@@ -271,3 +271,165 @@ Reviewer: independent (did not author). Lessons: 6 verb endings -s/-ed/-ing (`..
 - Unused passages: 7-p6, 8-p3, 8-p6, 9-p3, 9-p6. Five passages with facts to maintain and no item.
 - Hint 3 leaves at least two choices for every item except those listed. Longest-key unique: 0 in new items.
 - Items I could not mark down: 38 per lesson solved correctly; passage numbering, sentence refs in all stems, `why`/`how` refs to sentence numbers (checked by hand against the passage text for every hot-text and every item that names a sentence) are correct in all four lessons.
+
+
+## Second review (lessons 1-5)
+
+Reviewer: independent second reviewer (did not author, did not write the first review). Lessons 1-5 of `js/data/lessons/L-GUM1.js` (STATUS rows `B7a` 1-5), reviewed in the revised state after the author's phase 2. Read-only: no lesson edits, no git. Local server (port 8847, pid 23401) killed by pid. Scripts and answers: `scratchpad/b7s/`.
+
+### Verdicts
+
+| Lesson | Verdict | MUST | SHOULD | NOTE |
+|---|---|---|---|---|
+| 1 Complete sentences | ACCEPT (SHOULDs recommended) | 0 | 2 | 4 |
+| 2 Singular and plural nouns | CHANGES REQUIRED | 1 | 4 | 3 |
+| 3 Question words | ACCEPT (SHOULDs recommended) | 0 | 3 | 3 |
+| 4 Capital letters | CHANGES REQUIRED | 2 | 3 | 3 |
+| 5 Plurals with -s or -es | ACCEPT (SHOULDs recommended) | 0 | 2 | 3 |
+
+All five first-review MUST classes are genuinely fixed in the files (table below). The remaining MUSTs are all in child-facing hints of items that are not new core items (L2 P4, L4 P3, L4 P5), i.e. things the first review only partly reported.
+
+### Method and blindness
+
+- **Blind solve.** `b7s/blind.js` loads `L-GUM1.js` in a Node `vm` sandbox and prints, per lesson, the passages, every core item (refs resolved), S01-S15, Together and Test, with choices, dropdown options, hot-text options, ebsr parts shuffled by a seeded LCG (`9100 + 131*lessonIndex`). No key, `why`, hints, `how`, `clue`, `like`, `misconception` or addons were printed; hot-text targets were printed as the passage sentence. No lesson figures or alt text exist in these five lessons. Answers were saved (`ans1.json`-`ans5.json`) before any key was read; `compare.js` un-shuffled them.
+- **Items solved: 195** (L1 39, L2 36, L3 34, L4 36... counted as 15 core + 15 similar + Together + 5 Test per lesson). **Agreement 194/195 (99.5%).** The one miss is my slip, not an item flaw: 4-C13 slot 2, I capitalised "My brother and I" after "so" mid-sentence (the key `my brother and I` is right; the trap works, and hint 3 now rules the capital out).
+- **Fully blind?** Yes. Before solving I printed only field names and counts. I did not open the author log, the first review, the keyed dump or the raw lesson source for those items until `ans*.json` were saved. (I had listed the scratchpad directory, which shows earlier reviewers' folder names; I opened none of them for content before solving, only their generic scripts afterwards.)
+
+### Mechanical audit results
+
+- **Points / DOK / structure** (`struct.js`): every ms and pick-two item is 2 points, ebsr and match 2, two-slot dropdown 2, no mismatch in any item. mc in core 6/5/5/5/6 (cap 6), four or more formats, 3+ technology-enhanced, DOK 1 count 0/0/0/0/1, DOK 3 count 6/6/4/4/4, 7-8 draft items per lesson (plan wants 5). No passage carries more than 5 core items. Every core item has a twin by `like`; all `like` ids resolve.
+- **Passages**: all 29 drafts are 101-115 words excluding "(n)" (L3 p6 is the shortest at 101); my FK (own syllable counter) is 0.9-3.9, max 3.87 (L2 p1/p5), under 4.5.
+- **Hint ladder, every item** (read item by item, all 195 including addons for refs and Together): live choices after hint 3 alone are two or more for every new core and twin item. Exactly two live (acceptable): L1 C04, C12 slots, S04; L2 C04, C08, C12, S04, S08, S12; L3 C04, C12, S04, S12; L4 C12, S04, S09, S12; L5 C04, C12, C13 slot 2, S04, S12, S13 slot 2. Findings in Together/ref addons are in the tables (L2 P4, L4 P3, L4 P5). Hint 3 never quotes a key option. The first-review cases (5-C09, 5-C15, 5-C13/S13, 1-S12) now name one wrong choice or leave two live.
+- **Longest key** (`longest.js`, all mc, ms, ebsr parts, dropdown slots, hot-text options, incl. choose-two): no new core or twin item has a uniquely longest key; choose-two keys are never the two longest in new items. Unique-longest only in legacy items: L1 P5, L2 T2 T5, L3 T2 T4, L4 P2 (and P5 two keys are the two longest), L5 P1 P5 T1 T5. This matches the author's list.
+- **Twin overlap** (`jac3.js`, token Jaccard over prompt, stem, text, choices, options, rows, cols, ebsr parts, targeted sentences): twin x core, all 15 pairs per twin, max set/multiset 0.194/0.200 (L1), 0.203/0.209 (L2), 0.203/0.209 (L3), 0.192/0.209 (L4), 0.196/0.209 (L5). **All at or below 0.21 and identical to the author's table.** Core x core pairs go over 0.21 in places (L3 C04/C12 0.33, L1 C05/C10 0.31, L4 C05/C10 0.29, L5 C04/C12 0.27); each of those pairs differs in text, context and key (see NOTES). Twin x Together/Test highest 0.265 (L3 S09/T3, frame words only).
+- **Duplicates over all `js/data`** (`dup.js`, `dup2.js`, exact strings/sentences of four or more words and 5-grams): only house prompts and hint templates repeat. One real finding: the L2 p3 title "A Walk to the Pond", with the pond behind the school, is also `L-V3.js` p4 (see L2 SHOULD). Legacy phrases ("Our class planted bean seeds" also in L-GUM5) are unchanged originals.
+- **Learn It / Watch Me / grown-up text vs items** (`lt.js`): no Watch Me or Learn It example sentence is reused in an item; only generic rule phrases overlap. Practice P1-P5 and Test T1-T5 are byte-identical to the pre-B7a original (`b7a/L-GUM1.orig.js`).
+- **Gate**: `node verification/check-content.js --all` PASS, 0 failures; no warnings on `SK-GUM1-1..5`.
+- **Browser, 390 x 844, touch, one Chromium process per lesson** (`run390.py`): sets y, y2, y3, real taps and `select_option` on every control, Check pressed, passage tab opened for every passage item. **75/75 core items accepted the key ("is-right")**, no horizontal scroll, zero page errors, no passage mismatch. (Answers were driven from the keyed data, so this checks controls and scoring; the blind solve checks the keys. I did not press the hint button in this run; hints were audited from the data.)
+
+### Web sources (this session)
+
+- `cants`: Merriam-Webster https://www.merriam-webster.com/dictionary/cants lists "cants" as a verb form (canted, canting, cants) and `cant` has noun senses (insincere pious talk; a slanted surface; a squared log). It is a real word.
+- `gas`: plural "gases also gasses" https://www.merriam-webster.com/dictionary/gases . Only a non-key option (`gas becomes gases`, 5-C15), so safe.
+- `tadpole`, `beetle`, `bean`: M-W pages exist (e.g. https://prod-bytebunny.merriam-webster.com/dictionary/tadpoles) but the entries were not fetched; I know of no unchanged-plural variant for these, so the replacements for minnow/seed are accepted on that basis (NOTE).
+- Command's understood subject "you", imperative is a complete sentence: https://www.grammarly.com/blog/sentences/imperative-sentences/
+- Fragments lack a subject or main verb; examples of no-verb and no-subject fragments: https://owl.purdue.edu/owl/general_writing/mechanics/sentence_fragments.html (the page labels an -ing phrase as a fragment but does not state the -ed participle case; see 1-S11 NOTE).
+- Apostrophes show possession and are not used for noun plurals: https://owl.purdue.edu/owl/general_writing/punctuation/apostrophe_introduction.html
+- -es plural rule (s, x, z, sh, ch, and ss), quiz becomes quizzes: https://learnersdictionary.com/definition/-es and https://www.grammarly.com/blog/grammar/spelling-plurals-with-s-es/ (no page found that mentions the stomach/stomachs exception, only the grown-up note uses it; standard).
+- The pronoun I always capitalised, I'm/I'll: https://languagetool.org/insights/post/grammar-uppercase-i/ (cited in the author log and first review; the dictionary.com page I fetched only gives the history, not the rule).
+- Question words who/what/where/when/why/how: I did not fetch a dictionary page (the allowlist refused merriam-webster `/dictionary/` pages directly; search results only). The mappings used (person, thing or action, place, time, reason, way, how many = amount) match the lesson's own Learn It and are standard.
+- Official wording (`official` in `js/data/standards.js`, page 15, grade 3 Reinforce): L1 "Use nouns and verbs to share complete thoughts when speaking."; L2 "Form and use singular and plural nouns when speaking."; L3 "Use interrogatives to ask questions when speaking."; L4 "Capitalize the first word of a sentence and the pronoun I."; L5 "Form regular plural nouns by adding -s or -es." Items are written recognition; the Grown-up speak card carries "when speaking" (L1-L3). NOTE only.
+
+### Confirmation of the first review (each MUST and SHOULD checked in the files)
+
+| First-review finding | Status in the file | Evidence |
+|---|---|---|
+| L1 MUST C08 why "slowly" | FIXED | why now "quietly and bags do not work" |
+| L1 MUST S08 why "beside" | FIXED | why now "Next to the shelf and underneath tell where" |
+| L1 MUST S12 hint 3 removes both distractors | FIXED | H3 names only a comma; slot 1 untouched |
+| L1 SHOULD C05/C10 same logic | FIXED | C10 is now "a verb is only half of a sentence" |
+| L1 SHOULD S02 "Which one cannot you find" | FIXED | "can't you find" |
+| L1 SHOULD P2/P5 legacy refs in core, P2 hint 3 | FIXED | no refs in L1 core; P2 H3 now strategy only |
+| L2 MUST C11 minnow | FIXED | key is `Many tadpole` |
+| L2 MUST C13 seed distractor | FIXED | distractor is `Many bean sprouted` |
+| L2 SHOULD C12 "not a word" | PARTLY | why now "does not fit here"; the distractor `cants` is still a real word (SHOULD below) |
+| L2 SHOULD C05 distractors | FIXED | all four options now argue "why correct" |
+| L2 SHOULD twins vs Teach wording, S11 hint 3 | FIXED | "clue word" used; S11 H3 readable |
+| L2 SHOULD P3 legacy | FIXED | P3 is Together only (P4 remains the one ref) |
+| L3 SHOULD how never modeled/keyed | FIXED | Watch Me 3 is how; C14 keys how |
+| L3 SHOULD S10 hints 2-3 | FIXED | H2 neutral, H3 removes one |
+| L3 SHOULD C10/C12 pre-eliminate C11 | FIXED | C11 shown sentences 3,5,8,9,10 do not include 4, 6, 7 |
+| L3 SHOULD S01/P3 answer echoed in stem | NOT FIXED | see L3 SHOULD |
+| L4 MUST S10 | FIXED | S10 is now a DOK 3 "Pia thinks i'm ... Do you agree?" |
+| L4 SHOULD C07 hint 2, C06 same-draft giveaway, legacy P3/P5 refs | FIXED | H2 neutral; C06 targets 2, 8, not 6; no L4 refs |
+| L4 SHOULD C05/C10 vs Teach | PARTLY | Teach still says "The word I is always..." and "When I joins another word ... keeps its capital", close to the keys (NOTE) |
+| L4 SHOULD P5 hint 3 describes the three wrong options | NOT FIXED | P5 H3 unchanged, see L4 MUST |
+| L5 MUST C09, C15 hint 3 | FIXED | each names one choice and does not remove it |
+| L5 MUST C13/S13 slot 2 | FIXED | H1 no longer says "so each needs a plural"; two live |
+| L5 SHOULD same-draft giveaways, C07/C10, S02 like, p6 orphan, Teach examples | FIXED | C06 now keys 4 and 8, C10 vs C07 different contrast, S02 pick one like P4, p6 removed, Teach now flag/mess/ditch and princess/trench/marble |
+| L5 SHOULD P3 hint 3 (toy) | FIXED | H3 now "adds -es to a noun that ends in y" (true: `toyes`) |
+
+### Author log: claims checked
+
+- **True (reproduced):** twin x core overlap table (to three decimals); no uniquely longest key in new items and the legacy list; shortest-passage word counts; FK all under 4.5; P1-P5 and T1-T5 unchanged; gate PASS with no SK-GUM1-1..5 warnings; the live-choice recount outcome for lessons 1, 3, 5 (no real narrowing found by me beyond the items below).
+- **FALSE or stale:**
+  1. "Phase 2 fixed every one that was reported" and the Known-limits sentence: the first review's L4 P5 hint 3 (describes all three wrong options) is unchanged, and the L3 S01/P3 echo and the `cants` distractor were kept.
+  2. The refs table is stale: it lists L1 refs P2,P4 (actual: none), L2 P3,P5 (actual: P4 only), L3 P2,P4 (actual P3,P4), L4 P3,P5 (actual: none). "Together = practice minus the two refs, 3 items in each lesson" is also stale (actual 5/4/3/5/3).
+  3. Opening deviation note says Teach was "unchanged except lesson 1 `learn`". Teach text actually changed in L1, L4 and L5 and the L3 `learn` gained a third Watch Me (disclosed later in phase 2 prose, not in this note).
+  4. "Highest FK 3.44" for lesson 1: my counter gives 3.70 (p1). Under 4.5 either way (counter difference).
+  5. "No hint narrows the choices ... hint 3 removes at most one choice" (Gate section): false for L4 P5 and not true for L2 P5 H3 (removes two of three distractors, leaving two live, allowed).
+
+### Lesson 1: complete sentences (ACCEPT)
+
+Strengths: three fragment types (no who, no verb, command) are balanced; hot-text scopes match key counts; C10 and C15 are good DOK 3 refutations; hint 3 never removes more than one distractor per slot.
+
+| Sev | Item | Finding | Fix |
+|---|---|---|---|
+| SHOULD | 1-S11 (sentence 2) and p6 sentence 2 | `A rain gauge made from a clear plastic bottle with a ruler taped to it.` is keyed "never shows what anyone does or is". `made` and `taped` look like verbs to a grade 3 child; the item needs the participle idea (Purdue labels such phrases fragments, but the child-facing lesson never teaches it). First review called it NOTE; the how line admits the trap. | Replace with a fragment without a participle (e.g. `A rain gauge with a ruler on its side.`), update how and why. |
+| SHOULD | 1-C05 / S05 and Teach point 1 | C05's key ("It is a command, so the person told is the doer") is Teach point 1 almost verbatim ("It does not write the who, but it tells the listener to act") and Watch Me 3. A reader of Learn It can pick it. | Acceptable as recall in a Reinforce lesson, but reword one of the two. |
+| NOTE | 1-P5 (Together, legacy) | Unique-longest key (34 vs 29); grade 1-2 sentence. Together only. | none |
+| NOTE | Grade level | Drafts are FK 2.2-3.7 with simple sentences; content meets grade 3 only through the drafts. Plan says do not lengthen to look harder. | none |
+| NOTE | 1-C06/C11 | Extra fragments in the same draft (p2 sentences 7, 9) are used by C07, C10, not by hot-text. | none |
+| NOTE | Standard | "when speaking" served by the grown-up card. | none |
+
+### Lesson 2: singular and plural nouns (CHANGES REQUIRED)
+
+Strengths: clue-word frame is clear; apostrophe and double-s distractors are real errors; minnow/seed replaced with single-plural nouns; C05 fixed.
+
+| Sev | Item | Finding | Fix |
+|---|---|---|---|
+| MUST | 2-P4 (core ref, set 1) hint 3 | "Two of the sentences use a, and a goes with just one thing." Only one sentence contains "a" (`A frog sat on a log.`, twice). The other three sentences have no "a". The hint states a false fact about the item. | "One sentence uses a, and a goes with just one thing." |
+| SHOULD | 2-C12 distractor `cants` (hint 3 "Cants does not fit this sentence") | `cants` is a real word (verb form; noun `cant`; M-W link above). The key is clear in context (shelf, a few), but the plan's variant rule (minnow, seed) says a distractor should be an error, not another word. | Use a clear non-word (e.g. `cannes`/`canns` or `cans'`); update how/why/hint 3. |
+| SHOULD | Learn It / apostrophes | Eight items (C03, C07, C08, S03, S07, S08, C10, S10) use an apostrophe distractor and C10/S10 are keyed on "an apostrophe would show belonging". Learn It never mentions an apostrophe (possessives are a later skill), so the rule first appears in the hints. | Add one Learn It sentence: "An apostrophe shows that something belongs to someone (Jada's pencil); it does not make a plural." |
+| SHOULD | 2-S15 key (class/glass) | Counterexample needs `class` and `glass` as singular nouns ending in -s; Learn It says nothing about this, so a new fact first appears in the item. | Add to Learn It or use `bus` in the Watch Me. |
+| SHOULD | 2-C04/S04, C12/S12 | Dropdown frame repeats four times ("number or clue word before the blank, -s form, singular, misspelling"). Pairs are core/twin by design, but C04 and C12 are both set 1/3 core with the same logic; only the clue word differs (`three`, `a few`). | Vary one core copy (e.g. a noun after `every` that needs the one form). |
+| NOTE | 2-C01 H3 / S01 H3 | Both hints say "every" sounds like a crowd but goes with one thing; resolves the two `every/each` rows. Allowed (completes part of a match). | none |
+| NOTE | 2-P3, T4, P2 (Together/Test, legacy) | Kindergarten-level "a pencil / several crayons", "one apple and two cookies"; plan 4.8 lists P2 as weak. Together/Test only, unchanged originals. | Revise in a later pass. |
+| NOTE | 2-S10 hint 3 | Removes two of three distractors; two live (key and "Agree. Plural nouns ... bowl's"). Allowed. | none |
+
+### Lesson 3: question words (ACCEPT)
+
+Strengths: place, time, reason, person, way and amount are never ambiguous; C10/S10 (which question can sentence 7 answer but 6 cannot) and C15/S15 (what for actions, how much) are strong DOK 3; Watch Me now models time, reason and way.
+
+| Sev | Item | Finding | Fix |
+|---|---|---|---|
+| SHOULD | 3-S01 and 3-P3 | Plan 6.5, answer wording echoed in the stem. S01 stem "the place its owner dropped it" and key "Where did the owner drop this mitten?" share owner/drop/mitten; P3 "the reason the park closed" and key "Why did the park close today?". First review asked for this; S01 was only reworded. | S01: "...hopes to learn where it came from" with a different verb in the key; P3 optional. |
+| SHOULD | 3-P4 (core ref, set 1) and 3-P3 | Both are grade 1-2 first-word matches (`Where did you put the leash?` / `Where do penguins live?`), the first two items of the fifteen; P4 is solvable by reading the first word. | Replace in the core with a content item (e.g. choose the line whose answer would be "near the window"), keep as Together. |
+| SHOULD | 3-C13, S02, S13 | Three more items are solved by the first word of each line ("two begin with Why/When/Who"). C14 is now content-based, which helps. | Make one of S02/S13 content-based. |
+| NOTE | 3-C09, S09 H3 | Each gives away one row (the because/cause row). Allowed (completes part of a match). | none |
+| NOTE | 3-C04/C12/S04/S12 | Same frame "{0} did ... ?" four times; component differs (why, what, why, how). | none |
+| NOTE | Standard | "when speaking" served by the Grown-up card. | none |
+
+### Lesson 4: capital letters (CHANGES REQUIRED)
+
+Strengths: every item has one defensible answer; I in the middle is well contrasted (C15/S15 are good); S10 is now a faithful DOK 3 twin; "shown" scope is honest.
+
+| Sev | Item | Finding | Fix |
+|---|---|---|---|
+| MUST | 4-P5 (Together) hint 3 | "Two sentences begin with a small letter, and one more starts with a small word that is a question." This describes all three wrong options (B, D, E), leaving only the two keys in a pick-two item. First review reported it; it is unchanged. | "Check the sentences that start with a capital letter and look inside them too." (no count of wrong options). |
+| MUST | 4-P3 (Together) hint 3 | "Two of the four sentences begin with a small letter." Only one does (`the bus came late today.`; `Dad said i could help.` starts with D). False statement in feedback. | "Check the first letter of every sentence, then look for the word I in the others." |
+| SHOULD | 4-P4 hint 2 | "Look at the very first word of the sentence." plus the stem `on Saturday, my cousin and I went fishing.` yields the key (`on`) without the choices. Together item. | "Check each word against the two rules." |
+| SHOULD | Set 2: C07, C09, C10 | Three of five set 2 items rest on the same fact (a short form i'm / i'll contains I). C10's key states it outright and settles C09's count (3, not 2) and C07's Part A; "no giveaways inside a set". | Move C09 to a plain count (no short form) or change C10 to a different capital rule (e.g. a title or `Mom`). |
+| SHOULD | 4-C02 vs 4-C08 | Both are "pick the two correctly written sentences from five standalone sentences" testing first-word plus I; they differ only by sentences (plan 6: pairs must differ in two of text, component, verb, context). | Turn C08 into an error-finding item in a draft, or switch components (e.g. a name or a title). |
+| NOTE | Teach vs keys | Teach point 3 ("When I joins another word, as in I'm or I'll, the first letter keeps its capital") is nearly C10's key. | Reword one. |
+| NOTE | 4-C05 vs Teach | C05 key "I names the writer, and that word keeps a capital in every spot" restates Teach. Plan rule 7. | none |
+| NOTE | Grade level | Drafts FK 0.9-2.3, the lowest of the five lessons, inherent to the skill. | none |
+
+### Lesson 5: plurals with -s or -es (ACCEPT)
+
+Strengths: the s/x/z/ch/sh rule is applied consistently; the Teach examples (flag/mess/ditch, princess/trench/marble) no longer equal tested nouns; C15 and S15 (jar; path/h) are real counterexamples; the apostrophe, -ies and doubled distractors are plausible errors, not valid variants.
+
+| Sev | Item | Finding | Fix |
+|---|---|---|---|
+| SHOULD | 5-P3, P4 (core refs, set 1) | The first two core items are easy single-sentence checks (`dishs`, `lunchs`), and set 2 reuses draft p1 for C06/C07 (a "new context" set that is not new). | Move one of C06/C07 to p2 or p3 (p3 has only C12). |
+| SHOULD | 5-S05 and S06 (same draft p4) | S05 explains matches vs balls and S06 then targets sentence 9 (matchs) and 4 (balls). Using S05 first gives S06 away. | Put S05 on a different sentence pair. |
+| NOTE | 5-C13/S13 H3 | Completes slot 2 by stating that the noun ends in w/t so no -es; two live remain. Allowed scaffold. | none |
+| NOTE | 5-p3 sentence 7 | `inchs` is a second error that no item uses; fine because no item says "the only error". | none |
+| NOTE | Repeated `-ies` distractor | `-ies` nonwords appear in C03, C04, C12, C13, S03, S13; a child learns "ignore the -ies option". | Vary one. |
+
+### Cross-lesson notes
+
+- L2 p3 title "A Walk to the Pond" and the pond-behind-school premise duplicate `L-V3.js` p4 (title, same setting). SHOULD (L2): rename.
+- Core x core overlaps over 0.21 (L3 C04/C12, L4 C05/C10, L5 C04/C12) reflect shared frames; text, context and key differ, so they pass the plan 6 two-of-four test.
+- Remaining legacy items are the same easy ones listed by the first review; they sit in Together/Test or as core refs in L2, L3, L5.
+- Items I could not mark down: all 75 core and 75 twin keys have exactly one defensible answer; hot-text scopes, sentence references in stems, `why` and `how` match the passages.

@@ -9982,10 +9982,173 @@ PP.addLesson({
         "Ask: Does it tell where or when? During tells when we cannot talk."
       ],
       answer: "During is the preposition. It tells when."
+    },
+    {
+      show: ["Grandpa read us a story under the quilt before bed."],
+      ask: "Which two words are prepositions, and what does each one tell?",
+      steps: [
+        "Look for small words that start a group of words ending in a noun. Under starts under the quilt, and before starts before bed.",
+        "Ask what each group tells. Under the quilt tells where Grandpa read. Before bed tells when.",
+        "Under tells where, and before tells when."
+      ],
+      answer: "Under tells where, and before tells when."
     }
   ],
   parent: "Play a hiding game with a small toy. Hide it, then give your child clues that use prepositions (It is under something soft. It is behind something tall.). Then trade places.",
-  passages: [],
+  passages: [
+    /* B7b:passages:start */
+    {
+      "id": "p1",
+      "title": "Saturday at the Lake",
+      "byline": "A third grader's draft",
+      "genre": "Student draft (narrative)",
+      "draft": true,
+      "paragraphs": [
+        [
+          "(1) Last Saturday, we packed the van and drove out to Lake Pine for a picnic lunch.",
+          "(2) We spread a red blanket during the soft grass near the water.",
+          "(3) Dad set the cooler beside the old oak tree, and Mom opened it."
+        ],
+        [
+          "(4) She pulled sandwiches out of the cooler and passed them around to everyone.",
+          "(5) After lunch, my brother and I skipped flat stones across the lake.",
+          "(6) A turtle rested until a warm log and watched us closely."
+        ],
+        [
+          "(7) We stayed at the lake until the sun began to set behind the hills.",
+          "(8) Before we left, we picked up all of our trash and cans.",
+          "(9) The ride home was quiet, and I fell asleep in the car.",
+          "(10) I hope we visit the lake again next summer."
+        ]
+      ]
+    },
+    {
+      "id": "p2",
+      "title": "The Pet Parade",
+      "byline": "A third grader's draft",
+      "genre": "Student draft (narrative)",
+      "draft": true,
+      "paragraphs": [
+        [
+          "(1) Our class held a pet parade on the playground last Friday.",
+          "(2) Every child waited during the front gate with a leash or a box.",
+          "(3) Mr. Ortiz checked each pet and each leash carefully before the parade began."
+        ],
+        [
+          "(4) Jin's rabbit hopped beside the long line of excited kids.",
+          "(5) A parrot rode on Tess's shoulder and squawked as loudly as it could.",
+          "(6) Pedro's puppy hid until a bench and would not come out."
+        ],
+        [
+          "(7) After the parade, we gave each pet a snack of seeds or carrots.",
+          "(8) Mr. Ortiz said the parade could return in the spring.",
+          "(9) We stayed outside until the bell rang for lunch.",
+          "(10) Everyone went inside happy and a little dusty."
+        ]
+      ]
+    },
+    {
+      "id": "p3",
+      "title": "Muffins with Aunt Pilar",
+      "byline": "A third grader's draft",
+      "genre": "Student draft (narrative)",
+      "draft": true,
+      "paragraphs": [
+        [
+          "(1) On Sunday, Aunt Pilar and I baked blueberry muffins in her kitchen.",
+          "(2) She tied an apron around my waist before we started.",
+          "(3) We mixed the flour and eggs inside a huge steel bowl."
+        ],
+        [
+          "(4) Aunt Pilar set the muffin tin across the oven for twenty minutes.",
+          "(5) Steam drifted up from the oven and curled between the ceiling.",
+          "(6) After the timer rang, we pulled the hot pan out of the oven.",
+          "(7) We let the muffins cool until a wire rack."
+        ],
+        [
+          "(8) Aunt Pilar packed six muffins in a paper bag for me to take home.",
+          "(9) I ate one on the porch steps while the sun set.",
+          "(10) The rest went to my neighbors next door."
+        ]
+      ]
+    },
+    {
+      "id": "p4",
+      "title": "The Science Fair",
+      "byline": "A third grader's draft",
+      "genre": "Student draft (narrative)",
+      "draft": true,
+      "paragraphs": [
+        [
+          "(1) Our school held its science fair in the gym on Thursday afternoon.",
+          "(2) Posters hung between the wall, and every one had a bright title.",
+          "(3) Mrs. Brooks welcomed the families at the front door of the gym."
+        ],
+        [
+          "(4) My volcano sat on a small table beside a tray of baking soda.",
+          "(5) Parents walked between two long rows of tables and asked many questions.",
+          "(6) A boy named Omar set his magnet display until the window."
+        ],
+        [
+          "(7) The judges visited every table before lunch.",
+          "(8) Then they handed out ribbons in the middle of the gym.",
+          "(9) I earned a blue ribbon, and I held it all the way home.",
+          "(10) I cannot wait for next year's science fair."
+        ]
+      ]
+    },
+    {
+      "id": "p5",
+      "title": "A Windy Soccer Practice",
+      "byline": "A third grader's draft",
+      "genre": "Student draft (narrative)",
+      "draft": true,
+      "paragraphs": [
+        [
+          "(1) On Tuesday, our soccer team met on the field after school.",
+          "(2) Coach Rivera told everyone to line up during the goal.",
+          "(3) We jogged slowly around the muddy track to warm up our legs."
+        ],
+        [
+          "(4) Then we kicked the ball back and forth between two orange cones.",
+          "(5) The wind blew the ball until the fence, and a boy chased it.",
+          "(6) Leah stood beside me and counted every pass out loud."
+        ],
+        [
+          "(7) After practice, we drank cold water from a big cooler.",
+          "(8) Coach Rivera clapped and said we played well during the windy afternoon.",
+          "(9) We packed our bags and walked home before dark.",
+          "(10) I am excited for our first game next week."
+        ]
+      ]
+    },
+    {
+      "id": "p6",
+      "title": "Learning to Swim",
+      "byline": "A third grader's draft",
+      "genre": "Student draft (narrative)",
+      "draft": true,
+      "paragraphs": [
+        [
+          "(1) This summer, I took swimming lessons at the town pool.",
+          "(2) My teacher, Ms. Vega, met us beside the shallow end each morning.",
+          "(3) We sat on the warm edge and kicked our feet in the water."
+        ],
+        [
+          "(4) First, we blew bubbles during the pool and practiced breathing.",
+          "(5) Next, I held a foam board and kicked across the shallow end.",
+          "(6) Ms. Vega waited until my side as I swam my very first lap of the pool.",
+          "(7) At the end, I climbed out between the ladder and sat down."
+        ],
+        [
+          "(8) Afterward, we dried off under the big blue umbrella.",
+          "(9) Ms. Vega gave every student a sticker for being brave.",
+          "(10) I will swim in the deep end before summer ends."
+        ]
+      ]
+    }
+    /* B7b:passages:end */
+  ],
   practice: [
     { id: "SK-GUM2-7-P1", type: "dropdown", points: 1, dok: 1, passages: [],
       prompt: "Choose the word that correctly completes the sentence.",
@@ -10036,6 +10199,1352 @@ PP.addLesson({
       clue: "Picture each sentence. Does the small word before each noun tell a where or when that makes sense?",
       why: "The answer is \"The fish swam during the bowl.\" A bowl is a place, but during tells when. The sentence should say in the bowl." }
   ],
+  /* B7b:core:start */
+  /* ---------- Expansion 2026-10-22, batch B7b (GUM Reinforce, second half) ----------
+     core: fifteen items in three sets of five. { ref } reuses a practice item; the other practice items stay in Practice Together.
+     Passages are used only by core and the similar bank; none is used by test.
+     Author log: docs/expansion-2026-10-22/batches/B7b-author-log.md. NOT ACCEPTED: needs independent review. */
+  core: {
+    "rev": "1",
+    "sets": [
+      {
+        "title": "Set 1",
+        "items": [
+          {
+            "ref": "SK-GUM2-7-P4"
+          },
+          {
+            "ref": "SK-GUM2-7-P5"
+          },
+          {
+            "id": "SK-GUM2-7-C03",
+            "type": "mc",
+            "points": 1,
+            "dok": 2,
+            "std": [
+              "3.L.GC.1:R:use-frequently-occurring-prepositions"
+            ],
+            "passages": [
+              "p1"
+            ],
+            "prompt": "Sentence 2 has a preposition that does not make sense. What is the problem?",
+            "choices": [
+              {
+                "text": "During points to a time, but the soft grass is a place, so another preposition is needed.",
+                "correct": true
+              },
+              {
+                "text": "During points to a place, but the soft grass is a time, so another preposition is needed."
+              },
+              {
+                "text": "During is a verb, but the blanket needs a noun to show who spread it out."
+              },
+              {
+                "text": "During is correct, but the word spread should come after the grass instead of before it."
+              }
+            ],
+            "clue": "A preposition starts a group of words that ends with a noun. Find the group in sentence 2.",
+            "hints": [
+              "A preposition starts a group of words that ends with a noun. Find the group in sentence 2.",
+              "Ask what kind of noun ends the group in sentence 2.",
+              "Spread is the action word in the sentence. Think about the other choices."
+            ],
+            "how": [
+              "The group of words that starts with during ends with the noun grass.",
+              "Grass is a place, so the group needs a preposition that tells where.",
+              "The answer is \"During points to a time, but the soft grass is a place, so another preposition is needed.\""
+            ],
+            "misconception": "A common mix-up is thinking any small word can start the group. The word has to fit the noun that comes after it.",
+            "why": "The answer is \"During points to a time, but the soft grass is a place, so another preposition is needed.\" Grass is a place, so the sentence needs a different preposition. During is a preposition, not a verb, and moving spread would not fix anything.",
+            "like": [
+              "SK-GUM2-7-S03"
+            ]
+          },
+          {
+            "id": "SK-GUM2-7-C04",
+            "type": "dropdown",
+            "points": 1,
+            "dok": 2,
+            "std": [
+              "3.L.GC.1:R:use-frequently-occurring-prepositions"
+            ],
+            "passages": [
+              "p1"
+            ],
+            "prompt": "Sentence 6 has the wrong preposition. Which word repairs it?",
+            "text": "A turtle rested {0} a warm log and watched us closely.",
+            "slots": [
+              {
+                "options": [
+                  "on",
+                  "until",
+                  "during"
+                ],
+                "answer": 0
+              }
+            ],
+            "clue": "Decide whether the log is a place or a time.",
+            "hints": [
+              "Decide whether the log is a place or a time.",
+              "Picture the turtle and the log. The blank needs a preposition for where the turtle rested.",
+              "During tells when something happens. Look at the other choices."
+            ],
+            "how": [
+              "The group of words ends with the noun log, which is a place.",
+              "The blank needs a word that tells where the turtle rested.",
+              "The answer is on. Until and during both tell when."
+            ],
+            "misconception": "A common mix-up is choosing until because it sounds like a small joining word. Until tells when, and a log is a place.",
+            "why": "The answer is on. A log is a place, so the blank needs a word that tells where. Until and during tell when, so they do not fit.",
+            "like": [
+              "SK-GUM2-7-S04"
+            ]
+          },
+          {
+            "id": "SK-GUM2-7-C05",
+            "type": "mc",
+            "points": 1,
+            "dok": 3,
+            "std": [
+              "3.L.GC.1:R:use-frequently-occurring-prepositions"
+            ],
+            "passages": [
+              "p1"
+            ],
+            "prompt": "Sentences 6 and 7 both use until, yet only sentence 6 is a mistake. Why?",
+            "choices": [
+              {
+                "text": "In sentence 7 until goes with a time, but in sentence 6 it goes with a place.",
+                "correct": true
+              },
+              {
+                "text": "Until tells where something is, so sentence 6 is fine and sentence 7 is the mistake."
+              },
+              {
+                "text": "Both sentences use until in the same way, so neither one needs to be fixed at all."
+              },
+              {
+                "text": "Sentence 7 has the word began in it, and began permits every preposition after it."
+              }
+            ],
+            "clue": "Look at the group of words that follows until in each sentence.",
+            "hints": [
+              "Look at the group of words that follows until in each sentence.",
+              "Ask what kind of noun follows until in each sentence.",
+              "Until tells when, so one of the choices cannot be true. Think about the other choices."
+            ],
+            "how": [
+              "Sentence 6: until a warm log. Sentence 7: until the sun began to set.",
+              "A sun setting is a time, and a log is a place.",
+              "The answer is \"In sentence 7 until goes with a time, but in sentence 6 it goes with a place.\""
+            ],
+            "misconception": "A common mix-up is thinking a word is right or wrong by itself. The noun that follows it decides.",
+            "why": "The answer is \"In sentence 7 until goes with a time, but in sentence 6 it goes with a place.\" Until tells when, so it fits the setting sun. It does not fit a log.",
+            "like": [
+              "SK-GUM2-7-S05"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Set 2",
+        "items": [
+          {
+            "id": "SK-GUM2-7-C06",
+            "type": "hottext",
+            "points": 2,
+            "dok": 2,
+            "std": [
+              "3.L.GC.1:R:use-frequently-occurring-prepositions"
+            ],
+            "passages": [
+              "p2"
+            ],
+            "prompt": "Two sentences from 2 through 6 pair a preposition with the wrong noun. Select them.",
+            "targets": [
+              "p2:1:2",
+              "p2:1:3",
+              "p2:2:1",
+              "p2:2:2",
+              "p2:2:3"
+            ],
+            "answer": [
+              "p2:1:2",
+              "p2:2:3"
+            ],
+            "pick": 2,
+            "clue": "Find the preposition in each of sentences 2 through 6. Ask whether the noun after it names a place or a time.",
+            "hints": [
+              "Find the preposition in each of sentences 2 through 6. Ask whether the noun after it names a place or a time.",
+              "Picture each sentence and ask whether the small word makes sense with the words after it.",
+              "The sentence about the parrot and the shoulder makes sense. Think about the rest."
+            ],
+            "how": [
+              "Check each preposition one sentence at a time.",
+              "Before the parade, beside the long line and on Tess's shoulder all fit their nouns.",
+              "The other two use a word that tells when with a place."
+            ],
+            "misconception": "A common mix-up is stopping at the first mistake. Check every sentence in the range.",
+            "why": "The answers are \"Every child waited during the front gate with a leash or a box.\" and \"Pedro's puppy hid until a bench and would not come out.\" Gate and bench are places, but during and until tell when. Sentences 3, 4 and 5 are correct.",
+            "like": [
+              "SK-GUM2-7-S06"
+            ]
+          },
+          {
+            "id": "SK-GUM2-7-C07",
+            "type": "ebsr",
+            "points": 2,
+            "dok": 3,
+            "std": [
+              "3.L.GC.1:R:use-frequently-occurring-prepositions"
+            ],
+            "passages": [
+              "p2"
+            ],
+            "prompt": "Complete Part A, then move to Part B.",
+            "partA": {
+              "prompt": "What is wrong with the preposition in sentence 2?",
+              "choices": [
+                {
+                  "text": "During tells when, but the front gate is a place, so a word for where is needed.",
+                  "correct": true
+                },
+                {
+                  "text": "During tells where, but the front gate is a time, so a word for when is needed."
+                },
+                {
+                  "text": "During is correct as written, but waited should change to waits to match the leash."
+                },
+                {
+                  "text": "During starts the group correctly, but the group should end with a verb, not a noun."
+                }
+              ]
+            },
+            "partB": {
+              "prompt": "Pick the version that repairs sentence 2.",
+              "choices": [
+                {
+                  "text": "Every child waited at the front gate with a leash or a box.",
+                  "correct": true
+                },
+                {
+                  "text": "Every child waited until the front gate with a leash or a box."
+                },
+                {
+                  "text": "Every child waited among the front gate with a leash or a box."
+                },
+                {
+                  "text": "Every child waited during the front gate with a leash or a box."
+                }
+              ]
+            },
+            "clue": "Find the group of words that starts with during. Ask what kind of noun ends the group.",
+            "hints": [
+              "Find the group of words that starts with during. Ask what kind of noun ends the group.",
+              "In Part B, read each version and picture the child at the gate.",
+              "Among usually goes with several things. Think about the other versions."
+            ],
+            "how": [
+              "Part A: the group ends with the noun gate, which names a place.",
+              "Part B: the fix needs a preposition that tells where the child waited.",
+              "The answers are \"During tells when, but the front gate is a place, so a word for where is needed.\" and \"Every child waited at the front gate with a leash or a box.\""
+            ],
+            "misconception": "A common mix-up is trusting the first preposition that sounds familiar. Check the noun that follows it.",
+            "why": "Part A: \"During tells when, but the front gate is a place, so a word for where is needed.\" Part B: \"Every child waited at the front gate with a leash or a box.\" At tells where the child waited. Until and during tell when.",
+            "like": [
+              "SK-GUM2-7-S07"
+            ]
+          },
+          {
+            "id": "SK-GUM2-7-C08",
+            "type": "ms",
+            "points": 2,
+            "dok": 2,
+            "std": [
+              "3.L.GC.1:R:use-frequently-occurring-prepositions"
+            ],
+            "passages": [],
+            "prompt": "Which TWO sentences use a preposition that tells when?",
+            "pick": 2,
+            "choices": [
+              {
+                "text": "Tia stretched her legs after the long concert.",
+                "correct": true
+              },
+              {
+                "text": "The library stays closed until Monday morning.",
+                "correct": true
+              },
+              {
+                "text": "A bird built its nest on the porch roof near the door."
+              },
+              {
+                "text": "Ana walked through the tunnel to the playground."
+              },
+              {
+                "text": "The mail truck stopped near the old red mailbox."
+              }
+            ],
+            "clue": "Find the preposition in each sentence. Ask what the noun that follows it names.",
+            "hints": [
+              "Find the preposition in each sentence. Ask what the noun that follows it names.",
+              "Check all five choices, including the ones that look right at first glance. A time word and a place word lead to different answers.",
+              "Three choices end their groups with places. Think about which two do not."
+            ],
+            "how": [
+              "Look at the noun after each preposition.",
+              "Concert and Monday morning name times. Porch roof, tunnel and mailbox name places.",
+              "The answers are after the long concert and until Monday morning."
+            ],
+            "misconception": "A common mix-up is picking a sentence because it mentions the day or the night. The preposition itself has to tell when.",
+            "why": "The answers are \"Tia stretched her legs after the long concert.\" and \"The library stays closed until Monday morning.\" After and until tell when. On, through and near tell where.",
+            "like": [
+              "SK-GUM2-7-S08"
+            ]
+          },
+          {
+            "id": "SK-GUM2-7-C09",
+            "type": "mc",
+            "points": 1,
+            "dok": 1,
+            "std": [
+              "3.L.GC.1:R:use-frequently-occurring-prepositions"
+            ],
+            "passages": [],
+            "prompt": "Pick the preposition in this sentence.",
+            "stem": "The frog jumped behind a green lily pad.",
+            "choices": [
+              {
+                "text": "behind",
+                "correct": true
+              },
+              {
+                "text": "jumped"
+              },
+              {
+                "text": "green"
+              },
+              {
+                "text": "frog"
+              }
+            ],
+            "clue": "A preposition starts a group of words that ends with a noun. Find that group.",
+            "hints": [
+              "A preposition starts a group of words that ends with a noun. Find that group.",
+              "The group in this sentence names a place. Look at the small word that starts it.",
+              "Green describes the lily pad. Think about the other choices."
+            ],
+            "how": [
+              "The group of words is behind a green lily pad.",
+              "Behind starts the group and tells where the frog jumped.",
+              "The answer is behind."
+            ],
+            "misconception": "A common mix-up is picking the action word. Jumped tells what the frog did, not where.",
+            "why": "The answer is behind. Behind starts the group behind a green lily pad and tells where the frog jumped. Jumped is a verb, green describes the lily pad, and frog is a noun.",
+            "like": [
+              "SK-GUM2-7-S09"
+            ]
+          },
+          {
+            "id": "SK-GUM2-7-C10",
+            "type": "mc",
+            "points": 1,
+            "dok": 3,
+            "std": [
+              "3.L.GC.1:R:use-frequently-occurring-prepositions"
+            ],
+            "passages": [
+              "p2"
+            ],
+            "prompt": "Ana says until in sentence 9 is wrong because a bell is not a time. Which reply is best?",
+            "choices": [
+              {
+                "text": "Until tells how long the kids stayed, and the bell ringing is the moment it ended.",
+                "correct": true
+              },
+              {
+                "text": "Objects such as bells always need a word for where, so Ana has the better idea."
+              },
+              {
+                "text": "Until can only be followed by a day or a month, so Ana is correct about sentence 9."
+              },
+              {
+                "text": "Until works only before a person's name, so sentence 9 should say until Mr. Ortiz."
+              }
+            ],
+            "clue": "Think about what Ana is trusting. Is it the kind of noun, or what until tells?",
+            "hints": [
+              "Think about what Ana is trusting. Is it the kind of noun, or what until tells?",
+              "Read sentence 9 and ask what happens when the bell rings.",
+              "Until does not need a day or a name after it. Think about the other choices."
+            ],
+            "how": [
+              "Until tells when something stops.",
+              "The kids stayed outside, and the bell ringing ended it. That is a time idea.",
+              "The answer is \"Until tells how long the kids stayed, and the bell ringing is the moment it ended.\""
+            ],
+            "misconception": "A common mix-up is thinking a time word must be followed by a clock time. An event can name a time too.",
+            "why": "The answer is \"Until tells how long the kids stayed, and the bell ringing is the moment it ended.\" Until tells when, and the bell marks the moment. Until does not need a day or a name.",
+            "like": [
+              "SK-GUM2-7-S10"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Set 3",
+        "items": [
+          {
+            "id": "SK-GUM2-7-C11",
+            "type": "hottext",
+            "points": 2,
+            "dok": 2,
+            "std": [
+              "3.L.GC.1:R:use-frequently-occurring-prepositions"
+            ],
+            "passages": [
+              "p3"
+            ],
+            "prompt": "Two sentences from 3 to 7 have a preposition that makes sense. Select them.",
+            "targets": [
+              "p3:1:3",
+              "p3:2:1",
+              "p3:2:2",
+              "p3:2:3",
+              "p3:2:4"
+            ],
+            "answer": [
+              "p3:1:3",
+              "p3:2:3"
+            ],
+            "pick": 2,
+            "clue": "Find the preposition in each of sentences 3 to 7. Ask what each one is supposed to show.",
+            "hints": [
+              "Find the preposition in each of sentences 3 to 7. Ask what each one is supposed to show.",
+              "Picture each sentence. Check whether the noun that comes next fits a where or a when idea.",
+              "The sentence about the steam uses a word that goes with two things. Think about the rest."
+            ],
+            "how": [
+              "Check each sentence one at a time.",
+              "Sentence 3 puts the flour inside a bowl, and sentence 6 pulls the hot pan out of the oven. Both make sense.",
+              "Sentences 4, 5 and 7 use across, between and until in places where they do not fit."
+            ],
+            "misconception": "A common mix-up is choosing a sentence because it sounds familiar. Picture what the preposition says.",
+            "why": "The answers are \"We mixed the flour and eggs inside a huge steel bowl.\" and \"After the timer rang, we pulled the hot pan out of the oven.\" Inside a bowl and out of the oven make sense. Across the oven, between the ceiling and until a wire rack do not.",
+            "like": [
+              "SK-GUM2-7-S11"
+            ]
+          },
+          {
+            "id": "SK-GUM2-7-C12",
+            "type": "dropdown",
+            "points": 1,
+            "dok": 2,
+            "std": [
+              "3.L.GC.1:R:use-frequently-occurring-prepositions"
+            ],
+            "passages": [
+              "p3"
+            ],
+            "prompt": "Which word fixes the preposition in sentence 7?",
+            "text": "We let the muffins cool {0} a wire rack.",
+            "slots": [
+              {
+                "options": [
+                  "on",
+                  "until",
+                  "among"
+                ],
+                "answer": 0
+              }
+            ],
+            "clue": "Decide whether the wire rack is a place or a time.",
+            "hints": [
+              "Decide whether the wire rack is a place or a time.",
+              "Picture the muffins cooling. The blank needs a word that tells where they sit.",
+              "Among usually goes with several things. Look at the other choices."
+            ],
+            "how": [
+              "The group ends with the noun rack, which is a place.",
+              "The blank needs a word that tells where the muffins cooled.",
+              "The answer is on. Until tells when, and among goes with several things."
+            ],
+            "misconception": "A common mix-up is picking until because the muffins cool for a while. The noun after it is a place.",
+            "why": "The answer is on. A wire rack is a place, so the blank needs a word that tells where. Until tells when, and among goes with several things.",
+            "like": [
+              "SK-GUM2-7-S12"
+            ]
+          },
+          {
+            "id": "SK-GUM2-7-C13",
+            "type": "dropdown",
+            "points": 2,
+            "dok": 2,
+            "std": [
+              "3.L.GC.1:R:use-frequently-occurring-prepositions"
+            ],
+            "passages": [],
+            "prompt": "Select the best preposition for each blank.",
+            "text": "The mail carrier walks {0} our street every day and stops {1} noon to eat lunch.",
+            "slots": [
+              {
+                "options": [
+                  "along",
+                  "during",
+                  "until"
+                ],
+                "answer": 0
+              },
+              {
+                "options": [
+                  "at",
+                  "in",
+                  "between"
+                ],
+                "answer": 0
+              }
+            ],
+            "clue": "The two blanks need different kinds of prepositions. Decide whether each noun is a place or a time.",
+            "hints": [
+              "The two blanks need different kinds of prepositions. Decide whether each noun is a place or a time.",
+              "The first blank comes before street. The second blank comes before noon.",
+              "Between goes with two things. Look at the choices for the second blank."
+            ],
+            "how": [
+              "The first blank tells where the carrier walks. The second blank tells when the carrier stops.",
+              "Street is a place, and noon is a time.",
+              "The answers are along and at."
+            ],
+            "misconception": "A common mix-up is using the same kind of word twice. One blank tells where, and the other tells when.",
+            "why": "The answers are along and at. Along tells where the carrier walks. At noon tells when the carrier stops to eat.",
+            "like": [
+              "SK-GUM2-7-S13"
+            ]
+          },
+          {
+            "id": "SK-GUM2-7-C14",
+            "type": "hottext",
+            "points": 1,
+            "dok": 2,
+            "std": [
+              "3.L.GC.1:R:use-frequently-occurring-prepositions"
+            ],
+            "passages": [],
+            "prompt": "Which sentence has a preposition that tells the wrong thing?",
+            "options": [
+              "Zara rode her bike along the quiet trail.",
+              "The movers carried the couch through the narrow door.",
+              "Our class waited inside until the rain stopped.",
+              "Leo found his missing shoe between the sofa and the wall.",
+              "The cookies cooled during the kitchen counter."
+            ],
+            "answer": [
+              4
+            ],
+            "pick": 1,
+            "clue": "Find the preposition in each sentence. Ask whether the noun after it names a place or a time.",
+            "hints": [
+              "Find the preposition in each sentence. Ask whether the noun after it names a place or a time.",
+              "Picture each sentence and check that the small word makes sense with the words after it.",
+              "The sentence about the shoe uses a word that goes with two things, and it fits. Think about the rest."
+            ],
+            "how": [
+              "Look at the noun after each preposition.",
+              "Trail, door, rain stopping and the sofa and the wall all fit their prepositions.",
+              "The answer is \"The cookies cooled during the kitchen counter.\" A counter is a place, so the sentence should say on."
+            ],
+            "misconception": "A common mix-up is thinking during works anywhere. During tells when, so it needs a time.",
+            "why": "The answer is \"The cookies cooled during the kitchen counter.\" A counter is a place, but during tells when. The sentence should say on the kitchen counter.",
+            "like": [
+              "SK-GUM2-7-S14"
+            ]
+          },
+          {
+            "id": "SK-GUM2-7-C15",
+            "type": "mc",
+            "points": 1,
+            "dok": 3,
+            "std": [
+              "3.L.GC.1:R:use-frequently-occurring-prepositions"
+            ],
+            "passages": [],
+            "prompt": "Kai says, \"A preposition always tells where something is.\" Which sentence shows that Kai is wrong?",
+            "choices": [
+              {
+                "text": "We practiced our song before the show.",
+                "correct": true
+              },
+              {
+                "text": "The tent stood beside the frozen pond."
+              },
+              {
+                "text": "A tiny frog hid behind the flower pot."
+              },
+              {
+                "text": "The path wound across the sunny hill."
+              }
+            ],
+            "clue": "To test a statement, look for an example that breaks it. Look at what each preposition tells.",
+            "hints": [
+              "To test a statement, look for an example that breaks it. Look at what each preposition tells.",
+              "In each sentence, ask whether the preposition tells a place or a time.",
+              "Three of the sentences tell where. Think about which one does not."
+            ],
+            "how": [
+              "Kai says every preposition tells where. Look for one that tells when.",
+              "Beside, behind and across tell where.",
+              "The answer is \"We practiced our song before the show.\""
+            ],
+            "misconception": "A common mix-up is thinking prepositions only tell place. Some tell time.",
+            "why": "The answer is \"We practiced our song before the show.\" Before tells when, which proves Kai wrong. Beside, behind and across tell where.",
+            "like": [
+              "SK-GUM2-7-S15"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  similar: [
+    {
+      "id": "SK-GUM2-7-S01",
+      "type": "hottext",
+      "points": 1,
+      "dok": 2,
+      "std": [
+        "3.L.GC.1:R:use-frequently-occurring-prepositions"
+      ],
+      "passages": [],
+      "prompt": "Tap the line with a preposition that does not fit.",
+      "options": [
+        "The ferry sailed across the wide bay on Sunday.",
+        "Our class lined up beside the yellow school bus.",
+        "The sled raced over the snowy hill at top speed.",
+        "Dad parked the truck until the garage.",
+        "We sang songs around the glowing campfire."
+      ],
+      "answer": [
+        3
+      ],
+      "pick": 1,
+      "clue": "Find the preposition in each line. Ask whether the noun after it names a place or a time.",
+      "hints": [
+        "Find the preposition in each line. Ask whether the noun after it names a place or a time.",
+        "Picture each line. Check that the small word makes sense with the words after it.",
+        "The line about the sled makes sense. Think about the rest."
+      ],
+      "how": [
+        "Look at the noun after each preposition.",
+        "Across the bay, beside the bus, over the hill and around the campfire all tell where.",
+        "The answer is \"Dad parked the truck until the garage.\" A garage is a place, but until tells when."
+      ],
+      "misconception": "A common mix-up is picking a line because it is short. Check what the preposition tells.",
+      "why": "The answer is \"Dad parked the truck until the garage.\" A garage is a place, but until tells when. The sentence should say in the garage.",
+      "like": [
+        "SK-GUM2-7-P5"
+      ]
+    },
+    {
+      "id": "SK-GUM2-7-S02",
+      "type": "match",
+      "points": 2,
+      "dok": 2,
+      "std": [
+        "3.L.GC.1:R:use-frequently-occurring-prepositions"
+      ],
+      "passages": [],
+      "prompt": "Place every phrase under the heading it fits.",
+      "cols": [
+        "Place",
+        "Time"
+      ],
+      "rows": [
+        {
+          "text": "on the shelf",
+          "answer": 0
+        },
+        {
+          "text": "until midnight",
+          "answer": 1
+        },
+        {
+          "text": "beside the gate",
+          "answer": 0
+        },
+        {
+          "text": "at noon",
+          "answer": 1
+        },
+        {
+          "text": "across the field",
+          "answer": 0
+        },
+        {
+          "text": "since Monday",
+          "answer": 1
+        }
+      ],
+      "clue": "Look at the noun that ends each group of words. Ask whether it names a spot or a moment.",
+      "hints": [
+        "Look at the noun that ends each group of words. Ask whether it names a spot or a moment.",
+        "Say each group in a sentence, such as The box sat ___ or We waited ___.",
+        "Some of these words tell time only. Use them to sort a few first."
+      ],
+      "how": [
+        "Look at the last word of each group.",
+        "Shelf, gate and field are places. Midnight, noon and Monday are times.",
+        "Place each group where its noun belongs."
+      ],
+      "misconception": "A common mix-up is sorting by the first word. The noun that ends the group tells you which group it is.",
+      "why": "On the shelf, beside the gate and across the field show a place. Until midnight, at noon and since Monday show a time.",
+      "like": [
+        "SK-GUM2-7-P4"
+      ]
+    },
+    {
+      "id": "SK-GUM2-7-S03",
+      "type": "mc",
+      "points": 1,
+      "dok": 2,
+      "std": [
+        "3.L.GC.1:R:use-frequently-occurring-prepositions"
+      ],
+      "passages": [
+        "p4"
+      ],
+      "prompt": "What change would repair sentence 2, and why?",
+      "choices": [
+        {
+          "text": "Swap in on, since the posters were stuck against one wall.",
+          "correct": true
+        },
+        {
+          "text": "Swap in during, since the posters hung for the whole afternoon."
+        },
+        {
+          "text": "Swap in among, since posters are always grouped by their colors."
+        },
+        {
+          "text": "Swap in until, since the posters stayed up for a long time."
+        }
+      ],
+      "clue": "Find the group of words in sentence 2 that ends with a noun.",
+      "hints": [
+        "Find the group of words in sentence 2 that ends with a noun.",
+        "Ask how many walls the sentence names, and what the posters need to do with it.",
+        "Until tells when. Think about the other choices."
+      ],
+      "how": [
+        "The group of words ends with the noun wall.",
+        "The sentence names one wall, so between does not fit.",
+        "The answer is \"Swap in on, since the posters were stuck against one wall.\""
+      ],
+      "misconception": "A common mix-up is changing the word to another time word. The posters need a word that tells where.",
+      "why": "The answer is \"Swap in on, since the posters were stuck against one wall.\" Between goes with two things, and the sentence names one wall. During, among and until do not fit one wall.",
+      "like": [
+        "SK-GUM2-7-C03"
+      ]
+    },
+    {
+      "id": "SK-GUM2-7-S04",
+      "type": "dropdown",
+      "points": 1,
+      "dok": 2,
+      "std": [
+        "3.L.GC.1:R:use-frequently-occurring-prepositions"
+      ],
+      "passages": [
+        "p4"
+      ],
+      "prompt": "Which word fits sentence 6 best?",
+      "text": "A boy named Omar set his magnet display {0} the window.",
+      "slots": [
+        {
+          "options": [
+            "near",
+            "until",
+            "between"
+          ],
+          "answer": 0
+        }
+      ],
+      "clue": "Decide whether the window is a place or a time.",
+      "hints": [
+        "Decide whether the window is a place or a time.",
+        "Picture the magnet display and the window.",
+        "Between usually goes with two things. Look at the choices again."
+      ],
+      "how": [
+        "The group ends with the noun window, which is a place.",
+        "The blank needs a word that tells where the display sat.",
+        "The answer is near. Until tells when, and between needs two things."
+      ],
+      "misconception": "A common mix-up is choosing between because it sounds like a place word. It needs two things.",
+      "why": "The answer is near. A window is a place, so the blank needs a word that tells where. Until tells when, and between goes with two things.",
+      "like": [
+        "SK-GUM2-7-C04"
+      ]
+    },
+    {
+      "id": "SK-GUM2-7-S05",
+      "type": "mc",
+      "points": 1,
+      "dok": 3,
+      "std": [
+        "3.L.GC.1:R:use-frequently-occurring-prepositions"
+      ],
+      "passages": [
+        "p4"
+      ],
+      "prompt": "Between appears in sentence 2 and in sentence 5. What makes just one of them wrong?",
+      "choices": [
+        {
+          "text": "Two rows leave a gap for parents to walk through, yet a single wall leaves no gap.",
+          "correct": true
+        },
+        {
+          "text": "Between suits people who walk, so the parents may use it while the posters may not."
+        },
+        {
+          "text": "Between can point at every spot in a room, so each of these sentences is properly written."
+        },
+        {
+          "text": "Between shows a stretch of time in the first case, while it shows a spot in the second."
+        }
+      ],
+      "clue": "Look at what follows between in each sentence.",
+      "hints": [
+        "Look at what follows between in each sentence.",
+        "Count how many things each sentence has after between.",
+        "Between does not tell when. Think about the other choices."
+      ],
+      "how": [
+        "Sentence 2: between the wall. Sentence 5: between two long rows of tables.",
+        "Between points to the middle of two things. Sentence 5 has two rows, and sentence 2 has one wall.",
+        "The answer is \"Two rows leave a gap for parents to walk through, yet a single wall leaves no gap.\""
+      ],
+      "misconception": "A common mix-up is thinking a word is wrong every time. What follows it decides.",
+      "why": "The answer is \"Two rows leave a gap for parents to walk through, yet a single wall leaves no gap.\" Between points to the middle of two things. Sentence 5 has two rows, and sentence 2 has only one wall.",
+      "like": [
+        "SK-GUM2-7-C05"
+      ]
+    },
+    {
+      "id": "SK-GUM2-7-S06",
+      "type": "hottext",
+      "points": 2,
+      "dok": 2,
+      "std": [
+        "3.L.GC.1:R:use-frequently-occurring-prepositions"
+      ],
+      "passages": [
+        "p5"
+      ],
+      "prompt": "Tap the two preposition mistakes hiding in sentences 2 to 6.",
+      "targets": [
+        "p5:1:2",
+        "p5:1:3",
+        "p5:2:1",
+        "p5:2:2",
+        "p5:2:3"
+      ],
+      "answer": [
+        "p5:1:2",
+        "p5:2:2"
+      ],
+      "pick": 2,
+      "clue": "Find the preposition in each of sentences 2 to 6, and ask what each noun names.",
+      "hints": [
+        "Find the preposition in each of sentences 2 to 6, and ask what each noun names.",
+        "Picture each sentence and ask whether the small word fits the words after it.",
+        "The sentence about the cones makes sense. Think about the rest, including the ones that look fine."
+      ],
+      "how": [
+        "Check each preposition one sentence at a time.",
+        "Around the muddy track, between two orange cones and beside me all fit.",
+        "The other two use a word that tells when with a place."
+      ],
+      "misconception": "A common mix-up is stopping at the first mistake. Check every sentence in the range.",
+      "why": "The answers are \"Coach Rivera told everyone to line up during the goal.\" and \"The wind blew the ball until the fence, and a boy chased it.\" A goal and a fence are places, but during and until tell when. Sentences 3, 4 and 6 are correct.",
+      "like": [
+        "SK-GUM2-7-C06"
+      ]
+    },
+    {
+      "id": "SK-GUM2-7-S07",
+      "type": "ebsr",
+      "points": 2,
+      "dok": 3,
+      "std": [
+        "3.L.GC.1:R:use-frequently-occurring-prepositions"
+      ],
+      "passages": [
+        "p5"
+      ],
+      "prompt": "Part A comes first, and it sets up what you need for the second part.",
+      "partA": {
+        "prompt": "Why does sentence 5 read oddly?",
+        "choices": [
+          {
+            "text": "Until is a word about time, yet the fence names a place the ball is heading to.",
+            "correct": true
+          },
+          {
+            "text": "Until is a word about place, yet the fence names a time the ball is heading to."
+          },
+          {
+            "text": "Until is a word about speed, yet the fence names how fast the wind is blowing."
+          },
+          {
+            "text": "Until is a word about people, yet the fence names a group the boy is chasing."
+          }
+        ]
+      },
+      "partB": {
+        "prompt": "Choose the rewrite that corrects sentence 5.",
+        "choices": [
+          {
+            "text": "The wind blew the ball toward the fence, and a boy chased it.",
+            "correct": true
+          },
+          {
+            "text": "The wind blew the ball after the fence, and a boy chased it."
+          },
+          {
+            "text": "The wind blew the ball since the fence, and a boy chased it."
+          },
+          {
+            "text": "The wind blew the ball between the fence, and a boy chased it."
+          }
+        ]
+      },
+      "clue": "Find the group that starts with until, and ask what kind of noun ends it.",
+      "hints": [
+        "Find the group that starts with until, and ask what kind of noun ends it.",
+        "In Part B, read each sentence and picture the ball and the fence.",
+        "Since tells when. Think about the other choices, and picture each one."
+      ],
+      "how": [
+        "Part A: the group ends with the noun fence, which names a place.",
+        "Part B: the fix needs a preposition that fits a ball heading to a fence.",
+        "The answers are \"Until is a word about time, yet the fence names a place the ball is heading to.\" and \"The wind blew the ball toward the fence, and a boy chased it.\""
+      ],
+      "misconception": "A common mix-up is picking any preposition that sounds familiar. Check the noun that follows it.",
+      "why": "Part A: \"Until is a word about time, yet the fence names a place the ball is heading to.\" Part B: \"The wind blew the ball toward the fence, and a boy chased it.\" Toward fits a ball moving to a fence. After, since and between do not.",
+      "like": [
+        "SK-GUM2-7-C07"
+      ]
+    },
+    {
+      "id": "SK-GUM2-7-S08",
+      "type": "ms",
+      "points": 2,
+      "dok": 2,
+      "std": [
+        "3.L.GC.1:R:use-frequently-occurring-prepositions"
+      ],
+      "passages": [],
+      "prompt": "Select both choices where a preposition points to a time.",
+      "pick": 2,
+      "choices": [
+        {
+          "text": "Yuki feeds the chickens before the sun comes up.",
+          "correct": true
+        },
+        {
+          "text": "The skating rink opens at six on Fridays.",
+          "correct": true
+        },
+        {
+          "text": "The wooden ladder leans against the side of the garage wall."
+        },
+        {
+          "text": "A kite got stuck in the tall maple tree beside the road."
+        },
+        {
+          "text": "Mia hid the key under a flowerpot on the back steps."
+        }
+      ],
+      "clue": "Find the preposition in each sentence. Ask what the noun that follows it names.",
+      "hints": [
+        "Find the preposition in each sentence. Ask what the noun that follows it names.",
+        "Check every sentence, including the ones that look right. A moment and a spot lead to different answers.",
+        "Three sentences end their groups with places. Think about which two do not."
+      ],
+      "how": [
+        "Look at the noun after each preposition.",
+        "The sun coming up and six name times. The garage wall, the maple tree and a flowerpot name places.",
+        "The answers are before the sun comes up and at six."
+      ],
+      "misconception": "A common mix-up is picking a sentence because it mentions a day of the week. The preposition itself has to tell when.",
+      "why": "The answers are \"Yuki feeds the chickens before the sun comes up.\" and \"The skating rink opens at six on Fridays.\" Before and at tell when. Against, in and under tell where.",
+      "like": [
+        "SK-GUM2-7-C08"
+      ]
+    },
+    {
+      "id": "SK-GUM2-7-S09",
+      "type": "mc",
+      "points": 1,
+      "dok": 1,
+      "std": [
+        "3.L.GC.1:R:use-frequently-occurring-prepositions"
+      ],
+      "passages": [],
+      "prompt": "Which of these words is a preposition?",
+      "stem": "A red kite floated above the busy beach.",
+      "choices": [
+        {
+          "text": "above",
+          "correct": true
+        },
+        {
+          "text": "floated"
+        },
+        {
+          "text": "red"
+        },
+        {
+          "text": "kite"
+        }
+      ],
+      "clue": "A preposition starts a group of words that ends with a noun. Find that group.",
+      "hints": [
+        "A preposition starts a group of words that ends with a noun. Find that group.",
+        "The group in this sentence names a place. Look at the small word that starts it.",
+        "Red describes the kite. Think about the other choices."
+      ],
+      "how": [
+        "The group of words is above the busy beach.",
+        "Above starts the group and tells where the kite floated.",
+        "The answer is above."
+      ],
+      "misconception": "A common mix-up is picking the action word. Floated tells what the kite did, not where.",
+      "why": "The answer is above. Above starts the group above the busy beach and tells where the kite floated. Floated is a verb, red describes the kite, and kite is a noun.",
+      "like": [
+        "SK-GUM2-7-C09"
+      ]
+    },
+    {
+      "id": "SK-GUM2-7-S10",
+      "type": "mc",
+      "points": 1,
+      "dok": 3,
+      "std": [
+        "3.L.GC.1:R:use-frequently-occurring-prepositions"
+      ],
+      "passages": [
+        "p5"
+      ],
+      "prompt": "Dani thinks under would read better than before in sentence 9. What is your best answer?",
+      "choices": [
+        {
+          "text": "Walking home before dark describes a moment, so before already suits the sentence.",
+          "correct": true
+        },
+        {
+          "text": "Dani is right, because going home is a trip, and every trip needs the word under."
+        },
+        {
+          "text": "Dani is right, because under always reads better than before in any kind of draft."
+        },
+        {
+          "text": "Dani is wrong only because under cannot begin a phrase in any sentence."
+        }
+      ],
+      "clue": "Think about what the last noun in sentence 9 names.",
+      "hints": [
+        "Think about what the last noun in sentence 9 names.",
+        "Picture when the team walked home, and what before can show.",
+        "Under is a real preposition. Think about the other choices."
+      ],
+      "how": [
+        "Sentence 9 says walked home before dark.",
+        "Dark names a moment, and before can point to a moment.",
+        "The answer is \"Walking home before dark describes a moment, so before already suits the sentence.\""
+      ],
+      "misconception": "A common mix-up is thinking before only points to a spot. Before can also point to a moment.",
+      "why": "The answer is \"Walking home before dark describes a moment, so before already suits the sentence.\" Under would point to a spot, and the sentence needs a moment.",
+      "like": [
+        "SK-GUM2-7-C10"
+      ]
+    },
+    {
+      "id": "SK-GUM2-7-S11",
+      "type": "hottext",
+      "points": 2,
+      "dok": 2,
+      "std": [
+        "3.L.GC.1:R:use-frequently-occurring-prepositions"
+      ],
+      "passages": [
+        "p6"
+      ],
+      "prompt": "Tap the pair of sentences between 3 and 7 where the preposition works.",
+      "targets": [
+        "p6:1:3",
+        "p6:2:1",
+        "p6:2:2",
+        "p6:2:3",
+        "p6:2:4"
+      ],
+      "answer": [
+        "p6:1:3",
+        "p6:2:2"
+      ],
+      "pick": 2,
+      "clue": "Find the preposition in each of sentences 3 to 7. Ask what each one is supposed to show.",
+      "hints": [
+        "Find the preposition in each of sentences 3 to 7. Ask what each one is supposed to show.",
+        "Picture each sentence. Check whether the noun that follows fits a where or a when idea.",
+        "The sentence about the lap and the side makes no sense. Think about the rest."
+      ],
+      "how": [
+        "Check each sentence one at a time.",
+        "Sentence 3 puts feet in the water, and sentence 5 kicks across the shallow end. Both make sense.",
+        "Sentences 4, 6 and 7 use during, until and between where they do not fit."
+      ],
+      "misconception": "A common mix-up is choosing a sentence because it sounds familiar. Picture what the preposition says.",
+      "why": "The answers are \"We sat on the warm edge and kicked our feet in the water.\" and \"Next, I held a foam board and kicked across the shallow end.\" In the water and across the shallow end make sense. During the pool, until my side and between the ladder do not.",
+      "like": [
+        "SK-GUM2-7-C11"
+      ]
+    },
+    {
+      "id": "SK-GUM2-7-S12",
+      "type": "dropdown",
+      "points": 1,
+      "dok": 2,
+      "std": [
+        "3.L.GC.1:R:use-frequently-occurring-prepositions"
+      ],
+      "passages": [
+        "p6"
+      ],
+      "prompt": "Pick the word that fits sentence 6.",
+      "text": "Ms. Vega waited {0} my side as I swam my very first lap of the pool.",
+      "slots": [
+        {
+          "options": [
+            "beside",
+            "during",
+            "under"
+          ],
+          "answer": 0
+        }
+      ],
+      "clue": "Decide whether my side is a place or a time.",
+      "hints": [
+        "Decide whether my side is a place or a time.",
+        "Picture Ms. Vega and the swimmer. The blank needs a word that tells where she waited.",
+        "During tells when something happens. Look at the other choices."
+      ],
+      "how": [
+        "The group ends with the noun side, which is a place.",
+        "The blank needs a word that tells where Ms. Vega waited.",
+        "The answer is beside. During tells when, and under puts her below the swimmer."
+      ],
+      "misconception": "A common mix-up is picking during because the lap takes a while. The noun after it is a place.",
+      "why": "The answer is beside. My side is a place, so the blank needs a word that tells where. During tells when, and under does not fit a teacher standing next to a swimmer.",
+      "like": [
+        "SK-GUM2-7-C12"
+      ]
+    },
+    {
+      "id": "SK-GUM2-7-S13",
+      "type": "dropdown",
+      "points": 2,
+      "dok": 2,
+      "std": [
+        "3.L.GC.1:R:use-frequently-occurring-prepositions"
+      ],
+      "passages": [],
+      "prompt": "Complete each gap with the word that suits it best.",
+      "text": "The scouts hiked {0} the canyon, then slept {1} the stars.",
+      "slots": [
+        {
+          "options": [
+            "through",
+            "until",
+            "between"
+          ],
+          "answer": 0
+        },
+        {
+          "options": [
+            "under",
+            "during",
+            "between"
+          ],
+          "answer": 0
+        }
+      ],
+      "clue": "The two gaps follow different ideas. Decide what each noun names.",
+      "hints": [
+        "The two gaps follow different ideas. Decide what each noun names.",
+        "The first gap comes before canyon. The second gap comes before stars.",
+        "During tells when. Look at the choices for the second gap."
+      ],
+      "how": [
+        "The first gap tells where the scouts hiked. The second gap tells where they slept.",
+        "Both nouns are places.",
+        "The answers are through and under."
+      ],
+      "misconception": "A common mix-up is thinking one gap needs a time word. Both nouns here are places.",
+      "why": "The answers are through and under. Through the canyon tells where the scouts hiked. Under the stars tells where they slept.",
+      "like": [
+        "SK-GUM2-7-C13"
+      ]
+    },
+    {
+      "id": "SK-GUM2-7-S14",
+      "type": "hottext",
+      "points": 1,
+      "dok": 2,
+      "std": [
+        "3.L.GC.1:R:use-frequently-occurring-prepositions"
+      ],
+      "passages": [],
+      "prompt": "One line pairs a small word with the wrong kind of noun. Tap it.",
+      "options": [
+        "A cyclist pedaled up the winding street at dusk.",
+        "The soccer team practiced after the sun went down.",
+        "Ben hung his coat on the hook near the closet.",
+        "We swam during the shallow end of the lake.",
+        "A squirrel dashed across the yard to the tree."
+      ],
+      "answer": [
+        3
+      ],
+      "pick": 1,
+      "clue": "Find the preposition in each line. Ask whether the noun after it names a place or a time.",
+      "hints": [
+        "Find the preposition in each line. Ask whether the noun after it names a place or a time.",
+        "Picture each line and check that the small word fits the words after it.",
+        "The line about the practice names a time with a time word, and it fits. Think about the rest."
+      ],
+      "how": [
+        "Look at the noun after each preposition.",
+        "Street, the sun going down, the hook and the yard all fit their prepositions.",
+        "The answer is \"We swam during the shallow end of the lake.\" A shallow end is a place, so the sentence should say in."
+      ],
+      "misconception": "A common mix-up is thinking during works anywhere. During tells when, so it needs a time.",
+      "why": "The answer is \"We swam during the shallow end of the lake.\" A shallow end is a place, but during tells when. The sentence should say in the shallow end.",
+      "like": [
+        "SK-GUM2-7-C14"
+      ]
+    },
+    {
+      "id": "SK-GUM2-7-S15",
+      "type": "mc",
+      "points": 1,
+      "dok": 3,
+      "std": [
+        "3.L.GC.1:R:use-frequently-occurring-prepositions"
+      ],
+      "passages": [],
+      "prompt": "Mina claims every preposition tells a time. Which sentence proves her wrong?",
+      "choices": [
+        {
+          "text": "A cat curled up beside the warm heater.",
+          "correct": true
+        },
+        {
+          "text": "Dad reads to us after supper every night."
+        },
+        {
+          "text": "The parade starts before noon on Saturday."
+        },
+        {
+          "text": "Class ends at three o'clock each afternoon."
+        }
+      ],
+      "clue": "To prove a claim wrong, find an example that breaks it. Look at what each preposition tells.",
+      "hints": [
+        "To prove a claim wrong, find an example that breaks it. Look at what each preposition tells.",
+        "In each sentence, ask whether the preposition tells a place or a time.",
+        "Three of the sentences tell when. Think about which one does not."
+      ],
+      "how": [
+        "Mina says every preposition tells a time. Look for one that tells where.",
+        "After, before and at tell when in these sentences.",
+        "The answer is \"A cat curled up beside the warm heater.\""
+      ],
+      "misconception": "A common mix-up is thinking prepositions only tell time. Some tell place.",
+      "why": "The answer is \"A cat curled up beside the warm heater.\" Beside tells where, which proves Mina wrong. After, before and at tell when.",
+      "like": [
+        "SK-GUM2-7-C15"
+      ]
+    }
+  ],
+  addons: {
+    "SK-GUM2-7-P1": {
+      "hints": [
+        "Picture where the milk needs to go to stay cold.",
+        "Try each word in the sentence and picture the refrigerator.",
+        "Across means from one side to the other. Think about the other choices."
+      ],
+      "how": [
+        "The milk needs to go into a cold place.",
+        "Try each word. Across, through and between do not fit one refrigerator.",
+        "The answer is in."
+      ],
+      "misconception": "A common mix-up is choosing between because it sounds like a place word. Between goes with two things."
+    },
+    "SK-GUM2-7-P2": {
+      "hints": [
+        "A preposition starts a group of words that ends with a noun. Find that group.",
+        "The group in this sentence tells where the kitten slept. Look at the small word that starts it.",
+        "Warm describes the stove. Think about the other choices."
+      ],
+      "how": [
+        "The group of words is beside the warm stove.",
+        "Beside starts the group and tells where the kitten slept.",
+        "The answer is beside."
+      ],
+      "misconception": "A common mix-up is picking the action word. Slept tells what the kitten did, not where."
+    },
+    "SK-GUM2-7-P3": {
+      "hints": [
+        "Is bedtime a place or a time?",
+        "Try each choice in the sentence and picture it.",
+        "Under and across tell where. Look at the other choices."
+      ],
+      "how": [
+        "Bedtime is a time, so the blank needs a word that tells when.",
+        "Under and across tell where, so they do not fit.",
+        "The answer is before. Until would mean brushing for hours."
+      ],
+      "misconception": "A common mix-up is choosing until because it also tells when. It changes the meaning."
+    },
+    "SK-GUM2-7-P4": {
+      "hints": [
+        "Look at the noun after each preposition.",
+        "Ask whether each noun is a place or a time.",
+        "Bridge, barn and river are things you can stand near. Use that to sort some of the groups first."
+      ],
+      "how": [
+        "Look at the noun at the end of each group.",
+        "Bridge, barn and river are places. Breakfast, storm and sunrise are times.",
+        "Place each group where its noun belongs."
+      ],
+      "misconception": "A common mix-up is sorting by the first word. The noun at the end tells you which group it is."
+    },
+    "SK-GUM2-7-P5": {
+      "hints": [
+        "Picture each sentence.",
+        "Does the small word before each noun tell a where or a when that makes sense?",
+        "The sentence about the plane and the clouds makes sense. Think about the others."
+      ],
+      "how": [
+        "Look at the noun after each preposition.",
+        "The creek, the clouds, his two best friends and the movies all fit their prepositions.",
+        "The answer is \"The fish swam during the bowl.\" A bowl is a place, but during tells when."
+      ],
+      "misconception": "A common mix-up is thinking any small word can come before a noun. It has to make sense with the noun."
+    }
+  },
+  /* B7b:core:end */
   test: [
     { id: "SK-GUM2-7-T1", type: "dropdown", points: 1, dok: 1, passages: [],
       prompt: "Choose the word that correctly completes the sentence.",
@@ -10134,10 +11643,197 @@ PP.addLesson({
         "Check that no comma sits between the month and the day."
       ],
       answer: "My cousin lives in Dalton, Georgia. She moved there on March 3, 2019."
+    },
+    {
+      show: ["My aunt lives at 31 Elm Road Provo Utah."],
+      ask: "Where do the commas go?",
+      steps: [
+        "Find the address. It has a street, a city and a state: 31 Elm Road, Provo, and Utah.",
+        "Put a comma after the street, and put a comma between the city and the state.",
+        "Do not put a comma between the number and the street name."
+      ],
+      answer: "My aunt lives at 31 Elm Road, Provo, Utah."
     }
   ],
   parent: "Write a short thank-you note together. Let your child add the date, the greeting, the closing and a list of three things, and check each comma with you.",
-  passages: [],
+  passages: [
+    /* B7b:passages:start */
+    {
+      "id": "p1",
+      "title": "A Letter from Camp",
+      "byline": "A third grader's draft",
+      "genre": "Student draft (letter)",
+      "draft": true,
+      "paragraphs": [
+        [
+          "(1) July 9 2026",
+          "(2) Dear Grandma,"
+        ],
+        [
+          "(3) I am having a wonderful time at a big summer camp in Dayton Ohio.",
+          "(4) Every morning we eat pancakes, eggs, and toast in the dining hall with our whole cabin.",
+          "(5) My cabin has two beds three shelves, and four hooks for our wet swimming towels.",
+          "(6) We swim, paddle, and hike around the lake until lunch time on sunny days."
+        ],
+        [
+          "(7) Please write back to me at the camp office at 25 Birch Road, Dayton, Ohio.",
+          "(8) The bus brings us home on August 2, 2026.",
+          "(9) I miss you and Grandpa very much, and I hope you are both happy."
+        ],
+        [
+          "(10) Your granddaughter",
+          "(11) Zoe"
+        ]
+      ]
+    },
+    {
+      "id": "p2",
+      "title": "A Thank-You Note",
+      "byline": "A third grader's draft",
+      "genre": "Student draft (letter)",
+      "draft": true,
+      "paragraphs": [
+        [
+          "(1) May 20, 2026",
+          "(2) Dear Ms. Okafor"
+        ],
+        [
+          "(3) Thank you for visiting our class at Maple School in Tulsa, Oklahoma.",
+          "(4) You told us about wolves, otters, and eagles that live in our state.",
+          "(5) We drew bears turtles, and owls in our science notebooks afterward.",
+          "(6) My favorite part was the soft gray fur that you let each of us touch and hold."
+        ],
+        [
+          "(7) Please send your reply to our class at 18 Elm Street, Tulsa, Oklahoma.",
+          "(8) Everyone in Room 12 says you are the best visitor we ever had at our school.",
+          "(9) We hope you can come back to see us again next year when the weather is warm."
+        ],
+        [
+          "(10) Your friend,",
+          "(11) Mateo"
+        ]
+      ]
+    },
+    {
+      "id": "p3",
+      "title": "A Letter to the Principal",
+      "byline": "A third grader's draft",
+      "genre": "Student draft (letter)",
+      "draft": true,
+      "paragraphs": [
+        [
+          "(1) March 3, 2026",
+          "(2) Dear Principal Reyes,"
+        ],
+        [
+          "(3) We need new swings, slides, and jump ropes.",
+          "(4) Some of us live at 42 Ash Lane Reno, Nevada.",
+          "(5) The new gear could arrive by June 1 2026.",
+          "(6) We visited a park in Carson City, Nevada.",
+          "(7) We would use balls, cones and, whistles every day."
+        ],
+        [
+          "(8) Right now, our class has only one old slide and two flat balls to share.",
+          "(9) Many kids wait in a long line at recess just to take a turn.",
+          "(10) Thank you for reading our letter and thinking about our idea.",
+          "(11) Please let us know what you decide about the playground."
+        ],
+        [
+          "(12) Sincerely,",
+          "(13) The students in Room 14"
+        ]
+      ]
+    },
+    {
+      "id": "p4",
+      "title": "A Letter About the Zoo",
+      "byline": "A third grader's draft",
+      "genre": "Student draft (letter)",
+      "draft": true,
+      "paragraphs": [
+        [
+          "(1) April 18 2026",
+          "(2) Dear Uncle Ben,"
+        ],
+        [
+          "(3) Our class rode a long bus to the zoo in Fresno California.",
+          "(4) We saw monkeys, parrots, and snakes inside the jungle house.",
+          "(5) I bought a map a hat, and a water bottle at the gift shop.",
+          "(6) My friend Omar fed a goat at the petting area near the gate."
+        ],
+        [
+          "(7) Please send your next letter to 77 Cedar Court, Fresno, California.",
+          "(8) Our teacher says we may visit again when the weather turns warm.",
+          "(9) I hope you can come with us next time and see the baby elephant.",
+          "(10) The giraffes were my favorite because they ate leaves from the tall trees."
+        ],
+        [
+          "(11) Your nephew,",
+          "(12) Eli"
+        ]
+      ]
+    },
+    {
+      "id": "p5",
+      "title": "A Note to the Firefighter",
+      "byline": "A third grader's draft",
+      "genre": "Student draft (letter)",
+      "draft": true,
+      "paragraphs": [
+        [
+          "(1) June 2, 2026",
+          "(2) Dear Captain Lopez,"
+        ],
+        [
+          "(3) Our class loved climbing into the big red fire truck in Billings Montana.",
+          "(4) We tried on helmets, boots, and gloves in the parking lot behind the school.",
+          "(5) You told us how to stay safe at home, at school, and at the park near us.",
+          "(6) Our class made a poster with stickers crayons, and markers."
+        ],
+        [
+          "(7) Please mail your next note to 6 Hill Road, Billings, Montana.",
+          "(8) Everyone in Room 9 wants to be a firefighter when we grow up.",
+          "(9) We hope you can visit our school again before summer starts.",
+          "(10) The fire truck was louder and taller than I ever imagined."
+        ],
+        [
+          "(11) Your friend,",
+          "(12) Rin"
+        ]
+      ]
+    },
+    {
+      "id": "p6",
+      "title": "A Letter to the Mayor",
+      "byline": "A third grader's draft",
+      "genre": "Student draft (letter)",
+      "draft": true,
+      "paragraphs": [
+        [
+          "(1) October 5, 2026",
+          "(2) Dear Mayor Kim,"
+        ],
+        [
+          "(3) Riders need bike racks, benches, and bins.",
+          "(4) Our school stands at 90 Pond Road Albany, New York.",
+          "(5) Our benches will be ready for use by May 1 2027.",
+          "(6) Our museum trip was in Syracuse, New York.",
+          "(7) Kids can sit, rest and, talk on them all day."
+        ],
+        [
+          "(8) Right now, riders lock their bikes to the school fence and the old pole.",
+          "(9) Many families walk past the park each morning without a place to sit and rest.",
+          "(10) Thank you for reading our letter and thinking about our idea.",
+          "(11) Please tell us what you decide about the park."
+        ],
+        [
+          "(12) Sincerely,",
+          "(13) The students in Room 6"
+        ]
+      ]
+    }
+    /* B7b:passages:end */
+  ],
   practice: [
     { id: "SK-GUM2-8-P1", type: "dropdown", points: 1, dok: 1, passages: [],
       prompt: "Choose the date that is written correctly.",
@@ -10187,6 +11883,1354 @@ PP.addLesson({
       clue: "Look at what the comma separates: things in a list, a day and a year, a city and a state, or the words that start or end a letter.",
       why: "Pens, paper, and glue is a list. April 9, 2026 and June 1, 2025 are dates. Rome, Georgia is a city and state. Dear Aunt Rosa, is a letter greeting and Sincerely, is a letter closing." }
   ],
+  /* B7b:core:start */
+  /* ---------- Expansion 2026-10-22, batch B7b (GUM Reinforce, second half) ----------
+     core: fifteen items in three sets of five. { ref } reuses a practice item; the other practice items stay in Practice Together.
+     Passages are used only by core and the similar bank; none is used by test.
+     Author log: docs/expansion-2026-10-22/batches/B7b-author-log.md. NOT ACCEPTED: needs independent review. */
+  core: {
+    "rev": "1",
+    "sets": [
+      {
+        "title": "Set 1",
+        "items": [
+          {
+            "ref": "SK-GUM2-8-P3"
+          },
+          {
+            "ref": "SK-GUM2-8-P5"
+          },
+          {
+            "id": "SK-GUM2-8-C03",
+            "type": "mc",
+            "points": 1,
+            "dok": 2,
+            "std": [
+              "3.L.GC.1:R:use-commas-in-a-series-and-in-dates-addresses-sa"
+            ],
+            "passages": [
+              "p1"
+            ],
+            "prompt": "Line 1 has a comma mistake. What is the mistake?",
+            "choices": [
+              {
+                "text": "A comma is missing after the day, so it should read July 9, 2026.",
+                "correct": true
+              },
+              {
+                "text": "A comma is missing after the month, so it should read July, 9 2026."
+              },
+              {
+                "text": "Two commas are needed, one after July and one after 9, so it should read July, 9, 2026."
+              },
+              {
+                "text": "The date is correct, but the line should finish with a period after the year."
+              }
+            ],
+            "clue": "A date has three parts: a month, a day and a year. Find them in line 1.",
+            "hints": [
+              "A date has three parts: a month, a day and a year. Find them in line 1.",
+              "Ask which two parts a comma should keep apart.",
+              "A date is not a full sentence, so it does not end with a period. Think about the other choices."
+            ],
+            "how": [
+              "Line 1 has the month July, the day 9 and the year 2026.",
+              "A date needs one comma, and it keeps the day and the year apart.",
+              "The answer is \"A comma is missing after the day, so it should read July 9, 2026.\""
+            ],
+            "misconception": "A common mix-up is putting the comma right after the month. The comma goes after the day.",
+            "why": "The answer is \"A comma is missing after the day, so it should read July 9, 2026.\" A date has one comma, between the day and the year. A comma after the month, or two commas, do not match the rule.",
+            "like": [
+              "SK-GUM2-8-S03"
+            ]
+          },
+          {
+            "id": "SK-GUM2-8-C04",
+            "type": "dropdown",
+            "points": 1,
+            "dok": 2,
+            "std": [
+              "3.L.GC.1:R:use-commas-in-a-series-and-in-dates-addresses-sa"
+            ],
+            "passages": [
+              "p1"
+            ],
+            "prompt": "Line 3 needs a comma. Choose the city and state that are written correctly.",
+            "text": "I am having a wonderful time at a big summer camp in {0}.",
+            "slots": [
+              {
+                "options": [
+                  "Dayton, Ohio",
+                  "Dayton Ohio",
+                  "Dayton. Ohio"
+                ],
+                "answer": 0
+              }
+            ],
+            "clue": "Find the name of the city and the name of the state in line 3.",
+            "hints": [
+              "Find the name of the city and the name of the state in line 3.",
+              "Decide what mark, if any, belongs between the city and the state.",
+              "A period ends a sentence. Think about the other choices."
+            ],
+            "how": [
+              "Dayton is the city, and Ohio is the state.",
+              "A comma goes between the name of a city and the name of its state.",
+              "The answer is Dayton, Ohio."
+            ],
+            "misconception": "A common mix-up is leaving out the comma because the two names are said together. The comma keeps the city and the state apart.",
+            "why": "The answer is Dayton, Ohio. A comma goes between a city and its state. A period would end the sentence too soon, and no mark makes the names run together.",
+            "like": [
+              "SK-GUM2-8-S04"
+            ]
+          },
+          {
+            "id": "SK-GUM2-8-C05",
+            "type": "mc",
+            "points": 1,
+            "dok": 3,
+            "std": [
+              "3.L.GC.1:R:use-commas-in-a-series-and-in-dates-addresses-sa"
+            ],
+            "passages": [
+              "p1"
+            ],
+            "prompt": "Dayton, Ohio shows up in lines 3 and 7, but only one line is wrong. Why?",
+            "choices": [
+              {
+                "text": "Line 7 has a comma inside the place name, but line 3 leaves it out.",
+                "correct": true
+              },
+              {
+                "text": "Line 3 is about a camp, and a camp name always takes a comma in front of it."
+              },
+              {
+                "text": "Line 7 is an address, and addresses are the sole kind of line where commas may appear."
+              },
+              {
+                "text": "Dayton is spelled two different ways, so one of the lines is a spelling mistake."
+              }
+            ],
+            "clue": "Look closely at line 3 and at line 7.",
+            "hints": [
+              "Look closely at line 3 and at line 7.",
+              "Compare the two lines word by word.",
+              "Check how Dayton is spelled in both lines. Think about the other choices."
+            ],
+            "how": [
+              "Line 3 says Dayton Ohio, and line 7 says Dayton, Ohio.",
+              "A comma belongs between a city and its state in any line, not only in an address.",
+              "The answer is \"Line 7 has a comma inside the place name, but line 3 leaves it out.\""
+            ],
+            "misconception": "A common mix-up is thinking the comma rule belongs only to addresses. A city and a state need a comma in any sentence.",
+            "why": "The answer is \"Line 7 has a comma inside the place name, but line 3 leaves it out.\" Both lines name the same place, and a city and state need a comma wherever they appear.",
+            "like": [
+              "SK-GUM2-8-S05"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Set 2",
+        "items": [
+          {
+            "id": "SK-GUM2-8-C06",
+            "type": "hottext",
+            "points": 2,
+            "dok": 2,
+            "std": [
+              "3.L.GC.1:R:use-commas-in-a-series-and-in-dates-addresses-sa"
+            ],
+            "passages": [
+              "p2"
+            ],
+            "prompt": "Two lines from 2 through 6 have a comma mistake. Select them.",
+            "targets": [
+              "p2:1:2",
+              "p2:2:1",
+              "p2:2:2",
+              "p2:2:3",
+              "p2:2:4"
+            ],
+            "answer": [
+              "p2:1:2",
+              "p2:2:3"
+            ],
+            "pick": 2,
+            "clue": "Check each of lines 2 through 6 for a greeting, a list, or a place.",
+            "hints": [
+              "Check each of lines 2 through 6 for a greeting, a list, or a place.",
+              "A greeting ends with a comma, and the things in a list are kept apart with commas.",
+              "The line about the soft fur needs no commas. Think about the rest."
+            ],
+            "how": [
+              "Check each line one at a time.",
+              "Line 3 has a comma between Tulsa and Oklahoma. Line 4 has commas between the animals. Line 6 needs none.",
+              "Line 2 has no comma after the greeting, and line 5 has no comma between bears and turtles."
+            ],
+            "misconception": "A common mix-up is stopping at the first mistake. Check every line in the range.",
+            "why": "The answers are \"Dear Ms. Okafor\" and \"We drew bears turtles, and owls in our science notebooks afterward.\" A greeting needs a comma after it, and a list needs a comma after each thing before and. Lines 3, 4 and 6 are correct.",
+            "like": [
+              "SK-GUM2-8-S06"
+            ]
+          },
+          {
+            "id": "SK-GUM2-8-C07",
+            "type": "ebsr",
+            "points": 2,
+            "dok": 3,
+            "std": [
+              "3.L.GC.1:R:use-commas-in-a-series-and-in-dates-addresses-sa"
+            ],
+            "passages": [
+              "p2"
+            ],
+            "prompt": "Answer Part A, and then go on to Part B.",
+            "partA": {
+              "prompt": "What is wrong with line 2?",
+              "choices": [
+                {
+                  "text": "A greeting must end with a comma, so line 2 needs one after Okafor.",
+                  "correct": true
+                },
+                {
+                  "text": "A greeting must end with a period, so line 2 needs one after Okafor."
+                },
+                {
+                  "text": "A greeting must have a comma after Dear, so line 2 should read Dear, Ms. Okafor."
+                },
+                {
+                  "text": "A greeting must have two commas, one after Dear and one after Okafor, so both are missing."
+                }
+              ]
+            },
+            "partB": {
+              "prompt": "Pick the version that repairs line 2.",
+              "choices": [
+                {
+                  "text": "Dear Ms. Okafor,",
+                  "correct": true
+                },
+                {
+                  "text": "Dear, Ms. Okafor"
+                },
+                {
+                  "text": "Dear Ms. Okafor."
+                },
+                {
+                  "text": "Dear, Ms. Okafor,"
+                }
+              ]
+            },
+            "clue": "Look at how a letter greeting ends in the other letters you have seen.",
+            "hints": [
+              "Look at how a letter greeting ends in the other letters you have seen.",
+              "In Part B, compare each version with the greeting in a letter you know.",
+              "A period ends a sentence, and a greeting is not a sentence. Think about the other versions."
+            ],
+            "how": [
+              "Part A: the greeting in line 2 has no mark after Okafor.",
+              "Part B: the repaired greeting has one comma at the end.",
+              "The answers are \"A greeting must end with a comma, so line 2 needs one after Okafor.\" and \"Dear Ms. Okafor,\""
+            ],
+            "misconception": "A common mix-up is adding a comma after Dear. The comma goes at the end of the greeting.",
+            "why": "Part A: \"A greeting must end with a comma, so line 2 needs one after Okafor.\" Part B: \"Dear Ms. Okafor,\" The comma goes after the whole name, not after Dear.",
+            "like": [
+              "SK-GUM2-8-S07"
+            ]
+          },
+          {
+            "id": "SK-GUM2-8-C08",
+            "type": "ms",
+            "points": 2,
+            "dok": 2,
+            "std": [
+              "3.L.GC.1:R:use-commas-in-a-series-and-in-dates-addresses-sa"
+            ],
+            "passages": [],
+            "prompt": "Which TWO sentences have commas in all the right places?",
+            "pick": 2,
+            "choices": [
+              {
+                "text": "The fair opens on July 4, 2026.",
+                "correct": true
+              },
+              {
+                "text": "My aunt moved to Mesa, Arizona.",
+                "correct": true
+              },
+              {
+                "text": "Mom bought plums, pears and, grapes at the market."
+              },
+              {
+                "text": "The play starts on May, 9 2026 at the school."
+              },
+              {
+                "text": "Our principal, read us a funny story after lunch."
+              }
+            ],
+            "clue": "Look at what each comma separates. Ask whether it belongs there.",
+            "hints": [
+              "Look at what each comma separates. Ask whether it belongs there.",
+              "Check all five choices, including the ones that look right at first glance. A comma in the wrong spot is a mistake too.",
+              "Three choices put a comma where it does not belong. Think about which two do not."
+            ],
+            "how": [
+              "Check where each comma sits.",
+              "July 4, 2026 has its comma between the day and the year. Mesa, Arizona has its comma between the city and the state.",
+              "The other three have commas after and, after May, or after the principal."
+            ],
+            "misconception": "A common mix-up is choosing a sentence because it has a comma in it. The comma has to be in the right place.",
+            "why": "The answers are \"The fair opens on July 4, 2026.\" and \"My aunt moved to Mesa, Arizona.\" The date and the city and state each have their comma in the right place. The commas after and, after May and after principal do not belong.",
+            "like": [
+              "SK-GUM2-8-S08"
+            ]
+          },
+          {
+            "id": "SK-GUM2-8-C09",
+            "type": "mc",
+            "points": 1,
+            "dok": 1,
+            "std": [
+              "3.L.GC.1:R:use-commas-in-a-series-and-in-dates-addresses-sa"
+            ],
+            "passages": [],
+            "prompt": "Where does the missing comma go?",
+            "stem": "The class trip is on May 21 2026.",
+            "choices": [
+              {
+                "text": "after 21",
+                "correct": true
+              },
+              {
+                "text": "after May"
+              },
+              {
+                "text": "after trip"
+              },
+              {
+                "text": "after 2026"
+              }
+            ],
+            "clue": "Find the month, the day and the year in the sentence.",
+            "hints": [
+              "Find the month, the day and the year in the sentence.",
+              "A comma in a date goes between two of its parts.",
+              "A comma does not belong after the year at the end of the sentence. Think about the other choices."
+            ],
+            "how": [
+              "The date is May 21 2026.",
+              "The comma goes between the day and the year.",
+              "The answer is after 21."
+            ],
+            "misconception": "A common mix-up is putting the comma after the month. The comma goes after the day.",
+            "why": "The answer is after 21. A date needs a comma between the day and the year: May 21, 2026. A comma after May, trip or 2026 does not follow the rule.",
+            "like": [
+              "SK-GUM2-8-S09"
+            ]
+          },
+          {
+            "id": "SK-GUM2-8-C10",
+            "type": "mc",
+            "points": 1,
+            "dok": 3,
+            "std": [
+              "3.L.GC.1:R:use-commas-in-a-series-and-in-dates-addresses-sa"
+            ],
+            "passages": [
+              "p2"
+            ],
+            "prompt": "Kai says line 1 is wrong because a date should never have a comma. Which reply is best?",
+            "choices": [
+              {
+                "text": "Line 1 has its comma after the day and before the year, which is where a date needs it.",
+                "correct": true
+              },
+              {
+                "text": "Kai is right, because a date is only numbers and numbers never take commas."
+              },
+              {
+                "text": "Kai is right, because the comma belongs right after the month instead."
+              },
+              {
+                "text": "A date needs two commas, one after the month and one after the day, so line 1 is wrong."
+              }
+            ],
+            "clue": "Look at line 1 and at how it is written. Think about where a comma belongs in a date.",
+            "hints": [
+              "Look at line 1 and at how it is written. Think about where a comma belongs in a date.",
+              "Ask which two parts of a date a comma keeps apart.",
+              "A date can have a month written as a word, so it is not only numbers. Think about the other choices."
+            ],
+            "how": [
+              "Line 1 says May 20, 2026.",
+              "The comma sits between the day and the year, which is where a date needs it.",
+              "The answer is \"Line 1 has its comma after the day and before the year, which is where a date needs it.\""
+            ],
+            "misconception": "A common mix-up is thinking a date never needs a comma. A date needs one comma, between the day and the year.",
+            "why": "The answer is \"Line 1 has its comma after the day and before the year, which is where a date needs it.\" May 20, 2026 has its comma in the right place, so Kai is wrong.",
+            "like": [
+              "SK-GUM2-8-S10"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Set 3",
+        "items": [
+          {
+            "id": "SK-GUM2-8-C11",
+            "type": "hottext",
+            "points": 2,
+            "dok": 2,
+            "std": [
+              "3.L.GC.1:R:use-commas-in-a-series-and-in-dates-addresses-sa"
+            ],
+            "passages": [
+              "p3"
+            ],
+            "prompt": "Two lines from 3 to 7 have commas in all the right places. Select them.",
+            "targets": [
+              "p3:2:1",
+              "p3:2:2",
+              "p3:2:3",
+              "p3:2:4",
+              "p3:2:5"
+            ],
+            "answer": [
+              "p3:2:1",
+              "p3:2:4"
+            ],
+            "pick": 2,
+            "clue": "Check each of lines 3 to 7 for a list, a date, or an address.",
+            "hints": [
+              "Check each of lines 3 to 7 for a list, a date, or an address.",
+              "In a full address, commas separate the parts of the address.",
+              "Some of these lines are missing commas, and one has a comma where it does not belong. Think about the rest."
+            ],
+            "how": [
+              "Check each line one at a time.",
+              "Line 3 has commas between the three things, and line 6 has a comma between the city and the state.",
+              "Lines 4 and 5 are missing commas, and line 7 has a comma after and."
+            ],
+            "misconception": "A common mix-up is choosing a line because it has a lot of commas. They all have to be in the right places.",
+            "why": "The answers are \"We need new swings, slides, and jump ropes.\" and \"We visited a park in Carson City, Nevada.\" The list and the city and state have their commas in the right places. Line 4 is missing a comma after the street, line 5 is missing the date comma, and line 7 has a comma after and.",
+            "like": [
+              "SK-GUM2-8-S11"
+            ]
+          },
+          {
+            "id": "SK-GUM2-8-C12",
+            "type": "dropdown",
+            "points": 1,
+            "dok": 2,
+            "std": [
+              "3.L.GC.1:R:use-commas-in-a-series-and-in-dates-addresses-sa"
+            ],
+            "passages": [
+              "p3"
+            ],
+            "prompt": "Line 5 needs a comma. Pick the correct way to write its date.",
+            "text": "The new gear could arrive by {0}.",
+            "slots": [
+              {
+                "options": [
+                  "June 1, 2026",
+                  "June, 1 2026",
+                  "June 1 2026"
+                ],
+                "answer": 0
+              }
+            ],
+            "clue": "Find the month, the day and the year in line 5.",
+            "hints": [
+              "Find the month, the day and the year in line 5.",
+              "Decide which two parts of the date a comma should keep apart.",
+              "The month and the day belong together. Look at the other choices."
+            ],
+            "how": [
+              "The date is June 1 2026, with a month, a day and a year.",
+              "The comma goes between the day and the year.",
+              "The answer is June 1, 2026."
+            ],
+            "misconception": "A common mix-up is leaving the comma out because the date is short. A date needs one comma.",
+            "why": "The answer is June 1, 2026. A comma goes between the day and the year. A comma after June splits the month from the day, and no comma leaves the date without its mark.",
+            "like": [
+              "SK-GUM2-8-S12"
+            ]
+          },
+          {
+            "id": "SK-GUM2-8-C13",
+            "type": "dropdown",
+            "points": 2,
+            "dok": 2,
+            "std": [
+              "3.L.GC.1:R:use-commas-in-a-series-and-in-dates-addresses-sa"
+            ],
+            "passages": [],
+            "prompt": "Choose the correct writing for each blank.",
+            "text": "Our cousins moved to {0}. They arrived on {1}.",
+            "slots": [
+              {
+                "options": [
+                  "Tampa, Florida",
+                  "Tampa Florida",
+                  "Tampa. Florida"
+                ],
+                "answer": 0
+              },
+              {
+                "options": [
+                  "March 8, 2025",
+                  "March, 8 2025",
+                  "March 8 2025"
+                ],
+                "answer": 0
+              }
+            ],
+            "clue": "The two blanks need different commas. Decide what each blank names.",
+            "hints": [
+              "The two blanks need different commas. Decide what each blank names.",
+              "The first blank names a place. The second blank names a day.",
+              "A comma does not go between a month and its day. Look at the choices for the second blank."
+            ],
+            "how": [
+              "The first blank has a city and a state. The second blank has a month, a day and a year.",
+              "The city and the state need a comma between them. The date needs a comma between the day and the year.",
+              "The answers are Tampa, Florida and March 8, 2025."
+            ],
+            "misconception": "A common mix-up is using the comma in the same spot twice. A place and a date put their commas in different spots.",
+            "why": "The answers are Tampa, Florida and March 8, 2025. The first comma separates a city and a state. The second comma separates a day and a year.",
+            "like": [
+              "SK-GUM2-8-S13"
+            ]
+          },
+          {
+            "id": "SK-GUM2-8-C14",
+            "type": "hottext",
+            "points": 1,
+            "dok": 2,
+            "std": [
+              "3.L.GC.1:R:use-commas-in-a-series-and-in-dates-addresses-sa"
+            ],
+            "passages": [],
+            "prompt": "Which sentence has a misplaced comma?",
+            "options": [
+              "We planted tulips, daisies, and roses in May.",
+              "The concert is on April 12, 2027.",
+              "My grandparents live in Salem, Oregon.",
+              "The coach, handed out water bottles.",
+              "Send the package to 9 Lake Drive, Boise, Idaho."
+            ],
+            "answer": [
+              3
+            ],
+            "pick": 1,
+            "clue": "Look at each comma and ask what it separates.",
+            "hints": [
+              "Look at each comma and ask what it separates.",
+              "A comma can separate things in a list, parts of a date, or parts of an address.",
+              "The sentence about the concert has its comma in the right place. Think about the rest."
+            ],
+            "how": [
+              "Look at what each comma separates.",
+              "The tulips, the concert date, Salem, Oregon and the address all have commas that separate listed things or parts of a date or place.",
+              "The answer is \"The coach, handed out water bottles.\" The comma separates a person from what the person did."
+            ],
+            "misconception": "A common mix-up is putting a comma wherever the voice pauses. A comma needs a rule behind it.",
+            "why": "The answer is \"The coach, handed out water bottles.\" The comma does not separate a list, a date, a place or a letter part. The other sentences use their commas for those jobs.",
+            "like": [
+              "SK-GUM2-8-S14"
+            ]
+          },
+          {
+            "id": "SK-GUM2-8-C15",
+            "type": "mc",
+            "points": 1,
+            "dok": 3,
+            "std": [
+              "3.L.GC.1:R:use-commas-in-a-series-and-in-dates-addresses-sa"
+            ],
+            "passages": [],
+            "prompt": "Lee says, \"Commas belong only in lists.\" Pick the sentence that proves Lee wrong.",
+            "choices": [
+              {
+                "text": "The party is on June 9, 2026.",
+                "correct": true
+              },
+              {
+                "text": "We bought apples, pears, and plums."
+              },
+              {
+                "text": "She packed socks, shoes, and hats."
+              },
+              {
+                "text": "He has a bat, a ball, and a glove."
+              }
+            ],
+            "clue": "To test a statement, look for an example that breaks it. Look at what each comma separates.",
+            "hints": [
+              "To test a statement, look for an example that breaks it. Look at what each comma separates.",
+              "In each sentence, ask whether the commas separate a list or something else.",
+              "Three of the sentences have lists. Think about which one does not."
+            ],
+            "how": [
+              "Lee says commas are only for lists. Look for a comma that does something else.",
+              "The commas in the other three sentences separate things in a list.",
+              "The answer is \"The party is on June 9, 2026.\""
+            ],
+            "misconception": "A common mix-up is thinking commas have only one job. They also separate dates, places, greetings and closings.",
+            "why": "The answer is \"The party is on June 9, 2026.\" The comma separates the day and the year, which is not a list. That proves Lee wrong. The other sentences each have a list.",
+            "like": [
+              "SK-GUM2-8-S15"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  similar: [
+    {
+      "id": "SK-GUM2-8-S01",
+      "type": "hottext",
+      "points": 1,
+      "dok": 2,
+      "std": [
+        "3.L.GC.1:R:use-commas-in-a-series-and-in-dates-addresses-sa"
+      ],
+      "passages": [],
+      "prompt": "Which line in this note has a comma mistake?",
+      "options": [
+        "Hello Nana,",
+        "Your gifts were books, games, and puzzles.",
+        "March 15 2027",
+        "With love,",
+        "Priya"
+      ],
+      "answer": [
+        2
+      ],
+      "pick": 1,
+      "clue": "Check the greeting, the list, the date and the closing.",
+      "hints": [
+        "Check the greeting, the list, the date and the closing.",
+        "A date needs a comma between the day and the year.",
+        "The list and the greeting are written correctly. Think about the rest."
+      ],
+      "how": [
+        "Look at each line and ask which rule it follows.",
+        "The greeting, the list and the closing all have their commas.",
+        "The answer is \"March 15 2027\". The date needs a comma between the day and the year: March 15, 2027."
+      ],
+      "misconception": "A common mix-up is thinking a short line cannot have a mistake. Check every line.",
+      "why": "The answer is \"March 15 2027\". A date needs a comma between the day and the year: March 15, 2027. The other lines have the commas they need.",
+      "like": [
+        "SK-GUM2-8-P3"
+      ]
+    },
+    {
+      "id": "SK-GUM2-8-S02",
+      "type": "match",
+      "points": 2,
+      "dok": 2,
+      "std": [
+        "3.L.GC.1:R:use-commas-in-a-series-and-in-dates-addresses-sa"
+      ],
+      "passages": [],
+      "prompt": "What does each comma do? Sort every example.",
+      "cols": [
+        "Things in a list",
+        "Day and year",
+        "City and state",
+        "Greeting or closing"
+      ],
+      "rows": [
+        {
+          "text": "hats, gloves, and boots",
+          "answer": 0
+        },
+        {
+          "text": "May 6, 2027",
+          "answer": 1
+        },
+        {
+          "text": "Laramie, Wyoming",
+          "answer": 2
+        },
+        {
+          "text": "Dear Mr. Chen,",
+          "answer": 3
+        },
+        {
+          "text": "January 14, 2025",
+          "answer": 1
+        },
+        {
+          "text": "Best wishes,",
+          "answer": 3
+        }
+      ],
+      "clue": "Look at what the comma sits between in each example.",
+      "hints": [
+        "Look at what the comma sits between in each example.",
+        "Some examples have a month and a number. Some have two place names. Some start or end a letter.",
+        "A list has three or more things. Use that to sort one example first."
+      ],
+      "how": [
+        "Look at the words on each side of the comma.",
+        "Hats, gloves and boots are things in a list. May 6, 2027 and January 14, 2025 are dates. Laramie, Wyoming is a city and state.",
+        "Dear Mr. Chen, and Best wishes, are parts of a letter."
+      ],
+      "misconception": "A common mix-up is sorting by how many commas are in the example. What the comma separates decides the group.",
+      "why": "Hats, gloves, and boots is a list. May 6, 2027 and January 14, 2025 are dates. Laramie, Wyoming is a city and state. Dear Mr. Chen, and Best wishes, are a greeting and a closing.",
+      "like": [
+        "SK-GUM2-8-P5"
+      ]
+    },
+    {
+      "id": "SK-GUM2-8-S03",
+      "type": "mc",
+      "points": 1,
+      "dok": 2,
+      "std": [
+        "3.L.GC.1:R:use-commas-in-a-series-and-in-dates-addresses-sa"
+      ],
+      "passages": [
+        "p4"
+      ],
+      "prompt": "How should line 1 be fixed?",
+      "choices": [
+        {
+          "text": "Insert a comma beside the 18 to get April 18, 2026.",
+          "correct": true
+        },
+        {
+          "text": "Insert a comma beside the April to get April, 18 2026."
+        },
+        {
+          "text": "Insert a period beside the 18 to get April 18. 2026."
+        },
+        {
+          "text": "Insert a comma beside the 2026 to get April 18 2026,."
+        }
+      ],
+      "clue": "Find the month, the day and the year in line 1.",
+      "hints": [
+        "Find the month, the day and the year in line 1.",
+        "Ask which two parts a mark should keep apart.",
+        "A date is not a full sentence. Think about the other choices."
+      ],
+      "how": [
+        "Line 1 has the month April, the day 18 and the year 2026.",
+        "A date needs one comma, and it keeps the day and the year apart.",
+        "The answer is \"Insert a comma beside the 18 to get April 18, 2026.\""
+      ],
+      "misconception": "A common mix-up is thinking a date needs a mark at its end. The comma goes inside the date.",
+      "why": "The answer is \"Insert a comma beside the 18 to get April 18, 2026.\" A date has one comma, between the day and the year.",
+      "like": [
+        "SK-GUM2-8-C03"
+      ]
+    },
+    {
+      "id": "SK-GUM2-8-S04",
+      "type": "dropdown",
+      "points": 1,
+      "dok": 2,
+      "std": [
+        "3.L.GC.1:R:use-commas-in-a-series-and-in-dates-addresses-sa"
+      ],
+      "passages": [
+        "p4"
+      ],
+      "prompt": "Which version of the place name is right for line 3?",
+      "text": "Our class rode a long bus to the zoo in {0}.",
+      "slots": [
+        {
+          "options": [
+            "Fresno, California",
+            "Fresno California",
+            "Fresno. California"
+          ],
+          "answer": 0
+        }
+      ],
+      "clue": "Find the city and the state in line 3.",
+      "hints": [
+        "Find the city and the state in line 3.",
+        "Decide what mark, if any, belongs between the two names.",
+        "A period ends a sentence. Think about the other choices."
+      ],
+      "how": [
+        "Fresno is the city, and California is the state.",
+        "A comma goes between the name of a city and the name of its state.",
+        "The answer is Fresno, California."
+      ],
+      "misconception": "A common mix-up is leaving the comma out because the two names are said together. The comma keeps them apart.",
+      "why": "The answer is Fresno, California. A comma goes between a city and its state. A period would end the sentence too soon, and no mark makes the names run together.",
+      "like": [
+        "SK-GUM2-8-C04"
+      ]
+    },
+    {
+      "id": "SK-GUM2-8-S05",
+      "type": "mc",
+      "points": 1,
+      "dok": 3,
+      "std": [
+        "3.L.GC.1:R:use-commas-in-a-series-and-in-dates-addresses-sa"
+      ],
+      "passages": [
+        "p4"
+      ],
+      "prompt": "Line 4 and line 5 each hold three items. What makes line 5 the flawed one?",
+      "choices": [
+        {
+          "text": "Each item in line 4 is separated from the next by a comma, while line 5 runs two of them together.",
+          "correct": true
+        },
+        {
+          "text": "Line 5 mentions a gift shop, and anything bought in a gift shop cannot be listed with commas."
+        },
+        {
+          "text": "Line 4 has animals in it, so it needs commas, while line 5 has objects, so it does not need any."
+        },
+        {
+          "text": "Both lines hold three items, so they must each have the same number of words in them as well, no matter what."
+        }
+      ],
+      "clue": "Count the items held in each of lines 4 and 5.",
+      "hints": [
+        "Count the items held in each of lines 4 and 5.",
+        "Look at what comes between the items in each of the two lines.",
+        "What the items are does not decide the commas. Think about the other choices."
+      ],
+      "how": [
+        "Line 4: monkeys, parrots, and snakes. Line 5: a map a hat, and a water bottle.",
+        "A list needs a comma after each item before and. Line 5 is missing the first one.",
+        "The answer is \"Each item in line 4 is separated from the next by a comma, while line 5 runs two of them together.\""
+      ],
+      "misconception": "A common mix-up is thinking commas depend on what is listed. A list needs the same commas for animals or for objects.",
+      "why": "The answer is \"Each item in line 4 is separated from the next by a comma, while line 5 runs two of them together.\" Animals and objects are punctuated the same way in a list.",
+      "like": [
+        "SK-GUM2-8-C05"
+      ]
+    },
+    {
+      "id": "SK-GUM2-8-S06",
+      "type": "hottext",
+      "points": 2,
+      "dok": 2,
+      "std": [
+        "3.L.GC.1:R:use-commas-in-a-series-and-in-dates-addresses-sa"
+      ],
+      "passages": [
+        "p5"
+      ],
+      "prompt": "Which two of lines 2 to 6 contain a comma error? Tap both.",
+      "targets": [
+        "p5:1:2",
+        "p5:2:1",
+        "p5:2:2",
+        "p5:2:3",
+        "p5:2:4"
+      ],
+      "answer": [
+        "p5:2:1",
+        "p5:2:4"
+      ],
+      "pick": 2,
+      "clue": "Check each of lines 2 to 6 for a greeting, a list, or a place.",
+      "hints": [
+        "Check each of lines 2 to 6 for a greeting, a list, or a place.",
+        "A greeting ends with a comma, and a city and a state are kept apart with a comma.",
+        "The greeting at the top of this letter is written correctly. Think about the rest."
+      ],
+      "how": [
+        "Check each line one at a time.",
+        "Line 2 has its comma, and lines 4 and 5 have commas between their listed things.",
+        "Line 3 has no comma between Billings and Montana, and line 6 has no comma between stickers and crayons."
+      ],
+      "misconception": "A common mix-up is trusting a line because it is long. Check every comma and every place that needs one.",
+      "why": "The answers are \"Our class loved climbing into the big red fire truck in Billings Montana.\" and \"Our class made a poster with stickers crayons, and markers.\" A city and a state need a comma between them, and a list needs a comma after each thing before and. Lines 2, 4 and 5 are correct.",
+      "like": [
+        "SK-GUM2-8-C06"
+      ]
+    },
+    {
+      "id": "SK-GUM2-8-S07",
+      "type": "ebsr",
+      "points": 2,
+      "dok": 3,
+      "std": [
+        "3.L.GC.1:R:use-commas-in-a-series-and-in-dates-addresses-sa"
+      ],
+      "passages": [
+        "p5"
+      ],
+      "prompt": "Work through both halves of this question.",
+      "partA": {
+        "prompt": "Why does line 3 need fixing?",
+        "choices": [
+          {
+            "text": "Billings and Montana run together, so a comma is needed between them.",
+            "correct": true
+          },
+          {
+            "text": "Billings and Montana run together, so a dash is needed between them."
+          },
+          {
+            "text": "Billings comes after Montana, so the two names need to switch places."
+          },
+          {
+            "text": "The names are fine, but the word fire needs a comma of its own."
+          }
+        ]
+      },
+      "partB": {
+        "prompt": "Choose the rewrite that corrects line 3.",
+        "choices": [
+          {
+            "text": "Our class loved climbing into the big red fire truck in Billings, Montana.",
+            "correct": true
+          },
+          {
+            "text": "Our class loved climbing into the big red fire truck in Billings - Montana."
+          },
+          {
+            "text": "Our class loved climbing into the big red fire truck in Billings Montana,."
+          },
+          {
+            "text": "Our class loved, climbing into the big red fire truck in Billings Montana."
+          }
+        ]
+      },
+      "clue": "Find the two place names in line 3. Ask what separates them.",
+      "hints": [
+        "Find the two place names in line 3. Ask what separates them.",
+        "In Part B, read each rewrite and look at where its mark sits.",
+        "A dash is not a comma. Think about the other rewrites."
+      ],
+      "how": [
+        "Part A: line 3 has no mark between Billings and Montana.",
+        "Part B: the rewrite needs one comma between the two place names.",
+        "The answers are \"Billings and Montana run together, so a comma is needed between them.\" and \"Our class loved climbing into the big red fire truck in Billings, Montana.\""
+      ],
+      "misconception": "A common mix-up is putting a mark at the end of the line instead of between the names. The comma goes between the city and the state.",
+      "why": "Part A: \"Billings and Montana run together, so a comma is needed between them.\" Part B: \"Our class loved climbing into the big red fire truck in Billings, Montana.\" The comma goes between the city and the state.",
+      "like": [
+        "SK-GUM2-8-C07"
+      ]
+    },
+    {
+      "id": "SK-GUM2-8-S08",
+      "type": "ms",
+      "points": 2,
+      "dok": 2,
+      "std": [
+        "3.L.GC.1:R:use-commas-in-a-series-and-in-dates-addresses-sa"
+      ],
+      "passages": [],
+      "prompt": "Pick the two sentences where every comma is placed well.",
+      "pick": 2,
+      "choices": [
+        {
+          "text": "Dad packed sandwiches, apples, and juice.",
+          "correct": true
+        },
+        {
+          "text": "The recital is on November 3, 2026.",
+          "correct": true
+        },
+        {
+          "text": "We drove to Helena Montana last summer."
+        },
+        {
+          "text": "The kitten, jumped onto the shelf above the sink."
+        },
+        {
+          "text": "Her birthday is on August 5 2026 at noon."
+        }
+      ],
+      "clue": "Look at what each comma separates. Ask whether it belongs there.",
+      "hints": [
+        "Look at what each comma separates. Ask whether it belongs there.",
+        "Check every sentence, including the ones that look right. A missing comma is a mistake too.",
+        "Three sentences have a comma in the wrong place or none where one is needed. Think about which two do not."
+      ],
+      "how": [
+        "Check where each comma sits and whether one is missing.",
+        "The list of foods has commas between the things, and the date has a comma between the day and the year.",
+        "Helena Montana needs a comma, the kitten has a comma it does not need, and the August date needs one."
+      ],
+      "misconception": "A common mix-up is choosing a sentence because it has a comma in it. Check that every needed comma is there.",
+      "why": "The answers are \"Dad packed sandwiches, apples, and juice.\" and \"The recital is on November 3, 2026.\" The list and the date have every comma they need. The other three sentences have a missing or an extra comma.",
+      "like": [
+        "SK-GUM2-8-C08"
+      ]
+    },
+    {
+      "id": "SK-GUM2-8-S09",
+      "type": "mc",
+      "points": 1,
+      "dok": 1,
+      "std": [
+        "3.L.GC.1:R:use-commas-in-a-series-and-in-dates-addresses-sa"
+      ],
+      "passages": [],
+      "prompt": "At which spot should a comma be added?",
+      "stem": "My sister was born on March 7 2019.",
+      "choices": [
+        {
+          "text": "between 7 and 2019",
+          "correct": true
+        },
+        {
+          "text": "between March and 7"
+        },
+        {
+          "text": "between born and on"
+        },
+        {
+          "text": "before March"
+        }
+      ],
+      "clue": "Find the month, the day and the year in the sentence.",
+      "hints": [
+        "Find the month, the day and the year in the sentence.",
+        "A comma in a date goes between two of its parts.",
+        "A comma does not belong before the month. Think about the other choices."
+      ],
+      "how": [
+        "The date is March 7 2019.",
+        "The comma goes between the day and the year.",
+        "The answer is between 7 and 2019."
+      ],
+      "misconception": "A common mix-up is putting the comma after the month. The comma goes after the day.",
+      "why": "The answer is between 7 and 2019. A date needs a comma between the day and the year: March 7, 2019. A comma between March and 7, between born and on, or before March does not follow the rule.",
+      "like": [
+        "SK-GUM2-8-C09"
+      ]
+    },
+    {
+      "id": "SK-GUM2-8-S10",
+      "type": "mc",
+      "points": 1,
+      "dok": 3,
+      "std": [
+        "3.L.GC.1:R:use-commas-in-a-series-and-in-dates-addresses-sa"
+      ],
+      "passages": [
+        "p5"
+      ],
+      "prompt": "Rin argues that line 4 is too short for commas. How would you respond?",
+      "choices": [
+        {
+          "text": "Three items in a row form a list, and a list needs commas even in a brief line.",
+          "correct": true
+        },
+        {
+          "text": "Brief lines never use commas of any kind, which proves Rin right about her letter."
+        },
+        {
+          "text": "Just lines holding a date ever require commas, which proves Rin right about line 4."
+        },
+        {
+          "text": "Each comma is needed, but all of them belong after the final item in the line."
+        }
+      ],
+      "clue": "Read line 4 and count how many things it names.",
+      "hints": [
+        "Read line 4 and count how many things it names.",
+        "Ask what keeps them apart.",
+        "The length of a line does not decide its commas. Think about the other choices."
+      ],
+      "how": [
+        "Line 4 names helmets, boots and gloves.",
+        "Three in a row make a list, and a list needs commas between its parts.",
+        "The answer is \"Three items in a row form a list, and a list needs commas even in a brief line.\""
+      ],
+      "misconception": "A common mix-up is thinking a short line needs fewer commas. The list decides the commas.",
+      "why": "The answer is \"Three items in a row form a list, and a list needs commas even in a brief line.\" Helmets, boots and gloves are a list, so they need commas.",
+      "like": [
+        "SK-GUM2-8-C10"
+      ]
+    },
+    {
+      "id": "SK-GUM2-8-S11",
+      "type": "hottext",
+      "points": 2,
+      "dok": 2,
+      "std": [
+        "3.L.GC.1:R:use-commas-in-a-series-and-in-dates-addresses-sa"
+      ],
+      "passages": [
+        "p6"
+      ],
+      "prompt": "Which two of lines 3 to 7 are punctuated perfectly? Tap them.",
+      "targets": [
+        "p6:2:1",
+        "p6:2:2",
+        "p6:2:3",
+        "p6:2:4",
+        "p6:2:5"
+      ],
+      "answer": [
+        "p6:2:1",
+        "p6:2:4"
+      ],
+      "pick": 2,
+      "clue": "Check each of lines 3 to 7 for a list, a date, or an address.",
+      "hints": [
+        "Check each of lines 3 to 7 for a list, a date, or an address.",
+        "In a full address, commas separate the parts of the address.",
+        "Some of these lines are missing commas, and one has a comma where it does not belong. Think about the rest."
+      ],
+      "how": [
+        "Check each line one at a time.",
+        "Line 3 has commas between the three things, and line 6 has a comma between the city and the state.",
+        "Lines 4 and 5 are missing commas, and line 7 has a comma after and."
+      ],
+      "misconception": "A common mix-up is choosing a line because it has a lot of commas. They all have to be in the right places.",
+      "why": "The answers are \"Riders need bike racks, benches, and bins.\" and \"Our museum trip was in Syracuse, New York.\" The list and the city and state have their commas in the right places. Line 4 is missing a comma after the street, line 5 is missing the date comma, and line 7 has a comma after and.",
+      "like": [
+        "SK-GUM2-8-C11"
+      ]
+    },
+    {
+      "id": "SK-GUM2-8-S12",
+      "type": "dropdown",
+      "points": 1,
+      "dok": 2,
+      "std": [
+        "3.L.GC.1:R:use-commas-in-a-series-and-in-dates-addresses-sa"
+      ],
+      "passages": [
+        "p6"
+      ],
+      "prompt": "Which date fits line 5?",
+      "text": "Our benches will be ready for use by {0}.",
+      "slots": [
+        {
+          "options": [
+            "May 1, 2027",
+            "May, 1 2027",
+            "May 1 2027"
+          ],
+          "answer": 0
+        }
+      ],
+      "clue": "Find the month, the day and the year in line 5.",
+      "hints": [
+        "Find the month, the day and the year in line 5.",
+        "Decide which two parts of the date a comma should keep apart.",
+        "The month and the day belong together. Look at the other choices."
+      ],
+      "how": [
+        "The date is May 1 2027, with a month, a day and a year.",
+        "The comma goes between the day and the year.",
+        "The answer is May 1, 2027."
+      ],
+      "misconception": "A common mix-up is leaving the comma out because the date is short. A date needs one comma.",
+      "why": "The answer is May 1, 2027. A comma goes between the day and the year. A comma after May splits the month from the day, and no comma leaves the date without its mark.",
+      "like": [
+        "SK-GUM2-8-C12"
+      ]
+    },
+    {
+      "id": "SK-GUM2-8-S13",
+      "type": "dropdown",
+      "points": 2,
+      "dok": 2,
+      "std": [
+        "3.L.GC.1:R:use-commas-in-a-series-and-in-dates-addresses-sa"
+      ],
+      "passages": [],
+      "prompt": "Pick the correct writing for each gap.",
+      "text": "Grandpa was born in {0}. His birthday is {1}.",
+      "slots": [
+        {
+          "options": [
+            "Mobile, Alabama",
+            "Mobile Alabama",
+            "Mobile. Alabama"
+          ],
+          "answer": 0
+        },
+        {
+          "options": [
+            "January 12, 1950",
+            "January, 12 1950",
+            "January 12 1950"
+          ],
+          "answer": 0
+        }
+      ],
+      "clue": "The two gaps need different commas. Decide what each gap names.",
+      "hints": [
+        "The two gaps need different commas. Decide what each gap names.",
+        "The first gap names a place. The second gap names a day.",
+        "A comma does not go between a month and its day. Look at the choices for the second gap."
+      ],
+      "how": [
+        "The first gap has a city and a state. The second gap has a month, a day and a year.",
+        "The city and the state need a comma between them. The date needs a comma between the day and the year.",
+        "The answers are Mobile, Alabama and January 12, 1950."
+      ],
+      "misconception": "A common mix-up is using the comma in the same spot twice. A place and a date put their commas in different spots.",
+      "why": "The answers are Mobile, Alabama and January 12, 1950. The first comma separates a city and a state. The second comma separates a day and a year.",
+      "like": [
+        "SK-GUM2-8-C13"
+      ]
+    },
+    {
+      "id": "SK-GUM2-8-S14",
+      "type": "hottext",
+      "points": 1,
+      "dok": 2,
+      "std": [
+        "3.L.GC.1:R:use-commas-in-a-series-and-in-dates-addresses-sa"
+      ],
+      "passages": [],
+      "prompt": "Pick the sentence where a needed comma is missing.",
+      "options": [
+        "Pack your shorts, shirts, and socks for camp.",
+        "Write to us at 3 Reed Road Austin, Texas.",
+        "The race is on April 9, 2027.",
+        "My uncle lives in Fargo, North Dakota.",
+        "Mia sang, danced, and played the drums."
+      ],
+      "answer": [
+        1
+      ],
+      "pick": 1,
+      "clue": "Look at each sentence and ask what its commas separate.",
+      "hints": [
+        "Look at each sentence and ask what its commas separate.",
+        "A list, a date and an address each have places where commas belong.",
+        "The sentence about the race has its comma in the right place. Think about the rest."
+      ],
+      "how": [
+        "Check each list, date and place for every comma it needs.",
+        "The shorts, the race date, Fargo, North Dakota and Mia's list all have the commas they need.",
+        "The answer is \"Write to us at 3 Reed Road Austin, Texas.\" An address needs a comma after the street."
+      ],
+      "misconception": "A common mix-up is stopping once you see one comma. An address needs a comma after the street and another between the city and the state.",
+      "why": "The answer is \"Write to us at 3 Reed Road Austin, Texas.\" An address needs a comma after the street: 3 Reed Road, Austin, Texas. The other sentences have every comma they need.",
+      "like": [
+        "SK-GUM2-8-C14"
+      ]
+    },
+    {
+      "id": "SK-GUM2-8-S15",
+      "type": "mc",
+      "points": 1,
+      "dok": 3,
+      "std": [
+        "3.L.GC.1:R:use-commas-in-a-series-and-in-dates-addresses-sa"
+      ],
+      "passages": [],
+      "prompt": "Dee believes dates are the only place for a comma. Which example proves her wrong?",
+      "choices": [
+        {
+          "text": "My uncle lives in Fargo, North Dakota.",
+          "correct": true
+        },
+        {
+          "text": "Our school year finally ends on June 8, 2027."
+        },
+        {
+          "text": "The fair opens in the park on July 4, 2026."
+        },
+        {
+          "text": "Her party is planned for March 7, 2026."
+        }
+      ],
+      "clue": "To test a thought, look for an example that breaks it. Look at what each comma separates.",
+      "hints": [
+        "To test a thought, look for an example that breaks it. Look at what each comma separates.",
+        "In each sentence, ask whether the comma is part of a date or something else.",
+        "Three of the sentences have dates. Think about which one does not."
+      ],
+      "how": [
+        "Dee says commas are only for dates. Look for a comma that does something else.",
+        "The commas in the other three sentences separate parts of a date.",
+        "The answer is \"My uncle lives in Fargo, North Dakota.\""
+      ],
+      "misconception": "A common mix-up is thinking commas have only one job. They also separate lists, places, greetings and closings.",
+      "why": "The answer is \"My uncle lives in Fargo, North Dakota.\" The comma separates a city and a state, which is not a date. That proves Dee wrong. The other sentences each have a date.",
+      "like": [
+        "SK-GUM2-8-C15"
+      ]
+    }
+  ],
+  addons: {
+    "SK-GUM2-8-P1": {
+      "hints": [
+        "Look at the three ways the date is written.",
+        "Find the month, the day and the year. Decide which two parts a comma should keep apart.",
+        "A comma between the month and the day does not match the rule in the lesson. Think about the other choices."
+      ],
+      "how": [
+        "The date has a month, a day and a year.",
+        "A comma keeps the day and the year apart.",
+        "The answer is August 15, 2025."
+      ],
+      "misconception": "A common mix-up is putting the comma right after the month. The comma goes after the day."
+    },
+    "SK-GUM2-8-P2": {
+      "hints": [
+        "Find the list of things Dad bought.",
+        "Commas go between the things in the list, not before the list starts.",
+        "One choice puts a comma right after bought. Think about the other choices."
+      ],
+      "how": [
+        "The list is milk, bread and eggs.",
+        "Commas separate the things in the list. No comma comes after bought or after and.",
+        "The answer is \"Dad bought milk, bread, and eggs at the store.\""
+      ],
+      "misconception": "A common mix-up is putting a comma after the verb. The commas go between the things in the list."
+    },
+    "SK-GUM2-8-P3": {
+      "hints": [
+        "Check the date, the list, the greeting and the closing.",
+        "A greeting and a closing each end with a comma.",
+        "The date and the list are written correctly. Think about the rest."
+      ],
+      "how": [
+        "Check each line one at a time.",
+        "The date, the list and the closing have their commas. The name Mateo needs none.",
+        "The answer is \"Dear Coach Hill\". It needs a comma: Dear Coach Hill,"
+      ],
+      "misconception": "A common mix-up is thinking the greeting does not need a comma. A greeting always ends with one."
+    },
+    "SK-GUM2-8-P4": {
+      "hints": [
+        "This is a city and a state.",
+        "Think about what mark, if any, goes between them.",
+        "A period ends a sentence. Think about the other choices."
+      ],
+      "how": [
+        "Orlando is the city, and Florida is the state.",
+        "A comma goes between a city and its state.",
+        "The answer is Orlando, Florida."
+      ],
+      "misconception": "A common mix-up is leaving the comma out because the names are said together. The comma keeps them apart."
+    },
+    "SK-GUM2-8-P5": {
+      "hints": [
+        "Look at what the comma separates in each example.",
+        "Some examples have a month and a number. Some have two place names. Some start or end a letter.",
+        "A list has three or more things. Use that to sort one example first."
+      ],
+      "how": [
+        "Look at the words on each side of the comma.",
+        "Pens, paper and glue are a list. April 9, 2026 and June 1, 2025 are dates. Rome, Georgia is a city and state.",
+        "Dear Aunt Rosa, and Sincerely, are parts of a letter."
+      ],
+      "misconception": "A common mix-up is sorting by how many commas are in the example. What the comma separates decides the group."
+    }
+  },
+  /* B7b:core:end */
   test: [
     { id: "SK-GUM2-8-T1", type: "dropdown", points: 1, dok: 1, passages: [],
       prompt: "Choose the date that is written correctly.",
