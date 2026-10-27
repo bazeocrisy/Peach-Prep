@@ -9390,7 +9390,7 @@ PP.addLesson({
     points: [
       "A hyphen is a short line (-). It goes at the end of the first line, never at the start of the next line, and it shows that the word keeps going.",
       "Clap the word to count its syllables. Always split a word between syllables. A word with only one syllable, like school or bright, is never split. Move the whole word to the next line instead. Also, never leave a single letter alone at the end or the start of a line. Break after a syllable, not after the first or last letter.",
-      "When two different consonants sit between two vowels, split between the consonants: gar-den, sis-ter, pen-cil. But letters that make one sound together, like th, sh, ch and ck, stay together: fish-er, lock-er.",
+      "When two different consonants sit between two vowels, split between the consonants: gar-den, sis-ter, pen-cil. But letters that make one sound together, like th, sh, ch and ck, stay together, and they stay with the vowel before them: fish-er, lock-er, rock-et, wash-er.",
       "When the same consonant comes twice in the middle, split between the two letters: hap-py, bub-ble.",
       "When a word is made of two smaller words, split between the two words: sun-set, rail-road."
     ],
@@ -10680,7 +10680,7 @@ PP.addLesson({
         { text: "butterf- | ly" }
       ],
       clue: "Butterfly has a double letter in it. It is also made of two smaller words. Which split follows a rule?",
-      why: "The answer is but- | terfly. Butterfly has a double t, and the rule says to split between the two t's. (The split in the passage, butter- | fly, is also correct, because it falls between the two smaller words butter and fly.) The other splits do not follow any rule." },
+      why: "The answer is but- | terfly. Butterfly has a double t, and the rule says to split between the two t's. (The split in the sentence, butter- | fly, is also correct, because it falls between the two smaller words butter and fly.) The other splits do not follow any rule." },
     { id: "SK-GUM3-8-T3", type: "ms", points: 2, dok: 2, passages: [], pick: 2,
       prompt: "Choose the TWO words that should never be split at the end of a line.",
       choices: [

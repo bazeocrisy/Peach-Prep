@@ -5100,7 +5100,7 @@ PP.addLesson({
       "draft": true,
       "paragraphs": [
         [
-          "(1) Field Day was the best day of the whole school year, and the sun was out.",
+          "(1) Field Day was our favorite day of the entire school year, and the sun was out.",
           "(2) Who was ready for the sack race?",
           "(3) Hooray, the sack race had finally begun!"
         ],
@@ -5111,9 +5111,9 @@ PP.addLesson({
           "(7) Did the whole crowd cheer loudly for us."
         ],
         [
-          "(8) After all the games, we drank cold water in the shade of a big oak tree.",
+          "(8) After all the games, we drank cold water under the shady branches of an elm.",
           "(9) Mr. Fenn asked who wanted to hold the trophy.",
-          "(10) We cannot wait for next year's Field Day to come back around."
+          "(10) Next spring, we will play again on Field Day, and I will be ready."
         ]
       ]
     },
@@ -5126,7 +5126,7 @@ PP.addLesson({
       "paragraphs": [
         [
           "(1) Last Friday afternoon, our whole school had a magic show in the gym.",
-          "(2) Who wanted to help the magician?",
+          "(2) Who wanted to help the magician on the stage?",
           "(3) Everyone in the room raised a hand and waved it around.",
           "(4) The magician chose a boy named Omar from the front row."
         ],
@@ -5274,17 +5274,17 @@ PP.addLesson({
             "prompt": "Sentence 8 ends with the wrong mark. What is the mistake?",
             "choices": [
               {
-                "text": "It asks about something, so it needs a question mark in place of the period.",
+                "text": "It asks about something, so a question mark should replace the period.",
                 "correct": true
               },
               {
-                "text": "It shows strong feeling, so it needs an exclamation point in place of the period."
+                "text": "It shows strong feeling, so an exclamation point should replace the period."
               },
               {
                 "text": "It tells what someone thinks, so the period is already the right mark."
               },
               {
-                "text": "It asks about something, so it needs both a question mark and a period."
+                "text": "It asks about something, so a question mark and a period should both be used."
               }
             ],
             "clue": "Say sentence 8 aloud the way a person would. Decide whether it tells, asks or shows strong feeling.",
@@ -5296,10 +5296,10 @@ PP.addLesson({
             "how": [
               "Sentence 8 begins with Do and wants an answer from the reader.",
               "A sentence that wants an answer is an asking sentence, and it ends with a question mark.",
-              "The answer is \"It asks about something, so it needs a question mark in place of the period.\" A sentence ends with only one mark."
+              "The answer is \"It asks about something, so a question mark should replace the period.\" A sentence ends with only one mark."
             ],
             "misconception": "A common mix-up is thinking the word think makes a sentence a telling sentence. Here the reader is asked to answer.",
-            "why": "The answer is \"It asks about something, so it needs a question mark in place of the period.\" Sentence 8 begins with Do and wants an answer. It shows no strong feeling, and a sentence ends with only one mark.",
+            "why": "The answer is \"It asks about something, so a question mark should replace the period.\" Sentence 8 begins with Do and wants an answer. It shows no strong feeling, and a sentence ends with only one mark.",
             "like": [
               "SK-GUM2-4-S03"
             ]
@@ -5358,7 +5358,7 @@ PP.addLesson({
             "prompt": "Sentence 6 uses the word asked, yet it should end with a period, not a question mark. Why?",
             "choices": [
               {
-                "text": "It tells what the sister asked and does not ask the reader a question.",
+                "text": "It reports what the sister asked, and the writer is not asking the reader anything.",
                 "correct": true
               },
               {
@@ -5371,19 +5371,19 @@ PP.addLesson({
                 "text": "A question told in a story always ends with a period, even when the writer asks it."
               }
             ],
-            "clue": "Compare sentence 2 with sentence 6. Think about who is asking in each one.",
+            "clue": "Compare sentence 2 with sentence 6. Think about who is speaking in each one.",
             "hints": [
-              "Compare sentence 2 with sentence 6. Think about who is asking in each one.",
+              "Compare sentence 2 with sentence 6. Think about who is speaking in each one.",
               "Say each sentence aloud. In which one does the writer want you to give an answer?",
               "Where a sentence sits in a draft does not decide its end mark. Think about the other choices."
             ],
             "how": [
               "Sentence 2 asks the reader a question. Sentence 6 says that someone else asked a question.",
               "A sentence that reports a question is a telling sentence, so it ends with a period.",
-              "The answer is \"It tells what the sister asked and does not ask the reader a question.\""
+              "The answer is \"It reports what the sister asked, and the writer is not asking the reader anything.\""
             ],
             "misconception": "A common mix-up is thinking every sentence with the word asked is a question. Only a sentence that asks the reader is.",
-            "why": "The answer is \"It tells what the sister asked and does not ask the reader a question.\" Sentence 2 asks directly, so it takes a question mark. Sentence 6 only reports a question, so it takes a period.",
+            "why": "The answer is \"It reports what the sister asked, and the writer is not asking the reader anything.\" Sentence 2 asks directly, so it takes a question mark. Sentence 6 only reports a question, so it takes a period.",
             "like": [
               "SK-GUM2-4-S05"
             ]
@@ -5450,7 +5450,7 @@ PP.addLesson({
               "prompt": "What kind of sentence is sentence 5?",
               "choices": [
                 {
-                  "text": "An asking sentence, so it needs a question mark.",
+                  "text": "An asking sentence, which calls for a question mark.",
                   "correct": true
                 },
                 {
@@ -5491,10 +5491,10 @@ PP.addLesson({
             "how": [
               "Part A: the sentence wants the reader to say whether he or she can swim across the pool.",
               "Part B: the first three words begin the sentence the way an asking sentence often begins.",
-              "The answers are \"An asking sentence, so it needs a question mark.\" and \"Can you swim\"."
+              "The answers are \"An asking sentence, which calls for a question mark.\" and \"Can you swim\"."
             ],
             "misconception": "A common mix-up is picking words from the end of the sentence. The first words are the clue.",
-            "why": "Part A: \"An asking sentence, so it needs a question mark.\" Part B: \"Can you swim\". The sentence begins with words that ask, and it wants an answer, so it takes a question mark.",
+            "why": "Part A: \"An asking sentence, which calls for a question mark.\" Part B: \"Can you swim\". The sentence begins with words that ask, and it wants an answer, so it takes a question mark.",
             "like": [
               "SK-GUM2-4-S07"
             ]
@@ -5508,7 +5508,7 @@ PP.addLesson({
               "3.L.GC.1:R:use-end-punctuation-period-exclamation-point-que"
             ],
             "passages": [],
-            "prompt": "Choose the TWO sentences that have the correct end mark.",
+            "prompt": "Choose the TWO sentences that end with the correct mark.",
             "pick": 2,
             "choices": [
               {
@@ -5602,7 +5602,7 @@ PP.addLesson({
             "prompt": "Zoe says sentence 8 needs a question mark because Dan asked something. Which reply explains the mistake in her idea?",
             "choices": [
               {
-                "text": "The sentence tells what Dan asked and does not ask the reader, so it takes a period.",
+                "text": "The sentence only reports Dan's question to the reader, so it takes a period.",
                 "correct": true
               },
               {
@@ -5624,10 +5624,10 @@ PP.addLesson({
             "how": [
               "Sentence 8 says that Dan asked something. The writer is not asking the reader.",
               "A sentence that reports a question tells what happened, so it ends with a period.",
-              "The answer is \"The sentence tells what Dan asked and does not ask the reader, so it takes a period.\""
+              "The answer is \"The sentence only reports Dan's question to the reader, so it takes a period.\""
             ],
             "misconception": "A common mix-up is seeing a question word and adding a question mark. The sentence has to ask the reader something.",
-            "why": "The answer is \"The sentence tells what Dan asked and does not ask the reader, so it takes a period.\" Sentence 8 reports a question, so it is a telling sentence. Zoe's idea would work only if the writer were asking.",
+            "why": "The answer is \"The sentence only reports Dan's question to the reader, so it takes a period.\" Sentence 8 reports a question, so it is a telling sentence. Zoe's idea would work only if the writer were asking.",
             "like": [
               "SK-GUM2-4-S10"
             ]
@@ -5648,7 +5648,7 @@ PP.addLesson({
             "passages": [
               "p3"
             ],
-            "prompt": "Look at sentences 3 through 7. Pick the TWO sentences that end with the right mark.",
+            "prompt": "Among sentences 3 to 7, which TWO end with the right mark?",
             "targets": [
               "p3:1:3",
               "p3:2:1",
@@ -5673,7 +5673,7 @@ PP.addLesson({
               "Sentences 4 and 7 ask but end with periods, and sentence 6 only tells what the writer wonders but ends with a question mark."
             ],
             "misconception": "A common mix-up is picking a sentence that looks right once you have found one mistake. Check all five sentences.",
-            "why": "The answers are \"Hooray, the sack race had finally begun!\" and \"My team crossed the finish line first.\" The first shows strong joy, and the second tells. Sentences 4 and 7 ask and need question marks. Sentence 6 only tells what the writer wonders, so it needs a period.",
+            "why": "The answers are \"Hooray, the sack race had finally begun!\" and \"My team crossed the finish line first, ahead of the other three teams.\" The first shows strong joy, and the second tells. Sentences 4 and 7 ask and need question marks. Sentence 6 only tells what the writer wonders, so it needs a period.",
             "like": [
               "SK-GUM2-4-S11"
             ]
@@ -5773,7 +5773,7 @@ PP.addLesson({
               "3.L.GC.1:R:use-end-punctuation-period-exclamation-point-que"
             ],
             "passages": [],
-            "prompt": "These sentences have no end marks. Select the one that should end with an exclamation point.",
+            "prompt": "None of these sentences has an end mark yet. Select the one that needs an exclamation point.",
             "options": [
               "Whoa, the roller coaster just dropped",
               "The roller coaster opens at ten",
@@ -5811,10 +5811,10 @@ PP.addLesson({
               "3.L.GC.1:R:use-end-punctuation-period-exclamation-point-que"
             ],
             "passages": [],
-            "prompt": "Lee says, \"Any sentence with the word asked needs a question mark.\" Which sentence shows that Lee is wrong?",
+            "prompt": "Lee says, \"Any sentence with the word asked needs a question mark.\" Which sentence breaks Lee's rule?",
             "choices": [
               {
-                "text": "Mr. Cole asked us to line up at the door.",
+                "text": "Ms. Cole asked us to line up at the door.",
                 "correct": true
               },
               {
@@ -5824,7 +5824,7 @@ PP.addLesson({
                 "text": "Did anyone ask where the extra glue sticks went?"
               },
               {
-                "text": "What did Mr. Cole ask us to bring to the picnic?"
+                "text": "What did Ms. Cole ask us to bring to the picnic?"
               }
             ],
             "clue": "To show an idea is wrong, find a sentence where it does not work. Look at the end mark of each sentence that has the word asked.",
@@ -5835,11 +5835,11 @@ PP.addLesson({
             ],
             "how": [
               "Lee's idea says the word asked always means a question mark. Look for asked in a sentence that does not ask.",
-              "Mr. Cole asked us to line up only tells what Mr. Cole did. It tells, so it ends with a period.",
-              "The answer is \"Mr. Cole asked us to line up at the door.\""
+              "Ms. Cole asked us to line up only tells what Ms. Cole did. It tells, so it ends with a period.",
+              "The answer is \"Ms. Cole asked us to line up at the door.\""
             ],
             "misconception": "A common mix-up is thinking a clue word decides the end mark. What the whole sentence does decides it.",
-            "why": "The answer is \"Mr. Cole asked us to line up at the door.\" It has the word asked, but it only tells what happened, so it ends with a period. That proves Lee wrong. The other three sentences ask questions.",
+            "why": "The answer is \"Ms. Cole asked us to line up at the door.\" It has the word asked, but it only tells what happened, so it ends with a period. That proves Lee wrong. The other three sentences ask questions.",
             "like": [
               "SK-GUM2-4-S15"
             ]
@@ -5956,35 +5956,35 @@ PP.addLesson({
       "passages": [
         "p4"
       ],
-      "prompt": "Which fix is needed at the end of sentence 8?",
+      "prompt": "What should replace the last mark in sentence 8?",
       "choices": [
         {
-          "text": "It wants an answer, so it should end with (?) instead.",
+          "text": "(?), because Where begins a line that wants a reply",
           "correct": true
         },
         {
-          "text": "It names a place, so it should end with (!) instead."
+          "text": "(!), because rabbits do surprising things after a show"
         },
         {
-          "text": "It tells a fact, so it should end with (,) instead."
+          "text": "(,), because the line should pause after the word show"
         },
         {
-          "text": "It is long, so it should end with two (.) marks."
+          "text": "(..), because the line is long and needs extra dots"
         }
       ],
       "clue": "Read sentence 8 aloud. Decide whether it tells, asks or shows strong feeling.",
       "hints": [
         "Read sentence 8 aloud. Decide whether it tells, asks or shows strong feeling.",
-        "Look at the first word of sentence 8 and think about what kind of sentence begins that way.",
+        "Look at the first word of sentence 8 and think about what kind of line starts that way.",
         "A comma is not an end mark. Think about the other choices."
       ],
       "how": [
         "Sentence 8 begins with Where and asks the reader about the rabbit.",
-        "A sentence that asks gets the mark that shows a question.",
-        "The answer is \"It wants an answer, so it should end with (?) instead.\""
+        "A line that asks gets the mark that shows a question.",
+        "The answer is \"(?), because Where begins a line that wants a reply\"."
       ],
       "misconception": "A common mix-up is thinking a sentence with a place word tells where something is. This one asks where.",
-      "why": "The answer is \"It wants an answer, so it should end with (?) instead.\" Sentence 8 begins with Where and asks about the rabbit. It does not show strong feeling, and a comma is not an end mark.",
+      "why": "The answer is \"(?), because Where begins a line that wants a reply\". Sentence 8 asks about the rabbit. It does not show strong feeling, and a comma is not an end mark.",
       "like": [
         "SK-GUM2-4-C03"
       ]
@@ -6040,35 +6040,35 @@ PP.addLesson({
       "passages": [
         "p4"
       ],
-      "prompt": "A friend says sentence 6 is fine because Omar was curious. How could you explain the problem?",
+      "prompt": "Your friend defends the (?) in sentence 6 by saying Omar was curious. How would you answer?",
       "choices": [
         {
-          "text": "The writer only reports a question and does not ask one, so (.) is the right way to stop.",
+          "text": "Omar's wondering is just described for the audience, so (.) is the better stop.",
           "correct": true
         },
         {
-          "text": "Being curious makes a sentence a question, so Omar's sentence keeps its (?) at the end."
+          "text": "Curious people always get (?) in their lines, so the mark stays as it is now."
         },
         {
-          "text": "Curious feelings are strong feelings, so Omar's sentence needs (!) at the end instead."
+          "text": "Curious people always get (!) in their lines, so the mark should change to it."
         },
         {
-          "text": "Any sentence in the middle of a paragraph can finish with any mark at all, so it is fine."
+          "text": "Punctuation in a draft is a matter of taste, so whatever mark you like will do here."
         }
       ],
-      "clue": "Think about who is speaking and who is being asked. Is the writer putting a question to you?",
+      "clue": "Think about who is speaking in sentence 6 and who is being spoken to.",
       "hints": [
-        "Think about who is speaking and who is being asked. Is the writer putting a question to you?",
-        "Say sentence 6 aloud and listen for whether it wants an answer from you.",
-        "Strong feeling sentences usually start with a word like hooray or whew. Think about the other choices."
+        "Think about who is speaking in sentence 6 and who is being spoken to.",
+        "Say sentence 6 aloud and listen for whether it wants a reply from you.",
+        "Strong feeling lines usually start with a word like hooray or whew. Think about the other choices."
       ],
       "how": [
         "Sentence 5 puts a question to the reader. Sentence 6 says that Omar asked one.",
         "A sentence that reports a question tells what happened, so it stops with a period.",
-        "The answer is \"The writer only reports a question and does not ask one, so (.) is the right way to stop.\""
+        "The answer is \"Omar's wondering is just described for the audience, so (.) is the better stop.\""
       ],
-      "misconception": "A common mix-up is thinking a curious person makes a sentence a question. The writer must ask the reader.",
-      "why": "The answer is \"The writer only reports a question and does not ask one, so (.) is the right way to stop.\" Sentence 5 asks directly, but sentence 6 only reports what Omar asked.",
+      "misconception": "A common mix-up is thinking a curious person makes a line a question. The writer must be putting the question to the reader.",
+      "why": "The answer is \"Omar's wondering is just described for the audience, so (.) is the better stop.\" Sentence 5 asks directly, but sentence 6 only reports what Omar asked.",
       "like": [
         "SK-GUM2-4-C05"
       ]
@@ -6125,27 +6125,27 @@ PP.addLesson({
       "passages": [
         "p5"
       ],
-      "prompt": "Answer the first half, then use your answer for the second half.",
+      "prompt": "Use the first half to help you with the second half.",
       "partA": {
-        "prompt": "How should sentence 3 be described?",
+        "prompt": "Which statement explains how sentence 3 should end?",
         "choices": [
           {
-            "text": "Telling: it states what Mr. Lee did, so it should finish with (.)",
+            "text": "It reports what Mr. Lee did, and (.) closes it.",
             "correct": true
           },
           {
-            "text": "Asking: it wants an answer, so (?) is the right mark."
+            "text": "It wants a reply from you, so it ends with (?)"
           },
           {
-            "text": "Feeling: it shows surprise, so it should finish with (!)"
+            "text": "It shows great surprise, so it ends with (!)"
           },
           {
-            "text": "Asking: it wants an answer, so it should finish with (,)"
+            "text": "It goes on after a short pause, so it ends with (,)"
           }
         ]
       },
       "partB": {
-        "prompt": "Which group of words in sentence 3 best supports your answer?",
+        "prompt": "Pick the words from sentence 3 that back up your choice.",
         "choices": [
           {
             "text": "Mr. Lee showed us",
@@ -6162,19 +6162,19 @@ PP.addLesson({
           }
         ]
       },
-      "clue": "Read sentence 3 aloud. Decide whether the writer is asking something or reporting what happened.",
+      "clue": "Read sentence 3 aloud. Decide whether the writer is putting a question to you or reporting what happened.",
       "hints": [
-        "Read sentence 3 aloud. Decide whether the writer is asking something or reporting what happened.",
-        "In the second half, look for the words that say who did what. A sentence that reports an action tells.",
-        "The words how deep may look like an asking phrase, but think about whether they begin the sentence."
+        "Read sentence 3 aloud. Decide whether the writer is putting a question to you or reporting what happened.",
+        "In the second half, look for the words that say who did what. A line that names someone doing something tells.",
+        "The words how deep may look like an asking phrase, but think about whether they begin the line."
       ],
       "how": [
-        "Part A: the sentence says what Mr. Lee did, and it does not want an answer.",
-        "Part B: the first words name the person and the action, which is how a telling sentence often begins.",
-        "The answers are \"Telling: it states what Mr. Lee did, so it should finish with (.)\" and \"Mr. Lee showed us\"."
+        "Part A: the line says what Mr. Lee did, and it does not want a reply.",
+        "Part B: the first words name the person and the action, which is how a telling line often begins.",
+        "The answers are \"It reports what Mr. Lee did, and (.) closes it.\" and \"Mr. Lee showed us\"."
       ],
       "misconception": "A common mix-up is picking how deep because it looks like a question word. The clue is who did what.",
-      "why": "Part A: \"Telling: it states what Mr. Lee did, so it should finish with (.)\" Part B: \"Mr. Lee showed us\". The sentence says what Mr. Lee did and does not ask the reader anything.",
+      "why": "Part A: \"It reports what Mr. Lee did, and (.) closes it.\" Part B: \"Mr. Lee showed us\". The line says what Mr. Lee did and does not put anything to the reader.",
       "like": [
         "SK-GUM2-4-C07"
       ]
@@ -6206,7 +6206,7 @@ PP.addLesson({
           "text": "The snow is falling very fast?"
         },
         {
-          "text": "Could you pass me the salt."
+          "text": "Do you want another pear."
         }
       ],
       "clue": "Say each sentence aloud. Decide whether it asks, tells or shows strong feeling, and then look at its mark.",
@@ -6218,7 +6218,7 @@ PP.addLesson({
       "how": [
         "Decide what each sentence does.",
         "Did the bus leave without us asks, so the question mark fits. My mom wonders where the keys went tells, so the period fits.",
-        "Where did we park the car and Could you pass me the salt ask, so they need question marks. The snow sentence tells, so it needs a period."
+        "Where did we park the car and Do you want another pear ask, so they need question marks. The snow sentence tells, so it needs a period."
       ],
       "misconception": "A common mix-up is thinking the word wonders turns a sentence into a question. It only tells what someone thinks.",
       "why": "The answers are \"Did the bus leave without us?\" and \"My mom wonders where the keys went.\" The first asks, and the second tells what the mom wonders. The other three have the wrong mark.",
@@ -6282,32 +6282,32 @@ PP.addLesson({
       "prompt": "A classmate wants to change the end of sentence 7 to (?). What should you tell her?",
       "choices": [
         {
-          "text": "Keep the (.) because the sentence reports Sam's question instead of asking one.",
+          "text": "Leave the (.) alone, since Sam's wondering is simply being reported to us.",
           "correct": true
         },
         {
-          "text": "Change it to (?) because every sentence about waiting for plants asks something."
+          "text": "Change it to (?), since waiting for plants is a puzzling thing to describe."
         },
         {
-          "text": "Change it to (?) because the word when always starts a question in a sentence."
+          "text": "Change it to (?), since when is a word that always opens a puzzle line."
         },
         {
-          "text": "Change it to (!) because waiting for a sprout to appear is very exciting."
+          "text": "Change it to (!), since sprouts popping up make everyone cheer and shout."
         }
       ],
-      "clue": "Think about who is asking and who is being asked. Is the writer putting a question to you?",
+      "clue": "Think about who is speaking in sentence 7 and who is being spoken to.",
       "hints": [
-        "Think about who is asking and who is being asked. Is the writer putting a question to you?",
-        "Read sentence 7 aloud. Does it want an answer from you?",
-        "Strong feeling needs a word that shows it. Look for such a word in the sentence."
+        "Think about who is speaking in sentence 7 and who is being spoken to.",
+        "Read sentence 7 aloud. Does it want a reply from you?",
+        "Strong feeling needs a word that shows it. Look for such a word in the line."
       ],
       "how": [
-        "Sentence 7 says that Sam asked something. The writer is not asking the reader.",
-        "A sentence that reports a question is a telling sentence, so it ends with a period.",
-        "The answer is \"Keep the (.) because the sentence reports Sam's question instead of asking one.\""
+        "Sentence 7 says that Sam asked something. The writer is not putting a question to the reader.",
+        "A line that reports a question is a telling line, so it ends with a period.",
+        "The answer is \"Leave the (.) alone, since Sam's wondering is simply being reported to us.\""
       ],
-      "misconception": "A common mix-up is thinking the word when always starts a question. Here it sits inside a telling sentence.",
-      "why": "The answer is \"Keep the (.) because the sentence reports Sam's question instead of asking one.\" The word when can begin a question, but here it sits inside a telling sentence.",
+      "misconception": "A common mix-up is thinking the word when always starts a question. Here it sits inside a telling line.",
+      "why": "The answer is \"Leave the (.) alone, since Sam's wondering is simply being reported to us.\" The word when can begin a question, but here it sits inside a telling line.",
       "like": [
         "SK-GUM2-4-C10"
       ]
@@ -6323,7 +6323,7 @@ PP.addLesson({
       "passages": [
         "p6"
       ],
-      "prompt": "Which two lines among 3 to 7 end with the right mark? Tap them.",
+      "prompt": "Two of lines 3 to 7 are finished correctly. Tap them.",
       "targets": [
         "p6:1:3",
         "p6:1:4",
@@ -6486,7 +6486,7 @@ PP.addLesson({
         "3.L.GC.1:R:use-end-punctuation-period-exclamation-point-que"
       ],
       "passages": [],
-      "prompt": "Ana says, \"Whenever a sentence has the word who in it, it ends with a question mark.\" Which sentence proves Ana wrong?",
+      "prompt": "Ana says, \"Whenever a sentence has the word who in it, a question mark must finish it.\" Which sentence proves Ana wrong?",
       "choices": [
         {
           "text": "My neighbor knows who built the old clock tower.",
