@@ -103,7 +103,79 @@ PP.addLesson({
       figures: [
         { after: 2, src: "assets/figures/v3a-b-balloon-parts.svg", label: "Figure 1", caption: "The parts of a hot-air balloon",
           alt: "A drawing of a hot-air balloon with four labels. The label vent points to a small dashed circle at the very top of the balloon. The label envelope points to the big balloon. The label burner points to a small box under the balloon, with a flame pointing up into it. The label basket points to the basket that hangs from ropes at the bottom." }
-      ] }
+      ] },
+    /* B5-b5b:passages:start */
+    {
+      id: "p4",
+      title: "Weaving Day",
+      genre: "Literary text",
+      paragraphs: [
+        [
+          "Nia went to a weaving class at the town library on Saturday."
+        ],
+        [
+          "Her teacher, Ms. Reyes, showed her a loom, which is a frame that holds the long threads in place."
+        ],
+        [
+          "Nia picked bold hues, such as red, orange and gold.",
+          "She tied each thread to the frame."
+        ],
+        [
+          "At first, her threads were loose, but Ms. Reyes helped her pull them until they were taut.",
+          "Then Nia could pass the yarn over and under, row after row."
+        ],
+        [
+          "By noon, the cloth was finished.",
+          "Nia felt very proud of her work."
+        ]
+      ]
+    },
+    {
+      id: "p5",
+      title: "Life on the Tundra",
+      genre: "Informational text",
+      paragraphs: [
+        [
+          "The tundra is a cold land near the top of the world.",
+          "No trees grow there, and the ground is frozen hard in winter."
+        ],
+        [
+          "The tundra is barren.",
+          "Only moss, grass and a few tiny flowers can grow there."
+        ],
+        [
+          "Arctic foxes live on the tundra.",
+          "In winter, their thick fur turns white, which helps them hide in the snow."
+        ],
+        [
+          "Summer is short.",
+          "The top layer of soil thaws, and small flowers bloom.",
+          "Birds fly in to nest, and insects hum over the ponds."
+        ]
+      ]
+    },
+    {
+      id: "p6",
+      title: "A Morning at the River",
+      genre: "Literary text",
+      paragraphs: [
+        [
+          "On Sunday, Dad and I walked down to the bank of the river."
+        ],
+        [
+          "The current was strong, so we stayed back from the edge."
+        ],
+        [
+          "I dropped a stick into the water and watched it race away."
+        ],
+        [
+          "By noon, my arms were tired from tossing stones.",
+          "Dad said, \"Let's call it a day.\"",
+          "We packed our bag and walked home."
+        ]
+      ]
+    }
+    /* B5-b5b:passages:end */
   ],
   practice: [
     { id: "SK-V3a-P1", type: "mc", points: 1, dok: 2, passages: ["p1"],
@@ -181,6 +253,1443 @@ PP.addLesson({
       clue: "Read the whole sentence. Where did the treats go, and why would a bake sale need them there?",
       why: "The answer is \"put it where people could see it.\" The class put the treats on two long tables in the front hall so buyers could see them and pick some. Read together, the words set everything out mean to lay things out for people to see." }
   ],
+  /* B5-b5b:core:start */
+  /* ---------- Expansion 2026-10-22, batch B5 (author b5b) ----------
+     core: fifteen items in three sets of five. { ref } reuses a practice item; the other practice items stay in Practice Together.
+     Author log: docs/expansion-2026-10-22/batches/B5-b5b-author-log.md. NEEDS INDEPENDENT REVIEW. */
+  core: {
+    rev: "1",
+    sets: [
+      {
+        title: "Set 1",
+        items: [
+          {
+            id: "SK-V3a-C01",
+            type: "mc",
+            points: 1,
+            dok: 2,
+            std: [
+              "3.L.V.3.a"
+            ],
+            passages: [
+              "p4"
+            ],
+            prompt: "What does loom mean in paragraph 2?",
+            choices: [
+              {
+                text: "a frame that holds long threads",
+                correct: true
+              },
+              {
+                text: "a tool that cuts the yarn"
+              },
+              {
+                text: "a box for storing wool and yarn"
+              },
+              {
+                text: "a table where the class eats lunch"
+              }
+            ],
+            clue: "Look for a signal word near the new word. It can point to the meaning.",
+            hints: [
+              "Look for a signal word near the new word. It can point to the meaning.",
+              "Read the sentence the word is in. Look at the words that come right after the signal.",
+              "One choice is about lunch, which has nothing to do with weaving. Decide which of the others fits the words after the signal."
+            ],
+            how: [
+              "Find the word: \"a loom, which is a frame that holds the long threads in place.\"",
+              "The words which is are a signal. The meaning comes right after them.",
+              "After which is: a frame that holds the long threads in place."
+            ],
+            misconception: "A common mix-up is guessing a meaning from the topic of weaving. The words after which is give the exact meaning.",
+            why: "The answer is \"a frame that holds long threads.\" The words which is lead into the meaning: a frame that holds the long threads in place. A tool that cuts yarn, a box for storing yarn and a lunch table are not what the sentence says."
+          },
+          {
+            id: "SK-V3a-C02",
+            type: "ebsr",
+            points: 2,
+            dok: 3,
+            std: [
+              "3.L.V.3.a"
+            ],
+            passages: [
+              "p4"
+            ],
+            prompt: "This question has two parts. Answer Part A, then Part B.",
+            partA: {
+              prompt: "What does hues mean in paragraph 3?",
+              choices: [
+                {
+                  text: "colors",
+                  correct: true
+                },
+                {
+                  text: "sizes"
+                },
+                {
+                  text: "sounds"
+                },
+                {
+                  text: "patterns"
+                }
+              ]
+            },
+            partB: {
+              prompt: "Which sentence from the story BEST helps you know what hues means?",
+              choices: [
+                {
+                  text: "Nia picked bold hues, such as red, orange and gold.",
+                  correct: true
+                },
+                {
+                  text: "Nia went to a weaving class at the town library on Saturday."
+                },
+                {
+                  text: "Then Nia could pass the yarn over and under, row after row."
+                },
+                {
+                  text: "By noon, the cloth was finished."
+                }
+              ]
+            },
+            clue: "Authors sometimes give examples to show what a word means. For Part B, look for the sentence that gives them.",
+            hints: [
+              "Authors sometimes give examples to show what a word means. For Part B, look for the sentence that gives them.",
+              "Think about the whole story, not only the part with the word. Which sentences give details you could picture?",
+              "For Part B, a true sentence about the weaving class may not tell you anything about the word."
+            ],
+            how: [
+              "Part A: look at the examples in the sentence: red, orange and gold. They are all colors.",
+              "Examples that share one kind of thing tell you what the word means.",
+              "Part B: the sentence with such as red, orange and gold gives the examples.",
+              "The other sentences tell about the class and the work, not about the word."
+            ],
+            misconception: "A common mix-up is picking a sentence just because it is about weaving. The sentence has to explain the word.",
+            why: "Part A: colors. Red, orange and gold are colors, so hues means colors. Part B: \"Nia picked bold hues, such as red, orange and gold.\" The words such as lead to examples that show the meaning. The other sentences do not explain the word."
+          },
+          {
+            id: "SK-V3a-C03",
+            type: "hottext",
+            points: 1,
+            dok: 2,
+            std: [
+              "3.L.V.3.a"
+            ],
+            passages: [
+              "p4"
+            ],
+            prompt: "Read the sentence. Choose the word that gives an antonym clue for taut.",
+            stem: [
+              "At first, her threads were loose, but Ms. Reyes helped her pull them until they were taut."
+            ],
+            options: [
+              "loose",
+              "taut",
+              "pull",
+              "helped"
+            ],
+            answer: [
+              0
+            ],
+            pick: 1,
+            clue: "An antonym clue is a word that means the opposite. Look for a word that points the other way.",
+            hints: [
+              "An antonym clue is a word that means the opposite. Look for a word that points the other way.",
+              "Read the sentence and look for the small word that signals a change. Look at the words on either side of it.",
+              "The word taut is the word you are trying to understand, so it cannot be its own clue. Check the other choices."
+            ],
+            how: [
+              "The word but shows a change: the threads were one way at first, and then another way.",
+              "At first the threads were loose, but later they were taut. So taut is the opposite of loose.",
+              "Pull and helped tell what Ms. Reyes did. They do not show the opposite of taut."
+            ],
+            misconception: "A common mix-up is choosing a word that tells what happened. An antonym clue means the opposite.",
+            why: "The answer is \"loose.\" The word but tells you the threads changed from loose to taut, so taut means the opposite of loose: pulled tight. Pull and helped are actions, and taut is the word being explained."
+          },
+          {
+            id: "SK-V3a-C04",
+            type: "ms",
+            points: 2,
+            dok: 2,
+            std: [
+              "3.L.V.3.a"
+            ],
+            passages: [
+              "p4"
+            ],
+            prompt: "Which TWO word groups in paragraphs 2 and 3 are signals that a clue is coming?",
+            pick: 2,
+            choices: [
+              {
+                text: "which is",
+                correct: true
+              },
+              {
+                text: "such as",
+                correct: true
+              },
+              {
+                text: "in place"
+              },
+              {
+                text: "each thread"
+              },
+              {
+                text: "row after row"
+              }
+            ],
+            clue: "Signal words are small word groups that tell you a clue is coming. Think about the ones you learned.",
+            hints: [
+              "Signal words are small word groups that tell you a clue is coming. Think about the ones you learned.",
+              "Read paragraphs 2 and 3 and look for small word groups that come before an explanation or a list.",
+              "A signal word group is followed by an explanation or a list. Check what comes after each choice."
+            ],
+            how: [
+              "In paragraph 2, which is comes right before the meaning of loom.",
+              "In paragraph 3, such as comes right before a list of examples.",
+              "In place, each thread and row after row are parts of the story, and nothing explains a word after them."
+            ],
+            misconception: "A common mix-up is choosing any short group of words. A signal word group is followed by a meaning or examples.",
+            why: "The answers are \"which is\" and \"such as.\" Which is leads to the meaning of loom, and such as leads to a list of examples that shows the meaning of hues. The other word groups are not followed by a meaning or examples."
+          },
+          {
+            ref: "SK-V3a-P3"
+          }
+        ]
+      },
+      {
+        title: "Set 2",
+        items: [
+          {
+            id: "SK-V3a-C05",
+            type: "mc",
+            points: 1,
+            dok: 2,
+            std: [
+              "3.L.V.3.a"
+            ],
+            passages: [
+              "p5"
+            ],
+            prompt: "What does barren mean in paragraph 2?",
+            choices: [
+              {
+                text: "with very little growing",
+                correct: true
+              },
+              {
+                text: "full of tall trees"
+              },
+              {
+                text: "covered with deep water"
+              },
+              {
+                text: "busy with many animals"
+              }
+            ],
+            clue: "Sometimes the clue to a word comes in the sentence after it. Read on.",
+            hints: [
+              "Sometimes the clue to a word comes in the sentence after it. Read on.",
+              "Read the sentence the word is in and the one that follows it. Look at what grows there.",
+              "Some choices talk about trees or water or animals. Check what the first paragraph says about the land."
+            ],
+            how: [
+              "Find the word: \"The tundra is barren.\" The sentence does not explain it.",
+              "Read the next sentence: only moss, grass and a few tiny flowers can grow there.",
+              "So barren means with very little growing."
+            ],
+            misconception: "A common mix-up is stopping at the sentence with the word. The next sentence holds the clue.",
+            why: "The answer is \"with very little growing.\" The next sentence says only moss, grass and a few tiny flowers can grow there. Paragraph 1 says no trees grow there, so the land is not full of trees, and nothing says it is covered with water or busy with animals."
+          },
+          {
+            id: "SK-V3a-C06",
+            type: "ebsr",
+            points: 2,
+            dok: 3,
+            std: [
+              "3.L.V.3.a"
+            ],
+            passages: [
+              "p5"
+            ],
+            prompt: "This question has two parts. Answer Part A, then Part B.",
+            partA: {
+              prompt: "What does thaws mean in paragraph 4?",
+              choices: [
+                {
+                  text: "melts and turns soft",
+                  correct: true
+                },
+                {
+                  text: "freezes hard"
+                },
+                {
+                  text: "dries out in the sun"
+                },
+                {
+                  text: "fills up with water"
+                }
+              ]
+            },
+            partB: {
+              prompt: "Which sentence from the article BEST helps you know what thaws means?",
+              choices: [
+                {
+                  text: "No trees grow there, and the ground is frozen hard in winter.",
+                  correct: true
+                },
+                {
+                  text: "The tundra is a cold land near the top of the world."
+                },
+                {
+                  text: "Only moss, grass and a few tiny flowers can grow there."
+                },
+                {
+                  text: "Birds fly in to nest, and insects hum over the ponds."
+                }
+              ]
+            },
+            clue: "Think about what this word describes happening and what that thing was like before. For Part B, look for a sentence about how things were before summer.",
+            hints: [
+              "Think about what this word describes happening and what that thing was like before. For Part B, look for a sentence about how things were before summer.",
+              "Think about the whole article, not only the paragraph with the word. What changes between winter and summer?",
+              "For Part A, thaws is a change that happens in summer, not in winter. For Part B, a true detail about the plants may not tell about the ground."
+            ],
+            how: [
+              "Part A: paragraph 4 says summer is short and flowers bloom, so something changes in the soil.",
+              "Part B: paragraph 1 says the ground is frozen hard in winter.",
+              "Frozen hard in winter and thaws in summer are opposites, so thaws means melts and turns soft.",
+              "The other sentences are true, but they do not tell what the ground is like."
+            ],
+            misconception: "A common mix-up is looking only at the paragraph with the word. A clue can be in an earlier paragraph.",
+            why: "Part A: melts and turns soft. Part B: \"No trees grow there, and the ground is frozen hard in winter.\" The soil is frozen in winter and thaws in summer, so thaws means melts and turns soft. The other sentences are true, but they do not tell what the ground is like."
+          },
+          {
+            id: "SK-V3a-C07",
+            type: "mc",
+            points: 1,
+            dok: 2,
+            std: [
+              "3.L.V.3.a"
+            ],
+            passages: [],
+            prompt: "Read the sentence and look at the graph. What does scant mean?",
+            stem: [
+              "By December, daylight on the tundra was scant."
+            ],
+            figure: {
+              src: "assets/figures/v3a-c-daylight-graph.svg",
+              alt: "Bar graph titled Hours of Daylight on the Tundra. The words at the bottom say hours. The bars show September 12, October 9, November 5 and December 3. December has the shortest bar."
+            },
+            choices: [
+              {
+                text: "very little; hardly any",
+                correct: true
+              },
+              {
+                text: "plenty for everyone"
+              },
+              {
+                text: "bright and warm all day"
+              },
+              {
+                text: "the same as in summer"
+              }
+            ],
+            clue: "Read the title of the graph and the words at the bottom. Think about what the bars count.",
+            hints: [
+              "Read the title of the graph and the words at the bottom. Think about what the bars count.",
+              "Compare the bars for different months. Look at which way the bars go as the months go by.",
+              "The word is about an amount, not about color or weather. Decide which choices are about how much."
+            ],
+            how: [
+              "The title tells what the graph counts: hours of daylight on the tundra.",
+              "The bars get shorter each month, and December has the shortest bar: 3 hours.",
+              "Three hours is very little compared with twelve, so scant means very little."
+            ],
+            misconception: "A common mix-up is choosing a meaning from the word daylight. Use the graph to see how much daylight there is.",
+            why: "The answer is \"very little; hardly any.\" The graph shows hours of daylight getting smaller each month, down to only 3 hours in December. Bars that short mean there is very little daylight. September, not December, was the month with the most daylight."
+          },
+          {
+            id: "SK-V3a-C08",
+            type: "mc",
+            points: 1,
+            dok: 2,
+            std: [
+              "3.L.V.3.a"
+            ],
+            passages: [],
+            prompt: "Read the sentence and look at the picture. What is a den?",
+            stem: [
+              "The fox cubs stayed safe in the den."
+            ],
+            figure: {
+              src: "assets/figures/v3a-c-fox-den.svg",
+              alt: "A cutaway drawing of snowy ground. A tunnel leads from the snow down to a small room under the ground. Two fox cubs sleep in the room. Labels name the snow, the tunnel and the room."
+            },
+            choices: [
+              {
+                text: "an animal's hidden home under the ground",
+                correct: true
+              },
+              {
+                text: "a tool for digging through hard snow"
+              },
+              {
+                text: "a trail that foxes follow to the sea"
+              },
+              {
+                text: "a thick white coat that keeps foxes warm"
+              }
+            ],
+            clue: "Read the sentence, then look at the picture and its labels.",
+            hints: [
+              "Read the sentence, then look at the picture and its labels.",
+              "Look at where the cubs are in the picture. Look at what is around them.",
+              "Think about what a place must be like for cubs to stay safe inside it. Decide which choices are places."
+            ],
+            how: [
+              "The sentence says the cubs stayed safe in the den, so a den is a place.",
+              "The picture shows a tunnel from the snow to a room under the ground, and the cubs sleep in the room.",
+              "So a den is an animal's hidden home under the ground."
+            ],
+            misconception: "A common mix-up is picking a meaning that is about foxes but not about a place. The cubs stayed in the den.",
+            why: "The answer is \"an animal's hidden home under the ground.\" The cubs are inside the den, and the picture shows a room under the snow with a tunnel to reach it. A tool, a trail and a coat are not places where cubs can stay."
+          },
+          {
+            id: "SK-V3a-C09",
+            type: "dropdown",
+            points: 1,
+            dok: 2,
+            std: [
+              "3.L.V.3.a"
+            ],
+            passages: [],
+            prompt: "Read the sentence and look at the table. Choose the meaning of prey.",
+            stem: [
+              "Lemmings are the Arctic fox's main prey."
+            ],
+            figure: {
+              src: "assets/figures/v3a-c-fox-table.svg",
+              alt: "Table titled Animals the Arctic Fox Hunts. The columns are animal and days hunted. Lemming, most days. Bird, some days. Hare, few days."
+            },
+            text: "In this sentence, prey means {0}.",
+            slots: [
+              {
+                options: [
+                  "animals that are hunted for food",
+                  "places where foxes sleep",
+                  "thick fur that keeps foxes warm"
+                ],
+                answer: 0
+              }
+            ],
+            clue: "Read the title of the table and the words in the rows. Think about what the table lists.",
+            hints: [
+              "Read the title of the table and the words in the rows. Think about what the table lists.",
+              "Look at the two columns. Think about what the fox does with each animal in the first column.",
+              "Check each choice against the title of the table. The meaning must fit what the table lists."
+            ],
+            how: [
+              "The title says the table lists animals the Arctic fox hunts.",
+              "Lemming, bird and hare are animals, and the fox hunts them most days, some days or few days.",
+              "So prey means animals that are hunted for food."
+            ],
+            misconception: "A common mix-up is choosing a meaning about foxes in general. The table is about animals the fox hunts.",
+            why: "The answer is \"animals that are hunted for food.\" The title says the table lists animals the Arctic fox hunts, and lemmings are the animal it hunts most days. Places where foxes sleep and thick fur are not on the table."
+          }
+        ]
+      },
+      {
+        title: "Set 3",
+        items: [
+          {
+            id: "SK-V3a-C10",
+            type: "mc",
+            points: 1,
+            dok: 2,
+            std: [
+              "3.L.V.3.a"
+            ],
+            passages: [
+              "p6"
+            ],
+            prompt: "Bank has more than one meaning. What does bank mean in paragraph 1?",
+            choices: [
+              {
+                text: "the land along the side of a river",
+                correct: true
+              },
+              {
+                text: "a place that keeps people's money"
+              },
+              {
+                text: "a pile of snow beside a road"
+              },
+              {
+                text: "a row of lights on a wall"
+              }
+            ],
+            clue: "Say more than one meaning of bank before you choose.",
+            hints: [
+              "Say more than one meaning of bank before you choose.",
+              "Read the sentence the word is in. Look for the words that tell where Dad and the writer were going.",
+              "Put each meaning in place of the word and read the sentence again. Cross out any meaning that does not make sense."
+            ],
+            how: [
+              "Bank has more than one meaning: land by water, a place for money, a pile of snow.",
+              "Paragraph 1 says Dad and the writer walked down to the bank of the river.",
+              "Only the land along the side of a river fits next to the river."
+            ],
+            misconception: "A common mix-up is choosing the meaning you know best. Check which meaning fits the sentence.",
+            why: "The answer is \"the land along the side of a river.\" The sentence says they walked down to the bank of the river, so bank means the land beside the water. A place for money, a pile of snow and a row of lights do not fit."
+          },
+          {
+            id: "SK-V3a-C11",
+            type: "hottext",
+            points: 1,
+            dok: 2,
+            std: [
+              "3.L.V.3.a"
+            ],
+            passages: [],
+            prompt: "Choose the sentence in which current has the SAME meaning as in paragraph 2 of the story.",
+            stem: [
+              "Paragraph 2 says: \"The current was strong, so we stayed back from the edge.\""
+            ],
+            options: [
+              "A strong current pulled the raft downstream.",
+              "The current price of milk is on the sign.",
+              "The electric current made the bulb glow.",
+              "Her current teacher is Mr. Ross."
+            ],
+            answer: [
+              0
+            ],
+            pick: 1,
+            clue: "First decide what current means in the story. Then check each sentence for that same meaning.",
+            hints: [
+              "First decide what current means in the story. Then check each sentence for that same meaning.",
+              "Put the story meaning in place of current in each sentence. Does the sentence still make sense?",
+              "Two of the sentences use current to mean happening now. Compare the other two with the story."
+            ],
+            how: [
+              "In the story, the current is the moving water in the river, and it was strong.",
+              "A current of water pulling a raft downstream is the same meaning.",
+              "The price and the teacher are about now, and the bulb is about electricity."
+            ],
+            misconception: "A common mix-up is choosing a sentence that has the same word but a different meaning.",
+            why: "The answer is \"A strong current pulled the raft downstream.\" Both sentences use current to mean moving water. The price and the teacher use it to mean happening now, and the bulb uses it to mean electricity."
+          },
+          {
+            id: "SK-V3a-C12",
+            type: "ebsr",
+            points: 2,
+            dok: 3,
+            std: [
+              "3.L.V.3.a"
+            ],
+            passages: [
+              "p6"
+            ],
+            prompt: "This question has two parts. Answer Part A, then Part B.",
+            partA: {
+              prompt: "What does the phrase call it a day mean in paragraph 4?",
+              choices: [
+                {
+                  text: "stop for the rest of the day",
+                  correct: true
+                },
+                {
+                  text: "give the day a new name"
+                },
+                {
+                  text: "phone someone later today"
+                },
+                {
+                  text: "wait one more day to start"
+                }
+              ]
+            },
+            partB: {
+              prompt: "Which sentence from the story shows what they did after Dad said it?",
+              choices: [
+                {
+                  text: "We packed our bag and walked home.",
+                  correct: true
+                },
+                {
+                  text: "On Sunday, Dad and I walked down to the bank of the river."
+                },
+                {
+                  text: "I dropped a stick into the water and watched it race away."
+                },
+                {
+                  text: "By noon, my arms were tired from tossing stones."
+                }
+              ]
+            },
+            clue: "A phrase can have a meaning that is different from its separate words. Read the sentences around it.",
+            hints: [
+              "A phrase can have a meaning that is different from its separate words. Read the sentences around it.",
+              "Think about the whole story, not only paragraph 4. What happened first, and what happened last?",
+              "For Part A, a phrase about a day is not always about naming or calling. For Part B, think about when each event happened compared with Dad's words."
+            ],
+            how: [
+              "Part A: Dad says it when the writer is tired, near noon.",
+              "Part B: look for what happened after Dad spoke.",
+              "They packed the bag and walked home, so they stopped for the day.",
+              "The other sentences tell what happened earlier in the morning."
+            ],
+            misconception: "A common mix-up is reading each word of the phrase by itself. The whole phrase has its own meaning.",
+            why: "Part A: stop for the rest of the day. Part B: \"We packed our bag and walked home.\" After Dad said it, they packed up and went home, so call it a day means to stop for the day. The other sentences tell what happened before Dad spoke."
+          },
+          {
+            ref: "SK-V3a-P6"
+          },
+          {
+            ref: "SK-V3a-P7"
+          }
+        ]
+      }
+    ]
+  },
+  similar: [
+    {
+      id: "SK-V3a-S01",
+      type: "mc",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.L.V.3.a"
+      ],
+      passages: [],
+      like: [
+        "SK-V3a-C01"
+      ],
+      prompt: "What does easel mean in the sentence?",
+      stem: [
+        "Mia set up her easel, which is a stand that holds a painting while it is made."
+      ],
+      choices: [
+        {
+          text: "a stand that holds a painting",
+          correct: true
+        },
+        {
+          text: "a brush for thin lines"
+        },
+        {
+          text: "a jar for rinsing paint"
+        },
+        {
+          text: "a cloth for wiping hands"
+        }
+      ],
+      clue: "Look for a signal word near the new word. It can point to the meaning.",
+      hints: [
+        "Look for a signal word near the new word. It can point to the meaning.",
+        "Read the sentence and look at the words that come after the signal.",
+        "One of the choices is a tool you hold in your hand. Think about what the sentence says an easel does."
+      ],
+      how: [
+        "Find the word: \"her easel, which is a stand that holds a painting while it is made.\"",
+        "The words which is are a signal, and the meaning comes right after them.",
+        "After which is: a stand that holds a painting while it is made."
+      ],
+      misconception: "A common mix-up is picking a thing that painters use. The words after which is give the exact meaning.",
+      why: "The answer is \"a stand that holds a painting.\" The words which is lead into the meaning: a stand that holds a painting while it is made. A brush, a jar and a cloth are other things a painter might use, but the sentence does not describe them."
+    },
+    {
+      id: "SK-V3a-S02",
+      type: "ebsr",
+      points: 2,
+      dok: 3,
+      std: [
+        "3.L.V.3.a"
+      ],
+      passages: [],
+      like: [
+        "SK-V3a-C02"
+      ],
+      prompt: "This question has two parts. Answer Part A, then Part B.",
+      stem: [
+        "Mia's list: \"We leave at nine from the school parking lot in the morning. For the hike, pack footwear, like boots, sandals and sneakers. Also bring a hat and a big bottle of cold water for the trail. Meet us by the front gate before the school bus comes.\""
+      ],
+      partA: {
+        prompt: "In Mia's list, footwear names which kind of things?",
+        choices: [
+          {
+            text: "things you wear on your feet",
+            correct: true
+          },
+          {
+            text: "things you wear on your head"
+          },
+          {
+            text: "things you carry water in"
+          },
+          {
+            text: "things you sit on to rest"
+          }
+        ]
+      },
+      partB: {
+        prompt: "Which line gives examples that explain the word?",
+        choices: [
+          {
+            text: "For the hike, pack footwear, like boots, sandals and sneakers.",
+            correct: true
+          },
+          {
+            text: "We leave at nine from the school parking lot in the morning."
+          },
+          {
+            text: "Also bring a hat and a big bottle of cold water for the trail."
+          },
+          {
+            text: "Meet us by the front gate before the school bus comes."
+          }
+        ]
+      },
+      clue: "Authors sometimes give examples to show what a word means. For Part B, look for the sentence that gives them.",
+      hints: [
+        "Authors sometimes give examples to show what a word means. For Part B, look for the sentence that gives them.",
+        "Think about the whole list, not only the part with the word. Which sentences name things you could picture?",
+        "For Part B, a sentence about what to bring may not be about the word."
+      ],
+      how: [
+        "Part A: look at the examples: boots, sandals and sneakers. All of them go on your feet.",
+        "Examples that share one kind of thing tell you what the word means.",
+        "Part B: the sentence with like boots, sandals and sneakers gives the examples.",
+        "The other sentences tell the time, the hat and water, and where to meet."
+      ],
+      misconception: "A common mix-up is picking any sentence about the hike. The sentence has to explain the word.",
+      why: "Part A: things you wear on your feet. Boots, sandals and sneakers all go on your feet. Part B: \"For the hike, pack footwear, like boots, sandals and sneakers.\" The word like leads to examples that show the meaning. The other sentences do not explain the word."
+    },
+    {
+      id: "SK-V3a-S03",
+      type: "hottext",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.L.V.3.a"
+      ],
+      passages: [],
+      like: [
+        "SK-V3a-C03"
+      ],
+      prompt: "Which word in this sentence points to the opposite of scorching?",
+      stem: [
+        "The soup was scorching, but the lemonade was icy."
+      ],
+      options: [
+        "icy",
+        "scorching",
+        "soup",
+        "lemonade"
+      ],
+      answer: [
+        0
+      ],
+      pick: 1,
+      clue: "An opposite clue is a word that means the reverse. Look for a word that points the other way.",
+      hints: [
+        "An opposite clue is a word that means the reverse. Look for a word that points the other way.",
+        "Read the sentence and look for the small word that signals a change. Look at what comes on each side of it.",
+        "The word scorching is the word you are trying to understand, so it cannot be its own clue. Check the other choices."
+      ],
+      how: [
+        "The word but shows a change: one thing is one way, and the other thing is the opposite way.",
+        "The lemonade is icy, so the soup must be the opposite of icy: very hot.",
+        "Soup and lemonade are the things being described, not the clue."
+      ],
+      misconception: "A common mix-up is choosing a noun in the sentence. The clue is the word that means the opposite.",
+      why: "The answer is \"icy.\" The word but tells you the soup and the lemonade are opposites. Icy means very cold, so scorching means very hot. Soup and lemonade only name the two foods."
+    },
+    {
+      id: "SK-V3a-S04",
+      type: "ms",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.L.V.3.a"
+      ],
+      passages: [],
+      like: [
+        "SK-V3a-C04"
+      ],
+      prompt: "Which TWO choices tell you that a meaning or examples are about to follow?",
+      stem: [
+        "Ava's note: \"My map has a legend, which means a list that explains the symbols. I also like landmarks, like the old mill and the tall bridge.\""
+      ],
+      pick: 2,
+      choices: [
+        {
+          text: "which means",
+          correct: true
+        },
+        {
+          text: "like the old mill",
+          correct: true
+        },
+        {
+          text: "a map"
+        },
+        {
+          text: "I also"
+        },
+        {
+          text: "like"
+        }
+      ],
+      clue: "Signal words are small word groups that tell you a clue is coming. Think about the ones you learned.",
+      hints: [
+        "Signal words are small word groups that tell you a clue is coming. Think about the ones you learned.",
+        "Read the note and look for small word groups that come before an explanation or a list.",
+        "A signal word group is followed by an explanation or a list. Check what comes after each choice."
+      ],
+      how: [
+        "In the first sentence, which means comes right before the meaning of legend.",
+        "In the second sentence, the word like comes right before a list of examples.",
+        "A map, I also and like the old mill are parts of the sentences, and nothing explains a word after them."
+      ],
+      misconception: "A common mix-up is choosing any short group of words. A signal word group is followed by a meaning or examples.",
+      why: "The answers are \"which means\" and \"like.\" Which means leads to the meaning of legend, and like leads to examples of landmarks. The other choices are not followed by a meaning or examples."
+    },
+    {
+      id: "SK-V3a-S05",
+      type: "dropdown",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.L.V.3.a"
+      ],
+      passages: [],
+      like: [
+        "SK-V3a-P3"
+      ],
+      prompt: "Pick the best meaning for ravenous.",
+      stem: [
+        "After the long hike, the hikers were ravenous. They were so hungry that they ate every crumb."
+      ],
+      text: "Here, ravenous describes hikers who are {0}.",
+      slots: [
+        {
+          options: [
+            "extremely hungry",
+            "extremely tired",
+            "extremely noisy"
+          ],
+          answer: 0
+        }
+      ],
+      clue: "Find another word or phrase near the new word that means almost the same thing. That is a synonym clue.",
+      hints: [
+        "Find another word or phrase near the new word that means almost the same thing. That is a synonym clue.",
+        "Read the sentence after the word. Look for words that tell how the hikers felt.",
+        "A long hike can make people tired, but check what the clue words actually say."
+      ],
+      how: [
+        "Find the word ravenous in the first sentence.",
+        "The next sentence says they were so hungry that they ate every crumb.",
+        "So the clue word is hungry, and ravenous means extremely hungry."
+      ],
+      misconception: "A common mix-up is picking a feeling that goes with a hike. Use the words in the clue.",
+      why: "The answer is \"extremely hungry.\" The next sentence says the hikers were so hungry that they ate every crumb. Hungry is a synonym clue. Nothing in the sentences says they were noisy, and tired is not the clue."
+    },
+    {
+      id: "SK-V3a-S06",
+      type: "mc",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.L.V.3.a"
+      ],
+      passages: [],
+      like: [
+        "SK-V3a-C05"
+      ],
+      prompt: "What does deserted mean in the sentences?",
+      stem: [
+        "The beach was deserted. No people walked on the sand, and no boats floated near the shore."
+      ],
+      choices: [
+        {
+          text: "with no one there",
+          correct: true
+        },
+        {
+          text: "full of loud noise"
+        },
+        {
+          text: "covered by big waves"
+        },
+        {
+          text: "warm and sunny"
+        }
+      ],
+      clue: "Sometimes the clue to a word comes in the sentence after it. Read on.",
+      hints: [
+        "Sometimes the clue to a word comes in the sentence after it. Read on.",
+        "Read the sentence the word is in and the one that follows it. Look at who is on the beach.",
+        "Some choices talk about noise or waves or weather. Check what the second sentence tells about people and boats."
+      ],
+      how: [
+        "Find the word: \"The beach was deserted.\" The sentence does not explain it.",
+        "Read the next sentence: no people walked on the sand, and no boats floated near the shore.",
+        "So deserted means with no one there."
+      ],
+      misconception: "A common mix-up is stopping at the sentence with the word. The next sentence holds the clue.",
+      why: "The answer is \"with no one there.\" The next sentence says no people walked on the sand and no boats floated near the shore. The sentences say nothing about noise, waves or the weather."
+    },
+    {
+      id: "SK-V3a-S07",
+      type: "ebsr",
+      points: 2,
+      dok: 3,
+      std: [
+        "3.L.V.3.a"
+      ],
+      passages: [],
+      like: [
+        "SK-V3a-C06"
+      ],
+      prompt: "This question has two parts. Answer Part A, then Part B.",
+      stem: [
+        "Tara's note: \"The lilies grew beside the front gate. Last week they stood tall and fresh. Then the heat came. By Friday they had wilted. Mom watered them in the evening.\""
+      ],
+      partA: {
+        prompt: "Which meaning fits wilted in Tara's note?",
+        choices: [
+          {
+            text: "became droopy and weak",
+            correct: true
+          },
+          {
+            text: "grew taller and greener"
+          },
+          {
+            text: "turned bright blue"
+          },
+          {
+            text: "stayed the same"
+          }
+        ]
+      },
+      partB: {
+        prompt: "Which line in the note gives the best clue to the word?",
+        choices: [
+          {
+            text: "Last week they stood tall and fresh.",
+            correct: true
+          },
+          {
+            text: "The lilies grew beside the front gate."
+          },
+          {
+            text: "Mom watered them in the evening."
+          },
+          {
+            text: "By Friday they had wilted."
+          }
+        ]
+      },
+      clue: "Think about how the lilies looked before this word and how they looked after it. For Part B, look for a detail about how the lilies looked.",
+      hints: [
+        "Think about how the lilies looked before this word and how they looked after it. For Part B, look for a detail about how the lilies looked.",
+        "Think about the whole note, not only the sentence with the word. What changed for the lilies?",
+        "For Part A, wilted is a change for the worse. For Part B, a true detail about where the lilies grew may not show how they looked."
+      ],
+      how: [
+        "Part A: the lilies stood tall and fresh last week. After the heat, they had wilted.",
+        "Part B: look for the detail that shows how they looked before.",
+        "Tall and fresh is the opposite of droopy and weak, so wilted means became droopy and weak.",
+        "The other sentences tell where they grew, when Mom watered them, or repeat the word."
+      ],
+      misconception: "A common mix-up is looking only at the sentence with the word. A clue can come in an earlier sentence.",
+      why: "Part A: became droopy and weak. Part B: \"Last week they stood tall and fresh.\" The lilies changed from tall and fresh to wilted, so wilted means the opposite: droopy and weak. The other sentences do not show how the lilies looked."
+    },
+    {
+      id: "SK-V3a-S08",
+      type: "mc",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.L.V.3.a"
+      ],
+      passages: [],
+      like: [
+        "SK-V3a-C07"
+      ],
+      prompt: "Use the graph and the sentence together to decide what abundant means.",
+      stem: [
+        "Row B had an abundant crop of pumpkins."
+      ],
+      figure: {
+        src: "assets/figures/v3a-s-pumpkin-graph.svg",
+        alt: "Bar graph titled Pumpkins in Our Garden. The words at the bottom say number of pumpkins. The bars show Row A 3, Row B 14 and Row C 5. Row B has the longest bar."
+      },
+      choices: [
+        {
+          text: "a large amount; more than enough",
+          correct: true
+        },
+        {
+          text: "a tiny amount, almost none"
+        },
+        {
+          text: "rotten and ready to throw away"
+        },
+        {
+          text: "painted in many colors"
+        }
+      ],
+      clue: "Read the title of the graph and the words at the bottom. Think about what the bars count.",
+      hints: [
+        "Read the title of the graph and the words at the bottom. Think about what the bars count.",
+        "Compare the bar for Row B with the other bars. Look at how long each bar is.",
+        "The word is about an amount, not about how the pumpkins look. Decide which choices are about how much."
+      ],
+      how: [
+        "The title tells what the graph counts: pumpkins in the garden rows.",
+        "Row B has the longest bar: 14 pumpkins, much more than Row A or Row C.",
+        "So abundant means a large amount."
+      ],
+      misconception: "A common mix-up is choosing a meaning from the word pumpkins. Use the graph to see how many there are.",
+      why: "The answer is \"a large amount; more than enough.\" Row B has 14 pumpkins, while Row A has 3 and Row C has 5. That is far more than the other rows. Nothing on the graph shows rot or paint."
+    },
+    {
+      id: "SK-V3a-S09",
+      type: "mc",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.L.V.3.a"
+      ],
+      passages: [],
+      like: [
+        "SK-V3a-C08"
+      ],
+      prompt: "Which meaning of perch matches the picture beside the sentence?",
+      stem: [
+        "The owl sat on its perch."
+      ],
+      figure: {
+        src: "assets/figures/v3a-s-owl-perch.svg",
+        alt: "A drawing of an owl standing on a thick tree branch. Labels name the owl and the branch."
+      },
+      choices: [
+        {
+          text: "a place where a bird sits to rest",
+          correct: true
+        },
+        {
+          text: "a fish that lives in a lake"
+        },
+        {
+          text: "a long pole for pushing a boat"
+        },
+        {
+          text: "a loud call that a bird makes"
+        }
+      ],
+      clue: "Say more than one meaning of perch before you choose. Then look at the picture and its labels.",
+      hints: [
+        "Say more than one meaning of perch before you choose. Then look at the picture and its labels.",
+        "Look at where the owl is in the picture. Look at what is under it.",
+        "Put each meaning in place of the word and read the sentence again. Check which ones can be sat on."
+      ],
+      how: [
+        "Perch has more than one meaning: a kind of fish, a resting place for a bird, and others.",
+        "The picture shows the owl sitting on a branch.",
+        "So perch here means a place where a bird sits to rest."
+      ],
+      misconception: "A common mix-up is choosing the meaning you know best. The picture shows which meaning fits.",
+      why: "The answer is \"a place where a bird sits to rest.\" The picture shows the owl sitting on a branch, and the sentence says it sat on its perch. A fish cannot be sat on, and a pole and a call are not in the picture."
+    },
+    {
+      id: "SK-V3a-S10",
+      type: "dropdown",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.L.V.3.a"
+      ],
+      passages: [],
+      like: [
+        "SK-V3a-C09"
+      ],
+      prompt: "Use the table to decide what forage means in the sentence.",
+      stem: [
+        "The squirrel likes to forage in the fall."
+      ],
+      figure: {
+        src: "assets/figures/v3a-s-squirrel-table.svg",
+        alt: "Table titled Where the Squirrel Looks for Food. The columns are season and where. Fall, on the ground. Winter, under the snow. Spring, in tree holes."
+      },
+      text: "To forage means {0}.",
+      slots: [
+        {
+          options: [
+            "to look around for something to eat",
+            "to sleep in a nest",
+            "to bury a nut"
+          ],
+          answer: 0
+        }
+      ],
+      clue: "Read the title of the table and the words in the rows. Think about what the table lists.",
+      hints: [
+        "Read the title of the table and the words in the rows. Think about what the table lists.",
+        "Look at the two columns. Think about what the squirrel does in each place.",
+        "Check each choice against the title of the table. The meaning must fit what the table lists."
+      ],
+      how: [
+        "The title says the table lists places where the squirrel looks for food.",
+        "Fall, winter and spring each have a place where the squirrel looks.",
+        "So forage means to look around for something to eat."
+      ],
+      misconception: "A common mix-up is choosing something a squirrel does that is not on the table. Use the title.",
+      why: "The answer is \"to look around for something to eat.\" The title says the table lists where the squirrel looks for food, and the sentence says it likes to forage in the fall. Sleeping in a nest and burying a nut are not on the table."
+    },
+    {
+      id: "SK-V3a-S11",
+      type: "mc",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.L.V.3.a"
+      ],
+      passages: [],
+      like: [
+        "SK-V3a-C10"
+      ],
+      prompt: "Read the sentence about the show. Which meaning of row fits?",
+      stem: [
+        "Our class sat in the third row and waited for the play to start."
+      ],
+      choices: [
+        {
+          text: "a line of seats, one next to another",
+          correct: true
+        },
+        {
+          text: "to paddle a boat with oars"
+        },
+        {
+          text: "a loud fight between two people"
+        },
+        {
+          text: "cans stacked high in a store"
+        }
+      ],
+      clue: "Say more than one meaning of row before you choose.",
+      hints: [
+        "Say more than one meaning of row before you choose.",
+        "Read the sentence the word is in. Look at what the children did and where.",
+        "Put each meaning in place of the word and read the sentence again. Cross out any meaning that does not make sense."
+      ],
+      how: [
+        "Row has more than one meaning: a line of things, to move a boat, a loud fight.",
+        "The sentence says the class sat in the third row and waited for a play.",
+        "Only a line of seats fits where children sit to watch a show."
+      ],
+      misconception: "A common mix-up is choosing the meaning you know best. Check which meaning fits the sentence.",
+      why: "The answer is \"a line of seats, one next to another.\" The class sat in the third row, and the third in a line of seats makes sense at a play. Moving a boat, a fight and a stack of cans do not fit."
+    },
+    {
+      id: "SK-V3a-S12",
+      type: "hottext",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.L.V.3.a"
+      ],
+      passages: [],
+      like: [
+        "SK-V3a-C11"
+      ],
+      prompt: "Which sentence uses light the way the first sentence does?",
+      stem: [
+        "The box was light, so I carried it with one hand."
+      ],
+      options: [
+        "The light from the sun woke us up.",
+        "Dad's new coat is light enough for summer.",
+        "Please turn on the light by the door.",
+        "She wore a light green sweater."
+      ],
+      answer: [
+        1
+      ],
+      pick: 1,
+      clue: "First decide what light means in the first sentence. Then check each sentence for that same meaning.",
+      hints: [
+        "First decide what light means in the first sentence. Then check each sentence for that same meaning.",
+        "Put the first meaning in place of light in each sentence. Does the sentence still make sense?",
+        "Two of the sentences use light to mean something you can see. Compare the other two with the first sentence."
+      ],
+      how: [
+        "In the first sentence, light means not heavy, because the box was carried with one hand.",
+        "A coat that is light enough for summer is not heavy, so it is the same meaning.",
+        "Light from the sun and a light by the door are about seeing, and light green is about color."
+      ],
+      misconception: "A common mix-up is choosing a sentence that has the same word but a different meaning.",
+      why: "The answer is \"Dad's new coat is light enough for summer.\" In both sentences light means not heavy. The sun and the door light give off light, and light green is a pale color."
+    },
+    {
+      id: "SK-V3a-S13",
+      type: "ebsr",
+      points: 2,
+      dok: 3,
+      std: [
+        "3.L.V.3.a"
+      ],
+      passages: [],
+      like: [
+        "SK-V3a-C12"
+      ],
+      prompt: "This question has two parts. Answer Part A, then Part B.",
+      stem: [
+        "Mr. Bell's class had to clean the gym after the big game on Friday. Everyone pitched in. Some swept the floor, some wiped the walls, and some carried chairs. The gym had a shiny wooden floor that the janitor waxed the week before. The janitor thanked all of them and gave out cold juice at lunch."
+      ],
+      partA: {
+        prompt: "What does the phrase pitched in mean?",
+        choices: [
+          {
+            text: "helped with the work",
+            correct: true
+          },
+          {
+            text: "threw a ball"
+          },
+          {
+            text: "left the room"
+          },
+          {
+            text: "waited for a turn"
+          }
+        ]
+      },
+      partB: {
+        prompt: "Which sentence BEST shows what pitched in means?",
+        choices: [
+          {
+            text: "Some swept the floor, some wiped the walls, and some carried chairs.",
+            correct: true
+          },
+          {
+            text: "The gym had a shiny wooden floor that the janitor waxed the week before."
+          },
+          {
+            text: "The janitor thanked all of them and gave out cold juice at lunch."
+          },
+          {
+            text: "Mr. Bell's class had to clean the gym after the big game on Friday."
+          }
+        ]
+      },
+      clue: "A phrase can have a meaning that is different from its separate words. Think about what the class did.",
+      hints: [
+        "A phrase can have a meaning that is different from its separate words. Think about what the class did.",
+        "Think about the whole passage, not only the sentence with the phrase. What did each person do?",
+        "For Part A, a phrase about a job is not always about a ball or leaving. For Part B, a sentence about the floor or the thanks may not show what people did."
+      ],
+      how: [
+        "Part A: everyone pitched in, and then the passage names jobs.",
+        "Part B: look for the sentence that shows what the students did.",
+        "Some swept, some wiped and some carried, so everyone helped with the work.",
+        "The other sentences tell about the floor, the thanks and the job."
+      ],
+      misconception: "A common mix-up is reading each word of the phrase by itself. The whole phrase has its own meaning.",
+      why: "Part A: helped with the work. Part B: \"Some swept the floor, some wiped the walls, and some carried chairs.\" Each student did a job, so pitched in means helped with the work. The other sentences do not show what the students did."
+    },
+    {
+      id: "SK-V3a-S14",
+      type: "mc",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.L.V.3.a"
+      ],
+      passages: [],
+      like: [
+        "SK-V3a-P6"
+      ],
+      prompt: "Which meaning of palm matches the picture beside the sentence?",
+      stem: [
+        "A coconut fell on the sand beside the palm."
+      ],
+      figure: {
+        src: "assets/figures/v3a-s-palm.svg",
+        alt: "A drawing of a tree with a curved trunk and long leaves at the top, standing on a sandy beach. Coconuts hang under the leaves. A coconut lies on the sand. Labels name the coconuts and the sand."
+      },
+      choices: [
+        {
+          text: "a kind of tree with big leaves on top",
+          correct: true
+        },
+        {
+          text: "the inside of a hand"
+        },
+        {
+          text: "a computer that fits in a hand"
+        },
+        {
+          text: "a kind of sail for a ship"
+        }
+      ],
+      clue: "Say more than one meaning of palm before you choose. Then look at the picture and its labels.",
+      hints: [
+        "Say more than one meaning of palm before you choose. Then look at the picture and its labels.",
+        "Look at what stands on the sand in the picture. Look at what is beside the coconut.",
+        "Put each meaning in place of the word and read the sentence again. Check which ones could stand beside a coconut."
+      ],
+      how: [
+        "Palm has more than one meaning: part of the hand, a kind of tree, a small computer.",
+        "The picture shows a tree with long leaves and coconuts on a sandy beach.",
+        "So palm here means a kind of tree with big leaves on top."
+      ],
+      misconception: "A common mix-up is choosing the meaning you know best. The picture shows which meaning fits.",
+      why: "The answer is \"a kind of tree with big leaves on top.\" The picture shows a tree with coconuts standing on the sand. A hand, a small computer and a sail are not in the picture."
+    },
+    {
+      id: "SK-V3a-S15",
+      type: "dropdown",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.L.V.3.a"
+      ],
+      passages: [],
+      like: [
+        "SK-V3a-P7"
+      ],
+      prompt: "Read the sentences. Choose the meaning of the phrase under the weather.",
+      stem: [
+        "Sam stayed home because he was feeling under the weather. He had a cough and a fever."
+      ],
+      text: "In the sentences, under the weather means {0}.",
+      slots: [
+        {
+          options: [
+            "a little sick",
+            "standing in the rain",
+            "very happy"
+          ],
+          answer: 0
+        }
+      ],
+      clue: "A phrase can have a meaning that is different from its separate words. Read the sentences around it.",
+      hints: [
+        "A phrase can have a meaning that is different from its separate words. Read the sentences around it.",
+        "Read the sentence after the phrase. Look at what is wrong with Sam.",
+        "Think about why a person would stay home. Check which choices could be a reason."
+      ],
+      how: [
+        "The phrase is in the first sentence, and the next sentence says he had a cough and a fever.",
+        "A cough and a fever are signs that a person is sick.",
+        "So under the weather means a little sick."
+      ],
+      misconception: "A common mix-up is reading each word by itself. The whole phrase has its own meaning.",
+      why: "The answer is \"a little sick.\" Sam stayed home and had a cough and a fever, so he was not feeling well. The phrase does not mean standing in the rain, and a person who is very happy would not stay home for those reasons."
+    }
+  ],
+  addons: {
+    "SK-V3a-P1": {
+      hints: [
+        "Look for signal words near the new word. They can point to the meaning.",
+        "Read the sentence the word is in and look at the words that come after the signal.",
+        "Some choices tell how the treats were made or where they were put. Check which one the examples in the sentence agree with."
+      ],
+      how: [
+        "Find assorted: the sentence says the class baked assorted treats, such as banana bread, oatmeal cookies and lemon bars.",
+        "Such as is a signal word for examples.",
+        "The examples are different kinds of treats, so assorted means of many different kinds."
+      ],
+      misconception: "A common mix-up is picking a detail about how the treats look or taste. The examples show how many kinds there are."
+    },
+    "SK-V3a-P2": {
+      hints: [
+        "Think about what the first part of the sale was like. A clue can be in a sentence near the word.",
+        "Think about the whole paragraph, not only the sentence with the word. Which sentence tells you the number of buyers?",
+        "For Part B, a sentence can tell about Leah or the tables and not about the buyers."
+      ],
+      how: [
+        "Find scarce in paragraph 3: at first, buyers were scarce.",
+        "The next sentence says only two people stopped by in the whole first hour.",
+        "Two people in a whole hour is very few, so scarce means very few."
+      ],
+      misconception: "A common mix-up is picking a sentence that shows how Leah felt. The clue is about how many buyers came."
+    },
+    "SK-V3a-P3": {
+      hints: [
+        "Find another word or phrase in the sentence that means almost the same thing as the new word.",
+        "Read the whole sentence. Look at what the students did to the cookies.",
+        "Check each choice against what the students did, and cross out any that do not fit."
+      ],
+      how: [
+        "Find devoured in paragraph 4.",
+        "The same sentence says they were gobbling up every last crumb in ten minutes.",
+        "Gobbling up is a synonym clue, so devoured means ate quickly and hungrily."
+      ],
+      misconception: "A common mix-up is picking a meaning from a different part of the story. The clue is in the same sentence."
+    },
+    "SK-V3a-P4": {
+      hints: [
+        "A definition clue tells you the exact meaning of a word. Think about the signal words that come before it.",
+        "Read each sentence and look for small word groups that come before a meaning.",
+        "Some sentences give examples or other clues instead. Check what each sentence does."
+      ],
+      how: [
+        "Which is leads into the meaning of budget.",
+        "The sentence that tells what a budget is has the definition clue.",
+        "The other sentences give an example, a clue for scarce, and a clue for devoured."
+      ],
+      misconception: "A common mix-up is choosing any sentence with a clue. A definition clue tells exactly what the word means."
+    },
+    "SK-V3a-P5": {
+      hints: [
+        "For each sentence, find the words that help you know the meaning of the word in front of it.",
+        "Ask whether the clue tells the meaning, gives examples, means the same thing or means the opposite.",
+        "Start with the sentence that has the word but in it and decide what kind of clue it gives."
+      ],
+      how: [
+        "Arid: which are very dry places tells the meaning, so it is a definition clue.",
+        "Legumes: such as peas, beans and peanuts gives examples. Drowsy: sleepy means almost the same thing.",
+        "Tidy: but a big mess shows the opposite."
+      ],
+      misconception: "A common mix-up is matching by the topic of the sentence. Match by what the clue does."
+    },
+    "SK-V3a-P6": {
+      hints: [
+        "Say more than one meaning of trunk before you choose. Then look at the picture and its labels.",
+        "Look at what the ladder is leaning on in the picture.",
+        "Put each meaning in place of the word and read the sentence again. Check which ones could hold a ladder."
+      ],
+      how: [
+        "Trunk has more than one meaning: part of a tree, part of a car, an elephant's nose, swim shorts.",
+        "The picture shows a ladder leaning on the thick stem of a tree.",
+        "So trunk here means the thick main stem of a tree."
+      ],
+      misconception: "A common mix-up is choosing the meaning you know best. The picture shows which meaning fits."
+    },
+    "SK-V3a-P7": {
+      hints: [
+        "A phrase can have a meaning that is different from its separate words. Read the sentence around it.",
+        "Read the whole sentence. Look at where the treats went and why a bake sale would need them there.",
+        "Think about what the class wanted the buyers to do. Check which choices help with that."
+      ],
+      how: [
+        "Set everything out is in a sentence about the treats at the bake sale.",
+        "The class put the treats on two long tables in the front hall.",
+        "So set everything out means put it where people could see it."
+      ],
+      misconception: "A common mix-up is reading each word by itself. The whole phrase has its own meaning."
+    }
+  },
+  /* B5-b5b:core:end */
   test: [
     { id: "SK-V3a-T8", type: "mc", points: 1, dok: 2, passages: [],
       prompt: "Read the sentence and look at the graph. What does attendance mean?",
@@ -407,7 +1916,76 @@ PP.addLesson({
         ["Nadia set the volcano on the table and took a deep breath.", "Then she poured in the vinegar.", "Nothing happened!"],
         ["Her friend Grace peeked inside.", "\"I think you forgot the baking soda,\" Grace whispered.", "Nadia quickly added two big spoonfuls.", "This time, foam rushed up and spilled down the sides."],
         ["The crowd clapped and cheered.", "By the end of the day, Nadia was not nervous anymore, and she felt calm and proud."]
-      ] }
+      ] },
+    /* B5-b5b:passages:start */
+    {
+      id: "p3",
+      title: "A Letter from Camp",
+      genre: "Student draft (letter)",
+      paragraphs: [
+        [
+          "Dear Mom,",
+          "Camp is great, and I have made two new friends."
+        ],
+        [
+          "Our cabin is near the lake, and we sail a small boat every day.",
+          "The camp store had a sail on hats, so I bought a blue one.",
+          "At night, we sit by the fire and sing songs."
+        ],
+        [
+          "I hope you can hear my news from here.",
+          "Love, Tessa"
+        ]
+      ]
+    },
+    {
+      id: "p4",
+      title: "A Walk to the Pond",
+      genre: "Literary text",
+      paragraphs: [
+        [
+          "On Saturday, Dad and I took a walk to the pond behind our school.",
+          "The wind blew the leaves across the grass."
+        ],
+        [
+          "The path would wind around the pond, so the walk took longer than we planned.",
+          "It went left, then right, then left again, and it curved around the old willow tree."
+        ],
+        [
+          "We stopped to look at a turtle on a log.",
+          "It was swift to dive when it heard us."
+        ],
+        [
+          "Soon the sun was low, and the sky turned orange.",
+          "We walked home slowly, tired and happy."
+        ]
+      ]
+    },
+    {
+      id: "p5",
+      title: "Market Day",
+      genre: "Literary text",
+      paragraphs: [
+        [
+          "Every Saturday, Mrs. Cole sells fruit at the town market.",
+          "Her stall is small, but the fruit is always fresh."
+        ],
+        [
+          "One day, a boy came with only a few coins.",
+          "Mrs. Cole was generous, not selfish, so she gave him extra plums."
+        ],
+        [
+          "The next week, the boy came back and helped her carry boxes.",
+          "Mrs. Cole was delighted.",
+          "She was so glad that she thanked him with a big smile."
+        ],
+        [
+          "At noon, the market was noisy, but by closing time it was quiet.",
+          "Mrs. Cole counted her coins and smiled."
+        ]
+      ]
+    }
+    /* B5-b5b:passages:end */
   ],
   practice: [
     { id: "SK-V3b-P1", type: "dropdown", points: 1, dok: 1, passages: [],
@@ -480,6 +2058,1430 @@ PP.addLesson({
       clue: "Homophones sound exactly the same when you say them. Say each pair out loud slowly.",
       why: "The answers are knows / nose and sea / see. Each pair sounds exactly the same but has a different spelling and meaning. Shell and shall, and cold and colt, sound close but not the same. Fast and quick are synonyms, not homophones." }
   ],
+  /* B5-b5b:core:start */
+  /* ---------- Expansion 2026-10-22, batch B5 (author b5b) ----------
+     core: fifteen items in three sets of five. { ref } reuses a practice item; the other practice items stay in Practice Together.
+     Author log: docs/expansion-2026-10-22/batches/B5-b5b-author-log.md. NEEDS INDEPENDENT REVIEW. */
+  core: {
+    rev: "1",
+    sets: [
+      {
+        title: "Set 1",
+        items: [
+          {
+            id: "SK-V3b-C01",
+            type: "dropdown",
+            points: 2,
+            dok: 2,
+            std: [
+              "3.L.V.3.b"
+            ],
+            passages: [],
+            prompt: "Choose the homophone that fits each blank.",
+            text: "Mina filled the {0} with water and put on a {1} yellow shirt.",
+            slots: [
+              {
+                options: [
+                  "pail",
+                  "pale",
+                  "pall"
+                ],
+                answer: 0
+              },
+              {
+                options: [
+                  "pale",
+                  "pail",
+                  "pole"
+                ],
+                answer: 0
+              }
+            ],
+            clue: "Homophones sound alike but are spelled differently. Think about what each blank needs to mean.",
+            hints: [
+              "Homophones sound alike but are spelled differently. Think about what each blank needs to mean.",
+              "Read the words around each blank. Ask whether it needs a thing you can carry or a word that tells about a color.",
+              "Start with the first blank. Decide whether it names a thing or tells about a thing."
+            ],
+            how: [
+              "Blank one: Mina filled it with water, so it is a container. A pail is a bucket.",
+              "Blank two: it tells about the color of the shirt. Pale means light in color.",
+              "Pail and pale sound the same, so the meaning decides the spelling."
+            ],
+            misconception: "A common mix-up is picking the spelling that looks familiar. Use the meaning to choose.",
+            why: "The answers are \"pail\" and \"pale.\" A pail is a bucket that holds water, and pale means light in color, as in a pale yellow shirt. Pall and pole are not the words these sentences need."
+          },
+          {
+            id: "SK-V3b-C02",
+            type: "hottext",
+            points: 1,
+            dok: 2,
+            std: [
+              "3.L.V.3.b"
+            ],
+            passages: [
+              "p3"
+            ],
+            prompt: "One sentence in Tessa's letter uses the wrong homophone. Choose that sentence.",
+            targets: [
+              "p3:2:1",
+              "p3:2:2",
+              "p3:2:3",
+              "p3:3:1"
+            ],
+            answer: [
+              "p3:2:2"
+            ],
+            pick: 1,
+            clue: "Say each sound-alike word in the letter and think about what it means in that sentence.",
+            hints: [
+              "Say each sound-alike word in the letter and think about what it means in that sentence.",
+              "Read each sentence and look for a word that has a sound-alike twin with a different spelling.",
+              "A word can be spelled right for one meaning and wrong for another. Check the meaning in each sentence, not only the spelling."
+            ],
+            how: [
+              "Check each sound-alike word: sail, sail, hear.",
+              "In the first sentence, sail is an action: to move a boat. It fits.",
+              "In the second sentence, a sail on hats should be a sale, because a store sells things for less. Sail is the wrong homophone."
+            ],
+            misconception: "A common mix-up is choosing the sentence with the rarest word. Check the meaning of each sound-alike word.",
+            why: "The answer is \"The camp store had a sail on hats, so I bought a blue one.\" A store has a sale, not a sail. Sail is correct in the first sentence because it names an action with a boat. Hear is spelled right for listening."
+          },
+          {
+            id: "SK-V3b-C03",
+            type: "mc",
+            points: 1,
+            dok: 2,
+            std: [
+              "3.L.V.3.b"
+            ],
+            passages: [],
+            prompt: "Present has more than one meaning. What does present mean in the sentence?",
+            stem: [
+              "Mr. Lane will present the prize to the winner."
+            ],
+            choices: [
+              {
+                text: "to hand something over",
+                correct: true
+              },
+              {
+                text: "a gift in a box"
+              },
+              {
+                text: "the time that is now"
+              },
+              {
+                text: "being here and not away"
+              }
+            ],
+            clue: "Say more than one meaning of present before you choose.",
+            hints: [
+              "Say more than one meaning of present before you choose.",
+              "Read the sentence and ask what job the word does. Is it a thing, an action or a describing word?",
+              "Put each meaning in place of the word. Check which ones still make a sentence."
+            ],
+            how: [
+              "Present has more than one meaning: a gift, the time now, here, and to give.",
+              "In this sentence, Mr. Lane does something with the prize, so it is an action.",
+              "To present the prize means to hand it over."
+            ],
+            misconception: "A common mix-up is choosing the meaning you know best. Check which meaning fits the sentence.",
+            why: "The answer is \"to hand something over.\" Mr. Lane will do something with the prize, so present is an action here. A gift, the time now and being here are other meanings of the same spelling."
+          },
+          {
+            id: "SK-V3b-C04",
+            type: "ebsr",
+            points: 2,
+            dok: 3,
+            std: [
+              "3.L.V.3.b"
+            ],
+            passages: [
+              "p4"
+            ],
+            prompt: "This question has two parts. Answer Part A, then Part B.",
+            partA: {
+              prompt: "What does wind mean in paragraph 2? It rhymes with kind.",
+              choices: [
+                {
+                  text: "to bend and turn in curves",
+                  correct: true
+                },
+                {
+                  text: "moving air outdoors"
+                },
+                {
+                  text: "to tighten a toy with a key"
+                },
+                {
+                  text: "to come to an end"
+                }
+              ]
+            },
+            partB: {
+              prompt: "Which sentence from the story BEST helps you know the answer to Part A?",
+              choices: [
+                {
+                  text: "It went left, then right, then left again, and it curved around the old willow tree.",
+                  correct: true
+                },
+                {
+                  text: "The wind blew the leaves across the grass."
+                },
+                {
+                  text: "We stopped to look at a turtle on a log."
+                },
+                {
+                  text: "Soon the sun was low, and the sky turned orange."
+                }
+              ]
+            },
+            clue: "Say more than one meaning of wind before you choose. For Part B, look for the sentence that shows what the path did.",
+            hints: [
+              "Say more than one meaning of wind before you choose. For Part B, look for the sentence that shows what the path did.",
+              "Think about the whole story, not only paragraph 2. Which sentences tell about the path?",
+              "For Part A, the word is said with a long i sound here. For Part B, a sentence can have the same spelling and still not show this meaning."
+            ],
+            how: [
+              "Part A: the word wind rhymes with kind here, so it is an action, not air.",
+              "Part B: look for the sentence that tells how the path went.",
+              "It went left, then right, then left again, and curved around the tree, so the path bent and turned.",
+              "The sentence about leaves has the same spelling but a different meaning and sound."
+            ],
+            misconception: "A common mix-up is picking the sentence with the same spelling. That sentence uses the other meaning.",
+            why: "Part A: to bend and turn in curves. Part B: \"It went left, then right, then left again, and it curved around the old willow tree.\" That shows a path that bends. The sentence about the wind blowing leaves uses the same spelling, but it means moving air."
+          },
+          {
+            ref: "SK-V3b-P4"
+          }
+        ]
+      },
+      {
+        title: "Set 2",
+        items: [
+          {
+            id: "SK-V3b-C05",
+            type: "mc",
+            points: 1,
+            dok: 2,
+            std: [
+              "3.L.V.3.b"
+            ],
+            passages: [
+              "p4"
+            ],
+            prompt: "Which word means about the same as swift in paragraph 3?",
+            choices: [
+              {
+                text: "fast",
+                correct: true
+              },
+              {
+                text: "slow"
+              },
+              {
+                text: "sleepy"
+              },
+              {
+                text: "loud"
+              }
+            ],
+            clue: "A synonym means about the same. Think about what swift tells about the turtle.",
+            hints: [
+              "A synonym means about the same. Think about what swift tells about the turtle.",
+              "Read the sentence the word is in. Ask what the turtle did and how it did it.",
+              "An antonym is a word that means the opposite. Make sure your choice is not an antonym."
+            ],
+            how: [
+              "Find swift: \"It was swift to dive when it heard us.\"",
+              "A turtle that dives right away is quick.",
+              "So fast means about the same, and slow is the opposite."
+            ],
+            misconception: "A common mix-up is choosing a word that means the opposite. A synonym means about the same.",
+            why: "The answer is \"fast.\" The turtle dived quickly when it heard them, so swift means fast. Slow is an antonym, and sleepy and loud do not describe how it dove."
+          },
+          {
+            id: "SK-V3b-C06",
+            type: "ms",
+            points: 2,
+            dok: 2,
+            std: [
+              "3.L.V.3.b"
+            ],
+            passages: [],
+            prompt: "Which TWO words are synonyms of frightened?",
+            pick: 2,
+            choices: [
+              {
+                text: "scared",
+                correct: true
+              },
+              {
+                text: "afraid",
+                correct: true
+              },
+              {
+                text: "brave"
+              },
+              {
+                text: "calm"
+              },
+              {
+                text: "tired"
+              }
+            ],
+            clue: "Synonyms are words that mean about the same. Say each word in the sentence \"The boy was ___ of the dark.\"",
+            hints: [
+              "Synonyms are words that mean about the same. Say each word in the sentence \"The boy was ___ of the dark.\"",
+              "Try each choice in the same sentence. Ask which ones keep the meaning of frightened.",
+              "Some choices mean the opposite and some name a different feeling. Check each choice against the meaning, not the sound."
+            ],
+            how: [
+              "Frightened means feeling fear.",
+              "Scared and afraid both mean feeling fear, so they are synonyms.",
+              "Brave and calm are the opposite of frightened, and tired is a different feeling."
+            ],
+            misconception: "A common mix-up is choosing a word about feelings. A synonym has to mean about the same as frightened.",
+            why: "The answers are \"scared\" and \"afraid.\" Both mean feeling fear, like frightened. Brave and calm mean the opposite, and tired is a different feeling."
+          },
+          {
+            id: "SK-V3b-C07",
+            type: "dropdown",
+            points: 2,
+            dok: 2,
+            std: [
+              "3.L.V.3.b"
+            ],
+            passages: [],
+            prompt: "Choose the word that is an antonym.",
+            text: "An antonym of damp is {0}. An antonym of ancient is {1}.",
+            slots: [
+              {
+                options: [
+                  "dry",
+                  "soaked",
+                  "cold"
+                ],
+                answer: 0
+              },
+              {
+                options: [
+                  "modern",
+                  "very old",
+                  "dusty"
+                ],
+                answer: 0
+              }
+            ],
+            clue: "An antonym means the opposite. Say what each word means, then think of the opposite.",
+            hints: [
+              "An antonym means the opposite. Say what each word means, then think of the opposite.",
+              "For each blank, test each choice: does it mean the opposite, the same, or something else?",
+              "Start with the first blank. Damp means a little wet, so ask which choices go the other way."
+            ],
+            how: [
+              "Damp means a little wet. The opposite is dry.",
+              "Ancient means very, very old. The opposite is modern, or new.",
+              "Soaked and very old mean about the same as the word, and cold and dusty are about something else."
+            ],
+            misconception: "A common mix-up is choosing a word that means the same. An antonym means the opposite.",
+            why: "The answers are \"dry\" and \"modern.\" Damp means a little wet, so dry is the opposite. Ancient means very old, so modern is the opposite. Soaked and very old are synonyms, and cold and dusty are not opposites."
+          },
+          {
+            id: "SK-V3b-C08",
+            type: "hottext",
+            points: 1,
+            dok: 2,
+            std: [
+              "3.L.V.3.b"
+            ],
+            passages: [
+              "p5"
+            ],
+            prompt: "Read the sentence from paragraph 4. Choose the antonym of noisy.",
+            stem: [
+              "At noon, the market was noisy, but by closing time it was quiet."
+            ],
+            options: [
+              "quiet",
+              "market",
+              "closing",
+              "noon"
+            ],
+            answer: [
+              0
+            ],
+            pick: 1,
+            clue: "An antonym is a word that means the opposite. Look for a word that points the other way.",
+            hints: [
+              "An antonym is a word that means the opposite. Look for a word that points the other way.",
+              "Read the sentence and look for the small word that shows a change. Look at the words on each side of it.",
+              "Say noisy and a choice together as a pair. Ask whether the two words point the same way or opposite ways."
+            ],
+            how: [
+              "The word but shows that the market changed from one way to the other.",
+              "At noon it was noisy, and later it was the opposite.",
+              "Quiet is the opposite of noisy, so it is the antonym."
+            ],
+            misconception: "A common mix-up is picking a noun in the sentence. An antonym is a word that means the opposite.",
+            why: "The answer is \"quiet.\" The word but shows a change from noisy to the opposite, and quiet means with little sound. Market, closing and noon are about the place and time."
+          },
+          {
+            ref: "SK-V3b-P5"
+          }
+        ]
+      },
+      {
+        title: "Set 3",
+        items: [
+          {
+            id: "SK-V3b-C09",
+            type: "mc",
+            points: 1,
+            dok: 2,
+            std: [
+              "3.L.V.3.b"
+            ],
+            passages: [
+              "p5"
+            ],
+            prompt: "Use the antonym clue. What does generous mean in paragraph 2?",
+            choices: [
+              {
+                text: "willing to give and share",
+                correct: true
+              },
+              {
+                text: "unwilling to share what you have"
+              },
+              {
+                text: "good at counting coins"
+              },
+              {
+                text: "quick to finish a job"
+              }
+            ],
+            clue: "An antonym clue is a word that means the opposite. Look for a word near the new word that points the other way.",
+            hints: [
+              "An antonym clue is a word that means the opposite. Look for a word near the new word that points the other way.",
+              "Read the sentence the word is in. Look for a small word that shows the two words are not alike.",
+              "Decide what the word near it means. Then think about what the opposite would be."
+            ],
+            how: [
+              "The sentence says Mrs. Cole was generous, not selfish.",
+              "Selfish means not wanting to share, so generous means the opposite.",
+              "She gave the boy extra plums, which shows she was willing to give."
+            ],
+            misconception: "A common mix-up is choosing the meaning of the clue word. The clue word means the opposite of the new word.",
+            why: "The answer is \"willing to give and share.\" The sentence says generous, not selfish. Selfish means not wanting to share, so generous means the opposite, and she gave extra plums. Unwilling to share is the meaning of selfish."
+          },
+          {
+            id: "SK-V3b-C10",
+            type: "ebsr",
+            points: 2,
+            dok: 2,
+            std: [
+              "3.L.V.3.b"
+            ],
+            passages: [
+              "p5"
+            ],
+            prompt: "This question has two parts. Answer Part A, then Part B.",
+            partA: {
+              prompt: "In paragraph 3, which meaning fits delighted?",
+              choices: [
+                {
+                  text: "greatly pleased",
+                  correct: true
+                },
+                {
+                  text: "worn out"
+                },
+                {
+                  text: "taken by surprise"
+                },
+                {
+                  text: "too shy to speak"
+                }
+              ]
+            },
+            partB: {
+              prompt: "Which line gives the best clue for Part A?",
+              choices: [
+                {
+                  text: "She was so glad that she thanked him with a big smile.",
+                  correct: true
+                },
+                {
+                  text: "The next week, the boy came back and helped her carry boxes."
+                },
+                {
+                  text: "One day, a boy came with only a few coins."
+                },
+                {
+                  text: "Mrs. Cole counted her coins and smiled."
+                }
+              ]
+            },
+            clue: "A synonym is a word that means about the same. Look for a word near the new word that means about the same.",
+            hints: [
+              "A synonym is a word that means about the same. Look for a word near the new word that means about the same.",
+              "Think about the whole story, not only paragraph 3. Which sentences tell how Mrs. Cole felt?",
+              "For Part B, a sentence can tell what happened without telling how someone felt. Look for how she felt."
+            ],
+            how: [
+              "Part A: after delighted, the next sentence says she was so glad that she thanked him with a big smile.",
+              "Glad is a synonym for pleased, so delighted means greatly pleased.",
+              "Part B: that sentence tells how she felt and gives the synonym."
+            ],
+            misconception: "A common mix-up is choosing a sentence about what happened. The sentence has to give a word that means the same.",
+            why: "Part A: greatly pleased. Part B: \"She was so glad that she thanked him with a big smile.\" Glad means pleased, so it is a synonym that shows what delighted means. The other sentences tell what happened but do not give a word that means about the same."
+          },
+          {
+            id: "SK-V3b-C11",
+            type: "ms",
+            points: 2,
+            dok: 2,
+            std: [
+              "3.L.V.3.b"
+            ],
+            passages: [],
+            prompt: "Choose the TWO sentences that use the correct word.",
+            pick: 2,
+            choices: [
+              {
+                text: "Dad will write a note for the teacher.",
+                correct: true
+              },
+              {
+                text: "We have a spelling test every week.",
+                correct: true
+              },
+              {
+                text: "Put the letter in the male box."
+              },
+              {
+                text: "The movie starts in one weak."
+              },
+              {
+                text: "She will right a story about her cat."
+              }
+            ],
+            clue: "Each sentence has a word that has a sound-alike twin. Think about what the sentence needs the word to mean.",
+            hints: [
+              "Each sentence has a word that has a sound-alike twin. Think about what the sentence needs the word to mean.",
+              "Say each sentence and ask what the sound-alike word means there. Check whether it fits.",
+              "A word can be a real word and still be wrong for the sentence. Check the meaning, not only the spelling."
+            ],
+            how: [
+              "Write means to put words on paper, and week means seven days.",
+              "Male is a boy or man, and mail is what comes in the post. Weak means not strong, and right means correct.",
+              "Only two sentences have the word that matches what is meant."
+            ],
+            misconception: "A common mix-up is choosing a sentence because every word is a real word. Check the meaning of the sound-alike word.",
+            why: "The answers are \"Dad will write a note for the teacher.\" and \"We have a spelling test every week.\" Write means to put words on paper, and week is seven days. The other sentences use male, weak and right where mail, week and write belong."
+          },
+          {
+            id: "SK-V3b-C12",
+            type: "match",
+            points: 2,
+            dok: 2,
+            std: [
+              "3.L.V.3.b"
+            ],
+            passages: [],
+            prompt: "Match each word to its antonym.",
+            cols: [
+              "smooth",
+              "timid",
+              "quiet",
+              "dim"
+            ],
+            rows: [
+              {
+                text: "rough",
+                answer: 0
+              },
+              {
+                text: "brave",
+                answer: 1
+              },
+              {
+                text: "noisy",
+                answer: 2
+              },
+              {
+                text: "bright",
+                answer: 3
+              }
+            ],
+            clue: "An antonym means the opposite. Say what each word means, then think of its opposite.",
+            hints: [
+              "An antonym means the opposite. Say what each word means, then think of its opposite.",
+              "Read each word and try each choice. Ask whether the two words are opposites.",
+              "Start with the word that tells about a surface you can touch. Decide which choice is its opposite."
+            ],
+            how: [
+              "Rough and smooth are opposites for how a surface feels.",
+              "Brave and timid are opposites for how a person acts around danger.",
+              "Noisy and quiet are opposites for sound, and bright and dim are opposites for light."
+            ],
+            misconception: "A common mix-up is matching words that go together. Antonyms are opposites.",
+            why: "Rough is the opposite of smooth. Brave is the opposite of timid. Noisy is the opposite of quiet. Bright is the opposite of dim."
+          },
+          {
+            id: "SK-V3b-C13",
+            type: "dropdown",
+            points: 2,
+            dok: 3,
+            std: [
+              "3.L.V.3.b"
+            ],
+            passages: [],
+            prompt: "Choose the best word for each blank.",
+            text: "Wide and narrow are {0}. Large and huge are {1}.",
+            slots: [
+              {
+                options: [
+                  "antonyms",
+                  "synonyms",
+                  "homophones"
+                ],
+                answer: 0
+              },
+              {
+                options: [
+                  "synonyms",
+                  "antonyms",
+                  "homographs"
+                ],
+                answer: 0
+              }
+            ],
+            clue: "Say what each pair of words means. Then ask how the two words in the pair are related.",
+            hints: [
+              "Say what each pair of words means. Then ask how the two words in the pair are related.",
+              "For each pair, ask whether the words mean the same, mean the opposite, or sound alike.",
+              "Start with the second pair. Think about whether large and huge point the same way or opposite ways."
+            ],
+            how: [
+              "Wide and narrow mean the opposite of each other, so they are antonyms.",
+              "Large and huge both mean big, so they are synonyms.",
+              "Homophones sound alike and homographs are spelled alike, and neither pair is like that."
+            ],
+            misconception: "A common mix-up is thinking all word pairs are synonyms. First decide if the words mean the same or the opposite.",
+            why: "The answers are \"antonyms\" and \"synonyms.\" Wide and narrow are opposites. Large and huge both mean big. Neither pair sounds alike or is spelled alike."
+          }
+        ]
+      }
+    ]
+  },
+  similar: [
+    {
+      id: "SK-V3b-S01",
+      type: "dropdown",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.L.V.3.b"
+      ],
+      passages: [],
+      like: [
+        "SK-V3b-C01"
+      ],
+      prompt: "Pick the sound-alike word that goes in each blank.",
+      text: "Please {0} here while I check the {1} of this box.",
+      slots: [
+        {
+          options: [
+            "wait",
+            "weight",
+            "wheat"
+          ],
+          answer: 0
+        },
+        {
+          options: [
+            "weight",
+            "wait",
+            "wet"
+          ],
+          answer: 0
+        }
+      ],
+      clue: "Sound-alike words are spelled differently. Think about what each blank needs to mean.",
+      hints: [
+        "Sound-alike words are spelled differently. Think about what each blank needs to mean.",
+        "Read the words around each blank. Ask whether it needs something you do or something a scale tells.",
+        "Start with the second blank. Decide whether it names how heavy something is."
+      ],
+      how: [
+        "Blank one: it is something a person does, to stay until something happens. Wait.",
+        "Blank two: it is how heavy the box is. Weight.",
+        "Wait and weight sound the same, so the meaning decides the spelling."
+      ],
+      misconception: "A common mix-up is picking the spelling that looks familiar. Use the meaning to choose.",
+      why: "The answers are \"wait\" and \"weight.\" To wait is to stay until something happens, and weight is how heavy something is. Wheat and wet are not the words these sentences need."
+    },
+    {
+      id: "SK-V3b-S02",
+      type: "hottext",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.L.V.3.b"
+      ],
+      passages: [],
+      like: [
+        "SK-V3b-C02"
+      ],
+      prompt: "Which sentence uses a wrong sound-alike word?",
+      stem: [
+        "From a class news page:"
+      ],
+      options: [
+        "Our class grew pumpkins behind the gym.",
+        "Mr. Ortiz sells tickets for the fall fair.",
+        "Everyone will meat in the gym on Friday.",
+        "Dad drove us home after the show."
+      ],
+      answer: [
+        2
+      ],
+      pick: 1,
+      clue: "Say each sound-alike word and think about what it means in that sentence.",
+      hints: [
+        "Say each sound-alike word and think about what it means in that sentence.",
+        "Read each sentence and look for a word that has a sound-alike twin with a different spelling.",
+        "A word can be spelled right for one meaning and wrong for another. Check the meaning in each sentence, not only the spelling."
+      ],
+      how: [
+        "Check each sound-alike word: grew, sells, meat, drove.",
+        "Meat is food that comes from animals. A group of people comes together to meet.",
+        "Everyone will meet in the gym, so meat is the wrong word."
+      ],
+      misconception: "A common mix-up is choosing a sentence with a hard word. Check the meaning of each sound-alike word.",
+      why: "The answer is \"Everyone will meat in the gym on Friday.\" People meet in a gym, and meat is a kind of food. The other sentences use sound-alike words correctly."
+    },
+    {
+      id: "SK-V3b-S03",
+      type: "mc",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.L.V.3.b"
+      ],
+      passages: [],
+      like: [
+        "SK-V3b-C03"
+      ],
+      prompt: "Which meaning of lead fits the sentence?",
+      stem: [
+        "Our guide will lead us up the trail."
+      ],
+      choices: [
+        {
+          text: "to show the way",
+          correct: true
+        },
+        {
+          text: "a heavy gray metal"
+        },
+        {
+          text: "the first place in a race"
+        },
+        {
+          text: "a thin stick inside a pencil"
+        }
+      ],
+      clue: "Say more than one meaning of lead before you choose.",
+      hints: [
+        "Say more than one meaning of lead before you choose.",
+        "Read the sentence and ask what job the word does. Look at who is doing something.",
+        "Put each meaning in place of the word. Check which ones still make a sentence."
+      ],
+      how: [
+        "Lead has more than one meaning: a metal, the front place, the stick in a pencil, and to guide.",
+        "In this sentence, the guide does something to show the group the way.",
+        "So lead here means to show the way."
+      ],
+      misconception: "A common mix-up is choosing the meaning you know best. Check which meaning fits the sentence.",
+      why: "The answer is \"to show the way.\" The guide will take the group up the trail, so lead is an action. A metal, the first place in a race and the stick in a pencil are other meanings of the same spelling."
+    },
+    {
+      id: "SK-V3b-S04",
+      type: "ebsr",
+      points: 2,
+      dok: 3,
+      std: [
+        "3.L.V.3.b"
+      ],
+      passages: [],
+      like: [
+        "SK-V3b-C04"
+      ],
+      prompt: "This question has two parts. Answer Part A, then Part B.",
+      stem: [
+        "Sam's note: \"The ants in the yard were minute. I had to use a magnifying glass to see them. I watched them march across a leaf. Then Mom called me inside for lunch.\""
+      ],
+      partA: {
+        prompt: "Said my-NOOT, minute has what meaning in Sam's note?",
+        choices: [
+          {
+            text: "very tiny",
+            correct: true
+          },
+          {
+            text: "sixty seconds long"
+          },
+          {
+            text: "very fast"
+          },
+          {
+            text: "very quiet"
+          }
+        ]
+      },
+      partB: {
+        prompt: "Pick the line in Sam's note that best backs up Part A.",
+        choices: [
+          {
+            text: "I had to use a magnifying glass to see them.",
+            correct: true
+          },
+          {
+            text: "I watched them march across a leaf."
+          },
+          {
+            text: "Then Mom called me inside for lunch."
+          },
+          {
+            text: "The ants in the yard were minute."
+          }
+        ]
+      },
+      clue: "Say more than one meaning of minute before you choose. Then look at how the word is said.",
+      hints: [
+        "Say more than one meaning of minute before you choose. Then look at how the word is said.",
+        "Think about the whole note, not only the first sentence. Which lines tell about seeing the ants?",
+        "For Part A, the word is not about time here. For Part B, a line can tell what the ants did without showing how big they were."
+      ],
+      how: [
+        "Part A: minute said my-NOOT means very tiny.",
+        "Part B: look for the line that shows how small the ants were.",
+        "Sam needed a magnifying glass to see them, so they were very tiny.",
+        "The other lines tell what the ants did, what Mom did, or repeat the word."
+      ],
+      misconception: "A common mix-up is choosing the meaning about time. The way the word is said shows the meaning.",
+      why: "Part A: very tiny. Part B: \"I had to use a magnifying glass to see them.\" Only very tiny things need a magnifying glass. The other lines do not show how small the ants were."
+    },
+    {
+      id: "SK-V3b-S05",
+      type: "mc",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.L.V.3.b"
+      ],
+      passages: [],
+      like: [
+        "SK-V3b-P4"
+      ],
+      prompt: "Close is a homograph. In which sentence does close mean \"very near\"?",
+      choices: [
+        {
+          text: "The park is close to our school.",
+          correct: true
+        },
+        {
+          text: "Please close the window before it rains."
+        },
+        {
+          text: "The shop will close at nine tonight."
+        },
+        {
+          text: "She will close her eyes and make a wish."
+        }
+      ],
+      clue: "Say the word in each sentence. Some sentences use a different sound and meaning.",
+      hints: [
+        "Say the word in each sentence. Some sentences use a different sound and meaning.",
+        "Read each sentence and ask what job close does: telling where something is or doing something.",
+        "Put the words very near in place of close in each sentence. Check which ones still make sense."
+      ],
+      how: [
+        "Close can rhyme with rose, as in to shut, or with dose, as in near.",
+        "In the sentence about the park, close tells where the park is.",
+        "In the other sentences, close is something a person does, such as shut a window."
+      ],
+      misconception: "A common mix-up is choosing the sentence that looks the same. Check the meaning and how the word sounds.",
+      why: "The answer is \"The park is close to our school.\" Close tells how near the park is. In the other sentences, close means to shut or to end, and it sounds different."
+    },
+    {
+      id: "SK-V3b-S06",
+      type: "mc",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.L.V.3.b"
+      ],
+      passages: [],
+      like: [
+        "SK-V3b-C05"
+      ],
+      prompt: "Choose the synonym for weary.",
+      stem: [
+        "The weary hikers sat down to rest."
+      ],
+      choices: [
+        {
+          text: "tired",
+          correct: true
+        },
+        {
+          text: "eager"
+        },
+        {
+          text: "frightened"
+        },
+        {
+          text: "hungry"
+        }
+      ],
+      clue: "A synonym means about the same. Think about what the hikers need.",
+      hints: [
+        "A synonym means about the same. Think about what the hikers need.",
+        "Read the sentence and ask why the hikers sat down to rest.",
+        "An antonym is a word that means the opposite. Make sure your choice is not an antonym."
+      ],
+      how: [
+        "The hikers sat down to rest.",
+        "People rest when they are worn out.",
+        "So tired means about the same as weary."
+      ],
+      misconception: "A common mix-up is choosing a feeling that is not a synonym. A synonym means about the same.",
+      why: "The answer is \"tired.\" People sit down to rest when they are worn out, so weary means tired. Eager, frightened and hungry are different feelings."
+    },
+    {
+      id: "SK-V3b-S07",
+      type: "ms",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.L.V.3.b"
+      ],
+      passages: [],
+      like: [
+        "SK-V3b-C06"
+      ],
+      prompt: "Which TWO words mean about the same as silent?",
+      pick: 2,
+      choices: [
+        {
+          text: "quiet",
+          correct: true
+        },
+        {
+          text: "hushed",
+          correct: true
+        },
+        {
+          text: "noisy"
+        },
+        {
+          text: "busy"
+        },
+        {
+          text: "rough"
+        }
+      ],
+      clue: "Synonyms are words that mean about the same. Say each word in the sentence \"The room was ___.\"",
+      hints: [
+        "Synonyms are words that mean about the same. Say each word in the sentence \"The room was ___.\"",
+        "Try each choice in the same sentence. Ask which ones keep the meaning of silent.",
+        "Some choices mean the opposite and some are about something else. Check each choice against the meaning."
+      ],
+      how: [
+        "Silent means making no sound.",
+        "Quiet and hushed both mean making little or no sound, so they are synonyms.",
+        "Noisy is the opposite, and busy and rough are about other things."
+      ],
+      misconception: "A common mix-up is choosing a word about a room. A synonym has to mean about the same as silent.",
+      why: "The answers are \"quiet\" and \"hushed.\" Both mean with little or no sound, like silent. Noisy means the opposite, and busy and rough are not about sound."
+    },
+    {
+      id: "SK-V3b-S08",
+      type: "dropdown",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.L.V.3.b"
+      ],
+      passages: [],
+      like: [
+        "SK-V3b-C07"
+      ],
+      prompt: "Complete each pair of opposites.",
+      text: "Cheerful and {0} are opposites. Rapid and {1} are opposites.",
+      slots: [
+        {
+          options: [
+            "happy",
+            "gloomy",
+            "bright"
+          ],
+          answer: 1
+        },
+        {
+          options: [
+            "slow",
+            "quick",
+            "speedy"
+          ],
+          answer: 0
+        }
+      ],
+      clue: "An antonym means the opposite. Say what each word means, then think of the opposite.",
+      hints: [
+        "An antonym means the opposite. Say what each word means, then think of the opposite.",
+        "For each blank, test each choice: does it mean the opposite, the same, or something else?",
+        "Start with the second blank. Rapid means moving fast, so ask which choices go the other way."
+      ],
+      how: [
+        "Cheerful means full of good spirits. The opposite is gloomy.",
+        "Rapid means very fast. The opposite is slow.",
+        "Happy, quick and speedy mean about the same as the word, and bright is about light."
+      ],
+      misconception: "A common mix-up is choosing a word that means the same. An antonym means the opposite.",
+      why: "The answers are \"gloomy\" and \"slow.\" Cheerful means in good spirits, so gloomy is the opposite. Rapid means very fast, so slow is the opposite. Happy, quick and speedy are synonyms."
+    },
+    {
+      id: "SK-V3b-S09",
+      type: "hottext",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.L.V.3.b"
+      ],
+      passages: [],
+      like: [
+        "SK-V3b-C08"
+      ],
+      prompt: "Pick the word that is the opposite of shallow.",
+      stem: [
+        "Toddlers splashed at one shallow end, while grown swimmers dived into the deep end."
+      ],
+      options: [
+        "deep",
+        "splashed",
+        "grown",
+        "end"
+      ],
+      answer: [
+        0
+      ],
+      pick: 1,
+      clue: "An antonym is a word that means the opposite. Look for a word that points the other way.",
+      hints: [
+        "An antonym is a word that means the opposite. Look for a word that points the other way.",
+        "Read the sentence and look for the small word that compares the two ends. Look at the words on each side of it.",
+        "Say shallow and a choice together as a pair. Ask whether the two words point the same way or opposite ways."
+      ],
+      how: [
+        "The word while compares one end with the other end.",
+        "At one end it was shallow, and at the other end it was the opposite.",
+        "Deep is the opposite of shallow, so it is the antonym."
+      ],
+      misconception: "A common mix-up is picking a noun in the sentence. An antonym is a word that means the opposite.",
+      why: "The answer is \"deep.\" The word while compares the two ends, and deep means going far down, the opposite of shallow. Splashed, grown and end do not tell how deep the water was."
+    },
+    {
+      id: "SK-V3b-S10",
+      type: "match",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.L.V.3.b"
+      ],
+      passages: [],
+      like: [
+        "SK-V3b-P5"
+      ],
+      prompt: "Sort each word pair by how its words are related.",
+      cols: [
+        "Same meaning",
+        "Opposite meaning"
+      ],
+      rows: [
+        {
+          text: "glad / cheerful",
+          answer: 0
+        },
+        {
+          text: "hot / cold",
+          answer: 1
+        },
+        {
+          text: "tiny / little",
+          answer: 0
+        },
+        {
+          text: "wet / dry",
+          answer: 1
+        }
+      ],
+      clue: "For each pair, say what each word means.",
+      hints: [
+        "For each pair, say what each word means.",
+        "Ask whether the two words point the same way or opposite ways.",
+        "Start with a pair about the weather or temperature. Decide whether the words match or go against each other."
+      ],
+      how: [
+        "Glad and cheerful both mean happy, so they mean the same.",
+        "Hot and cold are opposite temperatures. Wet and dry are opposite too.",
+        "Tiny and little both mean small, so they mean the same."
+      ],
+      misconception: "A common mix-up is thinking two words that go together mean the same. Check the meanings.",
+      why: "Glad and cheerful mean the same, and tiny and little mean the same. Hot and cold are opposites, and wet and dry are opposites."
+    },
+    {
+      id: "SK-V3b-S11",
+      type: "mc",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.L.V.3.b"
+      ],
+      passages: [],
+      like: [
+        "SK-V3b-C09"
+      ],
+      prompt: "Use the antonym clue. What does reluctant mean?",
+      stem: [
+        "At the talent show, Dan was reluctant to go on stage, but his sister was eager to go first."
+      ],
+      choices: [
+        {
+          text: "not wanting to do something",
+          correct: true
+        },
+        {
+          text: "very excited to begin"
+        },
+        {
+          text: "unable to see the stage"
+        },
+        {
+          text: "tired from practice"
+        }
+      ],
+      clue: "An antonym clue is a word that means the opposite. Look for a word near the new word that points the other way.",
+      hints: [
+        "An antonym clue is a word that means the opposite. Look for a word near the new word that points the other way.",
+        "Read the sentence the word is in. Look for a small word that shows the two people are not alike.",
+        "Decide what the word near it means. Then think about what the opposite would be."
+      ],
+      how: [
+        "The sentence says Dan was reluctant, but his sister was eager.",
+        "Eager means wanting to do something, so reluctant means the opposite.",
+        "So reluctant means not wanting to do something."
+      ],
+      misconception: "A common mix-up is choosing the meaning of the clue word. The clue word means the opposite of the new word.",
+      why: "The answer is \"not wanting to do something.\" The word but shows Dan and his sister are not alike. His sister was eager, so reluctant is the opposite: not wanting to. Very excited is the meaning of eager."
+    },
+    {
+      id: "SK-V3b-S12",
+      type: "ebsr",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.L.V.3.b"
+      ],
+      passages: [],
+      like: [
+        "SK-V3b-C10"
+      ],
+      prompt: "This question has two parts. Answer Part A, then Part B.",
+      stem: [
+        "Ben's journal: \"Our puppy was ecstatic when I got home. It was so overjoyed that it spun in circles and licked my hands. Then it fell asleep on the rug.\""
+      ],
+      partA: {
+        prompt: "What is the best meaning of ecstatic here?",
+        choices: [
+          {
+            text: "extremely happy",
+            correct: true
+          },
+          {
+            text: "very sleepy"
+          },
+          {
+            text: "a little scared"
+          },
+          {
+            text: "a bit confused"
+          }
+        ]
+      },
+      partB: {
+        prompt: "Which sentence is the strongest clue to that word?",
+        choices: [
+          {
+            text: "It was so overjoyed that it spun in circles and licked my hands.",
+            correct: true
+          },
+          {
+            text: "Then it fell asleep on the rug."
+          },
+          {
+            text: "Our puppy was ecstatic when I got home."
+          },
+          {
+            text: "The journal was kept on a shelf."
+          }
+        ]
+      },
+      clue: "A synonym is a word that means about the same. Look for a word near the new word that means about the same.",
+      hints: [
+        "A synonym is a word that means about the same. Look for a word near the new word that means about the same.",
+        "Think about the whole journal, not only the first sentence. Which lines tell how the puppy felt?",
+        "For Part B, a line can tell what the puppy did without telling how it felt. Look for how it felt."
+      ],
+      how: [
+        "Part A: the next sentence says it was so overjoyed that it spun in circles.",
+        "Overjoyed means very happy, so ecstatic means extremely happy.",
+        "Part B: that line gives a word that means about the same."
+      ],
+      misconception: "A common mix-up is choosing a line about what happened. The line has to give a word that means about the same.",
+      why: "Part A: extremely happy. Part B: \"It was so overjoyed that it spun in circles and licked my hands.\" Overjoyed means very happy, so it is a synonym that shows the meaning. The other lines do not give a word like that."
+    },
+    {
+      id: "SK-V3b-S13",
+      type: "ms",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.L.V.3.b"
+      ],
+      passages: [],
+      like: [
+        "SK-V3b-C11"
+      ],
+      prompt: "Which TWO sentences use the right sound-alike word?",
+      pick: 2,
+      choices: [
+        {
+          text: "Grandma added flour to the bread dough.",
+          correct: true
+        },
+        {
+          text: "The cat's tail swished back and forth.",
+          correct: true
+        },
+        {
+          text: "The bridge is made of strong steal."
+        },
+        {
+          text: "The baker mixed flower into the dough."
+        },
+        {
+          text: "Our dog chased its own tale around the yard."
+        }
+      ],
+      clue: "Each sentence has a word that has a sound-alike twin. Think about what the sentence needs the word to mean.",
+      hints: [
+        "Each sentence has a word that has a sound-alike twin. Think about what the sentence needs the word to mean.",
+        "Say each sentence and ask what the sound-alike word means there. Check whether it fits.",
+        "A word can be a real word and still be wrong for the sentence. Check the meaning, not only the spelling."
+      ],
+      how: [
+        "Flour is what bread is made of, and a tail is on the back of a cat.",
+        "Steal means to take what is not yours, and a flower grows in a garden. A tale is a story.",
+        "Only two sentences have the word that matches what is meant."
+      ],
+      misconception: "A common mix-up is choosing a sentence because every word is a real word. Check the meaning of the sound-alike word.",
+      why: "The answers are \"Grandma added flour to the bread dough.\" and \"The cat's tail swished back and forth.\" Flour goes in dough, and a cat has a tail. The other sentences use steal, flower and tale where steel, flour and tail belong."
+    },
+    {
+      id: "SK-V3b-S14",
+      type: "match",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.L.V.3.b"
+      ],
+      passages: [],
+      like: [
+        "SK-V3b-C12"
+      ],
+      prompt: "Which word is the opposite of each word on the left?",
+      cols: [
+        "thin",
+        "dirty",
+        "sell",
+        "leave"
+      ],
+      rows: [
+        {
+          text: "thick",
+          answer: 0
+        },
+        {
+          text: "clean",
+          answer: 1
+        },
+        {
+          text: "buy",
+          answer: 2
+        },
+        {
+          text: "arrive",
+          answer: 3
+        }
+      ],
+      clue: "Say what each word means, then think of its opposite.",
+      hints: [
+        "Say what each word means, then think of its opposite.",
+        "Read each word and try each choice. Ask whether the two words are opposites.",
+        "Start with the word about washing. Decide which choice is its opposite."
+      ],
+      how: [
+        "Thick and thin are opposite for how wide something is.",
+        "Clean and dirty are opposites. Buy and sell are opposites.",
+        "Arrive and leave are opposites, for coming and going."
+      ],
+      misconception: "A common mix-up is matching words that go together. Opposites go against each other.",
+      why: "Thick is the opposite of thin. Clean is the opposite of dirty. Buy is the opposite of sell. Arrive is the opposite of leave."
+    },
+    {
+      id: "SK-V3b-S15",
+      type: "dropdown",
+      points: 2,
+      dok: 3,
+      std: [
+        "3.L.V.3.b"
+      ],
+      passages: [],
+      like: [
+        "SK-V3b-C13"
+      ],
+      prompt: "Finish each sentence about the word pair.",
+      text: "Pale and pail are a pair that {0}. Quick and fast are a pair that {1}.",
+      slots: [
+        {
+          options: [
+            "sound alike but are spelled differently",
+            "are spelled alike but sound different",
+            "mean the opposite"
+          ],
+          answer: 0
+        },
+        {
+          options: [
+            "mean about the same",
+            "mean the opposite",
+            "sound alike"
+          ],
+          answer: 0
+        }
+      ],
+      clue: "Say what each pair of words sounds like and means. Then ask how the two words are related.",
+      hints: [
+        "Say what each pair of words sounds like and means. Then ask how the two words are related.",
+        "For each pair, ask whether the words sound alike, mean the same, or mean the opposite.",
+        "Start with the second pair. Think about whether quick and fast point the same way or opposite ways."
+      ],
+      how: [
+        "Pale and pail sound the same but are spelled differently and mean different things.",
+        "Quick and fast both mean moving at a high speed, so they mean about the same.",
+        "Words spelled alike that sound different are homographs, and opposites go against each other."
+      ],
+      misconception: "A common mix-up is thinking all word pairs mean the same. First decide how the two words are related.",
+      why: "The answers are \"sound alike but are spelled differently\" and \"mean about the same.\" Pale and pail are homophones. Quick and fast are synonyms. Neither pair is spelled alike or means the opposite."
+    }
+  ],
+  addons: {
+    "SK-V3b-P1": {
+      hints: [
+        "Sound-alike words are spelled differently. Think about what the blank needs to mean.",
+        "Read the words around the blank. Ask whether it tells where, tells also, or tells how many.",
+        "The sentence asks how many chairs. Think about what each spelling means, one at a time."
+      ],
+      how: [
+        "All three words sound the same.",
+        "The blank tells how many more chairs are needed, so it names a number.",
+        "Two is the number 2. To and too are other words."
+      ],
+      misconception: "A common mix-up is picking the spelling you see most. Use the meaning to choose."
+    },
+    "SK-V3b-P2": {
+      hints: [
+        "Look at the words near enormous. A word near it may mean about the same.",
+        "Think about the whole story, not only paragraph 5. Which sentences tell how big the fish was?",
+        "For Part B, a sentence can tell about the fish without telling how big it was."
+      ],
+      how: [
+        "Find enormous in paragraph 5: Kofi says it is enormous.",
+        "Kofi also says what a huge fish.",
+        "Huge and enormous both mean very big."
+      ],
+      misconception: "A common mix-up is picking a sentence that tells about the fish. The sentence has to give a word that means about the same."
+    },
+    "SK-V3b-P3": {
+      hints: [
+        "Say more than one meaning of scales before you choose.",
+        "Read the sentence and ask what has the scales. Think about what would flash in the sun.",
+        "Put each meaning in place of the word and read the sentence again. Cross out any that do not make sense."
+      ],
+      how: [
+        "Scales has more than one meaning: plates on a fish, tools for weighing, climbs, and music notes.",
+        "The sentence is about the fish that flipped out of the water.",
+        "Small, thin plates cover a fish and shine in the sun."
+      ],
+      misconception: "A common mix-up is choosing the meaning you know best. Check which meaning fits the sentence."
+    },
+    "SK-V3b-P4": {
+      hints: [
+        "Say more than one meaning of wound before you choose. Then look at how it is said.",
+        "Read the sentence and ask what Kofi did with the line. Look at what a reel does.",
+        "Put each meaning in place of the word and read the sentence again. Cross out any that do not make sense."
+      ],
+      how: [
+        "Wound has more than one meaning: wrapped around, or a cut on the body.",
+        "Kofi wound the line back onto the reel, and a reel holds line by turning.",
+        "So wound here means wrapped around and around."
+      ],
+      misconception: "A common mix-up is choosing the meaning you know best. The way the word is said shows the meaning."
+    },
+    "SK-V3b-P5": {
+      hints: [
+        "For each pair, say what each word means.",
+        "Ask whether the two words point the same way or opposite ways.",
+        "Start with the pair about how something feels. Decide whether the words match or go against each other."
+      ],
+      how: [
+        "Calm and still both mean quiet and not moving.",
+        "Tight and loose are opposites, and early and late are opposites.",
+        "Huge and enormous both mean very big."
+      ],
+      misconception: "A common mix-up is thinking words that go together mean the same. Check the meanings."
+    },
+    "SK-V3b-P6": {
+      hints: [
+        "Homophones sound exactly the same. Say each pair slowly.",
+        "Look for pairs where the two words sound alike but have different spellings and meanings.",
+        "Some pairs sound close but not the same, and some pairs mean the same thing. Decide which are which."
+      ],
+      how: [
+        "Knows and nose sound the same but mean different things.",
+        "Sea and see sound the same but mean different things.",
+        "Shell and shall and cold and colt sound close, and fast and quick are synonyms."
+      ],
+      misconception: "A common mix-up is choosing pairs that sound close. Homophones sound exactly the same."
+    }
+  },
+  /* B5-b5b:core:end */
   test: [
     { id: "SK-V3b-T1", type: "dropdown", points: 2, dok: 1, passages: [],
       prompt: "Choose the homophone that correctly completes each part of the sentence.",

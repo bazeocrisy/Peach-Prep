@@ -95,3 +95,21 @@ Gates after the second pass: check-content --all PASS (0 failures); check-writin
 ### Still to build
 
 3.L.V.2.c, 3.L.V.3.a, 3.L.V.3.b (see the continuation ledger above; unchanged).
+
+## Third pass (after second review: 1.a and 1.b ACCEPT; 2.a and 2.b CHANGES REQUIRED)
+
+1.a and 1.b were not touched. Changes for the third light review:
+
+- 2.a: P1 addon hint 3 now "Check each choice against the meaning the question gives for -less." (no longer leaves one choice); Teach example 1 changed from hopeless to endless (P1 no longer pre-answered); `testRev: { A: "2", B: "2" }` set in the lesson (T4 and TB4 keys changed; I did not run --record-versions); choose-two sets rebalanced so the two keys are no longer the two longest: C09 (butterfly, assembly, family), S09 (pony, monopoly, strawberry; angry dropped), C15 (grapefruit, grasshopper, gravel), S07 (unicorn, restaurant, mister), P5 (reindeer, mistletoe replace ready, misty; WHY and addon HOW updated); C14, S14 and S13 hint 3 now "Check each choice against both root meanings" or "the meaning of the root"; S14 hint 2 no longer restates the key.
+- 2.b: C11 joker replaced by hunter (WHY and HOW now say "Hunt is left"); P5 and S10 hint 3 now "Cover -er in each word. Ask whether the word left is an action or a describing word."; S01 hint 3 now "Decide whether smoothly tells about the pilot, the plane, or the way the plane landed."; C03 prompt "in paragraphs 2 and 3"; C04 prompt "from the passage".
+- Not taken (SHOULDs): 2.a TB1/TB3/TB4 word overlap with L-VOC-02 and 2.b C13, 2.a C12/S12 distractors, 2.b C08 paragraph cue, Teach pre-answers (visitor, excitement), 2.b P3 firefighter (passage word), 2.b C09/S09/S15 wording.
+- Re-measured: worst twin similarity 2.a 0.198, 2.b 0.200 (word-set and multiset). Longest-key 2.a 21%, 2.b 24%. Passage numbering unchanged (1.b numbered passages only).
+
+## Fourth pass: 3.L.V.2.c, 3.L.V.3.a, 3.L.V.3.b built (supersedes the continuation ledger)
+
+All three are "AUTHORED (B5 b5b), NEEDS INDEPENDENT REVIEW" in the matrix and STATUS (NOT ACCEPTED). Each has 15 core items in 3 sets of 5, a 15-item twin bank (via `like`), and addons (hints, stepped how, misconception) for refs and Together items.
+
+- 3.L.V.2.c (L-V12.js): 12 new core items (C01-C12) plus refs P3, P6, P7; passages p1 Cleaning the Shed, p2 Leaf Watch, p3 Our Cardboard Periscope. Word origins checked on the web: periscope = peri- (around) + skopein (look); geology = geo + -logy; kilo = thousand. Worst twin 0.207; unique-longest key 11%.
+- 3.L.V.3.a (L-V3.js): 12 new core items plus refs P3, P6, P7; new passages p4 Weaving Day, p5 Life on the Tundra, p6 A Morning at the River. Seven original SVG figures with alt text (assets/figures: v3a-c-daylight-graph, v3a-c-fox-den, v3a-c-fox-table for core; v3a-s-pumpkin-graph, v3a-s-owl-perch, v3a-s-squirrel-table, v3a-s-palm for twins); each rendered and checked, none shows the answer. Worst twin 0.210; unique-longest key 25% (core+similar), 38% across all items incl. the pre-existing tests.
+- 3.L.V.3.b (L-V3.js): 13 new core items (C01-C13) plus refs P4, P5; new passages p3 A Letter from Camp, p4 A Walk to the Pond, p5 Market Day (passages unnumbered). Formats dropdown 3, hottext 2, mc 4, ebsr 2, ms 2, match 2; DOK 2 x13, DOK 3 x2. Worst twin 0.212 by rounding (S12~C10 word-set 0.21), shared options 0. Unique-longest key 11%. Hint 3 audited on all 3.b items: C08, S09 and P1 hint 3 were changed so more than one choice stays live.
+- Gates: check-content --all PASS (0 failures; warnings are short passages and version records: run --record-versions); check-writing 0 failures; check-instructional-copy 28 passed; all new passages FK <= 4.4.

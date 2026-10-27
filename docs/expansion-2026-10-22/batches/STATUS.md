@@ -25,10 +25,13 @@
 | B5 b5a | 3.L.GC.2.b | ACCEPTED | B5-b5a-review.md (third and fourth light review); open SHOULDs: C05 scenario shares key with SK-GUM3-4-T1 (different code); C08 HOW1 should say 1 to 8; Learn It phrase 'and or gives a choice' |
 | B5 b5a | 3.L.GC.2.c | ACCEPTED | B5-b5a-review.md (third and fourth light review); open SHOULD: hint wording edited text-only |
 | B5 b5a | 3.L.GC.2.d | ACCEPTED | B5-b5a-review.md (third review); open SHOULD: C14 key reuses passage word |
-| B5 b5b | 3.L.V.1.a | NOT ACCEPTED: awaiting independent review | AUTHORED (B5 b5b), NEEDS INDEPENDENT REVIEW; B5-b5b-author-log.md; js/data/lessons/L-V12.js |
-| B5 b5b | 3.L.V.1.b | NOT ACCEPTED: awaiting independent review | AUTHORED (B5 b5b), NEEDS INDEPENDENT REVIEW; B5-b5b-author-log.md; js/data/lessons/L-V12.js |
+| B5 b5b | 3.L.V.1.a | ACCEPTED | B5-b5b-review.md (second review); SHOULDs open |
+| B5 b5b | 3.L.V.1.b | ACCEPTED | B5-b5b-review.md (second review); SHOULDs open |
 | B5 b5b | 3.L.V.2.a | NOT ACCEPTED: awaiting independent review | AUTHORED (B5 b5b), NEEDS INDEPENDENT REVIEW; B5-b5b-author-log.md; js/data/lessons/L-V12.js |
 | B5 b5b | 3.L.V.2.b | NOT ACCEPTED: awaiting independent review | AUTHORED (B5 b5b), NEEDS INDEPENDENT REVIEW; B5-b5b-author-log.md; js/data/lessons/L-V12.js |
+| B5 b5b | 3.L.V.2.c | NOT ACCEPTED: awaiting independent review | AUTHORED (B5 b5b), NEEDS INDEPENDENT REVIEW; B5-b5b-author-log.md; js/data/lessons/L-V12.js |
+| B5 b5b | 3.L.V.3.a | NOT ACCEPTED: awaiting independent review | AUTHORED (B5 b5b), NEEDS INDEPENDENT REVIEW; B5-b5b-author-log.md; js/data/lessons/L-V3.js |
+| B5 b5b | 3.L.V.3.b | NOT ACCEPTED: awaiting independent review | AUTHORED (B5 b5b), NEEDS INDEPENDENT REVIEW; B5-b5b-author-log.md; js/data/lessons/L-V3.js |
 | B3 | 3.T.T.3.a | ACCEPTED | B3-b3b-rereview.md (incl. final spot re-solve) |
 | B3 | 3.T.RA.1.a | ACCEPTED | B3-b3b-rereview.md (incl. final spot re-solve) |
 | B3 | 3.T.C.1.a | ACCEPTED | B3-b3a-rereview.md; blind re-solve (post-polish) in B3-b3c-rereview.md |

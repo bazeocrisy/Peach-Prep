@@ -9,9 +9,9 @@ PP.addLesson({
     points: [
       "A contraction squeezes two words into one. The apostrophe goes where letters were left out: do not becomes don't, and I am becomes I'm.",
       "A few contractions change more than that. Will not becomes won't.",
-      "To show that something belongs to one person or thing, add 's: the dog's bowl, Rosa's kite.",
+      "To show that something belongs to one person or thing, add 's: the dog's bowl, Rosa's kite. Careful: 's can also stand for is, as in Rosa's ready. Try is in its place. If it makes sense, the word is a contraction.",
       "A word that only means more than one gets no apostrophe: three dogs, two kites.",
-      "It's is short for it is or it has. Its with no apostrophe means \"belonging to it\": The bird flapped its wings."
+      "It's is short for it is or it has. Its with no apostrophe means \"belonging to it\": The bird flapped its wings. The same trick works for you're (you are) and they're (they are)."
     ],
     words: [
       { term: "apostrophe", means: "a little mark ( ' ) that sits up high between letters" },
@@ -45,6 +45,16 @@ PP.addLesson({
         "Tires just means more than one tire. Nothing belongs to the tires, so there is no apostrophe."
       ],
       answer: "The girl's bike has two flat tires."
+    },
+    {
+      show: ["The snail (wont / won't) leave (its / it's) shell until the rain stops."],
+      ask: "Which word is correct in each pair?",
+      steps: [
+        "First pair: will not squeezes into won't. The apostrophe takes the place of the o in not.",
+        "Second pair: try it is. \"The snail will not leave it is shell\" does not make sense, so there is no apostrophe.",
+        "Its with no apostrophe shows that the shell belongs to the snail."
+      ],
+      answer: "The snail won't leave its shell until the rain stops."
     }
   ],
   parent: "Hunt for apostrophes on cereal boxes, signs and mail together. For each one, ask your child: Is it a short word with letters left out, or does it show that something belongs to someone?",
@@ -106,12 +116,12 @@ PP.addLesson({
       draft: true,
       paragraphs: [
         [
-          "(1) Join us at the Saturday flea market on Maple Street!",
-          "(2) Families will sell toys, books and old tools.",
+          "(1) Join us at the big Saturday flea market on Maple Street!",
+          "(2) Families will sell toys, books, plants and old tools.",
           "(3) You can buy a used bike for five dollars."
         ],
         [
-          "(4) Dont forget to bring your own bags.",
+          "(4) Dont leave trash on the ground.",
           "(5) The school band's concert starts at noon.",
           "(6) Our principal's lemonade stand will be near the stage."
         ],
@@ -120,7 +130,11 @@ PP.addLesson({
           "(8) It's going to be a great day!",
           "(9) We hope you'll come."
         ],
-        ["(10) Parking is free behind the church.", "(11) Come early to get the best deals!"]
+        [
+          "(10) Parking is free behind the church.",
+          "(11) Come early to get the best deals!",
+          "(12) We hope to see you there."
+        ]
       ]
     },
     {
@@ -201,7 +215,8 @@ PP.addLesson({
         ],
         [
           "(10) Every dollar helps a dog find a new home.",
-          "(11) Bring a friend, and bring a smile!"
+          "(11) Bring a friend, and bring a smile!",
+          "(12) Thank you for helping us."
         ]
       ]
     }
@@ -582,14 +597,14 @@ PP.addLesson({
             ],
             passages: [],
             prompt: "Choose the words that correctly complete the note.",
-            text: "The twins {0} here yet, so we {1} start the relay without them.",
+            text: "The twins {0} here yet, so the relay {1} started.",
             slots: [
               {
                 options: ["aren't", "are'nt", "arent"],
                 answer: 0
               },
               {
-                options: ["can't", "ca'nt", "cant"],
+                options: ["hasn't", "has'nt", "hasnt"],
                 answer: 0
               }
             ],
@@ -601,11 +616,11 @@ PP.addLesson({
             ],
             how: [
               "Blank 1: the twins are not here yet. Are not squeezes into aren't, with the apostrophe where the o in not was left out.",
-              "Blank 2: we can not start without them. Can not squeezes into can't, with the apostrophe where the no in not was left out.",
+              "Blank 2: the relay has not started. Has not squeezes into hasn't, with the apostrophe where the o in not was left out.",
               "Check the other options: are'nt and ca'nt put the apostrophe in the wrong place, and arent and cant leave it out."
             ],
             misconception: "A common mix-up is leaving out the apostrophe, or putting it right after the first word.",
-            why: "The answers are aren't and can't. Are not squeezes into aren't, and cannot squeezes into can't. The apostrophe stands where the letters were left out, so are'nt and ca'nt are wrong, and arent and cant have no apostrophe at all."
+            why: "The answers are aren't and hasn't. Are not squeezes into aren't, and has not squeezes into hasn't. The apostrophe stands where the o in not was left out, so are'nt and has'nt are wrong, and arent and hasnt have no apostrophe at all."
           },
           {
             id: "SK-GUM3-1-C13",
@@ -813,7 +828,7 @@ PP.addLesson({
         "3.L.GC.1:M:use-apostrophes-in-contractions-and-singular-pos"
       ],
       passages: ["p4"],
-      prompt: "Sentence 4 of the draft needs an apostrophe. Choose the word that fixes it.",
+      prompt: "One word in sentence 4 should show who owns something. Which word fits in the blank?",
       text: "Imani found a teddy bear in the box, but the {0} nose was missing.",
       slots: [
         {
@@ -928,7 +943,7 @@ PP.addLesson({
       clue: "Try it is in place of a word with it in it. If the sentence stops making sense, the word is wrong.",
       hints: [
         "Try it is in place of a word with it in it. If the sentence stops making sense, the word is wrong.",
-        "For Part A, find the sentences that have its or it's, and test each one with it is. For Part B, ask what the beak has to do with the duck.",
+        "For Part A, test each sentence that has a word spelled with its in it. For Part B, ask who owns the thing that comes right after the word.",
         "In Part B, no word in English ends with an apostrophe after the s of its. Check the other choices."
       ],
       how: [
@@ -953,11 +968,11 @@ PP.addLesson({
       prompt: "Which TWO changes would fix mistakes in the draft?",
       pick: 2,
       choices: [
-        { text: "In sentence 2, change Ray's to Rays." },
-        { text: "In sentence 5, change watermelon's to watermelons.", correct: true },
-        { text: "In sentence 3, change couldn't to could'nt." },
-        { text: "In sentence 8, change They're to Theyre." },
-        { text: "In sentence 7, change shouldnt to shouldn't.", correct: true }
+        { text: "Take the apostrophe out of Ray's in sentence 2." },
+        { text: "Write watermelons, with no apostrophe, in sentence 5.", correct: true },
+        { text: "Move the apostrophe in couldn't to after the d in sentence 3." },
+        { text: "Take the apostrophe out of They're in sentence 8." },
+        { text: "Write shouldn't, with an apostrophe, in sentence 7.", correct: true }
       ],
       clue: "A good fix makes a word match its job. Check whether each word in the choices shows belonging, stands for two words, or just means more than one.",
       hints: [
@@ -972,7 +987,7 @@ PP.addLesson({
         "Sentence 7: shouldnt stands for should not, so it needs the apostrophe where the o was left out: shouldn't."
       ],
       misconception: "A common mix-up is taking the apostrophe out of a word that is already correct, because it ends in s or looks too long.",
-      why: "The answers are \"In sentence 5, change watermelon's to watermelons.\" and \"In sentence 7, change shouldnt to shouldn't.\" Watermelon's only means more than one, so it needs no apostrophe, and shouldn't needs one in place of the o. Ray's, couldn't and they're are already correct.",
+      why: "The answers are \"Write watermelons, with no apostrophe, in sentence 5.\" and \"Write shouldn't, with an apostrophe, in sentence 7.\" Watermelon's only means more than one, so it needs no apostrophe, and shouldn't needs one in place of the o. Ray's, couldn't and they're are already correct.",
       like: ["SK-GUM3-1-C08"]
     },
     {
@@ -1016,15 +1031,15 @@ PP.addLesson({
         "3.L.GC.1:M:use-apostrophes-in-contractions-and-singular-pos"
       ],
       passages: ["p5"],
-      prompt: "Sentence 3 has couldn't with an apostrophe, and sentence 5 has watermelon's with an apostrophe. Why is only one of them correct?",
+      prompt: "Sentences 3 and 5 each have a word with an apostrophe. Which explanation of the two words is right?",
       choices: [
-        { text: "Couldn't is wrong because nothing in sentence 3 belongs to anyone, but watermelon's is correct." },
-        { text: "Both are correct, because every short word with a t or an s needs an apostrophe." },
+        { text: "Couldn't is wrong because nobody owns anything in sentence 3, but watermelon's is right." },
+        { text: "Both words are right, because any word that ends in t or s needs an apostrophe." },
         {
-          text: "Couldn't stands for could not, but watermelon's only means more than one, so it needs no apostrophe.",
+          text: "Couldn't is short for could not, but watermelon's only counts the melons and should be watermelons.",
           correct: true
         },
-        { text: "Watermelon's is correct because an apostrophe makes a word mean more than one." }
+        { text: "Watermelon's is right because an apostrophe tells the reader there is more than one." }
       ],
       clue: "An apostrophe needs a job: missing letters, or belonging to one owner. Ask what job each word is doing.",
       hints: [
@@ -1036,10 +1051,10 @@ PP.addLesson({
         "Ask what job each apostrophe is doing.",
         "In sentence 3, couldn't stretches into could not, so the apostrophe stands for a missing letter.",
         "In sentence 5, nothing belongs to the watermelons. Sentence 4 says there are two, so the word only means more than one and should be watermelons.",
-        "The answer is that couldn't stands for could not, but watermelon's only means more than one."
+        "The answer is that couldn't is short for could not, but watermelon's only counts the melons."
       ],
       misconception: "A common mix-up is thinking an apostrophe can make a word mean more than one.",
-      why: "The answer is that couldn't stands for could not, but watermelon's only means more than one, so it needs no apostrophe. Apostrophes show missing letters or belonging. They do not make a word mean more than one.",
+      why: "The answer is \"Couldn't is short for could not, but watermelon's only counts the melons and should be watermelons.\" Apostrophes show missing letters or belonging. They do not make a word mean more than one.",
       like: ["SK-GUM3-1-C10"]
     },
     {
@@ -1116,7 +1131,7 @@ PP.addLesson({
         "3.L.GC.1:M:use-apostrophes-in-contractions-and-singular-pos"
       ],
       passages: [],
-      prompt: "This sentence from a teacher's note has one mistake. Which revision fixes it?",
+      prompt: "Choose the correct way to write this sentence from a teacher's note.",
       stem: "Please tape each students name to the cubby.",
       choices: [
         { text: "Please tape each students' name to the cubby." },
@@ -1179,7 +1194,7 @@ PP.addLesson({
         "3.L.GC.1:M:use-apostrophes-in-contractions-and-singular-pos"
       ],
       passages: [],
-      prompt: "Read the two sentences. Which TWO statements are true?",
+      prompt: "Look at the two sentences. Which TWO statements about Ben's are true?",
       stem: ["Ben's hungry.", "Ben's lunch is in the bag."],
       pick: 2,
       choices: [
@@ -1221,7 +1236,7 @@ PP.addLesson({
     },
     "SK-GUM3-1-P2": {
       hints: [
-        "Check each word with an apostrophe or one that might need one. Ask whether it stands for missing letters, shows belonging, or just means more than one.",
+        "Ask what job each apostrophe does: missing letters, belonging, or neither.",
         "Look at the four sentences one at a time. Find the word in each that is the likely problem.",
         "Two of the sentences are missing an apostrophe. Check the other two."
       ],
@@ -1247,7 +1262,7 @@ PP.addLesson({
     },
     "SK-GUM3-1-P4": {
       hints: [
-        "An apostrophe has two jobs: standing for missing letters, or showing that something belongs to one owner. A word that only means more than one needs neither.",
+        "An apostrophe stands for missing letters or shows belonging. A word that only means more than one needs neither.",
         "Find each word with an apostrophe and say what job it does: missing letters or belonging.",
         "Can't stands for cannot, so that sentence is correct. Check the other three."
       ],
@@ -1375,7 +1390,163 @@ PP.addLesson({
     }
   ],
   parent: "Play \"one, two\" in the car: you say \"one mouse,\" and your child says \"two mice.\" Mix in easy ones (cat, cats) and special ones (foot, child, goose, sheep).",
-  passages: [],
+  passages: [
+    /* B6:passages:start */
+    {
+      id: "p1",
+      title: "A Morning at the State Park",
+      byline: "A third grader's draft",
+      genre: "Student draft (narrative)",
+      draft: true,
+      paragraphs: [
+        [
+          "(1) On Tuesday, our class rode a bus to the state park.",
+          "(2) A ranger named Ms. Bell met our class at the gate.",
+          "(3) First, we walked past a pond where six geese were floating."
+        ],
+        [
+          "(4) Then we picked up red and gold leafs from the path.",
+          "(5) Ms. Bell showed us tracks left by two foxes.",
+          "(6) Far away, we saw three mooses standing in a field."
+        ],
+        [
+          "(7) She taught us about the lifes of the animals there.",
+          "(8) We wrote notes about everything we saw.",
+          "(9) The bus got us back to school before dark."
+        ],
+        [
+          "(10) I want to go back to the park next spring."
+        ]
+      ]
+    },
+    {
+      id: "p2",
+      title: "Snowed In at the Cabin",
+      byline: "A third grader's draft",
+      genre: "Student draft (narrative)",
+      draft: true,
+      paragraphs: [
+        [
+          "(1) Last winter, my family rented a cabin in the mountains.",
+          "(2) The snow was so deep that it covered our boots.",
+          "(3) On the first morning, we saw four deers drinking from the stream."
+        ],
+        [
+          "(4) We watched them from the porch.",
+          "(5) At dawn, six gooses flew over the roof.",
+          "(6) My cousins and I counted them twice."
+        ],
+        [
+          "(7) Mom put the dishes on two shelfs by the stove.",
+          "(8) Dad told stories until the fire burned low.",
+          "(9) We hoped to come back to the cabin next winter."
+        ]
+      ]
+    },
+    {
+      id: "p3",
+      title: "Willow Farm Visitor Poster",
+      byline: "A third grader's draft",
+      genre: "Student draft (poster)",
+      draft: true,
+      paragraphs: [
+        [
+          "(1) Welcome to Willow Farm!",
+          "(2) Our visitors love to meet the baby goats.",
+          "(3) This spring, four calfs were born in the red barn."
+        ],
+        [
+          "(4) The sheeps graze in the north field.",
+          "(5) Please do not feed the ponies.",
+          "(6) Two wagons take visitors around the farm on Saturdays."
+        ],
+        [
+          "(7) Visitors can watch the farmers care for the oxes.",
+          "(8) Wear sturdy shoes, because the paths can get muddy.",
+          "(9) We hope you enjoy your visit."
+        ],
+        ["(10) Come back soon to see what is new."]
+      ]
+    },
+    {
+      id: "p4",
+      title: "A Day at the Zoo",
+      byline: "A third grader's draft",
+      genre: "Student draft (narrative)",
+      draft: true,
+      paragraphs: [
+        [
+          "(1) Our class went to the zoo on a sunny Wednesday.",
+          "(2) The first exhibit had two otters that played in the water.",
+          "(3) Next to them, a keeper was cutting apples into halfs for the monkeys."
+        ],
+        [
+          "(4) At the plains exhibit, we counted five bisons near the fence.",
+          "(5) A guide told us that the zoo has more than two hundred animals.",
+          "(6) We ate our lunch under the shady trees."
+        ],
+        [
+          "(7) In the forest exhibit, two wolfs slept in the shade.",
+          "(8) A zookeeper let each child touch a snake's skin.",
+          "(9) By three o'clock, we were ready to go home."
+        ],
+        [
+          "(10) I hope we can visit again next year."
+        ]
+      ]
+    },
+    {
+      id: "p5",
+      title: "Blizzard Day",
+      byline: "A third grader's draft",
+      genre: "Student draft (narrative)",
+      draft: true,
+      paragraphs: [
+        [
+          "(1) Last February, a big blizzard hit our town.",
+          "(2) School was closed, so my brother and I stayed home.",
+          "(3) We looked out the window and saw two mans shoveling snow."
+        ],
+        [
+          "(4) Dad made hot cocoa for everyone.",
+          "(5) Our neighbor's tractor was buried under a huge drift.",
+          "(6) Later, he dug it out and fed his sheeps."
+        ],
+        [
+          "(7) Mom sharpened the kitchen knifes before she made soup.",
+          "(8) We played board games by the window.",
+          "(9) The next day, the sun came out and the snow began to melt."
+        ],
+        ["(10) It was the best snow day ever."]
+      ]
+    },
+    {
+      id: "p6",
+      title: "Costume Contest Flyer",
+      byline: "A third grader's draft",
+      genre: "Student draft (flyer)",
+      draft: true,
+      paragraphs: [
+        [
+          "(1) Join our costume contest at the town hall on Friday night!",
+          "(2) Everyone is invited, from tiny babies to grandparents.",
+          "(3) Last year, we saw three elfs and a very tall robot."
+        ],
+        [
+          "(4) This year, there will be prizes for the funniest costume.",
+          "(5) Two judges will walk around the room.",
+          "(6) Wear shoes that are comfortable, because your feets can get tired from dancing."
+        ],
+        [
+          "(7) Dancing starts at seven o'clock.",
+          "(8) We will serve hot chocolate and warm pretzels.",
+          "(9) We hope to see you there!"
+        ],
+        ["(10) Bring a friend, and bring a smile."]
+      ]
+    }
+    /* B6:passages:end */
+  ],
   practice: [
     { id: "SK-GUM3-2-P1", type: "dropdown", points: 1, dok: 1, passages: [],
       prompt: "Choose the word that correctly completes the sentence.",
@@ -1425,6 +1596,992 @@ PP.addLesson({
       clue: "Both blanks need a word for more than one. Child and mouse are special nouns. Say \"one ___, two ___\" for each.",
       why: "The answers are children and mice. One child, many children. One mouse, two mice. Childrens and mices add an extra -s that does not belong." }
   ],
+  /* B6:core:start */
+  /* ---------- Expansion 2026-10-22, batch B6 (GUM Master) ----------
+     core: fifteen items in three sets of five. { ref } reuses a practice item; the other practice items stay in Practice Together.
+     Passages are used only by core and the similar bank; none is used by test or testB.
+     Author log: docs/expansion-2026-10-22/batches/B6-author-log.md. NEEDS INDEPENDENT REVIEW. */
+  core: {
+    rev: "1",
+    sets: [
+      {
+        title: "Set 1",
+        items: [
+          { ref: "SK-GUM3-2-P4" },
+          { ref: "SK-GUM3-2-P5" },
+          {
+            id: "SK-GUM3-2-C03",
+            type: "dropdown",
+            points: 1,
+            dok: 2,
+            std: [
+              "3.L.GC.1:M:form-and-use-irregular-plural-nouns"
+            ],
+            passages: ["p1"],
+            prompt: "Sentence 4 of the draft has a plural noun that is spelled the wrong way. Choose the word that fixes it.",
+            text: "Then we picked up red and gold {0} from the path.",
+            slots: [
+              {
+                options: ["leafs", "leaves", "leafes"],
+                answer: 1
+              }
+            ],
+            clue: "Some nouns change when they mean more than one. Say the noun for one, then say it for many.",
+            hints: [
+              "Some nouns change when they mean more than one. Say the noun for one, then say it for many.",
+              "Read sentence 4. Picture the path, and say the noun for just one of the red or gold things. Then say it for many.",
+              "Leafes is not a word, because -es is never added right after an f. Decide between the other two."
+            ],
+            how: [
+              "Say the noun for one thing: leaf. The sentence needs the noun for many.",
+              "Leaf ends in f. For nouns like knife and wolf, the f changes to v before the ending: knife, knives and wolf, wolves.",
+              "The answer is leaves. Leafs only adds -s, and leafes adds -es after an f."
+            ],
+            misconception: "A common mix-up is adding -s to every noun. Some nouns that end in f change the f to v.",
+            why: "The answer is leaves. Leaf is a noun that changes its f to v when it means more than one, the way knife becomes knives. Leafs just adds -s, and leafes is not a word."
+          },
+          {
+            id: "SK-GUM3-2-C04",
+            type: "hottext",
+            points: 1,
+            dok: 2,
+            std: [
+              "3.L.GC.1:M:form-and-use-irregular-plural-nouns"
+            ],
+            passages: ["p1"],
+            prompt: "Select the sentence that has a plural noun that should stay the same as the singular noun.",
+            targets: ["p1:1:3", "p1:2:1", "p1:2:2", "p1:2:3", "p1:3:1"],
+            answer: ["p1:2:3"],
+            pick: 1,
+            clue: "Some nouns do not change at all when they mean more than one. Think about which plural noun should look just like its singular.",
+            hints: [
+              "Some nouns do not change at all when they mean more than one. Think about which plural noun should look just like its singular.",
+              "Read each plural noun in the sentences. Say the noun for one, then for many, and listen for the one that should sound the same.",
+              "Foxes adds -es the usual way. Check the other four sentences."
+            ],
+            how: [
+              "Find the plural noun in each sentence and say the noun for one.",
+              "Geese, foxes, leafs and lifes are plurals that change in some way. Foxes adds -es the usual way, geese changes its vowels, and leafs and lifes need their f changed to v.",
+              "Mooses is wrong, because moose is a noun that stays the same: one moose, three moose. The sentence should say three moose."
+            ],
+            misconception: "A common mix-up is adding -s or -es to a noun that stays the same, like moose, sheep or deer.",
+            why: "The answer is sentence 6, \"Far away, we saw three mooses standing in a field.\" Moose stays the same for one or many: one moose, three moose. Geese changes its vowels, foxes adds -es, and leafs and lifes need their f changed to v."
+          },
+          {
+            id: "SK-GUM3-2-C05",
+            type: "ebsr",
+            points: 2,
+            dok: 3,
+            std: [
+              "3.L.GC.1:M:form-and-use-irregular-plural-nouns"
+            ],
+            passages: ["p1"],
+            prompt: "This question has two parts. Answer Part A, then Part B.",
+            partA: {
+              prompt: "Sentence 7 of the draft has a plural noun that is spelled the wrong way. Which revision fixes it?",
+              choices: [
+                { text: "She taught us about the life's of the animals there." },
+                { text: "She taught us about the lives of the animals there.", correct: true },
+                { text: "She taught us about the lifs of the animals there." },
+                { text: "She taught us about the lifes' of the animals there." }
+              ]
+            },
+            partB: {
+              prompt: "Which rule best explains the revision in Part A?",
+              choices: [
+                { text: "The word life stays the same when it means more than one, the same way sheep does." },
+                { text: "The vowel in life changes, the same way foot changes to feet." },
+                { text: "The f in life changes to v, the same way knife changes to knives.", correct: true },
+                { text: "The word life adds -en, the same way child changes to children." }
+              ]
+            },
+            clue: "Say the noun for one, then decide how it changes when it means more than one.",
+            hints: [
+              "Say the noun for one, then decide how it changes when it means more than one.",
+              "For Part A, read sentence 7 and ask whether the animals have one life or many. For Part B, think about which other nouns change in a similar way.",
+              "In Part A, a word with an apostrophe before the s shows belonging, not more than one. Check the other choices."
+            ],
+            how: [
+              "Part A: sentence 7 is about the animals, so the noun life needs to mean more than one.",
+              "Life ends in fe. When a noun like this means more than one, the f changes to v and -s is added: life, lives.",
+              "Part A answer: \"She taught us about the lives of the animals there.\" Life's has an apostrophe for belonging, and lifs and lifes' are not spelled that way.",
+              "Part B answer: \"The f in life changes to v, the same way knife changes to knives.\""
+            ],
+            misconception: "A common mix-up is adding only -s to a noun that ends in f or fe. For many of these nouns, the f changes to v.",
+            why: "Part A: \"She taught us about the lives of the animals there.\" Part B: \"The f in life changes to v, the same way knife changes to knives.\" Life's would show belonging, and lifs and lifes' are not words. Sheep stays the same, foot changes its vowels, and child adds -en, so they are different patterns."
+          }
+        ]
+      },
+      {
+        title: "Set 2",
+        items: [
+          {
+            id: "SK-GUM3-2-C06",
+            type: "mc",
+            points: 1,
+            dok: 2,
+            std: [
+              "3.L.GC.1:M:form-and-use-irregular-plural-nouns"
+            ],
+            passages: ["p2"],
+            prompt: "Sentence 5 of the draft has a plural noun that is spelled the wrong way. Which revision fixes it?",
+            choices: [
+              { text: "At dawn, six geeses flew over the roof." },
+              { text: "At dawn, six goose flew over the roof." },
+              { text: "At dawn, six gese flew over the roof." },
+              { text: "At dawn, six geese flew over the roof.", correct: true }
+            ],
+            clue: "Some nouns change their spelling when they mean more than one. Say the noun for one, then for six.",
+            hints: [
+              "Some nouns change their spelling when they mean more than one. Say the noun for one, then for six.",
+              "Read the number word in sentence 5, then think about how the noun changes for more than one.",
+              "A noun that changes its spelling does not also add -es. Check which choices do both."
+            ],
+            how: [
+              "Find the noun: goose. The number word six tells you it must mean more than one.",
+              "Goose is a noun that changes the letters inside it: goose, geese. It does not add -s or -es.",
+              "The answer is \"At dawn, six geese flew over the roof.\" Geeses adds -es to a word that already changed, goose is for one, and gese is not spelled that way."
+            ],
+            misconception: "A common mix-up is changing the word and then adding -s or -es too, as in geeses or mices.",
+            why: "The answer is \"At dawn, six geese flew over the roof.\" Goose changes its spelling for more than one: goose, geese. Geeses adds an ending it does not need, goose means only one, and gese is not spelled that way."
+          },
+          {
+            id: "SK-GUM3-2-C07",
+            type: "hottext",
+            points: 2,
+            dok: 2,
+            std: [
+              "3.L.GC.1:M:form-and-use-irregular-plural-nouns"
+            ],
+            passages: ["p2"],
+            prompt: "Select the TWO sentences that have a plural noun spelled the wrong way.",
+            targets: ["p2:1:2", "p2:1:3", "p2:2:3", "p2:3:1", "p2:3:2"],
+            answer: ["p2:1:3", "p2:3:1"],
+            pick: 2,
+            clue: "Say each plural noun, then say the noun for one. Check that the plural changes, or stays the same, the way it should.",
+            hints: [
+              "Say each plural noun, then say the noun for one. Check that the plural changes, or stays the same, the way it should.",
+              "Look at the sentences with plural nouns in the first and last parts of the draft. Say each noun for one and then for many.",
+              "Boots adds -s the usual way. Check the other four sentences."
+            ],
+            how: [
+              "Find the plural noun in each sentence and say the noun for one.",
+              "Boots, cousins and stories follow the usual rules, so those sentences are fine.",
+              "Sentence 3: deer is a noun that stays the same, so deers is wrong. It should be four deer.",
+              "Sentence 7: shelf changes its f to v for more than one, so shelfs is wrong. It should be shelves."
+            ],
+            misconception: "A common mix-up is thinking every plural noun just adds -s. Deer stays the same, and shelf changes its f to v.",
+            why: "The answers are \"On the first morning, we saw four deers drinking from the stream.\" and \"Mom put the dishes on two shelfs by the stove.\" Deer stays the same for one or many, and shelf changes to shelves. Boots, cousins and stories are spelled correctly."
+          },
+          {
+            id: "SK-GUM3-2-C08",
+            type: "mc",
+            points: 1,
+            dok: 3,
+            std: [
+              "3.L.GC.1:M:form-and-use-irregular-plural-nouns"
+            ],
+            passages: [],
+            prompt: "Foot changes to feet. Which noun changes in the same way?",
+            choices: [
+              { text: "tooth, which becomes teeth", correct: true },
+              { text: "wolf, which becomes wolves" },
+              { text: "child, which becomes children" },
+              { text: "deer, which stays the same" }
+            ],
+            clue: "Look for a noun that changes in the same way, not just any noun that changes.",
+            hints: [
+              "Look for a noun that changes in the same way, not just any noun that changes.",
+              "Say foot and feet aloud. Notice which part of the word changes, then say each pair in the choices.",
+              "Deer does not change at all, but foot does. Check the other three."
+            ],
+            how: [
+              "Say foot and feet. The oo in the middle of foot changes to ee. The beginning and end stay the same.",
+              "Now check each pair. Tooth becomes teeth, with the oo changing to ee in the middle. That is the same change.",
+              "Wolf changes its f to v, child adds -ren, and deer does not change, so none of those match."
+            ],
+            misconception: "A common mix-up is picking any noun that changes. Look at which part changes, not just that it changes.",
+            why: "The answer is \"tooth, which becomes teeth.\" Foot changes the letters inside the word, from oo to ee, and tooth does the same thing. Wolf changes its f to v, child adds letters at the end, and deer stays the same."
+          },
+          {
+            id: "SK-GUM3-2-C09",
+            type: "ms",
+            points: 2,
+            dok: 2,
+            std: [
+              "3.L.GC.1:M:form-and-use-irregular-plural-nouns"
+            ],
+            passages: [],
+            prompt: "Choose the TWO sentences that use plural nouns correctly.",
+            pick: 2,
+            choices: [
+              { text: "The wolfs howled at the moon." },
+              { text: "Two mailmen waved from the truck.", correct: true },
+              { text: "Mia hurt her feets on the hot sand." },
+              { text: "Two moose waded into the cold lake.", correct: true },
+              { text: "Both policemans stood near the crosswalk." }
+            ],
+            clue: "Find the plural noun in each sentence. Ask whether it changes, stays the same, or adds -s the way it should.",
+            hints: [
+              "Find the plural noun in each sentence. Ask whether it changes, stays the same, or adds -s the way it should.",
+              "Say the noun for one, and then for many. Check that each sentence has the right plural.",
+              "One of the wrong choices has a noun that needs its f changed to v. Check the other four."
+            ],
+            how: [
+              "Find the plural noun in each sentence and say the noun for one.",
+              "\"Two mailmen waved from the truck.\" Mailman changes man to men, like man and men. \"Two moose waded into the cold lake.\" Moose stays the same.",
+              "The others are wrong: it should be policemen, wolves and feet."
+            ],
+            misconception: "A common mix-up is adding -s to a noun that changes (like feets) or to a noun that stays the same.",
+            why: "The answers are \"Two mailmen waved from the truck.\" and \"Two moose waded into the cold lake.\" Mailman changes to mailmen, and moose stays the same. The others should say policemen, wolves and feet."
+          },
+          {
+            id: "SK-GUM3-2-C10",
+            type: "match",
+            points: 2,
+            dok: 2,
+            std: [
+              "3.L.GC.1:M:form-and-use-irregular-plural-nouns"
+            ],
+            passages: [],
+            prompt: "Match each plural noun to the noun that means only one.",
+            cols: ["calf", "policeman", "wolf", "tooth"],
+            rows: [
+              { text: "calves", answer: 0 },
+              { text: "policemen", answer: 1 },
+              { text: "wolves", answer: 2 },
+              { text: "teeth", answer: 3 }
+            ],
+            clue: "Think of the noun for just one. Say it, and then say the plural to check that they go together.",
+            hints: [
+              "Think of the noun for just one. Say it, and then say the plural to check that they go together.",
+              "Start with the row you are surest about, and then decide the rest one at a time.",
+              "Two of the plurals end in ves. Decide about the other two rows first."
+            ],
+            how: [
+              "For each plural, think of the noun for just one thing.",
+              "Calves has ves at the end, so its singular is calf. Wolves is wolf in the same way.",
+              "Policemen ends in men, so its singular ends in man: policeman. Teeth changes the vowels back to the oo in tooth."
+            ],
+            misconception: "A common mix-up is matching a plural to a word that only looks similar. Say the plural for each choice to check.",
+            why: "Calves goes with calf and wolves goes with wolf, because the v changes back to f. Policemen goes with policeman, because men changes back to man. Teeth goes with tooth, because ee changes back to oo."
+          }
+        ]
+      },
+      {
+        title: "Set 3",
+        items: [
+          {
+            id: "SK-GUM3-2-C11",
+            type: "hottext",
+            points: 2,
+            dok: 2,
+            std: [
+              "3.L.GC.1:M:form-and-use-irregular-plural-nouns"
+            ],
+            passages: ["p3"],
+            prompt: "Select the TWO sentences in the poster that have a plural noun spelled the wrong way.",
+            targets: ["p3:1:2", "p3:1:3", "p3:2:1", "p3:2:3", "p3:3:2"],
+            answer: ["p3:1:3", "p3:2:1"],
+            pick: 2,
+            clue: "Say each plural noun, and then say the noun for one. Check that the plural changes, or stays the same, the way it should.",
+            hints: [
+              "Say each plural noun, and then say the noun for one. Check that the plural changes, or stays the same, the way it should.",
+              "Look at the first four sentences with plural nouns on the poster. Say each noun for one and then for many.",
+              "Goats follows the usual rule. Check the other four sentences."
+            ],
+            how: [
+              "Find the plural noun in each sentence and say the noun for one.",
+              "Goats and wagons add -s the usual way, and shoes is spelled correctly.",
+              "Sentence 3: calf changes its f to v, so calfs is wrong. It should be calves.",
+              "Sentence 4: sheep stays the same for one or many, so sheeps is wrong."
+            ],
+            misconception: "A common mix-up is adding -s to every plural. Calf changes its f to v, and sheep stays the same.",
+            why: "The answers are \"This spring, four calfs were born in the red barn.\" and \"The sheeps graze in the north field.\" Calf becomes calves, and sheep stays the same for one or many. Goats, wagons and shoes are spelled correctly."
+          },
+          {
+            id: "SK-GUM3-2-C12",
+            type: "dropdown",
+            points: 1,
+            dok: 2,
+            std: [
+              "3.L.GC.1:M:form-and-use-irregular-plural-nouns"
+            ],
+            passages: [],
+            prompt: "Choose the word that correctly completes the sentence.",
+            text: "After the long chase, both {0} sat down to rest.",
+            slots: [
+              {
+                options: ["policemans", "policemen", "policemens"],
+                answer: 1
+              }
+            ],
+            clue: "Both means more than one, so the noun needs to change. Say the noun for one first.",
+            hints: [
+              "Both means more than one, so the noun needs to change. Say the noun for one first.",
+              "Look at the end of the noun for one. Think about another noun that ends the same way and how it changes.",
+              "Policemens adds -s to a word that has already changed. Decide between the other two."
+            ],
+            how: [
+              "Both tells you there are two, so the noun must mean more than one.",
+              "The noun for one is policeman. It ends in man, and man changes to men: man, men.",
+              "The answer is policemen. Policemans only adds -s, and policemens changes the word and then adds -s."
+            ],
+            misconception: "A common mix-up is adding -s to a noun that ends in man. These nouns change to men.",
+            why: "The answer is policemen. Policeman ends in man, so the plural changes man to men. Policemans only adds -s, and policemens adds an extra -s to a word that already changed."
+          },
+          {
+            id: "SK-GUM3-2-C13",
+            type: "ms",
+            points: 2,
+            dok: 3,
+            std: [
+              "3.L.GC.1:M:form-and-use-irregular-plural-nouns"
+            ],
+            passages: [],
+            prompt: "Mr. Park says, \"Every noun that means more than one ends in the letter s.\" Which TWO examples show that his rule is wrong?",
+            pick: 2,
+            choices: [
+              { text: "one pencil, two pencils" },
+              { text: "one mouse, two mice", correct: true },
+              { text: "one puppy, two puppies" },
+              { text: "one deer, two deer", correct: true },
+              { text: "one wolf, two wolves" }
+            ],
+            clue: "To test a rule, look for examples that break it. Check how each plural noun ends.",
+            hints: [
+              "To test a rule, look for examples that break it. Check how each plural noun ends.",
+              "Read each pair. Look at the last letter of the plural noun in each one.",
+              "Pencils and puppies end in the letter s. Decide about the other three."
+            ],
+            how: [
+              "Check the last letter of each plural noun against the rule.",
+              "Pencils, wolves and puppies all end in s. Wolves is a special plural, but it still ends in s, so it does not break this rule.",
+              "Mice ends in e, and deer ends in r. Those two plurals do not end in s, so they show that the rule is wrong."
+            ],
+            misconception: "A common mix-up is picking every special plural. The rule is only about the last letter, and wolves still ends in s.",
+            why: "The answers are \"one mouse, two mice\" and \"one deer, two deer.\" Mice ends in e and deer ends in r, so neither plural ends in s. Pencils, wolves and puppies all end in s, so they do not break Mr. Park's rule."
+          },
+          {
+            id: "SK-GUM3-2-C14",
+            type: "mc",
+            points: 1,
+            dok: 2,
+            std: [
+              "3.L.GC.1:M:form-and-use-irregular-plural-nouns"
+            ],
+            passages: ["p3"],
+            prompt: "Sentence 7 of the poster has a plural noun spelled the wrong way. Which revision fixes it?",
+            choices: [
+              { text: "Visitors can watch the farmers care for the oxes." },
+              { text: "Visitors can watch the farmers care for the oxen.", correct: true },
+              { text: "Visitors can watch the farmers care for the oxs." },
+              { text: "Visitors can watch the farmers care for the ox." }
+            ],
+            clue: "Some nouns add letters at the end that are not -s or -es. Say the noun for one, then for many.",
+            hints: [
+              "Some nouns add letters at the end that are not -s or -es. Say the noun for one, then for many.",
+              "Read sentence 7. The farmers care for more than one animal. Think about how the noun for just one changes.",
+              "The ox is for only one animal. Decide among the other three."
+            ],
+            how: [
+              "Find the noun: ox. The farmers care for more than one, so it must be a plural.",
+              "Ox is one of the nouns that adds -en to mean more than one: ox, oxen.",
+              "The answer is \"Visitors can watch the farmers care for the oxen.\" Oxes and oxs add the usual -s, and ox means only one."
+            ],
+            misconception: "A common mix-up is adding -es to a noun that ends in x. Ox is one of the nouns that adds -en.",
+            why: "The answer is \"Visitors can watch the farmers care for the oxen.\" Ox adds -en to mean more than one: ox, oxen. Oxes and oxs add endings that do not belong, and ox means only one animal."
+          },
+          {
+            id: "SK-GUM3-2-C15",
+            type: "mc",
+            points: 1,
+            dok: 3,
+            std: [
+              "3.L.GC.1:M:form-and-use-irregular-plural-nouns"
+            ],
+            passages: [],
+            prompt: "Which sentence stays correct when you change the word One to Two and leave the noun exactly the same?",
+            choices: [
+              { text: "One goose waded across the stream." },
+              { text: "One child waded across the stream." },
+              { text: "One deer waded across the stream.", correct: true },
+              { text: "One mouse waded across the stream." }
+            ],
+            clue: "Look for a noun that does not change at all when it means more than one.",
+            hints: [
+              "Look for a noun that does not change at all when it means more than one.",
+              "Try changing One to Two in each sentence. Ask whether the noun would have to change too.",
+              "Goose and mouse both change the letters inside the word. Decide about the other two."
+            ],
+            how: [
+              "For each sentence, try Two in place of One and check the noun.",
+              "Two goose, two child and two mouse are all wrong. They need geese, children and mice.",
+              "Deer stays the same for one or many, so \"Two deer waded across the stream.\" is correct with the noun unchanged."
+            ],
+            misconception: "A common mix-up is thinking every plural noun must look different from the noun for one.",
+            why: "The answer is \"One deer waded across the stream.\" Deer stays the same for one or many, so only the number word changes. Goose, child and mouse all change when they mean more than one: geese, children and mice."
+          }
+        ]
+      }
+    ]
+  },
+  similar: [
+    {
+      id: "SK-GUM3-2-S01",
+      type: "hottext",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.L.GC.1:M:form-and-use-irregular-plural-nouns"
+      ],
+      passages: [],
+      prompt: "Select the sentence that has an error.",
+      options: [
+        "Five geese landed on the lake.",
+        "My little sister lost two front tooths.",
+        "Grandma packed two sharp knives.",
+        "The farmer counted nine sheep."
+      ],
+      answer: [1],
+      pick: 1,
+      clue: "Find the plural noun in each sentence. Say the noun for one, then check that the plural is spelled the special way.",
+      hints: [
+        "Find the plural noun in each sentence. Say the noun for one, then check that the plural is spelled the special way.",
+        "Look at each noun that means more than one. Ask whether it should change its spelling, stay the same, or add -s.",
+        "Knives changes its f to v the way it should. Check the other three sentences."
+      ],
+      how: [
+        "Find each noun that means more than one.",
+        "Geese changes the letters inside goose, knives changes its f to v, and sheep stays the same.",
+        "Tooths adds -s to a noun that changes its spelling. Tooth becomes teeth."
+      ],
+      misconception: "A common mix-up is adding -s to a noun that changes its spelling.",
+      why: "The error is in \"My little sister lost two front tooths.\" Tooth is a special noun: one tooth, two teeth. Geese, knives and sheep are all spelled correctly.",
+      like: ["SK-GUM3-2-P4"]
+    },
+    {
+      id: "SK-GUM3-2-S02",
+      type: "dropdown",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.L.GC.1:M:form-and-use-irregular-plural-nouns"
+      ],
+      passages: [],
+      prompt: "Choose the words that correctly complete the sentence.",
+      text: "The {0} on the hike watched five {1} fly over the lake.",
+      slots: [
+        {
+          options: ["mans", "men", "mens"],
+          answer: 1
+        },
+        {
+          options: ["gooses", "geese", "geeses"],
+          answer: 1
+        }
+      ],
+      clue: "Both blanks need a word for more than one. Say the noun for one, then change it.",
+      hints: [
+        "Both blanks need a word for more than one. Say the noun for one, then change it.",
+        "Look at each blank. Think about how a noun that ends in man changes, and how goose changes.",
+        "Mens and geeses add -s or -es to a word that has already changed. Decide about the other options."
+      ],
+      how: [
+        "Both blanks need nouns that mean more than one. Five tells you the second one is plural, and the hikers are more than one person.",
+        "Man changes to men. Goose changes to geese. Neither one adds -s or -es.",
+        "Mans and gooses add the usual ending to a word that should change. Mens and geeses add a second ending."
+      ],
+      misconception: "A common mix-up is changing the word and also adding -s or -es.",
+      why: "The answers are men and geese. One man, many men. One goose, many geese. Mans, mens, gooses and geeses add endings that do not belong.",
+      like: ["SK-GUM3-2-P5"]
+    },
+    {
+      id: "SK-GUM3-2-S03",
+      type: "dropdown",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.L.GC.1:M:form-and-use-irregular-plural-nouns"
+      ],
+      passages: ["p4"],
+      prompt: "Sentence 3 of the draft has a plural noun that is spelled the wrong way. Choose the word that fixes it.",
+      text: "Next to them, a keeper was cutting apples into {0} for the monkeys.",
+      slots: [
+        {
+          options: ["halfs", "halves", "halfes"],
+          answer: 1
+        }
+      ],
+      clue: "Some nouns change when they mean more than one. Say the noun for one piece, then for two.",
+      hints: [
+        "Some nouns change when they mean more than one. Say the noun for one piece, then for two.",
+        "Read sentence 3. A keeper cuts an apple into more than one piece. Say the noun for one piece, then for many.",
+        "Halfes is not a word, because -es is never added right after an f. Decide between the other two."
+      ],
+      how: [
+        "Say the noun for one piece: half. The sentence needs the noun for many pieces.",
+        "Half ends in f. For nouns like knife and wolf, the f changes to v before the ending.",
+        "The answer is halves. Halfs only adds -s, and halfes adds -es after an f."
+      ],
+      misconception: "A common mix-up is adding -s to every noun. Some nouns that end in f change the f to v.",
+      why: "The answer is halves. Half changes its f to v when it means more than one. Halfs just adds -s, and halfes is not a word.",
+      like: ["SK-GUM3-2-C03"]
+    },
+    {
+      id: "SK-GUM3-2-S04",
+      type: "hottext",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.L.GC.1:M:form-and-use-irregular-plural-nouns"
+      ],
+      passages: ["p4"],
+      prompt: "Select the sentence that has a plural noun that should stay the same as the singular noun.",
+      targets: ["p4:1:2", "p4:1:3", "p4:2:1", "p4:2:2", "p4:3:1"],
+      answer: ["p4:2:1"],
+      pick: 1,
+      clue: "Some nouns do not change at all when they mean more than one. Think about which plural noun should look just like its singular.",
+      hints: [
+        "Some nouns do not change at all when they mean more than one. Think about which plural noun should look just like its singular.",
+        "Read each plural noun in the sentences. Say the noun for one, then for many, and listen for the one that should sound the same.",
+        "Otters adds -s the usual way. Check the other four sentences."
+      ],
+      how: [
+        "Find the plural noun in each sentence and say the noun for one.",
+        "Otters and animals add -s the usual way. Halfs and wolfs need their f changed to v.",
+        "Bisons is wrong, because bison stays the same: one bison, five bison."
+      ],
+      misconception: "A common mix-up is adding -s to a noun that stays the same, like bison, sheep or deer.",
+      why: "The answer is sentence 4, \"At the plains exhibit, we counted five bisons near the fence.\" Bison stays the same for one or many. Otters and animals add -s the usual way, and halfs and wolfs need their f changed to v.",
+      like: ["SK-GUM3-2-C04"]
+    },
+    {
+      id: "SK-GUM3-2-S05",
+      type: "ebsr",
+      points: 2,
+      dok: 3,
+      std: [
+        "3.L.GC.1:M:form-and-use-irregular-plural-nouns"
+      ],
+      passages: ["p4"],
+      prompt: "This question has two parts. Answer Part A, then Part B.",
+      partA: {
+        prompt: "Sentence 7 of the draft has a plural noun that is spelled the wrong way. Which revision fixes it?",
+        choices: [
+          { text: "In the forest exhibit, two wolfes slept in the shade." },
+          { text: "In the forest exhibit, two wolve slept in the shade." },
+          { text: "In the forest exhibit, two wolf's slept in the shade." },
+          { text: "In the forest exhibit, two wolves slept in the shade.", correct: true }
+        ]
+      },
+      partB: {
+        prompt: "Which rule best explains the revision in Part A?",
+        choices: [
+          { text: "The f in wolf changes to v, the same way elf changes to elves.", correct: true },
+          { text: "The word wolf stays the same when it means more than one, the same way deer does." },
+          { text: "The vowel in wolf changes, the same way goose changes to geese." },
+          { text: "The word wolf adds -en, the same way ox changes to oxen." }
+        ]
+      },
+      clue: "Say the noun for one, then decide how it changes when it means more than one.",
+      hints: [
+        "Say the noun for one, then decide how it changes when it means more than one.",
+        "For Part A, read sentence 7 and picture the forest exhibit. For Part B, think about which other nouns end in f and what happens to them.",
+        "In Part A, a word with an apostrophe shows belonging, not more than one. Check the other choices."
+      ],
+      how: [
+        "Part A: two tells you the noun must mean more than one. The noun for one is wolf.",
+        "Wolf ends in f. The f changes to v and the ending is added: wolf, wolves.",
+        "Part A answer: \"In the forest exhibit, two wolves slept in the shade.\" Wolfes and wolve are not spelled that way, and wolf's would show belonging.",
+        "Part B answer: \"The f in wolf changes to v, the same way elf changes to elves.\""
+      ],
+      misconception: "A common mix-up is adding only -s to a noun that ends in f. For many of these nouns, the f changes to v.",
+      why: "Part A: \"In the forest exhibit, two wolves slept in the shade.\" Part B: \"The f in wolf changes to v, the same way elf changes to elves.\" Wolf's would show belonging, and wolfes and wolve are not words. Deer stays the same, goose changes its vowels, and ox adds -en.",
+      like: ["SK-GUM3-2-C05"]
+    },
+    {
+      id: "SK-GUM3-2-S06",
+      type: "mc",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.L.GC.1:M:form-and-use-irregular-plural-nouns"
+      ],
+      passages: ["p5"],
+      prompt: "Sentence 3 of the draft has a plural noun that is spelled the wrong way. Which revision fixes it?",
+      choices: [
+        { text: "We heard mices scratching in the walls." },
+        { text: "We heard mouse scratching in the walls." },
+        { text: "We heard mice scratching in the walls.", correct: true },
+        { text: "We heard mouses' scratching in the walls." }
+      ],
+      clue: "Some nouns change their spelling when they mean more than one. Say the noun for one, then for many.",
+      hints: [
+        "Some nouns change their spelling when they mean more than one. Say the noun for one, then for many.",
+        "Think about how many animals could be scratching at the same time. Say the noun for just one, then change it.",
+        "A noun that changes its spelling does not also add -s. Check which choices do both."
+      ],
+      how: [
+        "Find the noun: mouse. The sentence tells about more than one.",
+        "Mouse changes the letters inside it: mouse, mice. It does not add -s.",
+        "The answer is \"We heard mice scratching in the walls.\" Mices adds -s to a word that already changed, mouse is for one, and mouses' is not spelled that way."
+      ],
+      misconception: "A common mix-up is changing the word and then adding -s too, as in mices.",
+      why: "The answer is \"We heard mice scratching in the walls.\" Mouse changes its spelling for more than one: mouse, mice. Mices adds an extra ending, mouse means only one, and mouses' is not spelled that way.",
+      like: ["SK-GUM3-2-C06"]
+    },
+    {
+      id: "SK-GUM3-2-S07",
+      type: "hottext",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.L.GC.1:M:form-and-use-irregular-plural-nouns"
+      ],
+      passages: ["p5"],
+      prompt: "Select the TWO sentences that have a plural noun spelled the wrong way.",
+      targets: ["p5:1:2", "p5:2:1", "p5:2:3", "p5:3:1", "p5:3:2"],
+      answer: ["p5:2:3", "p5:3:1"],
+      pick: 2,
+      clue: "Say each plural noun, then say the noun for one. Check that the plural changes, or stays the same, the way it should.",
+      hints: [
+        "Say each plural noun, then say the noun for one. Check that the plural changes, or stays the same, the way it should.",
+        "Look at the sentences with plural nouns in the second and third parts of the draft. Say each noun for one and then for many.",
+        "Games adds -s the usual way. Check the other four sentences."
+      ],
+      how: [
+        "Find the plural noun in each sentence and say the noun for one.",
+        "Games, and the other plural nouns in the first sentences, follow the usual rules.",
+        "Sentence 6: sheep stays the same, so sheeps is wrong.",
+        "Sentence 7: knife changes its f to v, so knifes is wrong. It should be knives."
+      ],
+      misconception: "A common mix-up is thinking every plural noun just adds -s. Sheep stays the same, and knife changes its f to v.",
+      why: "The answers are \"Later, he dug it out and fed his sheeps.\" and \"Mom sharpened the kitchen knifes before she made soup.\" Sheep stays the same for one or many, and knife becomes knives. The other sentences are spelled correctly.",
+      like: ["SK-GUM3-2-C07"]
+    },
+    {
+      id: "SK-GUM3-2-S08",
+      type: "mc",
+      points: 1,
+      dok: 3,
+      std: [
+        "3.L.GC.1:M:form-and-use-irregular-plural-nouns"
+      ],
+      passages: [],
+      prompt: "Goose changes to geese. Which noun changes in the same way?",
+      choices: [
+        { text: "knife, which becomes knives" },
+        { text: "foot, which becomes feet", correct: true },
+        { text: "ox, which becomes oxen" },
+        { text: "sheep, which stays the same" }
+      ],
+      clue: "Look for a noun that changes in the same way, not just any noun that changes.",
+      hints: [
+        "Look for a noun that changes in the same way, not just any noun that changes.",
+        "Say goose and geese aloud. Notice which part of the word changes, then say each pair in the choices.",
+        "Sheep does not change at all, but goose does. Check the other three."
+      ],
+      how: [
+        "Say goose and geese. The oo in the middle changes to ee.",
+        "Now check each pair. Foot becomes feet, with the oo changing to ee in the middle. That is the same change.",
+        "Knife changes its f to v, ox adds -en, and sheep does not change."
+      ],
+      misconception: "A common mix-up is picking any noun that changes. Look at which part changes.",
+      why: "The answer is \"foot, which becomes feet.\" Goose changes the oo in the middle to ee, and foot does the same thing. Knife changes its f to v, ox adds letters at the end, and sheep stays the same.",
+      like: ["SK-GUM3-2-C08"]
+    },
+    {
+      id: "SK-GUM3-2-S09",
+      type: "ms",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.L.GC.1:M:form-and-use-irregular-plural-nouns"
+      ],
+      passages: [],
+      prompt: "Choose the TWO sentences that use plural nouns correctly.",
+      pick: 2,
+      choices: [
+        { text: "The elfs hid behind the big oak tree." },
+        { text: "My baby sister has four new tooths." },
+        { text: "The farmer fed his oxen at sunrise.", correct: true },
+        { text: "Dad bought three loafs of bread." },
+        { text: "Seven bison grazed on the open plain.", correct: true }
+      ],
+      clue: "Find the plural noun in each sentence. Ask whether it changes, stays the same, or adds -s the way it should.",
+      hints: [
+        "Find the plural noun in each sentence. Ask whether it changes, stays the same, or adds -s the way it should.",
+        "Say the noun for one, and then for many. Check that each sentence has the right plural.",
+        "One of the wrong choices is about something you eat. Check the other four."
+      ],
+      how: [
+        "Find the plural noun in each sentence and say the noun for one.",
+        "Ox adds -en, so oxen is correct. Bison stays the same for one or many.",
+        "The others are wrong: it should be elves, loaves and teeth."
+      ],
+      misconception: "A common mix-up is adding -s to a noun that changes its spelling or stays the same.",
+      why: "The answers are \"The farmer fed his oxen at sunrise.\" and \"Seven bison grazed on the open plain.\" Ox becomes oxen, and bison stays the same. The others should say elves, loaves and teeth.",
+      like: ["SK-GUM3-2-C09"]
+    },
+    {
+      id: "SK-GUM3-2-S10",
+      type: "match",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.L.GC.1:M:form-and-use-irregular-plural-nouns"
+      ],
+      passages: [],
+      prompt: "Match each plural noun to the noun that means only one.",
+      cols: ["elf", "man", "mouse", "ox"],
+      rows: [
+        { text: "mice", answer: 2 },
+        { text: "oxen", answer: 3 },
+        { text: "men", answer: 1 },
+        { text: "elves", answer: 0 }
+      ],
+      clue: "Think of the noun for just one. Say it, and then say the plural to check that they go together.",
+      hints: [
+        "Think of the noun for just one. Say it, and then say the plural to check that they go together.",
+        "Start with the row you are surest about, and then decide the rest one at a time.",
+        "Oxen and men both end in en. Decide about the other two rows first."
+      ],
+      how: [
+        "For each plural, think of the noun for just one thing.",
+        "Elves ends in ves, so its singular is elf. Mice goes with mouse.",
+        "Men goes back to man, and oxen goes back to ox."
+      ],
+      misconception: "A common mix-up is matching a plural to a word that only looks similar. Say the plural for each choice to check.",
+      why: "Elves goes with elf, because the v changes back to f. Mice goes with mouse, men goes with man, and oxen goes with ox.",
+      like: ["SK-GUM3-2-C10"]
+    },
+    {
+      id: "SK-GUM3-2-S11",
+      type: "hottext",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.L.GC.1:M:form-and-use-irregular-plural-nouns"
+      ],
+      passages: ["p6"],
+      prompt: "Select the TWO sentences in the flyer that have a plural noun spelled the wrong way.",
+      targets: ["p6:1:2", "p6:1:3", "p6:2:2", "p6:2:3", "p6:3:2"],
+      answer: ["p6:1:3", "p6:2:3"],
+      pick: 2,
+      clue: "Say each plural noun, and then say the noun for one. Check that the plural changes, or stays the same, the way it should.",
+      hints: [
+        "Say each plural noun, and then say the noun for one. Check that the plural changes, or stays the same, the way it should.",
+        "Look at the sentences with plural nouns in the first two parts of the flyer. Say each noun for one and then for many.",
+        "Judges adds -s the usual way. Check the other four sentences."
+      ],
+      how: [
+        "Find the plural noun in each sentence and say the noun for one.",
+        "Babies, judges and pretzels follow the usual rules for their endings.",
+        "Sentence 3: elf changes its f to v, so elfs is wrong. It should be elves.",
+        "Sentence 6: foot changes the letters inside, so feets is wrong. It should be feet."
+      ],
+      misconception: "A common mix-up is adding -s to every plural. Elf changes its f to v, and foot changes its vowels.",
+      why: "The answers are \"Last year, we saw three elfs and a very tall robot.\" and \"Wear shoes that are comfortable, because your feets can get tired from dancing.\" Elf becomes elves, and foot becomes feet. Babies, judges and pretzels are spelled correctly.",
+      like: ["SK-GUM3-2-C11"]
+    },
+    {
+      id: "SK-GUM3-2-S12",
+      type: "dropdown",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.L.GC.1:M:form-and-use-irregular-plural-nouns"
+      ],
+      passages: [],
+      prompt: "Choose the word that correctly completes the sentence.",
+      text: "On the stage stood three {0} holding bright flags.",
+      slots: [
+        {
+          options: ["womans", "women", "womens"],
+          answer: 1
+        }
+      ],
+      clue: "Three means more than one, so the noun needs to change. Say the noun for one first.",
+      hints: [
+        "Three means more than one, so the noun needs to change. Say the noun for one first.",
+        "Look at the end of the noun for one. Think about another noun that ends the same way and how it changes.",
+        "Womens adds -s to a word that has already changed. Decide between the other two."
+      ],
+      how: [
+        "Three tells you there is more than one, so the noun must be plural.",
+        "The noun for one is woman. It ends in man, and man changes to men: woman, women.",
+        "The answer is women. Womans only adds -s, and womens changes the word and then adds -s."
+      ],
+      misconception: "A common mix-up is adding -s to a noun that ends in man. These nouns change to men.",
+      why: "The answer is women. Woman ends in man, so the plural changes man to men. Womans only adds -s, and womens adds an extra -s to a word that already changed.",
+      like: ["SK-GUM3-2-C12"]
+    },
+    {
+      id: "SK-GUM3-2-S13",
+      type: "ms",
+      points: 2,
+      dok: 3,
+      std: [
+        "3.L.GC.1:M:form-and-use-irregular-plural-nouns"
+      ],
+      passages: [],
+      prompt: "Max says, \"To make a noun mean more than one, just add -s.\" Which TWO examples show that he is wrong?",
+      pick: 2,
+      choices: [
+        { text: "one moose, two moose", correct: true },
+        { text: "one hat, two hats" },
+        { text: "one goose, two geese", correct: true },
+        { text: "one desk, two desks" },
+        { text: "one kite, two kites" }
+      ],
+      clue: "To test a rule, look for examples that break it. Ask whether the plural is made by adding -s.",
+      hints: [
+        "To test a rule, look for examples that break it. Ask whether the plural is made by adding -s.",
+        "Read each pair. Ask whether the plural is the noun for one with an s on the end.",
+        "Kites and hats both just add -s. Decide about the other three."
+      ],
+      how: [
+        "Check each pair against the rule: add -s to the noun for one.",
+        "Kites, hats and desks all add just -s, so the rule works for them.",
+        "Geese changes the letters inside goose, and moose stays the same. Neither one is made by adding -s."
+      ],
+      misconception: "A common mix-up is thinking every plural noun follows the same rule. Some nouns change, and some stay the same.",
+      why: "The answers are \"one goose, two geese\" and \"one moose, two moose.\" Geese changes the letters inside the word, and moose stays the same, so neither one just adds -s. Kites, hats and desks follow Max's rule.",
+      like: ["SK-GUM3-2-C13"]
+    },
+    {
+      id: "SK-GUM3-2-S14",
+      type: "mc",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.L.GC.1:M:form-and-use-irregular-plural-nouns"
+      ],
+      passages: [],
+      prompt: "Choose the correct way to write this sentence.",
+      stem: "The coach gave a snack to all the childs after the game.",
+      choices: [
+        { text: "The coach gave a snack to all the childrens after the game." },
+        { text: "The coach gave a snack to all the childes after the game." },
+        { text: "The coach gave a snack to all the child after the game." },
+        { text: "The coach gave a snack to all the children after the game.", correct: true }
+      ],
+      clue: "Some nouns add letters at the end that are not -s or -es. Say the noun for one, then for many.",
+      hints: [
+        "Some nouns add letters at the end that are not -s or -es. Say the noun for one, then for many.",
+        "Read the sentence. All the means more than one. Think about how the noun for just one changes.",
+        "Children already shows more than one. Check what the other choices add or take away."
+      ],
+      how: [
+        "Find the noun: child. The words all the tell you it must mean more than one.",
+        "Child is one of the nouns that adds letters at the end: child, children.",
+        "Childrens adds an -s to a word that already shows more than one, childes is not a word, and child means only one."
+      ],
+      misconception: "A common mix-up is adding -s to children, which already means more than one.",
+      why: "The answer is \"The coach gave a snack to all the children after the game.\" Child becomes children for more than one. Childrens adds an extra -s, childes is not a word, and child means only one.",
+      like: ["SK-GUM3-2-C14"]
+    },
+    {
+      id: "SK-GUM3-2-S15",
+      type: "mc",
+      points: 1,
+      dok: 3,
+      std: [
+        "3.L.GC.1:M:form-and-use-irregular-plural-nouns"
+      ],
+      passages: [],
+      prompt: "Which sentence stays correct when you change the word A to Three and leave the noun exactly the same?",
+      choices: [
+        { text: "A bison stood by the gate.", correct: true },
+        { text: "A goose stood by the gate." },
+        { text: "A wolf stood by the gate." },
+        { text: "A child stood by the gate." }
+      ],
+      clue: "Look for a noun that does not change at all when it means more than one.",
+      hints: [
+        "Look for a noun that does not change at all when it means more than one.",
+        "Try changing A to Three in each sentence. Ask whether the noun would have to change too.",
+        "Goose and child both change when they mean more than one. Decide about the other two."
+      ],
+      how: [
+        "For each sentence, try Three in place of A and check the noun.",
+        "Three goose, three wolf and three child are wrong. They need geese, wolves and children.",
+        "Bison stays the same for one or many, so \"Three bison stood by the gate.\" is correct with the noun unchanged."
+      ],
+      misconception: "A common mix-up is thinking every plural noun must look different from the noun for one.",
+      why: "The answer is \"A bison stood by the gate.\" Bison stays the same for one or many, so only the number word changes. Goose, wolf and child all change: geese, wolves and children.",
+      like: ["SK-GUM3-2-C15"]
+    }
+  ],
+  addons: {
+    "SK-GUM3-2-P1": {
+      hints: [
+        "Think about whether the noun changes when it means more than one. All of my tells you there is more than one.",
+        "Say the noun for one tooth, then say it for many. Does the word just add an s, or does it change inside?",
+        "Teeths adds an -s to a word that already changed. Decide among the other three."
+      ],
+      how: [
+        "All of my tells you the sentence needs a plural noun.",
+        "Tooth is a special noun. It changes the letters inside it instead of adding -s: tooth, teeth.",
+        "The answer is teeth. Tooths and teeths add -s, and tooth means only one."
+      ],
+      misconception: "A common mix-up is adding -s to a noun that changes its spelling."
+    },
+    "SK-GUM3-2-P2": {
+      hints: [
+        "Look at each word that means more than one. Ask whether it is a special noun that changes or stays the same.",
+        "Read the four sentences one at a time. For each, find the noun that means more than one and say the noun for one.",
+        "Sheep stays the same for one or many. Check the other sentences."
+      ],
+      how: [
+        "Find the noun that means more than one in each sentence.",
+        "\"Two women sold peaches at the market.\" Woman changes to women, so this one is correct.",
+        "The others are wrong: it should be sheep (it stays the same), children and feet."
+      ],
+      misconception: "A common mix-up is adding -s to a special noun, like sheeps, childs or feets."
+    },
+    "SK-GUM3-2-P3": {
+      hints: [
+        "Say one ___, two ___ for each noun. Listen: does the word change, or does it sound the same both times?",
+        "Start with the noun you know best, and decide the rest one at a time.",
+        "Say one deer, two deer. Does the word change? Then decide the other rows."
+      ],
+      how: [
+        "Say one ___, two ___ for each noun.",
+        "Goose becomes geese, and foot becomes feet. Both change their spelling.",
+        "Sheep and deer stay the same: one sheep, two sheep and one deer, two deer."
+      ],
+      misconception: "A common mix-up is thinking every plural has to look different from the noun for one."
+    },
+    "SK-GUM3-2-P4": {
+      hints: [
+        "Find the word in each sentence that means more than one. Ask whether it is spelled the special way.",
+        "Say the noun for one, then for many, in each sentence. Ask whether the plural changes the way it should.",
+        "Oxen adds -en, the way the noun ox should. Check the other three sentences."
+      ],
+      how: [
+        "Find the word in each sentence that means more than one.",
+        "Geese, oxen and men are all spelled the special way.",
+        "\"Two mans fixed our broken fence.\" Man is a special noun. One man, two men."
+      ],
+      misconception: "A common mix-up is adding -s to a noun that ends in man. These nouns change to men."
+    },
+    "SK-GUM3-2-P5": {
+      hints: [
+        "Both blanks need a word for more than one. Child and mouse are special nouns, so say one ___, two ___ for each.",
+        "Look at each blank and its clue words. In the first, the children on the trip are more than one. In the second, two tells you.",
+        "Childrens and mices add -s to words that already changed. Decide about the other options."
+      ],
+      how: [
+        "Both blanks need a word for more than one.",
+        "One child, many children. One mouse, two mice. Both change their spelling.",
+        "Childs and mouses add the usual -s to nouns that should change. Childrens and mices add an extra -s."
+      ],
+      misconception: "A common mix-up is changing the word and then adding -s as well."
+    }
+  },
+  /* B6:core:end */
   test: [
     { id: "SK-GUM3-2-T1", type: "mc", points: 1, dok: 1, passages: [],
       prompt: "Which word correctly completes the sentence?",

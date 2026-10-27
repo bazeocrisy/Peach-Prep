@@ -3343,6 +3343,7 @@ PP.addLesson({
 PP.addLesson({
   code: "3.L.V.2.a",
   title: "Using word parts to figure out meaning",
+  testRev: { A: "2", B: "2" },
   teach: {
     big: "Many long words are built from parts, like a base word or a root with a part added to the front or the end, so I find each part and put the meanings together.",
     points: [
@@ -3361,7 +3362,7 @@ PP.addLesson({
     examples: [
       {
         label: "Example: a suffix",
-        lines: ["hopeless = hope + less", "-less means without.", "So hopeless means without hope."],
+        lines: ["endless = end + less", "-less means without.", "So endless means without an end."],
         note: "Cover the suffix and read the base word. Then put the two meanings together."
       },
       {
@@ -3556,12 +3557,12 @@ PP.addLesson({
         { text: "unsure", correct: true },
         { text: "misspell", correct: true },
         { text: "uncle" },
-        { text: "ready" },
-        { text: "misty" },
+        { text: "reindeer" },
+        { text: "mistletoe" },
         { text: "reach" }
       ],
       clue: "Cover the letters at the front that look like a prefix: un, re or mis. If a real word is left, that word may have a prefix. If no word is left, it does not.",
-      why: "The answers are \"unsure\" and \"misspell.\" Take away un- and sure is left, so unsure means not sure. Take away mis- and spell is left, so misspell means spell wrongly. In uncle, ready, misty and reach, the letters left over are not words, so those words have no prefix." },
+      why: "The answers are \"unsure\" and \"misspell.\" Take away un- and sure is left, so unsure means not sure. Take away mis- and spell is left, so misspell means spell wrongly. In uncle, reindeer, mistletoe and reach, the letters left over are not words, so those words have no prefix." },
     { id: "SK-V2a-P7", type: "mc", points: 1, dok: 2, passages: [],
       prompt: "Read the sentence. The prefix trans- means \"across.\" Use the root in transport to figure out what it means.",
       stem: ["A big truck will transport the new desks from the store to our school."],
@@ -3881,13 +3882,13 @@ PP.addLesson({
                 correct: true
               },
               {
+                text: "butterfly"
+              },
+              {
+                text: "assembly"
+              },
+              {
                 text: "family"
-              },
-              {
-                text: "ugly"
-              },
-              {
-                text: "city"
               }
             ],
             clue: "Cover the ending of each word. If a whole word is left, the ending may be a suffix.",
@@ -3899,10 +3900,10 @@ PP.addLesson({
             how: [
               "Cover -ful in tearful. Tear is left, so tearful means full of tears.",
               "Cover -less in sleepless. Sleep is left, so sleepless means without sleep.",
-              "In family, ugly and city, covering the ending leaves letters that are not words."
+              "In butterfly, assembly and family, covering the ending leaves letters that are not words."
             ],
             misconception: "A common mix-up is choosing words because the ending looks like a suffix. A real suffix leaves a real word.",
-            why: "The answers are \"tearful\" and \"sleepless.\" Cover -ful and tear is left. Cover -less and sleep is left. Family, ugly and city end in letters that look like suffixes, but nothing real is left over when you cover them."
+            why: "The answers are \"tearful\" and \"sleepless.\" Cover -ful and tear is left. Cover -less and sleep is left. Butterfly, assembly and family end in letters that look like suffixes, but nothing real is left over when you cover them."
           },
           {
             id: "SK-V2a-C10",
@@ -4096,7 +4097,7 @@ PP.addLesson({
             hints: [
               "Split the word into its roots. The question tells you what each one means.",
               "For Part B, think about the whole passage. Which sentence tells you what Kendra's class made, not only a fact about the person?",
-              "For Part A, only one choice uses both roots. For Part B, some sentences are facts about Mrs. Dixon and some are about Kendra's work."
+              "For Part A, check each choice against both root meanings. For Part B, some sentences are facts about Mrs. Dixon and some are about Kendra's work."
             ],
             how: [
               "Part A: bio means life and graph means write, so a biography is life writing, a written story of a person's life.",
@@ -4128,10 +4129,10 @@ PP.addLesson({
                 correct: true
               },
               {
-                text: "grape"
+                text: "grapefruit"
               },
               {
-                text: "grain"
+                text: "grasshopper"
               },
               {
                 text: "gravel"
@@ -4146,10 +4147,10 @@ PP.addLesson({
             how: [
               "Paragraph has graph at the end. A paragraph is writing that groups sentences.",
               "Photograph has graph at the end. A photograph is a picture made with light.",
-              "Grape, grain and gravel start with gra but do not have the root graph."
+              "Grapefruit, grasshopper and gravel start with gra but do not have the root graph."
             ],
             misconception: "A common mix-up is choosing words that start with gra. The root graph must be the whole piece.",
-            why: "The answers are \"paragraph\" and \"photograph.\" Both end with the root graph. Grape, grain and gravel have similar letters, but they do not contain graph."
+            why: "The answers are \"paragraph\" and \"photograph.\" Both end with the root graph. Grapefruit, grasshopper and gravel have similar letters, but they do not contain graph."
           }
         ]
       }
@@ -4476,10 +4477,10 @@ PP.addLesson({
           correct: true
         },
         {
-          text: "under"
+          text: "unicorn"
         },
         {
-          text: "real"
+          text: "restaurant"
         },
         {
           text: "mister"
@@ -4494,10 +4495,10 @@ PP.addLesson({
       how: [
         "Cover un- in unlucky. Lucky is left, so unlucky means not lucky.",
         "Cover re- in refold. Fold is left, so refold means fold again.",
-        "In under, real and mister, the letters left over are not words that fit."
+        "In unicorn, restaurant and mister, the letters left over are not words that fit."
       ],
       misconception: "A common mix-up is choosing words because the start looks like a prefix. A real prefix leaves a real word.",
-      why: "The answers are \"unlucky\" and \"refold.\" Cover un- and lucky is left. Cover re- and fold is left. Under, real and mister start with letters that look like prefixes, but the letters left over are not words that fit."
+      why: "The answers are \"unlucky\" and \"refold.\" Cover un- and lucky is left. Cover re- and fold is left. Unicorn, restaurant and mister start with letters that look like prefixes, but the letters left over are not words that fit."
     },
     {
       id: "SK-V2a-S08",
@@ -4566,13 +4567,13 @@ PP.addLesson({
           correct: true
         },
         {
-          text: "puppy"
+          text: "pony"
         },
         {
-          text: "angry"
+          text: "monopoly"
         },
         {
-          text: "candy"
+          text: "strawberry"
         }
       ],
       clue: "Cover the ending of each word. If a whole word is left, the ending may be a suffix.",
@@ -4584,10 +4585,10 @@ PP.addLesson({
       how: [
         "Cover -ful in painful. Pain is left, so painful means full of pain.",
         "Cover -less in hopeless. Hope is left, so hopeless means without hope.",
-        "In puppy, angry and candy, covering the ending leaves letters that are not words."
+        "In pony, monopoly and strawberry, covering the ending leaves letters that are not words."
       ],
       misconception: "A common mix-up is choosing words because the ending looks like a suffix. A real suffix leaves a real word.",
-      why: "The answers are \"painful\" and \"hopeless.\" Cover -ful and pain is left. Cover -less and hope is left. Puppy, angry and candy end in letters that look like suffixes, but no real word is left."
+      why: "The answers are \"painful\" and \"hopeless.\" Cover -ful and pain is left. Cover -less and hope is left. Pony, monopoly and strawberry end in letters that look like suffixes, but no real word is left."
     },
     {
       id: "SK-V2a-S10",
@@ -4766,7 +4767,7 @@ PP.addLesson({
       hints: [
         "Find the root in the word. The question tells you what it means. Then add the meaning of the ending.",
         "Read the sentence the word is in. Look at what kind of night it is and what the star is like.",
-        "Check which of the senses each choice uses. Only one choice matches the root."
+        "Check each choice against the meaning of the root."
       ],
       how: [
         "Split the word: vis + ible. Vis means see, and -ible means can be.",
@@ -4828,8 +4829,8 @@ PP.addLesson({
       clue: "Split the word into its root and ending. The question tells you what dict means.",
       hints: [
         "Split the word into its root and ending. The question tells you what dict means.",
-        "For Part B, think about a classroom. Which action has words being spoken for others to write?",
-        "For Part A, one choice has both saying and writing in it. For Part B, some actions have writing but no speaking."
+        "For Part B, think about a classroom. Which action matches what dict means?",
+        "For Part A, check each choice against both root meanings. For Part B, some actions have writing but no speaking."
       ],
       how: [
         "Part A: dict means say, so dictate means to say words so someone else can write them.",
@@ -4911,7 +4912,7 @@ PP.addLesson({
       how: [
         "Cover un- in unsure. Sure is left, so unsure means not sure.",
         "Cover mis- in misspell. Spell is left, so misspell means spell wrongly.",
-        "In uncle, ready, misty and reach, the letters left over are not words that fit."
+        "In uncle, reindeer, mistletoe and reach, the letters left over are not words that fit."
       ],
       misconception: "A common mix-up is choosing words because the start looks like a prefix. A real prefix leaves a real word."
     },
@@ -4932,7 +4933,7 @@ PP.addLesson({
       hints: [
         "Cover the ending and read the base word. Then add the meaning the question gives you.",
         "Think about how Nia feels when the kite crashes. Which choice fits her feelings?",
-        "Full of hope would be a different word. Check which choice says the opposite."
+        "Check each choice against the meaning the question gives for -less."
       ],
       how: [
         "Split the word: hope + less. The base word is hope.",
@@ -5366,7 +5367,7 @@ PP.addLesson({
             passages: [
               "p3"
             ],
-            prompt: "Choose the sentence in paragraph 3 that has a word ending in -or that names a person.",
+            prompt: "Choose the sentence in paragraphs 2 and 3 that has a word ending in -or that names a person.",
             targets: [
               "p3:2:1",
               "p3:2:2",
@@ -5403,7 +5404,7 @@ PP.addLesson({
             passages: [
               "p3"
             ],
-            prompt: "Which TWO words from paragraphs 2 and 4 tell how something happens?",
+            prompt: "Which TWO words from the passage tell how something happens?",
             pick: 2,
             choices: [
               {
@@ -5671,7 +5672,7 @@ PP.addLesson({
                 text: "keeper"
               },
               {
-                text: "joker"
+                text: "hunter"
               }
             ],
             clue: "Cover -er in each word. If a real word is left, the ending may be a suffix.",
@@ -5682,11 +5683,11 @@ PP.addLesson({
             ],
             how: [
               "Cover -er in singer. Sing is left, so a singer is a person who sings.",
-              "Cover -er in keeper. Keep is left. Cover -er in joker. Joke is left.",
+              "Cover -er in keeper. Keep is left. Cover -er in hunter. Hunt is left.",
               "Cover -er in finger and river. Fing and riv are not words, so the -er is not a suffix."
             ],
             misconception: "A common mix-up is thinking every word that ends in -er has a suffix. A real suffix leaves a real base word.",
-            why: "The answers are \"finger\" and \"river.\" Covering -er leaves fing and riv, which are not words. Singer, keeper and joker each have a real action word left."
+            why: "The answers are \"finger\" and \"river.\" Covering -er leaves fing and riv, which are not words. Singer, keeper and hunter each have a real action word left."
           },
           {
             id: "SK-V2b-C12",
@@ -5916,7 +5917,7 @@ PP.addLesson({
       hints: [
         "Look at the ending of smoothly. Then find the action word it tells about.",
         "Find the action in the sentence. Ask what the word smoothly adds to it.",
-        "Names, counts and colors are jobs for other kinds of words. Decide which kind of job the ending -ly suggests."
+        "Decide whether smoothly tells about the pilot, the plane, or the way the plane landed."
       ],
       how: [
         "Split the word: smooth + ly. The -ly ending is a clue.",
@@ -6348,7 +6349,7 @@ PP.addLesson({
       hints: [
         "Cover -er in each word. Is the base word an action, or a word that describes?",
         "Check each word with -er. Ask whether it names someone or compares things.",
-        "Three of the words name someone who does an action. Look for the one that compares."
+        "Cover -er in each word. Ask whether the word left is an action or a describing word."
       ],
       how: [
         "Greener: green describes a color, so greener compares.",
@@ -6635,7 +6636,7 @@ PP.addLesson({
       hints: [
         "Cover -er in each word. Is the base word an action someone does, or a word that describes?",
         "Check each word with -er. Ask whether it names someone or compares things.",
-        "Three of the words name someone who does an action. Look for the one that compares."
+        "Cover -er in each word. Ask whether the word left is an action or a describing word."
       ],
       how: [
         "Baker, camper and reader each have an action word, so they name people who do it.",
