@@ -1206,3 +1206,8 @@ a.sk-chip:hover .sk-chip-code{border-color:var(--peach-deep);text-decoration:und
 @media (max-height:480px){
   .tm-bar{position:static;}
 }
+
+/* question-first: the mode tag never shrinks below its own words (the back button gives way instead) */
+#screen-player .bar-tag{flex:0 0 auto;}
+#screen-player .bar .nav-btn{min-width:0;}
+@media (max-width:360px){ #screen-player .bar{gap:6px;padding-left:12px;padding-right:12px;} #screen-player .bar .nav-btn{padding-left:12px;padding-right:12px;} }
