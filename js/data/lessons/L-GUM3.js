@@ -5974,7 +5974,7 @@ PP.addLesson({
               "3.L.GC.1:M:use-collective-and-abstract-nouns"
             ],
             passages: ["p2"],
-            prompt: "Sentence 3 of the draft has two verbs that do not match the groups. Each group acts together as one. Choose the words that fix them.",
+            prompt: "Sentence 3 of the draft has two verbs that do not match the groups. Each group acts together as one, and the draft tells about the past. Choose the words that fix them.",
             text: "The whole orchestra {0} ready to play, and the audience {1} quiet.",
             slots: [
               {
@@ -6074,11 +6074,11 @@ PP.addLesson({
             prompt: "Mia says, \"Every abstract noun names a feeling.\" Which TWO sentences show that Mia is wrong?",
             pick: 2,
             choices: [
-              { text: "Anger made his face turn red." },
+              { text: "Anger made his whole face turn bright red." },
               { text: "Her strength surprised everyone at the gym.", correct: true },
-              { text: "Excitement filled the room." },
+              { text: "Excitement filled the whole noisy room." },
               { text: "Teamwork helped our class win the relay.", correct: true },
-              { text: "Fear grew as the thunder got louder." }
+              { text: "Fear grew as the thunder got louder and louder." }
             ],
             clue: "To test a rule, look for examples that break it. Find the abstract noun in each sentence and ask whether it is a feeling.",
             hints: [
@@ -9418,14 +9418,14 @@ PP.addLesson({
       answer: "Yes. Window is split correctly, between the consonants n and d."
     },
     {
-      show: ["I lost my red mi-", "tten on the bus."],
-      ask: "Is the word mitten split correctly?",
+      show: ["Ana cleaned the fis-", "hbowl on the shelf."],
+      ask: "Is the word fishbowl split correctly?",
       steps: [
-        "Clap mitten: two beats, so it can be split.",
-        "Look at the middle letters: the same consonant, t, comes twice.",
-        "The rule says split between the two t's: mit-ten. This split comes too early."
+        "Clap fishbowl: two beats, so it can be split.",
+        "Look at the whole word. It is made of two smaller words, fish and bowl. The letters sh make one sound, so they stay together.",
+        "The rule says split between the two words: fish-bowl. This split comes too early and breaks up sh."
       ],
-      answer: "No. Mitten should be split between the two t's: mit- on the first line and ten on the next."
+      answer: "No. Fishbowl should be split between fish and bowl: fish- on the first line and bowl on the next."
     },
     {
       show: ["We walked to the scho-", "ol in the rain."],
@@ -9510,7 +9510,7 @@ PP.addLesson({
         [
           "(4) Next, we climbed into a bright red box- | car.",
           "(5) The seats had thin cush- | ions.",
-          "(6) The guide handed each of us a tick- | et for the ride around the yard."
+          "(6) The guide handed each of us a ticket for the ride around the yard."
         ],
         [
           "(7) After lunch, we saw a model village with a bridge and a wind- | mill.",
@@ -9534,7 +9534,7 @@ PP.addLesson({
           "(3) Mom filled the ket- | tle with cold water from the lake."
         ],
         [
-          "(4) We toasted some marshmallows over the bonf- | ire.",
+          "(4) We toasted some marshmallows over the campf- | ire.",
           "(5) We skipped a flat peb | -ble across the lake.",
           "(6) Later, we sat by the stre- | am and listened to the frogs."
         ],
@@ -9592,7 +9592,7 @@ PP.addLesson({
         ],
         [
           "(7) The sun was bright, and the sunl- | ight sparkled on the pond.",
-          "(8) A duck shook the cold water from its feath- | ers.",
+          "(8) A duck shook the cold water from its feathers.",
           "(9) We waved goodbye to the pond and walked back to school together after lunch."
         ]
       ]
@@ -9680,10 +9680,10 @@ PP.addLesson({
                 answer: 0
               }
             ],
-            clue: "Say the whole word. Ask whether it is made of smaller words, and where one of them ends.",
+            clue: "Say the word and look at the letters in the middle. Ask which rule fits them.",
             hints: [
-              "Say the whole word. Ask whether it is made of smaller words, and where one of them ends.",
-              "Read sentence 5 and say each choice. Check whether the break falls between the smaller words.",
+              "Say the word and look at the letters in the middle. Ask which rule fits them.",
+              "Read sentence 5 and say each choice. Check where each break falls inside the word.",
               "Toot- | hbrush cuts the first small word in half. Decide between the other two."
             ],
             how: [
@@ -9811,8 +9811,8 @@ PP.addLesson({
             prompt: "The | mark shows where the first line ends. Choose the TWO words that are NOT split correctly.",
             pick: 2,
             choices: [
-              { text: "pitch- | er" },
-              { text: "pe- | ncil", correct: true },
+              { text: "gar- | lic" },
+              { text: "tu- | rnip", correct: true },
               { text: "pup- | pet" },
               { text: "trum- | pet" },
               { text: "wa- | sher", correct: true }
@@ -9825,11 +9825,11 @@ PP.addLesson({
             ],
             how: [
               "Say each word whole and check the break.",
-              "Pencil has n and c between vowels, so it should be pen- | cil. Washer has two beats, wash and er, so it should be wash- | er.",
-              "Trum- | pet, pitch- | er and pup- | pet follow the rules."
+              "Turnip has r and n between vowels, so it should be tur- | nip. Washer has two beats, wash and er, so it should be wash- | er.",
+              "Trum- | pet, gar- | lic and pup- | pet follow the rules."
             ],
             misconception: "A common mix-up is splitting after the first vowel. Look at the consonants and split by the rules.",
-            why: "The answers are pe- | ncil and wa- | sher. Pencil should be pen- | cil, between the consonants n and c. Washer should be wash- | er, because its first beat is wash. Trum- | pet, pitch- | er and pup- | pet follow the rules."
+            why: "The answers are tu- | rnip and wa- | sher. Turnip should be tur- | nip, between the consonants r and n. Washer should be wash- | er, because its first beat is wash. Trum- | pet, gar- | lic and pup- | pet follow the rules."
           },
           {
             id: "SK-GUM3-8-C08",
@@ -9840,17 +9840,17 @@ PP.addLesson({
               "3.L.GC.1:M:use-hyphens-to-divide-words-at-line-breaks"
             ],
             passages: [],
-            prompt: "Which word is split correctly between the double letters? The | mark shows where the line ends.",
+            prompt: "Which word is split correctly? The | mark shows where the line ends.",
             choices: [
               { text: "ra- | bbit" },
               { text: "rabb- | it" },
               { text: "rabbi- | t" },
               { text: "rab- | bit", correct: true }
             ],
-            clue: "Look for the two matching letters in the middle of the word. Where should the break go?",
+            clue: "Say the word and look at the letters in the middle. Ask which rule fits them.",
             hints: [
-              "Look for the two matching letters in the middle of the word. Where should the break go?",
-              "Say the word and find the two matching letters. Then check where each choice puts the break.",
+              "Say the word and look at the letters in the middle. Ask which rule fits them.",
+              "Check where each choice puts the break, and what is left on each line.",
               "Rabbi- | t leaves a single letter alone on the next line. Check the other three."
             ],
             how: [
@@ -9882,10 +9882,10 @@ PP.addLesson({
               { text: "Both splits are correct." },
               { text: "Neither split is correct." }
             ],
-            clue: "Check each split against the rules. Remember that some letters stay together.",
+            clue: "Check each split against the rules from the lesson.",
             hints: [
-              "Check each split against the rules. Remember that some letters stay together.",
-              "Look at the letters on each side of the break in both splits. Ask whether any letters that make one sound were pulled apart.",
+              "Check each split against the rules from the lesson.",
+              "Look at the letters on each side of the break in both splits, and say each word whole.",
               "Look at the line that holds the k in each split. Check which letters ride along with it."
             ],
             how: [
@@ -9979,11 +9979,11 @@ PP.addLesson({
               { text: "tick- | et", correct: true },
               { text: "t- | icket" }
             ],
-            clue: "Look for letters that make one sound together. Those letters stay on the same line.",
+            clue: "Say the word and look at the letters in the middle. Ask which rule fits them.",
             hints: [
-              "Look for letters that make one sound together. Those letters stay on the same line.",
-              "Say ticket and look at the letters on each side of every break. Ask which break pulls a pair of letters apart.",
-              "Tic- | ket pulls the c and k apart. Check the other three."
+              "Say the word and look at the letters in the middle. Ask which rule fits them.",
+              "Say ticket and look at the letters on each side of every break.",
+              "T- | icket leaves a single letter alone on the first line. Check the other three."
             ],
             how: [
               "Say ticket. It has two beats, so it can be split.",
@@ -10008,8 +10008,8 @@ PP.addLesson({
               { text: "The letters nt make one sound, so they must stay together." },
               { text: "Lantern has two beats, so it can be split.", correct: true },
               { text: "Lantern is made of two smaller words, lan and tern." },
-              { text: "Two different consonants, n and t, sit between the vowels, so the split goes between them.", correct: true },
-              { text: "The same consonant comes twice in the middle." }
+              { text: "Two different consonants, n and t, sit between the vowels.", correct: true },
+              { text: "The same consonant comes twice in the middle of the word." }
             ],
             clue: "Look at the middle letters of lantern. Check each reason against the word.",
             hints: [
@@ -10023,7 +10023,7 @@ PP.addLesson({
               "The other reasons do not fit: there is no double letter, lan is not a word, and nt does not make one sound."
             ],
             misconception: "A common mix-up is picking a rule because it sounds familiar. Check that the rule matches the letters in the word.",
-            why: "The answers are \"Two different consonants, n and t, sit between the vowels, so the split goes between them.\" and \"Lantern has two beats, so it can be split.\" Lantern has no double letter, lan is not a word, and n and t do not make one sound together."
+            why: "The answers are \"Two different consonants, n and t, sit between the vowels.\" and \"Lantern has two beats, so it can be split.\" Lantern has no double letter, lan is not a word, and n and t do not make one sound together."
           },
           {
             id: "SK-GUM3-8-C14",
@@ -10034,7 +10034,7 @@ PP.addLesson({
               "3.L.GC.1:M:use-hyphens-to-divide-words-at-line-breaks"
             ],
             passages: [],
-            prompt: "Match each word to the rule that tells where to split it. Treat ck as one sound.",
+            prompt: "Match each word to the rule that tells where to split it. Use each rule one time.",
             cols: ["Two different consonants", "Double letter", "Two smaller words", "Letters that stay together"],
             rows: [
               { text: "pocket", answer: 3 },
@@ -10077,7 +10077,7 @@ PP.addLesson({
             hints: [
               "Say the word and look at the letters in the middle. Ask which rule fits them.",
               "Find the consonants between the two vowels. Then check where each choice puts the break.",
-              "Magn- | et leaves two consonants with the first part and pulls them from the e. Decide between the other two."
+              "Magn- | et puts both g and n on the first line. Decide between the other two."
             ],
             how: [
               "Magnet has two beats, so it can be split.",
@@ -10170,23 +10170,23 @@ PP.addLesson({
       text: "Better: {0}",
       slots: [
         {
-          options: ["bon- | fire", "bonf- | ire", "bo- | nfire"],
+          options: ["camp- | fire", "campf- | ire", "cam- | pfire"],
           answer: 0
         }
       ],
-      clue: "Say the whole word. Ask whether it is made of smaller words.",
+      clue: "Say the word and look at the letters in the middle. Ask which rule fits them.",
       hints: [
-        "Say the whole word. Ask whether it is made of smaller words.",
-        "Read sentence 4 and say each choice. Check where the smaller words meet.",
-        "Bo- | nfire starts the break before the first small word is done. Decide between the other two."
+        "Say the word and look at the letters in the middle. Ask which rule fits them.",
+        "Read sentence 4 and say each choice. Check where each break falls inside the word.",
+        "Cam- | pfire starts the break before the first small word is done. Decide between the other two."
       ],
       how: [
-        "Say the whole word: bonfire.",
-        "It is made of the smaller words bon and fire. A word made of two smaller words is split between them.",
-        "The answer is bon- | fire. Bonf- | ire and bo- | nfire cut a smaller word apart."
+        "Say the whole word: campfire.",
+        "It is made of the smaller words camp and fire. A word made of two smaller words is split between them.",
+        "The answer is camp- | fire. Campf- | ire and cam- | pfire cut a smaller word apart."
       ],
       misconception: "A common mix-up is splitting where the line happens to run out. Split where the smaller words meet.",
-      why: "The answer is bon- | fire. Bonfire is made of the smaller words bon and fire, so it splits between them. Bonf- | ire and bo- | nfire cut a smaller word apart.",
+      why: "The answer is camp- | fire. Campfire is made of the smaller words camp and fire, so it splits between them. Campf- | ire and cam- | pfire cut a smaller word apart.",
       like: ["SK-GUM3-8-C03"]
     },
     {
@@ -10341,10 +10341,10 @@ PP.addLesson({
         { text: "pupp- | y" },
         { text: "p- | uppy" }
       ],
-      clue: "Look for the two matching letters in the middle. Where should the break go?",
+      clue: "Say the word and look at the letters in the middle. Ask which rule fits them.",
       hints: [
-        "Look for the two matching letters in the middle. Where should the break go?",
-        "Say the word and find the two matching letters. Then check where each choice puts the break.",
+        "Say the word and look at the letters in the middle. Ask which rule fits them.",
+        "Check where each choice puts the break, and what is left on each line.",
         "P- | uppy leaves a single letter alone on the first line. Check the other three."
       ],
       how: [
@@ -10380,7 +10380,7 @@ PP.addLesson({
       clue: "Check each split against the rules.",
       hints: [
         "Check each split against the rules.",
-        "Look at the letters on each side of the break in both splits. Ask which split pulled a pair of letters apart.",
+        "Look at the letters on each side of the break in both splits, and say each word whole.",
         "Look at the line that holds the h in each split. Check which letters ride along with it."
       ],
       how: [
@@ -10472,10 +10472,10 @@ PP.addLesson({
         { text: "f- | eathers" },
         { text: "feathe- | rs" }
       ],
-      clue: "Look for letters that make one sound together. Those letters stay on the same line.",
+      clue: "Say the word and look at the letters in the middle. Ask which rule fits them.",
       hints: [
-        "Look for letters that make one sound together. Those letters stay on the same line.",
-        "Say feathers and look at the letters on each side of every break. Ask which break pulls a pair apart.",
+        "Say the word and look at the letters in the middle. Ask which rule fits them.",
+        "Say feathers and look at the letters on each side of every break.",
         "F- | eathers leaves a single letter alone on a line. Check the other three."
       ],
       how: [
@@ -10499,10 +10499,10 @@ PP.addLesson({
       prompt: "Name the TWO best reasons bas- | ket is a fine break.",
       pick: 2,
       choices: [
-        { text: "Its middle holds a matching pair." },
+        { text: "Its center holds a matching pair, like pp or tt." },
         { text: "S and k blend into a single sound that cannot be pulled apart." },
-        { text: "S and k are unlike letters standing among vowels, which is where the word breaks.", correct: true },
-        { text: "It is built from small words, bas and ket." },
+        { text: "Two unlike consonants, s and k, stand between two vowels.", correct: true },
+        { text: "It is built from two small words, bas and ket, joined up." },
         { text: "More than one beat means a break is allowed.", correct: true }
       ],
       clue: "Look at the middle of basket. Check each reason against the word.",
@@ -10517,7 +10517,7 @@ PP.addLesson({
         "The other reasons do not fit: there is no double letter, bas and ket are not words, and sk does not make one sound."
       ],
       misconception: "A common mix-up is picking a rule because it sounds familiar. Check that the rule matches the letters in the word.",
-      why: "The answers are \"S and k are unlike letters standing among vowels, which is where the word breaks.\" and \"More than one beat means a break is allowed.\" Basket has no double letter, bas and ket are not words, and s and k do not make one sound together.",
+      why: "The answers are \"Two unlike consonants, s and k, stand between two vowels.\" and \"More than one beat means a break is allowed.\" Basket has no double letter, bas and ket are not words, and s and k do not make one sound together.",
       like: ["SK-GUM3-8-C13"]
     },
     {
@@ -10529,7 +10529,7 @@ PP.addLesson({
         "3.L.GC.1:M:use-hyphens-to-divide-words-at-line-breaks"
       ],
       passages: [],
-      prompt: "Sort each word by the rule that decides its break. The pair c and k makes a single sound here.",
+      prompt: "Give each rule to exactly one word. Each rule decides where one word breaks.",
       cols: [
         "Unlike consonants in the middle",
         "Matching pair in the middle",
@@ -10661,15 +10661,15 @@ PP.addLesson({
   test: [
     { id: "SK-GUM3-8-T1", type: "mc", points: 1, dok: 2, passages: [],
       prompt: "Four words are split at the ends of lines. Which word is split correctly?",
-      stem: ["On Saturday we had a pic-", "nic by the lake. Dad set up a la-", "dder to hang the silv-", "er lights. Each plate had a napk-", "in on it."],
+      stem: ["On Saturday we had a pic-", "nic by the lake. Dad cooked a big din-", "ner and hung the silv-", "er lights. Each plate had a napk-", "in on it."],
       choices: [
         { text: "picnic", correct: true },
-        { text: "ladder" },
+        { text: "dinner" },
         { text: "silver" },
         { text: "napkin" }
       ],
       clue: "Look at the letters in the middle of each split word. Is each break exactly between two consonants or between double letters?",
-      why: "The answer is picnic. It is split between the consonants c and n: pic-nic. Ladder should be lad-der (between the double d), silver should be sil-ver (between l and v), and napkin should be nap-kin (between p and k)." },
+      why: "The answer is picnic. It is split between the consonants c and n: pic-nic. Dinner should be din-ner (between the double n), silver should be sil-ver (between l and v), and napkin should be nap-kin (between p and k)." },
     { id: "SK-GUM3-8-T2", type: "mc", points: 1, dok: 2, passages: [],
       prompt: "The word butterfly is split at the end of the first line. The | mark shows where a line ends. Which is another correct way to split it?",
       stem: ["The puppy chased a butter-", "fly across the yard."],
@@ -10686,23 +10686,23 @@ PP.addLesson({
       choices: [
         { text: "night", correct: true },
         { text: "clown", correct: true },
-        { text: "hammer" },
+        { text: "supper" },
         { text: "candy" },
         { text: "marble" }
       ],
       clue: "Clap each word. Which ones have only one beat?",
-      why: "The answers are night and clown. Each has only one syllable, so it can never be split. Hammer (ham-mer), candy (can-dy) and marble (mar-ble) each have two syllables." },
+      why: "The answers are night and clown. Each has only one syllable, so it can never be split. Supper (sup-per), candy (can-dy) and marble (mar-ble) each have two syllables." },
     { id: "SK-GUM3-8-T4", type: "match", points: 2, dok: 2, passages: [],
       prompt: "Each word was split at the end of a line. The | mark shows where the first line ends. Is each split correct?",
       cols: ["Correct", "Not correct"],
       rows: [
         { text: "hel- | met", answer: 0 },
         { text: "kit- | ten", answer: 0 },
-        { text: "pi- | llow", answer: 1 },
+        { text: "co- | llar", answer: 1 },
         { text: "cact- | us", answer: 1 }
       ],
       clue: "Look at the middle of each word. Is the break exactly between two consonants or between double letters?",
-      why: "Hel- | met splits between the consonants l and m, and kit- | ten splits between the double t, so both are correct. Pillow should be pil- | low (between the double l), and cactus should be cac- | tus (between c and t)." },
+      why: "Hel- | met splits between the consonants l and m, and kit- | ten splits between the double t, so both are correct. Collar should be col- | lar (between the double l), and cactus should be cac- | tus (between c and t)." },
     { id: "SK-GUM3-8-T5", type: "mc", points: 1, dok: 2, passages: [],
       prompt: "A student split the word rainbow at the end of a line. What is wrong?",
       stem: ["Grandpa and I watched the rain", "-bow over the lake."],

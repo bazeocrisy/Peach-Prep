@@ -43,10 +43,170 @@ PP.addLesson({
         "Future tense uses will plus the plain verb. Will visited mixes the past and the future, so it is wrong."
       ],
       answer: "Will visit. Next Saturday, Aunt Lena will visit us at our new house."
+    },
+    {
+      show: ["Every Tuesday, the mail carrier ___ a package to our door. (delivers, delivered, will deliver)"],
+      ask: "Which verb fits the sentence?",
+      steps: [
+        "Find the time clue: Every Tuesday. It happens again and again, so the verb is in the present tense.",
+        "One person, the mail carrier, does the action. A present tense verb for one person usually adds -s.",
+        "Delivered tells about the past, and will deliver tells about the future. Delivers is the present."
+      ],
+      answer: "Delivers. Every Tuesday, the mail carrier delivers a package to our door."
     }
   ],
   parent: "At dinner, take turns telling one thing you did yesterday, one thing you do every day and one thing you will do tomorrow. Listen together for the verb in each sentence.",
-  passages: [],
+  passages: [
+    /* B7b:passages:start */
+    {
+      "id": "p1",
+      "title": "The Recycling Bins",
+      "byline": "A third grader's draft",
+      "genre": "Student draft (narrative)",
+      "draft": true,
+      "paragraphs": [
+        [
+          "(1) Last month, our class started a recycling project at school.",
+          "(2) Every morning, Ms. Duran checks the blue bins in the hall.",
+          "(3) Yesterday, Jada will count the cans and bottles in the gym."
+        ],
+        [
+          "(4) Right now, two helpers sort the paper into tall stacks.",
+          "(5) Last Monday, we weighed the stacks on a big scale.",
+          "(6) Next week, the class collects the cardboard from every room."
+        ],
+        [
+          "(7) Tomorrow, Mr. Boyd will pick up the heavy bins.",
+          "(8) Every Friday, our class paints a new poster for the hall.",
+          "(9) Last Friday, the poster showed a smiling bottle with big eyes.",
+          "(10) Soon, our whole school will join the project."
+        ]
+      ]
+    },
+    {
+      "id": "p2",
+      "title": "Fix-It Day at the Park",
+      "byline": "A third grader's draft",
+      "genre": "Student draft (narrative)",
+      "draft": true,
+      "paragraphs": [
+        [
+          "(1) Every spring, our neighbors gather at Maple Park for the big Fix-It Day.",
+          "(2) Last Saturday, Mr. Reyes paints the old picnic tables green.",
+          "(3) Tomorrow, the Scouts planted flowers near the gate.",
+          "(4) Right now, Ana's mom hands out gloves to the helpers.",
+          "(5) Two weeks ago, we repaired the squeaky swings.",
+          "(6) Next month, a crew will build a new bench by the pond."
+        ],
+        [
+          "(7) Today, I carry water to the thirsty workers.",
+          "(8) Yesterday, we cleaned the brushes at the pump.",
+          "(9) Last week, the mayor joins our picnic lunch.",
+          "(10) Soon, everyone will see the new picnic area.",
+          "(11) Every year, our park looks better than it did before."
+        ]
+      ]
+    },
+    {
+      "id": "p3",
+      "title": "The Rain Barrel",
+      "byline": "A third grader's draft",
+      "genre": "Student draft (narrative)",
+      "draft": true,
+      "paragraphs": [
+        [
+          "(1) Last spring, my dad placed a rain barrel behind our house.",
+          "(2) Every time it rains, water runs down the roof into the barrel.",
+          "(3) Right now, the barrel holds enough water for the whole garden.",
+          "(4) Yesterday, we watered the tomato plants with a small can."
+        ],
+        [
+          "(5) Tomorrow, my sister will draw a big fish on the side.",
+          "(6) Last Sunday, I paint the lid bright blue.",
+          "(7) Every evening, Dad checks the water level with a stick.",
+          "(8) Next month, our neighbors will copy our rain barrel idea."
+        ],
+        [
+          "(9) Today, our garden looks greener than last year.",
+          "(10) We like our barrel because it saves water for the dry days."
+        ]
+      ]
+    },
+    {
+      "id": "p4",
+      "title": "The Lost-and-Found Box",
+      "byline": "A third grader's draft",
+      "genre": "Student draft (narrative)",
+      "draft": true,
+      "paragraphs": [
+        [
+          "(1) Every Monday, Mr. Sims opens the lost-and-found box in the lunchroom.",
+          "(2) Last week, the box contained three jackets and a lunch bag.",
+          "(3) Yesterday, two students returned a blue scarf to its owner."
+        ],
+        [
+          "(4) Right now, Kiana lists the lost items on a chart.",
+          "(5) Last Tuesday, she tapes the chart by the office door.",
+          "(6) Tomorrow, the helpers sorted the extra mittens by size."
+        ],
+        [
+          "(7) Next Monday, our class will wash the old water bottles.",
+          "(8) Every afternoon, Mr. Sims locks the box at the last bell.",
+          "(9) Soon, the box will look neat and tidy again.",
+          "(10) Many families smile when they find a missing coat."
+        ]
+      ]
+    },
+    {
+      "id": "p5",
+      "title": "Neighborhood Soup Supper",
+      "byline": "A third grader's draft",
+      "genre": "Student draft (narrative)",
+      "draft": true,
+      "paragraphs": [
+        [
+          "(1) Every November, our street holds a soup supper at the community hall.",
+          "(2) Last year, neighbors carried twelve pots of soup to the tables.",
+          "(3) Yesterday, Mrs. Hall stirs a huge pot of bean soup.",
+          "(4) At the moment, the twins fold the paper napkins by the door.",
+          "(5) Tomorrow, volunteers lined the long benches with cloths.",
+          "(6) Three days ago, Mrs. Ortiz baked twenty loaves of warm bread for the supper."
+        ],
+        [
+          "(7) Last night, I practiced my welcome speech in the mirror.",
+          "(8) Soon, I welcomed the guests at the door.",
+          "(9) Every year, the supper raises money for the food pantry.",
+          "(10) Next November, we will serve even more soup to our hungry neighbors."
+        ]
+      ]
+    },
+    {
+      "id": "p6",
+      "title": "The Lemonade Test",
+      "byline": "A third grader's draft",
+      "genre": "Student draft (narrative)",
+      "draft": true,
+      "paragraphs": [
+        [
+          "(1) Three days ago, my cousin and I tested three kinds of lemonade in the backyard.",
+          "(2) At the moment, the cups sit on the porch rail in the cool shade.",
+          "(3) Two hours ago, we measured the sugar with a tiny spoon and a paper cup.",
+          "(4) Later today, our neighbors will taste each cup and vote."
+        ],
+        [
+          "(5) Last night, I mix the juice too fast.",
+          "(6) Each day, Dad squeezes fresh lemons for us.",
+          "(7) In two weeks, we will make a bigger batch."
+        ],
+        [
+          "(8) Today, my cousin writes the labels on the cups.",
+          "(9) Each time, the sweetest cup disappears before the others.",
+          "(10) Each summer, our family sells lemonade by the road on hot days."
+        ]
+      ]
+    }
+    /* B7b:passages:end */
+  ],
   practice: [
     { id: "SK-GUM2-1-P1", type: "dropdown", points: 1, dok: 1, passages: [],
       prompt: "Choose the verb that correctly completes the sentence.",
@@ -99,6 +259,1351 @@ PP.addLesson({
       clue: "Each sentence has its own time word. Match each verb to its time word. Remember what kind of verb comes after will.",
       why: "The answers are planted and will plant. Last spring already happened, so it needs the past tense, planted. Next spring has not happened yet, so it needs the future tense, will plant. After will, use the plain verb, so will planted is wrong." }
   ],
+  /* B7b:core:start */
+  /* ---------- Expansion 2026-10-22, batch B7b (GUM Reinforce, second half) ----------
+     core: fifteen items in three sets of five. { ref } reuses a practice item; the other practice items stay in Practice Together.
+     Passages are used only by core and the similar bank; none is used by test.
+     Author log: docs/expansion-2026-10-22/batches/B7b-author-log.md. NOT ACCEPTED: needs independent review. */
+  core: {
+    "rev": "1",
+    "sets": [
+      {
+        "title": "Set 1",
+        "items": [
+          {
+            "ref": "SK-GUM2-1-P3"
+          },
+          {
+            "ref": "SK-GUM2-1-P4"
+          },
+          {
+            "id": "SK-GUM2-1-C03",
+            "type": "mc",
+            "points": 1,
+            "dok": 2,
+            "std": [
+              "3.L.GC.1:R:form-and-use-simple-verb-tenses"
+            ],
+            "passages": [
+              "p1"
+            ],
+            "prompt": "Sentence 3 does not match its time clue. Which revision fixes it?",
+            "choices": [
+              {
+                "text": "Yesterday, Jada counted the cans and bottles in the gym.",
+                "correct": true
+              },
+              {
+                "text": "Yesterday, Jada counts the cans and bottles in the gym."
+              },
+              {
+                "text": "Yesterday, Jada will counted the cans and bottles in the gym."
+              },
+              {
+                "text": "Yesterday, Jada counting the cans and bottles in the gym."
+              }
+            ],
+            "clue": "Find the time clue at the start of the sentence. Decide whether it points to the past, the present or the future.",
+            "hints": [
+              "Find the time clue at the start of the sentence. Decide whether it points to the past, the present or the future.",
+              "Read sentence 3 aloud. Say what time its first word shows, then listen for whether the verb tells the same time.",
+              "A verb that ends in -ing with no helping word does not make a whole sentence here. Think about the other choices."
+            ],
+            "how": [
+              "Sentence 3 begins with Yesterday, so it tells about the past. The verb will count is future tense, so it does not match.",
+              "A regular verb shows the past by adding -ed: counted.",
+              "The answer is \"Yesterday, Jada counted the cans and bottles in the gym.\" The other choices keep a wrong tense or mix two tenses."
+            ],
+            "misconception": "A common mix-up is keeping will because the work is part of a project plan. The clue Yesterday shows the past.",
+            "why": "The answer is \"Yesterday, Jada counted the cans and bottles in the gym.\" Yesterday already happened, so the verb needs the past tense, counted. Counts is present tense, and will counted mixes the future and the past.",
+            "like": [
+              "SK-GUM2-1-S03"
+            ]
+          },
+          {
+            "id": "SK-GUM2-1-C04",
+            "type": "dropdown",
+            "points": 1,
+            "dok": 2,
+            "std": [
+              "3.L.GC.1:R:form-and-use-simple-verb-tenses"
+            ],
+            "passages": [
+              "p1"
+            ],
+            "prompt": "Sentence 6 does not match its time clue. Choose the words that fix it.",
+            "text": "Next week, the class {0} the cardboard from every room.",
+            "slots": [
+              {
+                "options": [
+                  "will collects",
+                  "collected",
+                  "will collect"
+                ],
+                "answer": 2
+              }
+            ],
+            "clue": "Look at the time clue at the start of the sentence, then pick the verb form that tells the same time.",
+            "hints": [
+              "Look at the time clue at the start of the sentence, then pick the verb form that tells the same time.",
+              "Say the clue out loud. Ask whether the cardboard has already been collected, is being collected now, or has not been collected yet.",
+              "Collected ends in -ed, which shows the past. Think about the other two choices."
+            ],
+            "how": [
+              "Next week has not happened yet, so the verb has to be future tense.",
+              "Future tense uses will plus the plain verb.",
+              "The answer is will collect. Collected is past tense, and will collects puts an ending on the verb after will."
+            ],
+            "misconception": "A common mix-up is adding -s after will. The word will already shows the future, so the verb stays plain.",
+            "why": "The answer is will collect. Next week is in the future, so the verb needs will plus the plain verb. Collected is past tense, and will collects wrongly adds -s after will.",
+            "like": [
+              "SK-GUM2-1-S04"
+            ]
+          },
+          {
+            "id": "SK-GUM2-1-C05",
+            "type": "mc",
+            "points": 1,
+            "dok": 3,
+            "std": [
+              "3.L.GC.1:R:form-and-use-simple-verb-tenses"
+            ],
+            "passages": [
+              "p1"
+            ],
+            "prompt": "Sentence 7 says will pick and sentence 8 says paints. Why does only paints end in -s?",
+            "choices": [
+              {
+                "text": "Paints is present tense for one class, but a verb after will keeps its plain form.",
+                "correct": true
+              },
+              {
+                "text": "Paints is past tense, and a verb after will must end in -ed instead."
+              },
+              {
+                "text": "Pick is a plural verb because it follows Mr. Boyd, who is one person."
+              },
+              {
+                "text": "Paints ends in -s because it comes after the word Every, which makes verbs plural."
+              }
+            ],
+            "clue": "A verb changes its form for a reason. Look for the clue or the helping word in sentences 7 and 8.",
+            "hints": [
+              "A verb changes its form for a reason. Look for the clue or the helping word in sentences 7 and 8.",
+              "In sentence 7, find the helping word in front of pick. In sentence 8, find the clue at the start and count who does the painting.",
+              "Neither sentence 7 nor sentence 8 begins with a clue about the past. Think about the choices again."
+            ],
+            "how": [
+              "Sentence 7 has the helping word will in front of pick. After will, the verb stays plain.",
+              "Sentence 8 begins with Every Friday, so it tells what happens again and again. One class does the painting, so the verb adds -s.",
+              "The answer is \"Paints is present tense for one class, but a verb after will keeps its plain form.\""
+            ],
+            "misconception": "A common mix-up is thinking an ending always means the past. Present tense can end in -s too.",
+            "why": "The answer is \"Paints is present tense for one class, but a verb after will keeps its plain form.\" Every Friday points to the present, and one class does the painting, so paints takes -s. Will shows the future, so pick stays plain.",
+            "like": [
+              "SK-GUM2-1-S05"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Set 2",
+        "items": [
+          {
+            "id": "SK-GUM2-1-C06",
+            "type": "hottext",
+            "points": 2,
+            "dok": 2,
+            "std": [
+              "3.L.GC.1:R:form-and-use-simple-verb-tenses"
+            ],
+            "passages": [
+              "p2"
+            ],
+            "prompt": "Look at sentences 2 through 6. Select the TWO sentences with a verb that does not match its time clue.",
+            "targets": [
+              "p2:1:2",
+              "p2:1:3",
+              "p2:1:4",
+              "p2:1:5",
+              "p2:1:6"
+            ],
+            "answer": [
+              "p2:1:2",
+              "p2:1:3"
+            ],
+            "pick": 2,
+            "clue": "Check each sentence in the list: the time clue must point to the same time as the verb.",
+            "hints": [
+              "Check each sentence in the list: the time clue must point to the same time as the verb.",
+              "Take sentences 2 through 6 one at a time. Circle the clue, then circle the verb, and say whether they tell the same time.",
+              "Sentence 5 has a clue and a verb that tell the same time. Think about the rest."
+            ],
+            "how": [
+              "Check each sentence from 2 through 6 for a clue and a verb that agree.",
+              "Sentence 2 begins with Last Saturday, which is past, but paints is present tense. Sentence 3 begins with Tomorrow, which is future, but planted is past tense.",
+              "Sentences 4, 5 and 6 match: Right now with hands, Two weeks ago with repaired, and Next month with will build."
+            ],
+            "misconception": "A common mix-up is picking a sentence just because its verb has an -ed ending. Compare the verb with its own clue.",
+            "why": "The answers are sentences 2 and 3: \"Last Saturday, Mr. Reyes paints the old picnic tables green.\" and \"Tomorrow, the Scouts planted flowers near the gate.\" Last Saturday needs a past verb, and Tomorrow needs will plus a plain verb. Sentences 4, 5 and 6 match.",
+            "like": [
+              "SK-GUM2-1-S06"
+            ]
+          },
+          {
+            "id": "SK-GUM2-1-C07",
+            "type": "ebsr",
+            "points": 2,
+            "dok": 3,
+            "std": [
+              "3.L.GC.1:R:form-and-use-simple-verb-tenses"
+            ],
+            "passages": [
+              "p2"
+            ],
+            "prompt": "This question has two parts. Answer Part A, then Part B.",
+            "partA": {
+              "prompt": "What is wrong with sentence 9?",
+              "choices": [
+                {
+                  "text": "The verb joins is present tense, but the clue Last week shows the past.",
+                  "correct": true
+                },
+                {
+                  "text": "The verb joins needs will, because the mayor has not come to the park yet."
+                },
+                {
+                  "text": "The verb joins is spelled wrong, because it needs -es at the end."
+                },
+                {
+                  "text": "The clue Last week is in the wrong place and belongs at the end."
+                }
+              ]
+            },
+            "partB": {
+              "prompt": "Which revision of sentence 9 fixes the problem from Part A?",
+              "choices": [
+                {
+                  "text": "Last week, the mayor joined our picnic lunch.",
+                  "correct": true
+                },
+                {
+                  "text": "Last week, the mayor will join our picnic lunch."
+                },
+                {
+                  "text": "Last week, the mayor joins our picnic lunch yesterday."
+                },
+                {
+                  "text": "Last week, the mayor will joined our picnic lunch."
+                }
+              ]
+            },
+            "clue": "Start with the time clue in sentence 9, then compare it with the verb.",
+            "hints": [
+              "Start with the time clue in sentence 9, then compare it with the verb.",
+              "For Part A, decide what time the clue shows and what time the verb shows. For Part B, test each revision the same way.",
+              "In Part B, a revision that keeps joins and adds another clue word still has a present tense verb. Think about the others."
+            ],
+            "how": [
+              "Part A: sentence 9 begins with Last week, which is the past. The verb joins is present tense, so they do not match.",
+              "Part B: a past tense verb fixes the mismatch. Joined ends in -ed.",
+              "The answers are \"The verb joins is present tense, but the clue Last week shows the past.\" and \"Last week, the mayor joined our picnic lunch.\" The other revisions use future tense, mix tenses, or add a second clue."
+            ],
+            "misconception": "A common mix-up is changing the clue instead of the verb, or using will for something that is over. Match the verb to the clue.",
+            "why": "Part A: \"The verb joins is present tense, but the clue Last week shows the past.\" Part B: \"Last week, the mayor joined our picnic lunch.\" Last week is over, so the verb needs the past tense. Will join is future, and will joined mixes two tenses.",
+            "like": [
+              "SK-GUM2-1-S07"
+            ]
+          },
+          {
+            "id": "SK-GUM2-1-C08",
+            "type": "ms",
+            "points": 2,
+            "dok": 2,
+            "std": [
+              "3.L.GC.1:R:form-and-use-simple-verb-tenses"
+            ],
+            "passages": [],
+            "prompt": "Choose the TWO sentences that use the past tense correctly.",
+            "pick": 2,
+            "choices": [
+              {
+                "text": "Last winter, my uncle shoveled snow from our long driveway.",
+                "correct": true
+              },
+              {
+                "text": "Two nights ago, a storm rattled the windows of our house.",
+                "correct": true
+              },
+              {
+                "text": "Tomorrow, my uncle shoveled the snow from the front steps."
+              },
+              {
+                "text": "This week, my cousin will visited us at the lake."
+              },
+              {
+                "text": "Every day, the baker bakes warm bread for the town."
+              }
+            ],
+            "clue": "Look at the time clue in each sentence, then check that the verb shows the past.",
+            "hints": [
+              "Look at the time clue in each sentence, then check that the verb shows the past.",
+              "Sort the sentences by clue first: past, present or future. Then check each verb. A sentence can have the right tense for its clue and still not be the past.",
+              "Every day points to something that happens again and again. Decide which other choices the past clue fits."
+            ],
+            "how": [
+              "Find the clue in each sentence and ask what time it shows.",
+              "Last winter and Two nights ago are past clues, and shoveled and rattled end in -ed. Those two sentences use the past tense correctly.",
+              "Tomorrow does not fit a past verb. Will visited mixes tenses. Bakes is present tense, so it is not the past."
+            ],
+            "misconception": "A common mix-up is picking any sentence that is written correctly. The question asks for the past tense only.",
+            "why": "The answers are \"Last winter, my uncle shoveled snow from our long driveway.\" and \"Two nights ago, a storm rattled the windows of our house.\" Both have past clues and past tense verbs. Tomorrow needs the future, will visited mixes tenses, and bakes is present tense.",
+            "like": [
+              "SK-GUM2-1-S08"
+            ]
+          },
+          {
+            "id": "SK-GUM2-1-C09",
+            "type": "mc",
+            "points": 1,
+            "dok": 1,
+            "std": [
+              "3.L.GC.1:R:form-and-use-simple-verb-tenses"
+            ],
+            "passages": [],
+            "prompt": "Which verb tells about something that already happened?",
+            "choices": [
+              {
+                "text": "cleaned",
+                "correct": true
+              },
+              {
+                "text": "cleans"
+              },
+              {
+                "text": "will clean"
+              },
+              {
+                "text": "cleaning"
+              }
+            ],
+            "clue": "Think about what each verb form says about time: the past, the present or the future.",
+            "hints": [
+              "Think about what each verb form says about time: the past, the present or the future.",
+              "Say each choice in a sentence about yesterday and listen for the one that fits.",
+              "Will is a helping word for things that have not happened yet. Think about the other choices."
+            ],
+            "how": [
+              "Past tense tells about something that is over.",
+              "A regular verb adds -ed for the past, so cleaned tells about the past.",
+              "The answer is cleaned. Cleans is present, will clean is future, and cleaning has no helping word."
+            ],
+            "misconception": "A common mix-up is thinking any verb with an ending is past. Only -ed shows the past for a regular verb.",
+            "why": "The answer is cleaned. Cleaned ends in -ed, so it tells about something that already happened. Cleans is present tense, will clean is future tense, and cleaning is not a past tense verb.",
+            "like": [
+              "SK-GUM2-1-S09"
+            ]
+          },
+          {
+            "id": "SK-GUM2-1-C10",
+            "type": "mc",
+            "points": 1,
+            "dok": 3,
+            "std": [
+              "3.L.GC.1:R:form-and-use-simple-verb-tenses"
+            ],
+            "passages": [
+              "p2"
+            ],
+            "prompt": "Ben says sentence 5 should be \"Two weeks ago, we repair the squeaky swings.\" Why is Ben wrong?",
+            "choices": [
+              {
+                "text": "Two weeks ago points to the past, so the verb needs the -ed ending.",
+                "correct": true
+              },
+              {
+                "text": "The swings are still squeaky today, so the verb has to stay present."
+              },
+              {
+                "text": "A verb that follows we always keeps the plain form with no ending."
+              },
+              {
+                "text": "The word we is plural, so the sentence needs will before the verb."
+              }
+            ],
+            "clue": "To judge someone's idea, ask what the time clue shows. Then check whether his verb shows the same time.",
+            "hints": [
+              "To judge someone's idea, ask what the time clue shows. Then check whether his verb shows the same time.",
+              "Find the time clue in sentence 5 and say whether it points to the past, present or future.",
+              "How the swings are today does not change the time that the clue words show. Think about the other choices."
+            ],
+            "how": [
+              "Find the clue in sentence 5: Two weeks ago. That is a time that is over.",
+              "A time that is over needs a past tense verb. For a regular verb, that means -ed: repaired.",
+              "The answer is \"Two weeks ago points to the past, so the verb needs the -ed ending.\" Ben's repair is present tense, and the word we does not decide the tense."
+            ],
+            "misconception": "A common mix-up is letting the picture in your head decide the tense. The time clue decides it.",
+            "why": "The answer is \"Two weeks ago points to the past, so the verb needs the -ed ending.\" Ben's version, we repair, is present tense and does not match the clue. The word we can go with a past, present or future verb.",
+            "like": [
+              "SK-GUM2-1-S10"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Set 3",
+        "items": [
+          {
+            "id": "SK-GUM2-1-C11",
+            "type": "hottext",
+            "points": 2,
+            "dok": 2,
+            "std": [
+              "3.L.GC.1:R:form-and-use-simple-verb-tenses"
+            ],
+            "passages": [
+              "p3"
+            ],
+            "prompt": "Select the TWO sentences that tell about something that has not happened yet.",
+            "targets": [
+              "p3:1:3",
+              "p3:1:4",
+              "p3:2:1",
+              "p3:2:3",
+              "p3:2:4",
+              "p3:3:1"
+            ],
+            "answer": [
+              "p3:2:1",
+              "p3:2:4"
+            ],
+            "pick": 2,
+            "clue": "Future tense tells about something that has not happened yet. Look for the sentences that show it.",
+            "hints": [
+              "Future tense tells about something that has not happened yet. Look for the sentences that show it.",
+              "Skim the sentences listed for a time clue and a helping word that point to later. Skip the ones about now or about the past.",
+              "Sentence 4 tells about something that is over. Think about the rest."
+            ],
+            "how": [
+              "Future tense uses will plus the plain verb, and the clue often points to later.",
+              "Sentence 5 says Tomorrow and will draw. Sentence 8 says Next month and will copy.",
+              "Sentences 3, 7 and 9 are present tense, and sentence 4 is past."
+            ],
+            "misconception": "A common mix-up is picking a sentence that has a time clue but not the future. Check the verb, too.",
+            "why": "The answers are \"Tomorrow, my sister will draw a big fish on the side.\" and \"Next month, our neighbors will copy our rain barrel idea.\" Both use will plus a plain verb. The other sentences tell about the present or the past.",
+            "like": [
+              "SK-GUM2-1-S11"
+            ]
+          },
+          {
+            "id": "SK-GUM2-1-C12",
+            "type": "dropdown",
+            "points": 1,
+            "dok": 2,
+            "std": [
+              "3.L.GC.1:R:form-and-use-simple-verb-tenses"
+            ],
+            "passages": [
+              "p3"
+            ],
+            "prompt": "Sentence 6 does not match its time clue. Choose the verb that fixes it.",
+            "text": "Last Sunday, I {0} the lid bright blue.",
+            "slots": [
+              {
+                "options": [
+                  "paint",
+                  "will paint",
+                  "painted"
+                ],
+                "answer": 2
+              }
+            ],
+            "clue": "Find the time clue and decide what time it shows. Then choose the verb form that tells the same time.",
+            "hints": [
+              "Find the time clue and decide what time it shows. Then choose the verb form that tells the same time.",
+              "Last Sunday is already over. Say the sentence with each choice and listen for the one that tells about a finished job.",
+              "Will paint tells about a job that has not been done. Think about the other two choices."
+            ],
+            "how": [
+              "Last Sunday is in the past, so the verb must be past tense.",
+              "A regular verb adds -ed to show the past.",
+              "The answer is painted. Paint is present tense, and will paint is future."
+            ],
+            "misconception": "A common mix-up is leaving the plain verb because the sentence sounds fine. The clue Last Sunday needs a past tense verb.",
+            "why": "The answer is painted. Last Sunday is over, so the verb needs the past tense, painted. Paint is present tense, and will paint is future tense.",
+            "like": [
+              "SK-GUM2-1-S12"
+            ]
+          },
+          {
+            "id": "SK-GUM2-1-C13",
+            "type": "dropdown",
+            "points": 2,
+            "dok": 2,
+            "std": [
+              "3.L.GC.1:R:form-and-use-simple-verb-tenses"
+            ],
+            "passages": [],
+            "prompt": "Choose the correct verb for each blank.",
+            "text": "Last night, a gust {0} the trash can down our street. Tomorrow, the neighbors {1} the broken mailbox.",
+            "slots": [
+              {
+                "options": [
+                  "pushes",
+                  "pushed",
+                  "will push"
+                ],
+                "answer": 1
+              },
+              {
+                "options": [
+                  "fixed",
+                  "will fixes",
+                  "will fix"
+                ],
+                "answer": 2
+              }
+            ],
+            "clue": "Each sentence starts with its own time clue. Match each verb to its own clue.",
+            "hints": [
+              "Each sentence starts with its own time clue. Match each verb to its own clue.",
+              "Last night is over. Tomorrow has not come yet. Think about which verb form tells each time.",
+              "After the word will, a verb stays in its plain form. Use that to check the second blank."
+            ],
+            "how": [
+              "Blank one follows Last night, which is the past. A regular verb shows the past with -ed: pushed.",
+              "Blank two follows Tomorrow, which is the future. Future tense uses will plus the plain verb: will fix.",
+              "The answers are pushed and will fix. Pushes is present tense, will push is future, fixed is past, and will fixes adds -es after will."
+            ],
+            "misconception": "A common mix-up is using one tense for both blanks. Each sentence has its own clue.",
+            "why": "The answers are pushed and will fix. Last night is in the past, so the first verb is pushed. Tomorrow is in the future, so the second verb is will fix. Will fixes is wrong because a verb after will stays plain.",
+            "like": [
+              "SK-GUM2-1-S13"
+            ]
+          },
+          {
+            "id": "SK-GUM2-1-C14",
+            "type": "hottext",
+            "points": 1,
+            "dok": 2,
+            "std": [
+              "3.L.GC.1:R:form-and-use-simple-verb-tenses"
+            ],
+            "passages": [],
+            "prompt": "Select the sentence that uses the future tense correctly.",
+            "options": [
+              "Next summer, my cousins will camp beside the river.",
+              "Next summer, my cousins camped beside the river.",
+              "Next summer, my cousins will camped beside the river.",
+              "Next summer, my cousins will camps beside the river."
+            ],
+            "answer": [
+              0
+            ],
+            "pick": 1,
+            "clue": "Future tense tells about something that has not happened yet. Check how each verb is built.",
+            "hints": [
+              "Future tense tells about something that has not happened yet. Check how each verb is built.",
+              "All four sentences begin with the same clue, so compare only the verbs. Ask which ones use will and which do not.",
+              "Camped ends in -ed, which shows the past. Think about the other choices."
+            ],
+            "how": [
+              "Next summer has not happened yet, so the verb must be future tense.",
+              "Future tense is will plus the plain verb: will camp.",
+              "The answer is \"Next summer, my cousins will camp beside the river.\" Camped is past, will camped mixes tenses, and will camps adds -s after will."
+            ],
+            "misconception": "A common mix-up is picking the sentence that sounds like a story. A clue about next summer needs will.",
+            "why": "The answer is \"Next summer, my cousins will camp beside the river.\" Next summer is in the future, so the verb is will plus the plain verb. Camped is past tense, will camped mixes two tenses, and will camps adds -s after will.",
+            "like": [
+              "SK-GUM2-1-S14"
+            ]
+          },
+          {
+            "id": "SK-GUM2-1-C15",
+            "type": "mc",
+            "points": 1,
+            "dok": 3,
+            "std": [
+              "3.L.GC.1:R:form-and-use-simple-verb-tenses"
+            ],
+            "passages": [],
+            "prompt": "Mia says, \"You can only tell a sentence is in the past if it has a time clue like yesterday.\" Which sentence shows that Mia is wrong?",
+            "choices": [
+              {
+                "text": "The goalie blocked the last shot of the game.",
+                "correct": true
+              },
+              {
+                "text": "Tomorrow, the goalie will block the last shot."
+              },
+              {
+                "text": "Every game, the goalie blocks the last shot."
+              },
+              {
+                "text": "Yesterday, the goalie blocked the last shot."
+              }
+            ],
+            "clue": "To show that an idea is wrong, find an example that breaks it. Check each sentence for a clue word and for a verb ending.",
+            "hints": [
+              "To show that an idea is wrong, find an example that breaks it. Check each sentence for a clue word and for a verb ending.",
+              "Underline any time clue in each choice. Then ask what tells the time in a sentence that has none.",
+              "The sentence about Yesterday does have a clue, so it fits Mia's idea. Think about the other choices."
+            ],
+            "how": [
+              "Mia says a past sentence needs a clue word. Look for a past sentence with no clue word.",
+              "Most choices begin with a clue. One sentence has none, but its verb ends in -ed and tells about the past.",
+              "The answer is \"The goalie blocked the last shot of the game.\" The -ed ending shows the past without a clue word."
+            ],
+            "misconception": "A common mix-up is thinking the clue word is the only way to show time. The verb form shows it too.",
+            "why": "The answer is \"The goalie blocked the last shot of the game.\" It has no time clue, but blocked ends in -ed, so it still tells about the past. That proves Mia wrong. The other sentences all begin with a clue word.",
+            "like": [
+              "SK-GUM2-1-S15"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  similar: [
+    {
+      "id": "SK-GUM2-1-S01",
+      "type": "hottext",
+      "points": 1,
+      "dok": 2,
+      "std": [
+        "3.L.GC.1:R:form-and-use-simple-verb-tenses"
+      ],
+      "passages": [],
+      "prompt": "Which line has a verb that disagrees with the clue at its start?",
+      "options": [
+        "Long ago, farmers worked this hill.",
+        "Each spring, ducks nest along the muddy bank.",
+        "At this moment, Ellie packed her lunch.",
+        "Soon, the bus will carry us to the museum.",
+        "Later today, my brother will mow the grass."
+      ],
+      "answer": [
+        2
+      ],
+      "pick": 1,
+      "clue": "Compare each opening clue with its verb. They must point to the same time.",
+      "hints": [
+        "Compare each opening clue with its verb. They must point to the same time.",
+        "Go line by line. Say whether the clue points to before, now or later, and whether the verb does too.",
+        "The line about the museum has a clue about later and a helping word for later. Check the rest."
+      ],
+      "how": [
+        "Read the clue first, then the verb, in each line.",
+        "At this moment is the present, but packed is past tense, so they do not match.",
+        "The answer is \"At this moment, Ellie packed her lunch.\" The other lines match: Long ago with worked, Each spring with nest, and Soon and Later today with will."
+      ],
+      "misconception": "A common mix-up is hunting only for will. A past verb with a present clue is an error too.",
+      "why": "The answer is \"At this moment, Ellie packed her lunch.\" At this moment tells about the present, but packed is past tense. In the other lines, the clue and the verb point to the same time.",
+      "like": [
+        "SK-GUM2-1-P3"
+      ]
+    },
+    {
+      "id": "SK-GUM2-1-S02",
+      "type": "match",
+      "points": 2,
+      "dok": 2,
+      "std": [
+        "3.L.GC.1:R:form-and-use-simple-verb-tenses"
+      ],
+      "passages": [],
+      "prompt": "Read each sentence. When does the action happen? Sort each one.",
+      "cols": [
+        "Already happened",
+        "Happens now or again and again",
+        "Has not happened yet"
+      ],
+      "rows": [
+        {
+          "text": "Nell fixed the clock.",
+          "answer": 0
+        },
+        {
+          "text": "Nell fixes the clock on Fridays.",
+          "answer": 1
+        },
+        {
+          "text": "Nell will fix the clock soon.",
+          "answer": 2
+        },
+        {
+          "text": "The owls hooted all night.",
+          "answer": 0
+        },
+        {
+          "text": "The owls hoot in the old oak tree.",
+          "answer": 1
+        },
+        {
+          "text": "The owls will hoot at sunrise.",
+          "answer": 2
+        }
+      ],
+      "clue": "Look at each verb. Is there an -ed ending, the helping word will, or neither?",
+      "hints": [
+        "Look at each verb. Is there an -ed ending, the helping word will, or neither?",
+        "Sort the sentences that use a helping word first. Then decide the rest by looking at the ending.",
+        "Hooted and fixed end in -ed. Think about which column fits that ending."
+      ],
+      "how": [
+        "Find the verb in each sentence.",
+        "Fixed and hooted end in -ed, so the actions already happened. Fixes and hoot have no -ed and no will, so they are present.",
+        "Will fix and will hoot use will, so they have not happened yet."
+      ],
+      "misconception": "A common mix-up is putting every verb with -s in the past. Past tense for a regular verb ends in -ed.",
+      "why": "Fixed and hooted are past tense. Fixes and hoot are present tense. Will fix and will hoot are future tense.",
+      "like": [
+        "SK-GUM2-1-P4"
+      ]
+    },
+    {
+      "id": "SK-GUM2-1-S03",
+      "type": "mc",
+      "points": 1,
+      "dok": 2,
+      "std": [
+        "3.L.GC.1:R:form-and-use-simple-verb-tenses"
+      ],
+      "passages": [
+        "p4"
+      ],
+      "prompt": "In sentence 5, the verb and the opening words tell different times. Which choice repairs the sentence?",
+      "choices": [
+        {
+          "text": "Last Tuesday, she taped the chart by the office door.",
+          "correct": true
+        },
+        {
+          "text": "Last Tuesday, she tapes the chart by the office door."
+        },
+        {
+          "text": "Last Tuesday, she will tape the chart by the office door."
+        },
+        {
+          "text": "Last Tuesday, she will taped the chart by the office door."
+        }
+      ],
+      "clue": "Find the opening words and decide which time they show. Then compare that time with the verb.",
+      "hints": [
+        "Find the opening words and decide which time they show. Then compare that time with the verb.",
+        "The opening words name a day that is over. Say each choice and listen for the one that tells about a finished action.",
+        "Will taped has a helping word and an -ed ending. Think about whether that makes sense."
+      ],
+      "how": [
+        "Last Tuesday is over, so it is the past.",
+        "Tapes is present tense, so the verb needs to change to the past: taped.",
+        "The answer is \"Last Tuesday, she taped the chart by the office door.\" The other choices keep the present or use will."
+      ],
+      "misconception": "A common mix-up is leaving a present verb because the chart is still hanging. The clue Last Tuesday decides the tense.",
+      "why": "The answer is \"Last Tuesday, she taped the chart by the office door.\" Last Tuesday is over, so the verb needs the past tense. Tapes is present tense, will tape is future, and will taped mixes two tenses.",
+      "like": [
+        "SK-GUM2-1-C03"
+      ]
+    },
+    {
+      "id": "SK-GUM2-1-S04",
+      "type": "dropdown",
+      "points": 1,
+      "dok": 2,
+      "std": [
+        "3.L.GC.1:R:form-and-use-simple-verb-tenses"
+      ],
+      "passages": [
+        "p4"
+      ],
+      "prompt": "Pick the verb form that repairs sentence 6.",
+      "text": "Tomorrow, the helpers {0} the extra mittens by size.",
+      "slots": [
+        {
+          "options": [
+            "will sort",
+            "will sorted",
+            "sorts"
+          ],
+          "answer": 0
+        }
+      ],
+      "clue": "Read the clue first. Then decide which verb form tells the same time.",
+      "hints": [
+        "Read the clue first. Then decide which verb form tells the same time.",
+        "Say the clue aloud and ask whether the mittens are already sorted, being sorted now, or still waiting.",
+        "Sorts has no helping word and no ending for later. Think about the other two choices."
+      ],
+      "how": [
+        "Tomorrow has not come yet, so the verb has to be future tense.",
+        "Future tense is will plus the plain verb: will sort.",
+        "The answer is will sort. Will sorted puts -ed after will, and sorts is present tense."
+      ],
+      "misconception": "A common mix-up is adding -ed after will. The verb after will stays plain.",
+      "why": "The answer is will sort. Tomorrow is in the future, so the verb needs will plus the plain verb. Will sorted mixes the future and the past, and sorts is present tense.",
+      "like": [
+        "SK-GUM2-1-C04"
+      ]
+    },
+    {
+      "id": "SK-GUM2-1-S05",
+      "type": "mc",
+      "points": 1,
+      "dok": 3,
+      "std": [
+        "3.L.GC.1:R:form-and-use-simple-verb-tenses"
+      ],
+      "passages": [
+        "p4"
+      ],
+      "prompt": "What explains the -s on locks in sentence 8 but no ending on look in sentence 9?",
+      "choices": [
+        {
+          "text": "Look has the helper will in front of it, but locks is alone and tells about now.",
+          "correct": true
+        },
+        {
+          "text": "Look has a helper, so it is past, while locks is alone and tells about the future."
+        },
+        {
+          "text": "Both verbs tell about now, so the writer should add -s to look as well."
+        },
+        {
+          "text": "Locks is spelled with -s because box is one thing, and look is for many boxes."
+        }
+      ],
+      "clue": "A verb can change form because of a helping word, a time clue, or who does the action. Look for those in sentences 8 and 9.",
+      "hints": [
+        "A verb can change form because of a helping word, a time clue, or who does the action. Look for those in sentences 8 and 9.",
+        "In sentence 9, see which word sits right in front of look. In sentence 8, see who locks the box and when.",
+        "Locks has no -ed ending, and neither sentence starts with a clue about the past. Think about the choices again."
+      ],
+      "how": [
+        "Sentence 9 has will in front of look, so look stays plain.",
+        "Sentence 8 starts with Every afternoon, which is a repeated action in the present. One person locks the box, so the verb adds -s.",
+        "The answer is \"Look has the helper will in front of it, but locks is alone and tells about now.\""
+      ],
+      "misconception": "A common mix-up is thinking -s shows the future or the past. It goes with present tense for one person or thing.",
+      "why": "The answer is \"Look has the helper will in front of it, but locks is alone and tells about now.\" Every afternoon tells about the present, and Mr. Sims is one person, so locks takes -s. Will shows the future, so look has no ending.",
+      "like": [
+        "SK-GUM2-1-C05"
+      ]
+    },
+    {
+      "id": "SK-GUM2-1-S06",
+      "type": "hottext",
+      "points": 2,
+      "dok": 2,
+      "std": [
+        "3.L.GC.1:R:form-and-use-simple-verb-tenses"
+      ],
+      "passages": [
+        "p5"
+      ],
+      "prompt": "Which TWO of sentences 2 to 6 pair a clue and a verb that point to different times?",
+      "targets": [
+        "p5:1:2",
+        "p5:1:3",
+        "p5:1:4",
+        "p5:1:5",
+        "p5:1:6"
+      ],
+      "answer": [
+        "p5:1:3",
+        "p5:1:5"
+      ],
+      "pick": 2,
+      "clue": "Compare the clue at the start of each sentence with its verb. Do they point to the same time?",
+      "hints": [
+        "Compare the clue at the start of each sentence with its verb. Do they point to the same time?",
+        "Work through sentences 2 to 6 in order. Mark each clue as before, now or later, and do the same for each verb.",
+        "Sentence 6 has a past clue and a past verb. Check the rest."
+      ],
+      "how": [
+        "Check sentences 2 through 6 one at a time.",
+        "Yesterday is past, but stirs is present. Tomorrow is future, but lined is past.",
+        "Sentences 2, 4 and 6 match: Last year with carried, At the moment with fold, and Three days ago with baked."
+      ],
+      "misconception": "A common mix-up is picking the sentence that sounds odd rather than checking the clue and verb. Compare them one by one.",
+      "why": "The answers are \"Yesterday, Mrs. Hall stirs a huge pot of bean soup.\" and \"Tomorrow, volunteers lined the long benches with cloths.\" Yesterday needs a past verb, and Tomorrow needs will plus a plain verb. The other sentences match.",
+      "like": [
+        "SK-GUM2-1-C06"
+      ]
+    },
+    {
+      "id": "SK-GUM2-1-S07",
+      "type": "ebsr",
+      "points": 2,
+      "dok": 3,
+      "std": [
+        "3.L.GC.1:R:form-and-use-simple-verb-tenses"
+      ],
+      "passages": [
+        "p5"
+      ],
+      "prompt": "Work through the first half, then the second half.",
+      "partA": {
+        "prompt": "What is the mistake in sentence 8?",
+        "choices": [
+          {
+            "text": "Welcomed shows the past, but Soon looks ahead to later.",
+            "correct": true
+          },
+          {
+            "text": "Welcomed should end in -s, since I is one person at the door."
+          },
+          {
+            "text": "Soon should be replaced by Yesterday so the verb can stay as it is."
+          },
+          {
+            "text": "Soon looks back to the past, but welcomed looks ahead to later."
+          }
+        ]
+      },
+      "partB": {
+        "prompt": "Pick the rewrite that corrects it.",
+        "choices": [
+          {
+            "text": "Soon, I will welcome the guests at the door.",
+            "correct": true
+          },
+          {
+            "text": "Soon, I will welcomed the guests at the door."
+          },
+          {
+            "text": "Soon, I welcomes the guests at the door."
+          },
+          {
+            "text": "Soon, I welcoming the guests at the door."
+          }
+        ]
+      },
+      "clue": "Find the clue in sentence 8, then compare it with the verb.",
+      "hints": [
+        "Find the clue in sentence 8, then compare it with the verb.",
+        "In the first half, say what time Soon points to and what time welcomed shows. In the second half, test each rewrite the same way.",
+        "In the second half, a verb with -ing and no helping word is not a complete verb for this sentence. Think about the others."
+      ],
+      "how": [
+        "Part A: Soon points to later, so it is the future. Welcomed ends in -ed, so it is past tense.",
+        "Part B: the future needs will plus the plain verb: will welcome.",
+        "The answers are \"Welcomed shows the past, but Soon looks ahead to later.\" and \"Soon, I will welcome the guests at the door.\""
+      ],
+      "misconception": "A common mix-up is fixing the clue instead of the verb. The verb should change to match the clue.",
+      "why": "Part A: \"Welcomed shows the past, but Soon looks ahead to later.\" Part B: \"Soon, I will welcome the guests at the door.\" Soon has not happened yet, so the verb needs will plus the plain verb.",
+      "like": [
+        "SK-GUM2-1-C07"
+      ]
+    },
+    {
+      "id": "SK-GUM2-1-S08",
+      "type": "ms",
+      "points": 2,
+      "dok": 2,
+      "std": [
+        "3.L.GC.1:R:form-and-use-simple-verb-tenses"
+      ],
+      "passages": [],
+      "prompt": "Tap the TWO sentences about habits, things that happen again and again.",
+      "pick": 2,
+      "choices": [
+        {
+          "text": "On Saturdays, my dad washes the car in the driveway.",
+          "correct": true
+        },
+        {
+          "text": "Each winter, the pond freezes near the old bridge.",
+          "correct": true
+        },
+        {
+          "text": "Two Saturdays ago, my dad washed the car in the driveway."
+        },
+        {
+          "text": "Later this winter, the pond will freeze near the old bridge."
+        },
+        {
+          "text": "At the moment, the water drips from the car roof."
+        }
+      ],
+      "clue": "Look for clue words that mean a habit, and check that the verb is in the present.",
+      "hints": [
+        "Look for clue words that mean a habit, and check that the verb is in the present.",
+        "Read the clue at the start of each sentence. Ask whether it tells about one time or about every time.",
+        "At the moment tells about one short time. Decide among the rest."
+      ],
+      "how": [
+        "Find the clue in each sentence.",
+        "On Saturdays and Each winter mean again and again, and washes and freezes are present tense verbs.",
+        "Two Saturdays ago and Later this winter tell about one time, and At the moment tells about this moment."
+      ],
+      "misconception": "A common mix-up is picking sentences about the same people and things. The clue shows whether it repeats.",
+      "why": "The answers are \"On Saturdays, my dad washes the car in the driveway.\" and \"Each winter, the pond freezes near the old bridge.\" Both have clues that mean again and again and present tense verbs. The other sentences tell about one time.",
+      "like": [
+        "SK-GUM2-1-C08"
+      ]
+    },
+    {
+      "id": "SK-GUM2-1-S09",
+      "type": "mc",
+      "points": 1,
+      "dok": 1,
+      "std": [
+        "3.L.GC.1:R:form-and-use-simple-verb-tenses"
+      ],
+      "passages": [],
+      "prompt": "Which form of bake goes in a sentence about next week?",
+      "choices": [
+        {
+          "text": "will bake",
+          "correct": true
+        },
+        {
+          "text": "will baked"
+        },
+        {
+          "text": "baked"
+        },
+        {
+          "text": "bakes"
+        }
+      ],
+      "clue": "Think about what each verb form says about time.",
+      "hints": [
+        "Think about what each verb form says about time.",
+        "Say each choice in a sentence about next week and listen for the one that fits.",
+        "Baked ends in -ed, which shows the past. Think about the other choices."
+      ],
+      "how": [
+        "Future tense tells about something that has not happened yet.",
+        "It uses the helping word will with the plain verb: will bake.",
+        "The answer is will bake. Baked is past, bakes is present, and will baked mixes tenses."
+      ],
+      "misconception": "A common mix-up is putting an -ed ending after will. The verb after will stays plain.",
+      "why": "The answer is will bake. It uses will plus the plain verb, so it tells about the future. Baked is past tense, bakes is present tense, and will baked mixes two tenses.",
+      "like": [
+        "SK-GUM2-1-C09"
+      ]
+    },
+    {
+      "id": "SK-GUM2-1-S10",
+      "type": "mc",
+      "points": 1,
+      "dok": 3,
+      "std": [
+        "3.L.GC.1:R:form-and-use-simple-verb-tenses"
+      ],
+      "passages": [
+        "p5"
+      ],
+      "prompt": "Luis rewrites sentence 7 as \"Last night, I practice my welcome speech in the mirror.\" Which statement about his rewrite is true?",
+      "choices": [
+        {
+          "text": "It is worse, because Last night is over and practiced shows that.",
+          "correct": true
+        },
+        {
+          "text": "It is better, because the speech still needs more work today."
+        },
+        {
+          "text": "It is better, because I is one person and always takes the plain form."
+        },
+        {
+          "text": "It is worse, because the speech should be moved to the future."
+        }
+      ],
+      "clue": "To judge a rewrite, ask what the opening words show about time. Then see whether the new verb shows the same time.",
+      "hints": [
+        "To judge a rewrite, ask what the opening words show about time. Then see whether the new verb shows the same time.",
+        "Find the opening words of sentence 7. Say whether they are about the past, the present or the future.",
+        "Whether the speech is perfect today is a different question from when the sentence takes place. Think about the other choices."
+      ],
+      "how": [
+        "Find the clue in sentence 7: Last night. That time is over.",
+        "A regular verb shows the past with -ed: practiced.",
+        "The answer is \"It is worse, because Last night is over and practiced shows that.\" The word I can go with any tense."
+      ],
+      "misconception": "A common mix-up is letting what is true now decide the tense. The clue decides it.",
+      "why": "The answer is \"It is worse, because Last night is over and practiced shows that.\" Luis's version, I practice, is present tense and does not match the clue. The word I can go with a past, present or future verb.",
+      "like": [
+        "SK-GUM2-1-C10"
+      ]
+    },
+    {
+      "id": "SK-GUM2-1-S11",
+      "type": "hottext",
+      "points": 2,
+      "dok": 2,
+      "std": [
+        "3.L.GC.1:R:form-and-use-simple-verb-tenses"
+      ],
+      "passages": [
+        "p6"
+      ],
+      "prompt": "Which TWO listed sentences look ahead to something still to come?",
+      "targets": [
+        "p6:1:2",
+        "p6:1:3",
+        "p6:1:4",
+        "p6:2:2",
+        "p6:2:3",
+        "p6:3:1"
+      ],
+      "answer": [
+        "p6:1:4",
+        "p6:2:3"
+      ],
+      "pick": 2,
+      "clue": "Look for sentences about a time that has not arrived. The verb should show it too.",
+      "hints": [
+        "Look for sentences about a time that has not arrived. The verb should show it too.",
+        "Check the clue and the helping word in each listed sentence. Skip the ones about now or about the past.",
+        "Sentence 3 tells about a job that is finished. Think about the rest."
+      ],
+      "how": [
+        "The future is shown with will plus the plain verb, and the clue points to later.",
+        "Sentence 4 says Later today and will taste. Sentence 7 says In two weeks and will make.",
+        "Sentences 2 and 8 are present tense, sentence 6 is a habit, and sentence 3 is past."
+      ],
+      "misconception": "A common mix-up is picking a sentence with a clue but no will. Check the verb as well.",
+      "why": "The answers are \"Later today, our neighbors will taste each cup and vote.\" and \"In two weeks, we will make a bigger batch.\" Both use will plus a plain verb. The other sentences tell about the present or the past.",
+      "like": [
+        "SK-GUM2-1-C11"
+      ]
+    },
+    {
+      "id": "SK-GUM2-1-S12",
+      "type": "dropdown",
+      "points": 1,
+      "dok": 2,
+      "std": [
+        "3.L.GC.1:R:form-and-use-simple-verb-tenses"
+      ],
+      "passages": [
+        "p6"
+      ],
+      "prompt": "Repair sentence 5 by picking the best verb.",
+      "text": "Last night, I {0} the juice too fast.",
+      "slots": [
+        {
+          "options": [
+            "mix",
+            "mixed",
+            "will mix"
+          ],
+          "answer": 1
+        }
+      ],
+      "clue": "Find the clue and decide what time it shows. Then pick the verb form that fits.",
+      "hints": [
+        "Find the clue and decide what time it shows. Then pick the verb form that fits.",
+        "Last night is over. Say the sentence with each choice and listen for the one that tells about a finished action.",
+        "Mix is the plain verb with no ending. Think about the other two choices."
+      ],
+      "how": [
+        "Last night is in the past, so the verb has to be past tense.",
+        "A regular verb adds -ed to show the past: mixed.",
+        "The answer is mixed. Mix is present, and will mix is future."
+      ],
+      "misconception": "A common mix-up is leaving the plain verb because it looks short and simple. The clue Last night needs a past tense verb.",
+      "why": "The answer is mixed. Last night is over, so the verb needs the past tense. Mix is present tense, and will mix is future tense.",
+      "like": [
+        "SK-GUM2-1-C12"
+      ]
+    },
+    {
+      "id": "SK-GUM2-1-S13",
+      "type": "dropdown",
+      "points": 2,
+      "dok": 2,
+      "std": [
+        "3.L.GC.1:R:form-and-use-simple-verb-tenses"
+      ],
+      "passages": [],
+      "prompt": "Fill each gap with the verb form that suits its clue.",
+      "text": "Yesterday, the wind {0} the leaves across the yard. Next week, Dad {1} the leaves into piles.",
+      "slots": [
+        {
+          "options": [
+            "tosses",
+            "tossed",
+            "will toss"
+          ],
+          "answer": 1
+        },
+        {
+          "options": [
+            "rakes",
+            "will rake",
+            "will raked"
+          ],
+          "answer": 1
+        }
+      ],
+      "clue": "Each sentence has its own clue. Match each verb to its own clue.",
+      "hints": [
+        "Each sentence has its own clue. Match each verb to its own clue.",
+        "Yesterday is over, and Next week has not come yet. Decide which tense each clue shows.",
+        "Whatever follows the word will stays plain. Use that to check the second gap."
+      ],
+      "how": [
+        "Use the clue in each sentence.",
+        "Yesterday shows the past, so the first gap needs a past form.",
+        "Next week shows the future, so the second gap needs will plus the plain verb. The answers are tossed and will rake."
+      ],
+      "misconception": "A common mix-up is using one tense for both gaps. Each sentence has its own clue.",
+      "why": "The answers are tossed and will rake. Yesterday is in the past, so the wind tossed the leaves. Next week is in the future, so Dad will rake. Tosses is present tense, and will raked puts -ed after will.",
+      "like": [
+        "SK-GUM2-1-C13"
+      ]
+    },
+    {
+      "id": "SK-GUM2-1-S14",
+      "type": "hottext",
+      "points": 1,
+      "dok": 2,
+      "std": [
+        "3.L.GC.1:R:form-and-use-simple-verb-tenses"
+      ],
+      "passages": [],
+      "prompt": "Which sentence tells about a finished action and writes the verb correctly?",
+      "options": [
+        "Last Friday, the choir performed for the new principal.",
+        "Last Friday, the choir perform for the new principal.",
+        "Last Friday, the choir will perform for the new principal.",
+        "Last Friday, the choir will performed for the new principal."
+      ],
+      "answer": [
+        0
+      ],
+      "pick": 1,
+      "clue": "Past tense tells about something that already happened. Check how each verb is built.",
+      "hints": [
+        "Past tense tells about something that already happened. Check how each verb is built.",
+        "All four sentences begin with the same clue, so compare only the verbs. Which ones use will, and which do not?",
+        "Will perform is a future form. Think about the other choices."
+      ],
+      "how": [
+        "Last Friday is over, so the verb must show the past.",
+        "A regular verb adds -ed for the past: performed.",
+        "The answer is \"Last Friday, the choir performed for the new principal.\" Perform is present, will perform is future, and will performed mixes two tenses."
+      ],
+      "misconception": "A common mix-up is choosing the plain verb because it looks safe. The clue Last Friday needs a past verb.",
+      "why": "The answer is \"Last Friday, the choir performed for the new principal.\" Last Friday is over, so the verb is past tense. Perform is present tense, will perform is future tense, and will performed mixes two tenses.",
+      "like": [
+        "SK-GUM2-1-C14"
+      ]
+    },
+    {
+      "id": "SK-GUM2-1-S15",
+      "type": "mc",
+      "points": 1,
+      "dok": 3,
+      "std": [
+        "3.L.GC.1:R:form-and-use-simple-verb-tenses"
+      ],
+      "passages": [],
+      "prompt": "Rex claims you need a word like tomorrow to write about the future. Which sentence proves he is mistaken?",
+      "choices": [
+        {
+          "text": "The tide will rise slowly over the sand.",
+          "correct": true
+        },
+        {
+          "text": "Tomorrow, the tide will rise slowly over the sand."
+        },
+        {
+          "text": "Every night, the tide rises slowly over the sand."
+        },
+        {
+          "text": "Last night, the tide rose slowly over the sand."
+        }
+      ],
+      "clue": "To prove an idea wrong, find an example that breaks it. Check each sentence for a clue word and for the verb.",
+      "hints": [
+        "To prove an idea wrong, find an example that breaks it. Check each sentence for a clue word and for the verb.",
+        "Underline the clue words in each choice. Then ask what tells the time in a sentence that has none.",
+        "The sentence with Tomorrow has the clue Rex wants, so it cannot prove him wrong. Think about the others."
+      ],
+      "how": [
+        "Rex says a future sentence needs a clue word. Look for a future sentence with no clue word.",
+        "Most choices start with a clue. One does not, but the word will in front of the verb tells about later.",
+        "The answer is \"The tide will rise slowly over the sand.\" The helping word will shows the future without a clue."
+      ],
+      "misconception": "A common mix-up is thinking the clue word is the only way to show time. The helping word will shows the future by itself.",
+      "why": "The answer is \"The tide will rise slowly over the sand.\" It has no clue word, but will rise tells about the future. That proves Rex wrong. The other sentences all begin with a clue word.",
+      "like": [
+        "SK-GUM2-1-C15"
+      ]
+    }
+  ],
+  addons: {
+    "SK-GUM2-1-P1": {
+      "hints": [
+        "Find the time word in the sentence. Decide whether it points to the past, the present or the future.",
+        "Think about the bike ride. Has Rosa finished it, is she doing it now, or is it still to come?",
+        "A verb with will in front tells about the future. Think about the other two choices."
+      ],
+      "how": [
+        "Look at the time word: Yesterday. It is over, so the verb must be past tense.",
+        "A regular verb adds -ed for the past.",
+        "The answer is pedaled. Pedals is present tense, and will pedal is future tense."
+      ],
+      "misconception": "A common mix-up is picking the verb that sounds most like the bike. The time word Yesterday decides the tense."
+    },
+    "SK-GUM2-1-P2": {
+      "hints": [
+        "Future tense tells about something that has not happened yet. Look at how each verb is built.",
+        "Check each sentence for the helping word that shows the future.",
+        "Two of the sentences tell about things that are over. Think about the other two."
+      ],
+      "how": [
+        "Check each sentence for a verb that shows later.",
+        "Will practice uses the helping word will, so it is future tense.",
+        "Practiced and cheered are past, and practices is present."
+      ],
+      "misconception": "A common mix-up is picking a sentence that mentions Monday. The verb shows the time, not the day."
+    },
+    "SK-GUM2-1-P3": {
+      "hints": [
+        "Check that the time word in each sentence and its verb tell the same time.",
+        "Take the sentences one at a time. Underline the time word, then the verb.",
+        "Two sentences use will or Next week, and they match. Think about the rest."
+      ],
+      "how": [
+        "Read each time word and its verb.",
+        "Yesterday is in the past, but cooks is present tense.",
+        "The other sentences match: Last night with watched, Tomorrow with will help, Every Sunday with calls, and Next week with will visit."
+      ],
+      "misconception": "A common mix-up is hunting only for the word will. A present verb with a past time word is an error too."
+    },
+    "SK-GUM2-1-P4": {
+      "hints": [
+        "Look at each verb. Check for -ed, for the helping word will, or for neither.",
+        "Sort the sentences that have will first. Then decide about the rest by looking at the ending.",
+        "Locked and croaked end in -ed. Think about which column fits that ending."
+      ],
+      "how": [
+        "Find the verb in each sentence.",
+        "Locked and croaked end in -ed, so they are past. Locks and croak have no -ed and no will, so they are present.",
+        "Will lock and will croak use will, so they are future."
+      ],
+      "misconception": "A common mix-up is calling every verb with -s past tense. Past tense for a regular verb ends in -ed."
+    },
+    "SK-GUM2-1-P5": {
+      "hints": [
+        "Each sentence has its own time word. Match each verb to its own time word.",
+        "Last spring has already happened, and Next spring has not. Think about which tense each time word shows.",
+        "Whatever follows will stays plain. Use that to check the second blank."
+      ],
+      "how": [
+        "The first blank follows Last spring, which is over, so it needs a past verb.",
+        "The second blank follows Next spring, which has not come yet, so it needs will plus the plain verb.",
+        "The answers are planted and will plant. Will planted puts -ed after will."
+      ],
+      "misconception": "A common mix-up is copying the first verb into the second blank. Each sentence has its own time word."
+    }
+  },
+  /* B7b:core:end */
   test: [
     { id: "SK-GUM2-1-T1", type: "dropdown", points: 1, dok: 1, passages: [],
       prompt: "Choose the verb that correctly completes the sentence.",

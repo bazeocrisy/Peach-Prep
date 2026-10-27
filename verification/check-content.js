@@ -2,9 +2,10 @@
 /* Peach Prep content checker -- the release gate for every set and task
    listed in js/data/manifest.js (and, with --all, every file on disk).
    Usage: node verification/check-content.js [--all] [--release]
-          node verification/check-content.js --all --record-versions
+          node verification/check-content.js --all --record-versions [--accept-reword <itemId,...> --by "<name>"] [--init]
+          node verification/check-content.js --print-hashes <key[,key]>
           node verification/check-content.js --all --record-review <key[,key]> [--part core|similar|test|all]
-                --by "<reviewer,reviewer>" --record <review file under docs/> [--authors "<name,name>"] [--date YYYY-MM-DD]
+                --by "<reviewer,reviewer>" --authors "<name,name>" --record <review .md file under docs/> [--lead-attest "<reason>"] [--date YYYY-MM-DD] [--init]
    --release (expansion 2026-10-22, 01-architecture 2.6 rules 1, 11, 12): the migration warning, a missing or stale
    independent-review record and a material change to a check without a new testRev become FAILURES. Without it they
    stay warnings, so the day-to-day gate is unchanged. --record-versions writes verification/assessment-versions.json;
@@ -696,10 +697,14 @@ if (coreStats.noCore.length) {
 }
 
 /* ---------- expansion 2026-10-22 (01-architecture 2.4 item 5, 2.6 rules 11 and 12): check versions and the review ledger ----------
-   assessment-versions.json: per check form (<lesson>:A, <lesson>:B) a rev, a full content hash and a material hash
-   (ids, types, points and answer keys, not wording). A material change with the same testRev is the problem the rev exists for.
-   review-ledger.json: who independently reviewed which content, with the hash of what they reviewed.
-   Both are warnings by default and failures with --release. */
+   assessment-versions.json (v2): per check form (<lesson>:A, <lesson>:B) a rev (with the list of revs ever used), a full content
+   hash (items and the passages they point at), a material hash (ids, types, points, answer positions AND the text of what the
+   key is: correct choices, columns, option order, step order, passage ids), and a per-item/per-passage question hash (q).
+   A material change with the same testRev is the problem the rev exists for. A reworded question (q changed) that keeps its id,
+   points and key must be acknowledged by name when it is recorded, and fails --release on a lesson with core until it is.
+   review-ledger.json: who independently reviewed which content, the hash of that content, and the hash of the review file.
+   Both are warnings by default and failures with --release, except damaged files, which always fail.
+   Neither file is a signature: anyone who can run a command or edit the file can write any name. They are a process record. */
 const crypto = require("crypto");
 const canon = v => JSON.stringify(v, (k, x) => x && typeof x === "object" && !Array.isArray(x) ? Object.keys(x).sort().reduce((o, key) => (o[key] = x[key], o), {}) : x);
 const sha = v => crypto.createHash("sha256").update(canon(v)).digest("hex");
@@ -713,93 +718,198 @@ function keyFacts(v, pth, out) {
   });
   return out;
 }
-const materialOf = items => sha((items || []).map(it => keyFacts(it, "", [])));
-/* The question text of each item (prompt, stem, passage text of a text-box item), as a short hash, so a record can name the items
-   whose question was reworded. Clues, hints and explanations are left out on purpose. */
-const questionOf = items => { const o = {}; (items || []).forEach(it => { o[it.id] = sha([it.prompt, it.stem, it.text, it.choices && it.choices.map(c => c && c.text)]).slice(0, 12); }); return o; };
+/* what the key IS, as text and order, for every item type (a key kept as "the choice at index i" moves when the text or order moves) */
+function keyText(it) {
+  const t = c => (c && typeof c === "object" ? c.text : c);
+  const right = ch => (Array.isArray(ch) ? ch.map((c, i) => (c && c.correct ? [i, t(c)] : null)).filter(Boolean) : []);
+  const base = { p: it.passages || [] };
+  switch (it.type) {
+    case "mc": case "ms": return Object.assign(base, { right: right(it.choices) });
+    case "ebsr": return Object.assign(base, { a: right(it.partA && it.partA.choices), b: right(it.partB && it.partB.choices) });
+    case "match": return Object.assign(base, { cols: it.cols, rows: it.rows });
+    case "dropdown": return Object.assign(base, { slots: (it.slots || []).map(s => [s.answer, s.options, (s.options || [])[s.answer]]) });
+    case "hottext": return Object.assign(base, it.options ? { options: it.options, answer: it.answer, text: (it.answer || []).map(i => it.options[i]) } : { targets: it.targets, answer: it.answer });
+    case "order": return Object.assign(base, { steps: it.steps });
+    default: return base;
+  }
+}
+const materialOf = items => sha((items || []).map(it => [keyFacts(it, "", []), keyText(it)]));
+/* the question as the child reads it: everything except clues, explanations, hints and bookkeeping */
+const NOT_QUESTION = new Set(["clue", "why", "hints", "how", "misconception", "mix", "dok", "std", "like", "explanation"]);
+const omitDeep = v => Array.isArray(v) ? v.map(omitDeep) : v && typeof v === "object" ? Object.keys(v).sort().reduce((o, k) => (NOT_QUESTION.has(k) || (o[k] = omitDeep(v[k])), o), {}) : v;
+const passagesFor = (L, items) => {
+  const want = new Set(); (items || []).forEach(it => (it.passages || []).forEach(id => want.add(id)));
+  return (L.passages || []).filter(p => p && want.has(p.id));
+};
+const questionOf = (L, items) => {
+  const o = {};
+  (items || []).forEach(it => { o[it.id] = sha(omitDeep(it)).slice(0, 12); });
+  passagesFor(L, items).forEach(p => { o["passage:" + p.id] = sha(p).slice(0, 12); });
+  return o;
+};
 const lessonKeyOf = L => L.key || L.code;
 function coreResolved(L) {
   const prac = {}; (L.practice || []).forEach(it => { prac[it.id] = it; });
   const ad = L.addons || {};
   return { rev: L.core.rev, sets: L.core.sets.map(st => ({ title: st.title, items: (st.items || []).map(it => it && it.ref ? Object.assign({}, prac[it.ref] || { ref: it.ref }, ad[it.ref] || {}) : it) })) };
 }
+const coreItems = L => [].concat(...coreResolved(L).sets.map(s => s.items));
 const VERS_FILE = path.join(ROOT, "verification/assessment-versions.json");
 const LEDGER_FILE = path.join(ROOT, "docs/expansion-2026-10-22/review-ledger.json");
-const readJson = f => { try { return JSON.parse(fs.readFileSync(f, "utf8")); } catch (e) { return null; } };
+const isObj = v => !!v && typeof v === "object" && !Array.isArray(v);
+/* A record file is "missing", "corrupt" (exists but unreadable or the wrong shape) or "ok". Nothing here ever turns corrupt into empty. */
+function readRecord(file, field, versions) {
+  if (!fs.existsSync(file)) return { state: "missing" };
+  let d;
+  try { d = JSON.parse(fs.readFileSync(file, "utf8")); } catch (e) { return { state: "corrupt", why: "it is not valid JSON (" + String(e.message).slice(0, 80) + ")" }; }
+  if (!isObj(d)) return { state: "corrupt", why: "it is not a JSON object" };
+  if (!(versions ? d.v === 1 || d.v === 2 : d.v === 1)) return { state: "corrupt", why: "its format number \"v\" is missing or unknown" };
+  if (!isObj(d[field])) return { state: "corrupt", why: "it has no \"" + field + "\" object" };
+  if (!Object.keys(d[field]).every(k => isObj(d[field][k]))) return { state: "corrupt", why: "an entry under \"" + field + "\" is not an object" };
+  return { state: "ok", data: d };
+}
+function writeAtomic(file, text) { const tmp = file + ".tmp-" + process.pid; fs.writeFileSync(tmp, text); fs.renameSync(tmp, file); }
 const today = () => { const d = new Date(), p = n => String(n).padStart(2, "0"); return d.getFullYear() + "-" + p(d.getMonth() + 1) + "-" + p(d.getDate()); };
+const realDate = s => { const m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(s || ""); if (!m) return false; const d = new Date(Date.UTC(+m[1], +m[2] - 1, +m[3])); return d.getUTCFullYear() === +m[1] && d.getUTCMonth() === +m[2] - 1 && d.getUTCDate() === +m[3]; };
 const revOf = (L, f) => { const t = L.testRev; const v = t && typeof t === "object" ? t[f] : null; return typeof v === "string" && v.trim() ? v : "1"; };
 function currentForms() {
   const out = {};
   lessons.forEach(L => {
     const k = lessonKeyOf(L);
-    if ((L.test || []).length) out[k + ":A"] = { rev: revOf(L, "A"), hash: sha(L.test), mat: materialOf(L.test), q: questionOf(L.test) };
-    if (Array.isArray(L.testB) && L.testB.length) out[k + ":B"] = { rev: revOf(L, "B"), hash: sha(L.testB), mat: materialOf(L.testB), q: questionOf(L.testB) };
+    [["A", L.test], ["B", L.testB]].forEach(([f, items]) => {
+      if (!Array.isArray(items) || !items.length) return;
+      out[k + ":" + f] = { rev: revOf(L, f), hash: sha({ items, passages: passagesFor(L, items) }), mat: materialOf(items), q: questionOf(L, items) };
+    });
   });
   return out;
 }
 function currentInputs() {
   const acc = (ctx.window.PP_ACCEPTED || []).slice().sort(), forms = currentForms();
-  return { rev: "1", accepted: acc, groups: sha((ctx.window.PP_STD_GROUPS || []).map(g => [g.code, g.order, g.lessons])), forms: acc.map(k => [k, (forms[k + ":A"] || {}).mat || null, (forms[k + ":B"] || {}).mat || null]) };
+  return { accepted: acc, groups: sha((ctx.window.PP_STD_GROUPS || []).map(g => [g.code, g.order, g.lessons])), forms: acc.map(k => [k, (forms[k + ":A"] || {}).mat || null, (forms[k + ":B"] || {}).mat || null]) };
 }
 function currentParts() {
   const out = {};
   lessons.forEach(L => {
     const k = lessonKeyOf(L), o = {};
-    if (L.core) { o.core = { rev: L.core.rev, hash: sha(coreResolved(L)) }; o.similar = { rev: L.core.rev, hash: sha(L.similar || []) }; }
-    if ((L.test || []).length) o["test:A"] = { rev: revOf(L, "A"), hash: sha(L.test) };
-    if (Array.isArray(L.testB) && L.testB.length) o["test:B"] = { rev: revOf(L, "B"), hash: sha(L.testB) };
+    if (L.core) {
+      const ci = coreItems(L);
+      o.core = { rev: L.core.rev, hash: sha({ core: coreResolved(L), passages: passagesFor(L, ci) }) };
+      o.similar = { rev: L.core.rev, hash: sha({ similar: L.similar || [], passages: passagesFor(L, L.similar || []) }) };
+    }
+    [["A", L.test], ["B", L.testB]].forEach(([f, items]) => { if (Array.isArray(items) && items.length) o["test:" + f] = { rev: revOf(L, f), hash: sha({ items, passages: passagesFor(L, items) }) }; });
     if (Object.keys(o).length) out[k] = o;
   });
   return out;
 }
 const slot = (e, part) => { if (!e) return null; if (part.indexOf("test:") === 0) return e.test && e.test[part.slice(5)] || null; return e[part] || null; };
-const partNames = parts => Object.keys(parts);
+const hasCoreKey = k => lessons.some(L => lessonKeyOf(L) === k && L.core);
+const formLesson = fk => fk.replace(/:[AB]$/, "");
+/* names: trimmed, case-folded, without full stops; "A. Author" and "Al Author" share a first initial and surname, so they collide */
+const normName = n => String(n || "").toLowerCase().replace(/[.,]/g, " ").replace(/\s+/g, " ").trim();
+const nameKey = n => { const t = normName(n).split(" "); return t.length > 1 ? t[0][0] + " " + t[t.length - 1] : t[0]; };
+const sameName = (a, b) => normName(a) === normName(b) || nameKey(a) === nameKey(b);
+const collide = (rv, au) => rv.filter(r => au.some(a => sameName(r, a)));
+const listOf = s => (s || "").split(",").map(x => x.trim()).filter(Boolean);
+const sliceList = (a, n) => a.slice(0, n || 10).join(", ") + (a.length > (n || 10) ? ", and " + (a.length - (n || 10)) + " more" : "");
+const inDocs = rel => { const p = path.resolve(ROOT, rel || ""); return p.startsWith(path.join(ROOT, "docs") + path.sep) && /\.md$/.test(p) && fs.existsSync(p) && fs.statSync(p).isFile() ? p : null; };
+const fileHash = p => crypto.createHash("sha256").update(fs.readFileSync(p)).digest("hex");
+const refuse = msg => { console.log("NOT RECORDED: " + msg); process.exit(1); };
 
+if (ARGV.includes("--print-hashes")) {
+  const cp = currentParts(), keys = listOf(argOf("--print-hashes"));
+  if (!keys.length || keys.some(k => !cp[k])) refuse("name lessons that have reviewable content after --print-hashes");
+  keys.forEach(k => Object.keys(cp[k]).forEach(pn => console.log(k + "  " + pn + "  " + cp[k][pn].hash.slice(0, 12))));
+  console.log("Put these lines in the review file when the review is done. --record-review then accepts the file as proof of what was reviewed.");
+  process.exit(0);
+}
 if (ARGV.includes("--record-versions")) {
-  if (!all) { console.log("NOT RECORDED: run --record-versions together with --all, so every lesson file is read"); process.exit(1); }
-  const cur = currentForms(), old = (readJson(VERS_FILE) || {}).forms || {}, forms = {}, refused = [];
+  if (!all) refuse("run --record-versions together with --all, so every lesson file is read");
+  const rr = readRecord(VERS_FILE, "forms", true);
+  if (rr.state === "corrupt") refuse("verification/assessment-versions.json exists but " + rr.why + ". It was not touched. Restore it from the repository before recording.");
+  if (rr.state === "missing" && !ARGV.includes("--init")) refuse("verification/assessment-versions.json does not exist. If that is intended, run again with --init.");
+  if (rr.state === "ok" && !Object.keys(rr.data.forms).length && !ARGV.includes("--init")) refuse("verification/assessment-versions.json lists no forms at all, which looks like a truncated file. It was not touched. Restore it, or run with --init if it is meant to start again.");
+  const old = rr.state === "ok" ? rr.data : { forms: {} }, oldFormat = rr.state === "ok" && old.v !== 2;
+  const oldForms = old.forms, cur = currentForms(), forms = {}, bad = [], notes = [];
+  const ackIds = listOf(argOf("--accept-reword")), by = argOf("--by");
+  if (ackIds.length && !by) refuse("--accept-reword needs --by \"<name>\", the person who says these are corrections and not different questions");
+  const usedAck = new Set();
   Object.keys(cur).sort().forEach(k => {
-    const o = old[k], c = cur[k];
-    if (o && o.mat !== c.mat && o.rev === c.rev) { refused.push(k + " (material change, testRev still \"" + c.rev + "\")"); forms[k] = o; }
-    else forms[k] = { rev: c.rev, hash: c.hash, mat: c.mat, q: c.q };
+    const o = oldForms[k], c = cur[k], hist = o && !o.removed && Array.isArray(o.history) ? o.history.slice() : (o && o.removed && Array.isArray(o.history) ? o.history.slice() : (o && o.rev ? [o.rev] : []));
+    if (o && o.removed && hist.indexOf(c.rev) >= 0) bad.push(k + " was removed and comes back with rev \"" + c.rev + "\", which it used before");
+    else if (o && !o.removed && !oldFormat) {
+      if (o.rev !== c.rev) {
+        if (hist.indexOf(c.rev) >= 0) bad.push(k + ": testRev \"" + c.rev + "\" was used before (history " + hist.join(", ") + "); a rev is never reused");
+        else if (/^\d+$/.test(o.rev) && /^\d+$/.test(c.rev) && Number(c.rev) <= Number(o.rev)) bad.push(k + ": testRev \"" + c.rev + "\" is lower than the recorded \"" + o.rev + "\"");
+      } else {
+        if (o.mat !== c.mat) bad.push(k + " (material change: ids, points, answer keys, the text of the key or passage ids, with testRev still \"" + c.rev + "\")");
+        const changed = Object.keys(c.q).filter(id => o.q && o.q[id] !== c.q[id] && o.q[id] !== undefined).concat(Object.keys(o.q || {}).filter(id => c.q[id] === undefined));
+        if (changed.length) {
+          if (hasCoreKey(formLesson(k))) {
+            const missing = changed.filter(id => ackIds.indexOf(id) < 0);
+            if (missing.length) bad.push(k + ": the question text changed on " + missing.join(", ") + " while the id, points and key stayed. If it is a correction, record it with --accept-reword " + missing.join(",") + " --by \"<name>\"; if it is a different question, raise testRev");
+            else changed.forEach(id => { usedAck.add(id); c.acks = (o.acks || []).concat([{ id, by, date: today(), q: c.q[id] }]); });
+          } else notes.push(k + ": question text changed on " + changed.join(", ") + " (legacy lesson, recorded without an acknowledgement)");
+        }
+      }
+    }
+    forms[k] = { rev: c.rev, hash: c.hash, mat: c.mat, q: c.q, history: hist.indexOf(c.rev) >= 0 ? hist : hist.concat([c.rev]) };
+    const acks = (c.acks || (o && !o.removed && o.rev === c.rev && Array.isArray(o.acks) ? o.acks : null));
+    if (acks) forms[k].acks = acks;
   });
-  if (refused.length) { console.log("NOT RECORDED: a check changed materially (ids, points or answer keys) without a new testRev. Raise testRev in the lesson first: " + refused.join("; ")); process.exit(1); }
-  const inp = currentInputs(), oi = (readJson(VERS_FILE) || {}).inputs;
-  const inputs = { rev: oi && oi.rev || "1", hash: sha({ accepted: inp.accepted, groups: inp.groups, forms: inp.forms }) };
-  if (oi && oi.hash !== inputs.hash && oi.rev === inputs.rev) inputs.rev = String(Number(oi.rev) + 1);
-  fs.writeFileSync(VERS_FILE, JSON.stringify({ v: 1, note: "Written by check-content.js --record-versions. rev is the lesson's testRev (default 1). hash covers every word of the form; mat covers ids, types, points and answer keys only. Reviews and the cumulative review are built at run time from the accepted lessons' forms, so their version is the hash of those inputs (rev here, and a short signature stored on each result).", forms, inputs }, null, 2) + "\n");
-  console.log("recorded " + Object.keys(forms).length + " check forms and the review inputs (rev " + inputs.rev + ") in verification/assessment-versions.json");
+  ackIds.forEach(id => { if (!usedAck.has(id)) bad.push("--accept-reword names " + id + ", which has not changed question text under an unchanged rev"); });
+  if (bad.length) refuse(bad.join("; "));
+  Object.keys(oldForms).forEach(k => { if (!cur[k]) forms[k] = oldForms[k].removed ? oldForms[k] : { removed: today(), lastRev: oldForms[k].rev, history: oldForms[k].history || [oldForms[k].rev] }; });
+  const inp = currentInputs(), oi = old.inputs, ih = sha(inp);
+  const inputs = { rev: oi && /^\d+$/.test(oi.rev) ? oi.rev : "1", hash: ih };
+  if (oi && oi.hash !== ih && oi.rev === inputs.rev) inputs.rev = String(Number(oi.rev) + 1);
+  writeAtomic(VERS_FILE, JSON.stringify({ v: 2, note: "Written by check-content.js --record-versions; do not edit by hand. rev is the lesson's testRev (default 1) and history lists every rev a form has used, so a rev is never lowered or reused. hash covers every word of the form and the passages it points at; mat covers ids, types, points, answer positions and the text of the key; q is a hash of each question (and passage) as the child reads it, so a reworded question is named; acks records who said a reworded question is a correction. Reviews and the cumulative review are built at run time from the accepted lessons' checks: inputs.rev is informational, and each stored result carries a run-time signature. This is a process record, not a signature.", forms, inputs }, null, 2) + "\n");
+  console.log("recorded " + Object.keys(cur).length + " check forms and the review inputs (rev " + inputs.rev + ") in verification/assessment-versions.json" + (oldFormat ? " (the earlier record used the previous hashing and had no question hashes, so rewordings before this run cannot be named)" : ""));
+  notes.forEach(n => console.log("  note  " + n));
   process.exit(0);
 }
 if (ARGV.includes("--record-review")) {
-  if (!all) { console.log("NOT RECORDED: run --record-review together with --all, so every lesson file is read"); process.exit(1); }
-  const keys = (argOf("--record-review") || "").split(",").map(x => x.trim()).filter(Boolean), by = (argOf("--by") || "").split(",").map(x => x.trim()).filter(Boolean);
-  const au = (argOf("--authors") || "").split(",").map(x => x.trim()).filter(Boolean), rec = argOf("--record"), date = argOf("--date") || today(), part = argOf("--part") || "all";
-  const bad = [];
+  if (!all) refuse("run --record-review together with --all, so every lesson file is read");
+  const keys = listOf(argOf("--record-review")), by = listOf(argOf("--by")), au = listOf(argOf("--authors")), rec = argOf("--record"), date = argOf("--date") || today(), part = argOf("--part") || "all", attest = argOf("--lead-attest");
+  const bad = [], cp = currentParts();
   if (!keys.length) bad.push("name the lesson key(s) after --record-review");
-  if (!by.length) bad.push("--by needs at least one reviewer");
-  if (!rec || !fs.existsSync(path.join(ROOT, rec))) bad.push("--record must name an existing review file in the repository");
-  if (!/^\d{4}-\d{2}-\d{2}$/.test(date)) bad.push("--date must be YYYY-MM-DD");
-  if (by.some(x => au.indexOf(x) >= 0)) bad.push("a reviewer is also listed as an author: " + by.filter(x => au.indexOf(x) >= 0).join(", "));
-  const cp = currentParts();
   keys.forEach(k => { if (!cp[k]) bad.push(k + " is not a lesson with reviewable content"); });
-  if (bad.length) { console.log("NOT RECORDED: " + bad.join("; ")); process.exit(1); }
-  const led = readJson(LEDGER_FILE) || { v: 1, lessons: {} };
+  if (!by.length) bad.push("--by needs at least one reviewer (a person or role id as it appears in the review file)");
+  if (!au.length) bad.push("--authors is required: name the authors from the author log, so independence can be checked");
+  if (["all", "core", "similar", "test"].indexOf(part) < 0) bad.push("--part must be core, similar, test or all");
+  if (!realDate(date)) bad.push("--date must be a real date as YYYY-MM-DD");
+  else if (date > today()) bad.push("--date is in the future");
+  const clash = collide(by, au);
+  if (clash.length) bad.push("a reviewer is also an author (names are compared ignoring case, full stops and given names beyond the first initial): " + clash.join(", "));
+  const recPath = inDocs(rec);
+  if (!recPath) bad.push("--record must be an existing .md review file under docs/");
+  const rr = readRecord(LEDGER_FILE, "lessons");
+  if (rr.state === "corrupt") bad.push("review-ledger.json exists but " + rr.why + "; it was not touched");
+  if (rr.state === "missing" && !ARGV.includes("--init")) bad.push("review-ledger.json does not exist; run with --init if that is intended");
+  if (bad.length) refuse(bad.join("; "));
+  const text = normName(fs.readFileSync(recPath, "utf8")), raw = fs.readFileSync(recPath, "utf8");
+  const sel = k => Object.keys(cp[k]).filter(pn => part === "all" || pn.split(":")[0] === part);
+  keys.forEach(k => { if (!sel(k).length) bad.push(k + " has no " + part + " part"); if (raw.indexOf(k) < 0) bad.push("the review file does not mention " + k + ", so it is not a review of that lesson"); });
+  by.forEach(r => { if (text.indexOf(normName(r)) < 0) bad.push("the review file does not name the reviewer \"" + r + "\""); });
+  const basis = {};
+  keys.forEach(k => { basis[k] = sel(k).every(pn => raw.indexOf(cp[k][pn].hash.slice(0, 12)) >= 0) ? "hash-in-review" : "lead-attestation"; });
+  keys.forEach(k => { if (basis[k] === "lead-attestation" && !(attest && attest.trim().length >= 10)) bad.push(k + ": the review file does not contain the current hash of every part being recorded (run --print-hashes " + k + " and have the reviewer add the lines), and no --lead-attest \"<reason, at least ten characters>\" was given"); });
+  if (bad.length) refuse(bad.join("; "));
+  const led = rr.state === "ok" ? rr.data : { v: 1, lessons: {} };
   keys.forEach(k => {
     const e = led.lessons[k] || (led.lessons[k] = {});
-    Object.keys(cp[k]).forEach(pn => {
-      if (part !== "all" && pn.split(":")[0] !== part) return;
-      const entry = { rev: cp[k][pn].rev, hash: cp[k][pn].hash, reviewers: by, authors: au, date, record: rec };
+    sel(k).forEach(pn => {
+      const entry = { rev: cp[k][pn].rev, hash: cp[k][pn].hash, reviewers: by, authors: au, date, record: path.relative(ROOT, recPath).split(path.sep).join("/"), recordHash: fileHash(recPath), basis: basis[k] };
+      if (basis[k] === "lead-attestation") entry.attest = attest.trim();
       if (pn.indexOf("test:") === 0) { (e.test = e.test || {})[pn.slice(5)] = entry; } else e[pn] = entry;
     });
   });
-  fs.writeFileSync(LEDGER_FILE, JSON.stringify(led, null, 2) + "\n");
-  console.log("recorded " + keys.join(", ") + " (" + part + ") as reviewed by " + by.join(", ") + " in docs/expansion-2026-10-22/review-ledger.json");
+  writeAtomic(LEDGER_FILE, JSON.stringify(led, null, 2) + "\n");
+  console.log("recorded " + keys.join(", ") + " (" + part + ") as reviewed by " + by.join(", ") + " in docs/expansion-2026-10-22/review-ledger.json; basis " + keys.map(k => k + ": " + basis[k]).join(", "));
   process.exit(0);
 }
 
 (function () {
-  const C = "versions", R = "ledger", V = readJson(VERS_FILE), LG = readJson(LEDGER_FILE), lev = RELEASE ? F : W;
+  const C = "versions", R = "ledger", lev = RELEASE ? F : W;
   /* testRev shape (always a failure) */
   lessons.forEach(L => {
     if (L.testRev === undefined) return;
@@ -813,53 +923,69 @@ if (ARGV.includes("--record-review")) {
     });
   });
   /* versions */
-  if (!V || typeof V.forms !== "object") { lev(C, "verification/assessment-versions.json is missing or unreadable (run --record-versions)"); }
+  const vr = readRecord(VERS_FILE, "forms", true);
+  if (vr.state === "corrupt") F(C, "verification/assessment-versions.json is damaged: " + vr.why);
+  else if (vr.state === "missing") lev(C, "verification/assessment-versions.json is missing (run --record-versions --init)");
+  else if (vr.data.v !== 2) lev(C, "the version record uses the previous hashing (no passages, no key text, no question hashes): run --record-versions once the content has settled");
   else {
-    const cur = currentForms(), mat = [], edit = [], stale = [], added = [], gone = [];
+    const V = vr.data, cur = currentForms(), mat = [], edit = [], stale = [], added = [], gone = [], reword = [], rewordLegacy = [], passEdit = [];
     Object.keys(cur).forEach(k => {
       const o = V.forms[k], c = cur[k];
-      if (!o) { added.push(k); return; }
+      if (!o || o.removed) { added.push(k); return; }
       if (o.rev !== c.rev) { stale.push(k + " (record rev " + o.rev + ", testRev " + c.rev + ")"); return; }
-      if (o.mat !== c.mat) mat.push(k);
-      else if (o.hash !== c.hash) edit.push(k);
+      if (o.mat !== c.mat) { mat.push(k); return; }
+      if (o.hash === c.hash) return;
+      const ids = Object.keys(c.q).filter(id => o.q && o.q[id] !== undefined && o.q[id] !== c.q[id]);
+      const items = ids.filter(id => id.indexOf("passage:") !== 0), pass = ids.filter(id => id.indexOf("passage:") === 0);
+      if (items.length || pass.length) (hasCoreKey(formLesson(k)) ? reword : rewordLegacy).push(k + " (" + ids.join(", ") + ")");
+      else edit.push(k);
     });
-    if (all) Object.keys(V.forms).forEach(k => { if (!cur[k]) gone.push(k); });
-    const list = a => a.slice(0, 10).join(", ") + (a.length > 10 ? ", and " + (a.length - 10) + " more" : "");
-    if (mat.length) lev(C, mat.length + " check form" + (mat.length === 1 ? "" : "s") + " changed materially (ids, points or answer keys) with the same testRev, so old attempts would be read as the new check: " + list(mat) + ". Raise testRev in the lesson, then run --record-versions");
-    if (stale.length) lev(C, "testRev differs from the record for " + list(stale) + ". Run --record-versions");
-    if (added.length) lev(C, added.length + " check form" + (added.length === 1 ? " has" : "s have") + " no version record: " + list(added) + ". Run --record-versions");
-    if (gone.length) lev(C, "the version record lists forms that no longer exist: " + list(gone));
-    if (edit.length) W(C, edit.length + " check form" + (edit.length === 1 ? " was" : "s were") + " edited in wording only since the record (same ids, points and keys): " + list(edit) + ". testRev stays; run --record-versions to refresh the hash");
-    /* a reworded question can keep its id, points and answer position and still be a different question: name those items */
-    const reworded = [];
-    edit.concat(mat).forEach(k => { const o = V.forms[k], c = cur[k]; if (o && o.q) Object.keys(c.q).forEach(id => { if (o.q[id] && o.q[id] !== c.q[id]) reworded.push(id); }); });
-    if (reworded.length) W(C, "the question text itself (prompt, stem or choices, not only clue or explanation) changed on " + list(reworded) + " while the id, points and answer position stayed. If this is a different question, raise testRev; if it is a correction, leave it");
-    const inp = currentInputs(), ih = sha({ accepted: inp.accepted, groups: inp.groups, forms: inp.forms });
-    if (V.inputs && V.inputs.hash !== ih) lev(C, "the inputs of the reviews (accepted lessons, their checks' answer keys, the standard groups) changed since the record: run --record-versions, which raises the reviews' rev");
+    if (all) Object.keys(V.forms).forEach(k => { if (!cur[k] && !V.forms[k].removed) gone.push(k); });
+    if (mat.length) lev(C, mat.length + " check form" + (mat.length === 1 ? "" : "s") + " changed materially (ids, points, answer keys, the text of the correct answer, column or step order, or the passages used) with the same testRev, so old attempts would be read as the new check: " + sliceList(mat) + ". Raise testRev in the lesson, then run --record-versions");
+    if (reword.length) lev(C, reword.length + " check form" + (reword.length === 1 ? "" : "s") + " on a lesson with core had a question or passage reworded (the id, points and key stayed) and the change is not recorded: " + sliceList(reword) + ". If it is a different question, raise testRev; if it is a correction, record it with --record-versions --accept-reword <ids> --by \"<name>\"");
+    if (rewordLegacy.length) W(C, "question or passage text changed on legacy lessons (id, points and key stayed): " + sliceList(rewordLegacy) + ". If it is a different question, raise testRev");
+    if (stale.length) lev(C, "testRev differs from the record for " + sliceList(stale) + ". Run --record-versions");
+    if (added.length) lev(C, added.length + " check form" + (added.length === 1 ? " has" : "s have") + " no version record: " + sliceList(added) + ". Run --record-versions");
+    if (gone.length) lev(C, "the version record lists forms that no longer exist: " + sliceList(gone));
+    if (edit.length) W(C, edit.length + " check form" + (edit.length === 1 ? " was" : "s were") + " edited in clue, explanation or hint wording only since the record (same ids, points, keys and question text): " + sliceList(edit) + ". testRev stays; run --record-versions to refresh the hash");
+    Object.keys(V.forms).forEach(k => { (V.forms[k].acks || []).forEach(a => { if (!a || !a.by || !realDate(a.date)) F(C, "an acknowledgement on " + k + " has no name or no real date"); }); });
+    const ih = sha(currentInputs());
+    if (V.inputs && V.inputs.hash !== ih) lev(C, "the inputs of the reviews (accepted lessons, their checks' keys, the standard groups) changed since the record: run --record-versions (inputs.rev is informational)");
   }
   /* ledger */
-  if (!LG || typeof LG.lessons !== "object") { lev(R, "docs/expansion-2026-10-22/review-ledger.json is missing or unreadable"); return; }
+  const lr = readRecord(LEDGER_FILE, "lessons");
+  if (lr.state === "corrupt") { F(R, "docs/expansion-2026-10-22/review-ledger.json is damaged: " + lr.why); return; }
+  if (lr.state === "missing") { lev(R, "docs/expansion-2026-10-22/review-ledger.json is missing"); return; }
+  const LG = lr.data;
   /* Lead decision (2026-10-23): the existing legacy-lesson checks are grandfathered for release; the ledger is required for every
      lesson with core practice (its core, its similar items and its check forms). A legacy lesson can still be recorded. */
-  const need = currentParts(), hasCore = new Set(lessons.filter(L => L.core).map(lessonKeyOf)), missing = [], differ = [], invalid = [], orphan = [];
-  Object.keys(need).sort().forEach(k => partNames(need[k]).forEach(pn => {
+  const need = currentParts(), hasCore = new Set(lessons.filter(L => L.core).map(lessonKeyOf)), missing = [], differ = [], invalid = [], orphan = [], basisCount = { "hash-in-review": 0, "lead-attestation": 0 };
+  Object.keys(need).sort().forEach(k => Object.keys(need[k]).forEach(pn => {
     if (!hasCore.has(k) && !slot(LG.lessons[k], pn)) return;
     const e = slot(LG.lessons[k], pn), tag = k + " " + pn;
     if (!e) { missing.push(tag); return; }
     const probs = [];
     if (!Array.isArray(e.reviewers) || !e.reviewers.length || e.reviewers.some(x => typeof x !== "string" || !x.trim())) probs.push("no reviewers");
-    if (!/^\d{4}-\d{2}-\d{2}$/.test(e.date || "")) probs.push("no date");
-    if (typeof e.record !== "string" || !fs.existsSync(path.join(ROOT, e.record))) probs.push("review file not found");
-    if (Array.isArray(e.authors) && Array.isArray(e.reviewers) && e.reviewers.some(x => e.authors.indexOf(x) >= 0)) probs.push("a reviewer is also an author");
+    if (!Array.isArray(e.authors) || !e.authors.length || e.authors.some(x => typeof x !== "string" || !x.trim())) probs.push("no authors named");
+    else if (Array.isArray(e.reviewers) && collide(e.reviewers.filter(x => typeof x === "string"), e.authors).length) probs.push("a reviewer is also an author");
+    if (!realDate(e.date) || e.date > today()) probs.push("no real date, or a date in the future");
+    const rp = typeof e.record === "string" ? inDocs(e.record) : null;
+    if (!rp) probs.push("review file not found under docs/");
+    else if (e.recordHash && e.recordHash !== fileHash(rp)) probs.push("the review file changed after it was recorded");
+    else if (!e.recordHash) probs.push("no hash of the review file");
+    if (e.basis !== "hash-in-review" && e.basis !== "lead-attestation") probs.push("no basis (hash-in-review or lead-attestation)");
+    else if (e.basis === "lead-attestation" && !(typeof e.attest === "string" && e.attest.trim().length >= 10)) probs.push("a lead attestation with no reason");
     if (probs.length) { invalid.push(tag + " (" + probs.join(", ") + ")"); return; }
+    basisCount[e.basis]++;
     if (e.hash !== need[k][pn].hash || e.rev !== need[k][pn].rev) differ.push(tag);
   }));
   if (all) Object.keys(LG.lessons).forEach(k => { if (!need[k]) orphan.push(k); });
-  const list = a => a.slice(0, 12).join("; ") + (a.length > 12 ? "; and " + (a.length - 12) + " more" : "");
+  const list = a => sliceList(a, 12);
   if (invalid.length) F(R, invalid.length + " review record" + (invalid.length === 1 ? " is" : "s are") + " not valid: " + list(invalid));
-  if (differ.length) lev(R, differ.length + " part" + (differ.length === 1 ? "" : "s") + " changed since the independent review recorded for it (the shipped content is not what was reviewed): " + list(differ));
+  if (differ.length) lev(R, differ.length + " part" + (differ.length === 1 ? "" : "s") + " changed since the independent review recorded for it (the shipped content, with the passages it uses, is not what was reviewed): " + list(differ));
   if (missing.length) lev(R, missing.length + " part" + (missing.length === 1 ? " has" : "s have") + " no independent-review record: " + list(missing));
   if (orphan.length) lev(R, "the ledger names lessons that are not in the checked set or have no reviewable content: " + list(orphan));
+  if (RELEASE && (basisCount["hash-in-review"] || basisCount["lead-attestation"])) console.log("  info  ledger: " + basisCount["hash-in-review"] + " recorded parts rest on a hash found in the review file, " + basisCount["lead-attestation"] + " on a lead attestation");
 })();
 
 Object.keys(coreStats.together || {}).forEach(k => console.log("  info  lesson " + k + ": Practice Together = " + coreStats.together[k].join(", ") + " (practice minus the core refs)"));

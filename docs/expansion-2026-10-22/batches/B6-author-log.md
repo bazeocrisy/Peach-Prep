@@ -8,12 +8,12 @@ File edited: `js/data/lessons/L-GUM3.js` (the only content file). Each lesson's 
 Each lesson now has: `core` (3 sets of 5, with `{ref}` to two original practice items where they fit), a `similar` bank S01 to S15 (every core item has its own twin via `like`), `addons` (hints, how, misconception) for P1 to P5, six new passages (three for core, three for twins), hints h1 to h3, `how` steps and a `misconception` line on every item. Teach and Watch Me were extended by hand outside the markers where the new items needed it: L1 teach points 3 and 5 and a third Watch Me (won't / its); L2 third Watch Me (loaf/loaves); L4 teach point 5 (yet, for, nor) and a third Watch Me; L5 third Watch Me (audience claps); L6 third Watch Me (Tia and I / by ourselves); L7 third Watch Me (comma splice). L3 and L8 were not changed.
 
 ## Gate results (last run, after the review fixes)
-- `node verification/check-content.js --all`: PASS, 0 failures, 104 warnings (run on the final file after the fourth-review fixes; the total rose from 70 because other agents' lessons were added to the same tree, and none of the warnings on the B6 items I edited is new; the B6 ones are the older "hint 1 is much longer than hint 3" notes). The B6 warnings are the older "hint 1 is much longer than hint 3" notes plus shared-record notes about check forms (wording-only edits to some L1 to L7 check forms since the record; I did not run --record-versions).
+- `node verification/check-content.js --all`: PASS, 0 failures, 106 warnings (run on the final file after the fifth-review fixes; the total rose from 70 because other agents' lessons were added to the same tree, and none of the warnings on the B6 items I edited is new; the B6 ones are the older "hint 1 is much longer than hint 3" notes). The B6 warnings are the older "hint 1 is much longer than hint 3" notes plus shared-record notes about check forms (wording-only edits to some L1 to L7 check forms since the record; I did not run --record-versions).
 - `node verification/check-writing.js`: 0 failures, 0 warnings. `node verification/check-instructional-copy.js`: 28 assertions passed.
 - `python3 verification/readability.py js/data/lessons/L-GUM3.js`: no passage is above grade 4.5 (L5 p4 is exactly 4.5, the limit). Passage length, measured with `refs.js` on the final file (words excluding the "(n)" markers, a hyphenated line-break fragment such as suit- | case counted as one word): all 48 B6 passages are 101 words or more. Smallest passage per lesson: L1 102, L2 102, L3 102, L4 103, L5 102, L6 102, L7 101, L8 101.
 - Key-vs-why check (scratchpad `keychk.js`): for every mc, ms and ebsr item in core and similar (all 8 lessons), the keyed option text appears in why or how. 0 misses. This is the check that would have caught L2 S05 and L7 S05 Part B.
-- **Twin vs core overlap, measured on the final file** (`audit.js <lesson> sim` for each of the eight lessons, reading every pair, not the tail; word-set Jaccard and multiset Jaccard over prompt, stem, text, choices, slot options, match rows and columns, ebsr parts, and the sentences a hottext item targets; hints, how and why are not counted). Maximum over every twin-vs-core pair (set / multiset): L1 0.182/0.205, L2 0.200/0.203, L3 0.205/0.195, L4 0.208/0.207, L5 0.192/0.205, L6 0.186/0.200, L7 0.190/0.198, L8 0.209/0.206. So every pair is at or under 0.21 on both measures. Earlier logs reported higher numbers for L1 to L7 (0.37 to 0.46) and a wrong L8 figure from reading only the tail of sorted output; those were replaced after the second review.
-- Key uniquely longest (`audit.js stats`): L1 1 of 20 slots (C15 1.04); L2 0 of 16; L3 2 of 16 (C05B 1.13, S05B 1.12); L4 2 of 20 (C12 1.10, S12 1.05); L5 3 of 18 (C05B 1.04, S09 1.02, S12 1.17); L6 1 of 16 (S05B 1.02); L7 2 of 18 (C05B 1.07, S05B 1.03); L8 0 of 18. None is a check failure.
+- **Twin vs core overlap, measured on the final file** (`audit.js <lesson> sim` for each of the eight lessons, reading every pair, not the tail; word-set Jaccard and multiset Jaccard over prompt, stem, text, choices, slot options, match rows and columns, ebsr parts, and the sentences a hottext item targets; hints, how and why are not counted). Maximum over every twin-vs-core pair (set / multiset): L1 0.182/0.205, L2 0.200/0.203, L3 0.205/0.195, L4 0.208/0.207, L5 0.192/0.205, L6 0.186/0.200, L7 0.190/0.198, L8 0.209/0.206. So every pair is at or under 0.21 on both measures. With the passage text of the item added (stricter, passages are shared by design between twins and cores), the maxima for the two lessons changed in the fifth review are L5 0.221/0.279 and L8 0.191/0.246 (measured with `auditp.js`); those are shared stock words, not shared items. Earlier logs reported higher numbers for L1 to L7 (0.37 to 0.46) and a wrong L8 figure from reading only the tail of sorted output; those were replaced after the second review.
+- Key longest-option check (`longest.js`, run on the final file, core and similar, every mc, ms, ebsr part and dropdown slot): L1 single-key 1 of 22 uniquely longest, choose-two 0 of 6 with both keys longer than every distractor; L2 single-key 0 of 20 uniquely longest, choose-two 1 of 4 with both keys longer than every distractor; L3 single-key 2 of 24 uniquely longest, choose-two 0 of 4 with both keys longer than every distractor; L4 single-key 3 of 22 uniquely longest, choose-two 1 of 6 with both keys longer than every distractor; L5 single-key 2 of 20 uniquely longest, choose-two 1 of 6 with both keys longer than every distractor; L6 single-key 3 of 24 uniquely longest, choose-two 1 of 4 with both keys longer than every distractor; L7 single-key 2 of 22 uniquely longest, choose-two 0 of 4 with both keys longer than every distractor; L8 single-key 0 of 20 uniquely longest, choose-two 0 of 6 with both keys longer than every distractor. Largest ratios: SK-GUM3-1-C15 1.04; SK-GUM3-2-S13 keys-two-longest 1.08; SK-GUM3-3-C05 B 1.13, SK-GUM3-3-S05 B 1.12; SK-GUM3-4-C09 s1 1.50, SK-GUM3-4-C12 1.10, SK-GUM3-4-S07 keys-two-longest 1.05, SK-GUM3-4-S12 1.05; SK-GUM3-5-C07 keys-two-longest 1.11, SK-GUM3-5-S09 1.02, SK-GUM3-5-S12 1.17; SK-GUM3-6-S05 B 1.02, SK-GUM3-6-S10 s1 1.11, SK-GUM3-6-S13 keys-two-longest 1.13, SK-GUM3-6-S14 s1 1.11; SK-GUM3-7-C05 B 1.07, SK-GUM3-7-S05 B 1.03. None is a check failure.
 
 ## Review fixes applied (first review, B6-review.md)
 Lessons 5 to 8:
@@ -54,6 +54,13 @@ Lessons 1 to 4:
 - L4 (accepted lesson, wording only, in how, why and hint text; no item text, key, option or ladder logic changed): "so nor can follow" became "so the joining word nor can follow" and "so nor does not fit" became "so the joining word nor does not fit" in C07 (two how lines and why: file lines 4577, 4578, 4581) and S07 (two how lines and why: lines 5067, 5068, 5071); S08 how (line 5100) "so and adds one more thing" became "so the joining word and adds one more thing".
 - Left open on purpose: L5-N1 alignment drift (NOTE); L8-S5 (digraph and compound rules are in Teach only and no Watch Me models them); the L6 SHOULDs (ourself frame, C05B/S05B key vs Watch Me 2) and the L1 S02 "every apostrophe" wording were not in this task's scope because L1 and L6 are accepted.
 
+## Fifth review fixes (B6-review.md fifth review; L5 accepted, L4 accepted, L8 changes required)
+- **L8 S03 MUST:** bonfire is gone (bon is not a word). S03 is now campfire (camp and fire are both words): options camp- | fire, campf- | ire, cam- | pfire; passage p4 sentence 4 now reads "campf- | ire"; hint 2, 3, how, why and misconception rewritten. I swept every L8 how, why, hint and misconception for "smaller word" claims: toothbrush, cupcake, doorbell, flashlight, cardboard, boxcar, windmill, postcard, sunflower, sunlight, raincoat, sunset, popcorn, football, pancake, birthday, rainbow, butterfly and campfire are real compounds; lantern (lan) and basket (bas, ket) are called not-words, which is true. No other false word-claim found.
+- **L8 SHOULDs:** C11 passage p3 sentence 6 and S11 passage p6 sentence 8 now show the whole words "ticket" and "feathers" instead of the C12 and S12 keys. C14 and S14 prompts now say each rule is used once (football and pancake otherwise fit two columns; the ck sentence in the prompts was removed because the use-once rule settles pocket and chicken too). Hint 1 and 2 on C03, S03, C08, S08, C12, S12 no longer name the deciding rule (they ask which rule fits and where each break falls); C08's stem no longer says "between the double letters"; C12 hint 3 now names t- | icket instead of repeating the stem; S09 and C09 hint 2 no longer say which split pulled a pair apart. C13 key shortened to "Two different consonants, n and t, sit between the vowels." and S13 key to "Two unlike consonants, s and k, stand between two vowels." with the distractors lengthened (C13 and S13 no longer have one far longer key; the S13 wording is no longer circular). C07 pitch- | er replaced by gar- | lic, and pe- | ncil by tu- | rnip (Teach keeps pen-cil). C15 hint 3 now says it puts both g and n on the first line. Test A: T1 uses dinner instead of ladder, T3 uses supper instead of hammer, T4 row 3 is co- | llar instead of pi- | llow. Watch Me: the mitten example (double letter) was replaced by a fishbowl example that models a compound and sh staying together (the engine allows 3 worked examples, so I replaced instead of adding).
+- **L5 (accepted; wording only):** C10 prompt now ends the premise with "and the draft tells about the past" so slot 2 states the tense. C13 distractors were lengthened ("Anger made his whole face turn bright red.", "Excitement filled the whole noisy room.", "Fear grew as the thunder got louder and louder.") because both keys were the two longest options; no key or option meaning changed.
+- Re-measured on the final file: keychk 0 misses; twin overlap, check-content, check-writing, readability, passage lengths, longest-key and live-choice figures are the ones printed above.
+- Not done: L5-S4 (Test A reuses core key words), L5-S5 (C05 Part A frame), L5 S05 Part B key (S05 says "A sandwich has a shape, but generosity has none"), L8 N-notes.
+
 ## Web checks (grammar and rules), done 2026-10-27
 - Hyphenation at line breaks: https://www.c82.net/typography/term/division-of-words (divide at syllable boundaries; consonant pairs that make one sound such as ch and th are never split; compounds divide at the simple words; double consonants divide between the letters; avoid one-letter lines). Also consulted by title: https://nos-langues.canada.ca/en/writing-tips-plus/hyphens-word-division and https://solano.edu/ASTC/forms/english/TIP%20Sheet%20THE%20HYPHEN.pdf. One-syllable words are not split follows from division by syllable.
 - Reflexive pronouns: https://www.scribbr.com/nouns-and-pronouns/reflexive-pronouns/ (list; hisself, theirselves, theirself are nonstandard; myself is not a substitute for I or me). The item set avoids singular "themself" on purpose.
@@ -61,295 +68,296 @@ Lessons 1 to 4:
 - Contractions, irregular plurals, irregular past tense, collective nouns: not web-checked by me. The independent reviewers fetched sources for all of them (Purdue OWL apostrophes; Merriam-Webster and Wiktionary for bison; Woodward English and LibreTexts verb lists; Learner's Dictionary and Grammar Monster for collective nouns) and found the keys correct.
 
 ## Item table
+Live choices column: produced by `live.js` on the final file. It counts the options still live after each hint by removing the options whose text (or, for split-word options, the split fragment such as "lad- | der") is quoted in hints 1 to the current one; for L8 C04, S04, C05 Part A, S05 Part A, C13, S13 and P1 it also removes the one option that hint 3 describes without quoting. It is an upper bound: a hint that narrows by meaning without quoting an option is not counted unless listed. A `!` marks a slot where the script found the key quoted in a hint; the flags are in accepted lessons (L4, L6) and come from joining words and pronouns that also occur as ordinary words in the hint prose; I did not re-judge them.
 Legend: Component = core (C), similar (S). Task type uses the lesson's own types (mc, ms, ebsr, dropdown, hottext, match). "Draft edit" = the item edits inside a numbered draft passage.
 
 ### Lesson 1: 3.L.GC.1:M:use-apostrophes-in-contractions-and-singular-pos
 Passages: p1 "Getting Ready for the Pep Rally"; p2 "Stargazing on the Back Steps"; p3 "Flea Market Flyer"; p4 "Our Toy Drive"; p5 "A Cookout at the Lake"; p6 "Dog Wash Sign-Up Sheet"
 
-| Id | Set | Comp | Type | DOK | Passage | Differs from its twin / notes | Live choices after hints |
+| Id | Set | Comp | Type | DOK | Passage | Differs from its twin / notes | Live choices after hint 1 > 2 > 3 (script `live.js`) |
 |---|---|---|---|---|---|---|---|
 | SK-GUM3-1-P4 | 1 | core ref | (original practice) | | | reused as a core item | |
 | SK-GUM3-1-P5 | 1 | core ref | (original practice) | | | reused as a core item | |
-| SK-GUM3-1-C03 | 1 | core | mc | 2 | p1 (draft edit) | twin SK-GUM3-1-S03 uses a different word set, stem and frame |  |
-| SK-GUM3-1-C04 | 1 | core | dropdown | 2 | p1 (draft edit) | twin SK-GUM3-1-S04 uses a different word set, stem and frame |  |
-| SK-GUM3-1-C05 | 1 | core | mc | 3 | p1 (draft edit) | twin SK-GUM3-1-S05 uses a different word set, stem and frame |  |
-| SK-GUM3-1-C06 | 2 | core | hottext | 2 | p2 (draft edit) | twin SK-GUM3-1-S06 uses a different word set, stem and frame |  |
-| SK-GUM3-1-C07 | 2 | core | ebsr | 3 | p2 (draft edit) | twin SK-GUM3-1-S07 uses a different word set, stem and frame |  |
-| SK-GUM3-1-C08 | 2 | core | ms | 3 | p2 (draft edit) | twin SK-GUM3-1-S08 uses a different word set, stem and frame |  |
-| SK-GUM3-1-C09 | 2 | core | dropdown | 2 | none | twin SK-GUM3-1-S09 uses a different word set, stem and frame |  |
-| SK-GUM3-1-C10 | 2 | core | mc | 3 | p2 (draft edit) | twin SK-GUM3-1-S10 uses a different word set, stem and frame |  |
-| SK-GUM3-1-C11 | 3 | core | hottext | 2 | p3 (draft edit) | twin SK-GUM3-1-S11 uses a different word set, stem and frame |  |
-| SK-GUM3-1-C12 | 3 | core | dropdown | 2 | none | twin SK-GUM3-1-S12 uses a different word set, stem and frame |  |
-| SK-GUM3-1-C13 | 3 | core | mc | 2 | none | twin SK-GUM3-1-S13 uses a different word set, stem and frame |  |
-| SK-GUM3-1-C14 | 3 | core | mc | 2 | none | twin SK-GUM3-1-S14 uses a different word set, stem and frame |  |
-| SK-GUM3-1-C15 | 3 | core | mc | 3 | none | twin SK-GUM3-1-S15 uses a different word set, stem and frame |  |
-| SK-GUM3-1-S01 | twin | similar | hottext | 2 | none | like SK-GUM3-1-P4 | |
-| SK-GUM3-1-S02 | twin | similar | ms | 2 | none | like SK-GUM3-1-P5 | |
-| SK-GUM3-1-S03 | twin | similar | mc | 2 | p4 | like SK-GUM3-1-C03 | |
-| SK-GUM3-1-S04 | twin | similar | dropdown | 2 | p4 | like SK-GUM3-1-C04 | |
-| SK-GUM3-1-S05 | twin | similar | ms | 3 | p4 | like SK-GUM3-1-C05 | |
-| SK-GUM3-1-S06 | twin | similar | hottext | 2 | p5 | like SK-GUM3-1-C06 | |
-| SK-GUM3-1-S07 | twin | similar | ebsr | 3 | p5 | like SK-GUM3-1-C07 | |
-| SK-GUM3-1-S08 | twin | similar | ms | 3 | p5 | like SK-GUM3-1-C08 | |
-| SK-GUM3-1-S09 | twin | similar | dropdown | 2 | none | like SK-GUM3-1-C09 | |
-| SK-GUM3-1-S10 | twin | similar | mc | 3 | p5 | like SK-GUM3-1-C10 | |
-| SK-GUM3-1-S11 | twin | similar | hottext | 2 | p6 | like SK-GUM3-1-C11 | |
-| SK-GUM3-1-S12 | twin | similar | dropdown | 2 | none | like SK-GUM3-1-C12 | |
-| SK-GUM3-1-S13 | twin | similar | mc | 2 | none | like SK-GUM3-1-C13 | |
-| SK-GUM3-1-S14 | twin | similar | mc | 2 | none | like SK-GUM3-1-C14 | |
-| SK-GUM3-1-S15 | twin | similar | ms | 3 | none | like SK-GUM3-1-C15 | |
+| SK-GUM3-1-C03 | 1 | core | mc | 2 | p1 (draft edit) | twin SK-GUM3-1-S03 uses a different word set, stem and frame | 4/4 > 4/4 > 4/4 |
+| SK-GUM3-1-C04 | 1 | core | dropdown | 2 | p1 (draft edit) | twin SK-GUM3-1-S04 uses a different word set, stem and frame | slot1: 3/3 > 2/3 > 2/3 |
+| SK-GUM3-1-C05 | 1 | core | mc | 3 | p1 (draft edit) | twin SK-GUM3-1-S05 uses a different word set, stem and frame | 4/4 > 4/4 > 4/4 |
+| SK-GUM3-1-C06 | 2 | core | hottext | 2 | p2 (draft edit) | twin SK-GUM3-1-S06 uses a different word set, stem and frame | 5/5 > 5/5 > 5/5 |
+| SK-GUM3-1-C07 | 2 | core | ebsr | 3 | p2 (draft edit) | twin SK-GUM3-1-S07 uses a different word set, stem and frame | A: 4/4 > 4/4 > 4/4; B: 4/4 > 4/4 > 4/4 |
+| SK-GUM3-1-C08 | 2 | core | ms | 3 | p2 (draft edit) | twin SK-GUM3-1-S08 uses a different word set, stem and frame | 5/5 > 5/5 > 5/5 |
+| SK-GUM3-1-C09 | 2 | core | dropdown | 2 | none | twin SK-GUM3-1-S09 uses a different word set, stem and frame | slot1: 3/3 > 2/3 > 2/3 |
+| SK-GUM3-1-C10 | 2 | core | mc | 3 | p2 (draft edit) | twin SK-GUM3-1-S10 uses a different word set, stem and frame | 4/4 > 4/4 > 4/4 |
+| SK-GUM3-1-C11 | 3 | core | hottext | 2 | p3 (draft edit) | twin SK-GUM3-1-S11 uses a different word set, stem and frame | 5/5 > 5/5 > 5/5 |
+| SK-GUM3-1-C12 | 3 | core | dropdown | 2 | none | twin SK-GUM3-1-S12 uses a different word set, stem and frame | slot1: 3/3 > 3/3 > 3/3; slot2: 3/3 > 3/3 > 3/3 |
+| SK-GUM3-1-C13 | 3 | core | mc | 2 | none | twin SK-GUM3-1-S13 uses a different word set, stem and frame | 4/4 > 4/4 > 4/4 |
+| SK-GUM3-1-C14 | 3 | core | mc | 2 | none | twin SK-GUM3-1-S14 uses a different word set, stem and frame | 4/4 > 4/4 > 4/4 |
+| SK-GUM3-1-C15 | 3 | core | mc | 3 | none | twin SK-GUM3-1-S15 uses a different word set, stem and frame | 4/4 > 4/4 > 4/4 |
+| SK-GUM3-1-S01 | twin | similar | hottext | 2 | none | like SK-GUM3-1-P4 | 4/4 > 4/4 > 4/4 |
+| SK-GUM3-1-S02 | twin | similar | ms | 2 | none | like SK-GUM3-1-P5 | 5/5 > 5/5 > 5/5 |
+| SK-GUM3-1-S03 | twin | similar | mc | 2 | p4 | like SK-GUM3-1-C03 | 4/4 > 4/4 > 4/4 |
+| SK-GUM3-1-S04 | twin | similar | dropdown | 2 | p4 | like SK-GUM3-1-C04 | slot1: 3/3 > 2/3 > 2/3 |
+| SK-GUM3-1-S05 | twin | similar | ms | 3 | p4 | like SK-GUM3-1-C05 | 5/5 > 5/5 > 5/5 |
+| SK-GUM3-1-S06 | twin | similar | hottext | 2 | p5 | like SK-GUM3-1-C06 | 5/5 > 5/5 > 5/5 |
+| SK-GUM3-1-S07 | twin | similar | ebsr | 3 | p5 | like SK-GUM3-1-C07 | A: 4/4 > 4/4 > 4/4; B: 4/4 > 4/4 > 4/4 |
+| SK-GUM3-1-S08 | twin | similar | ms | 3 | p5 | like SK-GUM3-1-C08 | 5/5 > 5/5 > 5/5 |
+| SK-GUM3-1-S09 | twin | similar | dropdown | 2 | none | like SK-GUM3-1-C09 | slot1: 3/3 > 2/3 > 2/3 |
+| SK-GUM3-1-S10 | twin | similar | mc | 3 | p5 | like SK-GUM3-1-C10 | 4/4 > 4/4 > 4/4 |
+| SK-GUM3-1-S11 | twin | similar | hottext | 2 | p6 | like SK-GUM3-1-C11 | 5/5 > 5/5 > 5/5 |
+| SK-GUM3-1-S12 | twin | similar | dropdown | 2 | none | like SK-GUM3-1-C12 | slot1: 3/3 > 3/3 > 3/3; slot2: 3/3 > 3/3 > 3/3 |
+| SK-GUM3-1-S13 | twin | similar | mc | 2 | none | like SK-GUM3-1-C13 | 4/4 > 4/4 > 4/4 |
+| SK-GUM3-1-S14 | twin | similar | mc | 2 | none | like SK-GUM3-1-C14 | 4/4 > 4/4 > 4/4 |
+| SK-GUM3-1-S15 | twin | similar | ms | 3 | none | like SK-GUM3-1-C15 | 5/5 > 5/5 > 5/5 |
 
 ### Lesson 2: 3.L.GC.1:M:form-and-use-irregular-plural-nouns
 Passages: p1 "A Morning at the State Park"; p2 "Snowed In at the Cabin"; p3 "Willow Farm Visitor Poster"; p4 "A Day at the Zoo"; p5 "Blizzard Day"; p6 "Costume Contest Flyer"
 
-| Id | Set | Comp | Type | DOK | Passage | Differs from its twin / notes | Live choices after hints |
+| Id | Set | Comp | Type | DOK | Passage | Differs from its twin / notes | Live choices after hint 1 > 2 > 3 (script `live.js`) |
 |---|---|---|---|---|---|---|---|
 | SK-GUM3-2-P4 | 1 | core ref | (original practice) | | | reused as a core item | |
 | SK-GUM3-2-P5 | 1 | core ref | (original practice) | | | reused as a core item | |
-| SK-GUM3-2-C03 | 1 | core | dropdown | 2 | p1 (draft edit) | twin SK-GUM3-2-S03 uses a different word set, stem and frame |  |
-| SK-GUM3-2-C04 | 1 | core | hottext | 2 | p1 (draft edit) | twin SK-GUM3-2-S04 uses a different word set, stem and frame |  |
-| SK-GUM3-2-C05 | 1 | core | ebsr | 3 | p1 (draft edit) | twin SK-GUM3-2-S05 uses a different word set, stem and frame |  |
-| SK-GUM3-2-C06 | 2 | core | mc | 2 | none | twin SK-GUM3-2-S06 uses a different word set, stem and frame |  |
-| SK-GUM3-2-C07 | 2 | core | hottext | 2 | p2 (draft edit) | twin SK-GUM3-2-S07 uses a different word set, stem and frame |  |
-| SK-GUM3-2-C08 | 2 | core | mc | 3 | none | twin SK-GUM3-2-S08 uses a different word set, stem and frame |  |
-| SK-GUM3-2-C09 | 2 | core | ms | 2 | none | twin SK-GUM3-2-S09 uses a different word set, stem and frame |  |
-| SK-GUM3-2-C10 | 2 | core | match | 2 | none | twin SK-GUM3-2-S10 uses a different word set, stem and frame |  |
-| SK-GUM3-2-C11 | 3 | core | hottext | 2 | p3 (draft edit) | twin SK-GUM3-2-S11 uses a different word set, stem and frame |  |
-| SK-GUM3-2-C12 | 3 | core | dropdown | 2 | none | twin SK-GUM3-2-S12 uses a different word set, stem and frame |  |
-| SK-GUM3-2-C13 | 3 | core | ms | 3 | none | twin SK-GUM3-2-S13 uses a different word set, stem and frame |  |
-| SK-GUM3-2-C14 | 3 | core | mc | 2 | none | twin SK-GUM3-2-S14 uses a different word set, stem and frame |  |
-| SK-GUM3-2-C15 | 3 | core | mc | 3 | none | twin SK-GUM3-2-S15 uses a different word set, stem and frame |  |
-| SK-GUM3-2-S01 | twin | similar | hottext | 2 | none | like SK-GUM3-2-P4 | |
-| SK-GUM3-2-S02 | twin | similar | dropdown | 2 | none | like SK-GUM3-2-P5 | |
-| SK-GUM3-2-S03 | twin | similar | dropdown | 2 | p4 | like SK-GUM3-2-C03 | |
-| SK-GUM3-2-S04 | twin | similar | hottext | 2 | p4 | like SK-GUM3-2-C04 | |
-| SK-GUM3-2-S05 | twin | similar | ebsr | 3 | p4 | like SK-GUM3-2-C05 | |
-| SK-GUM3-2-S06 | twin | similar | mc | 2 | none | like SK-GUM3-2-C06 | |
-| SK-GUM3-2-S07 | twin | similar | hottext | 2 | p5 | like SK-GUM3-2-C07 | |
-| SK-GUM3-2-S08 | twin | similar | mc | 3 | none | like SK-GUM3-2-C08 | |
-| SK-GUM3-2-S09 | twin | similar | ms | 2 | none | like SK-GUM3-2-C09 | |
-| SK-GUM3-2-S10 | twin | similar | match | 2 | none | like SK-GUM3-2-C10 | |
-| SK-GUM3-2-S11 | twin | similar | hottext | 2 | p6 | like SK-GUM3-2-C11 | |
-| SK-GUM3-2-S12 | twin | similar | dropdown | 2 | none | like SK-GUM3-2-C12 | |
-| SK-GUM3-2-S13 | twin | similar | ms | 3 | none | like SK-GUM3-2-C13 | |
-| SK-GUM3-2-S14 | twin | similar | mc | 2 | none | like SK-GUM3-2-C14 | |
-| SK-GUM3-2-S15 | twin | similar | mc | 3 | none | like SK-GUM3-2-C15 | |
+| SK-GUM3-2-C03 | 1 | core | dropdown | 2 | p1 (draft edit) | twin SK-GUM3-2-S03 uses a different word set, stem and frame | slot1: 3/3 > 3/3 > 2/3 |
+| SK-GUM3-2-C04 | 1 | core | hottext | 2 | p1 (draft edit) | twin SK-GUM3-2-S04 uses a different word set, stem and frame | 5/5 > 5/5 > 5/5 |
+| SK-GUM3-2-C05 | 1 | core | ebsr | 3 | p1 (draft edit) | twin SK-GUM3-2-S05 uses a different word set, stem and frame | A: 4/4 > 4/4 > 4/4; B: 4/4 > 4/4 > 4/4 |
+| SK-GUM3-2-C06 | 2 | core | mc | 2 | none | twin SK-GUM3-2-S06 uses a different word set, stem and frame | 4/4 > 4/4 > 4/4 |
+| SK-GUM3-2-C07 | 2 | core | hottext | 2 | p2 (draft edit) | twin SK-GUM3-2-S07 uses a different word set, stem and frame | 5/5 > 5/5 > 5/5 |
+| SK-GUM3-2-C08 | 2 | core | mc | 3 | none | twin SK-GUM3-2-S08 uses a different word set, stem and frame | 4/4 > 4/4 > 4/4 |
+| SK-GUM3-2-C09 | 2 | core | ms | 2 | none | twin SK-GUM3-2-S09 uses a different word set, stem and frame | 5/5 > 5/5 > 5/5 |
+| SK-GUM3-2-C10 | 2 | core | match | 2 | none | twin SK-GUM3-2-S10 uses a different word set, stem and frame | rows: 4/4 > 4/4 > 4/4 |
+| SK-GUM3-2-C11 | 3 | core | hottext | 2 | p3 (draft edit) | twin SK-GUM3-2-S11 uses a different word set, stem and frame | 5/5 > 5/5 > 5/5 |
+| SK-GUM3-2-C12 | 3 | core | dropdown | 2 | none | twin SK-GUM3-2-S12 uses a different word set, stem and frame | slot1: 3/3 > 3/3 > 2/3 |
+| SK-GUM3-2-C13 | 3 | core | ms | 3 | none | twin SK-GUM3-2-S13 uses a different word set, stem and frame | 5/5 > 5/5 > 5/5 |
+| SK-GUM3-2-C14 | 3 | core | mc | 2 | none | twin SK-GUM3-2-S14 uses a different word set, stem and frame | 4/4 > 4/4 > 4/4 |
+| SK-GUM3-2-C15 | 3 | core | mc | 3 | none | twin SK-GUM3-2-S15 uses a different word set, stem and frame | 4/4 > 4/4 > 4/4 |
+| SK-GUM3-2-S01 | twin | similar | hottext | 2 | none | like SK-GUM3-2-P4 | 4/4 > 4/4 > 4/4 |
+| SK-GUM3-2-S02 | twin | similar | dropdown | 2 | none | like SK-GUM3-2-P5 | slot1: 3/3 > 3/3 > 2/3; slot2: 3/3 > 3/3 > 3/3 |
+| SK-GUM3-2-S03 | twin | similar | dropdown | 2 | p4 | like SK-GUM3-2-C03 | slot1: 3/3 > 3/3 > 2/3 |
+| SK-GUM3-2-S04 | twin | similar | hottext | 2 | p4 | like SK-GUM3-2-C04 | 5/5 > 5/5 > 5/5 |
+| SK-GUM3-2-S05 | twin | similar | ebsr | 3 | p4 | like SK-GUM3-2-C05 | A: 4/4 > 4/4 > 4/4; B: 4/4 > 4/4 > 4/4 |
+| SK-GUM3-2-S06 | twin | similar | mc | 2 | none | like SK-GUM3-2-C06 | 4/4 > 4/4 > 4/4 |
+| SK-GUM3-2-S07 | twin | similar | hottext | 2 | p5 | like SK-GUM3-2-C07 | 5/5 > 5/5 > 5/5 |
+| SK-GUM3-2-S08 | twin | similar | mc | 3 | none | like SK-GUM3-2-C08 | 4/4 > 4/4 > 4/4 |
+| SK-GUM3-2-S09 | twin | similar | ms | 2 | none | like SK-GUM3-2-C09 | 5/5 > 5/5 > 5/5 |
+| SK-GUM3-2-S10 | twin | similar | match | 2 | none | like SK-GUM3-2-C10 | rows: 4/4 > 4/4 > 2/4 |
+| SK-GUM3-2-S11 | twin | similar | hottext | 2 | p6 | like SK-GUM3-2-C11 | 5/5 > 5/5 > 5/5 |
+| SK-GUM3-2-S12 | twin | similar | dropdown | 2 | none | like SK-GUM3-2-C12 | slot1: 3/3 > 3/3 > 2/3 |
+| SK-GUM3-2-S13 | twin | similar | ms | 3 | none | like SK-GUM3-2-C13 | 5/5 > 5/5 > 5/5 |
+| SK-GUM3-2-S14 | twin | similar | mc | 2 | none | like SK-GUM3-2-C14 | 4/4 > 4/4 > 4/4 |
+| SK-GUM3-2-S15 | twin | similar | mc | 3 | none | like SK-GUM3-2-C15 | 4/4 > 4/4 > 4/4 |
 
 ### Lesson 3: 3.L.GC.1:M:form-and-use-the-past-tense-of-irregular-verbs
 Passages: p1 "The Treasure Hunt"; p2 "Birthday at the Trampoline Park"; p3 "Room 12 News"; p4 "Hike to the Waterfall"; p5 "My Hamster Biscuit"; p6 "Camp Lakeside News"
 
-| Id | Set | Comp | Type | DOK | Passage | Differs from its twin / notes | Live choices after hints |
+| Id | Set | Comp | Type | DOK | Passage | Differs from its twin / notes | Live choices after hint 1 > 2 > 3 (script `live.js`) |
 |---|---|---|---|---|---|---|---|
 | SK-GUM3-3-P4 | 1 | core ref | (original practice) | | | reused as a core item | |
 | SK-GUM3-3-P5 | 1 | core ref | (original practice) | | | reused as a core item | |
-| SK-GUM3-3-C03 | 1 | core | dropdown | 2 | p1 (draft edit) | twin SK-GUM3-3-S03 uses a different word set, stem and frame |  |
-| SK-GUM3-3-C04 | 1 | core | mc | 2 | p1 (draft edit) | twin SK-GUM3-3-S04 uses a different word set, stem and frame |  |
-| SK-GUM3-3-C05 | 1 | core | ebsr | 3 | p1 (draft edit) | twin SK-GUM3-3-S05 uses a different word set, stem and frame |  |
-| SK-GUM3-3-C06 | 2 | core | hottext | 2 | p2 (draft edit) | twin SK-GUM3-3-S06 uses a different word set, stem and frame |  |
-| SK-GUM3-3-C07 | 2 | core | ms | 2 | none | twin SK-GUM3-3-S07 uses a different word set, stem and frame |  |
-| SK-GUM3-3-C08 | 2 | core | match | 2 | none | twin SK-GUM3-3-S08 uses a different word set, stem and frame |  |
-| SK-GUM3-3-C09 | 2 | core | mc | 3 | none | twin SK-GUM3-3-S09 uses a different word set, stem and frame |  |
-| SK-GUM3-3-C10 | 2 | core | dropdown | 2 | p2 (draft edit) | twin SK-GUM3-3-S10 uses a different word set, stem and frame |  |
-| SK-GUM3-3-C11 | 3 | core | hottext | 2 | p3 (draft edit) | twin SK-GUM3-3-S11 uses a different word set, stem and frame |  |
-| SK-GUM3-3-C12 | 3 | core | mc | 2 | p3 (draft edit) | twin SK-GUM3-3-S12 uses a different word set, stem and frame |  |
-| SK-GUM3-3-C13 | 3 | core | ms | 3 | none | twin SK-GUM3-3-S13 uses a different word set, stem and frame |  |
-| SK-GUM3-3-C14 | 3 | core | dropdown | 2 | none | twin SK-GUM3-3-S14 uses a different word set, stem and frame |  |
-| SK-GUM3-3-C15 | 3 | core | mc | 2 | none | twin SK-GUM3-3-S15 uses a different word set, stem and frame |  |
-| SK-GUM3-3-S01 | twin | similar | hottext | 2 | none | like SK-GUM3-3-P4 | |
-| SK-GUM3-3-S02 | twin | similar | dropdown | 2 | none | like SK-GUM3-3-P5 | |
-| SK-GUM3-3-S03 | twin | similar | dropdown | 2 | p4 | like SK-GUM3-3-C03 | |
-| SK-GUM3-3-S04 | twin | similar | mc | 2 | p4 | like SK-GUM3-3-C04 | |
-| SK-GUM3-3-S05 | twin | similar | ebsr | 3 | p4 | like SK-GUM3-3-C05 | |
-| SK-GUM3-3-S06 | twin | similar | hottext | 2 | p5 | like SK-GUM3-3-C06 | |
-| SK-GUM3-3-S07 | twin | similar | ms | 2 | none | like SK-GUM3-3-C07 | |
-| SK-GUM3-3-S08 | twin | similar | match | 2 | none | like SK-GUM3-3-C08 | |
-| SK-GUM3-3-S09 | twin | similar | mc | 3 | none | like SK-GUM3-3-C09 | |
-| SK-GUM3-3-S10 | twin | similar | dropdown | 2 | p5 | like SK-GUM3-3-C10 | |
-| SK-GUM3-3-S11 | twin | similar | hottext | 2 | p6 | like SK-GUM3-3-C11 | |
-| SK-GUM3-3-S12 | twin | similar | mc | 2 | p6 | like SK-GUM3-3-C12 | |
-| SK-GUM3-3-S13 | twin | similar | ms | 3 | none | like SK-GUM3-3-C13 | |
-| SK-GUM3-3-S14 | twin | similar | dropdown | 2 | none | like SK-GUM3-3-C14 | |
-| SK-GUM3-3-S15 | twin | similar | mc | 2 | none | like SK-GUM3-3-C15 | |
+| SK-GUM3-3-C03 | 1 | core | dropdown | 2 | p1 (draft edit) | twin SK-GUM3-3-S03 uses a different word set, stem and frame | slot1: 3/3 > 3/3 > 2/3 |
+| SK-GUM3-3-C04 | 1 | core | mc | 2 | p1 (draft edit) | twin SK-GUM3-3-S04 uses a different word set, stem and frame | 4/4 > 4/4 > 4/4 |
+| SK-GUM3-3-C05 | 1 | core | ebsr | 3 | p1 (draft edit) | twin SK-GUM3-3-S05 uses a different word set, stem and frame | A: 4/4 > 4/4 > 4/4; B: 4/4 > 4/4 > 4/4 |
+| SK-GUM3-3-C06 | 2 | core | hottext | 2 | p2 (draft edit) | twin SK-GUM3-3-S06 uses a different word set, stem and frame | 5/5 > 5/5 > 5/5 |
+| SK-GUM3-3-C07 | 2 | core | ms | 2 | none | twin SK-GUM3-3-S07 uses a different word set, stem and frame | 5/5 > 5/5 > 5/5 |
+| SK-GUM3-3-C08 | 2 | core | match | 2 | none | twin SK-GUM3-3-S08 uses a different word set, stem and frame | rows: 4/4 > 4/4 > 3/4 |
+| SK-GUM3-3-C09 | 2 | core | mc | 3 | none | twin SK-GUM3-3-S09 uses a different word set, stem and frame | 4/4 > 4/4 > 4/4 |
+| SK-GUM3-3-C10 | 2 | core | dropdown | 2 | p2 (draft edit) | twin SK-GUM3-3-S10 uses a different word set, stem and frame | slot1: 3/3 > 3/3 > 3/3; slot2: 3/3 > 3/3 > 2/3 |
+| SK-GUM3-3-C11 | 3 | core | hottext | 2 | p3 (draft edit) | twin SK-GUM3-3-S11 uses a different word set, stem and frame | 5/5 > 5/5 > 5/5 |
+| SK-GUM3-3-C12 | 3 | core | mc | 2 | p3 (draft edit) | twin SK-GUM3-3-S12 uses a different word set, stem and frame | 4/4 > 4/4 > 4/4 |
+| SK-GUM3-3-C13 | 3 | core | ms | 3 | none | twin SK-GUM3-3-S13 uses a different word set, stem and frame | 5/5 > 5/5 > 5/5 |
+| SK-GUM3-3-C14 | 3 | core | dropdown | 2 | none | twin SK-GUM3-3-S14 uses a different word set, stem and frame | slot1: 4/4 > 4/4 > 3/4 |
+| SK-GUM3-3-C15 | 3 | core | mc | 2 | none | twin SK-GUM3-3-S15 uses a different word set, stem and frame | 4/4 > 4/4 > 4/4 |
+| SK-GUM3-3-S01 | twin | similar | hottext | 2 | none | like SK-GUM3-3-P4 | 4/4 > 4/4 > 4/4 |
+| SK-GUM3-3-S02 | twin | similar | dropdown | 2 | none | like SK-GUM3-3-P5 | slot1: 3/3 > 3/3 > 3/3; slot2: 3/3 > 3/3 > 2/3 |
+| SK-GUM3-3-S03 | twin | similar | dropdown | 2 | p4 | like SK-GUM3-3-C03 | slot1: 3/3 > 3/3 > 2/3 |
+| SK-GUM3-3-S04 | twin | similar | mc | 2 | p4 | like SK-GUM3-3-C04 | 4/4 > 4/4 > 4/4 |
+| SK-GUM3-3-S05 | twin | similar | ebsr | 3 | p4 | like SK-GUM3-3-C05 | A: 4/4 > 4/4 > 4/4; B: 4/4 > 4/4 > 4/4 |
+| SK-GUM3-3-S06 | twin | similar | hottext | 2 | p5 | like SK-GUM3-3-C06 | 5/5 > 5/5 > 5/5 |
+| SK-GUM3-3-S07 | twin | similar | ms | 2 | none | like SK-GUM3-3-C07 | 5/5 > 5/5 > 5/5 |
+| SK-GUM3-3-S08 | twin | similar | match | 2 | none | like SK-GUM3-3-C08 | rows: 4/4 > 4/4 > 3/4 |
+| SK-GUM3-3-S09 | twin | similar | mc | 3 | none | like SK-GUM3-3-C09 | 4/4 > 4/4 > 4/4 |
+| SK-GUM3-3-S10 | twin | similar | dropdown | 2 | p5 | like SK-GUM3-3-C10 | slot1: 3/3 > 3/3 > 3/3; slot2: 3/3 > 3/3 > 2/3 |
+| SK-GUM3-3-S11 | twin | similar | hottext | 2 | p6 | like SK-GUM3-3-C11 | 5/5 > 5/5 > 5/5 |
+| SK-GUM3-3-S12 | twin | similar | mc | 2 | p6 | like SK-GUM3-3-C12 | 4/4 > 4/4 > 4/4 |
+| SK-GUM3-3-S13 | twin | similar | ms | 3 | none | like SK-GUM3-3-C13 | 5/5 > 5/5 > 5/5 |
+| SK-GUM3-3-S14 | twin | similar | dropdown | 2 | none | like SK-GUM3-3-C14 | slot1: 4/4 > 4/4 > 3/4 |
+| SK-GUM3-3-S15 | twin | similar | mc | 2 | none | like SK-GUM3-3-C15 | 4/4 > 4/4 > 4/4 |
 
 ### Lesson 4: 3.L.GC.1:M:use-coordinating-conjunctions-to-join-words-phra
 Passages: p1 "Yoga for Kids"; p2 "Chalk Art Day"; p3 "Swim Lesson Day"; p4 "Jump Rope Club"; p5 "The Scarecrow Contest"; p6 "Snow Cone Stand"
 
-| Id | Set | Comp | Type | DOK | Passage | Differs from its twin / notes | Live choices after hints |
+| Id | Set | Comp | Type | DOK | Passage | Differs from its twin / notes | Live choices after hint 1 > 2 > 3 (script `live.js`) |
 |---|---|---|---|---|---|---|---|
 | SK-GUM3-4-P5 | 1 | core ref | (original practice) | | | reused as a core item | |
-| SK-GUM3-4-C02 | 1 | core | dropdown | 2 | p1 (draft edit) | twin SK-GUM3-4-S02 uses a different word set, stem and frame |  |
-| SK-GUM3-4-C03 | 1 | core | mc | 2 | p1 (draft edit) | twin SK-GUM3-4-S03 uses a different word set, stem and frame |  |
-| SK-GUM3-4-C04 | 1 | core | ebsr | 3 | p1 (draft edit) | twin SK-GUM3-4-S04 uses a different word set, stem and frame |  |
-| SK-GUM3-4-C05 | 1 | core | hottext | 2 | p1 (draft edit) | twin SK-GUM3-4-S05 uses a different word set, stem and frame |  |
-| SK-GUM3-4-C06 | 2 | core | mc | 2 | none | twin SK-GUM3-4-S06 uses a different word set, stem and frame |  |
-| SK-GUM3-4-C07 | 2 | core | ms | 2 | none | twin SK-GUM3-4-S07 uses a different word set, stem and frame |  |
-| SK-GUM3-4-C08 | 2 | core | match | 2 | none | twin SK-GUM3-4-S08 uses a different word set, stem and frame |  |
-| SK-GUM3-4-C09 | 2 | core | dropdown | 2 | p2 (draft edit) | twin SK-GUM3-4-S09 uses a different word set, stem and frame |  |
-| SK-GUM3-4-C10 | 2 | core | mc | 2 | p2 (draft edit) | twin SK-GUM3-4-S10 uses a different word set, stem and frame |  |
-| SK-GUM3-4-C11 | 3 | core | hottext | 2 | p3 (draft edit) | twin SK-GUM3-4-S11 uses a different word set, stem and frame |  |
-| SK-GUM3-4-C12 | 3 | core | mc | 2 | none | twin SK-GUM3-4-S12 uses a different word set, stem and frame |  |
-| SK-GUM3-4-C13 | 3 | core | mc | 3 | none | twin SK-GUM3-4-S13 uses a different word set, stem and frame |  |
-| SK-GUM3-4-C14 | 3 | core | dropdown | 2 | none | twin SK-GUM3-4-S14 uses a different word set, stem and frame |  |
-| SK-GUM3-4-C15 | 3 | core | ms | 2 | none | twin SK-GUM3-4-S15 uses a different word set, stem and frame |  |
-| SK-GUM3-4-S01 | twin | similar | ms | 2 | none | like SK-GUM3-4-P5 | |
-| SK-GUM3-4-S02 | twin | similar | dropdown | 2 | p4 | like SK-GUM3-4-C02 | |
-| SK-GUM3-4-S03 | twin | similar | mc | 2 | p4 | like SK-GUM3-4-C03 | |
-| SK-GUM3-4-S04 | twin | similar | ebsr | 3 | p4 | like SK-GUM3-4-C04 | |
-| SK-GUM3-4-S05 | twin | similar | hottext | 2 | p4 | like SK-GUM3-4-C05 | |
-| SK-GUM3-4-S06 | twin | similar | mc | 2 | none | like SK-GUM3-4-C06 | |
-| SK-GUM3-4-S07 | twin | similar | ms | 2 | none | like SK-GUM3-4-C07 | |
-| SK-GUM3-4-S08 | twin | similar | match | 2 | none | like SK-GUM3-4-C08 | |
-| SK-GUM3-4-S09 | twin | similar | dropdown | 2 | p5 | like SK-GUM3-4-C09 | |
-| SK-GUM3-4-S10 | twin | similar | mc | 2 | p5 | like SK-GUM3-4-C10 | |
-| SK-GUM3-4-S11 | twin | similar | hottext | 2 | p6 | like SK-GUM3-4-C11 | |
-| SK-GUM3-4-S12 | twin | similar | mc | 2 | none | like SK-GUM3-4-C12 | |
-| SK-GUM3-4-S13 | twin | similar | mc | 3 | none | like SK-GUM3-4-C13 | |
-| SK-GUM3-4-S14 | twin | similar | dropdown | 2 | none | like SK-GUM3-4-C14 | |
-| SK-GUM3-4-S15 | twin | similar | ms | 2 | none | like SK-GUM3-4-C15 | |
+| SK-GUM3-4-C02 | 1 | core | dropdown | 2 | p1 (draft edit) | twin SK-GUM3-4-S02 uses a different word set, stem and frame | slot1: 3/4 > 2/4! > 1/4! |
+| SK-GUM3-4-C03 | 1 | core | mc | 2 | p1 (draft edit) | twin SK-GUM3-4-S03 uses a different word set, stem and frame | 4/4 > 4/4 > 4/4 |
+| SK-GUM3-4-C04 | 1 | core | ebsr | 3 | p1 (draft edit) | twin SK-GUM3-4-S04 uses a different word set, stem and frame | A: 4/4 > 4/4 > 4/4; B: 4/4 > 4/4 > 4/4 |
+| SK-GUM3-4-C05 | 1 | core | hottext | 2 | p1 (draft edit) | twin SK-GUM3-4-S05 uses a different word set, stem and frame | 5/5 > 5/5 > 5/5 |
+| SK-GUM3-4-C06 | 2 | core | mc | 2 | none | twin SK-GUM3-4-S06 uses a different word set, stem and frame | 4/4 > 4/4 > 4/4 |
+| SK-GUM3-4-C07 | 2 | core | ms | 2 | none | twin SK-GUM3-4-S07 uses a different word set, stem and frame | 5/5 > 5/5 > 5/5 |
+| SK-GUM3-4-C08 | 2 | core | match | 2 | none | twin SK-GUM3-4-S08 uses a different word set, stem and frame | rows: 4/4 > 4/4 > 4/4 |
+| SK-GUM3-4-C09 | 2 | core | dropdown | 2 | p2 (draft edit) | twin SK-GUM3-4-S09 uses a different word set, stem and frame | slot1: 3/3 > 3/3 > 2/3; slot2: 3/3 > 3/3 > 3/3 |
+| SK-GUM3-4-C10 | 2 | core | mc | 2 | p2 (draft edit) | twin SK-GUM3-4-S10 uses a different word set, stem and frame | 4/4 > 4/4 > 4/4 |
+| SK-GUM3-4-C11 | 3 | core | hottext | 2 | p3 (draft edit) | twin SK-GUM3-4-S11 uses a different word set, stem and frame | 5/5 > 5/5 > 5/5 |
+| SK-GUM3-4-C12 | 3 | core | mc | 2 | none | twin SK-GUM3-4-S12 uses a different word set, stem and frame | 4/4 > 4/4 > 4/4 |
+| SK-GUM3-4-C13 | 3 | core | mc | 3 | none | twin SK-GUM3-4-S13 uses a different word set, stem and frame | 4/4 > 4/4 > 4/4 |
+| SK-GUM3-4-C14 | 3 | core | dropdown | 2 | none | twin SK-GUM3-4-S14 uses a different word set, stem and frame | slot1: 3/3 > 3/3 > 1/3 |
+| SK-GUM3-4-C15 | 3 | core | ms | 2 | none | twin SK-GUM3-4-S15 uses a different word set, stem and frame | 5/5 > 5/5 > 4/5 |
+| SK-GUM3-4-S01 | twin | similar | ms | 2 | none | like SK-GUM3-4-P5 | 5/5 > 5/5 > 5/5 |
+| SK-GUM3-4-S02 | twin | similar | dropdown | 2 | p4 | like SK-GUM3-4-C02 | slot1: 3/3 > 2/3! > 1/3! |
+| SK-GUM3-4-S03 | twin | similar | mc | 2 | p4 | like SK-GUM3-4-C03 | 4/4 > 4/4 > 4/4 |
+| SK-GUM3-4-S04 | twin | similar | ebsr | 3 | p4 | like SK-GUM3-4-C04 | A: 4/4 > 4/4 > 4/4; B: 4/4 > 4/4 > 4/4 |
+| SK-GUM3-4-S05 | twin | similar | hottext | 2 | p4 | like SK-GUM3-4-C05 | 5/5 > 5/5 > 5/5 |
+| SK-GUM3-4-S06 | twin | similar | mc | 2 | none | like SK-GUM3-4-C06 | 4/4 > 4/4 > 4/4 |
+| SK-GUM3-4-S07 | twin | similar | ms | 2 | none | like SK-GUM3-4-C07 | 5/5 > 5/5 > 5/5 |
+| SK-GUM3-4-S08 | twin | similar | match | 2 | none | like SK-GUM3-4-C08 | rows: 4/4 > 4/4 > 4/4 |
+| SK-GUM3-4-S09 | twin | similar | dropdown | 2 | p5 | like SK-GUM3-4-C09 | slot1: 3/3 > 2/3 > 2/3; slot2: 3/3 > 3/3 > 3/3 |
+| SK-GUM3-4-S10 | twin | similar | mc | 2 | p5 | like SK-GUM3-4-C10 | 4/4 > 4/4 > 4/4 |
+| SK-GUM3-4-S11 | twin | similar | hottext | 2 | p6 | like SK-GUM3-4-C11 | 5/5 > 5/5 > 5/5 |
+| SK-GUM3-4-S12 | twin | similar | mc | 2 | none | like SK-GUM3-4-C12 | 4/4 > 4/4 > 4/4 |
+| SK-GUM3-4-S13 | twin | similar | mc | 3 | none | like SK-GUM3-4-C13 | 4/4 > 4/4 > 4/4 |
+| SK-GUM3-4-S14 | twin | similar | dropdown | 2 | none | like SK-GUM3-4-C14 | slot1: 3/3 > 2/3 > 1/3 |
+| SK-GUM3-4-S15 | twin | similar | ms | 2 | none | like SK-GUM3-4-C15 | 5/5 > 4/5! > 3/5! |
 
 ### Lesson 5: 3.L.GC.1:M:use-collective-and-abstract-nouns
 Passages: p1 "Fleet Day at the Harbor"; p2 "Orchestra Rehearsal"; p3 "Our Class Ant Farm"; p4 "The Ferry Ride"; p5 "Pet Show Day"; p6 "Bird Watching Club"
 
-| Id | Set | Comp | Type | DOK | Passage | Differs from its twin / notes | Live choices after hints |
+| Id | Set | Comp | Type | DOK | Passage | Differs from its twin / notes | Live choices after hint 1 > 2 > 3 (script `live.js`) |
 |---|---|---|---|---|---|---|---|
 | SK-GUM3-5-P4 | 1 | core ref | (original practice) | | | reused as a core item | |
 | SK-GUM3-5-P5 | 1 | core ref | (original practice) | | | reused as a core item | |
-| SK-GUM3-5-C03 | 1 | core | mc | 1 | p1 (draft edit) | twin SK-GUM3-5-S03 uses a different word set, stem and frame |  |
-| SK-GUM3-5-C04 | 1 | core | dropdown | 2 | p1 (draft edit) | twin SK-GUM3-5-S04 uses a different word set, stem and frame |  |
-| SK-GUM3-5-C05 | 1 | core | ebsr | 2 | p1 (draft edit) | twin SK-GUM3-5-S05 uses a different word set, stem and frame |  |
-| SK-GUM3-5-C06 | 2 | core | hottext | 2 | p2 (draft edit) | twin SK-GUM3-5-S06 uses a different word set, stem and frame |  |
-| SK-GUM3-5-C07 | 2 | core | ms | 2 | none | twin SK-GUM3-5-S07 uses a different word set, stem and frame |  |
-| SK-GUM3-5-C08 | 2 | core | match | 1 | none | twin SK-GUM3-5-S08 uses a different word set, stem and frame |  |
-| SK-GUM3-5-C09 | 2 | core | mc | 3 | none | twin SK-GUM3-5-S09 uses a different word set, stem and frame |  |
-| SK-GUM3-5-C10 | 2 | core | dropdown | 2 | p2 (draft edit) | twin SK-GUM3-5-S10 uses a different word set, stem and frame |  |
-| SK-GUM3-5-C11 | 3 | core | hottext | 2 | p3 (draft edit) | twin SK-GUM3-5-S11 uses a different word set, stem and frame |  |
-| SK-GUM3-5-C12 | 3 | core | mc | 2 | none | twin SK-GUM3-5-S12 uses a different word set, stem and frame |  |
-| SK-GUM3-5-C13 | 3 | core | ms | 3 | none | twin SK-GUM3-5-S13 uses a different word set, stem and frame |  |
-| SK-GUM3-5-C14 | 3 | core | dropdown | 2 | none | twin SK-GUM3-5-S14 uses a different word set, stem and frame |  |
-| SK-GUM3-5-C15 | 3 | core | mc | 2 | none | twin SK-GUM3-5-S15 uses a different word set, stem and frame |  |
-| SK-GUM3-5-S01 | twin | similar | ms | 2 | none | like SK-GUM3-5-P4 | |
-| SK-GUM3-5-S02 | twin | similar | hottext | 2 | none | like SK-GUM3-5-P5 | |
-| SK-GUM3-5-S03 | twin | similar | mc | 1 | p4 | like SK-GUM3-5-C03 | |
-| SK-GUM3-5-S04 | twin | similar | dropdown | 2 | p4 | like SK-GUM3-5-C04 | |
-| SK-GUM3-5-S05 | twin | similar | ebsr | 2 | p4 | like SK-GUM3-5-C05 | |
-| SK-GUM3-5-S06 | twin | similar | hottext | 2 | p5 | like SK-GUM3-5-C06 | |
-| SK-GUM3-5-S07 | twin | similar | ms | 2 | none | like SK-GUM3-5-C07 | |
-| SK-GUM3-5-S08 | twin | similar | match | 1 | none | like SK-GUM3-5-C08 | |
-| SK-GUM3-5-S09 | twin | similar | mc | 3 | none | like SK-GUM3-5-C09 | |
-| SK-GUM3-5-S10 | twin | similar | dropdown | 2 | p5 | like SK-GUM3-5-C10 | |
-| SK-GUM3-5-S11 | twin | similar | hottext | 2 | p6 | like SK-GUM3-5-C11 | |
-| SK-GUM3-5-S12 | twin | similar | mc | 2 | none | like SK-GUM3-5-C12 | |
-| SK-GUM3-5-S13 | twin | similar | ms | 3 | none | like SK-GUM3-5-C13 | |
-| SK-GUM3-5-S14 | twin | similar | dropdown | 2 | none | like SK-GUM3-5-C14 | |
-| SK-GUM3-5-S15 | twin | similar | mc | 2 | none | like SK-GUM3-5-C15 | |
+| SK-GUM3-5-C03 | 1 | core | mc | 1 | p1 (draft edit) | twin SK-GUM3-5-S03 uses a different word set, stem and frame | 4/4 > 4/4 > 3/4 |
+| SK-GUM3-5-C04 | 1 | core | dropdown | 2 | p1 (draft edit) | twin SK-GUM3-5-S04 uses a different word set, stem and frame | slot1: 3/3 > 3/3 > 2/3 |
+| SK-GUM3-5-C05 | 1 | core | ebsr | 2 | p1 (draft edit) | twin SK-GUM3-5-S05 uses a different word set, stem and frame | A: 4/4 > 4/4 > 2/4; B: 4/4 > 4/4 > 4/4 |
+| SK-GUM3-5-C06 | 2 | core | hottext | 2 | p2 (draft edit) | twin SK-GUM3-5-S06 uses a different word set, stem and frame | 5/5 > 5/5 > 5/5 |
+| SK-GUM3-5-C07 | 2 | core | ms | 2 | none | twin SK-GUM3-5-S07 uses a different word set, stem and frame | 5/5 > 5/5 > 5/5 |
+| SK-GUM3-5-C08 | 2 | core | match | 1 | none | twin SK-GUM3-5-S08 uses a different word set, stem and frame | rows: 3/4 > 3/4 > 3/4 |
+| SK-GUM3-5-C09 | 2 | core | mc | 3 | none | twin SK-GUM3-5-S09 uses a different word set, stem and frame | 4/4 > 4/4 > 4/4 |
+| SK-GUM3-5-C10 | 2 | core | dropdown | 2 | p2 (draft edit) | twin SK-GUM3-5-S10 uses a different word set, stem and frame | slot1: 3/3 > 3/3 > 2/3; slot2: 2/3 > 2/3 > 2/3 |
+| SK-GUM3-5-C11 | 3 | core | hottext | 2 | p3 (draft edit) | twin SK-GUM3-5-S11 uses a different word set, stem and frame | 5/5 > 5/5 > 5/5 |
+| SK-GUM3-5-C12 | 3 | core | mc | 2 | none | twin SK-GUM3-5-S12 uses a different word set, stem and frame | 4/4 > 4/4 > 3/4 |
+| SK-GUM3-5-C13 | 3 | core | ms | 3 | none | twin SK-GUM3-5-S13 uses a different word set, stem and frame | 5/5 > 5/5 > 5/5 |
+| SK-GUM3-5-C14 | 3 | core | dropdown | 2 | none | twin SK-GUM3-5-S14 uses a different word set, stem and frame | slot1: 3/3 > 3/3 > 2/3 |
+| SK-GUM3-5-C15 | 3 | core | mc | 2 | none | twin SK-GUM3-5-S15 uses a different word set, stem and frame | 4/4 > 4/4 > 4/4 |
+| SK-GUM3-5-S01 | twin | similar | ms | 2 | none | like SK-GUM3-5-P4 | 5/5 > 5/5 > 5/5 |
+| SK-GUM3-5-S02 | twin | similar | hottext | 2 | none | like SK-GUM3-5-P5 | 4/4 > 4/4 > 4/4 |
+| SK-GUM3-5-S03 | twin | similar | mc | 1 | p4 | like SK-GUM3-5-C03 | 4/4 > 4/4 > 3/4 |
+| SK-GUM3-5-S04 | twin | similar | dropdown | 2 | p4 | like SK-GUM3-5-C04 | slot1: 3/3 > 3/3 > 2/3 |
+| SK-GUM3-5-S05 | twin | similar | ebsr | 2 | p4 | like SK-GUM3-5-C05 | A: 4/4 > 4/4 > 2/4; B: 4/4 > 4/4 > 4/4 |
+| SK-GUM3-5-S06 | twin | similar | hottext | 2 | p5 | like SK-GUM3-5-C06 | 5/5 > 5/5 > 5/5 |
+| SK-GUM3-5-S07 | twin | similar | ms | 2 | none | like SK-GUM3-5-C07 | 5/5 > 5/5 > 5/5 |
+| SK-GUM3-5-S08 | twin | similar | match | 1 | none | like SK-GUM3-5-C08 | rows: 3/4 > 3/4 > 3/4 |
+| SK-GUM3-5-S09 | twin | similar | mc | 3 | none | like SK-GUM3-5-C09 | 4/4 > 4/4 > 4/4 |
+| SK-GUM3-5-S10 | twin | similar | dropdown | 2 | p5 | like SK-GUM3-5-C10 | slot1: 3/3 > 3/3 > 2/3; slot2: 3/3 > 3/3 > 3/3 |
+| SK-GUM3-5-S11 | twin | similar | hottext | 2 | p6 | like SK-GUM3-5-C11 | 5/5 > 5/5 > 5/5 |
+| SK-GUM3-5-S12 | twin | similar | mc | 2 | none | like SK-GUM3-5-C12 | 4/4 > 4/4 > 3/4 |
+| SK-GUM3-5-S13 | twin | similar | ms | 3 | none | like SK-GUM3-5-C13 | 5/5 > 5/5 > 5/5 |
+| SK-GUM3-5-S14 | twin | similar | dropdown | 2 | none | like SK-GUM3-5-C14 | slot1: 3/3 > 3/3 > 2/3 |
+| SK-GUM3-5-S15 | twin | similar | mc | 2 | none | like SK-GUM3-5-C15 | 4/4 > 4/4 > 4/4 |
 
 ### Lesson 6: 3.L.GC.1:M:use-reflexive-pronouns
 Passages: p1 "Building Our Treehouse"; p2 "The Puppet Show"; p3 "Learning Cartwheels"; p4 "Sandcastle Day"; p5 "Sewing Club"; p6 "Pottery Class"
 
-| Id | Set | Comp | Type | DOK | Passage | Differs from its twin / notes | Live choices after hints |
+| Id | Set | Comp | Type | DOK | Passage | Differs from its twin / notes | Live choices after hint 1 > 2 > 3 (script `live.js`) |
 |---|---|---|---|---|---|---|---|
 | SK-GUM3-6-P4 | 1 | core ref | (original practice) | | | reused as a core item | |
 | SK-GUM3-6-P5 | 1 | core ref | (original practice) | | | reused as a core item | |
-| SK-GUM3-6-C03 | 1 | core | dropdown | 2 | p1 (draft edit) | twin SK-GUM3-6-S03 uses a different word set, stem and frame |  |
-| SK-GUM3-6-C04 | 1 | core | mc | 2 | p1 (draft edit) | twin SK-GUM3-6-S04 uses a different word set, stem and frame |  |
-| SK-GUM3-6-C05 | 1 | core | ebsr | 3 | p1 (draft edit) | twin SK-GUM3-6-S05 uses a different word set, stem and frame |  |
-| SK-GUM3-6-C06 | 2 | core | hottext | 2 | p2 (draft edit) | twin SK-GUM3-6-S06 uses a different word set, stem and frame |  |
-| SK-GUM3-6-C07 | 2 | core | ms | 2 | none | twin SK-GUM3-6-S07 uses a different word set, stem and frame |  |
-| SK-GUM3-6-C08 | 2 | core | match | 2 | none | twin SK-GUM3-6-S08 uses a different word set, stem and frame |  |
-| SK-GUM3-6-C09 | 2 | core | mc | 3 | none | twin SK-GUM3-6-S09 uses a different word set, stem and frame |  |
-| SK-GUM3-6-C10 | 2 | core | dropdown | 2 | none | twin SK-GUM3-6-S10 uses a different word set, stem and frame |  |
-| SK-GUM3-6-C11 | 3 | core | hottext | 2 | p3 (draft edit) | twin SK-GUM3-6-S11 uses a different word set, stem and frame |  |
-| SK-GUM3-6-C12 | 3 | core | mc | 2 | none | twin SK-GUM3-6-S12 uses a different word set, stem and frame |  |
-| SK-GUM3-6-C13 | 3 | core | ms | 3 | none | twin SK-GUM3-6-S13 uses a different word set, stem and frame |  |
-| SK-GUM3-6-C14 | 3 | core | dropdown | 2 | none | twin SK-GUM3-6-S14 uses a different word set, stem and frame |  |
-| SK-GUM3-6-C15 | 3 | core | mc | 2 | none | twin SK-GUM3-6-S15 uses a different word set, stem and frame |  |
-| SK-GUM3-6-S01 | twin | similar | hottext | 2 | none | like SK-GUM3-6-P4 | |
-| SK-GUM3-6-S02 | twin | similar | dropdown | 2 | none | like SK-GUM3-6-P5 | |
-| SK-GUM3-6-S03 | twin | similar | dropdown | 2 | p4 | like SK-GUM3-6-C03 | |
-| SK-GUM3-6-S04 | twin | similar | mc | 2 | p4 | like SK-GUM3-6-C04 | |
-| SK-GUM3-6-S05 | twin | similar | ebsr | 3 | p4 | like SK-GUM3-6-C05 | |
-| SK-GUM3-6-S06 | twin | similar | hottext | 2 | p5 | like SK-GUM3-6-C06 | |
-| SK-GUM3-6-S07 | twin | similar | ms | 2 | none | like SK-GUM3-6-C07 | |
-| SK-GUM3-6-S08 | twin | similar | match | 2 | none | like SK-GUM3-6-C08 | |
-| SK-GUM3-6-S09 | twin | similar | mc | 3 | none | like SK-GUM3-6-C09 | |
-| SK-GUM3-6-S10 | twin | similar | dropdown | 2 | none | like SK-GUM3-6-C10 | |
-| SK-GUM3-6-S11 | twin | similar | hottext | 2 | p6 | like SK-GUM3-6-C11 | |
-| SK-GUM3-6-S12 | twin | similar | mc | 2 | none | like SK-GUM3-6-C12 | |
-| SK-GUM3-6-S13 | twin | similar | ms | 3 | none | like SK-GUM3-6-C13 | |
-| SK-GUM3-6-S14 | twin | similar | dropdown | 2 | none | like SK-GUM3-6-C14 | |
-| SK-GUM3-6-S15 | twin | similar | mc | 2 | none | like SK-GUM3-6-C15 | |
+| SK-GUM3-6-C03 | 1 | core | dropdown | 2 | p1 (draft edit) | twin SK-GUM3-6-S03 uses a different word set, stem and frame | slot1: 4/4 > 4/4 > 2/4! |
+| SK-GUM3-6-C04 | 1 | core | mc | 2 | p1 (draft edit) | twin SK-GUM3-6-S04 uses a different word set, stem and frame | 4/4 > 4/4 > 4/4 |
+| SK-GUM3-6-C05 | 1 | core | ebsr | 3 | p1 (draft edit) | twin SK-GUM3-6-S05 uses a different word set, stem and frame | A: 4/4 > 4/4 > 4/4; B: 4/4 > 4/4 > 4/4 |
+| SK-GUM3-6-C06 | 2 | core | hottext | 2 | p2 (draft edit) | twin SK-GUM3-6-S06 uses a different word set, stem and frame | 5/5 > 5/5 > 5/5 |
+| SK-GUM3-6-C07 | 2 | core | ms | 2 | none | twin SK-GUM3-6-S07 uses a different word set, stem and frame | 5/5 > 5/5 > 5/5 |
+| SK-GUM3-6-C08 | 2 | core | match | 2 | none | twin SK-GUM3-6-S08 uses a different word set, stem and frame | rows: 4/4 > 4/4 > 4/4 |
+| SK-GUM3-6-C09 | 2 | core | mc | 3 | none | twin SK-GUM3-6-S09 uses a different word set, stem and frame | 4/4 > 4/4 > 4/4 |
+| SK-GUM3-6-C10 | 2 | core | dropdown | 2 | none | twin SK-GUM3-6-S10 uses a different word set, stem and frame | slot1: 3/3 > 3/3 > 2/3; slot2: 3/3 > 3/3 > 3/3 |
+| SK-GUM3-6-C11 | 3 | core | hottext | 2 | p3 (draft edit) | twin SK-GUM3-6-S11 uses a different word set, stem and frame | 5/5 > 5/5 > 5/5 |
+| SK-GUM3-6-C12 | 3 | core | mc | 2 | none | twin SK-GUM3-6-S12 uses a different word set, stem and frame | 4/4 > 4/4 > 4/4 |
+| SK-GUM3-6-C13 | 3 | core | ms | 3 | none | twin SK-GUM3-6-S13 uses a different word set, stem and frame | 5/5 > 5/5 > 5/5 |
+| SK-GUM3-6-C14 | 3 | core | dropdown | 2 | none | twin SK-GUM3-6-S14 uses a different word set, stem and frame | slot1: 3/3 > 3/3 > 2/3 |
+| SK-GUM3-6-C15 | 3 | core | mc | 2 | none | twin SK-GUM3-6-S15 uses a different word set, stem and frame | 4/4 > 4/4 > 4/4 |
+| SK-GUM3-6-S01 | twin | similar | hottext | 2 | none | like SK-GUM3-6-P4 | 4/4 > 4/4 > 4/4 |
+| SK-GUM3-6-S02 | twin | similar | dropdown | 2 | none | like SK-GUM3-6-P5 | slot1: 3/3 > 3/3 > 2/3; slot2: 3/3 > 3/3 > 2/3 |
+| SK-GUM3-6-S03 | twin | similar | dropdown | 2 | p4 | like SK-GUM3-6-C03 | slot1: 3/3 > 3/3 > 2/3 |
+| SK-GUM3-6-S04 | twin | similar | mc | 2 | p4 | like SK-GUM3-6-C04 | 4/4 > 4/4 > 4/4 |
+| SK-GUM3-6-S05 | twin | similar | ebsr | 3 | p4 | like SK-GUM3-6-C05 | A: 4/4 > 4/4 > 4/4; B: 4/4 > 4/4 > 4/4 |
+| SK-GUM3-6-S06 | twin | similar | hottext | 2 | p5 | like SK-GUM3-6-C06 | 5/5 > 5/5 > 5/5 |
+| SK-GUM3-6-S07 | twin | similar | ms | 2 | none | like SK-GUM3-6-C07 | 5/5 > 5/5 > 5/5 |
+| SK-GUM3-6-S08 | twin | similar | match | 2 | none | like SK-GUM3-6-C08 | rows: 4/4 > 4/4 > 4/4 |
+| SK-GUM3-6-S09 | twin | similar | mc | 3 | none | like SK-GUM3-6-C09 | 4/4 > 4/4 > 4/4 |
+| SK-GUM3-6-S10 | twin | similar | dropdown | 2 | none | like SK-GUM3-6-C10 | slot1: 3/3 > 3/3 > 2/3; slot2: 3/3 > 3/3 > 3/3 |
+| SK-GUM3-6-S11 | twin | similar | hottext | 2 | p6 | like SK-GUM3-6-C11 | 5/5 > 5/5 > 5/5 |
+| SK-GUM3-6-S12 | twin | similar | mc | 2 | none | like SK-GUM3-6-C12 | 4/4 > 4/4 > 4/4 |
+| SK-GUM3-6-S13 | twin | similar | ms | 3 | none | like SK-GUM3-6-C13 | 5/5 > 5/5 > 5/5 |
+| SK-GUM3-6-S14 | twin | similar | dropdown | 2 | none | like SK-GUM3-6-C14 | slot1: 3/3 > 3/3 > 2/3 |
+| SK-GUM3-6-S15 | twin | similar | mc | 2 | none | like SK-GUM3-6-C15 | 4/4 > 4/4 > 4/4 |
 
 ### Lesson 7: 3.L.GC.1:M:use-commas-with-coordinating-conjunctions-to-joi
 Passages: p1 "Mini Golf with Dad"; p2 "Our Clubhouse"; p3 "The Climbing Wall"; p4 "Zipline Day"; p5 "Hayride Night"; p6 "Corn Maze Visit"
 
-| Id | Set | Comp | Type | DOK | Passage | Differs from its twin / notes | Live choices after hints |
+| Id | Set | Comp | Type | DOK | Passage | Differs from its twin / notes | Live choices after hint 1 > 2 > 3 (script `live.js`) |
 |---|---|---|---|---|---|---|---|
 | SK-GUM3-7-P2 | 1 | core ref | (original practice) | | | reused as a core item | |
 | SK-GUM3-7-P4 | 1 | core ref | (original practice) | | | reused as a core item | |
-| SK-GUM3-7-C03 | 1 | core | dropdown | 2 | p1 (draft edit) | twin SK-GUM3-7-S03 uses a different word set, stem and frame |  |
-| SK-GUM3-7-C04 | 1 | core | mc | 2 | p1 (draft edit) | twin SK-GUM3-7-S04 uses a different word set, stem and frame |  |
-| SK-GUM3-7-C05 | 1 | core | ebsr | 3 | p1 (draft edit) | twin SK-GUM3-7-S05 uses a different word set, stem and frame |  |
-| SK-GUM3-7-C06 | 2 | core | hottext | 2 | p2 (draft edit) | twin SK-GUM3-7-S06 uses a different word set, stem and frame |  |
-| SK-GUM3-7-C07 | 2 | core | mc | 2 | none | twin SK-GUM3-7-S07 uses a different word set, stem and frame |  |
-| SK-GUM3-7-C08 | 2 | core | match | 2 | none | twin SK-GUM3-7-S08 uses a different word set, stem and frame |  |
-| SK-GUM3-7-C09 | 2 | core | mc | 3 | none | twin SK-GUM3-7-S09 uses a different word set, stem and frame |  |
-| SK-GUM3-7-C10 | 2 | core | dropdown | 2 | p2 (draft edit) | twin SK-GUM3-7-S10 uses a different word set, stem and frame |  |
-| SK-GUM3-7-C11 | 3 | core | hottext | 2 | p3 (draft edit) | twin SK-GUM3-7-S11 uses a different word set, stem and frame |  |
-| SK-GUM3-7-C12 | 3 | core | mc | 2 | none | twin SK-GUM3-7-S12 uses a different word set, stem and frame |  |
-| SK-GUM3-7-C13 | 3 | core | ms | 3 | none | twin SK-GUM3-7-S13 uses a different word set, stem and frame |  |
-| SK-GUM3-7-C14 | 3 | core | dropdown | 2 | none | twin SK-GUM3-7-S14 uses a different word set, stem and frame |  |
-| SK-GUM3-7-C15 | 3 | core | mc | 2 | none | twin SK-GUM3-7-S15 uses a different word set, stem and frame |  |
-| SK-GUM3-7-S01 | twin | similar | hottext | 2 | none | like SK-GUM3-7-P2 | |
-| SK-GUM3-7-S02 | twin | similar | ms | 2 | none | like SK-GUM3-7-P4 | |
-| SK-GUM3-7-S03 | twin | similar | dropdown | 2 | none | like SK-GUM3-7-C03 | |
-| SK-GUM3-7-S04 | twin | similar | mc | 2 | p4 | like SK-GUM3-7-C04 | |
-| SK-GUM3-7-S05 | twin | similar | ebsr | 3 | p4 | like SK-GUM3-7-C05 | |
-| SK-GUM3-7-S06 | twin | similar | hottext | 2 | p5 | like SK-GUM3-7-C06 | |
-| SK-GUM3-7-S07 | twin | similar | mc | 2 | none | like SK-GUM3-7-C07 | |
-| SK-GUM3-7-S08 | twin | similar | match | 2 | none | like SK-GUM3-7-C08 | |
-| SK-GUM3-7-S09 | twin | similar | mc | 3 | none | like SK-GUM3-7-C09 | |
-| SK-GUM3-7-S10 | twin | similar | dropdown | 2 | none | like SK-GUM3-7-C10 | |
-| SK-GUM3-7-S11 | twin | similar | hottext | 2 | p6 | like SK-GUM3-7-C11 | |
-| SK-GUM3-7-S12 | twin | similar | mc | 2 | none | like SK-GUM3-7-C12 | |
-| SK-GUM3-7-S13 | twin | similar | ms | 3 | none | like SK-GUM3-7-C13 | |
-| SK-GUM3-7-S14 | twin | similar | dropdown | 2 | none | like SK-GUM3-7-C14 | |
-| SK-GUM3-7-S15 | twin | similar | mc | 2 | none | like SK-GUM3-7-C15 | |
+| SK-GUM3-7-C03 | 1 | core | dropdown | 2 | p1 (draft edit) | twin SK-GUM3-7-S03 uses a different word set, stem and frame | slot1: 3/3 > 3/3 > 3/3 |
+| SK-GUM3-7-C04 | 1 | core | mc | 2 | p1 (draft edit) | twin SK-GUM3-7-S04 uses a different word set, stem and frame | 4/4 > 4/4 > 4/4 |
+| SK-GUM3-7-C05 | 1 | core | ebsr | 3 | p1 (draft edit) | twin SK-GUM3-7-S05 uses a different word set, stem and frame | A: 4/4 > 4/4 > 4/4; B: 4/4 > 4/4 > 4/4 |
+| SK-GUM3-7-C06 | 2 | core | hottext | 2 | p2 (draft edit) | twin SK-GUM3-7-S06 uses a different word set, stem and frame | 5/5 > 5/5 > 5/5 |
+| SK-GUM3-7-C07 | 2 | core | mc | 2 | none | twin SK-GUM3-7-S07 uses a different word set, stem and frame | 4/4 > 4/4 > 4/4 |
+| SK-GUM3-7-C08 | 2 | core | match | 2 | none | twin SK-GUM3-7-S08 uses a different word set, stem and frame | rows: 4/4 > 4/4 > 4/4 |
+| SK-GUM3-7-C09 | 2 | core | mc | 3 | none | twin SK-GUM3-7-S09 uses a different word set, stem and frame | 4/4 > 4/4 > 4/4 |
+| SK-GUM3-7-C10 | 2 | core | dropdown | 2 | p2 (draft edit) | twin SK-GUM3-7-S10 uses a different word set, stem and frame | slot1: 3/3 > 2/3 > 2/3; slot2: 3/3 > 3/3 > 3/3 |
+| SK-GUM3-7-C11 | 3 | core | hottext | 2 | p3 (draft edit) | twin SK-GUM3-7-S11 uses a different word set, stem and frame | 5/5 > 5/5 > 5/5 |
+| SK-GUM3-7-C12 | 3 | core | mc | 2 | none | twin SK-GUM3-7-S12 uses a different word set, stem and frame | 4/4 > 4/4 > 4/4 |
+| SK-GUM3-7-C13 | 3 | core | ms | 3 | none | twin SK-GUM3-7-S13 uses a different word set, stem and frame | 5/5 > 5/5 > 5/5 |
+| SK-GUM3-7-C14 | 3 | core | dropdown | 2 | none | twin SK-GUM3-7-S14 uses a different word set, stem and frame | slot1: 3/3 > 3/3 > 3/3 |
+| SK-GUM3-7-C15 | 3 | core | mc | 2 | none | twin SK-GUM3-7-S15 uses a different word set, stem and frame | 4/4 > 4/4 > 4/4 |
+| SK-GUM3-7-S01 | twin | similar | hottext | 2 | none | like SK-GUM3-7-P2 | 4/4 > 4/4 > 4/4 |
+| SK-GUM3-7-S02 | twin | similar | ms | 2 | none | like SK-GUM3-7-P4 | 5/5 > 5/5 > 5/5 |
+| SK-GUM3-7-S03 | twin | similar | dropdown | 2 | none | like SK-GUM3-7-C03 | slot1: 3/3 > 3/3 > 3/3 |
+| SK-GUM3-7-S04 | twin | similar | mc | 2 | p4 | like SK-GUM3-7-C04 | 4/4 > 4/4 > 4/4 |
+| SK-GUM3-7-S05 | twin | similar | ebsr | 3 | p4 | like SK-GUM3-7-C05 | A: 4/4 > 4/4 > 4/4; B: 4/4 > 4/4 > 4/4 |
+| SK-GUM3-7-S06 | twin | similar | hottext | 2 | p5 | like SK-GUM3-7-C06 | 5/5 > 5/5 > 5/5 |
+| SK-GUM3-7-S07 | twin | similar | mc | 2 | none | like SK-GUM3-7-C07 | 4/4 > 4/4 > 4/4 |
+| SK-GUM3-7-S08 | twin | similar | match | 2 | none | like SK-GUM3-7-C08 | rows: 4/4 > 4/4 > 4/4 |
+| SK-GUM3-7-S09 | twin | similar | mc | 3 | none | like SK-GUM3-7-C09 | 4/4 > 4/4 > 4/4 |
+| SK-GUM3-7-S10 | twin | similar | dropdown | 2 | none | like SK-GUM3-7-C10 | slot1: 3/3 > 3/3 > 3/3; slot2: 3/3 > 3/3 > 3/3 |
+| SK-GUM3-7-S11 | twin | similar | hottext | 2 | p6 | like SK-GUM3-7-C11 | 5/5 > 5/5 > 5/5 |
+| SK-GUM3-7-S12 | twin | similar | mc | 2 | none | like SK-GUM3-7-C12 | 4/4 > 4/4 > 4/4 |
+| SK-GUM3-7-S13 | twin | similar | ms | 3 | none | like SK-GUM3-7-C13 | 5/5 > 5/5 > 5/5 |
+| SK-GUM3-7-S14 | twin | similar | dropdown | 2 | none | like SK-GUM3-7-C14 | slot1: 3/3 > 3/3 > 3/3 |
+| SK-GUM3-7-S15 | twin | similar | mc | 2 | none | like SK-GUM3-7-C15 | 4/4 > 4/4 > 4/4 |
 
 ### Lesson 8: 3.L.GC.1:M:use-hyphens-to-divide-words-at-line-breaks
 Passages: p1 "Packing a Suitcase"; p2 "Basement Clean-Up"; p3 "Train Museum Trip"; p4 "Campsite Chores"; p5 "Grocery Store Helper"; p6 "Pond Cleanup Day"
 
-| Id | Set | Comp | Type | DOK | Passage | Differs from its twin / notes | Live choices after hints |
+| Id | Set | Comp | Type | DOK | Passage | Differs from its twin / notes | Live choices after hint 1 > 2 > 3 (script `live.js`) |
 |---|---|---|---|---|---|---|---|
 | SK-GUM3-8-P3 | 1 | core ref | (original practice) | | | reused as a core item | |
 | SK-GUM3-8-P4 | 1 | core ref | (original practice) | | | reused as a core item | |
-| SK-GUM3-8-C03 | 1 | core | dropdown | 2 | p1 (draft edit) | twin SK-GUM3-8-S03 uses a different word set, stem and frame |  |
-| SK-GUM3-8-C04 | 1 | core | mc | 2 | p1 (draft edit) | twin SK-GUM3-8-S04 uses a different word set, stem and frame |  |
-| SK-GUM3-8-C05 | 1 | core | ebsr | 2 | p1 (draft edit) | twin SK-GUM3-8-S05 uses a different word set, stem and frame |  |
-| SK-GUM3-8-C06 | 2 | core | hottext | 2 | p2 (draft edit) | twin SK-GUM3-8-S06 uses a different word set, stem and frame |  |
-| SK-GUM3-8-C07 | 2 | core | ms | 2 | none | twin SK-GUM3-8-S07 uses a different word set, stem and frame |  |
-| SK-GUM3-8-C08 | 2 | core | mc | 1 | none | twin SK-GUM3-8-S08 uses a different word set, stem and frame |  |
-| SK-GUM3-8-C09 | 2 | core | mc | 3 | none | twin SK-GUM3-8-S09 uses a different word set, stem and frame |  |
-| SK-GUM3-8-C10 | 2 | core | dropdown | 2 | none | twin SK-GUM3-8-S10 uses a different word set, stem and frame |  |
-| SK-GUM3-8-C11 | 3 | core | hottext | 2 | p3 (draft edit) | twin SK-GUM3-8-S11 uses a different word set, stem and frame |  |
-| SK-GUM3-8-C12 | 3 | core | mc | 2 | none | twin SK-GUM3-8-S12 uses a different word set, stem and frame |  |
-| SK-GUM3-8-C13 | 3 | core | ms | 3 | none | twin SK-GUM3-8-S13 uses a different word set, stem and frame |  |
-| SK-GUM3-8-C14 | 3 | core | match | 2 | none | twin SK-GUM3-8-S14 uses a different word set, stem and frame |  |
-| SK-GUM3-8-C15 | 3 | core | dropdown | 1 | none | twin SK-GUM3-8-S15 uses a different word set, stem and frame |  |
-| SK-GUM3-8-S01 | twin | similar | match | 2 | none | like SK-GUM3-8-P3 | |
-| SK-GUM3-8-S02 | twin | similar | ms | 2 | none | like SK-GUM3-8-P4 | |
-| SK-GUM3-8-S03 | twin | similar | dropdown | 2 | p4 | like SK-GUM3-8-C03 | |
-| SK-GUM3-8-S04 | twin | similar | mc | 2 | p4 | like SK-GUM3-8-C04 | |
-| SK-GUM3-8-S05 | twin | similar | ebsr | 2 | p4 | like SK-GUM3-8-C05 | |
-| SK-GUM3-8-S06 | twin | similar | hottext | 2 | p5 | like SK-GUM3-8-C06 | |
-| SK-GUM3-8-S07 | twin | similar | ms | 2 | none | like SK-GUM3-8-C07 | |
-| SK-GUM3-8-S08 | twin | similar | mc | 1 | none | like SK-GUM3-8-C08 | |
-| SK-GUM3-8-S09 | twin | similar | mc | 3 | none | like SK-GUM3-8-C09 | |
-| SK-GUM3-8-S10 | twin | similar | dropdown | 2 | none | like SK-GUM3-8-C10 | |
-| SK-GUM3-8-S11 | twin | similar | hottext | 2 | p6 | like SK-GUM3-8-C11 | |
-| SK-GUM3-8-S12 | twin | similar | mc | 2 | none | like SK-GUM3-8-C12 | |
-| SK-GUM3-8-S13 | twin | similar | ms | 3 | none | like SK-GUM3-8-C13 | |
-| SK-GUM3-8-S14 | twin | similar | match | 2 | none | like SK-GUM3-8-C14 | |
-| SK-GUM3-8-S15 | twin | similar | dropdown | 1 | none | like SK-GUM3-8-C15 | |
+| SK-GUM3-8-C03 | 1 | core | dropdown | 2 | p1 (draft edit) | twin SK-GUM3-8-S03 uses a different word set, stem and frame | slot1: 3/3 > 3/3 > 2/3 |
+| SK-GUM3-8-C04 | 1 | core | mc | 2 | p1 (draft edit) | twin SK-GUM3-8-S04 uses a different word set, stem and frame | 4/4 > 4/4 > 3/4 |
+| SK-GUM3-8-C05 | 1 | core | ebsr | 2 | p1 (draft edit) | twin SK-GUM3-8-S05 uses a different word set, stem and frame | A: 4/4 > 4/4 > 3/4; B: 4/4 > 4/4 > 4/4 |
+| SK-GUM3-8-C06 | 2 | core | hottext | 2 | p2 (draft edit) | twin SK-GUM3-8-S06 uses a different word set, stem and frame | 5/5 > 5/5 > 4/5 |
+| SK-GUM3-8-C07 | 2 | core | ms | 2 | none | twin SK-GUM3-8-S07 uses a different word set, stem and frame | 5/5 > 5/5 > 4/5 |
+| SK-GUM3-8-C08 | 2 | core | mc | 1 | none | twin SK-GUM3-8-S08 uses a different word set, stem and frame | 4/4 > 4/4 > 3/4 |
+| SK-GUM3-8-C09 | 2 | core | mc | 3 | none | twin SK-GUM3-8-S09 uses a different word set, stem and frame | 4/4 > 4/4 > 4/4 |
+| SK-GUM3-8-C10 | 2 | core | dropdown | 2 | none | twin SK-GUM3-8-S10 uses a different word set, stem and frame | slot1: 3/3 > 3/3 > 3/3; slot2: 3/3 > 3/3 > 2/3 |
+| SK-GUM3-8-C11 | 3 | core | hottext | 2 | p3 (draft edit) | twin SK-GUM3-8-S11 uses a different word set, stem and frame | 5/5 > 5/5 > 4/5 |
+| SK-GUM3-8-C12 | 3 | core | mc | 2 | none | twin SK-GUM3-8-S12 uses a different word set, stem and frame | 4/4 > 4/4 > 3/4 |
+| SK-GUM3-8-C13 | 3 | core | ms | 3 | none | twin SK-GUM3-8-S13 uses a different word set, stem and frame | 5/5 > 5/5 > 4/5 |
+| SK-GUM3-8-C14 | 3 | core | match | 2 | none | twin SK-GUM3-8-S14 uses a different word set, stem and frame | rows: 4/4 > 4/4 > 3/4 |
+| SK-GUM3-8-C15 | 3 | core | dropdown | 1 | none | twin SK-GUM3-8-S15 uses a different word set, stem and frame | slot1: 3/3 > 3/3 > 2/3 |
+| SK-GUM3-8-S01 | twin | similar | match | 2 | none | like SK-GUM3-8-P3 | rows: 4/4 > 4/4 > 4/4 |
+| SK-GUM3-8-S02 | twin | similar | ms | 2 | none | like SK-GUM3-8-P4 | 5/5 > 5/5 > 5/5 |
+| SK-GUM3-8-S03 | twin | similar | dropdown | 2 | p4 | like SK-GUM3-8-C03 | slot1: 3/3 > 3/3 > 2/3 |
+| SK-GUM3-8-S04 | twin | similar | mc | 2 | p4 | like SK-GUM3-8-C04 | 4/4 > 4/4 > 3/4 |
+| SK-GUM3-8-S05 | twin | similar | ebsr | 2 | p4 | like SK-GUM3-8-C05 | A: 4/4 > 4/4 > 3/4; B: 4/4 > 4/4 > 4/4 |
+| SK-GUM3-8-S06 | twin | similar | hottext | 2 | p5 | like SK-GUM3-8-C06 | 5/5 > 5/5 > 4/5 |
+| SK-GUM3-8-S07 | twin | similar | ms | 2 | none | like SK-GUM3-8-C07 | 5/5 > 5/5 > 4/5 |
+| SK-GUM3-8-S08 | twin | similar | mc | 1 | none | like SK-GUM3-8-C08 | 4/4 > 4/4 > 3/4 |
+| SK-GUM3-8-S09 | twin | similar | mc | 3 | none | like SK-GUM3-8-C09 | 4/4 > 4/4 > 4/4 |
+| SK-GUM3-8-S10 | twin | similar | dropdown | 2 | none | like SK-GUM3-8-C10 | slot1: 3/3 > 3/3 > 3/3; slot2: 3/3 > 3/3 > 2/3 |
+| SK-GUM3-8-S11 | twin | similar | hottext | 2 | p6 | like SK-GUM3-8-C11 | 5/5 > 5/5 > 4/5 |
+| SK-GUM3-8-S12 | twin | similar | mc | 2 | none | like SK-GUM3-8-C12 | 4/4 > 4/4 > 3/4 |
+| SK-GUM3-8-S13 | twin | similar | ms | 3 | none | like SK-GUM3-8-C13 | 5/5 > 5/5 > 4/5 |
+| SK-GUM3-8-S14 | twin | similar | match | 2 | none | like SK-GUM3-8-C14 | rows: 4/4 > 4/4 > 3/4 |
+| SK-GUM3-8-S15 | twin | similar | dropdown | 1 | none | like SK-GUM3-8-C15 | slot1: 3/3 > 3/3 > 2/3 |
 
 ## Items to skeptically re-solve first
 - L8 C09 and S09 (DOK 3 two-student split: ck vs th). Confirm the stated split is the only correct reading.
@@ -370,7 +378,7 @@ Passages: p1 "Packing a Suitcase"; p2 "Basement Clean-Up"; p3 "Train Museum Trip
 - Passage topics were scanned with `topic.sh` across js/data; common topics (farm, bake, ocean, market) were avoided; shared words such as camp, store and museum appear in a few other files and are logged here.
 
 ## Not addressed / known weaker spots
-- Open concerns (left on purpose, none is a check failure): L5 C04/C14 share key logic; L2 C12/S12 are noun-swap twins; L8 Learn It has no digraph example (Teach covers it); L8 breaks such as buck-et are syllable-correct but typographic guides avoid carrying two letters, and the split words need a cold dictionary check (pyphen only for most); L1 Watch Me 1 sentence also appears in L-GUM2; L4 nor and for are rare words for grade 3; about a fifth of L1 items cover its/it's; the L7 comma rules (including the short-clause note in Teach) were not web-fetched this pass; check-content still prints "hint 1 is much longer than hint 3" warnings on some B6 items and wording-only version-record notes (owner should run --record-versions); nothing is marked ACCEPTED.
+- Open concerns (left on purpose, none is a check failure): L5 C04/C14 share key logic; L2 C12/S12 are noun-swap twins; L8 Watch Me now models a compound-plus-digraph word and no longer models a double letter (Teach point 4 and C08/S08 cover it); L8 breaks such as buck-et are syllable-correct but typographic guides avoid carrying two letters, and the split words need a cold dictionary check (pyphen only for most); L1 Watch Me 1 sentence also appears in L-GUM2; L4 nor and for are rare words for grade 3; about a fifth of L1 items cover its/it's; the L7 comma rules (including the short-clause note in Teach) were not web-fetched this pass; check-content still prints "hint 1 is much longer than hint 3" warnings on some B6 items and wording-only version-record notes (owner should run --record-versions); nothing is marked ACCEPTED.
 - L2 passages p2, p3, p5, p6 were lengthened to 100 words or more; an earlier short-passage warning may still show for older passages in other lessons.
 - The L8 draft splits follow dictionary syllable breaks for the words chosen (VCCV, double consonant, compound, digraph). Words with ambiguous splits (robot, lemon, river, prefix/suffix cases) were avoided. Dictionary-checking every split word is still recommended: L8 words used as keys or in drafts include suitcase, blanket, jacket, ribbon, toothbrush, pillow, window, flashlight, cardboard, ladder, rubber, lunch, conductor, boxcar, cushions, ticket, windmill, postcard, backpack, kettle, bonfire, pebble, stream, hammock, counter, carrots, pepper, pumpkin, floor, turtles, cattails, bottle, minnow, raincoat, sunlight, feathers.
 - Hint-2 rule: hint 2 never points to the one paragraph that holds the key; a reviewer should still spot-check the passage-based items in every lesson.
