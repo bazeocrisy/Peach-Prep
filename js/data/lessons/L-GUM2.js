@@ -8382,7 +8382,7 @@ PP.addLesson({
       "draft": true,
       "paragraphs": [
         [
-          "(1) On Sunday, it rained all day, so my brother and I stayed inside.",
+          "(1) On Sunday, it rained all day, so Ben and I stayed in the house.",
           "(2) Mom gave Ben and I a deck of cards.",
           "(3) We played a game while she cooked supper in the kitchen."
         ],
@@ -8407,20 +8407,20 @@ PP.addLesson({
       "draft": true,
       "paragraphs": [
         [
-          "(1) Last week, my class visited the school library.",
+          "(1) Last week, my whole class visited the big school library on Tuesday morning.",
           "(2) Ms. Gold showed us where the new books were shelved.",
-          "(3) Zoe grabbed a book about whales, and she opened it right away."
+          "(3) Zoe grabbed a whale book, and she opened it right away."
         ],
         [
-          "(4) Him and Caleb found a shelf of comic books.",
+          "(4) Him and Caleb found a long shelf of comic books near the window.",
           "(5) The librarian told they to whisper.",
           "(6) Pia asked for help, and Ms. Gold gave her a stool.",
-          "(7) Me and Pia searched the top shelf together."
+          "(7) Me and Pia searched the top shelf together for a book about sharks."
         ],
         [
-          "(8) At the end, each of us checked out two books to take home.",
+          "(8) At the end, each of us checked out two books to take home for the long weekend.",
           "(9) Ms. Gold stamped the cards and wished us a happy weekend.",
-          "(10) I read my whale book twice before bedtime."
+          "(10) I read my whale book twice before bedtime that night."
         ]
       ]
     },
@@ -8432,20 +8432,20 @@ PP.addLesson({
       "draft": true,
       "paragraphs": [
         [
-          "(1) At recess on Monday, my friends picked teams for kickball.",
+          "(1) At recess on Monday, my friends picked teams for a big game of kickball on the field.",
           "(2) Noah and me were chosen as the captains.",
           "(3) Mr. Hart handed Noah and me the big red ball."
         ],
         [
-          "(4) The other kids cheered, and them ran to their bases.",
-          "(5) Maya kicked the ball far, and she raced to second base.",
+          "(4) Maya cheered, and her ran to second base.",
+          "(5) Kofi kicked the ball far, and he raced to first base.",
           "(6) I caught the ball once, and I threw it to Noah."
         ],
         [
           "(7) The bell rang before we could finish the last inning.",
           "(8) Everyone groaned, but Mr. Hart promised we could play again soon.",
-          "(9) We lined up at the door, tired and dusty.",
-          "(10) I cannot wait for recess tomorrow."
+          "(9) We stood in a line by the door, tired, hot and dusty from the long game.",
+          "(10) I cannot wait for recess tomorrow so we can finish."
         ]
       ]
     },
@@ -8457,19 +8457,19 @@ PP.addLesson({
       "draft": true,
       "paragraphs": [
         [
-          "(1) Every summer, my cousins and I visit Grandpa's workshop.",
+          "(1) Every summer, my cousins and I visit Grandpa's workshop at the end of his street.",
           "(2) Grandpa let Ravi and I sand the old stool.",
-          "(3) He showed us how to hold the sandpaper."
+          "(3) He showed us how to hold the sandpaper and rub with the grain."
         ],
         [
           "(4) Us hammered the nails while Grandpa watched.",
-          "(5) The shiny red toolbox is hers.",
+          "(5) The shiny red toolbox on the high shelf is hers.",
           "(6) I asked him why his saw was so old."
         ],
         [
           "(7) Grandpa said his father gave him that saw long ago.",
-          "(8) When we finished, the stool stood straight and strong.",
-          "(9) Grandpa painted it blue and let it dry in the sun.",
+          "(8) When we finished, the stool stood straight and strong on its four legs.",
+          "(9) Grandpa painted it blue and let it dry in the warm sun all afternoon.",
           "(10) We all agreed it was the best stool in the world."
         ]
       ]
@@ -8483,19 +8483,19 @@ PP.addLesson({
       "paragraphs": [
         [
           "(1) On Friday, my sister and I planned a surprise for Mom's birthday.",
-          "(2) We hid the cake in the garage until the party began.",
+          "(2) We hid the cake in the garage until the guests arrived and the party began.",
           "(3) Dad helped my sister and me hang the banner."
         ],
         [
-          "(4) Her and I blew up forty balloons.",
+          "(4) Her and I blew up forty bright balloons in the living room.",
           "(5) Our neighbors brought their own snacks to share.",
-          "(6) Mom walked in, and us shouted surprise.",
-          "(7) Dad hugged she and gave her a gift."
+          "(6) Mom walked in the front door, and us shouted surprise together.",
+          "(7) Dad hugged she and gave her a gift wrapped in shiny paper."
         ],
         [
-          "(8) Everyone sang loudly, and the dog barked along with the song.",
+          "(8) Everyone sang loudly, and the dog barked along with the song from under the table.",
           "(9) Mom blew out the candles on the first try.",
-          "(10) It was the best party we ever planned together."
+          "(10) It was the best party we ever planned together, and Mom said so."
         ]
       ]
     }
@@ -8527,11 +8527,11 @@ PP.addLesson({
     { id: "SK-GUM2-6-P4", type: "hottext", points: 1, dok: 2, passages: [],
       prompt: "Select the sentence that has a pronoun error.",
       options: [
-        "The bird built its nest in our mailbox.",
+        "The bird built its nest in our old green mailbox.",
         "Him and his sister walk to school together.",
-        "Can you share your markers with us?",
+        "Can you share your new markers with us today?",
         "The blue lunchbox is mine.",
-        "They invited her to the party."
+        "They invited her to the party on Saturday."
       ],
       answer: [1], pick: 1,
       clue: "Find the pronoun that does the action in each sentence. A pronoun that does the action must be a subject pronoun.",
@@ -8678,9 +8678,9 @@ PP.addLesson({
                 "text": "The word Dad changes the name Jada, so the pronoun after it may change too."
               }
             ],
-            "clue": "Compare the two sentences. In each one, ask who does the action and who receives it.",
+            "clue": "Compare the two sentences. In each one, ask what job Jada and the writer have.",
             "hints": [
-              "Compare the two sentences. In each one, ask who does the action and who receives it.",
+              "Compare the two sentences. In each one, ask what job Jada and the writer have.",
               "Cover up Jada and in each sentence and say the sentence with just the pronoun.",
               "Where a sentence sits in a draft does not decide the pronoun. Think about the other choices."
             ],
@@ -8711,7 +8711,7 @@ PP.addLesson({
             "passages": [
               "p2"
             ],
-            "prompt": "In sentences 2 through 6, find the TWO with a pronoun mistake.",
+            "prompt": "Two of sentences 2 through 6 have a pronoun mistake. Select both.",
             "targets": [
               "p2:1:2",
               "p2:1:3",
@@ -8752,9 +8752,9 @@ PP.addLesson({
             "passages": [
               "p2"
             ],
-            "prompt": "This question has two parts. Answer Part A, then Part B.",
+            "prompt": "Answer Part A first. Then use it to answer Part B.",
             "partA": {
-              "prompt": "What is the mistake in sentence 2?",
+              "prompt": "What is wrong with the pronoun in sentence 2?",
               "choices": [
                 {
                   "text": "I does the action, but here the pronoun gets the cards, so it should be me.",
@@ -8772,7 +8772,7 @@ PP.addLesson({
               ]
             },
             "partB": {
-              "prompt": "Which rewrite of sentence 2 is correct?",
+              "prompt": "Which version fixes sentence 2?",
               "choices": [
                 {
                   "text": "Mom gave Ben and me a deck of cards.",
@@ -8815,7 +8815,7 @@ PP.addLesson({
               "3.L.GC.1:R:use-personal-pronouns-subject-object-possessive"
             ],
             "passages": [],
-            "prompt": "Choose the TWO sentences that use pronouns correctly.",
+            "prompt": "Pick the TWO sentences in which every pronoun fits its job.",
             "pick": 2,
             "choices": [
               {
@@ -8862,7 +8862,7 @@ PP.addLesson({
               "3.L.GC.1:R:use-personal-pronouns-subject-object-possessive"
             ],
             "passages": [],
-            "prompt": "Which word correctly completes the sentence? ___ ate lunch under the oak tree.",
+            "prompt": "Fill the blank with the correct word. ___ ate lunch under the oak tree.",
             "choices": [
               {
                 "text": "We",
@@ -8925,7 +8925,7 @@ PP.addLesson({
             "clue": "Think about what Kai is trusting. Is it the job of the pronoun, or how polite the words sound?",
             "hints": [
               "Think about what Kai is trusting. Is it the job of the pronoun, or how polite the words sound?",
-              "Cover up Ben and in sentence 2 and read the sentence with just the pronoun.",
+              "Take Ben out of sentence 2 and read the sentence with just the pronoun.",
               "Sounding polite does not decide which pronoun is right. Think about the other choices."
             ],
             "how": [
@@ -8980,7 +8980,7 @@ PP.addLesson({
               "Sentences 4, 5 and 7 use him, they and me in jobs where they do not fit."
             ],
             "misconception": "A common mix-up is choosing a sentence because the pronoun sounds familiar. Check what the pronoun does.",
-            "why": "The answers are \"Zoe grabbed a book about whales, and she opened it right away.\" and \"Pia asked for help, and Ms. Gold gave her a stool.\" She does the opening, and her receives the stool. Sentence 4 needs He, sentence 5 needs them, and sentence 7 needs I.",
+            "why": "The answers are \"Zoe grabbed a whale book, and she opened it right away.\" and \"Pia asked for help, and Ms. Gold gave her a stool.\" She does the opening, and her receives the stool. Sentence 4 needs He, sentence 5 needs them, and sentence 7 needs I.",
             "like": [
               "SK-GUM2-6-S11"
             ]
@@ -9040,8 +9040,8 @@ PP.addLesson({
               {
                 "options": [
                   "their",
-                  "them",
-                  "they"
+                  "theirs",
+                  "them"
                 ],
                 "answer": 0
               },
@@ -9080,7 +9080,7 @@ PP.addLesson({
               "3.L.GC.1:R:use-personal-pronouns-subject-object-possessive"
             ],
             "passages": [],
-            "prompt": "Select the sentence that uses a standalone owning word before a noun.",
+            "prompt": "Choose the sentence in which a standalone owning word sits before a noun.",
             "options": [
               "That bike with the blue seat is mine.",
               "Our team practiced after school.",
@@ -9118,14 +9118,14 @@ PP.addLesson({
               "3.L.GC.1:R:use-personal-pronouns-subject-object-possessive"
             ],
             "passages": [],
-            "prompt": "Tia says, \"Always use I when you name yourself and another person.\" Which sentence shows that Tia is wrong?",
+            "prompt": "Tia says, \"Use I every time another person is named next to you.\" Which sentence shows that Tia is wrong?",
             "choices": [
               {
                 "text": "The coach called Ravi and me to the front.",
                 "correct": true
               },
               {
-                "text": "Ravi and I walked to the front of the line."
+                "text": "Ravi and I walked to the front of the room."
               },
               {
                 "text": "Ravi and I carried the equipment to the car."
@@ -9167,7 +9167,7 @@ PP.addLesson({
       "passages": [],
       "prompt": "Tap the line with a pronoun mistake.",
       "options": [
-        "The kitten licked its paw after dinner.",
+        "The goat chewed its rope after breakfast.",
         "Please hand the map to Dev and me.",
         "The note was left for Dana and I.",
         "That red seat is yours.",
@@ -9263,35 +9263,35 @@ PP.addLesson({
       "passages": [
         "p4"
       ],
-      "prompt": "Which choice explains the mistake in sentence 2?",
+      "prompt": "Which fix does sentence 2 need, and why?",
       "choices": [
         {
-          "text": "Me needs to become I, since Noah and the speaker are the captains doing the action.",
+          "text": "Swap in I, since Noah and the speaker were picked as captains.",
           "correct": true
         },
         {
-          "text": "Me needs to become my, since the captains own the kickball game together."
+          "text": "Swap in my, since Noah and the speaker jointly own the kickball field."
         },
         {
-          "text": "Me needs to become us, since two people can only be named with plural words."
+          "text": "Swap in us, since any pair of kids named together needs a plural word."
         },
         {
-          "text": "Me needs to become mine, since the captain job belongs to the speaker alone."
+          "text": "Swap in mine, since captain is a job held only by the speaker."
         }
       ],
       "clue": "A pronoun takes the place of a noun. Ask what job the pronoun does in sentence 2.",
       "hints": [
         "A pronoun takes the place of a noun. Ask what job the pronoun does in sentence 2.",
-        "Cover up Noah and, and read the sentence with just the pronoun.",
+        "Take the other captain's name out, and read the sentence with just the pronoun.",
         "Mine stands alone and does not come before a noun. Think about the other choices."
       ],
       "how": [
-        "Cover up Noah and. The sentence becomes Me were chosen, which sounds wrong.",
+        "Take the other name out. The sentence becomes Me were chosen, which sounds wrong.",
         "The people who were chosen are the subject of the sentence, so it needs a subject pronoun.",
-        "The answer is \"Me needs to become I, since Noah and the speaker are the captains doing the action.\""
+        "The answer is \"Swap in I, since Noah and the speaker were picked as captains.\""
       ],
       "misconception": "A common mix-up is thinking me is fine because it is common in speech. The sentence needs a subject pronoun.",
-      "why": "The answer is \"Me needs to become I, since Noah and the speaker are the captains doing the action.\" I was chosen sounds right. My and mine tell who owns something, and us would change who is meant.",
+      "why": "The answer is \"Swap in I, since Noah and the speaker were picked as captains.\" I was chosen sounds right. My and mine tell who owns something, and us would change who is meant.",
       "like": [
         "SK-GUM2-6-C03"
       ]
@@ -9307,14 +9307,14 @@ PP.addLesson({
       "passages": [
         "p4"
       ],
-      "prompt": "Pick the pronoun that belongs in sentence 4.",
-      "text": "The other kids cheered, and {0} ran to their bases.",
+      "prompt": "Which word completes sentence 4 correctly?",
+      "text": "Maya cheered, and {0} ran to second base.",
       "slots": [
         {
           "options": [
-            "they",
-            "them",
-            "their"
+            "she",
+            "her",
+            "hers"
           ],
           "answer": 0
         }
@@ -9323,15 +9323,15 @@ PP.addLesson({
       "hints": [
         "A pronoun takes the place of a noun. Decide what job the blank does in the sentence.",
         "Look at the verb that comes right after the blank.",
-        "Their tells who owns something, and it needs a noun after it. Look at what follows the blank."
+        "Hers stands alone and does not do an action. Think about the other choices."
       ],
       "how": [
-        "The blank takes the place of the other kids, and it does the running.",
+        "The blank takes the place of Maya, and it does the running.",
         "A pronoun that does the action is a subject pronoun.",
-        "The answer is they. Them gets an action, and their tells who owns something."
+        "The answer is she. Her gets an action or comes before a noun, and hers stands alone."
       ],
-      "misconception": "A common mix-up is using them because it sounds like a word for several kids. Them gets an action.",
-      "why": "The answer is they. The kids do the running, so the blank needs a subject pronoun. Them gets an action, and their must be followed by a noun.",
+      "misconception": "A common mix-up is using her because it sounds natural in speech. Her gets an action and does not do it.",
+      "why": "The answer is she. Maya does the running, so the blank needs a subject pronoun. Her gets an action or comes before a noun, and hers stands alone.",
       "like": [
         "SK-GUM2-6-C04"
       ]
@@ -9347,35 +9347,35 @@ PP.addLesson({
       "passages": [
         "p4"
       ],
-      "prompt": "Both sentence 2 and sentence 3 say Noah and me, yet one is wrong. What sets them apart?",
+      "prompt": "One of the two Noah pairings is wrong. What is the difference between them?",
       "choices": [
         {
-          "text": "Noah and the speaker are chosen in sentence 2, but in sentence 3 they are handed the ball.",
+          "text": "Sentence 2 names the pair as captains, while sentence 3 has them handed the ball.",
           "correct": true
         },
         {
-          "text": "Sentence 3 has more words than sentence 2, so extra words can change what pronoun is allowed."
+          "text": "Neither sentence has a flaw, since me and I may trade places whenever someone likes."
         },
         {
-          "text": "The first time a pronoun shows up in a draft, it must be I, and later it can be me."
+          "text": "The ball is a thing, so a sentence about a thing must use a different kind of pronoun."
         },
         {
-          "text": "Mr. Hart changes the name Noah, so any pronoun after his name may change as well."
+          "text": "Captains are the leaders, so leaders always take I while helpers always take me."
         }
       ],
-      "clue": "Look at the two sentences side by side. Ask who is doing something and who is getting something.",
+      "clue": "Look at the two sentences side by side. Ask what Noah is doing or getting in each one.",
       "hints": [
-        "Look at the two sentences side by side. Ask who is doing something and who is getting something.",
-        "Cover up Noah and in each one and read the sentence with just the pronoun.",
+        "Look at the two sentences side by side. Ask what Noah is doing or getting in each one.",
+        "Take Noah out of each sentence and read it with just the pronoun.",
         "How long a sentence is, or where it sits in a draft, does not choose the pronoun. Think about the other choices."
       ],
       "how": [
         "Sentence 2: Noah and the speaker were chosen. Sentence 3: Mr. Hart handed something to them.",
         "A pronoun that is handed something is an object pronoun, so me works in sentence 3. In sentence 2 the pronoun is part of the subject.",
-        "The answer is \"Noah and the speaker are chosen in sentence 2, but in sentence 3 they are handed the ball.\""
+        "The answer is \"Sentence 2 names the pair as captains, while sentence 3 has them handed the ball.\""
       ],
       "misconception": "A common mix-up is thinking the words Noah and me are always wrong. The job in the sentence decides.",
-      "why": "The answer is \"Noah and the speaker are chosen in sentence 2, but in sentence 3 they are handed the ball.\" Mr. Hart handed me the ball sounds right. Me were chosen does not, so sentence 2 needs I.",
+      "why": "The answer is \"Sentence 2 names the pair as captains, while sentence 3 has them handed the ball.\" Mr. Hart handed me the ball sounds right. Me were chosen does not, so sentence 2 needs I.",
       "like": [
         "SK-GUM2-6-C05"
       ]
@@ -9432,27 +9432,27 @@ PP.addLesson({
       "passages": [
         "p5"
       ],
-      "prompt": "Do the first half first. Its answer will guide the second half.",
+      "prompt": "Finish the first part before you move on to the second part.",
       "partA": {
-        "prompt": "What is wrong with sentence 4?",
+        "prompt": "Why does sentence 4 need fixing?",
         "choices": [
           {
-            "text": "Us gets an action, but here the pronoun does the hammering, so it should be we.",
+            "text": "Us names the receiver, yet the hammering needs a word that names the doer.",
             "correct": true
           },
           {
-            "text": "Us does an action, but here the pronoun owns the nails, so it should be our."
+            "text": "Us names the doer, yet the hammering needs a word that names the receiver."
           },
           {
-            "text": "Us gets an action, but here the pronoun is singular, so it should be me."
+            "text": "Us names one person, yet the hammering needs a word that stands for a group."
           },
           {
-            "text": "Us does the hammering, so it is correct, but Grandpa should be he."
+            "text": "Us tells whose nails they are, yet the hammering needs a word for the receiver."
           }
         ]
       },
       "partB": {
-        "prompt": "Which version of sentence 4 is correct?",
+        "prompt": "Pick the best fix for sentence 4.",
         "choices": [
           {
             "text": "We hammered the nails while Grandpa watched.",
@@ -9469,19 +9469,19 @@ PP.addLesson({
           }
         ]
       },
-      "clue": "Say sentence 4 aloud. Ask whether the pronoun does the action or gets it.",
+      "clue": "Say sentence 4 aloud. Ask who is doing the hammering.",
       "hints": [
-        "Say sentence 4 aloud. Ask whether the pronoun does the action or gets it.",
-        "In the second half, test each version by saying the first word with the rest of the sentence.",
+        "Say sentence 4 aloud. Ask who is doing the hammering.",
+        "In Part B, test each version by saying the first word with the rest of the sentence.",
         "Ours stands alone and does not start a sentence like this. Think about the other versions."
       ],
       "how": [
         "Part A: the pronoun in sentence 4 is the one doing the hammering.",
         "Part B: a pronoun that does the action is a subject pronoun, so we fits.",
-        "The answers are \"Us gets an action, but here the pronoun does the hammering, so it should be we.\" and \"We hammered the nails while Grandpa watched.\""
+        "The answers are \"Us names the receiver, yet the hammering needs a word that names the doer.\" and \"We hammered the nails while Grandpa watched.\""
       ],
-      "misconception": "A common mix-up is using us whenever a sentence is about a group. Us gets an action and does not do it.",
-      "why": "Part A: \"Us gets an action, but here the pronoun does the hammering, so it should be we.\" Part B: \"We hammered the nails while Grandpa watched.\" We hammered sounds right. Us hammered does not.",
+      "misconception": "A common mix-up is using us whenever a sentence is about a group. Us names a receiver and does not do the action.",
+      "why": "Part A: \"Us names the receiver, yet the hammering needs a word that names the doer.\" Part B: \"We hammered the nails while Grandpa watched.\" We hammered sounds right. Us hammered does not.",
       "like": [
         "SK-GUM2-6-C07"
       ]
@@ -9495,22 +9495,22 @@ PP.addLesson({
         "3.L.GC.1:R:use-personal-pronouns-subject-object-possessive"
       ],
       "passages": [],
-      "prompt": "Tap both sentences that use pronouns the right way.",
+      "prompt": "Which two choices have a pronoun that fits its job? Pick both.",
       "pick": 2,
       "choices": [
         {
-          "text": "Lena and I picked apples at the farm.",
+          "text": "Lena and I picked ripe apples at the farm.",
           "correct": true
         },
         {
-          "text": "The teacher thanked us for the cards.",
+          "text": "The nurse gave him a sticker.",
           "correct": true
         },
         {
-          "text": "Them waved at the passing train."
+          "text": "Me waved at the passing train from the bridge."
         },
         {
-          "text": "The map is for Sam and I to share."
+          "text": "Nobody told Sam or I about the field trip."
         },
         {
           "text": "Him and Rita fed the goats."
@@ -9520,15 +9520,15 @@ PP.addLesson({
       "hints": [
         "Find the pronoun in each sentence. Ask whether it does an action or gets one.",
         "Check every sentence, including the ones that look right. Cover up the other name when a name is joined to a pronoun.",
-        "One choice joins a name and a pronoun after the word for. Think about whether that pronoun gets the action."
+        "One choice joins a name and a pronoun right after told. Think about whether that pronoun gets the action."
       ],
       "how": [
         "Test each pronoun by saying the sentence with just that pronoun.",
-        "Lena and I picked: I picked sounds right. Thanked us: us gets the thanking, so it fits.",
-        "Them waved, for Sam and I, and Him and Rita fed use the wrong kind of pronoun."
+        "Lena and I picked: I picked sounds right. Gave him: him gets the sticker, so it fits.",
+        "Me waved, Nobody told Sam or I, and Him and Rita fed use the wrong kind of pronoun."
       ],
-      "misconception": "A common mix-up is choosing I whenever a name comes before the pronoun. After for, the pronoun gets the action and needs me.",
-      "why": "The answers are \"Lena and I picked apples at the farm.\" and \"The teacher thanked us for the cards.\" I picked sounds right, and thanked us sounds right. Them waved, for Sam and I, and Him and Rita fed are incorrect.",
+      "misconception": "A common mix-up is choosing I whenever a name comes before the pronoun. After told, the pronoun gets the action and needs me.",
+      "why": "The answers are \"Lena and I picked ripe apples at the farm.\" and \"The nurse gave him a sticker.\" I picked sounds right, and gave him sounds right. Me waved, Nobody told Sam or I, and Him and Rita fed are incorrect.",
       "like": [
         "SK-GUM2-6-C08"
       ]
@@ -9542,35 +9542,35 @@ PP.addLesson({
         "3.L.GC.1:R:use-personal-pronouns-subject-object-possessive"
       ],
       "passages": [],
-      "prompt": "Pick the word that fits the blank. ___ waved to the bus driver.",
+      "prompt": "Which pronoun finishes this sentence? ___ waved to the bus driver.",
       "choices": [
         {
-          "text": "They",
+          "text": "He",
           "correct": true
         },
         {
-          "text": "Them"
+          "text": "Him"
         },
         {
-          "text": "Their"
+          "text": "His"
         },
         {
-          "text": "Theirs"
+          "text": "Himself"
         }
       ],
       "clue": "The blank is at the start of the sentence. Ask who is doing the waving.",
       "hints": [
         "The blank is at the start of the sentence. Ask who is doing the waving.",
         "A word that does the action is a subject pronoun. Think about which choices do that job.",
-        "Theirs stands alone and does not begin a sentence like this. Think about the other choices."
+        "His tells who owns something and comes before a noun. Think about the other choices."
       ],
       "how": [
         "Someone is waving, so the blank does the action.",
-        "They is a subject pronoun, so it can do the action.",
-        "The answer is They."
+        "He is a subject pronoun, so it can do the action.",
+        "The answer is He."
       ],
-      "misconception": "A common mix-up is choosing them because it sounds like a group. Them gets an action and does not do it.",
-      "why": "The answer is They. The blank does the waving, so it needs a subject pronoun. Them gets an action, their must come before a noun, and theirs stands alone.",
+      "misconception": "A common mix-up is choosing him because it sounds natural in speech. Him gets an action and does not do it.",
+      "why": "The answer is He. The blank does the waving, so it needs a subject pronoun. Him gets an action, his must come before a noun, and himself is not used to start this sentence.",
       "like": [
         "SK-GUM2-6-C09"
       ]
@@ -9586,35 +9586,35 @@ PP.addLesson({
       "passages": [
         "p5"
       ],
-      "prompt": "Tess says sentence 5 should say her toolbox is the red one, so hers is wrong. What would you tell her?",
+      "prompt": "Tess wants to replace hers in sentence 5 with her. How should you respond?",
       "choices": [
         {
-          "text": "Hers can stand alone at the end of a thought, so sentence 5 already works.",
+          "text": "Hers works by itself when no noun follows it, so sentence 5 already works.",
           "correct": true
         },
         {
-          "text": "Her is the only owning word, so hers should always be replaced."
+          "text": "Her is the only owning word in the draft, so hers must always be replaced."
         },
         {
-          "text": "Hers goes before a noun, so the toolbox needs a different word in front of it."
+          "text": "Hers goes right before a noun, so the toolbox needs a different word in front."
         },
         {
-          "text": "Sentences about tools need her, because tools are owned by one girl."
+          "text": "Toolbox sentences use her by rule, since a toolbox always has one single owner."
         }
       ],
-      "clue": "Think about which owning words come before a noun and which can stand alone.",
+      "clue": "Think about which owning words go before a noun and which come without one.",
       "hints": [
-        "Think about which owning words come before a noun and which can stand alone.",
-        "Look at what follows hers in sentence 5. Is a noun waiting after it?",
+        "Think about which owning words go before a noun and which come without one.",
+        "Look at what comes after hers in sentence 5.",
         "What a sentence is about does not choose the owning word. Think about the other choices."
       ],
       "how": [
-        "Sentence 5 ends with hers, and no noun follows it.",
+        "Sentence 5 ends with hers, and no noun comes after it.",
         "An owning word that stands alone, such as hers, is right when no noun comes after it.",
-        "The answer is \"Hers can stand alone at the end of a thought, so sentence 5 already works.\""
+        "The answer is \"Hers works by itself when no noun follows it, so sentence 5 already works.\""
       ],
       "misconception": "A common mix-up is thinking her and hers are the same word. Her comes before a noun, and hers stands alone.",
-      "why": "The answer is \"Hers can stand alone at the end of a thought, so sentence 5 already works.\" Her would need a noun after it, as in her toolbox. Here the sentence ends with hers.",
+      "why": "The answer is \"Hers works by itself when no noun follows it, so sentence 5 already works.\" Her would need a noun after it, as in her toolbox. Here the sentence ends with hers.",
       "like": [
         "SK-GUM2-6-C10"
       ]
@@ -9630,7 +9630,7 @@ PP.addLesson({
       "passages": [
         "p6"
       ],
-      "prompt": "Among sentences 3 to 7, tap the two with pronouns used the right way.",
+      "prompt": "In sentences 3 to 7, which two use a pronoun correctly? Tap them.",
       "targets": [
         "p6:1:3",
         "p6:2:1",
@@ -9709,7 +9709,7 @@ PP.addLesson({
         "3.L.GC.1:R:use-personal-pronouns-subject-object-possessive"
       ],
       "passages": [],
-      "prompt": "Fill each gap with the right pronoun.",
+      "prompt": "Complete each gap with the correct pronoun.",
       "text": "Pedro washed {0} bike, and Mom helped {1} dry it.",
       "slots": [
         {
@@ -9755,13 +9755,13 @@ PP.addLesson({
         "3.L.GC.1:R:use-personal-pronouns-subject-object-possessive"
       ],
       "passages": [],
-      "prompt": "Tap the line that puts a standalone owning word in front of a noun.",
+      "prompt": "Which line uses an owning word in the wrong spot?",
       "options": [
-        "The blue coat on the hook is hers.",
-        "Is this lunch box ours or yours?",
+        "The green coat hanging on the hook is hers.",
+        "Is this lunch box on the shelf ours or theirs?",
         "Theirs dog barked at the mail truck.",
-        "Our class planted a tree.",
-        "The gray cat washed its face."
+        "Her class planted a new tree by the gate.",
+        "The gray cat washed its face in the sun."
       ],
       "answer": [
         2
@@ -9775,7 +9775,7 @@ PP.addLesson({
       ],
       "how": [
         "Find the owning words and look at what comes after each.",
-        "Hers, ours and yours stand alone, and our and its come before nouns.",
+        "Hers, ours and theirs stand alone, and her and its come before nouns.",
         "The answer is \"Theirs dog barked at the mail truck.\" It should be Their dog."
       ],
       "misconception": "A common mix-up is thinking theirs and their are the same. Theirs stands alone, and their comes before a noun.",
@@ -9793,14 +9793,14 @@ PP.addLesson({
         "3.L.GC.1:R:use-personal-pronouns-subject-object-possessive"
       ],
       "passages": [],
-      "prompt": "Ruben says, \"Always use me when you name another person and yourself.\" Which sentence shows that Ruben is wrong?",
+      "prompt": "Ruben thinks me is correct every time a pronoun follows a friend's name. Which example proves his idea false?",
       "choices": [
         {
           "text": "Dev and I won the three-legged race.",
           "correct": true
         },
         {
-          "text": "The coach drove Dev and me home after the race."
+          "text": "Ms. Park drove Dev and me home after the race."
         },
         {
           "text": "Mom gave Dev and me a snack after the race."
@@ -9809,14 +9809,14 @@ PP.addLesson({
           "text": "Several kids waved at Dev and me from the bus."
         }
       ],
-      "clue": "To show a rule is wrong, find an example that breaks it. Look at what each pronoun is doing.",
+      "clue": "To prove an idea false, find an example that breaks it. Look at what each pronoun is doing.",
       "hints": [
-        "To show a rule is wrong, find an example that breaks it. Look at what each pronoun is doing.",
-        "In each sentence, cover up Dev and and say the sentence with just the pronoun.",
-        "Three of the sentences follow Ruben's rule and sound right. Think about which one does not follow it."
+        "To prove an idea false, find an example that breaks it. Look at what each pronoun is doing.",
+        "In each sentence, take Dev out and say the sentence with just the pronoun.",
+        "Three of the sentences follow Ruben's idea and sound right. Think about which one does not follow it."
       ],
       "how": [
-        "Ruben's rule says me is always right. Look for a sentence where me would be wrong.",
+        "Ruben's idea says me is always right. Look for a sentence where me would be wrong.",
         "In three sentences, the pronoun gets the action. In the other, the pronoun does it.",
         "The answer is \"Dev and I won the three-legged race.\""
       ],
