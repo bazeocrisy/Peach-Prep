@@ -8,7 +8,7 @@ PP.addLesson({
     big: "Titles like Mr. and Dr., short forms of names like Jan. and St., and describing words made from place names like American all start with a capital letter.",
     points: [
       "A title right before a person's name starts with a capital letter: Mr. Cole, Dr. Shah, Mayor Green. The short titles Mr., Mrs., Ms. and Dr. end with a period. When no name comes after it, a word like mayor or doctor usually stays lowercase.",
-      "An abbreviation is a short way to write a word. We use short forms of days, months and streets in addresses, dates and schedules, not in ordinary sentences. If the long word is a name, the short form gets a capital too: Mon. for Monday, Jan. for January, Pine St. for Pine Street.",
+      "An abbreviation is a short way to write a word. We use short forms of days, months and streets in addresses, dates and schedules, not in ordinary sentences. If the long word is a name, the short form gets a capital too: Mon. for Monday, Jan. for January, Pine St. for Pine Street, Oak Ave. for Oak Avenue, Lake Rd. for Lake Road.",
       "Some describing words are made from names, like the names of places. Mexico is a place, and Mexican is a describing word: Mexican food. These words start with a capital: an American flag, a Chinese kite."
     ],
     words: [
@@ -19,23 +19,23 @@ PP.addLesson({
       label: "Example",
       lines: [
         "Dr. Moore checked my teeth.",
-        "The mayor ate Italian food at our school fair.",
+        "The mayor ate Mexican food at our school fair.",
         "Fair schedule: Mon., Jan. 12, at 14 Elm St."
       ],
-      note: "Dr. comes before a name, so it has a capital and a period. Italian comes from Italy, so it has a capital. Mayor stays lowercase because no name comes after it. In the schedule, Mon., Jan. and St. are short for names, so they have capitals."
+      note: "Dr. comes before a name, so it has a capital and a period. Mexican comes from Mexico, so it has a capital. Mayor stays lowercase because no name comes after it. In the schedule, Mon., Jan. and St. are short for names, so they have capitals."
     },
     tip: "When a question asks you to find the mistake, check every title, every short form and every word made from the name of a place. Ask: Does it need a capital?"
   },
   learn: [
     {
-      show: ["Our class wrote a thank-you note to dr. Rivera."],
-      ask: "Which word needs a capital letter?",
+      show: ["Our class wrote a thank-you note to dr. Rivera, and the doctor wrote back."],
+      ask: "Which word needs a capital letter, and which word stays lowercase?",
       steps: [
         "Look for a title in front of a person's name.",
-        "The word dr. comes right before the name Rivera, so it is a title.",
-        "A title before a name starts with a capital letter."
+        "The word dr. comes right before the name Rivera, so it is a title. A title before a name starts with a capital letter.",
+        "The word doctor comes later, and no name follows it. It names a job, so it stays lowercase."
       ],
-      answer: "The word dr. should be Dr.: \"Our class wrote a thank-you note to Dr. Rivera.\""
+      answer: "The word dr. should be Dr.: \"Our class wrote a thank-you note to Dr. Rivera, and the doctor wrote back.\""
     },
     {
       show: ["Grandma showed us how to fold a japanese paper crane."],
@@ -46,10 +46,173 @@ PP.addLesson({
         "Japanese comes from Japan, the name of a country, so it needs a capital."
       ],
       answer: "The word japanese should be Japanese: \"Grandma showed us how to fold a Japanese paper crane.\""
+    },
+    {
+      show: ["The yard sale is on wed., aug. 14, at 9 Hill rd."],
+      ask: "Which short forms need capital letters?",
+      steps: [
+        "Find the short forms. Wed. is short for Wednesday, aug. is short for August, and rd. is short for Road.",
+        "Ask: Is each long word a name? Wednesday and August are names, and Road is part of the street name Hill Road.",
+        "If the long word is a name, the short form gets a capital too."
+      ],
+      answer: "All three need capitals: \"The yard sale is on Wed., Aug. 14, at 9 Hill Rd.\""
     }
   ],
   parent: "When you see street signs, menus or mail, point out short forms like Dr., St. and Ave. and words like Mexican or Korean. Ask your child why each one starts with a capital letter.",
-  passages: [],
+  passages: [
+    /* B8:passages:start */
+    {
+      id: "p1",
+      title: "The Book Fair",
+      byline: "A third grader's draft",
+      genre: "Student draft (narrative)",
+      draft: true,
+      paragraphs: [
+        [
+          "(1) Our school held a book fair on sat., Oct. 17, in the gym.",
+          "(2) At the door, principal Hale cut the ribbon and welcomed every family.",
+          "(3) The tables were full of books about space, sharks and soccer."
+        ],
+        [
+          "(4) My friend Dev found a peruvian folk tale with bright pictures.",
+          "(5) His mom, Ms. Kapoor, helped him count his money at the register.",
+          "(6) A helper near the door sold bookmarks and pencils for one dollar."
+        ],
+        [
+          "(7) The leftover books went to the library on Birch Ave. for the little kids.",
+          "(8) The principal thanked everyone who stopped by and bought a book.",
+          "(9) We raised enough money for forty new books and two shelves.",
+          "(10) I hope the fair comes back again next year."
+        ]
+      ]
+    },
+    {
+      id: "p2",
+      title: "Clean-Up Day on Our Block",
+      byline: "A third grader's draft",
+      genre: "Student draft (narrative)",
+      draft: true,
+      paragraphs: [
+        [
+          "(1) Our block held a clean-up day on Sun., Nov. 8, after lunch.",
+          "(2) Before we began, Mayor Ortiz sent a note to thank every neighbor who helped.",
+          "(3) Next, officer Greer parked by the curb and passed out bright safety vests.",
+          "(4) Mr. Pruitt handed out gloves and trash bags at the corner."
+        ],
+        [
+          "(5) We picked up cans and paper along Cedar rd. until noon.",
+          "(6) A woman from the Nigerian bakery brought warm buns for everyone.",
+          "(7) The mayor said that clean streets make a proud town."
+        ],
+        [
+          "(8) By evening, a jamaican band played happy music in the park.",
+          "(9) We filled thirty bags and cleaned every ditch on our block.",
+          "(10) I cannot wait for the next clean-up day."
+        ]
+      ]
+    },
+    {
+      id: "p3",
+      title: "Our Soccer Season",
+      byline: "A third grader's draft",
+      genre: "Student draft (narrative)",
+      draft: true,
+      paragraphs: [
+        [
+          "(1) Our spring soccer season began on a sunny Saturday in March.",
+          "(2) Coach Dawson gave every player a bright yellow shirt.",
+          "(3) We practice twice a week, and our team is called the Hawks."
+        ],
+        [
+          "(4) At the first game, a Swedish player on the other team scored.",
+          "(5) Ms. Okoro, the referee, blew her whistle at halftime.",
+          "(6) At halftime, the Coach told us to pass the ball more."
+        ],
+        [
+          "(7) In the second half, our goalie made three big saves.",
+          "(8) We lost the game, but we cheered for both teams.",
+          "(9) Afterward, our families took us out for ice cream on Pecan St.",
+          "(10) I cannot wait for our next game on sat., Mar. 13."
+        ]
+      ]
+    },
+    {
+      id: "p4",
+      title: "Garden Day",
+      byline: "A third grader's draft",
+      genre: "Student draft (narrative)",
+      draft: true,
+      paragraphs: [
+        [
+          "(1) Our class planted a garden behind the school on fri., Apr. 9.",
+          "(2) First, nurse Alba showed us how to wash our hands after digging.",
+          "(3) Mr. Lang brought bags of soil and small tools in his truck."
+        ],
+        [
+          "(4) We watered every row and gave each plant a small sign.",
+          "(5) Our teacher, Mrs. Diaz, helped us measure the rows with a string.",
+          "(6) Kai planted seeds for a haitian pepper that grows very hot."
+        ],
+        [
+          "(7) We mailed a thank-you card to the garden shop on Cole St.",
+          "(8) The principal said the garden will feed our whole lunch room.",
+          "(9) Every day, two helpers will check the plants for bugs.",
+          "(10) I hope we pick our first tomatoes before summer break."
+        ]
+      ]
+    },
+    {
+      id: "p5",
+      title: "Library Night",
+      byline: "A third grader's draft",
+      genre: "Student draft (narrative)",
+      draft: true,
+      paragraphs: [
+        [
+          "(1) Our town library held a reading night on Wed., Dec. 2, for every family.",
+          "(2) After dinner, Chief Dunn of the fire station read us a story about a brave dog.",
+          "(3) Then sheriff Moss helped us find the best picture books on the top shelf.",
+          "(4) Ms. Reyes handed out free bookmarks at the front desk."
+        ],
+        [
+          "(5) The line of cars stretched all the way down Linden rd.",
+          "(6) A man from the Ethiopian cafe brought hot tea and snacks.",
+          "(7) The chief said that stories help people feel close to each other."
+        ],
+        [
+          "(8) Later, an indian dancer told us a tale using only her hands.",
+          "(9) We stayed until the library closed and the lights went out.",
+          "(10) I want to come back again next month."
+        ]
+      ]
+    },
+    {
+      id: "p6",
+      title: "Swim Meet",
+      byline: "A third grader's draft",
+      genre: "Student draft (narrative)",
+      draft: true,
+      paragraphs: [
+        [
+          "(1) Our swim team raced against another school on a warm day in June.",
+          "(2) Coach Lopez gave us a short talk before the first race.",
+          "(3) We lined up on the deck, and the cool water looked bright blue."
+        ],
+        [
+          "(4) A Colombian swimmer on the other team won the first race.",
+          "(5) Mrs. Park, the judge, held a flag at the end of each lane.",
+          "(6) After the relay, the Judge gave each winner a blue ribbon."
+        ],
+        [
+          "(7) My brother swam the last lap and finished in third place.",
+          "(8) Our team did not win, yet every swimmer heard loud claps from the fans.",
+          "(9) Later, everyone ate lunch together at the park on Hill Ave.",
+          "(10) The last meet of the year is on sun., Aug. 15, at the pool."
+        ]
+      ]
+    }
+    /* B8:passages:end */
+  ],
   practice: [
     { id: "SK-GUM5-1-P1", type: "mc", points: 1, dok: 2, passages: [],
       prompt: "Which sentence is correct?",
@@ -105,6 +268,1009 @@ PP.addLesson({
       clue: "Ask two questions. Is the word a title right before a name? Is it made from the name of a place?",
       why: "President needs a capital because it comes right before the name Lincoln. Spanish needs a capital because it comes from Spain. Doctor and street stay lowercase because they are not names and no name comes after them." }
   ],
+  /* B8:core:start */
+  /* ---------- Expansion 2026-10-22, batch B8 (GUM Introduce/Continue) ----------
+     core: fifteen items in three sets of five. { ref } reuses a practice item; the other practice items stay in Practice Together.
+     Passages are used only by core and the similar bank; none is used by test or testB.
+     Author log: docs/expansion-2026-10-22/batches/B8b-author-log.md. NEEDS INDEPENDENT REVIEW. */
+  core: {
+    rev: "1",
+    sets: [
+      {
+        title: "Set 1",
+        items: [
+          { ref: "SK-GUM5-1-P3" },
+          { ref: "SK-GUM5-1-P5" },
+          {
+            id: "SK-GUM5-1-C03",
+            type: "dropdown",
+            points: 1,
+            dok: 2,
+            std: [
+              "3.L.GC.1:I:use-conventional-capitalization-in-abbreviations"
+            ],
+            passages: ["p1"],
+            prompt: "Sentence 2 of the draft has a title that is written wrongly. Choose the words that fix it.",
+            text: "At the door, {0} cut the ribbon and welcomed every family.",
+            slots: [
+              {
+                options: ["principal Hale", "Principal hale", "Principal Hale"],
+                answer: 2
+              }
+            ],
+            clue: "A title that comes right before a person's name starts with a capital letter. Check the title and the name.",
+            hints: [
+              "A title that comes right before a person's name starts with a capital letter. Check the title and the name.",
+              "Say each choice at the start of the sentence. Check every word in it.",
+              "Principal hale gives the title a capital but leaves the name small, and a name always starts with a capital. Decide between the other two."
+            ],
+            how: [
+              "Find the title in sentence 2. Principal comes right before the name Hale.",
+              "A title before a name needs a capital letter, and so does the name.",
+              "The answer is Principal Hale."
+            ],
+            misconception: "A common mix-up is keeping the title small because principal is an everyday word. When it comes right before a name, it is part of the name.",
+            why: "The answer is Principal Hale. Principal comes right before the name Hale, so it is a title and starts with a capital letter. The name Hale starts with a capital too. The other choices leave one of the two words small."
+          },
+          {
+            id: "SK-GUM5-1-C04",
+            type: "mc",
+            points: 1,
+            dok: 1,
+            std: [
+              "3.L.GC.1:I:use-conventional-capitalization-in-abbreviations"
+            ],
+            passages: ["p1"],
+            prompt: "What is the correct way to write the day and the month in sentence 1 of the draft?",
+            choices: [
+              { text: "sat., Oct. 17" },
+              { text: "Sat., Oct. 17", correct: true },
+              { text: "Sat., oct. 17" },
+              { text: "sat., oct. 17" }
+            ],
+            clue: "Say the long word each short form stands for. If the long word is a name, the short form gets a capital letter too.",
+            hints: [
+              "Say the long word each short form stands for. If the long word is a name, the short form gets a capital letter too.",
+              "Check the short form of the day and the short form of the month, one at a time.",
+              "One choice leaves both short forms small, and both of them stand for names. Decide among the other three."
+            ],
+            how: [
+              "Say the long words: sat. is short for Saturday, and Oct. is short for October.",
+              "Saturday and October are names, so both short forms need capital letters.",
+              "The answer is Sat., Oct. 17."
+            ],
+            misconception: "A common mix-up is fixing only one short form. Both the day and the month are names, so both get a capital.",
+            why: "The answer is Sat., Oct. 17. Saturday and October are names, so the short forms Sat. and Oct. both start with a capital letter. The other choices leave one or both short forms small."
+          },
+          {
+            id: "SK-GUM5-1-C05",
+            type: "ebsr",
+            points: 2,
+            dok: 2,
+            std: [
+              "3.L.GC.1:I:use-conventional-capitalization-in-abbreviations"
+            ],
+            passages: ["p1"],
+            prompt: "This question has two parts. Answer Part A, then Part B.",
+            partA: {
+              prompt: "Which word in sentence 4 of the draft needs a capital letter?",
+              choices: [
+                { text: "folk" },
+                { text: "tale" },
+                { text: "peruvian", correct: true },
+                { text: "pictures" }
+              ]
+            },
+            partB: {
+              prompt: "Why does the word in Part A need a capital letter?",
+              choices: [
+                { text: "It is a short form of a day, a month or a street name." },
+                { text: "It is made from Peru, the name of a country, and tells what kind of tale.", correct: true },
+                { text: "It is the name of the friend who found the book at the fair." },
+                { text: "It is a title that comes right before the name of a person." }
+              ]
+            },
+            clue: "Ask what each word in the sentence does. Is it made from the name of a place? Then ask why that matters.",
+            hints: [
+              "Ask what each word in the sentence does. Is it made from the name of a place? Then ask why that matters.",
+              "Read sentence 4 and ask about each word. For Part B, think about which rule from Learn It the word follows.",
+              "In Part A, a tale is an everyday thing, not a name or a title. Decide among the other three."
+            ],
+            how: [
+              "Part A: read sentence 4 and check each word. Peruvian tells what kind of folk tale, and it comes from Peru.",
+              "Peru is the name of a country, so a describing word made from it starts with a capital letter.",
+              "Part A answer: peruvian.",
+              "Part B answer: \"It is made from Peru, the name of a country, and tells what kind of tale.\""
+            ],
+            misconception: "A common mix-up is keeping a describing word small because it is not a name itself. A word made from a place name still gets a capital.",
+            why: "Part A: peruvian. Part B: \"It is made from Peru, the name of a country, and tells what kind of tale.\" Peruvian is a describing word made from a place name, so it starts with a capital letter: Peruvian. It is not a title and not a person's name."
+          }
+        ]
+      },
+      {
+        title: "Set 2",
+        items: [
+          {
+            id: "SK-GUM5-1-C06",
+            type: "hottext",
+            points: 2,
+            dok: 2,
+            std: [
+              "3.L.GC.1:I:use-conventional-capitalization-in-abbreviations"
+            ],
+            passages: ["p2"],
+            prompt: "Look at sentences 2 through 6 of the draft. Select the TWO sentences that have a word that needs a capital letter.",
+            targets: ["p2:1:2", "p2:1:3", "p2:1:4", "p2:2:1", "p2:2:2"],
+            answer: ["p2:1:3", "p2:2:1"],
+            pick: 2,
+            clue: "Check each title, each short form and each describing word made from a place name. Ask whether every capital letter is there.",
+            hints: [
+              "Check each title, each short form and each describing word made from a place name. Ask whether every capital letter is there.",
+              "Read the five sentences one at a time. Pick TWO.",
+              "In sentence 6, the word made from a place name already has its capital letter. Check the other four."
+            ],
+            how: [
+              "Read each sentence and look for titles, short forms and words made from place names.",
+              "Sentence 3 has officer right before the name Greer, so it needs a capital: Officer Greer.",
+              "Sentence 5 has Cedar rd. Road is part of a street name, so its short form needs a capital: Cedar Rd.",
+              "Mayor Ortiz, Mr. Pruitt and Nigerian already have their capitals."
+            ],
+            misconception: "A common mix-up is picking a sentence just because it has a title or a short form. Check whether the capital letter is already there.",
+            why: "The answers are sentence 3 (officer Greer) and sentence 5 (Cedar rd.). Officer comes right before a name, so it needs a capital. Rd. is the short form of part of a street name, so it needs a capital too. The other three sentences already have the capitals they need."
+          },
+          {
+            id: "SK-GUM5-1-C07",
+            type: "ms",
+            points: 2,
+            dok: 2,
+            std: [
+              "3.L.GC.1:I:use-conventional-capitalization-in-abbreviations"
+            ],
+            passages: [],
+            prompt: "Choose the TWO sentences that use capital letters correctly.",
+            pick: 2,
+            choices: [
+              { text: "My neighbor plays an egyptian drum at night." },
+              { text: "We tasted Kenyan tea at the school fair.", correct: true },
+              { text: "Meet me at 5 Fox blvd. before noon." },
+              { text: "Judge Ramos spoke to our class about rules.", correct: true },
+              { text: "Our Principal read us a poem at noon." }
+            ],
+            clue: "Check each sentence for a title, a short form and a describing word made from a place name. Ask whether each capital letter is right.",
+            hints: [
+              "Check each sentence for a title, a short form and a describing word made from a place name. Ask whether each capital letter is right.",
+              "Pick TWO. In some sentences a capital is missing, and in one a capital does not belong.",
+              "In the sentence with Principal, no name comes right after the title. Decide about the other four."
+            ],
+            how: [
+              "Check the titles, short forms and place-name words in each sentence.",
+              "Kenyan comes from Kenya, so \"We tasted Kenyan tea at the school fair.\" is right.",
+              "Judge comes right before the name Ramos, so \"Judge Ramos spoke to our class about rules.\" is right.",
+              "The other three are not right: egyptian and blvd. need capitals, and Principal has no name after it."
+            ],
+            misconception: "A common mix-up is thinking every title needs a capital letter. A title stays small when no name comes right after it.",
+            why: "The answers are \"We tasted Kenyan tea at the school fair.\" and \"Judge Ramos spoke to our class about rules.\" Kenyan is made from a country name, and Judge comes right before a name. The others should say Egyptian, Fox Blvd. and our principal."
+          },
+          {
+            id: "SK-GUM5-1-C08",
+            type: "match",
+            points: 2,
+            dok: 2,
+            std: [
+              "3.L.GC.1:I:use-conventional-capitalization-in-abbreviations"
+            ],
+            passages: [],
+            prompt: "Is the day, month or street short form written correctly? Match each sentence.",
+            cols: ["Written correctly", "Needs a capital letter"],
+            rows: [
+              { text: "The class play is on Wed., Dec. 9.", answer: 0 },
+              { text: "Please mail the card to 17 Hill st.", answer: 1 },
+              { text: "Our trip home is on sun., Jan. 10.", answer: 1 },
+              { text: "The fair is held on Oak Ave. in town.", answer: 0 }
+            ],
+            clue: "Say the long word each short form stands for. If the long word is a name, its short form needs a capital letter.",
+            hints: [
+              "Say the long word each short form stands for. If the long word is a name, its short form needs a capital letter.",
+              "Check each sentence one at a time. Look at the day and month short forms and at the street short forms.",
+              "Wed. and Dec. stand for Wednesday and December, and both already have capitals. Decide about the other rows."
+            ],
+            how: [
+              "Say the long word for each short form: Wed. is Wednesday, st. is Street, sun. is Sunday and Ave. is Avenue.",
+              "Wednesday, December, Street, Sunday and Avenue are all names or parts of names, so their short forms need capitals.",
+              "Wed., Dec. and Oak Ave. already have capitals. The sentences with hill st. and sun. do not."
+            ],
+            misconception: "A common mix-up is thinking a short form is an ordinary word, so it can stay small. If the long word is a name, the short form needs a capital.",
+            why: "The sentences with Wed., Dec. and Oak Ave. are written correctly. The sentences with Hill st. and sun. need capital letters, because Street and Sunday are names. The short forms should be Hill St. and Sun."
+          },
+          {
+            id: "SK-GUM5-1-C09",
+            type: "mc",
+            points: 1,
+            dok: 3,
+            std: [
+              "3.L.GC.1:I:use-conventional-capitalization-in-abbreviations"
+            ],
+            passages: ["p2"],
+            prompt: "In the draft, sentence 2 says Mayor Ortiz, and sentence 7 says the mayor. Why does mayor have a capital letter in one sentence and not the other?",
+            choices: [
+              { text: "Mayor has a capital in sentence 2 because it comes in the first paragraph, and later ones stay small." },
+              { text: "Mayor always needs a capital letter when it names the person who runs the town." },
+              { text: "Sentence 2 is the one that is wrong, because a title needs a capital only at the start of a sentence." },
+              {
+                text: "Mayor gets a capital letter when a name comes right after it and stays small when it stands alone.",
+                correct: true
+              }
+            ],
+            clue: "Compare how the word mayor is used in the two sentences. Ask what is different about the words around it.",
+            hints: [
+              "Compare how the word mayor is used in the two sentences. Ask what is different about the words around it.",
+              "Reread sentence 2 and sentence 7 side by side. Look for every difference in how mayor is used.",
+              "Sentence 2 is not a mistake, so the answer cannot say it is wrong. Check the other choices."
+            ],
+            how: [
+              "Read sentence 2: Mayor comes right before the name Ortiz, so it is a title.",
+              "Read sentence 7: the mayor has no name after it, so it is just a word for a job.",
+              "The answer is \"Mayor gets a capital letter when a name comes right after it and stays small when it stands alone.\""
+            ],
+            misconception: "A common mix-up is thinking a title needs a capital letter every time. It needs one only when a name comes right after it.",
+            why: "The answer is \"Mayor gets a capital letter when a name comes right after it and stays small when it stands alone.\" In sentence 2, Mayor Ortiz is a title and a name. In sentence 7, the mayor names a job and no name follows. Both sentences are correct."
+          },
+          {
+            id: "SK-GUM5-1-C10",
+            type: "dropdown",
+            points: 1,
+            dok: 1,
+            std: [
+              "3.L.GC.1:I:use-conventional-capitalization-in-abbreviations"
+            ],
+            passages: ["p2"],
+            prompt: "Sentence 8 of the draft has a word that is written wrongly. Choose the word that fixes it.",
+            text: "By evening, a {0} band played happy music in the park.",
+            slots: [
+              {
+                options: ["jamaican", "Jamaica", "Jamaican"],
+                answer: 2
+              }
+            ],
+            clue: "Ask whether the word tells what kind of band and is made from the name of a place.",
+            hints: [
+              "Ask whether the word tells what kind of band and is made from the name of a place.",
+              "Say each choice in the blank. Think about how the word is used in the sentence.",
+              "Jamaica is the name of the place, but it does not tell what kind of band. Decide between the other two."
+            ],
+            how: [
+              "Read the sentence. The blank tells what kind of band played.",
+              "Jamaica is the name of a country, but a describing word made from it is Jamaican.",
+              "A describing word made from a place name starts with a capital letter, so the answer is Jamaican."
+            ],
+            misconception: "A common mix-up is leaving the word small because it only describes the band. A describing word from a place name still gets a capital.",
+            why: "The answer is Jamaican. It tells what kind of band played, and it is made from Jamaica, the name of a country. A describing word made from a place name starts with a capital letter. Jamaica is the place itself."
+          }
+        ]
+      },
+      {
+        title: "Set 3",
+        items: [
+          {
+            id: "SK-GUM5-1-C11",
+            type: "hottext",
+            points: 1,
+            dok: 2,
+            std: [
+              "3.L.GC.1:I:use-conventional-capitalization-in-abbreviations"
+            ],
+            passages: ["p3"],
+            prompt: "Look at sentences 5 through 9 of the draft. Select the sentence that has a capital letter that does not belong.",
+            targets: ["p3:2:2", "p3:2:3", "p3:3:1", "p3:3:2", "p3:3:3"],
+            answer: ["p3:2:3"],
+            pick: 1,
+            clue: "Some words need capitals, and some words are capitalized by mistake. Ask whether each capital letter has a reason.",
+            hints: [
+              "Some words need capitals, and some words are capitalized by mistake. Ask whether each capital letter has a reason.",
+              "Read the five sentences one at a time. Look at each capital letter that is not at the start of the sentence.",
+              "In sentence 9, Pecan St. is part of a street name, so its capital letters belong. Check the other four."
+            ],
+            how: [
+              "Read each sentence and find every capital letter that is not at the start.",
+              "Ms. Okoro and Pecan St. are names, so those capitals belong. Goalie and teams are everyday words with no capitals.",
+              "In sentence 6, the Coach has no name after it, so it is only a job word. It should be the coach."
+            ],
+            misconception: "A common mix-up is thinking a title always needs a capital letter. If no name comes right after it, the title stays small.",
+            why: "The answer is sentence 6, \"At halftime, the Coach told us to pass the ball more.\" Coach has no name after it, so it should be small: the coach. In sentence 5, Ms. Okoro is a title and a name, and Pecan St. in sentence 9 is a street name, so those capitals belong."
+          },
+          {
+            id: "SK-GUM5-1-C12",
+            type: "dropdown",
+            points: 1,
+            dok: 2,
+            std: [
+              "3.L.GC.1:I:use-conventional-capitalization-in-abbreviations"
+            ],
+            passages: ["p3"],
+            prompt: "Sentence 10 of the draft has a short form that is written wrongly. Choose the words that fix it.",
+            text: "I cannot wait for our next game on {0}.",
+            slots: [
+              {
+                options: ["sat., Mar. 13", "Sat., mar. 13", "Sat., Mar. 13"],
+                answer: 2
+              }
+            ],
+            clue: "Say the long word each short form stands for. If the long word is a name, the short form gets a capital letter.",
+            hints: [
+              "Say the long word each short form stands for. If the long word is a name, the short form gets a capital letter.",
+              "Say each choice in the blank. Check the short form of the day and the short form of the month.",
+              "One choice fixes the day but leaves the month small, and a month is a name. Decide between the other two."
+            ],
+            how: [
+              "The short forms are sat. for Saturday and Mar. for March.",
+              "Both Saturday and March are names, so both short forms need capital letters.",
+              "The answer is Sat., Mar. 13."
+            ],
+            misconception: "A common mix-up is fixing only the day. The month is a name too, so its short form also needs a capital.",
+            why: "The answer is Sat., Mar. 13. Saturday and March are names, so both short forms start with a capital letter. In the draft, sat. is small, and Sat., mar. leaves the month small."
+          },
+          {
+            id: "SK-GUM5-1-C13",
+            type: "ms",
+            points: 2,
+            dok: 3,
+            std: [
+              "3.L.GC.1:I:use-conventional-capitalization-in-abbreviations"
+            ],
+            passages: [],
+            prompt: "Dan says, \"A title always starts with a capital letter.\" Choose the TWO sentences that show Dan is not right.",
+            pick: 2,
+            choices: [
+              { text: "Our principal waved from the stage.", correct: true },
+              { text: "Judge Ramos told us to listen." },
+              { text: "The nurse handed each of us a sticker.", correct: true },
+              { text: "Mrs. Diaz called our names." },
+              { text: "Principal Hale waved from the stage." }
+            ],
+            clue: "A title keeps its capital in one kind of sentence, not another. Find where it stays small.",
+            hints: [
+              "A title keeps its capital in one kind of sentence, not another. Find where it stays small.",
+              "Pick TWO. Check whether a name comes right after each title.",
+              "Judge Ramos has a name right after the title. Decide about the other four."
+            ],
+            how: [
+              "Find the title in each sentence. Then check whether a name comes right after it.",
+              "In \"The nurse handed each of us a sticker.\" and \"Our principal waved from the stage.\" no name follows, so the titles stay small.",
+              "Principal Hale, Judge Ramos and Mrs. Diaz each have a name after the title, so those capitals are right."
+            ],
+            misconception: "A common mix-up is picking the sentences with capitals because they show titles. Dan is wrong when a title stays small.",
+            why: "The answers are \"The nurse handed each of us a sticker.\" and \"Our principal waved from the stage.\" In both, no name follows the title, so it stays small. That shows a title does not always start with a capital letter. The other three titles come right before names."
+          },
+          {
+            id: "SK-GUM5-1-C14",
+            type: "dropdown",
+            points: 2,
+            dok: 2,
+            std: [
+              "3.L.GC.1:I:use-conventional-capitalization-in-abbreviations"
+            ],
+            passages: [],
+            prompt: "Finish the address on the envelope. Choose the words that give each blank the right capital letters.",
+            text: "To: {0} Reed, 90 Palm {1}",
+            slots: [
+              {
+                options: ["dr.", "Doc.", "Dr."],
+                answer: 2
+              },
+              {
+                options: ["ave.", "Av.", "Ave."],
+                answer: 2
+              }
+            ],
+            clue: "Ask which short forms stand for a title and for part of a street name. Then ask which way of writing each one is correct.",
+            hints: [
+              "Ask which short forms stand for a title and for part of a street name. Then ask which way of writing each one is correct.",
+              "Choose one blank at a time. Read the short form out loud with its long word.",
+              "Doc. is a nickname, not the short form of a title. Decide about the other choices."
+            ],
+            how: [
+              "The first blank is a title before the name Reed. Doctor is shortened to Dr., with a capital and a period.",
+              "The second blank is part of a street name. Avenue is shortened to Ave., with a capital and a period.",
+              "The answers are Dr. and Ave."
+            ],
+            misconception: "A common mix-up is writing a short form with a small letter. A short form of a name or title keeps its capital.",
+            why: "The answers are Dr. and Ave. Dr. is the short form of the title Doctor, and Ave. is the short form of Avenue, part of a street name. Both keep their capital letters. Doc. and Av. are not the standard short forms."
+          },
+          {
+            id: "SK-GUM5-1-C15",
+            type: "mc",
+            points: 1,
+            dok: 3,
+            std: [
+              "3.L.GC.1:I:use-conventional-capitalization-in-abbreviations"
+            ],
+            passages: [],
+            prompt: "Ravi wrote, \"The vietnamese farmer showed us how rice grows.\" He says vietnamese can stay small because farmer is not a title. Is Ravi right?",
+            choices: [
+              { text: "No. Vietnamese is made from the name of a country, so it needs a capital letter.", correct: true },
+              { text: "Yes. A describing word stays small when it comes before an everyday noun like farmer." },
+              { text: "Yes. A describing word needs a capital only when it is the first word in a sentence." },
+              { text: "No. Farmer is a title, so farmer needs the capital letter and vietnamese can stay small." }
+            ],
+            clue: "Ask what vietnamese does in the sentence and where the word comes from. Then ask whether the word farmer changes that.",
+            hints: [
+              "Ask what vietnamese does in the sentence and where the word comes from. Then ask whether the word farmer changes that.",
+              "Read the sentence without the word farmer. Ask what kind of word vietnamese is.",
+              "Farmer is an everyday word for a job, and no name follows it. Decide among the other choices."
+            ],
+            how: [
+              "Ask what vietnamese tells about the farmer: where the farmer is from.",
+              "Vietnamese is made from Vietnam, the name of a country, so it is a describing word from a place name.",
+              "The answer is \"No. Vietnamese is made from the name of a country, so it needs a capital letter.\""
+            ],
+            misconception: "A common mix-up is thinking the next word decides the capital. A word made from a place name needs one wherever it appears.",
+            why: "The answer is \"No. Vietnamese is made from the name of a country, so it needs a capital letter.\" It does not matter that farmer is an everyday word. Ravi should write Vietnamese. A describing word made from a place name always starts with a capital letter."
+          }
+        ]
+      }
+    ]
+  },
+  similar: [
+    {
+      id: "SK-GUM5-1-S01",
+      type: "hottext",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.L.GC.1:I:use-conventional-capitalization-in-abbreviations"
+      ],
+      passages: [],
+      prompt: "Which line has a short form that is written wrongly?",
+      options: [
+        "Principal Cole will speak to the whole school at noon.",
+        "Please send the package to 31 Larch rd. before Friday.",
+        "Our class trip is on Fri., Feb. 12, at nine.",
+        "The Swedish choir sang two songs after lunch.",
+        "Our new neighbor, Dr. Abbott, grows peppers in the yard."
+      ],
+      answer: [1],
+      pick: 1,
+      clue: "Ask which words are short forms of names. If the long word is a name, its short form needs a capital letter.",
+      hints: [
+        "Ask which words are short forms of names. If the long word is a name, its short form needs a capital letter.",
+        "Read the five lines one at a time. Pick ONE line.",
+        "Fri. and Feb. stand for names, and in one line both have capitals. Check the other four."
+      ],
+      how: [
+        "Read each line and look for short forms of names.",
+        "Fri. and Feb. already have capitals, and Dr. Abbott does too.",
+        "In the line with rd., Road is part of the street name Larch Road, so the short form needs a capital: Larch Rd."
+      ],
+      misconception: "A common mix-up is thinking a short form is just an ordinary word. If the long word is a name, the short form needs a capital.",
+      why: "The error is in \"Please send the package to 31 Larch rd. before Friday.\" Road is part of a street name, so its short form needs a capital: Larch Rd. The other lines already have the capitals they need.",
+      like: ["SK-GUM5-1-P3"]
+    },
+    {
+      id: "SK-GUM5-1-S02",
+      type: "match",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.L.GC.1:I:use-conventional-capitalization-in-abbreviations"
+      ],
+      passages: [],
+      prompt: "Each row shows one word inside its sentence. Which words must begin with a capital where they are used?",
+      cols: ["Capital", "Small letter"],
+      rows: [
+        { text: "captain, in \"Everyone cheered for captain Ruiz.\"", answer: 0 },
+        { text: "nurse, in \"The nurse took my temperature.\"", answer: 1 },
+        { text: "filipino, in \"We tried a filipino dessert.\"", answer: 0 },
+        { text: "lane, in \"Our house sits on a quiet lane.\"", answer: 1 }
+      ],
+      clue: "For each word, ask two things. Does it come right before a name? Is it made from the name of a place?",
+      hints: [
+        "For each word, ask two things. Does it come right before a name? Is it made from the name of a place?",
+        "Do one row at a time. Look at the words next to the word, and at what it tells about.",
+        "In the sentence with nurse, no name comes after it. Decide about the other rows."
+      ],
+      how: [
+        "Ask about each word: is it a title before a name, or made from a place name?",
+        "Captain comes right before the name Ruiz, and filipino is made from the Philippines.",
+        "Nurse and lane are everyday words with no name after them, so they stay small."
+      ],
+      misconception: "A common mix-up is thinking every job word needs a capital. A title gets one only when a name comes right after it.",
+      why: "Captain needs a capital because it comes right before the name Ruiz. Filipino needs a capital because it is made from the name of a country. Nurse and lane are everyday words, and no name follows them.",
+      like: ["SK-GUM5-1-P5"]
+    },
+    {
+      id: "SK-GUM5-1-S03",
+      type: "dropdown",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.L.GC.1:I:use-conventional-capitalization-in-abbreviations"
+      ],
+      passages: ["p4"],
+      prompt: "Pick the version of the nurse's title and name that is right.",
+      text: "First, {0} showed us how to wash our hands after digging.",
+      slots: [
+        {
+          options: ["Nurse alba", "nurse Alba", "Nurse Alba"],
+          answer: 2
+        }
+      ],
+      clue: "Find the title in front of the person's name. Ask whether the title and the name both begin the way a name should.",
+      hints: [
+        "Find the title in front of the person's name. Ask whether the title and the name both begin the way a name should.",
+        "Say each choice after the word First and check the first letter of both words.",
+        "Nurse alba gives the title a capital but leaves the person's name small. Decide between the other two."
+      ],
+      how: [
+        "Look at sentence 2. Nurse comes right before the name Alba, so it is a title.",
+        "A title before a name starts with a capital letter, and the name does too.",
+        "The answer is Nurse Alba."
+      ],
+      misconception: "A common mix-up is fixing the title but forgetting the name. Both words in Nurse Alba start with capitals.",
+      why: "The answer is Nurse Alba. Nurse comes right before the name Alba, so both words start with capital letters. The other choices leave the title or the name small.",
+      like: ["SK-GUM5-1-C03"]
+    },
+    {
+      id: "SK-GUM5-1-S04",
+      type: "mc",
+      points: 1,
+      dok: 1,
+      std: [
+        "3.L.GC.1:I:use-conventional-capitalization-in-abbreviations"
+      ],
+      passages: ["p4"],
+      prompt: "Which choice shows the date in sentence 1 written the way it should be?",
+      choices: [
+        { text: "fri., Apr. 9" },
+        { text: "Fri., apr. 9" },
+        { text: "Fri., Apr. 9", correct: true },
+        { text: "fri., apr. 9" }
+      ],
+      clue: "Think of the long word for each short form. A short form of a name needs a capital letter, just like the long word.",
+      hints: [
+        "Think of the long word for each short form. A short form of a name needs a capital letter, just like the long word.",
+        "Look at the short form of the day and the short form of the month, one at a time.",
+        "One choice leaves both short forms in small letters, even though both come from names. Decide among the other three."
+      ],
+      how: [
+        "Say the long words: fri. is Friday, and Apr. is April.",
+        "Friday and April are names, so both short forms start with capital letters.",
+        "The answer is Fri., Apr. 9."
+      ],
+      misconception: "A common mix-up is fixing one short form and leaving the other small. The day and the month are both names.",
+      why: "The answer is Fri., Apr. 9. Friday and April are names, so their short forms both start with capital letters. The other choices leave one or both short forms small.",
+      like: ["SK-GUM5-1-C04"]
+    },
+    {
+      id: "SK-GUM5-1-S05",
+      type: "ebsr",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.L.GC.1:I:use-conventional-capitalization-in-abbreviations"
+      ],
+      passages: ["p4"],
+      prompt: "Start with A, and finish with B.",
+      partA: {
+        prompt: "Which word in sentence 6 should be written with a capital?",
+        choices: [
+          { text: "haitian", correct: true },
+          { text: "pepper" },
+          { text: "seeds" },
+          { text: "grows" }
+        ]
+      },
+      partB: {
+        prompt: "What is the reason for your choice in Part A?",
+        choices: [
+          { text: "Because it is a short form of a day, a month or a street name." },
+          { text: "Because it names the student who plants seeds in the garden row." },
+          { text: "Because it is a title that stands right before a teacher's name." },
+          { text: "Because it tells what kind of pepper, using the name of a country, Haiti.", correct: true }
+        ]
+      },
+      clue: "Ask which word in the sentence tells what kind of something. Then ask what that word is made from.",
+      hints: [
+        "Ask which word in the sentence tells what kind of something. Then ask what that word is made from.",
+        "Reread sentence 6 and ask about each word. For Part B, think about which Learn It rule the word follows.",
+        "In Part A, grows is a verb that tells what the pepper does. Decide among the other three."
+      ],
+      how: [
+        "Part A: read sentence 6. Haitian tells what kind of pepper it is, and it is made from Haiti.",
+        "Haiti is the name of a country, so a describing word made from it needs a capital letter.",
+        "Part A answer: haitian.",
+        "Part B answer: \"Because it tells what kind of pepper, using the name of a country, Haiti.\""
+      ],
+      misconception: "A common mix-up is leaving the word small because it sits in the middle of a sentence. Describing words made from place names always get capitals.",
+      why: "Part A: haitian. Part B: \"Because it tells what kind of pepper, using the name of a country, Haiti.\" Haitian is made from a place name, so it starts with a capital letter: Haitian. It is not the name of a person and not a title.",
+      like: ["SK-GUM5-1-C05"]
+    },
+    {
+      id: "SK-GUM5-1-S06",
+      type: "hottext",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.L.GC.1:I:use-conventional-capitalization-in-abbreviations"
+      ],
+      passages: ["p5"],
+      prompt: "Read sentences 2 through 6 of the draft. Pick the TWO sentences where a capital letter is missing.",
+      targets: ["p5:1:2", "p5:1:3", "p5:1:4", "p5:2:1", "p5:2:2"],
+      answer: ["p5:1:3", "p5:2:1"],
+      pick: 2,
+      clue: "Look at each title before a name, each short form and each word made from a place name. Is every capital letter there?",
+      hints: [
+        "Look at each title before a name, each short form and each word made from a place name. Is every capital letter there?",
+        "Go through the five sentences in order. Two of them are missing a capital.",
+        "In sentence 4, Ms. Reyes already has her capital letter. Check the other four."
+      ],
+      how: [
+        "Read each sentence and check its titles, short forms and place-name words.",
+        "In sentence 3, sheriff comes right before the name Moss, so it needs a capital: Sheriff Moss.",
+        "In sentence 5, rd. is short for Road in a street name, so it needs a capital: Linden Rd.",
+        "Chief Dunn, Ms. Reyes and Ethiopian already have capitals."
+      ],
+      misconception: "A common mix-up is picking a sentence just because it has a title or a short form. Check whether the capital letter is already there.",
+      why: "The answers are sentence 3 (sheriff Moss) and sentence 5 (Linden rd.). Sheriff comes right before a name, and Rd. is the short form of part of a street name, so both need capitals. The other three sentences already have the capitals they need.",
+      like: ["SK-GUM5-1-C06"]
+    },
+    {
+      id: "SK-GUM5-1-S07",
+      type: "ms",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.L.GC.1:I:use-conventional-capitalization-in-abbreviations"
+      ],
+      passages: [],
+      prompt: "Which TWO sentences have every capital letter in the right place?",
+      pick: 2,
+      choices: [
+        { text: "Our neighbor bakes turkish bread on Saturday." },
+        { text: "Captain Reyes taught us how to tie a strong knot.", correct: true },
+        { text: "Please call dr. Lopez if your cough stays." },
+        { text: "We thanked our Teacher for the fun trip." },
+        { text: "We watched a Norwegian film about whales.", correct: true }
+      ],
+      clue: "Look at each title, short form and describing word from a place name. Ask whether each capital letter is right.",
+      hints: [
+        "Look at each title, short form and describing word from a place name. Ask whether each capital letter is right.",
+        "Pick TWO. In some sentences a capital is missing, and in one a capital should be small.",
+        "In the sentence with Teacher, no name comes right after the title. Decide about the other four."
+      ],
+      how: [
+        "Check the titles, short forms and place-name words in each sentence.",
+        "Captain comes right before the name Reyes, so \"Captain Reyes taught us how to tie a strong knot.\" is right.",
+        "Norwegian is made from Norway, so \"We watched a Norwegian film about whales.\" is right.",
+        "The others need dr. and turkish capitalized, and Teacher should be small."
+      ],
+      misconception: "A common mix-up is capitalizing every job word. A title gets a capital only when a name comes right after it.",
+      why: "The answers are \"Captain Reyes taught us how to tie a strong knot.\" and \"We watched a Norwegian film about whales.\" Captain comes right before a name, and Norwegian is made from a country name. The others should say Dr. Lopez, Turkish and our teacher.",
+      like: ["SK-GUM5-1-C07"]
+    },
+    {
+      id: "SK-GUM5-1-S08",
+      type: "match",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.L.GC.1:I:use-conventional-capitalization-in-abbreviations"
+      ],
+      passages: [],
+      prompt: "Sort these sentences. Which ones have every short form capitalized, and which are still missing one?",
+      cols: ["Capitals are right", "A capital is missing"],
+      rows: [
+        { text: "Bake sale: Fri., Feb. 12, in the gym.", answer: 0 },
+        { text: "Send your reply to 20 Lake ave.", answer: 1 },
+        { text: "Choir meets again on mon., Mar. 22.", answer: 1 },
+        { text: "Our school stands on Grove Rd. beside the creek.", answer: 0 }
+      ],
+      clue: "Say the long word that each short form stands for. A short form of a name needs a capital, like the long word.",
+      hints: [
+        "Say the long word that each short form stands for. A short form of a name needs a capital, like the long word.",
+        "Look at one sentence at a time. Check the short forms of days, months and streets.",
+        "Fri. and Feb. stand for Friday and February, and both already have capitals. Decide about the other rows."
+      ],
+      how: [
+        "Say the long word for each short form: Fri. is Friday, ave. is Avenue, mon. is Monday and Rd. is Road.",
+        "Friday, Avenue, Monday, February and Road are names or parts of names, so their short forms need capitals.",
+        "Fri., Feb. and Grove Rd. have capitals. The sentences with Lake ave. and mon. do not."
+      ],
+      misconception: "A common mix-up is thinking a short form is an ordinary word that can stay small. If the long word is a name, the short form needs a capital.",
+      why: "The sentences with Fri., Feb. and Grove Rd. are written correctly. The sentences with Lake ave. and mon. need capital letters, because Avenue and Monday are names. They should say Lake Ave. and Mon.",
+      like: ["SK-GUM5-1-C08"]
+    },
+    {
+      id: "SK-GUM5-1-S09",
+      type: "mc",
+      points: 1,
+      dok: 3,
+      std: [
+        "3.L.GC.1:I:use-conventional-capitalization-in-abbreviations"
+      ],
+      passages: ["p5"],
+      prompt: "Compare chief in sentences 2 and 7 of the draft. Which statement is true?",
+      choices: [
+        { text: "A name follows chief in sentence 2, so it is a title there, and sentence 7 only names a job.", correct: true },
+        { text: "Chief names a person in both sentences, so the chief in sentence 7 needs a capital too." },
+        { text: "Neither sentence needs a capital for chief, so Chief in sentence 2 is the one with a mistake." },
+        { text: "Only the first paragraph may show a title with a capital, and later paragraphs use small letters." }
+      ],
+      clue: "Compare how the word chief is used in the two sentences. Ask what is different about the words around it.",
+      hints: [
+        "Compare how the word chief is used in the two sentences. Ask what is different about the words around it.",
+        "Look at sentence 2 and sentence 7 together. Ask whether either one has a mistake.",
+        "Neither sentence has a mistake. Check the choices that call one of them wrong."
+      ],
+      how: [
+        "In sentence 2, the name Dunn comes right after Chief, so Chief is a title.",
+        "In sentence 7, the chief has no name after it, so it only names a job.",
+        "The answer is \"A name follows chief in sentence 2, so it is a title there, and sentence 7 only names a job.\""
+      ],
+      misconception: "A common mix-up is thinking a title needs a capital letter every time. It needs one only when a name comes right after it.",
+      why: "The answer is \"A name follows chief in sentence 2, so it is a title there, and sentence 7 only names a job.\" In sentence 2, Chief Dunn is a title and a name. In sentence 7, the chief has no name after it. Both sentences are correct.",
+      like: ["SK-GUM5-1-C09"]
+    },
+    {
+      id: "SK-GUM5-1-S10",
+      type: "dropdown",
+      points: 1,
+      dok: 1,
+      std: [
+        "3.L.GC.1:I:use-conventional-capitalization-in-abbreviations"
+      ],
+      passages: ["p5"],
+      prompt: "Fix the mistake in sentence 8 by choosing the right word for the blank.",
+      text: "Later, an {0} dancer told us a tale using only her hands.",
+      slots: [
+        {
+          options: ["India", "Indian", "indian"],
+          answer: 1
+        }
+      ],
+      clue: "Ask whether the word tells what kind of dancer and comes from the name of a place.",
+      hints: [
+        "Ask whether the word tells what kind of dancer and comes from the name of a place.",
+        "Say each choice in the blank and think about the job the word does.",
+        "India is the place itself, but the sentence needs a word that describes the dancer. Decide between the other two."
+      ],
+      how: [
+        "Read the sentence. The blank describes the dancer.",
+        "India is a country, and a describing word made from it is Indian.",
+        "A describing word made from a place name starts with a capital letter, so the answer is Indian."
+      ],
+      misconception: "A common mix-up is leaving the word small because it only describes the dancer. A describing word from a place name still gets a capital.",
+      why: "The answer is Indian. It tells where the dancer is from, and it is made from India, the name of a country. A describing word made from a place name starts with a capital letter. India is the place itself.",
+      like: ["SK-GUM5-1-C10"]
+    },
+    {
+      id: "SK-GUM5-1-S11",
+      type: "hottext",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.L.GC.1:I:use-conventional-capitalization-in-abbreviations"
+      ],
+      passages: ["p6"],
+      prompt: "In sentences 5 to 9, one capital letter was added by mistake. Select that sentence.",
+      targets: ["p6:2:2", "p6:2:3", "p6:3:1", "p6:3:2", "p6:3:3"],
+      answer: ["p6:2:3"],
+      pick: 1,
+      clue: "Some capital letters are missing, and some are there by mistake. Ask whether each capital in the middle of a sentence has a reason.",
+      hints: [
+        "Some capital letters are missing, and some are there by mistake. Ask whether each capital in the middle of a sentence has a reason.",
+        "Go through the five sentences one at a time. Look at every capital letter that is not the first letter of the sentence.",
+        "In sentence 9, Hill Ave. is part of a street name, so its capitals have a reason. Check the other four."
+      ],
+      how: [
+        "Read each sentence and find the capitals that are not at the start.",
+        "Mrs. Park and Hill Ave. are names, so their capitals belong. The words place, brother and claps are everyday words with no capitals.",
+        "In sentence 6, the Judge has no name after it, so it only names a job. It should be the judge."
+      ],
+      misconception: "A common mix-up is thinking a job word always needs a capital. If no name comes right after the title, it stays small.",
+      why: "The answer is sentence 6, \"After the relay, the Judge gave each winner a blue ribbon.\" Judge has no name after it, so it should be small: the judge. In sentence 5, Mrs. Park is a title and a name, and Hill Ave. in sentence 9 is a street name.",
+      like: ["SK-GUM5-1-C11"]
+    },
+    {
+      id: "SK-GUM5-1-S12",
+      type: "dropdown",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.L.GC.1:I:use-conventional-capitalization-in-abbreviations"
+      ],
+      passages: ["p6"],
+      prompt: "Pick the best way to write the date in sentence 10.",
+      text: "The last meet of the year is on {0}, at the pool.",
+      slots: [
+        {
+          options: ["Sun., aug. 15", "sun., Aug. 15", "Sun., Aug. 15"],
+          answer: 2
+        }
+      ],
+      clue: "Say the long word that each short form stands for. If it is a name, the short form needs a capital letter.",
+      hints: [
+        "Say the long word that each short form stands for. If it is a name, the short form needs a capital letter.",
+        "Say each choice in the blank. Check the short form of the day and the short form of the month.",
+        "One choice fixes the day but leaves the month small, and a month is a name. Decide between the other two."
+      ],
+      how: [
+        "The short forms are sun. for Sunday and Aug. for August.",
+        "Sunday and August are names, so both short forms need capital letters.",
+        "The answer is Sun., Aug. 15."
+      ],
+      misconception: "A common mix-up is fixing only the day. The month is also a name, so its short form needs a capital too.",
+      why: "The answer is Sun., Aug. 15. Sunday and August are names, so both short forms start with a capital letter. In the draft, sun. is small, and Sun., aug. leaves the month small.",
+      like: ["SK-GUM5-1-C12"]
+    },
+    {
+      id: "SK-GUM5-1-S13",
+      type: "ms",
+      points: 2,
+      dok: 3,
+      std: [
+        "3.L.GC.1:I:use-conventional-capitalization-in-abbreviations"
+      ],
+      passages: [],
+      prompt: "Mia says, \"Every title needs a capital letter, even when no name follows it.\" Pick the TWO sentences that show Mia is wrong.",
+      pick: 2,
+      choices: [
+        { text: "Officer Gray gave our class a long safety talk." },
+        { text: "Dr. Cruz checked my ears and my nose today." },
+        { text: "We waved to the sheriff as he drove away.", correct: true },
+        { text: "Coach Nell set up all the orange cones early." },
+        { text: "My cousin wants to be a captain someday.", correct: true }
+      ],
+      clue: "A title keeps a capital in one kind of sentence and not in another. Look for the sentences where the title stays small.",
+      hints: [
+        "A title keeps a capital in one kind of sentence and not in another. Look for the sentences where the title stays small.",
+        "Pick TWO. Check whether a name comes right after each title.",
+        "Officer Gray has a name right after the title. Decide about the other four."
+      ],
+      how: [
+        "Find the title in each sentence. Then check whether a name comes right after it.",
+        "In \"We waved to the sheriff as he drove away.\" and \"My cousin wants to be a captain someday.\" no name follows, so the titles stay small.",
+        "Officer Gray, Coach Nell and Dr. Cruz each have a name after the title, so those capitals are right."
+      ],
+      misconception: "A common mix-up is picking the sentences with capitals because they show titles. Mia is wrong when a title stays small.",
+      why: "The answers are \"We waved to the sheriff as he drove away.\" and \"My cousin wants to be a captain someday.\" In both, no name follows the title, so it stays small. That shows a title does not always need a capital letter. The other three titles come right before names.",
+      like: ["SK-GUM5-1-C13"]
+    },
+    {
+      id: "SK-GUM5-1-S14",
+      type: "dropdown",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.L.GC.1:I:use-conventional-capitalization-in-abbreviations"
+      ],
+      passages: [],
+      prompt: "A label on a package needs two short forms. Pick the right way to write each one.",
+      text: "Mail to: {0} Cruz, 25 Maple {1}",
+      slots: [
+        {
+          options: ["Ms.", "ms.", "Mz."],
+          answer: 0
+        },
+        {
+          options: ["st.", "Str.", "St."],
+          answer: 2
+        }
+      ],
+      clue: "Ask which short forms stand for a title and for part of a street name. Then ask how each should be written.",
+      hints: [
+        "Ask which short forms stand for a title and for part of a street name. Then ask how each should be written.",
+        "Work on one blank at a time. Say the short form with its long word.",
+        "Mz. is not a standard short form of any title. Think about the other choices."
+      ],
+      how: [
+        "The first blank is a title before the name Cruz. Ms. is written with a capital and a period.",
+        "The second blank is part of a street name. Street is shortened to St., with a capital and a period.",
+        "The answers are Ms. and St."
+      ],
+      misconception: "A common mix-up is writing a short form in small letters. A short form of a title or a street name keeps its capital.",
+      why: "The answers are Ms. and St. Ms. is a title before a name, and St. is the short form of Street in a street name. Both start with a capital letter and end with a period. The choices mz. and Str. are not standard.",
+      like: ["SK-GUM5-1-C14"]
+    },
+    {
+      id: "SK-GUM5-1-S15",
+      type: "mc",
+      points: 1,
+      dok: 3,
+      std: [
+        "3.L.GC.1:I:use-conventional-capitalization-in-abbreviations"
+      ],
+      passages: [],
+      prompt: "A student labeled a photo, \"A moroccan weaver at work.\" Her partner thinks the label is fine as typed, because weaver is a plain job word. What is the best reply?",
+      choices: [
+        { text: "The label is fine, because a capital is needed only for the opening word of a label." },
+        { text: "The label is fine, because a describing word never takes a capital before a job word." },
+        { text: "Moroccan comes from Morocco, a country, so it should begin with a capital.", correct: true },
+        { text: "Weaver is the word that needs a capital, since it names a worker." }
+      ],
+      clue: "Ask what moroccan tells about the weaver and where the word comes from. Then ask whether the next word changes that.",
+      hints: [
+        "Ask what moroccan tells about the weaver and where the word comes from. Then ask whether the next word changes that.",
+        "Cover the word weaver and look at moroccan by itself. What kind of word is it?",
+        "Weaver is a plain word for a worker, and no name follows it. Decide among the other choices."
+      ],
+      how: [
+        "Ask what moroccan tells: where the weaver is from.",
+        "Moroccan comes from Morocco, the name of a country, so it is a describing word from a place name.",
+        "The answer is \"Moroccan comes from Morocco, a country, so it should begin with a capital.\""
+      ],
+      misconception: "A common mix-up is letting the next word decide. A word made from a place name needs a capital wherever it appears.",
+      why: "The answer is \"Moroccan comes from Morocco, a country, so it should begin with a capital.\" It does not matter that weaver is a plain job word. A describing word made from a place name always starts with a capital letter.",
+      like: ["SK-GUM5-1-C15"]
+    }
+  ],
+  addons: {
+    "SK-GUM5-1-P1": {
+      hints: [
+        "Check each title in front of a name and each word made from the name of a place. Ask whether its capital letters are right.",
+        "Read the four sentences one at a time. In each, look at the word that might need a capital letter.",
+        "The sentence about mayor Green has a title that is written small. Check the other three."
+      ],
+      how: [
+        "Check each sentence for a title before a name and for a word made from a place name.",
+        "Mr. Brooks, Mexican and Mayor Green need capitals, but those sentences write them small.",
+        "The answer is \"Our dentist, Dr. Patel, gave me a new toothbrush.\" Dr. has its capital and its period."
+      ],
+      misconception: "A common mix-up is treating a word like mexican as an everyday word. A describing word made from a place name needs a capital."
+    },
+    "SK-GUM5-1-P2": {
+      hints: [
+        "Ask what each blank is. One is a title before a name, and one tells what kind of rice and beans.",
+        "Fill one blank at a time. For the first, think about how a short title starts and how it ends.",
+        "Cuba is the name of a country, but the blank needs a word that tells what kind. Think about the other choices."
+      ],
+      how: [
+        "The first blank is a title before the name Ruiz. A short title like Mrs. starts with a capital and ends with a period.",
+        "The second blank tells what kind of rice and beans. A describing word made from Cuba is Cuban.",
+        "The answers are Mrs. and Cuban."
+      ],
+      misconception: "A common mix-up is choosing the place name itself. Cuba names the country, but Cuban describes the rice."
+    },
+    "SK-GUM5-1-P3": {
+      hints: [
+        "Ask which words are names, titles or short forms of names. Each one needs its capital letter.",
+        "Read the five lines one at a time. Pick ONE line.",
+        "Mon. and Sat. stand for the names Monday and Saturday, and in one line both have capitals. Check the other four."
+      ],
+      how: [
+        "Read each line and look for titles, short forms and words made from place names.",
+        "Ms. Ito, Mon., Sat., Captain Harris and American already have their capitals.",
+        "In \"Our new address: 22 Peach ave.\" the short form of Avenue needs a capital: Peach Ave."
+      ],
+      misconception: "A common mix-up is thinking a short form of a street can stay small. If the long word is a name, the short form needs a capital."
+    },
+    "SK-GUM5-1-P4": {
+      hints: [
+        "Ask whether each word is a title before a name or is made from the name of a place.",
+        "Check the four words one at a time. Ask what each one tells about the restaurant.",
+        "Downtown is an everyday word for part of a town, not a name. Check the other three."
+      ],
+      how: [
+        "Check each word: is it a title, a short form, or made from the name of a place?",
+        "Family, restaurant and downtown are everyday words, not names.",
+        "Italian is made from Italy, the name of a country, so the answer is italian, which should be Italian."
+      ],
+      misconception: "A common mix-up is thinking only names of people need capitals. A word made from a country name needs one too."
+    },
+    "SK-GUM5-1-P5": {
+      hints: [
+        "For each word, ask two things. Does it come right before a name? Is it made from the name of a place?",
+        "Do one row at a time. Check what the word is next to, and what it tells about.",
+        "In the sentence with doctor, no name comes after it. Decide about the other rows."
+      ],
+      how: [
+        "Ask about each word: is a name right after it, or is it made from a place name?",
+        "President comes right before Lincoln, and spanish is made from Spain, so both need capitals.",
+        "Doctor and street are everyday words with no name after them, so they stay small."
+      ],
+      misconception: "A common mix-up is capitalizing every job word. A title needs a capital only when a name comes right after it."
+    }
+  },
+  /* B8:core:end */
   test: [
     { id: "SK-GUM5-1-T1", type: "mc", points: 1, dok: 2, passages: [],
       prompt: "Which one is correct?",

@@ -164,7 +164,7 @@ PP.addLesson({
         [
           "(7) The class waited until the bell, and then we made a chart.",
           "(8) Sunlight makes ice melt faster than cool air does, so shade keeps it cold.",
-          "(9) We want to try the test again."
+          "(9) Our class will repeat the experiment."
         ]
       ]
     },
@@ -459,7 +459,7 @@ PP.addLesson({
               "A baker is a person, so a fact about a baker cannot explain a time."
             ],
             how: [
-              "Part A: a when phrase must end with a noun that names a time. Saturday is a day, so on Saturday tells when.",
+              "Part A: a when phrase must end with a noun that names a time. The answer is \"Dad wants to go again on Saturday.\" because Saturday is a day.",
               "The other revisions end with market, baker and fountain, which are a place, a person and a place.",
               "Part B: the fact that matches is \"Saturday names a day, and a day is a time.\""
             ],
@@ -490,7 +490,7 @@ PP.addLesson({
             clue: "Try each word in the blank and listen. A phrase that tells where names a place, and a phrase that tells when names a time.",
             hints: [
               "Try each word in the blank and listen. A phrase that tells where names a place, and a phrase that tells when names a time.",
-              "Say the noun after each blank. Ask whether a sofa is a place or a time, and whether a thunderstorm is a place or a time.",
+              "Say the noun after each blank. Ask whether a sofa is a place or a time, and whether the storm is a place or a time.",
               "Look only at the first blank. After tells when something happens, so it cannot show where the puppy hid."
             ],
             how: [
@@ -786,8 +786,8 @@ PP.addLesson({
         "3.L.GC.1:C:form-and-use-prepositional-phrases"
       ],
       passages: [],
-      prompt: "Does each phrase name a place or a time? Match each one.",
-      cols: ["Where","When"],
+      prompt: "Sort these phrases by the kind of detail they add.",
+      cols: ["A place","A time"],
       rows: [
         {
           text: "inside the cave",
@@ -798,7 +798,7 @@ PP.addLesson({
           answer: 1
         },
         {
-          text: "toward the gate",
+          text: "toward the lighthouse",
           answer: 0
         },
         {
@@ -810,19 +810,19 @@ PP.addLesson({
           answer: 0
         }
       ],
-      clue: "Look at the noun at the end of each phrase. Ask whether it names a place or a time.",
+      clue: "Look at the noun at the end of each phrase. Ask whether it names a spot or a moment.",
       hints: [
-        "Look at the noun at the end of each phrase. Ask whether it names a place or a time.",
-        "Do the phrases you are sure about first. Then use the same question for the rest.",
-        "A cave is something you can walk into, so it is not a time."
+        "Look at the noun at the end of each phrase. Ask whether it names a spot or a moment.",
+        "Sort the phrases you are sure about first. Then use the same question on the rest.",
+        "Cover the first word of each phrase, then ask whether what is left is somewhere you could stand."
       ],
       how: [
         "Read each phrase and find its noun.",
-        "Cave, gate and corner are places, so those phrases tell where.",
-        "Monday and midnight are times, so since Monday and until midnight tell when."
+        "Cave, lighthouse and corner are places, so those phrases add a place.",
+        "Monday and midnight are times, so since Monday and until midnight add a time."
       ],
-      misconception: "A common mix-up is going by the first word. Read the noun at the end to see if it is a place or a time.",
-      why: "Inside the cave, toward the gate and around the corner end with places. Since Monday and until midnight end with times.",
+      misconception: "A common mix-up is going by the first word. Read the noun at the end to see if it is a spot or a moment.",
+      why: "Inside the cave, toward the lighthouse and around the corner end with places. Since Monday and until midnight end with times.",
       like: ["SK-GUM4-1-P3"]
     },
     {
@@ -834,28 +834,28 @@ PP.addLesson({
         "3.L.GC.1:C:form-and-use-prepositional-phrases"
       ],
       passages: [],
-      prompt: "Which sentence has a prepositional phrase that tells where?",
+      prompt: "Select the sentence in which the phrase shows a location.",
       options: [
         "Nina painted a picture for her aunt Rosa.",
         "Nina painted a picture after a big dinner.",
-        "Nina painted a picture beside the window.",
+        "Nina painted a picture under the stairs.",
         "Nina painted a picture of a lighthouse."
       ],
       answer: [2],
       pick: 1,
-      clue: "Every sentence has a prepositional phrase. Look for the one that ends with a place.",
+      clue: "Each sentence ends with a group of words that starts with a small word. Check what each group names.",
       hints: [
-        "Every sentence has a prepositional phrase. Look for the one that ends with a place.",
-        "Find the preposition in each sentence, then read to its noun. Ask whether the noun is a place.",
-        "A dinner is a meal, so the phrase that ends with it tells about a time."
+        "Each sentence ends with a group of words that starts with a small word. Check what each group names.",
+        "Find the small word in each sentence, then read to its noun. Ask whether the noun is somewhere you could stand.",
+        "A dinner is a meal, so the group of words that ends with it is about a time."
       ],
       how: [
         "Find the phrase in each sentence.",
         "For her aunt Rosa names a person, after a big dinner names a time, and of a lighthouse tells what the picture shows.",
-        "Beside the window names a place, so it tells where."
+        "The answer is \"Nina painted a picture under the stairs.\" Under the stairs names a place, so it shows a location."
       ],
       misconception: "A common mix-up is picking any sentence with a phrase. The phrase has to end with a place.",
-      why: "The answer is \"Nina painted a picture beside the window.\". Beside the window names a place. For her aunt Rosa tells who, after a big dinner tells when, and of a lighthouse tells what the picture shows.",
+      why: "The answer is \"Nina painted a picture under the stairs.\". Under the stairs names a place. For her aunt Rosa tells who, after a big dinner tells when, and of a lighthouse tells what the picture shows.",
       like: ["SK-GUM4-1-P5"]
     },
     {
@@ -867,7 +867,7 @@ PP.addLesson({
         "3.L.GC.1:C:form-and-use-prepositional-phrases"
       ],
       passages: ["p4"],
-      prompt: "Look at sentence 3 of the draft. Which words make up its prepositional phrase?",
+      prompt: "Sentence 3 tells where the paper chains went. Which choice is a preposition together with the noun it points to?",
       choices: [
         {
           text: "across the porch",
@@ -880,19 +880,19 @@ PP.addLesson({
           text: "chains across the"
         },
         {
-          text: "We hung bright paper chains"
+          text: "hung bright paper chains"
         }
       ],
-      clue: "A prepositional phrase begins with a preposition and finishes with a noun. Find both ends before you choose.",
+      clue: "Begin by finding the small linking word. A phrase has that word at its start and a noun at its finish.",
       hints: [
-        "A prepositional phrase begins with a preposition and finishes with a noun. Find both ends before you choose.",
-        "Reread sentence 3 and find the small word that tells where the chains went. Read on until you reach a noun.",
-        "Words that name the chains with describing words in front are a thing, not a phrase that starts with a preposition."
+        "Begin by finding the small linking word. A phrase has that word at its start and a noun at its finish.",
+        "Reread sentence 3 and find the small word that shows direction, then keep reading until you hit a noun.",
+        "Words that only name the chains and describe them do not start with a small linking word."
       ],
       how: [
         "Find the small word that starts a phrase in sentence 3: across.",
         "Read on to the noun it points to: porch. The phrase is across the porch.",
-        "The answer is \"across the porch\". Bright paper chains has no preposition, chains across the stops before the noun, and We hung bright paper chains has no preposition."
+        "The answer is \"across the porch\". Bright paper chains and hung bright paper chains have no preposition, and chains across the stops before the noun."
       ],
       misconception: "A common mix-up is picking words that include the thing being hung. The phrase begins at the preposition.",
       why: "The answer is \"across the porch\" Across is the preposition, and porch is the noun that ends the phrase. The other choices have no preposition or stop before the noun.",
@@ -907,7 +907,7 @@ PP.addLesson({
         "3.L.GC.1:C:form-and-use-prepositional-phrases"
       ],
       passages: ["p4"],
-      prompt: "Sentence 7 of the draft has a mistake. Pick the word that repairs it.",
+      prompt: "A preposition in sentence 7 does not match the noun after it. Pick the word that repairs the opening.",
       text: "{0} dinner, Grandma walked up the front steps and rang the bell.",
       slots: [
         {
@@ -915,18 +915,18 @@ PP.addLesson({
           answer: 0
         }
       ],
-      clue: "Say the sentence out loud with each word in the blank. Decide which one makes sense with the noun.",
+      clue: "Say the whole sentence with each word in the blank. Decide which one makes sense next to the noun.",
       hints: [
-        "Say the sentence out loud with each word in the blank. Decide which one makes sense with the noun.",
-        "Reread sentence 7 and ask what the opening phrase should tell about Grandma's arrival.",
-        "Nobody walks underneath a meal, so one choice does not make sense."
+        "Say the whole sentence with each word in the blank. Decide which one makes sense next to the noun.",
+        "Think about when Grandma arrived compared with the meal, and then test each word.",
+        "Nobody walks underneath a meal, so one of the words does not fit."
       ],
       how: [
         "Read the sentence with each word in the blank.",
-        "Grandma arrived just ahead of the meal, so the phrase should tell when.",
+        "Grandma arrived just ahead of the meal, so the opening should tell when.",
         "The answer is Before. Inside and Under name places, and dinner is not a place."
       ],
-      misconception: "A common mix-up is keeping the word in the draft. Say the full phrase and ask if it makes sense.",
+      misconception: "A common mix-up is keeping the word that is in the draft. Say the full opening and ask if it makes sense.",
       why: "The answer is Before. Before dinner tells when Grandma walked up the steps. Inside and Under are place words, and dinner is a meal.",
       like: ["SK-GUM4-1-C04"]
     },
@@ -939,35 +939,35 @@ PP.addLesson({
         "3.L.GC.1:C:form-and-use-prepositional-phrases"
       ],
       passages: ["p4"],
-      prompt: "A cousin says at sunset in sentence 9 tells where, because at shows a place. What is the best response?",
+      prompt: "A cousin thinks the words at sunset in sentence 9 show a location, since at points to a spot. Which reply is best?",
       choices: [
         {
-          text: "Sunset names a time of day, so the phrase tells when.",
+          text: "Sunset is part of the day, so those words give the moment everyone cheered.",
           correct: true
         },
         {
-          text: "Sunset names a spot outdoors, so the phrase tells where."
+          text: "Sunset is a hill behind the house, so those words give the spot where everyone cheered."
         },
         {
-          text: "Sunset has no noun after at, so it is not a phrase."
+          text: "At is a verb in this line, so those words are not a prepositional phrase."
         },
         {
-          text: "Sunset describes the cheer, so the phrase tells how."
+          text: "Sunset is a feeling, so those words give the way everyone cheered."
         }
       ],
-      clue: "Do not stop at the first word of a phrase. Look at what the noun at the end of it names.",
+      clue: "Do not stop at the small word at the start of a group of words. Look at what the last word of the group names.",
       hints: [
-        "Do not stop at the first word of a phrase. Look at what the noun at the end of it names.",
-        "Find the phrase in sentence 9 and name its last word. Ask whether it names a place, a time or a way.",
-        "The phrase ends with a noun, so one response about a missing noun is not right."
+        "Do not stop at the small word at the start of a group of words. Look at what the last word of the group names.",
+        "Find those words in sentence 9 and name the last one. Ask whether it names a spot, a clock moment or a way.",
+        "At is a preposition in this line, so the reply that calls it a verb cannot be right."
       ],
       how: [
-        "Find the phrase in sentence 9: at sunset. It ends with the noun sunset.",
-        "Sunset is a time of day, so the phrase tells when.",
-        "The answer is \"Sunset names a time of day, so the phrase tells when.\" The word at often shows a place, but the noun decides."
+        "Find the words in sentence 9: at sunset. The last word is sunset.",
+        "Sunset is part of the day, so those words give a moment.",
+        "The answer is \"Sunset is part of the day, so those words give the moment everyone cheered.\" The small word at can show a spot, but the noun decides."
       ],
-      misconception: "A common mix-up is trusting the preposition to tell what the phrase does. The noun at the end decides.",
-      why: "The answer is \"Sunset names a time of day, so the phrase tells when.\" Sunset is a time of day, so at sunset tells when. The word at can start a place phrase, but the noun decides what a phrase tells.",
+      misconception: "A common mix-up is trusting the small word to settle what a phrase tells. The noun at the end decides.",
+      why: "The answer is \"Sunset is part of the day, so those words give the moment everyone cheered.\" Sunset is part of the day, so at sunset gives a moment. The small word at can show a spot, but the noun decides what a phrase tells.",
       like: ["SK-GUM4-1-C05"]
     },
     {
@@ -979,23 +979,23 @@ PP.addLesson({
         "3.L.GC.1:C:form-and-use-prepositional-phrases"
       ],
       passages: ["p5"],
-      prompt: "Look at sentences 2, 3, 4, 5 and 7. Select the TWO shown sentences that have a phrase telling where.",
+      prompt: "Look at sentences 2, 3, 4, 5 and 7. Pick the TWO shown sentences that give a location.",
       targets: ["p5:1:2","p5:1:3","p5:2:1","p5:2:2","p5:3:1"],
       answer: ["p5:1:2","p5:1:3"],
       pick: 2,
-      clue: "A phrase that tells where ends with a noun that names a place. Find each preposition and read to its noun.",
+      clue: "A location phrase finishes with a noun naming somewhere. Find each small linking word and read to its noun.",
       hints: [
-        "A phrase that tells where ends with a noun that names a place. Find each preposition and read to its noun.",
-        "Name the noun that ends the first phrase in each shown sentence. Ask whether it names a place, a time or a tool.",
-        "A ruler is a tool, so the phrase in sentence 5 does not name a place."
+        "A location phrase finishes with a noun naming somewhere. Find each small linking word and read to its noun.",
+        "Name the noun that finishes the first phrase in each shown sentence. Ask whether it names somewhere, a moment or a tool.",
+        "A ruler is a tool, so the phrase in sentence 5 does not name somewhere."
       ],
       how: [
         "Find the first prepositional phrase in each shown sentence.",
         "Sentence 2 has beside the fan and sentence 3 has on the window sill. Both name places.",
         "Sentences 4 and 7 have after lunch and until the bell, which name times. Sentence 5 has with a ruler, which names a tool."
       ],
-      misconception: "A common mix-up is choosing a sentence because it mentions a classroom object. The phrase has to name a place.",
-      why: "The answers are sentences 2 and 3: \"Ms. Grant set one dish beside the fan, and it stayed cool.\" and \"She set another dish on the window sill, and the sun shone on it.\". Beside the fan and on the window sill both name places. After lunch and until the bell name times, and with a ruler names a tool.",
+      misconception: "A common mix-up is choosing a sentence because it mentions classroom objects. The phrase has to end with a place.",
+      why: "The answers are sentences 2 and 3: \"Ms. Grant set one dish beside the fan, and it stayed cool.\" and \"She set another dish on the window sill, and the sun shone on it.\". Beside the fan and on the window sill both end with places. After lunch and until the bell end with times, and with a ruler ends with a tool.",
       like: ["SK-GUM4-1-C06"]
     },
     {
@@ -1009,54 +1009,54 @@ PP.addLesson({
       passages: ["p5"],
       prompt: "This question has two parts. Answer Part A, then Part B.",
       partA: {
-        prompt: "Sentence 9 should tell where the class will try the test again. Which revision does that?",
+        prompt: "The class wants to repeat the experiment, and sentence 9 should say where. Which new version of the sentence does that job?",
         choices: [
           {
             text: "We want to try the test again behind the gym.",
             correct: true
           },
           {
-            text: "We want to try the test again on Monday."
+            text: "We want to try the test again on Monday afternoon."
           },
           {
-            text: "We want to try the test again after the holiday."
+            text: "We want to try the test again after the winter holiday."
           },
           {
-            text: "We want to try the test again with a new timer."
+            text: "We want to try the test again with a brand new timer."
           }
         ]
       },
       partB: {
-        prompt: "Which fact explains why the phrase in the correct revision tells where?",
+        prompt: "Which fact shows that the added words name a location?",
         choices: [
           {
-            text: "Gym names a building, and a building is a place.",
+            text: "A gym is a building that students can walk to.",
             correct: true
           },
           {
-            text: "Monday names a day, and a day is a time."
+            text: "Monday is a school day that comes once each week."
           },
           {
-            text: "Holiday names a break, and a break is a time."
+            text: "A holiday is a break from school that lasts for days."
           },
           {
-            text: "Timer names a tool, and a tool is a thing."
+            text: "A timer is a small tool that counts the seconds."
           }
         ]
       },
-      clue: "Think about what kind of noun ends each new phrase: a place, a time or a thing. Then check which kind answers a where question.",
+      clue: "Think about what kind of noun finishes each new group of words: somewhere to go, a stretch of time, or an object. Then see which kind answers a where question.",
       hints: [
-        "Think about what kind of noun ends each new phrase: a place, a time or a thing. Then check which kind answers a where question.",
-        "For Part A, add each phrase to sentence 9 and listen for the one that answers where. For Part B, name the kind of noun that ends the phrase you chose.",
-        "A timer is a tool, so a fact about a timer cannot explain a place."
+        "Think about what kind of noun finishes each new group of words: somewhere to go, a stretch of time, or an object. Then see which kind answers a where question.",
+        "For Part A, add each group of words to sentence 9 and listen for the one that answers where. For Part B, name the kind of noun that finishes the one you picked.",
+        "A timer is a tool, so a fact about a timer cannot prove a place."
       ],
       how: [
-        "Part A: a where phrase must end with a noun that names a place. Gym is a building, so behind the gym tells where.",
-        "The other revisions end with Monday, holiday and timer, which are two times and a tool.",
-        "Part B: the fact that matches is \"Gym names a building, and a building is a place.\""
+        "Part A: a where phrase must end with a noun that names somewhere to go. The answer is \"We want to try the test again behind the gym.\"",
+        "The other versions end with Monday afternoon, winter holiday and timer, which are two times and a tool.",
+        "Part B: the fact is \"A gym is a building that students can walk to.\""
       ],
-      misconception: "A common mix-up is choosing the longest phrase. Check what the noun at the end of the phrase names.",
-      why: "Part A: \"We want to try the test again behind the gym.\" Part B: \"Gym names a building, and a building is a place.\" Behind the gym ends with a building, so it tells where. The other phrases end with a day, a break and a tool.",
+      misconception: "A common mix-up is choosing the version with the most words. Check what the noun at the end of the phrase names.",
+      why: "Part A: \"We want to try the test again behind the gym.\" Part B: \"A gym is a building that students can walk to.\" Behind the gym ends with a building, so it shows where. The other phrases end with a time of day, a break and a tool.",
       like: ["SK-GUM4-1-C07"]
     },
     {
@@ -1068,7 +1068,7 @@ PP.addLesson({
         "3.L.GC.1:C:form-and-use-prepositional-phrases"
       ],
       passages: [],
-      prompt: "Choose the best word for each blank. One phrase should name a place, and the other should name a time.",
+      prompt: "Choose the best word for each blank. One phrase should name a spot, and the other should name a moment.",
       text: "The kitten curled up {0} the basket {1} the long walk.",
       slots: [
         {
@@ -1080,18 +1080,18 @@ PP.addLesson({
           answer: 0
         }
       ],
-      clue: "Try each word in the blank and listen. Place words go with places, and time words go with times.",
+      clue: "Try each word in a blank and listen. Spot words go with spots, and moment words go with moments.",
       hints: [
-        "Try each word in the blank and listen. Place words go with places, and time words go with times.",
-        "Say the noun after each blank. Ask whether a basket is a place or a time, and whether a walk is a place or a time.",
+        "Try each word in a blank and listen. Spot words go with spots, and moment words go with moments.",
+        "Say the noun that follows each blank. Ask whether a basket is a spot or a moment, and whether a walk is a spot or a moment.",
         "Look only at the second blank. Near names a spot, so it cannot show when the kitten curled up."
       ],
       how: [
-        "The first phrase names a place, so the first blank needs a word that fits a basket.",
-        "The second phrase names a time, so the second blank needs a word that fits a walk that has ended.",
+        "The first phrase names a spot, so the first blank needs a word that fits a basket.",
+        "The second phrase names a moment, so the second blank needs a word that fits a walk that has ended.",
         "The answers are inside and after. Read it back: The kitten curled up inside the basket after the long walk."
       ],
-      misconception: "A common mix-up is putting a time word in the place blank. Match each blank to what its noun names.",
+      misconception: "A common mix-up is putting a moment word in the spot blank. Match each blank to what its noun names.",
       why: "The answers are inside and after. Inside the basket tells where the kitten curled up, and after the long walk tells when. Before and until are time words, and behind and near are place words, so each would sit in the wrong blank.",
       like: ["SK-GUM4-1-C08"]
     },
@@ -1105,7 +1105,7 @@ PP.addLesson({
       ],
       passages: [],
       stem: "The campers set up their tents ___.",
-      prompt: "Pick the TWO phrases that would tell where the tents went.",
+      prompt: "Choose the TWO groups of words that finish the sentence with a location.",
       pick: 2,
       choices: [
         {
@@ -1126,11 +1126,11 @@ PP.addLesson({
           text: "during the long storm"
         }
       ],
-      clue: "Place each phrase at the end of the sentence and read it. A where phrase ends with a place.",
+      clue: "Put each group of words at the end of the sentence and read it. A location ends with somewhere you could walk to.",
       hints: [
-        "Place each phrase at the end of the sentence and read it. A where phrase ends with a place.",
-        "Choose the two phrases that end with something you could walk to.",
-        "A storm is an event with a start and an end, so a phrase that ends with it tells about a time."
+        "Put each group of words at the end of the sentence and read it. A location ends with somewhere you could walk to.",
+        "Choose the two groups of words that end with a spot on a map.",
+        "A storm is an event with a start and an end, so a group of words that ends with it is about a time."
       ],
       how: [
         "Add each phrase to the sentence and read it.",
@@ -1150,36 +1150,36 @@ PP.addLesson({
         "3.L.GC.1:C:form-and-use-prepositional-phrases"
       ],
       passages: [],
-      stem: "Sentence A: The kayaks rested by the dock. Sentence B: The kayaks were back by noon.",
-      prompt: "What do the two phrases share, and how do they differ?",
+      stem: "1. The kayaks rested by the dock. 2. The kayaks were back by noon.",
+      prompt: "How do the words that begin with by compare in these two lines?",
       choices: [
         {
-          text: "Both start with by, but the first names a place and the second names a time.",
+          text: "Each line uses by, yet one points to a spot and the other points to a moment.",
           correct: true
         },
         {
-          text: "Both start with by, so both phrases must name the spot where the kayaks sat."
+          text: "Each line uses by, so both point to a spot where the kayaks stayed."
         },
         {
-          text: "Neither phrase has a preposition, so neither one counts as a phrase at all."
+          text: "By is not a preposition in either line, so neither group of words is a phrase."
         },
         {
-          text: "The first phrase names a time, and the second phrase names a place near the dock."
+          text: "The first line points to a moment, and the second line points to a spot."
         }
       ],
-      clue: "Look at the first word of each phrase. Then look at the noun at the end of each one.",
+      clue: "Look at the noun that ends each group of words that begins with by. Then compare the two nouns.",
       hints: [
-        "Look at the first word of each phrase. Then look at the noun at the end of each one.",
-        "Say dock and noon. Ask whether each word names a place or a time.",
-        "Both phrases begin with a preposition, so one choice about having none cannot be right."
+        "Look at the noun that ends each group of words that begins with by. Then compare the two nouns.",
+        "Say dock and noon. Ask whether each word names a spot or a moment.",
+        "By is a preposition in both lines, so the choice that says it is not cannot be right."
       ],
       how: [
-        "Both phrases start with by.",
-        "Dock is a place, so by the dock names a place. Noon is a time, so by noon names a time.",
-        "The answer is \"Both start with by, but the first names a place and the second names a time.\""
+        "Both groups of words start with by.",
+        "A dock is a spot, so by the dock points to a place. Noon is a moment, so by noon points to a time.",
+        "The answer is \"Each line uses by, yet one points to a spot and the other points to a moment.\""
       ],
       misconception: "A common mix-up is believing one preposition always means the same thing. Read the noun to decide.",
-      why: "The answer is \"Both start with by, but the first names a place and the second names a time.\" By the dock names where the kayaks rested, and by noon names when they were back. The same preposition starts both.",
+      why: "The answer is \"Each line uses by, yet one points to a spot and the other points to a moment.\" By the dock names where the kayaks rested, and by noon names when they were back. The same preposition starts both.",
       like: ["SK-GUM4-1-C10"]
     },
     {
@@ -1191,7 +1191,7 @@ PP.addLesson({
         "3.L.GC.1:C:form-and-use-prepositional-phrases"
       ],
       passages: ["p6"],
-      prompt: "Look at sentences 2, 3, 4, 5 and 6. Select the ONE shown sentence that does not have a prepositional phrase.",
+      prompt: "Sentences 2 to 6 are shown. Pick the ONE with no group of words that starts with a preposition.",
       targets: ["p6:1:2","p6:1:3","p6:2:1","p6:2:2","p6:2:3"],
       answer: ["p6:2:3"],
       pick: 1,
@@ -1219,11 +1219,11 @@ PP.addLesson({
         "3.L.GC.1:C:form-and-use-prepositional-phrases"
       ],
       passages: ["p6"],
-      prompt: "Sentence 9 of the draft has a mistake. Pick the word that repairs it.",
+      prompt: "Pick a better preposition for the blank so sentence 9 makes sense.",
       text: "My team cheered {0} the last relay, and our voices were loud.",
       slots: [
         {
-          options: ["during","across","beside"],
+          options: ["during","over","toward"],
           answer: 0
         }
       ],
@@ -1236,10 +1236,10 @@ PP.addLesson({
       how: [
         "Read the sentence with each word in the blank.",
         "A relay is a race that takes a few minutes, so the phrase should tell when.",
-        "The answer is during. Across and beside name places, and a race is not a place to cross."
+        "The answer is during. Over and toward name places or directions, and a race is not a place."
       ],
       misconception: "A common mix-up is leaving the word in the draft. Say the full phrase and ask if it makes sense.",
-      why: "The answer is during. During the last relay tells when the team cheered. Across and beside are place words, so they do not fit a race.",
+      why: "The answer is during. During the last relay tells when the team cheered. Over and toward are place words, so they do not fit a race.",
       like: ["SK-GUM4-1-C12"]
     },
     {
@@ -1251,40 +1251,40 @@ PP.addLesson({
         "3.L.GC.1:C:form-and-use-prepositional-phrases"
       ],
       passages: ["p6"],
-      prompt: "Compare the phrases in sentence 3 and sentence 4 of the draft. Choose the TWO true statements.",
+      prompt: "Read the groups of words that begin with from and into. Select the TWO correct claims.",
       pick: 2,
       choices: [
         {
-          text: "Both phrases start with a preposition.",
+          text: "The words from and into are the prepositions.",
           correct: true
         },
         {
-          text: "Both phrases name a place.",
+          text: "Bleachers and water are the nouns that finish the groups.",
           correct: true
         },
         {
-          text: "Both phrases tell when something happened."
+          text: "Both groups of words give the time of the swim meet."
         },
         {
-          text: "The word waved is part of the phrase in sentence 3."
+          text: "The verb dove belongs inside the group in sentence 4."
         },
         {
-          text: "The phrase in sentence 4 stops before its noun."
+          text: "Tia and I are the nouns that finish the groups."
         }
       ],
-      clue: "Find the prepositional phrase in each sentence. Then test each statement against both phrases.",
+      clue: "Find the group of words that begins with from in sentence 3 and the group that begins with into in sentence 4. Then check each claim against them.",
       hints: [
-        "Find the prepositional phrase in each sentence. Then test each statement against both phrases.",
-        "Name the preposition and the noun in each phrase, then decide what each phrase names.",
-        "The word waved is a verb, so it cannot be part of a phrase that starts with a preposition."
+        "Find the group of words that begins with from in sentence 3 and the group that begins with into in sentence 4. Then check each claim against them.",
+        "Name the first word and the last word of each group, then decide what each group gives.",
+        "The word dove shows an action, so it cannot be part of a group that starts with a preposition."
       ],
       how: [
-        "Find the phrases: from the bleachers in sentence 3 and into the cool water in sentence 4.",
-        "Both start with a preposition, from and into. Both end with a place, the bleachers and the water.",
-        "The other statements are false: neither phrase tells when, waved is not in the phrase, and into the cool water ends with the noun water."
+        "Find the groups: from the bleachers in sentence 3 and into the cool water in sentence 4.",
+        "From and into are the prepositions, and bleachers and water are the nouns that end the groups.",
+        "The other claims are false: neither group gives a time, dove is not in the group, and Tia and I are not the nouns that end the groups."
       ],
-      misconception: "A common mix-up is choosing a statement that is true of only one sentence. Each choice must fit both phrases.",
-      why: "The answers are \"Both phrases start with a preposition.\" and \"Both phrases name a place.\". From and into are prepositions, and bleachers and water are places. Neither phrase tells when, waved is not in the phrase, and the second phrase ends with a noun.",
+      misconception: "A common mix-up is choosing a claim that names words from the sentence but not from the phrase. Check the exact words inside each group.",
+      why: "The answers are \"The words from and into are the prepositions.\" and \"Bleachers and water are the nouns that finish the groups.\". From and into are prepositions, and bleachers and water end the groups. Neither group gives a time, dove is not in the group, and Tia and I are not the ending nouns.",
       like: ["SK-GUM4-1-C13"]
     },
     {
@@ -1297,35 +1297,35 @@ PP.addLesson({
       ],
       passages: [],
       stem: "The ice melted.",
-      prompt: "Which revision gives a phrase that tells when?",
+      prompt: "Choose the revision that adds words about time.",
       choices: [
         {
-          text: "The ice melted during the hot afternoon.",
+          text: "The ice melted after the first warm hour.",
           correct: true
         },
         {
-          text: "The ice melted on the warm windowsill."
+          text: "The ice melted on the sunny windowsill outside."
         },
         {
-          text: "The ice melted into a tiny puddle."
+          text: "The ice melted into a tiny clear puddle."
         },
         {
-          text: "The ice melted quickly and silently."
+          text: "The ice melted quickly and silently today."
         }
       ],
-      clue: "Add each detail to the sentence and read it. A phrase that tells when ends with a noun that names a time.",
+      clue: "Add each detail to the sentence and read it. Words about time end with a noun that names a time.",
       hints: [
-        "Add each detail to the sentence and read it. A phrase that tells when ends with a noun that names a time.",
+        "Add each detail to the sentence and read it. Words about time end with a noun that names a time.",
         "Look at the noun at the end of each phrase. Ask whether it names a time, a place or a result.",
         "One revision has only a how word, with no preposition."
       ],
       how: [
         "Check each revision for a prepositional phrase and name its noun.",
-        "During the hot afternoon ends with a time, so it tells when.",
-        "The answer is \"The ice melted during the hot afternoon.\" On the warm windowsill names a place, into a tiny puddle shows what the ice became, and quickly and silently has no phrase."
+        "After the first warm hour ends with a time, so it tells when.",
+        "The answer is \"The ice melted after the first warm hour.\" On the sunny windowsill outside names a place, into a tiny clear puddle shows what the ice became, and quickly and silently today has no phrase."
       ],
       misconception: "A common mix-up is picking a phrase that describes the ice. Look for a noun that names a time.",
-      why: "The answer is \"The ice melted during the hot afternoon.\" During the hot afternoon ends with a time, so it tells when the ice melted. The other revisions name a place, show a result or have no phrase.",
+      why: "The answer is \"The ice melted after the first warm hour.\" After the first warm hour ends with a time, so it tells when the ice melted. The other revisions name a place, show a result or have no phrase.",
       like: ["SK-GUM4-1-C14"]
     },
     {
@@ -1337,35 +1337,35 @@ PP.addLesson({
         "3.L.GC.1:C:form-and-use-prepositional-phrases"
       ],
       passages: [],
-      prompt: "Which sentence has a phrase that tells when and a different phrase that tells where?",
+      prompt: "Pick the sentence that adds one detail about time and one detail about location.",
       choices: [
         {
-          text: "Until sunset, the hikers rested beside the stream.",
+          text: "Until dark, the hikers waited inside the shelter.",
           correct: true
         },
         {
-          text: "The hikers rested beside the stream and under a tree."
+          text: "The hikers waited inside the shelter and along the wall."
         },
         {
-          text: "Until sunset and until dark, the hikers rested."
+          text: "Until dark and since breakfast, the hikers waited."
         },
         {
-          text: "The hikers rested with a friend after the climb."
+          text: "The hikers waited with a map until noon."
         }
       ],
-      clue: "Find the prepositional phrases in each sentence. Then decide what each one tells.",
+      clue: "Find the prepositional phrases in each sentence. Then decide what each one gives.",
       hints: [
-        "Find the prepositional phrases in each sentence. Then decide what each one tells.",
+        "Find the prepositional phrases in each sentence. Then decide what each one gives.",
         "A correct sentence needs two different kinds of phrases. Check each choice for one time and one place.",
         "One choice has two phrases, but both name places."
       ],
       how: [
-        "Mark each phrase in every choice and ask when or where.",
-        "Until sunset tells when, and beside the stream tells where.",
-        "The answer is \"Until sunset, the hikers rested beside the stream.\" The other choices have two places, two times, or a who phrase and a time."
+        "Mark each phrase in every choice and ask whether it gives a time or a place.",
+        "Until dark gives a time, and inside the shelter gives a place.",
+        "The answer is \"Until dark, the hikers waited inside the shelter.\" The other choices have two places, two times, or a with phrase and a time."
       ],
-      misconception: "A common mix-up is counting phrases without checking what each one tells. Look for one time and one place.",
-      why: "The answer is \"Until sunset, the hikers rested beside the stream.\" Until sunset names a time, and beside the stream names a place. The other choices have two place phrases, two time phrases, or no place phrase.",
+      misconception: "A common mix-up is counting phrases without checking what each one gives. Look for one time and one place.",
+      why: "The answer is \"Until dark, the hikers waited inside the shelter.\" Until dark names a time, and inside the shelter names a place. The other choices have two place phrases, two time phrases, or no place phrase.",
       like: ["SK-GUM4-1-C15"]
     }
   ],

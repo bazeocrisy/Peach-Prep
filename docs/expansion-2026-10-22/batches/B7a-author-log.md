@@ -159,7 +159,7 @@ Status unchanged: **NOT ACCEPTED: awaiting independent review.** No ACCEPTED mar
 Lessons 1 to 5
 - MUSTs: L2 P4 hint 3 now says "One sentence uses a" (it said two); L4 P3 hint 3 no longer states a count ("Check the first letter of every sentence, then look for the word I in the others"); L4 P5 hint 3 no longer describes the wrong options ("Check the sentences that start with a capital letter and look inside them too"); L4 P4 hint 2 no longer gives the key away.
 - SHOULDs done: L2 C12 distractor `cants` (a real word) replaced by the non-word `cann` (hint, how, why updated); L2 p3 title renamed "Our Pond Journal" (the old title duplicated `L-V3.js`); L3 S01 prompt and key reworded so the stem no longer echoes the key (key now "Where did this mitten go missing?"); L1 S11 fragment rewritten without participles ("A rain gauge with a tall ruler on its side and a clear plastic bottle below."; passage p6 is 104 words); L1 Teach point 1 reworded so it no longer equals C05's key; L2 Teach gained an apostrophe line and a "bus" line (the class/glass counterexample in S15 is now modelled).
-- SHOULDs not done (stated plainly): L3 P3/P4 grade 1 and 2 refs stay in core; L3 S02/S13 first-word items; L4 set 2 C09/C10 shared fact and C02/C08 similarity; L5 S05/S06 same-sentence pair and C06/C07 on p1; L2 C04/C12 frame; L1 C05 stays recall-level apart from the Teach reword.
+- SHOULDs not done (stated plainly): L3 P3/P4 grade 1 and 2 refs stay in core; L3 S02/S13 first-word items; L4 C02/C08 similarity (the set 2 C09/C10 shared fact was fixed in phase 4); L5 S05/S06 same-sentence pair and C06/C07 on p1; L2 C04/C12 frame; L1 C05 stays recall-level apart from the Teach reword.
 - Stale log items corrected in this file: refs table, Together counts, "Teach unchanged" claim, Watch Me notes, L1 shortest passage (104).
 
 Lesson 6: S07 moved to p5 sentence 11 (new plural-doer error "Each night, the volunteers locks the front door."; it was sentence 3, half of S11's key); S08 hint 3 no longer describes key B (it names the "Tom keeps asking" sentence); S11 says "sentences" in prompt, hints and how (the earlier log claim covered S06 only); S15 hint 2 no longer points the child at the -s verb.
@@ -173,3 +173,22 @@ Lesson 9: C05 moved to sentence 1 (Pine Ridge Elementary and school) so it no lo
 Live-choice recount for touched items: hint 3 names at most one wrong choice in every touched item; where one fact would falsify two choices the hint names one choice and gives no reason. Remaining `recount.js` flags in lessons 6 to 9 are mention matches (a hint that repeats a word from a choice or names the doer). Twin overlap is at most 0.203 set and 0.209 multiset in every lesson, and `check-content.js --all` passed after the last edit.
 
 Web: more than one city is named Denver (https://en.wikipedia.org/wiki/Denver_(disambiguation), from the second review).
+
+
+## Phase 4: fixes after the third review (lessons 2, 4, 7)
+Status unchanged: **NOT ACCEPTED: awaiting independent review.** No ACCEPTED marks, `accepted.js` untouched, no git change commands. Final-file figures are the tables above (twin overlap for lessons 2 and 4 is unchanged at 0.203/0.209 and 0.192/0.209 on item text).
+
+Lesson 2
+- S11 hint 3 now reads "Number 4 has the clue words a and a. Think about whether the nouns there fit." (sentence 4 has "a" twice and no "one"). S11 hint 1 was shortened to "Look for clue words that mean more than one, like several, two or many." to clear a hint-length warning.
+- C12: the distractor `cann` (a Collins Scrabble word, so my earlier "non-word" claim was wrong) became `canss`. Hint 3 no longer prints the distractor ("One choice has an extra letter and is not a real spelling. Decide between the other two choices."); why now says "canss is a misspelling". Unconfirmed in M-W: canss is not listed in any dictionary I fetched.
+
+Lesson 4 (set 2 redesigned so no item settles another)
+- C07 (short form, sentence 3) is unchanged. C09 now counts only sentence-opening words, with no short form or I: stem "my cousin came over after school. we played games in the yard. then we ate some snacks.", key 3. C10 is no longer about short forms: Mia types "After lunch, We played tag." and says the word after a comma needs a capital; key "No. The word after a comma stays small unless it is I, so We should be we." Both C09 and C10 are now stem-only (no passage).
+- Twins follow: S09 counts openers in "our team won on Saturday. we cheered for an hour. then we sang a song. it was fun." (key 4); S10 is Ned and a capital on the last word ("The puppy barked at the Moon."). S07 (first word) is unchanged.
+- S08 hint 3 now says "The line about Dan begins with a capital and has a capital I, so it can be ruled out." (the old hint described a keyed line).
+- Teach point 3 now reads "A short form joins I to another word, as in I'm or I'll. The first letter keeps its capital." so "short form" is taught.
+- Item text overlap after the change: lesson 4 max 0.192 set and 0.209 multiset over all twin x core pairs; no uniquely longest key in new items.
+
+Lesson 7: `testRev: { A: "2" }` was added to the lesson in `L-GUM1.js`, because the T4 change in phase 3 ("guessed" to "imagined", stem and why updated, same id, one point, DOK 2) changes the text of the key of a test item. The version record `verification/assessment-versions.json` was NOT re-recorded by me (that is a coordinator step), and I did not run `--record-versions` or `--release`.
+
+Gates after the last edit: `check-writing.js` 0 failures and 0 warnings; `check-instructional-copy.js` 28 assertions passed; `check-content.js --all` shows 0 failures in any B7a lesson (`SK-GUM1-*` warnings: lesson 9 hint-length warnings only). It currently reports one FAIL in a different batch, `SK-GUM5-1-S09` in `L-GUM5.js` (how and why do not name the answer); that is not mine and I did not touch it.

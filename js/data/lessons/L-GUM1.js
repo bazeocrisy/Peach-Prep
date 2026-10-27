@@ -2276,7 +2276,7 @@ PP.addLesson({
             text: "Only a few {0} were left on the shelf by closing time.",
             slots: [
               {
-                options: ["cans","can","cann"],
+                options: ["cans","can","canss"],
                 answer: 0
               }
             ],
@@ -2284,7 +2284,7 @@ PP.addLesson({
             hints: [
               "Look at the clue words before the blank. Decide if they mean one or more than one.",
               "Read the sentence with each choice and listen to how the clue words and the noun sound together.",
-              "Cann is not spelled like a real word here. Decide between the other two choices."
+              "One choice has an extra letter and is not a real spelling. Decide between the other two choices."
             ],
             how: [
               "The clue words before the blank are a few. A few means more than one.",
@@ -2292,7 +2292,7 @@ PP.addLesson({
               "The answer is cans. Can names only one."
             ],
             misconception: "A common mix-up is hearing the word a and choosing the one form. A few is a clue for more than one.",
-            why: "The answer is cans. A few means more than one, so can needs -s. Can names just one thing, and cann is a misspelling. The plural of can is cans."
+            why: "The answer is cans. A few means more than one, so can needs -s. Can names just one thing, and canss is a misspelling. The plural of can is cans."
           },
           {
             id: "SK-GUM1-2-C13",
@@ -2833,11 +2833,11 @@ PP.addLesson({
       targets: ["p6:1:2","p6:1:3","p6:2:1","p6:2:2"],
       answer: ["p6:1:3","p6:2:2"],
       pick: 2,
-      clue: "Look for clue words that mean more than one, like several, two or many. The noun next to one of them must show more than one.",
+      clue: "Look for clue words that mean more than one, like several, two or many.",
       hints: [
-        "Look for clue words that mean more than one, like several, two or many. The noun next to one of them must show more than one.",
+        "Look for clue words that mean more than one, like several, two or many.",
         "Go through numbers 2 to 5 one by one. Ask how many rocks, tools or shells each line talks about.",
-        "Number 4 has the clue words a and one. Think about whether the nouns there fit."
+        "Number 4 has the clue words a and a. Think about whether the nouns there fit."
       ],
       how: [
         "Check each line from 2 to 5 for a clue word and its noun.",
@@ -4645,7 +4645,7 @@ PP.addLesson({
     points: [
       "The first word of every sentence begins with a capital letter, even a short word like the or on.",
       "When you write about yourself, use a capital I every time, in any spot in the sentence.",
-      "When I joins another word, as in I'm or I'll, the first letter keeps its capital."
+      "A short form joins I to another word, as in I'm or I'll. The first letter keeps its capital."
     ],
     example: {
       label: "Example",
@@ -5254,7 +5254,7 @@ PP.addLesson({
               "3.L.GC.1:R:capitalize-the-first-word-of-a-sentence-and-the-"
             ],
             passages: [],
-            stem: "Maya wrote, \"my cousin and i are coming over after school. i'll bring snacks.\"",
+            stem: "Maya wrote, \"my cousin came over after school. we played games in the yard. then we ate some snacks.\"",
             prompt: "How many words in her note need a capital letter but do not have one?",
             choices: [
               {
@@ -5271,19 +5271,19 @@ PP.addLesson({
                 text: "4"
               }
             ],
-            clue: "Check the first word of each sentence, then look for the word I.",
+            clue: "Check the first word of each sentence.",
             hints: [
-              "Check the first word of each sentence, then look for the word I.",
-              "The note has two sentences. Check how each one begins, then check the middle of each.",
+              "Check the first word of each sentence.",
+              "The note has three sentences. Check how each one begins.",
               "The note has more than one mistake, so one choice can be ruled out."
             ],
             how: [
-              "Check the first word of each sentence. The words my and i'll both start with small letters.",
-              "Look for the word I in the middle. The small i in the first sentence is another mistake.",
-              "That makes three words: my, i and i'll. The answer is 3."
+              "Check the first word of each sentence. The words my, we and then all start with small letters.",
+              "That makes three words that need a capital letter.",
+              "The answer is 3."
             ],
-            misconception: "A common mix-up is counting only the first words. A small i in the middle needs a capital too.",
-            why: "The answer is \"3\" My and i'll start sentences with small letters, and the i in the middle is small too. That is three words."
+            misconception: "A common mix-up is counting only the first sentence. Every sentence begins with a capital.",
+            why: "The answer is \"3\" My, we and then start their sentences with small letters. That is three words."
           },
           {
             id: "SK-GUM1-4-C10",
@@ -5293,36 +5293,37 @@ PP.addLesson({
             std: [
               "3.L.GC.1:R:capitalize-the-first-word-of-a-sentence-and-the-"
             ],
-            passages: ["p2"],
-            prompt: "Sam says, \"The i in sentence 10 is part of the short form i'll, not the word I, so it can stay small.\" Is Sam right?",
+            passages: [],
+            stem: "Mia says the word after a comma needs a capital, so she typed: \"After lunch, We played tag.\"",
+            prompt: "Is Mia right?",
             choices: [
               {
-                text: "No. A short form like I'll still has the word I, so it needs a capital.",
+                text: "No. The word after a comma stays small unless it is I, so We should be we.",
                 correct: true
               },
               {
-                text: "Yes. A short form is a different word, so it follows its own rules."
+                text: "Yes. Each word following a comma opens a fresh part, so it needs a capital."
               },
               {
-                text: "Yes. A capital is needed only at the start of a sentence, and this is the middle."
+                text: "Yes. The first word of a sentence needs a capital, and We is first in its part."
               },
               {
-                text: "No. The word after I'll needs the capital letter instead of the I."
+                text: "No. The word After should be small, because only the word I needs a capital in the middle."
               }
             ],
-            clue: "Think about which two words I'll stands for.",
+            clue: "Think about which words in the sentence need a capital letter.",
             hints: [
-              "Think about which two words I'll stands for.",
-              "Think about what sits inside a short form, and about where a capital letter is needed.",
-              "One choice says a short form follows its own rules. Compare that with the rules you know."
+              "Think about which words in the sentence need a capital letter.",
+              "Find the first word of the whole sentence and the word after the comma. Check each against the two rules.",
+              "One choice says After should be small. Check how the whole sentence begins."
             ],
             how: [
-              "I'll is a short form of I will. It still has the word I in it.",
-              "The word I is always a capital, even inside a short form like I'll.",
-              "The answer is \"No. A short form like I'll still has the word I, so it needs a capital.\" The sentence is not at the start, but the rule for I does not depend on position."
+              "Check the rules: the first word of a sentence gets a capital, and so does the word I.",
+              "After is the first word of the whole sentence, so it keeps its capital. We comes after a comma in the middle and is not the word I, so it stays small.",
+              "The answer is \"No. The word after a comma stays small unless it is I, so We should be we.\""
             ],
-            misconception: "A common mix-up is thinking a short form is a different word that can stay small. It still has the word I.",
-            why: "The answer is \"No. A short form like I'll still has the word I, so it needs a capital.\" I'll is short for I will, so it contains the word I, which is always a capital. Where the word sits in the sentence does not matter."
+            misconception: "A common mix-up is thinking a comma starts a new sentence. A comma does not call for a capital letter.",
+            why: "The answer is \"No. The word after a comma stays small unless it is I, so We should be we.\" No. The word after a comma stays small unless it is I, so We should be we. After is the first word of the sentence, so it keeps its capital."
           }
         ]
       },
@@ -5818,7 +5819,7 @@ PP.addLesson({
       hints: [
         "Look at the first letter of every line, then at every I.",
         "Cross out the lines that begin with a capital and use only capital Is.",
-        "One line has a small i in the middle."
+        "The line about Dan begins with a capital and has a capital I, so it can be ruled out."
       ],
       how: [
         "Check the first letter and every I in each line.",
@@ -5838,8 +5839,8 @@ PP.addLesson({
         "3.L.GC.1:R:capitalize-the-first-word-of-a-sentence-and-the-"
       ],
       passages: [],
-      stem: "Ava texted, \"mom says i should pack soon. then i'll find my boots.\"",
-      prompt: "Count the words in Ava's text that are missing a needed capital.",
+      stem: "Ben texted, \"our team won on Saturday. we cheered for an hour. then we sang a song. it was fun.\"",
+      prompt: "Count the words in Ben's text that are missing a needed capital.",
       choices: [
         {
           text: "1"
@@ -5855,19 +5856,19 @@ PP.addLesson({
           correct: true
         }
       ],
-      clue: "Check how each sentence begins, then check the middle of each.",
+      clue: "Check how each sentence begins.",
       hints: [
-        "Check how each sentence begins, then check the middle of each.",
-        "The text has two sentences. Write down every word that has a small letter but needs a capital.",
-        "The text has more than two mistakes, so two choices can be ruled out."
+        "Check how each sentence begins.",
+        "The text has four sentences. Write down each first word that has a small letter.",
+        "The text has more than one mistake, so one choice can be ruled out."
       ],
       how: [
-        "Check the opening word of each sentence. The words mom and then both start with small letters.",
-        "Look for the word I and the short form i'll. The small i in the first sentence and i'll in the second are both mistakes.",
-        "That makes four words: mom, i, then and i'll. The answer is 4."
+        "Check the opening word of each sentence. The words our, we, then and it all start with small letters.",
+        "Every one of the four sentences begins with a small letter.",
+        "That makes four words. The answer is 4."
       ],
-      misconception: "A common mix-up is forgetting that a short form like i'll needs a capital. It contains the word I.",
-      why: "The answer is \"4\" Mom and then start sentences with small letters, and the i and the i'll are small too. That is four words.",
+      misconception: "A common mix-up is stopping after the first mistake. Every sentence begins with a capital.",
+      why: "The answer is \"4\" Our, we, then and it start their sentences with small letters. That is four words.",
       like: ["SK-GUM1-4-C09"]
     },
     {
@@ -5878,36 +5879,37 @@ PP.addLesson({
       std: [
         "3.L.GC.1:R:capitalize-the-first-word-of-a-sentence-and-the-"
       ],
-      passages: ["p4"],
-      prompt: "Pia thinks the small i at the front of number 11 is fine because i'm joins two words together. Do you agree?",
+      passages: [],
+      stem: "Ned believes the final word in any sentence deserves a big starting letter, so he wrote: \"The puppy barked at the Moon.\"",
+      prompt: "Is Ned correct?",
       choices: [
         {
-          text: "Disagree. Joining I and am keeps the writer's word inside, and it is capitalized every time.",
+          text: "Not correct. Just the opener and the pronoun I begin big, so Moon belongs in small letters.",
           correct: true
         },
         {
-          text: "Agree. Two words that get joined turn into a brand new word, free of the old rule about capitals."
+          text: "Correct. A closing term marks where a thought finishes, giving it some extra emphasis."
         },
         {
-          text: "Agree. Joined words are written small, no matter which letters they hold or where they sit."
+          text: "Correct. Writers always give the last term a big beginning before the period."
         },
         {
-          text: "Disagree. Only the apostrophe has to change, because it is the one part that is hard to see."
+          text: "Not correct. The opener The ought to be written small, because only the pronoun I begins big."
         }
       ],
-      clue: "Say the two words that get joined, one after the other.",
+      clue: "Look at how the whole line begins and how it ends.",
       hints: [
-        "Say the two words that get joined, one after the other.",
-        "Think about how each of those two words is written when it stands alone.",
-        "An apostrophe is a mark, and a mark cannot be a capital letter. Compare the other three choices."
+        "Look at how the whole line begins and how it ends.",
+        "Compare each term with the two capital-letter rules.",
+        "One choice says The should be written small. Check how the whole line begins."
       ],
       how: [
-        "Find the first word of number 11: i'm. It joins the words I and am.",
-        "The word I is a capital every time, even when it is joined to another word.",
-        "The answer is \"Disagree. Joining I and am keeps the writer's word inside, and it is capitalized every time.\""
+        "Check the rules: the first word of a sentence gets a capital, and so does the word I.",
+        "The begins the line, so it keeps its capital. Moon sits at the end and is not the word I, so it stays small.",
+        "The answer is \"Not correct. Just the opener and the pronoun I begin big, so Moon belongs in small letters.\""
       ],
-      misconception: "A common mix-up is thinking a joined word is new and can stay small. It still holds the word I.",
-      why: "The answer is \"Disagree. Joining I and am keeps the writer's word inside, and it is capitalized every time.\" I'm joins I and am, so the writer's word is still inside, and that word is always a capital. Joining words does not make a new rule, and the apostrophe is a mark, not a capital letter.",
+      misconception: "A common mix-up is thinking the last word of a sentence is special. Only the first word and the word I get capitals.",
+      why: "The answer is \"Not correct. Just the opener and the pronoun I begin big, so Moon belongs in small letters.\" Just the opener and the pronoun I begin big, so Moon belongs in small letters. The begins the line, so it keeps its capital.",
       like: ["SK-GUM1-4-C10"]
     },
     {
@@ -9134,6 +9136,7 @@ PP.addLesson({
 PP.addLesson({
   code: "3.L.GC.1:R:use-action-verbs",
   title: "Action verbs",
+  testRev: { A: "2" },
   teach: {
     big: "An action verb tells what someone or something does.",
     points: [
