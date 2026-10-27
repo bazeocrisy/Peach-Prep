@@ -106,7 +106,7 @@ PP.addLesson({
         ],
         [
           "Deerskins were very valuable.",
-          "One skin could buy a warm blanket."
+          "Traders gave cloth, pots and even guns for them."
         ],
         [
           "Today, you can still barter.",
@@ -402,7 +402,7 @@ PP.addLesson({
                 correct: true
               },
               {
-                text: "to sell goods for a higher price"
+                text: "to sell goods for a much higher price"
               },
               {
                 text: "to pay with coins at a store"
@@ -536,7 +536,7 @@ PP.addLesson({
                 correct: true
               },
               {
-                text: "It lists deerskins and cloth as examples of goods."
+                text: "It lists deerskins, cloth and pots as examples of what goods are."
               },
               {
                 text: "It uses a word that means the opposite of goods."
@@ -594,7 +594,7 @@ PP.addLesson({
               prompt: "Which sentence from the passage BEST helps you know what valuable means?",
               choices: [
                 {
-                  text: "\"One skin could buy a warm blanket.\"",
+                  text: "\"Traders gave cloth, pots and even guns for them.\"",
                   correct: true
                 },
                 {
@@ -611,17 +611,17 @@ PP.addLesson({
             clue: "Sometimes a word is explained by what happens next. Ask what the author tells you about the thing right after the new word.",
             hints: [
               "Sometimes a word is explained by what happens next. Ask what the author tells you about the thing right after the new word.",
-              "Find valuable in paragraph 4 and read the whole paragraph. What could one skin do?",
+              "Find valuable in paragraph 4 and read the whole paragraph. What does the author tell you about the skins besides the word itself?",
               "The sentence that holds the word valuable only repeats it, so it cannot explain it. Check the other three."
             ],
             how: [
               "Find the word: \"Deerskins were very valuable.\" This sentence does not say what valuable means.",
-              "Read the next sentence: \"One skin could buy a warm blanket.\" One skin could buy something people needed.",
-              "Something that can buy a lot is worth a lot. Part A: worth a lot. Part B: the sentence about the blanket.",
+              "Read the next sentence: \"Traders gave cloth, pots and even guns for them.\" Traders gave useful things for the skins.",
+              "Something that traders will give many useful things for is worth a lot. Part A: worth a lot. Part B: the sentence about what traders gave.",
               "The sentence that holds the word only repeats it."
             ],
             misconception: "A common mix-up is choosing the sentence that has the word valuable in it. A clue must tell what the word means.",
-            why: "Part A: worth a lot. Part B: \"One skin could buy a warm blanket.\" One skin could buy something people needed, so skins were worth a lot. The sentence with valuable only repeats the word. The other sentences are about the hunter and the trip."
+            why: "Part A: worth a lot. Part B: \"Traders gave cloth, pots and even guns for them.\" Traders gave useful things for the skins, so skins were worth a lot. The sentence with valuable only repeats the word. The other sentences are about the hunter and the trip."
           }
         ]
       },
@@ -653,7 +653,7 @@ PP.addLesson({
                 text: "to join a new team, because Dana did not stay with the same players"
               },
               {
-                text: "to rest on the bench, because Dana did not play in the last game"
+                text: "to rest on the bench, because Dana was not playing in the last game at all"
               }
             ],
             clue: "Use what the story shows to test each meaning. Ask what happens to the players, and which meaning fits those events.",
@@ -969,13 +969,13 @@ PP.addLesson({
             correct: true
           },
           {
-            text: "beetles which chew tunnels in soft wood"
+            text: "beetles which chew tunnels through the soft wood"
           },
           {
-            text: "mosses which grow best in damp places"
+            text: "mosses which grow best in cool damp places on the log"
           },
           {
-            text: "young plants which grow on top of a log"
+            text: "young plants that sprout on top of a log"
           }
         ]
       },
@@ -1034,13 +1034,13 @@ PP.addLesson({
           correct: true
         },
         {
-          text: "hurried to the top of the hill"
+          text: "hurried to the top of the nearest hill"
         },
         {
-          text: "packed up their camp to leave"
+          text: "packed up their camp to leave in a hurry"
         },
         {
-          text: "took pictures of the dark clouds"
+          text: "took pictures of the dark storm clouds"
         }
       ],
       clue: "A group of words can have its own meaning, like one word. Think about what the whole group tells you the hikers did.",
@@ -1229,7 +1229,7 @@ PP.addLesson({
       clue: "Words that tell how people act can show how they feel. Look for actions that show strong wanting.",
       hints: [
         "Words that tell how people act can show how they feel. Look for actions that show strong wanting.",
-        "Look across the passage for what the prospectors did when they heard the news and what they did during the day.",
+        "Look across the whole passage for what the prospectors did.",
         "Swirling the pan was a step in the work. It tells how to find gold, not how much the people wanted it. Look at what is left."
       ],
       how: [
@@ -1271,10 +1271,10 @@ PP.addLesson({
           text: "In the first sentence about the town."
         }
       ],
-      clue: "Meaning can come before a word as well as after it. Ask where the author shows the idea.",
+      clue: "An author can show a meaning in different places. Ask where this author shows the idea.",
       hints: [
-        "Meaning can come before a word as well as after it. Ask where the author shows the idea.",
-        "Find the words panning for gold. Then read the sentences just before them. What do they describe?",
+        "An author can show a meaning in different places. Ask where this author shows the idea.",
+        "Find the words panning for gold. Read the whole paragraph. Where does the author show what the people did?",
         "The last paragraph says visitors can pan for gold today, but it does not show how it is done. Check the other choices."
       ],
       how: [
@@ -1302,25 +1302,25 @@ PP.addLesson({
       ],
       prompt: "This question has two parts. Answer Part A, then Part B.",
       partA: {
-        prompt: "Paragraph 3 calls large nuggets rare. What is the reader being told about those lumps of gold from the streams?",
+        prompt: "The writer calls big nuggets rare. Pick the idea that fits.",
         choices: [
           {
-            text: "They were not often found.",
+            text: "Few people ever found one.",
             correct: true
           },
           {
-            text: "They were bright and shiny."
+            text: "Each one was bright and shiny."
           },
           {
-            text: "They were heavy to lift."
+            text: "Each one was heavy to lift."
           },
           {
-            text: "They fit in a pocket."
+            text: "Each one fit in a pocket."
           }
         ]
       },
       partB: {
-        prompt: "Choose the line that gives the strongest support for Part A.",
+        prompt: "Pick the line that most strongly supports Part A.",
         choices: [
           {
             text: "\"Most prospectors found only a few tiny bits, and many went home with little.\"",
@@ -1341,16 +1341,16 @@ PP.addLesson({
       hints: [
         "A word can be explained by what happens next. Ask what the writer tells you right after the new word.",
         "Find rare in paragraph 3 and read the whole paragraph. How much gold did most people find?",
-        "The line about people hurrying is about the news of gold. It does not say how often nuggets were found. Check the other choices."
+        "The line about people hurrying is about the news of gold, not about the nuggets. Check the other choices."
       ],
       how: [
         "Find the word: \"Large nuggets, or lumps of gold, were rare.\" It does not say what rare means.",
         "Read the next line: most prospectors found only a few tiny bits. Few people found big nuggets.",
-        "Something few people find is not often found. Part A: they were not often found. Part B: the line about the tiny bits.",
-        "The lines about sunrise and the hurrying crowd do not tell how often nuggets were found."
+        "Something few people find is hard to find. Part A: few people ever found one. Part B: the line about the tiny bits.",
+        "The lines about sunrise and the hurrying crowd do not tell whether nuggets were hard to find."
       ],
       misconception: "A common mix-up is choosing a line about gold being shiny or heavy. The clue tells how often it was found.",
-      why: "Part A: they were not often found. Part B: \"Most prospectors found only a few tiny bits, and many went home with little.\" It shows large nuggets were hard to find. The sunrise line and the hurrying line do not tell how often nuggets were found."
+      why: "Part A: few people ever found one. Part B: \"Most prospectors found only a few tiny bits, and many went home with little.\" It shows large nuggets were hard to find. The sunrise line and the hurrying line do not tell whether nuggets were hard to find."
     },
     {
       id: "SK-V1a-S11",
@@ -1380,7 +1380,7 @@ PP.addLesson({
           text: "visit both at once, since the class split up between two rooms"
         },
         {
-          text: "go somewhere new each week, since the class never repeated a place"
+          text: "go somewhere new each week, since the class never went to any place twice in a row"
         }
       ],
       clue: "Use what the class does to test each meaning. Ask which meaning fits the three weeks.",
@@ -1592,8 +1592,8 @@ PP.addLesson({
   addons: {
     "SK-V1a-P4": {
       hints: [
-        "A word's meaning may be clear from what the author says next. Think about what the grass needs in order to live where it grows.",
-        "Read paragraph 4. What does the grass do about the salt, and why would that help it?",
+        "A word's meaning may be clear from what the author says next. Ask what the special way helps the grass do.",
+        "Read paragraph 4. What does the grass do about the salt?",
         "The tiny white bits are salt on the grass. They are not the grass changing color. Check the other choices."
       ],
       how: [
@@ -1733,7 +1733,9 @@ PP.addLesson({
     ],
     words: [
       { term: "academic word", means: "a school word you use in many subjects, like measure or explain" },
-      { term: "content word", means: "a word that belongs to one subject, like predator in science (also called a specialized word)" }
+      { term: "content word", means: "a word that belongs to one subject, like predator in science (also called a specialized word)" },
+      { term: "describe", means: "to tell what something is like" },
+      { term: "explain", means: "to tell how or why something happens" }
     ],
     examples: [
       {
@@ -1837,19 +1839,20 @@ PP.addLesson({
       draft: true,
       paragraphs: [
         [
-          "(1) Good morning, everyone.",
-          "(2) Today I will show you how my toy car moves on different floors."
+          "(1) My toy car moves differently on different floors.",
+          "(2) I tested it on a smooth wood floor and on a thick rug."
         ],
         [
           "(3) On the smooth wood floor, my car rolled across the whole room.",
           "(4) On the thick rug, it stopped after only a few feet.",
           "(5) The rubbing between the wheels and the rug slowed it down.",
-          "(6) There is much less rubbing on the wood floor."
+          "(6) There is much less rubbing on the wood floor.",
+          "(7) Can everyone in the back see my car?"
         ],
         [
-          "(7) I did the test ten times on each one and got about the same answer every time.",
-          "(8) That means my results are fair.",
-          "(9) Thank you for listening."
+          "(8) I did the test ten times on each one and got about the same answer every time.",
+          "(9) That means my results are fair.",
+          "(10) Thank you for listening."
         ]
       ]
     },
@@ -1866,7 +1869,7 @@ PP.addLesson({
           "(3) A line on the map shows where Georgia stops and Alabama starts."
         ],
         [
-          "(4) We colored the land near the ocean light blue.",
+          "(4) We colored the water near the coast light blue.",
           "(5) The people who live in each town helped us label it.",
           "(6) Everyone in the class took part in the project."
         ],
@@ -2061,8 +2064,8 @@ PP.addLesson({
             passages: [
               "p1"
             ],
-            prompt: "Ana wants to add school words to tell the reader what she will do. Choose the best word for each blank.",
-            text: "In paragraph 1, Ana could add: Let me {0} what our young plants looked like. In paragraph 2, she could add: Let me {1} how bees help our beans.",
+            prompt: "Ana wants to add school words that tell the reader what she will do. Choose the best word for each blank.",
+            text: "In paragraph 1, Ana could add: Let me {0} the shape and color of our young plants. In paragraph 2, she could add: Let me {1} why bees help our beans.",
             slots: [
               {
                 options: [
@@ -2075,25 +2078,25 @@ PP.addLesson({
               {
                 options: [
                   "describe",
-                  "compare",
+                  "measure",
                   "explain"
                 ],
                 answer: 2
               }
             ],
-            clue: "Each academic word has its own job. Think about what job each blank needs done.",
+            clue: "Each school word has its own job. Think about what job each blank needs done.",
             hints: [
-              "Each academic word has its own job. Think about what job each blank needs done.",
-              "Read the words after each blank. What is the reader going to learn: what something is like, or how and why something happens?",
-              "For the second blank, bees help the beans in a certain way, and the reader will learn how. Think about which word is for how or why."
+              "Each school word has its own job. Think about what job each blank needs done.",
+              "Ask what the reader will learn after each blank. Will the reader learn what something is like, or how and why something happens?",
+              "For each blank, match the job of the sentence to the meaning of the word. One word tells what something is like. Another tells how or why."
             ],
             how: [
-              "Blank one: the reader will learn what the young plants looked like. Describe means to tell what something is like.",
-              "Blank two: the reader will learn how bees help the beans. Explain means to tell how or why something happens.",
-              "Compare means to tell how things are alike and different, and it does not fit either sentence."
+              "Blank one: the reader will learn the shape and color of the plants. Describe means to tell what something is like.",
+              "Blank two: the reader will learn why bees help the beans. Explain means to tell how or why something happens.",
+              "Compare and measure do not fit these sentences. Compare tells how things are alike and different, and measure finds a size or amount."
             ],
             misconception: "A common mix-up is thinking describe and explain mean the same thing. Describe tells what it is like. Explain tells how or why.",
-            why: "The answers are \"describe\" and \"explain.\" Telling what young plants looked like is describing. Telling how bees help beans is explaining how something works. Compare means to tell how things are alike and different."
+            why: "The answers are \"describe\" and \"explain.\" Telling the shape and color of plants is describing what they look like. Telling why bees help beans is explaining how something works. Compare and measure do not do either job."
           }
         ]
       },
@@ -2234,7 +2237,8 @@ PP.addLesson({
             cols: [
               "a letter to the mayor",
               "a science report",
-              "a talk with a friend"
+              "a talk with a friend",
+              "a thank-you card to a grandparent"
             ],
             rows: [
               {
@@ -2253,7 +2257,7 @@ PP.addLesson({
             clue: "Words fit a place when they sound like the people who will read or hear them. Ask who each sentence is talking to.",
             hints: [
               "Words fit a place when they sound like the people who will read or hear them. Ask who each sentence is talking to.",
-              "Read each sentence out loud. Ask whether it asks a leader for something, tells what happened in an experiment, or invites a friend.",
+              "Read each sentence out loud. Ask who would be reading or hearing it, and how that person would expect to be spoken to.",
               "One sentence invites someone to join in a game. Decide who would say that, and then match the other two."
             ],
             how: [
@@ -2491,7 +2495,7 @@ PP.addLesson({
           {
             id: "SK-V1b-C15",
             type: "hottext",
-            points: 1,
+            points: 2,
             dok: 3,
             std: [
               "3.L.V.1.b"
@@ -2501,31 +2505,31 @@ PP.addLesson({
             ],
             prompt: "Jamal is going to turn his talk into a written report. Choose the TWO sentences he should take out because they only fit a talk.",
             targets: [
-              "p4:1:1",
-              "p4:2:3",
-              "p4:2:4",
+              "p4:1:2",
+              "p4:2:1",
+              "p4:2:5",
               "p4:3:2",
               "p4:3:3"
             ],
             answer: [
-              "p4:1:1",
+              "p4:2:5",
               "p4:3:3"
             ],
             pick: 2,
             clue: "A talk and a report are different. Think about words that only make sense when someone is listening in the room.",
             hints: [
               "A talk and a report are different. Think about words that only make sense when someone is listening in the room.",
-              "Look at the first and last sentences of the talk, and the sentences that tell about the test. Which would a reader of a report not need?",
+              "Read each sentence and ask whether a reader of a report would need it.",
               "The sentences about the floor and the rug tell what happened in the test, so a report needs them. Decide which others belong to a talk."
             ],
             how: [
               "A written report tells facts and results. It does not greet the audience or thank them for listening.",
-              "\"Good morning, everyone.\" greets the people in the room.",
+              "\"Can everyone in the back see my car?\" asks the people in the room a question.",
               "\"Thank you for listening.\" thanks the people who just heard the talk.",
-              "The sentences about the smooth floor, the rug and what the test showed are facts a report needs."
+              "The sentences about the test, the floor, the rug and the results are facts a report needs."
             ],
             misconception: "A common mix-up is taking out sentences with plain words. The sentences to remove are the ones that only work when someone is listening.",
-            why: "The answers are \"Good morning, everyone.\" and \"Thank you for listening.\" Both speak to people in the room, so they fit a talk but not a written report. The sentences about the floor, the rug and the results are facts a report would keep."
+            why: "The answers are \"Can everyone in the back see my car?\" and \"Thank you for listening.\" Both speak to people in the room, so they fit a talk but not a written report. The sentences about the floor, the rug and the results are facts a report would keep."
           }
         ]
       }
@@ -2907,7 +2911,8 @@ PP.addLesson({
       cols: [
         "a chat at recess",
         "a note to the principal",
-        "a social studies report"
+        "a social studies report",
+        "a poem for the school paper"
       ],
       rows: [
         {
@@ -2926,7 +2931,7 @@ PP.addLesson({
       clue: "Words fit a place when they sound like the people who will read or hear them. Ask who each line is talking to.",
       hints: [
         "Words fit a place when they sound like the people who will read or hear them. Ask who each line is talking to.",
-        "Read each line out loud. Ask whether it asks an adult for something, tells facts about the past, or checks with a friend.",
+        "Read each line out loud. Ask who would be reading or hearing it, and how that person would expect to be spoken to.",
         "One line asks someone to swap seats at a game. Decide who would say that, and then match the other two."
       ],
       how: [
@@ -3175,7 +3180,7 @@ PP.addLesson({
     {
       id: "SK-V1b-S15",
       type: "hottext",
-      points: 1,
+      points: 2,
       dok: 3,
       std: [
         "3.L.V.1.b"
@@ -3189,31 +3194,31 @@ PP.addLesson({
         "Zuri's talk about the class plant:"
       ],
       options: [
-        "Hi, class, I am so glad you came.",
         "Our bean plant grew six inches in two weeks.",
         "It grew faster in the window than in the closet.",
-        "Now I am happy to take your questions.",
-        "We measured the plant every Monday."
+        "Can everyone in the back hear me?",
+        "We measured the plant every Monday.",
+        "Now I am happy to take your questions."
       ],
       answer: [
-        0,
-        3
+        2,
+        4
       ],
       pick: 2,
       clue: "A talk and a report are different. Think about words that only make sense when someone is listening in the room.",
       hints: [
         "A talk and a report are different. Think about words that only make sense when someone is listening in the room.",
-        "Look at the first and the fourth lines, and the lines that tell about the plant. Which would a reader of a report not need?",
+        "Read each line and ask whether a reader of a report would need it.",
         "The sentences about measuring and about the window tell what happened, so a report needs them. Decide which others belong to a talk."
       ],
       how: [
-        "A written report tells facts and results. It does not welcome the audience or invite questions.",
-        "\"Hi, class, I am so glad you came.\" greets the people in the room.",
+        "A written report tells facts and results. It does not ask the audience questions or invite them to ask.",
+        "\"Can everyone in the back hear me?\" asks the people in the room a question.",
         "\"Now I am happy to take your questions.\" talks to people who are listening right now.",
         "The sentences about the growth, the window and the measuring are facts a report needs."
       ],
       misconception: "A common mix-up is taking out sentences with numbers. The sentences to remove are the ones that only work when someone is listening.",
-      why: "The answers are \"Hi, class, I am so glad you came.\" and \"Now I am happy to take your questions.\" Both speak to people in the room, so they fit a talk but not a written report. The sentences about growth, the window and measuring are facts a report would keep."
+      why: "The answers are \"Can everyone in the back hear me?\" and \"Now I am happy to take your questions.\" Both speak to people in the room, so they fit a talk but not a written report. The sentences about growth, the window and measuring are facts a report would keep."
     }
   ],
   addons: {
@@ -3876,13 +3881,13 @@ PP.addLesson({
                 correct: true
               },
               {
-                text: "belly"
+                text: "family"
               },
               {
-                text: "silly"
+                text: "ugly"
               },
               {
-                text: "only"
+                text: "city"
               }
             ],
             clue: "Cover the ending of each word. If a whole word is left, the ending may be a suffix.",
@@ -3894,10 +3899,10 @@ PP.addLesson({
             how: [
               "Cover -ful in tearful. Tear is left, so tearful means full of tears.",
               "Cover -less in sleepless. Sleep is left, so sleepless means without sleep.",
-              "In belly, silly and only, covering the ending leaves letters that are not words."
+              "In family, ugly and city, covering the ending leaves letters that are not words."
             ],
             misconception: "A common mix-up is choosing words because the ending looks like a suffix. A real suffix leaves a real word.",
-            why: "The answers are \"tearful\" and \"sleepless.\" Cover -ful and tear is left. Cover -less and sleep is left. Belly, silly and only have endings that look like suffixes, but nothing real is left over when you cover them."
+            why: "The answers are \"tearful\" and \"sleepless.\" Cover -ful and tear is left. Cover -less and sleep is left. Family, ugly and city end in letters that look like suffixes, but nothing real is left over when you cover them."
           },
           {
             id: "SK-V2a-C10",
@@ -3912,7 +3917,7 @@ PP.addLesson({
             pick: 2,
             choices: [
               {
-                text: "unevenly",
+                text: "unfairly",
                 correct: true
               },
               {
@@ -3933,15 +3938,15 @@ PP.addLesson({
             hints: [
               "A word can have a part at the front and a part at the end. Cover both ends of each word and see what is left.",
               "Check each choice. Is there a part you can cover at the front and a part you can cover at the end, with a real word in the middle?",
-              "Two of the words have two endings and no prefix. Decide whether covering the front leaves a real word for each choice."
+              "One of the words has two endings and no prefix. Decide whether covering the front leaves a real word for each of the others."
             ],
             how: [
-              "Unevenly: cover un- and -ly. Even is left, so it has a prefix and a suffix.",
+              "Unfairly: cover un- and -ly. Fair is left, so it has a prefix and a suffix.",
               "Unkindly: cover un- and -ly. Kind is left, so it has a prefix and a suffix.",
               "Carelessly has two endings and no prefix. Bravely and hopeful have only one ending."
             ],
             misconception: "A common mix-up is counting two endings as a prefix and a suffix. A prefix comes at the front.",
-            why: "The answers are \"unevenly\" and \"unkindly.\" Each has a prefix, un-, and a suffix, -ly, around a base word. Carelessly has two suffixes and no prefix. Bravely and hopeful have only a suffix."
+            why: "The answers are \"unfairly\" and \"unkindly.\" Each has a prefix, un-, and a suffix, -ly, around a base word. Carelessly has two suffixes and no prefix. Bravely and hopeful have only a suffix."
           }
         ]
       },
@@ -4016,19 +4021,19 @@ PP.addLesson({
                 correct: true
               },
               {
-                text: "slow and smooth"
+                text: "slow and smooth, like gliding"
               },
               {
-                text: "loud and long"
+                text: "loud and long, like a horn"
               },
               {
-                text: "happening again"
+                text: "happening again and again"
               }
             ],
             clue: "Find the root in the word. The question tells you what it means. Think about how a break feels.",
             hints: [
               "Find the root in the word. The question tells you what it means. Think about how a break feels.",
-              "Picture what happens to everyone on the bus. How did the bus stop?",
+              "Read the sentence the word is in. Look for what happened to the riders.",
               "Rupt means break. Read the sentence again with each choice in place of abrupt, and see which ones make sense."
             ],
             how: [
@@ -4436,7 +4441,7 @@ PP.addLesson({
       clue: "This word has two endings. Cover them one at a time, starting from the end, and add each meaning.",
       hints: [
         "This word has two endings. Cover them one at a time, starting from the end, and add each meaning.",
-        "Think about how a cat creeps across a floor. What would a person hear?",
+        "Read the sentence the word is in. Look at what the cat is doing.",
         "Full of noise would be a different word. Check which choice fits a cat that is creeping."
       ],
       how: [
@@ -4561,13 +4566,13 @@ PP.addLesson({
           correct: true
         },
         {
-          text: "bully"
+          text: "puppy"
         },
         {
-          text: "family"
+          text: "angry"
         },
         {
-          text: "ugly"
+          text: "candy"
         }
       ],
       clue: "Cover the ending of each word. If a whole word is left, the ending may be a suffix.",
@@ -4579,10 +4584,10 @@ PP.addLesson({
       how: [
         "Cover -ful in painful. Pain is left, so painful means full of pain.",
         "Cover -less in hopeless. Hope is left, so hopeless means without hope.",
-        "In bully, family and ugly, covering the ending leaves letters that are not words."
+        "In puppy, angry and candy, covering the ending leaves letters that are not words."
       ],
       misconception: "A common mix-up is choosing words because the ending looks like a suffix. A real suffix leaves a real word.",
-      why: "The answers are \"painful\" and \"hopeless.\" Cover -ful and pain is left. Cover -less and hope is left. Bully, family and ugly end in letters that look like suffixes, but no real word is left."
+      why: "The answers are \"painful\" and \"hopeless.\" Cover -ful and pain is left. Cover -less and hope is left. Puppy, angry and candy end in letters that look like suffixes, but no real word is left."
     },
     {
       id: "SK-V2a-S10",
@@ -4621,7 +4626,7 @@ PP.addLesson({
       hints: [
         "A word can have a part at the front and a part at the end. Cover both ends of each word and see what is left.",
         "Check each choice. Is there a part you can cover at the front and a part you can cover at the end, with a real word in the middle?",
-        "Two of the words have two endings and no prefix. Decide whether covering the front leaves a real word for each choice."
+        "One of the words has two endings and no prefix. Decide whether covering the front leaves a real word for each of the others."
       ],
       how: [
         "Unwisely: cover un- and -ly. Wise is left, so it has a prefix and a suffix.",
@@ -4665,7 +4670,7 @@ PP.addLesson({
       clue: "Find the root in the word. The question tells you what it means, and what the prefix means.",
       hints: [
         "Find the root in the word. The question tells you what it means, and what the prefix means.",
-        "Picture what the workers will do on Maple Street. What will be there when they finish?",
+        "Read the sentence the word is in. Look at what the workers will do and where.",
         "Think about whether the workers are making something or taking it away. Check which choices fit."
       ],
       how: [
@@ -4760,7 +4765,7 @@ PP.addLesson({
       clue: "Find the root in the word. The question tells you what it means. Then add the meaning of the ending.",
       hints: [
         "Find the root in the word. The question tells you what it means. Then add the meaning of the ending.",
-        "Think about the star and the night sky. What can a person do with a faint star when the sky is clear?",
+        "Read the sentence the word is in. Look at what kind of night it is and what the star is like.",
         "Check which of the senses each choice uses. Only one choice matches the root."
       ],
       how: [
@@ -4952,7 +4957,7 @@ PP.addLesson({
     "SK-V2a-P6": {
       hints: [
         "Find the root at the start of the word and the ending at the back. Put their meanings together.",
-        "Picture where the spectators are sitting and what they are doing when Maya scores.",
+        "Read the sentence the word is in. Look at where the spectators are and what they are doing.",
         "The person who plays is a different job. Check what a spectator does."
       ],
       how: [
@@ -5003,17 +5008,16 @@ PP.addLesson({
         ] },
       clue: "Split careless into a base word and a suffix. Remember what that suffix means. Then look for another word with the same ending.",
       why: "Part A: not taking care. Care + less means without care, so a careless person is not taking care. Part B: spotless. It ends in -less too, and it means without a spot." },
-    { id: "SK-V2a-T4", type: "match", points: 2, dok: 2, passages: [],
-      prompt: "Match each word to the meaning of its prefix or suffix.",
-      cols: ["not", "before", "full of", "wrongly"],
-      rows: [
-        { text: "unfair", answer: 0 },
-        { text: "preview", answer: 1 },
-        { text: "helpful", answer: 2 },
-        { text: "misplace", answer: 3 }
+    { id: "SK-V2a-T4", type: "mc", points: 1, dok: 2, passages: [],
+      prompt: "Which word means \"to wrap again\"?",
+      choices: [
+        { text: "rewrap", correct: true },
+        { text: "unwrap" },
+        { text: "wrapper" },
+        { text: "wrapped" }
       ],
-      clue: "Cover the base word in each one. Look at the part that is left, and remember what it means.",
-      why: "Un- in unfair means not. Pre- in preview means before. -ful in helpful means full of. Mis- in misplace means wrongly (to put something in the wrong place)." },
+      clue: "Look for the word part that means again. Then check that the base word is wrap.",
+      why: "Re- means again, so rewrap means to wrap again. Unwrap means to take the wrapping off. A wrapper is something that wraps. Wrapped means the wrapping was already done." },
     { id: "SK-V2a-T6", type: "mc", points: 1, dok: 2, passages: [],
       prompt: "Read the sentence. Use the root in inspect to figure out what Coach will do.",
       stem: ["Before the bike race, Coach will inspect each bike to make sure the brakes work."],
@@ -5068,17 +5072,16 @@ PP.addLesson({
         ] },
       clue: "Split preheat into a prefix and a base word, and remember what the prefix means. For Part B, cover the same letters in each word. Is a real word left, and does the meaning fit?",
       why: "Part A: to heat ahead of time. Pre- means before, so preheat means to heat before, or ahead of time. The oven is hot before the muffins go in. Part B: preschool. Take away pre- and school is left, so preschool is the school children go to before kindergarten. In pretty and press, the letters left over are not words, so they have no prefix. Un- in unpack means the opposite of." },
-    { id: "SK-V2a-TB4", type: "match", points: 2, dok: 2, passages: [],
-      prompt: "What does the prefix or suffix in each word mean? Match each word to that meaning.",
-      cols: ["the opposite of", "again", "without", "in a ___ way"],
-      rows: [
-        { text: "disagree", answer: 0 },
-        { text: "reopen", answer: 1 },
-        { text: "seedless", answer: 2 },
-        { text: "slowly", answer: 3 }
+    { id: "SK-V2a-TB4", type: "mc", points: 1, dok: 2, passages: [],
+      prompt: "Which word means \"in a gentle way\"?",
+      choices: [
+        { text: "gently", correct: true },
+        { text: "gentler" },
+        { text: "gentlest" },
+        { text: "gentleness" }
       ],
-      clue: "Find the base word in each one and cover it. Look at the part that is left, and remember what that part means.",
-      why: "Dis- in disagree means the opposite of (the opposite of agree). Re- in reopen means again (to open again). -less in seedless means without (seedless grapes have no seeds). -ly in slowly means in a ___ way (in a slow way)." },
+      clue: "Look for the word part that means in a ___ way. Then check the base word.",
+      why: "The suffix -ly means in a ___ way, so gently means in a gentle way. Gentler and gentlest compare how gentle things are, and gentleness names the quality of being gentle." },
     { id: "SK-V2a-TB5", type: "mc", points: 1, dok: 2, passages: [],
       prompt: "Read the sentence. Use the root in disrupted to figure out what it means.",
       stem: ["A loud fire drill disrupted our spelling test, so we had to finish it after lunch."],
@@ -5214,7 +5217,8 @@ PP.addLesson({
           "\"No payment is needed,\" the man said, smiling."
         ],
         [
-          "Jaylen ran to the park and found his dog, happy and safe."
+          "Jaylen ran to the park and found his dog, happy and safe.",
+          "A visitor and an actor from the town play clapped for them."
         ]
       ]
     },
@@ -5536,38 +5540,39 @@ PP.addLesson({
               "p4"
             ],
             prompt: "Choose the word from the story that fits each blank.",
-            text: "In paragraph 4, {0} is a noun made with -ment. In paragraph 1, {1} is a noun made with -ness.",
+            text: "In paragraph 4, {0} is a noun made from an action word. In paragraph 1, {1} is a noun made from a describing word.",
             slots: [
               {
                 options: [
                   "payment",
-                  "offered",
-                  "needed"
+                  "worker",
+                  "kindness"
                 ],
                 answer: 0
               },
               {
                 options: [
                   "sadness",
-                  "felt",
-                  "great"
+                  "kindness",
+                  "payment"
                 ],
                 answer: 0
               }
             ],
-            clue: "Look for the ending in each word. A noun made with an ending names something, not an action.",
+            clue: "A noun made with an ending can come from an action word or from a describing word. Look at what is left when you cover the ending.",
             hints: [
-              "Look for the ending in each word. A noun made with an ending names something, not an action.",
-              "Read the words in paragraphs 4 and 1. Ask which word has the ending the blank names.",
-              "Some choices are action words or describing words. Decide which kind of word each blank needs."
+              "A noun made with an ending can come from an action word or from a describing word. Look at what is left when you cover the ending.",
+              "Sort the choices. For each one, cover the ending and decide whether an action word or a describing word is left.",
+              "The sentence also tells you which paragraph to look in. Use both clues for each blank."
             ],
             how: [
-              "Blank one: pay + ment makes payment, a noun. Offered and needed are action words.",
-              "Blank two: sad + ness makes sadness, a noun. Felt is an action word, and great describes.",
-              "So the answers are payment and sadness."
+              "Cover the ending of each choice. Pay, work, kind and sad are left.",
+              "Pay and work are action words. Kind and sad are describing words.",
+              "Blank one needs an action word in paragraph 4, and payment is in paragraph 4. Worker is in paragraph 3.",
+              "Blank two needs a describing word in paragraph 1, and sadness is in paragraph 1. Kindness is in paragraph 2."
             ],
-            misconception: "A common mix-up is picking a word without checking its ending. Look at the end of each word.",
-            why: "The answers are \"payment\" and \"sadness.\" Pay plus -ment makes the noun payment, and sad plus -ness makes the noun sadness. Offered, needed and felt are action words, and great describes."
+            misconception: "A common mix-up is picking a word with the right kind of ending but from the wrong paragraph. Check both clues.",
+            why: "The answers are \"payment\" and \"sadness.\" Pay is an action word, and payment is in paragraph 4. Sad is a describing word, and sadness is in paragraph 1. Worker comes from an action word but is in paragraph 3, and kindness comes from a describing word but is in paragraph 2."
           },
           {
             id: "SK-V2b-C09",
@@ -5656,7 +5661,7 @@ PP.addLesson({
                 correct: true
               },
               {
-                text: "number",
+                text: "river",
                 correct: true
               },
               {
@@ -5678,10 +5683,10 @@ PP.addLesson({
             how: [
               "Cover -er in singer. Sing is left, so a singer is a person who sings.",
               "Cover -er in keeper. Keep is left. Cover -er in joker. Joke is left.",
-              "Cover -er in finger and number. Fing and numb are not what those words mean, so the -er is not a suffix."
+              "Cover -er in finger and river. Fing and riv are not words, so the -er is not a suffix."
             ],
             misconception: "A common mix-up is thinking every word that ends in -er has a suffix. A real suffix leaves a real base word.",
-            why: "The answers are \"finger\" and \"number.\" Covering -er leaves fing and numb, which do not give the meanings of those words. Singer, keeper and joker each have a real action word left."
+            why: "The answers are \"finger\" and \"river.\" Covering -er leaves fing and riv, which are not words. Singer, keeper and joker each have a real action word left."
           },
           {
             id: "SK-V2b-C12",
@@ -5727,12 +5732,12 @@ PP.addLesson({
               "3.L.V.2.b"
             ],
             passages: [],
-            prompt: "Match each word to the job it does.",
+            prompt: "Sort each word by what it is or does.",
             cols: [
-              "names a person",
-              "names a feeling or idea",
-              "tells how",
-              "has no real suffix"
+              "a person who does something",
+              "an idea you cannot touch",
+              "how something is done",
+              "an ending that is not a suffix"
             ],
             rows: [
               {
@@ -5785,29 +5790,29 @@ PP.addLesson({
                 correct: true
               },
               {
+                text: "visitor"
+              },
+              {
+                text: "actor"
+              },
+              {
                 text: "worker"
-              },
-              {
-                text: "payment"
-              },
-              {
-                text: "kindness"
               }
             ],
             clue: "A real suffix leaves a real base word when you cover it. Test Marcus's idea on words that end in -or.",
             hints: [
               "A real suffix leaves a real base word when you cover it. Test Marcus's idea on words that end in -or.",
-              "Look through the passage for words that end in -or. Cover that ending and see what is left.",
-              "Some choices do not end in -or at all. Decide which choices could test Marcus's rule."
+              "Test each choice that ends in -or. Cover that ending and decide whether an action word is left.",
+              "One choice does not end in -or, so it cannot test the rule. Check each of the others one at a time."
             ],
             how: [
               "Marcus says every -or word is an action word plus a suffix.",
+              "Cover -or in visitor. Visit is left, an action word. Cover -or in actor. Act is left, an action word.",
               "Cover -or in neighbor. Neighb is left, which is not an action word.",
-              "Worker ends in -er, and payment and kindness do not end in -or.",
-              "So neighbor ends in -or but has no action word, which shows Marcus is wrong."
+              "Worker ends in -er, so it does not test a rule about -or. Neighbor ends in -or but has no action word, which shows Marcus is wrong."
             ],
             misconception: "A common mix-up is picking a word that does not test the rule. The word must end in -or.",
-            why: "The answer is \"neighbor.\" It ends in -or, but covering the ending leaves neighb, which is not an action word. Worker ends in -er, and payment and kindness do not end in -or."
+            why: "The answer is \"neighbor.\" It ends in -or, but covering the ending leaves neighb, which is not an action word. Visitor and actor each leave an action word, and worker ends in -er."
           },
           {
             id: "SK-V2b-C15",
@@ -6214,40 +6219,41 @@ PP.addLesson({
       ],
       prompt: "Read the sentence and complete the explanation.",
       stem: [
-        "Her improvement made the teacher proud, and her gladness showed."
+        "After her improvement in reading, her happiness showed, and the teacher thanked her for her politeness."
       ],
-      text: "The ending on {0} makes a noun from an action. The ending on {1} makes a noun from a describing word.",
+      text: "{0} comes from a word that shows action, plus an ending. {1} comes from a word that describes, plus an ending.",
       slots: [
         {
           options: [
             "improvement",
-            "proud",
-            "showed"
+            "happiness",
+            "politeness"
           ],
           answer: 0
         },
         {
           options: [
-            "gladness",
-            "teacher",
-            "showed"
+            "happiness",
+            "improvement",
+            "teacher"
           ],
           answer: 0
         }
       ],
-      clue: "Look for the ending in each word. A noun made with an ending names something, not an action.",
+      clue: "A noun made with an ending can come from an action word or from a describing word. Look at what is left when you cover the ending.",
       hints: [
-        "Look for the ending in each word. A noun made with an ending names something, not an action.",
-        "Read the sentence. Ask which word has the ending the blank names.",
-        "Some choices are action words or describing words. Decide which kind of word each blank needs."
+        "A noun made with an ending can come from an action word or from a describing word. Look at what is left when you cover the ending.",
+        "Sort the choices. For each one, cover the ending and decide whether an action word or a describing word is left.",
+        "Start with the second blank. Cover the ending of each choice and say what kind of word is left."
       ],
       how: [
-        "Blank one: improve + ment makes improvement, a noun. Proud describes and showed is an action.",
-        "Blank two: glad + ness makes gladness, a noun. Teacher names a person, and her is a pronoun.",
-        "So the answers are improvement and gladness."
+        "Cover the ending of each choice. Improve, happy, polite and teach are left.",
+        "Improve and teach are action words. Happy and polite are describing words.",
+        "Blank one needs an action word with an ending, and improvement is the only one of its choices that has one.",
+        "Blank two needs a describing word with an ending, and happiness is the only one of its choices that has one."
       ],
-      misconception: "A common mix-up is picking a word without checking its ending. Look at the end of each word.",
-      why: "The answers are \"improvement\" and \"gladness.\" Improve plus -ment makes a noun, and glad plus -ness makes a noun. Proud describes, showed is an action, teacher names a person, and her is a pronoun."
+      misconception: "A common mix-up is picking a word without checking what is left under its ending. Cover the ending first.",
+      why: "The answers are \"improvement\" and \"happiness.\" Improve is an action word, so improvement is formed from an action word plus -ment. Happy is a describing word, so happiness is formed from a describing word plus -ness. Politeness is also formed from a describing word, and teacher is formed from an action word, but each is in the wrong blank."
     },
     {
       id: "SK-V2b-S09",
@@ -6499,7 +6505,7 @@ PP.addLesson({
       ],
       prompt: "Dev's rule: every -er word names someone who does something. Which word in the sentence breaks his rule?",
       stem: [
-        "The farmer saw a tiger near the barn."
+        "The farmer and the painter saw a tiger near the barn."
       ],
       choices: [
         {
@@ -6510,10 +6516,10 @@ PP.addLesson({
           text: "farmer"
         },
         {
-          text: "barn"
+          text: "painter"
         },
         {
-          text: "saw"
+          text: "barn"
         }
       ],
       clue: "A real suffix leaves a real base word when you cover it. Test Dev's idea on words that end in -er.",
@@ -6525,11 +6531,11 @@ PP.addLesson({
       how: [
         "Dev says every -er word names a person who does something.",
         "Cover -er in tiger. Tig is left, which is not an action word, and a tiger is an animal.",
-        "Farmer is a person, and barn and saw do not end in -er.",
+        "Farmer and painter are people who do something, and barn does not end in -er.",
         "So tiger ends in -er but does not name a person, which shows Dev is wrong."
       ],
       misconception: "A common mix-up is picking a word that does not test the rule. The word must end in -er.",
-      why: "The answer is \"tiger.\" It ends in -er, but covering the ending leaves tig, which is not an action word, and a tiger is an animal. Farmer does name a person, and barn and saw do not end in -er."
+      why: "The answer is \"tiger.\" It ends in -er, but covering the ending leaves tig, which is not an action word, and a tiger is an animal. Farmer and painter both name people, and barn does not end in -er."
     },
     {
       id: "SK-V2b-S15",
@@ -6678,15 +6684,15 @@ PP.addLesson({
       clue: "Look at the endings. Which ending is added to an action word to name someone who does it?",
       why: "The answer is \"visitor.\" Visit + or names a person who visits. Clearly is an adverb, and brightness and amazement are nouns that do not name people." },
     { id: "SK-V2b-T2", type: "mc", points: 1, dok: 2, passages: ["p2"],
-      prompt: "What job does the word carefully do in paragraph 3?",
+      prompt: "Which sentence from the passage has a word that ends in -ly and tells how something was done?",
       choices: [
-        { text: "It tells how Mateo painted.", correct: true },
-        { text: "It names what Mateo made." },
-        { text: "It describes the planets." },
-        { text: "It tells when Mateo painted." }
+        { text: "He painted each planet carefully.", correct: true },
+        { text: "Next to her, Mateo showed a model of the planets." },
+        { text: "She asked each student a question about the project." },
+        { text: "Lena could not stop smiling." }
       ],
-      clue: "Look at the ending of carefully. Then find the action word it tells about.",
-      why: "The answer is \"It tells how Mateo painted.\" Careful + ly is an adverb. It tells how the action painted happened." },
+      clue: "Look for an ending that means in a ___ way. Then check that the word tells how an action was done.",
+      why: "The answer is \"He painted each planet carefully.\" Careful + ly tells how Mateo painted. The other sentences have no word that ends in -ly." },
     { id: "SK-V2b-T3", type: "ebsr", points: 2, dok: 2, passages: ["p2"],
       prompt: "This question has two parts. Answer Part A, then Part B.",
       partA: { prompt: "In paragraph 3, what kind of word is brightness?",

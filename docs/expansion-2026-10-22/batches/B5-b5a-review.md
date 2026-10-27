@@ -527,3 +527,60 @@ Cold re-solve of **C07** with the repaired p2: unique (`shakily`). C08, C12, C13
 | 3.L.GC.2.d | **ACCEPT** | 0 | 1 (C14 key word-match) | 5 | 38 of 38 |
 
 All second-review MUSTs are fixed (2.a mc cap, 2.b S05 and S13, 2.c S09, 2.d p2 numbering and C07). The format conversions in 2.a are clean and unambiguous. One new MUST turned up in 2.b: the C06 Part B key says the "whole story" is in the past, which the draft and C08 contradict. It is a two-line text edit (key, `how` step 4 and `why`). After that edit, 2.b needs only a re-check of C06 Part B, `how` and `why`, and S06 for drift.
+
+---
+
+## Fourth review (light)
+
+Reviewer: independent (not the author). Scope: 2.b C06 (Part B key rewrite), S06, S05 (hint 2), Learn It teach point 1 (`or`), the whole 2.b C05-C09 set; text-only hint edits in 2.a S10 (hint 3) and 2.c C09/S09 (hint 3).
+
+**Method.** Node vm sandbox, new seed (424242 + lesson offset, LCG), 10 items (2.a S10; 2.b C05-C09, S05, S06; 2.c C09, S09). Choices, slots and rows were shuffled and printed with passages only; keys, `why`, hints, `how`, `clue` and `misconception` were stripped. I saved my answers (`b5r7/ans.json`) before I compared them with the keys. I did not open the raw item source before solving. I did not open the author log before the solve. After the solve was saved, one `grep` for the teach sentence also printed one line of the author log (it only repeats the teach edit). The solve was fully blind.
+
+**Blind key agreement: 10 of 10** (all choice letters, both EBSR parts, the choose-two pair, the hot text, both matches).
+
+| Item | Blind | Key true next to the reasoning | Live after H1 / H2 / H3 | Hint states key? |
+|---|---|---|---|---|
+| 2.a S10 | D = key | Yes (line 3 compound, line 7 complex) | 4 / 4 / 4 (H3 names Before and asks a question, no choice removed) | No |
+| 2.b C05 | C = key | Yes | 4 / 4 / 3 (H3 removes `so`) | No |
+| 2.b C06 A | C = key | Yes (`shows` against gave/helped/put) | 4 / 4 / 3 | No |
+| 2.b C06 B | C = key | Yes, and it now agrees with C08 (see below) | 4 / 4 / 4 (H3 speaks to Part A only) | No |
+| 2.b C07 | D+E = key | Yes (After keeps the order; Before reverses it; `hike` is present; the third is a run-on) | 5 / 5 / 4 | No |
+| 2.b C08 | D = key | Yes | 4 / 4 / 3 (H3 removes the new-paragraph choice) | No |
+| 2.b C09 | [4] = key | Yes (sentence 8 `sketched`) | 5 / 5 / 4 (H3 clears sentence 7) | No |
+| 2.b S05 | C = key | Yes | 4 / 4 / 3 | No |
+| 2.b S06 A and B | D / C = key | Yes | A: 4 / 4 / 3; B: 4 / 4 / 4 | No |
+| 2.c C09 | A,B,A,A,B = key | Yes | 5 rows x 2 / same / 4 rows open | No (see 2.c-1) |
+| 2.c S09 | A,B,A,B,A = key | Yes | same | No (see 2.c-1) |
+
+A scripted check found no hint that contains a full key, a key row, or a key sentence. No hint states the key or leaves only the key. Points, DOK and `std` are right for all ten (choose-two and both EBSRs and both matches = 2; the others = 1).
+
+**Key beside C08's reasoning.** The new C06 Part B key says only that `Last weekend` places the events in the past. C08's key says `Now` marks the move to the present at sentence 10. These do not conflict, and C08's distractor B ("Last weekend ... every verb must be in the past") is now the over-claim that C06 no longer makes. HOW4 and the `why` of C06 match C08. The earlier MUST (2.b-1) is fixed. The other three Part B choices are plausible and each is wrong for a stated reason (`Now` does not make every earlier sentence present; `Keep` is not a time word and "whole story" is false; `Every day` describes sentence 12, not the story).
+
+**Similar vs core (Jaccard, item text plus passage).** S10 vs C10 0.14 (best match in lesson 0.16, C08). S05 vs C05 0.17. S06 vs C06 0.19-0.20 (different passage, same skill and format). 2.c S09 vs C09 0.10 (best match 0.17, P2). All are well below the 0.4 level that would worry me. `like` mappings are honest.
+
+**Learn It teach point 1.** The example "We can read a book, or we can play a game." appears nowhere else in js/data, and it contains no item answer. It does share the frame "We can X, or we can Y" with C05 and S05, which is fair for a model (Jaccard about 0.3 with C05) and gives no answer, since C05 needs the learner to judge why `or` fits. Neither Learn It (Watch Me) card models `or`; only the teach sentence does. It is covered, but thinly (2.b-4).
+
+### Findings
+
+| # | Sev | Item | Evidence | Fix |
+|---|---|---|---|---|
+| 2.b-1 | SHOULD | C05, S05 vs a sibling lesson | `3.L.GC.1:M:use-coordinating-conjunctions-to-join-words-phra` test SK-GUM3-4-T1 (L-GUM3.js ~line 671) is "Should we walk to the park, {0} should we ride our bikes?" with key `or`. C05 uses the same two actions and the same key. A child who has met one has met the other (same scenario, same word). Not a word-for-word duplicate and a different format. | Change C05's two actions (for example "We can paint a picture. We can build a fort.") and update the C05 `how`/`why`/`hints` text to match, or change the GUM3 test. S05 (Kia) is unique in js/data. |
+| 2.b-2 | SHOULD | C08 HOW1 (and prompt) | "Sentences 1 to 9 tell what happened last weekend, in the past tense." Sentence 9 ("Grandpa shows me ...") is the very error C06 asks about, and it is present tense. The prompt also says sentence 10 differs "from the sentences before it". A careful child who just found 9 in C06 sees 1 to 9 contradicted. The key is still right. | HOW1: "Sentences 1 to 8 tell what happened last weekend, in the past tense." Optional prompt: "from the sentences before sentence 9." |
+| 2.b-3 | SHOULD | Learn It teach point 1 | "... so shows a result, and or gives a choice" puts the words `and` and `or` side by side. It reads like "and/or" and is hard for a third grader to parse in a sentence that is itself full of the same joining words. | Put each joining word in quotes or set them apart: "'And' adds on. 'But' goes against what you expect. 'So' shows a result. 'Or' gives a choice." |
+| 2.b-4 | NOTE | Watch Me | No Watch Me card models `or`, though C05 and S05 need it. | Optional: add a short fourth card, or accept the teach example. |
+| 2.b-5 | NOTE | C06 HOW2/WHY | `put` is the same in past and present. It is used as a past-tense clue next to gave and helped. A child could call it present. Sentences 6 to 8 still settle the time. | None required. |
+| 2.b-6 | NOTE | C06 Part B H3 | The new H3 scaffolds Part A only. | None. |
+| 2.b-7 | NOTE | S06 prompt | Says "line 6" where C06 says "sentence". Same numbering, small mismatch. | None. |
+| 2.c-1 | NOTE | C09/S09 H3 | The new wording is correct ("names more than one thing" no longer sets a plural word beside `is`). It still gives away one of the five rows (the cake/box row is `has`/`was`, given H1). Acceptable as a worked row. | None. |
+| 2.c-2 | NOTE | C09/S09 `why` | A capital `The` mid-sentence ("... and The cars in the lot ...", "My uncle and The cake ..."). | Lower-case it. |
+| 2.a-1 | NOTE | S10 H3 | The old half-key problem is gone. H3 names `Before` and asks a question; it removes no choice. | None. |
+
+### Verdicts
+
+| Lesson | Verdict | MUST | SHOULD | NOTE |
+|---|---|---|---|---|
+| 3.L.GC.2.a (S10 H3) | **ACCEPT** | 0 | 0 | 1 |
+| 3.L.GC.2.b (C05-C09, S05, S06, Learn It) | **ACCEPT** (fix the three SHOULDs when convenient; none change a key or a hint) | 0 | 3 (2.b-1 C05 scenario also in GUM3 test, 2.b-2 C08 HOW1, 2.b-3 "and or") | 4 |
+| 3.L.GC.2.c (C09/S09 H3) | **ACCEPT** | 0 | 0 | 2 |
+
+**Fourth review (light): ACCEPT.** The 2.b MUST from the third review is fixed. No MUSTs. Blind solve 10 of 10, fully blind. No lesson edits and no git were made. No servers were started, so there are none to kill. Working files are in `/tmp/claude-0/-home-claude/e539678b-b5ce-5aba-86fc-30dcadc6e172/scratchpad/b5r7/`.
