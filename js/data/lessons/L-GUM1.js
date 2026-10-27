@@ -10458,7 +10458,191 @@ PP.addLesson({
     }
   ],
   parent: "On a walk, take turns describing things you see with an adjective (\"a tall tree\") and actions with an adverb (\"the dog ran quickly\"). Ask your child which word describes a thing and which describes an action.",
-  passages: [],
+  passages: [
+    /* B7a:passages:start */
+    {
+      id: "p1",
+      title: "The Class Garden",
+      byline: "A third grader's draft",
+      genre: "Student draft (narrative)",
+      draft: true,
+      paragraphs: [
+        [
+          "(1) Our class planted a garden behind the school.",
+          "(2) Mr. Reyes gave each group a small shovel.",
+          "(3) We dug deep holes in the soft soil.",
+          "(4) Priya gently placed a seed in each hole."
+        ],
+        [
+          "(5) Then we covered the seeds with dirt.",
+          "(6) Marco carried two heavy buckets of water.",
+          "(7) He walked patiently so he would not spill.",
+          "(8) A cheerful breeze blew across the yard."
+        ],
+        [
+          "(9) Each day, we checked for green sprouts.",
+          "(10) Soon, little leaves popped out of the ground.",
+          "(11) The whole class cheered loudly.",
+          "(12) We sat on the grass and drank cool water.",
+          "(13) Mr. Reyes smiled and took a photo.",
+          "(14) Our garden looked lovely by spring."
+        ]
+      ]
+    },
+    {
+      id: "p2",
+      title: "Cleanup Day on Elm Street",
+      byline: "A third grader's draft",
+      genre: "Student draft (narrative)",
+      draft: true,
+      paragraphs: [
+        [
+          "(1) Our street held a cleanup day on Saturday.",
+          "(2) Mrs. Ito brought a huge box of gloves.",
+          "(3) Everyone picked a job.",
+          "(4) I raked crunchy leaves into big piles."
+        ],
+        [
+          "(5) Two neighbors painted the rusty fence.",
+          "(6) They worked steadily all morning.",
+          "(7) A kind man fixed the broken gate.",
+          "(8) Some kids sorted bottles into the recycling bins."
+        ],
+        [
+          "(9) Later, we ate sandwiches under the shady maple.",
+          "(10) Mrs. Ito poured sweet juice for everyone.",
+          "(11) By afternoon, we had filled ten big bags with trash.",
+          "(12) The street looked clean and bright again.",
+          "(13) Neighbors waved from their porches.",
+          "(14) Mrs. Ito thanked every helper.",
+          "(15) I hope we do it again soon."
+        ]
+      ]
+    },
+    {
+      id: "p3",
+      title: "Frogs by the Pond",
+      byline: "A third grader's draft",
+      genre: "Student draft (narrative)",
+      draft: true,
+      paragraphs: [
+        [
+          "(1) Last night, a loud chorus woke me up.",
+          "(2) I tiptoed to the window.",
+          "(3) Many frogs sat beside the muddy pond.",
+          "(4) They croaked together in the cool air."
+        ],
+        [
+          "(5) One frog leaped into the air.",
+          "(6) It landed softly on a flat rock.",
+          "(7) Another frog snapped at a buzzing fly.",
+          "(8) The green frogs hopped everywhere."
+        ],
+        [
+          "(9) I grabbed my notebook and counted twelve frogs.",
+          "(10) Then I drew a quick sketch of the rock.",
+          "(11) Mom said frogs sing most when it rains.",
+          "(12) My little brother wanted to see them too.",
+          "(13) I fell asleep before the song ended.",
+          "(14) In the morning, the pond was calm again.",
+          "(15) I will listen closely tonight."
+        ]
+      ]
+    },
+    {
+      id: "p4",
+      title: "Soccer Practice",
+      byline: "A third grader's draft",
+      genre: "Student draft (narrative)",
+      draft: true,
+      paragraphs: [
+        [
+          "(1) Our soccer team practiced on Tuesday.",
+          "(2) Coach Lee set up orange cones on the field.",
+          "(3) We jogged three laps around them.",
+          "(4) Sam kicked the ball powerfully."
+        ],
+        [
+          "(5) The ball bounced off a wooden post.",
+          "(6) Ana shouted excitedly from the goal.",
+          "(7) I passed the ball smoothly to Ben.",
+          "(8) He dribbled around two tired defenders."
+        ],
+        [
+          "(9) Finally, Ben scored a thrilling goal.",
+          "(10) Everyone cheered, and Coach Lee grinned widely.",
+          "(11) Coach Lee clapped her hands and called us over.",
+          "(12) She said we played as a team.",
+          "(13) We drank water in the shade.",
+          "(14) The sweaty players stretched on the grass.",
+          "(15) I felt tired but happy.",
+          "(16) Our next game starts tomorrow."
+        ]
+      ]
+    },
+    {
+      id: "p5",
+      title: "Baking with Grandma",
+      byline: "A third grader's draft",
+      genre: "Student draft (narrative)",
+      draft: true,
+      paragraphs: [
+        [
+          "(1) On Sunday, we baked bread at Grandma's house.",
+          "(2) Grandma tied a flowery apron around my waist.",
+          "(3) I measured three cups of flour.",
+          "(4) She stirred the sticky dough firmly."
+        ],
+        [
+          "(5) Her kitchen smelled wonderful.",
+          "(6) I pressed the dough with my hands.",
+          "(7) We placed two round loaves in the oven.",
+          "(8) Later, my cousins arrived with fresh berries.",
+          "(9) They laughed cheerfully at my floury nose."
+        ],
+        [
+          "(10) The warm bread came out crispy.",
+          "(11) Grandma sliced it neatly.",
+          "(12) We spread creamy butter on every slice.",
+          "(13) Nobody left a single crumb.",
+          "(14) Grandma said it was the best bread ever.",
+          "(15) She smiled and hugged me tightly.",
+          "(16) I always visit Grandma on Sundays."
+        ]
+      ]
+    },
+    {
+      id: "p6",
+      title: "Growing Salt Crystals",
+      byline: "A third grader's draft",
+      genre: "Student draft (informational)",
+      draft: true,
+      paragraphs: [
+        [
+          "(1) Our class grew salt crystals last week.",
+          "(2) Ms. Kim gave each pair a clear jar.",
+          "(3) We poured hot water into the jar.",
+          "(4) I stirred in salt until it disappeared."
+        ],
+        [
+          "(5) Then we tied a string to a pencil.",
+          "(6) On Monday, tiny crystals appeared on the string.",
+          "(7) They sparkled brightly under the lamp.",
+          "(8) We checked the jars every morning.",
+          "(9) By Friday, large crystals covered it."
+        ],
+        [
+          "(10) Lena measured them accurately with a ruler.",
+          "(11) Some crystals were square, and others were pointy.",
+          "(12) We wrote our observations in a notebook.",
+          "(13) Ms. Kim praised our patient work.",
+          "(14) Everyone wanted to hold the biggest one.",
+          "(15) I want to try sugar crystals next."
+        ]
+      ]
+    }
+    /* B7a:passages:end */
+  ],
   practice: [
     { id: "SK-GUM1-8-P1", type: "mc", points: 1, dok: 1, passages: [],
       stem: "The fluffy kitten napped in the sun.",
@@ -10515,6 +10699,1178 @@ PP.addLesson({
       clue: "Look for a word that describes the action carried. Does it tell how, or when?",
       why: "The answer is \"Maya carefully carried the eggs.\" Carefully tells how Maya carried them. Yesterday is an adverb too, but it tells when. Brown and six are adjectives that describe the eggs." }
   ],
+  /* B7a:core:start */
+  /* ---------- Expansion 2026-10-22, batch B7a (GUM Reinforce, first half) ----------
+     core: fifteen items in three sets of five. { ref } reuses a practice item; the other practice items stay in Practice Together.
+     Passages are used only by core and the similar bank; none is used by test.
+     Author log: docs/expansion-2026-10-22/batches/B7a-author-log.md. NOT ACCEPTED: needs independent review. */
+  core: {
+    rev: "1",
+    sets: [
+      {
+        title: "Set 1",
+        items: [
+          {
+            ref: "SK-GUM1-8-P3"
+          },
+          {
+            ref: "SK-GUM1-8-P5"
+          },
+          {
+            id: "SK-GUM1-8-C03",
+            type: "mc",
+            points: 1,
+            dok: 2,
+            std: [
+              "3.L.GC.1:R:use-adjectives-and-adverbs"
+            ],
+            passages: ["p1"],
+            prompt: "Which word in sentence 4 is an adverb?",
+            choices: [
+              {
+                text: "gently",
+                correct: true
+              },
+              {
+                text: "Priya"
+              },
+              {
+                text: "placed"
+              },
+              {
+                text: "seed"
+              }
+            ],
+            clue: "Find the action in sentence 4. Then look for a word that tells more about that action.",
+            hints: [
+              "Find the action in sentence 4. Then look for a word that tells more about that action.",
+              "Say each word and ask whether it tells how Priya placed the seed.",
+              "Priya is a person, so it cannot tell how an action happened."
+            ],
+            how: [
+              "Find the action in sentence 4: placed.",
+              "Ask: how did Priya place the seed? She placed it gently.",
+              "The answer is gently. Priya and seed are nouns, and placed is the verb."
+            ],
+            misconception: "A common mix-up is choosing the verb itself. An adverb is the word that tells more about the verb.",
+            why: "The answer is \"gently\" Gently tells how Priya placed the seed. Priya and seed are nouns, and placed is the verb."
+          },
+          {
+            id: "SK-GUM1-8-C04",
+            type: "dropdown",
+            points: 1,
+            dok: 2,
+            std: [
+              "3.L.GC.1:R:use-adjectives-and-adverbs"
+            ],
+            passages: ["p1"],
+            prompt: "Choose the word that completes the sentence.",
+            text: "Marco carried two {0} buckets of water.",
+            slots: [
+              {
+                options: ["heavy","heavily","heaviness"],
+                answer: 0
+              }
+            ],
+            clue: "Find the word the blank will describe. Then decide whether it is a thing or an action.",
+            hints: [
+              "Find the word the blank will describe. Then decide whether it is a thing or an action.",
+              "The blank comes right before buckets. Buckets are things.",
+              "Heaviness names a thing, so it cannot describe buckets."
+            ],
+            how: [
+              "Find the word the blank describes: buckets, a noun.",
+              "A word that describes a noun is an adjective.",
+              "The answer is heavy. Heavily tells about an action, and heaviness is a noun."
+            ],
+            misconception: "A common mix-up is choosing the -ly word because it sounds like a describing word. Check whether the blank describes a noun or a verb.",
+            why: "The answer is heavy. Heavy is an adjective that tells what kind of buckets Marco carried. Heavily is an adverb, and heaviness is a noun."
+          },
+          {
+            id: "SK-GUM1-8-C05",
+            type: "mc",
+            points: 1,
+            dok: 3,
+            std: [
+              "3.L.GC.1:R:use-adjectives-and-adverbs"
+            ],
+            passages: ["p1"],
+            prompt: "In sentence 11, loudly tells about cheered. Why is loudly an adverb?",
+            choices: [
+              {
+                text: "It tells how the class cheered, and cheered is an action.",
+                correct: true
+              },
+              {
+                text: "It tells what kind of class this is, and class is a thing."
+              },
+              {
+                text: "It names the spot where the class cheered, so it tells where."
+              },
+              {
+                text: "It tells how many children cheered, so it is a number word."
+              }
+            ],
+            clue: "Ask which word loudly tells about, and what kind of word that is.",
+            hints: [
+              "Ask which word loudly tells about, and what kind of word that is.",
+              "Say the sentence without loudly, then add it back. What does it add about the cheering?",
+              "Loudly does not count anything, so counting can be ruled out."
+            ],
+            how: [
+              "Find the word loudly tells about: cheered, an action.",
+              "Ask what loudly adds. It tells how the class cheered.",
+              "The answer is \"It tells how the class cheered, and cheered is an action.\""
+            ],
+            misconception: "A common mix-up is thinking an adverb describes the doer. An adverb tells more about the action.",
+            why: "The answer is \"It tells how the class cheered, and cheered is an action.\" Loudly tells how the class cheered, and cheered is an action. It does not describe a noun, name a place or count anything."
+          }
+        ]
+      },
+      {
+        title: "Set 2",
+        items: [
+          {
+            id: "SK-GUM1-8-C06",
+            type: "hottext",
+            points: 2,
+            dok: 2,
+            std: [
+              "3.L.GC.1:R:use-adjectives-and-adverbs"
+            ],
+            passages: ["p1"],
+            prompt: "Select the TWO shown sentences with an adverb that tells how an action happens.",
+            targets: ["p1:1:3","p1:1:4","p1:2:4","p1:3:2","p1:3:3"],
+            answer: ["p1:1:4","p1:3:3"],
+            pick: 2,
+            clue: "An adverb that tells how answers the question: how did it happen? Look for the action and a word that tells more about it.",
+            hints: [
+              "An adverb that tells how answers the question: how did it happen? Look for the action and a word that tells more about it.",
+              "Check each shown sentence for a word that tells how someone did something.",
+              "Sentence 8 describes a breeze with a word that tells what kind, so it can be ruled out."
+            ],
+            how: [
+              "Look for a word that tells how an action happens.",
+              "Gently in sentence 4 tells how Priya placed the seed. Loudly in sentence 11 tells how the class cheered.",
+              "Sentences 3 and 8 use adjectives, and soon in sentence 10 tells when."
+            ],
+            misconception: "A common mix-up is choosing every sentence with a describing word. Only an adverb that tells how fits this question.",
+            why: "The answers are sentences 4 and 11: \"Priya gently placed a seed in each hole.\" and \"The whole class cheered loudly.\". Gently and loudly tell how an action happened. The other shown sentences use adjectives or an adverb that tells when."
+          },
+          {
+            id: "SK-GUM1-8-C07",
+            type: "ebsr",
+            points: 2,
+            dok: 3,
+            std: [
+              "3.L.GC.1:R:use-adjectives-and-adverbs"
+            ],
+            passages: ["p1"],
+            prompt: "This question has two parts. Answer Part A, then Part B.",
+            partA: {
+              prompt: "Which word in sentence 2 is an adjective?",
+              choices: [
+                {
+                  text: "small",
+                  correct: true
+                },
+                {
+                  text: "shovel"
+                },
+                {
+                  text: "gave"
+                },
+                {
+                  text: "group"
+                }
+              ]
+            },
+            partB: {
+              prompt: "Which word does the adjective describe?",
+              choices: [
+                {
+                  text: "shovel",
+                  correct: true
+                },
+                {
+                  text: "group"
+                },
+                {
+                  text: "Mr. Reyes"
+                },
+                {
+                  text: "gave"
+                }
+              ]
+            },
+            clue: "In Part A, look for a word that tells what size or kind. In Part B, ask which noun that word tells about.",
+            hints: [
+              "In Part A, look for a word that tells what size or kind. In Part B, ask which noun that word tells about.",
+              "Ask what kind of thing Mr. Reyes handed out. The word that answers is the adjective.",
+              "Gave is a verb, so it cannot describe a noun in Part A."
+            ],
+            how: [
+              "Part A: ask what kind of shovel it was. Small tells the size, so it is an adjective.",
+              "Part B: small describes the noun shovel.",
+              "The answers are small and shovel. Gave is a verb, and group and Mr. Reyes are not what small describes."
+            ],
+            misconception: "A common mix-up is naming the wrong noun. Find the noun that the adjective tells about.",
+            why: "Part A: \"small\" Part B: \"shovel\" Small tells what size the shovel was, so it is an adjective, and it describes the noun shovel."
+          },
+          {
+            id: "SK-GUM1-8-C08",
+            type: "ms",
+            points: 2,
+            dok: 2,
+            std: [
+              "3.L.GC.1:R:use-adjectives-and-adverbs"
+            ],
+            passages: [],
+            stem: "The thirsty horses drank greedily from the muddy stream.",
+            prompt: "Choose the TWO adjectives in the sentence.",
+            pick: 2,
+            choices: [
+              {
+                text: "horses"
+              },
+              {
+                text: "thirsty",
+                correct: true
+              },
+              {
+                text: "drank"
+              },
+              {
+                text: "greedily"
+              },
+              {
+                text: "muddy",
+                correct: true
+              },
+              {
+                text: "stream"
+              }
+            ],
+            clue: "Adjectives describe nouns. Find the nouns first.",
+            hints: [
+              "Adjectives describe nouns. Find the nouns first.",
+              "Ask which words tell what kind of horses and what kind of stream.",
+              "Greedily tells about the drinking, so it cannot describe a noun."
+            ],
+            how: [
+              "Find the nouns: horses and stream.",
+              "Ask: what kind of horses? Thirsty. What kind of stream? Muddy.",
+              "The answers are thirsty and muddy. Greedily is an adverb that tells how the horses drank."
+            ],
+            misconception: "A common mix-up is choosing the adverb too. Adjectives describe nouns, not actions.",
+            why: "The answers are \"thirsty\" and \"muddy\". Thirsty describes the horses and muddy describes the stream. Greedily is an adverb that tells how they drank."
+          },
+          {
+            id: "SK-GUM1-8-C09",
+            type: "mc",
+            points: 1,
+            dok: 1,
+            std: [
+              "3.L.GC.1:R:use-adjectives-and-adverbs"
+            ],
+            passages: [],
+            stem: "Grandpa baked a tasty pie.",
+            prompt: "Which word is an adjective?",
+            choices: [
+              {
+                text: "tasty",
+                correct: true
+              },
+              {
+                text: "Grandpa"
+              },
+              {
+                text: "baked"
+              },
+              {
+                text: "pie"
+              }
+            ],
+            clue: "An adjective describes a noun. Find the nouns first.",
+            hints: [
+              "An adjective describes a noun. Find the nouns first.",
+              "Ask what kind of pie it was.",
+              "Baked is an action, so it cannot describe a noun."
+            ],
+            how: [
+              "Find the nouns: Grandpa and pie.",
+              "Ask: what kind of pie? A tasty pie.",
+              "The answer is tasty. Grandpa and pie are nouns, and baked is a verb."
+            ],
+            misconception: "A common mix-up is choosing the noun that is described. The adjective is the word that does the describing.",
+            why: "The answer is \"tasty\" Tasty describes the noun pie. Grandpa and pie are nouns, and baked is a verb."
+          },
+          {
+            id: "SK-GUM1-8-C10",
+            type: "mc",
+            points: 1,
+            dok: 3,
+            std: [
+              "3.L.GC.1:R:use-adjectives-and-adverbs"
+            ],
+            passages: ["p2"],
+            prompt: "Sentence 6 says they worked steadily, and sentence 7 says a kind man. Which statement about steadily and kind is true?",
+            choices: [
+              {
+                text: "Steadily tells how they worked, and kind tells what kind of man.",
+                correct: true
+              },
+              {
+                text: "Both words describe nouns, so both of them are adjectives."
+              },
+              {
+                text: "Kind tells how someone worked, and steadily describes the man who fixed the gate."
+              },
+              {
+                text: "Both words tell about actions, so both of them are adverbs."
+              }
+            ],
+            clue: "For each word, find the word it tells about. Then decide if that word is a noun or an action.",
+            hints: [
+              "For each word, find the word it tells about. Then decide if that word is a noun or an action.",
+              "Ask which word steadily tells about, and which word kind tells about.",
+              "A man is a thing, not an action, so kind cannot tell about an action."
+            ],
+            how: [
+              "Find the word steadily tells about: worked, an action. It tells how they worked.",
+              "Find the word kind tells about: man, a noun. It tells what kind of man.",
+              "The answer is \"Steadily tells how they worked, and kind tells what kind of man.\""
+            ],
+            misconception: "A common mix-up is thinking both words do the same job. One describes an action and the other describes a noun.",
+            why: "The answer is \"Steadily tells how they worked, and kind tells what kind of man.\" Steadily is an adverb that tells how they worked, and kind is an adjective that tells what kind of man."
+          }
+        ]
+      },
+      {
+        title: "Set 3",
+        items: [
+          {
+            id: "SK-GUM1-8-C11",
+            type: "hottext",
+            points: 2,
+            dok: 2,
+            std: [
+              "3.L.GC.1:R:use-adjectives-and-adverbs"
+            ],
+            passages: ["p2"],
+            prompt: "Select the TWO shown sentences with an adverb that tells when.",
+            targets: ["p2:2:1","p2:2:2","p2:3:1","p2:3:5","p2:3:7"],
+            answer: ["p2:3:1","p2:3:7"],
+            pick: 2,
+            clue: "An adverb that tells when answers the question: when did it happen? Look for a time word.",
+            hints: [
+              "An adverb that tells when answers the question: when did it happen? Look for a time word.",
+              "Check each shown sentence for a word that tells the time of an action.",
+              "Sentence 6 tells how the neighbors worked, not when, so it can be ruled out."
+            ],
+            how: [
+              "Look for a time word that tells when an action happens.",
+              "Later in sentence 9 and soon in sentence 15 tell when.",
+              "Steadily in sentence 6 tells how. Sentences 5 and 13 do not have an adverb."
+            ],
+            misconception: "A common mix-up is choosing any adverb. Check that the adverb answers when, not how.",
+            why: "The answers are sentences 9 and 15: \"Later, we ate sandwiches under the shady maple.\" and \"I hope we do it again soon.\". Later and soon tell when. Steadily tells how, and the other shown sentences have no adverb."
+          },
+          {
+            id: "SK-GUM1-8-C12",
+            type: "dropdown",
+            points: 1,
+            dok: 2,
+            std: [
+              "3.L.GC.1:R:use-adjectives-and-adverbs"
+            ],
+            passages: ["p2"],
+            prompt: "Choose the word that completes sentence 5.",
+            text: "Two neighbors painted the {0} fence.",
+            slots: [
+              {
+                options: ["rusty","rustily","rustiness"],
+                answer: 0
+              }
+            ],
+            clue: "Find the word the blank will describe. Then decide whether it is a thing or an action.",
+            hints: [
+              "Find the word the blank will describe. Then decide whether it is a thing or an action.",
+              "The blank comes right before fence. A fence is a thing.",
+              "Rustiness names a thing, so it cannot describe a fence."
+            ],
+            how: [
+              "Find the word the blank describes: fence, a noun.",
+              "A word that describes a noun is an adjective.",
+              "The answer is rusty. Rustily tells about an action, and rustiness is a noun."
+            ],
+            misconception: "A common mix-up is thinking every describing word ends in -ly. An adjective has to fit a noun.",
+            why: "The answer is rusty. Rusty is an adjective that tells what kind of fence it was. Rustily is an adverb, and rustiness is a noun."
+          },
+          {
+            id: "SK-GUM1-8-C13",
+            type: "dropdown",
+            points: 2,
+            dok: 2,
+            std: [
+              "3.L.GC.1:R:use-adjectives-and-adverbs"
+            ],
+            passages: [],
+            prompt: "Choose the correct word for each blank.",
+            text: "The {0} tailor stitched the sleeve {1}.",
+            slots: [
+              {
+                options: ["skilled","skillfully","skillfulness"],
+                answer: 0
+              },
+              {
+                options: ["skilled","skillfully","skillfulness"],
+                answer: 1
+              }
+            ],
+            clue: "Find the word each blank tells about. One is a person and one is an action.",
+            hints: [
+              "Find the word each blank tells about. One is a person and one is an action.",
+              "The first blank comes before tailor. The second blank tells about stitched.",
+              "Skillfulness names a quality, so it fits neither blank."
+            ],
+            how: [
+              "The first blank describes tailor, a noun, so it needs an adjective.",
+              "The second blank tells how the tailor stitched, so it needs an adverb.",
+              "The answers are skilled and skillfully."
+            ],
+            misconception: "A common mix-up is using the same form in both blanks. A noun needs an adjective, and an action needs an adverb.",
+            why: "The answers are skilled and skillfully. Skilled describes the noun tailor, and skillfully tells how the tailor stitched."
+          },
+          {
+            id: "SK-GUM1-8-C14",
+            type: "hottext",
+            points: 1,
+            dok: 2,
+            std: [
+              "3.L.GC.1:R:use-adjectives-and-adverbs"
+            ],
+            passages: [],
+            stem: "A teacher marks four sentences about a dance show.",
+            prompt: "Select the sentence that uses an adjective where an adverb is needed.",
+            options: [
+              "The dancer moved graceful across the stage.",
+              "The dancer wore a graceful costume to the show.",
+              "The dancer bowed gracefully at the very end.",
+              "The graceful dancer smiled at her fans."
+            ],
+            answer: [0],
+            pick: 1,
+            clue: "Find the action in each sentence. Check that any word telling about the action is an adverb.",
+            hints: [
+              "Find the action in each sentence. Check that any word telling about the action is an adverb.",
+              "Look at the word right after the action. Does it tell how the action happened?",
+              "In one sentence, graceful sits right before the noun dancer. That use is correct."
+            ],
+            how: [
+              "Find the action in each sentence and any word that tells about it.",
+              "Graceful costume and graceful dancer use graceful to describe nouns, and bowed gracefully tells how she bowed.",
+              "The answer is \"The dancer moved graceful across the stage.\" Moved needs the adverb gracefully."
+            ],
+            misconception: "A common mix-up is thinking an adjective can tell how an action happens. Use an adverb for the action.",
+            why: "The answer is \"The dancer moved graceful across the stage.\". Moved is an action, so the sentence needs the adverb gracefully. The other sentences use graceful or gracefully correctly."
+          },
+          {
+            id: "SK-GUM1-8-C15",
+            type: "mc",
+            points: 1,
+            dok: 3,
+            std: [
+              "3.L.GC.1:R:use-adjectives-and-adverbs"
+            ],
+            passages: [],
+            prompt: "Lily says, \"Every word that ends in -ly is an adverb.\" Which sentence shows that Lily is wrong?",
+            choices: [
+              {
+                text: "My lovely aunt knitted a warm scarf.",
+                correct: true
+              },
+              {
+                text: "Dan packed his bag swiftly before dawn."
+              },
+              {
+                text: "Nora answered the question politely."
+              },
+              {
+                text: "The band played the song merrily."
+              }
+            ],
+            clue: "To show a claim is wrong, find an example that breaks it. Look for an -ly word that is not an adverb.",
+            hints: [
+              "To show a claim is wrong, find an example that breaks it. Look for an -ly word that is not an adverb.",
+              "For each sentence, find the -ly word and ask what it tells about: a noun or an action.",
+              "Swiftly tells about the packing, an action, so that sentence follows Lily's rule."
+            ],
+            how: [
+              "Lily's rule says every -ly word is an adverb. Look for an -ly word that is not.",
+              "Swiftly, politely and merrily tell how an action happened, so they are adverbs.",
+              "The answer is \"My lovely aunt knitted a warm scarf.\" Lovely describes the noun aunt, so it is an adjective."
+            ],
+            misconception: "A common mix-up is trusting the ending of a word. Check what the word tells about.",
+            why: "The answer is \"My lovely aunt knitted a warm scarf.\" Lovely ends in -ly but describes the noun aunt, so it is an adjective. The other -ly words tell how an action happened."
+          }
+        ]
+      }
+    ]
+  },
+  similar: [
+    {
+      id: "SK-GUM1-8-S01",
+      type: "match",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.L.GC.1:R:use-adjectives-and-adverbs"
+      ],
+      passages: [],
+      stem: "Tomorrow, the sleepy farmer will gently carry three baskets.",
+      prompt: "Sort each word by the job it does in the sentence.",
+      cols: [
+        "Describes a person or thing",
+        "Describes something someone does"
+      ],
+      rows: [
+        {
+          text: "Tomorrow",
+          answer: 1
+        },
+        {
+          text: "sleepy",
+          answer: 0
+        },
+        {
+          text: "gently",
+          answer: 1
+        },
+        {
+          text: "three",
+          answer: 0
+        }
+      ],
+      clue: "For each word, find the word it tells about. A noun goes with one box and an action goes with the other.",
+      hints: [
+        "For each word, find the word it tells about. A noun goes with one box and an action goes with the other.",
+        "Sort the words you feel surest about first. Then handle the rest.",
+        "One word tells when the carrying will happen. Find it before you move on."
+      ],
+      how: [
+        "Find the word each row tells about.",
+        "Sleepy describes the farmer and three counts the baskets, so both describe a person or thing.",
+        "Tomorrow tells when and gently tells how the farmer will carry, so both describe something someone does."
+      ],
+      misconception: "A common mix-up is sorting by word length or ending. Sort by what the word tells about.",
+      why: "Sleepy and three describe nouns. Tomorrow and gently tell about the action carry.",
+      like: ["SK-GUM1-8-P3"]
+    },
+    {
+      id: "SK-GUM1-8-S02",
+      type: "hottext",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.L.GC.1:R:use-adjectives-and-adverbs"
+      ],
+      passages: [],
+      prompt: "Choose the line where one word tells where the action happens.",
+      options: [
+        "The kids will search everywhere for the key.",
+        "The kids will search tomorrow for the key.",
+        "The kids will search eagerly for the key.",
+        "The kids will search seven closets for the key."
+      ],
+      answer: [0],
+      pick: 1,
+      clue: "Find the action in each line. Then look for a word that tells where it happens.",
+      hints: [
+        "Find the action in each line. Then look for a word that tells where it happens.",
+        "Test each line: does one word answer where?",
+        "Eagerly tells how the kids will search, not where, so it can be ruled out."
+      ],
+      how: [
+        "Find the action in each line: search.",
+        "Ask: where will the kids search? Everywhere.",
+        "The answer is \"The kids will search everywhere for the key.\" Tomorrow tells when, eagerly tells how, and seven describes the closets."
+      ],
+      misconception: "A common mix-up is choosing any adverb. Check that it answers where.",
+      why: "The answer is \"The kids will search everywhere for the key.\". Everywhere tells where the kids will search. Tomorrow tells when, eagerly tells how, and seven describes the closets.",
+      like: ["SK-GUM1-8-P5"]
+    },
+    {
+      id: "SK-GUM1-8-S03",
+      type: "mc",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.L.GC.1:R:use-adjectives-and-adverbs"
+      ],
+      passages: ["p4"],
+      prompt: "Which choice tells how the ball was passed in sentence 7?",
+      choices: [
+        {
+          text: "smoothly",
+          correct: true
+        },
+        {
+          text: "Ben"
+        },
+        {
+          text: "passed the ball"
+        },
+        {
+          text: "passed"
+        }
+      ],
+      clue: "Find the action. Then look for the choice that tells how it happened.",
+      hints: [
+        "Find the action. Then look for the choice that tells how it happened.",
+        "Ask how the ball was passed, and test each choice.",
+        "Ben is a person, so Ben cannot tell how an action happened."
+      ],
+      how: [
+        "Find the action in sentence 7: passed.",
+        "Ask: how was the ball passed? Smoothly.",
+        "The answer is smoothly. Ben is a noun, and passed the ball is the action with its object."
+      ],
+      misconception: "A common mix-up is choosing the verb. The adverb is the word that tells how the verb happened.",
+      why: "The answer is \"smoothly\" Smoothly tells how the ball was passed. Ben is a noun, and passed the ball names the action.",
+      like: ["SK-GUM1-8-C03"]
+    },
+    {
+      id: "SK-GUM1-8-S04",
+      type: "dropdown",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.L.GC.1:R:use-adjectives-and-adverbs"
+      ],
+      passages: ["p4"],
+      prompt: "Which form fits the blank in sentence 8?",
+      text: "He dribbled around two {0} defenders.",
+      slots: [
+        {
+          options: ["tired","tiredly","tiredness"],
+          answer: 0
+        }
+      ],
+      clue: "Find what the blank will describe. Decide whether that word names a thing or an action.",
+      hints: [
+        "Find what the blank will describe. Decide whether that word names a thing or an action.",
+        "The blank comes right before defenders, who are people.",
+        "One choice names a feeling, so it cannot describe defenders."
+      ],
+      how: [
+        "Find the word the blank describes: defenders, a noun.",
+        "A word that describes a noun is an adjective.",
+        "The answer is tired. Tiredly would tell about an action, and tiredness is a noun."
+      ],
+      misconception: "A common mix-up is choosing the noun form because it names the feeling. A describing word is needed before defenders.",
+      why: "The answer is tired. Tired is an adjective that tells what kind of defenders. Tiredly is an adverb, and tiredness is a noun.",
+      like: ["SK-GUM1-8-C04"]
+    },
+    {
+      id: "SK-GUM1-8-S05",
+      type: "mc",
+      points: 1,
+      dok: 3,
+      std: [
+        "3.L.GC.1:R:use-adjectives-and-adverbs"
+      ],
+      passages: ["p4"],
+      prompt: "Near the end of the draft, Coach Lee grinned widely. What gives widely its job?",
+      choices: [
+        {
+          text: "Its job is adding detail to the verb grinned, saying how it happened.",
+          correct: true
+        },
+        {
+          text: "Its job is adding detail to the noun Coach Lee, saying what kind he is."
+        },
+        {
+          text: "Its job is naming a place for the coach, answering the question where."
+        },
+        {
+          text: "Its job is giving a time for the cheering, answering the question when."
+        }
+      ],
+      clue: "Find the word widely tells about, and decide whether it is a noun or an action.",
+      hints: [
+        "Find the word widely tells about, and decide whether it is a noun or an action.",
+        "Say the sentence without widely, then add it back. What does it add?",
+        "Widely does not name a place, so one reason can be ruled out."
+      ],
+      how: [
+        "Find the word widely tells about: grinned, an action.",
+        "Widely adds how the coach grinned.",
+        "The answer is \"Its job is adding detail to the verb grinned, saying how it happened.\""
+      ],
+      misconception: "A common mix-up is thinking an adverb describes a person. An adverb gives details about an action.",
+      why: "The answer is \"Its job is adding detail to the verb grinned, saying how it happened.\" Widely adds detail to the verb grinned, saying how it happened. It does not describe a noun or name a place.",
+      like: ["SK-GUM1-8-C05"]
+    },
+    {
+      id: "SK-GUM1-8-S06",
+      type: "hottext",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.L.GC.1:R:use-adjectives-and-adverbs"
+      ],
+      passages: ["p4"],
+      prompt: "Tap both shown sentences where a word tells how someone did something.",
+      targets: ["p4:1:2","p4:1:4","p4:2:2","p4:2:4","p4:3:1"],
+      answer: ["p4:1:4","p4:2:2"],
+      pick: 2,
+      clue: "Look for the action in each shown sentence and a word that tells how it happened.",
+      hints: [
+        "Look for the action in each shown sentence and a word that tells how it happened.",
+        "Check each shown sentence: does one word answer how?",
+        "Sentence 8 tells how many defenders there were, so it can be ruled out."
+      ],
+      how: [
+        "Look for a word that tells how an action happened.",
+        "Powerfully in sentence 4 tells how Sam kicked. Excitedly in sentence 6 tells how Ana shouted.",
+        "Sentences 2 and 8 use adjectives, and finally in sentence 9 tells when."
+      ],
+      misconception: "A common mix-up is choosing every sentence with a describing word. Only a word that tells how fits.",
+      why: "The answers are sentences 4 and 6: \"Sam kicked the ball powerfully.\" and \"Ana shouted excitedly from the goal.\". Powerfully and excitedly tell how an action happened. The other shown sentences use adjectives or a word that tells when.",
+      like: ["SK-GUM1-8-C06"]
+    },
+    {
+      id: "SK-GUM1-8-S07",
+      type: "ebsr",
+      points: 2,
+      dok: 3,
+      std: [
+        "3.L.GC.1:R:use-adjectives-and-adverbs"
+      ],
+      passages: ["p4"],
+      prompt: "Answer the first half, then the second half.",
+      partA: {
+        prompt: "In sentence 4, which choice shows the manner of the kicking?",
+        choices: [
+          {
+            text: "powerfully",
+            correct: true
+          },
+          {
+            text: "Sam"
+          },
+          {
+            text: "kicked the ball"
+          },
+          {
+            text: "the ball"
+          }
+        ]
+      },
+      partB: {
+        prompt: "Name the action that this choice goes with.",
+        choices: [
+          {
+            text: "kicked",
+            correct: true
+          },
+          {
+            text: "Sam"
+          },
+          {
+            text: "the ball"
+          },
+          {
+            text: "a team"
+          }
+        ]
+      },
+      clue: "In the first half, look for the choice that tells how. In the second half, ask which action it goes with.",
+      hints: [
+        "In the first half, look for the choice that tells how. In the second half, ask which action it goes with.",
+        "Ask how the player did the action. The choice that answers is the adverb.",
+        "Sam is a person, so Sam cannot tell how an action happened."
+      ],
+      how: [
+        "First half: ask how Sam kicked the ball. Powerfully tells how.",
+        "Second half: powerfully tells about the verb kicked.",
+        "The answers are powerfully and kicked. Sam and the ball are nouns."
+      ],
+      misconception: "A common mix-up is picking the noun an adverb sits next to. An adverb tells about the action.",
+      why: "Part A: \"powerfully\" Part B: \"kicked\" Powerfully tells how the ball was kicked, and it tells about the verb kicked.",
+      like: ["SK-GUM1-8-C07"]
+    },
+    {
+      id: "SK-GUM1-8-S08",
+      type: "ms",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.L.GC.1:R:use-adjectives-and-adverbs"
+      ],
+      passages: [],
+      stem: "The hungry puppy ate crunchy biscuits eagerly.",
+      prompt: "Select both adjectives.",
+      pick: 2,
+      choices: [
+        {
+          text: "puppy"
+        },
+        {
+          text: "hungry",
+          correct: true
+        },
+        {
+          text: "ate"
+        },
+        {
+          text: "crunchy",
+          correct: true
+        },
+        {
+          text: "biscuits"
+        },
+        {
+          text: "eagerly"
+        }
+      ],
+      clue: "Adjectives tell more about nouns. Find the nouns first.",
+      hints: [
+        "Adjectives tell more about nouns. Find the nouns first.",
+        "Ask what kind of puppy and what kind of biscuits.",
+        "Eagerly tells about the eating, so it cannot describe a noun."
+      ],
+      how: [
+        "Find the nouns: puppy and biscuits.",
+        "Ask: what kind of puppy? Hungry. What kind of biscuits? Crunchy.",
+        "The answers are hungry and crunchy. Eagerly is an adverb that tells how the puppy ate."
+      ],
+      misconception: "A common mix-up is choosing the adverb too. Adjectives describe nouns, not actions.",
+      why: "The answers are \"hungry\" and \"crunchy\". Hungry describes the puppy and crunchy describes the biscuits. Eagerly is an adverb that tells how the puppy ate.",
+      like: ["SK-GUM1-8-C08"]
+    },
+    {
+      id: "SK-GUM1-8-S09",
+      type: "mc",
+      points: 1,
+      dok: 1,
+      std: [
+        "3.L.GC.1:R:use-adjectives-and-adverbs"
+      ],
+      passages: [],
+      stem: "Lina found a shiny coin.",
+      prompt: "Pick the word that describes a noun.",
+      choices: [
+        {
+          text: "shiny",
+          correct: true
+        },
+        {
+          text: "Lina"
+        },
+        {
+          text: "found"
+        },
+        {
+          text: "coin"
+        }
+      ],
+      clue: "Find the nouns first. An adjective tells more about one of them.",
+      hints: [
+        "Find the nouns first. An adjective tells more about one of them.",
+        "Ask what kind of coin it was.",
+        "Found is an action, so it cannot describe a noun."
+      ],
+      how: [
+        "Find the nouns: Lina and coin.",
+        "Ask: what kind of coin? A shiny coin.",
+        "The answer is shiny. Lina and coin are nouns, and found is a verb."
+      ],
+      misconception: "A common mix-up is choosing the noun that is described. The describing word is the adjective.",
+      why: "The answer is \"shiny\" Shiny describes the noun coin. Lina and coin are nouns, and found is a verb.",
+      like: ["SK-GUM1-8-C09"]
+    },
+    {
+      id: "SK-GUM1-8-S10",
+      type: "mc",
+      points: 1,
+      dok: 3,
+      std: [
+        "3.L.GC.1:R:use-adjectives-and-adverbs"
+      ],
+      passages: ["p5"],
+      prompt: "Compare sticky and firmly in the dough-stirring line. Which claim is true?",
+      choices: [
+        {
+          text: "Sticky goes with the dough, while firmly goes with the stirring.",
+          correct: true
+        },
+        {
+          text: "Both go with the dough, so neither one tells about the stirring."
+        },
+        {
+          text: "Firmly goes with the dough, while sticky goes with the stirring."
+        },
+        {
+          text: "Both go with the stirring, so neither one tells about the dough."
+        }
+      ],
+      clue: "For each word, find the word it describes. Then decide if that word is a thing or an action.",
+      hints: [
+        "For each word, find the word it describes. Then decide if that word is a thing or an action.",
+        "Ask which word sticky describes, and which word firmly describes.",
+        "Dough is a thing, so firmly cannot describe it. One choice can be ruled out."
+      ],
+      how: [
+        "Find the word sticky describes: dough, a noun.",
+        "Find the word firmly describes: stirred, an action.",
+        "The answer is \"Sticky goes with the dough, while firmly goes with the stirring.\""
+      ],
+      misconception: "A common mix-up is thinking both words do the same job. One describes a noun and the other describes an action.",
+      why: "The answer is \"Sticky goes with the dough, while firmly goes with the stirring.\" Sticky is an adjective that describes the dough, and firmly is an adverb that describes the stirring.",
+      like: ["SK-GUM1-8-C10"]
+    },
+    {
+      id: "SK-GUM1-8-S11",
+      type: "hottext",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.L.GC.1:R:use-adjectives-and-adverbs"
+      ],
+      passages: [],
+      prompt: "Choose the TWO sentences that use an adverb to tell when.",
+      options: [
+        "We will plant the seeds today.",
+        "We will plant the seeds gently.",
+        "We will plant the seeds there.",
+        "We will plant the seeds afterward.",
+        "We will plant black seeds."
+      ],
+      answer: [0,3],
+      pick: 2,
+      clue: "Find the action in each sentence. Then look for a word that answers when.",
+      hints: [
+        "Find the action in each sentence. Then look for a word that answers when.",
+        "Check each sentence for a word about time.",
+        "Gently tells how the seeds will be planted, not when, so it can be ruled out."
+      ],
+      how: [
+        "Look for a time word that tells when an action happens.",
+        "Today and afterward both tell when the seeds will be planted.",
+        "The answers are \"We will plant the seeds today.\" and \"We will plant the seeds afterward.\" Gently tells how, there tells where, and black describes the seeds."
+      ],
+      misconception: "A common mix-up is choosing any adverb. Check that the adverb answers when.",
+      why: "The answers are \"We will plant the seeds today.\" and \"We will plant the seeds afterward.\". Today and afterward tell when. Gently tells how, there tells where, and black describes the seeds.",
+      like: ["SK-GUM1-8-C11"]
+    },
+    {
+      id: "SK-GUM1-8-S12",
+      type: "dropdown",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.L.GC.1:R:use-adjectives-and-adverbs"
+      ],
+      passages: ["p5"],
+      prompt: "Which form fits the blank in sentence 4?",
+      text: "She stirred the {0} dough firmly.",
+      slots: [
+        {
+          options: ["sticky","stickily","stickiness"],
+          answer: 0
+        }
+      ],
+      clue: "Find the word the blank will describe. Then decide whether it names a thing or an action.",
+      hints: [
+        "Find the word the blank will describe. Then decide whether it names a thing or an action.",
+        "The blank comes right before dough, which is a thing.",
+        "Stickiness names a quality, so it cannot describe the dough here."
+      ],
+      how: [
+        "Find the word the blank describes: dough, a noun.",
+        "A word that describes a noun is an adjective.",
+        "The answer is sticky. Stickily would tell about an action, and stickiness is a noun."
+      ],
+      misconception: "A common mix-up is thinking a describing word always ends in -ly. An adjective has to fit a noun.",
+      why: "The answer is sticky. Sticky is an adjective that tells what kind of dough. Stickily is an adverb, and stickiness is a noun.",
+      like: ["SK-GUM1-8-C12"]
+    },
+    {
+      id: "SK-GUM1-8-S13",
+      type: "dropdown",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.L.GC.1:R:use-adjectives-and-adverbs"
+      ],
+      passages: [],
+      prompt: "Which words fit the two blanks?",
+      text: "The {0} puppy waited {1} for its dinner.",
+      slots: [
+        {
+          options: ["eager","eagerly","eagerness"],
+          answer: 0
+        },
+        {
+          options: ["eager","eagerly","eagerness"],
+          answer: 1
+        }
+      ],
+      clue: "Find the word each blank tells about. One is an animal and one is an action.",
+      hints: [
+        "Find the word each blank tells about. One is an animal and one is an action.",
+        "The first blank comes before puppy. The second blank tells about waited.",
+        "One choice names a feeling, so it fits neither blank."
+      ],
+      how: [
+        "The first blank describes puppy, a noun, so it needs an adjective.",
+        "The second blank tells how the puppy waited, so it needs an adverb.",
+        "The answers are eager and eagerly."
+      ],
+      misconception: "A common mix-up is using the same form in both blanks. A noun needs an adjective, and an action needs an adverb.",
+      why: "The answers are eager and eagerly. Eager describes the noun puppy, and eagerly tells how the puppy waited.",
+      like: ["SK-GUM1-8-C13"]
+    },
+    {
+      id: "SK-GUM1-8-S14",
+      type: "hottext",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.L.GC.1:R:use-adjectives-and-adverbs"
+      ],
+      passages: [],
+      stem: "A coach checks four sentences about a speech.",
+      prompt: "Pick the sentence that uses the wrong kind of describing word.",
+      options: [
+        "The boy answered polite when she asked.",
+        "The polite boy answered every question.",
+        "The boy answered politely when she asked.",
+        "A polite answer made the teacher grin."
+      ],
+      answer: [0],
+      pick: 1,
+      clue: "Find the action in each sentence. Check that any word telling about the action is an adverb.",
+      hints: [
+        "Find the action in each sentence. Check that any word telling about the action is an adverb.",
+        "Look at the word right after the action. Does it tell how the action happened?",
+        "In one sentence, polite sits right before the noun boy. That use is correct."
+      ],
+      how: [
+        "Find the action in each sentence and any word that tells about it.",
+        "Polite boy and polite answer use polite to describe nouns, and answered politely tells how he answered.",
+        "The answer is \"The boy answered polite when she asked.\" Answered needs the adverb politely."
+      ],
+      misconception: "A common mix-up is thinking an adjective can tell how an action happens. Use an adverb for the action.",
+      why: "The answer is \"The boy answered polite when she asked.\". Answered is an action, so the sentence needs the adverb politely. The other sentences use polite or politely correctly.",
+      like: ["SK-GUM1-8-C14"]
+    },
+    {
+      id: "SK-GUM1-8-S15",
+      type: "mc",
+      points: 1,
+      dok: 3,
+      std: [
+        "3.L.GC.1:R:use-adjectives-and-adverbs"
+      ],
+      passages: [],
+      prompt: "Ben claims that all adverbs end in -ly. Which sentence proves him wrong?",
+      choices: [
+        {
+          text: "Mom will call you tomorrow.",
+          correct: true
+        },
+        {
+          text: "The pilot landed the plane safely."
+        },
+        {
+          text: "Mia whispered the secret nervously."
+        },
+        {
+          text: "The nurse bandaged the arm tenderly."
+        }
+      ],
+      clue: "To show a claim is wrong, find an example that breaks it. Look for an adverb that does not end in -ly.",
+      hints: [
+        "To show a claim is wrong, find an example that breaks it. Look for an adverb that does not end in -ly.",
+        "Find the adverb in each sentence and check how it ends.",
+        "Nervously ends in -ly, so that sentence follows Ben's rule."
+      ],
+      how: [
+        "Ben's rule says every adverb ends in -ly. Look for an adverb that does not.",
+        "Safely, nervously and tenderly all end in -ly.",
+        "The answer is \"Mom will call you tomorrow.\" Tomorrow tells when but does not end in -ly."
+      ],
+      misconception: "A common mix-up is thinking the ending decides the word type. Check what the word tells about.",
+      why: "The answer is \"Mom will call you tomorrow.\" Tomorrow is an adverb that tells when, and it does not end in -ly. The other adverbs all end in -ly.",
+      like: ["SK-GUM1-8-C15"]
+    }
+  ],
+  addons: {
+    "SK-GUM1-8-P1": {
+      hints: [
+        "An adjective describes a noun. Find the nouns, then look for a word that tells more about one of them.",
+        "Say each word and ask whether it tells what kind of kitten or sun it is.",
+        "Napped is an action, so it cannot describe a noun."
+      ],
+      how: [
+        "Find the nouns: kitten and sun.",
+        "Ask: what kind of kitten? A fluffy one. The answer is fluffy."
+      ],
+      misconception: "A common mix-up is choosing the noun. The adjective is the word that describes it."
+    },
+    "SK-GUM1-8-P2": {
+      hints: [
+        "An adverb tells how an action happens. Find the action first.",
+        "Ask how the turtle crawled, then test each word.",
+        "Road is a thing, so it cannot tell how an action happened."
+      ],
+      how: [
+        "Find the action: crawled.",
+        "Ask: how did the turtle crawl? The answer is slowly."
+      ],
+      misconception: "A common mix-up is choosing the verb. The adverb is the word that tells more about the verb."
+    },
+    "SK-GUM1-8-P3": {
+      hints: [
+        "For each word, find the word it tells about. A noun goes with one column and an action goes with the other.",
+        "Sort the words you feel surest about first. Then handle the rest.",
+        "One word tells when the bird sang. Find it before you move on."
+      ],
+      how: [
+        "Tiny and tall describe the nouns bird and tree, so they are adjectives.",
+        "Sweetly tells how the bird sang, and yesterday tells when, so both are adverbs."
+      ],
+      misconception: "A common mix-up is sorting by where a word sits in the sentence. Sort by what the word tells about."
+    },
+    "SK-GUM1-8-P4": {
+      hints: [
+        "Find the word each blank tells about. One is a thing and one is an action.",
+        "The first blank comes before dog. The second blank tells about barked.",
+        "Noise and anger name things, so neither fits a blank."
+      ],
+      how: [
+        "The first blank describes dog, a noun, so it needs an adjective.",
+        "The second blank tells how the dog barked, so it needs an adverb. The answers are noisy and angrily."
+      ],
+      misconception: "A common mix-up is using the same form in both blanks. A noun needs an adjective, and an action needs an adverb."
+    },
+    "SK-GUM1-8-P5": {
+      hints: [
+        "Find the action in each sentence. Look for a word that tells how it happened.",
+        "Check each sentence: does one word answer how?",
+        "Yesterday tells when, not how, so one sentence can be ruled out."
+      ],
+      how: [
+        "Find the action: carried.",
+        "Ask: how did Maya carry the eggs? The answer is \"Maya carefully carried the eggs.\""
+      ],
+      misconception: "A common mix-up is choosing any sentence with a describing word. Only an adverb that tells how fits."
+    }
+  },
+  /* B7a:core:end */
   test: [
     { id: "SK-GUM1-8-T1", type: "mc", points: 1, dok: 1, passages: [],
       stem: "Jamal wore a bright jacket to the game.",

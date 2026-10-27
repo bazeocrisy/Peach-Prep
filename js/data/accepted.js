@@ -26,5 +26,5 @@ window.PP_ACCEPTED = [
   "3.T.C.2.c",
   "3.T.RA.1.b",
   "3.T.RA.2.a",
-  "3.T.RA.2.b","3.T.C.1.c","3.T.RA.1.c","3.T.T.1.e","3.T.T.3.c","3.T.T.4.b","3.T.T.2.d","3.T.SS.1.b","3.T.SS.1.c","3.T.SS.2.b","3.T.SS.1.d","TF-FEAT","TF-DIG","3.L.GC.2.d","3.L.GC.2.a","3.L.GC.2.b","3.L.GC.2.c","3.L.V.1.a","3.L.V.1.b","3.L.V.2.b","3.L.V.2.c","3.L.V.3.b","3.L.V.2.a","3.L.V.3.a","3.L.GC.1:M:form-and-use-irregular-plural-nouns","3.L.GC.1:M:form-and-use-the-past-tense-of-irregular-verbs","3.L.GC.1:M:use-coordinating-conjunctions-to-join-words-phra","3.L.GC.1:M:use-commas-with-coordinating-conjunctions-to-joi","3.F.P.4.a","3.F.P.4.c"
+  "3.T.RA.2.b","3.T.C.1.c","3.T.RA.1.c","3.T.T.1.e","3.T.T.3.c","3.T.T.4.b","3.T.T.2.d","3.T.SS.1.b","3.T.SS.1.c","3.T.SS.2.b","3.T.SS.1.d","TF-FEAT","TF-DIG","3.L.GC.2.d","3.L.GC.2.a","3.L.GC.2.b","3.L.GC.2.c","3.L.V.1.a","3.L.V.1.b","3.L.V.2.b","3.L.V.2.c","3.L.V.3.b","3.L.V.2.a","3.L.V.3.a","3.L.GC.1:M:form-and-use-irregular-plural-nouns","3.L.GC.1:M:form-and-use-the-past-tense-of-irregular-verbs","3.L.GC.1:M:use-coordinating-conjunctions-to-join-words-phra","3.L.GC.1:M:use-commas-with-coordinating-conjunctions-to-joi","3.F.P.4.a","3.F.P.4.c","3.L.GC.1:M:use-apostrophes-in-contractions-and-singular-pos","3.L.GC.1:M:use-reflexive-pronouns"
 ];

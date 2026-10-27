@@ -732,3 +732,166 @@ All 59+ split words are correct in Merriam-Webster (section 6). The defects are 
 ### 8. Files used (scratchpad `b6r3/`)
 
 `load.js`, `blind.js`, `ans-1..8.txt`, `cmp.js`, `jac.js`, `jacall.js`, `keychk.js`, `stale.js`, `dump.js`, `d1..d8.txt`, `struct2.js` (passages, FK, longest key), `unoff.js` (unoffered sentences), `ht.js`, `ht2.js` (hot-text), `dupe.js`, `dupe2.js`, `xdup.js` (cross-file duplicates), `pre.js` (keys in Teach/Learn), `run390.py` (browser run).
+
+
+## Fourth review (lessons 1, 5, 6, 8; Lesson 4 wording check; 2026-10-27)
+
+**Role:** independent reviewer, fresh eyes. I did not write the lessons and I took part in none of the earlier reviews. **Scope:** Lessons 1, 5, 6 and 8 in `js/data/lessons/L-GUM3.js` at HEAD (e091ac7, the frozen copy `/home/claude/pp-content`), plus a check that the Lesson 4 edits made after the third review were wording only. **Read-only:** no lesson, set or engine file was edited and no git command that writes was run (`git diff`/`git show` only, to compare with ddbc049, the commit the third review judged). The only repo file I touched is this one (append). One test server ran on port 8793 (pid 21404) and was killed by pid; other agents' servers were not touched. Work files are in the scratchpad folder `b6rev4/`.
+
+### Verdicts
+
+| Lesson | Verdict | MUST | SHOULD | NOTE |
+|---|---|---|---|---|
+| 1 Apostrophes | **ACCEPT** (with SHOULDs) | 0 | 5 | 5 |
+| 4 Coordinating conjunctions | **ACCEPT** (stays accepted; wording-only edits confirmed) | 0 | 1 | 2 |
+| 5 Collective and abstract nouns | **CHANGES REQUIRED** | 1 | 3 | 4 |
+| 6 Reflexive pronouns | **ACCEPT** (with SHOULDs) | 0 | 4 | 4 |
+| 8 Hyphens at line breaks | **CHANGES REQUIRED** | 1 | 5 | 3 |
+
+All 13 third-review MUSTs are genuinely fixed in the files (section 3). Two MUSTs are new: one hint in L8 states a false letter placement (S06 hint 3) and one L5 twin (S07) lacks the "acts as one" premise that its twin and S10 carry.
+
+### 1. Blind solve
+
+- **Method as the brief asks.** Node `vm` loader (`load.js`); a script (`blind.js`) that prints every `core` item (each `{ref}` resolved to its `practice` item), every `similar` item, the three Together items and Test A of lessons 1, 5, 6 and 8, with choices, slot options and match rows shuffled (seeded LCG, seed 4000 + 91 x lesson index), whole passages printed, and hot-text `targets` printed as references to numbered sentences. It prints no `correct`, `answer`, `why`, `hints`, `how`, `clue`, `like` or `misconception`. None of these lessons has a figure, so there is no figure alt text. I solved all of it from `blind-1/5/6/8.txt` and saved `answers.json` (152 answers; md5 17e58f23712cb190c845d746bb5e3660) before I opened the keys, the author log or any review.
+- **Agreement: 152 of 152** (core 60 with refs resolved, similar 60, Together 12, Test A 20). `compare.js` re-runs the same shuffle and maps my letters back to the keyed indexes.
+- **Was it fully blind? Nearly.** Before I wrote `blind.js` I printed one item's JSON and one set's JSON to learn the schema, and that print showed the keys of two items in Lesson 1 (Together P1, `it's`, and core C03, `won't`). I solved those two with that knowledge, so the blind result is 150 of 150 for the rest plus two I had seen. I read nothing else of the lesson source, the author log or the earlier reviews until the answers file was saved.
+- The solve found no ambiguity in a key by reading, except the two defensibility problems in section 4 that I flag from the stem alone (L5 S07, L1 S02 "every apostrophe"). Everything else in section 4 was found by the audits.
+
+### 2. Gate and mechanical results
+
+- `node verification/check-content.js --all`: PASS, 0 failures, 81 warnings (ledger "no independent-review record", check forms edited in wording since the record, including `use-apostrophes ... :A`). None names an item in these four lessons.
+- **Passages:** 24 passages in these four lessons, 111 to 128 words (my count, hyphen fragments as one word, "(n)" markers removed); `verification/readability.py` FK 1.7 to 4.5 (L5 p4 is exactly 4.5, the ceiling, no headroom). Every `{ref}` and every hot-text target resolves to a numbered sentence; every "sentence N" in a hint, how or why points at a sentence that holds the quoted word (script `sentref.js`, all passage items).
+- **Twin overlap** (`jac.js`; lower-case words over prompt, stem, text, choices, slot options, match rows and columns, ebsr parts and the sentences a hot-text item targets; each of the 60 similar items against its own `like` core item; 15 distinct `like` values per lesson). Maximum set / multiset: **L1 0.182 / 0.207, L5 0.192 / 0.205, L6 0.186 / 0.200, L8 0.209 / 0.206. No pair is above 0.21 on item text.** The author log's figures match (L1 multiset 0.205 vs my 0.207: same pair class, within rounding of how contractions are tokenised). With the passage text added the maxima are higher (L1 0.180 / 0.219, L5 0.221 / 0.266, L6 0.227 / 0.274, L8 0.181 / 0.246) because the twin and core texts share stock words; none is near 0.30. NOTE.
+- **Twin metadata** (`twinmeta.js`): only L1 S05 and S15 change format from their core item (mc to ms, 1 point to 2); both keep DOK 3. Points are right everywhere (choose-two, two-slot dropdown, ebsr and match items are 2 points; the rest 1). Core DOK: L1 none at 1, four at 3; L5 two at 1 (C03, C08), two at 3; L6 none at 1, three at 3; L8 two at 1 (C08, C15), one at 3 (C13) plus C09. Formats: `mc` is at most six in each lesson (L1 exactly six).
+- **Alignment with `official`:** the four rows read "Use apostrophes to form contractions and singular possessive nouns", "Use collective and abstract nouns", "Use reflexive pronouns", "Use hyphens to divide words at line breaks" (all p. 16, grade 3 column `M` in the GaDOE GUM chart text). All 60 core items test the named skill, with one drift: five of the L5 core items (C04, C07, C10, C11, C14) are subject-verb agreement with a collective noun, which the standards also place under 3.L.GC.2.c. NOTE L5-N1.
+- **Keyed text vs why/how/hints** (`keychk.js`): the keyed option appears in `how` or `why` for all 130 keyed mc, ms, ebsr and dropdown answers in core and similar (0 misses), and no hint contains a keyed option verbatim (0). Stale-text scan (`stale.js`): every unusual token in a hint, how, why or misconception is on the item's screen, in its passage or in the Teach and Learn text; the L1 S01 and S02 stale names found in the third review are gone.
+- **Longest key** (`longest.js`, per question or slot): key uniquely longest in L1 2 of 38, L5 4 of 34, L6 5 of 37, L8 0 of 33, about 9 percent overall against about 25 percent by chance. Highest ratios: L5 T5 1.34 (older Test A item), L6 P4 1.28 and S01 1.27, L1 T1 slot 2 1.17, L5 S12 1.17. NOTE only.
+- **Learn It and Watch Me against the fifteen** (`wmdup.js`, 4-gram scan of Teach, example and each Watch Me against every item; exact-string scan): no Teach, example or Watch Me sentence appears in an item or passage. Paraphrases and shared key facts are listed per lesson below.
+- **Concept and sentence duplicates over all of `js/data`** (43 other files, `xdup.js` 6-gram scan and `xsent.js` exact-sentence scan): no whole-item duplicate. Only stock frames ("Choose the word that correctly completes the sentence", "This question has two parts. Answer Part A, then Part B.", "A common mix-up is thinking ...") plus four content hits (NOTEs): L5 T5 option "Two horses ran across the field." is verbatim in `sets/L-GRM-01.js` line 134; L1 Watch Me 1 "We are going to the zoo." is verbatim in the `L-GUM2.js` teach example (line 476); L1 P5 option "We'll eat lunch under the big oak tree" has a near copy ("We ate lunch under the big oak tree") in `L-GUM5.js` line 723; the L5 and L1 hint phrases "an abstract noun names an idea", "a word that only means more than one" repeat `sets/L-GRM-01.js` and `sets/L-GRM-02.js`.
+- **Browser, 390 x 844, touch, mobile viewport** (Playwright, `run390.py`, one browser process per lesson because the single-process Chromium dies when a context closes). All 60 core items of the four lessons were opened through `PP_PLAYER.start("SK:<code>:y|y2|y3", "try")`; for passage items the passage tab was tapped (the visible passage was the right one in all cases), then `#tab-question`; the keyed answer was entered by real taps (choices, hot-text sentences, match buttons; `select_option` for the native selects) and Check was tapped. **60 of 60 accepted. No horizontal scroll, no page error.** I also looked at a 390-wide screenshot of the L8 passage with the `|` marks (`l8-c06-p.png`): the marks and the hyphens read clearly.
+
+### 3. Third-review MUSTs and the author log: genuinely fixed in the files?
+
+I compared HEAD with ddbc049 field by field (`diffobj.js`): 47 lines changed, in L1 (10 fields), L4 (8), L5 (3), L6 (6), L8 (20); L2, L3 and L7 are byte-identical.
+
+| Third-review MUST | In the files now | Result |
+|---|---|---|
+| L1-1 S01 hint 3, how, why name haven't and she's | now hasn't and Pia's, both on screen | FIXED |
+| L1-2 S02 hint 3, how, why, misconception name it's | now cup's and cups, which is option E | FIXED |
+| L1-3 C09 two defensible answers | "which was the home of one young fox" states the owner count; foxes' would contradict the clause | FIXED |
+| L5-1 C07, S07 hint 2 states the -s test | hint 2 is now "Read each sentence aloud and listen for whether its verb sounds right with one group"; the -s fact is in hint 3 and how | FIXED |
+| L5-2 S10 lacks "acts as one" | prompt now says "both being single units" | FIXED |
+| L6-1 C12, S12 hint 2 states the key | now "notice whether it names anyone besides Rosa/Lila" (the wording the review prescribed). See SHOULD L6-1 | FIXED (thin) |
+| L6-2 C10 copies the Teach example | now "Ella watched {herself} in the shop window, and the kitten licked {itself} clean"; no Teach or Watch Me frame | FIXED |
+| L8-1 C09 false reason (Sam) | Sam is now buc- \| ket; c and k really are on different lines; hint 3, how, why, misconception are true | FIXED |
+| L8-2 S09 false reason (Lia) | Lia is now mot- \| her; t and h really are on different lines | FIXED |
+| L8-3 C12 false reason (ti- \| cket) | ti- \| cket replaced by ticke- \| t; tic- \| ket is the only option that separates c and k; every sentence in hint 3, how, why checked true | FIXED |
+| L8-4 S12 two options fit | fea- \| thers replaced by f- \| eathers; stem now "keeps th together and also falls between the two beats"; only feath- \| ers fits | FIXED |
+| L8-5 P5 "bir- \| thday breaks up th" | how, why, misconception now say it "cuts the first small word in half" (true: bir \| th) | FIXED |
+| L8-6 C05, S05 Part B hint 2 leaves one live | now "compare the four facts one at a time with the word you chose in Part A"; four live | FIXED |
+
+**Author-log claims I tested against the files**
+- True: twin maxima; passages at 101 words or more (mine 111 to 128 with a different counting rule); "0 misses" in the key-in-why check; L6 C12/S12 hint 2 changed; L8 C05/S05 hint 2 changed; L5 S10 premise added; the P5 `why` edit; L4 edits are in how and why text only.
+- **False or overclaimed (L8):** "L8 reasons about letters on different lines, each tested against the actual placement" and the log's "so every stated reason is literally true" for C12/S12. One stated placement is false: **S06 hint 3** says "Pump- | kin splits between the consonants m and p"; the break is between p and k (see MUST L8-1 below). Two further explanations cite a rule that does not separate the wrong option from the key (SHOULD L8-2).
+- **Overclaimed (L4):** "every phrase of the form ', so X fits' became '. The joining word X fits'" is literally true, but the same awkward construction survives in seven other places in L4: S08 how "so and adds one more thing" and C07 and S07 hint 3, how, why "so nor can follow" / "so nor does not fit" (lines 4577, 4578, 4581, 5067, 5068, 5071, 5100). See L4 below.
+
+### 4. Findings by lesson
+
+#### Lesson 1: Apostrophes (ACCEPT)
+
+All 38 items solved blind and agree. Every hint, how and why sentence I read for the 30 core and similar items and the 3 Together addons is true of the options on screen. Hint ladders: four live or three live after hint 3 in every mc and ms item; two live (the accepted floor) in dropdowns C04, C09, S04, S09, C12 and S12 slot 2 and in hot-text items after hint 3; no ladder collapses.
+
+**SHOULD**
+- **L1-S1 SK-GUM3-1-S02 (and the older P5) stem "every apostrophe is right".** Option A "Dad said we shouldnt run near the pool." has no apostrophe, so "every apostrophe is right" is vacuously true of it; a literal reader has three defensible lines. Hint 1 and the clue rescue it ("check that it is there"), but the stem should not need that. Fix: "Pick the TWO lines that are written correctly." (P5 already says "use apostrophes correctly"; same small risk with "cant".)
+- **L1-S2 SK-GUM3-1-S05 and S10 (DOK 3) are dense for grade 3.** S05 options: "The robot owns the batteries, which is the job of its here." / "Say it's as two words and the line still reads fine." (keys) against "A robot is a single object, so each tiny word takes a mark." and "Who owns the batteries? The robot, says it's." (nonsense distractors); "Say it's as two words" is itself an odd phrase. S10 key is the longest option (about 120 characters) and says "squeezed form" and "merely counts melons". The skill is fine; the sentences are hard to parse. Fix: plain statements ("Its means belonging to the robot." / "It's means it is.").
+- **L1-S3 SK-GUM3-1-C10 repeats two of C06's five sentences.** Both use passage p2 in set 2. C06's keys are Jupiter isn't and She's (sentence 8); C10 asks about Mom's (sentence 4) and She's (sentence 8), and its key option says "She's is short for she is". A child who answered C06 has the C10 answer. Plan §6.7 and §4.3 rule 4 want distinct key facts inside a set. Fix: ask C10 about sentences not offered in C06 (for example sentences 2 and 4 or 5), or move C10 to another passage.
+- **L1-S4 SK-GUM3-1-C03 key fact equals Watch Me 3 and Teach point 2.** "wont / won't" is the first pair of Watch Me 3 ("The snail wont / won't leave its shell"); C03 asks the same position question for the same word. The third review fixed S12 for the same fact and left C03. Won't is the one irregular contraction, so it cannot be avoided in the lesson; change the Watch Me pair instead (for example the second pair only) or make C03 a different word that Teach does not name.
+- **L1-S5 Learn It does not model 's = is versus 's = belonging.** C10, C15, S10 and S15 (four of 30, three DOK 3) need that contrast; it appears only in Teach point 3. Add it to Watch Me 2 or a fourth step.
+
+**NOTE**
+- S07 Part A distractors C ("We couldn't wait to eat") and D ("Ray's grill") contain neither its nor it's, so they are not plausible answers to "where its or it's is used wrongly"; the item is still fair.
+- C04 and S04 `misconception` lines are garbled ("leaving off the apostrophe because the word already ends in s once you add it"; "looks complete with an s"). Reword.
+- S02 hint 3 says "puts an apostrophe in a plain plural, with the cups"; the phrase "with the cups" reads oddly.
+- Non-twin pair overlap and the three duplicate-sentence hits in section 2 (L1 Watch Me 1, P5 option).
+- Check form A (Test A) of this lesson is flagged "edited in wording since the record" by the gate; the lead should refresh the record.
+
+#### Lesson 4: Coordinating conjunctions (stays ACCEPTED)
+
+**Were the post-third-review changes wording only?** Yes. `diffobj.js` (field-level deep compare of the lesson object, ddbc049 against HEAD) lists exactly eight changed fields and nothing else in L4: core C08 `how[2]`, C09 `why`, C11 `how[2]`, similar S01 `how[1]`, S08 `how[2]`, S09 `why`, S11 `how[2]`, and addon P5 `how[1]`. No `prompt`, `stem`, `text`, `choices`, `options`, `slots`, `answer`, `correct`, `hints`, `clue`, `like`, `points`, `dok`, `std`, `passages` or `misconception` changed; no key or option changed. The `git diff` hunks agree (", so X fits" to ". The joining word X fits" in each). I read all eight new strings: each is true of its item (C08 rows bell/so, boots/for, test/yet; C09 but then so; C11 and then or; S01 so then and; S09 but then so; S11 so then and; S08 or; P5 so then and), and the item set, twins and keys are as the third review accepted. **Lesson 4 stays correct and ACCEPT.**
+
+**SHOULD**
+- **L4-1 the awkward construction survives in seven places.** S08 how step 3 "Mia and Leo each packed something, so and adds one more thing"; C07 hint 3 and how, and S07 hint 3, how and why: "Both start with a no, so nor can follow", "... say yes, so nor does not fit" (lines 4577 to 4581, 5067 to 5071). The author log's "fixed" refers only to the "fits" form. Say "the joining word nor can follow".
+
+**NOTE**
+- The S08 residue is the only one that reads as a mistake ("so and adds"); the "so nor" lines parse.
+- `how` and `why` use "joining word" and the Teach text uses "conjunction"/"joining word"; consistent.
+
+#### Lesson 5: Collective and abstract nouns (CHANGES REQUIRED)
+
+**MUST**
+- **L5-M1 SK-GUM3-5-S07 (ms) has no "acts as one" premise, so three distractors are defensible.** Prompt: "In which TWO of these do the group and its verb agree?" Options: The staff clean the room after lunch / The band plays at every home game (key) / The choir sing in the gym today / The cast arrive before every show / Our team wins when we help each other (key). Standard usage lets a collective noun take a plural verb when the members act separately, and British usage prefers it: "In British English they are more often plural ... a plural verb is used" and "a singular verb is still correct" (https://learnersdictionary.com/qa/Are-Collective-Nouns-Singular-or-Plural-verb-agreement, fetched 2026-10-27). Staff cleaning, a choir singing and a cast arriving are exactly the "members acting separately" cases. Its twin C07 says "Treat each group as one unit"; the third review made the same ruling for S10 and it was fixed. The premise appears only in hint 1 ("A group that acts as one takes the verb for one"), which the child must open. Fix: add "Treat each group as one unit." to the S07 prompt, as C07 does.
+
+**SHOULD**
+- **L5-S1 C11 and S11 stems still state no premise** ("the verb does not match the collective noun"; "a verb that clashes with the group word"). Third-review SHOULD, not done. The keyed sentences carry a cue ("work together to find food", "stay close together when they eat"), so the key holds, but sentence 9 in each ("We hope the colony stay healthy", "Everyone hopes the flock return tomorrow") has no such cue. Add "Each group acts as one."
+- **L5-S2 C05 and S05 Part B key still echoes Teach point 5 and Watch Me 2.** Key: "You can see him climb, but you cannot touch courage itself." Teach: "You can see a friend, but you cannot touch friendship." Same see/touch template, and the only option phrased as that test. Third-review SHOULD, not done. Rephrase the key or the Teach line.
+- **L5-S3 C07 and S07 hint 3 hands over a mechanical test.** Hint 3: "Eat does not end in -s, so it is the verb for many." Applying it to the other four options leaves exactly the two keys. The third review accepted this ("keep the -s fact for hint 3"); I record it because the ladder audit asks that hint 3 not leave only the key. Soften to "Look at the verb's ending" or drop the example.
+
+**NOTE**
+- L5-N1 alignment drift (section 2): five of 15 core items are agreement items, a different row.
+- L5-N2 C08 and S08 rows are Teach pairs (wolves/pack, fish/school, ants/colony, kittens/litter; flock is in Teach point 1); closed class, unavoidable. Hint 3 gives one row, a scaffold the ladder allows.
+- L5-N3 T5 option "Two horses ran across the field." is verbatim in `sets/L-GRM-01.js` (older Test A item, not B6 text).
+- L5-N4 p4 is at FK 4.5, no headroom; C10 models the error sentence "The whole orchestra were ready" in the draft (the child fixes it, fine).
+- Verified clean: C04, C10, C14, S04, S10, S14 premise present; C06 and S06 unoffered sentences hold no abstract noun the stem asks for (checked every sentence of p2 and p5); C11 and S11 unoffered sentences hold no verb error; C13 and S13 keys (teamwork, strength; wisdom, beauty) are not feelings, the three distractors are.
+
+#### Lesson 6: Reflexive pronouns (ACCEPT)
+
+**SHOULD**
+- **L6-S1 C12 and S12 hint 2 collapses the item by application.** Hint 2: "Read each choice and notice whether it names anyone besides Rosa" (Lila). The other three options all name someone else (friends, teacher, cousin / aunt, neighbor, classmate), so applying hint 2 leaves one choice; hint 3 then states the fourth. This is the wording the third review prescribed, so it is not a regression, but the cause is the distractor set. Fix: make one distractor name nobody ("Rosa finished the project at her own desk") so the hint cannot decide.
+- **L6-S2 SK-GUM3-6-S14 uses "everyone" as the group.** "Have fun, everyone! Please enjoy {yourselves}"; hint 2 and how say "everyone, which is more than one person". In a lesson about agreement, "everyone" takes singular verbs, so a child can defend yourself. Use "kids" or "team" (C14 already uses "kids").
+- **L6-S3 the "ourself" error frame is repeated in seven items** (C05 A, C07 C, C15 B, S01 D, S15 A, P2 C, T4 E: "We V ourself a N"). Plan §4.3 rule 6 says no two sentences may share a frame. Third-review SHOULD, still open.
+- **L6-S4 C05 Part B key and S05 Part B key paraphrase Watch Me 2.** WM2: "The girls are more than one person, so the word must end in -selves." C05 key: "We is more than one person, so the word has to end in -selves." S05 key: "Kids means several, and theirselves is not a real word." Plan §6.7 forbids paraphrasing a Watch Me. Rephrase.
+
+**NOTE**
+- C03 needs the object form me; Teach says "myself in place of I or me" but no step models me versus I, and Watch Me 3 shows I. Hint 2 teaches the method (leave out Luis and), so it is fair.
+- C11 and S11 stems say "myself or himself", but two of the five offered sentences use herself and ourselves (and Gus/Tessa lines), so they are visibly out of range. Harmless; the offered set could use myself or himself in all five.
+- S01 option A "The twins made themselves a tent." is the Teach example frame ("The twins made themselves a snack"); it is a distractor, so it helps elimination by memory, not the key.
+- C09 and S09 are labelled DOK 3 but are a one-step choice of the reflexive; DOK 2 is more honest.
+
+#### Lesson 8: Hyphens at line breaks (CHANGES REQUIRED)
+
+Every keyed and every distractor split in the lesson was checked against two sources: Merriam-Webster headwords (section 5) and the TeX hyphenation table in `pyphen` 0.18.1, `en_US` (`splits.js`, 121 split words in passages, items and tests). **Every correct split is a dictionary syllable break; every incorrect split is one the dictionary rejects.** The defects are in the stated reasons.
+
+**MUST**
+- **L8-M1 SK-GUM3-8-S06 (hot text) hint 3 states a false letter placement.** Hint 3: "Pump- | kin splits between the consonants m and p, which is correct. Check the other four sentences." The break in pump- | kin is between **p and k**; m and p are both on the first line. The sentence is shown to the child (hint 3 is the scaffold level) and misdescribes the very split it vouches for. Pumpkin has three consonants between its vowels (m, p, k), a case the Teach rule (two different consonants) does not cover, so the child cannot rebuild the claim. Merriam-Webster: pump·kin (https://www.merriam-webster.com/dictionary/pumpkin). Fix: "Pump- | kin has a first beat you can say alone, pump. Check the other four sentences," or "splits between p and k".
+
+**SHOULD**
+- **L8-S1 SK-GUM3-8-C07 (wa- | sher) and S01 row 2 (ro- | cket) give a reason that does not separate the wrong option.** C07 how and why: "Washer has the letters sh, which stay together, so it should be wash- | er." But wa- | sher keeps sh together too (wa- | **sh**er). S01 how and why: "Rocket should be rock- | et, because the letters ck stay together." But ro- | cket keeps ck together (ro- | **ck**et). No sentence is false; the reason is the one the third review called not discriminating for ti- | cket and fea- | thers, which was fixed by replacing the option. Here only the syllable (wash-er, rock-et; Teach point 2 "split a word between syllables") separates them, and a child who tests wa- | sher or ro- | cket against "ck and sh stay together" finds them correct. Merriam-Webster: wash·er (https://www.merriam-webster.com/dictionary/washer), rock·et (https://www.merriam-webster.com/dictionary/rocket). Fix: replace wa- | sher with was- | her and ro- | cket with roc- | ket (each really pulls the pair apart), or say "wash is the first beat" in how and why.
+- **L8-S2 SK-GUM3-8-C09 and S09 hint 2 plus hint 3 identify the flawed split.** C09 hint 3 "In Sam's split, the c and the k are on different lines" is now true; with hint 2 ("whether any letters that make one sound were pulled apart") it fixes which student is wrong. In C09 that leaves two live (Only Pia / Neither); in S09 it leaves effectively one, because A, B and D all say Lia is right. Fix: keep the fact for how and let hint 3 ask "Which student kept th (ck) on one line?" without saying it.
+- **L8-S3 C14 (pocket) and S14 (chicken) fit two columns literally.** "Two different consonants" is literally true of the c and k in pocket and chicken; the key is "Letters that stay together" (Teach: ck). Elimination resolves it (each column is used once in the key), but the UI does not force one use per column. Add a column name "Letters that make one sound" and keep "Two different consonants" for words with no digraph, or add a sentence to the prompt: "ck counts as one sound".
+- **L8-S4 C06 and S11 stems are word for word identical** ("Select the TWO sentences that have a word split in the wrong way. The | mark shows where the line ends."). Third-review SHOULD, not done. Reword one.
+- **L8-S5 digraph and compound rules are in Teach only.** C09, C12, S09, S12, C07, S01, S14, C14 (ck, th, sh) and C03, C10, S03, S10 (two smaller words) rest on rules that none of the three Watch Me examples model (they cover two consonants, double letter, one syllable). Add a fourth step or swap Watch Me 2.
+
+**NOTE**
+- L8-N1 Typographic caveat: several correct splits leave a two-letter tail on the next line (pup- | py, hap- | py in Teach, pump- | kin is fine at three). Typesetting guides advise avoiding a tail of fewer than three letters (https://www.c82.net/typography/term/division-of-words); the lesson's own rule is only "never one letter alone". Not an error at grade 3.
+- L8-N2 C05 and S05 key and Part B repeat Watch Me 3's key fact (one-syllable words are never split; "write the whole word on the next line"), with a different word. The plan's "same key fact" rule read strictly would flag it; I treat it as the lesson's one-syllable item pair and leave it.
+- L8-N3 Hints leave exactly two live after hint 3 in P5, C03, C10, C15, S15 (accepted floor). C13 and S13 lose one of five options at hint 3, so four stay live.
+- Verified clean: C09 (buc- | ket) and S09 (mot- | her) now separate the pair as stated; C12 (ticke- | t, t- | icket leave a single letter alone, tic- | ket splits ck); S12 (f- | eathers, feat- | hers, feathe- | rs); P5 (bir- | thday cuts birth); all of C03, C04, C08, C10, C11, C13, C15, S02, S03, S04, S07, S08, S10, S11, S15, T1 to T5 reasons tested against letter placement (every "pulls apart", "cuts a small word", "both on the second line", "leaves one letter alone" is true); hot-text unoffered sentences (p2, p3, p5, p6) hold no extra wrong split.
+
+### 5. Web and dictionary checks (fetched 2026-10-27)
+
+- Merriam-Webster headwords fetched for the risky L8 words: pump·kin https://www.merriam-webster.com/dictionary/pumpkin; wash·er https://www.merriam-webster.com/dictionary/washer; pitch·er https://www.merriam-webster.com/dictionary/pitcher; buck·et https://www.merriam-webster.com/dictionary/bucket; rock·et https://www.merriam-webster.com/dictionary/rocket; moth·er https://www.merriam-webster.com/dictionary/mother; min·now https://www.merriam-webster.com/dictionary/minnow; con·duc·tor https://www.merriam-webster.com/dictionary/conductor; tick·et https://www.merriam-webster.com/dictionary/ticket; feath·er https://www.merriam-webster.com/dictionary/feather; cush·ion https://www.merriam-webster.com/dictionary/cushion; lan·tern https://www.merriam-webster.com/dictionary/lantern; chick·en https://www.merriam-webster.com/dictionary/chicken; pock·et https://www.merriam-webster.com/dictionary/pocket. The other 107 split words agree with the `pyphen` en_US pattern and with the third review's Merriam-Webster list.
+- Word division rules (syllables, compounds at their parts, no single-letter line end, avoid short tails): https://www.c82.net/typography/term/division-of-words. The page does not itself say one-syllable words are never split; that follows from division by syllable.
+- Collective noun agreement (American usually singular, British usually plural, plural when members act separately; singular always safe): https://learnersdictionary.com/qa/Are-Collective-Nouns-Singular-or-Plural-verb-agreement. Basis for MUST L5-M1.
+- "theirselves" nonstandard: https://writingexplained.org/?p=12434 ("widely shunned and rarely crops up in written English"); "myself" in place of I or me is informal and ought not to occur in writing: https://www.dictionary.com/browse/myself (usage note). Both support the L6 keys. Singular `themself` appears only as a wrong distractor with a plural subject (S05), which is correct under any reading.
+- Not re-verified by me: the apostrophe, abstract-noun and hyphen-at-line-end conventions beyond what is above (taken from the third review's sources and the Teach text).
+
+### 6. What I did not do
+
+- No lesson, set or engine edit; no git write; no republish. Server on port 8793 (pid 21404) killed by pid; other servers on the machine were not touched.
+- I did not re-solve Lessons 2, 3, 4 or 7 (not in scope), and I did not rate legacy `T-*` items outside `L-GUM3.js`. Lesson 4 was judged by field-level comparison with the accepted state, not by a new blind solve.
+- The native `<select>` was driven by `select_option`, not a touch (as in the third review).
+- Typed-text and screen-reader behaviour were not tested.
+
+### 7. Files used (scratchpad `b6rev4/`)
+
+`blind.js`, `blind-1/5/6/8.txt`, `answers.json`, `compare.js` (152 of 152), `dump.js`, `keyed-1/5/6/8.txt`, `jac.js`, `twinmeta.js`, `longest.js`, `keychk.js`, `stale.js`, `sentref.js`, `wmdup.js`, `xdup.js`, `xsent.js`, `splits.js` and `splits.json`, `diffobj.js` and `old.js` (ddbc049 copy), `run390.py` and `run390-1/5/6/8.txt`, `shot.py` and `l8-c06-p.png`, `srv.log`.
