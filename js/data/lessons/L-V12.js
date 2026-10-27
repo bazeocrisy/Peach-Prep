@@ -142,7 +142,7 @@ PP.addLesson({
       genre: "Informational text",
       paragraphs: [
         [
-          "In 1828, a man found gold near Dahlonega, a town in the hills of north Georgia.",
+          "In the late 1820s, a man found gold near Dahlonega, a town in the hills of north Georgia.",
           "News spread fast.",
           "Soon thousands of people hurried there to hunt for gold."
         ],
@@ -5511,7 +5511,7 @@ PP.addLesson({
             hints: [
               "Some endings turn a word into a noun that names a feeling or an idea. Look for one in the paragraph.",
               "Read paragraph 2 slowly. Which words name a person or a thing, and which one names something you cannot touch?",
-              "A person and a thing can both be named by a noun. Decide which choices you could touch or point to."
+              "Two of the choices name things you can see. Decide which of the other two names a feeling or an idea."
             ],
             how: [
               "Kindness: kind + ness. The -ness ending makes a noun that names an idea or a feeling.",
@@ -5600,7 +5600,7 @@ PP.addLesson({
               ]
             },
             partB: {
-              prompt: "Which word from the passage has an ending that does the same job as -ment?",
+              prompt: "Look for another noun-making ending. Which word from the passage has one?",
               choices: [
                 {
                   text: "sadness",
@@ -6138,7 +6138,7 @@ PP.addLesson({
       hints: [
         "Some endings turn a word into a noun that names a feeling or an idea. Look for one in the sentence.",
         "Read the sentence slowly. Which words name a person or a thing, and which one names something you cannot touch?",
-        "A person and a thing can both be named by a noun. Decide which choices you could touch or point to."
+        "Two of the choices name things you can see. Decide which of the other two names a feeling or an idea."
       ],
       how: [
         "Weakness: weak + ness. The -ness ending makes a noun that names an idea.",
@@ -6263,28 +6263,28 @@ PP.addLesson({
       ],
       prompt: "This question has two parts. Answer Part A, then Part B.",
       stem: [
-        "Everyone liked the coach's fairness."
+        "Everyone on the team liked the coach's fairness during the long season."
       ],
       partA: {
-        prompt: "How does -ness change the word fair in fairness?",
+        prompt: "Fairness grows out of fair. Pick the result.",
         choices: [
           {
-            text: "It builds a noun for a quality someone has.",
+            text: "A naming word for a trait coaches show.",
             correct: true
           },
           {
-            text: "It builds an adverb for a way of playing."
+            text: "A how-word for a style of playing games."
           },
           {
-            text: "It builds a title for a player."
+            text: "A name tag for each player on the team."
           },
           {
-            text: "It builds a word that compares."
+            text: "A comparing word, such as bigger or taller."
           }
         ]
       },
       partB: {
-        prompt: "Pick another word where an ending does the job -ness does.",
+        prompt: "Pick a different example of this pattern.",
         choices: [
           {
             text: "illness",
@@ -6313,7 +6313,7 @@ PP.addLesson({
         "Ill plus -ness makes illness. Slowly tells how, teacher names a person, and taller compares."
       ],
       misconception: "A common mix-up is thinking every ending makes an adverb. Some endings make nouns.",
-      why: "Part A: It builds a noun for a quality someone has. Fair describes, and -ness turns it into a noun. Part B: illness. Ill plus -ness makes a noun. Slowly tells how, teacher names a person, and taller compares."
+      why: "Part A: A naming word for a trait coaches show. Fair describes, and -ness turns it into a noun. Part B: illness. Ill plus -ness makes a noun. Slowly tells how, teacher names a person, and taller compares."
     },
     {
       id: "SK-V2b-S10",
@@ -6327,11 +6327,11 @@ PP.addLesson({
       like: [
         "SK-V2b-P5"
       ],
-      prompt: "Pick the sentence in which the -er word compares instead of naming someone.",
+      prompt: "Pick the line where the -er word compares instead of naming someone.",
       options: [
-        "The plant grew greener than the weeds.",
+        "Our lawn is greener than the field.",
         "A builder drove past our house.",
-        "My uncle is a singer.",
+        "Her uncle is a singer.",
         "The helper carried the box."
       ],
       answer: [
@@ -6349,7 +6349,7 @@ PP.addLesson({
         "Builder, singer and helper each have an action word, so they name people who do the action."
       ],
       misconception: "A common mix-up is treating every -er word the same. Check the base word first.",
-      why: "The answer is \"The plant grew greener than the weeds.\" Green describes, so greener compares. Builder, singer and helper each name a person who does an action."
+      why: "The answer is \"Our lawn is greener than the field.\" Green describes, so greener compares. Builder, singer and helper each name a person who does an action."
     },
     {
       id: "SK-V2b-S11",
@@ -6445,12 +6445,12 @@ PP.addLesson({
       like: [
         "SK-V2b-C13"
       ],
-      prompt: "Sort each word.",
+      prompt: "Put every word into the right group.",
       cols: [
         "someone who does it",
         "a quality",
         "the way it is done",
-        "no suffix here"
+        "only looks like a suffix"
       ],
       rows: [
         {
@@ -6545,10 +6545,10 @@ PP.addLesson({
       ],
       prompt: "This question has two parts. Answer Part A, then Part B.",
       stem: [
-        "The scout hiked steadily up the hill."
+        "On Saturday morning, the scout hiked steadily up the steep hill behind camp."
       ],
       partA: {
-        prompt: "Pick the word that tells how the scout moved.",
+        prompt: "Which choice gives the manner in which the scout hiked?",
         choices: [
           {
             text: "steadily",
@@ -6566,20 +6566,20 @@ PP.addLesson({
         ]
       },
       partB: {
-        prompt: "What in that word helps you know?",
+        prompt: "Which feature gives it away?",
         choices: [
           {
-            text: "Its -ly ending usually shows how an action is done.",
+            text: "It ends with a part that usually points to the manner of an action.",
             correct: true
           },
           {
-            text: "Its -er ending usually points to a worker."
+            text: "It ends with a part that usually points to a worker who does a job."
           },
           {
-            text: "Its -er ending usually shows a comparison."
+            text: "It ends with a part that usually signals a comparison between two things."
           },
           {
-            text: "Its -s ending usually shows many."
+            text: "It ends with a part that usually signals several of something."
           }
         ]
       },
@@ -6595,7 +6595,7 @@ PP.addLesson({
         "Part B: the -ly ending is the clue that steadily tells how."
       ],
       misconception: "A common mix-up is picking a word with an -er ending. Check the job of each word.",
-      why: "Part A: steadily. Steady plus -ly makes an adverb. Part B: Its -ly ending usually shows how an action is done. Scout names a person, and hill names a place."
+      why: "Part A: steadily. Steady plus -ly makes an adverb. Part B: It ends with a part, -ly, that usually points to the manner of an action. Scout names a person, and hill names a place."
     }
   ],
   addons: {

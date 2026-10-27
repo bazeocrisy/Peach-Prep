@@ -228,3 +228,45 @@ Run commands: `CHROMIUM_PATH=<chrome> AXE_PATH=<axe.min.js> PP_WRITING_TEST_PORT
 
 ### 9.5 Gaps
 Unchanged from 8: check versioning (`testRev`, `attempts[].rev`), the review ledger hash rules, and `--release` are not built (59 lessons with a check and no core remain a warning). Reviews draw on check items that were not blind-solved in this phase (RR-11); a blind solve of the review items would be needed to call them independently verified. A grown-up looking at a pass sees the review note only on the skill page.
+
+## 10. Phase 4: check versioning, review ledger, `--release` (after re-review 2, 06c)
+
+### 10.1 What was built (all additive)
+| Item | Where | Behaviour |
+|---|---|---|
+| Check versioning | `js/skills.js` | `PP_SKILLS.testRev(key, form)` reads the lesson's optional `testRev: { A, B }` (default "1"). `recordTest` stores `rev` on each new `attempts[]` entry. An attempt without `rev` means "1". A pass, or a best score, set on an earlier version shows "on an earlier version of this check" (best score) and a grown-up line "this pass was on an earlier version of the check. The pass stands." Nothing about `mastered`, status or `passedAt` changes. Answers seen on version 1 do not make a version 2 pass "after seeing the answers": an additive `seenRev: {A, B}` (default "1") is written beside `answersSeenAt/By` and `reviewSeenBy`. |
+| Review versions | `js/review.js` | Each `pp.review.v1` result stores `rev`, a short signature of the review's questions (ids, types, points). A result with a different signature says "The questions have changed since." A result with no `rev` (saved before) or a corrupt `rev` says nothing and keeps its score. |
+| Version record | `verification/assessment-versions.json`, `check-content.js` | One entry per check form (`<key>:A`, `<key>:B`): `rev`, `hash` (every word), `mat` (ids, types, points, answer keys). One `inputs` entry for the reviews (accepted list, standard groups, accepted checks' `mat`). Bootstrapped by `--all --record-versions` from the content at that time (110 forms, every rev "1"). `--record-versions` refuses to record a material change that has no new `testRev`. |
+| Review ledger | `docs/expansion-2026-10-22/review-ledger.json`, `check-content.js` | `lessons[key] = { core, similar, test: { A, B } }`, each part `{ rev, hash, reviewers, authors, date, record }`. Written only by `--all --record-review <key> --by "<reviewers>" --record <review file> [--authors ...] [--part ...] [--date ...]`. Refuses a reviewer who is also an author, a missing review file, no reviewer, and use without `--all`. The checker computes SHA-256 hashes of the core items (refs resolved, with their addons), the similar items, and each check form. |
+| `--release` | `check-content.js` | Failures instead of warnings for: a lesson with a check and neither core nor a documented exception; a check form changed materially with the same `testRev`; a stale or missing version record; a part with no ledger entry; a part whose content differs from the ledger hash ("the shipped content is not what was reviewed"). In every mode (also the default) these fail: a malformed `testRev`; an invalid ledger entry (no reviewers, no date, review file not found, a reviewer who is also an author). The default run is unchanged except for the new, short warnings. |
+| Harness | `verification/versioning.py` (new, 37 checks) | N.1-N.21 run check-content on mutated copies; B.1-B.11 run the browser side. |
+
+### 10.2 Questions for the owner (not guessed)
+1. **Who signs the ledger, and when?** Nothing in the repository records the hash of what a past reviewer actually saw (the review files name no content hash), so I did not back-fill reviewers. The ledger is empty. Release mode therefore fails today on 190 parts and 55 lessons with no core. A reviewer, or the lead acting on a reviewer's final verdict, has to run `--record-review` per lesson at acceptance. A back-fill from `STATUS.md` would say that the content shipped today is the content the reviewer saw, which the SK-TC1c-T2 change (10.5) shows is not always true.
+2. **Do the legacy lesson checks (190 parts today, most of them lesson checks) need an independent review before release, or are they grandfathered?** I included checks in the ledger because the brief said "lesson/test content". If they are grandfathered, the owner should say how (for example a `legacy` list), and the rule changes in one place.
+3. **Severity of rule 12.** 01-architecture 2.6 says a changed hash with an unchanged rev "fails". I made it a warning by default and a failure with `--release`, because the brief said the default mode stays unchanged while authors edit. I also split it: a wording-only edit (same ids, points, keys) only warns, even in release; a moved key, changed points or a changed id is the failure. Tell me if wording-only edits should also require a new rev.
+4. **Review and cumulative sets in the version file.** The architecture asks for a hash per review set. Those sets are built in the browser from the accepted lessons, so the file holds one hash of their inputs and each stored result carries a run-time signature. Say if a hash per set, computed in node, is needed; it means running `review.js` in node.
+5. **`--release` as the default gate** is architecture phase 6 and is not done.
+
+### 10.3 Tests and mutation checks
+New suite `verification/versioning.py`: 37 checks (N.1-N.21 on mutated copies of check-content, B.0-B.11 in the browser). I planted seven faults in copies; each is caught by a named check.
+
+| Planted fault | Caught by |
+|---|---|
+| attempts do not store `rev` | B.1, B.2, B.6 |
+| answers seen on an earlier version still count | B.6 |
+| an earlier-version best score is not labelled | B.4 |
+| `--release` severity removed (everything warns) | N.2, N.4, N.5, N.15, N.16, N.17 |
+| material hash ignores answer keys and points | N.1, N.3, N.8, N.9 |
+| ledger hash mismatch not detected | N.16, N.17 |
+| review signature constant | B.8b |
+
+Review fixes: review.py R.18a now names its failure (the earlier crash came from an unguarded dict lookup; with the review's `answersSeen` call removed it now reports R.18a, R.18b and R.18c), review.py says when `AXE_PATH` points at a file that does not exist, and R.6 picks its "not covered yet" standard from the page, because 3.T.T.1.e has since been accepted and now sits in a review. Three sentences in this file that 06c found wrong were corrected (similar coverage, the review.py count, the NUL byte 403).
+
+### 10.4 Compatibility
+Fields added: `rev` (attempts and review results), `seenRev` (progress record). No key, field meaning, or storage key changed; an old record with none of them reads exactly as before (B.3, B.4). A rollback to the previous engine ignores the new fields.
+
+### 10.5 SK-TC1c-T2
+06c found that a distractor of SK-TC1c-T2 (lesson 3.T.C.1.c) changed after the phase-1 snapshot, with the same id, points and key: from "Peepers stop singing when you come near." to "Peepers are so small that they are hard to see." Nothing recorded it. The B4 review of that lesson (`batches/B4-review-C1c.md`, line 169) says the first claim was not verifiable from the source, so this is probably a review fix, but I cannot prove the link. `STATUS.md` now lists 3.T.C.1.c as ACCEPTED (fifth review). With the new tooling this edit is "wording only": same `mat`, so no `testRev` change is required, and the version record would show it as an editorial edit until refreshed. No pass was affected, because the key did not move. Because the lesson is accepted, a reviewer should confirm the final wording and record it in the ledger (10.2, question 1).
+
+### 10.6 Final gates, frozen copy `scratchpad/eng/snap5` (2026-10-24T01:30:31Z, 129 files; `snap5-md5.txt`)

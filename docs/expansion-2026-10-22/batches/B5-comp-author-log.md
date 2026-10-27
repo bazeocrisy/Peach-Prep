@@ -315,3 +315,37 @@ Please blind-solve cold:
 - TF-DIG: C12, S12 (new items), T1 (new item), T4 (new key and decoys), S15 (three new decoys), C09 and S09 (one decoy each), Learn It points 4 and 5.
 
 My own biggest risks: DIG C12 (is "to help listeners who sit far away hear the words better" an easy trap to eliminate?), DIG S12 (other choices too silly?), DIG T1 (is "the last part of the recording" the only reading?), FEAT S05 (is exactly one sentence a better answer?), FEAT T2 (the key is the only choice that mentions flowers).
+
+## 12. Third-review response (D3-M1, D3-M2, F3-M1 and SHOULDs)
+
+Strict key-fact rule applied: no core, Together, similar or test item keys a fact that an SK-* check item keys. Learn It and Watch Me still teach pop-up, link, CC and caption-adds (teaching text is not an item).
+
+### 12.1 Replaced facts and concept greps (all of js/data, outside T-CF.js)
+| Item(s) | Old fact (check item that keys it) | New fact | Concept grep result |
+|---|---|---|---|
+| DIG C04 rows 1, 3 | pop-up, link (SK-TC1b-T8) | plus button makes words bigger; scroll bar slides a long page | "scroll", "zoom", "bigger", "plus button", "enlarge": no item keys them (hits are narrative only) |
+| DIG S03 blank 2 | underlined words hop to another page (T8) | magnifying glass looks up a word (blank 1 decoys now three-line button / Home tab / plus button) | "magnif", "search box": only decoy use in SK-TC1b-S02; T-RA has a "menu" in a web header figure, not a key |
+| DIG S04 rows 2, 3 | link, dotted-line word (T8) | tab keeps a page open; minus button makes words smaller | "tab" (UI), "minus": none (only zipper tab in a story) |
+| DIG P1 | pop-up (T8) | Home button returns to the first page | "home button", "home tab": none |
+| DIG T2 blank 1 and 2, P2 row 2 | picking dot (own C01/S01), CC button (SK-TC1b-T9) | speaker button changes loudness; full-screen button fills the screen | "volume", "mute", "full screen", "speaker button": none keyed |
+| DIG T5 | [pause] before "Last" (own C06/S06) | [birds chirping] helps viewers picture an outdoor farm | "chirp": narrative text only. Nearest check fact is SK-TC1b-C15/S15 (a sound sets mood or time); T5 uses a sound for place |
+| FEAT C07, S07, P3, T4 | caption adds what the photo cannot show (SK-TC1b-T6) | a label names the one part its line points to | "label" outside T-CF: no SK-TC1b or SK-SS1a item keys it; the label-versus-caption idea sits in the T-T2 lesson (other standard) |
+
+Learn It (DIG) now also teaches Home button, scroll bar, plus and minus buttons, tab and full-screen button.
+
+### 12.2 SHOULDs
+- FEAT C11 Part B now reads "Which sentence in the section "The Road Breaks" shows how it builds on the section before it?"
+- FEAT S11 Part B prompt now "goes back to the section before it". p6 gained a fourth sentence in the last section ("Some oysters take longer than others."), used as a decoy in place of "People open the oyster to find it."
+- DIG C11 prompt no longer names the time ("arrive at robotics club on time"); S11 no longer names the place ("go to the wrong door"). Hint 2 now says to compare what each sentence tells. How text adjusted.
+- DIG C13 hint 3 typo fixed ("Saying it only once ...").
+- Not changed: FEAT T2 decoys (F3-S3), C15/S15 map key (F3-S4, other standard), C09 text box row, DIG C12/S12 decoys, D3-S3, D3-S7 and D3-S8 absurd-decoy notes.
+
+### 12.3 Gates and similarity
+- check-content --all: PASS (0 failures, 29 warnings; the version-hash warning ignored as instructed). check-writing: 0 failures. check-instructional-copy: 28 passed.
+- Similarity, all four modes: 0 pairs over 0.21. Highest: S12~C12 0.193, S14~C14 0.185, S07~C07 J=0.182 (bag 0.202), S11~C11 0.174; shared options 0 everywhere.
+- Longest-key cue: FEAT T4 key shortened (now 6 words against 7, 6, 8); no new longest-key groups. Duplicate-option scan: the S03 "Back arrow" overlap with S01 removed.
+- Smoke test: similar buttons work in both lessons (only external font requests fail in the sandbox).
+
+### 12.4 Changed items for the fourth blind review
+DIG: Learn It point 1 and 2, C04, S03, S04, P1, P2, T2, T5, C11, S11, C13 (hint 3).
+FEAT: C07, S07, P3, T4, C11 (Part B prompt), S11 (Part B prompt and decoy), passage p6 (fourth sentence).

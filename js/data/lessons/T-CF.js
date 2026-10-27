@@ -141,7 +141,7 @@ PP.addLesson({
         ["## Layer by Layer"],
         ["To protect itself, the oyster covers the grit with a smooth coating.", "Day after day, it adds another thin layer.", "This shiny coating is called nacre."],
         ["## A Pearl at Last"],
-        ["After a few years, nacre has covered the grit completely.", "The grit has become a pearl.", "People open the oyster to find it."]
+        ["After a few years, nacre has covered the grit completely.", "The grit has become a pearl.", "People open the oyster to find it.", "Some oysters take longer than others."]
       ] },
     /* p7: used only by similar item SK-TFF-S05. */
     { id: "p7", title: "Washing a Bike", genre: "Informational text",
@@ -179,16 +179,16 @@ PP.addLesson({
       clue: "A chapter is a big part of a book. A section is a smaller part inside a chapter. In the list, sections have a bullet.",
       why: "Saving at Home and Why Water Matters are chapters, because each one is marked Chapter in the list. In the Kitchen and In the Bathroom are sections, because they sit inside Chapter 2." },
     { id: "SK-TFF-P3", type: "mc", points: 1, dok: 2, std: ["3.T.SS.1.a", "3.T.C.1.b"], passages: [],
-      stem: ["A photo for a page about saving water shows a girl pouring water from a bucket onto a row of small plants. Nothing else is in the picture."],
-      prompt: "Which caption adds something that the photo cannot show?",
+      stem: ["A drawing of a bike has the words Bike Parts under it. A line runs from the word pedal to the part that a rider pushes with."],
+      prompt: "What kind of words is the word pedal?",
       choices: [
-        { text: "Rainwater from the bucket gives the plants a free drink.", correct: true },
-        { text: "A girl pours water from a bucket onto small plants." },
-        { text: "A bucket and a row of plants stand in the yard." },
-        { text: "A girl bends over a row of green plants." }
+        { text: "a label, which names one part of the bike", correct: true },
+        { text: "a caption, which tells about the whole drawing" },
+        { text: "a heading, which names a section of the text" },
+        { text: "a text box, which holds an extra fact" }
       ],
-      clue: "A caption can tell more than a photo shows. Ask which caption adds a fact a reader could not see.",
-      why: "The answer is \"Rainwater from the bucket gives the plants a free drink.\" A photo cannot show where the water came from. The other captions only tell what anyone can already see: the girl, the bucket and the plants." },
+      clue: "Look at how the word is joined to the drawing. Ask what a word at the end of a line does.",
+      why: "The answer is \"a label, which names one part of the bike.\" The line joins pedal to one part of the bike. The words Bike Parts under the drawing are the caption, a heading names a section, and a text box holds an extra fact." },
     { id: "SK-TFF-P4", type: "mc", points: 1, dok: 2, std: ["3.T.SS.1.a"], passages: ["p4"],
       stem: ["The author wants to add this sentence to the article: \"Water your plants early in the morning so less water dries up in the sun.\""],
       prompt: "In which section does the new sentence fit best?",
@@ -340,26 +340,25 @@ PP.addLesson({
         misconception: "A common mix-up is choosing any place on the right side of the map. Straight east means the place at the same level as the picnic tables.",
         why: "The answer is \"the pond.\" North is at the top, so east is on the right. Straight right of the picnic tables is the pond. The bird tower and the footbridge are also on the right, but they are up and down from the picnic tables. The parking lot is straight south." },
       { id: "SK-TFF-C07", type: "dropdown", points: 1, dok: 2, std: ["3.T.SS.1.a", "3.T.C.1.b"], passages: [],
-        stem: ["Mr. Carter's third-grade class grew bean plants in paper cups. A photo for the class newsletter shows a girl in a blue shirt who is holding a cup with a small bean plant. The plant has two green leaves. Nothing else is in the picture."],
-        prompt: "The writer wants a caption that tells readers something the photo cannot show. Choose the words that best complete the caption.",
-        text: "Caption: {0}",
+        stem: ["Mr. Carter's class studied a bean seed that was cut in half. A drawing in the newsletter shows the seed. A thin line runs from the word embryo to a tiny curved shape inside the seed."],
+        prompt: "Choose the words that best complete the sentence.",
+        text: "The word embryo is a label, so it {0}.",
         slots: [
-          { options: ["A girl holds a bean plant that she grew from a seed in two weeks.", "A girl in a blue shirt holds a cup with a small bean plant in it.", "A small bean plant with two green leaves grows in a paper cup."], answer: 0 }
+          { options: ["names the tiny part that its line points to", "tells about the whole drawing of the seed", "gives a fact that is not in the picture"], answer: 0 }
         ],
-        clue: "A caption can do more than describe a picture. Ask what a reader could learn from it that they cannot see.",
+        clue: "A word at the end of a line is there on purpose. Ask what it is for.",
         hints: [
-          "A caption can do more than describe a picture. Ask what a reader could learn from it that they cannot see.",
-          "Read the description of the photo in the box. Then read each caption and ask which of its details a reader could already see.",
-          "The blue shirt is a detail anyone can see in the photo, so the caption that names it adds nothing new. Check the other two captions the same way."
+          "A word at the end of a line is there on purpose. Ask what it is for.",
+          "Read where the line goes. Then ask whether the word tells about one part or about the whole drawing.",
+          "Words that tell about the whole drawing are a caption, not a label, so rule out that choice. Check the other two."
         ],
         how: [
-          "The photo shows a girl, a blue shirt, a paper cup, a small plant and two green leaves. A reader can see all of that.",
-          "A caption is most helpful when it adds something the picture cannot show, such as how long something took or how it happened.",
-          "The answer is \"A girl holds a bean plant that she grew from a seed in two weeks.\" A photo cannot show how long a plant took to grow.",
-          "The other captions only repeat what anyone can see: the blue shirt, the cup and the two leaves."
+          "A label is a word set at the end of a line.",
+          "The line runs to a tiny curved shape inside the seed, and the word embryo names that shape.",
+          "The answer is \"names the tiny part that its line points to.\" A label names one part, not the whole drawing, and it does not add a fact from outside the picture."
         ],
-        misconception: "A common mix-up is thinking a caption should list every detail of the picture. A caption is better when it adds who, when, where or why.",
-        why: "The answer is \"A girl holds a bean plant that she grew from a seed in two weeks.\" The time it took to grow cannot be seen in a photo. The other captions only describe what the picture shows." },
+        misconception: "A common mix-up is thinking a label tells about the whole picture. That is the job of a caption. A label names one part.",
+        why: "The answer is \"names the tiny part that its line points to.\" A label sits at the end of a line and names the part the line touches. A caption is what tells about the whole drawing." },
       { id: "SK-TFF-C08", type: "mc", points: 1, dok: 3, std: ["3.T.SS.1.a"], passages: ["p2"],
         prompt: "Why did the author put the sections of this brochure in this order?",
         choices: [
@@ -440,7 +439,7 @@ PP.addLesson({
             { text: "Each section goes from the cause of a pothole to the cost of fixing it." },
             { text: "The sections start with the most surprising fact and end with the least surprising." }
           ] },
-        partB: { prompt: "Which sentence best shows how the section \"The Road Breaks\" builds on the section before it?",
+        partB: { prompt: "Which sentence in the section \"The Road Breaks\" shows how it builds on the section before it?",
           choices: [
             { text: "\"At last, cars roll over the weak spot.\"", correct: true },
             { text: "\"A piece of road snaps loose, and a pothole opens.\"" },
@@ -688,26 +687,25 @@ PP.addLesson({
       misconception: "A common mix-up is choosing any place in the top half of the map. Straight north means directly above the bench.",
       why: "The answer is \"the flagpole.\" North is at the top, so straight north of the bench is directly above it. The garden and the swings are higher than the bench but off to the side, and the sandbox is straight east." },
     { id: "SK-TFF-S07", type: "dropdown", points: 1, dok: 2, std: ["3.T.SS.1.a", "3.T.C.1.b"], passages: [], like: ["SK-TFF-C07"],
-      stem: ["An editor is choosing words for a photo on the Arbor Day page of a school bulletin. A boy in a red cap stands beside a young oak. He grips a shovel, and the tree stands in a hole in the grass."],
-      prompt: "Pick the words that tell something new about the scene.",
-      text: "Words under it: {0}",
+      stem: ["Tyler drew a ladybug for a bug page. He wrote the word antenna and drew a short line from it to a thin feeler on the ladybug's head."],
+      prompt: "Pick the words that tell what Tyler's word does.",
+      text: "Tyler's word antenna {0}.",
       slots: [
-        { options: ["On Arbor Day, children plant an oak so the playground will have shade.", "Wearing a red cap, the boy holds a shovel by a young oak.", "Standing in a hole in the grass is a young oak."], answer: 0 }
+        { options: ["tells which part of the bug its line touches", "sums up what the entire page is about", "adds an event the drawing cannot show"], answer: 0 }
       ],
-      clue: "A caption can tell more than the picture shows. Ask which caption has a fact a reader could not see.",
+      clue: "A word joined to a drawing by a line has a job. Ask which part of the drawing it tells about.",
       hints: [
-        "A caption can tell more than the picture shows. Ask which caption has a fact a reader could not see.",
-        "Read the description of the photo. Then read each caption and ask which details are already in the picture.",
-        "The red cap is a detail anyone can see in the photo, so the caption that names it adds nothing new. Check the other two captions the same way."
+        "A word joined to a drawing by a line has a job. Ask which part of the drawing it tells about.",
+        "Read what Tyler drew. Then ask whether his word tells about one spot or about everything.",
+        "A word that sums up a whole page is a title, not a line-joined word, so rule out that choice. Check the other two."
       ],
       how: [
-        "The photo shows a boy, a red cap, a shovel, a small oak tree and a hole in the grass.",
-        "A good caption adds something a reader could not see, such as why something is happening.",
-        "The answer is \"On Arbor Day, children plant an oak so the playground will have shade.\" A photo cannot show the day or the reason for planting.",
-        "The other captions only repeat what the picture already shows."
+        "Tyler joined the word antenna to the ladybug with a short line.",
+        "The line ends at a thin feeler on the head, so the word names that spot.",
+        "The answer is \"tells which part of the bug its line touches.\" It does not sum up the page, and it does not add an event."
       ],
-      misconception: "A common mix-up is choosing the caption with the most details from the picture. A better caption adds something new.",
-      why: "The answer is \"On Arbor Day, children plant an oak so the playground will have shade.\" The day and the reason are not in the photo. The other captions only tell what the picture shows." },
+      misconception: "A common mix-up is thinking a word on a drawing sums up the whole page. A word with a line names one spot.",
+      why: "The answer is \"tells which part of the bug its line touches.\" The line joins the word to the feeler, so the word names that part. It does not sum up the page, and a drawing's words do not add an event." },
     { id: "SK-TFF-S08", type: "mc", points: 1, dok: 3, std: ["3.T.SS.1.a"], passages: [], like: ["SK-TFF-C08"],
       stem: ["A river boat brochure lists four headings, each with a first sentence.", "Leaving the Dock: Climb aboard at the town dock and find a seat.", "Under the Old Bridge: Soon the boat slides under an old stone bridge.", "Past the Tall Trees: Next, you float past big trees whose roots stand in the water.", "Back to Shore: At the end, the boat turns around and returns to the dock."],
       prompt: "What is the reason for the order of these four sections?",
@@ -788,10 +786,10 @@ PP.addLesson({
           { text: "Headings are in ABC order, like words in a dictionary." },
           { text: "Parts go from the saddest part to the happiest part." }
         ] },
-      partB: { prompt: "Which line in \"A Pearl at Last\" points back to something earlier?",
+      partB: { prompt: "Which line in \"A Pearl at Last\" goes back to the section before it?",
         choices: [
           { text: "\"After a few years, nacre has covered the grit completely.\"", correct: true },
-          { text: "\"People open the oyster to find it.\"" },
+          { text: "\"Some oysters take longer than others.\"" },
           { text: "\"Day after day, it adds another thin layer.\"" },
           { text: "\"Sometimes a tiny speck of grit slips inside an oyster's shell.\"" }
         ] },
@@ -926,17 +924,16 @@ PP.addLesson({
       misconception: "A common mix-up is calling every title a chapter. A section is a smaller part inside a chapter." },
     "SK-TFF-P3": {
       hints: [
-        "A caption can tell more than a photo shows. Ask which caption adds a fact a reader could not see.",
-        "Read the description of the photo. Then read each caption and ask which of its details a reader could already see.",
-        "The caption that says a girl pours water from a bucket only repeats what the photo shows, so rule it out. Check the other captions the same way."
+        "Look at how the word is joined to the drawing. Ask what a word at the end of a line does.",
+        "Read where the line goes. Then read what each choice says its words do.",
+        "A heading names a section of the text, and this word sits on the drawing, so rule out the heading. Check the other three."
       ],
       how: [
-        "The photo shows a girl, a bucket, water and small plants.",
-        "A caption is more helpful when it adds something the photo cannot show, such as where the water came from.",
-        "The answer is \"Rainwater from the bucket gives the plants a free drink.\" A photo cannot show where the water came from.",
-        "The other captions only name the girl, the bucket and the plants, which anyone can see."
+        "A line runs from the word pedal to the part a rider pushes with.",
+        "A word at the end of a line names the one part that the line touches.",
+        "The answer is \"a label, which names one part of the bike.\" The words Bike Parts under the drawing are the caption, a heading names a section, and a text box holds an extra fact."
       ],
-      misconception: "A common mix-up is choosing the caption that describes the picture. A better caption adds something new." },
+      misconception: "A common mix-up is calling every word near a picture a caption. A caption tells about the whole picture, but a word with a line is a label." },
     "SK-TFF-P4": {
       hints: [
         "To decide where a new sentence belongs, find the section that is about the same thing.",
@@ -983,16 +980,16 @@ PP.addLesson({
       clue: "Think about what a reader already knows when each section begins. Then picture the sections in a new order.",
       why: "The answer is \"Readers would learn about packing berries before they learn how berries grow.\" The sections now follow the berries from flowers, to picking, to the store. In a new order, readers would meet boxes and trucks before they know where the berries come from. The title and the number of sections would stay the same." },
     { id: "SK-TFF-T4", type: "mc", points: 1, dok: 2, std: ["3.T.SS.1.a", "3.T.C.1.b"], passages: [],
-      stem: ["A photo for the section Flowers in Spring shows two bees sitting on the white, bell-shaped flowers of a blueberry bush."],
-      prompt: "Which caption adds something that the photo cannot show?",
+      stem: ["A page about the moon has a photo of a crater. Under the photo are the words, \"Craters form when space rocks hit the moon.\" Beside the photo, a line runs from the word rim to the raised edge of the crater."],
+      prompt: "What does the word rim tell the reader?",
       choices: [
-        { text: "In early spring, bees visit the flowers to drink sweet nectar.", correct: true },
-        { text: "Two bees sit on white, bell-shaped flowers." },
-        { text: "White flowers cover a blueberry bush, and two bees rest on them." },
-        { text: "A blueberry bush has bell-shaped flowers, and bees sit on two." }
+        { text: "which part its line points to", correct: true },
+        { text: "how craters are made on the moon" },
+        { text: "how large the whole crater is" },
+        { text: "where on the moon the photo was taken" }
       ],
-      clue: "A caption can tell what a picture shows, or it can add when, where or why. Ask which caption tells more than the photo does.",
-      why: "The answer is \"In early spring, bees visit the flowers to drink sweet nectar.\" It adds when the bees come and why, and a photo cannot show those. The other captions only say what can already be seen in the photo." },
+      clue: "Look at how the word rim is joined to the photo. Ask what a word at the end of a line names.",
+      why: "The answer is \"which part its line points to.\" A word at the end of a line names one part, here the raised edge. The words under the photo tell how craters form, and nothing on the page gives the size or the place." },
     { id: "SK-TFF-T5", type: "dropdown", points: 1, dok: 2, std: ["3.T.SS.1.a"], passages: [],
       stem: ["Index of Fruit From the Farm", "apples: 3, 4", "blueberries: 9, 12", "harvest: 4, 12, 18", "peaches: 17, 18"],
       prompt: "Eli is looking for a single page that talks about blueberries and also the harvest. Which page works?",
@@ -1011,8 +1008,8 @@ PP.addLesson({
   teach: {
     big: "A screen, a recording and a speaker each have their own tools for sharing information. When you know what each tool does, you can find a fact fast, and you can tell why the author or speaker chose it.",
     points: [
-      "A web page or an app has tools you tap or click. A back arrow takes you to the page you just left. A menu button, often three short lines, opens a list of pages. A search box, often shown with a magnifying glass, finds a word or a topic. A link, often underlined words, takes you to another page. A pop-up is a small box that opens on top of the page, often to explain a word with a dotted line under it. You do not leave the page.",
-      "A video or audio player has controls. The play button starts or stops the recording. The progress bar shows how far along you are, and a marker on the bar can jump you to a part. A button such as 1x changes the speed, and a speaker button changes the volume. Captions, shown by the CC button, write out the words and the important sounds. A transcript is the whole recording written out, so you can read it.",
+      "A web page or an app has tools you tap or click. A back arrow takes you to the page you just left. A menu button, often three short lines, opens a list of pages. A search box, often shown with a magnifying glass, finds a word or a topic. A Home button, often a small house, returns to the first page. A scroll bar slides a long page up and down. A plus button makes words bigger, and a minus button makes them smaller. A tab keeps one page open while you look at another. A link, often underlined words, takes you to another page. A pop-up is a small box that opens on top of the page, often to explain a word with a dotted line under it. You do not leave the page.",
+      "A video or audio player has controls. The play button starts or stops the recording. The progress bar shows how far along you are, and a marker on the bar can jump you to a part. A button such as 1x changes the speed, and a speaker button changes the volume. A full-screen button makes the video fill the screen. Captions, shown by the CC button, write out the words and the important sounds. A transcript is the whole recording written out, so you can read it.",
       "A script is the writing for a recording. A name with a colon, such as GUIDE: or HOST:, shows who is talking. Words in [brackets] name a sound or a pause to put in. A sound such as a bell can show that a new part is starting, and a [pause] leaves a quiet moment.",
       "A speaker has a voice instead of headings. Listeners cannot look back, so a good speaker helps them. The speaker talks slowly and clearly, pauses before an important part, and says a key fact twice. The speaker also fits the voice to the message, so good news sounds happy and a warning sounds serious. Words such as first, next and last tell listeners where they are. A speaker can also ask a question and then wait, so that listeners start to think. The voice can build a feeling too: a slow, quiet voice can build suspense, and a fast, loud voice can build excitement.",
       "Each way of sharing is best at something, so pick the one that fits what you need. Ask what you need to do, and what your eyes, ears and hands can do while you do it."
@@ -1127,28 +1124,28 @@ PP.addLesson({
   ],
   practice: [
     { id: "SK-TFD-P1", type: "mc", points: 1, dok: 2, std: ["3.T.C.1.b"], passages: [],
-      stem: ["Eli is reading a story on a tablet. The word harbor has a dotted line under it. When he taps the word, a small box opens on top of the page. The box says, \"harbor: a safe place where ships can stay.\""],
-      prompt: "What is the small box, and what does it do?",
+      stem: ["Eli is reading a story about a farm on a tablet. He has tapped through many pages. At the top of the screen is a small picture of a house. When he taps the picture, the first page of the story appears."],
+      prompt: "What is the small picture of a house, and what does it do?",
       choices: [
-        { text: "It is a pop-up that explains a word without leaving the page.", correct: true },
-        { text: "It is a link that takes the reader to a new page about harbors." },
+        { text: "It is a Home button that returns to the first page.", correct: true },
+        { text: "It is a search box that finds a page by a typed word." },
         { text: "It is a menu that lists all the pages in the story." },
-        { text: "It is a caption that tells about a picture of a ship." }
+        { text: "It is a caption that tells about a picture of a barn." }
       ],
-      clue: "Ask what happened to the page when Eli tapped the word. Did he stay on the same page, or go to a new one?",
-      why: "The answer is \"It is a pop-up that explains a word without leaving the page.\" The box opened on top of the page and told what harbor means. A link opens a new page, a menu lists pages, and a caption goes with a picture." },
+      clue: "Ask what happened when Eli tapped the picture. Where did he end up?",
+      why: "The answer is \"It is a Home button that returns to the first page.\" The house picture took Eli back to the first page of the story. A search box finds a word, a menu lists pages, and a caption goes with a picture." },
     { id: "SK-TFD-P2", type: "match", points: 2, dok: 1, std: ["3.T.C.1.b"], passages: [],
       stem: ["A video player has four parts at the bottom of the screen."],
       prompt: "Match each part to the job it does.",
-      cols: ["starts or stops the video", "writes out the words and sounds", "changes how fast the video plays", "shows how far along the video is"],
+      cols: ["starts or stops the video", "changes how loud the sound is", "changes how fast the video plays", "shows how far along the video is"],
       rows: [
         { text: "the play button", answer: 0 },
-        { text: "the button marked CC", answer: 1 },
+        { text: "the speaker button", answer: 1 },
         { text: "the button marked 1x", answer: 2 },
         { text: "the progress bar", answer: 3 }
       ],
       clue: "Think about what each part is named. A name often tells the job.",
-      why: "The play button starts or stops the video. The CC button writes out the words and sounds as captions. The 1x button changes the speed. The progress bar shows how far along the video is." },
+      why: "The play button starts or stops the video. The speaker button changes how loud the sound is. The 1x button changes the speed. The progress bar shows how far along the video is." },
     { id: "SK-TFD-P3", type: "mc", points: 1, dok: 2, std: ["3.T.C.1.b"], passages: [],
       stem: ["A class listens to a recorded talk about bees. Amir missed one sentence. He wants to read the exact words the speaker said."],
       prompt: "Which feature should Amir use?",
@@ -1251,27 +1248,27 @@ PP.addLesson({
       { id: "SK-TFD-C04", type: "match", points: 2, dok: 2, std: ["3.T.C.1.b"], passages: [],
         stem: ["Kofi is reading a digital book about the ocean on a tablet. Each job below matches one feature on the screen."],
         prompt: "Match each job to the feature that does it.",
-        cols: ["a link", "a pop-up", "a search box", "a menu"],
+        cols: ["a scroll bar", "a plus button", "a search box", "a menu"],
         rows: [
-          { text: "Kofi wants a quick note about the word reef without leaving the page.", answer: 1 },
+          { text: "Kofi wants the small words on the page to look bigger.", answer: 1 },
           { text: "Kofi wants to see a list of all the chapters in the book.", answer: 3 },
-          { text: "Kofi wants to jump to the page about whales that the text mentions.", answer: 0 },
+          { text: "Kofi wants to slide down to the end of a long chapter.", answer: 0 },
           { text: "Kofi wants to find every page that uses the word tide.", answer: 2 }
         ],
-        clue: "Think about what each feature does when you tap it. One opens a note, one opens a list, one opens another page and one finds a word.",
+        clue: "Think about what each feature does when you tap it. One makes words bigger, one opens a list, one slides the page and one finds a word.",
         hints: [
-          "Think about what each feature does when you tap it. One opens a note, one opens a list, one opens another page and one finds a word.",
-          "Read each job and look for the key words, such as without leaving the page, a list, jump and find every page.",
-          "A note that stays on the same page is a pop-up, so match the first row yourself. Then work out the other three rows."
+          "Think about what each feature does when you tap it. One makes words bigger, one opens a list, one slides the page and one finds a word.",
+          "Read each job and look for the key words, such as bigger, a list, slide down and find every page.",
+          "Words that look bigger come from the plus button, so match the first row yourself. Then work out the other three rows."
         ],
         how: [
-          "A quick note that does not leave the page is a pop-up.",
-          "A list of all the chapters is a menu. A page that the text mentions, which you jump to, is a link.",
+          "Words that look bigger come from the plus button.",
+          "A list of all the chapters is a menu. Sliding down to the end of a long chapter is the job of a scroll bar.",
           "Finding every page that uses a word needs a search box, where you type the word.",
-          "So the matches are: note, pop-up; chapters, menu; page about whales, link; word tide, search box."
+          "So the matches are: bigger words, plus button; chapters, menu; end of the chapter, scroll bar; word tide, search box."
         ],
-        misconception: "A common mix-up is matching a link to every job, since it opens something. A link takes you to a new page, but a pop-up stays on the same page.",
-        why: "The note without leaving the page is a pop-up. The list of chapters is a menu. The jump to the page about whales is a link. Finding every page with the word tide needs a search box." },
+        misconception: "A common mix-up is matching a menu to every job, since it opens a list. A menu lists pages, but a scroll bar only slides the page you are on.",
+        why: "The bigger words come from the plus button. The list of chapters is a menu. Sliding down to the end of a long chapter is the job of a scroll bar. Finding every page with the word tide needs a search box." },
       { id: "SK-TFD-C05", type: "mc", points: 1, dok: 2, std: ["3.T.C.1.b"], passages: [],
         stem: ["Kofi wants to learn how to fold a paper fan. He can choose a video of two hands folding the paper, a recording of a voice that tells the steps, or a page of words with no pictures."],
         prompt: "Which choice will help him most, and why?",
@@ -1418,17 +1415,17 @@ PP.addLesson({
     ] },
     { title: "Set 3", items: [
       { id: "SK-TFD-C11", type: "hottext", points: 1, dok: 2, std: ["3.T.C.1.b"], passages: ["p2"],
-        prompt: "Jayden wants listeners to remember what time robotics club starts. Which sentence should he say a second time? Choose the sentence in the passage.",
+        prompt: "Jayden wants every listener to arrive at robotics club on time. Which sentence should he say a second time? Choose the sentence in the passage.",
         targets: ["p2:2:1", "p2:2:2", "p2:2:3", "p2:3:1", "p2:3:2", "p2:6:1"],
         answer: ["p2:2:2"], pick: 1,
         clue: "Listeners cannot look back at the page. Ask which fact they would be sorry to miss.",
         hints: [
           "Listeners cannot look back at the page. Ask which fact they would be sorry to miss.",
-          "Read the paragraph about robotics club. Ask which sentence tells the time.",
+          "Read the paragraph about robotics club. Compare what each of its three sentences tells.",
           "The sentence that begins \"Next, the lost and found box is full\" is about a different notice, so rule it out. Check the other sentences you can choose for the time."
         ],
         how: [
-          "Jayden wants listeners to remember the time, and listeners cannot look back at the page.",
+          "Arriving on time depends on knowing when the club starts, and listeners cannot look back at the page.",
           "The robotics club paragraph has three sentences. Only one tells the time.",
           "The answer is \"It starts at three o'clock.\" Saying it twice helps listeners remember when to come.",
           "The other sentences tell where robotics club meets, who can come, or other notices. They do not tell the time."
@@ -1470,7 +1467,7 @@ PP.addLesson({
         hints: [
           "Listeners must hear every word the first time. Ask what the mumble and the fast words did to the message.",
           "Reread the two problems in the stem. Each tip should fix one of them.",
-          "Saying the room only once would not fix the problem that it was too fast, so it is not the answer for the second blank. Decide the rest yourself."
+          "Saying it only once would not fix the problem that it was too fast, so it is not the answer for the second blank. Decide the rest yourself."
         ],
         how: [
           "The first problem is that his voice drops at the end of each sentence, so listeners miss the last words.",
@@ -1581,47 +1578,47 @@ PP.addLesson({
     { id: "SK-TFD-S03", type: "dropdown", points: 2, dok: 2, std: ["3.T.C.1.b"], passages: [], like: ["SK-TFD-C03"],
       stem: ["Mr. Reyes tried to explain a library site to first-graders, but he swapped the jobs of a pair of tools. He said a Home tab opens a list of every page and a magnifying glass takes you to another page."],
       prompt: "Choose the words that correct Mr. Reyes' explanation.",
-      text: "A list of every page opens from {0}. Underlined words are the way to {1}.",
+      text: "A list of every page opens from {0}. A magnifying glass is the way to {1}.",
       slots: [
-        { options: ["the three-line button", "the Home tab", "the magnifying glass"], answer: 0 },
-        { options: ["hop to another page", "look up a word", "jump back to the start"], answer: 0 }
+        { options: ["the three-line button", "the Home tab", "the plus button"], answer: 0 },
+        { options: ["look up a word", "hop to another page", "jump back to the start"], answer: 0 }
       ],
-      clue: "Ask what each tool does. One opens a list, one goes back, one finds words, and one takes you to another page.",
+      clue: "Ask what each tool does. One opens a list, one returns to the start, one goes back, and one finds words.",
       hints: [
-        "Ask what each tool does. One opens a list, one goes back, one finds words, and one takes you to another page.",
+        "Ask what each tool does. One opens a list, one returns to the start, one goes back, and one finds words.",
         "Read the two things Mr. Reyes said. Then match each job with the tool made for it.",
         "The Home tab returns to the start of the site, so it does not belong in the first blank. Decide the rest yourself."
       ],
       how: [
         "A button made of three short lines is a menu, and a menu opens a list of pages.",
-        "Underlined words are a link, and a link takes you to another page.",
-        "The answers are the three-line button and hop to another page. The Home tab returns to the start of the site, and the magnifying glass is for searching."
+        "A magnifying glass means a search, and a search looks up a word.",
+        "The answers are the three-line button and look up a word. The Home tab returns to the start of the site, and the plus button makes words bigger."
       ],
-      misconception: "A common mix-up is thinking the magnifying glass takes you to a page. It searches for a word, and a link is what takes you to another page.",
-      why: "The answers are the three-line button and hop to another page. The three-line button is a menu that opens a list of pages. Underlined words are a link, and a link takes you to another page." },
+      misconception: "A common mix-up is thinking the magnifying glass takes you to a page. It searches for a word you type.",
+      why: "The answers are the three-line button and look up a word. The three-line button is a menu that opens a list of pages. A magnifying glass shows a search, which looks up a word." },
     { id: "SK-TFD-S04", type: "match", points: 2, dok: 2, std: ["3.T.C.1.b"], passages: [], like: ["SK-TFD-C04"],
       stem: ["Tyrell has a kids' moon story open on his school computer. Several parts of the screen can be clicked."],
       prompt: "Connect each wish to the part of the screen that grants it.",
-      cols: ["underlined words", "a dotted-line word", "a magnifying glass", "a three-line button"],
+      cols: ["a minus button", "a tab", "a magnifying glass", "a three-line button"],
       rows: [
         { text: "Show all pages that mention crater.", answer: 2 },
-        { text: "Open a different page about the sun.", answer: 0 },
-        { text: "Explain what lunar means in a short note.", answer: 1 },
+        { text: "Keep this story open while looking at a different page.", answer: 1 },
+        { text: "Make the words smaller so that more fit on the screen.", answer: 0 },
         { text: "Display all the pages in one list.", answer: 3 }
       ],
-      clue: "Think about what happens on a click. One opens a page, one opens a note, one finds a word and one opens a list.",
+      clue: "Think about what happens on a click. One shrinks words, one keeps a page open, one finds a word and one opens a list.",
       hints: [
-        "Think about what happens on a click. One opens a page, one opens a note, one finds a word and one opens a list.",
-        "Read each wish and look for key words such as all pages that mention, a different page, a short note and one list.",
-        "A short note about a word is the job of the dotted-line word, so match the third row yourself. Then work out the other three."
+        "Think about what happens on a click. One shrinks words, one keeps a page open, one finds a word and one opens a list.",
+        "Read each wish and look for key words such as all pages that mention, keep this story open, smaller and one list.",
+        "Making words smaller is the job of the minus button, so match the third row yourself. Then work out the other three."
       ],
       how: [
-        "A short note about a word opens from a word with a dotted line.",
-        "Underlined words are a link to another page. A magnifying glass means a search, which finds a word. A button with three lines opens a list of pages.",
-        "So the matches are: crater, magnifying glass; page about the sun, underlined words; lunar, dotted-line word; list of pages, three-line button."
+        "Words that get smaller come from the minus button.",
+        "A tab keeps the story open while you look at another page. A magnifying glass means a search, which finds a word. A button with three lines opens a list of pages.",
+        "So the matches are: crater, magnifying glass; keep story open, tab; smaller words, minus button; list of pages, three-line button."
       ],
-      misconception: "A common mix-up is matching the dotted-line word with a new page. A dotted-line word opens a note on the same page.",
-      why: "Finding all pages that mention crater needs the magnifying glass. The page about the sun is a link, shown by underlined words. The note about lunar comes from the dotted-line word. The list of pages is the three-line button." },
+      misconception: "A common mix-up is matching the tab with the three-line button, since both hold pages. A tab keeps one page open, but the three-line button shows a list.",
+      why: "Finding all pages that mention crater needs the magnifying glass. Keeping the story open while looking at a different page is the job of a tab. Smaller words come from the minus button. The list of pages is the three-line button." },
     { id: "SK-TFD-S05", type: "mc", points: 1, dok: 2, std: ["3.T.C.1.b"], passages: [], like: ["SK-TFD-C05"],
       stem: ["Ravi's family is driving to the beach, and the ride will last about an hour. Screens and books make him queasy in a moving car. He is curious about the northern lights, so his teacher gave him three versions of one talk: a video, a recording and a printed handout."],
       prompt: "What should Ravi use, and what is the reason?",
@@ -1766,17 +1763,17 @@ PP.addLesson({
       misconception: "A common mix-up is choosing a feature that belongs to the poster. Studying at any time is what printed words do best.",
       why: "The answer is \"It reaches everyone at once, even children who are not near the door.\" The speakers are in every room, but the poster hangs in one place. Studying at leisure is something the poster allows, and a voice shows no map." },
     { id: "SK-TFD-S11", type: "hottext", points: 1, dok: 2, std: ["3.T.C.1.b"], passages: ["p5"], like: ["SK-TFD-C11"],
-      prompt: "Marcus hopes everyone knows where rehearsal meets. Which line ought he to say twice?",
+      prompt: "Marcus wants no one to go to the wrong door for rehearsal. Which line ought he to say twice?",
       targets: ["p5:2:1", "p5:2:2", "p5:2:3", "p5:3:1", "p5:3:2", "p5:6:1"],
       answer: ["p5:2:2"], pick: 1,
       clue: "Listeners cannot read the announcement again. A speaker says the fact that people must remember a second time.",
       hints: [
         "Listeners cannot read the announcement again. A speaker says the fact that people must remember a second time.",
-        "Read the paragraph about drama club. Ask which sentence tells where to go.",
+        "Read the paragraph about drama club. Compare what each of its four sentences tells.",
         "The sentence \"You do not need to carry anything\" tells what to carry, not where to meet, so rule it out. Check the other sentences you can choose for the place."
       ],
       how: [
-        "Marcus wants listeners to remember the place, and listeners cannot look back at the page.",
+        "Going to the right door depends on knowing the place, and listeners cannot look back at the page.",
         "The drama club paragraph has four sentences. Only one tells where to meet.",
         "The answer is \"Meet at the stage door at four sharp.\" Saying it twice helps listeners remember the place.",
         "The other sentences tell that drama club will rehearse, what to carry, or other news."
@@ -1879,16 +1876,16 @@ PP.addLesson({
   addons: {
     "SK-TFD-P1": {
       hints: [
-        "Ask what happened to the page when Eli tapped the word. Did he stay on the same page, or go to a new one?",
-        "Read the part that says the box opened on top of the page. Then read what the box says.",
-        "A menu lists many pages, but this box holds only one note about one word, so rule out the menu. Check the other three."
+        "Ask what happened when Eli tapped the picture. Where did he end up?",
+        "Read the part that says the first page appeared. Then think about which tool brings a reader back to the start.",
+        "A menu shows a list instead of one page, so rule out the menu. Check the other three."
       ],
       how: [
-        "Eli tapped a word with a dotted line, and a small box opened on top of the page.",
-        "The box told what the word harbor means, and Eli stayed on the same page.",
-        "The answer is \"It is a pop-up that explains a word without leaving the page.\" A link opens a new page, a menu lists pages, and a caption goes with a picture."
+        "Eli tapped a picture of a house, and the first page of the story appeared.",
+        "A Home button, often shown as a house, takes a reader back to the start.",
+        "The answer is \"It is a Home button that returns to the first page.\" A search box finds a word, a menu lists pages, and a caption goes with a picture."
       ],
-      misconception: "A common mix-up is calling every tapped word a link. A link takes you to a new page, but a pop-up stays on the page you are reading." },
+      misconception: "A common mix-up is calling every button at the top a menu. A menu shows a list, but a Home button goes straight to the first page." },
     "SK-TFD-P2": {
       hints: [
         "Think about what each part is named. A name often tells the job.",
@@ -1897,7 +1894,7 @@ PP.addLesson({
       ],
       how: [
         "The play button starts or stops the video.",
-        "CC stands for captions, so the CC button writes out the words and sounds.",
+        "The speaker button changes the volume, so it changes how loud the sound is.",
         "The 1x button changes the speed, and the progress bar shows how far along the video is."
       ],
       misconception: "A common mix-up is thinking the progress bar changes the speed. The bar shows where you are, and the 1x button changes how fast the video plays." },
@@ -1940,15 +1937,15 @@ PP.addLesson({
       clue: "The progress bar shows where you are in a recording. Ask what moving the dot along the bar does.",
       why: "The answer is \"the last part of the recording.\" The dot on a progress bar shows the spot being played, and dragging it near the end jumps to the last part. It does not start over, change the speed or write out the words." },
     { id: "SK-TFD-T2", type: "dropdown", points: 2, dok: 2, std: ["3.T.C.1.b"], passages: [],
-      stem: ["A video page about picking apples has a play button, a CC button and a volume button. A line under the video has three dots labeled Choosing, Picking and Storing."],
+      stem: ["A video page about picking apples has a play button, a CC button, a speaker button and a full-screen button."],
       prompt: "Choose the words that best complete the sentences.",
-      text: "To jump to the part about picking, Eli taps the {0}. To read the narrator's words while the video plays, he taps the {1}.",
+      text: "To make the narrator's voice louder, Eli taps the {0}. To make the video fill his whole screen, he taps the {1}.",
       slots: [
-        { options: ["Picking dot", "CC button", "volume button"], answer: 0 },
-        { options: ["CC button", "Storing dot", "play button"], answer: 0 }
+        { options: ["speaker button", "play button", "CC button"], answer: 0 },
+        { options: ["full-screen button", "play button", "CC button"], answer: 0 }
       ],
-      clue: "A dot on the line under a video jumps to a part. Ask which button shows the narrator's words.",
-      why: "The answers are Picking dot and CC button. The Picking dot jumps to the part about picking. The CC button shows captions, which write out the narrator's words." },
+      clue: "A button's name often tells its job. Ask which button changes the sound and which changes the size of the picture.",
+      why: "The answers are speaker button and full-screen button. The speaker button changes how loud the sound is. The full-screen button makes the video fill the screen." },
     { id: "SK-TFD-T3", type: "order", points: 2, dok: 2, std: ["3.T.C.1.b"], passages: ["p3"],
       prompt: "Put the steps in the order the narrator tells them.",
       steps: [
@@ -1971,14 +1968,14 @@ PP.addLesson({
       clue: "A listener hears a talk only once. Ask what a speaker can do so that an important fact stays with the listener.",
       why: "The answer is \"Listeners cannot look back, so a second time gives them another chance to catch it.\" A speaker repeats an important fact because listeners cannot go back over it. Resting the voice and deciding whether to agree are not reasons to repeat a safety rule, and Noah says it slowly, not in a whisper." },
     { id: "SK-TFD-T5", type: "mc", points: 1, dok: 2, std: ["3.T.C.1.b"], passages: ["p3"],
-      prompt: "Why does the script put a [pause] before the narrator says, \"Last, wash the berries at home\"?",
+      prompt: "The script begins with [birds chirping] before anyone speaks. What does this sound help viewers picture?",
       choices: [
-        { text: "to give viewers a moment to place the berry in the basket", correct: true },
-        { text: "to show that the narrator has finished the whole video" },
-        { text: "to let the sound of the birds play one more time" },
-        { text: "to tell viewers to skip the part about washing" }
+        { text: "an outdoor farm on a sunny day", correct: true },
+        { text: "a classroom where a teacher is talking" },
+        { text: "a kitchen where the berries are washed" },
+        { text: "a store with shelves full of fruit" }
       ],
-      clue: "A pause leaves a quiet stretch. Look at the narrator's line just before it, and ask what viewers might be doing.",
-      why: "The answer is \"to give viewers a moment to place the berry in the basket.\" Just before the pause, the narrator says to place the berry in the basket. The video goes on after the pause, so it is not finished." }
+      clue: "Birds make this sound in a certain kind of place. Then read what the narrator says first.",
+      why: "The answer is \"an outdoor farm on a sunny day.\" Birds chirp outside, and the narrator welcomes viewers to a farm and says the sun is hot. A classroom, a kitchen and a store are indoors." }
   ]
 });
