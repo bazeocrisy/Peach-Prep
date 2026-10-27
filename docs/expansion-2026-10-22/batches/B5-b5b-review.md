@@ -575,3 +575,108 @@ Blind solve 38 of 39 (S04 Part B, which I judge a defensible-alternative SHOULD)
 - **3.a S04 should be fixed first.** It is a data-entry error, not a content problem; the item reads well.
 - **Not reviewed by me:** the pre-existing Together and test items in 2.c, 3.a and 3.b were solved and agree, but I did not re-review their hints.
 - **Re-review after fixes.** 2.a: S07, S09, C09 (HOW, WHY). 3.a: S04 (key), longest-key (re-run my counter: `b5brev3/lk2.js`), plus C09 and S10 hint 3 if taken. 2.c and 3.b need no further review if the SHOULDs are skipped.
+
+## Fourth review (light, fifth-pass items)
+
+Scope: the items listed under "Fifth pass" in B5-b5b-author-log.md, in the live files (HEAD 1139017 against 9e713b5). Scripts and output are in `scratchpad/b5brev4/` (`blind.js`, `my-answers.json`, `keys.js`, `kd.js`, `lk.js`, `sim.js`). No lesson file, git state or server was touched.
+
+### Verdicts
+
+| Lesson | Verdict |
+|---|---|
+| 3.L.V.2.a (C09, S07, S09) | **ACCEPT** |
+| 3.L.V.3.a | **ACCEPT**, with four SHOULDs outstanding and one process finding (below). Both earlier MUSTs are fixed. |
+| 3.L.V.2.c (text-only) | **ACCEPT** |
+| 3.L.V.3.b (text-only) | **ACCEPT** |
+
+### 1. Blind solve (new seed, answers saved before any key was extracted)
+
+Node vm sandbox, seed 91827364, choices shuffled, `correct/why/hints/how/clue/like/sample` stripped. I printed the 25 touched items (2.a C09, S07, S09; 2.c C02; 3.a C02, C04, P3, C05, C06, C09, C10, C11, P7, S01, S02, S04, S09, S10, S11, S14; 3.b C01, C02, C03, S01, S02) with passages and figure alt text. **Agreement 25 of 25** (ebsr parts, dropdown slots and choose-two compared separately; all matched). Two disclosures about blindness: (1) I had read the tail of the first-review section of this file earlier in the session, so I knew S04 had been a key error and which items the earlier review wanted changed; (2) while printing the hottext options for 3.a C11 and 3.b C02 I printed C11's four options in authored order (key not marked). Neither affected a solve: the 3.a S04 answer I gave came from reading the stem. The keys were never printed before `my-answers.json` was written.
+
+### 2. Keys against the accepted state (9e713b5)
+
+`kd.js` compares every key (mc/ms by text, dropdown slot answers by text, ebsr parts, hottext targets, and the core order) across all four lessons, core, Together, similar, Form A and Form B, 287 items. **One difference: 3.a S04** ("like the old mill" is now "like"), which is the intended fix. 2.a, 2.c and 3.b keys are unchanged. The dropdown "answer index" changes in 3.a C09 and S10 (slot moved to position 2) keep the same key text.
+
+### 3. Findings
+
+**Process finding (read first).** The author log says four 3.a edits were made that are **not in the committed files** (`git diff 9e713b5 HEAD` and a grep both confirm it):
+
+| Log claim | What the file has |
+|---|---|
+| C04 "row after row" -> "the long threads" | Option 5 is still "row after row" (paragraph 4, so location still removes it; first-review SHOULD 3). |
+| C11 key now "A swift current ..." | Key is still "A strong current pulled the raft downstream." The story sentence also says "strong" (first-review SHOULD 7). |
+| C02, S02, C06 hint 1 no longer names the clue type | C02/S02 hint 1 still says "look for the sentence that gives them [examples]"; C06 hint 1 still says "look for a sentence about how things were before summer". |
+
+Either apply these four one-line edits or correct the log. None is a MUST on its own (each was a SHOULD in the first review), so I have not held the verdict on them.
+
+| # | Level | Lesson / item | Finding | Fix |
+|---|---|---|---|---|
+| 1 | SHOULD | 3.a C04 | Prompt says "paragraphs 2 and 3" and "row after row" (paragraph 4) is still an option; the child removes it by location, not by reasoning. Claimed fixed, not in file. | Replace with "the long threads" (paragraph 2) or "each thread"-type phrase from paragraph 2 or 3. |
+| 2 | SHOULD | 3.a C11 | Key repeats "strong" from the story sentence, so the match can be made by token. After hint 3 (two "happening now" options removed) the child has key and "electric current"; "strong current" wins on the shared word. Claimed fixed, not in file. | "A swift current pulled the raft downstream." (or move "strong" into a distractor). |
+| 3 | SHOULD | 3.a C02, S02 (Part B hint 1), C06 (hint 1) | Hint 1 names the clue type or the key's property ("the sentence that gives [examples]"; "a sentence about how things were before summer"). In C06 Part B this leaves the key and "The tundra is a cold land ..." live (2). Hint 3 restores three live choices, so not a MUST. Claimed fixed, not in file. | "For Part B, look for the sentence that helps you most, not only one that mentions the word." |
+| 4 | SHOULD | 3.a S10 | (a) The key is still the unique longest option (35 characters against 29 and 13), even though the log lists S10 as rebalanced; moving the slot to position 2 does not change length. (b) The new title "Squirrel Search Spots" still paraphrases the key ("search" for "look around"), and nothing in the table says "to eat", so the title does all the work. C09's "Arctic Fox Meals" is acceptable: a child must infer that things the fox eats are prey, and the other two options cannot be read from any table row. | Lengthen "to bury a nut" to about 30 characters ("to bury a nut under a tree") and shorten the key slightly. Optionally add a third column "Finds" (acorns, roots, seeds) or title the table "Squirrel Fall, Winter and Spring Chart". |
+| 5 | NOTE | 3.a C05 hint 3 | "Some choices talk about trees or water or animals" names all three distractor topics; hint 3 is neutral ("check the first paragraph") and all four choices stay live, but the key is the one topic not named. Unchanged from accepted state. | Optional: "Check each choice against what the story says about the land." |
+| 6 | NOTE | 3.a S09, S14 hint 3 | "Check which ones can be sat on" (S09) leaves the key and the pole; "could stand beside a coconut" (S14) leaves the key and "hand". Two live each; allowed. | None. |
+| 7 | NOTE | 2.a S09 | "history" = his + tory leaves the word "his" if a child covers -tory, and "assembly" = as + sembly is the same class (accepted in rounds 1 to 3). Neither is a plausible suffix, so the intended answers are the only ones that pass the lesson's own cover test (see section 4). | None. |
+| 8 | NOTE | 3.b C01, S01 | Hint 1 and hint 2 now say nearly the same thing ("what each blank needs to mean"); hint 3 is the only one that adds a step. Both blanks keep three live choices after hint 3. | Optional: make hint 2 "Read the words before and after each blank." |
+| 9 | NOTE | 3.b p3 | "we toast apples" is unusual (apples are roasted or baked); it reads fine at FK 1.6. | Optional: "we roast marshmallows". |
+
+### 4. Checks on each changed item
+
+**3.L.V.2.a (only the intended answers pass the cover test).** I split every option at every position and asked whether a whole word is left by removing something that could pass as a prefix or suffix.
+
+| Item | Intended | Distractors: leftover after covering the prefix or suffix | Result |
+|---|---|---|---|
+| C09 | tearful (tear), sleepless (sleep) | story (sto, stor), assembly (assemb, assem), family (famil, fami): none a word | Only the two pass. The 5-option set no longer has a compound. |
+| S07 | unlucky (lucky), refold (fold) | under (der), restaurant (staurant), mister (ter) | Only the two pass. "unicorn" is gone. |
+| S09 | painful (pain), hopeless (hope) | pony (pon, po), history (histor, hist), plenty (plent, plen) | Only the two pass. "monopoly" and "strawberry" are gone. |
+
+HOW and WHY for all three match the new words and do not contradict each other (the leftover letters named in HOW 3 are not words). Hints 1-3 leave all five choices live; hint 3 states the trap, not the key. Longest-key: no choose-two set in 2.a has both keys as the two longest (C09: sleepless 9, assembly 8; S07: restaurant 10, unlucky 7; S09: hopeless 8, painful 7 tied with history 7). `like` S07 -> P5, S09 -> C09 are honest. Distinctness: S09 against C09 jaccard 0.158; no six-word match anywhere in the repo.
+
+**3.L.V.3.a.** Key beside explanation checked for every touched item: WHY and HOW name the key text. S04: key now "which means" and "like"; WHY, HOW and the key array agree; choices are "the tall bridge", "a map", "I also"; all five live after hints 1-3; `like` -> C04 is honest.
+
+Figures (both rendered at 320 px and read, `b5brev4/figs.png`):
+
+| Figure | Alt text accurate? | Title paraphrases key? |
+|---|---|---|
+| `v3a-c-fox-table.svg` "Arctic Fox Meals" (Animal / How often; Lemming most days, Bird some days, Hare few days) | Yes | Not directly; acceptable (finding 4) |
+| `v3a-s-squirrel-table.svg` "Squirrel Search Spots" (Season / Where; Fall on the ground, Winter under the snow, Spring in tree holes) | Yes | Yes, partly (finding 4). The old titles are gone from every file. |
+
+Both SVG `<title>` lines drop the "columns" sentence of the alt text; harmless. Live choices after hints 1 to 3 (author-written hints only; P3 and P7 have none):
+
+| Item | Live after h1 / h2 / h3 | Notes |
+|---|---|---|
+| C05 | 4 / 4 / 4 | NOTE 5 |
+| C09, S10 | 3 / 3 / 3 | h3 "Put each meaning in the sentence and check it against the table" restores all three; no hint states or echoes the key |
+| C10, S11 | 4 / 4 / 4 | |
+| S01 | 4 / 4 / 3-4 | h3 mentions "a tool you hold in your hand" (a distractor) |
+| S09 | 4 / 4 / 2 | NOTE 6 |
+| S14 | 4 / 4 / 2-3 | NOTE 6 |
+| S04 | 5 / 5 / 5 | |
+| C04 | 5 / 5 / 5 | location giveaway for option 5 (finding 1) |
+| C02 Part B | 2 / 4 / 3 | h1 names the key's property (finding 3) |
+| C06 Part B | 2 / 4 / 3 | finding 3 |
+| S02 Part B | 2 / 4 / 3 | finding 3 |
+| C11 | 4 / 4 / 2 | finding 2 |
+
+Longest-key for the touched lesson (`lk.js`; mc, ebsr parts, dropdown slots counted separately; choose-two scored as "both keys longer than every distractor"):
+
+| Set | Key unique-longest | Key unique-shortest | Choose-two, both keys longest |
+|---|---|---|---|
+| 3.a core | 2/15 (13%) | 1/15 (7%) | 0/1 |
+| 3.a core + Together + similar | 8/33 (24%) | 1/33 (3%) | 0/2 |
+| 3.a all (with Form A, B) | 10/47 (21%) | 7/47 (15%) | 0/2 |
+
+That is about chance (25% for four options, 33% for three). The rebalanced items C05, C09, C10, S01, S09, S11, S14, P3, P7 are no longer the unique longest; S10 still is (finding 4). The key is rarely the shortest, so there is no inverse cue. Fits the author's 22%.
+
+Similarity (jaccard on content words, core vs similar): 3.a maximum 0.143 (S05/P3), S10/C09 0.139, S04/C04 below the top five. No six-word match for any new string ("lakes and rivers", "quiet pond", "very thin lines", "jar of water", "sailing ship", "long, slow trip" and the others occur only in this lesson, apart from "quiet pond" once in T-T34 and "jar of water" once in L-GUM5, both below the six-word threshold).
+
+**3.L.V.2.c (text-only).** C02: the passage sentence is now "Dad counted the paint cans, but he got the number wrong, so he began again." The key "miscounted" is no longer in the passage, and "got the number wrong" supports blank 1 without naming the key; "began again" could tempt "recounted" in blank 1, but the item text says "the wrong way" there, so one answer remains. Keys unchanged (kd.js). Teach: "im + port = import (to carry goods in from another country)" replaces "port + able = portable"; P7's key "portable" is no longer a Teach example, and the new example is accurate (Latin importare, in- + portare, "to carry"): https://www.etymonline.com/word/import . "import" appears nowhere else in the lesson. Longest-key 2.c all 7/39 (18%); choose-two 0/5 both longest; similarity maximum 0.176 (S08/C05). **ACCEPT**.
+
+**3.L.V.3.b (text-only).** p3 is "Tessa Writes Home"; no other passage in the repo has that title (T-SS keeps "A Letter from Camp"), and the night sentence is "After dinner, we toast apples and tell stories", which no longer copies T-SS. FK of p3 is 1.6. The C02 key (paragraph 2, sentence 2 "sail on hats") is unchanged, and HOW and WHY still match the passage. C01 and S01 hints 2 and 3 no longer name what each blank needs: three live choices per slot after hint 3. Longest-key 3.b all 8/39 (21%); choose-two both-longest only C06 (accepted, unchanged); similarity maximum 0.182 (S15/C05). **ACCEPT**.
+
+### 5. Message to the author
+
+- Reapply or retract the four 3.a edits in the process finding; a one-minute change closes SHOULDs 1 to 3.
+- S10 is the only rebalanced item still carrying the longest-key cue. Fix with finding 4 and the 3.a lesson has no outstanding cue at all.
+- Nothing in 2.a, 2.c or 3.b needs a further review.
