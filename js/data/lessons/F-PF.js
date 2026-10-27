@@ -1751,7 +1751,7 @@ PP.addLesson({
             hints: [
               "Say each word slowly and clap the beats.",
               "Count the vowel sounds you hear in each word.",
-              "Clap puppy and kitchen. Ask how many beats each word has."
+              "Clap puppy. Ask how many beats it has."
             ],
             how: [
               "Clap each word.",
@@ -1841,7 +1841,7 @@ PP.addLesson({
             hints: [
               "An r-controlled syllable has a vowel followed by r.",
               "Split each word into syllables. Look for a vowel and an r together.",
-              "Split window and pretzel into syllables and look at each part."
+              "Split window into syllables and look at each part."
             ],
             how: [
               "Split each word: morn / ing, win / dow, pret / zel, go / ing.",
@@ -1949,7 +1949,7 @@ PP.addLesson({
             passages: [],
             prompt: "Choose the word whose first syllable is closed, so its vowel is short.",
             stem: [
-              "Mia put a pocket, a tiny frog and a music box in a bag."
+              "Mia saw a pocket, a tiny frog, a music box and the sky."
             ],
             options: [
               "pocket",
@@ -1965,7 +1965,7 @@ PP.addLesson({
             hints: [
               "A closed syllable ends with a consonant. Split each word and look at the first syllable.",
               "Split each word into syllables. Look at the end of the first one.",
-              "Split tiny and music and look at the end of each first syllable."
+              "Split tiny and look at the end of its first syllable."
             ],
             how: [
               "Split each word: pock / et, ti / ny, mu / sic, sky.",
@@ -2265,7 +2265,7 @@ PP.addLesson({
       hints: [
         "Say each word slowly and clap the beats.",
         "Count the vowel sounds you hear in each word.",
-        "Clap farmer and melon. Ask how many beats each word has."
+        "Clap farmer. Ask how many beats it has."
       ],
       how: [
         "Clap each word.",
@@ -2288,13 +2288,13 @@ PP.addLesson({
         "SK-FP4b-C04"
       ],
       prompt: "Pick the split that makes real syllables.",
-      text: "Magnet splits as {0}. Bacon splits as {1}.",
+      text: "Pillow splits as {0}. Bacon splits as {1}.",
       slots: [
         {
           options: [
-            "ma / gnet",
-            "mag / net",
-            "magn / et"
+            "pi / llow",
+            "pil / low",
+            "pill / ow"
           ],
           answer: 1
         },
@@ -2314,12 +2314,12 @@ PP.addLesson({
         "Say each choice out loud. Ask which one gives parts you can say as real syllables."
       ],
       how: [
-        "Magnet has two consonants, g and n, between the vowels, so split between them: mag / net.",
+        "Pillow has two consonants, l and l, between the vowels, so split between them: pil / low.",
         "Bacon has one consonant between the vowels. Splitting before it gives ba / con, a word you know.",
         "The other splits leave parts that cannot be said."
       ],
       misconception: "A common mix-up is splitting anywhere. Split where each part can be said as a syllable.",
-      why: "Magnet splits as mag / net, between the two consonants. Bacon splits as ba / con, before the one consonant. The other choices make parts that are not syllables."
+      why: "Pillow splits as pil / low, between the two consonants. Bacon splits as ba / con, before the one consonant. The other choices make parts that are not syllables."
     },
     {
       id: "SK-FP4b-S05",
@@ -2353,7 +2353,7 @@ PP.addLesson({
       hints: [
         "Think about which letters sit together in a syllable.",
         "Split each word into syllables. Look for a vowel and an r together.",
-        "Split puppy and robot into syllables and look at each part."
+        "Split puppy into syllables and look at each part."
       ],
       how: [
         "Split each word: car / pet, pup / py, ro / bot, float.",
@@ -2422,20 +2422,20 @@ PP.addLesson({
       like: [
         "SK-FP4b-C07"
       ],
-      prompt: "Starfish has two halves. Name their builds.",
+      prompt: "Starfish has two halves. Which kind of syllable starts it, and which kind ends it?",
       text: "Front half: {0}. Back half: {1}.",
       slots: [
         {
           options: [
             "r-controlled",
-            "silent-e",
+            "vowel team",
             "consonant-le"
           ],
           answer: 0
         },
         {
           options: [
-            "silent-e",
+            "vowel team",
             "closed",
             "consonant-le"
           ],
@@ -2453,8 +2453,8 @@ PP.addLesson({
         "Star has a vowel followed by r, so it is r-controlled.",
         "Fish ends with a consonant, so it is closed."
       ],
-      misconception: "A common mix-up is giving both parts the same build. Look at each part on its own.",
-      why: "Star has a vowel followed by r, so it is an r-controlled syllable. Fish ends with a consonant, so it is a closed syllable. Neither part is silent-e or consonant-le."
+      misconception: "A common mix-up is giving both parts the same kind. Look at each part on its own.",
+      why: "Star has a vowel followed by r, so it is an r-controlled syllable. Fish ends with a consonant, so it is a closed syllable. Neither part is a vowel team or consonant-le."
     },
     {
       id: "SK-FP4b-S08",
@@ -2486,7 +2486,7 @@ PP.addLesson({
       hints: [
         "A closed syllable ends with a consonant. Split each word and look at the first syllable.",
         "Split each word into syllables. Look at the end of the first one.",
-        "Split baby and silent and look at the end of each first syllable."
+        "Split baby and look at the end of its first syllable."
       ],
       how: [
         "Split each word: win / ter, ba / by, si / lent, pu / pil.",
@@ -2930,13 +2930,13 @@ PP.addLesson({
       prompt: "Each row shows one syllable from a longer word. Match each syllable to its kind.",
       cols: ["closed", "open", "consonant-le"],
       rows: [
-        { text: "nap in napkin", answer: 0 },
+        { text: "fun in funnel", answer: 0 },
         { text: "po in pony", answer: 1 },
         { text: "ple in apple", answer: 2 },
-        { text: "ba in bacon", answer: 1 }
+        { text: "mo in moment", answer: 1 }
       ],
       clue: "Look at how each syllable ends. Does it end with a consonant, end with a vowel, or is it a consonant plus le at the end of the word?",
-      why: "Nap ends with a consonant, so it is closed. Po and ba end with a vowel, so they are open and the vowel is long. Ple is a consonant plus le at the end of apple." },
+      why: "Fun ends with a consonant, so it is closed. Po and mo end with a vowel, so they are open and the vowel is long. Ple is a consonant plus le at the end of apple." },
     { id: "SK-FP4b-T4", type: "ms", points: 2, dok: 2, passages: [], pick: 2,
       prompt: "Which TWO words split after the middle consonant, so the first vowel is short?",
       choices: [

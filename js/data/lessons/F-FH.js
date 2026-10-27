@@ -276,8 +276,8 @@
         choices: [
           { text: "My cat is gray.", correct: true },
           { text: "My car is gray." },
-          { text: "My cat is green." },
-          { text: "My hat is gray." }
+          { text: "My car is green." },
+          { text: "My cat is green." }
         ],
         clue: "Read one word at a time. Look closely at every letter of the second word and at the last word.",
         why: "The answer is \"My cat is gray.\" The second word ends in t, not r, and the last word is gray: g-r-a-y." },
@@ -286,12 +286,12 @@
         stem: "Cursive: frog",
         choices: [
           { text: "frog", correct: true },
-          { text: "flag" },
           { text: "from" },
-          { text: "fog" }
+          { text: "flog" },
+          { text: "flag" }
         ],
-        clue: "Count the letters first. Then look closely at the second letter and the last letter.",
-        why: "The answer is frog: f-r-o-g. The second letter is the cursive r, and the last letter is g with a loop below the line. From ends in m, which has humps and stays on the line, and flag has an l." },
+        clue: "Read the letters from the left. Look closely at the second letter and the last letter.",
+        why: "The answer is frog: f-r-o-g. The second letter is the cursive r, and the last letter is g with a loop below the line. From ends in m, which has humps and stays on the line, and flog and flag have an l as the second letter." },
       { id: "SK-FH3a-P3", type: "mc", points: 1, dok: 2, passages: [],
         prompt: "Read the cursive note. What does it ask you to do?",
         stem: "Cursive: Please feed the fish.",
@@ -321,12 +321,12 @@
         stem: "Cursive: Zoe",
         choices: [
           { text: "Zoe", correct: true },
+          { text: "Zeke" },
           { text: "Joe" },
-          { text: "Moe" },
-          { text: "Zack" }
+          { text: "Jack" }
         ],
         clue: "The capital letter is one of the tricky ones. Look at the letters after it too.",
-        why: "The answer is Zoe. It starts with a cursive capital Z, followed by o and e. Zack starts with Z too, but it has four letters and ends in ck." }
+        why: "The answer is Zoe. It starts with a cursive capital Z, followed by o and e. Zeke starts with Z too, but it has four letters and a k. Joe has the same last two letters, but it starts with a J. Jack starts with J and ends in ck." }
     ],
     /* B9:core:start */
     /* Expansion 2026-10-22, batch B9 (Foundations). core: fifteen items in three sets of five; { ref } reuses a practice item. NEEDS INDEPENDENT REVIEW. Author log: docs/expansion-2026-10-22/batches/B9-author-log.md */
@@ -358,10 +358,10 @@
                   text: "widow"
                 },
                 {
-                  text: "winter"
+                  text: "willow"
                 },
                 {
-                  text: "wonder"
+                  text: "wilder"
                 }
               ],
               clue: "Count the letters first. Then look at the letters you know best.",
@@ -376,7 +376,7 @@
                 "The last letters are d, o, w. The word is window."
               ],
               misconception: "A common mix-up is choosing a word that starts the same way. Read all the letters, not only the first few.",
-              why: "The answer is \"window.\" It has six letters: w-i-n-d-o-w. Widow has five letters, winter ends in ter, and wonder has a different middle."
+              why: "The answer is \"window.\" It has six letters: w-i-n-d-o-w. Widow has five letters, willow has two l's in the middle, and wilder ends in e-r."
             },
             {
               id: "SK-FH3a-C02",
@@ -481,32 +481,32 @@
               passages: [],
               prompt: "Read the cursive lines. Match each child to the thing they brought.",
               stem: [
-                "Cursive: Quinn: red cap",
-                "Cursive: Zoe: blue kite",
-                "Cursive: Gwen: green drum",
-                "Cursive: Tess: yellow ball"
+                "Cursive: Fay: gold cap",
+                "Cursive: Wes: blue kite",
+                "Cursive: Pia: green drum",
+                "Cursive: Ray: yellow ball"
               ],
               cols: [
                 "yellow ball",
-                "red cap",
+                "gold cap",
                 "green drum",
                 "blue kite"
               ],
               rows: [
                 {
-                  text: "Quinn",
+                  text: "Fay",
                   answer: 1
                 },
                 {
-                  text: "Zoe",
+                  text: "Wes",
                   answer: 3
                 },
                 {
-                  text: "Gwen",
+                  text: "Pia",
                   answer: 2
                 },
                 {
-                  text: "Tess",
+                  text: "Ray",
                   answer: 0
                 }
               ],
@@ -514,7 +514,7 @@
               hints: [
                 "Read each cursive line. It has a name, a colon, then a thing.",
                 "Find a name you know well first. Then read the words after its colon.",
-                "Start with Gwen. Read the two words after her colon, then look for them in the choices."
+                "Start with Pia. Read the two words after her colon, then look for them in the choices."
               ],
               how: [
                 "Read each line of the cursive list.",
@@ -522,7 +522,7 @@
                 "Match each name to the words after its colon."
               ],
               misconception: "A common mix-up is matching by guess. Read each line to find the name and its thing.",
-              why: "Quinn brought the red cap, Zoe brought the blue kite, Gwen brought the green drum, and Tess brought the yellow ball."
+              why: "Fay brought the gold cap, Wes brought the blue kite, Pia brought the green drum, and Ray brought the yellow ball."
             },
             {
               ref: "SK-FH3a-P4"
@@ -557,7 +557,7 @@
                   text: "Sara fixed the broken zipper."
                 },
                 {
-                  text: "Zara mixed the broken zipper."
+                  text: "Sara mixed the broken ladder."
                 }
               ],
               clue: "Read the cursive sentence one word at a time.",
@@ -662,36 +662,36 @@
               passages: [],
               prompt: "Read the cursive sign. What does it tell you to do?",
               stem: [
-                "Cursive: Always knock before you open the door."
+                "Cursive: Please wipe your feet before you come in."
               ],
               choices: [
                 {
-                  text: "Knock before opening the door.",
+                  text: "Please wipe your feet before you come in.",
                   correct: true
                 },
                 {
-                  text: "Knock after opening the door."
+                  text: "Please wash your hands before you come in."
                 },
                 {
-                  text: "Look before opening the door."
+                  text: "Please take off your shoes before you come in."
                 },
                 {
-                  text: "Knock before closing the door."
+                  text: "Please wipe your shoes before you come in."
                 }
               ],
               clue: "Read the cursive sign one word at a time.",
               hints: [
                 "Read the cursive sign one word at a time.",
-                "Find the action word that comes first and the small word that tells when.",
-                "Compare the small word that tells when, and the last action, with each choice."
+                "Every choice would make a sensible sign, so only the letters can tell you which one is written. Read the word right after Please.",
+                "Compare the action word and the word after your with each choice."
               ],
               how: [
                 "Read the sign word by word.",
-                "The first action is knock, and the small word is before.",
-                "The second action is open, and its object is the door."
+                "The action word after Please is wipe, and the word after your is feet.",
+                "The rest says before you come in. Only one choice has wipe and feet."
               ],
               misconception: "A common mix-up is picking a choice with one right part. Both parts have to match.",
-              why: "The answer is \"Knock before opening the door.\" The sign says to knock before you open the door. The other choices change when, the action, or the order."
+              why: "The answer is \"Please wipe your feet before you come in.\" The sign says to wipe your feet. The other choices change the action, the thing, or both. All four would make sense as a sign, so only the letters tell them apart."
             },
             {
               id: "SK-FH3a-C09",
@@ -766,7 +766,7 @@
                   text: "A large blanket, one cup and a jug of juice"
                 },
                 {
-                  text: "A large basket, two cups and a jug of juice"
+                  text: "A large basket, one cup and a jug of juice"
                 },
                 {
                   text: "A large blanket, two cups and a jar of juice"
@@ -869,7 +869,7 @@
               hints: [
                 "Think about how a reader works out a word they cannot read yet.",
                 "Think about what the rest of the sentence can tell Leo.",
-                "Printing the word does not read it, and skipping the note does not read it either. Decide which of the other two choices helps Leo read the word."
+                "Printing the word does not read it. Decide which of the other choices helps Leo read the word."
               ],
               how: [
                 "Leo knows some letters of the word.",
@@ -890,17 +890,17 @@
               passages: [],
               prompt: "Read the cursive invitation. Choose the day and the time.",
               stem: [
-                "Cursive: Dear Pam, the party is on Saturday at four o'clock. Love, Gran"
+                "Cursive: Dear Pam, the party is on Thursday at four o'clock. Love, Gran"
               ],
               text: "The party is on {0} at {1} o'clock.",
               slots: [
                 {
                   options: [
-                    "Sunday",
-                    "Saturday",
-                    "Thursday"
+                    "Thursday",
+                    "Wednesday",
+                    "Sunday"
                   ],
-                  answer: 1
+                  answer: 0
                 },
                 {
                   options: [
@@ -918,12 +918,12 @@
                 "Check the first letter and the last letter of each answer word."
               ],
               how: [
-                "Read the invitation: the party is on Saturday at four o'clock.",
-                "The word after on is the day: Saturday.",
+                "Read the invitation: the party is on Thursday at four o'clock.",
+                "The word after on is the day: Thursday.",
                 "The word after at is the time: four."
               ],
               misconception: "A common mix-up is picking a day that looks close. Read every letter.",
-              why: "The answers are \"Saturday\" and \"four.\" The invitation says the party is on Saturday at four o'clock. Sunday, Thursday, five and nine do not match."
+              why: "The answers are \"Thursday\" and \"four.\" The invitation says the party is on Thursday at four o'clock. Wednesday, Sunday, five and nine do not match."
             },
             {
               ref: "SK-FH3a-P5"
@@ -1213,7 +1213,7 @@
             text: "Sara mended the torn jacket."
           },
           {
-            text: "Tara minded the torn jacket."
+            text: "Sara minded the worn jacket."
           }
         ],
         clue: "Read the cursive sentence one word at a time.",
@@ -1338,7 +1338,7 @@
             text: "Wipe the table and walk Rex."
           },
           {
-            text: "Wipe the chairs and feed Rex."
+            text: "Wipe the chairs and walk Rex."
           },
           {
             text: "Sweep the table and feed Rex."
@@ -1432,7 +1432,7 @@
             text: "Brown eggs, ten plums, one cake"
           },
           {
-            text: "White eggs, ten plums, one loaf"
+            text: "White eggs, ten plums, one cake"
           },
           {
             text: "Brown eggs, ten pears, one loaf"
@@ -1467,7 +1467,7 @@
         prompt: "Match each cook to the dish.",
         stem: [
           "Cursive: Nan: pear tart",
-          "Cursive: Pop: corn soup",
+          "Cursive: Pop: lentil soup",
           "Cursive: Mom: fish pie",
           "Cursive: Dad: bean stew"
         ],
@@ -1475,7 +1475,7 @@
           "fish pie",
           "bean stew",
           "pear tart",
-          "corn soup"
+          "lentil soup"
         ],
         rows: [
           {
@@ -1507,7 +1507,7 @@
           "Match each name to the dish after its colon."
         ],
         misconception: "A common mix-up is matching by position. Read each line to find the name and its dish.",
-        why: "Nan makes the pear tart, Pop makes the corn soup, Mom makes the fish pie, and Dad makes the bean stew."
+        why: "Nan makes the pear tart, Pop makes the lentil soup, Mom makes the fish pie, and Dad makes the bean stew."
       },
       {
         id: "SK-FH3a-S13",
@@ -1541,7 +1541,7 @@
         hints: [
           "Think about how a reader works out a word they cannot read yet.",
           "Think about what the rest of the sentence can tell the pupil.",
-          "Rewriting the word in print does not read it, and tearing out the page does not read it either. Decide which of the other two choices helps the pupil read the word."
+          "Rewriting the word in print does not read it. Decide which of the other choices helps the pupil read the word."
         ],
         how: [
           "The pupil can read the ending.",
@@ -1622,28 +1622,28 @@
             correct: true
           },
           {
-            text: "Tess"
-          },
-          {
-            text: "Teresa"
-          },
-          {
             text: "Tasha"
+          },
+          {
+            text: "Tilly"
+          },
+          {
+            text: "Tori"
           }
         ],
         clue: "The capital letter is one of the tricky ones. Look at the letters after it too.",
         hints: [
           "The capital letter is one of the tricky ones. Look at the letters after it too.",
           "Count the letters in the name.",
-          "Compare the middle and the end of the name with each choice."
+          "Compare the middle letters of the name with each choice."
         ],
         how: [
           "Read the capital letter: T.",
           "Read the rest: e-s-s-a.",
-          "The name has five letters, so it is Tessa."
+          "The middle letters are e-s-s, so it is Tessa."
         ],
         misconception: "A common mix-up is choosing a name that starts the same way. Read all the letters.",
-        why: "The answer is \"Tessa.\" It starts with a cursive capital T followed by e-s-s-a. Tess has four letters, and Teresa and Tasha have different letters."
+        why: "The answer is \"Tessa.\" It starts with a cursive capital T followed by e-s-s-a. Tasha has a-s-h in the middle, Tilly has i-l-l, and Tori has only four letters."
       }
     ],
     addons: {
@@ -1662,13 +1662,13 @@
       },
       "SK-FH3a-P2": {
         hints: [
-          "Count the letters first.",
+          "Read the letters one at a time from the left.",
           "Look closely at the second letter and the last letter.",
-          "Compare the number of letters with each choice."
+          "Compare the last letter with each choice."
         ],
         how: [
-          "Count the letters: there are four.",
-          "The second letter is the cursive r, and the last letter has a loop below the line.",
+          "Read the letters from the left: f, then the cursive r.",
+          "The last letter has a loop below the line.",
           "That word is frog."
         ],
         misconception: "A common mix-up is choosing a word that starts the same way. Read every letter."
@@ -1703,12 +1703,12 @@
         hints: [
           "The capital letter is one of the tricky ones. Look at it closely.",
           "Count the letters in the name.",
-          "Compare the end of the name with each choice."
+          "Compare the second letter of the name with each choice."
         ],
         how: [
           "Read the capital letter: Z.",
           "Read the rest: o-e.",
-          "The name has three letters, so it is Zoe."
+          "The name starts with Z and has three letters, so it is Zoe."
         ],
         misconception: "A common mix-up is choosing a name that starts the same way. Read all the letters."
       }
@@ -1720,9 +1720,9 @@
         stem: "Cursive: We swim in the lake.",
         choices: [
           { text: "We swim in the lake.", correct: true },
-          { text: "We swing by the lake." },
-          { text: "We swim in the lane." },
-          { text: "We sing at the lake." }
+          { text: "We swing in the lake." },
+          { text: "We swing in the lane." },
+          { text: "We swim at the lake." }
         ],
         clue: "Check every word, especially the second word and the last word.",
         why: "The answer is \"We swim in the lake.\" The second word is swim and the last word is lake." },
@@ -1731,20 +1731,20 @@
         stem: "Cursive: river",
         choices: [
           { text: "river", correct: true },
-          { text: "rider" },
           { text: "liver" },
-          { text: "water" }
+          { text: "giver" },
+          { text: "diver" }
         ],
-        clue: "Look for the cursive r. How many r's do you see, and where are they?",
-        why: "The answer is river. It begins and ends with a cursive r, with i-v-e in the middle." },
+        clue: "Look closely at the first letter. Then check that the rest of the letters match.",
+        why: "The answer is river. It begins with a cursive r, followed by i-v-e-r. Liver, giver and diver have the same ending, but they begin with l, g and d." },
       { id: "SK-FH3a-T3", type: "mc", points: 1, dok: 2, passages: [],
         prompt: "Read the cursive note. When is the game?",
         stem: "Cursive: The game is on Friday at six.",
         choices: [
           { text: "Friday at six", correct: true },
           { text: "Friday at five" },
-          { text: "Sunday at six" },
-          { text: "Monday at six" }
+          { text: "Sunday at five" },
+          { text: "Sunday at six" }
         ],
         clue: "Find the day word, which starts with a capital letter. Then find the word after at.",
         why: "The answer is Friday at six. The note says the game is on Friday at six." },
@@ -1767,7 +1767,7 @@
         choices: [
           { text: "Grandma baked us a pie.", correct: true },
           { text: "Grandma made us a pie." },
-          { text: "Grandpa baked us a pie." },
+          { text: "Grandpa made us a pie." },
           { text: "Grandma baked us a cake." }
         ],
         clue: "Check the first word carefully, then the action word and the last word.",

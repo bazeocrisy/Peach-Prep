@@ -62,6 +62,15 @@
 | B6 | 3.L.GC.1:M:use-reflexive-pronouns | ACCEPTED | Fourth independent review ACCEPT; open SHOULDs in B6-review.md |
 | B6 | 3.L.GC.1:M:use-commas-with-coordinating-conjunctions-to-joi | ACCEPTED | Third independent review ACCEPT; see B6-review.md and B6-author-log.md (open NOTEs/SHOULDs listed there) |
 | B6 | 3.L.GC.1:M:use-hyphens-to-divide-words-at-line-breaks | NOT ACCEPTED: awaiting independent review | B6-author-log.md; authored, not reviewed |
+| B7a | 3.L.GC.1:R:use-nouns-and-verbs-to-form-complete-thoughts-in | NOT ACCEPTED: awaiting independent review | B7a-author-log.md; authored, not reviewed |
+| B7a | 3.L.GC.1:R:form-and-use-singular-and-plural-nouns-in-speech | NOT ACCEPTED: awaiting independent review | B7a-author-log.md; authored, not reviewed |
+| B7a | 3.L.GC.1:R:use-interrogatives-to-ask-questions-in-speech | NOT ACCEPTED: awaiting independent review | B7a-author-log.md; authored, not reviewed |
+| B7a | 3.L.GC.1:R:capitalize-the-first-word-of-a-sentence-and-the- | NOT ACCEPTED: awaiting independent review | B7a-author-log.md; authored, not reviewed |
+| B7a | 3.L.GC.1:R:form-regular-plural-nouns-with-s-or-es | NOT ACCEPTED: awaiting independent review | B7a-author-log.md; authored, not reviewed |
+| B7a | 3.L.GC.1:R:form-and-use-verbs-with-ing-ed-or-s | NOT ACCEPTED: awaiting independent review | B7a-author-log.md; authored, not reviewed |
+| B7a | 3.L.GC.1:R:use-action-verbs | NOT ACCEPTED: awaiting independent review | B7a-author-log.md; authored, not reviewed |
+| B7a | 3.L.GC.1:R:use-adjectives-and-adverbs | NOT ACCEPTED: awaiting independent review | B7a-author-log.md; authored, not reviewed |
+| B7a | 3.L.GC.1:R:use-common-and-proper-nouns | NOT ACCEPTED: awaiting independent review | B7a-author-log.md; authored, not reviewed |
 
 "Accepted" means an independent reviewer blind-solved the items, found every key defensible, and found no hint ladder that leaves only the key (see AUTHOR-BRIEF rules). It does not mean the lesson has been tried by a child.
 

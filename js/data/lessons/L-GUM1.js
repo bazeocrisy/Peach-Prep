@@ -1625,7 +1625,7 @@ PP.addLesson({
       paragraphs: [
         [
           "(1) Our class took a long walk to the pond behind the school on Tuesday.",
-          "(2) We saw a heron standing very still in the shallow water.",
+          "(2) We saw a heron standing perfectly still in the shallow water.",
           "(3) Two beetle crawled over the reeds near the bank.",
           "(4) Many minnow swam close to the edge of the pond."
         ],
@@ -1819,10 +1819,10 @@ PP.addLesson({
             how: [
               "Find the clue word before the noun in sentence 3: two. Two means more than one.",
               "A noun that means more than one needs its plural form, which ends in -s.",
-              "The answer is \"Mrs. Park set up two long tables near the door.\" Table's has an apostrophe it does not need, tabless is not spelled right, and a long tables mixes a one word with a plural noun."
+              "The answer is \"Mrs. Park set up two long tables near the door.\" Table's has an apostrophe it does not need, tabless is not spelled right, and a long tables pairs the one-thing word a with a plural noun."
             ],
             misconception: "A common mix-up is leaving the noun alone because the number word already shows how many. The noun has to change too.",
-            why: "The answer is \"Mrs. Park set up two long tables near the door.\" Two means more than one, so table must become tables. Table's adds an apostrophe that does not belong, and tabless is not a word. A long tables puts a one word in front of a plural noun."
+            why: "The answer is \"Mrs. Park set up two long tables near the door.\" Two means more than one, so table must become tables. Table's adds an apostrophe that does not belong, and tabless is not a word. A long tables pairs the one-thing word a with a plural noun."
           },
           {
             id: "SK-GUM1-2-C04",
@@ -2730,7 +2730,7 @@ PP.addLesson({
         "3.L.GC.1:R:form-and-use-singular-and-plural-nouns-in-speech"
       ],
       passages: [],
-      prompt: "Which word fits the gap?",
+      prompt: "Pick the form that completes the sentence.",
       text: "Before noon, several {0} had already gone home.",
       slots: [
         {
@@ -2809,7 +2809,7 @@ PP.addLesson({
       ],
       passages: [],
       stem: "A volunteer lists four lines for a park sign.",
-      prompt: "Tap the line whose noun is wrong for the word in front of it.",
+      prompt: "Tap the line that pairs a clue word with the wrong noun form.",
       options: [
         "Please put every cup in the bin.",
         "We planted two tree near the gate.",
@@ -3064,7 +3064,7 @@ PP.addLesson({
       draft: true,
       paragraphs: [
         [
-          "(1) Mr. Dale is the crossing guard at our school.",
+          "(1) Mr. Dale is the crossing guard near our school.",
           "(2) He stands at the corner of Pine Street.",
           "(3) He starts his shift at seven o'clock.",
           "(4) He wears a bright orange vest so drivers can see him."
@@ -3120,7 +3120,7 @@ PP.addLesson({
           "(1) Our class visited the salt marsh near Tybee Island.",
           "(2) We rode a yellow bus for one hour.",
           "(3) A guide named Mr. Kim met us at the dock.",
-          "(4) He gave each of us a net and a bucket."
+          "(4) He handed each child a net and a bucket."
         ],
         [
           "(5) We scooped up tiny crabs and snails from the mud.",
@@ -3198,7 +3198,7 @@ PP.addLesson({
       draft: true,
       paragraphs: [
         [
-          "(1) My bike had a flat tire on Thursday.",
+          "(1) My bicycle got a flat tire on Thursday.",
           "(2) Uncle Marcus showed me how to fix it in the garage.",
           "(3) First, we took the wheel off the frame.",
           "(4) Then he pulled out the tube with a small tool."
@@ -3685,7 +3685,7 @@ PP.addLesson({
             pick: 2,
             choices: [
               {
-                text: "Why do owls sleep during the day?",
+                text: "Why do owls puff up their feathers?",
                 correct: true
               },
               {
@@ -3696,7 +3696,7 @@ PP.addLesson({
                 text: "How many owls live in the old barn?"
               },
               {
-                text: "Where do owls build their nests in winter?"
+                text: "Where do owls perch near the creek?"
               },
               {
                 text: "When do owls start to hunt at night?"
@@ -3710,11 +3710,11 @@ PP.addLesson({
             ],
             how: [
               "Name the question word that begins each choice.",
-              "Why asks for a reason, and two choices begin with it: Why do owls sleep during the day? and Why did the pond freeze so early this year?",
+              "Why asks for a reason, and two choices begin with it: Why do owls puff up their feathers? and Why did the pond freeze so early this year?",
               "How many asks about an amount, where asks about a place and when asks about a time."
             ],
             misconception: "A common mix-up is picking a question because it is about the same animal. Pick by the question word and the kind of answer it wants.",
-            why: "The answers are \"Why do owls sleep during the day?\" and \"Why did the pond freeze so early this year?\". Both questions begin with why, which asks for a reason. The other three ask about an amount, a place and a time."
+            why: "The answers are \"Why do owls puff up their feathers?\" and \"Why did the pond freeze so early this year?\". Both questions begin with why, which asks for a reason. The other three ask about an amount, a place and a time."
           },
           {
             id: "SK-GUM1-3-C14",
@@ -4227,7 +4227,7 @@ PP.addLesson({
         "Lines 2, 6 and 10 tell where and what, so they do not give a time."
       ],
       misconception: "A common mix-up is picking a line because it says what happened. A time line has to name a day or a moment.",
-      why: "The answers are sentences 1 and 11: \"My bike had a flat tire on Thursday.\" and \"Now I can ride to the park again.\". On Thursday and now both set a time. The other shown lines tell where and what.",
+      why: "The answers are sentences 1 and 11: \"My bicycle got a flat tire on Thursday.\" and \"Now I can ride to the park again.\". On Thursday and now both set a time. The other shown lines tell where and what.",
       like: ["SK-GUM1-3-C11"]
     },
     {
@@ -4362,7 +4362,7 @@ PP.addLesson({
           text: "How did Dad flip the pancake so high?"
         },
         {
-          text: "How do bees turn nectar into honey?"
+          text: "How do spiders spin a web?"
         },
         {
           text: "How can I fix a flat tire on my bike?"
@@ -4372,11 +4372,11 @@ PP.addLesson({
       hints: [
         "To prove a rule wrong, find a question that breaks it. Check what each question wants as an answer.",
         "Think of an answer for each question: a way of doing something, or something else.",
-        "The question about bees asks for the way something is made, which fits Kai's rule."
+        "The question about spiders asks for the way something is made, which fits Kai's rule."
       ],
       how: [
         "Kai says how only asks about a way. Look for a question where the answer is not a way.",
-        "Flipping a pancake, turning nectar into honey and fixing a tire are all ways of doing something.",
+        "Flipping a pancake, spinning a web and fixing a tire are all ways of doing something.",
         "The answer is \"How much sugar goes into the batter?\" The answer would be an amount, like two cups."
       ],
       misconception: "A common mix-up is thinking how always asks about the way something is done. With much or many it asks about an amount.",
@@ -4551,7 +4551,7 @@ PP.addLesson({
         [
           "(1) Last Saturday my family drove to Lake Lanier.",
           "(2) we parked near the picnic tables.",
-          "(3) My brother and i built a sand castle.",
+          "(3) My cousin and i built a sand castle.",
           "(4) Dad grilled hot dogs for lunch.",
           "(5) The smell of smoke drifted over the whole beach."
         ],
@@ -4564,7 +4564,7 @@ PP.addLesson({
           "(9) i found a smooth gray stone that skipped five times.",
           "(10) I'm going to keep it in my room.",
           "(11) By the time we left, the sun was low.",
-          "(12) i hope we can go back next summer.",
+          "(12) i hope we visit again next summer.",
           "(13) We fell asleep in the car."
         ]
       ]
@@ -4607,7 +4607,7 @@ PP.addLesson({
       draft: true,
       paragraphs: [
         [
-          "(1) On Friday our class rode a bus to the aquarium.",
+          "(1) On Friday our class took a bus to the aquarium.",
           "(2) the guide met us at the front desk.",
           "(3) She asked who wanted to see the sharks first.",
           "(4) My hand shot up before anyone else's.",
@@ -4800,17 +4800,17 @@ PP.addLesson({
             prompt: "Sentence 3 has a capital-letter mistake. Which revision fixes it?",
             choices: [
               {
-                text: "My brother and I built a sand castle.",
+                text: "My cousin and I built a sand castle.",
                 correct: true
               },
               {
-                text: "My Brother and I built a sand castle."
+                text: "My Cousin and I built a sand castle."
               },
               {
-                text: "my brother and I built a sand castle."
+                text: "my cousin and I built a sand castle."
               },
               {
-                text: "My brother and i built a sand castle."
+                text: "My cousin and i built a sand castle."
               }
             ],
             clue: "Check the first word of sentence 3, then look for the word I by itself.",
@@ -4822,10 +4822,10 @@ PP.addLesson({
             how: [
               "Check the first word: My already begins with a capital M.",
               "Now find the word I. In sentence 3 it is a small i, and I must always be a capital.",
-              "The answer is \"My brother and I built a sand castle.\" The other choices add a capital to brother, make my small, or leave the small i."
+              "The answer is \"My cousin and I built a sand castle.\" The other choices add a capital to cousin, make my small, or leave the small i."
             ],
             misconception: "A common mix-up is fixing the first word and forgetting the word I in the middle. Check both.",
-            why: "The answer is \"My brother and I built a sand castle.\" The word I is always a capital, so the small i must change. My already has its capital, and brother is not a name."
+            why: "The answer is \"My cousin and I built a sand castle.\" The word I is always a capital, so the small i must change. My already has its capital, and cousin is not a name."
           },
           {
             id: "SK-GUM1-4-C04",
@@ -6155,7 +6155,7 @@ PP.addLesson({
       draft: true,
       paragraphs: [
         [
-          "(1) This spring our class planted a garden behind the school.",
+          "(1) This spring our class made a garden near the playground.",
           "(2) Mrs. Rivera brought seeds in tiny paper cups.",
           "(3) We dug holes with small shovels.",
           "(4) Each group planted two rowes of beans."
@@ -7556,7 +7556,7 @@ PP.addLesson({
         [
           "(1) Our class held a bake sale last Friday.",
           "(2) Each morning, Mrs. Cruz reminds us to bring treats.",
-          "(3) Two days ago, Maya mix the batter in a big bowl.",
+          "(3) Two days ago, Maya mix the dough in a big bowl.",
           "(4) Yesterday, Omar and I frosted forty cupcakes."
         ],
         [
@@ -9011,7 +9011,7 @@ PP.addLesson({
           "(10) Ms. Ortiz noticed the mess and smiled.",
           "(11) We scooped up the blocks and tossed them in the bin.",
           "(12) Soon the bell rang.",
-          "(13) We lined up at the door and marched down the hall.",
+          "(13) We formed a line by the door and marched down the hall.",
           "(14) The room smelled like wet jackets."
         ]
       ]
@@ -9766,36 +9766,36 @@ PP.addLesson({
         "3.L.GC.1:R:use-action-verbs"
       ],
       passages: [],
-      stem: "Nico doubted the strange rumor.",
+      stem: "Nico realized his silly mistake.",
       prompt: "Pick the word that tells what Nico did.",
       choices: [
         {
-          text: "doubted",
+          text: "realized",
           correct: true
         },
         {
           text: "Nico"
         },
         {
-          text: "strange"
+          text: "silly"
         },
         {
-          text: "rumor"
+          text: "his mistake"
         }
       ],
       clue: "Some actions happen in the mind. Ask what Nico did.",
       hints: [
         "Some actions happen in the mind. Ask what Nico did.",
         "Say each word and test whether it fits what Nico does.",
-        "Strange describes the rumor, so it cannot be what Nico does."
+        "Silly describes the mistake, so it cannot be what Nico does."
       ],
       how: [
         "Find who the sentence is about: Nico.",
-        "Ask: what did Nico do? He doubted the rumor in his mind.",
-        "The answer is doubted. Nico and rumor are nouns, and strange describes the rumor."
+        "Ask: what did Nico do? He realized his mistake in his mind.",
+        "The answer is realized. Nico and mistake are nouns, and silly describes the mistake."
       ],
-      misconception: "A common mix-up is thinking an action must be visible. Doubting is something Nico does in his mind.",
-      why: "The answer is \"doubted\" Doubted is something Nico does in his mind. Nico and rumor are nouns, and strange describes.",
+      misconception: "A common mix-up is thinking an action must be visible. Realizing is something Nico does in his mind.",
+      why: "The answer is \"realized\" Realized is something Nico does in his mind. Nico and mistake are nouns, and silly describes.",
       like: ["SK-GUM1-7-P5"]
     },
     {
@@ -10468,7 +10468,7 @@ PP.addLesson({
       draft: true,
       paragraphs: [
         [
-          "(1) Our class planted a garden behind the school.",
+          "(1) Our class grew a garden by the playground.",
           "(2) Mr. Reyes gave each group a small shovel.",
           "(3) We dug deep holes in the soft soil.",
           "(4) Priya gently placed a seed in each hole."
@@ -12061,7 +12061,7 @@ PP.addLesson({
       draft: true,
       paragraphs: [
         [
-          "(1) On Saturday, the Hawks played the Bears at Cole Park.",
+          "(1) On Saturday, the Cole Park Hawks played the Oak Hill Bears.",
           "(2) Our coach, Ms. Ramirez, gave a short speech.",
           "(3) The crowd cheered from the bleachers.",
           "(4) Felix kicked the ball past the goalie."
@@ -12772,24 +12772,24 @@ PP.addLesson({
         "3.L.GC.1:R:use-common-and-proper-nouns"
       ],
       passages: [],
-      stem: "On Wednesday, Hana fed the ducks at the pond.",
+      stem: "On Wednesday, Hana fed the geese near the dock.",
       prompt: "Tap both special names in the sentence.",
-      options: ["Wednesday","Hana","ducks","pond"],
+      options: ["Wednesday","Hana","geese","dock"],
       answer: [0,1],
       pick: 2,
       clue: "Special names are proper nouns. Look for the name of a day and the name of a person.",
       hints: [
         "Special names are proper nouns. Look for the name of a day and the name of a person.",
         "Ask for each noun: could it be about many things, or does it name just one?",
-        "Pond is a general word, so it cannot be a special name."
+        "Dock is a general word, so it cannot be a special name."
       ],
       how: [
         "Find the special names in the sentence.",
         "Wednesday names one day, and Hana names one person.",
-        "Ducks and pond are general words, so they are common nouns."
+        "Geese and dock are general words, so they are common nouns."
       ],
       misconception: "A common mix-up is choosing only one special name. Look for both the day and the person.",
-      why: "The answers are \"Wednesday\" and \"Hana\". Wednesday and Hana are special names. Ducks and pond are common nouns.",
+      why: "The answers are \"Wednesday\" and \"Hana\". Wednesday and Hana are special names. Geese and dock are common nouns.",
       like: ["SK-GUM1-9-P4"]
     },
     {
@@ -12873,35 +12873,35 @@ PP.addLesson({
         "3.L.GC.1:R:use-common-and-proper-nouns"
       ],
       passages: ["p4"],
-      prompt: "Look at Hawks, Bears and Cole Park in sentence 1. Why do they start with capitals?",
+      prompt: "Look at Cole Park Hawks and Oak Hill Bears in sentence 1. Why do they start with capitals?",
       choices: [
         {
-          text: "They are special names for one particular team or park.",
+          text: "They are special names, each for one particular team.",
           correct: true
         },
         {
-          text: "They are long words, and long words need capitals."
+          text: "They are long names, and long names need capitals."
         },
         {
           text: "They begin the sentence, and first words need capitals."
         },
         {
-          text: "They are general words for any team or any park."
+          text: "They are general words for any team at all."
         }
       ],
-      clue: "Ask whether each name could be about any team or place, or just one.",
+      clue: "Ask whether each name could be about any team, or just one.",
       hints: [
-        "Ask whether each name could be about any team or place, or just one.",
+        "Ask whether each name could be about any team, or just one.",
         "Think about why a name gets a capital letter even in the middle of a sentence.",
         "The names do not begin the sentence, so one reason can be ruled out."
       ],
       how: [
-        "Ask what kind of nouns Hawks, Bears and Cole Park are.",
-        "Each one is the special name of one team or one park, so each is a proper noun.",
-        "The answer is \"They are special names for one particular team or park.\""
+        "Ask what kind of nouns Cole Park Hawks and Oak Hill Bears are.",
+        "Each one is the special name of one team, so each is a proper noun.",
+        "The answer is \"They are special names, each for one particular team.\""
       ],
       misconception: "A common mix-up is thinking capital letters are only for the first word. Proper nouns get capitals anywhere.",
-      why: "The answer is \"They are special names for one particular team or park.\" They are special names for one particular team or park. Proper nouns start with capitals even in the middle of a sentence.",
+      why: "The answer is \"They are special names, each for one particular team.\" They are special names, each for one particular team. Proper nouns start with capitals even in the middle of a sentence.",
       like: ["SK-GUM1-9-C05"]
     },
     {
