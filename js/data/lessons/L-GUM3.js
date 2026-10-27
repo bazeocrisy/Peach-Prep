@@ -527,32 +527,27 @@ PP.addLesson({
               "3.L.GC.1:M:use-apostrophes-in-contractions-and-singular-pos"
             ],
             passages: ["p2"],
-            prompt: "Sentence 2 has moon's with an apostrophe, and sentence 5 has star's with an apostrophe. Why is only one of them correct?",
+            prompt: "Sentence 4 has Mom's with an apostrophe, and sentence 8 has She's with an apostrophe. Which explanation of the two words is right?",
             choices: [
-              { text: "Moon's is short for moon is, but star's is short for star has." },
-              { text: "Both words end in s, so each one needs an apostrophe before the s." },
-              {
-                text: "Moon's is correct because the apostrophe makes moon mean more than one, and star's is wrong because there is only one star."
-              },
-              {
-                text: "The light belongs to the moon, but star's only means more than one, so it needs no apostrophe.",
-                correct: true
-              }
+              { text: "Mom's is short for Mom is, but She's shows that something belongs to her." },
+              { text: "Both words show belonging, because every word with 's tells who owns something." },
+              { text: "Neither word needs an apostrophe, because each one is only about one person." },
+              { text: "Mom's shows that the flashlight belongs to Mom, but She's is short for she is.", correct: true }
             ],
             clue: "An apostrophe needs a job: missing letters, or belonging to one owner. Ask what job each word is doing.",
             hints: [
               "An apostrophe needs a job: missing letters, or belonging to one owner. Ask what job each word is doing.",
-              "Read sentences 2 and 5 side by side. In each one, ask what the word after the apostrophe word has to do with it.",
-              "Try stretching moon's into two words. Then try stretching star's. Check whether either one makes sense."
+              "Read sentences 4 and 8 side by side. In each one, ask what comes right after the word with the apostrophe.",
+              "Try stretching Mom's into Mom is in sentence 4. Check whether the sentence still makes sense."
             ],
             how: [
               "Ask what job each apostrophe is doing.",
-              "In sentence 2, the light belongs to the moon. Moon's shows belonging to one owner, so it is correct.",
-              "In sentence 5, the sentence counts the stars. Nothing belongs to them, and star's only means more than one. It should be stars.",
-              "The answer is that the light belongs to the moon, but star's only means more than one."
+              "In sentence 4, the flashlight belongs to Mom. Mom's shows belonging to one owner, so it is not a contraction.",
+              "In sentence 8, She's stretches into she is, so the apostrophe stands for a missing letter.",
+              "The answer is that Mom's shows that the flashlight belongs to Mom, but She's is short for she is."
             ],
-            misconception: "A common mix-up is thinking every word that ends in s needs an apostrophe before the s.",
-            why: "The answer is that the light belongs to the moon, but star's only means more than one, so it needs no apostrophe. Moon's cannot be stretched into moon is or moon has in this sentence, so the apostrophe shows belonging. Ending in s does not decide it."
+            misconception: "A common mix-up is thinking every word that ends in 's is a contraction, or that every one shows belonging.",
+            why: "The answer is \"Mom's shows that the flashlight belongs to Mom, but She's is short for she is.\" Mom's cannot be stretched into Mom is and still make sense, so the apostrophe shows belonging. She's stretches into she is, so its apostrophe stands for a missing letter."
           }
         ]
       },
@@ -575,7 +570,7 @@ PP.addLesson({
             clue: "Check every apostrophe, and every word that might need one. Ask what job it does.",
             hints: [
               "Check every apostrophe, and every word that might need one. Ask what job it does.",
-              "Look at sentences 4 to 9. Some words have an apostrophe, and one word is missing its apostrophe.",
+              "Look at sentences 4 to 9. Check each word that has an apostrophe, and each word that should have one.",
               "Sentence 5 shows belonging and is written correctly. Check the other four."
             ],
             how: [
@@ -617,7 +612,7 @@ PP.addLesson({
             how: [
               "Blank 1: the twins are not here yet. Are not squeezes into aren't, with the apostrophe where the o in not was left out.",
               "Blank 2: the relay has not started. Has not squeezes into hasn't, with the apostrophe where the o in not was left out.",
-              "Check the other options: are'nt and ca'nt put the apostrophe in the wrong place, and arent and cant leave it out."
+              "Check the other options: are'nt and has'nt put the apostrophe in the wrong place, and arent and hasnt leave it out."
             ],
             misconception: "A common mix-up is leaving out the apostrophe, or putting it right after the first word.",
             why: "The answers are aren't and hasn't. Are not squeezes into aren't, and has not squeezes into hasn't. The apostrophe stands where the o in not was left out, so are'nt and has'nt are wrong, and arent and hasnt have no apostrophe at all."
@@ -642,8 +637,8 @@ PP.addLesson({
             clue: "Ask who owns the hat, and whether that is one person or more than one.",
             hints: [
               "Ask who owns the hat, and whether that is one person or more than one.",
-              "Look at the word each in the sentence. Ask whether it points to one player at a time or to a whole group at once.",
-              "Adding two apostrophes to the same sentence is not a fix. Check what the other choices do to the word hat."
+              "Reread the sentence. Which word tells you how many players are meant?",
+              "A word that already ends in -s does not need an extra 's after it. Decide among the rest."
             ],
             how: [
               "Find the word that is missing its apostrophe. Hat belongs to a player.",
@@ -1045,7 +1040,7 @@ PP.addLesson({
       hints: [
         "An apostrophe needs a job: missing letters, or belonging to one owner. Ask what job each word is doing.",
         "Read sentences 3 and 5 side by side. Try stretching the word in each one into two words.",
-        "Sentence 4 tells you that there is more than one watermelon. Use that to check what watermelon's means in sentence 5."
+        "Sentence 4 tells you how many watermelons there are. Check whether anything in sentence 5 belongs to them."
       ],
       how: [
         "Ask what job each apostrophe is doing.",
@@ -1142,8 +1137,8 @@ PP.addLesson({
       clue: "Ask who owns the name, and whether that is one person or more than one.",
       hints: [
         "Ask who owns the name, and whether that is one person or more than one.",
-        "Look at the word each in the sentence. Ask whether it points to one student at a time or to a whole group at once.",
-        "Adding two apostrophes to the same sentence is not a fix. Check what the other choices do to the word name."
+        "Reread the sentence. Which word tells you how many students are meant?",
+        "A word that already ends in -s does not need an extra 's after it. Decide among the rest."
       ],
       how: [
         "Find the word that is missing its apostrophe. The name belongs to a student.",
@@ -1291,13 +1286,13 @@ PP.addLesson({
   test: [
     { id: "SK-GUM3-1-T1", type: "dropdown", points: 2, dok: 2, passages: [],
       prompt: "Choose the words that correctly complete the sentence.",
-      text: "We {0} go outside until we feed {1} cat.",
+      text: "Amara {0} home when we left, so we fed {1} cat.",
       slots: [
-        { options: ["cant", "can't", "ca'nt"], answer: 1 },
+        { options: ["wasnt", "wasn't", "was'nt"], answer: 1 },
         { options: ["Amaras", "Amara", "Amara's"], answer: 2 }
       ],
       clue: "The first blank is a short way to say two words. The second blank tells who the cat belongs to.",
-      why: "The answers are can't and Amara's. Can't is short for cannot, and the apostrophe stands where the n and o were left out. Amara's shows that the cat belongs to Amara, one person, so the 's goes right after her name." },
+      why: "The answers are wasn't and Amara's. Wasn't is short for was not, and the apostrophe stands where the o was left out. Amara's shows that the cat belongs to Amara, one person, so the 's goes right after her name." },
     { id: "SK-GUM3-1-T2", type: "mc", points: 1, dok: 2, passages: [],
       prompt: "Which sentence is correct?",
       choices: [
@@ -1309,15 +1304,15 @@ PP.addLesson({
       clue: "Check every apostrophe and every word that might need one. Ask what job each apostrophe is doing.",
       why: "The answer is \"The horse's mane was long and shiny.\" The mane belongs to the horse. The others should say cousins (just more than one), didn't (did not) and its (belonging to the kitten)." },
     { id: "SK-GUM3-1-T3", type: "mc", points: 1, dok: 1, passages: [],
-      prompt: "Which word is the contraction for will not?",
+      prompt: "Which word is the contraction for should not?",
       choices: [
-        { text: "won't", correct: true },
-        { text: "willn't" },
-        { text: "wo'nt" },
-        { text: "wont" }
+        { text: "shouldn't", correct: true },
+        { text: "should'nt" },
+        { text: "shouldnt" },
+        { text: "shouldno't" }
       ],
-      clue: "Say will not fast, the way you talk. Which word do you hear? Then check where the apostrophe goes.",
-      why: "The answer is won't. Will not changes to won't. The apostrophe takes the place of the o in not, so it sits between n and t." },
+      clue: "Say should not fast, the way you talk. Which word do you hear? Then check where the apostrophe goes.",
+      why: "The answer is shouldn't. Should not changes to shouldn't. The apostrophe takes the place of the o in not, so it sits between n and t." },
     { id: "SK-GUM3-1-T4", type: "hottext", points: 2, dok: 2, passages: [],
       prompt: "Select the TWO sentences that have an error.",
       options: [
@@ -1352,8 +1347,8 @@ PP.addLesson({
     points: [
       "A plural noun names more than one: one cat, two cats.",
       "Some nouns change their spelling: man becomes men, foot becomes feet, tooth becomes teeth, mouse becomes mice, and goose becomes geese.",
-      "Some nouns change in other ways: child becomes children, person becomes people, ox becomes oxen, and wolf becomes wolves. Knife becomes knives the same way.",
-      "A few nouns stay the same: one sheep, ten sheep; one deer, two deer; one moose, two moose.",
+      "Some nouns change in other ways: child becomes children, person becomes people, ox becomes oxen, and wolf becomes wolves. Knife becomes knives the same way. A noun that ends in -man changes to -men: snowman becomes snowmen.",
+      "A few nouns stay the same: one sheep, ten sheep; one deer, two deer; one moose, two moose; one fish, two fish; one bison, two bison.",
       "Never add -s to a special plural. Childrens, feets and mices are not words."
     ],
     words: [
@@ -1607,13 +1602,13 @@ PP.addLesson({
       why: "The error is in \"Two mans fixed our broken fence.\" Man is a special noun. One man, two men." },
     { id: "SK-GUM3-2-P5", type: "dropdown", points: 2, dok: 2, passages: [],
       prompt: "Choose the words that correctly complete the sentence.",
-      text: "The {0} on the field trip laughed when two {1} ran across the barn floor.",
+      text: "The {0} on the field trip laughed when two {1} marched across the yard.",
       slots: [
         { options: ["childs", "children", "childrens"], answer: 1 },
-        { options: ["mouses", "mice", "mices"], answer: 1 }
+        { options: ["gooses", "geese", "geeses"], answer: 1 }
       ],
-      clue: "Both blanks need a word for more than one. Child and mouse are special nouns. Say \"one ___, two ___\" for each.",
-      why: "The answers are children and mice. One child, many children. One mouse, two mice. Childrens and mices add an extra -s that does not belong." }
+      clue: "Both blanks need a word for more than one. Child and goose are special nouns. Say \"one ___, two ___\" for each.",
+      why: "The answers are children and geese. One child, many children. One goose, two geese. Childrens and geeses add an extra -s that does not belong." }
   ],
   /* B6:core:start */
   /* ---------- Expansion 2026-10-22, batch B6 (GUM Master) ----------
@@ -1997,9 +1992,9 @@ PP.addLesson({
               { text: "Visitors can watch the farmers care for the oxs." },
               { text: "Visitors can watch the farmers care for the ox." }
             ],
-            clue: "Some nouns add letters at the end that are not -s or -es. Say the noun for one, then for many.",
+            clue: "Say the noun for one, then say it for more than one, the way you would say it aloud.",
             hints: [
-              "Some nouns add letters at the end that are not -s or -es. Say the noun for one, then for many.",
+              "Say the noun for one, then say it for more than one, the way you would say it aloud.",
               "Read sentence 7. The farmers care for more than one animal. Think about how the noun for just one changes.",
               "The ox is for only one animal. Decide among the other three."
             ],
@@ -2169,10 +2164,10 @@ PP.addLesson({
       how: [
         "Find the plural noun in each sentence and say the noun for one.",
         "Otters and animals add -s the usual way. Halfs and wolfs need their f changed to v.",
-        "Bisons is wrong, because bison stays the same: one bison, five bison."
+        "Sheeps is wrong, because sheep stays the same: one sheep, five sheep."
       ],
-      misconception: "A common mix-up is adding -s to a noun that stays the same, like bison, sheep or deer.",
-      why: "The answer is sentence 4, \"At the plains exhibit, we counted five bisons near the fence.\" Bison stays the same for one or many. Otters and animals add -s the usual way, and halfs and wolfs need their f changed to v.",
+      misconception: "A common mix-up is adding -s to a noun that stays the same, like moose, sheep or deer.",
+      why: "The answer is sentence 4, \"At the plains exhibit, we counted five sheeps near the fence.\" Sheep stays the same for one or many. Otters and animals add -s the usual way, and halfs and wolfs need their f changed to v.",
       like: ["SK-GUM3-2-C04"]
     },
     {
@@ -2188,18 +2183,21 @@ PP.addLesson({
       partA: {
         prompt: "Look at the last sentence in the forest exhibit part of the draft. Which choice writes its plural noun correctly?",
         choices: [
+          { text: "In the forest exhibit, two wolfs slept in the shade." },
           { text: "In the forest exhibit, two wolfes slept in the shade." },
           { text: "In the forest exhibit, two wolve slept in the shade." },
-          { text: "In the forest exhibit, two wolves slept in the shade." },
-          { text: "In the forest exhibit, two wolfs slept in the shade.", correct: true }
+          { text: "In the forest exhibit, two wolves slept in the shade.", correct: true }
         ]
       },
       partB: {
         prompt: "Why is the answer to Part A correct?",
         choices: [
+          { text: "Wolf is a noun that never changes, so the plural looks just like the singular." },
           { text: "Wolf swaps the vowels inside the word, so the plural is spelled with a new vowel." },
-          { text: "Wolf ends in f, and an f like this changes to v before the plural ending, as in elf and elves." },
-          { text: "Wolf is a noun that never changes, so the plural looks just like the singular.", correct: true },
+          {
+            text: "Wolf ends in f, and an f like this changes to v before the plural ending, as in elf and elves.",
+            correct: true
+          },
           { text: "Wolf adds the letters -en at the end, so the plural is spelled with those letters." }
         ]
       },
@@ -2323,7 +2321,7 @@ PP.addLesson({
       pick: 2,
       choices: [
         { text: "The elfs hid behind the big oak tree." },
-        { text: "My baby sister has four new tooths." },
+        { text: "My little brother lost three tooths on the swing." },
         { text: "The farmer fed his oxen at sunrise.", correct: true },
         { text: "Dad bought three loafs of bread." },
         { text: "Seven bison grazed on the open plain.", correct: true }
@@ -2336,7 +2334,7 @@ PP.addLesson({
       ],
       how: [
         "Find the plural noun in each sentence and say the noun for one.",
-        "Ox adds -en, so oxen is correct. Bison stays the same for one or many.",
+        "Ox adds -en, so oxen is correct. Sheep stays the same for one or many.",
         "The others are wrong: it should be elves, loaves and teeth."
       ],
       misconception: "A common mix-up is adding -s to a noun that changes its spelling or stays the same.",
@@ -2486,11 +2484,11 @@ PP.addLesson({
         { text: "The coach gave a snack to all the child after the game." },
         { text: "The coach gave a snack to all the children after the game.", correct: true }
       ],
-      clue: "Some nouns add letters at the end that are not -s or -es. Say the noun for one, then for many.",
+      clue: "Say the noun for one, then say it for more than one, the way you would say it aloud.",
       hints: [
-        "Some nouns add letters at the end that are not -s or -es. Say the noun for one, then for many.",
+        "Say the noun for one, then say it for more than one, the way you would say it aloud.",
         "Read the sentence. All the means more than one. Think about how the noun for just one changes.",
-        "Children already shows more than one. Check what the other choices add or take away."
+        "One of the choices names only one child. Decide among the other three."
       ],
       how: [
         "Find the noun: child. The words all the tell you it must mean more than one.",
@@ -2588,14 +2586,14 @@ PP.addLesson({
     },
     "SK-GUM3-2-P5": {
       hints: [
-        "Both blanks need a word for more than one. Child and mouse are special nouns, so say one ___, two ___ for each.",
-        "Look at each blank and its clue words. In the first, the children on the trip are more than one. In the second, two tells you.",
-        "Childrens and mices add -s to words that already changed. Decide about the other options."
+        "Both blanks need a word for more than one. Say one ___, two ___ for each blank.",
+        "Look at each blank and its clue words. In the first, ask how many went on the trip. In the second, two tells you.",
+        "Childrens and geeses add -s to words that already changed. Decide about the other options."
       ],
       how: [
         "Both blanks need a word for more than one.",
-        "One child, many children. One mouse, two mice. Both change their spelling.",
-        "Childs and mouses add the usual -s to nouns that should change. Childrens and mices add an extra -s."
+        "One child, many children. One goose, two geese. Both change their spelling.",
+        "Childs and gooses add the usual -s to nouns that should change. Childrens and geeses add an extra -s."
       ],
       misconception: "A common mix-up is changing the word and then adding -s as well."
     }
@@ -2632,15 +2630,15 @@ PP.addLesson({
       why: "The answer is feet. One foot, two feet." },
     { id: "SK-GUM3-2-T4", type: "match", points: 2, dok: 1, passages: [],
       prompt: "Match each noun to its plural.",
-      cols: ["people", "oxen", "wolves", "knives"],
+      cols: ["women", "shelves", "calves", "teeth"],
       rows: [
-        { text: "person", answer: 0 },
-        { text: "ox", answer: 1 },
-        { text: "wolf", answer: 2 },
-        { text: "knife", answer: 3 }
+        { text: "woman", answer: 0 },
+        { text: "shelf", answer: 1 },
+        { text: "calf", answer: 2 },
+        { text: "tooth", answer: 3 }
       ],
       clue: "Say \"one ___, two ___\" for each word. Listen for the plural that sounds right.",
-      why: "One person, two people. One ox, two oxen. One wolf, two wolves. One knife, two knives." },
+      why: "One woman, two women. One shelf, two shelves. One calf, two calves. One tooth, two teeth." },
     { id: "SK-GUM3-2-T5", type: "hottext", points: 1, dok: 2, passages: [],
       prompt: "Select the sentence that has an error.",
       options: [
@@ -2683,10 +2681,10 @@ PP.addLesson({
       why: "The answers are \"The farmer's two calves drank milk from a big bucket.\" and \"The elves in our class play wore pointy green hats.\" One calf, two calves. One elf, many elves. In both words, the f changes to v before -es is added. The other sentences should say thieves, grandchildren and halves. Thief and half change the same way as calf: one thief, two thieves; one half, two halves. Grandchild changes like child and children. So thiefs, grandchilds and halfs are not words." },
     { id: "SK-GUM3-2-TB3", type: "dropdown", points: 1, dok: 1, passages: [],
       prompt: "Choose the word that correctly completes the sentence.",
-      text: "Mom baked three {0} of bread for the bake sale.",
-      slots: [{ options: ["loafs", "loaves", "loaf"], answer: 1 }],
-      clue: "Three means more than one, so you need a plural. Loaf ends in f. Think of another noun that ends in f or fe, like knife. How does it make its plural?",
-      why: "The answer is loaves. One loaf, three loaves. Like knife and knives, the f changes to v before -es is added. Loafs is not the plural of loaf, and loaf names only one." },
+      text: "The police caught two {0} near the bank.",
+      slots: [{ options: ["thiefs", "thieves", "thief"], answer: 1 }],
+      clue: "Two means more than one, so you need a plural. Thief ends in f. Think of another noun that ends in f or fe, like knife. How does it make its plural?",
+      why: "The answer is thieves. One thief, two thieves. Like knife and knives, the f changes to v before -es is added. Thiefs is not the plural of thief, and thief names only one." },
     { id: "SK-GUM3-2-TB4", type: "match", points: 2, dok: 2, passages: [],
       prompt: "Is the plural noun in each sentence correct, or does it need a fix? Match each sentence.",
       cols: ["Correct", "Needs a fix"],
@@ -2756,6 +2754,16 @@ PP.addLesson({
         "Bring is irregular. Its past tense is brought, not bringed."
       ],
       answer: "Yesterday, Mateo brought his kite to the beach on Tybee Island."
+    },
+    {
+      show: ["Last week, the coach (cutted / cut) the long rope in two."],
+      ask: "Which verb is correct?",
+      steps: [
+        "Find the time clue: last week. The verb must tell about the past.",
+        "Cut is an irregular verb, but it does not change at all. Cut is also the past tense.",
+        "Cutted is not a word, so cross it out."
+      ],
+      answer: "Last week, the coach cut the long rope in two."
     }
   ],
   parent: "At dinner, ask \"What did you do today?\" and listen for special past-tense verbs. If your child says \"I eated,\" just repeat it back the right way: \"Oh, you ate pizza!\"",
@@ -2774,7 +2782,7 @@ PP.addLesson({
           "(3) She gave each team a map and a pencil."
         ],
         [
-          "(4) My team runned across the grass to the first clue.",
+          "(4) My team drawed a path across the grass to the first clue.",
           "(5) We keeped the clue safe in my backpack.",
           "(6) It said to look near the tallest tree."
         ],
@@ -2889,7 +2897,7 @@ PP.addLesson({
         ],
         [
           "(7) My mom agreed he could sleep in my room.",
-          "(8) At midnight, Biscuit creeped out of his cage, and I catched him before he reached the door.",
+          "(8) At midnight, Biscuit creeped out of his cage, and I finded him before he reached the door.",
           "(9) I was too tired to be upset."
         ],
         ["(10) Now Biscuit has a lid on his cage."]
@@ -2971,7 +2979,7 @@ PP.addLesson({
         { options: ["rided", "rode", "rides"], answer: 1 },
         { options: ["seen", "saw", "seed"], answer: 1 }
       ],
-      clue: "Last Saturday already happened, so both verbs must tell about the past. Neither verb adds -ed.",
+      clue: "Last Saturday already happened, so both verbs must tell about the past.",
       why: "The answers are rode and saw. Ride becomes rode, and see becomes saw. Seen needs a helper word like has, so it does not fit here." }
   ],
   /* B6:core:start */
@@ -2997,10 +3005,10 @@ PP.addLesson({
             ],
             passages: ["p1"],
             prompt: "Sentence 4 of the draft has a verb mistake. Choose the word that fixes it.",
-            text: "My team {0} across the grass to the first clue.",
+            text: "My team {0} a path across the grass to the first clue.",
             slots: [
               {
-                options: ["runned", "ran", "runs"],
+                options: ["drawed", "drew", "draws"],
                 answer: 1
               }
             ],
@@ -3008,15 +3016,15 @@ PP.addLesson({
             hints: [
               "Find the time clue in the draft. The verb must tell about the past.",
               "Read sentence 4. Say each choice in the sentence and ask which one is a real past-tense word.",
-              "Runs tells about now. Decide between the other two."
+              "Draws tells about now. Decide between the other two."
             ],
             how: [
               "The draft tells about last Saturday, so the verb must tell about the past.",
-              "Run is an irregular verb. It changes into a new word instead of adding -ed.",
-              "The answer is ran. Runned is not a word, and runs tells about now."
+              "Draw is an irregular verb. It changes into a new word instead of adding -ed.",
+              "The answer is drew. Drawed is not a word, and draws tells about now."
             ],
-            misconception: "A common mix-up is adding -ed to a special verb. Say the word out loud: runned does not sound right.",
-            why: "The answer is ran. Run is an irregular verb, so its past tense is ran. Runned is not a word, and runs tells about now."
+            misconception: "A common mix-up is adding -ed to a special verb. Say the word out loud: drawed does not sound right.",
+            why: "The answer is drew. Draw is an irregular verb, so its past tense is drew. Drawed is not a word, and draws tells about now."
           },
           {
             id: "SK-GUM3-3-C04",
@@ -3079,7 +3087,7 @@ PP.addLesson({
             clue: "Say the verb, then decide whether it is a real past-tense word.",
             hints: [
               "Say the verb, then decide whether it is a real past-tense word.",
-              "For Part A, read sentence 7 and say each choice in it. For Part B, think about what kind of verb think is.",
+              "For Part A, read sentence 7 and say each choice in it. For Part B, think about whether thinked follows the pattern most verbs follow, and what the correct word looks like.",
               "In Part A, thinks tells about now. Check the other choices."
             ],
             how: [
@@ -3467,9 +3475,9 @@ PP.addLesson({
           answer: 0
         }
       ],
-      clue: "Last night already happened, so both verbs must tell about the past. Neither verb adds -ed.",
+      clue: "Last night already happened, so both verbs must tell about the past.",
       hints: [
-        "Last night already happened, so both verbs must tell about the past. Neither verb adds -ed.",
+        "Last night already happened, so both verbs must tell about the past.",
         "Say each choice in its blank. Ask which one is a real word that tells about the past.",
         "Goes tells about now. Decide the rest."
       ],
@@ -3694,9 +3702,9 @@ PP.addLesson({
       passages: [],
       prompt: "Which group of verbs never adds -ed to tell about the past?",
       choices: [
-        { text: "pay, wait, hear" },
-        { text: "say, call, hear" },
-        { text: "pay, say, hear", correct: true },
+        { text: "pay, wait, sit" },
+        { text: "say, call, sit" },
+        { text: "pay, say, sit", correct: true },
         { text: "wait, call, walk" }
       ],
       clue: "Say each verb in a sentence with yesterday. Ask whether it adds -ed or becomes a new word.",
@@ -3707,11 +3715,11 @@ PP.addLesson({
       ],
       how: [
         "Say Yesterday I ___ for each verb in the lists.",
-        "Pay becomes paid, say becomes said, and hear becomes heard. All three become new words.",
+        "Pay becomes paid, say becomes said, and sit becomes sat. All three become new words.",
         "Wait, call and walk all add -ed, so each of the other lists has at least one regular verb."
       ],
       misconception: "A common mix-up is picking a list that has one special verb. Every verb in the list must change.",
-      why: "The answer is \"pay, say, hear.\" Pay becomes paid, say becomes said, and hear becomes heard. Each other list has a verb that adds -ed, like wait, call or walk.",
+      why: "The answer is \"pay, say, sit.\" Pay becomes paid, say becomes said, and sit becomes sat. Each other list has a verb that adds -ed, like wait, call or walk.",
       like: ["SK-GUM3-3-C09"]
     },
     {
@@ -3731,7 +3739,7 @@ PP.addLesson({
           answer: 0
         },
         {
-          options: ["catches", "caught", "catched"],
+          options: ["finds", "found", "finded"],
           answer: 1
         }
       ],
@@ -3739,15 +3747,15 @@ PP.addLesson({
       hints: [
         "Both verbs must tell about the past. Ask whether each choice is a real past-tense word.",
         "Read sentence 8. Say each choice in its blank, and listen for the one that tells about last year.",
-        "Catches tells about now. Decide the rest."
+        "Finds tells about now. Decide the rest."
       ],
       how: [
         "Both verbs must tell about the past, because the draft tells about last year.",
         "Creep changes to crept. Creeped is not a word, and creeps tells about now.",
-        "Catch changes to caught. Catched is not a word, and catches tells about now."
+        "Find changes to found. Finded is not a word, and finds tells about now."
       ],
-      misconception: "A common mix-up is adding -ed to a verb that changes. Creeped and catched are both made up.",
-      why: "The answers are crept and caught. Creep becomes crept, and catch becomes caught. Creeped and catched are not words, and creeps and catches tell about now.",
+      misconception: "A common mix-up is adding -ed to a verb that changes. Creeped and finded are both made up.",
+      why: "The answers are crept and found. Creep becomes crept, and find becomes found. Creeped and finded are not words, and creeps and finds tell about now.",
       like: ["SK-GUM3-3-C10"]
     },
     {
@@ -3962,7 +3970,7 @@ PP.addLesson({
     },
     "SK-GUM3-3-P5": {
       hints: [
-        "Last Saturday already happened, so both verbs must tell about the past. Neither verb adds -ed.",
+        "Last Saturday already happened, so both verbs must tell about the past.",
         "Say each choice in its blank. Ask which one is a real past-tense word.",
         "Rides tells about now. Decide the rest."
       ],
@@ -4183,7 +4191,7 @@ PP.addLesson({
         [
           "(1) Last Friday, our class drew chalk art on the sidewalk by the gym.",
           "(2) Ms. Rao gave each of us a bucket of colorful chalk.",
-          "(3) I wanted to draw a huge whale, and the sidewalk square was too small, or I drew a small one."
+          "(3) My whale was going to be huge, and the sidewalk square was too small, or I drew a small one."
         ],
         [
           "(4) My friend Omar drew a bright sun with a big smile.",
@@ -4232,12 +4240,12 @@ PP.addLesson({
         [
           "(1) Welcome to the Jump Rope Club!",
           "(2) We meet every Thursday for an hour after school in the gym.",
-          "(3) Beginners can start with short ropes."
+          "(3) Beginners can start with short ropes and slow jumps."
         ],
         [
           "(4) Our coach, Ms. Yang, shows us a new trick each week, or she helps us practice the old ones.",
           "(5) Double jumps look easy, so they take lots of practice.",
-          "(6) The club has two rules for every member."
+          "(6) The club has two rules for every member, and both are easy."
         ],
         [
           "(7) You can bring your own rope, so you can borrow one from the closet.",
@@ -4344,7 +4352,7 @@ PP.addLesson({
         { text: "The movie was funny, or we laughed a lot." }
       ],
       clue: "Read each sentence and ask: Does the joining word do the right job? Adding, different, choice or result?",
-      why: "The answers are \"I was hungry, so I ate a banana.\" and \"Hana can play the piano and the drums.\" Being hungry is why I ate, so so fits, and and adds the drums. Leaving a coat at home when it is cold needs but. A choice between drawing and painting needs or. Laughing because the movie was funny needs so." }
+      why: "The answers are \"I was hungry, so I ate a banana.\" and \"Hana can play the piano and the drums.\" Being hungry is why I ate, the word so fits, and and adds the drums. Leaving a coat at home when it is cold needs but. A choice between drawing and painting needs or. Laughing because the movie was funny needs so." }
   ],
   /* B6:core:start */
   /* ---------- Expansion 2026-10-22, batch B6 (GUM Master) ----------
@@ -4450,7 +4458,7 @@ PP.addLesson({
             clue: "Find the two ideas the joining word connects, and ask how they are related.",
             hints: [
               "Find the two ideas the joining word connects, and ask how they are related.",
-              "For Part A, say each choice and ask what job the joining word does. For Part B, look for a sentence about how the place will be decided.",
+              "For Part A, say each choice and ask what job the joining word does. For Part B, reread the draft and decide which sentence tells you something about choosing.",
               "In Part A, nor goes with a sentence that says no, and sentence 7 does not say no. Check the other choices."
             ],
             how: [
@@ -4569,8 +4577,8 @@ PP.addLesson({
             prompt: "Match each joining word to the sentence it completes.",
             cols: ["for", "yet", "nor", "so"],
             rows: [
-              { text: "The hill was steep, ___ we climbed it.", answer: 1 },
-              { text: "Ana did not call, ___ did she write.", answer: 2 },
+              { text: "The path was muddy, ___ we kept going.", answer: 1 },
+              { text: "Tomas did not wave, ___ did he smile.", answer: 2 },
               { text: "Luis was sick, ___ he stayed home.", answer: 3 },
               { text: "Bring a hat, ___ the sun is strong.", answer: 0 }
             ],
@@ -4578,15 +4586,15 @@ PP.addLesson({
             hints: [
               "Read each sentence with a joining word in the blank. Ask how the second part connects to the first.",
               "Start with the sentence you are surest about. Think about which sentence begins with a no.",
-              "Ana did not call begins with a no. Decide the other rows one at a time."
+              "Tomas did not wave begins with a no. Decide the other rows one at a time."
             ],
             how: [
               "Ask how the second part connects to the first in each sentence.",
-              "Ana did not call, nor did she write. Nor goes with a no.",
-              "Sick is the reason Luis stayed home, so so fits. The sun is the reason for the hat, so for fits. Climbing a steep hill is a surprise, so yet fits."
+              "Tomas did not wave, nor did he smile. Nor goes with a no.",
+              "Sick is the reason Luis stayed home, so so fits. The sun is the reason for the hat, so for fits. Keeping going on a muddy path is a surprise, so yet fits."
             ],
             misconception: "A common mix-up is mixing up for and so. For gives the reason, and so tells the result.",
-            why: "Yet goes with the hill sentence, because climbing a steep hill is a surprise. Nor goes with Ana did not call. So goes with Luis was sick, because sick is why he stayed home. For goes with the hat sentence, because the sun is the reason."
+            why: "Yet goes with the path sentence, because going on through mud is a surprise. Nor goes with Tomas did not wave. So goes with Luis was sick, because sick is why he stayed home. For goes with the hat sentence, because the sun is the reason."
           },
           {
             id: "SK-GUM3-4-C09",
@@ -4598,7 +4606,7 @@ PP.addLesson({
             ],
             passages: ["p2"],
             prompt: "Sentence 3 of the draft uses the wrong joining word two times. Choose the words that fix it.",
-            text: "I wanted to draw a huge whale, {0} the sidewalk square was too small, {1} I drew a small one.",
+            text: "My whale was going to be huge, {0} the sidewalk square was too small, {1} I drew a small one.",
             slots: [
               {
                 options: ["or", "but", "so"],
@@ -4616,12 +4624,12 @@ PP.addLesson({
               "Or gives a choice, and the writer is not choosing between two things in the first blank. Decide the rest."
             ],
             how: [
-              "The writer wanted a huge whale, and the square was too small. That is a problem, so the first blank shows something different.",
+              "The whale was going to be huge, and the square was too small. That is a problem, so the first blank shows something different.",
               "The square was too small, and the writer drew a small whale. The small whale is the result.",
               "The answers are but and so."
             ],
             misconception: "A common mix-up is choosing the same kind of joining word for both blanks. Each blank connects its parts in a different way.",
-            why: "The answers are but and so. The wish for a huge whale goes against the small square, so but fits first. The small square is why the writer drew a small whale, so so fits second."
+            why: "The answers are but and so. The plan for a huge whale goes against the small square, so but fits first. The small square is why the writer drew a small whale, so so fits second."
           },
           {
             id: "SK-GUM3-4-C10",
@@ -4933,16 +4941,16 @@ PP.addLesson({
       partB: {
         prompt: "Which sentence from the draft best supports the answer to Part A?",
         choices: [
-          { text: "Our coach, Ms. Yang, shows us a new trick each week." },
-          { text: "Beginners can start with short ropes." },
+          { text: "Please be on time, for we start right at three o'clock." },
+          { text: "Beginners can start with short ropes and slow jumps." },
           { text: "You only need one rope, so choose the one you like.", correct: true },
-          { text: "We meet every Thursday for an hour after school in the gym." }
+          { text: "The club has two rules for every member, and both are easy." }
         ]
       },
       clue: "Find the two ideas the joining word connects, and ask how they are related.",
       hints: [
         "Find the two ideas the joining word connects, and ask how they are related.",
-        "For Part A, say each choice and ask what job the joining word does. For Part B, look for a sentence about how many ropes a member needs.",
+        "For Part A, say each choice and ask what job the joining word does. For Part B, reread the draft and decide which sentence tells you something about choosing.",
         "In Part A, nor goes with a sentence that says no, and this sentence does not say no. Check the other choices."
       ],
       how: [
@@ -5062,8 +5070,8 @@ PP.addLesson({
       rows: [
         { text: "It was dark, ___ I was not afraid.", answer: 1 },
         { text: "Take a snack, ___ the trip is long.", answer: 0 },
-        { text: "Pam was late, ___ she missed the bus.", answer: 3 },
-        { text: "Rob did not laugh, ___ did he smile.", answer: 2 }
+        { text: "Pam felt ill, ___ she stayed in bed.", answer: 3 },
+        { text: "Rob did not laugh, ___ did he cry.", answer: 2 }
       ],
       clue: "Read each sentence with a joining word in the blank. Ask how the second part connects to the first.",
       hints: [
@@ -5073,11 +5081,11 @@ PP.addLesson({
       ],
       how: [
         "Ask how the second part connects to the first in each sentence.",
-        "Rob did not laugh, nor did he smile. Nor goes with a no.",
-        "Missing the bus is the result of being late, so so fits. The long trip is the reason for a snack, so for fits. Not being afraid in the dark is a surprise, so yet fits."
+        "Rob did not laugh, nor did he cry. Nor goes with a no.",
+        "Staying in bed is the result of feeling ill, so so fits. The long trip is the reason for a snack, so for fits. Not being afraid in the dark is a surprise, so yet fits."
       ],
       misconception: "A common mix-up is mixing up for and so. For gives the reason, and so tells the result.",
-      why: "Yet goes with the dark sentence, because not being afraid is a surprise. Nor goes with Rob did not laugh. So goes with Pam was late, because being late is why she missed the bus. For goes with the snack sentence, because the long trip is the reason.",
+      why: "Yet goes with the dark sentence, because not being afraid is a surprise. Nor goes with Rob did not laugh. So goes with Pam felt ill, because feeling ill is why she stayed in bed. For goes with the snack sentence, because the long trip is the reason.",
       like: ["SK-GUM3-4-C08"]
     },
     {
@@ -5215,27 +5223,27 @@ PP.addLesson({
         "3.L.GC.1:M:use-coordinating-conjunctions-to-join-words-phra"
       ],
       passages: [],
-      prompt: "Which sentence has the same meaning as the sentence below?",
-      stem: "Ravi drank a glass of water, for he was thirsty.",
+      prompt: "Choose the version that tells it in a new order but keeps the idea.",
+      stem: "Lena grabbed an umbrella, for it was raining.",
       choices: [
-        { text: "Ravi was thirsty, but he drank a glass of water." },
-        { text: "Ravi was thirsty, or he drank a glass of water." },
-        { text: "Ravi was thirsty, so he drank a glass of water.", correct: true },
-        { text: "Ravi was thirsty, for he drank a glass of water." }
+        { text: "It was raining, but Lena grabbed an umbrella." },
+        { text: "It was raining, or Lena grabbed an umbrella." },
+        { text: "It was raining, so Lena grabbed an umbrella.", correct: true },
+        { text: "It was raining, for Lena grabbed an umbrella." }
       ],
       clue: "Find the reason and the result in the first sentence. Then find them in each choice.",
       hints: [
         "Find the reason and the result in the first sentence. Then find them in each choice.",
-        "In the first sentence, the water comes first. In the choices, being thirsty comes first. Ask what the joining word must show.",
-        "Or gives a choice, and Ravi is not choosing. Check the other three."
+        "In the first sentence, the umbrella comes first. In the choices, the weather comes first. Ask what the joining word must show.",
+        "Or gives a choice, and Lena is not choosing. Check the other three."
       ],
       how: [
-        "In the first sentence, being thirsty is the reason, and drinking water is the result.",
-        "The new sentence names the thirst first, so the joining word must lead to the result. So tells what happened because of something.",
-        "The answer is \"Ravi was thirsty, so he drank a glass of water.\" The choice with for says the water was the reason for the thirst, but shows a surprise, and or shows a choice."
+        "In the first sentence, the rain is the reason, and grabbing the umbrella is the result.",
+        "The new sentence names the rain first, so the joining word must lead to the result. So tells what happened because of something.",
+        "The answer is \"It was raining, so Lena grabbed an umbrella.\" The choice with for says the umbrella was the reason for the rain, but shows a surprise, and or shows a choice."
       ],
       misconception: "A common mix-up is keeping the same joining word when the parts switch places. When the parts switch, for changes to so.",
-      why: "The answer is \"Ravi was thirsty, so he drank a glass of water.\" Being thirsty is still the reason, and so tells the result. For would say the water was the reason for the thirst, but shows a surprise, and or shows a choice.",
+      why: "The answer is \"It was raining, so Lena grabbed an umbrella.\" The rain is still the reason, and so tells the result. For would say the umbrella was the reason for the rain, but shows a surprise, and or shows a choice.",
       like: ["SK-GUM3-4-C13"]
     },
     {
@@ -5433,15 +5441,15 @@ PP.addLesson({
   teach: {
     big: "A collective noun names a group as one thing, like team. An abstract noun names an idea or a feeling you cannot touch, like kindness.",
     points: [
-      "A collective noun is one word for a whole group: a team of players, a flock of birds, a herd of cows, a class of students.",
-      "When the group acts together, treat it as one thing: The team is ready. The flock flies south.",
+      "A collective noun is one word for a whole group: a team of players, a flock of birds, a herd of cows, a class of students. Animals have their own group words: a pack of wolves, a school of fish, a colony of ants, a litter of puppies.",
+      "When the group acts together, treat it as one thing: The team is ready. The crew sings. Helper verbs match too: The team was ready. The team has a new coach.",
       "A plural like birds is not a collective noun. A collective noun is one word that names the whole group.",
-      "An abstract noun names an idea, a feeling or a quality: joy, courage, friendship, honesty.",
+      "An abstract noun names an idea, a feeling or a quality: pride, freedom, patience, trust.",
       "You cannot see, hear, touch, taste or smell an abstract noun. You can see a friend, but you cannot touch friendship."
     ],
     words: [
       { term: "collective noun", means: "a noun that names a group, like team or family" },
-      { term: "abstract noun", means: "a noun that names an idea or feeling, like hope or fear" }
+      { term: "abstract noun", means: "a noun that names an idea or feeling, like pride or trust" }
     ],
     example: {
       label: "Example",
@@ -5472,14 +5480,14 @@ PP.addLesson({
       answer: "Kindness is the abstract noun."
     },
     {
-      show: ["The audience (clap / claps) when the show ends."],
+      show: ["The swarm (buzz / buzzes) around the hive."],
       ask: "Which verb goes with the group noun?",
       steps: [
-        "Find the group noun: audience. It names a whole group of people.",
-        "The audience claps together, so it acts as one thing.",
+        "Find the group noun: swarm. It names a whole group of bees.",
+        "The swarm moves together, so it acts as one thing.",
         "A group that acts as one takes the verb for one. In the present tense, that verb ends in -s."
       ],
-      answer: "The audience claps when the show ends."
+      answer: "The swarm buzzes around the hive."
     }
   ],
   parent: "At the park or the store, name groups together (a crowd of shoppers, a flock of pigeons). At bedtime, ask your child to name one feeling or idea from the day, like joy, fear or patience.",
@@ -5741,7 +5749,7 @@ PP.addLesson({
               "The answer is fleet. A fleet is one word for a group of boats."
             ],
             misconception: "A common mix-up is picking boats because it means more than one. A collective noun is one word that names a whole group.",
-            why: "The answer is fleet. A fleet is one word that names a group of boats. Boats is a plural, dock names one place, and sails is a verb."
+            why: "The answer is fleet. A fleet is one word that names a group of boats. Boats is a plural, dock names one place, and sails is a word for what boats do."
           },
           {
             id: "SK-GUM3-5-C04",
@@ -6028,7 +6036,7 @@ PP.addLesson({
             clue: "A collective noun is one word that names a whole group. Look for the word that does not do that.",
             hints: [
               "A collective noun is one word that names a whole group. Look for the word that does not do that.",
-              "Say a ___ of for each word. Ask which word is just the plural of one animal.",
+              "Say a ___ of for each word. Ask which one makes the phrase sound odd.",
               "A crew names a group of workers. Decide among the other three."
             ],
             how: [
@@ -6327,15 +6335,15 @@ PP.addLesson({
       hints: [
         "An abstract noun names an idea, a feeling or a quality. Look for words you cannot see or touch.",
         "Read the nouns in each of the five sentences. Ask whether you could see or touch the thing the noun names.",
-        "In sentence 3, committee names a group of people. Check the other four sentences."
+        "In sentence 3, panel names a group of people. Check the other four sentences."
       ],
       how: [
         "Find the nouns in each sentence and ask whether you could see or touch the thing.",
-        "Committee, group and litter name groups, and a group can be seen.",
+        "Panel, group and litter name groups, and a group can be seen.",
         "Sentence 5 has loyalty, and sentence 8 has relief. You cannot see or touch either one, so both are abstract nouns."
       ],
       misconception: "A common mix-up is picking a sentence with a group noun. A group of people or animals can be seen, so it is not abstract.",
-      why: "The answers are \"My neighbor's old dog showed loyalty, because it stayed by her side.\" and \"After the show, my sister felt relief because her dog behaved.\" Loyalty and relief name a quality and a feeling, so they are abstract nouns. Committee, group and litter name groups.",
+      why: "The answers are \"My neighbor's old dog showed loyalty, because it stayed by her side.\" and \"After the show, my sister felt relief because her dog behaved.\" Loyalty and relief name a quality and a feeling, so they are abstract nouns. Panel, group and litter name groups.",
       like: ["SK-GUM3-5-C06"]
     },
     {
@@ -6517,7 +6525,7 @@ PP.addLesson({
       clue: "Look for the word that means more than one person but is not one word for the whole group.",
       hints: [
         "Look for the word that means more than one person but is not one word for the whole group.",
-        "Say a ___ of for each word. Ask which word is just the plural of one relative.",
+        "Say a ___ of for each word. Ask which one makes the phrase sound odd.",
         "A herd names a group of animals. Decide among the other three."
       ],
       how: [
@@ -6758,9 +6766,9 @@ PP.addLesson({
     points: [
       "The reflexive pronouns are myself, yourself, himself, herself, itself, ourselves, yourselves and themselves.",
       "Use one when the person doing the action is also the one it happens to: I see myself in the mirror.",
-      "Match the pronoun to the word it points back to. One person or thing ends in -self (Ben, himself). More than one ends in -selves (the girls, themselves; we, ourselves).",
+      "Match the pronoun to the word it points back to. One person or thing ends in -self (Ben, himself). More than one ends in -selves (the girls, themselves; we, ourselves). When you talk to one person, use yourself. When you talk to more than one, use yourselves.",
       "You can also use a -self word after by to mean alone (I did it by myself).",
-      "Hisself and theirselves are not correct words. Also, do not use myself in place of I or me: say \"Dad and I went,\" not \"Dad and myself went.\""
+      "Hisself and theirselves are not correct words. Also, do not use myself in place of I or me: say \"Sam and I walked,\" not \"Sam and myself walked.\""
     ],
     words: [
       { term: "pronoun", means: "a word that takes the place of a noun, like he, she or they" },
@@ -6785,14 +6793,14 @@ PP.addLesson({
       answer: "Marcus cut himself a slice of bread."
     },
     {
-      show: ["We built ourself a fort out of blankets."],
+      show: ["The girls built theirselves a fort out of blankets."],
       ask: "This sentence has a pronoun error. How do you fix it?",
       steps: [
-        "Find who did the action: we.",
-        "We means more than one person, so the word must end in -selves.",
-        "The reflexive pronoun for we is ourselves."
+        "Find who did the action: the girls.",
+        "The girls are more than one person, so the word must end in -selves.",
+        "Theirselves is not a correct word. The reflexive pronoun for the girls is themselves."
       ],
-      answer: "We built ourselves a fort out of blankets."
+      answer: "The girls built themselves a fort out of blankets."
     },
     {
       show: ["Tia and (myself / I) planted the seeds by (myself / ourselves)."],
@@ -7343,7 +7351,7 @@ PP.addLesson({
             dok: 3,
             std: ["3.L.GC.1:M:use-reflexive-pronouns"],
             passages: [],
-            prompt: "Lee says, \"You can use the word myself in place of I or me.\" Which TWO sentences show that Lee is wrong?",
+            prompt: "Lee says, \"You can use the word myself in place of I or me.\" Choose the TWO sentences where myself is used when I or me should be used.",
             pick: 2,
             choices: [
               { text: "I looked at myself in the mirror." },
@@ -7352,9 +7360,9 @@ PP.addLesson({
               { text: "Mia and myself raced to the gate.", correct: true },
               { text: "I gave myself a haircut." }
             ],
-            clue: "To test a rule, look for examples that break it. Find sentences where myself is used in the wrong place.",
+            clue: "Find each myself. In which sentences does it stand in for a person, instead of pointing back to the one who acts?",
             hints: [
-              "To test a rule, look for examples that break it. Find sentences where myself is used in the wrong place.",
+              "Find each myself. In which sentences does it stand in for a person, instead of pointing back to the one who acts?",
               "Read each sentence. Ask whether myself points back to an I that is already in the sentence.",
               "In I gave myself a haircut, myself points back to I. Decide about the other four."
             ],
@@ -7806,7 +7814,7 @@ PP.addLesson({
       dok: 3,
       std: ["3.L.GC.1:M:use-reflexive-pronouns"],
       passages: [],
-      prompt: "Kim says, \"The word myself is just a fancy way to say me.\" Which TWO sentences show that Kim is wrong?",
+      prompt: "Kim says, \"The word myself is just a fancy way to say me.\" Choose the TWO sentences where myself takes the place of I or me.",
       pick: 2,
       choices: [
         { text: "The coach told Ana and myself to line up.", correct: true },
@@ -7815,9 +7823,9 @@ PP.addLesson({
         { text: "I did all of it by myself." },
         { text: "I made myself some toast." }
       ],
-      clue: "To test a rule, look for examples that break it. Find sentences where myself is used in the wrong place.",
+      clue: "Find each myself. In which sentences does it stand in for a person, instead of pointing back to the one who acts?",
       hints: [
-        "To test a rule, look for examples that break it. Find sentences where myself is used in the wrong place.",
+        "Find each myself. In which sentences does it stand in for a person, instead of pointing back to the one who acts?",
         "Read each sentence. Ask whether myself points back to an I that is already in the sentence.",
         "In I made myself some toast, myself points back to I. Decide about the other four."
       ],
@@ -8242,24 +8250,24 @@ PP.addLesson({
       prompt: "Select the sentence that needs a comma.",
       options: [
         "Grandpa grilled corn and baked a pie.",
-        "The bus was late so we missed the first bell.",
+        "The bus was late this morning so we missed the first bell.",
         "Rosa likes cats and dogs.",
         "We picked apples, and Dad made applesauce."
       ],
       answer: [1], pick: 1,
       clue: "Cover the joining word in each sentence. Look for one where both sides are complete sentences but there is no comma yet.",
-      why: "The answer is \"The bus was late so we missed the first bell.\" \"The bus was late\" and \"we missed the first bell\" are both complete sentences, so it needs a comma before so." },
+      why: "The answer is \"The bus was late this morning so we missed the first bell.\" \"The bus was late this morning\" and \"we missed the first bell\" are both complete sentences, so it needs a comma before so." },
     { id: "SK-GUM3-7-P3", type: "match", points: 2, dok: 2, passages: [],
       prompt: "Does each sentence need a comma before the joining word? Match each to the right column.",
       cols: ["Needs a comma", "No comma"],
       rows: [
         { text: "Ava found a shell and she gave it to her mom.", answer: 0 },
         { text: "Ava found a shell and gave it to her mom.", answer: 1 },
-        { text: "The dog barked but nobody came to the door.", answer: 0 },
+        { text: "The big dog barked loudly but nobody came to the door.", answer: 0 },
         { text: "Leo wanted pizza but not salad.", answer: 1 }
       ],
       clue: "Cover the joining word. Is the part after it a whole sentence with its own naming part?",
-      why: "\"Ava found a shell and she gave it to her mom\" and \"The dog barked but nobody came to the door\" each join two complete sentences, so they need a comma. \"Gave it to her mom\" and \"not salad\" are not sentences, so those two need no comma." },
+      why: "\"Ava found a shell and she gave it to her mom\" and \"The big dog barked loudly but nobody came to the door\" each join two complete sentences, so they need a comma. \"Gave it to her mom\" and \"not salad\" are not sentences, so those two need no comma." },
     { id: "SK-GUM3-7-P4", type: "ms", points: 2, dok: 2, passages: [], pick: 2,
       prompt: "Choose the TWO sentences that are punctuated correctly.",
       choices: [
@@ -8272,7 +8280,7 @@ PP.addLesson({
       clue: "For each sentence, cover the joining word and check both sides. Then check where the comma is, or whether one is missing.",
       why: "The answers are \"The sun came out, so we hung the wet towels outside.\" and \"Yusuf can sing and play the guitar.\" The first joins two complete sentences with a comma before so. The second joins two actions, so it needs no comma. Kim's sentence should have no comma, because \"labeled every road\" is not a sentence. The math sentence needs the comma before but, not after it. Lucas's sentence needs a comma before so." },
     { id: "SK-GUM3-7-P5", type: "mc", points: 1, dok: 2, passages: [],
-      prompt: "Read the two sentences. Which is the best way to combine them?",
+      prompt: "Two short sentences are shown. Which choice joins them into one correct sentence?",
       stem: ["Grandma planted tomatoes.", "Grandpa planted beans."],
       choices: [
         { text: "Grandma planted tomatoes, and Grandpa planted beans.", correct: true },
@@ -8414,7 +8422,7 @@ PP.addLesson({
               "3.L.GC.1:M:use-commas-with-coordinating-conjunctions-to-joi"
             ],
             passages: ["p2"],
-            prompt: "Select the TWO sentences that have a comma problem.",
+            prompt: "Look at sentences 3 through 8 of the draft. Select the TWO that have a comma problem.",
             targets: ["p2:1:3", "p2:2:1", "p2:2:2", "p2:2:3", "p2:3:2"],
             answer: ["p2:2:1", "p2:3:2"],
             pick: 2,
@@ -8481,7 +8489,7 @@ PP.addLesson({
             rows: [
               { text: "Lena fed the cat, and washed the bowl.", answer: 1 },
               { text: "We missed the bus, we walked to school.", answer: 3 },
-              { text: "Amir lost his hat and Lena found it.", answer: 0 },
+              { text: "Amir lost his favorite red hat and Lena found it under the bench.", answer: 0 },
               { text: "The lake was cold but, we swam anyway.", answer: 2 }
             ],
             clue: "Read each sentence and check where the comma is, whether there is a joining word, and whether both sides are complete sentences.",
@@ -8492,11 +8500,11 @@ PP.addLesson({
             ],
             how: [
               "Check each sentence for a comma, a joining word, and two complete sentences.",
-              "\"Amir lost his hat and Lena found it\" has two complete sentences and no comma, so add one before and. \"The lake was cold but, we swam anyway\" has the comma after but, so move it.",
+              "\"Amir lost his favorite red hat and Lena found it under the bench\" has two complete sentences and no comma, so add one before and. \"The lake was cold but, we swam anyway\" has the comma after but, so move it.",
               "\"Lena fed the cat, and washed the bowl\" has a comma before an action that cannot stand alone, so take it out. \"We missed the bus, we walked to school\" needs a joining word."
             ],
             misconception: "A common mix-up is adding a comma to every sentence. Some sentences need the comma taken out.",
-            why: "The bus sentence needs a joining word after the comma. Lena fed the cat, and washed the bowl needs the extra comma taken out. Amir lost his hat and Lena found it needs a comma before and. The lake sentence needs the comma moved before but."
+            why: "The bus sentence needs a joining word after the comma. Lena fed the cat, and washed the bowl needs the extra comma taken out. Amir lost his favorite red hat and Lena found it under the bench needs a comma before and. The lake sentence needs the comma moved before but."
           },
           {
             id: "SK-GUM3-7-C09",
@@ -8741,25 +8749,25 @@ PP.addLesson({
       prompt: "Select the sentence that needs a comma.",
       options: [
         "Mara baked bread and made soup.",
-        "It started to snow so we built a snowman.",
+        "It started to snow hard so we built a tall snowman in the yard.",
         "Salt and pepper sat on the shelf.",
         "We played tag, and Dad watched."
       ],
       answer: [1],
       pick: 1,
-      clue: "Cover the joining word in each sentence. Look for one where both sides are complete sentences but there is no comma yet.",
+      clue: "Cover the joining word in each sentence. Check what each side could be by itself.",
       hints: [
-        "Cover the joining word in each sentence. Look for one where both sides are complete sentences but there is no comma yet.",
+        "Cover the joining word in each sentence. Check what each side could be by itself.",
         "Check the sentences one at a time. Ask whether the part after the joining word has its own naming part.",
-        "In sentence 4, the comma is already in place. Check the other three sentences."
+        "The tag sentence already has its comma in the right place. Check the other three sentences."
       ],
       how: [
         "Cover the joining word in each sentence and check both sides.",
         "Mara baked bread and made soup joins two actions, and Salt and pepper joins two things, so neither needs a comma. The tag sentence already has its comma.",
-        "\"It started to snow\" and \"we built a snowman\" are both complete sentences, so the sentence needs a comma before so."
+        "\"It started to snow hard\" and \"we built a tall snowman in the yard\" are both complete sentences, so the sentence needs a comma before so."
       ],
       misconception: "A common mix-up is adding a comma before every joining word. Only add it when both sides could stand alone.",
-      why: "The answer is \"It started to snow so we built a snowman.\" Both sides are complete sentences, so it needs a comma before so. The other sentences join words or actions, or already have the comma.",
+      why: "The answer is \"It started to snow hard so we built a tall snowman in the yard.\" Both sides are complete sentences, so it needs a comma before so. The other sentences join words or actions, or already have the comma.",
       like: ["SK-GUM3-7-P2"]
     },
     {
@@ -8880,10 +8888,10 @@ PP.addLesson({
       partB: {
         prompt: "What is the reason for the comma in the answer to Part A?",
         choices: [
-          { text: "Just the second side is complete, so the comma goes after and." },
-          { text: "Both sides have their own naming part and doing part, so the comma goes before and." },
-          { text: "Every and needs a comma right after it, no matter what.", correct: true },
-          { text: "The sentence is long, so a comma is needed in the middle." }
+          { text: "Every and needs a comma right after it, no matter what else the sentence says." },
+          { text: "Only the second side is a complete sentence, so the comma goes after and." },
+          { text: "Both sides have their own naming part and doing part, so the comma goes before and.", correct: true },
+          { text: "The sentence is fairly long, so a comma is needed somewhere in the middle of it." }
         ]
       },
       clue: "Find the joining word. Then check both sides of it.",
@@ -8911,7 +8919,7 @@ PP.addLesson({
         "3.L.GC.1:M:use-commas-with-coordinating-conjunctions-to-joi"
       ],
       passages: ["p5"],
-      prompt: "Two sentences in the draft have a comma problem. Select them.",
+      prompt: "Look at sentences 3 through 8 of the draft. Select the TWO that have a comma problem.",
       targets: ["p5:1:3", "p5:2:1", "p5:2:2", "p5:2:3", "p5:3:2"],
       answer: ["p5:2:1", "p5:3:2"],
       pick: 2,
@@ -8941,10 +8949,10 @@ PP.addLesson({
       passages: [],
       prompt: "Which of these sentences needs no comma?",
       choices: [
-        { text: "Rosa opened the window and the breeze came in." },
-        { text: "Rosa opened the window but the room stayed warm." },
+        { text: "Rosa opened the big window and the cool breeze came in." },
+        { text: "Rosa opened the big window but the room stayed very warm." },
         { text: "Rosa opened the window and let in the breeze.", correct: true },
-        { text: "Rosa opened the window so the room cooled off." }
+        { text: "Rosa opened the big window so the whole room cooled off." }
       ],
       clue: "Cover the joining word. Check whether the part after it could stand alone as a sentence.",
       hints: [
@@ -8974,7 +8982,7 @@ PP.addLesson({
       cols: ["Put in a comma", "Delete the comma", "Move the comma", "Add a joining word"],
       rows: [
         { text: "It rained all day, we stayed inside.", answer: 3 },
-        { text: "Kai likes soccer and Jun likes tennis.", answer: 0 },
+        { text: "Kai likes playing soccer after school and Jun likes playing tennis.", answer: 0 },
         { text: "Dara swept the floor, and mopped it.", answer: 1 },
         { text: "I wanted pizza but, we had pasta.", answer: 2 }
       ],
@@ -8986,11 +8994,11 @@ PP.addLesson({
       ],
       how: [
         "Check each sentence for a comma, a joining word, and two complete sentences.",
-        "\"Kai likes soccer and Jun likes tennis\" has two complete sentences and no comma, so put one in before and. \"I wanted pizza but, we had pasta\" has the comma after but, so move it.",
+        "\"Kai likes playing soccer after school and Jun likes playing tennis\" has two complete sentences and no comma, so put one in before and. \"I wanted pizza but, we had pasta\" has the comma after but, so move it.",
         "\"Dara swept the floor, and mopped it\" has a comma before an action that cannot stand alone, so delete it. \"It rained all day, we stayed inside\" needs a joining word."
       ],
       misconception: "A common mix-up is adding a comma to every sentence. Some sentences need the comma deleted.",
-      why: "The rain sentence needs a joining word after the comma. Dara swept the floor, and mopped it needs the extra comma deleted. Kai likes soccer and Jun likes tennis needs a comma put in before and. The pizza sentence needs the comma moved before but.",
+      why: "The rain sentence needs a joining word after the comma. Dara swept the floor, and mopped it needs the extra comma deleted. Kai likes playing soccer after school and Jun likes playing tennis needs a comma put in before and. The pizza sentence needs the comma moved before but.",
       like: ["SK-GUM3-7-C08"]
     },
     {
@@ -9238,14 +9246,14 @@ PP.addLesson({
     },
     "SK-GUM3-7-P2": {
       hints: [
-        "Cover the joining word in each sentence. Look for one where both sides are complete sentences but there is no comma yet.",
+        "Cover the joining word in each sentence. Check what each side could be by itself.",
         "Check the sentences one at a time. Ask whether the part after the joining word has its own naming part.",
-        "In sentence 4, the comma is already in place. Check the other three sentences."
+        "The tag sentence already has its comma in the right place. Check the other three sentences."
       ],
       how: [
         "Cover the joining word in each sentence and check both sides.",
         "Grandpa grilled corn and baked a pie joins two actions, and Rosa likes cats and dogs joins two things, so neither needs a comma.",
-        "\"The bus was late\" and \"we missed the first bell\" are both complete sentences, so the sentence needs a comma before so."
+        "\"The bus was late this morning\" and \"we missed the first bell\" are both complete sentences, so the sentence needs a comma before so."
       ],
       misconception: "A common mix-up is adding a comma before every joining word. Only add it when both sides could stand alone."
     },
@@ -9319,22 +9327,22 @@ PP.addLesson({
       rows: [
         { text: "You can wear the red hat or you can wear the blue one.", answer: 0 },
         { text: "Carmen fixed the swing and pushed her sister.", answer: 1 },
-        { text: "The frog jumped but it missed the bug.", answer: 0 },
+        { text: "The tiny green frog jumped high but it missed the bug.", answer: 0 },
         { text: "Kai washed the car and the dog.", answer: 1 }
       ],
       clue: "Cover the joining word. Does the part after it have its own naming part and doing part?",
-      why: "\"You can wear the red hat or you can wear the blue one\" and \"The frog jumped but it missed the bug\" each join two complete sentences, so they need a comma before the joining word. \"Pushed her sister\" and \"the dog\" are not sentences, so those two need no comma." },
+      why: "\"You can wear the red hat or you can wear the blue one\" and \"The tiny green frog jumped high but it missed the bug\" each join two complete sentences, so they need a comma before the joining word. \"Pushed her sister\" and \"the dog\" are not sentences, so those two need no comma." },
     { id: "SK-GUM3-7-T4", type: "ms", points: 2, dok: 2, passages: [], pick: 2,
       prompt: "Choose the TWO sentences that need a comma before the joining word.",
       choices: [
-        { text: "The baby woke up so Dad warmed a bottle.", correct: true },
-        { text: "Aunt Rosa called but nobody was home.", correct: true },
+        { text: "The baby woke up crying so Dad warmed a bottle.", correct: true },
+        { text: "Aunt Rosa called us twice but nobody was home.", correct: true },
         { text: "Mom and I baked muffins for the sale." },
         { text: "Eli stretched and ran around the track." },
         { text: "We can eat inside or out on the porch." }
       ],
       clue: "Cover the joining word in each sentence. Only add a comma when both sides could stand alone as sentences.",
-      why: "The answers are \"The baby woke up so Dad warmed a bottle.\" and \"Aunt Rosa called but nobody was home.\" Each one joins two complete sentences, so each needs a comma before the joining word. The other three join words or parts that are not whole sentences, so they need no comma." },
+      why: "The answers are \"The baby woke up crying so Dad warmed a bottle.\" and \"Aunt Rosa called us twice but nobody was home.\" Each one joins two complete sentences, so each needs a comma before the joining word. The other three join words or parts that are not whole sentences, so they need no comma." },
     { id: "SK-GUM3-7-T5", type: "mc", points: 1, dok: 1, passages: [],
       prompt: "Which sentence is written correctly?",
       choices: [
@@ -9356,10 +9364,10 @@ PP.addLesson({
     big: "When a long word does not fit at the end of a line, you can split it between two syllables and put a hyphen (-) at the end of the line.",
     points: [
       "A hyphen is a short line (-). It goes at the end of the first line, never at the start of the next line, and it shows that the word keeps going.",
-      "Clap the word to count its syllables. A word with only one syllable, like school or bright, is never split. Move the whole word to the next line instead.",
-      "When two different consonants sit between two vowels, split between the consonants: gar-den, sis-ter, pen-cil. But letters that make one sound together, like th, sh, ch and ck, stay together: moth-er, rock-et.",
+      "Clap the word to count its syllables. A word with only one syllable, like school or bright, is never split. Move the whole word to the next line instead. Also, never leave a single letter alone at the end or the start of a line. Break after a syllable, not after the first or last letter.",
+      "When two different consonants sit between two vowels, split between the consonants: gar-den, sis-ter, pen-cil. But letters that make one sound together, like th, sh, ch and ck, stay together: fish-er, lock-er.",
       "When the same consonant comes twice in the middle, split between the two letters: hap-py, bub-ble.",
-      "When a word is made of two smaller words, split between the two words: sun-set, cup-cake."
+      "When a word is made of two smaller words, split between the two words: sun-set, rail-road."
     ],
     words: [
       { term: "hyphen", means: "a short line (-) that joins or splits words" },
@@ -9477,7 +9485,7 @@ PP.addLesson({
         [
           "(4) Next, we climbed into a bright red box- | car.",
           "(5) The seats had thin cush- | ions.",
-          "(6) The guide handed each of us a tic- | ket for the ride."
+          "(6) The guide handed each of us a tick- | et for the ride."
         ],
         [
           "(7) After lunch, we saw a model village with a bridge and a wind- | mill.",
@@ -9502,7 +9510,7 @@ PP.addLesson({
         ],
         [
           "(4) We toasted some marshmallows over the bonf- | ire.",
-          "(5) My brother dropped a peb | -ble in the lake.",
+          "(5) We skipped a flat peb | -ble across the lake.",
           "(6) Later, we sat by the stre- | am and listened to the frogs."
         ],
         [
@@ -9521,7 +9529,7 @@ PP.addLesson({
       paragraphs: [
         [
           "(1) Every Saturday, I help my aunt at her small grocery store.",
-          "(2) First, I stack the cans and wipe the coun- | ter.",
+          "(2) First, I stack the cans and wash the cab- | bage.",
           "(3) Next, I sort the fresh carr- | ots by size."
         ],
         [
@@ -9570,10 +9578,10 @@ PP.addLesson({
         { text: "Yes, because it is split between the consonants c and t.", correct: true },
         { text: "No, because the hyphen should go at the start of the next line." },
         { text: "No, because doctor has only one syllable and cannot be split." },
-        { text: "No, because it should be split between the letters do and ctor." }
+        { text: "Yes, because it is fine to split a word after any two letters." }
       ],
       clue: "Clap the word. Then look at the letters in the middle and at where the hyphen sits.",
-      why: "The answer is \"Yes, because it is split between the consonants c and t.\" Doctor has two beats, and c and t are two different consonants between vowels, so the split goes between them. The hyphen is at the end of the first line, where it belongs." },
+      why: "The answer is \"Yes, because it is split between the consonants c and t.\" Doctor has two beats, and c and t are two different consonants between vowels, so the split goes between them. The hyphen is at the end of the first line, where it belongs. A split cannot go after just any two letters." },
     { id: "SK-GUM3-8-P2", type: "mc", points: 1, dok: 1, passages: [],
       prompt: "Which word could be split with a hyphen at the end of a line?",
       choices: [
@@ -9696,18 +9704,18 @@ PP.addLesson({
               "3.L.GC.1:M:use-hyphens-to-divide-words-at-line-breaks"
             ],
             passages: ["p1"],
-            prompt: "This question has two parts. Answer Part A, then Part B.",
+            prompt: "Work through the fix in two steps.",
             partA: {
-              prompt: "Sentence 7 of the draft splits a word that should not be split. How should the writer fix it?",
+              prompt: "A word in sentence 7 should never have been broken. What fix is best?",
               choices: [
-                { text: "Move the hyphen to the start of the next line." },
+                { text: "Put the hyphen where the next line starts." },
                 { text: "Split the word after the first letter instead." },
-                { text: "Write the whole word on the next line.", correct: true },
-                { text: "Add a second hyphen to show where it ends." }
+                { text: "Write the entire word below, with no hyphen.", correct: true },
+                { text: "Add one more hyphen after the word." }
               ]
             },
             partB: {
-              prompt: "Which fact from the lesson supports the answer to Part A?",
+              prompt: "Which lesson fact explains the fix in Part A?",
               choices: [
                 { text: "A word with only one syllable is never split.", correct: true },
                 { text: "A hyphen goes at the end of the first line." },
@@ -9724,11 +9732,11 @@ PP.addLesson({
             how: [
               "Part A: clap the word in sentence 7. Line has one beat, so it has only one syllable.",
               "A word with one syllable cannot be split, so the whole word must go on the next line.",
-              "Part A answer: \"Write the whole word on the next line.\"",
+              "Part A answer: \"Write the entire word below, with no hyphen.\"",
               "Part B answer: \"A word with only one syllable is never split.\""
             ],
             misconception: "A common mix-up is thinking any word can be split if the hyphen is in the right place. A word with one beat is never split.",
-            why: "Part A: \"Write the whole word on the next line.\" Part B: \"A word with only one syllable is never split.\" Line has only one beat, so it stays whole. Moving the hyphen or splitting after the first letter still breaks the word, and a second hyphen does not help. The other facts are true, but they do not explain this fix."
+            why: "Part A: \"Write the entire word below, with no hyphen.\" Part B: \"A word with only one syllable is never split.\" Line has only one beat, so it stays whole. Moving the hyphen or splitting after the first letter still breaks the word, and one more hyphen does not help. The other facts are true, but they do not explain this fix."
           }
         ]
       },
@@ -9934,27 +9942,27 @@ PP.addLesson({
             std: [
               "3.L.GC.1:M:use-hyphens-to-divide-words-at-line-breaks"
             ],
-            passages: ["p3"],
-            prompt: "Sentence 6 of the draft splits ticket in the wrong place. Which revision fixes it? The | mark shows where the line ends.",
+            passages: [],
+            prompt: "Ana broke the word ticket as tic- | ket at the end of a line. Which break is the better one? A | mark shows where the line ends.",
             choices: [
-              { text: "The guide handed each of us a tic- | ket for the ride." },
-              { text: "The guide handed each of us a ti- | cket for the ride." },
-              { text: "The guide handed each of us a tick- | et for the ride.", correct: true },
-              { text: "The guide handed each of us a ticke- | t for the ride." }
+              { text: "ti- | cket" },
+              { text: "tic- | ket" },
+              { text: "tick- | et", correct: true },
+              { text: "t- | icket" }
             ],
             clue: "Look for letters that make one sound together. Those letters stay on the same line.",
             hints: [
               "Look for letters that make one sound together. Those letters stay on the same line.",
-              "Read sentence 6 and find the break. Ask which letters sit on each side of it.",
-              "The draft splits the word as tic- | ket, so that is the one that needs fixing. Check the other three."
+              "Say ticket and look at the letters on each side of every break. Ask which break pulls a pair of letters apart.",
+              "T- | icket leaves a single letter alone on a line. Check the other three."
             ],
             how: [
               "Say ticket. It has two beats, so it can be split.",
               "The letters ck make one sound, so they stay together. The split goes after them: tick- | et.",
-              "The answer is \"The guide handed each of us a tick- | et for the ride.\" The other choices pull the c and k apart or leave one letter alone."
+              "The answer is tick- | et. Tic- | ket and ti- | cket pull the c and k apart, and t- | icket leaves one letter alone."
             ],
             misconception: "A common mix-up is splitting before the k. The letters ck make one sound and stay together.",
-            why: "The answer is \"The guide handed each of us a tick- | et for the ride.\" The letters ck make one sound and stay together, so the split goes after them. Tic- | ket and ti- | cket pull the c and k apart, and ticke- | t leaves one letter alone."
+            why: "The answer is tick- | et. The letters ck make one sound and stay together, so the split goes after them. Tic- | ket and ti- | cket pull the c and k apart, and t- | icket leaves one letter alone."
           },
           {
             id: "SK-GUM3-8-C13",
@@ -9965,7 +9973,7 @@ PP.addLesson({
               "3.L.GC.1:M:use-hyphens-to-divide-words-at-line-breaks"
             ],
             passages: [],
-            prompt: "The word lantern is split as lan- | tern. Choose the TWO reasons that explain why this split is correct.",
+            prompt: "The word lantern is split as lan- | tern. Choose the TWO reasons that make this split correct.",
             pick: 2,
             choices: [
               { text: "The letters nt make one sound, so they must stay together." },
@@ -10028,8 +10036,8 @@ PP.addLesson({
               "3.L.GC.1:M:use-hyphens-to-divide-words-at-line-breaks"
             ],
             passages: [],
-            prompt: "The word magnet will not fit at the end of a line. The | mark shows where the line ends. Choose the correct split.",
-            text: "{0} is how to split magnet.",
+            prompt: "Magnet has to be broken at the end of a line. Which break is right? A | shows where the first line ends.",
+            text: "{0}",
             slots: [
               {
                 options: ["mag- | net", "ma- | gnet", "magn- | et"],
@@ -10064,8 +10072,8 @@ PP.addLesson({
         "3.L.GC.1:M:use-hyphens-to-divide-words-at-line-breaks"
       ],
       passages: [],
-      prompt: "Some words were split at the end of a line. The | mark shows where the first line ends. Is each split correct?",
-      cols: ["Correct", "Not correct"],
+      prompt: "Tell whether the writer broke each word properly. A bar (|) stands for the line break.",
+      cols: ["Broken properly", "Broken badly"],
       rows: [
         { text: "tur- | key", answer: 0 },
         { text: "ro- | cket", answer: 1 },
@@ -10096,7 +10104,7 @@ PP.addLesson({
         "3.L.GC.1:M:use-hyphens-to-divide-words-at-line-breaks"
       ],
       passages: [],
-      prompt: "The | mark shows where the first line ends. Choose the TWO words that are split correctly.",
+      prompt: "Two of these words were divided at the right spot for a line break. Pick them. A bar (|) shows the break.",
       pick: 2,
       choices: [
         { text: "bu- | tter" },
@@ -10129,8 +10137,8 @@ PP.addLesson({
         "3.L.GC.1:M:use-hyphens-to-divide-words-at-line-breaks"
       ],
       passages: ["p4"],
-      prompt: "Sentence 4 of the draft splits the word bonfire in the wrong place. Choose the correct split. The | mark shows where the line ends.",
-      text: "Bonfire should be split as {0}",
+      prompt: "The writer made a bad break in sentence 4 of the draft. Pick the better one. A bar (|) marks where the line stops.",
+      text: "Better: {0}",
       slots: [
         {
           options: ["bon- | fire", "bonf- | ire", "bo- | nfire"],
@@ -10161,12 +10169,12 @@ PP.addLesson({
         "3.L.GC.1:M:use-hyphens-to-divide-words-at-line-breaks"
       ],
       passages: ["p4"],
-      prompt: "Sentence 5 of the draft puts the hyphen in the wrong place. Which revision fixes it? The | mark shows where the line ends.",
+      prompt: "Which version of sentence 5 puts the hyphen where it belongs? A bar (|) shows the line break.",
       choices: [
-        { text: "My brother dropped a peb | -ble in the lake." },
-        { text: "My brother dropped a pe- | bble in the lake." },
-        { text: "My brother dropped a pebble- | in the lake." },
-        { text: "My brother dropped a peb- | ble in the lake.", correct: true }
+        { text: "We skipped a flat peb | -ble across the lake." },
+        { text: "We skipped a flat pe- | bble across the lake." },
+        { text: "We skipped a flat pebble- | across the lake." },
+        { text: "We skipped a flat peb- | ble across the lake.", correct: true }
       ],
       clue: "Check where the hyphen sits. Remember which line it belongs on.",
       hints: [
@@ -10177,10 +10185,10 @@ PP.addLesson({
       how: [
         "The hyphen belongs at the end of the first line, before the | mark.",
         "Pebble has a double b in the middle, so it splits between the two b's: peb- | ble.",
-        "The answer is \"My brother dropped a peb- | ble in the lake.\" Pe- | bble puts both b's on the second line, and pebble- | does not split the word."
+        "The answer is \"We skipped a flat peb- | ble across the lake.\" Pe- | bble puts both b's on the second line, and pebble- | does not split the word."
       ],
       misconception: "A common mix-up is putting the hyphen at the start of the next line. The hyphen goes at the end of the first line.",
-      why: "The answer is \"My brother dropped a peb- | ble in the lake.\" The hyphen goes at the end of the first line, and the double b is split between the two letters. The draft has the hyphen on the second line, pe- | bble splits in the wrong place, and pebble- | does not split the word at all.",
+      why: "The answer is \"We skipped a flat peb- | ble across the lake.\" The hyphen goes at the end of the first line, and the double b is split between the two letters. The draft has the hyphen on the second line, pe- | bble splits in the wrong place, and pebble- | does not split the word at all.",
       like: ["SK-GUM3-8-C04"]
     },
     {
@@ -10192,23 +10200,23 @@ PP.addLesson({
         "3.L.GC.1:M:use-hyphens-to-divide-words-at-line-breaks"
       ],
       passages: ["p4"],
-      prompt: "This question has two parts. Answer Part A, then Part B.",
+      prompt: "Both parts go together. Do Part A first.",
       partA: {
-        prompt: "Sentence 6 of the draft splits a word that should not be split. How should the writer fix it?",
+        prompt: "Sentence 6 breaks a word that has no place to break. What is the best repair?",
         choices: [
-          { text: "Move the hyphen to the start of the next line." },
-          { text: "Write the whole word on the next line.", correct: true },
-          { text: "Split the word after the first two letters." },
-          { text: "Put a second hyphen after the word." }
+          { text: "Shift the hyphen to the front of line two." },
+          { text: "Leave it whole and begin it down on the following line.", correct: true },
+          { text: "Cut it after its opening pair of letters and add a hyphen there." },
+          { text: "Mark both lines with a long dash." }
         ]
       },
       partB: {
-        prompt: "Which fact from the lesson supports the answer to Part A?",
+        prompt: "Pick the rule that supports your choice in Part A.",
         choices: [
-          { text: "A word made of two smaller words is split between them." },
-          { text: "Letters like th and sh stay together at a break." },
-          { text: "A word with only one beat is never split.", correct: true },
-          { text: "A hyphen goes at the end of the first line." }
+          { text: "Small words inside a longer word show the break spot." },
+          { text: "Sound pairs like th and sh must not be pulled apart." },
+          { text: "A one-beat word cannot be divided.", correct: true },
+          { text: "The mark for a break belongs on the upper line." }
         ]
       },
       clue: "Clap the word that is split in sentence 6. Count the beats.",
@@ -10220,11 +10228,11 @@ PP.addLesson({
       how: [
         "Part A: clap the word in sentence 6. Stream has one beat, so it has only one syllable.",
         "A word with one syllable cannot be split, so the whole word must go on the next line.",
-        "Part A answer: \"Write the whole word on the next line.\"",
-        "Part B answer: \"A word with only one beat is never split.\""
+        "Part A answer: \"Leave it whole and begin it down on the following line.\"",
+        "Part B answer: \"A one-beat word cannot be divided.\""
       ],
       misconception: "A common mix-up is thinking any word can be split if the hyphen is in the right place. A word with one beat is never split.",
-      why: "Part A: \"Write the whole word on the next line.\" Part B: \"A word with only one beat is never split.\" Stream has only one beat, so it stays whole. Moving the hyphen, splitting after two letters, or adding a second hyphen still breaks the word. The other facts are true, but they do not explain this fix.",
+      why: "Part A: \"Leave it whole and begin it down on the following line.\" Part B: \"A one-beat word cannot be divided.\" Stream has only one beat, so it stays whole. Moving the hyphen, splitting after two letters, or adding a second hyphen still breaks the word. The other facts are true, but they do not explain this fix.",
       like: ["SK-GUM3-8-C05"]
     },
     {
@@ -10236,7 +10244,7 @@ PP.addLesson({
         "3.L.GC.1:M:use-hyphens-to-divide-words-at-line-breaks"
       ],
       passages: ["p5"],
-      prompt: "Select the TWO sentences that have a word split in the wrong way. The | mark shows where the line ends.",
+      prompt: "Which TWO sentences break a word at a bad spot? A bar (|) shows where the line stops.",
       targets: ["p5:1:2", "p5:1:3", "p5:2:1", "p5:2:3", "p5:3:1"],
       answer: ["p5:1:3", "p5:3:1"],
       pick: 2,
@@ -10248,11 +10256,11 @@ PP.addLesson({
       ],
       how: [
         "Say each split word whole, clap it, and check the break.",
-        "Coun- | ter, pep- | per and pump- | kin follow the rules.",
+        "Cab- | bage, pep- | per and pump- | kin follow the rules.",
         "Carr- | ots should be car- | rots, between the double r. Flo- | or has only one beat, so it should not be split."
       ],
       misconception: "A common mix-up is thinking a split is right if it comes after a few letters. Check the break against the rules.",
-      why: "The wrong splits are in \"Next, I sort the fresh carr- | ots by size.\" and \"Then I take out the trash and sweep the flo- | or.\" Carrots should be car- | rots, and floor has one syllable. Coun- | ter, pep- | per and pump- | kin are split correctly.",
+      why: "The wrong splits are in \"Next, I sort the fresh carr- | ots by size.\" and \"Then I take out the trash and sweep the flo- | or.\" Carrots should be car- | rots, and floor has one syllable. Cab- | bage, pep- | per and pump- | kin are split correctly.",
       like: ["SK-GUM3-8-C06"]
     },
     {
@@ -10264,7 +10272,7 @@ PP.addLesson({
         "3.L.GC.1:M:use-hyphens-to-divide-words-at-line-breaks"
       ],
       passages: [],
-      prompt: "The | mark shows where the first line ends. Choose the TWO words that are NOT split correctly.",
+      prompt: "Find the TWO words whose line break is in a bad spot. A bar (|) shows the break.",
       pick: 2,
       choices: [
         { text: "bu- | tton", correct: true },
@@ -10297,7 +10305,7 @@ PP.addLesson({
         "3.L.GC.1:M:use-hyphens-to-divide-words-at-line-breaks"
       ],
       passages: [],
-      prompt: "Which split of puppy is in the right place? The | mark shows where the line ends.",
+      prompt: "Pick the best place to break puppy when the line runs out. A bar (|) is the break.",
       choices: [
         { text: "pu- | ppy" },
         { text: "pup- | py", correct: true },
@@ -10328,11 +10336,11 @@ PP.addLesson({
         "3.L.GC.1:M:use-hyphens-to-divide-words-at-line-breaks"
       ],
       passages: [],
-      prompt: "Two students split the same word. Which statement is true?",
+      prompt: "Who broke the word correctly?",
       stem: [
-        "The word mother will not fit at the end of a line.",
-        "Lia split it like this: mo- | ther",
-        "Omar split it like this: moth- | er"
+        "Mother does not fit on the first line.",
+        "Lia broke it as mo- | ther.",
+        "Omar broke it as moth- | er."
       ],
       choices: [
         { text: "Lia is right, because a break should come right after a vowel." },
@@ -10364,8 +10372,8 @@ PP.addLesson({
         "3.L.GC.1:M:use-hyphens-to-divide-words-at-line-breaks"
       ],
       passages: [],
-      prompt: "Neither word will fit at the end of a line. The | mark shows where the line ends. Choose the correct split for each word.",
-      text: "{0} is the way to split happen, and {1} is the way to split doorbell.",
+      prompt: "Break each word so it can wrap onto a new line. A bar (|) shows the break.",
+      text: "{0} for happen; {1} for doorbell.",
       slots: [
         {
           options: ["ha- | ppen", "hap- | pen", "happ- | en"],
@@ -10427,27 +10435,27 @@ PP.addLesson({
       std: [
         "3.L.GC.1:M:use-hyphens-to-divide-words-at-line-breaks"
       ],
-      passages: ["p6"],
-      prompt: "Sentence 8 of the draft splits feathers in the wrong place. Which revision fixes it? The | mark shows where the line ends.",
+      passages: [],
+      prompt: "Which break of feathers keeps its letter pairs together? Use the bar (|) as the line end.",
       choices: [
-        { text: "A duck shook the water from its feath- | ers.", correct: true },
-        { text: "A duck shook the water from its feat- | hers." },
-        { text: "A duck shook the water from its fea- | thers." },
-        { text: "A duck shook the water from its feathe- | rs." }
+        { text: "feath- | ers", correct: true },
+        { text: "feat- | hers" },
+        { text: "fea- | thers" },
+        { text: "feathe- | rs" }
       ],
       clue: "Look for letters that make one sound together. Those letters stay on the same line.",
       hints: [
         "Look for letters that make one sound together. Those letters stay on the same line.",
-        "Read sentence 8 and find the break. Ask which letters sit on each side of it.",
-        "The draft splits the word as feat- | hers, so that is the one that needs fixing. Check the other three."
+        "Say feathers and look at the letters on each side of every break. Ask which break pulls a pair apart.",
+        "Feathe- | rs leaves two letters alone on a line. Check the other three."
       ],
       how: [
         "Say feathers. It has two beats, so it can be split.",
         "The letters th make one sound, so they stay together. The split goes after them: feath- | ers.",
-        "The answer is \"A duck shook the water from its feath- | ers.\" The other choices pull the t and h apart or leave letters alone."
+        "The answer is feath- | ers. Feat- | hers and fea- | thers pull the t and h apart, and feathe- | rs leaves two letters alone."
       ],
       misconception: "A common mix-up is splitting between the t and the h. The letters th make one sound and stay together.",
-      why: "The answer is \"A duck shook the water from its feath- | ers.\" The letters th make one sound and stay together, so the split goes after them. Feat- | hers and fea- | thers pull the t and h apart, and feathe- | rs leaves two letters alone.",
+      why: "The answer is feath- | ers. The letters th make one sound and stay together, so the split goes after them. Feat- | hers and fea- | thers pull the t and h apart, and feathe- | rs leaves two letters alone.",
       like: ["SK-GUM3-8-C12"]
     },
     {
@@ -10459,22 +10467,19 @@ PP.addLesson({
         "3.L.GC.1:M:use-hyphens-to-divide-words-at-line-breaks"
       ],
       passages: [],
-      prompt: "The word dentist is split as den- | tist. Choose the TWO reasons that explain why this split is correct.",
+      prompt: "Name the TWO best reasons den- | tist is a fine break.",
       pick: 2,
       choices: [
-        { text: "The same letter appears twice in the middle." },
-        { text: "The letters nt must stay together because they make one sound." },
-        {
-          text: "The consonants n and t are different and sit between two vowels, so the break goes between them.",
-          correct: true
-        },
-        { text: "Dentist is made of the smaller words den and tist." },
-        { text: "Dentist has more than one syllable, so it can be split.", correct: true }
+        { text: "Its middle holds a matching pair." },
+        { text: "N and t blend into a single sound that cannot be pulled apart." },
+        { text: "N and t are unlike letters standing among vowels, which is where the word breaks.", correct: true },
+        { text: "It is built from small words, den and tist." },
+        { text: "More than one beat means a break is allowed.", correct: true }
       ],
-      clue: "Look at the middle letters of dentist. Check each reason against the word.",
+      clue: "Look at the middle of dentist. Check each reason against the word.",
       hints: [
-        "Look at the middle letters of dentist. Check each reason against the word.",
-        "Say the word and clap it. Then check each reason against the letters in the word.",
+        "Look at the middle of dentist. Check each reason against the word.",
+        "Say the word and clap it. Then check each reason against the word.",
         "Dentist does not have any double letters. Decide about the other four."
       ],
       how: [
@@ -10483,7 +10488,7 @@ PP.addLesson({
         "The other reasons do not fit: there is no double letter, tist is not a word, and nt does not make one sound."
       ],
       misconception: "A common mix-up is picking a rule because it sounds familiar. Check that the rule matches the letters in the word.",
-      why: "The answers are \"The consonants n and t are different and sit between two vowels, so the break goes between them.\" and \"Dentist has more than one syllable, so it can be split.\" Dentist has no double letter, tist is not a word, and n and t do not make one sound together.",
+      why: "The answers are \"N and t are unlike letters standing among vowels, which is where the word breaks.\" and \"More than one beat means a break is allowed.\" Dentist has no double letter, tist is not a word, and n and t do not make one sound together.",
       like: ["SK-GUM3-8-C13"]
     },
     {
@@ -10495,8 +10500,13 @@ PP.addLesson({
         "3.L.GC.1:M:use-hyphens-to-divide-words-at-line-breaks"
       ],
       passages: [],
-      prompt: "Match each word to the rule that tells where to split it.",
-      cols: ["Different consonants", "Double consonant", "Two small words", "Letters that go together"],
+      prompt: "Sort each word by the rule that decides its break.",
+      cols: [
+        "Unlike consonants in the middle",
+        "Matching pair in the middle",
+        "Built from small words",
+        "Sound pair kept whole"
+      ],
       rows: [
         { text: "chicken", answer: 3 },
         { text: "pancake", answer: 2 },
@@ -10527,8 +10537,8 @@ PP.addLesson({
         "3.L.GC.1:M:use-hyphens-to-divide-words-at-line-breaks"
       ],
       passages: [],
-      prompt: "The word insect will not fit at the end of a line. The | mark shows where the line ends. Choose the correct split.",
-      text: "{0} is the best way to split insect.",
+      prompt: "Pick how insect should break when the line runs out. A bar (|) marks it.",
+      text: "Break it as {0}",
       slots: [
         {
           options: ["in- | sect", "ins- | ect", "i- | nsect"],

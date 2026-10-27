@@ -191,12 +191,12 @@ with sync_playwright() as p:
     q.click("#mixed-review"); q.wait_for_timeout(200)
     hub = q.evaluate("""({cur:PP_APP.current(), hash:location.hash, focus:document.activeElement.id, h:[...document.querySelectorAll('#review-body h2')].map(h=>h.textContent),
         t:document.getElementById('review-body').innerText, starts:document.querySelectorAll('#rv-curriculum .rv-start').length, pt:document.querySelectorAll('#rv-statetest .rv-start').length,
-        tasks:document.querySelectorAll('#rv-writing .rv-task').length, obs:document.querySelectorAll('#rv-observed li').length})""")
-    check("R.5 #mixed keeps its four section cards and links to the review and the map; the hub has four labelled kinds (curriculum, state-test practice, writing tasks, observed), no combined score",
+        tasks:document.querySelectorAll('#rv-writing .rv-task').length, obs:document.querySelectorAll('#rv-observed li').length, unavailable:PP_REVIEW.areas().some(a=>!a.covered.length)})""")
+    check("R.5 #mixed keeps its four section cards and links to the review and the map; the hub has four labelled kinds (curriculum, state-test practice, writing tasks, observed), no combined score, and says 'Not available yet' exactly when a cumulative area has no accepted lesson",
           mx == {"cards": 4, "links": ["#review", "#coverage"]} and hub["cur"] == "review" and hub["hash"] == "#review" and hub["focus"] == "review-title"
           and [x.split(". ", 1)[1].split(" (")[0] for x in hub["h"]] == ["Curriculum review", "State-test practice", "Writing tasks", "Observed by a grown-up"]
           and hub["starts"] >= 1 and hub["pt"] >= 1 and hub["tasks"] == 2 and hub["obs"] >= 5 and "There is no combined score" in hub["t"]
-          and "Not available yet" in hub["t"] and not re.search(r"\bmaster(ed|y)\b", hub["t"], re.I), (mx, hub["h"], hub["starts"], hub["pt"], hub["tasks"], hub["obs"]))
+          and (("Not available yet" in hub["t"]) == hub["unavailable"]) and not re.search(r"\bmaster(ed|y)\b", hub["t"], re.I), (mx, hub["h"], hub["starts"], hub["pt"], hub["tasks"], hub["obs"]))
     ready(q, "#coverage")
     q.evaluate("document.querySelectorAll('#coverage-body details').forEach(d=>d.open=true)")
     cov = q.evaluate("""({rows:document.querySelectorAll('#coverage-body tr[data-code]').length, n:PP_STANDARDS.length, t:document.getElementById('coverage-body').innerText,
