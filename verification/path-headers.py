@@ -7,6 +7,8 @@ from pathlib import Path
 from playwright.sync_api import sync_playwright
 base=sys.argv[1];out=Path(sys.argv[2]);results=[]
 TAG="""(()=>{const t=[...document.querySelectorAll('.bar-tag')].find(x=>x.offsetParent);if(!t)return null;const s=t.querySelector('span'),r=s.getBoundingClientRect(),p=t.getBoundingClientRect();return {text:s.textContent,cut:s.scrollWidth>s.clientWidth+1||t.scrollWidth>t.clientWidth+1||r.right>p.right+1||r.left<p.left-1||r.width<1};})()"""
+# question-first: 3.T.C.1.b has core practice, so its :y set is Practice on my own and its tag reads Practice (see docs/question-first/TEST-CHANGES.md)
+EXPECT={'Try it yourself':'Practice'}
 with sync_playwright() as p:
  for mode in ['browse','path']:
   for w in [320,360,375,390]:
@@ -21,7 +23,7 @@ with sync_playwright() as p:
    for label,action in cases:
     q.evaluate(action);q.wait_for_timeout(40)
     tag=None if label=='Lesson' else q.evaluate(TAG)
-    good=(label=='Lesson' or bool(tag and tag['text']==label and not tag['cut'])) and q.evaluate('document.documentElement.scrollWidth<=innerWidth+1')
+    good=(label=='Lesson' or bool(tag and tag['text']==EXPECT.get(label,label) and not tag['cut'])) and q.evaluate('document.documentElement.scrollWidth<=innerWidth+1')
     results.append({'mode':mode,'width':w,'screen':label,'pass':good,'tag':tag})
     print(('PASS ' if good else 'FAIL ')+mode+' '+str(w)+' '+label,flush=True)
     if mode=='path' and w==320 and label=='Try it yourself':q.screenshot(path=str(out/'activity-header-320.png'))

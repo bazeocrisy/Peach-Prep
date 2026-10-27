@@ -150,7 +150,7 @@
     const handsOn = keys.filter(k => window.PP_SKILLS.stepNames(k).indexOf("Check") >= 0).length;
     const nTasks = (PP.tasks || []).length;
     body.appendChild(make("p", "routine-except", "Some lessons are different. " +
-      "Skills that do not have fifteen practice questions yet still open on their skill page, with Learn It, Watch Me, Practice Together, Try It Yourself and a check. " + (handsOn ? cap(PP.countWord(handsOn)) + " hands-on lesson" + (handsOn === 1 ? "" : "s") + ", for reading aloud and cursive, " + (handsOn === 1 ? "has" : "have") + " a grown-up Check. " : "") +
+      "Skills that do not have fifteen practice questions yet still open on their skill page, with Learn It, Watch Me, Practice Together, Try It Yourself and Test Your Knowledge. " + (handsOn ? cap(PP.countWord(handsOn)) + " hands-on lesson" + (handsOn === 1 ? "" : "s") + ", for reading aloud and cursive, " + (handsOn === 1 ? "has" : "have") + " a grown-up Check. " : "") +
       (nTasks ? "The " + PP.countWord(nTasks) + " essay task" + (nTasks === 1 ? " has" : "s have") + " Read, Plan, Write and Check, and a For parents tab for scoring." : "")));
     body.appendChild(make("h3", "routine-h3", "When a grown-up joins in"));
     const ul = make("ul", "routine-adult");

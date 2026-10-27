@@ -218,7 +218,7 @@ with sync_playwright() as p:
     before = q.evaluate(KEYS)
     ready(q, "#std/3.T.T.1"); q.reload(); q.wait_for_timeout(700)
     q.click("#std-review .rv-start"); q.wait_for_timeout(200)
-    st = q.evaluate("({s:PP_PLAYER.state(), help:['q-help','q-hint','q-how','q-check'].filter(i=>!document.getElementById(i).hidden), nav:document.querySelectorAll('#q-nav .qn-btn').length, focus:document.activeElement.id})")
+    st = q.evaluate("({s:PP_PLAYER.state(), help:['q-help','q-teach','q-check'].filter(i=>!document.getElementById(i).hidden), nav:document.querySelectorAll('#q-nav .qn-btn').length, focus:document.activeElement.id})")
     did = answer_all(q, partial_first=True)
     q.click("#confirm-submit"); q.wait_for_timeout(250)
     res = q.evaluate("""({rows:[...document.querySelectorAll('#res-skills .skill-row')].map(r=>r.querySelector('.skill-name').textContent), hidden:document.getElementById('res-skills').hidden,

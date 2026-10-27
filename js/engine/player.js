@@ -336,7 +336,7 @@
     const total = run.set.items.length;
     el("q-count").textContent = run.sim ? "Fresh question (not one of the fifteen)" : "Question " + (i + 1) + " of " + total;
     /* practice is never scored, so the right-hand note is the set, not points */
-    el("q-points").textContent = run.own ? (run.sim ? "Extra" : "Set " + run.set.setNo + " of " + (((PP.core || {})[run.set.code] || { sets: [1, 2, 3] }).sets.length)) : item.type === "cr" ? "Not scored" : item.points === 2 ? "2 points" : "1 point";
+    el("q-points").textContent = run.own ? (run.sim ? "Extra" : "Set " + run.set.setNo + " of " + (((PP.core || {})[run.set.code] || { sets: [1, 2, 3] }).sets.length) + (item.type === "cr" ? " \u00b7 Not scored" : "")) : item.type === "cr" ? "Not scored" : item.points === 2 ? "2 points" : "1 point";
     el("q-bar").style.width = Math.round(((i + 1) / total) * 100) + "%";   /* PP-004 U-6.6: matches "Question i of n", so the last question shows 100% */
     el("q-prompt").textContent = item.prompt;
     const host = el("q-body");
@@ -669,6 +669,7 @@
     run.teach.shown = (done || st.shown) ? comp.units.length : Math.min(2, comp.units.length);
     if (!restore && !done && !st.shown) st.tp = Math.max(st.tp || 0, run.teach.shown);
     if (!restore) persist({ t: "teach" });
+    syncControls();   /* the question screen is hidden, but its Check state is already right for the return */
     renderTeach(true);
     window.PP_APP.setHash(questionHash() + "/teach");
     return true;

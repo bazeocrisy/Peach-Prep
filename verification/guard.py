@@ -143,21 +143,23 @@ with sync_playwright() as p:
                 cr = pg.evaluate("PP_PLAYER.ctx().item.type==='cr'")
                 if not cr:
                     pg.evaluate(WRONG); pg.click("#q-check"); pg.wait_for_timeout(30)
-                    fb = pg.evaluate("({cls:document.getElementById('q-feedback').className, txt:document.getElementById('q-feedback').textContent, why:PP_PLAYER.ctx().item.why, how:!document.getElementById('q-how-steps').hidden})")
+                    fb = pg.evaluate("({cls:document.getElementById('q-feedback').className, txt:document.getElementById('q-feedback').textContent, why:PP_PLAYER.ctx().item.why, how:!document.getElementById('teach-panel').hidden})")   # question-first: Teach Me must not open by itself
                     if "is-try" not in fb["cls"]: wrong_fail.append(s + " " + iid)
                     if (fb["why"] and fb["why"][:40] in fb["txt"]) or fb["how"]: leak_fail.append(s + " " + iid)
                 want = pg.evaluate("(it=>(it.hints&&it.hints.length?it.hints:[it.clue]))(PP_PLAYER.ctx().item)")
                 seen = []
+                pg.click("#q-teach"); pg.wait_for_timeout(30)   # question-first: hints live inside Teach Me (docs/question-first/TEST-CHANGES.md)
                 for k in range(len(want)):
-                    pg.click("#q-hint"); pg.wait_for_timeout(20)
-                    seen.append(pg.evaluate("""({steps:[...document.querySelectorAll('#q-help-steps .help-step .help-text')].map(x=>x.textContent),
+                    pg.click("#teach-hint"); pg.wait_for_timeout(20)
+                    seen.append(pg.evaluate("""({steps:[...document.querySelectorAll('#teach-hints .help-step .help-text')].map(x=>x.textContent),
                         ruled:document.querySelectorAll('#q-body .is-ruled-out').length, outline:document.querySelectorAll('#q-body .is-hint').length,
-                        how:!document.getElementById('q-how-steps').hidden, picked:JSON.stringify(PP_PLAYER.ctx().resp)})"""))
+                        how:!!document.querySelector('#teach-cards [data-unit=answer]'), picked:JSON.stringify(PP_PLAYER.ctx().resp)})"""))
                 last = seen[-1] if seen else None
                 if not (last and last["steps"] == want and all(x["ruled"] == 0 and x["outline"] == 0 and not x["how"] for x in seen)
                         and [len(x["steps"]) for x in seen] == list(range(1, len(want) + 1))
-                        and pg.evaluate("document.getElementById('q-hint').disabled")):
+                        and pg.evaluate("document.getElementById('teach-hint').disabled")):
                     own_hint_fail.append(s + " " + iid + " " + json.dumps([len(want), [len(x["steps"]) for x in seen], last and {k: last[k] for k in ("ruled", "outline", "how")}]))
+                pg.click("#teach-back"); pg.wait_for_timeout(60)
                 if cr:
                     pg.evaluate("(()=>{const c=PP_PLAYER.ctx();c.resp.text='My answer.';c.onChange();})()"); pg.click("#q-check"); pg.wait_for_timeout(30)
                     good = pg.evaluate("document.getElementById('q-status').textContent.indexOf('Written and checked')>=0 && !document.getElementById('q-cr').hidden")
@@ -359,17 +361,17 @@ with sync_playwright() as p:
         if core:
             pick = pg.evaluate("({cur:PP_APP.current(), step:PP_SKILLS.step(), sets:document.querySelectorAll('#sk-panel .own-set').length})")
             pg.click("#sk-start-try"); pg.wait_for_timeout(80)
-        intry = pg.evaluate("({s:PP_PLAYER.state(), help:!document.getElementById('q-help').hidden, hint:!document.getElementById('q-hint').hidden, how:!document.getElementById('q-how').hidden, steps:document.querySelectorAll('#q-help-steps .help-step').length, open:!document.getElementById('q-how-steps').hidden})")
+        intry = pg.evaluate("({s:PP_PLAYER.state(), help:!document.getElementById('q-help').hidden, hint:!document.getElementById('q-teach').hidden, how:!document.getElementById('q-hint')&&!document.getElementById('q-how'), steps:document.querySelectorAll('#q-help-steps .help-step').length, open:!document.getElementById('teach-panel').hidden})")   # question-first: Teach Me replaces the hint and Show me how buttons
         if core:
-            ok(nm("9.5a", "Practice Together leads to the Try step's set picker; on my own, Help me is absent and hints and Show me how are offered, nothing shown yet"),
+            ok(nm("9.5a", "Practice Together leads to the Try step's set picker; on my own, Help me is absent and Teach Me is offered (hints and the answer are inside it), nothing shown yet"),
                dn["done"] and "on my own" in dn["t"].lower() and pick == {"cur": "skill", "step": "try", "sets": 3} and intry["s"]["setId"] == "SK:%s:y" % qcode
                and not intry["help"] and intry["hint"] and intry["how"] and intry["steps"] == 0 and not intry["open"], (dn, pick, intry))
         else:
             ok("9.5a Practice Together leads to Try It Yourself, where Help me starts hidden", dn["done"] and "yourself" in dn["t"].lower() and intry["s"]["setId"] == "SK:%s:y" % qcode and not intry["help"], (dn, intry))
         pg.evaluate(WRONG); pg.click("#q-check"); pg.wait_for_timeout(30)
         if core:
-            w = pg.evaluate("({hint:!document.getElementById('q-hint').hidden, steps:document.querySelectorAll('#q-help-steps .help-step').length, open:!document.getElementById('q-how-steps').hidden, outline:document.querySelectorAll('#q-body .is-hint').length})")
-            ok(nm("9.5b", "after one wrong try, help stays opt-in: a hint is offered but nothing is shown or outlined on its own"), w == {"hint": True, "steps": 0, "open": False, "outline": 0}, w)
+            w = pg.evaluate("({hint:!document.getElementById('q-teach').hidden, steps:document.querySelectorAll('#q-help-steps .help-step').length, open:!document.getElementById('teach-panel').hidden, outline:document.querySelectorAll('#q-body .is-hint').length})")
+            ok(nm("9.5b", "after one wrong try, help stays opt-in: Teach Me is offered but nothing is shown or outlined on its own"), w == {"hint": True, "steps": 0, "open": False, "outline": 0}, w)
         else:
             ok("9.5b in Try It Yourself, Help me unlocks after one wrong try", pg.evaluate("!document.getElementById('q-help').hidden"))
         pg.evaluate(CORRECT); pg.click("#q-check"); pg.click("#q-next"); pg.wait_for_timeout(20)
@@ -1167,12 +1169,17 @@ with sync_playwright() as p:
                     chk("%s q%d" % (s, i + 1)); q.click("#q-next")
                 q.evaluate("PP_PLAYER.abandon()")
                 continue
-            own = q.evaluate("!!PP.byId['%s'].own" % s)   # expansion 2026-10-22: own sets take hints from #q-hint (no Help me)
+            own = q.evaluate("!!PP.byId['%s'].own" % s)   # expansion 2026-10-22: own sets take hints from Teach Me (no Help me)
             for i in range(q.evaluate("PP_PLAYER.state().total")):
                 if q.is_visible("#tab-question"): q.click("#tab-question")
                 chk("%s q%d" % (s, i + 1))
-                for k in range(3): q.click("#q-hint" if own else "#q-help")
-                if own: q.click("#q-how")
+                if own:   # question-first: hints and the answer are inside Teach Me; measure it open, then back at the question
+                    q.click("#q-teach")
+                    for k in range(3): q.click("#teach-hint")
+                    while q.is_visible("#teach-next"): q.click("#teach-next")
+                    chk("%s q%d teach" % (s, i + 1)); q.click("#teach-back"); q.wait_for_timeout(60)
+                else:
+                    for k in range(3): q.click("#q-help")
                 # a written (cr) core item is never scored: give it some text so Compare with the sample can run
                 if own: q.evaluate("(()=>{const c=PP_PLAYER.ctx();if(c.item.type==='cr'){c.resp.text='My answer.';c.onChange();}})()")
                 chk("%s q%d help" % (s, i + 1))

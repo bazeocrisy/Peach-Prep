@@ -44,8 +44,8 @@ sys.excepthook = _crash_hook
 
 
 def check(name, good, detail=""):
-    results.append({"name": name, "pass": bool(good), "detail": "" if good else str(detail)[:400]})
-    print(("PASS  " if good else "FAIL  ") + name + ("" if good else "   [" + str(detail)[:400] + "]"), flush=True)
+    results.append({"name": name, "pass": bool(good), "detail": "" if good else str(detail)[:900]})
+    print(("PASS  " if good else "FAIL  ") + name + ("" if good else "   [" + str(detail)[:900] + "]"), flush=True)
 
 
 # answers in the engine's index space, for the item now on screen
@@ -133,6 +133,30 @@ def item_id(q):
     return q.evaluate("PP_PLAYER.ctx().item.id")
 
 
+# question-first helpers (docs/question-first/TEST-CHANGES.md): hints and the answer now live inside Teach Me
+def teach(q):
+    """Open Teach Me from the question (phones: the Question tab first)."""
+    if q.is_visible("#tab-question"): q.click("#tab-question")
+    if not vis(q, "#teach-panel"):
+        q.click("#q-teach"); q.wait_for_timeout(60)
+
+
+def hint(q):
+    teach(q); q.click("#teach-hint"); q.wait_for_timeout(40)
+
+
+def reveal(q):
+    """Press 'Show the next step' until the answer card is on screen."""
+    teach(q)
+    n = 0
+    while vis(q, "#teach-next") and n < 20:
+        q.click("#teach-next"); q.wait_for_timeout(30); n += 1
+
+
+def back_q(q):
+    q.click("#teach-back"); q.wait_for_timeout(120)
+
+
 with sync_playwright() as p:
     b = p   # page() launches its own browser from this Playwright handle
     errors = []
@@ -160,16 +184,16 @@ with sync_playwright() as p:
           and q.evaluate("!PP.sets.some(s=>s.items.some(i=>/-S0/.test(i.id)&&i.id.indexOf('SK-TT1c')===0))"), reg)
     # Together still runs the unchanged Help me ladder, and its end leads to the set picker
     q.evaluate("PP_SKILLS.open(%s,'practice')" % json.dumps(K)); q.click("#sk-start-practice"); q.wait_for_timeout(80)
-    tg = q.evaluate("({ids:[0,1,2].map(i=>PP_PLAYER.ctx(i).item.id), help:!document.getElementById('q-help').hidden, hint:!document.getElementById('q-hint').hidden, how:!document.getElementById('q-how').hidden})")
+    tg = q.evaluate("({ids:[0,1,2].map(i=>PP_PLAYER.ctx(i).item.id), help:!document.getElementById('q-help').hidden, hint:!!document.getElementById('q-hint'), how:!!document.getElementById('q-how'), teach:!document.getElementById('q-teach').hidden})")
     for i in range(3):
         q.evaluate(CORRECT); q.click("#q-check"); q.click("#q-next"); q.wait_for_timeout(30)
     q.click("#done-test"); q.wait_for_timeout(120)
     land = q.evaluate("({cur:PP_APP.current(), step:PP_SKILLS.step(), picker:!!document.getElementById('sk-try-set-1')})")
-    check("A.5 Practice Together on 3.T.T.1.c runs P1-P3 with Help me (no hint/how buttons) and leads to the Try step's set picker",
-          tg["ids"] == reg["p"] and tg["help"] and not tg["hint"] and not tg["how"] and land == {"cur": "skill", "step": "try", "picker": True}, (tg, land))
+    check("A.5 Practice Together on 3.T.T.1.c runs P1-P3 with Help me (no hint/how buttons, no Teach Me) and leads to the Try step's set picker",
+          tg["ids"] == reg["p"] and tg["help"] and not tg["hint"] and not tg["how"] and not tg["teach"] and land == {"cur": "skill", "step": "try", "picker": True}, (tg, land))
     q.evaluate("localStorage.clear()"); close_page(q)
 
-    # ---------------- B. own-mode controls on set 1 ----------------
+    # ---------------- B. own-mode controls on set 1 (question-first: Check Answer, Teach Me, Back to My Question) ----------------
     q = page(b, errors=errors); ready(q, "#browse"); q.evaluate("localStorage.clear()"); ready(q, "#skill/%s/try" % K)
     pk = q.evaluate("""({h:document.querySelector('#sk-panel .panel-h').textContent, sets:document.querySelectorAll('#sk-panel .own-set').length,
         start:(document.getElementById('sk-start-try')||{}).textContent, line:document.getElementById('sk-panel').textContent})""")
@@ -177,65 +201,80 @@ with sync_playwright() as p:
           pk["h"] == "Try It Yourself: practice on my own" and pk["sets"] == 3 and pk["start"] == "Start set 1"
           and "Fifteen questions in three sets of five" in pk["line"] and "You can stop after any set and come back." in pk["line"], pk)
     q.click("#sk-start-try"); q.wait_for_timeout(100)
-    c = q.evaluate("""(()=>{const ids=['q-check','q-hint','q-how','q-next','q-prev'];return {state:PP_PLAYER.state(),hash:location.hash,tag:document.getElementById('player-mode').textContent,
+    c = q.evaluate("""(()=>{const ids=['q-check','q-teach','q-next','q-prev'];return {state:PP_PLAYER.state(),hash:location.hash,tag:document.getElementById('player-mode').textContent,
         ctl:ids.map(i=>{const e=document.getElementById(i),r=e.getBoundingClientRect();return [i,!e.hidden,e.textContent,Math.round(r.height),Math.round(r.width),e.disabled]}),
-        help:!document.getElementById('q-help').hidden, sim:!document.getElementById('q-similar').hidden}})()""")
+        gone:!document.getElementById('q-hint')&&!document.getElementById('q-how'), help:!document.getElementById('q-help').hidden, sim:!document.getElementById('q-similar').hidden}})()""")
     ctl = {x[0]: x for x in c["ctl"]}
-    check("B.1 own mode: Check my answer, Give me a hint, Show me how (shows the answer) and Next are present before any wrong answer; no Help me; targets at least 44px",
-          c["state"]["own"] and c["hash"] == "#play/SK:%s:y/try" % K and c["tag"] == "Try it yourself" and not c["help"]
-          and ctl["q-check"][1] and ctl["q-check"][2] == "Check my answer" and ctl["q-hint"][1] and ctl["q-hint"][2] == "Give me a hint"
-          and ctl["q-how"][1] and ctl["q-how"][2] == "Show me how (shows the answer)" and ctl["q-next"][1]
-          and all(x[3] >= 44 and x[4] >= 44 for x in c["ctl"] if x[1]), c)
-    check("B.2 blank: Check my answer is disabled; Try a similar question is not offered yet", ctl["q-check"][5] and not c["sim"], c)
-    # P4 (ms, 2 points): wrong twice, then hints
+    check("B.1 own mode: Check Answer, Teach Me and Skip for now before any answer; no Help me; hints and the answer are no longer on the question screen (they are inside Teach Me); targets at least 44px",
+          c["state"]["own"] and c["hash"] == "#play/SK:%s:y/try" % K and c["tag"] == "Practice" and not c["help"] and c["gone"]
+          and ctl["q-check"][1] and ctl["q-check"][2] == "Check Answer" and ctl["q-teach"][1] and ctl["q-teach"][2] == "Teach Me"
+          and ctl["q-next"][1] and ctl["q-next"][2] == "Skip for now" and all(x[3] >= 44 and x[4] >= 44 for x in c["ctl"] if x[1]), c)
+    check("B.2 blank: Check Answer is disabled; a fresh question like this is not offered yet", ctl["q-check"][5] and not c["sim"], c)
+    # P4 (ms, 2 points): wrong twice, then Teach Me for hints
     snap0 = q.evaluate(KEYS)
     q.evaluate(WRONG); q.click("#q-check"); q.wait_for_timeout(40)
-    w1 = q.evaluate("({fb:document.getElementById('q-feedback').textContent, why:PP_PLAYER.ctx().item.why, dis:document.getElementById('q-check').disabled, how:document.getElementById('q-how-steps').hidden, outline:document.querySelectorAll('#q-body .is-hint').length})")
+    w1 = q.evaluate("({fb:document.getElementById('q-feedback').textContent, why:PP_PLAYER.ctx().item.why, dis:document.getElementById('q-check').disabled, outline:document.querySelectorAll('#q-body .is-hint').length})")
     q.click("#q-check"); q.wait_for_timeout(40)
     w2 = q.evaluate("({fb:document.getElementById('q-feedback').textContent, dis:document.getElementById('q-check').disabled, focus:document.activeElement.id})")
-    check("B.3 a wrong check says Not quite with no explanation and allows a retry; after two wrong checks Check waits for a hint or Show me how",
-          w1["fb"].startswith("Not quite") and w1["why"][:40] not in w1["fb"] and not w1["dis"] and w1["how"] and w1["outline"] == 0
-          and "Two tries used. Ask for a hint or press Show me how." in w2["fb"] and w2["dis"] and w2["focus"] == "q-hint", (w1, w2))
+    check("B.3 a wrong check says Not quite with no explanation and allows a retry; after two wrong checks Check Answer waits until the child has opened Teach Me, and focus moves to Teach Me",
+          w1["fb"].startswith("Not quite") and w1["why"][:40] not in w1["fb"] and not w1["dis"] and w1["outline"] == 0
+          and "Two tries used. Tap Teach Me" in w2["fb"] and w2["dis"] and w2["focus"] == "q-teach", (w1, w2))
+    teach(q)
+    tm0 = q.evaluate("""({hash:location.hash, panel:!document.getElementById('teach-panel').hidden, main:document.getElementById('q-main').hidden, title:document.activeElement.id,
+        cards:[...document.querySelectorAll('#teach-cards .tm-card')].map(x=>x.dataset.unit), rec:PP_PRACTICE.rec(%s,PP_PLAYER.ctx().item.id)})""" % json.dumps(K))
+    check("B.3b Teach Me opens in place of the question at #play/<set>/try/teach: the heading has focus, it starts with what the question asks and the strategy, and the open is saved (tm = 1)",
+          tm0["hash"] == "#play/SK:%s:y/try/teach" % K and tm0["panel"] and tm0["main"] and tm0["title"] == "teach-title" and tm0["cards"][:2] == ["asks", "strategy"] and tm0["rec"]["tm"] == 1, tm0)
     hints = []
     for n in range(3):
-        q.click("#q-hint"); q.wait_for_timeout(40)
-        hints.append(q.evaluate("""({steps:[...document.querySelectorAll('#q-help-steps .help-step')].map(s=>[s.querySelector('.fb-label').textContent,s.querySelector('.help-text').textContent]),
-            outline:document.querySelectorAll('#q-body .is-hint').length, ruled:document.querySelectorAll('#q-body .is-ruled-out').length, check:document.getElementById('q-check').disabled,
-            label:document.getElementById('q-hint').textContent, dis:document.getElementById('q-hint').disabled, ans:PP_ITEMS[PP_PLAYER.ctx().item.type].answerText(PP_PLAYER.ctx().item,PP.byId['SK:%s:y'])})""" % K))
+        q.click("#teach-hint"); q.wait_for_timeout(40)
+        hints.append(q.evaluate("""({steps:[...document.querySelectorAll('#teach-hints .help-step')].map(s=>[s.querySelector('.fb-label').textContent,s.querySelector('.help-text').textContent]),
+            label:document.getElementById('teach-hint').textContent, dis:document.getElementById('teach-hint').disabled, check:document.getElementById('q-check').disabled,
+            outline:document.querySelectorAll('#q-body .is-hint').length, ruled:document.querySelectorAll('#q-body .is-ruled-out').length,
+            ans:PP_ITEMS[PP_PLAYER.ctx().item.type].answerText(PP_PLAYER.ctx().item,PP.byId['SK:%s:y'])})""" % K))
     authored = q.evaluate("PP_PLAYER.ctx().item.hints")
-    check("B.4 three graduated hints in order, each the authored text, labelled Hint n of 3; no outline, nothing ruled out; a hint re-enables one check",
+    check("B.4 three graduated hints in order inside Teach Me, each the authored text, labelled Hint n of 3; no outline, nothing ruled out; the button then says No more hints; a hint re-enables one check",
           [len(h["steps"]) for h in hints] == [1, 2, 3] and [s[1] for s in hints[2]["steps"]] == authored
           and [s[0].lower() for s in hints[2]["steps"]] == ["hint 1 of 3", "hint 2 of 3", "hint 3 of 3"]
           and all(h["outline"] == 0 and h["ruled"] == 0 for h in hints) and not hints[0]["check"]
           and hints[0]["label"] == "Give me another hint" and hints[2]["label"] == "No more hints" and hints[2]["dis"]
           and not any(h["ans"].lower() in s[1].lower() for h in hints for s in h["steps"]), hints[2])
-    # Show me how reveals and marks Answer shown, permanently
-    q.click("#q-how"); q.wait_for_timeout(60)
-    hw = q.evaluate("""({box:document.getElementById('q-how-steps').innerText, steps:document.querySelectorAll('#q-how-steps .how-list li').length, how:PP_PLAYER.ctx().item.how,
-        outline:document.querySelectorAll('#q-body .is-hint').length, status:document.getElementById('q-status').textContent, focus:document.activeElement.className,
-        sim:!document.getElementById('q-similar').hidden, howBtn:!document.getElementById('q-how').hidden})""")
+    # Reveal in Teach Me: marks Answer shown, permanently
+    pre_text = q.evaluate("document.getElementById('teach-cards').innerText")
+    explain = ""
+    n = 0
+    while vis(q, "#teach-next") and n < 20:
+        explain = text(q, "#teach-explain")
+        q.click("#teach-next"); q.wait_for_timeout(30); n += 1
+    hw = q.evaluate("""(()=>{const it=PP_PLAYER.ctx().item,box=document.getElementById('teach-cards'),a=box.querySelector('[data-unit=answer]');
+        return {units:box.querySelectorAll('.tm-card').length, ans:a?a.innerText:'', focus:document.activeElement.dataset.unit||document.activeElement.id, why:it.why, mix:it.misconception||'',
+        end:!document.getElementById('teach-end').hidden, nextHidden:document.getElementById('teach-next').hidden, last:it.how[it.how.length-1]};})()""")
     rec = q.evaluate(PRACTICE)["l"][K]["i"]["SK-TT1c-P4"]
-    check("B.5 Show me how: numbered steps from how, the answer, the mix-up line, the key outlined; the item is Answer shown and focus moves to the steps",
-          hw["steps"] == len(hw["how"]) and "The answer:" in hw["box"] and "honest" in hw["box"] and "common mix-up" in hw["box"].lower() and hw["outline"] == 2
-          and "Answer shown" in hw["status"] and "how-h" in hw["focus"] and rec["x"] is True and rec["ok"] is False and rec["w"] == 2 and rec["h"] == 3 and not hw["howBtn"], (hw, rec))
+    back_q(q)
+    ret = q.evaluate("""({hash:location.hash, outline:document.querySelectorAll('#q-body .is-hint').length, status:document.getElementById('q-status').textContent, focus:document.activeElement.id,
+        main:!document.getElementById('q-main').hidden, say:document.getElementById('q-say').textContent})""")
+    check("B.5 Teach Me to the end: the labeled Answer card with the last step, why and the mix-up line; the answer button warned that the question is marked answer shown; the item is Answer shown (x, w and h kept); Back to My Question returns to the question with the key outlined",
+          "marked answer shown" in explain and "Answer:" in hw["ans"] and hw["last"] in hw["ans"] and hw["end"] and hw["nextHidden"] and hw["focus"] == "answer"
+          and (not hw["mix"] or hw["mix"] in hw["ans"]) and rec["x"] is True and rec["ok"] is False and rec["w"] == 2 and rec["h"] == 3 and rec["tm"] == 1
+          and ret["hash"] == "#play/SK:%s:y/try" % K and ret["main"] and ret["outline"] == 2 and "Answer shown" in ret["status"], (explain, hw, rec, ret))
     q.evaluate(CORRECT); q.click("#q-check"); q.wait_for_timeout(40)
     after = q.evaluate("({fb:document.getElementById('q-feedback').textContent, status:document.getElementById('q-status').textContent})")
     rec = q.evaluate(PRACTICE)["l"][K]["i"]["SK-TT1c-P4"]
-    check("B.6 a right answer after Show me how is accepted but stays Answer shown; w, h and x are never lowered; the full history is kept",
-          "counts as answer shown" in after["fb"] and "Answer shown" in after["status"] and rec["ok"] is True and rec["x"] is True and rec["w"] == 2 and rec["h"] == 3
-          and [e["t"] for e in rec["log"]] == ["check", "check", "hint", "hint", "hint", "how", "check"], (after, rec))
+    types = [e["t"] for e in rec["log"] if e["t"] != "teach-step"]
+    check("B.6 a right answer after the answer was shown is accepted but stays Answer shown; w, h, x and tm are never lowered; the full history is kept",
+          "counts as answer shown" in after["fb"] and "Answer shown" in after["status"] and rec["ok"] is True and rec["x"] is True and rec["w"] == 2 and rec["h"] == 3 and rec["tm"] == 1
+          and types == ["check", "check", "teach", "hint", "hint", "hint", "how", "check"] and rec["f1"] == {"ok": False, "pre": False}, (after, rec))
     check("B.7 no pass from practice: pp.progress.v1 is untouched by own-mode actions; only pp.practice.v1 is new",
           q.evaluate(PROG) is None and set(q.evaluate(KEYS)) - set(snap0) == {"pp.practice.v1"}, q.evaluate(KEYS).keys())
-    # similar: offered after the reveal (P4 is in S01's like); separate record; bank used up
+    # similar: offered after teaching/reveal (P4 is in S01's like); separate record; bank used up
     simv = q.evaluate("!document.getElementById('q-similar').hidden")
     core_before = json.dumps(q.evaluate(PRACTICE)["l"][K]["i"])
     q.click("#q-similar"); q.wait_for_timeout(100)
-    s1 = q.evaluate("({sim:PP_PLAYER.state().sim, count:document.getElementById('q-count').textContent, next:document.getElementById('q-next').textContent, prev:document.getElementById('q-prev').textContent, simbtn:!document.getElementById('q-similar').hidden, hint:!document.getElementById('q-hint').hidden, how:!document.getElementById('q-how').hidden})")
-    q.evaluate(WRONG); q.click("#q-check"); q.click("#q-hint"); q.evaluate(CORRECT); q.click("#q-check"); q.wait_for_timeout(40)
+    s1 = q.evaluate("({sim:PP_PLAYER.state().sim, count:document.getElementById('q-count').textContent, next:document.getElementById('q-next').textContent, prev:document.getElementById('q-prev').textContent, simbtn:!document.getElementById('q-similar').hidden, teach:!document.getElementById('q-teach').hidden})")
+    q.evaluate(WRONG); q.click("#q-check"); hint(q); back_q(q); q.evaluate(CORRECT); q.click("#q-check"); q.wait_for_timeout(40)
     st = q.evaluate(PRACTICE)["l"][K]
-    check("B.8 Try a similar question opens a separate extra question (S01), labelled not one of the fifteen, with the same controls and no further similar button",
-          simv and s1["sim"] == "SK-TT1c-S01" and s1["count"] == "Extra question (not one of the fifteen)" and s1["next"] == "Go on to question 2"
-          and s1["prev"] == "Back to question 1" and not s1["simbtn"] and s1["hint"] and s1["how"], s1)
+    check("B.8 a fresh question like this opens a separate extra question (S01), labelled not one of the fifteen, with the same controls and no further similar button",
+          simv and s1["sim"] == "SK-TT1c-S01" and "not one of the fifteen" in s1["count"] and s1["next"] == "Go on to question 2"
+          and s1["prev"] == "Back to question 1" and not s1["simbtn"] and s1["teach"], s1)
     check("B.9 the similar question is saved under s with for = the core item; the core record is unchanged; it is not counted in the fifteen",
           st["s"]["SK-TT1c-S01"]["for"] == "SK-TT1c-P4" and st["s"]["SK-TT1c-S01"]["ok"] is True and st["s"]["SK-TT1c-S01"]["h"] == 1 and st["s"]["SK-TT1c-S01"]["w"] == 1
           and json.dumps(st["i"]) == core_before and "SK-TT1c-S01" not in st["i"]
@@ -247,53 +286,57 @@ with sync_playwright() as p:
           back == {"id": "SK-TT1c-P4", "sim": None, "simbtn": True}, back)
     q.click("#q-next"); q.wait_for_timeout(60)
     # P5 (order) first-try right. The button shows exactly when a similar item maps to P5 (it hides otherwise; lead decision).
-    # To keep the "hidden when none maps" rule under test whatever the content team maps, P5 is unmapped in memory (the page's copy, not the file).
     q.evaluate("(k=>{(PP.similarFor[k]||[]).forEach(s=>{s.like=(s.like||[]).filter(x=>x!=='SK-TT1c-P5');});})(%s)" % json.dumps(K))
     has_sim_p5 = False
     q.evaluate(CORRECT); q.click("#q-check"); q.wait_for_timeout(40)
-    p5 = q.evaluate("({id:PP_PLAYER.ctx().item.id, sim:!document.getElementById('q-similar').hidden, st:document.getElementById('q-status').textContent, focus:document.activeElement.id})")
-    check("B.11 right on the first try: status Right on the first try; a core item with no mapped similar item hides Try a similar question",
-          p5["id"] == "SK-TT1c-P5" and p5["sim"] == has_sim_p5 and "Right on the first try" in p5["st"] and p5["focus"] == "q-next", p5)
+    p5 = q.evaluate("({id:PP_PLAYER.ctx().item.id, sim:!document.getElementById('q-similar').hidden, st:document.getElementById('q-status').textContent, focus:document.activeElement.id, f1:PP_PRACTICE.rec(%s,'SK-TT1c-P5').f1})" % json.dumps(K))
+    check("B.11 right on the first try: status Right on the first try (no help came before the first check); an item with no mapped similar item hides the fresh-question button",
+          p5["id"] == "SK-TT1c-P5" and p5["sim"] == has_sim_p5 and "Right on the first try" in p5["st"] and p5["focus"] == "q-next" and p5["f1"] == {"ok": True, "pre": False}, p5)
     q.click("#q-next"); q.wait_for_timeout(40)
     # C03 retry: wrong, right
     q.evaluate(WRONG); q.click("#q-check"); q.evaluate(CORRECT); q.click("#q-check"); q.wait_for_timeout(40)
     q.click("#q-next"); q.wait_for_timeout(40)
-    # C04: hint then right
-    q.click("#q-hint"); q.evaluate(CORRECT); q.click("#q-check"); q.wait_for_timeout(40)
+    # C04: Teach Me (a hint), back, then right
+    hint(q); back_q(q); q.evaluate(CORRECT); q.click("#q-check"); q.wait_for_timeout(40)
     q.click("#q-next"); q.wait_for_timeout(40)
     # P6: skip (Next without answering)
     skip = q.evaluate("({id:PP_PLAYER.ctx().item.id, next:document.getElementById('q-next').textContent})")
     q.click("#q-next"); q.wait_for_timeout(80)
     done = q.evaluate("""({stage:!document.getElementById('stage-done').hidden, title:document.getElementById('done-title').textContent, line:document.getElementById('done-line').textContent,
         rows:[...document.querySelectorAll('#done-summary .own-dot-word')].map(x=>x.textContent), btn:document.getElementById('done-test').textContent, back:document.getElementById('done-back').textContent})""")
-    want = ["Question 1: Answer shown", "Question 2: Right on the first try", "Question 3: Right after another try", "Question 4: Right with hints", "Question 5: Not finished"]
-    check("B.12 five statuses in words at the end of the set (shown, first try, retry, hints, not finished); a skipped item stays Not finished",
-          skip == {"id": "SK-TT1c-P6", "next": "Finish this set"} and done["stage"] and done["rows"] == want and done["title"] == "End of set 1"
-          and "One question is not finished yet" in done["line"] and "never scored" in done["line"] and done["btn"] == "Go on to set 2" and done["back"] == "Back to the lesson", done)
+    want = ["Question 1: Answer shown", "Question 2: Right on the first try", "Question 3: Right after another try", "Question 4: Right after Teach Me", "Question 5: Not finished"]
+    check("B.12 five statuses in words at the end of the set (shown, first try, retry, Teach Me, not finished); a skipped item stays Not finished; the session end offers the next five or stopping",
+          skip == {"id": "SK-TT1c-P6", "next": "Skip and finish"} and done["stage"] and done["rows"] == want and done["title"] == "End of set 1"
+          and "not finished yet" in done["line"] and "never scored" in done["line"] and "keep going with the next five, or stop here" in done["line"]
+          and done["btn"] == "Next five questions" and done["back"].startswith("Back to "), done)
     stv = q.evaluate("(k=>PP_SKILLS.coreIds(k).slice(0,5).map(id=>PP_PRACTICE.status(k,id)))(%s)" % json.dumps(K))
-    check("B.13 the stored facts derive the same five statuses", stv == ["shown", "first", "retry", "hints", "none"], stv)
+    check("B.13 the stored facts derive the same five statuses", stv == ["shown", "first", "retry", "taught", "none"], stv)
     # Forward / reload on a finished set: the already-finished stage offers Look back and Go on
     q.reload(); q.wait_for_timeout(700)
     ag = q.evaluate("({stage:!document.getElementById('stage-again').hidden, t:document.getElementById('again-title').textContent, a:document.getElementById('again-start').textContent, n:!document.getElementById('again-next').hidden&&document.getElementById('again-next').textContent, b:document.getElementById('again-back').textContent})")
-    check("B.14 a reload on a finished set shows the already-finished stage: Look back at this set, Go on to set 2, Back to the lesson",
-          ag == {"stage": True, "t": "You reached the end of this set", "a": "Look back at this set", "n": "Go on to set 2", "b": "Back to the lesson"}, ag)
+    check("B.14 a reload on a finished set shows the already-finished stage: Look back at this set, the next five, and the way back",
+          ag["stage"] and ag["t"] == "You reached the end of this set" and ag["a"] == "Look back at this set" and ag["n"] in ("Go on to set 2", "Next five questions") and ag["b"].startswith("Back to "), ag)
     q.click("#again-start"); q.wait_for_timeout(100)
-    lb = q.evaluate("({pos:PP_PLAYER.state().pos, solved:PP_PLAYER.state().solved, locked:document.querySelectorAll('#q-body .choice:disabled').length, status:document.getElementById('q-status').textContent, how:!document.getElementById('q-how-steps').hidden})")
-    check("B.15 Look back reopens set 1 at question 1 with the saved answer locked and its Answer shown status and steps",
-          lb["pos"] == 0 and lb["solved"][0] is True and lb["locked"] == 5 and "Answer shown" in lb["status"] and lb["how"], lb)
+    lb = q.evaluate("({pos:PP_PLAYER.state().pos, solved:PP_PLAYER.state().solved, locked:document.querySelectorAll('#q-body .choice:disabled').length, status:document.getElementById('q-status').textContent})")
+    teach(q)
+    lb["answer"] = q.evaluate("!!document.querySelector('#teach-cards [data-unit=answer]')")
+    back_q(q)
+    check("B.15 Look back reopens set 1 at question 1 with the saved answer locked and its Answer shown status; Teach Me there shows the whole walk-through, including the answer, without changing anything",
+          lb["pos"] == 0 and lb["solved"][0] is True and lb["locked"] == 5 and "Answer shown" in lb["status"] and lb["answer"], lb)
     # set picker reflects it
     q.evaluate("PP_SKILLS.open(%s,'try')" % json.dumps(K)); q.wait_for_timeout(60)
     sp = q.evaluate("""({cards:[...document.querySelectorAll('#sk-panel .own-set')].map(c=>[c.querySelector('.own-set-state').textContent,[...c.querySelectorAll('.own-dot-word')].map(x=>x.textContent).join('|'),c.querySelector('button').textContent]),
         start:document.getElementById('sk-start-try').textContent, sum:document.querySelector('.own-summary').textContent, tick:document.getElementById('sk-tab-try').classList.contains('is-done')})""")
     check("B.16 the set picker shows each set's status in words (dots carry a word, not only colour) and Continue set 1; extra questions are counted apart",
-          sp["cards"][0][0] == "Started: question 5 of 5" and sp["cards"][0][1] == "Answer shown|First try|After a retry|With hints|Not finished"
+          sp["cards"][0][0] == "Started: question 5 of 5" and sp["cards"][0][1] == "Answer shown|First try|After a retry|After Teach Me|Not finished"
           and sp["cards"][0][2] == "Continue set 1" and sp["cards"][1][0] == "Not started" and sp["start"] == "Continue set 1"
           and "Extra questions tried: one" in sp["sum"] and not sp["tick"], sp)
+
     # ---------------- C. resume after reload on set 2 ----------------
     q.click("#sk-try-set-2"); q.wait_for_timeout(100)
     orders = {}
     for i in range(3):
-        if i == 1: q.click("#q-hint"); q.click("#q-hint")
+        if i == 1: hint(q); hint(q); back_q(q)
         q.evaluate(CORRECT); q.click("#q-check"); q.wait_for_timeout(30)
         orders[i] = q.evaluate("(c=>JSON.stringify({o:c.order,a:c.orderA,b:c.orderB,r:c.rowOrder,h:c.hotOrder,r2:c.resp}))(PP_PLAYER.ctx())")
         q.click("#q-next"); q.wait_for_timeout(40)
@@ -304,10 +347,11 @@ with sync_playwright() as p:
     q.click("#sk-try-set-2"); q.wait_for_timeout(100)
     rs = q.evaluate("({pos:PP_PLAYER.state().pos, resp:JSON.stringify(PP_PLAYER.ctx().resp), id:PP_PLAYER.ctx().item.id})")
     q.click("#q-prev"); q.wait_for_timeout(40); q.click("#q-prev"); q.wait_for_timeout(40)
-    r2 = q.evaluate("({id:PP_PLAYER.ctx().item.id, steps:document.querySelectorAll('#q-help-steps .help-step').length, ord:(c=>JSON.stringify({o:c.order,a:c.orderA,b:c.orderB,r:c.rowOrder,h:c.hotOrder,r2:c.resp}))(PP_PLAYER.ctx()), locked:PP_PLAYER.state().solved[1]})")
+    teach(q)
+    r2 = q.evaluate("({id:PP_PLAYER.ctx().item.id, steps:document.querySelectorAll('#teach-hints .help-step').length, ord:(c=>JSON.stringify({o:c.order,a:c.orderA,b:c.orderB,r:c.rowOrder,h:c.hotOrder,r2:c.resp}))(PP_PLAYER.ctx()), locked:PP_PLAYER.state().solved[1]})")
     check("C.1 resume: after a reload the picker says Started: question 4 of 5, and Continue opens set 2 at question 4 with its unchecked answer",
           pk2[1] == "Started: question 4 of 5" and rs["pos"] == 3 and rs["resp"] == q4 and rs["id"] == "SK-TT1c-C09", (pk2, rs, q4))
-    check("C.2 resume restores the earlier question's answer, its choice order and its hint log (two hints shown again)",
+    check("C.2 resume restores the earlier question's answer, its choice order and its hint log (two hints shown again inside Teach Me)",
           r2["id"] == "SK-TT1c-C07" and r2["steps"] == 2 and r2["ord"] == orders[1] and r2["locked"] is True, (r2, orders[1]))
     # direct address to set 3 and the mode guard: #play/SK:<k>:y3/test runs as practice and stores no pass
     ready(q, "#play/SK:%s:y3/test" % K)
@@ -316,7 +360,7 @@ with sync_playwright() as p:
         q.evaluate(CORRECT); q.click("#q-check"); q.click("#q-next"); q.wait_for_timeout(30)
     pr = (q.evaluate(PROG) or {}).get(K, {})
     check("C.3 #play/SK:<k>:y3/test runs as Practice on my own (never a test) and finishing it stores no pass, try or best",
-          d3["s"]["mode"] == "practice" and d3["s"]["own"] and d3["hash"] == "#play/SK:%s:y3/try" % K and d3["tag"] == "Try it yourself"
+          d3["s"]["mode"] == "practice" and d3["s"]["own"] and d3["hash"] == "#play/SK:%s:y3/try" % K and d3["tag"] == "Practice"
           and not any(f in pr for f in ("mastered", "tries", "best", "attempts", "passedAt")), (d3, pr))
     # finish all fifteen: only `tried` appears
     for part in ("y", "y2"):
@@ -346,7 +390,7 @@ with sync_playwright() as p:
     q.check("#q-cr input[type=checkbox]")
     crr = q.evaluate(PRACTICE)["l"]["FX-CR"]["i"]["SK-FXCR-C01"]
     check("D.1 cr: Not scored, Compare with the sample shows one good answer (other answers can also be right) and the criteria; status Written and checked; never right",
-          cr0 == {"pts": "Not scored", "check": "Compare with the sample", "dis": True, "box": True, "label": True}
+          cr0 == {"pts": "Set 1 of 3 \u00b7 Not scored", "check": "Compare with the sample", "dis": True, "box": True, "label": True}
           and "One good answer. Other answers can also be right" in cr1["cmp"] and cr1["boxes"] == 2 and "Written and checked against the list" in cr1["status"]
           and cr1["score"] == {"points": 0, "max": 0} and "right" not in cr1["fb"].lower().replace("can also be right", "")
           and crr["cr"]["done"] is True and crr["cr"]["text"] == "Being honest is always the right choice." and crr["cr"]["checks"] == [True, False] and "ok" in crr and crr["ok"] is False, (cr0, cr1, crr))
@@ -356,29 +400,32 @@ with sync_playwright() as p:
     cr2 = q.evaluate("({text:document.querySelector('#q-body textarea').value, checks:[...document.querySelectorAll('#q-cr input')].map(x=>x.checked)})")
     check("D.2 cr resume: the written answer and the ticked criteria come back after a reload", cr2 == {"text": "Being honest is always the right choice.", "checks": [True, False]}, cr2)
     close_page(q)
-    # D.3 (reviewer fix): Show me how on a written item uses compare wording, not "choose it", and the position words match the layout
+    # D.3 (reviewer fix, adapted): the answer for a written item is shown in Teach Me with compare wording, not "choose it"
     q = page(b, errors=errors); ready(q, "#browse"); q.evaluate("localStorage.clear()"); q.evaluate(FXCR)
     q.evaluate("PP_PLAYER.start('SK:FX-CR:y','try')"); q.wait_for_timeout(100)
-    q.fill("#q-body textarea", "Always tell the truth."); q.click("#q-how"); q.wait_for_timeout(60)
-    h0 = q.evaluate("document.querySelector('#q-how-steps .how-warn-line').textContent")
+    q.fill("#q-body textarea", "Always tell the truth."); reveal(q)
+    h0 = q.evaluate("""({all:document.getElementById('teach-cards').innerText, ask:document.querySelector('#teach-cards [data-unit=asks]').innerText, status:''})""")
+    back_q(q)
     q.click("#q-check"); q.wait_for_timeout(60)
-    h1 = q.evaluate("""({line:document.querySelector('#q-how-steps .how-warn-line').textContent, fb:document.getElementById('q-feedback').textContent, all:document.getElementById('q-how-steps').textContent,
-        how:document.getElementById('q-how-steps').getBoundingClientRect().bottom, crTop:document.getElementById('q-cr').getBoundingClientRect().top,
-        crBottom:document.getElementById('q-cr').getBoundingClientRect().bottom, fbTop:document.getElementById('q-feedback').getBoundingClientRect().top,
-        btnTop:document.getElementById('q-check').getBoundingClientRect().top, status:document.getElementById('q-status').textContent})""")
-    check("D.3 Show me how on a written item: the sample and the criteria, compare wording (no 'choose'), refreshed after Compare; the checklist is below the steps and the feedback's 'shown above' is true",
-          "Compare your own writing with them. Then press Compare with the sample to tick the checklist." in h0 and "choose" not in h0
-          and h1["line"].endswith("You can tick the checklist below.") and "choose" not in h1["all"].lower()
-          and "One good answer:" in h1["all"] and "I wrote a lesson that works for anyone." in h1["all"]
-          and "shown above" in h1["fb"] and h1["how"] <= h1["crTop"] and h1["crBottom"] <= h1["fbTop"] and "Answer shown" in h1["status"], (h0, h1))
+    h1 = q.evaluate("""({fb:document.getElementById('q-feedback').textContent, cmp:document.getElementById('q-cr').innerText, status:document.getElementById('q-status').textContent,
+        crTop:document.getElementById('q-cr').getBoundingClientRect().top, crBottom:document.getElementById('q-cr').getBoundingClientRect().bottom, fbTop:document.getElementById('q-feedback').getBoundingClientRect().top,
+        text:document.querySelector('#q-body textarea').value})""")
+    check("D.3 Teach Me on a written item: the sample and the criteria, 'other answers can also be right', compare wording (no 'choose'); back at the question the written text is kept, Compare shows the checklist above the feedback, and the item stays Answer shown",
+          "One good answer:" in h0["all"] and "Other answers can also be right." in h0["all"] and "I wrote a lesson that works for anyone." in h0["all"]
+          and "choose" not in h0["all"].lower().replace("choose the", "").replace("choose one", "") and "Write your own answer" in h0["ask"]
+          and h1["text"] == "Always tell the truth." and "One good answer. Other answers can also be right" in h1["cmp"] and h1["crBottom"] <= h1["fbTop"]
+          and "Answer shown" in h1["status"], (h0, h1))
     close_page(q)
-    # D.4 the authored written item 3.T.C.2.a C12 (reported by its author): the same type-aware Show me how
+    # D.4 the authored written item 3.T.C.2.a C12 (reported by its author): the same type-aware answer card
     q = page(b, errors=errors); ready(q, "#browse"); q.evaluate("localStorage.clear()")
     c12 = q.evaluate("""(()=>{const sid=['y','y2','y3'].map(p=>'SK:3.T.C.2.a:'+p).find(id=>PP.byId[id]&&PP.byId[id].items.some(i=>i.id==='SK-TC2a-C12'));
-        if(!sid)return null;const pos=PP.byId[sid].items.findIndex(i=>i.id==='SK-TC2a-C12');PP_PLAYER.start(sid,'try',{pos});
-        document.getElementById('q-how').click();const it=PP_PLAYER.ctx().item;const t=document.getElementById('q-how-steps').textContent;
-        return {type:it.type, t, sample:t.indexOf(it.sample)>=0, crit:(it.criteria||[]).every(c=>t.indexOf(c)>=0), choose:/choose/i.test(t), status:document.getElementById('q-status').textContent};})()""")
-    check("D.4 3.T.C.2.a C12 (cr): Show me how shows its sample and every criterion, with no 'choose' wording, and marks it Answer shown",
+        if(!sid)return null;const pos=PP.byId[sid].items.findIndex(i=>i.id==='SK-TC2a-C12');PP_PLAYER.start(sid,'try',{pos});return {sid,pos};})()""")
+    if c12:
+        reveal(q)
+        c12.update(q.evaluate("""(()=>{const it=PP_PLAYER.ctx().item;const t=document.querySelector('#teach-cards [data-unit=answer]').innerText;
+            return {type:it.type, sample:t.indexOf(it.sample)>=0, crit:(it.criteria||[]).every(c=>t.indexOf(c)>=0), choose:/choose/i.test(t)};})()"""))
+        back_q(q); c12["status"] = text(q, "#q-status")
+    check("D.4 3.T.C.2.a C12 (cr): Teach Me's answer card shows its sample and every criterion, with no 'choose' wording, and marks it Answer shown",
           c12 is not None and (c12["type"] == "cr" and c12["sample"] and c12["crit"] and not c12["choose"] and "Answer shown" in c12["status"]), c12)
     close_page(q)
 
@@ -390,12 +437,12 @@ with sync_playwright() as p:
         q.goto(BASE + "#skill/%s/try" % K); q.wait_for_timeout(800)
         pn = q.evaluate("({n:(document.querySelector('#sk-panel .practice-storage')||{}).textContent||'', line:document.getElementById('sk-panel').textContent})")
         q.click("#sk-start-try"); q.wait_for_timeout(100)
-        q.evaluate(WRONG); q.click("#q-check"); q.click("#q-hint"); q.evaluate(CORRECT); q.click("#q-check"); q.wait_for_timeout(40)
+        q.evaluate(WRONG); q.click("#q-check"); hint(q); back_q(q); q.evaluate(CORRECT); q.click("#q-check"); q.wait_for_timeout(40)
         pl = q.evaluate("({n:(document.querySelector('#q-storage .practice-storage')||{}).textContent||'', st:document.getElementById('q-status').textContent, solved:PP_PLAYER.state().solved[0]})")
         q.click("#q-next"); q.wait_for_timeout(40); q.click("#q-prev"); q.wait_for_timeout(40)
         kept = q.evaluate("({solved:PP_PLAYER.state().solved[0], st:document.getElementById('q-status').textContent})")
         msg = "Saving is unavailable. Your practice answers are kept only while this page stays open. If you reload or close it, this practice starts again from the beginning."
-        ok = msg in pn["n"] and "You can stop after any set and come back." not in pn["line"] and msg in pl["n"] and pl["solved"] and "Right with hints" in pl["st"] and kept["solved"] and not errs
+        ok = msg in pn["n"] and "You can stop after any set and come back." not in pn["line"] and msg in pl["n"] and pl["solved"] and "Right after Teach Me" in pl["st"] and kept["solved"] and not errs
         if name == "full":
             q.evaluate("()=>{Storage.prototype.setItem=window.__realSet;}"); q.click("#q-next"); q.wait_for_timeout(40)   # a later action (moving on) saves
             q.evaluate(WRONG)
@@ -447,7 +494,7 @@ with sync_playwright() as p:
         q.goto(BASE + h); q.wait_for_timeout(250)
     q.evaluate("PP_APP.landBrowse()"); q.fill("#skill-search", "3-5.T.T.1"); q.wait_for_timeout(80)
     mid = q.evaluate(KEYS)
-    start_set(q, "y"); q.evaluate(WRONG); q.click("#q-check"); q.click("#q-hint"); q.click("#q-how")
+    start_set(q, "y"); q.evaluate(WRONG); q.click("#q-check"); hint(q); reveal(q)
     after = q.evaluate(KEYS)
     changed = [k for k in before if after.get(k) != before[k]]
     check("F.1 seeded pp.progress.v1 (2.1, PP-003, PP-004 records), pp.path.v1, pp.task.* and pp.skwrite.* stay byte-identical after every changed screen and own-mode actions",
@@ -465,13 +512,13 @@ with sync_playwright() as p:
     q.evaluate("PP_SKILLS.open(%s,'try')" % json.dumps(L0)); q.wait_for_timeout(60)
     lt = q.evaluate("({h:document.querySelector('#sk-panel .panel-h').textContent, intro:document.querySelector('#sk-panel .go-card').textContent, picker:document.querySelectorAll('.own-set').length})")
     q.click("#sk-start-try"); q.wait_for_timeout(80)
-    l1 = q.evaluate("({help:!document.getElementById('q-help').hidden, hint:!document.getElementById('q-hint').hidden, how:!document.getElementById('q-how').hidden, prev:!document.getElementById('q-prev').hidden, tag:document.getElementById('player-mode').textContent, check:document.getElementById('q-check').textContent})")
+    l1 = q.evaluate("({help:!document.getElementById('q-help').hidden, hint:!!document.getElementById('q-hint'), how:!!document.getElementById('q-how'), teach:!document.getElementById('q-teach').hidden, prev:!document.getElementById('q-prev').hidden, tag:document.getElementById('player-mode').textContent, check:document.getElementById('q-check').textContent})")
     q.evaluate(WRONG); q.click("#q-check"); q.wait_for_timeout(30)
     l2 = q.evaluate("({help:!document.getElementById('q-help').hidden, fb:document.getElementById('q-feedback').textContent})")
     check("F.3 a lesson without core is unchanged: ceil(n/2) Together/Try split, Try It Yourself card, Help me hidden until one wrong try, no hint/how buttons, nothing in pp.practice.v1",
           not lg["core"] and lg["p"] == lg["wantP"] and lg["y"] == lg["wantY"] and not lg["own"] and not lg["y2"] and lg["next"] == "SK:%s:t" % L0
           and lt["h"] == "Try It Yourself" and "Help me unlocks after one try." in lt["intro"] and lt["picker"] == 0
-          and not l1["help"] and not l1["hint"] and not l1["how"] and not l1["prev"] and l1["tag"] == "Try it yourself" and l1["check"] == "Check"
+          and not l1["help"] and not l1["hint"] and not l1["how"] and not l1["teach"] and not l1["prev"] and l1["tag"] == "Try it yourself" and l1["check"] == "Check"
           and l2["help"] and "Help me is now on" in l2["fb"] and q.evaluate("localStorage.getItem('pp.practice.v1')") is None, (lg, lt, l1, l2))
     close_page(q)
 
@@ -508,7 +555,7 @@ with sync_playwright() as p:
           and ss["lv"][0].startswith("Master and Reinforce") and ss["lv"][1].startswith("Introduce and Continue")
           and "A grown-up observes this. There is no scored check" in ss["hb"], ss)
     check("G.5 a narrow code page: one lesson button, practice (fifteen in three sets), the check with its two forms, progress labelled as this device only",
-          ss["one"] == [[K, "Start the lesson"]] and "fifteen questions in three sets of five" in ss["t"] and "two forms" in ss["t"]
+          ss["one"] == [[K, "Start practice"]] and "fifteen questions in three sets of five" in ss["t"] and "two forms" in ss["t"]
           and "It is not a Milestones score." in ss["t"] and not re.search(r"\bmaster(ed|y)\b", ss["t"], re.I), ss["one"])
     # every visible code is a link and never nested (catalog, chips, official wording, parents, claims table, path, habits, search card)
     places = {}
@@ -548,8 +595,8 @@ with sync_playwright() as p:
     q.click('#skill-list .sl-codes a.std-link[data-std="3.T.T.1.c"]'); q.wait_for_timeout(150)
     h1 = q.evaluate("[PP_APP.current(), location.hash, document.activeElement.id]")
     q.click('#std-body .std-lesson-btn[data-lesson="3.T.T.1.c"]'); q.wait_for_timeout(150)
-    h2 = q.evaluate("[PP_APP.current(), location.hash, document.getElementById('skill-back').textContent]")
-    q.click("#skill-back"); q.wait_for_timeout(250)
+    h2 = q.evaluate("[PP_APP.current(), location.hash, document.getElementById('player-back').textContent]")
+    q.click("#player-back"); q.wait_for_timeout(250)
     h3 = q.evaluate("[PP_APP.current(), location.hash]")
     q.go_back(); q.wait_for_timeout(250)
     h4 = q.evaluate("[PP_APP.current(), location.hash]")
@@ -561,8 +608,8 @@ with sync_playwright() as p:
     h7 = q.evaluate("[PP_APP.current(), location.hash]")
     q.click("#std-back"); q.wait_for_timeout(250)
     h8 = q.evaluate("[PP_APP.current(), location.hash]")
-    check("H.1 catalog code -> standard page (focus on h1) -> lesson -> '← Standard 3.T.T.1.c' returns to the standard; Back to the catalog; Forward; reload; parent link; the page's Back",
-          h1 == ["std", "#std/3.T.T.1.c", "std-title"] and h2[:2] == ["skill", "#skill/3.T.T.1.c"] and h2[2] == "\u2190 Standard 3.T.T.1.c" and h3 == ["std", "#std/3.T.T.1.c"]
+    check("H.1 catalog code -> standard page (focus on h1) -> Start practice (the first question) -> '← Standard 3.T.T.1.c' returns to the standard; Back to the catalog; Forward; reload; parent link; the page's Back",
+          h1 == ["std", "#std/3.T.T.1.c", "std-title"] and h2[:2] == ["player", "#play/SK:3.T.T.1.c:y/try"] and h2[2] == "\u2190 Standard 3.T.T.1.c" and h3 == ["std", "#std/3.T.T.1.c"]
           and h4 == ["home", "#browse"] and h5 == ["std", "#std/3.T.T.1.c"] and h6[:2] == ["std", "#std/3.T.T.1.c"] and h7 == ["std", "#std/3.T.T.1"] and h8 == ["std", "#std/3.T.T.1.c"],
           (h1, h2, h3, h4, h5, h6, h7, h8))
     ready(q, "#std/3-5.T.T.1")
@@ -582,12 +629,12 @@ with sync_playwright() as p:
     q.evaluate("PP_PLAYER.start('SK:%s:t','test')" % K); q.wait_for_timeout(100)
     n = q.evaluate("PP_PLAYER.state().total")
     t0 = q.evaluate("""({nav:document.querySelectorAll('#q-nav .qn-btn').length, cur:(document.querySelector('#q-nav [aria-current=step]')||{}).textContent,
-        lab:[...document.querySelectorAll('#q-nav .qn-btn')].map(b=>b.getAttribute('aria-label')), hidden:['q-hint','q-how','q-similar','q-check','q-help'].filter(i=>!document.getElementById(i).hidden),
+        lab:[...document.querySelectorAll('#q-nav .qn-btn')].map(b=>b.getAttribute('aria-label')), hidden:['q-teach','q-similar','q-check','q-help'].filter(i=>!document.getElementById(i).hidden),
         flag:!document.getElementById('q-flag').hidden, navName:document.getElementById('q-nav').getAttribute('aria-label')})""")
     q.click("#q-nav .qn-btn:nth-child(3)"); q.wait_for_timeout(60)
     q.evaluate(CORRECT); q.click("#q-flag"); q.wait_for_timeout(40)
     t1 = q.evaluate("({pos:PP_PLAYER.state().pos, lab:document.querySelector('#q-nav .qn-btn:nth-child(3)').getAttribute('aria-label'), pressed:document.getElementById('q-flag').getAttribute('aria-pressed'), fb:document.getElementById('q-feedback').hidden, steps:document.querySelectorAll('#q-help-steps .help-step').length})")
-    check("I.1 the check has a question navigator (one button per question, aria-current, state in words) and Mark to review; no hint, Show me how, similar, Check or feedback",
+    check("I.1 the check has a question navigator (one button per question, aria-current, state in words) and Mark to review; no Teach Me, similar, Check or feedback",
           t0["nav"] == n and t0["cur"] == "1" and t0["lab"][0] == "1, not answered" and t0["hidden"] == [] and t0["flag"] and t0["navName"] == "Questions"
           and t1["pos"] == 2 and t1["lab"] == "3, answered, marked to review" and t1["pressed"] == "true" and t1["fb"] and t1["steps"] == 0, (t0, t1))
     q.click("#q-nav .qn-btn:nth-child(%d)" % n); q.click("#q-next"); q.wait_for_timeout(60)
@@ -647,11 +694,17 @@ with sync_playwright() as p:
         if OUT and w in (320, 390, 1366): q.screenshot(path=str(OUT / ("picker-%dx%d.png" % (w, h))), full_page=True)
         q.click("#sk-start-try"); q.wait_for_timeout(100)
         if q.is_visible("#tab-question"): q.click("#tab-question")
-        q.evaluate(WRONG); q.click("#q-check"); q.click("#q-hint"); q.click("#q-hint"); q.click("#q-how"); q.wait_for_timeout(60)
-        geo = q.evaluate("""(()=>{const ids=['q-prev','q-hint','q-how','q-check','q-similar','q-next'];return ids.map(i=>{const e=document.getElementById(i);if(e.hidden)return null;const r=e.getBoundingClientRect();
+        q.evaluate(WRONG); q.click("#q-check"); q.wait_for_timeout(60)
+        geo = q.evaluate("""(()=>{const ids=['q-prev','q-check','q-teach','q-similar','q-next'];return ids.map(i=>{const e=document.getElementById(i);if(e.hidden)return null;const r=e.getBoundingClientRect();
             return [i,Math.round(r.left),Math.round(r.right),Math.round(r.height),Math.round(r.width),e.scrollWidth>e.clientWidth+1]}).filter(Boolean);})()""")
         o2 = q.evaluate("document.documentElement.scrollWidth-innerWidth")
         if OUT: q.screenshot(path=str(OUT / ("practice-%dx%d.png" % (w, h))), full_page=True)
+        teach(q); q.click("#teach-hint"); q.click("#teach-hint"); reveal(q); q.wait_for_timeout(60)
+        geoT = q.evaluate("""(()=>{const ids=['teach-back','teach-hint','teach-next','teach-similar','teach-back2'];return ids.map(i=>{const e=document.getElementById(i);if(e.hidden)return null;const r=e.getBoundingClientRect();
+            return [i,Math.round(r.left),Math.round(r.right),Math.round(r.height),Math.round(r.width),e.scrollWidth>e.clientWidth+1]}).filter(Boolean);})()""")
+        o2 += q.evaluate("document.documentElement.scrollWidth-innerWidth")
+        if OUT: q.screenshot(path=str(OUT / ("teach-%dx%d.png" % (w, h))), full_page=True)
+        geo += geoT
         clipped = [g for g in geo if g[1] < 0 or g[2] > w or g[3] < 44 or g[4] < 44 or g[5]]
         q.evaluate("PP_STD.open('3.T.T.1')"); q.wait_for_timeout(60)
         o3 = q.evaluate("document.documentElement.scrollWidth-innerWidth")
@@ -683,7 +736,8 @@ with sync_playwright() as p:
             for i in range(5):
                 cid = qq.evaluate("PP_PLAYER.ctx().item.id")
                 if not qq.evaluate("PP_PLAYER.state().solved[PP_PLAYER.state().pos]"):
-                    qq.evaluate(CORRECT); qq.click("#q-check"); qq.wait_for_timeout(20)
+                    # question-first: a fresh question is offered after help or a wrong try, so each item gets one wrong try first
+                    qq.evaluate(WRONG); qq.click("#q-check"); qq.evaluate(CORRECT); qq.click("#q-check"); qq.wait_for_timeout(20)
                 if qq.is_visible("#q-similar"):
                     qq.click("#q-similar"); qq.wait_for_timeout(40)
                     sid = qq.evaluate("PP_PLAYER.state().sim")
@@ -710,7 +764,7 @@ with sync_playwright() as p:
           all(x[1] and x[2] for x in p2) and p2[0][1] == "SK-FXS-S2" and p2[2][1] == "SK-FXS-S3"
           and len(s2["SK-FXS-S2"].get("past", [])) == 1 and s2["SK-FXS-S2"]["past"][0]["ok"] is True and s2["SK-FXS-S2"]["for"] == "SK-FXS-C01"
           and len(s2["SK-FXS-S3"].get("past", [])) == 1 and json.dumps(st2["i"]) == core1
-          and q.evaluate("PP_PRACTICE.counts('FX-SIM',PP_SKILLS.coreIds('FX-SIM')).first") == 15, ([x[1] for x in p2], {k: len(v.get("past", [])) for k, v in s2.items()}))
+          and q.evaluate("PP_PRACTICE.counts('FX-SIM',PP_SKILLS.coreIds('FX-SIM')).retry") == 15, ([x[1] for x in p2], {k: len(v.get("past", [])) for k, v in s2.items()}))
     close_page(q)
 
     # ---------------- M. review fixes: ENG-06 changed questions, ENG-10 targets, ENG-11 names ----------------
