@@ -557,3 +557,101 @@ After hint 3 at least two choices remain live for every item in all four lessons
 - "Every remaining passage is used by at least one item": true (checked).
 - Claim of 0 `SK-GUM1-*` warnings in lessons 1 to 8 and 11 in lesson 9: I see 9 lesson-9 hint-length warnings and none elsewhere; harmless.
 - Web section says "calm / calmly / calmness, carefully, patiently, flopped, crawled" not verified: now verified (above).
+
+
+## Third review (L2, L4, L8 and post-acceptance edits)
+
+Reviewer: independent, fresh eyes (did not author, did not do reviews 1 or 2). Frozen copy at /home/claude/pp-content, L-GUM1.js compared with commit 78f764b ('Accept B7a lessons 6, 7, 9 (second review)').
+
+### Verdicts
+
+| Lesson | Verdict | Reason |
+|---|---|---|
+| L2 singular/plural nouns | CHANGES REQUIRED | 1 MUST (S11 hint 3 states a false fact); SHOULD on 'cann' |
+| L4 capital letters | ACCEPTED with SHOULDs | no MUST found; S08 H3 and set-2 giveaway are SHOULDs the author log admits were not done |
+| L8 adjectives/adverbs | ACCEPTED | NOTEs and one SHOULD (lookup dropdowns) |
+| L7 T4 (post-acceptance) | CHANGES REQUIRED (process only) | material change to a TEST item with the same testRev |
+| L1, L3, L5, L6, L9, other L7 edits | ACCEPT | NOTEs only |
+
+If the lead treats "no giveaway inside a set" as hard, L4 set 2 (C07/C09/C10) should be CHANGES REQUIRED instead. I lean ACCEPTED because the earlier reviews accepted comparable same-passage reuse.
+
+### Method and blindness
+
+- Blind solve in a vm sandbox with stripped keys, seeded shuffles, passages included, answers saved before any key extraction: 116/117 (99.1%). The one miss is my own slip (L4 C13 slot 2). Fully blind for the lesson items. I read the author log and reviews 1 and 2 only after answers were saved. A few review-file excerpts were seen only after saving.
+- Browser: 390x844 touch, one Chromium process per lesson, real taps and 3 hints pressed on every item. 15/15 core OK for each of L2, L4, L8. No horizontal scroll, no page errors, no passage mismatch. Hints do not change the live choice count in the DOM (as designed).
+- check-content --all: PASS, 0 failures, 83 warnings, none on SK-GUM1-2/4/8 (10 hint-length warnings on L9, as in the log). `--release` fails only on the unrelated core migration, plus the T4 material change when tested in a scratch copy (see below).
+- Mechanical: points, pick counts, key counts, type/points of each `like` mapping and dok all consistent. Core format mix is identical in L2, L4 and L8 (4 hottext, 5 mc, 3 dropdown, 1 each match/ebsr/ms).
+- Passages: all at least 100 words (L2 103-113, L4 102-106, L8 102-105). Flesch-Kincaid by my counter: L2 max 3.87, L4 max 2.28, L8 max 3.07. All passages used.
+- Twin overlap (author tokenization, reproduced exactly): L2 0.203/0.209, L4 0.192/0.209, L8 0.194/0.195, all at most 0.21.
+- Longest key: no new core or twin item has a uniquely longest key. L2 S13 has one key longest of two; L4 C08 keys are 32/29 chars with a tie. Legacy: L2 T2/T3 (unchanged).
+- Duplicates over js/data: none (only the trivial "may I have some water?" fragment also in L-GUM4).
+- Hint recount (script plus by hand): at least 2 live choices after hint 3 on every item. Exactly two live: L2 C04, C12, S04, S12, S10, P5, C08, S08; L4 C12, S04, S09, S12, S13 slot 2, C13 slot 2; L8 C04, C12, S04, S12, P4, C13, S13.
+- Legacy practice and test items are byte-identical to the original, except L7 T4.
+
+### Earlier MUST/SHOULD status (confirmed in files)
+
+Fixed: L2 P4 H3 now "One sentence uses a" (true); L4 P3 H3 has no count; L4 P5 H3 no longer describes wrong options; L4 P4 H2 neutral; L8 Teach now "The room felt chilly" (C12 key sentence out of Teach); L8 C10/S10 H3 name one choice; L8 S10 moved to floury/cheerfully (no longer prints S12's key); L8 S05 reworded; L2 Teach apostrophe and "bus"; L2 p3 renamed "Our Pond Journal".
+Not done, and honestly logged: L4 C09/C10 and C02/C08, L2 C04/C12 frame, L1 C05, L3 P3/P4/S02/S13, L5 S05/S06/C06/C07.
+
+### Findings: L2
+
+| Sev | Item | Evidence | Fix |
+|---|---|---|---|
+| MUST | 2-S11 hint 3 | "Number 4 has the clue words a and one." Sentence 4 is "Mr. Singh gave us a magnifying lens and a small scale to share." It contains "a", "a" and no "one". A false fact in feedback, the same class as the earlier L2 P4 MUST. The author's scripts never checked it. | "Number 4 has the clue words a and a." or point to another sentence that really has each and one. Re-check HOW4. |
+| SHOULD | 2-C12 'cann' (and hint 3, why, how) | The hint says it is "not spelled like a real word" and the why calls it a misspelling. unscramble.me lists CANN as a Scrabble word. I believe it is Collins Scrabble Words (rare nautical variant of conn/con/cun). I could not confirm it in Merriam-Webster (fetch refused by the allowlist) and the wehd.com and Wikipedia pages do not list it. Not safe to call a non-word. | Use an unmistakable non-word in the pattern of gamess/tabless/guestes, e.g. "canss". Avoid cannes/canns. Update hint 3, why, how. |
+| NOTE | 2-C05/C10 | core x core overlap 0.23, frames differ | none |
+| NOTE | 2-S06 prompt | says "numbers 1 to 6" but sentence 4 is not tappable | harmless |
+| NOTE | 2-S15 | class/glass is modelled via Teach "bus" | fine |
+| NOTE | L2 P2/P3 | Together only. P3 is kindergarten-like, P2 weak | unchanged legacy |
+
+Sources: https://www.unscramble.me/cannon ; https://wehd.com/18/Con_v2.html ; https://en.wikipedia.org/wiki/Conn_(nautical)
+
+### Findings: L4
+
+| Sev | Item | Evidence | Fix |
+|---|---|---|---|
+| SHOULD | 4-S08 hint 3 | "One line has a small i in the middle" describes a KEYED line (the item asks for the two lines that break a rule). In C08/S02 the same wording removes a distractor. | Name a correct line instead, e.g. "Dan and I walked home has a capital I." |
+| SHOULD | 4 set 2 (C07/C09/C10) | All three hinge on "a short form I'm/I'll contains I". C10's key (also Teach point 3) settles C09 and C07. C02 vs C08 is the same pick-two-correct-sentences format (0.26). Not fixed; the log admits it. | Vary one frame, or reorder so C10 comes first. |
+| SHOULD | 4 C10/S15 vocabulary | "short form" in prompts and hints, but Teach says "When I joins another word, as in I'm or I'll". | Add "short form" to Teach or reword. |
+| NOTE | 4-S01 H3 | "One line begins with a small letter. Find it" gives a row. Allowed for match items. | none |
+| NOTE | 4-C12 vs C11 | C12 reveals sentence 6 is a small-first-letter, no-i sentence (a C11 distractor). Order protects. | none |
+| NOTE | 4-S05 | key is colloquial "wherever it lands" | none |
+| NOTE | core x core overlap | C02/C08 0.26, C05/C10 0.29, C07/C10 0.28, C03/C07 0.23, C07/C15, C10/C15, C11/C14 above 0.21; frames differ | none |
+
+### Findings: L8
+
+| Sev | Item | Evidence | Fix |
+|---|---|---|---|
+| SHOULD (NOTE if lead prefers) | 8-C04, S04, S12 | the keyed sentence appears verbatim in the visible correct passage, so the dropdown is solved by lookup. Same pattern accepted in L7 C12/S12 and L9 C04/S04. | vary at least one so a sentence differs from the passage |
+| NOTE | 8-C11 H3 | "Sentence 6 tells how ... not when" while the sentence has "all morning". C10 (set 2) reveals "steadily" is how, pre-eliminating one C11 distractor. | order protects |
+| NOTE | 8-S01 | "three" counted as an adjective; Teach covers "how many" | fine |
+| NOTE | 8-T4 | "Outside" is modelled by Teach/Learn ("nearby") | fine |
+| NOTE | core x core overlap | P3/C03 0.24, C03/C09, C04/C12 0.26/0.27, C05/C10; frames differ | none |
+| NOTE | Teach/Learn | now models predicate adjective, non-ly adverbs and where/when | good |
+
+### Post-acceptance edits (git diff 78f764b..HEAD, 117 hunks)
+
+| Item | Rating | Notes |
+|---|---|---|
+| L1 Teach point 1 | ACCEPT | no longer equals C05's key. NOTE: Learn It 3 is still similar. |
+| L1 S11 | ACCEPT | sentence 2 is now a true fragment ("A rain gauge with a tall ruler ... clear plastic bottle below."). p6 104 words, FK 3.55. how/why updated. |
+| L3 S01 | ACCEPT | key "Where did this mitten go missing?". NOTE: it is the only question naming the mitten, so partly solvable by noun matching. |
+| L5 | no edits | none |
+| L6 S07 (new p5 s11) | ACCEPT with NOTE | "Each night, the volunteers locks the front door." Key unique, 110 words, FK 3.65, s11 not an S11 target. NOTE: S07, S10 and S11 now all test plural-doer-plain-form in one passage; S07's `like` C07 is the opposite direction, so the mapping is loose. |
+| L6 S08 H3 | ACCEPT | names one distractor |
+| L6 S11 | ACCEPT | "sentences" fixed. NOTE: prompt "misuses or lacks its -s" is awkward. |
+| L6 S15 H2 | ACCEPT with NOTE | no longer points at -s, but only one option has an -s verb so it is still solvable; the second review's suggested second -s choice was not added. |
+| L7 C14/S14 H3 | ACCEPT | each names one sentence |
+| L7 S10 stem | ACCEPT | "put" in place of "brushed" in sentence 5; "put" unused elsewhere, no longer prints S07's "went" |
+| L7 S06 stem | ACCEPT with SHOULD | key still unique (s8 decided, s12 imagined) but "only in the mind" keeps s8 arguable. Use "an action verb that happens in the mind" for parity with C06. |
+| L7 T4 | CHANGES REQUIRED (process) | see below |
+| L9 C05, C07, C10, S04, S12 moves | ACCEPT | none is an S06/S11 target. NOTE: C07 now tests a person name like C03 (different component and sentence); it reveals sentence 4 is not a day sentence (C06 distractor) but C06 comes first. |
+| L9 S07 part B | ACCEPT | "It names one particular city, not every city." False Denver claim gone. NOTE: key echoes part A's "names a single city" and is the shortest option. |
+
+L7 T4 detail: stem now "Lily imagined a funny answer to the riddle.", key 'imagined' (was 'guessed'). Same id, 1 point, dok 2, key still at index 0, other options answer/riddle/Lily; clue and why updated. Content is acceptable: 'imagined' is a mental action verb by the lesson's own C06/S06 keys, and Teach says "Some actions happen in your mind". But it is a MATERIAL change (key text) to a test item with the same testRev. In my scratch-copy test (record at 78f764b, then the HEAD file), `check-content --all` warns "1 check form changed materially ... 3.L.GC.1:R:use-action-verbs:A. Raise testRev" and `--release` FAILS. Architecture 01 section 2.4: a material change means new ids and a bumped testRev. The repo's current version record is an old v1 that does not hash key text, so the gate does not currently see it, and the author log does not disclose it.
+MUST fix: bump L7 `testRev: { A: "2" }` and re-record (new id per 2.4), or revert T4 to 'guessed'.
+
+### Author-log accuracy
+
+True: twin overlap table (exact); passage word counts and FK; no new uniquely longest keys (note the L4 C08 tie); gate PASS with 10 L9 warnings and none on L1-8; legacy items unchanged except T4; MUST fixes (L2 P4, L4 P3/P5/P4, L8 Teach/C10/S10/S05); the "SHOULDs not done" list is honest.
+False or overstated: "cann non-word" (a Collins Scrabble word per unscramble.me; unconfirmed in M-W); the log omits that the T4 change is a material version change needing a testRev bump; the L2 S11 H3 false clue-word claim was never caught by the author's scripts. "Hint 3 names at most one wrong choice in every touched item" is true for touched items, but L2 S10 and P5 H3 remove two (previously allowed).
