@@ -39,7 +39,7 @@
         "Accuracy means reading each word the way it is written, without skipping, adding or changing words.",
         "When a word is new, slow down and use what you know: sound it out in parts, look for a base word, and check the sentence around it.",
         "If something does not sound right, go back and reread. Fixing your own mistakes is what strong readers do.",
-        "A passage is a good fit for reading on your own when you can read about 95 out of every 100 words correctly."
+        "A passage is a good fit for reading on your own when you can read nearly every word correctly. Many teachers use about 19 out of every 20 words as a rough guide, not a pass mark."
       ],
       example: {
         label: "Example",
@@ -89,7 +89,7 @@
       tasks: [
         {
           title: "Reading 1: A story",
-          how: "Pick a short story passage the reader has not read. Write today's date. The reader reads it aloud once. The grown-up follows along and puts a tick above each word that is skipped, added or changed. Count the ticks. About 95 right out of every 100 words means a good fit.",
+          how: "Pick a short story passage the reader has not read. Write today's date. The reader reads it aloud once. The grown-up follows along and puts a tick above each word that is skipped, added or changed. Count the ticks. Many teachers use about 19 right out of every 20 words as a rough guide to a good fit. It is a guide, not a pass mark.",
           checklist: [
             "The date and passage name are written down.",
             "Mistakes were counted but the reader was not stopped.",
@@ -100,18 +100,18 @@
           title: "Reading 2: An information passage",
           how: "Use a new passage about real things, such as animals or places. Write the date. The reader reads aloud while the grown-up marks mistakes. Then talk about hard words. Ask the reader how they worked out any new word.",
           checklist: [
-            "The reader read at least 95 of every 100 words correctly.",
+            "The reader read nearly every word correctly (the number of mistakes per 100 words was written down).",
             "The reader used word parts or the sentence to work out a new word.",
             "The date and the number of mistakes were written down."
           ]
         },
         {
           title: "Reading 3: A poem",
-          how: "Use a short poem the reader has not seen. Write the date. The reader reads it aloud once. The grown-up marks any word that was skipped, added or changed. Compare the three dates: did the number of mistakes stay the same or get smaller?",
+          how: "Use a short poem the reader has not seen. Write the date. The reader reads it aloud once. The grown-up marks any word that was skipped, added or changed. Compare the three dated readings by mistakes per 100 words, since the texts differ in length. A poem may be harder, so look for the overall direction, not one number.",
           checklist: [
             "The reader read each line the way it is written.",
             "The reader went back to fix a word that did not sound right.",
-            "The grown-up compared all three dated readings."
+            "The grown-up compared mistakes per 100 words across the three readings."
           ]
         }
       ]
@@ -197,9 +197,9 @@
         },
         {
           title: "Round 2: Questions and surprises",
-          how: "Choose a passage with a question and an exclamation. Talk about how those sentences should sound. The reader practices, then performs it. The grown-up listens for a rising voice on questions and a strong voice on exclamations.",
+          how: "Choose a passage with a question and an exclamation. Talk about how those sentences should sound. The reader practices, then performs it. The grown-up listens for a rising voice on yes or no questions such as \"Are you coming?\" and a strong voice on exclamations. Questions that start with who, what, where or why usually go down at the end. When the reading is done, the reader tells in one sentence what the passage was about.",
           checklist: [
-            "The reader's voice went up on questions.",
+            "The reader's voice went up on yes or no questions and down on who, what, where and why questions.",
             "The reader showed excitement on exclamations.",
             "The reader read in phrases, not word by word."
           ]
@@ -435,12 +435,12 @@
               passages: [],
               prompt: "Read the cursive sentence. Choose the word that has the letter z.",
               stem: [
-                "Cursive: The baby dozed in a soft chair."
+                "Cursive: The baby dozed in a warm chair."
               ],
               options: [
                 "baby",
                 "dozed",
-                "soft",
+                "warm",
                 "chair"
               ],
               answer: [
@@ -454,12 +454,12 @@
                 "Check the letters in the middle of each word."
               ],
               how: [
-                "Read each word in the sentence: The baby dozed in a soft chair.",
+                "Read each word in the sentence: The baby dozed in a warm chair.",
                 "Look at the letters in each word.",
                 "Dozed has a z in the middle, and the other words do not."
               ],
               misconception: "A common mix-up is choosing the longest word. Read each word and look for the z.",
-              why: "The answer is \"dozed.\" It is spelled d-o-z-e-d, so it has a z. Baby, soft and chair have no z."
+              why: "The answer is \"dozed.\" It is spelled d-o-z-e-d, so it has a z. Baby, warm and chair have no z."
             },
             {
               id: "SK-FH3a-C04",
@@ -539,7 +539,7 @@
                   correct: true
                 },
                 {
-                  text: "Zara fixed the broken zebra."
+                  text: "Zara fixed the broken ladder."
                 },
                 {
                   text: "Sara fixed the broken zipper."
@@ -589,7 +589,7 @@
               hints: [
                 "Read the cursive sentence one word at a time.",
                 "Think about what each word names or tells.",
-                "Look at the word that starts with the cursive r."
+                "Hid tells what something did, so it names no animal. Read the other words and ask which one names a living thing."
               ],
               how: [
                 "Read each word: A brown rabbit hid in the tall grass.",
@@ -732,23 +732,23 @@
                 "3.F.H.3.a"
               ],
               passages: [],
-              prompt: "Read the cursive note. What should Dad bring to the pond?",
+              prompt: "Read the cursive note. What does it ask someone to bring?",
               stem: [
                 "Cursive: Please bring a large blanket, two cups and a jug of juice."
               ],
               choices: [
                 {
-                  text: "A blanket, two cups and a jug of juice",
+                  text: "A large blanket, two cups and a jug of juice",
                   correct: true
                 },
                 {
-                  text: "A blanket, one cup and a jug of juice"
+                  text: "A large blanket, one cup and a jug of juice"
                 },
                 {
-                  text: "A basket, two cups and a jug of juice"
+                  text: "A large basket, two cups and a jug of juice"
                 },
                 {
-                  text: "A blanket, two cups and a jar of juice"
+                  text: "A large blanket, two cups and a jar of juice"
                 }
               ],
               clue: "Read the cursive note one word at a time.",
@@ -763,7 +763,7 @@
                 "Only one choice has the blanket, two cups and the jug."
               ],
               misconception: "A common mix-up is choosing the first choice that sounds right. Check every item.",
-              why: "The answer is \"A blanket, two cups and a jug of juice.\" The note asks for a large blanket, two cups and a jug of juice. The other choices change the blanket, the number of cups, or the jug."
+              why: "The answer is \"A large blanket, two cups and a jug of juice.\" The note asks for a large blanket, two cups and a jug of juice. The other choices change the blanket, the number of cups, or the jug."
             },
             {
               id: "SK-FH3a-C11",
@@ -777,19 +777,19 @@
               prompt: "Read the cursive schedule. Match each day to its activity.",
               stem: [
                 "Cursive: Monday: swim class",
-                "Cursive: Tuesday: art club",
-                "Cursive: Wednesday: soccer",
-                "Cursive: Thursday: piano"
+                "Cursive: Friday: art club",
+                "Cursive: Saturday: piano",
+                "Cursive: Sunday: judo"
               ],
               cols: [
                 "piano",
                 "swim class",
-                "soccer",
+                "judo",
                 "art club"
               ],
               rows: [
                 {
-                  text: "Wednesday",
+                  text: "Sunday",
                   answer: 2
                 },
                 {
@@ -797,11 +797,11 @@
                   answer: 1
                 },
                 {
-                  text: "Thursday",
+                  text: "Saturday",
                   answer: 0
                 },
                 {
-                  text: "Tuesday",
+                  text: "Friday",
                   answer: 3
                 }
               ],
@@ -817,7 +817,7 @@
                 "Match each day to the activity after its colon."
               ],
               misconception: "A common mix-up is matching by position. Read each line to find the day and its activity.",
-              why: "Monday is swim class, Tuesday is art club, Wednesday is soccer, and Thursday is piano."
+              why: "Monday is swim class, Friday is art club, Saturday is piano, and Sunday is judo."
             },
             {
               id: "SK-FH3a-C12",
@@ -831,7 +831,7 @@
               prompt: "Leo cannot read the third word in a cursive note. He knows the first letter and the last letter. What should he do next?",
               choices: [
                 {
-                  text: "Use the letters he knows and think about what fits the sentence.",
+                  text: "Use the letters he knows and think about what fits.",
                   correct: true
                 },
                 {
@@ -848,15 +848,15 @@
               hints: [
                 "Think about how a reader works out a word they cannot read yet.",
                 "Think about what the rest of the sentence can tell Leo.",
-                "Compare each choice with what Leo knows: some letters and the sentence around the word."
+                "Skipping the note does not tell Leo what the word says. Ask which choice uses what he can already see."
               ],
               how: [
                 "Leo knows some letters of the word.",
                 "He also has the rest of the sentence.",
-                "So he should use the letters he knows and think about what fits the sentence."
+                "So he should use the letters he knows and think about what fits."
               ],
               misconception: "A common mix-up is guessing without using the sentence. The other words give clues.",
-              why: "The answer is \"Use the letters he knows and think about what fits the sentence.\" The letters and the other words together help him work out the word. The other choices skip the note, guess, or change the word to print."
+              why: "The answer is \"Use the letters he knows and think about what fits.\" The letters and the other words together help him work out the word. The other choices skip the note, guess, or change the word to print."
             },
             {
               id: "SK-FH3a-C13",
@@ -1020,13 +1020,13 @@
         ],
         prompt: "Tap the one spelled with a q.",
         stem: [
-          "Cursive: A quiet duck swam by our dock."
+          "Cursive: A quail ran past our rusty boat."
         ],
         options: [
-          "quiet",
-          "duck",
-          "swam",
-          "dock"
+          "quail",
+          "ran",
+          "past",
+          "boat"
         ],
         answer: [
           0
@@ -1036,15 +1036,15 @@
         hints: [
           "Go through the cursive line one piece at a time.",
           "Look for a letter with a long tail that is easy to spot.",
-          "Check how each piece begins."
+          "Check each piece letter by letter, not only the first letter."
         ],
         how: [
           "Read each piece of the line.",
-          "Look at the first letters.",
-          "Quiet begins with q, and the others do not have one."
+          "Look at the letters in each one.",
+          "Quail starts with q, and the others do not have one."
         ],
         misconception: "A common mix-up is choosing a word that looks tall. Look for the q itself.",
-        why: "The answer is \"quiet.\" It is spelled q-u-i-e-t. Duck, swam and dock have no q."
+        why: "The answer is \"quail.\" It is spelled q-u-a-i-l. Ran, past and boat have no q."
       },
       {
         id: "SK-FH3a-S04",
@@ -1058,15 +1058,15 @@
         like: [
           "SK-FH3a-C04"
         ],
-        prompt: "Count the letters in each word. Match.",
+        prompt: "What kind of word is each one? Match.",
         stem: [
           "Cursive: Sam took eight plates."
         ],
         cols: [
-          "three letters",
-          "four letters",
-          "five letters",
-          "six letters"
+          "a name",
+          "an action",
+          "a number",
+          "a thing"
         ],
         rows: [
           {
@@ -1089,16 +1089,16 @@
         clue: "Use the spaces to see where each word stops.",
         hints: [
           "Use the spaces to see where each word stops.",
-          "Count the letters in one word at a time.",
-          "Start with the shortest word."
+          "Read one word at a time and think about what it tells.",
+          "Start with the first word. It has a capital letter."
         ],
         how: [
           "Find the four words using the spaces.",
-          "Count the letters in each: Sam has 3, took has 4, eight has 5, plates has 6.",
-          "Match each word to its count."
+          "Read them: Sam, took, eight, plates.",
+          "Sam is a name, took is an action, eight is a number, and plates are things."
         ],
-        misconception: "A common mix-up is counting the spaces. Count only the letters.",
-        why: "Sam has three letters, took has four, eight has five, and plates has six."
+        misconception: "A common mix-up is matching by position. Read each word and think about what it tells.",
+        why: "Sam is a name, took is an action, eight is a number, and plates are things."
       },
       {
         id: "SK-FH3a-S05",
@@ -1227,7 +1227,7 @@
         hints: [
           "Go through the cursive line one piece at a time.",
           "Think about what each piece names or tells.",
-          "Look at the piece that has a cursive p near the start."
+          "Knits tells what someone does. Read the other words and ask which one tells how something looks."
         ],
         how: [
           "Read each piece of the line.",
@@ -1482,7 +1482,7 @@
         prompt: "A pupil is stuck on one scribbled word but can read its ending. What is the best plan?",
         choices: [
           {
-            text: "Test words with that ending and see which one fits the story around it.",
+            text: "Test words with that ending and see which fits.",
             correct: true
           },
           {
@@ -1499,15 +1499,15 @@
         hints: [
           "Think about how a reader works out a word they cannot read yet.",
           "Think about what the rest of the sentence can tell the pupil.",
-          "Compare each choice with what the pupil has: some letters and the sentence around the word."
+          "Tearing out the page does not help the pupil read the word. Ask which choice uses what the pupil can already see."
         ],
         how: [
           "The pupil can read the ending.",
           "The pupil also has the rest of the sentence.",
-          "So the best plan is to test words with that ending and see which one fits."
+          "So the best plan is to test words with that ending and see which fits."
         ],
         misconception: "A common mix-up is guessing without using the sentence. The other words give clues.",
-        why: "The answer is \"Test words with that ending and see which one fits the story around it.\" The letters and the story together help work out the word. The other choices give up, guess, or only change the word to print."
+        why: "The answer is \"Test words with that ending and see which fits.\" The letters and the story together help work out the word. The other choices give up, guess, or only change the word to print."
       },
       {
         id: "SK-FH3a-S14",
@@ -1810,19 +1810,19 @@
         },
         {
           title: "Session 2: Joins",
-          how: "Trace three joined words, such as \"mom\", \"run\" and \"hill\". Then write each one with no tracing. The pencil stays down inside each word and lifts only at the end.",
+          how: "Trace three joined words, such as \"mom\", \"run\" and \"hill\". Then write each one with no tracing. The pencil stays down inside each word and lifts only at the end. The letters b, o, v and w end with a little swing at the middle line, so the next letter starts from up there, not from the bottom line.",
           checklist: [
             "Letters in each word were joined without lifting.",
-            "Joins started from the right height.",
+            "After b, o, v or w, the next letter started from the middle line.",
             "Dots and crosses were added after the word."
           ]
         },
         {
           title: "Session 3: Capitals",
-          how: "Trace capital letters in the child's own name and one place name. Then write them with no tracing. Check that capitals that do not join are followed by a small space.",
+          how: "Trace capital letters in the child's own name and one place name. Then write them with no tracing. In this model the capitals T, W, O and P do not join the next letter, so check for a small space after them. Follow your school's model if it is different.",
           checklist: [
             "Capitals were the right shape and height.",
-            "Capitals that do not join were left unjoined.",
+            "T, W, O and P (or the capitals your school leaves unjoined) were not joined to the next letter.",
             "The name was written without tracing."
           ]
         }
@@ -1900,7 +1900,7 @@
           checklist: [
             "Spaces between words were about the width of one small letter.",
             "Spaces were the same all the way across.",
-            "Each sentence started with a capital and ended with a mark."
+            "Letters inside each word were joined, with no gaps and no letters running into the next word."
           ]
         },
         {

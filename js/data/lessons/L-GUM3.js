@@ -4177,7 +4177,7 @@ PP.addLesson({
           "(7) Next week we can do yoga inside, so we can do it outside under the trees.",
           "(8) Mr. Lee will pick only one place on Friday.",
           "(9) I hope we choose the trees, for the shade feels nice.",
-          "(10) Mr. Lee said we could not bring snacks, nor could we bring toys."
+          "(10) Mr. Lee said we could not choose our own mats, nor could we trade them."
         ],
         [
           "(11) Yoga is fun, and I want to do it again."
@@ -4243,7 +4243,7 @@ PP.addLesson({
         [
           "(1) Welcome to the Jump Rope Club!",
           "(2) We meet every Thursday for an hour after school in the gym.",
-          "(3) Beginners can start with short ropes and slow jumps."
+          "(3) Beginners can choose short ropes and slow jumps."
         ],
         [
           "(4) Our coach, Ms. Yang, shows us a new trick each week, or she helps us practice the old ones.",
@@ -4252,7 +4252,7 @@ PP.addLesson({
         ],
         [
           "(7) You can bring your own rope, so you can borrow one from the closet.",
-          "(8) You only need one rope, so choose the one you like.",
+          "(8) You need just one rope, so take whichever you prefer.",
           "(9) Please be on time, for we start right at three o'clock."
         ],
         ["(10) We hope to see you there!"]
@@ -4455,13 +4455,13 @@ PP.addLesson({
                 { text: "We breathed slowly, and the room grew quiet." },
                 { text: "Mr. Lee will pick only one place on Friday.", correct: true },
                 { text: "At first I felt silly, but then I started to like it." },
-                { text: "Yoga is fun, and I want to do it again." }
+                { text: "Mr. Lee said we could not choose our own mats, nor could we trade them." }
               ]
             },
             clue: "Find the two ideas the joining word connects, and ask how they are related.",
             hints: [
               "Find the two ideas the joining word connects, and ask how they are related.",
-              "For Part A, say each choice and ask what job the joining word does. For Part B, reread the draft and decide which sentence tells you something about choosing.",
+              "For Part A, say each choice and ask what job the joining word does. For Part B, reread the draft and find the sentence that gives the best evidence for your Part A answer.",
               "In Part A, nor goes with a sentence that says no, and sentence 7 does not say no. Check the other choices."
             ],
             how: [
@@ -4580,24 +4580,24 @@ PP.addLesson({
             prompt: "Match each joining word to the sentence it completes.",
             cols: ["for", "yet", "nor", "so"],
             rows: [
-              { text: "The path was muddy, ___ we kept going.", answer: 1 },
-              { text: "Tomas did not wave, ___ did he smile.", answer: 2 },
-              { text: "Luis was sick, ___ he stayed home.", answer: 3 },
-              { text: "Bring a hat, ___ the sun is strong.", answer: 0 }
+              { text: "The test was long, ___ Ana finished early.", answer: 1 },
+              { text: "The cave was not safe, ___ was it dry.", answer: 2 },
+              { text: "The bell rang, ___ we lined up.", answer: 3 },
+              { text: "Wear boots, ___ the snow is deep.", answer: 0 }
             ],
             clue: "Read each sentence with a joining word in the blank. Ask how the second part connects to the first.",
             hints: [
               "Read each sentence with a joining word in the blank. Ask how the second part connects to the first.",
               "Start with the sentence you are surest about. Think about which sentence begins with a no.",
-              "Tomas did not wave begins with a no. Decide the other rows one at a time."
+              "The cave was not safe begins with a no. Decide the other rows one at a time."
             ],
             how: [
               "Ask how the second part connects to the first in each sentence.",
-              "Tomas did not wave, nor did he smile. Nor goes with a no.",
-              "Sick is the reason Luis stayed home, so so fits. The sun is the reason for the hat, so for fits. Keeping going on a muddy path is a surprise, so yet fits."
+              "The cave was not safe, nor was it dry. Nor goes with a no.",
+              "The bell is the reason the class lined up, so the joining word is so. Deep snow is the reason for boots, so for fits. Finishing early on a long test is a surprise, so yet fits."
             ],
             misconception: "A common mix-up is mixing up for and so. For gives the reason, and so tells the result.",
-            why: "Yet goes with the path sentence, because going on through mud is a surprise. Nor goes with Tomas did not wave. So goes with Luis was sick, because sick is why he stayed home. For goes with the hat sentence, because the sun is the reason."
+            why: "Yet goes with the test sentence, because finishing early on a long test is a surprise. Nor goes with the cave sentence. So goes with the bell sentence, because the bell is why the class lined up. For goes with the boots sentence, because the deep snow is the reason."
           },
           {
             id: "SK-GUM3-4-C09",
@@ -4835,28 +4835,28 @@ PP.addLesson({
         "3.L.GC.1:M:use-coordinating-conjunctions-to-join-words-phra"
       ],
       passages: [],
-      prompt: "Which TWO sentences have a joining word that fits the meaning?",
+      prompt: "Two of these sentences are linked by a joining word that fits the meaning. Which two?",
       pick: 2,
       choices: [
-        { text: "Mara can sing and dance.", correct: true },
-        { text: "Do you want a pear but a plum?" },
-        { text: "Tom was sleepy, so he went to bed early.", correct: true },
-        { text: "The game was fun, or we cheered a lot." },
-        { text: "It was snowing, so we wore shorts." }
+        { text: "Rosa plays violin and cello.", correct: true },
+        { text: "Would you like tea but milk?" },
+        { text: "Nico felt tired, so he napped on the couch.", correct: true },
+        { text: "Our team lost, or we cheered loudly." },
+        { text: "The flowers wilted, so they got plenty of water." }
       ],
-      clue: "Read each sentence and ask: Does the joining word do the right job? Adding, different, choice or result?",
+      clue: "Read each sentence and ask what job the joining word does. Is it adding, showing a difference, giving a choice, or telling a result?",
       hints: [
-        "Read each sentence and ask: Does the joining word do the right job? Adding, different, choice or result?",
+        "Read each sentence and ask what job the joining word does. Is it adding, showing a difference, giving a choice, or telling a result?",
         "Say each sentence aloud. Ask whether the two parts fit together the way the joining word says.",
-        "Snow is not a reason to wear shorts. Decide about the other four."
+        "Plenty of water does not cause flowers to wilt. Decide about the other four."
       ],
       how: [
         "Read each sentence and think about what the joining word does.",
-        "Being sleepy is the reason Tom went to bed, so so fits. Singing and dancing are two things Mara can do, so and fits.",
-        "The others do not fit: snow would not lead to shorts, a choice needs or and not but, and cheering a lot is not a choice."
+        "Being tired is why Nico napped, so the joining word so fits. Playing violin and cello are two things Rosa does, so and fits.",
+        "The others do not fit: water would not lead to wilting, a drink choice needs or and not but, and losing a game is not a choice with cheering."
       ],
       misconception: "A common mix-up is picking a sentence because the joining word is common. Check what the word does.",
-      why: "The answers are \"Tom was sleepy, so he went to bed early.\" and \"Mara can sing and dance.\" Being sleepy is why Tom went to bed, and and adds one more thing Mara can do. In the other sentences, the joining word does not match the meaning.",
+      why: "The answers are \"Nico felt tired, so he napped on the couch.\" and \"Rosa plays violin and cello.\" Being tired is why Nico napped, and and adds one more thing Rosa plays. In the other sentences, the joining word does not match the meaning.",
       like: ["SK-GUM3-4-P5"]
     },
     {
@@ -4868,27 +4868,27 @@ PP.addLesson({
         "3.L.GC.1:M:use-coordinating-conjunctions-to-join-words-phra"
       ],
       passages: ["p4"],
-      prompt: "The fourth sentence of the draft uses a joining word that does not fit. Which word belongs in the blank?",
+      prompt: "Which word belongs in the blank to repair the fourth line of the draft?",
       text: "Our coach, Ms. Yang, shows us a new trick each week, {0} she helps us practice the old ones.",
       slots: [
         {
-          options: ["or", "and", "so"],
+          options: ["yet", "and", "nor"],
           answer: 1
         }
       ],
-      clue: "Ask how the two parts connect. Are they a choice, a result, a difference, or two things that go together?",
+      clue: "Ask how the two parts connect. Are they a difference, a result, or two things that go together?",
       hints: [
-        "Ask how the two parts connect. Are they a choice, a result, a difference, or two things that go together?",
+        "Ask how the two parts connect. Are they a difference, a result, or two things that go together?",
         "Read the sentence and picture what the coach does. Then try each joining word in the blank.",
-        "So tells a result, and teaching a trick does not cause practice. Decide between the other two."
+        "Yet shows something different, and the coach's two jobs do not clash. Decide between the other two."
       ],
       how: [
         "Read both parts: the coach shows a new trick, and the coach helps the club practice old tricks.",
-        "She does both things. They are not a choice, a difference, or a result.",
-        "The answer is and, because and adds one more thing. Or gives a choice, and so tells a result."
+        "She does both things. They are not a difference or a result.",
+        "The answer is and, because and adds one more thing. Yet shows something different, and nor goes with a no."
       ],
-      misconception: "A common mix-up is picking or because two actions are named. Or is for a choice, and the coach does both.",
-      why: "The answer is and. The coach does both things, so the second part adds one more thing. Or gives a choice, and so tells a result.",
+      misconception: "A common mix-up is picking yet because two actions are named. Yet is for a difference, and the coach does both.",
+      why: "The answer is and. The coach does both things, so the second part adds one more thing. Yet shows something different, and nor goes with a no.",
       like: ["SK-GUM3-4-C02"]
     },
     {
@@ -4900,26 +4900,26 @@ PP.addLesson({
         "3.L.GC.1:M:use-coordinating-conjunctions-to-join-words-phra"
       ],
       passages: ["p4"],
-      prompt: "The fifth sentence of the draft has a joining word that does not fit. What is the best way to write it?",
+      prompt: "Rewrite the fifth line so the idea makes sense. Which choice does that?",
       choices: [
         { text: "Double jumps look easy, so they take lots of practice." },
-        { text: "Double jumps look easy, or they take lots of practice." },
+        { text: "Double jumps look easy, nor they take lots of practice." },
         { text: "Double jumps look easy, for they take lots of practice." },
         { text: "Double jumps look easy, but they take lots of practice.", correct: true }
       ],
-      clue: "Read both parts. Ask whether the second part is a result, a choice, or something different.",
+      clue: "Read both parts. Ask whether the second part is a result, a reason, or something different.",
       hints: [
-        "Read both parts. Ask whether the second part is a result, a choice, or something different.",
-        "Find the fifth sentence. Ask what you would expect after the word easy, and what the writer says instead.",
-        "Or gives a choice, and the writer is not choosing between two things. Check the other three."
+        "Read both parts. Ask whether the second part is a result, a reason, or something different.",
+        "Find sentence 5. Ask what you would expect after the word easy, and what the writer says instead.",
+        "Nor goes with a sentence that says no, and this sentence does not say no. Check the other three."
       ],
       how: [
         "Read both parts: double jumps look easy, but they take lots of practice.",
         "The second part is different from what you would expect. That is a surprise.",
-        "The answer is \"Double jumps look easy, but they take lots of practice.\" So tells a result, or gives a choice, and for gives a reason."
+        "The answer is \"Double jumps look easy, but they take lots of practice.\" So tells a result, nor goes with a no, and for gives a reason."
       ],
       misconception: "A common mix-up is using so for any two ideas. So only tells a result, and looking easy does not cause practice.",
-      why: "The answer is \"Double jumps look easy, but they take lots of practice.\" But joins two ideas that are different. The other joining words do not fit: so tells a result, or gives a choice, and for gives a reason.",
+      why: "The answer is \"Double jumps look easy, but they take lots of practice.\" But joins two ideas that are different. The other joining words do not fit: so tells a result, nor goes with a no, and for gives a reason.",
       like: ["SK-GUM3-4-C03"]
     },
     {
@@ -4931,9 +4931,9 @@ PP.addLesson({
         "3.L.GC.1:M:use-coordinating-conjunctions-to-join-words-phra"
       ],
       passages: ["p4"],
-      prompt: "This question has two parts. Answer Part A, then Part B.",
+      prompt: "Complete both items below.",
       partA: {
-        prompt: "Look at the first sentence of the third paragraph in the draft. Which choice uses the right joining word?",
+        prompt: "Which opening line of paragraph 3 has a correct joining word?",
         choices: [
           { text: "You can bring your own rope, or you can borrow one from the closet.", correct: true },
           { text: "You can bring your own rope, but you can borrow one from the closet." },
@@ -4942,28 +4942,28 @@ PP.addLesson({
         ]
       },
       partB: {
-        prompt: "Which sentence from the draft best supports the answer to Part A?",
+        prompt: "Which line proves that your first choice is right?",
         choices: [
           { text: "Please be on time, for we start right at three o'clock." },
-          { text: "Beginners can start with short ropes and slow jumps." },
-          { text: "You only need one rope, so choose the one you like.", correct: true },
+          { text: "Beginners can choose short ropes and slow jumps." },
+          { text: "You need just one rope, so take whichever you prefer.", correct: true },
           { text: "The club has two rules for every member, and both are easy." }
         ]
       },
       clue: "Find the two ideas the joining word connects, and ask how they are related.",
       hints: [
         "Find the two ideas the joining word connects, and ask how they are related.",
-        "For Part A, say each choice and ask what job the joining word does. For Part B, reread the draft and decide which sentence tells you something about choosing.",
+        "For Part A, say each choice and ask what job the joining word does. For Part B, reread the draft and find the sentence that gives the best evidence for your Part A answer.",
         "In Part A, nor goes with a sentence that says no, and this sentence does not say no. Check the other choices."
       ],
       how: [
         "Part A: the sentence names two ways to get a rope, your own or one from the closet. A member would not use both.",
         "Two ways to pick from make a choice, and or is the joining word for a choice.",
         "Part A answer: \"You can bring your own rope, or you can borrow one from the closet.\" But, nor and so do not fit the meaning.",
-        "Part B answer: \"You only need one rope, so choose the one you like.\" It shows that a member picks only one rope."
+        "Part B answer: \"You need just one rope, so take whichever you prefer.\" It shows that a member takes just one rope."
       ],
       misconception: "A common mix-up is picking so because the sentence tells what you can do. So tells a result, and the second part is not a result of the first.",
-      why: "Part A: \"You can bring your own rope, or you can borrow one from the closet.\" Part B: \"You only need one rope, so choose the one you like.\" A member needs only one rope, so the two parts are a choice and need or. The other sentences do not talk about choosing a rope.",
+      why: "Part A: \"You can bring your own rope, or you can borrow one from the closet.\" Part B: \"You need just one rope, so take whichever you prefer.\" A member needs only one rope, so the two parts are a choice and need or. The other sentences do not talk about choosing a rope.",
       like: ["SK-GUM3-4-C04"]
     },
     {
@@ -4975,7 +4975,7 @@ PP.addLesson({
         "3.L.GC.1:M:use-coordinating-conjunctions-to-join-words-phra"
       ],
       passages: ["p4"],
-      prompt: "Select the sentence in which the word for works as a joining word that gives a reason.",
+      prompt: "Find the sentence where for joins two ideas and explains why.",
       targets: ["p4:1:2", "p4:1:3", "p4:2:3", "p4:3:2", "p4:3:3"],
       answer: ["p4:3:3"],
       pick: 1,
@@ -5003,27 +5003,27 @@ PP.addLesson({
         "3.L.GC.1:M:use-coordinating-conjunctions-to-join-words-phra"
       ],
       passages: [],
-      prompt: "Which sentence puts the two short sentences together best?",
-      stem: "Dana wanted to play outside. It started to rain.",
+      prompt: "Choose the best way to combine these two sentences.",
+      stem: "Dana hoped to play outside. It started to rain.",
       choices: [
-        { text: "Dana wanted to play outside, so it started to rain." },
-        { text: "Dana wanted to play outside, but it started to rain.", correct: true },
-        { text: "Dana wanted to play outside, or it started to rain." },
-        { text: "Dana wanted to play outside, for it started to rain." }
+        { text: "Dana hoped to play outside, so it started to rain." },
+        { text: "Dana hoped to play outside, but it started to rain.", correct: true },
+        { text: "Dana hoped to play outside, nor it started to rain." },
+        { text: "Dana hoped to play outside, for it started to rain." }
       ],
-      clue: "Ask how the second idea connects to the first. Is it a result, a choice, or something different?",
+      clue: "Ask how the second idea connects to the first. Is it a result, a reason, or something different?",
       hints: [
-        "Ask how the second idea connects to the first. Is it a result, a choice, or something different?",
+        "Ask how the second idea connects to the first. Is it a result, a reason, or something different?",
         "Say each sentence aloud. Ask whether the two parts make sense together.",
-        "Or gives a choice, and Dana is not choosing between the two parts. Check the other three."
+        "Nor goes with a sentence that says no, and the first part does not. Check the other three."
       ],
       how: [
-        "Wanting to play outside and rain starting work against each other.",
-        "The second part gets in the way of what Dana wanted. That calls for but.",
-        "The answer is \"Dana wanted to play outside, but it started to rain.\" So and for make the rain a result or a reason, and or makes it a choice."
+        "Hoping to play outside and rain starting work against each other.",
+        "The second part gets in the way of what Dana hoped. That calls for but.",
+        "The answer is \"Dana hoped to play outside, but it started to rain.\" So and for make the rain a result or a reason, and nor needs a no."
       ],
       misconception: "A common mix-up is picking so because the sentences are about the same day. So must tell a result.",
-      why: "The answer is \"Dana wanted to play outside, but it started to rain.\" But joins two ideas that are different. So tells a result, or gives a choice, and for gives a reason, and none of those fit.",
+      why: "The answer is \"Dana hoped to play outside, but it started to rain.\" But joins two ideas that are different. So tells a result, for gives a reason, and nor needs a no, and none of those fit.",
       like: ["SK-GUM3-4-C06"]
     },
     {
@@ -5035,28 +5035,28 @@ PP.addLesson({
         "3.L.GC.1:M:use-coordinating-conjunctions-to-join-words-phra"
       ],
       passages: [],
-      prompt: "Choose the TWO sentences where nor is used correctly.",
+      prompt: "Which TWO of these sentences have nor in the right place?",
       pick: 2,
       choices: [
-        { text: "Ana likes cats, nor she likes dogs." },
-        { text: "I washed the car, nor the sun came out." },
-        { text: "Ben did not bring lunch, nor did he bring a snack.", correct: true },
-        { text: "We can walk, nor we can drive." },
-        { text: "The bus was not late, nor was it early.", correct: true }
+        { text: "Gus hums loudly, nor he whistles." },
+        { text: "You could go home, nor you could stay." },
+        { text: "Ruth never cleaned her room, nor did she make her bed.", correct: true },
+        { text: "Our team won, nor the crowd cheered." },
+        { text: "The milk was not cold, nor was it fresh.", correct: true }
       ],
       clue: "Nor goes with a sentence that says no. Look at what the first part says.",
       hints: [
         "Nor goes with a sentence that says no. Look at what the first part says.",
         "Read each sentence. Ask whether the first part says something did not happen.",
-        "Ana likes cats says yes, not no. Decide about the other four."
+        "Gus hums loudly says yes, not no. Decide about the other four."
       ],
       how: [
         "Nor is used after a part that says something did not happen.",
-        "Ben did not bring lunch, and the bus was not late. Both start with a no, so nor can follow.",
-        "Ana likes cats, we can walk, and I washed the car all say yes, so nor does not fit."
+        "Ruth never cleaned her room, and the milk was not cold. Both start with a no, so nor can follow.",
+        "Gus hums loudly, our team won, and you could go home all say yes, so nor does not fit."
       ],
       misconception: "A common mix-up is using nor like or in a sentence that has no no. Nor needs a no in the first part.",
-      why: "The answers are \"Ben did not bring lunch, nor did he bring a snack.\" and \"The bus was not late, nor was it early.\" Each first part says something did not happen, so nor can follow. In the other sentences, the first part says yes, so nor does not fit.",
+      why: "The answers are \"Ruth never cleaned her room, nor did she make her bed.\" and \"The milk was not cold, nor was it fresh.\" Each first part says something did not happen, so nor can follow. In the other sentences, the first part says yes, so nor does not fit.",
       like: ["SK-GUM3-4-C07"]
     },
     {
@@ -5068,27 +5068,27 @@ PP.addLesson({
         "3.L.GC.1:M:use-coordinating-conjunctions-to-join-words-phra"
       ],
       passages: [],
-      prompt: "Which joining word goes in the blank of each sentence?",
-      cols: ["for", "yet", "nor", "so"],
+      prompt: "Fill each blank with the joining word that fits.",
+      cols: ["and", "or", "nor", "so"],
       rows: [
-        { text: "It was dark, ___ I was not afraid.", answer: 1 },
-        { text: "Take a snack, ___ the trip is long.", answer: 0 },
-        { text: "Pam felt ill, ___ she stayed in bed.", answer: 3 },
-        { text: "Rob did not laugh, ___ did he cry.", answer: 2 }
+        { text: "Mia packed apples, ___ Leo packed pears.", answer: 0 },
+        { text: "You can read now, ___ you can read later.", answer: 1 },
+        { text: "The shop was not open, ___ was the bank.", answer: 2 },
+        { text: "Rain fell all night, ___ the creek rose.", answer: 3 }
       ],
       clue: "Read each sentence with a joining word in the blank. Ask how the second part connects to the first.",
       hints: [
         "Read each sentence with a joining word in the blank. Ask how the second part connects to the first.",
         "Start with the sentence you are surest about. Think about which sentence begins with a no.",
-        "Rob did not laugh begins with a no. Decide the other rows one at a time."
+        "The shop was not open begins with a no. Decide the other rows one at a time."
       ],
       how: [
         "Ask how the second part connects to the first in each sentence.",
-        "Rob did not laugh, nor did he cry. Nor goes with a no.",
-        "Staying in bed is the result of feeling ill, so so fits. The long trip is the reason for a snack, so for fits. Not being afraid in the dark is a surprise, so yet fits."
+        "The shop was not open, nor was the bank. Nor goes with a no.",
+        "Rain is the reason the creek rose, so the joining word is so. Reading now or later is a choice, so or fits. Mia and Leo each packed something, so and adds one more thing."
       ],
-      misconception: "A common mix-up is mixing up for and so. For gives the reason, and so tells the result.",
-      why: "Yet goes with the dark sentence, because not being afraid is a surprise. Nor goes with Rob did not laugh. So goes with Pam felt ill, because feeling ill is why she stayed in bed. For goes with the snack sentence, because the long trip is the reason.",
+      misconception: "A common mix-up is mixing up and and so. And adds one more thing, and so tells a result.",
+      why: "And goes with the apples sentence, because it adds what Leo packed. Or goes with the reading sentence, because it gives a choice. Nor goes with the shop sentence. So goes with the rain sentence, because the rain is why the creek rose.",
       like: ["SK-GUM3-4-C08"]
     },
     {
@@ -5100,15 +5100,15 @@ PP.addLesson({
         "3.L.GC.1:M:use-coordinating-conjunctions-to-join-words-phra"
       ],
       passages: ["p5"],
-      prompt: "Sentence 3 of the draft has two joining words that do not fit. Choose the words that fix them.",
+      prompt: "Fix the two mistakes in sentence 3 by picking the right words.",
       text: "My dad wanted to make a pirate, {0} we did not have a hat, {1} we used a paper bag.",
       slots: [
         {
-          options: ["so", "but", "nor"],
+          options: ["and", "but", "nor"],
           answer: 1
         },
         {
-          options: ["or", "so", "yet"],
+          options: ["or", "so", "nor"],
           answer: 1
         }
       ],
@@ -5116,7 +5116,7 @@ PP.addLesson({
       hints: [
         "Read the whole sentence. Ask how each part connects to the part before it.",
         "Say each choice in its blank. Think about what Dad wanted, what was missing, and what they did.",
-        "Or gives a choice, and Dad is not choosing between two things in the first blank. Decide the rest."
+        "And adds one more thing, and a missing hat is not one more thing Dad wanted. Decide the rest."
       ],
       how: [
         "Dad wanted a pirate, and they had no hat. That is a problem, so the first blank shows something different.",
@@ -5136,26 +5136,26 @@ PP.addLesson({
         "3.L.GC.1:M:use-coordinating-conjunctions-to-join-words-phra"
       ],
       passages: ["p5"],
-      prompt: "Which choice puts sentences 6 and 7 of the draft together best?",
+      prompt: "Which version merges 6 and 7 from the draft?",
       choices: [
         { text: "The scarecrows shook on their poles, so nobody left the park." },
-        { text: "The scarecrows shook on their poles, or nobody left the park." },
+        { text: "The scarecrows shook on their poles, for nobody left the park." },
         { text: "The scarecrows shook on their poles, yet nobody left the park.", correct: true },
-        { text: "The scarecrows shook on their poles, for nobody left the park." }
+        { text: "The scarecrows shook on their poles, nor nobody left the park." }
       ],
       clue: "Ask how the second idea connects to the first. Would shaking scarecrows make people stay or leave?",
       hints: [
         "Ask how the second idea connects to the first. Would shaking scarecrows make people stay or leave?",
         "Read sentences 6 and 7 together. Then try each joining word between them.",
-        "For gives a reason, and the park was not emptied because the scarecrows shook. Check the other three."
+        "Nor goes with a sentence that says no, and sentence 6 does not say no. Check the other three."
       ],
       how: [
         "Shaking scarecrows in the wind are a reason to go home, but nobody left.",
         "The second part is a surprise. Yet works like but and shows that surprise.",
-        "The answer is \"The scarecrows shook on their poles, yet nobody left the park.\" So would tell a result, or would give a choice, and for would give a reason."
+        "The answer is \"The scarecrows shook on their poles, yet nobody left the park.\" So would tell a result, for would give a reason, and nor needs a no."
       ],
       misconception: "A common mix-up is thinking yet is a time word, as in not yet. Here yet works like but.",
-      why: "The answer is \"The scarecrows shook on their poles, yet nobody left the park.\" Yet works like but, and it shows that the second idea is a surprise. So tells a result, or gives a choice, and for gives a reason.",
+      why: "The answer is \"The scarecrows shook on their poles, yet nobody left the park.\" Yet works like but, and it shows that the second idea is a surprise. So tells a result, for gives a reason, and nor needs a no.",
       like: ["SK-GUM3-4-C10"]
     },
     {
@@ -5167,7 +5167,7 @@ PP.addLesson({
         "3.L.GC.1:M:use-coordinating-conjunctions-to-join-words-phra"
       ],
       passages: ["p6"],
-      prompt: "Select the TWO sentences that use the wrong joining word.",
+      prompt: "Which TWO sentences have a joining word that does not fit?",
       targets: ["p6:1:2", "p6:2:1", "p6:2:2", "p6:2:3", "p6:2:4"],
       answer: ["p6:2:1", "p6:2:2"],
       pick: 2,
@@ -5195,26 +5195,26 @@ PP.addLesson({
         "3.L.GC.1:M:use-coordinating-conjunctions-to-join-words-phra"
       ],
       passages: [],
-      prompt: "In which sentence does the joining word connect two whole sentences?",
+      prompt: "Only one choice links two complete sentences with a joining word. Which choice is it?",
       choices: [
         { text: "Pedro hurt his knee, so he sat on the bench.", correct: true },
-        { text: "Grandpa grows tomatoes and peppers." },
-        { text: "The path was narrow yet safe." },
-        { text: "Do you want to sit by the door or near the stage?" }
+        { text: "Mom added salt and pepper." },
+        { text: "The box was small but heavy." },
+        { text: "Is the soup hot or cold?" }
       ],
       clue: "A joining word can connect words, groups of words, or whole sentences. Look at what is on each side.",
       hints: [
         "A joining word can connect words, groups of words, or whole sentences. Look at what is on each side.",
         "Cover the joining word in each choice. Ask whether each side could stand alone as a sentence.",
-        "Tomatoes and peppers are two words, not two sentences. Check the other three."
+        "Salt and pepper are two words, not two sentences. Check the other three."
       ],
       how: [
         "Look at what the joining word connects in each choice.",
         "In \"Pedro hurt his knee, so he sat on the bench.\" both sides could stand alone: Pedro hurt his knee. He sat on the bench.",
-        "Narrow yet safe joins two words, and by the door or near the stage joins two groups of words."
+        "Small but heavy joins two words, and hot or cold joins two words."
       ],
       misconception: "A common mix-up is picking a sentence with a comma. Check whether each side could stand alone.",
-      why: "The answer is \"Pedro hurt his knee, so he sat on the bench.\" Each side could stand alone as a sentence. In the other choices, the joining word links two words or two groups of words.",
+      why: "The answer is \"Pedro hurt his knee, so he sat on the bench.\" Each side could stand alone as a sentence. In the other choices, the joining word links only two words.",
       like: ["SK-GUM3-4-C12"]
     },
     {
@@ -5290,29 +5290,29 @@ PP.addLesson({
         "3.L.GC.1:M:use-coordinating-conjunctions-to-join-words-phra"
       ],
       passages: [],
-      prompt: "Choose the TWO joining words that fit the blank.",
-      stem: "The lake was freezing, ____ we jumped in anyway.",
+      prompt: "Two of the words below can fill the gap. Which two?",
+      stem: "Heavy rain fell all night, ____ the creek rose by morning.",
       pick: 2,
       choices: [
-        { text: "but", correct: true },
+        { text: "and", correct: true },
         { text: "or" },
-        { text: "yet", correct: true },
+        { text: "so", correct: true },
         { text: "nor" },
-        { text: "so" }
+        { text: "but" }
       ],
-      clue: "Read the whole sentence, including the word anyway. Ask how the second part connects to the first.",
+      clue: "Read the whole sentence. Ask how the second part connects to the first.",
       hints: [
-        "Read the whole sentence, including the word anyway. Ask how the second part connects to the first.",
+        "Read the whole sentence. Ask how the second part connects to the first.",
         "Try each word in the blank. Ask whether the sentence makes sense and sounds right.",
         "Nor goes with a sentence that says no, and the first part does not. Decide about the other four."
       ],
       how: [
-        "A freezing lake is a reason not to jump in, but the children jumped anyway. The second part is a surprise.",
-        "But and yet both show a surprise.",
-        "So tells a result, nor goes with a no, and or gives a choice, so those three do not fit."
+        "Heavy rain is the reason the creek rose, so the second part tells what happened next.",
+        "So tells a result, and and adds what happened.",
+        "But shows a difference, nor goes with a no, and or gives a choice, so those three do not fit."
       ],
-      misconception: "A common mix-up is picking only but. Yet works like but, so both fit.",
-      why: "The answers are yet and but. Jumping into a freezing lake is a surprise, and both words show something different. So tells a result, nor goes with a no, and or gives a choice.",
+      misconception: "A common mix-up is picking only so. And also fits, because the second part adds what happened.",
+      why: "The answers are so and and. The rain is why the creek rose, and both words fit that meaning. But shows a difference, nor goes with a no, and or gives a choice.",
       like: ["SK-GUM3-4-C15"]
     }
   ],
@@ -5377,7 +5377,7 @@ PP.addLesson({
       ],
       how: [
         "Read each sentence and think about what the joining word does.",
-        "Being hungry is why I ate, so so fits. The piano and the drums are two things Hana can play, so and fits.",
+        "Being hungry is the reason I ate, so the word that fits is so. The piano and the drums are two things Hana can play, so and fits.",
         "The others do not fit: it was cold, so the coat should come along; a choice needs or; and a funny movie is not a choice."
       ],
       misconception: "A common mix-up is picking a sentence because the joining word is common. Check what the word does."
@@ -5447,12 +5447,12 @@ PP.addLesson({
       "A collective noun is one word for a whole group: a team of players, a flock of birds, a herd of cows, a class of students. Animals have their own group words: a pack of wolves, a school of fish, a colony of ants, a litter of puppies.",
       "When the group acts together, treat it as one thing: The team is ready. The crew sings. Helper verbs match too: The team was ready. The team has a new coach.",
       "A plural like birds is not a collective noun. A collective noun is one word that names the whole group.",
-      "An abstract noun names an idea, a feeling or a quality: pride, freedom, patience, trust.",
+      "An abstract noun names an idea, a feeling or a quality: wonder, peace, laughter, comfort.",
       "You cannot see, hear, touch, taste or smell an abstract noun. You can see a friend, but you cannot touch friendship."
     ],
     words: [
       { term: "collective noun", means: "a noun that names a group, like team or family" },
-      { term: "abstract noun", means: "a noun that names an idea or feeling, like pride or trust" }
+      { term: "abstract noun", means: "a noun that names an idea or feeling, like wonder or peace" }
     ],
     example: {
       label: "Example",
@@ -5483,14 +5483,14 @@ PP.addLesson({
       answer: "Kindness is the abstract noun."
     },
     {
-      show: ["The swarm (buzz / buzzes) around the hive."],
+      show: ["The patrol (walk / walks) the beach every night."],
       ask: "Which verb goes with the group noun?",
       steps: [
-        "Find the group noun: swarm. It names a whole group of bees.",
-        "The swarm moves together, so it acts as one thing.",
+        "Find the group noun: patrol. It names a whole group of guards.",
+        "The patrol moves together, so it acts as one thing.",
         "A group that acts as one takes the verb for one. In the present tense, that verb ends in -s."
       ],
-      answer: "The swarm buzzes around the hive."
+      answer: "The patrol walks the beach every night."
     }
   ],
   parent: "At the park or the store, name groups together (a crowd of shoppers, a flock of pigeons). At bedtime, ask your child to name one feeling or idea from the day, like joy, fear or patience.",

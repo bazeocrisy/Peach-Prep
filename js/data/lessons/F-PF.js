@@ -8,8 +8,9 @@ PP.addLesson({
       "The letters ea usually say long e, as in bead and team. In some words, like bread and head, ea says short e. In a few words, like great and steak, ea even says long a.",
       "The letters ow can say long o, as in snow and grow. They can also say the sound in cow and town, the same sound you hear in ouch.",
       "C is usually hard, like k, before a, o, u or a consonant, as in cat, cup and clap. C is usually soft, like s, when e, i or y comes right after it, as in face, city and fancy.",
-      "G is usually hard, as in go and gum, before a, o or u. Before e, i or y, g is often soft and says j, as in gem, giant and gym. But not always: get, give and girl keep the hard g.",
-      "Two more vowel teams have two sounds. The letters oo can say the sound in moon or the sound in book. The letters ou can say the sound in out or the sound in soup. Bonus trickster: ough sounds different in tough, though and through, so you learn those words one at a time."
+      "G is usually hard, as in go and gum, before a, o or u. Before e, i or y, g is often soft and says j, as in gem, giant and gym. But not always: get and give keep the hard g.",
+      "Two more vowel teams have two sounds. The letters oo can say the sound in moon or the sound in book. The letters ou can say the sound in out or the sound in soup. Bonus trickster: ough sounds different in tough, though and through, so you learn those words one at a time.",
+      "The letter y can act as a vowel. At the end of a short word like by, my or fly, y says long i. At the end of a longer word like baby, candy or tiny, y says long e.",
     ],
     words: [
       { term: "vowel team", means: "two letters that work together to make one vowel sound, like ea or ow" },
@@ -402,7 +403,7 @@ PP.addLesson({
             hints: [
               "Find each g. Then look at the letter right after it.",
               "Only some of these words have a g in them. Find those words first.",
-              "Say stage and game out loud. Ask whether each g sounds like the g in go or like j."
+              "Game has a g too. Ask what letter comes right after that g, and whether that fits the rule for a g that says j."
             ],
             how: [
               "Find the words with a g: stage and game.",
@@ -529,7 +530,7 @@ PP.addLesson({
                 text: "pool"
               },
               {
-                text: "broom"
+                text: "spoon"
               },
               {
                 text: "noon"
@@ -544,10 +545,10 @@ PP.addLesson({
             how: [
               "Say book. The oo is short, as in look.",
               "Say each choice. Wool has the short oo sound.",
-              "Pool, broom and noon have the long oo sound, like in moon."
+              "Pool, spoon and noon have the long oo sound, like in moon."
             ],
             misconception: "A common mix-up is thinking oo always sounds like moon. In some words it is short.",
-            why: "The answer is \"wool.\" The oo in wool is short, like the oo in book. Pool, broom and noon have the long oo, like in moon."
+            why: "The answer is \"wool.\" The oo in wool is short, like the oo in book. Pool, spoon and noon have the long oo, like in moon."
           },
           {
             id: "SK-FP4a-C10",
@@ -776,7 +777,7 @@ PP.addLesson({
       ],
       prompt: "Decide how ow is said in each word.",
       stem: [
-        "A crowd saw a snowman by the brown window."
+        "A crowd saw a snowman by the tall window."
       ],
       text: "Crowd sounds like {0}. Window ends like {1}.",
       slots: [
@@ -801,7 +802,7 @@ PP.addLesson({
       hints: [
         "Say each word aloud. Think of a word that rhymes with it.",
         "Say each word one slow sound at a time and listen to the ow.",
-        "Start with the end of window. Ask whether it sounds like ouch or like go."
+        "Say window slowly and listen to its last sound. Which choice rhymes with that sound?"
       ],
       how: [
         "Say crowd. It rhymes with loud, so the ow sounds like the ow in cow.",
@@ -896,7 +897,7 @@ PP.addLesson({
       hints: [
         "Say seat. Then say each choice and listen to its vowel.",
         "Say each word slowly. Ask whether the vowel is the same as in seat.",
-        "Some choices have the vowel in bed and one has the vowel in day. Say each word to check."
+        "Break has a vowel you hear in day. Say the others and compare each with seat."
       ],
       how: [
         "Say seat. The vowel is long e.",
@@ -1012,7 +1013,7 @@ PP.addLesson({
           correct: true
         },
         {
-          text: "camp"
+          text: "cube"
         },
         {
           text: "bucket"
@@ -1028,15 +1029,15 @@ PP.addLesson({
       hints: [
         "Find the c in each word. Then look at the next letter.",
         "Check the letter after each c. Say each word to hear the sound.",
-        "Check camp. Is the c followed by e, i or y, or by another letter?"
+        "Check cube. Is the c followed by e, i or y, or by another letter?"
       ],
       how: [
         "Find each c and say its sound.",
         "In peace, c comes before e. In mice, c also comes before e. Both say s.",
-        "Camp, bucket, coin and crab have a hard c."
+        "Cube, bucket, coin and crab have a hard c."
       ],
       misconception: "A common mix-up is choosing words that only have a c. Look at the letter after the c.",
-      why: "The answers are \"peace\" and \"mice.\" The c comes before e in both and says s. Camp, bucket, coin and crab have a hard c, like k."
+      why: "The answers are \"peace\" and \"mice.\" The c comes before e in both and says s. Cube, bucket, coin and crab have a hard c, like k."
     },
     {
       id: "SK-FP4a-S09",
@@ -1200,10 +1201,10 @@ PP.addLesson({
           text: "Let them rhyme, since their last letters match."
         },
         {
-          text: "Use the sound of cow, for the ou stands for it."
+          text: "Give both words the sound in cow."
         },
         {
-          text: "Use a short u, as each ends in gh."
+          text: "Give both words a short u, as in cup."
         }
       ],
       clue: "Think about how a group of letters can be used in different words.",
@@ -1266,15 +1267,15 @@ PP.addLesson({
       like: [
         "SK-FP4a-P6"
       ],
-      prompt: "Tap the word with a c that says s.",
+      prompt: "Tap the word spelled with c but said with s.",
       stem: [
-        "We ate buns and rice in the cold hall."
+        "A fox hid by the fence in the cold."
       ],
       options: [
-        "buns",
-        "rice",
+        "fox",
+        "fence",
         "cold",
-        "ate"
+        "hid"
       ],
       answer: [
         1
@@ -1284,15 +1285,15 @@ PP.addLesson({
       hints: [
         "Find each c. Then look at the letter right after it.",
         "Only some of these words have a c. Find them first.",
-        "Say rice and cold out loud. Ask whether each c says k or s."
+        "Cold has a c too. Look at the letter right after it and compare it with the rule for a c that says s."
       ],
       how: [
-        "Find the words with a c: rice and cold.",
+        "Find the words with a c: fence and cold.",
         "In cold, c comes before o, so it is hard.",
-        "In rice, c comes before e, so it is soft."
+        "In fence, c comes before e, so it is soft."
       ],
       misconception: "A common mix-up is choosing the first word with a c. Check the letter after the c.",
-      why: "The answer is \"rice.\" The c comes before e, so it says s. In cold, c is hard, and buns and ate have no c."
+      why: "The answer is \"fence.\" The c comes before e, so it says s. In cold, c is hard, and fox and hid have no c."
     },
     {
       id: "SK-FP4a-S15",
@@ -1307,30 +1308,30 @@ PP.addLesson({
         "SK-FP4a-P7"
       ],
       prompt: "Which spelling goes in the blank?",
-      text: "Mom put a clean {0} on the table.",
+      text: "Dad bumped his {0} on the shelf.",
       slots: [
         {
           options: [
-            "plait",
-            "plate",
-            "playt"
+            "head",
+            "hed",
+            "heed"
           ],
-          answer: 1
+          answer: 0
         }
       ],
       clue: "Say the word that fits the sentence. Then picture how it looks.",
       hints: [
         "Say the word that fits the sentence. Then picture how it looks.",
         "Some of these are real words that mean something else. Read each one in the sentence.",
-        "Think about what goes on a table and what letters make the long a sound."
+        "Think about the part of the body that fits, and which letters can spell the vowel in bed."
       ],
       how: [
-        "Read the sentence and think of a dish you eat from.",
-        "That word is spelled p-l-a-t-e.",
-        "Plait is a real word, but it means a braid. Playt is not a word."
+        "Read the sentence and think of the part of the body that can bump a shelf.",
+        "That word is spelled h-e-a-d.",
+        "Heed is a real word, but it means to pay attention. Hed is not a word."
       ],
       misconception: "A common mix-up is picking a spelling that sounds right but is a different word.",
-      why: "The answer is plate. A plate goes on a table, and the long a sound is spelled a-t-e. Plait means a braid, and playt is not a word."
+      why: "The answer is head. A head is a body part, and the short e sound is spelled e-a here. Heed means to pay attention, and hed is not a word."
     }
   ],
   addons: {
@@ -1503,7 +1504,8 @@ PP.addLesson({
       "There are six kinds of syllables (see the key words). The kind of syllable is a clue to the vowel sound.",
       "When two consonants stand between two vowels, you usually split between them: nap-kin, rab-bit.",
       "When one consonant stands between two vowels, try splitting before it first, so the first vowel is long: ti-ger, ro-bot. If that is not a real word, split after it, so the vowel is short: cab-in, lem-on.",
-      "When a word ends in a consonant plus le, those three letters usually make the last syllable: ta-ble, pur-ple, puz-zle."
+      "When a word ends in a consonant plus le, those three letters usually make the last syllable: ta-ble, pur-ple, puz-zle.",
+      "The letter y can act as a vowel. At the end of a short word like sky or fly, y says long i. At the end of a longer word like baby or tiny, y says long e."
     ],
     words: [
       { term: "closed", means: "ends with a consonant; the vowel is usually short, like cat or the nap in napkin" },
@@ -1769,13 +1771,13 @@ PP.addLesson({
             ],
             passages: [],
             prompt: "Choose how each word splits into syllables.",
-            text: "Pocket splits as {0}. Basin splits as {1}.",
+            text: "Ribbon splits as {0}. Basin splits as {1}.",
             slots: [
               {
                 options: [
-                  "pock / et",
-                  "po / cket",
-                  "pocke / t"
+                  "rib / bon",
+                  "ri / bbon",
+                  "ribb / on"
                 ],
                 answer: 0
               },
@@ -1795,12 +1797,12 @@ PP.addLesson({
               "For basin, try splitting before the s first. Say it and ask if it is a real word."
             ],
             how: [
-              "Pocket has two consonants, c and k, between the vowels, so split between them: pock / et.",
+              "Ribbon has two consonants, b and b, between the vowels, so split between them: rib / bon.",
               "Basin has one consonant between the vowels. Splitting before it gives ba / sin, a word you know.",
               "The other splits leave parts that cannot be said."
             ],
             misconception: "A common mix-up is splitting anywhere. Split where each part can be said as a syllable.",
-            why: "Pocket splits as pock / et, with the split between the two consonants. Basin splits as ba / sin, with the split before the one consonant. The other choices make parts that are not syllables."
+            why: "Ribbon splits as rib / bon, with the split between the two consonants. Basin splits as ba / sin, with the split before the one consonant. The other choices make parts that are not syllables."
           },
           {
             ref: "SK-FP4b-P5"
@@ -1947,12 +1949,12 @@ PP.addLesson({
             passages: [],
             prompt: "Choose the word whose first syllable is closed, so its vowel is short.",
             stem: [
-              "Mia put a pocket, a tiny frog and a paper cup in a bag."
+              "Mia put a pocket, a tiny frog and a music box in a bag."
             ],
             options: [
               "pocket",
               "tiny",
-              "paper",
+              "music",
               "sky"
             ],
             answer: [
@@ -1963,15 +1965,15 @@ PP.addLesson({
             hints: [
               "A closed syllable ends with a consonant. Split each word and look at the first syllable.",
               "Split each word into syllables. Look at the end of the first one.",
-              "Split tiny and paper and look at the end of each first syllable."
+              "Split tiny and music and look at the end of each first syllable."
             ],
             how: [
-              "Split each word: pock / et, ti / ny, pa / per, sky.",
+              "Split each word: pock / et, ti / ny, mu / sic, sky.",
               "Pock ends with a consonant, so it is closed and the o is short.",
-              "Ti, pa and sky end with vowels, so they are open."
+              "Ti, mu and sky end with vowels, so they are open."
             ],
             misconception: "A common mix-up is choosing the word with a short-looking vowel. Check how the first syllable ends.",
-            why: "The answer is \"pocket.\" The first syllable, pock, ends with a consonant, so it is closed. Tiny, paper and sky have open first syllables."
+            why: "The answer is \"pocket.\" The first syllable, pock, ends with a consonant, so it is closed. Tiny, music and sky have open first syllables."
           },
           {
             ref: "SK-FP4b-P6"
@@ -1997,7 +1999,7 @@ PP.addLesson({
                 correct: true
               },
               {
-                text: "paper"
+                text: "spider"
               },
               {
                 text: "tiger"
@@ -2010,15 +2012,15 @@ PP.addLesson({
             hints: [
               "Find the vowels in each word. Then look at what stands between them.",
               "Count the consonants between the first two vowels in each word.",
-              "Look at the letters between the first two vowels in paper and tiger."
+              "Look at the letters between the first two vowels in spider and tiger."
             ],
             how: [
               "Find the first two vowels in each word.",
               "In pencil, n and c stand between e and i, so it splits pen / cil.",
-              "Paper, tiger and lemon have one consonant between the vowels."
+              "Spider, tiger and lemon have one consonant between the vowels."
             ],
             misconception: "A common mix-up is counting all the consonants. Count only those between the vowels.",
-            why: "The answer is \"pencil.\" Two consonants, n and c, stand between e and i, so it splits pen / cil. Paper, tiger and lemon have one consonant between the vowels."
+            why: "The answer is \"pencil.\" Two consonants, n and c, stand between e and i, so it splits pen / cil. Spider, tiger and lemon have one consonant between the vowels."
           },
           {
             id: "SK-FP4b-C10",
@@ -2139,7 +2141,7 @@ PP.addLesson({
             hints: [
               "Say each word one syllable at a time. Write what you hear.",
               "Check that each syllable has a vowel. Check how the last syllable is spelled.",
-              "Start with the second blank. Think of the letters that spell the end of table and candle."
+              "Start with the second blank. Jungul ends in a vowel and a consonant. Ask whether that matches how a consonant-le syllable is spelled."
             ],
             how: [
               "Pumpkin has two syllables: pump / kin. Each syllable has a vowel.",
@@ -2420,39 +2422,39 @@ PP.addLesson({
       like: [
         "SK-FP4b-C07"
       ],
-      prompt: "Tell how the two parts of pancake are built.",
-      text: "Pan {0}, and cake {1}.",
+      prompt: "How is each half of starfish built?",
+      text: "Front half: {0}. Back half: {1}.",
       slots: [
         {
           options: [
-            "ends with a vowel",
-            "stops on a plain letter",
-            "has two vowels in a row"
+            "r-controlled",
+            "consonant-le",
+            "vowel team"
           ],
-          answer: 1
+          answer: 0
         },
         {
           options: [
-            "stops on a plain letter",
-            "has two vowels in a row",
-            "finishes with a silent e"
+            "consonant-le",
+            "closed",
+            "r-controlled"
           ],
-          answer: 2
+          answer: 1
         }
       ],
       clue: "Split the word into two parts. Then look at how each part ends.",
       hints: [
         "Split the word into two parts. Then look at how each part ends.",
-        "Look at the last letters of each part. Ask whether they are a consonant, a vowel team, or a silent e.",
-        "Start with cake. Look at its last letter."
+        "Look for a vowel followed by r in one part. Look at the last letter of the other part.",
+        "Start with fish. Look at its last letter."
       ],
       how: [
-        "Split the word: pan / cake.",
-        "Pan stops on a plain consonant letter, so it is closed.",
-        "Cake has a vowel, a consonant and a silent e, so it finishes with a silent e."
+        "Split the word: star / fish.",
+        "Star has a vowel followed by r, so it is r-controlled.",
+        "Fish ends with a consonant, so it is closed."
       ],
       misconception: "A common mix-up is giving both parts the same build. Look at each part on its own.",
-      why: "Pan stops on a plain letter, a consonant, so it is a closed syllable. Cake finishes with a silent e, so it is a vowel-consonant-e syllable. Neither part has two vowels in a row."
+      why: "Star has a vowel followed by r, so it is an r-controlled syllable. Fish ends with a consonant, so it is a closed syllable. Neither part is consonant-le or a vowel team."
     },
     {
       id: "SK-FP4b-S08",
@@ -2468,13 +2470,13 @@ PP.addLesson({
       ],
       prompt: "Tap the word that starts with a closed syllable.",
       stem: [
-        "Lee drew a winter scarf, a baby, a silent clown and a hotel."
+        "Lee drew a winter scarf, a baby, a silent clown and a pupil."
       ],
       options: [
         "winter",
         "baby",
         "silent",
-        "hotel"
+        "pupil"
       ],
       answer: [
         0
@@ -2487,12 +2489,12 @@ PP.addLesson({
         "Split baby and silent and look at the end of each first syllable."
       ],
       how: [
-        "Split each word: win / ter, ba / by, si / lent, ho / tel.",
+        "Split each word: win / ter, ba / by, si / lent, pu / pil.",
         "Win ends with a consonant, so it is closed.",
-        "Ba, si and ho end with vowels, so they are open."
+        "Ba, si and pu end with vowels, so they are open."
       ],
       misconception: "A common mix-up is choosing the first word. Check how the first syllable ends.",
-      why: "The answer is \"winter.\" The first syllable, win, ends with a consonant, so it is closed. Baby, silent and hotel start with open syllables."
+      why: "The answer is \"winter.\" The first syllable, win, ends with a consonant, so it is closed. Baby, silent and pupil start with open syllables."
     },
     {
       id: "SK-FP4b-S09",
@@ -2516,7 +2518,7 @@ PP.addLesson({
           text: "motel"
         },
         {
-          text: "cobra"
+          text: "robot"
         },
         {
           text: "silent"
@@ -2526,15 +2528,15 @@ PP.addLesson({
       hints: [
         "Find the vowels in each word. Then look at what stands between them.",
         "Look at the letters between the first two vowels in each word.",
-        "Look at the letters between the first two vowels in cobra and silent."
+        "Look at the letters between the first two vowels in robot and silent."
       ],
       how: [
         "Find the first two vowels in each word.",
         "In mitten, t and t stand between i and e, so it splits mit / ten.",
-        "Motel, cobra and silent have one consonant between the first two vowels."
+        "Motel, robot and silent have one consonant between the first two vowels."
       ],
       misconception: "A common mix-up is counting every consonant. Count only those between the vowels.",
-      why: "The answer is \"mitten.\" Two consonants, t and t, stand between i and e, so it splits mit / ten. Motel, cobra and silent have one consonant between the first two vowels."
+      why: "The answer is \"mitten.\" Two consonants, t and t, stand between i and e, so it splits mit / ten. Motel, robot and silent have one consonant between the first two vowels."
     },
     {
       id: "SK-FP4b-S10",
@@ -2548,20 +2550,20 @@ PP.addLesson({
       like: [
         "SK-FP4b-C10"
       ],
-      prompt: "LYE-mit is not a real word. How can Ana fix her reading of li / mit?",
+      prompt: "Ana reads li / mit as LYE-mit, which is not a word. What helps?",
       choices: [
         {
           text: "Say lim / it with a short i.",
           correct: true
         },
         {
-          text: "Say li / mit again, but louder."
+          text: "Read li / mit a second time, slower."
         },
         {
-          text: "Cut off one letter and try again."
+          text: "Try l / imit and sound it out."
         },
         {
-          text: "Guess the last part and move on."
+          text: "Try limi / t and sound it out."
         }
       ],
       clue: "Think about what Ana does when the first try is not a real word.",
@@ -2641,7 +2643,7 @@ PP.addLesson({
         "SK-FP4b-C12"
       ],
       prompt: "Which spellings finish the sentence?",
-      text: "A {0} sat in the {1}.",
+      text: "A {0} hid behind the {1}.",
       slots: [
         {
           options: [
@@ -2753,22 +2755,22 @@ PP.addLesson({
           text: "panel"
         },
         {
-          text: "hotel"
+          text: "tunnel"
         }
       ],
       clue: "Look at how each word ends. Look at the last three letters.",
       hints: [
         "Look at how each word ends. Look at the last three letters.",
         "Say each word. Ask whether the end is a consonant plus le.",
-        "Check hotel and panel. Do they end in a consonant plus le?"
+        "Check tunnel and panel. Do they end in a consonant plus le?"
       ],
       how: [
         "Look at the last three letters of each word.",
         "Kettle ends in tle, and cattle ends in tle. Both are consonant-le.",
-        "Kennel, panel and hotel end in el, not a consonant plus le."
+        "Kennel, panel and tunnel end in el, not a consonant plus le."
       ],
       misconception: "A common mix-up is choosing words that end with l. The ending has to be a consonant plus le.",
-      why: "The answers are \"kettle\" and \"cattle.\" Both end with the consonant-le syllable tle. Kennel, panel and hotel end in el."
+      why: "The answers are \"kettle\" and \"cattle.\" Both end with the consonant-le syllable tle. Kennel, panel and tunnel end in el."
     },
     {
       id: "SK-FP4b-S15",
@@ -2892,7 +2894,7 @@ PP.addLesson({
       hints: [
         "Say the word that fits the sentence. Then picture how it looks.",
         "Check how the last syllable is spelled.",
-        "Think about the letters that end words like table and little."
+        "Candal ends in a vowel and a consonant. Ask whether that matches how a consonant-le syllable is spelled."
       ],
       how: [
         "Read the sentence and think of what you blow out on a cake.",
@@ -3148,7 +3150,7 @@ PP.addLesson({
               },
               {
                 options: [
-                  "wrongly",
+                  "not",
                   "before",
                   "again"
                 ],
@@ -3159,7 +3161,7 @@ PP.addLesson({
             hints: [
               "Cover the front part of each word. Think about what the front part adds.",
               "Say the base word. Then think about the meaning of each front part.",
-              "Start with relabel. Think about what re- means."
+              "Start with relabel. Look at its front part and ask what it adds."
             ],
             how: [
               "Cover the front part of each word. Label is left in both.",
@@ -3431,22 +3433,22 @@ PP.addLesson({
               "3.F.P.4.c"
             ],
             passages: [],
-            prompt: "Pick the piece for each place in unbreakable.",
-            text: "Unbreakable begins with {0} and is built on the main word {1}.",
+            prompt: "Pick the piece for each place in unlikely.",
+            text: "Unlikely begins with {0} and is built on the main word {1}.",
             slots: [
               {
                 options: [
-                  "break",
+                  "like",
                   "un-",
-                  "-able"
+                  "-ly"
                 ],
                 answer: 1
               },
               {
                 options: [
-                  "-able",
-                  "un-",
-                  "break"
+                  "-ly",
+                  "re-",
+                  "like"
                 ],
                 answer: 2
               }
@@ -3459,11 +3461,11 @@ PP.addLesson({
             ],
             how: [
               "The prefix is the part at the front: un-.",
-              "The suffix is the part at the end: -able.",
-              "Cover both, and break is left. Break is the base word."
+              "The suffix is the part at the end: -ly.",
+              "Cover both, and like is left. Like is the base word."
             ],
             misconception: "A common mix-up is mixing up the three parts. The prefix goes first, the suffix goes last, and the base word is in the middle.",
-            why: "The prefix is un-, the base word is break, and the suffix is -able. Un- is at the front, -able is at the end, and break is left in the middle."
+            why: "The prefix is un-, the base word is like, and the suffix is -ly. Un- is at the front, -ly is at the end, and like is left in the middle."
           },
           {
             ref: "SK-FP4c-P6"
@@ -3663,7 +3665,7 @@ PP.addLesson({
         },
         {
           options: [
-            "misuse",
+            "overuse",
             "disuse",
             "reuse"
           ],
@@ -3674,7 +3676,7 @@ PP.addLesson({
       hints: [
         "Cover the front part of each word. Think about what the front part adds.",
         "Say the base word. Then think about the meaning of each front part.",
-        "Start with reuse. Think about what re- means."
+        "Look at the front part of each word. Which front part means one more time?"
       ],
       how: [
         "Cover the front part of each word. Use is left in both.",
@@ -3682,7 +3684,7 @@ PP.addLesson({
         "Re- means again, so reuse means to use again."
       ],
       misconception: "A common mix-up is giving both words the same meaning. Mis- and re- are different prefixes.",
-      why: "Misuse means to use wrongly, because mis- means wrongly. Reuse means to use again, because re- means again. Before is the meaning of pre-."
+      why: "Misuse means to use wrongly, because mis- means wrongly. Reuse means to use again, because re- means again."
     },
     {
       id: "SK-FP4c-S02",
@@ -4019,11 +4021,11 @@ PP.addLesson({
         },
         {
           options: [
-            "prefix",
             "suffix",
-            "base word"
+            "base word",
+            "syllable"
           ],
-          answer: 2
+          answer: 1
         }
       ],
       clue: "Think about where each piece sits in the word.",
@@ -4263,43 +4265,43 @@ PP.addLesson({
       like: [
         "SK-FP4c-P7"
       ],
-      prompt: "Which meaning does each ending or front part give? Match.",
+      prompt: "Which meaning does each front part give? Match.",
       cols: [
-        "the opposite of",
-        "having lots of",
-        "lacking"
+        "wrongly",
+        "again",
+        "before"
       ],
       rows: [
         {
-          text: "unwise",
+          text: "miscount",
           answer: 0
         },
         {
-          text: "powerful",
+          text: "refresh",
           answer: 1
         },
         {
-          text: "harmless",
+          text: "preset",
           answer: 2
         },
         {
-          text: "disloyal",
+          text: "mismatch",
           answer: 0
         }
       ],
-      clue: "Cover the front part or the ending. Think about what it adds.",
+      clue: "Cover the front part of each word. Think about what it adds.",
       hints: [
-        "Cover the front part or the ending. Think about what it adds.",
-        "Ask whether the part means the opposite of, having lots of, or lacking.",
-        "Start with harmless. Look at the ending."
+        "Cover the front part of each word. Think about what it adds.",
+        "Ask whether the front part means wrongly, again, or before.",
+        "Start with preset. Look at the front part."
       ],
       how: [
-        "Find the prefix or suffix in each word.",
-        "Un- and dis- mean the opposite of, so unwise and disloyal go together.",
-        "-Ful means having lots of, and -less means lacking."
+        "Find the prefix in each word.",
+        "Mis- means wrongly, so miscount and mismatch go together.",
+        "Re- means again, and pre- means before."
       ],
-      misconception: "A common mix-up is guessing from the base word. Look at the prefix or suffix.",
-      why: "Unwise and disloyal have prefixes that mean the opposite of. Powerful has -ful, having lots of. Harmless has -less, lacking."
+      misconception: "A common mix-up is guessing from the base word. Look at the prefix.",
+      why: "Miscount and mismatch have mis-, wrongly. Refresh has re-, again. Preset has pre-, before."
     }
   ],
   addons: {
@@ -4619,10 +4621,10 @@ PP.addLesson({
     tasks: [
       {
         title: "Round 1: Words by themselves",
-        how: "A grown-up writes or prints twenty words the reader has learned, such as words from this week's lessons. Cover all but one word at a time. The reader says each word as fast as they can without sounding it out. Mark each word as quick, slow, or missed. Do the round again in a few days with the missed words mixed in.",
+        how: "A grown-up writes or prints twenty words the reader has learned. Include at least eight words that are not spelled the way they sound (such as said, was, once, enough) and two look-alike pairs (was and saw, from and form). Cover all but one word at a time. The reader says each word as fast as they can without sounding it out. Quick means said within about one second without sounding it out. Mark each word as quick, slow, or missed. Do the round again in a few days with the missed words mixed in.",
         checklist: [
-          "The reader said at least 16 of the 20 words right away.",
-          "The reader did not sound out the words they knew.",
+          "The reader said at least 16 of the 20 words quickly (about one second each).",
+          "The list had at least eight words that are not spelled the way they sound and two look-alike pairs.",
           "Missed and slow words were saved for the next round."
         ]
       },
@@ -4846,14 +4848,14 @@ PP.addLesson({
   /* Expansion 2026-10-22, batch B9: performance sequence instead of fifteen selected-response items (practice-exceptions.json). NEEDS INDEPENDENT REVIEW. */
   coreException: {
     kind: "observation",
-    rationale: "A child's own self-correction happens only while reading aloud, so an adult has to watch for it. Three adult-observed rounds plus the fix-up log take the place of fifteen items. The five practice items stay as supporting checks.",
+    rationale: "A child's own self-correction is easiest to see while reading aloud, so an adult has to watch for it. Silent self-correction cannot be seen, so it is checked by asking the child to show where they went back. Three adult-observed rounds plus the fix-up log take the place of fifteen items. The five practice items stay as supporting checks.",
     tasks: [
       {
         title: "Round 1: Listen for the stop",
-        how: "Give the reader a passage that is a little hard. The grown-up listens and does not help. Each time the reader stops, rereads or changes a word, write it in the fix-up log: the word, what the reader said first, and what they fixed it to.",
+        how: "Give the reader a passage that is a little hard. The grown-up listens. When the reader stops on a word, wait about five seconds. If the reader fixes it, mark it self-fixed. If not, say the word and mark it told. Write each one in the fix-up log: the word, what the reader said first, and whether it was self-fixed or told.",
         checklist: [
-          "The grown-up did not give the word.",
-          "Each fix was written in the log.",
+          "The grown-up waited about five seconds before giving a word.",
+          "Each stop was written in the log as self-fixed or told.",
           "The reader checked that the word made sense."
         ]
       },
@@ -4867,12 +4869,12 @@ PP.addLesson({
         ]
       },
       {
-        title: "Round 3: On their own",
-        how: "Use a new passage. The grown-up listens again and writes in the log. Compare the logs: are there more self-fixes and fewer words the grown-up had to give?",
+        title: "Round 3: Aloud, then silent",
+        how: "Use a new passage. First the reader reads a few sentences aloud while the grown-up writes self-fixed and told in the log. Compare with Round 1: are there more self-fixed words and fewer told words? Then the reader reads another paragraph silently. Afterward, ask the reader to point to one spot where they went back and say what they fixed. Write it in the log as a silent fix. Ask for a one-sentence retell to check the meaning.",
         checklist: [
-          "The reader fixed more mistakes without help.",
-          "The reader reread when something sounded wrong.",
-          "The log from all three rounds was compared."
+          "There were more self-fixed words and fewer told words than in Round 1.",
+          "The reader pointed to a spot where they went back silently and said what they fixed.",
+          "The reader's retell matched the passage."
         ]
       }
     ]
