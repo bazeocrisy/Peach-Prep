@@ -497,7 +497,7 @@ PP.addLesson({
             ],
             passages: [],
             prompt: "Choose the word that correctly completes the sentence.",
-            text: "A hungry owl watched the {0} den, where one young fox slept.",
+            text: "A hungry owl watched the {0} den, which was the home of one young fox.",
             slots: [
               {
                 options: ["foxes", "fox's", "foxes'"],
@@ -507,8 +507,8 @@ PP.addLesson({
             clue: "Decide who owns the den, and whether that is one animal or more than one.",
             hints: [
               "Decide who owns the den, and whether that is one animal or more than one.",
-              "Look for the clue about how many foxes are in the den. Then ask whose den it is.",
-              "Foxes is the plural of fox. Decide whether the sentence tells you that the den belongs to a group or to one animal."
+              "Look for the words that tell how many foxes the den belongs to. Then ask what the word must show.",
+              "Foxes is the plural of fox. Decide whether the den belongs to a group or to one animal."
             ],
             how: [
               "Ask who owns the den. It belongs to a fox.",
@@ -739,15 +739,15 @@ PP.addLesson({
       hints: [
         "Check each word with an apostrophe. Ask whether it stands for missing letters, shows belonging, or only means more than one.",
         "Find the word in each sentence that ends in s, and ask whether anything belongs to it.",
-        "Haven't stands for have not, and the apostrophe is in the right place. Check the other three."
+        "Hasn't stands for has not, and the apostrophe is in the right place. Check the other three."
       ],
       how: [
         "Find each word with an apostrophe and ask what job it does.",
-        "Maria's umbrella: the umbrella belongs to Maria. Haven't is short for have not. She's is short for she is.",
+        "Maria's umbrella: the umbrella belongs to Maria. Hasn't is short for has not. Pia's is short for Pia is.",
         "The two truck's blocked our street: nothing belongs to the trucks, and the word only means more than one. It should be trucks."
       ],
       misconception: "A common mix-up is thinking every word that ends in s needs an apostrophe.",
-      why: "The error is in \"The two truck's blocked our street.\" Trucks only means more than one truck, so it needs no apostrophe. Maria's shows belonging, haven't is short for have not, and she's is short for she is.",
+      why: "The error is in \"The two truck's blocked our street.\" Trucks only means more than one truck, so it needs no apostrophe. Maria's shows belonging, hasn't is short for has not, and Pia's is short for Pia is.",
       like: ["SK-GUM3-1-P4"]
     },
     {
@@ -772,15 +772,15 @@ PP.addLesson({
       hints: [
         "For each sentence, find every word that needs an apostrophe. Then check that it is there and that no plain plural has one.",
         "Say each short word as two words, and ask who owns each thing. Look for a plain plural that has an apostrophe.",
-        "One of the sentences uses it's where a word that shows belonging should go. Check the other four."
+        "One of the sentences puts an apostrophe in a plain plural, with the cups. Check the other four."
       ],
       how: [
         "Check each sentence for a contraction, a word that shows belonging, and a plain plural.",
         "\"My neighbor's dog naps on our porch.\" The dog belongs to the neighbor. \"They've planted tomatoes along the fence.\" They've is short for they have.",
-        "The others are wrong: shouldnt needs an apostrophe (shouldn't), pumpkin's should be pumpkins, and it's should be its."
+        "The others are wrong: shouldnt needs an apostrophe (shouldn't), pumpkin's should be pumpkins, and cup's should be cups."
       ],
-      misconception: "A common mix-up is adding an apostrophe to a plain plural, or using it's where the word shows belonging.",
-      why: "The answers are \"My neighbor's dog naps on our porch.\" and \"They've planted tomatoes along the fence.\" The first shows belonging, and the second is short for they have. The others should say shouldn't, pumpkins and its.",
+      misconception: "A common mix-up is adding an apostrophe to a plain plural, or leaving it out of a contraction.",
+      why: "The answers are \"My neighbor's dog naps on our porch.\" and \"They've planted tomatoes along the fence.\" The first shows belonging, and the second is short for they have. The others should say shouldn't, pumpkins and cups.",
       like: ["SK-GUM3-1-P5"]
     },
     {
@@ -4606,7 +4606,7 @@ PP.addLesson({
             how: [
               "Ask how the second part connects to the first in each sentence.",
               "The cave was not safe, nor was it dry. Nor goes with a no.",
-              "The bell is the reason the class lined up, so the joining word is so. Deep snow is the reason for boots, so for fits. Finishing early on a long test is a surprise, so yet fits."
+              "The bell is the reason the class lined up, so the joining word is so. Deep snow is the reason for boots. The joining word for fits. Finishing early on a long test is a surprise. The joining word yet fits."
             ],
             misconception: "A common mix-up is mixing up for and so. For gives the reason, and so tells the result.",
             why: "Yet goes with the test sentence, because finishing early on a long test is a surprise. Nor goes with the cave sentence. So goes with the bell sentence, because the bell is why the class lined up. For goes with the boots sentence, because the deep snow is the reason."
@@ -4644,7 +4644,7 @@ PP.addLesson({
               "The answers are but and so."
             ],
             misconception: "A common mix-up is choosing the same kind of joining word for both blanks. Each blank connects its parts in a different way.",
-            why: "The answers are but and so. The plan for a huge whale goes against the small square, so but fits first. The small square is why the writer drew a small whale, so so fits second."
+            why: "The answers are but and so. The plan for a huge whale goes against the small square. The joining word but fits first. The small square is why the writer drew a small whale. The joining word so fits second."
           },
           {
             id: "SK-GUM3-4-C10",
@@ -4703,7 +4703,7 @@ PP.addLesson({
             how: [
               "Read each sentence and ask what job the joining word does.",
               "Sentence 2 uses but, sentence 4 uses so, and sentence 7 uses for. Each one fits its sentence.",
-              "Sentence 3 uses yet, but the coach tells the class to do two things together, so and fits better. Sentence 5 uses so, but staying in the shallow end and swimming to the rope are two choices, so or fits better."
+              "Sentence 3 uses yet, but the coach tells the class to do two things together. The joining word and fits better. Sentence 5 uses so, but staying in the shallow end and swimming to the rope are two choices. The joining word or fits better."
             ],
             misconception: "A common mix-up is thinking a joining word is wrong because it is a rare one. The word has to fit the meaning.",
             why: "The wrong joining words are in \"She told us to kick our legs, yet to keep our faces down.\" and \"I could stay in the shallow end, so I could swim to the rope.\" The first should use and, and the second should use or. The joining words in sentences 2, 4 and 7 all fit."
@@ -4864,7 +4864,7 @@ PP.addLesson({
       ],
       how: [
         "Read each sentence and think about what the joining word does.",
-        "Being tired is why Nico napped, so the joining word so fits. Playing violin and cello are two things Rosa does, so and fits.",
+        "Being tired is why Nico napped, so the joining word so fits. Playing violin and cello are two things Rosa does. The joining word and fits.",
         "The others do not fit: water would not lead to wilting, a drink choice needs or and not but, and losing a game is not a choice with cheering."
       ],
       misconception: "A common mix-up is picking a sentence because the joining word is common. Check what the word does.",
@@ -5097,7 +5097,7 @@ PP.addLesson({
       how: [
         "Ask how the second part connects to the first in each sentence.",
         "The shop was not open, nor was the bank. Nor goes with a no.",
-        "Rain is the reason the creek rose, so the joining word is so. Reading now or later is a choice, so or fits. Mia and Leo each packed something, so and adds one more thing."
+        "Rain is the reason the creek rose, so the joining word is so. Reading now or later is a choice. The joining word or fits. Mia and Leo each packed something, so and adds one more thing."
       ],
       misconception: "A common mix-up is mixing up and and so. And adds one more thing, and so tells a result.",
       why: "And goes with the apples sentence, because it adds what Leo packed. Or goes with the reading sentence, because it gives a choice. Nor goes with the shop sentence. So goes with the rain sentence, because the rain is why the creek rose.",
@@ -5136,7 +5136,7 @@ PP.addLesson({
         "The answers are but and so."
       ],
       misconception: "A common mix-up is choosing the same kind of joining word for both blanks. Each blank connects its parts in a different way.",
-      why: "The answers are but and so. The wish to make a pirate goes against having no hat, so but fits first. Having no hat is why they used a paper bag, so so fits second.",
+      why: "The answers are but and so. The wish to make a pirate goes against having no hat. The joining word but fits first. Having no hat is why they used a paper bag. The joining word so fits second.",
       like: ["SK-GUM3-4-C09"]
     },
     {
@@ -5192,7 +5192,7 @@ PP.addLesson({
       how: [
         "Read each sentence and ask what job the joining word does.",
         "Sentence 2 uses but, sentence 5 uses for, and sentence 6 uses but. Each one fits its sentence.",
-        "Sentence 3 uses or, but the hot sun made the line grow, so so fits better. Sentence 4 uses so, but some kids wanted cherry and some wanted lime, so and fits better."
+        "Sentence 3 uses or, but the hot sun made the line grow. The joining word so fits better. Sentence 4 uses so, but some kids wanted cherry and some wanted lime. The joining word and fits better."
       ],
       misconception: "A common mix-up is thinking a joining word is wrong because it is a rare one. The word has to fit the meaning.",
       why: "The wrong joining words are in \"The sun was hot, or the line grew long.\" and \"Some kids wanted cherry, so some kids wanted lime.\" The first should use so, and the second should use and. The joining words in sentences 2, 5 and 6 all fit.",
@@ -5389,7 +5389,7 @@ PP.addLesson({
       ],
       how: [
         "Read each sentence and think about what the joining word does.",
-        "Being hungry is the reason I ate, so the word that fits is so. The piano and the drums are two things Hana can play, so and fits.",
+        "Being hungry is the reason I ate, so the word that fits is so. The piano and the drums are two things Hana can play. The joining word and fits.",
         "The others do not fit: it was cold, so the coat should come along; a choice needs or; and a funny movie is not a choice."
       ],
       misconception: "A common mix-up is picking a sentence because the joining word is common. Check what the word does."
@@ -5893,7 +5893,7 @@ PP.addLesson({
             clue: "Find the group noun in each sentence. A group that acts as one takes the verb for one.",
             hints: [
               "Find the group noun in each sentence. A group that acts as one takes the verb for one.",
-              "Say each verb aloud. The verb for one group usually ends in -s when it tells about now.",
+              "Read each sentence aloud and listen for whether its verb sounds right with one group.",
               "Eat does not end in -s, so it is the verb for many. Decide about the other four."
             ],
             how: [
@@ -6382,7 +6382,7 @@ PP.addLesson({
       clue: "Find the group noun in each sentence. A group that acts as one takes the verb for one.",
       hints: [
         "Find the group noun in each sentence. A group that acts as one takes the verb for one.",
-        "Say each verb aloud. The verb for one group usually ends in -s when it tells about now.",
+        "Read each sentence aloud and listen for whether its verb sounds right with one group.",
         "Sing does not end in -s, so it is the verb for many. Decide about the other four."
       ],
       how: [
@@ -6466,7 +6466,7 @@ PP.addLesson({
         "3.L.GC.1:M:use-collective-and-abstract-nouns"
       ],
       passages: ["p5"],
-      prompt: "Pick the helper verbs that fit the panel and the group.",
+      prompt: "Pick the helper verbs for the panel and the group, both being single units.",
       text: "The panel {0} chosen a winner, and the group {1} cheered.",
       slots: [
         {
@@ -7278,7 +7278,7 @@ PP.addLesson({
             std: ["3.L.GC.1:M:use-reflexive-pronouns"],
             passages: [],
             prompt: "Choose the words that correctly complete the sentence.",
-            text: "Ella taught {0} to knit, and the kitten washed {1} in the sun.",
+            text: "Ella watched {0} in the shop window, and the kitten licked {1} clean.",
             slots: [
               {
                 options: ["herself", "himself", "itself"],
@@ -7289,11 +7289,11 @@ PP.addLesson({
                 answer: 0
               }
             ],
-            clue: "Find who did the teaching and who did the washing. Then pick the word that points back to that same person or thing.",
+            clue: "Find who did the watching and who did the licking. Then pick the word that points back to that same one.",
             hints: [
-              "Find who did the teaching and who did the washing. Then pick the word that points back to that same person or thing.",
+              "Find who did the watching and who did the licking. Then pick the word that points back to that same one.",
               "Decide whether each blank points to a boy, a girl, a thing, or more than one.",
-              "Himself is for a boy, and Ella is a girl. Decide the rest."
+              "Himself is for a boy, and Ella is a girl, so decide the rest by who each blank is about."
             ],
             how: [
               "The first blank points back to Ella, who is one girl.",
@@ -7350,7 +7350,7 @@ PP.addLesson({
             clue: "Alone means with no one else helping. Look for the choice that shows that.",
             hints: [
               "Alone means with no one else helping. Look for the choice that shows that.",
-              "Read each choice and ask who did the work. Only one choice has just Rosa doing it.",
+              "Read each choice and notice whether it names anyone besides Rosa.",
               "Rosa and her cousin means two people worked. Check the other three."
             ],
             how: [
@@ -7812,7 +7812,7 @@ PP.addLesson({
       clue: "Alone means with no one else helping. Look for the choice that shows that.",
       hints: [
         "Alone means with no one else helping. Look for the choice that shows that.",
-        "Read each choice and ask who did the work. Only one choice has just Lila doing it.",
+        "Read each choice and notice whether it names anyone besides Lila.",
         "Lila and a classmate means two people worked. Check the other three."
       ],
       how: [
@@ -9648,7 +9648,7 @@ PP.addLesson({
       text: "Split it like this: {0}",
       slots: [{ options: ["bir- | thday", "birth- | day", "birthd- | ay"], answer: 1 }],
       clue: "Clap the word. Then use the split rules from the lesson: two different consonants, a double letter, or two smaller words. Remember that some letter pairs stay together.",
-      why: "The answer is birth- | day. Birthday is made of two smaller words, birth and day, so the split goes between them. Bir- | thday breaks up th, which makes one sound and stays together. Birthd- | ay does not split between the two beats, birth and day." }
+      why: "The answer is birth- | day. Birthday is made of two smaller words, birth and day, so the split goes between them. Bir- | thday cuts the first small word in half. Birthd- | ay does not split between the two beats, birth and day." }
   ],
   /* B6:core:start */
   /* ---------- Expansion 2026-10-22, batch B6 (GUM Master) ----------
@@ -9755,7 +9755,7 @@ PP.addLesson({
             clue: "Clap the word that is split in sentence 7. Count the beats.",
             hints: [
               "Clap the word that is split in sentence 7. Count the beats.",
-              "For Part A, say the word out loud and clap it. For Part B, think about what your count in Part A shows and which fact matches it.",
+              "For Part A, say the word out loud and clap it. For Part B, compare the four facts one at a time with the word you chose in Part A.",
               "In Part A, moving the hyphen would still leave the word split. Check the other choices."
             ],
             how: [
@@ -9874,7 +9874,7 @@ PP.addLesson({
             stem: [
               "The word bucket will not fit at the end of a line.",
               "Pia split it like this: buck- | et",
-              "Sam split it like this: bu- | cket"
+              "Sam split it like this: buc- | ket"
             ],
             choices: [
               { text: "Only Pia's split is correct.", correct: true },
@@ -9893,7 +9893,7 @@ PP.addLesson({
               "The letters ck make one sound, so they stay together. The split goes after them: buck- | et.",
               "Pia kept ck together, and Sam pulled it apart. The answer is \"Only Pia's split is correct.\""
             ],
-            misconception: "A common mix-up is splitting before the k because the k starts the second beat. The letters ck stay together.",
+            misconception: "A common mix-up is splitting right before the k because the k starts the second beat. The letters ck stay together.",
             why: "The answer is \"Only Pia's split is correct.\" The letters ck make one sound and stay together, so bucket splits as buck- | et. Sam pulled the c and the k apart."
           },
           {
@@ -9974,7 +9974,7 @@ PP.addLesson({
             passages: [],
             prompt: "Ana broke the word ticket as tic- | ket at the end of a line. Which break is the better one? A | mark shows where the line ends.",
             choices: [
-              { text: "ti- | cket" },
+              { text: "ticke- | t" },
               { text: "tic- | ket" },
               { text: "tick- | et", correct: true },
               { text: "t- | icket" }
@@ -9983,15 +9983,15 @@ PP.addLesson({
             hints: [
               "Look for letters that make one sound together. Those letters stay on the same line.",
               "Say ticket and look at the letters on each side of every break. Ask which break pulls a pair of letters apart.",
-              "T- | icket leaves a single letter alone on a line. Check the other three."
+              "Tic- | ket pulls the c and k apart. Check the other three."
             ],
             how: [
               "Say ticket. It has two beats, so it can be split.",
               "The letters ck make one sound, so they stay together. The split goes after them: tick- | et.",
-              "The answer is tick- | et. Tic- | ket and ti- | cket pull the c and k apart, and t- | icket leaves one letter alone."
+              "The answer is tick- | et. Tic- | ket pulls the c and k apart, and ticke- | t and t- | icket each leave one letter alone."
             ],
             misconception: "A common mix-up is splitting before the k. The letters ck make one sound and stay together.",
-            why: "The answer is tick- | et. The letters ck make one sound and stay together, so the split goes after them. Tic- | ket and ti- | cket pull the c and k apart, and t- | icket leaves one letter alone."
+            why: "The answer is tick- | et. The letters ck make one sound and stay together, so the split goes after them. Tic- | ket pulls the c and k apart, and ticke- | t and t- | icket each leave one letter alone."
           },
           {
             id: "SK-GUM3-8-C13",
@@ -10251,7 +10251,7 @@ PP.addLesson({
       clue: "Clap the word that is split in sentence 6. Count the beats.",
       hints: [
         "Clap the word that is split in sentence 6. Count the beats.",
-        "For Part A, say the word and clap it. For Part B, think about what your beat count shows and which fact matches it.",
+        "For Part A, say the word and clap it. For Part B, compare the four facts one at a time with the word you chose in Part A.",
         "In Part A, moving the hyphen would still leave the word split. Check the other choices."
       ],
       how: [
@@ -10368,11 +10368,11 @@ PP.addLesson({
       prompt: "Who broke the word correctly?",
       stem: [
         "Mother does not fit on the first line.",
-        "Lia broke it as mo- | ther.",
+        "Lia broke it as mot- | her.",
         "Omar broke it as moth- | er."
       ],
       choices: [
-        { text: "Lia is right, because a break should come right after a vowel." },
+        { text: "Lia is right, because a break can go after any single letter." },
         { text: "Lia is right, because t and h are two consonants that must be split." },
         { text: "Omar is right, because th makes one sound and stays together.", correct: true },
         { text: "Both are right, because a word can be split in any place." }
@@ -10388,8 +10388,8 @@ PP.addLesson({
         "The letters th make one sound, so they stay together. The split goes after them: moth- | er.",
         "Omar kept th together, and Lia pulled it apart. The answer is \"Omar is right, because th makes one sound and stays together.\""
       ],
-      misconception: "A common mix-up is splitting right after the first vowel. The letters th stay together.",
-      why: "The answer is \"Omar is right, because th makes one sound and stays together.\" Mother splits as moth- | er. Lia pulled the t and the h apart.",
+      misconception: "A common mix-up is splitting between t and h because they are two different letters. The letters th stay together.",
+      why: "The answer is \"Omar is right, because th makes one sound and stays together.\" Mother splits as moth- | er. Lia pulled the t and the h apart, and a break cannot go just anywhere.",
       like: ["SK-GUM3-8-C09"]
     },
     {
@@ -10465,26 +10465,26 @@ PP.addLesson({
         "3.L.GC.1:M:use-hyphens-to-divide-words-at-line-breaks"
       ],
       passages: [],
-      prompt: "Which break of feathers keeps its letter pairs together? Use the bar (|) as the line end.",
+      prompt: "Which break of feathers keeps th together and also falls between the two beats? Use the bar (|) as the line end.",
       choices: [
         { text: "feath- | ers", correct: true },
         { text: "feat- | hers" },
-        { text: "fea- | thers" },
+        { text: "f- | eathers" },
         { text: "feathe- | rs" }
       ],
       clue: "Look for letters that make one sound together. Those letters stay on the same line.",
       hints: [
         "Look for letters that make one sound together. Those letters stay on the same line.",
         "Say feathers and look at the letters on each side of every break. Ask which break pulls a pair apart.",
-        "Feathe- | rs leaves two letters alone on a line. Check the other three."
+        "F- | eathers leaves a single letter alone on a line. Check the other three."
       ],
       how: [
         "Say feathers. It has two beats, so it can be split.",
         "The letters th make one sound, so they stay together. The split goes after them: feath- | ers.",
-        "The answer is feath- | ers. Feat- | hers and fea- | thers pull the t and h apart, and feathe- | rs leaves two letters alone."
+        "The answer is feath- | ers. Feat- | hers pulls the t and h apart, f- | eathers leaves one letter alone, and feathe- | rs does not fall between the two beats."
       ],
       misconception: "A common mix-up is splitting between the t and the h. The letters th make one sound and stay together.",
-      why: "The answer is feath- | ers. The letters th make one sound and stay together, so the split goes after them. Feat- | hers and fea- | thers pull the t and h apart, and feathe- | rs leaves two letters alone.",
+      why: "The answer is feath- | ers. The letters th make one sound and stay together, so the split goes after them. Feat- | hers pulls the t and h apart, f- | eathers leaves one letter alone, and feathe- | rs does not fall between the two beats.",
       like: ["SK-GUM3-8-C12"]
     },
     {
@@ -10652,9 +10652,9 @@ PP.addLesson({
       how: [
         "Say the whole word: birthday.",
         "It is made of the smaller words birth and day, so the split goes between them.",
-        "The answer is birth- | day. Bir- | thday breaks up th."
+        "The answer is birth- | day. Bir- | thday cuts the first small word in half."
       ],
-      misconception: "A common mix-up is splitting th apart. The letters th make one sound and stay together."
+      misconception: "A common mix-up is splitting in the middle of a small word. Birthday is birth and day, so the split goes between them."
     }
   },
   /* B6:core:end */

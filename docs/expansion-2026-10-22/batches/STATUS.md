@@ -49,7 +49,11 @@
 | B4 | 3.T.SS.1.c | ACCEPTED | B4-review-SS1bc.md (third review) |
 | B4 | 3.T.SS.2.b | ACCEPTED | B4-review-SS1d2b.md (second review) |
 | B4 | 3.T.SS.1.d | ACCEPTED | B4-review-SS1d2b.md (third review; open SHOULDs: key-longest cue in C10/C01/S01/S03, S14 multiset 0.23, C07/C08 "jobs" wording, C04 hay) |
-| B4–B9 | see 04-content-plan.md | NOT STARTED | — |
+| B9 | 3.F.P.4.a | ACCEPTED | Third independent review ACCEPT; open SHOULDs in B9-review.md (P6 h2, S15) |
+| B9 | 3.F.P.4.c | ACCEPTED | Third independent review ACCEPT; open SHOULDs in B9-review.md (near-twin pairs, weak like mappings) |
+| B9 | 3.F.P.4.b | NOT ACCEPTED: CHANGES REQUIRED (third review) | B9-review.md T-items |
+| B9 | 3.F.H.3.a | NOT ACCEPTED: CHANGES REQUIRED (third review) | B9-review.md T-items |
+| B4–B9 | see 04-content-plan.md | B4, B5, B6 (partly), B9 (partly) done; B7, B8 in progress | see rows above |
 | B6 | 3.L.GC.1:M:use-apostrophes-in-contractions-and-singular-pos | NOT ACCEPTED: awaiting independent review | B6-author-log.md; authored, not reviewed |
 | B6 | 3.L.GC.1:M:form-and-use-irregular-plural-nouns | ACCEPTED | Third independent review ACCEPT; see B6-review.md and B6-author-log.md (open NOTEs/SHOULDs listed there) |
 | B6 | 3.L.GC.1:M:form-and-use-the-past-tense-of-irregular-verbs | ACCEPTED | Third independent review ACCEPT; see B6-review.md and B6-author-log.md (open NOTEs/SHOULDs listed there) |

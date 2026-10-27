@@ -6032,7 +6032,180 @@ PP.addLesson({
     }
   ],
   parent: "Make a quick sorting game with things in the kitchen: say a noun (cup, glass, dish, spoon) and have your child say and spell the plural, then tell you whether it took -s or -es. A few words break the pattern (quiz becomes quizzes, stomach becomes stomachs), so check a dictionary together if your child asks.",
-  passages: [],
+  passages: [
+    /* B7a:passages:start */
+    {
+      id: "p1",
+      title: "Our Weekend Campout",
+      byline: "A third grader's draft",
+      genre: "Student draft (narrative)",
+      draft: true,
+      paragraphs: [
+        [
+          "(1) Our family went camping at a state park last weekend.",
+          "(2) We set up two tentes near a quiet stream.",
+          "(3) Dad packed six pouchs of trail mix in a big cooler.",
+          "(4) My sister gathered branchs for the campfire."
+        ],
+        [
+          "(5) I found three smooth rocks by the water.",
+          "(6) We roasted marshmallows on long sticks.",
+          "(7) The flames made orange sparks that floated up."
+        ],
+        [
+          "(8) After dinner, we scrubbed the pans with sand.",
+          "(9) My brother made two big splashs in the stream.",
+          "(10) We watched the ashes glow after dark."
+        ],
+        [
+          "(11) At night we counted a hundred stars.",
+          "(12) Everyone slept soundly inside the warm tents.",
+          "(13) We hope to go on more camping trips soon."
+        ]
+      ]
+    },
+    {
+      id: "p2",
+      title: "Craft Fair Saturday",
+      byline: "A third grader's draft",
+      genre: "Student draft (informational)",
+      draft: true,
+      paragraphs: [
+        [
+          "(1) Our town holds a craft fair every spring.",
+          "(2) Neighbors set up tables under bright blue tents.",
+          "(3) One woman sold quilts with colorful patchs.",
+          "(4) A man carved wooden birds with sharp tools."
+        ],
+        [
+          "(5) Mrs. Hill tied flowers into small bunchs.",
+          "(6) I bought two candlees that smelled like pine.",
+          "(7) My little brother wanted three whistles.",
+          "(8) Dad found a stand with old dresses and hats."
+        ],
+        [
+          "(9) Kids painted faces and made paper crowns.",
+          "(10) The library offered free art classes in the back room.",
+          "(11) The band played songs on the stage.",
+          "(12) We took home a bag full of treats and two new mugs.",
+          "(13) Everyone voted for the best table."
+        ]
+      ]
+    },
+    {
+      id: "p3",
+      title: "Class Trip to the Science Museum",
+      byline: "A third grader's draft",
+      genre: "Student draft (narrative)",
+      draft: true,
+      paragraphs: [
+        [
+          "(1) On Monday our class visited the science museum.",
+          "(2) A guide led us past tables covered with strange rocks.",
+          "(3) Some rocks had sharp edges and sparkling crystals.",
+          "(4) We used lenses to look at tiny fossils."
+        ],
+        [
+          "(5) Then a worker showed us how to flip the switchs on a model.",
+          "(6) Each switch turned on a different light.",
+          "(7) In the next room, a machine measured our hands in inchs.",
+          "(8) My hand was longer than I thought."
+        ],
+        [
+          "(9) The guide explained that gases are all around us.",
+          "(10) She blew soap bubbles to show us how one kind works.",
+          "(11) I watched the bubbles float past the windows.",
+          "(12) After lunch, we wrote notes about the best exhibits.",
+          "(13) We cannot wait to visit again."
+        ]
+      ]
+    },
+    {
+      id: "p4",
+      title: "Tennis Camp",
+      byline: "A third grader's draft",
+      genre: "Student draft (narrative)",
+      draft: true,
+      paragraphs: [
+        [
+          "(1) Last summer I joined a tennis camp at the city park.",
+          "(2) Each morning, our coachs gave us new drills.",
+          "(3) We started with stretchs to warm up our arms.",
+          "(4) Then we practiced hitting balls across the net."
+        ],
+        [
+          "(5) I carried my racketes in a long green bag.",
+          "(6) My friend Omar forgot his towels, so I shared mine.",
+          "(7) By noon the courts felt hot as ovens.",
+          "(8) We drank cold water from big coolers."
+        ],
+        [
+          "(9) In the afternoon, we played short matchs against other campers.",
+          "(10) I won two of the three games.",
+          "(11) On the last day, every camper got a certificate.",
+          "(12) I hung mine on the wall above my desk."
+        ]
+      ]
+    },
+    {
+      id: "p5",
+      title: "Our Classroom Garden",
+      byline: "A third grader's draft",
+      genre: "Student draft (narrative)",
+      draft: true,
+      paragraphs: [
+        [
+          "(1) This spring our class planted a garden behind the school.",
+          "(2) Mrs. Rivera brought seeds in tiny paper cups.",
+          "(3) We dug holes with small shovels.",
+          "(4) Each group planted two rowes of beans."
+        ],
+        [
+          "(5) I watered the plants with a green hose.",
+          "(6) Soon, tiny sprouts pushed up through the dirt.",
+          "(7) Two bunchs of weeds grew by the fence.",
+          "(8) We pulled them out with gloves on."
+        ],
+        [
+          "(9) Two other classs came to see our work.",
+          "(10) They asked us many questions about the beans.",
+          "(11) I told them how roots grow under the dirt.",
+          "(12) We felt proud of our hard work.",
+          "(13) The sun shone warm on our backs.",
+          "(14) Mrs. Rivera took pictures of us."
+        ]
+      ]
+    },
+    {
+      id: "p6",
+      title: "Cleaning the Garage",
+      byline: "A third grader's draft",
+      genre: "Student draft (narrative)",
+      draft: true,
+      paragraphs: [
+        [
+          "(1) On Saturday my dad and I cleaned the garage.",
+          "(2) We found old toys, bike tires and paint cans.",
+          "(3) Dad swept the dusty corners with a stiff broom.",
+          "(4) I sorted the screws and nails into small jars."
+        ],
+        [
+          "(5) Dad hung his wrenchs on hooks above the table.",
+          "(6) He kept three hammeres in a red toolbox.",
+          "(7) Under the ladder, I discovered two lost marbles.",
+          "(8) I rolled them across the floor to test the slope."
+        ],
+        [
+          "(9) Mom brought cold drinks and two plates of cookies.",
+          "(10) We ate the cookies on the front steps.",
+          "(11) By dinner, the garage looked brand new.",
+          "(12) The old radio still played music.",
+          "(13) We laughed at our dusty faces."
+        ]
+      ]
+    }
+    /* B7a:passages:end */
+  ],
   practice: [
     { id: "SK-GUM1-5-P1", type: "dropdown", points: 1, dok: 1, passages: [],
       prompt: "Choose the word that correctly completes the sentence.",
@@ -6084,6 +6257,1163 @@ PP.addLesson({
       clue: "Both blanks need a word for more than one. Check the last letter of each noun to choose -s or -es.",
       why: "The answers are cups and glasses. Cup ends in p, so it just adds -s. Glass ends in s, so it adds -es." }
   ],
+  /* B7a:core:start */
+  /* ---------- Expansion 2026-10-22, batch B7a (GUM Reinforce, first half) ----------
+     core: fifteen items in three sets of five. { ref } reuses a practice item; the other practice items stay in Practice Together.
+     Passages are used only by core and the similar bank; none is used by test.
+     Author log: docs/expansion-2026-10-22/batches/B7a-author-log.md. NOT ACCEPTED: needs independent review. */
+  core: {
+    rev: "1",
+    sets: [
+      {
+        title: "Set 1",
+        items: [
+          {
+            ref: "SK-GUM1-5-P3"
+          },
+          {
+            ref: "SK-GUM1-5-P4"
+          },
+          {
+            id: "SK-GUM1-5-C03",
+            type: "mc",
+            points: 1,
+            dok: 2,
+            std: [
+              "3.L.GC.1:R:form-regular-plural-nouns-with-s-or-es"
+            ],
+            passages: ["p1"],
+            prompt: "Sentence 3 has a mistake in a plural noun. Which revision fixes it?",
+            choices: [
+              {
+                text: "Dad packed six pouches of trail mix in a big cooler.",
+                correct: true
+              },
+              {
+                text: "Dad packed six pouch's of trail mix in a big cooler."
+              },
+              {
+                text: "Dad packed six pouchies of trail mix in a big cooler."
+              },
+              {
+                text: "Dad packed six pouchs of trail mix in a big cooler."
+              }
+            ],
+            clue: "Find the noun that means more than one in sentence 3. Look at its last letters.",
+            hints: [
+              "Find the noun that means more than one in sentence 3. Look at its last letters.",
+              "Say the plural of that noun out loud. Listen for an extra beat at the end.",
+              "An apostrophe shows that something belongs to a noun. It does not make a noun mean more than one, so one choice can be ruled out."
+            ],
+            how: [
+              "Find the plural noun in sentence 3: pouchs. The single noun is pouch.",
+              "Pouch ends in ch, and nouns that end in ch add -es. Say it: pouch-es.",
+              "The answer is \"Dad packed six pouches of trail mix in a big cooler.\" Pouch's uses an apostrophe, pouchies is not the plural, and pouchs is missing the e."
+            ],
+            misconception: "A common mix-up is adding only -s to every noun. Look at the last letters first.",
+            why: "The answer is \"Dad packed six pouches of trail mix in a big cooler.\" Pouch ends in ch, so it adds -es. An apostrophe does not make a plural, and pouchies is not the plural form."
+          },
+          {
+            id: "SK-GUM1-5-C04",
+            type: "dropdown",
+            points: 1,
+            dok: 2,
+            std: [
+              "3.L.GC.1:R:form-regular-plural-nouns-with-s-or-es"
+            ],
+            passages: ["p1"],
+            prompt: "Sentence 9 needs a plural noun. Choose the word that fixes it.",
+            text: "My brother made two big {0} in the stream.",
+            slots: [
+              {
+                options: ["splashes","splashs","splashies"],
+                answer: 0
+              }
+            ],
+            clue: "Two means more than one. Look at the last letters of the noun before you add an ending.",
+            hints: [
+              "Two means more than one. Look at the last letters of the noun before you add an ending.",
+              "Say each choice out loud. Listen for the extra beat that some plurals have at the end.",
+              "One choice is not a real plural form of this noun, so it can be ruled out."
+            ],
+            how: [
+              "Find the noun: splash. Two means more than one, so the noun needs a plural.",
+              "Splash ends in sh, and nouns that end in sh add -es. Say it: splash-es.",
+              "The answer is splashes. Splashs is missing the e, and splashies is not the plural form."
+            ],
+            misconception: "A common mix-up is adding only -s because most nouns take it. Check the last letters first.",
+            why: "The answer is splashes. Splash ends in sh, so it adds -es. Splashs leaves out the e, and splashies is not the plural form."
+          },
+          {
+            id: "SK-GUM1-5-C05",
+            type: "mc",
+            points: 1,
+            dok: 3,
+            std: [
+              "3.L.GC.1:R:form-regular-plural-nouns-with-s-or-es"
+            ],
+            passages: ["p1"],
+            prompt: "Sentence 10 uses ashes and sentence 12 uses tents. Why does one plural add -es while the other adds only -s?",
+            choices: [
+              {
+                text: "Ash ends in sh, so it adds -es, but tent ends in t, so it adds only -s.",
+                correct: true
+              },
+              {
+                text: "Ashes is a longer word than tents, so its plural needs a longer ending."
+              },
+              {
+                text: "Tent ends in a letter that sounds like s, so a plural of tent needs no -es."
+              },
+              {
+                text: "Both words end in letters other than s, so both of them must add -es."
+              }
+            ],
+            clue: "Compare the last letters of ash and tent. Look at how each one ends.",
+            hints: [
+              "Compare the last letters of ash and tent. Look at how each one ends.",
+              "Think about the list of endings that add -es. Check whether each word ends that way.",
+              "The length of a word does not decide which ending it takes, so one reason can be ruled out."
+            ],
+            how: [
+              "Look at the last letters: ash ends in sh, and tent ends in t.",
+              "Nouns that end in s, x, z, ch or sh add -es. Other nouns add only -s.",
+              "The answer is \"Ash ends in sh, so it adds -es, but tent ends in t, so it adds only -s.\" The length of the word does not matter."
+            ],
+            misconception: "A common mix-up is thinking every plural needs -es, or that the length of a word decides the ending. The last letters decide.",
+            why: "The answer is \"Ash ends in sh, so it adds -es, but tent ends in t, so it adds only -s.\" Ash ends in sh, which adds -es, and tent ends in t, which adds only -s. The length of a word does not decide the ending."
+          }
+        ]
+      },
+      {
+        title: "Set 2",
+        items: [
+          {
+            id: "SK-GUM1-5-C06",
+            type: "hottext",
+            points: 2,
+            dok: 2,
+            std: [
+              "3.L.GC.1:R:form-regular-plural-nouns-with-s-or-es"
+            ],
+            passages: ["p1"],
+            prompt: "Select the TWO shown sentences with a plural noun that needs -es but ends with only -s.",
+            targets: ["p1:1:3","p1:1:4","p1:2:1","p1:2:2","p1:3:1"],
+            answer: ["p1:1:3","p1:1:4"],
+            pick: 2,
+            clue: "Find each noun that means more than one. Check whether the single noun ends in s, x, z, ch or sh.",
+            hints: [
+              "Find each noun that means more than one. Check whether the single noun ends in s, x, z, ch or sh.",
+              "Read each shown sentence and say its plural noun out loud. Listen for a missing beat.",
+              "Sentence 8 has a plural noun that ends in n and s, so it can be ruled out."
+            ],
+            how: [
+              "Find the plural noun in each shown sentence and look at the single noun's last letters.",
+              "Pouchs in sentence 3 and branchs in sentence 4 come from nouns that end in ch, so they need -es.",
+              "Rocks, marshmallows, sticks and pans come from nouns that do not end in s, x, z, ch or sh, so -s is right."
+            ],
+            misconception: "A common mix-up is picking every plural noun. Only a noun that ends in s, x, z, ch or sh needs -es.",
+            why: "The answers are sentences 3 and 4: \"Dad packed six pouchs of trail mix in a big cooler.\" and \"My sister gathered branchs for the campfire.\". Pouch and branch both end in ch, so they need -es. The other shown sentences have nouns that correctly add only -s."
+          },
+          {
+            id: "SK-GUM1-5-C07",
+            type: "ebsr",
+            points: 2,
+            dok: 3,
+            std: [
+              "3.L.GC.1:R:form-regular-plural-nouns-with-s-or-es"
+            ],
+            passages: ["p1"],
+            prompt: "This question has two parts. Answer Part A, then Part B.",
+            partA: {
+              prompt: "What is wrong with the plural noun in sentence 2?",
+              choices: [
+                {
+                  text: "Tent does not end in s, x, z, ch or sh, so it needs only -s.",
+                  correct: true
+                },
+                {
+                  text: "Tent ends in ch, so it should add -es when it is plural."
+                },
+                {
+                  text: "Tent should have an apostrophe before the s to show more than one."
+                },
+                {
+                  text: "Tent is already a plural noun, so it needs no ending at all."
+                }
+              ]
+            },
+            partB: {
+              prompt: "Which revision of sentence 2 fixes the mistake?",
+              choices: [
+                {
+                  text: "We set up two tents near a quiet stream.",
+                  correct: true
+                },
+                {
+                  text: "We set up two tent's near a quiet stream."
+                },
+                {
+                  text: "We set up two tentses near a quiet stream."
+                },
+                {
+                  text: "We set up two tentes near a quiet stream."
+                }
+              ]
+            },
+            clue: "Look at the last letters of the single noun before the ending.",
+            hints: [
+              "Look at the last letters of the single noun before the ending.",
+              "For Part A, check whether tent ends in s, x, z, ch or sh. For Part B, say each revision out loud.",
+              "An apostrophe does not make a noun mean more than one, so one choice in Part B can be ruled out."
+            ],
+            how: [
+              "Part A: tent ends in t, which is not s, x, z, ch or sh. The answer is \"Tent does not end in s, x, z, ch or sh, so it needs only -s.\"",
+              "Part B: the plural is tents. The answer is \"We set up two tents near a quiet stream.\"",
+              "The other revisions add an apostrophe, add too many letters, or keep the mistake."
+            ],
+            misconception: "A common mix-up is adding -es to every noun to be safe. Only nouns that end in s, x, z, ch or sh need it.",
+            why: "Part A: \"Tent does not end in s, x, z, ch or sh, so it needs only -s.\" Part B: \"We set up two tents near a quiet stream.\" Tent ends in t, so it adds only -s. The other revisions add an apostrophe or extra letters."
+          },
+          {
+            id: "SK-GUM1-5-C08",
+            type: "ms",
+            points: 2,
+            dok: 2,
+            std: [
+              "3.L.GC.1:R:form-regular-plural-nouns-with-s-or-es"
+            ],
+            passages: [],
+            prompt: "Choose the TWO sentences with plural nouns that are spelled correctly.",
+            pick: 2,
+            choices: [
+              {
+                text: "We swept the porches before the storm.",
+                correct: true
+              },
+              {
+                text: "Dan lined up six markers on the desk.",
+                correct: true
+              },
+              {
+                text: "Lia carried two big cratees to the garage."
+              },
+              {
+                text: "A rain cloud dropped three splashs on the roof."
+              },
+              {
+                text: "The kids gave out ten ribbones at the fair."
+              }
+            ],
+            clue: "Find each plural noun. Check whether the single noun ends in s, x, z, ch or sh.",
+            hints: [
+              "Find each plural noun. Check whether the single noun ends in s, x, z, ch or sh.",
+              "Say each plural out loud. Listen for an extra beat at the end and check the spelling.",
+              "One choice adds -es to a noun that ends in n, so it can be ruled out."
+            ],
+            how: [
+              "Find each plural noun and look at the last letters of the single noun.",
+              "Porch ends in ch, so porches is right. Marker ends in r, so markers is right.",
+              "The answers are \"We swept the porches before the storm.\" and \"Dan lined up six markers on the desk.\" Cratees, splashs and ribbones are spelled wrong."
+            ],
+            misconception: "A common mix-up is picking the sentences that look simple. Check the ending of every plural noun.",
+            why: "The answers are \"We swept the porches before the storm.\" and \"Dan lined up six markers on the desk.\". Porches and markers follow the endings rules. The other plurals leave out the e or add letters they do not need."
+          },
+          {
+            id: "SK-GUM1-5-C09",
+            type: "mc",
+            points: 1,
+            dok: 1,
+            std: [
+              "3.L.GC.1:R:form-regular-plural-nouns-with-s-or-es"
+            ],
+            passages: [],
+            prompt: "Which noun needs -es to mean more than one?",
+            choices: [
+              {
+                text: "ranch",
+                correct: true
+              },
+              {
+                text: "cabin"
+              },
+              {
+                text: "mitten"
+              },
+              {
+                text: "ladder"
+              }
+            ],
+            clue: "Look at the last letters of each noun.",
+            hints: [
+              "Look at the last letters of each noun.",
+              "Check each noun against the list of endings that add -es: s, x, z, ch and sh.",
+              "Cabin, mitten and ladder end in n, n and r, so check them against the list."
+            ],
+            how: [
+              "Look at the last letters of each noun.",
+              "Ranch ends in ch, and nouns that end in ch add -es. Say it: ranch-es.",
+              "The answer is ranch. Cabin, mitten and ladder end in n, n and r, so they add only -s."
+            ],
+            misconception: "A common mix-up is choosing the longest word. The last letters decide the ending.",
+            why: "The answer is \"ranch\" Ranch ends in ch, so it adds -es. The other nouns end in n and r, so they add only -s."
+          },
+          {
+            id: "SK-GUM1-5-C10",
+            type: "mc",
+            points: 1,
+            dok: 3,
+            std: [
+              "3.L.GC.1:R:form-regular-plural-nouns-with-s-or-es"
+            ],
+            passages: ["p2"],
+            prompt: "Kim thinks candlees in sentence 6 is correct, since candle ends in e and so needs -es. Is Kim right?",
+            choices: [
+              {
+                text: "No. Candle does not end in s, x, z, ch or sh, so it adds only -s.",
+                correct: true
+              },
+              {
+                text: "Yes. Any noun that ends in e needs -es to mean more than one."
+              },
+              {
+                text: "Yes. A plural is correct when it has more letters than the single noun."
+              },
+              {
+                text: "No. Candle ends in ch, so it should add -es, not just -s."
+              }
+            ],
+            clue: "Look at the last letters of candle, not at the whole word.",
+            hints: [
+              "Look at the last letters of candle, not at the whole word.",
+              "Check whether candle ends in one of the endings that add -es.",
+              "One choice says candle ends in ch. Look at the word again."
+            ],
+            how: [
+              "Look at the last letters of candle. It ends in le, with the letter e at the end.",
+              "Nouns that add -es end in s, x, z, ch or sh. Candle does not.",
+              "The answer is \"No. Candle does not end in s, x, z, ch or sh, so it adds only -s.\" The plural is candles."
+            ],
+            misconception: "A common mix-up is adding -es whenever a noun ends in the letter e. Check for s, x, z, ch and sh.",
+            why: "The answer is \"No. Candle does not end in s, x, z, ch or sh, so it adds only -s.\" Candle does not end in s, x, z, ch or sh, so it adds only -s. The plural is candles."
+          }
+        ]
+      },
+      {
+        title: "Set 3",
+        items: [
+          {
+            id: "SK-GUM1-5-C11",
+            type: "hottext",
+            points: 2,
+            dok: 2,
+            std: [
+              "3.L.GC.1:R:form-regular-plural-nouns-with-s-or-es"
+            ],
+            passages: ["p2"],
+            prompt: "Select the TWO shown sentences with a plural noun that is spelled wrong.",
+            targets: ["p2:1:3","p2:1:4","p2:2:2","p2:2:4","p2:3:1"],
+            answer: ["p2:1:3","p2:2:2"],
+            pick: 2,
+            clue: "Find each plural noun and think about its single noun. Check the ending against what that noun needs.",
+            hints: [
+              "Find each plural noun and think about its single noun. Check the ending against what that noun needs.",
+              "Say each plural out loud. A plural may be missing a beat or have extra letters.",
+              "Sentence 9 has a plural that follows the rule, so it can be ruled out."
+            ],
+            how: [
+              "Find each plural noun and check the ending that its single noun needs.",
+              "Patchs in sentence 3 should be patches, because patch ends in ch.",
+              "Candlees in sentence 6 should be candles, because candle does not need -es.",
+              "Birds, dresses and faces are spelled correctly."
+            ],
+            misconception: "A common mix-up is thinking a mistake always means a missing e. A plural can also have extra letters.",
+            why: "The answers are sentences 3 and 6: \"One woman sold quilts with colorful patchs.\" and \"I bought two candlees that smelled like pine.\". Patchs leaves out an e, and candlees adds letters it does not need. Birds, dresses and faces are all spelled correctly."
+          },
+          {
+            id: "SK-GUM1-5-C12",
+            type: "dropdown",
+            points: 1,
+            dok: 2,
+            std: [
+              "3.L.GC.1:R:form-regular-plural-nouns-with-s-or-es"
+            ],
+            passages: ["p3"],
+            prompt: "Sentence 5 has a plural noun that is spelled wrong. Choose the word that fixes it.",
+            text: "Then a worker showed us how to flip the {0} on a model.",
+            slots: [
+              {
+                options: ["switches","switchs","switchies"],
+                answer: 0
+              }
+            ],
+            clue: "Look at the last letters of the single noun before you choose an ending.",
+            hints: [
+              "Look at the last letters of the single noun before you choose an ending.",
+              "Say each choice out loud and listen for the extra beat at the end.",
+              "One choice is not a real plural form of this noun, so it can be ruled out."
+            ],
+            how: [
+              "Find the noun: switch. The sentence needs the plural.",
+              "Switch ends in ch, so it adds -es. Say it: switch-es.",
+              "The answer is switches. Switchs leaves out the e, and switchies is not the plural form."
+            ],
+            misconception: "A common mix-up is hearing the extra beat and still writing only -s. Say the plural out loud and write what you hear.",
+            why: "The answer is switches. Switch ends in ch, so it adds -es. Switchs leaves out the e, and switchies is not the plural form."
+          },
+          {
+            id: "SK-GUM1-5-C13",
+            type: "dropdown",
+            points: 2,
+            dok: 2,
+            std: [
+              "3.L.GC.1:R:form-regular-plural-nouns-with-s-or-es"
+            ],
+            passages: [],
+            prompt: "Choose the correct plural noun for each blank.",
+            text: "The store sold three {0} and two {1} on Friday.",
+            slots: [
+              {
+                options: ["couches","couchs","couchies"],
+                answer: 0
+              },
+              {
+                options: ["pillows","pillowes","pillow"],
+                answer: 0
+              }
+            ],
+            clue: "Each blank follows a number word, so each needs a plural. Check the last letters of each noun.",
+            hints: [
+              "Each blank follows a number word, so each needs a plural. Check the last letters of each noun.",
+              "Say the first noun with each ending, then the second noun. Listen for an extra beat.",
+              "One noun ends in w, so it does not need the extra beat that -es gives."
+            ],
+            how: [
+              "The first blank follows three, so it needs a plural. Couch ends in ch, so it adds -es.",
+              "The second blank follows two, so it needs a plural. Pillow ends in w, so it adds only -s.",
+              "The answers are couches and pillows."
+            ],
+            misconception: "A common mix-up is using the same ending for both blanks. Check the last letters of each noun.",
+            why: "The answers are couches and pillows. Couch ends in ch, so it adds -es. Pillow ends in w, so it adds only -s."
+          },
+          {
+            id: "SK-GUM1-5-C14",
+            type: "hottext",
+            points: 1,
+            dok: 2,
+            std: [
+              "3.L.GC.1:R:form-regular-plural-nouns-with-s-or-es"
+            ],
+            passages: [],
+            stem: "A reporter writes four sentences for the school paper.",
+            prompt: "Select the sentence with a plural noun spelled wrong.",
+            options: [
+              "The club sold cookies and lemonade on Friday afternoon.",
+              "The tailor sewed six stitchs on the torn sleeve.",
+              "Parents brought snacks for every grade in the school.",
+              "Ms. Hall handed out colorful ribbons to all the winners."
+            ],
+            answer: [1],
+            pick: 1,
+            clue: "Find each plural noun. Check whether the single noun ends in s, x, z, ch or sh.",
+            hints: [
+              "Find each plural noun. Check whether the single noun ends in s, x, z, ch or sh.",
+              "Read the sentences one at a time and say each plural out loud.",
+              "The sentence about Ms. Hall has a plural that follows the usual rule of adding -s, so it can be ruled out."
+            ],
+            how: [
+              "Find each plural noun and check the last letters of the single noun.",
+              "Stitch ends in ch, so the plural is stitches, not stitchs.",
+              "Cookies, snacks and ribbons are spelled correctly."
+            ],
+            misconception: "A common mix-up is checking only the first plural in a sentence. Look at every noun that means more than one.",
+            why: "The answer is \"The tailor sewed six stitchs on the torn sleeve.\". Stitch ends in ch, so it needs -es. The plurals in the other sentences are spelled correctly."
+          },
+          {
+            id: "SK-GUM1-5-C15",
+            type: "mc",
+            points: 1,
+            dok: 3,
+            std: [
+              "3.L.GC.1:R:form-regular-plural-nouns-with-s-or-es"
+            ],
+            passages: [],
+            prompt: "Ben says, \"Add -es to any noun that ends in a consonant.\" Which pair shows that Ben is wrong?",
+            choices: [
+              {
+                text: "jar becomes jars",
+                correct: true
+              },
+              {
+                text: "wax becomes waxes"
+              },
+              {
+                text: "gas becomes gases"
+              },
+              {
+                text: "tax becomes taxes"
+              }
+            ],
+            clue: "To show that a rule is wrong, find an example that breaks it. Look at how each noun ends.",
+            hints: [
+              "To show that a rule is wrong, find an example that breaks it. Look at how each noun ends.",
+              "Find the noun that ends in a consonant but does not add -es.",
+              "Wax, gas and tax end in x, s and x, which are on the list of endings that add -es."
+            ],
+            how: [
+              "Ben's rule says every noun that ends in a consonant adds -es. Look for a noun that ends in a consonant and adds only -s.",
+              "Jar ends in r, which is a consonant, and the plural is jars. That breaks Ben's rule.",
+              "The answer is \"jar becomes jars\". Wax, gas and tax end in x or s, so they do add -es."
+            ],
+            misconception: "A common mix-up is thinking every consonant at the end calls for -es. Only s, x, z, ch and sh do.",
+            why: "The answer is \"jar becomes jars\" Jar ends in a consonant but adds only -s, so Ben's rule is wrong. Wax, gas and tax follow the real rule."
+          }
+        ]
+      }
+    ]
+  },
+  similar: [
+    {
+      id: "SK-GUM1-5-S01",
+      type: "mc",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.L.GC.1:R:form-regular-plural-nouns-with-s-or-es"
+      ],
+      passages: [],
+      prompt: "Which sentence has a plural noun with a spelling mistake?",
+      choices: [
+        {
+          text: "The camera made two bright flashs.",
+          correct: true
+        },
+        {
+          text: "Rita grew four pumpkins this year."
+        },
+        {
+          text: "We hung seven flags along the fences."
+        },
+        {
+          text: "Miguel carved three masks for the play."
+        }
+      ],
+      clue: "Check each noun that means more than one. Look at its last letters before the ending.",
+      hints: [
+        "Check each noun that means more than one. Look at its last letters before the ending.",
+        "Say each plural out loud. Listen for an extra beat at the end.",
+        "Mask ends in k, so its plural in one sentence can be trusted."
+      ],
+      how: [
+        "Find each plural noun and check the single noun's last letters.",
+        "Flash ends in sh, so the plural is flashes, not flashs.",
+        "Pumpkins, flags, fences and masks are spelled correctly. The answer is \"The camera made two bright flashs.\""
+      ],
+      misconception: "A common mix-up is trusting the sentence that sounds the most natural. Check every plural ending.",
+      why: "The answer is \"The camera made two bright flashs.\" Flash ends in sh, so it needs -es. The other plurals are spelled correctly.",
+      like: ["SK-GUM1-5-P3"]
+    },
+    {
+      id: "SK-GUM1-5-S02",
+      type: "hottext",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.L.GC.1:R:form-regular-plural-nouns-with-s-or-es"
+      ],
+      passages: [],
+      prompt: "Tap the TWO sentences that spell the plural noun correctly.",
+      options: [
+        "Two classes visited the pond today.",
+        "She tied bright ribbons around the gifts.",
+        "The team lost three matchs this season.",
+        "A hen laid six eggses in the nest.",
+        "I found two patchs on my jacket."
+      ],
+      answer: [0,1],
+      pick: 2,
+      clue: "Check the ending of each plural noun against its single noun.",
+      hints: [
+        "Check the ending of each plural noun against its single noun.",
+        "Say each plural out loud and listen for the extra beat.",
+        "One sentence has a plural that adds letters to a noun ending in g."
+      ],
+      how: [
+        "Check the single noun's last letters for each plural.",
+        "Class ends in s, so classes is right. Ribbon ends in n, so ribbons is right.",
+        "Matchs and patchs leave out the e, and eggses adds extra letters."
+      ],
+      misconception: "A common mix-up is picking plurals that look longer. Check the last letters of the single noun.",
+      why: "The answers are \"Two classes visited the pond today.\" and \"She tied bright ribbons around the gifts.\". Classes and ribbons follow the rules. The other plurals leave out an e or add extra letters.",
+      like: ["SK-GUM1-5-P4"]
+    },
+    {
+      id: "SK-GUM1-5-S03",
+      type: "mc",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.L.GC.1:R:form-regular-plural-nouns-with-s-or-es"
+      ],
+      passages: ["p4"],
+      prompt: "Which version of number 2 repairs the misspelled noun?",
+      choices: [
+        {
+          text: "Each morning, our coaches gave us new drills.",
+          correct: true
+        },
+        {
+          text: "Each morning, our coach's gave us new drills."
+        },
+        {
+          text: "Each morning, our coachies gave us new drills."
+        },
+        {
+          text: "Each morning, our coachs gave us new drills."
+        }
+      ],
+      clue: "Pick out the noun that names more than one person in number 2. Check its last letters.",
+      hints: [
+        "Pick out the noun that names more than one person in number 2. Check its last letters.",
+        "Say the plural out loud and listen for an extra beat.",
+        "A mark above the line shows ownership, not a group, so one choice can be set aside."
+      ],
+      how: [
+        "The noun is coachs, and the single noun is coach.",
+        "Coach ends in ch, so it adds -es. Say it: coach-es.",
+        "The answer is \"Each morning, our coaches gave us new drills.\" Coach's uses an apostrophe, and coachies is not the plural."
+      ],
+      misconception: "A common mix-up is adding just -s to a noun that sounds like it has an extra beat. Say it out loud.",
+      why: "The answer is \"Each morning, our coaches gave us new drills.\" Coach ends in ch, so it adds -es. An apostrophe does not make a plural, and coachies is not the plural form.",
+      like: ["SK-GUM1-5-C03"]
+    },
+    {
+      id: "SK-GUM1-5-S04",
+      type: "dropdown",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.L.GC.1:R:form-regular-plural-nouns-with-s-or-es"
+      ],
+      passages: ["p4"],
+      stem: "A camp counselor is proofreading the tennis journal before copies go home to parents.",
+      prompt: "Pick the word that fixes number 5.",
+      text: "I carried my {0} in a long green bag.",
+      slots: [
+        {
+          options: ["rackets","racketes","racket's"],
+          answer: 0
+        }
+      ],
+      clue: "Look at the last letter of the single noun before you pick an ending.",
+      hints: [
+        "Look at the last letter of the single noun before you pick an ending.",
+        "Say each choice out loud. Does the noun need an extra beat?",
+        "One choice has a mark that shows ownership, which does not fit here."
+      ],
+      how: [
+        "The noun is racket. My plural noun here means more than one.",
+        "Racket ends in t, so it adds only -s.",
+        "The answer is rackets. Racketes adds letters it does not need, and racket's shows ownership."
+      ],
+      misconception: "A common mix-up is adding -es to be safe. Only nouns that end in s, x, z, ch or sh need it.",
+      why: "The answer is rackets. Racket ends in t, so it adds only -s. Racketes has extra letters, and racket's shows ownership.",
+      like: ["SK-GUM1-5-C04"]
+    },
+    {
+      id: "SK-GUM1-5-S05",
+      type: "mc",
+      points: 1,
+      dok: 3,
+      std: [
+        "3.L.GC.1:R:form-regular-plural-nouns-with-s-or-es"
+      ],
+      passages: ["p4"],
+      stem: "Dev reads number 9 and number 4 of the tennis draft and wonders why the two nouns get different spellings when more than one is meant.",
+      prompt: "What explains the difference between matches and balls?",
+      choices: [
+        {
+          text: "Match finishes with ch, which calls for an extra beat, while ball finishes with l.",
+          correct: true
+        },
+        {
+          text: "Matches belongs to a sport, so sport names always get longer spellings than other nouns do."
+        },
+        {
+          text: "Ball sounds like a one-beat noun, so counting the beats alone settles the spelling."
+        },
+        {
+          text: "Both nouns finish with consonants, so each one gets exactly the same spelling change."
+        }
+      ],
+      clue: "Compare how the two nouns in the question end. Look at the last letters of each.",
+      hints: [
+        "Compare how the two nouns in the question end. Look at the last letters of each.",
+        "Think about the special endings, then check each noun against them.",
+        "What a noun names does not decide its spelling, so one reason can be ruled out."
+      ],
+      how: [
+        "Look at how the nouns finish: match finishes with ch, and ball finishes with l.",
+        "Nouns that finish with s, x, z, ch or sh get -es. Others get only -s.",
+        "The answer is \"Match finishes with ch, which calls for an extra beat, while ball finishes with l.\""
+      ],
+      misconception: "A common mix-up is guessing from what the noun means. The last letters decide the spelling.",
+      why: "The answer is \"Match finishes with ch, which calls for an extra beat, while ball finishes with l.\" Match finishes with ch, so it gets -es. Ball finishes with l, so it gets only -s. What a noun names does not decide.",
+      like: ["SK-GUM1-5-C05"]
+    },
+    {
+      id: "SK-GUM1-5-S06",
+      type: "hottext",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.L.GC.1:R:form-regular-plural-nouns-with-s-or-es"
+      ],
+      passages: ["p4"],
+      prompt: "Tap the TWO shown lines where a noun should end in -es but ends in -s.",
+      targets: ["p4:1:2","p4:1:4","p4:2:2","p4:2:3","p4:3:1"],
+      answer: ["p4:1:2","p4:3:1"],
+      pick: 2,
+      clue: "Spot each noun that names more than one. Think about the last letters of its single form.",
+      hints: [
+        "Spot each noun that names more than one. Think about the last letters of its single form.",
+        "Say each plural out loud and listen for a beat that is not written.",
+        "Line 7 has a plural from a noun that ends in n, so it can be ruled out."
+      ],
+      how: [
+        "Check each plural noun against the last letters of its single form.",
+        "Coachs in line 2 and matchs in line 9 come from nouns that end in ch, so they need -es.",
+        "Balls, towels and ovens come from nouns that need only -s."
+      ],
+      misconception: "A common mix-up is changing every plural you see. Change only the ones whose single noun ends in s, x, z, ch or sh.",
+      why: "The answers are sentences 2 and 9: \"Each morning, our coachs gave us new drills.\" and \"In the afternoon, we played short matchs against other campers.\". Coach and match both end in ch, so they need -es. The other shown lines have nouns that correctly add only -s.",
+      like: ["SK-GUM1-5-C06"]
+    },
+    {
+      id: "SK-GUM1-5-S07",
+      type: "ebsr",
+      points: 2,
+      dok: 3,
+      std: [
+        "3.L.GC.1:R:form-regular-plural-nouns-with-s-or-es"
+      ],
+      passages: ["p5"],
+      prompt: "Work through the first half, then the second half.",
+      partA: {
+        prompt: "Which fact about the noun in sentence 4 explains the mistake?",
+        choices: [
+          {
+            text: "The noun finishes with a plain letter, so one s is enough.",
+            correct: true
+          },
+          {
+            text: "The noun finishes with a hissing sound, so -es is called for."
+          },
+          {
+            text: "The noun is full-grown already, so the writer should leave it untouched."
+          },
+          {
+            text: "The noun is missing a small mark above the line before the last letter."
+          }
+        ]
+      },
+      partB: {
+        prompt: "Pick the rewrite that repairs sentence 4.",
+        choices: [
+          {
+            text: "Each group planted two rows of beans.",
+            correct: true
+          },
+          {
+            text: "Each group planted two row's of beans."
+          },
+          {
+            text: "Each group planted two rowses of beans."
+          },
+          {
+            text: "Each group planted two rowes of beans."
+          }
+        ]
+      },
+      clue: "Study the last letter of the single noun before the ending.",
+      hints: [
+        "Study the last letter of the single noun before the ending.",
+        "In the first half, check the last letter of row. In the second half, say each rewrite out loud.",
+        "A mark that shows ownership does not make a noun mean more than one, so one rewrite can be ruled out."
+      ],
+      how: [
+        "First half: row ends in w, which is not on the list of endings that add -es. The answer is \"The noun finishes with a plain letter, so one s is enough.\"",
+        "Second half: the plural is rows. The answer is \"Each group planted two rows of beans.\"",
+        "The other rewrites add an apostrophe, add extra letters, or keep the mistake."
+      ],
+      misconception: "A common mix-up is adding -es to a noun just because the plural sounds longer. Check the last letter first.",
+      why: "Part A: \"The noun finishes with a plain letter, so one s is enough.\" Part B: \"Each group planted two rows of beans.\" Row ends in w, so it takes only -s. The other rewrites add an apostrophe or extra letters.",
+      like: ["SK-GUM1-5-C07"]
+    },
+    {
+      id: "SK-GUM1-5-S08",
+      type: "ms",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.L.GC.1:R:form-regular-plural-nouns-with-s-or-es"
+      ],
+      passages: [],
+      stem: "A scout leader typed five lines for the campfire handbook.",
+      prompt: "Pick the TWO sentences with a plural noun spelled wrong.",
+      pick: 2,
+      choices: [
+        {
+          text: "Gran added two pinchs of salt to the soup.",
+          correct: true
+        },
+        {
+          text: "The scouts built two hutchs by the creek.",
+          correct: true
+        },
+        {
+          text: "Lena wrapped ten small gifts with red ribbon."
+        },
+        {
+          text: "The farmer fed the pigs and the goats at dawn."
+        },
+        {
+          text: "Mia counted seven peaks on the map of the park."
+        }
+      ],
+      clue: "Find each plural noun and think about the last letters of its single noun.",
+      hints: [
+        "Find each plural noun and think about the last letters of its single noun.",
+        "Say each plural out loud and listen for a beat that is not written.",
+        "The sentence about the farmer has plurals that follow the usual rule of adding -s, so it can be trusted."
+      ],
+      how: [
+        "Check each plural against the last letters of its single noun.",
+        "Pinch and hutch end in ch, so they need -es: pinches and hutches. The answers are \"Gran added two pinchs of salt to the soup.\" and \"The scouts built two hutchs by the creek.\"",
+        "Gifts, pigs, goats and peaks are spelled correctly."
+      ],
+      misconception: "A common mix-up is picking sentences that sound odd. Check the last letters instead.",
+      why: "The answers are \"Gran added two pinchs of salt to the soup.\" and \"The scouts built two hutchs by the creek.\". Pinch and hutch both end in ch, so they need -es. The other plurals are spelled correctly.",
+      like: ["SK-GUM1-5-C08"]
+    },
+    {
+      id: "SK-GUM1-5-S09",
+      type: "mc",
+      points: 1,
+      dok: 1,
+      std: [
+        "3.L.GC.1:R:form-regular-plural-nouns-with-s-or-es"
+      ],
+      passages: [],
+      stem: "A word wall in the art room lists four words about sewing and drawing.",
+      prompt: "Pick the word that gets -es in its plural.",
+      choices: [
+        {
+          text: "stitch",
+          correct: true
+        },
+        {
+          text: "jacket"
+        },
+        {
+          text: "basket"
+        },
+        {
+          text: "feather"
+        }
+      ],
+      clue: "Study how each word ends.",
+      hints: [
+        "Study how each word ends.",
+        "Compare each ending with the list: s, x, z, ch and sh.",
+        "Jacket and basket both end in t, so check them against the list."
+      ],
+      how: [
+        "Look at the last letters of each word.",
+        "Stitch ends in ch, and words that end in ch add -es. Say it: stitch-es.",
+        "The answer is stitch. The other words end in t and r, so they add only -s."
+      ],
+      misconception: "A common mix-up is choosing the word with the most letters. The last letters decide.",
+      why: "The answer is \"stitch\" Stitch ends in ch, so it adds -es. The other words end in t and r, so they add only -s.",
+      like: ["SK-GUM1-5-C09"]
+    },
+    {
+      id: "SK-GUM1-5-S10",
+      type: "mc",
+      points: 1,
+      dok: 3,
+      std: [
+        "3.L.GC.1:R:form-regular-plural-nouns-with-s-or-es"
+      ],
+      passages: ["p5"],
+      stem: "An editor needs a margin note beside rowes in sentence 4 of the garden draft.",
+      prompt: "Which note should the editor write?",
+      choices: [
+        {
+          text: "Row finishes with a plain letter, so keep the short plural: rows.",
+          correct: true
+        },
+        {
+          text: "Row sounds long when it is said aloud, so rowes is the careful spelling."
+        },
+        {
+          text: "Plurals always grow by two letters, so rowes is right as typed."
+        },
+        {
+          text: "Row finishes with an x sound, so rowes is needed."
+        }
+      ],
+      clue: "Look at how row is spelled at its very end, not at how it sounds.",
+      hints: [
+        "Look at how row is spelled at its very end, not at how it sounds.",
+        "Decide whether row finishes with one of the special endings that add -es.",
+        "One note says row finishes with an x sound. Look at the word again."
+      ],
+      how: [
+        "Look at how row finishes: with w, a plain letter.",
+        "Only nouns finishing with s, x, z, ch or sh get -es. Row does not.",
+        "The answer is \"Row finishes with a plain letter, so keep the short plural: rows.\""
+      ],
+      misconception: "A common mix-up is adding -es when a plural seems to need more sound. Check the last letter of the single noun.",
+      why: "The answer is \"Row finishes with a plain letter, so keep the short plural: rows.\" Row finishes with w, not with s, x, z, ch or sh, so it gets only -s. The plural is rows.",
+      like: ["SK-GUM1-5-C10"]
+    },
+    {
+      id: "SK-GUM1-5-S11",
+      type: "hottext",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.L.GC.1:R:form-regular-plural-nouns-with-s-or-es"
+      ],
+      passages: ["p5"],
+      prompt: "Tap the TWO shown lines with a plural noun spelled wrong.",
+      targets: ["p5:1:2","p5:1:4","p5:2:3","p5:2:4","p5:3:2"],
+      answer: ["p5:1:4","p5:2:3"],
+      pick: 2,
+      clue: "Find each plural noun and think about its single noun. Check the ending it needs.",
+      hints: [
+        "Find each plural noun and think about its single noun. Check the ending it needs.",
+        "Say each plural out loud. A plural may leave out a beat or add extra letters.",
+        "Line 10 has a plural that follows the rule, so it can be ruled out."
+      ],
+      how: [
+        "Check each plural against the last letters of its single noun.",
+        "Rowes in line 4 should be rows, because row ends in w.",
+        "Bunchs in line 7 should be bunches, because bunch ends in ch. Cups, gloves and questions are spelled correctly."
+      ],
+      misconception: "A common mix-up is thinking a mistake is always a missing e. A plural can also have extra letters.",
+      why: "The answers are sentences 4 and 7: \"Each group planted two rowes of beans.\" and \"Two bunchs of weeds grew by the fence.\". Rowes adds an e it does not need, and bunchs leaves one out. Cups, gloves and questions are spelled correctly.",
+      like: ["SK-GUM1-5-C11"]
+    },
+    {
+      id: "SK-GUM1-5-S12",
+      type: "dropdown",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.L.GC.1:R:form-regular-plural-nouns-with-s-or-es"
+      ],
+      passages: ["p5"],
+      stem: "A visitor list for the garden open house is missing one word.",
+      prompt: "Which spelling completes the list?",
+      text: "Two other {0} came to see our work.",
+      slots: [
+        {
+          options: ["classes","classs","class's"],
+          answer: 0
+        }
+      ],
+      clue: "Study the last letters of the single noun. Then choose its ending.",
+      hints: [
+        "Study the last letters of the single noun. Then choose its ending.",
+        "Say each choice out loud and listen for the extra beat.",
+        "One choice has a mark that shows ownership, which does not fit here."
+      ],
+      how: [
+        "The noun is class. Two other means more than one.",
+        "Class ends in s, so it adds -es. Say it: class-es.",
+        "The answer is classes. Classs leaves out the e, and class's shows ownership."
+      ],
+      misconception: "A common mix-up is adding only -s to a noun that already ends in s. Say the plural out loud.",
+      why: "The answer is classes. Class ends in s, so it adds -es. Classs leaves out the e, and class's shows ownership.",
+      like: ["SK-GUM1-5-C12"]
+    },
+    {
+      id: "SK-GUM1-5-S13",
+      type: "dropdown",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.L.GC.1:R:form-regular-plural-nouns-with-s-or-es"
+      ],
+      passages: [],
+      prompt: "Fill both gaps with the right plural nouns.",
+      text: "The artist finished three {0} and sewed five {1} on the coat.",
+      slots: [
+        {
+          options: ["sketches","sketchs","sketchies"],
+          answer: 0
+        },
+        {
+          options: ["pockets","pocketes","pocket"],
+          answer: 0
+        }
+      ],
+      clue: "Each gap follows a number word, so each needs a plural. Study the last letters of each noun.",
+      hints: [
+        "Each gap follows a number word, so each needs a plural. Study the last letters of each noun.",
+        "Say the first noun with each ending, then the second. Listen for an extra beat.",
+        "One noun ends in t, so it does not need the extra beat that -es gives."
+      ],
+      how: [
+        "The first gap follows three, so it needs a plural. Sketch ends in ch, so it adds -es.",
+        "The second gap follows five, so it needs a plural. Pocket ends in t, so it adds only -s.",
+        "The answers are sketches and pockets."
+      ],
+      misconception: "A common mix-up is giving both nouns the same ending. Study each noun's last letters.",
+      why: "The answers are sketches and pockets. Sketch ends in ch, so it adds -es. Pocket ends in t, so it adds only -s.",
+      like: ["SK-GUM1-5-C13"]
+    },
+    {
+      id: "SK-GUM1-5-S14",
+      type: "hottext",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.L.GC.1:R:form-regular-plural-nouns-with-s-or-es"
+      ],
+      passages: [],
+      stem: "Four notes hang from a clip on the gym door.",
+      prompt: "Which note has a noun spelled wrong in its plural form? Tap it.",
+      options: [
+        "Put the balls in the red bags beside the door.",
+        "Meet at the gym before noon on Saturday.",
+        "Bring three cups and two torchs.",
+        "Check the nets for holes before the game."
+      ],
+      answer: [2],
+      pick: 1,
+      clue: "Find each plural noun. Check the ending against its single noun.",
+      hints: [
+        "Find each plural noun. Check the ending against its single noun.",
+        "Read the notes one at a time and say each plural out loud.",
+        "The note about the nets has a plural that ends the usual way, so it can be ruled out."
+      ],
+      how: [
+        "Find each plural noun and check the last letters of the single noun.",
+        "Torch ends in ch, so the plural is torches, not torchs.",
+        "Balls, bags, nets and holes are spelled correctly."
+      ],
+      misconception: "A common mix-up is stopping after the first plural in a note. Check every noun that means more than one.",
+      why: "The answer is \"Bring three cups and two torchs.\". Torch ends in ch, so it needs -es. The other notes have correct plurals.",
+      like: ["SK-GUM1-5-C14"]
+    },
+    {
+      id: "SK-GUM1-5-S15",
+      type: "mc",
+      points: 1,
+      dok: 3,
+      std: [
+        "3.L.GC.1:R:form-regular-plural-nouns-with-s-or-es"
+      ],
+      passages: [],
+      stem: "A poster in the hall claims that every noun with an e on the end needs -es.",
+      prompt: "Which example proves the poster wrong?",
+      choices: [
+        {
+          text: "One kite, two kites.",
+          correct: true
+        },
+        {
+          text: "One ax, two axes."
+        },
+        {
+          text: "One inch, two inches."
+        },
+        {
+          text: "One ranch, two ranches."
+        }
+      ],
+      clue: "To prove a claim wrong, find an example that breaks it. Look at how each noun finishes.",
+      hints: [
+        "To prove a claim wrong, find an example that breaks it. Look at how each noun finishes.",
+        "Find the noun that has an e on the end but does not get -es.",
+        "Ax finishes with x, not with e, so one example can be set aside."
+      ],
+      how: [
+        "The poster says nouns with an e on the end get -es. Look for one that gets only -s.",
+        "Kite finishes with e, and the plural is kites. That breaks the claim.",
+        "The answer is \"One kite, two kites.\" Ax, inch and ranch do not finish with e."
+      ],
+      misconception: "A common mix-up is adding -es whenever a noun ends in the letter e. Check for s, x, z, ch and sh instead.",
+      why: "The answer is \"One kite, two kites.\" Kite finishes with e but gets only -s, so the poster is wrong. The other nouns do not finish with e.",
+      like: ["SK-GUM1-5-C15"]
+    }
+  ],
+  addons: {
+    "SK-GUM1-5-P1": {
+      hints: [
+        "Look at the last letter of the noun.",
+        "Say each choice out loud and listen for an extra beat at the end.",
+        "One choice names only one thing."
+      ],
+      how: [
+        "Two means more than one, so the noun needs a plural.",
+        "Box ends in x, so it adds -es. The answer is boxes."
+      ],
+      misconception: "A common mix-up is adding only -s to every noun. Check the last letter first."
+    },
+    "SK-GUM1-5-P2": {
+      hints: [
+        "Check the end of each word for s, x, z, ch or sh.",
+        "Say each plural out loud and listen for an extra beat.",
+        "Lamp and pencil end in p and l."
+      ],
+      how: [
+        "Look at the last letters of each word.",
+        "Dish, brush, glass and peach end in sh, sh, s and ch, so they add -es. Lamp and pencil add only -s."
+      ],
+      misconception: "A common mix-up is sorting by the length of the word. Sort by the last letters."
+    },
+    "SK-GUM1-5-P3": {
+      hints: [
+        "Find the plural noun in each sentence and check its last letters.",
+        "Say each plural out loud and listen for an extra beat.",
+        "Toy ends in y after a vowel, so the plural in one sentence follows the usual rule."
+      ],
+      how: [
+        "Find each plural noun and check the last letters of its single noun.",
+        "The answer is \"We picked six peaches from the tree.\" Peach ends in ch, so it adds -es."
+      ],
+      misconception: "A common mix-up is trusting a plural that looks neat. Check the single noun's last letters."
+    },
+    "SK-GUM1-5-P4": {
+      hints: [
+        "Look at each plural noun. Does its single form end in s, x, z, ch or sh?",
+        "Say each plural out loud and listen for a missing beat.",
+        "Girls and flowers both come from nouns that end in l and r."
+      ],
+      how: [
+        "Check the last letters of each single noun.",
+        "The error is in \"We packed our lunchs in a bag.\" Lunch ends in ch, so the plural is lunches."
+      ],
+      misconception: "A common mix-up is checking only the first plural. Check each one."
+    },
+    "SK-GUM1-5-P5": {
+      hints: [
+        "Both blanks need a word for more than one. Check the last letter of each noun.",
+        "Say each plural out loud and listen for the extra beat.",
+        "Cup ends in p, so it does not need the extra beat."
+      ],
+      how: [
+        "Check the last letter of each noun.",
+        "The answers are cups and glasses. Cup adds -s, and glass ends in s, so it adds -es."
+      ],
+      misconception: "A common mix-up is giving both nouns the same ending. Check each noun on its own."
+    }
+  },
+  /* B7a:core:end */
   test: [
     { id: "SK-GUM1-5-T1", type: "dropdown", points: 1, dok: 1, passages: [],
       prompt: "Choose the word that correctly completes the sentence.",

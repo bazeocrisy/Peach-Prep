@@ -570,3 +570,150 @@ Each has kind, rationale and three tasks with title, how and a three-line checkl
 
 - A 158-of-158 blind solve does not prove keys right. Dictionary syllable checks found a wrong key (cover) that every solver would accept.
 - Hottext items that print the answer words defeat a cursive-reading standard.
+
+---
+
+# Third review (independent, fresh eyes)
+
+Reviewer: third reviewer. I did not write or earlier-review this content. Scope: 3.F.P.4.a, 3.F.P.4.b, 3.F.P.4.c, 3.F.H.3.a and the six coreException sequences (3.F.F.1.a, 3.F.F.1.d, 3.F.F.1.b, 3.F.F.1.c, 3.F.H.4.a, 3.F.H.4.b). Frozen copy at /home/claude/pp-content. Read-only apart from this section. A local server was used for rendering and has been stopped by pid.
+
+## T1. Blind solve
+
+- Method: items loaded in Node through a vm stub, keys, why, hints, how and clue stripped, choices shuffled with a seeded permutation, answers saved to a file before any key was extracted. I did not open the author log or the earlier reviews until after the answers were saved.
+- Result: 134 of 134 scored answers agree with the keys. The solve was fully blind for 4.a, 4.b and 4.c.
+- Caveat for H.3.a: the Node dump prints the cursive as plain text, because the data stores it as plain text. So that solve proves only that the keys are self-consistent. It does not prove a child must read cursive. I tested that separately in T6 and it fails for several items.
+- A perfect match does not show keys are right. T2 and T3 are the real correctness checks.
+
+## T2. Dictionary check (Merriam-Webster, via WebSearch then WebFetch)
+
+Every syllable division in 4.b and every phonics key I could reach was checked at https://www.merriam-webster.com/dictionary/<word>. Pages reached include: baby, bacon, basin, banana, bottle, bubble, cabinet, cactus, camel, cancel, candle, carpet, cattle, channel, chipmunk, cover, dragon, feather, garden, gather, giraffe, giggle, goose, handle, heavy, hinge, insect, jungle, kangaroo, kennel, kettle, kitchen, kitten, lemon, limit, magnet, mailbox, marble, melon, middle, cough, dough, deaf, bread, break, cliff, cocoa, coupon, cougar, crowd, flower, September, apple and others from the 4.b and 4.c lists.
+
+- No syllable key is wrong. The cover problem from review 2 is gone (S04 now uses bacon, ba / con, which MW confirms).
+- Not reached (the search never surfaced a fetchable page, so these rest on common knowledge and on the item's own internal consistency): health, orange, stage, page, dream, beans, reach, cheap, speak, mean, seat, clean, head, beach. All are very common words with no dispute. I did not verify them in a dictionary. Please treat them as unverified.
+- Rule claims checked on the web: six syllable types, https://www.readingrockets.org/topics/spelling-and-word-study/articles/six-syllable-types (closed, open, vowel-consonant-e, vowel team, r-controlled, consonant-le). The VCCV split between two consonants and the V/CV split with a long first vowel are the normal teaching rule, with exceptions that the items avoid by using only words whose MW division matches.
+
+## T3. Standards and wording
+
+Official wording in js/data/standards.js was compared with the item types. 4.a, 4.b and 4.c items are on the stated skill. H.3.a items are on "read cursive" in wording but not always in demand (T6).
+
+## T4. Hint ladder, live choices, longest key, keyed text
+
+- Live choices after hints 1, 2 and 3 were recounted for every item. A hint 3 that narrows to the key, or that hands over the split, counts as a MUST.
+- Longest key: single-key items with a strictly longest key are few and in most cases the lengths differ by one letter (for example 4.b S12 kitten 6 vs 5, H.3.a S07 aunt 4 vs 3). I rate none of those a defect. Ties on choose-two were checked separately: every choose-two key is either a tie or not both strictly longest. The author-log claim "0 everywhere" is not what I measure (see T9), but I found no choose-two item where both keys are the two longest by a clear margin.
+- Keyed text against why, how and hints: one item refers to a word that is not in the item (4.b P6, below). Everything else is consistent.
+
+## T5. Twins, duplicates
+
+Twin whole-text Jaccard, same definition the author's figures reproduce with (letters-only tokens on the visible text):
+
+| Lesson | Max twin (letters only) | Item |
+|---|---|---|
+| 3.F.P.4.a | 0.186 | S13 |
+| 3.F.P.4.b | 0.200 | S03 |
+| 3.F.P.4.c | 0.207 | S04 |
+| 3.F.H.3.a | 0.208 | S06 |
+
+All are at or under the 0.21 ceiling. Under a hyphen-splitting tokenizer 4.b S07 is 0.250 and 4.c S09 and H.3.a S03 are 0.226. That is a different counting rule, so I only note it. With hints and why included the figures are 0.64 to 0.74, which is expected because the templates repeat. Nothing is at 0.30.
+
+Duplicate scan over all 3034 items in js/data (158 in B9), including test keys:
+- Test items T are paired with practice items P at 0.47 to 0.68 similarity: H.3.a P2/T2 0.47, 4.b P4/T5 0.50, 4.c P1/T1 0.53, P3/T3 0.50, P4/T4 0.68. These are deliberate form pairs. 4.c P4/T4 (0.68, same match shape, same frame, different words) is closest to a re-skin. SHOULD (S-T1).
+- Cross-lesson: 4.c C04 against L-VOC-02-2 in js/data/sets/L-VOC-02.js scores 0.48. SHOULD (S-T2).
+- Same-prompt hits are generic stems ("read the cursive sentence", "choose the word that is spelled correctly") with different content. NOTE.
+
+## T6. 3.F.H.3.a rendering and cursive-reading demand (390 x 844)
+
+I rendered every cursive item on the real route (#skill/3.F.H.3.a/try) and checked each as a screenshot, plus component analysis of the glyph joins.
+
+- Font: PP Cursive (Playwrite US Trad) at css/styles.css, with word-spacing .3em. One face is used for every cursive stem, the Learn It example and the Watch Me example. Ruling: a single cursive face is acceptable and correct. Add one line to the teaching note saying that it is one model and that a child's school model may differ (SHOULD S-H5, because H.4.a already says "follow your school's model" and H.3.a should match).
+- Readability: letters join, the line wraps without breaking a word, and long stems stay inside the 16 px gutters. No horizontal scroll at 390 px.
+- Gap: the letter s leaves a visible break in several words (the join after s is thin or open). It is readable but it can look like two words. This is not disclosed to the grown-up. SHOULD (S-H6): either say it in the teaching note, or choose words and lines where the break cannot mimic a space.
+- Plain-text leaks (the child does not need to read the cursive): MUST M3-H1 below.
+
+## T7. Earlier MUSTs
+
+I checked the files, not the log. The review 2 MUSTs are genuinely fixed: 4.b S04 now uses bacon (M2-B1), 4.b C01 h3 no longer gives the count (M2-B2), 4.c S03 and S05 now cover-test only real prefixes (M2-C1), and the 4.a S14 key is no longer "fence" (M2-A1). M2-H1 (answer words printed next to cursive) is fixed only in part. C03, C06, S03, S04 and S07 no longer print the answer word list as plain text, but dropdown options still print the exact candidate words, and match columns still print the exact answers (see M3-H1). The review 1 MUSTs listed in S9 of the second review are also fixed.
+
+## T8. Findings
+
+### MUST
+
+- M3-B1 (3.F.P.4.b, C04 and S04, hint 3). H3 of C04 says "For basin, try splitting before the s first" and H3 of S04 says "For bacon, try splitting before the c first." That hands over the split for the one-consonant word, which is the key. It also leaves one live option for slot 1. Fix: H3 should say "Say each choice out loud. A part that cannot be a word on its own is wrong." Same for both items, and update the how text if it echoes the split.
+- M3-B2 (3.F.P.4.b, C05 and S05). The question is "which word has an r-controlled syllable" and the choice set has only one word with an r in it (morning, carpet). A child can answer by spotting the letter r with no syllable knowledge, which the item's own misconception line warns against. Fix: add a distractor with r that is not r-controlled in its syllables (for example a word with r after a consonant like "pretzel" or "tablet" is no good; use "robot" or "parade", where r starts a syllable), and make the key's r follow its vowel in a syllable.
+- M3-B3 (3.F.P.4.b, P6 addon). The addon hint 3 and the how both refer to "tunnel", which is not among P6's choices (bubble, turtle, channel, travel, sunset). A child sees a hint about a word that is not there. Fix: rewrite the addon h3 and how for P6 using channel and travel, or replace the addon.
+- M3-H1 (3.F.H.3.a, S04, S12, S07, and the same weakness in C04, C03, C08). The child can answer without reading cursive.
+  - S04 and C04: the four words are printed as plain match options and the clues are positional. "Sam" starts the sentence (a name), "took" follows, "eight" comes before "plates", "plates" ends. Grammar and the printed words give the order. Same for C04 (Nia ran home fast).
+  - S12: the four plans are printed in plain text and each season has an obvious plan (spring: plant seeds, summer: go camping, autumn: rake leaves, winter: build snowmen). The cursive adds nothing.
+  - S07: the choices differ by meaning (aunt/ant/art, purple/people/purse) and the plain-text sentence frame "My ___ knits a ___ scarf every winter" makes aunt and purple the only sensible choices.
+  - C03 and C08: same pattern, where the printed frame or the sensible meaning identifies the key.
+  - Fix: use distractors that are all sensible in the frame (so the child must read letters), and for match items make the printed items only plausible if read from the cursive (for example sentences whose word order is not predictable, or distractor words that are in the line but in different positions).
+
+### SHOULD
+
+- S-A1 (3.F.P.4.a, P6 h2 and S15). Both leave only one plausible option after the hint; widen one distractor. Carried from review 2, and the 4.a S14 and T6 repeat is gone but P6/S15 still narrow.
+- S-B4 (3.F.P.4.b, S11, S13, C07, C12, P7). The ladders still near-narrow on hint 3 (carried S-B3). Remove the word that eliminates a distractor.
+- S-C1 (3.F.P.4.c, S15 like, C03 / P5, C01 / C04). Honest `like` mappings need work: S15 is mapped to an item with a different rule, and C03/P5 and C01/C04 teach the same rule with near-identical frames.
+- S-T1 (4.c P4 and T4, 0.68). Change T4's frame so that it is not the same shape with different words.
+- S-T2 (4.c C04 and L-VOC-02-2, 0.48). Rewrite C04's words or retire one of the two.
+- S-H1 (3.F.H.3.a, S05, C06, C12, S13). Ties and near-ties in length favour the key. Equalise the distractor length.
+- S-H2 (3.F.H.3.a, C08 and P3, S14). Near-twins. Change one stem.
+- S-H5 (3.F.H.3.a). Add a single-model note to the grown-up text (see T6).
+- S-H6 (3.F.H.3.a). The s-gap in the font is under-disclosed (see T6).
+
+### NOTE
+
+- N1. The Jaccard figures depend on the tokenizer. Under hyphen-splitting, 4.b S07 is 0.250, above the ceiling. Please state the tokenizer in the plan.
+- N2. Unreached dictionary words (T2). Please confirm those 14 in a dictionary once.
+- N3. Same-prompt hits among generic stems are fine.
+- N4. I could not reproduce the log's "single-key unique-longest 23 / 22 / 28 / 6 percent." The measure is not harmful.
+
+## T9. Author-log claims checked against the files
+
+1. "Choose-two both-longest: 0 everywhere." Not what I measured in 4.b and H.3.a; several choose-two keys tie for longest with a distractor. Harmless, but the claim is overstated.
+2. "Hints no longer narrow." False for 4.b C04 and S04 (M3-B1) and still partly for 4.b C07, C12 and P7.
+3. "Keys rechecked after every edit." True for syllable keys as of this copy (T2), but the claim about hints does not follow from it.
+4. "Answer words no longer printed beside the cursive." Only partly true (M3-H1).
+5. The log is silent on P6's missing word, on C05/S05 r-spotting and on the s-gap.
+
+## T10. coreException sequences
+
+I read each sequence in full (kind, rationale, three tasks with how and checklists) and compared it with the lesson's teach text and its remaining practice items.
+
+| Lesson | Kind | Honest? | Notes |
+|---|---|---|---|
+| 3.F.F.1.a Sight words | performance | Yes | Timing cannot be shown by selected-response. The 16 of 20 line and the 8 irregular words with 2 look-alike pairs match the how. The seven practice items stay as supports. |
+| 3.F.F.1.d Self-correction | observation | Yes | Aloud work is observed, and silent self-correction is shown by pointing. The Round 3 comparison with Round 1 uses different passages, so it is a rough guide. NOTE only. |
+| 3.F.F.1.b Reading accurately | performance | Yes | Dated readings of three kinds, with mistakes per 100 words so the different lengths compare fairly. The 19 of 20 figure is labelled a rough guide, not a pass mark. |
+| 3.F.F.1.c Smoothness and expression | performance | Yes | Matches the teach text, including yes-or-no questions rising and who/what/where/why falling. |
+| 3.F.H.4.a Cursive letters and joins | performance | Yes | Motor skill. The unjoined capitals T, W, O and P are marked as this model's rule and the grown-up is told to follow the school's model. |
+| 3.F.H.4.b Cursive spacing | performance | Yes | The "width of an o" matches the Task 1 check ("one small letter"). |
+
+No sequence replaces fifteen items with something thinner than the rationale says.
+
+## T11. Verdicts
+
+| Item / lesson | Verdict |
+|---|---|
+| 3.F.P.4.a | ACCEPT (with SHOULD S-A1) |
+| 3.F.P.4.b | CHANGES REQUIRED (M3-B1, M3-B2, M3-B3) |
+| 3.F.P.4.c | ACCEPT (with SHOULDs S-C1, S-T1, S-T2) |
+| 3.F.H.3.a | CHANGES REQUIRED (M3-H1; also S-H5, S-H6) |
+| 3.F.F.1.a | ACCEPT |
+| 3.F.F.1.d | ACCEPT |
+| 3.F.F.1.b | ACCEPT |
+| 3.F.F.1.c | ACCEPT |
+| 3.F.H.4.a | ACCEPT |
+| 3.F.H.4.b | ACCEPT |
+
+## T12. Fix list for the lead
+
+1. 4.b C04 and S04 h3: remove the split-before-the-consonant steer (M3-B1).
+2. 4.b C05 and S05: add an r distractor that is not r-controlled (M3-B2).
+3. 4.b P6 addon: remove "tunnel" (M3-B3).
+4. H.3.a S04, C04, S12, S07, C03, C08: rebuild so the cursive must be read (M3-H1). Re-solve changed items blind and rerun the twin Jaccard and the ladder count on every changed item.
+5. Then the SHOULDs. Coverage rows for 4.b and H.3.a should not be marked VERIFIED until these are done.
+6. Confirm the 14 unreached words in a dictionary.
+
+## T13. Notes for memory
+
+- A fully blind 134 of 134 solve still hides wrong keys and leaky items. The dictionary pass and the render pass found what the solve could not.
+- Cursive items stored as plain text need a separate "does the child have to read it" test.
