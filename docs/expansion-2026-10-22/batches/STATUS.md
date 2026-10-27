@@ -52,7 +52,8 @@
 | B9 | 3.F.P.4.a | ACCEPTED | Third independent review ACCEPT; open SHOULDs in B9-review.md (P6 h2, S15) |
 | B9 | 3.F.P.4.c | ACCEPTED | Third independent review ACCEPT; open SHOULDs in B9-review.md (near-twin pairs, weak like mappings) |
 | B9 | 3.F.P.4.b | ACCEPTED | Fourth independent review ACCEPT; open SHOULDs F-B1..B5 in B9-review.md |
-| B9 | 3.F.H.3.a | NOT ACCEPTED: CHANGES REQUIRED (third review) | B9-review.md T-items |
+| B9 | 3.F.P.4.b note | OPEN MUST M5-B1 | S04 pillow has two defensible answers; fix pending (puppet); lesson stays ACCEPTED only if fixed and re-checked |
+| B9 | 3.F.H.3.a | ACCEPTED | Fifth independent review ACCEPT; open SHOULDs (T1 wording, C08 duplicates a GUM2 key, C12/S13, S08, C06/S10) in B9-review.md |
 | B4–B9 | see 04-content-plan.md | B4, B5, B6 (partly), B9 (partly) done; B7, B8 in progress | see rows above |
 | B6 | 3.L.GC.1:M:use-apostrophes-in-contractions-and-singular-pos | ACCEPTED | Fourth independent review ACCEPT; open SHOULDs in B6-review.md |
 | B6 | 3.L.GC.1:M:form-and-use-irregular-plural-nouns | ACCEPTED | Third independent review ACCEPT; see B6-review.md and B6-author-log.md (open NOTEs/SHOULDs listed there) |

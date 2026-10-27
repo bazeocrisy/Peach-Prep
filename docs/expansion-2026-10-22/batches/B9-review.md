@@ -885,3 +885,180 @@ I rebuilt the third-review dump script output for 4.a and 4.c from the current f
 - A set of distractors that are each one edit away from the key makes the key the hub; check with an edit-distance sum before accepting any "which sentence matches" item.
 - MW pages that WebFetch refuses (URL_NOT_ON_ALLOWLIST) can often be reached by running WebSearch with allowed_domains merriam-webster.com first, then fetching the returned link.
 - Match items that print the names or things also print the cursive's words; a name reused across items in a set gives the child a decoded model of its cursive shape.
+
+
+# Fifth review (independent, fresh eyes)
+
+Reviewer: fifth reviewer. I did not write or earlier-review this content. Scope: 3.F.H.3.a (F-FH.js) after the fourth fix pass, and the author's wording edits to the ACCEPTED lesson 3.F.P.4.b (F-PF.js), frozen copy at /home/claude/pp-content. Read-only apart from this section (appended; nothing above was changed). A local server (port 8777, pid 28253) rendered 390 x 844 and was killed by pid. Scratch files: session scratchpad, folder b9rev5.
+
+## V1. Verdicts at a glance
+
+| Lesson | Verdict | Blocking finding |
+|---|---|---|
+| 3.F.H.3.a | ACCEPT (SHOULDs V-H1 to V-H5 recommended before STATUS) | none. The fourth-review MUST (M4-H1, C08) is fixed in the file |
+| 3.F.P.4.b (author's wording edits) | CHANGES REQUIRED (one MUST, M5-B1) | S04 "pillow": the item's own criterion ("real syllables you can say") does not rule out `pill / ow`, and its key `pil / low` contains a non-word |
+
+Other edits to 4.b (C08, T3, hint 3 on C03/S03/C05/S05/C08/S08, S07) are correct and leave every key and every live choice intact (V6).
+
+## V2. Blind solve (integrity statement)
+
+- Method: my own Node vm loader (`b9rev5/ld.js`, `blind.js`). For every core item (refs resolved), the three Together items P1 to P3, all fifteen similar items and all five check items (T1 to T5) I printed prompt, stem, frame text and choices only, with choices, dropdown options and order steps shuffled by a seeded generator. Keys, `why`, hints, `how`, `clue`, `misconception`, `like` and the `correct` flags were stripped. Answers were saved to `b9rev5/myans.json` before any key was extracted. Match columns were printed in authored (not shuffled) order, with rows in authored order.
+- Result: **38 of 38 items agree with the keys** (15 core, 3 Together, 15 similar, 5 check items; choose-two counted as one item, order items scored as a whole).
+- Honesty: this was blind to the keys, but not blind to the lesson's earlier history. Before solving I read only CONTENT-BRIEF, REVIEWER-BRIEF, the plan sections 4.5, 6 and 8, and engine code. I looked at the scratchpad folder listing and at an older probe script that printed nothing of this lesson's content. I did not open the author log or any earlier review until the answers were saved.
+- The Node dump prints the cursive as plain text, so this solve shows only that the keys are self-consistent. Reading demand was tested separately (V5).
+
+## V3. Hint ladder, live choices, keyed text (every item, by script where possible)
+
+Live choices after hints 1 to 3 (script `hl.js` lists every hint that shares a word with an option, and a second scan lists every number or count a hint states; the player never crosses anything out on a hint, `player.js` hint()):
+- mc items: 4 of 4 live after hint 3 in every item except **C12 (3 of 4: the print option is ruled out in hint 3)** and **S13 (3 of 4: the rewrite-in-print option)**. Both leave the key plus two weak options (V-H3).
+- Dropdowns (C02, C03, C06, C09, C13, S02, S03, S07, S10, S14): 3 and 3 live in every slot. No hint states a letter count or a letter.
+- Choose-two (P4, S05, T4): 5 of 5 live.
+- Match (C04, C11, S04, S12): hints name one row (Pia, Jon) and never its answer; 4 of 4 live.
+- Order: C07 and S08. Hint 1 fixes step 1, hint 2 fixes step 2 (C07) or step 3 (S08), hint 3 fixes step 4. After all three one ordering is left. No single hint does it, so this passes plan 4.5 (hint 3 alone leaves six orderings). NOTE V-N2, carried from N-B2.
+- Together items P1 to P5 (addons): all live.
+- No hint 1 or 2 names or quotes a key. No hint 3 quotes a key.
+
+Keyed text against why, how and hints (all 38): every key matches its why and how. Letter counts, spellings and word positions in the how lines are right (checked by script and by hand: rabbit 6, tall 4, quail 5, rusty 5, aunt 4, purple 6, garden 6, Tessa 5, Tori 4, and so on). Statements that do not discriminate:
+- T1 (check form A): why and clue say the second word is swim and the last word is lake, and the clue says to check "especially the second word and the last word". Choice B "We swim at the lake." also has swim and lake, so the why and clue do not rule it out; only the third word does. See V-H1.
+- C12 hint 2 ("what the rest of the sentence can tell Leo") together with hint 1 describes the key's idea (use the rest of the sentence and what fits); A and B ignore the sentence. See V-H3.
+- S06 hint 3 checks the first, second and last words, but distractor A differs in the fourth word (torn / worn). Hint 3 does not touch it (NOTE V-N4).
+- P3 hint 3 "first letter of the action word": Feed, Feed, Find, Fill all start with F (NOTE V-N4).
+
+Longest key (single-key groups: 19 mc and 20 dropdown slots = 39; choose-two counted by whether both keys are at least as long as the longest distractor):
+- Strictly longest: C02 slot 0 Quinn, C09 slot 1 shelf, S14 slot 1 Wednesday (3 of 39, each by one or two letters, on three-option name, place and day slots). No mc key is strictly longest; the two strategy items C12 (51 of 53 characters) and S13 (47 of 52) have a longer distractor.
+- Choose-two P4, S05, T4: 0 of 3 (the longest distractor is longer than both keys, or the keys tie with others).
+- The author's "3 of 39 and 0 of 3" reproduces.
+
+Hub effect (key as the unique minimum summed edit distance to the other options; letter distance for single words, word distance for sentences; also the unique option within one edit of all others):
+- No mc item has the key as the unique minimum: **0 of 19** (the author's claim holds). C08's unique centre is now a distractor ("wipe your shoes").
+- The key is at the minimum but tied with exactly one distractor in 10 mc items: C01 (window / widow), C10, P2, P3, P5, S09, S11, S15, T1, T5. It is tied four ways in P1, S01, T2, T3. A hub-picker scores 50 percent on the ten, not 25. In check form A that is T1 and T5 (T2 and T3 are four-way ties). The log names only four ties (river, window, Zoe, Tessa); it understates this. NOTE V-N1.
+- Dropdown slots with the key as the unique centre: C02 slot 1 (red), C06 slot 1 (tall), S02 slot 0 (Tess). Three-option slots of unrelated words; no action.
+
+## V4. Twins, duplicates, leaks
+
+Twin Jaccard (word set / multiset; tokens from prompt, cursive stem, frame text and every option; lower case, letters only): all fifteen pairs are at or under 0.21. Worst: S13~C12 0.206 / 0.206, then S08~C07 0.170 / 0.136, S06~C05 0.160 / 0.172. If the prompt is left out of the tokens, S13~C12 rises to 0.200 / 0.230, so the pair has no margin (NOTE V-N3). The author's log names S06~C05 as the worst pair at 0.206; under my tokens S06~C05 is 0.17 and the 0.206 belongs to S13~C12. Mislabelled, not a failure.
+
+Duplicate scan over every file in js/data (all 83 distinct cursive phrases and every sentence-length option; six-word rule of plan 8):
+- **Hit: C08's key "Please wipe your feet before you come in." is the same seven words as the key of SK-GUM2 (L-GUM2.js:546, "Please wipe your feet before you come inside.")**. This was introduced by the fix for M4-H1 (the fourth reviewer suggested the sentence; the scan was not run on it). See V-H2.
+- T1 distractor "We swim at the lake" appears as the last four words of a key in L-GUM5.js:894; P3 "Please feed the fish" is in L-GUM5.js:282. Four to five words; not flagged beyond a NOTE.
+- Every other cursive phrase is unique in js/data. Hyphenation of "pillow" in L-GUM3 is the 4.b finding (M5-B1).
+- Cross-item leak scan (a cursive word of one item printed as an option, frame or prompt in another item of the same lesson): only the word "please" (C08, C10, P3). Key-as-distractor scan: only S14's key Wednesday is C13's distractor (twin pair; harmless). Set 3 prints Sunday in C13 and in C11's rows; neither is the other's key. The fourth-review leaks (Quinn/red, Saturday, Zoe) are gone.
+
+## V5. 3.F.H.3.a rendering and reading demand (390 x 844, route PP_PLAYER.start('SK:3.F.H.3.a:y|y2|y3'), Together and check set also loaded)
+
+- All fifteen core items, all fifteen similar items (reached through the real "Try a similar question" button after a correct answer) and the check page rendered; scrollWidth is 390 on every one; no page errors; no horizontal scroll; cursive blocks wrap at word boundaries inside the gutters.
+- Readability at device scale 3 (window, scooter, Tuesday, Saturday, Sunday, keys, shelf, Tess read cleanly). The s-gap is visible after a lowercase s inside a word: "Tues day", "s cooter", "Wednes day". A word is still read as one, and Teach point 4 and the grown-up note both say the font leaves a small gap after s and that the wider spaces show word ends. That is accurate. NOTE V-N5 (a font with joined s would remove the problem; carried from the earlier open item).
+- Grown-up note: says one font is used, the school model may differ, and s can leave a small gap. Accurate and plain.
+- Reading-demand test. I hid every `.cursive` block (visibility hidden) and answered each item from the printed prompt, frame and options alone, by meaning and by comparing options:
+  - Cannot be answered without reading: C01, C02, C03, C04, P4, C05, C08, C10, C11, C13, P5, and in similar S01 to S06, S09, S11, S12, S14, S15; all Together and check items P1 to P3, T1 to T5. C08 is fixed: all four signs ("wash your hands", "take off your shoes", "wipe your shoes", "wipe your feet") are ordinary, so only the letters decide. NOTE V-N6: "wipe your feet" is the most common doormat sign.
+  - Partly guessable: **C06 slot 1** (a rabbit hides in "tall grass"; thick and wet are also possible) and **S10 slot 0** ("First wash the pans" before "stack the cups"). The key is the most idiomatic option in each, about one in two by meaning. The other slot of each item is not guessable. NOTE V-N6.
+  - Answerable without cursive by design: C07, S08 (order a method), C12, S13 (what to do when stuck). Two of the fifteen. Acceptable; see V-H3, V-H4.
+- Match rows are listed in the order of the cursive lines in C04 and S04 but not in C11 and S12. A child can match by position and then needs only the thing words. NOTE V-N6.
+
+## V6. Edits to the ACCEPTED lesson 3.F.P.4.b (F-PF.js), checked in the file
+
+Merriam-Webster pages fetched with WebFetch this pass (all consistent with the lesson): pil·low (https://www.merriam-webster.com/dictionary/pillow, pronounced ˈpi-(ˌ)lō), fun·nel (https://www.merriam-webster.com/dictionary/funnel, ˈfə-nᵊl, short vowel), mo·ment (https://www.merriam-webster.com/dictionary/moment, ˈmō-mənt, long o), po·ny (https://www.merriam-webster.com/dictionary/pony, ˈpō-nē), star·fish (https://www.merriam-webster.com/dictionary/starfish, ˈstär-ˌfish), pup·pet (https://www.merriam-webster.com/dictionary/puppet, my suggested replacement word).
+
+| Edit | Check | Result |
+|---|---|---|
+| C08 sentence and hint 3 | Hottext options are the four chips (pocket, tiny, music, sky); the sentence is context only, so frog and box are not selectable. why, how and hint 3 agree. Key unchanged (pocket, index 0). Live 4 of 4 (hint 3 names tiny). | Correct |
+| S08 hint 3 | Names baby only. Key winter unchanged. | Correct (check-content now warns "hint 1 is much longer than hint 3" for C08 and S08, a new NOTE) |
+| C03, S03, C05, S05 hint 3 | "Clap puppy.", "Clap farmer.", "Split window...", "Split puppy...": one distractor each, no key named, all four options live. why and how still agree (banana, tomato, morning, carpet). | Correct. Closes F-B4 |
+| T3 rows | "fun in funnel" (closed), "mo in moment" (open); po in pony (open) and ple in apple (consonant-le) unchanged. Answers 0, 1, 2, 1 as before (why says Fun, Po, mo). The Teach glossary no longer states the row words ("the nap in napkin" is a Teach example only). `check-content` reports the check form edited in wording only, same ids, points and keys. | Correct. No testRev bump needed (V7) |
+| S07 starfish | Key r-controlled + closed holds (star, fish). Options r-controlled / vowel team / consonant-le and vowel team / closed / consonant-le. | Correct, but see NOTE V-N7 |
+| **S04 pillow** | Options `pi / llow`, `pil / low` (key), `pill / ow`; bacon slot unchanged. | **MUST M5-B1** |
+
+Other checks on 4.b: hint 3 on C03, S03, C05, S05, C08, S08 leaves three of four live, as the fourth review asked. 4.b twin Jaccard (tokens including hyphen-split syllables): worst S03 0.200 and S07 0.200; the author's "0.200" holds, and S07 is at the edge again. S08 shares the words baby and silent with check item T4 (both are distractors in T4 and open-syllable words in S08, whose why says so), so a child who saw S08 can eliminate two T4 options (carried, NOTE V-N8). The prompt "C13/S14 shared distractors" has no 4.b counterpart (4.b has no C13): in 4.b, S14 and P6 share no option; S14's pretzel is also a C05 option but plays a different role. In 3.F.H.3.a the only C13/S14 overlap is Wednesday (C13 distractor, S14 key).
+
+## V7. Check form A, T1 to T5 (the lesson has no form B)
+
+- Same ids, types, points (1, 1, 1, 2, 1) and keys as the record: `check-content.js --all` exits PASS (0 failures, 100 warnings) and says 3.F.H.3.a:A and 3.F.P.4.b:A were edited in wording only, same ids, points and keys. I re-solved all five blind (V2) and confirmed the keys by reading each why.
+- Opinion on testRev: **no bump.** The construct, ids, points and keys are unchanged. The distractor edits remove the hub (T1 is now tied with one distractor, T2 and T3 four-way ties, T5 tied with one), which makes the form slightly harder, not different in kind. The engine does not store an unfinished check, and the review signature holds ids, types and points. Run `--record-versions` once, after the last edit, to refresh the hash only (the 3.F.H.3.a ledger lines are still "no record").
+- T1's why and clue do not discriminate choice B (V-H1). Fixing it changes wording only.
+- No giveaway into the check: T items print no cursive word that appears as an option in another item (V4), and the frames repeat only generic prompts ("Which sentence matches it?").
+
+## V8. Findings
+
+### MUST
+
+- **M5-B1 (3.F.P.4.b, S04, similar, the "pillow" replacement).** The prompt is "Pick the split that makes real syllables." Hint 3 says "Say each choice out loud. Ask which one gives parts you can say as real syllables." The why says "The other choices make parts that are not syllables" and how step 3 says "The other splits leave parts that cannot be said." For `pill / ow` every one of those statements is false: pill and ow are both real, sayable words, while the key `pil / low` contains `pil`, which is not a word. A child who follows the hint and prefers real words picks `pill / ow`, so the item has a second defensible answer by its own stated criterion; only the lesson's rule (two consonants, split between them) separates the key, and the item does not ask for the rule. The old magnet and C04's ribbon had unsayable wrong parts (magn, ribb); pillow does not. The same word and the same split are the key of SK-GUM3-8-C04 in L-GUM3.js (pil- | low, with pill- | ow as a distractor), the F-B2 problem again.
+  - Fix: use a double-consonant word that no split item uses and whose wrong splits leave unsayable parts, for example puppet (pup / pet, with pu / ppet and puppe / t; Merriam-Webster pup·pet; no split item uses it). Reword hint 3 and the how to the rule if you keep the criterion ("Look at the two consonants between the vowels, then split between them"). Re-run the option-set scan and the twin Jaccard for S04~C04.
+
+### SHOULD
+
+- **V-H1 (3.F.H.3.a, T1, why and clue).** The clue says to check "especially the second word and the last word"; the why gives only swim and lake. Choice B "We swim at the lake." matches both. A child who does exactly what the clue says still has two live choices and is not told which word breaks the tie. Fix: clue "Check every word, especially the second word and the word after it"; why "...The second word is swim, the third word is in and the last word is lake. Swing, at and lane change one of them." Wording only; no testRev.
+- **V-H2 (3.F.H.3.a, C08, duplicate of another lesson).** "Please wipe your feet before you come in." matches SK-GUM2's key "Please wipe your feet before you come inside." for seven words (plan 8: six words flagged). Different skill (punctuation against reading), but the sentence is the same, and a child who has done GUM2 meets it as a remembered sentence. Fix: change the sign, for example "Please hang your coat on the hook." with sensible choices (hang your coat / hang your hat / put your coat / hang your bag, one shared frame), and rewrite hints 2 and 3, how and why. Re-run the hub script and re-solve blind.
+- **V-H3 (3.F.H.3.a, C12 and S13, weak distractors and an echoing hint 2).** After the fourth-review change hint 3 rules out only the print option, as asked, but the two options left beside the key are not tempting ("Skip the note and read only the capital letters.", "Guess any long word that starts with the same letter."; "Tear out the page and begin a new one.", "Choose whichever word looks the longest on the page."). The plan (6.5) says no distractor is absurd, and these are the two DOK 3 items. Hint 2 ("what the rest of the sentence can tell Leo / the pupil") with hint 1 states the key's idea in other words, so a reader who has seen hints 1 and 2 can write the key. Fix: give each item one other plausible strategy ("Read only the last letter and choose a word that ends the same way", "Say every letter of the word out loud, then stop") and make hint 2 point at the evidence ("Which words around it are already readable?") without naming the idea.
+- **V-H4 (3.F.H.3.a, S08).** The steps (start at the capital letter, say each word quietly, skip ahead if you get stuck, come back with clues) are not in Learn It or Watch Me, so the item asks for a method it has not taught (plan 6.9: no new rule first appears in an item). The order is defensible, and I solved it correctly blind, but only by common sense. Fix: add "skip a hard word and come back to it" to Learn It point 3, or use the Learn It steps as C07 does.
+- **V-H5 (3.F.H.3.a, partly guessable slots).** C06 slot 1 ("tall grass") and S10 slot 0 ("First wash the pans") are the most idiomatic option. Fix: make all three options equally idiomatic (C06: tall, long, high; S10: wash, scrub, rinse).
+
+### NOTE
+
+- V-N1. Hub: 10 mc items have the key tied for the minimum with one distractor (V3). The log lists four. Residual only.
+- V-N2. Order items C07 and S08: the three hints together fix every step (carried N-B2).
+- V-N3. Twin S13~C12 is 0.206; without the prompt in the tokens it is 0.23. Any wording change to either must be re-measured.
+- V-N4. S06 hint 3 does not reach distractor A (fourth word); P3 hint 3 "first letter of the action word" does not discriminate (all start with F). Clean up when next touched.
+- V-N5. s-gap remains in this face (explained, not removed). Cursive Z in P5 and T in S15 still look close to 3 and J; both are named as tricky in Learn It, and P5's how now says to compare the capital.
+- V-N6. Reading demand details: "wipe your feet" is the most common doormat sign; C04 and S04 rows follow the order of the cursive lines.
+- V-N7. 4.b S07 omits the lesson's term vowel-consonant-e and the term open: its options are r-controlled, vowel team, consonant-le and closed. The twin C07 (sunshine) tests closed, open and vowel-consonant-e, so the twin pair no longer exercises the same term set, and the item's two wrong options in each slot (vowel team, consonant-le) are easy to rule out for starfish. The author's reason (overlap 0.31 with C07 if vowel-consonant-e is used) is acceptable; carry the F-B5 SHOULD as open and choose a different word if you want the term back, for example "Homemade has two halves" (home / made: vowel-consonant-e + vowel-consonant-e) with a different distractor set.
+- V-N8. 4.b S08 / S09 words baby and silent are also T4 distractors (carried; the check is the accepted form).
+- V-N9. Standard wording: the official text is "Read phrases and sentences written in cursive." Six single-word or name items (C01, P5, S01, S15, T2, P2) are words, not phrases or sentences; P4, S05 and T4 read word lists. Acceptable at the foundation level; no change required.
+- V-N10. DOK labels: 13 of 15 core items are DOK 2 by label but are decoding and matching; the reading-lesson DOK 3 minimum does not apply to this foundations lesson (author exception stands).
+- V-N11. Watch Me still models the s and S only; the items use lists with colons, notes with signatures and "which sentence matches" comparisons (carried N-H3).
+- V-N12. Grade level: "pupil" (S13) and "scribbled" are fine for grade 3; "student" is more common in US text.
+
+## V9. Fourth-review findings confirmed against the files (not the log)
+
+| Fourth-review finding | Status in the files |
+|---|---|
+| M4-H1 C08 answerable without reading | **FIXED.** C08 is now the "Please wipe your feet" sign with four ordinary signs; answered correctly only with the cursive visible. Hints 2 and 3, how and why agree. A new duplicate (V-H2) came with the sentence |
+| F-H1 hub effect | **FIXED to the extent claimed**: 0 of 19 unique hubs (was 15); ties remain in 10 items (V-N1) |
+| F-H2 leaks (Quinn/red, Saturday, Zoe) | **FIXED.** C04 uses Fay, Wes, Pia, Ray and "gold cap"; C13 asks for Thursday; no repeated cursive word across items |
+| F-H3 false or non-discriminating statements | **FIXED** for C01 (widow five letters, willow double l, wilder ends in er; true), P5 (compare the second letter and the Z; true), S15 (e-s-s, a-s-h, i-l-l, four letters; true). New non-discriminating line: T1 (V-H1) |
+| F-H4 C12 and S13 hint 3 | **FIXED as worded** (one option ruled out); the remaining distractors are weak (V-H3) |
+| F-H5 S12 corn soup | **FIXED** (Pop: lentil soup) |
+| F-B1 4.b C08 sky | **FIXED** (sky in the sentence; four options) |
+| F-B2 4.b S04 duplicate | **NOT FIXED**: pillow is a duplicate of a GUM3 item and the item now has a second defensible answer (M5-B1) |
+| F-B3 4.b T3 leaks | **FIXED** (funnel, moment) |
+| F-B4 4.b hint 3 names two distractors | **FIXED** (one each, also on C08 and S08) |
+| F-B5 4.b S07 term drift | **PARTLY**: "silent-e" is gone and the prompt says "kind"; vowel-consonant-e is absent (V-N7) |
+
+## V10. Author-log claims checked against the files
+
+1. "C08 rebuilt ... each would make a sensible sign" TRUE.
+2. "`check-content --all` PASS (0 failures, 100 warnings), `check-writing` 0 failures, `check-instructional-copy` 28 passed" TRUE (I ran all three). The new 4.b warnings "hint 1 is much longer than hint 3" on C08 and S08 are not mentioned.
+3. "Hub: H.3.a 0 of 19 mc items" TRUE for a unique hub. The sentence on ties names four items; there are ten (V-N1).
+4. "Twin similarity H.3.a worst 0.206 (S06~C05)" The value is right but the pair is S13~C12 (S06~C05 is 0.17).
+5. "Longest key: 4.b 5 of 27 and 0 of 5; H.3.a 3 of 39 and 0 of 3" TRUE for H.3.a; I did not re-run 4.b.
+6. "4.b S04 ... No other lesson uses that option set." **MISLEADING.** The exact three options are not repeated, but L-GUM3 SK-GUM3-8-C04 uses the same word, the same key split pil / low, and the same distractor split pill / ow. Not a false number, but it answers the F-B2 finding wrongly.
+7. "S07: vowel-consonant-e raised the twin overlap with C07 to 0.31 (it is 0.200 now)" The 0.200 is right (S07 0.200 / 0.173); I did not reproduce 0.31.
+8. "Test items changed (wording or distractors only; same ids, points, types and keys): T1, T2, T3, T5" TRUE (check-content's wording-only warning; my solve).
+9. "I did not touch 4.a or 4.c this pass." Not checked; the wording-only warning list for 4.c:A comes from the earlier pass.
+10. The log does not mention T1's non-discriminating why and clue, the new duplicate with SK-GUM2, or that the pillow item changed the criterion for the key.
+
+## V11. Per-item verdicts
+
+3.F.H.3.a (38 items: 15 core, 15 similar, 3 Together, 5 check)
+- ACCEPT: C01, C02, C03, C04, P4, C05, C06 (V-H5), C07, C09, C10, C11, C13, P5, S01, S02, S03, S04, S05, S06, S07, S09, S10 (V-H5), S11, S12, S14, S15, P1, P2, P3, T2, T3, T4, T5.
+- ACCEPT with SHOULD: C08 (V-H2), C12 and S13 (V-H3), S08 (V-H4), T1 (V-H1).
+- CHANGES REQUIRED: none.
+- Lesson: **ACCEPT.** The fourth-review MUST is fixed. SHOULDs V-H1 to V-H5 are recommended before the lesson is marked VERIFIED; V-H1 is a one-line wording change and V-H2 needs a re-solve of C08 only.
+
+3.F.P.4.b (edits only; 40 items)
+- ACCEPT: every item except S04 (all keys and live choices intact; C08, T3, hint 3 on C03, S03, C05, S05, C08, S08 and S07 are correct).
+- CHANGES REQUIRED: S04 (M5-B1).
+- Lesson: **CHANGES REQUIRED** until S04 is replaced. After the fix, re-solve S04 blind, re-run the option-set scan against js/data and the twin Jaccard for S04~C04; the change is wording and distractors only (same id, points, type), so no testRev bump.
+
+## V12. Fix list for the lead
+
+1. 4.b S04: replace pillow with a word whose wrong splits are unsayable (puppet: pup / pet) and put the rule in hint 3 and how (M5-B1).
+2. H.3.a T1 clue and why (V-H1); C08 sentence duplicate with SK-GUM2 (V-H2).
+3. H.3.a C12 / S13 distractors and hint 2 (V-H3); S08 teach gap (V-H4); C06 / S10 slot idiom (V-H5).
+4. Then `check-content.js --all --record-versions` once, and record the ledger for 3.F.H.3.a and 3.F.P.4.b.
+
+## V13. Notes for memory
+
+- Keep two tests for a cursive item stored as plain text: the Node self-consistency solve and a hide-the-cursive answer test (meaning, frame, hub option).
+- When a reviewer proposes a replacement word or sentence, scan it against all of js/data before the author uses it: both fourth-review suggestions (the C08 sign and the pillow word) collided with an existing item.
+- A "split into real syllables" criterion fails for any split whose parts are words (pill / ow); use unsayable wrong parts or state the rule.
+- WebFetch reached merriam-webster.com pages directly this session; the allowed_domains workaround was not needed.

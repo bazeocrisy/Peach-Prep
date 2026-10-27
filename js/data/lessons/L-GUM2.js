@@ -66,7 +66,7 @@ PP.addLesson({
       "draft": true,
       "paragraphs": [
         [
-          "(1) Last month, our class started a recycling project at school.",
+          "(1) Last month, Room 12 began a recycling project at school.",
           "(2) Every morning, Ms. Duran checks the blue bins in the hall.",
           "(3) Yesterday, Jada will count the cans and bottles in the gym."
         ],
@@ -287,7 +287,7 @@ PP.addLesson({
             "passages": [
               "p1"
             ],
-            "prompt": "Sentence 3 does not match its time clue. Which revision fixes it?",
+            "prompt": "The verb in sentence 3 does not fit the clue at its start. Which revision is correct?",
             "choices": [
               {
                 "text": "Yesterday, Jada counted the cans and bottles in the gym.",
@@ -331,7 +331,7 @@ PP.addLesson({
             "passages": [
               "p1"
             ],
-            "prompt": "Sentence 6 does not match its time clue. Choose the words that fix it.",
+            "prompt": "The verb in sentence 6 does not fit the clue at its start. Choose the words that repair it.",
             "text": "Next week, the class {0} the cardboard from every room.",
             "slots": [
               {
@@ -420,7 +420,7 @@ PP.addLesson({
             "passages": [
               "p2"
             ],
-            "prompt": "Look at sentences 2 through 6. Select the TWO sentences with a verb that does not match its time clue.",
+            "prompt": "Look at sentences 2 through 6. Mark the TWO sentences in which the verb and the clue point to different times.",
             "targets": [
               "p2:1:2",
               "p2:1:3",
@@ -481,7 +481,7 @@ PP.addLesson({
               ]
             },
             "partB": {
-              "prompt": "Which revision of sentence 9 fixes the problem from Part A?",
+              "prompt": "Which rewrite of sentence 9 solves the problem named in Part A?",
               "choices": [
                 {
                   "text": "Last week, the mayor joined our picnic lunch.",
@@ -501,7 +501,7 @@ PP.addLesson({
             "clue": "Start with the time clue in sentence 9, then compare it with the verb.",
             "hints": [
               "Start with the time clue in sentence 9, then compare it with the verb.",
-              "For Part A, decide what time the clue shows and what time the verb shows. For Part B, test each revision the same way.",
+              "For Part A, decide what time the clue gives and what time the verb gives. For Part B, test each revision the same way.",
               "In Part B, a revision that keeps joins and adds another clue word still has a present tense verb. Think about the others."
             ],
             "how": [
@@ -524,7 +524,7 @@ PP.addLesson({
               "3.L.GC.1:R:form-and-use-simple-verb-tenses"
             ],
             "passages": [],
-            "prompt": "Choose the TWO sentences that use the past tense correctly.",
+            "prompt": "Pick the TWO sentences that use the past tense correctly.",
             "pick": 2,
             "choices": [
               {
@@ -571,7 +571,7 @@ PP.addLesson({
               "3.L.GC.1:R:form-and-use-simple-verb-tenses"
             ],
             "passages": [],
-            "prompt": "Which verb tells about something that already happened?",
+            "prompt": "Which verb shows an action that is already over?",
             "choices": [
               {
                 "text": "cleaned",
@@ -618,7 +618,7 @@ PP.addLesson({
             "prompt": "Ben says sentence 5 should be \"Two weeks ago, we repair the squeaky swings.\" Why is Ben wrong?",
             "choices": [
               {
-                "text": "Two weeks ago points to the past, so the verb needs the -ed ending.",
+                "text": "Two weeks ago is over, so the verb must end in -ed.",
                 "correct": true
               },
               {
@@ -640,10 +640,10 @@ PP.addLesson({
             "how": [
               "Find the clue in sentence 5: Two weeks ago. That is a time that is over.",
               "A time that is over needs a past tense verb. For a regular verb, that means -ed: repaired.",
-              "The answer is \"Two weeks ago points to the past, so the verb needs the -ed ending.\" Ben's repair is present tense, and the word we does not decide the tense."
+              "The answer is \"Two weeks ago is over, so the verb must end in -ed.\" Ben's repair is present tense, and the word we does not decide the tense."
             ],
             "misconception": "A common mix-up is letting the picture in your head decide the tense. The time clue decides it.",
-            "why": "The answer is \"Two weeks ago points to the past, so the verb needs the -ed ending.\" Ben's version, we repair, is present tense and does not match the clue. The word we can go with a past, present or future verb.",
+            "why": "The answer is \"Two weeks ago is over, so the verb must end in -ed.\" Ben's version, we repair, is present tense and does not match the clue. The word we can go with a past, present or future verb.",
             "like": [
               "SK-GUM2-1-S10"
             ]
@@ -664,7 +664,7 @@ PP.addLesson({
             "passages": [
               "p3"
             ],
-            "prompt": "Select the TWO sentences that tell about something that has not happened yet.",
+            "prompt": "Select the TWO sentences about a time that has not arrived.",
             "targets": [
               "p3:1:3",
               "p3:1:4",
@@ -827,7 +827,7 @@ PP.addLesson({
               "3.L.GC.1:R:form-and-use-simple-verb-tenses"
             ],
             "passages": [],
-            "prompt": "Mia says, \"You can only tell a sentence is in the past if it has a time clue like yesterday.\" Which sentence shows that Mia is wrong?",
+            "prompt": "Nora thinks you can only tell that a sentence is in the past if it has a clue like yesterday. Which sentence shows that Nora is wrong?",
             "choices": [
               {
                 "text": "The goalie blocked the last shot of the game.",
@@ -847,15 +847,15 @@ PP.addLesson({
             "hints": [
               "To show that an idea is wrong, find an example that breaks it. Check each sentence for a clue word and for a verb ending.",
               "Underline any time clue in each choice. Then ask what tells the time in a sentence that has none.",
-              "The sentence about Yesterday does have a clue, so it fits Mia's idea. Think about the other choices."
+              "The sentence about Yesterday does have a clue, so it fits Nora's idea. Think about the other choices."
             ],
             "how": [
-              "Mia says a past sentence needs a clue word. Look for a past sentence with no clue word.",
+              "Nora says a past sentence needs a clue word. Look for a past sentence with no clue word.",
               "Most choices begin with a clue. One sentence has none, but its verb ends in -ed and tells about the past.",
               "The answer is \"The goalie blocked the last shot of the game.\" The -ed ending shows the past without a clue word."
             ],
             "misconception": "A common mix-up is thinking the clue word is the only way to show time. The verb form shows it too.",
-            "why": "The answer is \"The goalie blocked the last shot of the game.\" It has no time clue, but blocked ends in -ed, so it still tells about the past. That proves Mia wrong. The other sentences all begin with a clue word.",
+            "why": "The answer is \"The goalie blocked the last shot of the game.\" It has no time clue, but blocked ends in -ed, so it still tells about the past. That proves Nora wrong. The other sentences all begin with a clue word.",
             "like": [
               "SK-GUM2-1-S15"
             ]
@@ -1075,7 +1075,7 @@ PP.addLesson({
       "clue": "A verb can change form because of a helping word, a time clue, or who does the action. Look for those in sentences 8 and 9.",
       "hints": [
         "A verb can change form because of a helping word, a time clue, or who does the action. Look for those in sentences 8 and 9.",
-        "In sentence 9, see which word sits right in front of look. In sentence 8, see who locks the box and when.",
+        "In sentence 9, see which word sits right before look. In sentence 8, see who locks the box and when.",
         "Locks has no -ed ending, and neither sentence starts with a clue about the past. Think about the choices again."
       ],
       "how": [
@@ -1100,7 +1100,7 @@ PP.addLesson({
       "passages": [
         "p5"
       ],
-      "prompt": "Which TWO of sentences 2 to 6 pair a clue and a verb that point to different times?",
+      "prompt": "Tap the two sentences among 2 to 6 whose verb belongs to another time than the opening words.",
       "targets": [
         "p5:1:2",
         "p5:1:3",
@@ -1141,27 +1141,27 @@ PP.addLesson({
       "passages": [
         "p5"
       ],
-      "prompt": "Work through the first half, then the second half.",
+      "prompt": "Complete both halves, starting with the first.",
       "partA": {
-        "prompt": "What is the mistake in sentence 8?",
+        "prompt": "Which statement explains the error in sentence 8?",
         "choices": [
           {
-            "text": "Welcomed shows the past, but Soon looks ahead to later.",
+            "text": "Welcomed names a finished action, but Soon looks ahead to later.",
             "correct": true
           },
           {
             "text": "Welcomed should end in -s, since I is one person at the door."
           },
           {
-            "text": "Soon should be replaced by Yesterday so the verb can stay as it is."
+            "text": "Soon should be swapped for Last night so the verb can stay as it is."
           },
           {
-            "text": "Soon looks back to the past, but welcomed looks ahead to later."
+            "text": "Soon looks back to a finished time, but welcomed looks ahead to later."
           }
         ]
       },
       "partB": {
-        "prompt": "Pick the rewrite that corrects it.",
+        "prompt": "Choose the repair.",
         "choices": [
           {
             "text": "Soon, I will welcome the guests at the door.",
@@ -1187,10 +1187,10 @@ PP.addLesson({
       "how": [
         "Part A: Soon points to later, so it is the future. Welcomed ends in -ed, so it is past tense.",
         "Part B: the future needs will plus the plain verb: will welcome.",
-        "The answers are \"Welcomed shows the past, but Soon looks ahead to later.\" and \"Soon, I will welcome the guests at the door.\""
+        "The answers are \"Welcomed names a finished action, but Soon looks ahead to later.\" and \"Soon, I will welcome the guests at the door.\""
       ],
       "misconception": "A common mix-up is fixing the clue instead of the verb. The verb should change to match the clue.",
-      "why": "Part A: \"Welcomed shows the past, but Soon looks ahead to later.\" Part B: \"Soon, I will welcome the guests at the door.\" Soon has not happened yet, so the verb needs will plus the plain verb.",
+      "why": "Part A: \"Welcomed names a finished action, but Soon looks ahead to later.\" Part B: \"Soon, I will welcome the guests at the door.\" Soon has not happened yet, so the verb needs will plus the plain verb.",
       "like": [
         "SK-GUM2-1-C07"
       ]
@@ -1204,7 +1204,7 @@ PP.addLesson({
         "3.L.GC.1:R:form-and-use-simple-verb-tenses"
       ],
       "passages": [],
-      "prompt": "Tap the TWO sentences about habits, things that happen again and again.",
+      "prompt": "Tap the TWO sentences about habits, actions that repeat.",
       "pick": 2,
       "choices": [
         {
@@ -1311,9 +1311,9 @@ PP.addLesson({
           "text": "It is worse, because the speech should be moved to the future."
         }
       ],
-      "clue": "To judge a rewrite, ask what the opening words show about time. Then see whether the new verb shows the same time.",
+      "clue": "To judge a rewrite, ask what the opening words say about time. Then see whether the new verb tells the same time.",
       "hints": [
-        "To judge a rewrite, ask what the opening words show about time. Then see whether the new verb shows the same time.",
+        "To judge a rewrite, ask what the opening words say about time. Then see whether the new verb tells the same time.",
         "Find the opening words of sentence 7. Say whether they are about the past, the present or the future.",
         "Whether the speech is perfect today is a different question from when the sentence takes place. Think about the other choices."
       ],
@@ -1339,7 +1339,7 @@ PP.addLesson({
       "passages": [
         "p6"
       ],
-      "prompt": "Which TWO listed sentences look ahead to something still to come?",
+      "prompt": "Which TWO listed sentences look ahead to a time still to come?",
       "targets": [
         "p6:1:2",
         "p6:1:3",
@@ -1420,38 +1420,38 @@ PP.addLesson({
       ],
       "passages": [],
       "prompt": "Fill each gap with the verb form that suits its clue.",
-      "text": "Yesterday, the wind {0} the leaves across the yard. Next week, Dad {1} the leaves into piles.",
+      "text": "Two nights ago, my sister {0} her science poster with glue. In a few days, she {1} it to class.",
       "slots": [
         {
           "options": [
-            "tosses",
-            "tossed",
-            "will toss"
+            "finishes",
+            "finished",
+            "will finish"
           ],
           "answer": 1
         },
         {
           "options": [
-            "rakes",
-            "will rake",
-            "will raked"
+            "carried",
+            "will carries",
+            "will carry"
           ],
-          "answer": 1
+          "answer": 2
         }
       ],
       "clue": "Each sentence has its own clue. Match each verb to its own clue.",
       "hints": [
         "Each sentence has its own clue. Match each verb to its own clue.",
-        "Yesterday is over, and Next week has not come yet. Decide which tense each clue shows.",
+        "Two nights ago is over, and In a few days has not come yet. Decide which tense each clue shows.",
         "Whatever follows the word will stays plain. Use that to check the second gap."
       ],
       "how": [
         "Use the clue in each sentence.",
-        "Yesterday shows the past, so the first gap needs a past form.",
-        "Next week shows the future, so the second gap needs will plus the plain verb. The answers are tossed and will rake."
+        "Two nights ago shows the past, so the first gap needs a past form: finished.",
+        "In a few days shows the future, so the second gap needs will plus the plain verb. The answers are finished and will carry."
       ],
       "misconception": "A common mix-up is using one tense for both gaps. Each sentence has its own clue.",
-      "why": "The answers are tossed and will rake. Yesterday is in the past, so the wind tossed the leaves. Next week is in the future, so Dad will rake. Tosses is present tense, and will raked puts -ed after will.",
+      "why": "The answers are finished and will carry. Two nights ago is in the past, so my sister finished her poster. In a few days is in the future, so she will carry it. Finishes is present tense, carried is past, and will carries adds -s after will.",
       "like": [
         "SK-GUM2-1-C13"
       ]
@@ -1502,7 +1502,7 @@ PP.addLesson({
         "3.L.GC.1:R:form-and-use-simple-verb-tenses"
       ],
       "passages": [],
-      "prompt": "Rex claims you need a word like tomorrow to write about the future. Which sentence proves he is mistaken?",
+      "prompt": "Rex believes a future sentence must contain tomorrow, soon or next week. Which choice proves him mistaken?",
       "choices": [
         {
           "text": "The tide will rise slowly over the sand.",
@@ -1525,7 +1525,7 @@ PP.addLesson({
         "The sentence with Tomorrow has the clue Rex wants, so it cannot prove him wrong. Think about the others."
       ],
       "how": [
-        "Rex says a future sentence needs a clue word. Look for a future sentence with no clue word.",
+        "Rex says a future sentence needs one of those clue words. Look for a future sentence with none.",
         "Most choices start with a clue. One does not, but the word will in front of the verb tells about later.",
         "The answer is \"The tide will rise slowly over the sand.\" The helping word will shows the future without a clue."
       ],
