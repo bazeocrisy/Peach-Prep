@@ -268,7 +268,7 @@
         answer: "Sam starts with capital S, and swims has a lowercase s at the beginning and at the end."
       }
     ],
-    parent: "Write your grocery list or a short note to your child in cursive, and let them read it to you. Birthday cards from relatives are great real-life cursive practice too.",
+    parent: "Write your grocery list or a short note to your child in cursive, and let them read it to you. Birthday cards from relatives are great real-life cursive practice too. The cursive on this page uses one font, and your child's school may teach a different model, so letters can look a little different. In this font the letter s can leave a small gap after it, so a word may look as if it has been split. If your child pauses at a gap, point out that the whole word is joined and that the wider spaces show where words end.",
     practice: [
       { id: "SK-FH3a-P1", type: "mc", points: 1, dok: 1, passages: [],
         prompt: "Read the cursive sentence. Which sentence matches it?",
@@ -403,11 +403,11 @@
                 },
                 {
                   options: [
-                    "rod",
-                    "rid",
-                    "red"
+                    "red",
+                    "new",
+                    "old"
                   ],
-                  answer: 2
+                  answer: 0
                 }
               ],
               clue: "Read the cursive sentence one word at a time.",
@@ -418,11 +418,11 @@
               ],
               how: [
                 "Read the first word. It starts with a capital letter and has five letters: Quinn.",
-                "Read the word before scooter. It has three letters: r-e-d.",
+                "Read the word before scooter. It has three letters and starts with r: r-e-d.",
                 "Check the sentence: Quinn rode a red scooter."
               ],
               misconception: "A common mix-up is guessing a word from its first letter. Read every letter.",
-              why: "The answers are \"Quinn\" and \"red.\" The sentence starts with the name Quinn and says Quinn rode a red scooter. Gwen, Owen, rod and rid do not match the letters."
+              why: "The answers are \"Quinn\" and \"red.\" The sentence starts with the name Quinn and says Quinn rode a red scooter. Gwen, Owen, new and old do not match the letters."
             },
             {
               id: "SK-FH3a-C03",
@@ -442,16 +442,16 @@
                 {
                   options: [
                     "dozed",
-                    "dived",
-                    "danced"
+                    "sulked",
+                    "slept"
                   ],
                   answer: 0
                 },
                 {
                   options: [
                     "warm",
-                    "ward",
-                    "wall"
+                    "wide",
+                    "worn"
                   ],
                   answer: 0
                 }
@@ -468,7 +468,7 @@
                 "The word before chair has four letters: warm."
               ],
               misconception: "A common mix-up is choosing a word that starts the same way. Read every letter.",
-              why: "The answers are \"dozed\" and \"warm.\" The sentence says The baby dozed in a warm chair. Dived, danced, ward and wall do not match the letters."
+              why: "The answers are \"dozed\" and \"warm.\" The sentence says The baby dozed in a warm chair. Sulked, slept, wide and worn do not match the letters."
             },
             {
               id: "SK-FH3a-C04",
@@ -479,47 +479,50 @@
                 "3.F.H.3.a"
               ],
               passages: [],
-              prompt: "Read the cursive sentence. Match each place in the sentence to its word.",
+              prompt: "Read the cursive lines. Match each child to the thing they brought.",
               stem: [
-                "Cursive: Nia ran home fast."
+                "Cursive: Quinn: red cap",
+                "Cursive: Zoe: blue kite",
+                "Cursive: Gwen: green drum",
+                "Cursive: Tess: yellow ball"
               ],
               cols: [
-                "home",
-                "Nia",
-                "fast",
-                "ran"
+                "yellow ball",
+                "red cap",
+                "green drum",
+                "blue kite"
               ],
               rows: [
                 {
-                  text: "last word",
-                  answer: 2
-                },
-                {
-                  text: "first word",
+                  text: "Quinn",
                   answer: 1
                 },
                 {
-                  text: "third word",
-                  answer: 0
+                  text: "Zoe",
+                  answer: 3
                 },
                 {
-                  text: "second word",
-                  answer: 3
+                  text: "Gwen",
+                  answer: 2
+                },
+                {
+                  text: "Tess",
+                  answer: 0
                 }
               ],
-              clue: "Use the spaces to find where each word begins and ends.",
+              clue: "Read each cursive line. It has a name, a colon, then a thing.",
               hints: [
-                "Use the spaces to find where each word begins and ends.",
-                "Read each word one at a time and count its place in the sentence.",
-                "Start with the first word. It has a capital letter."
+                "Read each cursive line. It has a name, a colon, then a thing.",
+                "Find a name you know well first. Then read the words after its colon.",
+                "Start with Gwen. Read the two words after her colon, then look for them in the choices."
               ],
               how: [
-                "Find the four words using the spaces.",
-                "Read them in order: Nia, ran, home, fast.",
-                "Match each place to the word that sits there."
+                "Read each line of the cursive list.",
+                "Find the line for each name.",
+                "Match each name to the words after its colon."
               ],
-              misconception: "A common mix-up is counting from the wrong end. Start at the capital letter.",
-              why: "The first word is Nia, the second is ran, the third is home, and the last is fast."
+              misconception: "A common mix-up is matching by guess. Read each line to find the name and its thing.",
+              why: "Quinn brought the red cap, Zoe brought the blue kite, Gwen brought the green drum, and Tess brought the yellow ball."
             },
             {
               ref: "SK-FH3a-P4"
@@ -597,8 +600,8 @@
                 {
                   options: [
                     "tall",
-                    "tail",
-                    "toll"
+                    "thick",
+                    "wet"
                   ],
                   answer: 0
                 }
@@ -615,7 +618,7 @@
                 "The word before grass has four letters: tall."
               ],
               misconception: "A common mix-up is choosing a word that names the same kind of thing. Read every letter.",
-              why: "The answers are \"rabbit\" and \"tall.\" The sentence says A brown rabbit hid in the tall grass. Robin, raccoon, tail and toll do not match the letters."
+              why: "The answers are \"rabbit\" and \"tall.\" The sentence says A brown rabbit hid in the tall grass. Robin, raccoon, thick and wet do not match the letters."
             },
             {
               id: "SK-FH3a-C07",
@@ -670,7 +673,7 @@
                   text: "Knock after opening the door."
                 },
                 {
-                  text: "Lock the door before knocking."
+                  text: "Look before opening the door."
                 },
                 {
                   text: "Knock before closing the door."
@@ -1004,8 +1007,8 @@
           {
             options: [
               "heavy",
-              "happy",
-              "hairy"
+              "empty",
+              "woven"
             ],
             answer: 0
           }
@@ -1022,7 +1025,7 @@
           "Check the sentence: Tess carried a heavy basket."
         ],
         misconception: "A common mix-up is guessing a word from its first letter. Read every letter.",
-        why: "The answers are \"Tess\" and \"heavy.\" The sentence says Tess carried a heavy basket. Jess, Tim, happy and hairy do not match the letters."
+        why: "The answers are \"Tess\" and \"heavy.\" The sentence says Tess carried a heavy basket. Jess, Tim, empty and woven do not match the letters."
       },
       {
         id: "SK-FH3a-S03",
@@ -1036,7 +1039,7 @@
         like: [
           "SK-FH3a-C03"
         ],
-        prompt: "Pick the words that complete the cursive sentence.",
+        prompt: "Fill both gaps from the cursive line.",
         stem: [
           "Cursive: A quail ran past our rusty boat."
         ],
@@ -1045,16 +1048,16 @@
           {
             options: [
               "quail",
-              "quilt",
-              "quill"
+              "ferret",
+              "pigeon"
             ],
             answer: 0
           },
           {
             options: [
               "rusty",
-              "dusty",
-              "musty"
+              "rotten",
+              "wooden"
             ],
             answer: 0
           }
@@ -1071,7 +1074,7 @@
           "The word before boat has five letters and starts with r: rusty."
         ],
         misconception: "A common mix-up is choosing a word that looks close. Read every letter.",
-        why: "The answers are \"quail\" and \"rusty.\" The line says A quail ran past our rusty boat. Quilt, quill, dusty and musty do not match the letters."
+        why: "The answers are \"quail\" and \"rusty.\" The line says A quail ran past our rusty boat. Ferret, pigeon, rotten and wooden do not match the letters."
       },
       {
         id: "SK-FH3a-S04",
@@ -1085,47 +1088,50 @@
         like: [
           "SK-FH3a-C04"
         ],
-        prompt: "Which word fits each clue about the cursive line? Match.",
+        prompt: "Which toy goes with each name in the cursive list? Match.",
         stem: [
-          "Cursive: Sam took eight plates."
+          "Cursive: Hal: pink bike",
+          "Cursive: Ivy: gray sled",
+          "Cursive: Jon: tan boat",
+          "Cursive: Kit: black skates"
         ],
         cols: [
-          "eight",
-          "Sam",
-          "plates",
-          "took"
+          "tan boat",
+          "pink bike",
+          "black skates",
+          "gray sled"
         ],
         rows: [
           {
-            text: "starts the sentence",
+            text: "Hal",
             answer: 1
           },
           {
-            text: "comes right after Sam",
+            text: "Ivy",
             answer: 3
           },
           {
-            text: "comes right before plates",
+            text: "Jon",
             answer: 0
           },
           {
-            text: "ends the sentence",
+            text: "Kit",
             answer: 2
           }
         ],
-        clue: "Use the spaces to see where each word stops.",
+        clue: "Read each cursive line. It has a name, a colon, then a toy.",
         hints: [
-          "Use the spaces to see where each word stops.",
-          "Read the cursive line one word at a time and put the words in order.",
-          "Start with the first word. It has a capital letter."
+          "Read each cursive line. It has a name, a colon, then a toy.",
+          "Find a name you know well first. Then read the words after its colon.",
+          "Start with Jon. Read the two words after his colon, then look for them in the choices."
         ],
         how: [
-          "Find the four words using the spaces.",
-          "Read them in order: Sam, took, eight, plates.",
-          "Match each clue to the word that sits there."
+          "Read each line of the cursive list.",
+          "Find the line for each name.",
+          "Match each name to the words after its colon."
         ],
-        misconception: "A common mix-up is guessing from the clue words. Read the cursive to see the order.",
-        why: "Sam starts the sentence. Took comes right after Sam. Eight comes right before plates. Plates ends the sentence."
+        misconception: "A common mix-up is matching by guess. Read each line to find the name and its toy.",
+        why: "Hal has the pink bike, Ivy has the gray sled, Jon has the tan boat, and Kit has the black skates."
       },
       {
         id: "SK-FH3a-S05",
@@ -1245,16 +1251,16 @@
           {
             options: [
               "aunt",
-              "ant",
-              "art"
+              "mother",
+              "cousin"
             ],
             answer: 0
           },
           {
             options: [
               "purple",
-              "people",
-              "purse"
+              "orange",
+              "yellow"
             ],
             answer: 0
           }
@@ -1268,10 +1274,10 @@
         how: [
           "Read each piece of the line.",
           "The word after My has four letters and starts with a: aunt.",
-          "The word before scarf has six letters: purple."
+          "The word before scarf has six letters and starts with p: purple."
         ],
         misconception: "A common mix-up is choosing a word that looks close. Read every letter.",
-        why: "The answers are \"aunt\" and \"purple.\" The line says My aunt knits a purple scarf every winter. Ant, art, people and purse do not match the letters."
+        why: "The answers are \"aunt\" and \"purple.\" The line says My aunt knits a purple scarf every winter. Mother, cousin, orange and yellow do not match the letters."
       },
       {
         id: "SK-FH3a-S08",
@@ -1373,16 +1379,16 @@
           {
             options: [
               "wash",
-              "wish",
-              "watch"
+              "dry",
+              "wipe"
             ],
             answer: 0
           },
           {
             options: [
               "cups",
-              "caps",
-              "cubs"
+              "bowls",
+              "plates"
             ],
             answer: 0
           }
@@ -1399,7 +1405,7 @@
           "The last word is cups."
         ],
         misconception: "A common mix-up is guessing a word that makes sense but does not match the letters. Read every letter.",
-        why: "The answers are \"wash\" and \"cups.\" The line says Wash the pans and stack the cups. Wish, watch, caps and cubs do not match the letters."
+        why: "The answers are \"wash\" and \"cups.\" The line says Wash the pans and stack the cups. Dry, wipe, bowls and plates do not match the letters."
       },
       {
         id: "SK-FH3a-S11",
@@ -1458,50 +1464,50 @@
         like: [
           "SK-FH3a-C11"
         ],
-        prompt: "Match each season to its plan.",
+        prompt: "Match each cook to the dish.",
         stem: [
-          "Cursive: Spring: plant seeds",
-          "Cursive: Summer: go camping",
-          "Cursive: Autumn: rake leaves",
-          "Cursive: Winter: build snowmen"
+          "Cursive: Nan: pear tart",
+          "Cursive: Pop: corn soup",
+          "Cursive: Mom: fish pie",
+          "Cursive: Dad: bean stew"
         ],
         cols: [
-          "go camping",
-          "build snowmen",
-          "rake leaves",
-          "plant seeds"
+          "fish pie",
+          "bean stew",
+          "pear tart",
+          "corn soup"
         ],
         rows: [
           {
-            text: "Autumn",
-            answer: 2
-          },
-          {
-            text: "Spring",
-            answer: 3
-          },
-          {
-            text: "Winter",
+            text: "Dad",
             answer: 1
           },
           {
-            text: "Summer",
+            text: "Nan",
+            answer: 2
+          },
+          {
+            text: "Mom",
             answer: 0
+          },
+          {
+            text: "Pop",
+            answer: 3
           }
         ],
-        clue: "Read each line of the cursive chart.",
+        clue: "Read each line of the cursive menu.",
         hints: [
-          "Read each line of the cursive chart.",
-          "Each line has a season, then a colon, then a plan.",
-          "Start with the season you know best. Find its line and read the words after the colon."
+          "Read each line of the cursive menu.",
+          "Each line has a name, then a colon, then a dish.",
+          "Start with the name you know best. Find its line and read the words after the colon."
         ],
         how: [
-          "Read each line of the chart.",
-          "Find the line for each season.",
-          "Match each season to the plan after its colon."
+          "Read each line of the menu.",
+          "Find the line for each name.",
+          "Match each name to the dish after its colon."
         ],
-        misconception: "A common mix-up is matching by position. Read each line to find the season and its plan.",
-        why: "Spring is plant seeds, Summer is go camping, Autumn is rake leaves, and Winter is build snowmen."
+        misconception: "A common mix-up is matching by position. Read each line to find the name and its dish.",
+        why: "Nan makes the pear tart, Pop makes the corn soup, Mom makes the fish pie, and Dad makes the bean stew."
       },
       {
         id: "SK-FH3a-S13",
@@ -1566,8 +1572,8 @@
           {
             options: [
               "fountain",
-              "mountain",
-              "fortune"
+              "library",
+              "playground"
             ],
             answer: 0
           },
@@ -1592,7 +1598,7 @@
           "The word after on is Wednesday."
         ],
         misconception: "A common mix-up is picking a word that looks close. Read every letter.",
-        why: "The answers are \"fountain\" and \"Wednesday.\" The message says to meet by the fountain on Wednesday. Mountain, fortune, Tuesday and Monday do not match."
+        why: "The answers are \"fountain\" and \"Wednesday.\" The message says to meet by the fountain on Wednesday. Library, playground, Tuesday and Monday do not match."
       },
       {
         id: "SK-FH3a-S15",

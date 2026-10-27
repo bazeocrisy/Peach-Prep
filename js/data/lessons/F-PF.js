@@ -1323,7 +1323,7 @@ PP.addLesson({
       hints: [
         "Say the word that fits the sentence. Then picture how it looks.",
         "Some of these are real words that mean something else. Read each one in the sentence.",
-        "Think about what you do with jam on toast, and which letters can spell the vowel in bed."
+        "Think about what you do with jam on toast. Then say each spelling in the sentence."
       ],
       how: [
         "Read the sentence and think of what you do with jam on toast.",
@@ -1794,7 +1794,7 @@ PP.addLesson({
             hints: [
               "Find the vowels, then look at the consonants between them.",
               "Try to split so that each part makes a real syllable you can say.",
-              "For basin, try splitting before the s first. Say it and ask if it is a real word."
+              "Say each choice out loud. Ask which one gives parts you can say as real syllables."
             ],
             how: [
               "Ribbon has two consonants, b and b, between the vowels, so split between them: rib / bon.",
@@ -1831,7 +1831,7 @@ PP.addLesson({
                 text: "window"
               },
               {
-                text: "tablet"
+                text: "pretzel"
               },
               {
                 text: "going"
@@ -1841,15 +1841,15 @@ PP.addLesson({
             hints: [
               "An r-controlled syllable has a vowel followed by r.",
               "Split each word into syllables. Look for a vowel and an r together.",
-              "Split window and tablet into syllables and look at each part."
+              "Split window and pretzel into syllables and look at each part."
             ],
             how: [
-              "Split each word: morn / ing, win / dow, tab / let, go / ing.",
+              "Split each word: morn / ing, win / dow, pret / zel, go / ing.",
               "Look for a vowel followed by r. Morn has or.",
-              "The other words have no vowel followed by r."
+              "The other words have no vowel followed by r. Pretzel has an r, but the r comes before the e."
             ],
             misconception: "A common mix-up is looking for the letter r anywhere. The r has to follow the vowel in a syllable.",
-            why: "The answer is \"morning.\" The first syllable, morn, has a vowel followed by r, which makes it r-controlled. Window, tablet and going have no vowel followed by r."
+            why: "The answer is \"morning.\" The first syllable, morn, has a vowel followed by r, which makes it r-controlled. Window, pretzel and going have no vowel followed by r. The r in pretzel comes before its vowel."
           },
           {
             id: "SK-FP4b-C06",
@@ -2311,7 +2311,7 @@ PP.addLesson({
       hints: [
         "Find the vowels, then look at the consonants between them.",
         "Try a split and say each part. Check whether the parts are real syllables.",
-        "For bacon, try splitting before the c first. Say it and ask if it is a real word."
+        "Say each choice out loud. Ask which one gives parts you can say as real syllables."
       ],
       how: [
         "Magnet has two consonants, g and n, between the vowels, so split between them: mag / net.",
@@ -2343,7 +2343,7 @@ PP.addLesson({
           text: "puppy"
         },
         {
-          text: "table"
+          text: "robot"
         },
         {
           text: "float"
@@ -2353,15 +2353,15 @@ PP.addLesson({
       hints: [
         "Think about which letters sit together in a syllable.",
         "Split each word into syllables. Look for a vowel and an r together.",
-        "Split puppy and table into syllables and look at each part."
+        "Split puppy and robot into syllables and look at each part."
       ],
       how: [
-        "Split each word: car / pet, pup / py, ta / ble, float.",
+        "Split each word: car / pet, pup / py, ro / bot, float.",
         "Look for a vowel followed by r. Car has ar.",
-        "The other words have no vowel followed by r."
+        "The other words have no vowel followed by r. Robot has an r, but the r comes before the o."
       ],
       misconception: "A common mix-up is looking for r anywhere in the word. The r has to follow the vowel in a syllable.",
-      why: "The answer is \"carpet.\" The first syllable, car, has a vowel followed by r, so it is r-controlled. Puppy, table and float have no vowel followed by r."
+      why: "The answer is \"carpet.\" The first syllable, car, has a vowel followed by r, so it is r-controlled. Puppy, robot and float have no vowel followed by r. The r in robot comes before its vowel."
     },
     {
       id: "SK-FP4b-S06",
@@ -2422,22 +2422,22 @@ PP.addLesson({
       like: [
         "SK-FP4b-C07"
       ],
-      prompt: "How is each half of starfish built?",
+      prompt: "Starfish has two halves. Name their builds.",
       text: "Front half: {0}. Back half: {1}.",
       slots: [
         {
           options: [
             "r-controlled",
-            "consonant-le",
-            "vowel team"
+            "silent-e",
+            "consonant-le"
           ],
           answer: 0
         },
         {
           options: [
-            "consonant-le",
+            "silent-e",
             "closed",
-            "r-controlled"
+            "consonant-le"
           ],
           answer: 1
         }
@@ -2454,7 +2454,7 @@ PP.addLesson({
         "Fish ends with a consonant, so it is closed."
       ],
       misconception: "A common mix-up is giving both parts the same build. Look at each part on its own.",
-      why: "Star has a vowel followed by r, so it is an r-controlled syllable. Fish ends with a consonant, so it is a closed syllable. Neither part is consonant-le or a vowel team."
+      why: "Star has a vowel followed by r, so it is an r-controlled syllable. Fish ends with a consonant, so it is a closed syllable. Neither part is silent-e or consonant-le."
     },
     {
       id: "SK-FP4b-S08",
@@ -2881,12 +2881,12 @@ PP.addLesson({
       hints: [
         "Look at how each word ends. Look at the last three letters.",
         "Say each word. Ask whether the end is a consonant plus le.",
-        "Check tunnel and sunset. Do they end in a consonant plus le?"
+        "Check channel and sunset. Do they end in a consonant plus le?"
       ],
       how: [
         "Look at the last three letters of each word.",
         "Bubble ends in ble, and turtle ends in tle. Both are consonant-le.",
-        "Tunnel, travel and sunset do not end in a consonant plus le."
+        "Channel, travel and sunset do not end in a consonant plus le."
       ],
       misconception: "A common mix-up is choosing words that end with l. The ending has to be a consonant plus le."
     },
@@ -3259,43 +3259,43 @@ PP.addLesson({
               "3.F.P.4.c"
             ],
             passages: [],
-            prompt: "Match each word to the meaning of its prefix.",
+            prompt: "Which front part gives each meaning? Match.",
             cols: [
-              "again",
-              "before",
-              "wrongly"
+              "re-",
+              "pre-",
+              "mis-"
             ],
             rows: [
               {
-                text: "rewind",
+                text: "again",
                 answer: 0
               },
               {
-                text: "pretest",
+                text: "before",
                 answer: 1
               },
               {
-                text: "misjudge",
+                text: "wrongly",
                 answer: 2
               },
               {
-                text: "regroup",
+                text: "once more",
                 answer: 0
               }
             ],
-            clue: "Cover the front part of each word. Then think about what that part means.",
+            clue: "Think about a word you know that begins with each front part.",
             hints: [
-              "Cover the front part of each word. Then think about what that part means.",
-              "Ask whether the front part means again, before or wrongly.",
-              "Start with pretest. Cover the front part and say what is left."
+              "Think about a word you know that begins with each front part.",
+              "Ask what the front part adds to the base word in a word like that.",
+              "Start with before. Think of a word that begins with a front part that means before."
             ],
             how: [
-              "Cover the prefix on each word.",
-              "Rewind and regroup have re-, which means again.",
-              "Pretest has pre-, meaning before, and misjudge has mis-, meaning wrongly."
+              "Think of a word for each front part.",
+              "Re- means again or once more, as in redo.",
+              "Pre- means before, as in preview, and mis- means wrongly, as in misspell."
             ],
-            misconception: "A common mix-up is guessing from the base word. Look at the prefix.",
-            why: "Rewind and regroup have re-, which means again. Pretest has pre-, which means before. Misjudge has mis-, which means wrongly."
+            misconception: "A common mix-up is guessing from how the front part looks. Think about what it means.",
+            why: "Re- means again or once more. Pre- means before. Mis- means wrongly."
           },
           {
             ref: "SK-FP4c-P5"
@@ -4429,14 +4429,14 @@ PP.addLesson({
       clue: "Look at the last two letters of the base word. Then use the spelling rule that fits before -ed.",
       why: "The answer is tried. Try ends with r and y, a consonant and y, so you change the y to i and add -ed." },
     { id: "SK-FP4c-T4", type: "match", points: 2, dok: 2, passages: [],
-      prompt: "Match each word and ending to the spelling change it needs.",
+      prompt: "What happens to the base word when the ending is added? Match.",
       cols: ["drop the e", "double the last letter", "change y to i", "no change"],
       rows: [
-        { text: "shine + ing", answer: 0 },
-        { text: "skate + ed", answer: 0 },
-        { text: "swim + ing", answer: 1 },
-        { text: "happy + ly", answer: 2 },
-        { text: "spy + ed", answer: 2 }
+        { text: "adding -ing to shine", answer: 0 },
+        { text: "adding -ed to skate", answer: 0 },
+        { text: "adding -ing to swim", answer: 1 },
+        { text: "adding -ly to happy", answer: 2 },
+        { text: "adding -ed to spy", answer: 2 }
       ],
       clue: "Look at the last letters of each base word. For words that end in y, check the letter just before the y. A column can be used more than once, or not at all.",
       why: "Shine and skate drop the e (shining, skated). Swim doubles the m (swimming). Happy and spy end with a consonant and y, so the y changes to i (happily, spied). Every word here needs a change, so no row goes under no change." },

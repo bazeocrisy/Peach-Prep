@@ -74,3 +74,31 @@ Phonics claims re-checked on the web this pass:
 - ough variants: https://en.wikipedia.org/wiki/Ough_(orthography)
 
 Still open: second cursive face (none exists); Watch Me models only s and capital S in H.3.a and does not model y to i in 4.c (matrix wording says so); the s-gap in the font is explained in Teach, not removed; coreException has no UI consumer. H.3.a now has five dropdown items in the core, all "read the cursive, fill the blanks". Accepted 3.L.V.3.a SHOULDs from the earlier log are unchanged. STATUS.md and `--record-versions` are still the coordinator's.
+
+## Third fix pass after review 3 (B9-review.md, "Third review")
+Measured on the final files: `check-content --all` PASS (0 failures), `check-writing` 0 failures, `check-instructional-copy` 28 passed. Twin similarity (word-set and multiset; I also ran the same script with whole hyphenated words and with both whole and split tokens, and all three gave the same worst values): 4.a 0.186, 4.b 0.200, 4.c 0.197, H.3.a 0.208. I could not reproduce the reviewer's 0.250 for 4.b S07 or 0.226 for 4.c S09 and H.3.a S03 with any tokenizer I tried. I reduced overlap on S07 (now 3 shared words of 34) and on H.3.a S03 anyway. Longest key (ties counted for choose-two): 4.a 5 of 22 single keys, 0 of 5 choose-two; 4.b 5 of 27 and 0 of 5; 4.c 8 of 32 and 0 of 5; H.3.a 3 of 39 and 0 of 3.
+
+Corrections to earlier log statements:
+- "Hints no longer narrow" (first and second fix passes) was false. 4.b C04 and S04 hint 3 handed over the split. Fixed this pass; I did not re-audit every hint in every lesson by script. I re-read hint 3 on each item I changed.
+- "Choose-two both-longest: 0 everywhere" (first fix pass) was false when ties are counted. The second pass fixed the ties; the figures above are from the final files.
+- "Answer words no longer printed beside the cursive" (second pass) was only partly true. Printed choices could still give the answer by meaning or position. Redone below.
+
+3.F.P.4.b (all three MUSTs):
+- C04 and S04 hint 3 now say "Say each choice out loud. Ask which one gives parts you can say as real syllables." for both items. They no longer name the split.
+- C05: "tablet" became "pretzel" (pret-zel in Merriam-Webster), which has an r but no vowel followed by r. S05: "table" became "robot". How and why say the r comes before the vowel.
+- P6 addon hint 3 and how now name channel, not tunnel.
+- S07 reworded (prompt, options: r-controlled, silent-e, consonant-le / silent-e, closed, consonant-le).
+
+3.F.H.3.a (M3-H1): the child now has to decode the cursive.
+- C04 and S04 are now matching a name to a thing in cursive lines ("Quinn: red cap", "Hal: pink bike"). The pairing is only in the cursive. S12 uses the same design (cook to dish).
+- C02, C03, C06, S02, S03, S07, S10, S14 now offer choices that all fit the sentence (for example slept, sulked and dozed), so only the letters tell them apart.
+- C08 is a knock/look/lock-and-open/close sign with every choice sensible.
+- Parent note: added that the cursive uses one font, that the child's school model may differ, and that the letter s can leave a small gap, so a word may look split.
+
+3.F.P.4.a and 3.F.P.4.c (you asked for exact changes; wording only):
+- 4.a S15 hint 3 now reads "Think about what you do with jam on toast. Then say each spelling in the sentence." It no longer points at the vowel spelling. (P6 hint 2 was already changed in the second pass.) Key unchanged.
+- 4.c C04 now asks "Which front part gives each meaning?" with columns re-, pre-, mis- and the meanings as rows (again, before, wrongly, once more). Keys and the skill are unchanged; it no longer duplicates L-VOC-02-2 (0.20 under my measure).
+- 4.c T4 (a test item) prompt and row labels reworded ("adding -ing to shine"), same columns and keys, so it is less like P4 (0.42 under my measure; I could not reproduce 0.68).
+- 4.c S15 stays a twin of P7 (same rule: opposite, with lots of, free of). C03 (dis-) and C01 (unlock/relock) were already changed in the second pass.
+
+Still open: only one cursive face; Watch Me does not model every tricky letter; the s-gap is explained, not removed; 14 common words listed by review 3 as not dictionary-checked (health, orange, stage, page, dream, beans, reach, cheap, speak, mean, seat, clean, head, beach) are still unverified by me; coreException has no UI consumer. STATUS.md and `--record-versions` are the coordinator's.
