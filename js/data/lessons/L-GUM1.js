@@ -7,7 +7,7 @@ PP.addLesson({
   teach: {
     big: "A complete sentence has a part that tells who or what, and a verb, so it makes a whole thought.",
     points: [
-      "Every sentence has a naming part that tells who or what the sentence is about. It can be a noun, like Maria or the dog, or a word like I, we, she or they. In a command like Close the door, the who is you, even though it is not written.",
+      "Every sentence has a naming part that tells who or what the sentence is about. It can be a noun, like Maria or the dog, or a word like I, we, she or they. A command like Close the door is a sentence too. It does not write the who, but it tells the listener to act.",
       "Every sentence has a verb. Most verbs tell an action, like splashed or runs. Some verbs, like is and was, tell what someone or something is like.",
       "If a group of words has nothing that tells who or what, or has no verb, the thought is not complete. Add the missing part."
     ],
@@ -50,9 +50,9 @@ PP.addLesson({
       steps: [
         "Look for the verb. Wash tells someone to do something.",
         "A sentence that tells someone to do something is a command.",
-        "In a command, the who is you, even though the word is not written."
+        "Ask who is being told. The listener is the one who will wash, so the doer is there even though it is not written."
       ],
-      answer: "It is a complete sentence. It is a command, so the who is you."
+      answer: "It is a complete sentence. It is a command that tells the listener what to do."
     }
   ],
   parent: "This skill is about speaking in complete thoughts, so practice it out loud. When your child answers with a few words, like \"the park,\" ask them to say it again as a whole sentence, such as \"We went to the park.\"",
@@ -1253,35 +1253,35 @@ PP.addLesson({
         "3.L.GC.1:R:use-nouns-and-verbs-to-form-complete-thoughts-in"
       ],
       passages: ["p5"],
-      prompt: "Ravi thinks sentence 11 stands alone because waited is a verb. What is Ravi overlooking?",
+      prompt: "Ravi believes line 11 can stand on its own since waited tells an action. What is Ravi overlooking?",
       choices: [
         {
-          text: "A verb needs a doer too, and nobody is named as the one who waited.",
+          text: "An action word still needs somebody doing it, and nobody is named as the one who waited.",
           correct: true
         },
         {
-          text: "Waited is not an action, since waiting means that nothing is going on at all."
+          text: "Waiting is not really an action, since waiting means that nothing is going on at all."
         },
         {
-          text: "A line about paint needs a comma in front of the verb to be complete."
+          text: "Lines about paint need a comma in front of the word waited before they can stand on their own."
         },
         {
-          text: "The line is too short, because a sentence has to hold at least ten words."
+          text: "Anything this short cannot stand on its own, because it needs at least ten words in a row."
         }
       ],
-      clue: "A sentence needs two parts. Test sentence 11 for each of them.",
+      clue: "Lines that stand on their own need two parts. Test line 11 for each one.",
       hints: [
-        "A sentence needs two parts. Test sentence 11 for each of them.",
+        "Lines that stand on their own need two parts. Test line 11 for each one.",
         "Think about what Ravi has already found. Then look at the line for the part he has not checked.",
         "Waiting is something a person can do, so it counts as an action. Think about the other choices."
       ],
       how: [
         "Check sentence 11, Waited two days for the paint to dry. It has the verb waited, so Ravi is right about that part.",
         "A verb is only one part of a sentence. Ask who waited. The line does not say.",
-        "The answer is \"A verb needs a doer too, and nobody is named as the one who waited.\""
+        "The answer is \"An action word still needs somebody doing it, and nobody is named as the one who waited.\""
       ],
       misconception: "A common mix-up is trusting a verb without asking who does it. Waited has no one doing it.",
-      why: "The answer is \"A verb needs a doer too, and nobody is named as the one who waited.\" Waited is a verb, but nobody is named as the one who waited, so sentence 11 is not complete. A comma or a longer line would not add the missing who.",
+      why: "The answer is \"An action word still needs somebody doing it, and nobody is named as the one who waited.\" Waited is a verb, but nobody is named as the one who waited, so sentence 11 is not complete. A comma or a longer line would not add the missing who.",
       like: ["SK-GUM1-1-C10"]
     },
     {
