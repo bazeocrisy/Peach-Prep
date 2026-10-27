@@ -4,18 +4,18 @@ Author: B7a (content author). Status of every lesson: **AUTHORED (B7a), NOT ACCE
 
 ## Deviation from the brief: file used, and a warning for the second-half author
 - The brief asked for a new file `L-GUM4.js`. That was impossible: `js/data/lessons/L-GUM4.js` and `L-GUM5.js` already exist (they hold the B8 lessons, and `manifest.js` already lists both). A lesson code that is registered twice is silently ignored (first one wins), so a second set of lessons under these codes would never load.
-- All nine lessons were therefore edited **in place in `js/data/lessons/L-GUM1.js`** (the same approach B6 used in `L-GUM3.js`). The new blocks sit between `/* B7a:passages:start/end */` and `/* B7a:core:start/end */` style markers inside each lesson. Original practice P1 to P5, test T1 to T5, Teach, and Parent text are unchanged, except lesson 1 `learn`, which gained a third Watch Me ("Wash your hands before lunch.").
+- All nine lessons were therefore edited **in place in `js/data/lessons/L-GUM1.js`** (the same approach B6 used in `L-GUM3.js`). The new blocks sit between `/* B7a:passages:start/end */` and `/* B7a:core:start/end */` style markers inside each lesson. Original practice P1 to P5 and test T1 to T5 are unchanged except one Test item in lesson 7 (T4, see phase 3). Teach text changed in lessons 1, 2, 4, 5, 8 and 9, and `learn` gained a Watch Me in lessons 1, 3, 6, 7 and 8 (details in phases 2 and 3). Parent text is unchanged.
 - **Second-half author (lessons 10 to 18): do NOT write to or overwrite `L-GUM4.js` or `L-GUM5.js`. Do not use `L-GUM1.js`, which this batch owns. Check `manifest.js` and the existing files before choosing a file name.**
 
 ## What was built (per lesson)
-Each of the nine lessons has: `core` (3 sets of 5; two items are `{ref}` to original practice items, 13 are new), a `similar` bank S01 to S15 (every core item, including the two refs, has its own twin through `like`), `addons` for P1 to P5 (hints, how, misconception), six new passages `p1` to `p6`, and the Learn It / Watch Me / Together flow the L-GUM3 format uses (Together = practice minus the two refs, 3 items in each lesson).
+Each of the nine lessons has: `core` (3 sets of 5; zero to two items per lesson are `{ref}` to original practice items, see the table below; the rest are new), a `similar` bank S01 to S15 (every core item, including the two refs, has its own twin through `like`), `addons` for P1 to P5 (hints, how, misconception), six new passages `p1` to `p6`, and the Learn It / Watch Me / Together flow the L-GUM3 format uses (Together = practice minus the refs: 5, 4, 3, 5, 3, 3, 3, 3, 3 items in lessons 1 to 9).
 
-| # | Lesson code | Refs (original practice items reused in Set 1) |
+| # | Lesson code | Refs in core Set 1 (original practice items), final files |
 |---|---|---|
-| 1 | use-nouns-and-verbs-to-form-complete-thoughts-in | P2, P4 |
-| 2 | form-and-use-singular-and-plural-nouns-in-speech | P3, P5 |
-| 3 | use-interrogatives-to-ask-questions-in-speech | P2, P4 |
-| 4 | capitalize-the-first-word-of-a-sentence-and-the- | P3, P5 |
+| 1 | use-nouns-and-verbs-to-form-complete-thoughts-in | none |
+| 2 | form-and-use-singular-and-plural-nouns-in-speech | P4 |
+| 3 | use-interrogatives-to-ask-questions-in-speech | P3, P4 |
+| 4 | capitalize-the-first-word-of-a-sentence-and-the- | none |
 | 5 | form-regular-plural-nouns-with-s-or-es | P3, P4 |
 | 6 | form-and-use-verbs-with-ing-ed-or-s | P4, P5 |
 | 7 | use-action-verbs | P2, P5 |
@@ -23,7 +23,7 @@ Each of the nine lessons has: `core` (3 sets of 5; two items are `{ref}` to orig
 | 9 | use-common-and-proper-nouns | P2, P4 |
 
 ## Gate results (last run, on the final `L-GUM1.js`)
-- `node verification/check-content.js --all` (run after the last edit of phase 2): **PASS, 0 failures** (repo-wide warning count moves as other agents edit; it was 80 to 87 during the last runs). For `SK-GUM1-*` there are 11 warnings, all "hint 1 is much longer than hint 3" on lesson 9 items (lesson 9 was ACCEPT-with-SHOULDs; the reviewer called these hint-length warnings optional trims, and they were left). Lessons 1 to 8 have 0 `SK-GUM1-*` warnings.
+- `node verification/check-content.js --all` (run after the last edit of phase 3): **PASS, 0 failures** (repo-wide warning count moves as other agents edit; 79 to 82 in the last runs). For `SK-GUM1-*` there are 10 warnings, all "hint 1 is much longer than hint 3" on lesson 9 items (optional trims, left). Lessons 1 to 8 have 0 `SK-GUM1-*` warnings.
 - `node verification/check-writing.js`: 0 failures, 0 warnings. `node verification/check-instructional-copy.js`: 28 assertions passed.
 - `python3 verification/readability.py js/data/lessons/L-GUM1.js`: highest passage in lessons 1 to 9 is lesson 6 p3 at FK 4.1 (4.07 by the author script), then lesson 6 p1 and lesson 2 p5 at 3.9; all are at or below the 4.5 limit. (An earlier version of this log said "no passage above 3.9"; that was true before phase 2 added the river-otter passage text. That script counts the "(n)" markers as words, so its word counts run about 15 higher than the counts below.)
 - Author-side checker (`verify.js` in the session scratchpad, run on the final file; no output of `PROBLEM`): the keyed text appears in why for every mc, ms, ebsr, dropdown and hot-text item; how names the key words; no hint contains the key text; no twin pair is above 0.21. The old claim here that "after hint 3 at least two choices stay live for every item" was a mention-based script result and is superseded by the "Live-choice recount" section below.
@@ -33,7 +33,7 @@ Words are counted without the "(n)" markers (script `fkp.js`/`verify.js`; FK is 
 
 | Lesson | Passages | Shortest passage (words) | Highest FK |
 |---|---|---|---|
-| 1 | 6 | 103 | 3.44 |
+| 1 | 6 | 104 | 3.44 |
 | 2 | 6 | 103 | 3.87 |
 | 3 | 6 | 101 | 3.54 |
 | 4 | 6 | 102 | 2.28 |
@@ -55,12 +55,12 @@ Tokens are lowercase `[a-z']+` words over stem, prompt, text, choices, slot opti
 | 3 | 0.203 / 0.208 | 0.203 / 0.209 |
 | 4 | 0.192 / 0.209 | 0.192 / 0.209 |
 | 5 | 0.196 / 0.209 | 0.196 / 0.209 |
-| 6 | 0.196 / 0.206 | 0.196 / 0.209 |
-| 7 | 0.189 / 0.180 | 0.200 / 0.196 |
+| 6 | 0.184 / 0.206 | 0.184 / 0.209 |
+| 7 | 0.197 / 0.180 | 0.200 / 0.196 |
 | 8 | 0.190 / 0.195 | 0.194 / 0.195 |
-| 9 | 0.203 / 0.191 | 0.203 / 0.195 |
+| 9 | 0.182 / 0.194 | 0.200 / 0.195 |
 
-Digits are not tokens, so numeral-only choices do not count toward the overlap. These are the numbers from the final files (run after the last edit); no pair is above 0.21 and none was rounded by hand.
+These are the numbers from the final files (run after the last edit); no pair is above 0.21 and none was rounded by hand.
 
 ## Key length, format mix, difficulty
 - **Key uniquely longest, new core and twin items:** 0 in all nine lessons by the final `verify.js` run (mc, ms, ebsr parts, dropdown slots, hot-text options). In lesson 7 the strong-verb dropdowns were re-paired so that a weak distractor is as long as or longer than the key (for example dashed / walked / went; crawled / traveled / moved).
@@ -115,7 +115,7 @@ Not verified on a live page (stated plainly for the reviewers)
 - Lesson 1 to 6 sentence-level content such as "tabless is not a word" or "Racketes has extra letters" are spelling judgments, not looked up.
 
 ## Known limits
-- CORRECTION to the first version of this log: it said hint 3 removes at most one choice and that no hint narrows the choices. That was not true for every item. The independent review found hint 3 lines that named several wrong choices (lesson 5, lesson 6 C15/S15, lesson 7 C15/S15) and hints 1 and 2 that stated or narrowed to the key (lessons 1, 2, 4, 6, 7, 8, 9). Phase 2 fixed every one that was reported, and the live-choice recount below found three more in lesson 7 (C09, S09, addon P2). Independent blind solving has still not been done by anyone but the author.
+- CORRECTION to the first version of this log: it said hint 3 removes at most one choice and that no hint narrows the choices. That was not true for every item. The independent review found hint 3 lines that named several wrong choices (lesson 5, lesson 6 C15/S15, lesson 7 C15/S15) and hints 1 and 2 that stated or narrowed to the key (lessons 1, 2, 4, 6, 7, 8, 9). The statement in phase 2 that "every reported one was fixed" was itself false: the second review found L4 P5 hint 3 (names all three wrong options in a pick-two item), L4 P3 hint 3 and L2 P4 hint 3 (false counts), and six more hint-3 lines that name two choices or a key (8-C10, 8-S10, 9-C10, 7-C14, 7-S14, 6-S08). All of those are fixed in phase 3. The live-choice recount found three more in lesson 7 (C09, S09, addon P2) in phase 2. Independent blind solving has still not been done by anyone but the author.
 - A reviewer should look hard at: lesson 8 C14/S14 (an adjective used where an adverb is needed: "moved graceful", "answered polite" are standard-English errors, but informal speech accepts some adjectives as adverbs, so the chosen words were picked to avoid that: polite has no adverb sense per the dictionary above, and graceful is not used adverbially); lesson 9 S05 (team names); lesson 9 C14/S14 (capitalization edits); lesson 7 C15/S15 (counterexample items).
 - `STATUS.md` has nine new rows (`B7a`, NOT ACCEPTED: awaiting independent review) and `02-coverage-matrix.csv` has `review_status` updated to "Expansion: AUTHORED (B7a), NEEDS INDEPENDENT REVIEW. NOT ACCEPTED" for the nine `3.L.GC.1:R:` rows. Other columns of the matrix were not recalculated.
 
@@ -150,4 +150,26 @@ Lesson 9
 - Mental action verbs (think, imagine, dream, remember): https://www.thesaurus.com/e/grammar/action-verbs/
 - Taste, smell, look, feel sometimes act as linking verbs, and an adjective after one describes the subject ("tasted sweet"): https://digfir-published.macmillanusa.com/writershelp2e/writershelp2e_ch14_121.html
 - Sleepily (adverb): https://www.oxfordlearnersdictionaries.com/definition/english/sleepily ; sleepiness (noun): https://www.oxfordlearnersdictionaries.com/definition/english/sleepiness ; thirstily (adverb): https://www.oxfordlearnersdictionaries.com/definition/english/thirstily ; sweetly (adverb): https://www.oxfordlearnersdictionaries.com/definition/english/sweetly ; sweetness (noun): https://merriam-webster.com/dictionary/sweet ness
-- Not verified on a live page in phase 2: "calm / calmly / calmness", "carefully", "patiently", "flopped" and "crawled" as strong verbs (ordinary dictionary words, no page fetched).
+- Phase 2 listed "calm / calmly / calmness", "carefully", "patiently", "flopped" and "crawled" as unverified; the second reviewer checked them on Merriam-Webster and Oxford Learner's pages (see the review file). Still not fetched by anyone: excitedly, trudged, today, soon.
+
+
+## Phase 3: fixes after the second independent review (lessons 1 to 9)
+Status unchanged: **NOT ACCEPTED: awaiting independent review.** No ACCEPTED marks, `accepted.js` untouched, no git change commands. Final-file figures are in the tables above (twin overlap, passage words and FK, `check-content` result, warnings).
+
+Lessons 1 to 5
+- MUSTs: L2 P4 hint 3 now says "One sentence uses a" (it said two); L4 P3 hint 3 no longer states a count ("Check the first letter of every sentence, then look for the word I in the others"); L4 P5 hint 3 no longer describes the wrong options ("Check the sentences that start with a capital letter and look inside them too"); L4 P4 hint 2 no longer gives the key away.
+- SHOULDs done: L2 C12 distractor `cants` (a real word) replaced by the non-word `cann` (hint, how, why updated); L2 p3 title renamed "Our Pond Journal" (the old title duplicated `L-V3.js`); L3 S01 prompt and key reworded so the stem no longer echoes the key (key now "Where did this mitten go missing?"); L1 S11 fragment rewritten without participles ("A rain gauge with a tall ruler on its side and a clear plastic bottle below."; passage p6 is 104 words); L1 Teach point 1 reworded so it no longer equals C05's key; L2 Teach gained an apostrophe line and a "bus" line (the class/glass counterexample in S15 is now modelled).
+- SHOULDs not done (stated plainly): L3 P3/P4 grade 1 and 2 refs stay in core; L3 S02/S13 first-word items; L4 set 2 C09/C10 shared fact and C02/C08 similarity; L5 S05/S06 same-sentence pair and C06/C07 on p1; L2 C04/C12 frame; L1 C05 stays recall-level apart from the Teach reword.
+- Stale log items corrected in this file: refs table, Together counts, "Teach unchanged" claim, Watch Me notes, L1 shortest passage (104).
+
+Lesson 6: S07 moved to p5 sentence 11 (new plural-doer error "Each night, the volunteers locks the front door."; it was sentence 3, half of S11's key); S08 hint 3 no longer describes key B (it names the "Tom keeps asking" sentence); S11 says "sentences" in prompt, hints and how (the earlier log claim covered S06 only); S15 hint 2 no longer points the child at the -s verb.
+
+Lesson 7: C14 and S14 hint 3 name one sentence only (leaped / roared); S10 no longer names "went" (it compares brushed with put); S06 stem now says the doer does something only in the mind. T4 (legacy Test item) changes exactly three strings: the stem "Lily guessed the answer to the riddle." became "Lily imagined a funny answer to the riddle."; the keyed option text "guessed" became "imagined"; the why text now reads "The answer is imagined. Imagining is something Lily does with her mind, so it is an action verb. Lily, answer and riddle are nouns." The other options, the clue, the type and the points are unchanged.
+
+Lesson 8: Teach example "The soup tasted sweet" (the key sentence of C12) was replaced by "The room felt chilly", and the rule now reads "after a word like is, was or felt". C10 and S10 hint 3 name one choice only ("Cross out the choice that says ..."). S10 moved to the laughing line (floury and cheerfully, p5 sentence 9) so it no longer prints S12's key line. S05 prompt reworded ("What job does widely do?"). Teach and Learn It use "nearby" instead of "outside" (outside is a row in the legacy test).
+
+Lesson 9: C05 moved to sentence 1 (Pine Ridge Elementary and school) so it no longer prints C03's key; C07 moved to sentence 4 (Mateo); C10 moved to sentence 8 (Oak Avenue and bus) and its hint 3 names one choice; S04 moved to sentence 8 (p4 now reads "The defender, Gianna, blocked a shot near our net."); S12 moved to sentence 6 (Italy); S07 part B no longer claims that only one city is named Denver (key now "It names one particular city, not every city.").
+
+Live-choice recount for touched items: hint 3 names at most one wrong choice in every touched item; where one fact would falsify two choices the hint names one choice and gives no reason. Remaining `recount.js` flags in lessons 6 to 9 are mention matches (a hint that repeats a word from a choice or names the doer). Twin overlap is at most 0.203 set and 0.209 multiset in every lesson, and `check-content.js --all` passed after the last edit.
+
+Web: more than one city is named Denver (https://en.wikipedia.org/wiki/Denver_(disambiguation), from the second review).

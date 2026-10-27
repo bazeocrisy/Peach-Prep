@@ -2418,7 +2418,7 @@ PP.addLesson({
             "hints": [
               "Each blank needs a different kind of small word. One is chosen by a sound, and the other tells who owns something.",
               "For the first blank, say the word hour aloud and listen. For the second blank, ask whose lunch it is.",
-              "You and yours do not go before a noun like lunch. Use that to check the second blank."
+              "Yours stands alone and does not go before a noun like lunch. Use that to check the second blank."
             ],
             "how": [
               "The first blank comes before hour. Hour begins with a vowel sound because the h is silent, so it takes an.",
@@ -2498,7 +2498,7 @@ PP.addLesson({
             "hints": [
               "To show a rule is wrong, find an example that breaks it. Check the first sound, not just the first letter, of the word after a or an.",
               "All four phrases begin with a vowel letter. Say the second word of each phrase and listen to its first sound.",
-              "The other phrases follow Jo's rule and the rule works for them. Think about which one does not follow it."
+              "Jo's idea is about letters, but a or an goes by sounds. Think about the other choices."
             ],
             "how": [
               "Jo's rule only looks at letters. A better rule listens to sounds.",
@@ -3093,7 +3093,7 @@ PP.addLesson({
       "hints": [
         "Each gap needs a different kind of small word. One is chosen by a sound, and the other tells who owns something.",
         "For the first gap, say the word after it aloud and listen. For the second gap, ask whose stopwatch it is.",
-        "He and him do not go before a noun like stopwatch. Use that to check the second gap."
+        "He does the action and does not go before a noun like stopwatch. Use that to check the second gap."
       ],
       "how": [
         "The first gap comes before extra. Extra begins with a vowel sound, so it takes an.",
@@ -3173,7 +3173,7 @@ PP.addLesson({
       "hints": [
         "To show an idea is wrong, find an example that breaks it. Think about the sounds that begin the words after a.",
         "Look at the first letter of each word after a. Then say the words aloud and listen to how they really begin.",
-        "The other phrases begin with consonant letters and consonant sounds. Think about whether they could prove Ty wrong."
+        "Ty's idea is about letters, but a goes by sounds. Think about the other choices."
       ],
       "how": [
         "Ty's idea looks at letters only. Look for a word after a that begins with a vowel letter.",
@@ -11671,18 +11671,20 @@ PP.addLesson({
         ],
         [
           "(3) I am having a wonderful time at a big summer camp in Dayton Ohio.",
-          "(4) Every morning we eat pancakes, eggs, and toast in the dining hall with our whole cabin.",
-          "(5) My cabin has two beds three shelves, and four hooks for our wet swimming towels.",
-          "(6) We swim, paddle, and hike around the lake until lunch time on sunny days."
+          "(4) Every morning we eat pancakes, eggs, and toast with our cabin.",
+          "(5) My cabin has two beds three shelves, and four hooks for towels.",
+          "(6) We swim, paddle, and hike around the lake each day."
         ],
         [
-          "(7) Please write back to me at the camp office at 25 Birch Road, Dayton, Ohio.",
+          "(7) Please write back to me at 25 Birch Road, Dayton, Ohio.",
           "(8) The bus brings us home on August 2, 2026.",
-          "(9) I miss you and Grandpa very much, and I hope you are both happy."
+          "(9) I miss you and Grandpa very much every day.",
+          "(10) The food here is really great and there is always plenty.",
+          "(11) My new friends are kind and funny and we play games."
         ],
         [
-          "(10) Your granddaughter",
-          "(11) Zoe"
+          "(12) Your granddaughter",
+          "(13) Zoe"
         ]
       ]
     },
@@ -11699,18 +11701,22 @@ PP.addLesson({
         ],
         [
           "(3) Thank you for visiting our class at Maple School in Tulsa, Oklahoma.",
-          "(4) You told us about wolves, otters, and eagles that live in our state.",
-          "(5) We drew bears turtles, and owls in our science notebooks afterward.",
-          "(6) My favorite part was the soft gray fur that you let each of us touch and hold."
+          "(4) You told us about wolves, otters, and eagles.",
+          "(5) We drew bears turtles, and owls in our science notebooks.",
+          "(6) My favorite part was the soft gray fur."
         ],
         [
-          "(7) Please send your reply to our class at 18 Elm Street, Tulsa, Oklahoma.",
-          "(8) Everyone in Room 12 says you are the best visitor we ever had at our school.",
-          "(9) We hope you can come back to see us again next year when the weather is warm."
+          "(7) Please send your reply to 18 Elm Street, Tulsa, Oklahoma.",
+          "(8) Everyone in Room 12 says you are the best visitor.",
+          "(9) We loved every minute of your talk with us.",
+          "(10) The otters were my favorite animals.",
+          "(11) We still draw them every day.",
+          "(12) We hope you can come back next year.",
+          "(13) That would make all of us very happy."
         ],
         [
-          "(10) Your friend,",
-          "(11) Mateo"
+          "(14) Your friend,",
+          "(15) Mateo"
         ]
       ]
     },
@@ -11757,19 +11763,21 @@ PP.addLesson({
         ],
         [
           "(3) Our class rode a long bus to the zoo in Fresno California.",
-          "(4) We saw monkeys, parrots, and snakes inside the jungle house.",
+          "(4) We saw monkeys, parrots, and snakes in the jungle house.",
           "(5) I bought a map a hat, and a water bottle at the gift shop.",
-          "(6) My friend Omar fed a goat at the petting area near the gate."
+          "(6) My friend Omar fed a goat near the gate."
         ],
         [
           "(7) Please send your next letter to 77 Cedar Court, Fresno, California.",
-          "(8) Our teacher says we may visit again when the weather turns warm.",
-          "(9) I hope you can come with us next time and see the baby elephant.",
-          "(10) The giraffes were my favorite because they ate leaves from the tall trees."
+          "(8) Our teacher says we may visit again soon.",
+          "(9) I hope you can come with us next time too.",
+          "(10) The giraffes were my favorite animals.",
+          "(11) They ate leaves from the tall trees.",
+          "(12) The baby elephant was tiny and cute."
         ],
         [
-          "(11) Your nephew,",
-          "(12) Eli"
+          "(13) Your nephew,",
+          "(14) Eli"
         ]
       ]
     },
@@ -11786,19 +11794,20 @@ PP.addLesson({
         ],
         [
           "(3) Our class loved climbing into the big red fire truck in Billings Montana.",
-          "(4) We tried on helmets, boots, and gloves in the parking lot behind the school.",
+          "(4) We tried on helmets, boots, and gloves in the parking lot.",
           "(5) You told us how to stay safe at home, at school, and at the park near us.",
           "(6) Our class made a poster with stickers crayons, and markers."
         ],
         [
           "(7) Please mail your next note to 6 Hill Road, Billings, Montana.",
-          "(8) Everyone in Room 9 wants to be a firefighter when we grow up.",
-          "(9) We hope you can visit our school again before summer starts.",
-          "(10) The fire truck was louder and taller than I ever imagined."
+          "(8) Everyone in Room 9 wants to be a firefighter.",
+          "(9) We hope you can visit our school again.",
+          "(10) The fire truck was louder than I ever imagined.",
+          "(11) The siren was the loudest sound I ever heard."
         ],
         [
-          "(11) Your friend,",
-          "(12) Rin"
+          "(12) Your friend,",
+          "(13) Rin"
         ]
       ]
     },
@@ -12069,7 +12078,7 @@ PP.addLesson({
               "Line 2 has no comma after the greeting, and line 5 has no comma between bears and turtles."
             ],
             "misconception": "A common mix-up is stopping at the first mistake. Check every line in the range.",
-            "why": "The answers are \"Dear Ms. Okafor\" and \"We drew bears turtles, and owls in our science notebooks afterward.\" A greeting needs a comma after it, and a list needs a comma after each thing before and. Lines 3, 4 and 6 are correct.",
+            "why": "The answers are \"Dear Ms. Okafor\" and \"We drew bears turtles, and owls in our science notebooks.\" A greeting needs a comma after it, and a list needs a comma after each thing before and. Lines 3, 4 and 6 are correct.",
             "like": [
               "SK-GUM2-8-S06"
             ]
@@ -13327,10 +13336,174 @@ PP.addLesson({
         "Just add -d: baked. Do not add another e."
       ],
       answer: "Baked. Last week, we baked a cake for Grandma."
+    },
+    {
+      show: ["Every night, Dad ___ about the weather. (worry)"],
+      ask: "How do you spell the verb?",
+      steps: [
+        "One person, Dad, does the action, and it happens every night. So the verb needs an ending.",
+        "Look at how worry ends. It ends in a consonant, r, and then y.",
+        "Change the y to i and add -es: worries."
+      ],
+      answer: "Worries. Every night, Dad worries about the weather."
     }
   ],
   parent: "As you do chores, name each one in a sentence about someone else (Dad washes, Grandma fixes, the baby cries). Have your child spell the verb aloud and say which ending it needs.",
-  passages: [],
+  passages: [
+    /* B7b:passages:start */
+    {
+      "id": "p1",
+      "title": "Dad's Busy Morning",
+      "byline": "A third grader's draft",
+      "genre": "Student draft (narrative)",
+      "draft": true,
+      "paragraphs": [
+        [
+          "(1) Every morning, my dad wakes up before the sun comes up.",
+          "(2) He brushs his teeth and combs his hair in the dark bathroom.",
+          "(3) Then he fixes a big breakfast for all of us."
+        ],
+        [
+          "(4) He mixes the eggs in a bowl and cooks them in a pan.",
+          "(5) My sister trys a bite of everything on her plate.",
+          "(6) My brother passs the toast down the long table to me."
+        ],
+        [
+          "(7) Dad catches the early bus when the bell on the corner rings.",
+          "(8) He tosses his lunch bag onto the seat and waves goodbye to us.",
+          "(9) Then the house gets quiet, and we get ready for school.",
+          "(10) I love our busy mornings together."
+        ]
+      ]
+    },
+    {
+      "id": "p2",
+      "title": "The Garden Party",
+      "byline": "A third grader's draft",
+      "genre": "Student draft (narrative)",
+      "draft": true,
+      "paragraphs": [
+        [
+          "(1) Last Friday, our class planned a garden party for the families.",
+          "(2) Mrs. Diaz inviteed every parent with a bright paper card."
+        ],
+        [
+          "(3) We shared lemonade and fruit with everyone on the soft green grass.",
+          "(4) Omar smiled at the little kids and waved hello to their parents.",
+          "(5) Two girls dancd to the radio near the big white tent.",
+          "(6) A bee landed on a cup, and Jin scared it away."
+        ],
+        [
+          "(7) Later, the families admired every flower bed.",
+          "(8) Our teacher thanked us for all our hard work.",
+          "(9) We cleaned up the cups and the napkins.",
+          "(10) The garden looked lovely when the sun went down.",
+          "(11) I hope we plan another party next spring."
+        ]
+      ]
+    },
+    {
+      "id": "p3",
+      "title": "Our Weekend Chores",
+      "byline": "A third grader's draft",
+      "genre": "Student draft (narrative)",
+      "draft": true,
+      "paragraphs": [
+        [
+          "(1) In our house, every person has a chore to do on Saturday morning.",
+          "(2) Mom sweeps the porch and stacks the chairs by the front door."
+        ],
+        [
+          "(3) My brother emptys the trash can by the garage each night.",
+          "(4) Uncle Ray fixes the leaky faucet with a wrench.",
+          "(5) I pushs the vacuum across the rug in the hall.",
+          "(6) Grandpa dries the plates and puts them away.",
+          "(7) Dad do the grocery shopping on Sunday morning."
+        ],
+        [
+          "(8) When we finish, everyone sits down to eat pancakes together.",
+          "(9) The house smells clean, and the dog naps in the warm sun.",
+          "(10) I feel proud when our whole family works together as a team."
+        ]
+      ]
+    },
+    {
+      "id": "p4",
+      "title": "A Day on the Farm",
+      "byline": "A third grader's draft",
+      "genre": "Student draft (narrative)",
+      "draft": true,
+      "paragraphs": [
+        [
+          "(1) On our farm, everyone starts work when the sun comes up.",
+          "(2) My aunt catchs the loose hen near the wooden gate.",
+          "(3) Uncle Joe mends the old fence with wire and nails."
+        ],
+        [
+          "(4) Gus feeds the goats and fills their water pail.",
+          "(5) Luna hurrys through the field with a heavy bucket.",
+          "(6) Gus mixs corn and oats for the hungry horses."
+        ],
+        [
+          "(7) At noon, we all sit under the shady apple tree to eat.",
+          "(8) The farm dog barks at the crows and chases them away.",
+          "(9) By evening, my arms feel tired, but my heart feels happy.",
+          "(10) I would never trade our farm for a house in the city."
+        ]
+      ]
+    },
+    {
+      "id": "p5",
+      "title": "The School Play",
+      "byline": "A third grader's draft",
+      "genre": "Student draft (narrative)",
+      "draft": true,
+      "paragraphs": [
+        [
+          "(1) Last spring, our class performed a play about a brave knight.",
+          "(2) Mr. Park shapeed a shiny cardboard sword for the knight by hand."
+        ],
+        [
+          "(3) We practiced our lines during recess for two whole weeks.",
+          "(4) Priya bowed to the crowd and waved to her grandma.",
+          "(5) The audience lovd every joke and clapped for a long time.",
+          "(6) After the show, the judges praised each actor on the big stage."
+        ],
+        [
+          "(7) Then everyone gathered backstage for juice and cookies.",
+          "(8) My friend Leo tripped on his cape, but he laughed about it later.",
+          "(9) Our teacher hugged us all and told us we did a great job.",
+          "(10) I will remember that play for the rest of my life."
+        ]
+      ]
+    },
+    {
+      "id": "p6",
+      "title": "Weekend Jobs at Grandma's",
+      "byline": "A third grader's draft",
+      "genre": "Student draft (narrative)",
+      "draft": true,
+      "paragraphs": [
+        [
+          "(1) Every weekend, we visit Grandma and help her with all of her jobs.",
+          "(2) She keeps the garden neat and tidy all year long."
+        ],
+        [
+          "(3) Grandpa replys to every letter from his old friends within a day.",
+          "(4) Aunt Rose reaches the top shelf without a stool.",
+          "(5) Cousin Max boxs the apples for the market stand.",
+          "(6) Pop tries a new tool every single week.",
+          "(7) Our neighbor do the milking before the sun comes up."
+        ],
+        [
+          "(8) At lunch, we all sit on the porch and eat peach pie together.",
+          "(9) Grandma says our help is the best gift that she gets all week.",
+          "(10) I feel lucky to have such a kind and hardworking family."
+        ]
+      ]
+    }
+    /* B7b:passages:end */
+  ],
   practice: [
     { id: "SK-GUM2-9-P1", type: "dropdown", points: 1, dok: 1, passages: [],
       prompt: "Choose the word that correctly completes the sentence.",
@@ -13380,6 +13553,1351 @@ PP.addLesson({
       clue: "Look at each verb and how its plain form ends. Check that it has the right ending.",
       why: "The answer is \"Our teacher teachs us a new word each day.\" Teach ends in ch, so it needs -es: teaches." }
   ],
+  /* B7b:core:start */
+  /* ---------- Expansion 2026-10-22, batch B7b (GUM Reinforce, second half) ----------
+     core: fifteen items in three sets of five. { ref } reuses a practice item; the other practice items stay in Practice Together.
+     Passages are used only by core and the similar bank; none is used by test.
+     Author log: docs/expansion-2026-10-22/batches/B7b-author-log.md. NOT ACCEPTED: needs independent review. */
+  core: {
+    "rev": "1",
+    "sets": [
+      {
+        "title": "Set 1",
+        "items": [
+          {
+            "ref": "SK-GUM2-9-P4"
+          },
+          {
+            "ref": "SK-GUM2-9-P5"
+          },
+          {
+            "id": "SK-GUM2-9-C03",
+            "type": "mc",
+            "points": 1,
+            "dok": 2,
+            "std": [
+              "3.L.GC.1:R:form-and-use-verbs-by-adding-d-or-es"
+            ],
+            "passages": [
+              "p1"
+            ],
+            "prompt": "One verb in sentence 2 is misspelled. What is the mistake?",
+            "choices": [
+              {
+                "text": "Brush ends in sh, so the verb needs -es and should be spelled brushes.",
+                "correct": true
+              },
+              {
+                "text": "Brush finishes with a consonant plus y, which means the y turns into i before -es."
+              },
+              {
+                "text": "Brush ends in e, so the verb needs only -d and should be spelled brushed."
+              },
+              {
+                "text": "Brush needs only -s, so the spelling is fine and the mistake is the word his."
+              }
+            ],
+            "clue": "Find the verb in sentence 2 that has an ending added.",
+            "hints": [
+              "Find the verb in sentence 2 that has an ending added.",
+              "Look at the last letters of the plain verb before any ending is added.",
+              "Look at the very last letter of brush. Think about the other choices."
+            ],
+            "how": [
+              "The plain verb is brush. Its last two letters are sh.",
+              "A verb that ends in sh adds -es when one person does the action now.",
+              "The answer is \"Brush ends in sh, so the verb needs -es and should be spelled brushes.\""
+            ],
+            "misconception": "A common mix-up is adding only -s to every verb. Verbs that end in sh need -es.",
+            "why": "The answer is \"Brush ends in sh, so the verb needs -es and should be spelled brushes.\" Brush does not end in e or y, and adding only -s leaves the ending hard to say.",
+            "like": [
+              "SK-GUM2-9-S03"
+            ]
+          },
+          {
+            "id": "SK-GUM2-9-C04",
+            "type": "dropdown",
+            "points": 1,
+            "dok": 2,
+            "std": [
+              "3.L.GC.1:R:form-and-use-verbs-by-adding-d-or-es"
+            ],
+            "passages": [
+              "p1"
+            ],
+            "prompt": "Sentence 5 has a verb spelled wrong. Choose the correct spelling.",
+            "text": "My sister {0} a bite of everything on her plate.",
+            "slots": [
+              {
+                "options": [
+                  "tries",
+                  "trys",
+                  "tryes"
+                ],
+                "answer": 0
+              }
+            ],
+            "clue": "Think of the plain verb. Then look at the letter in front of the y.",
+            "hints": [
+              "Think of the plain verb. Then look at the letter in front of the y.",
+              "Decide whether that letter is a vowel (a, e, i, o or u) or a consonant.",
+              "Just adding -s after a consonant and a y does not follow the rule. Look at the other choices."
+            ],
+            "how": [
+              "The plain verb is try. The letter in front of the y is r.",
+              "R is a consonant, so the y changes to i and -es is added.",
+              "The answer is tries."
+            ],
+            "misconception": "A common mix-up is adding only -s after a y. A consonant before the y means the y changes to i.",
+            "why": "The answer is tries. Try has an r, a consonant, before the y, so the y changes to i and -es is added.",
+            "like": [
+              "SK-GUM2-9-S04"
+            ]
+          },
+          {
+            "id": "SK-GUM2-9-C05",
+            "type": "mc",
+            "points": 1,
+            "dok": 3,
+            "std": [
+              "3.L.GC.1:R:form-and-use-verbs-by-adding-d-or-es"
+            ],
+            "passages": [
+              "p1"
+            ],
+            "prompt": "Sentences 5 and 6 each have a verb that needs fixing. How do the two fixes differ?",
+            "choices": [
+              {
+                "text": "In sentence 5 the y turns into i before -es, but in sentence 6 -es is simply added to pass.",
+                "correct": true
+              },
+              {
+                "text": "Both fixes only add -es to the end of the word, so the two sentences need exactly the same change."
+              },
+              {
+                "text": "Sentence 6 needs the y changed to i, while sentence 5 needs -es added to the whole word."
+              },
+              {
+                "text": "Sentence 5 needs -d because it is in the past, while sentence 6 needs -es."
+              }
+            ],
+            "clue": "Write the plain form of each verb in sentences 5 and 6.",
+            "hints": [
+              "Write the plain form of each verb in sentences 5 and 6.",
+              "Look at the last letters of each plain verb.",
+              "Both sentences tell about every morning, so neither one is in the past. Think about the other choices."
+            ],
+            "how": [
+              "Try ends in a consonant and y. Pass ends in ss.",
+              "A consonant and y means the y changes to i. Ending in ss means -es is just added.",
+              "The answer is \"In sentence 5 the y turns into i before -es, but in sentence 6 -es is simply added to pass.\""
+            ],
+            "misconception": "A common mix-up is thinking every fix is the same. The last letters of the plain verb decide the change.",
+            "why": "The answer is \"In sentence 5 the y turns into i before -es, but in sentence 6 -es is simply added to pass.\" Try changes its y to i. Pass already ends in s, so it just adds -es.",
+            "like": [
+              "SK-GUM2-9-S05"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Set 2",
+        "items": [
+          {
+            "id": "SK-GUM2-9-C06",
+            "type": "hottext",
+            "points": 2,
+            "dok": 2,
+            "std": [
+              "3.L.GC.1:R:form-and-use-verbs-by-adding-d-or-es"
+            ],
+            "passages": [
+              "p2"
+            ],
+            "prompt": "Select the TWO sentences in 2 through 6 where a verb is not spelled right.",
+            "targets": [
+              "p2:1:2",
+              "p2:2:1",
+              "p2:2:2",
+              "p2:2:3",
+              "p2:2:4"
+            ],
+            "answer": [
+              "p2:1:2",
+              "p2:2:3"
+            ],
+            "pick": 2,
+            "clue": "Find the verb in each of sentences 2 through 6. Ask what its plain form ends in.",
+            "hints": [
+              "Find the verb in each of sentences 2 through 6. Ask what its plain form ends in.",
+              "These sentences tell about the past. Check how each verb was changed.",
+              "The sentence about the bee uses a verb that is spelled right. Think about the rest."
+            ],
+            "how": [
+              "Check each verb one sentence at a time.",
+              "Shared, smiled, waved and scared all just add -d to a verb that ends in e or e plus a letter.",
+              "In sentences 2 and 5, the verbs are spelled with the wrong ending."
+            ],
+            "misconception": "A common mix-up is trusting a verb because it looks long and careful. Check its ending against its plain form.",
+            "why": "The answers are \"Mrs. Diaz inviteed every parent with a bright paper card.\" and \"Two girls dancd to the radio near the big white tent.\" Invite and dance already end in e, so they just add -d: invited and danced. Sentences 3, 4 and 6 are spelled correctly.",
+            "like": [
+              "SK-GUM2-9-S06"
+            ]
+          },
+          {
+            "id": "SK-GUM2-9-C07",
+            "type": "ebsr",
+            "points": 2,
+            "dok": 3,
+            "std": [
+              "3.L.GC.1:R:form-and-use-verbs-by-adding-d-or-es"
+            ],
+            "passages": [
+              "p2"
+            ],
+            "prompt": "Take Part A first, and then do Part B.",
+            "partA": {
+              "prompt": "Why is the verb in sentence 2 spelled wrong?",
+              "choices": [
+                {
+                  "text": "Invite ends in e already, which means -d alone is enough, giving invited.",
+                  "correct": true
+                },
+                {
+                  "text": "Invite finishes in a consonant plus y, which means the y turns into i before -es."
+                },
+                {
+                  "text": "Invite shows an action that happens now, so the ending should be -s, giving invites."
+                },
+                {
+                  "text": "Invite ends in e, so the e should be dropped and -ing added, giving inviting."
+                }
+              ]
+            },
+            "partB": {
+              "prompt": "Which sentence correctly repairs sentence 2?",
+              "choices": [
+                {
+                  "text": "Mrs. Diaz invited every parent with a bright paper card.",
+                  "correct": true
+                },
+                {
+                  "text": "Mrs. Diaz invitd every parent with a bright paper card."
+                },
+                {
+                  "text": "Mrs. Diaz invites every parent with a bright paper card."
+                },
+                {
+                  "text": "Mrs. Diaz inviteed every parent with a bright paper card."
+                }
+              ]
+            },
+            "clue": "Think of the plain verb in sentence 2. Look at how it ends.",
+            "hints": [
+              "Think of the plain verb in sentence 2. Look at how it ends.",
+              "In Part B, read each version and think about whether the sentence tells about the past.",
+              "Inviting is a different form of the verb. Think about the other versions."
+            ],
+            "how": [
+              "Part A: the plain verb is invite, and it ends in e.",
+              "Part B: the sentence tells about last Friday, so the verb needs a past ending.",
+              "The answers are \"Invite ends in e already, which means -d alone is enough, giving invited.\" and \"Mrs. Diaz invited every parent with a bright paper card.\""
+            ],
+            "misconception": "A common mix-up is adding a whole -ed to a verb that already ends in e. Only -d is added.",
+            "why": "Part A: \"Invite ends in e already, which means -d alone is enough, giving invited.\" Part B: \"Mrs. Diaz invited every parent with a bright paper card.\" Invites would not tell about the past.",
+            "like": [
+              "SK-GUM2-9-S07"
+            ]
+          },
+          {
+            "id": "SK-GUM2-9-C08",
+            "type": "ms",
+            "points": 2,
+            "dok": 2,
+            "std": [
+              "3.L.GC.1:R:form-and-use-verbs-by-adding-d-or-es"
+            ],
+            "passages": [],
+            "prompt": "Choose the TWO sentences whose verb has the correct spelling.",
+            "pick": 2,
+            "choices": [
+              {
+                "text": "My uncle mixes paint for the mural every spring.",
+                "correct": true
+              },
+              {
+                "text": "Last night, we hiked up the steep trail.",
+                "correct": true
+              },
+              {
+                "text": "My sister catchs fireflies in a jar every summer."
+              },
+              {
+                "text": "Yesterday, the boys rakeed the leaves into a big pile."
+              },
+              {
+                "text": "Our baby cryes when the thunder booms outside."
+              }
+            ],
+            "clue": "Find the verb in each sentence. Think of its plain form and look at how it ends.",
+            "hints": [
+              "Find the verb in each sentence. Think of its plain form and look at how it ends.",
+              "Check all five choices, including the ones that look right at first glance. Each plain verb needs the ending that fits the way it ends.",
+              "Three choices have a verb with the wrong ending. Think about which two do not."
+            ],
+            "how": [
+              "Look at each plain verb: mix, hike, catch, rake and cry.",
+              "Mix ends in x, so it adds -es. Hike ends in e, so it just adds -d.",
+              "Catch needs -es, rake needs only -d, and cry needs the y changed to i."
+            ],
+            "misconception": "A common mix-up is picking a sentence because the verb looks familiar. Check the ending against the plain verb.",
+            "why": "The answers are \"My uncle mixes paint for the mural every spring.\" and \"Last night, we hiked up the steep trail.\" Mix adds -es, and hike just adds -d. Catchs, rakeed and cryes are misspelled.",
+            "like": [
+              "SK-GUM2-9-S08"
+            ]
+          },
+          {
+            "id": "SK-GUM2-9-C09",
+            "type": "mc",
+            "points": 1,
+            "dok": 1,
+            "std": [
+              "3.L.GC.1:R:form-and-use-verbs-by-adding-d-or-es"
+            ],
+            "passages": [],
+            "prompt": "Pick the correct spelling to finish the sentence. Last night, Dad ___ goodbye to us.",
+            "choices": [
+              {
+                "text": "waved",
+                "correct": true
+              },
+              {
+                "text": "waveed"
+              },
+              {
+                "text": "wavd"
+              },
+              {
+                "text": "waves"
+              }
+            ],
+            "clue": "Last night already happened. Look at how the plain verb wave ends.",
+            "hints": [
+              "Last night already happened. Look at how the plain verb wave ends.",
+              "A verb that ends in e needs a short ending for the past.",
+              "Waves tells about the present. Think about the other choices."
+            ],
+            "how": [
+              "The sentence tells about the past, and wave ends in e.",
+              "Only -d is added when a verb ends in e.",
+              "The answer is waved."
+            ],
+            "misconception": "A common mix-up is adding a whole -ed to a verb that ends in e. Only -d is added.",
+            "why": "The answer is waved. Wave already ends in e, so only -d is added for the past. Waveed has an extra e, wavd drops the e, and waves does not tell about the past.",
+            "like": [
+              "SK-GUM2-9-S09"
+            ]
+          },
+          {
+            "id": "SK-GUM2-9-C10",
+            "type": "mc",
+            "points": 1,
+            "dok": 3,
+            "std": [
+              "3.L.GC.1:R:form-and-use-verbs-by-adding-d-or-es"
+            ],
+            "passages": [
+              "p2"
+            ],
+            "prompt": "Ben says dancd in sentence 5 is fine because the e must be dropped before -d. Which reply is best?",
+            "choices": [
+              {
+                "text": "The last letter of dance, an e, stays put, and only -d is added, giving danced.",
+                "correct": true
+              },
+              {
+                "text": "Ben is right, because any verb that ends in e must lose it before an ending is added."
+              },
+              {
+                "text": "Ben is right, because endings are meant to trim a word down."
+              },
+              {
+                "text": "Dance needs -ed, so the spelling should be danceed with two e letters."
+              }
+            ],
+            "clue": "Think about what Ben is trusting. Is it the plain verb, or a guess about letters?",
+            "hints": [
+              "Think about what Ben is trusting. Is it the plain verb, or a guess about letters?",
+              "Look at how dance ends, and what Ben says happens when the ending joins.",
+              "A past ending adds letters. It does not take them away. Think about the other choices."
+            ],
+            "how": [
+              "Dance ends in e.",
+              "Only -d is added to a verb that ends in e, and the e stays in the word.",
+              "The answer is \"The last letter of dance, an e, stays put, and only -d is added, giving danced.\""
+            ],
+            "misconception": "A common mix-up is dropping the e before -d. The e stays, and only -d is added.",
+            "why": "The answer is \"The last letter of dance, an e, stays put, and only -d is added, giving danced.\" Dancd loses the e that the word needs, and danceed adds a second one.",
+            "like": [
+              "SK-GUM2-9-S10"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Set 3",
+        "items": [
+          {
+            "id": "SK-GUM2-9-C11",
+            "type": "hottext",
+            "points": 2,
+            "dok": 2,
+            "std": [
+              "3.L.GC.1:R:form-and-use-verbs-by-adding-d-or-es"
+            ],
+            "passages": [
+              "p3"
+            ],
+            "prompt": "Two sentences from 3 to 7 have verbs that are spelled and used correctly. Select them.",
+            "targets": [
+              "p3:2:1",
+              "p3:2:2",
+              "p3:2:3",
+              "p3:2:4",
+              "p3:2:5"
+            ],
+            "answer": [
+              "p3:2:2",
+              "p3:2:4"
+            ],
+            "pick": 2,
+            "clue": "Find the verb in each of sentences 3 to 7. Ask what its plain form ends in.",
+            "hints": [
+              "Find the verb in each of sentences 3 to 7. Ask what its plain form ends in.",
+              "Check the ending that was added, and whether it matches one person doing the action now.",
+              "Some of these verbs have the wrong ending, and one is the wrong word for one person. Think about the rest."
+            ],
+            "how": [
+              "Check each sentence one at a time.",
+              "Fixes and dries have the endings that match their plain verbs.",
+              "Emptys, pushs and do do not match."
+            ],
+            "misconception": "A common mix-up is picking a sentence because it looks simple. Check each verb's ending.",
+            "why": "The answers are \"Uncle Ray fixes the leaky faucet with a wrench.\" and \"Grandpa dries the plates and puts them away.\" Fix ends in x, so it adds -es. Dry ends in a consonant and y, so the y changes to i. Emptys, pushs and do are wrong.",
+            "like": [
+              "SK-GUM2-9-S11"
+            ]
+          },
+          {
+            "id": "SK-GUM2-9-C12",
+            "type": "dropdown",
+            "points": 1,
+            "dok": 2,
+            "std": [
+              "3.L.GC.1:R:form-and-use-verbs-by-adding-d-or-es"
+            ],
+            "passages": [
+              "p3"
+            ],
+            "prompt": "Sentence 3 has a verb spelled wrong. Pick the correct spelling.",
+            "text": "My brother {0} the trash can by the garage each night.",
+            "slots": [
+              {
+                "options": [
+                  "empties",
+                  "emptys",
+                  "emptyes"
+                ],
+                "answer": 0
+              }
+            ],
+            "clue": "Think of the plain verb. Then look at the letter in front of the y.",
+            "hints": [
+              "Think of the plain verb. Then look at the letter in front of the y.",
+              "Decide whether that letter is a vowel (a, e, i, o or u) or a consonant.",
+              "Just adding -s after a consonant and a y does not follow the rule. Look at the other choices."
+            ],
+            "how": [
+              "The plain verb is empty. The letter in front of the y is t.",
+              "T is a consonant, so the y changes to i and -es is added.",
+              "The answer is empties."
+            ],
+            "misconception": "A common mix-up is adding only -s to a verb that ends in y. A consonant before the y means the y changes.",
+            "why": "The answer is empties. Empty has a t, a consonant, before the y, so the y changes to i and -es is added.",
+            "like": [
+              "SK-GUM2-9-S12"
+            ]
+          },
+          {
+            "id": "SK-GUM2-9-C13",
+            "type": "dropdown",
+            "points": 2,
+            "dok": 2,
+            "std": [
+              "3.L.GC.1:R:form-and-use-verbs-by-adding-d-or-es"
+            ],
+            "passages": [],
+            "prompt": "Select the spelling that suits each blank.",
+            "text": "Every day, Ben {0} to practice, and he {1} his homework first.",
+            "slots": [
+              {
+                "options": [
+                  "goes",
+                  "gos",
+                  "goies"
+                ],
+                "answer": 0
+              },
+              {
+                "options": [
+                  "finishes",
+                  "finishs",
+                  "finishies"
+                ],
+                "answer": 0
+              }
+            ],
+            "clue": "The two blanks need different endings. Think of each plain verb.",
+            "hints": [
+              "The two blanks need different endings. Think of each plain verb.",
+              "The first plain verb is go. The second ends in sh.",
+              "Just adding -s after sh does not follow the rule. Look at the choices for the second blank."
+            ],
+            "how": [
+              "Go is one of the two short verbs that add -es. Finish ends in sh, so it adds -es.",
+              "Each blank needs -es, but neither one changes a letter.",
+              "The answers are goes and finishes."
+            ],
+            "misconception": "A common mix-up is adding only -s to both verbs. Go and finish both need -es.",
+            "why": "The answers are goes and finishes. Go adds -es, and finish ends in sh, so it adds -es too.",
+            "like": [
+              "SK-GUM2-9-S13"
+            ]
+          },
+          {
+            "id": "SK-GUM2-9-C14",
+            "type": "hottext",
+            "points": 1,
+            "dok": 2,
+            "std": [
+              "3.L.GC.1:R:form-and-use-verbs-by-adding-d-or-es"
+            ],
+            "passages": [],
+            "prompt": "Which sentence has a verb spelled wrong?",
+            "options": [
+              "The little boy sneezes whenever the dust rises.",
+              "Grandma hurries to the door when the bell rings.",
+              "Our cat stretchs in the sun every afternoon.",
+              "Last night, we hiked along the river.",
+              "The mechanic fixes the engine for free."
+            ],
+            "answer": [
+              2
+            ],
+            "pick": 1,
+            "clue": "Find the verb in each sentence. Think of its plain form.",
+            "hints": [
+              "Find the verb in each sentence. Think of its plain form.",
+              "Look at the last letters of each plain verb. Check that the ending matches.",
+              "The sentence about Grandma and the door has a verb that is spelled right. Think about the rest."
+            ],
+            "how": [
+              "Look at each verb and how its plain form ends.",
+              "Sneezes, hurries, hiked and fixes all have endings that match their plain verbs.",
+              "The answer is \"Our cat stretchs in the sun every afternoon.\" Stretch ends in ch, so it needs -es."
+            ],
+            "misconception": "A common mix-up is adding only -s after ch. Verbs that end in ch need -es.",
+            "why": "The answer is \"Our cat stretchs in the sun every afternoon.\" Stretch ends in ch, so it adds -es: stretches. The other sentences have verbs with the right endings.",
+            "like": [
+              "SK-GUM2-9-S14"
+            ]
+          },
+          {
+            "id": "SK-GUM2-9-C15",
+            "type": "mc",
+            "points": 1,
+            "dok": 3,
+            "std": [
+              "3.L.GC.1:R:form-and-use-verbs-by-adding-d-or-es"
+            ],
+            "passages": [],
+            "prompt": "Lia says, \"To make a verb fit one person, always add -s.\" Which sentence shows that Lia is wrong?",
+            "choices": [
+              {
+                "text": "The coach teaches us a new drill.",
+                "correct": true
+              },
+              {
+                "text": "Our cat naps on the porch after lunch."
+              },
+              {
+                "text": "The bell rings at noon on school days."
+              },
+              {
+                "text": "Dad cooks dinner for us on Fridays."
+              }
+            ],
+            "clue": "To test a rule, look for an example that breaks it. Look at how each verb ends.",
+            "hints": [
+              "To test a rule, look for an example that breaks it. Look at how each verb ends.",
+              "In each sentence, think of the plain verb and what it ends in.",
+              "Three of the verbs follow Lia's rule. Think about which one does not."
+            ],
+            "how": [
+              "Lia says every verb just adds -s. Look for a verb that needs more.",
+              "Nap, ring and cook just add -s.",
+              "The answer is \"The coach teaches us a new drill.\""
+            ],
+            "misconception": "A common mix-up is thinking every verb adds only -s. Verbs that end in ch, sh, s, x or z need -es.",
+            "why": "The answer is \"The coach teaches us a new drill.\" Teach ends in ch, so it needs -es. That proves Lia wrong. Naps, rings and cooks just add -s.",
+            "like": [
+              "SK-GUM2-9-S15"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  similar: [
+    {
+      "id": "SK-GUM2-9-S01",
+      "type": "hottext",
+      "points": 1,
+      "dok": 2,
+      "std": [
+        "3.L.GC.1:R:form-and-use-verbs-by-adding-d-or-es"
+      ],
+      "passages": [],
+      "prompt": "Tap the sentence where a verb is spelled wrong.",
+      "options": [
+        "Our neighbor mows his lawn each Friday.",
+        "The chef sprinkles cheese on the pizza.",
+        "My brother pitchs the tent each summer.",
+        "Yesterday, Ana skated on the frozen pond.",
+        "The toddler giggles at the pigeons."
+      ],
+      "answer": [
+        2
+      ],
+      "pick": 1,
+      "clue": "Find the verb in each sentence. Think of its plain form.",
+      "hints": [
+        "Find the verb in each sentence. Think of its plain form.",
+        "Look at the last letters of each plain verb. Check that the ending matches.",
+        "The sentence about the lawn has a verb that is spelled right. Think about the rest."
+      ],
+      "how": [
+        "Look at each verb and how its plain form ends.",
+        "Mows, sprinkles, skated and giggles all have endings that match their plain verbs.",
+        "The answer is \"My brother pitchs the tent each summer.\" Pitch ends in ch, so it needs -es."
+      ],
+      "misconception": "A common mix-up is picking a sentence because it is short. Check every verb.",
+      "why": "The answer is \"My brother pitchs the tent each summer.\" Pitch ends in ch, so it adds -es: pitches. The other sentences have verbs with the right endings.",
+      "like": [
+        "SK-GUM2-9-P5"
+      ]
+    },
+    {
+      "id": "SK-GUM2-9-S02",
+      "type": "match",
+      "points": 2,
+      "dok": 2,
+      "std": [
+        "3.L.GC.1:R:form-and-use-verbs-by-adding-d-or-es"
+      ],
+      "passages": [],
+      "prompt": "Choose the group for every sentence, based on its verb in ( ).",
+      "cols": [
+        "Just -d",
+        "Just -es",
+        "Swap y for i, then -es"
+      ],
+      "rows": [
+        {
+          "text": "Last winter, the twins ___ a snack. (share)",
+          "answer": 0
+        },
+        {
+          "text": "At bedtime, Gran ___ me goodnight. (kiss)",
+          "answer": 1
+        },
+        {
+          "text": "These days, Dad ___ the jar. (empty)",
+          "answer": 2
+        },
+        {
+          "text": "Last Sunday, we ___ up the hill. (hike)",
+          "answer": 0
+        },
+        {
+          "text": "Before dawn, Rosa ___ on a star. (wish)",
+          "answer": 1
+        },
+        {
+          "text": "Quickly, Dara ___ to her mom. (reply)",
+          "answer": 2
+        }
+      ],
+      "clue": "Think of each plain verb in ( ) and how it ends.",
+      "hints": [
+        "Think of each plain verb in ( ) and how it ends.",
+        "An e at the end, an s, sh, ch, x or z at the end, and a consonant plus y at the end each get a different ending.",
+        "Use words like Last winter to see which verbs tell about the past."
+      ],
+      "how": [
+        "Look at the last letters of each plain verb.",
+        "Share and hike end in e. Kiss and wish end in ss and sh. Empty and reply end in a consonant and y.",
+        "Place each sentence in the group that matches its verb."
+      ],
+      "misconception": "A common mix-up is sorting by the time word. The last letters of the verb decide the group.",
+      "why": "Share and hike end in e, so they become shared and hiked. Kiss and wish end in ss and sh, so they become kisses and wishes. Empty and reply end in a consonant and y, so they become empties and replies.",
+      "like": [
+        "SK-GUM2-9-P4"
+      ]
+    },
+    {
+      "id": "SK-GUM2-9-S03",
+      "type": "mc",
+      "points": 1,
+      "dok": 2,
+      "std": [
+        "3.L.GC.1:R:form-and-use-verbs-by-adding-d-or-es"
+      ],
+      "passages": [
+        "p4"
+      ],
+      "prompt": "Pick the spelling that repairs the verb in line two of the farm story, with its reason.",
+      "choices": [
+        {
+          "text": "catches, since verbs ending in ch take -es",
+          "correct": true
+        },
+        {
+          "text": "catchies, since verbs ending in ch take -ies"
+        },
+        {
+          "text": "catchd, since every farm verb takes just -d"
+        },
+        {
+          "text": "catchs, since every verb for one person takes just -s"
+        }
+      ],
+      "clue": "Find the verb in sentence 2 that has an ending added.",
+      "hints": [
+        "Find the verb in sentence 2 that has an ending added.",
+        "Look at how the plain verb catch ends.",
+        "Look at the very last letter of catch. Think about the other choices."
+      ],
+      "how": [
+        "The plain verb is catch. Its last two letters are ch.",
+        "A verb that ends in ch adds -es when one person does the action now.",
+        "The answer is \"catches, since verbs ending in ch take -es\"."
+      ],
+      "misconception": "A common mix-up is adding only -s to every verb. Verbs that end in ch need -es.",
+      "why": "The answer is \"catches, since verbs ending in ch take -es\". Catch does not end in e or y, and adding only -s leaves the ending hard to say.",
+      "like": [
+        "SK-GUM2-9-C03"
+      ]
+    },
+    {
+      "id": "SK-GUM2-9-S04",
+      "type": "dropdown",
+      "points": 1,
+      "dok": 2,
+      "std": [
+        "3.L.GC.1:R:form-and-use-verbs-by-adding-d-or-es"
+      ],
+      "passages": [
+        "p4"
+      ],
+      "prompt": "Which spelling belongs in sentence 5?",
+      "text": "Luna {0} through the field with a heavy bucket.",
+      "slots": [
+        {
+          "options": [
+            "hurries",
+            "hurrys",
+            "hurryes"
+          ],
+          "answer": 0
+        }
+      ],
+      "clue": "Think of the plain verb. Then look at the letter in front of the y.",
+      "hints": [
+        "Think of the plain verb. Then look at the letter in front of the y.",
+        "Decide whether that letter is a vowel (a, e, i, o or u) or a consonant.",
+        "Just adding -s after a consonant and a y does not follow the rule. Look at the other choices."
+      ],
+      "how": [
+        "The plain verb is hurry. The letter in front of the y is r.",
+        "R is a consonant, so the y changes to i and -es is added.",
+        "The answer is hurries."
+      ],
+      "misconception": "A common mix-up is adding only -s after a y. A consonant before the y means the y changes to i.",
+      "why": "The answer is hurries. Hurry has an r, a consonant, before the y, so the y changes to i and -es is added.",
+      "like": [
+        "SK-GUM2-9-C04"
+      ]
+    },
+    {
+      "id": "SK-GUM2-9-S05",
+      "type": "mc",
+      "points": 1,
+      "dok": 3,
+      "std": [
+        "3.L.GC.1:R:form-and-use-verbs-by-adding-d-or-es"
+      ],
+      "passages": [
+        "p4"
+      ],
+      "prompt": "Fixing hurry changes a letter, but fixing mix does not. Why?",
+      "choices": [
+        {
+          "text": "Hurry has a y after a consonant to swap out, while mix has no y to swap.",
+          "correct": true
+        },
+        {
+          "text": "Mix has a y after a consonant to swap out, while hurry has no y to swap."
+        },
+        {
+          "text": "Hurry came first in the story, so it alone is allowed to lose a letter."
+        },
+        {
+          "text": "Each word loses a letter, but mix loses a bigger one than hurry does."
+        }
+      ],
+      "clue": "Write the plain form of each verb in sentences 5 and 6.",
+      "hints": [
+        "Write the plain form of each verb in sentences 5 and 6.",
+        "Look at how each plain verb finishes.",
+        "The farm story is told in the present. Think about the other choices."
+      ],
+      "how": [
+        "Hurry finishes with r and y. Mix finishes with x.",
+        "A consonant and y means the y changes to i. An x means -es is just added.",
+        "The answer is \"Hurry has a y after a consonant to swap out, while mix has no y to swap.\""
+      ],
+      "misconception": "A common mix-up is treating all the fixes alike. The last letters of the plain verb decide the change.",
+      "why": "The answer is \"Hurry has a y after a consonant to swap out, while mix has no y to swap.\" Hurry changes its y to i. Mix ends in x, so it just adds -es.",
+      "like": [
+        "SK-GUM2-9-C05"
+      ]
+    },
+    {
+      "id": "SK-GUM2-9-S06",
+      "type": "hottext",
+      "points": 2,
+      "dok": 2,
+      "std": [
+        "3.L.GC.1:R:form-and-use-verbs-by-adding-d-or-es"
+      ],
+      "passages": [
+        "p5"
+      ],
+      "prompt": "Tap the two sentences from 2 to 6 that contain a misspelled verb.",
+      "targets": [
+        "p5:1:2",
+        "p5:2:1",
+        "p5:2:2",
+        "p5:2:3",
+        "p5:2:4"
+      ],
+      "answer": [
+        "p5:1:2",
+        "p5:2:3"
+      ],
+      "pick": 2,
+      "clue": "Find the verb in each of sentences 2 to 6. Ask what its plain form ends in.",
+      "hints": [
+        "Find the verb in each of sentences 2 to 6. Ask what its plain form ends in.",
+        "These sentences tell about the past. Check how each verb was changed.",
+        "The sentence about Priya uses a verb that is spelled right. Think about the rest."
+      ],
+      "how": [
+        "Check each verb one sentence at a time.",
+        "Practiced, bowed, waved and praised all have endings that match their plain verbs.",
+        "In sentences 2 and 5, the verbs have the wrong ending."
+      ],
+      "misconception": "A common mix-up is trusting a verb because it looks long and careful. Check its ending against its plain form.",
+      "why": "The answers are \"Mr. Park shapeed a shiny cardboard sword for the knight by hand.\" and \"The audience lovd every joke and clapped for a long time.\" Shape and love already end in e, so they just add -d: shaped and loved. Sentences 3, 4 and 6 are spelled correctly.",
+      "like": [
+        "SK-GUM2-9-C06"
+      ]
+    },
+    {
+      "id": "SK-GUM2-9-S07",
+      "type": "ebsr",
+      "points": 2,
+      "dok": 3,
+      "std": [
+        "3.L.GC.1:R:form-and-use-verbs-by-adding-d-or-es"
+      ],
+      "passages": [
+        "p5"
+      ],
+      "prompt": "Take both halves of this question in order.",
+      "partA": {
+        "prompt": "Which rule did the writer forget in sentence 2?",
+        "choices": [
+          {
+            "text": "A verb already ending in e only takes -d.",
+            "correct": true
+          },
+          {
+            "text": "A verb whose last two letters are a consonant and y swaps the y for i."
+          },
+          {
+            "text": "A verb telling about right now takes -s."
+          },
+          {
+            "text": "A verb ending in e drops the e and takes -ing."
+          }
+        ]
+      },
+      "partB": {
+        "prompt": "Pick the rewrite that fixes sentence 2.",
+        "choices": [
+          {
+            "text": "Mr. Park shaped a shiny cardboard sword for the knight by hand.",
+            "correct": true
+          },
+          {
+            "text": "Mr. Park shapd a shiny cardboard sword for the knight by hand."
+          },
+          {
+            "text": "Mr. Park shapes a shiny cardboard sword for the knight by hand."
+          },
+          {
+            "text": "Mr. Park shapeed a shiny cardboard sword for the knight by hand."
+          }
+        ]
+      },
+      "clue": "Think of the plain verb in sentence 2. Look at how it ends.",
+      "hints": [
+        "Think of the plain verb in sentence 2. Look at how it ends.",
+        "In the second half, read each rewrite and think about whether the story is in the past.",
+        "Shaping is a different form of the verb. Think about the other rewrites."
+      ],
+      "how": [
+        "Part A: the plain verb is shape, and it ends in e.",
+        "Part B: the story is about last spring, so the verb needs a past ending.",
+        "The answers are \"A verb already ending in e only takes -d.\" and \"Mr. Park shaped a shiny cardboard sword for the knight by hand.\""
+      ],
+      "misconception": "A common mix-up is adding a whole -ed to a verb that already ends in e. Only -d is added.",
+      "why": "Part A: \"A verb already ending in e only takes -d.\" Part B: \"Mr. Park shaped a shiny cardboard sword for the knight by hand.\" Shapes would not tell about the past.",
+      "like": [
+        "SK-GUM2-9-C07"
+      ]
+    },
+    {
+      "id": "SK-GUM2-9-S08",
+      "type": "ms",
+      "points": 2,
+      "dok": 2,
+      "std": [
+        "3.L.GC.1:R:form-and-use-verbs-by-adding-d-or-es"
+      ],
+      "passages": [],
+      "prompt": "Two of these sentences use a verb with the proper ending. Which two?",
+      "pick": 2,
+      "choices": [
+        {
+          "text": "The girl watches the stars from the roof after dark.",
+          "correct": true
+        },
+        {
+          "text": "My cousins raced along the dusty road in June.",
+          "correct": true
+        },
+        {
+          "text": "The teacher pushs the cart to the library each day."
+        },
+        {
+          "text": "On Monday, the class glueed the paper onto a poster."
+        },
+        {
+          "text": "The little puppy trys to climb the stairs by himself."
+        }
+      ],
+      "clue": "Find the verb in each sentence. Think of its plain form and how it ends.",
+      "hints": [
+        "Find the verb in each sentence. Think of its plain form and how it ends.",
+        "Check every sentence, including the ones that look right. Each plain verb needs the ending that fits the way it ends.",
+        "Three sentences have a verb with the wrong ending. Think about which two do not."
+      ],
+      "how": [
+        "Look at each plain verb: watch, race, push, glue and try.",
+        "Watch ends in ch, so it adds -es. Race ends in e, so it just adds -d.",
+        "Push needs -es, glue needs only -d, and try needs the y changed to i."
+      ],
+      "misconception": "A common mix-up is choosing a sentence because the verb looks familiar. Check the ending against the plain verb.",
+      "why": "The answers are \"The girl watches the stars from the roof after dark.\" and \"My cousins raced along the dusty road in June.\" Watch adds -es, and race just adds -d. Pushs, glueed and trys are misspelled.",
+      "like": [
+        "SK-GUM2-9-C08"
+      ]
+    },
+    {
+      "id": "SK-GUM2-9-S09",
+      "type": "mc",
+      "points": 1,
+      "dok": 1,
+      "std": [
+        "3.L.GC.1:R:form-and-use-verbs-by-adding-d-or-es"
+      ],
+      "passages": [],
+      "prompt": "Which spelling completes the sentence? Yesterday, Kai ___ me to the corner.",
+      "choices": [
+        {
+          "text": "raced",
+          "correct": true
+        },
+        {
+          "text": "raceed"
+        },
+        {
+          "text": "racd"
+        },
+        {
+          "text": "races"
+        }
+      ],
+      "clue": "Yesterday already happened. Look at how the plain verb race ends.",
+      "hints": [
+        "Yesterday already happened. Look at how the plain verb race ends.",
+        "A verb that ends in e needs a short ending for the past.",
+        "Races tells about the present. Think about the other choices."
+      ],
+      "how": [
+        "The sentence tells about the past, and race ends in e.",
+        "Only -d is added when a verb ends in e.",
+        "The answer is raced."
+      ],
+      "misconception": "A common mix-up is adding a whole -ed to a verb that ends in e. Only -d is added.",
+      "why": "The answer is raced. Race already ends in e, so only -d is added for the past. Raceed has an extra e, racd drops the e, and races does not tell about the past.",
+      "like": [
+        "SK-GUM2-9-C09"
+      ]
+    },
+    {
+      "id": "SK-GUM2-9-S10",
+      "type": "mc",
+      "points": 1,
+      "dok": 3,
+      "std": [
+        "3.L.GC.1:R:form-and-use-verbs-by-adding-d-or-es"
+      ],
+      "passages": [
+        "p5"
+      ],
+      "prompt": "Rita prefers lovd in sentence 5 since it takes up less room. What do you say?",
+      "choices": [
+        {
+          "text": "Love already has its e, so the ending adds one letter, d, to make loved.",
+          "correct": true
+        },
+        {
+          "text": "Less room is always better, so lovd wins and loved has to go."
+        },
+        {
+          "text": "Loved is correct, yet only because past words must have at least five letters."
+        },
+        {
+          "text": "Lovd is correct, since a long e sound cannot be kept when more letters join."
+        }
+      ],
+      "clue": "Think about whether room on the page decides how a verb is spelled.",
+      "hints": [
+        "Think about whether room on the page decides how a verb is spelled.",
+        "Look at how that verb ends, and what happens to it.",
+        "Spelling follows rules about letters, not room. Think about the other choices."
+      ],
+      "how": [
+        "Love ends in e.",
+        "A verb that ends in e only takes -d, and the e stays in the word.",
+        "The answer is \"Love already has its e, so the ending adds one letter, d, to make loved.\""
+      ],
+      "misconception": "A common mix-up is dropping the e before -d. The e stays, and only -d is added.",
+      "why": "The answer is \"Love already has its e, so the ending adds one letter, d, to make loved.\" Lovd loses the e that the word needs, and loveed adds a second one.",
+      "like": [
+        "SK-GUM2-9-C10"
+      ]
+    },
+    {
+      "id": "SK-GUM2-9-S11",
+      "type": "hottext",
+      "points": 2,
+      "dok": 2,
+      "std": [
+        "3.L.GC.1:R:form-and-use-verbs-by-adding-d-or-es"
+      ],
+      "passages": [
+        "p6"
+      ],
+      "prompt": "Which two of sentences 3 to 7 have verbs that are spelled and used correctly? Tap them.",
+      "targets": [
+        "p6:2:1",
+        "p6:2:2",
+        "p6:2:3",
+        "p6:2:4",
+        "p6:2:5"
+      ],
+      "answer": [
+        "p6:2:2",
+        "p6:2:4"
+      ],
+      "pick": 2,
+      "clue": "Find the verb in each of sentences 3 to 7. Ask what its plain form ends in.",
+      "hints": [
+        "Find the verb in each of sentences 3 to 7. Ask what its plain form ends in.",
+        "Check the ending that was added, and whether it matches one person doing the action now.",
+        "Some of these verbs have the wrong ending, and one is the wrong word for one person. Think about the rest."
+      ],
+      "how": [
+        "Check each sentence one at a time.",
+        "Reaches and tries have the endings that match their plain verbs.",
+        "Replys, boxs and do do not match."
+      ],
+      "misconception": "A common mix-up is picking a sentence because it looks simple. Check each verb's ending.",
+      "why": "The answers are \"Aunt Rose reaches the top shelf without a stool.\" and \"Pop tries a new tool every single week.\" Reach ends in ch, so it adds -es. Try ends in a consonant and y, so the y changes to i. Replys, boxs and do are wrong.",
+      "like": [
+        "SK-GUM2-9-C11"
+      ]
+    },
+    {
+      "id": "SK-GUM2-9-S12",
+      "type": "dropdown",
+      "points": 1,
+      "dok": 2,
+      "std": [
+        "3.L.GC.1:R:form-and-use-verbs-by-adding-d-or-es"
+      ],
+      "passages": [
+        "p6"
+      ],
+      "prompt": "Which spelling fits sentence 3?",
+      "text": "Grandpa {0} to every letter from his old friends within a day.",
+      "slots": [
+        {
+          "options": [
+            "replies",
+            "replys",
+            "replyes"
+          ],
+          "answer": 0
+        }
+      ],
+      "clue": "Think of the plain verb. Then look at the letter in front of the y.",
+      "hints": [
+        "Think of the plain verb. Then look at the letter in front of the y.",
+        "Decide whether that letter is a vowel (a, e, i, o or u) or a consonant.",
+        "Just adding -s after a consonant and a y does not follow the rule. Look at the other choices."
+      ],
+      "how": [
+        "The plain verb is reply. The letter in front of the y is l.",
+        "L is a consonant, so the y changes to i and -es is added.",
+        "The answer is replies."
+      ],
+      "misconception": "A common mix-up is adding only -s to a verb that ends in y. A consonant before the y means the y changes.",
+      "why": "The answer is replies. Reply has an l, a consonant, before the y, so the y changes to i and -es is added.",
+      "like": [
+        "SK-GUM2-9-C12"
+      ]
+    },
+    {
+      "id": "SK-GUM2-9-S13",
+      "type": "dropdown",
+      "points": 2,
+      "dok": 2,
+      "std": [
+        "3.L.GC.1:R:form-and-use-verbs-by-adding-d-or-es"
+      ],
+      "passages": [],
+      "prompt": "Fill each gap with the spelling that fits.",
+      "text": "Each night, Mia {0} her chores, and she {1} her teeth first.",
+      "slots": [
+        {
+          "options": [
+            "does",
+            "dos",
+            "doies"
+          ],
+          "answer": 0
+        },
+        {
+          "options": [
+            "brushes",
+            "brushs",
+            "brushies"
+          ],
+          "answer": 0
+        }
+      ],
+      "clue": "The two gaps need different endings. Think of each plain verb.",
+      "hints": [
+        "The two gaps need different endings. Think of each plain verb.",
+        "The first plain verb is do. The second ends in sh.",
+        "Just adding -s after sh does not follow the rule. Look at the choices for the second gap."
+      ],
+      "how": [
+        "Do is one of the two short verbs that add -es. Brush ends in sh, so it adds -es.",
+        "Each gap needs -es, but neither one changes a letter.",
+        "The answers are does and brushes."
+      ],
+      "misconception": "A common mix-up is adding only -s to both verbs. Do and brush both need -es.",
+      "why": "The answers are does and brushes. Do adds -es, and brush ends in sh, so it adds -es too.",
+      "like": [
+        "SK-GUM2-9-C13"
+      ]
+    },
+    {
+      "id": "SK-GUM2-9-S14",
+      "type": "hottext",
+      "points": 1,
+      "dok": 2,
+      "std": [
+        "3.L.GC.1:R:form-and-use-verbs-by-adding-d-or-es"
+      ],
+      "passages": [],
+      "prompt": "One of these sentences misspells its verb. Tap it.",
+      "options": [
+        "The girl buzzes the doorbell twice.",
+        "My neighbor carries groceries up the stairs.",
+        "The kids dashs across the field at recess.",
+        "In June, we baked bread for the fair.",
+        "A turtle crosses the road very slowly."
+      ],
+      "answer": [
+        2
+      ],
+      "pick": 1,
+      "clue": "Find the verb in each sentence. Think of its plain form.",
+      "hints": [
+        "Find the verb in each sentence. Think of its plain form.",
+        "Look at the last letters of each plain verb. Check that the ending matches.",
+        "The sentence about the groceries has a verb that is spelled right. Think about the rest."
+      ],
+      "how": [
+        "Look at each verb and how its plain form ends.",
+        "Buzzes, carries, baked and crosses all have endings that match their plain verbs.",
+        "The answer is \"The kids dashs across the field at recess.\" Dash ends in sh, so it needs -es."
+      ],
+      "misconception": "A common mix-up is adding only -s after sh. Verbs that end in sh need -es.",
+      "why": "The answer is \"The kids dashs across the field at recess.\" Dash ends in sh, so it adds -es: dashes. The other sentences have verbs with the right endings.",
+      "like": [
+        "SK-GUM2-9-C14"
+      ]
+    },
+    {
+      "id": "SK-GUM2-9-S15",
+      "type": "mc",
+      "points": 1,
+      "dok": 3,
+      "std": [
+        "3.L.GC.1:R:form-and-use-verbs-by-adding-d-or-es"
+      ],
+      "passages": [],
+      "prompt": "Rob claims that a verb for one person never needs more than -s. Which sentence proves him mistaken?",
+      "choices": [
+        {
+          "text": "My sister washes the car on Saturdays.",
+          "correct": true
+        },
+        {
+          "text": "The dog digs a deep hole by the fence."
+        },
+        {
+          "text": "A bird sings in the tall tree each dawn."
+        },
+        {
+          "text": "Mr. Lee walks to work every single day."
+        }
+      ],
+      "clue": "To test a claim, look for an example that breaks it. Look at how each verb ends.",
+      "hints": [
+        "To test a claim, look for an example that breaks it. Look at how each verb ends.",
+        "In each sentence, think of the plain verb and what it ends in.",
+        "Three of the verbs follow Rob's claim. Think about which one does not."
+      ],
+      "how": [
+        "Rob says every verb just adds -s. Look for a verb that needs more.",
+        "Dig, sing and walk just add -s.",
+        "The answer is \"My sister washes the car on Saturdays.\""
+      ],
+      "misconception": "A common mix-up is thinking every verb adds only -s. Verbs that end in ch, sh, s, x or z need -es.",
+      "why": "The answer is \"My sister washes the car on Saturdays.\" Wash ends in sh, so it needs -es. That proves Rob mistaken. Digs, sings and walks just add -s.",
+      "like": [
+        "SK-GUM2-9-C15"
+      ]
+    }
+  ],
+  addons: {
+    "SK-GUM2-9-P1": {
+      "hints": [
+        "Think of the plain verb. Then look at the letter in front of the y.",
+        "Decide whether that letter is a vowel (a, e, i, o or u) or a consonant.",
+        "Just adding -s after a consonant and a y does not follow the rule. Look at the other choices."
+      ],
+      "how": [
+        "The plain verb is cry. The letter in front of the y is r.",
+        "R is a consonant, so the y changes to i and -es is added.",
+        "The answer is cries."
+      ],
+      "misconception": "A common mix-up is adding only -s after a y. A consonant before the y means the y changes to i."
+    },
+    "SK-GUM2-9-P2": {
+      "hints": [
+        "Yesterday already happened. Look at how the plain verb vote ends.",
+        "A verb that ends in e needs a short ending for the past.",
+        "Votes tells about the present. Think about the other choices."
+      ],
+      "how": [
+        "Yesterday tells about the past, and vote ends in e.",
+        "Only -d is added when a verb ends in e.",
+        "The answer is voted."
+      ],
+      "misconception": "A common mix-up is adding a whole -ed to a verb that ends in e. Only -d is added."
+    },
+    "SK-GUM2-9-P3": {
+      "hints": [
+        "Find the verb in each sentence. Think of its plain form.",
+        "Look at how fix ends, and think about what ending that needs.",
+        "Fixies does not follow the rule for words that end in x. Look at the other choices."
+      ],
+      "how": [
+        "The plain verb is fix, and it ends in x.",
+        "A verb that ends in x adds -es.",
+        "The answer is \"Kai fixes his bike chain with a small tool.\""
+      ],
+      "misconception": "A common mix-up is adding only -s after x. Verbs that end in x need -es."
+    },
+    "SK-GUM2-9-P4": {
+      "hints": [
+        "Think of each plain verb in ( ) and how it ends.",
+        "An e at the end, an x or z at the end, and a consonant plus y at the end each get a different ending.",
+        "Use the words Last night and Every morning to see which verbs tell about the past."
+      ],
+      "how": [
+        "Look at the last letters of each plain verb.",
+        "Save and practice end in e. Mix and buzz end in x and z. Hurry and carry end in a consonant and y.",
+        "Place each sentence in the group that matches its verb."
+      ],
+      "misconception": "A common mix-up is sorting by the time word. The last letters of the verb decide the group."
+    },
+    "SK-GUM2-9-P5": {
+      "hints": [
+        "Find the verb in each sentence. Think of its plain form.",
+        "Look at the last letters of each plain verb. Check that the ending matches.",
+        "The sentence about the goat and the fence has a verb that is spelled right. Think about the rest."
+      ],
+      "how": [
+        "Look at each verb and how its plain form ends.",
+        "Brushes, nibbled, tries and closed all have endings that match their plain verbs.",
+        "The answer is \"Our teacher teachs us a new word each day.\" Teach ends in ch, so it needs -es."
+      ],
+      "misconception": "A common mix-up is adding only -s after ch. Verbs that end in ch need -es."
+    }
+  },
+  /* B7b:core:end */
   test: [
     { id: "SK-GUM2-9-T1", type: "dropdown", points: 1, dok: 1, passages: [],
       prompt: "Choose the word that correctly completes the sentence.",

@@ -7,7 +7,7 @@ PP.addLesson({
   teach: {
     big: "A complete sentence has a part that tells who or what, and a verb, so it makes a whole thought.",
     points: [
-      "Every sentence has a naming part that tells who or what the sentence is about. It can be a noun, like Maria or the dog, or a word like I, we, she or they. A command like Close the door is a sentence too. It does not write the who, but it tells the listener to act.",
+      "Every sentence has a naming part that tells who or what the sentence is about. It can be a noun, like Maria or the dog, or a word like I, we, she or they. A command like Close the door is a sentence too. It tells someone what to do, even when nobody is named.",
       "Every sentence has a verb. Most verbs tell an action, like splashed or runs. Some verbs, like is and was, tell what someone or something is like.",
       "If a group of words has nothing that tells who or what, or has no verb, the thought is not complete. Add the missing part."
     ],
@@ -200,7 +200,7 @@ PP.addLesson({
       paragraphs: [
         [
           "(1) Our science class set up a weather station behind the school this fall.",
-          "(2) A rain gauge made from a clear plastic bottle with a ruler taped to it.",
+          "(2) A rain gauge with a tall ruler on its side and a clear plastic bottle below.",
           "(3) Mrs. Reyes showed us how to read the numbers on the side."
         ],
         [
@@ -1305,12 +1305,12 @@ PP.addLesson({
       ],
       how: [
         "Check each sentence from 2 to 7 for a word that tells what someone or something does or is.",
-        "Sentence 2, A rain gauge made from a clear plastic bottle with a ruler taped to it, names a thing but has no verb for the gauge itself.",
+        "Sentence 2, A rain gauge with a tall ruler on its side and a clear plastic bottle below, names a thing but has no verb for the gauge itself.",
         "Sentence 5, The little wind sock on top of the tall pole, names a thing but has no verb.",
         "Sentence 4 has the verb checked but no who, which is a different problem."
       ],
       misconception: "A common mix-up is picking the sentence with no written who. That one has a verb, so it does not fit this question.",
-      why: "The answers are sentences 2 and 5: \"A rain gauge made from a clear plastic bottle with a ruler taped to it.\" and \"The little wind sock on top of the tall pole.\". Sentences 2 and 5 name a thing but never say what it does or is. Sentence 4 has the verb checked, and sentences 3, 6 and 7 have verbs too.",
+      why: "The answers are sentences 2 and 5: \"A rain gauge with a tall ruler on its side and a clear plastic bottle below.\" and \"The little wind sock on top of the tall pole.\". Sentences 2 and 5 name a thing but never say what it does or is. Sentence 4 has the verb checked, and sentences 3, 6 and 7 have verbs too.",
       like: ["SK-GUM1-1-C11"]
     },
     {
@@ -1602,7 +1602,9 @@ PP.addLesson({
       "A singular noun names one thing, like one cat.",
       "A plural noun names more than one thing. Most nouns add -s to make the plural, like two cats.",
       "Clue words help you choose. A, an, one, each and every go with one thing. Two, three, many, several and a few go with more than one.",
-      "When you talk, listen for the -s sound at the end of the word when you mean more than one."
+      "When you talk, listen for the -s sound at the end of the word when you mean more than one.",
+      "An apostrophe shows that something belongs to someone, like Jada's pencil. It does not make a plural.",
+      "A few singular nouns already end in s, like bus. Check the clue word, not just the last letter."
     ],
     words: [
       { term: "singular", means: "one" },
@@ -1700,7 +1702,7 @@ PP.addLesson({
     },
     {
       id: "p3",
-      title: "A Walk to the Pond",
+      title: "Our Pond Journal",
       byline: "A third grader's draft",
       genre: "Student draft (narrative)",
       draft: true,
@@ -2274,7 +2276,7 @@ PP.addLesson({
             text: "Only a few {0} were left on the shelf by closing time.",
             slots: [
               {
-                options: ["cans","can","cants"],
+                options: ["cans","can","cann"],
                 answer: 0
               }
             ],
@@ -2282,7 +2284,7 @@ PP.addLesson({
             hints: [
               "Look at the clue words before the blank. Decide if they mean one or more than one.",
               "Read the sentence with each choice and listen to how the clue words and the noun sound together.",
-              "Cants does not fit this sentence. Decide between the other two choices."
+              "Cann is not spelled like a real word here. Decide between the other two choices."
             ],
             how: [
               "The clue words before the blank are a few. A few means more than one.",
@@ -2290,7 +2292,7 @@ PP.addLesson({
               "The answer is cans. Can names only one."
             ],
             misconception: "A common mix-up is hearing the word a and choosing the one form. A few is a clue for more than one.",
-            why: "The answer is cans. A few means more than one, so can needs -s. Can names just one thing, and cants does not fit here. The plural of can is cans."
+            why: "The answer is cans. A few means more than one, so can needs -s. Can names just one thing, and cann is a misspelling. The plural of can is cans."
           },
           {
             id: "SK-GUM1-2-C13",
@@ -3044,7 +3046,7 @@ PP.addLesson({
       hints: [
         "Find each clue word that means more than one and check the noun after it.",
         "Read the sentences one at a time and ask how many things each noun names.",
-        "Two of the sentences use a, and a goes with just one thing. Check the others."
+        "One sentence uses a, and a goes with just one thing. Check the others."
       ],
       how: [
         "Find the clue word and noun in each sentence.",
@@ -3939,10 +3941,10 @@ PP.addLesson({
       ],
       passages: [],
       stem: "After the Saturday scrimmage, Coach Lee keeps a blue bin of forgotten gloves, scarves and water bottles beside the equipment shed.",
-      prompt: "He picks up one lone red mitten and hopes to learn the place its owner dropped it. Pick the best question for him to ask the players.",
+      prompt: "He picks up one lone red mitten and hopes to learn the spot it vanished from. Pick the best question for him to ask the players.",
       choices: [
         {
-          text: "Where did the owner drop this mitten?",
+          text: "Where did this mitten go missing?",
           correct: true
         },
         {
@@ -3962,12 +3964,12 @@ PP.addLesson({
         "Coach Lee is not asking about an amount, so one question can be ruled out."
       ],
       how: [
-        "Find what the coach wants to learn: the place the owner dropped the mitten.",
+        "Find what the coach wants to learn: the spot the mitten vanished from.",
         "A spot is a place, and the question word for a place is where.",
-        "The answer is \"Where did the owner drop this mitten?\" The other questions ask about an amount, a thing and a reason."
+        "The answer is \"Where did this mitten go missing?\" The other questions ask about an amount, a thing and a reason."
       ],
       misconception: "A common mix-up is picking the question that mentions gloves or the shed. Pick the question word that asks for what the coach wants.",
-      why: "The answer is \"Where did the owner drop this mitten?\" A spot is a place, and where asks about a place. The other questions ask about an amount, a thing and a reason.",
+      why: "The answer is \"Where did this mitten go missing?\" A spot is a place, and where asks about a place. The other questions ask about an amount, a thing and a reason.",
       like: ["SK-GUM1-3-P3"]
     },
     {
@@ -6109,7 +6111,7 @@ PP.addLesson({
       hints: [
         "For each sentence, check the first letter and look for the word I.",
         "Sort the sentences you feel surest of first.",
-        "Two of the four sentences begin with a small letter, so check those first."
+        "Check the first letter of every sentence, then look for the word I in the others."
       ],
       how: [
         "Check the first letter and every I in each sentence.",
@@ -6120,7 +6122,7 @@ PP.addLesson({
     "SK-GUM1-4-P4": {
       hints: [
         "Think about the two capital-letter rules.",
-        "Look at the very first word of the sentence.",
+        "Check each word against the two rules.",
         "Fishing is a plain word in the middle of the sentence."
       ],
       how: [
@@ -6133,7 +6135,7 @@ PP.addLesson({
       hints: [
         "Check the first letter of each sentence, then look for the word I.",
         "Cross out every sentence that begins with a small letter.",
-        "Two sentences begin with a small letter, and one more starts with a small word that is a question."
+        "Check the sentences that start with a capital letter and look inside them too."
       ],
       how: [
         "Check the first letter and every I.",
@@ -7841,7 +7843,7 @@ PP.addLesson({
           "(8) Right now, Joy reads a story about a dragon to the kids.",
           "(9) Every month, the librarians holds a puzzle night.",
           "(10) I love sorting the colorful covers.",
-          "(11) Yesterday, Ms. Bell thanked us with stickers.",
+          "(11) Each night, the volunteers locks the front door.",
           "(12) I keep visit the library after school."
         ]
       ]
@@ -8665,54 +8667,54 @@ PP.addLesson({
       passages: ["p5"],
       prompt: "Work through the first half, then the second half.",
       partA: {
-        prompt: "Which fact explains the mistake in sentence 3?",
+        prompt: "Which fact explains what went wrong in number 11?",
         choices: [
           {
-            text: "A pair of people act, so the verb must stay in its plain form.",
+            text: "Several people do the job, so the plain form is needed.",
             correct: true
           },
           {
-            text: "The work is finished, so the verb must carry a past ending."
+            text: "The job is already done, so a past tense form is needed here."
           },
           {
-            text: "The sentence has a word such as kept before the verb, so it must end in -ing."
+            text: "A word like kept comes before it, so -ing is needed."
           },
           {
-            text: "The verb is spelled with -s, so it already matches the plain form."
+            text: "The word is spelled with -s, so it already matches."
           }
         ]
       },
       partB: {
-        prompt: "Pick the revision that repairs sentence 3.",
+        prompt: "Pick the revision that repairs number 11.",
         choices: [
           {
-            text: "Each week, my friend Joy and I stack books on the cart.",
+            text: "Each night, the volunteers lock the front door.",
             correct: true
           },
           {
-            text: "Each week, my friend Joy and I stacked books on the cart."
+            text: "Each night, the volunteers locked the front door."
           },
           {
-            text: "Each week, my friend Joy and I stacking books on the cart."
+            text: "Each night, the volunteers locking the front door."
           },
           {
-            text: "Each week, my friend Joy and I stacks books on the cart."
+            text: "Each night, the volunteers locks the front door."
           }
         ]
       },
-      clue: "Find who does the action in sentence 3 and count the doers.",
+      clue: "Find who does the job in number 11 and count them.",
       hints: [
-        "Find who does the action in sentence 3 and count the doers.",
-        "In the first half, decide how many do the action. In the second half, read each revision aloud.",
-        "Each week tells about again and again, not about the past, so one revision can be ruled out."
+        "Find who does the job in number 11 and count them.",
+        "In the first half, decide how many do the job. In the second half, read each revision aloud.",
+        "Each night repeats and does not tell about the past, so one revision can be ruled out."
       ],
       how: [
-        "First half: the doers are Joy and I, which is two people. A verb with two doers does not take -s. The answer is \"A pair of people act, so the verb must stay in its plain form.\"",
-        "Second half: take -s off stacks. The answer is \"Each week, my friend Joy and I stack books on the cart.\"",
-        "The other revisions use -ed for the past, use -ing with no word like started or kept before it, or keep the -s."
+        "First half: the doers are the volunteers, which is several people. A verb with several doers does not take -s. The answer is \"Several people do the job, so the plain form is needed.\"",
+        "Second half: take -s off locks. The answer is \"Each night, the volunteers lock the front door.\"",
+        "The other revisions use a past ending, use -ing with no word like kept before it, or keep the -s."
       ],
       misconception: "A common mix-up is putting -s on a verb because the action happens now. Count the people who do it first.",
-      why: "Part A: \"A pair of people act, so the verb must stay in its plain form.\" Part B: \"Each week, my friend Joy and I stack books on the cart.\" Joy and I is two people, so the verb stays stack. Each week tells about again and again, not the past.",
+      why: "Part A: \"Several people do the job, so the plain form is needed.\" Part B: \"Each night, the volunteers lock the front door.\" The volunteers are several people, so the verb stays lock. Each night repeats, so it is not the past.",
       like: ["SK-GUM1-6-C07"]
     },
     {
@@ -8750,7 +8752,7 @@ PP.addLesson({
       hints: [
         "Check each verb against its clue word or the word right before it.",
         "Cross out any sentence where the verb fits. Keep the ones that do not match.",
-        "One sentence has a plural doer with a verb ending in -s."
+        "The verb after keeps takes -ing, so the sentence about the trip can be ruled out."
       ],
       how: [
         "Check each verb against its clue.",
@@ -8852,21 +8854,21 @@ PP.addLesson({
       ],
       passages: ["p5"],
       stem: "A library volunteer proofreads the helper's draft before it goes in the newsletter.",
-      prompt: "Tap the TWO shown lines where an -s ending is added wrongly or left off.",
+      prompt: "Tap the TWO shown sentences in which a verb misuses or lacks its -s.",
       targets: ["p5:1:1","p5:1:3","p5:2:1","p5:3:1","p5:3:3"],
       answer: ["p5:1:3","p5:2:1"],
       pick: 2,
-      clue: "Find who or what does the action in each shown line. Count how many there are.",
+      clue: "Find who or what does the action in each shown sentence. Count how many there are.",
       hints: [
-        "Find who or what does the action in each shown line. Count how many there are.",
+        "Find who or what does the action in each shown sentence. Count how many there are.",
         "Check each verb. One person or thing doing something now gets -s, and more than one does not.",
-        "Line 10 has an -ing verb after love, which is correct, so it can be ruled out."
+        "Sentence 10 has an -ing verb after love, which is correct, so it can be ruled out."
       ],
       how: [
-        "Find the doer in each shown line and check the verb.",
-        "Line 3 says Joy and I stacks. Joy and I is two people, so it should be stack.",
-        "Line 5 says Ms. Bell open. Ms. Bell is one person, so it should be opens.",
-        "Lines 1, 8 and 10 already match their doers and clues."
+        "Find the doer in each shown sentence and check the verb.",
+        "Sentence 3 says Joy and I stacks. Joy and I is two people, so it should be stack.",
+        "Sentence 5 says Ms. Bell open. Ms. Bell is one person, so it should be opens.",
+        "Sentences 1, 8 and 10 already match their doers and clues."
       ],
       misconception: "A common mix-up is putting -s on every present-time verb. Count the people who do the action.",
       why: "The answers are sentences 3 and 5: \"Each week, my friend Joy and I stacks books on the cart.\" and \"Now Ms. Bell open the story room for the little kids.\". Joy and I is two people, so stacks should be stack. Ms. Bell is one person, so open should be opens. The other shown verbs fit.",
@@ -9004,7 +9006,7 @@ PP.addLesson({
       clue: "To show that a claim is wrong, find an example that breaks it. Think about what the poster says.",
       hints: [
         "To show that a claim is wrong, find an example that breaks it. Think about what the poster says.",
-        "Look at the verbs, not the nouns. Ask which verb ends in -s and when its action happens.",
+        "Look at the verbs, not the nouns. Ask when each action happens and what ending its verb has.",
         "Yesterday tells about the past, and its verb has no -s, so that sentence cannot break the claim."
       ],
       how: [
@@ -9872,7 +9874,7 @@ PP.addLesson({
             hints: [
               "Find the action verb in each sentence. Ask which one tells the reader the least.",
               "Picture each action. One verb gives almost no picture at all.",
-              "Leaped and scribbled each show a lot about how the action looked, so one of them can be ruled out."
+              "Leaped paints a clear picture of the jump, so that sentence cannot be the weakest."
             ],
             how: [
               "Find the action verb in each sentence: went, pointed, leaped and scribbled.",
@@ -10117,7 +10119,7 @@ PP.addLesson({
         "3.L.GC.1:R:use-action-verbs"
       ],
       passages: ["p4"],
-      prompt: "Tap both shown sentences that show a thought rather than a movement.",
+      prompt: "Tap both shown sentences where the doer does something only in the mind.",
       targets: ["p4:1:2","p4:1:4","p4:2:4","p4:3:4","p4:3:5"],
       answer: ["p4:2:4","p4:3:4"],
       pick: 2,
@@ -10293,35 +10295,35 @@ PP.addLesson({
         "3.L.GC.1:R:use-action-verbs"
       ],
       passages: ["p5"],
-      prompt: "Read went and brushed in the treehouse story. What can a reader say about them?",
+      prompt: "A friend would rather write put in place of brushed in sentence 5. What can a reader say?",
       choices: [
         {
-          text: "Brushed lets us see how paint was spread, and went does not.",
+          text: "Brushed shows how paint was spread, and put does not.",
           correct: true
         },
         {
-          text: "Went is better, because short words always win in good writing."
+          text: "Put is stronger, since fewer letters make a word clearer."
         },
         {
-          text: "Neither one shows anything, so the two are equally clear."
+          text: "Neither word helps, since both show an identical scene."
         },
         {
           text: "Brushed names the walls, so that word is really a noun."
         }
       ],
-      clue: "Think about how much each verb shows the reader.",
+      clue: "Think about how much each verb tells the reader.",
       hints: [
-        "Think about how much each verb shows the reader.",
-        "Say each verb in its sentence. Which one shows more about the action?",
+        "Think about how much each verb tells the reader.",
+        "Say each verb in its sentence. Which one tells more about the action?",
         "One choice calls an action word a noun. Ask what the writer did to the walls."
       ],
       how: [
-        "Compare the pictures. Went only says the writer moved somehow.",
+        "Compare the pictures. Put only says the paint got on the walls somehow.",
         "Brushed shows how the writer put paint on the walls.",
-        "The answer is \"Brushed lets us see how paint was spread, and went does not.\""
+        "The answer is \"Brushed shows how paint was spread, and put does not.\""
       ],
       misconception: "A common mix-up is thinking all action verbs are equally strong. Some verbs show much more.",
-      why: "The answer is \"Brushed lets us see how paint was spread, and went does not.\" Brushed shows how the paint was put on. Went shows little, and both are action verbs.",
+      why: "The answer is \"Brushed shows how paint was spread, and put does not.\" Brushed shows how the paint was put on. Put shows little, and both are action verbs.",
       like: ["SK-GUM1-7-C10"]
     },
     {
@@ -10443,7 +10445,7 @@ PP.addLesson({
       hints: [
         "Find the action verb in each sentence. Ask which one tells the reader the least.",
         "Picture each action. One verb gives almost no picture at all.",
-        "Sprinted and roared each show a lot about how the action looked or sounded, so one of them can be ruled out."
+        "Roared paints a clear picture of the sound, so that sentence cannot be the weakest."
       ],
       how: [
         "Find the action verbs: got, sprinted, roared and waved.",
@@ -10584,16 +10586,16 @@ PP.addLesson({
       clue: "The missing word should tell what the kitten did.",
       why: "The answer is hid. It tells what the kitten did. Fluffy and quiet are describing words, not actions." },
     { id: "SK-GUM1-7-T4", type: "mc", points: 1, dok: 2, passages: [],
-      stem: "Lily guessed the answer to the riddle.",
+      stem: "Lily imagined a funny answer to the riddle.",
       prompt: "Which word is the action verb?",
       choices: [
-        { text: "guessed", correct: true },
+        { text: "imagined", correct: true },
         { text: "answer" },
         { text: "riddle" },
         { text: "Lily" }
       ],
       clue: "Some actions happen in your mind. Ask: what did Lily do?",
-      why: "The answer is guessed. Guessing is something Lily does with her mind, so it is an action verb. Lily, answer and riddle are nouns." },
+      why: "The answer is imagined. Imagining is something Lily does with her mind, so it is an action verb. Lily, answer and riddle are nouns." },
     { id: "SK-GUM1-7-T5", type: "match", points: 2, dok: 2, passages: [],
       stem: "Dad sliced the bread and spread jam on it.",
       prompt: "Sort the words from the sentence.",
@@ -10619,8 +10621,8 @@ PP.addLesson({
     points: [
       "An adjective tells more about a noun. It can tell what kind or how many: a fluffy kitten, three kittens.",
       "An adverb tells more about a verb. It can tell how, when or where an action happens.",
-      "Many adverbs that tell how end in -ly, like quickly and softly. Some adverbs, like early and outside, do not.",
-      "An adjective can also come after a word like is, was or tasted: The soup tasted sweet. It still describes the noun.",
+      "Many adverbs that tell how end in -ly, like quickly and softly. Some adverbs, like early and nearby, do not.",
+      "An adjective can also come after a word like is, was or felt: The room felt chilly. It still describes the noun.",
       "A word like kindness names a feeling. It is a noun, so it does not describe anything.",
       "To tell them apart, find the word being described. If it is a noun, use an adjective. If it is a verb, use an adverb."
     ],
@@ -10657,14 +10659,14 @@ PP.addLesson({
       answer: "Calmly is correct."
     },
     {
-      show: ["My brother woke up early and played outside."],
+      show: ["My brother woke up early and played nearby."],
       ask: "Which words are adverbs?",
       steps: [
         "Find the actions: woke up and played.",
-        "Ask when he woke up: early. Ask where he played: outside.",
+        "Ask when he woke up: early. Ask where he played: nearby.",
         "Neither word ends in -ly, but each one tells more about an action, so both are adverbs."
       ],
-      answer: "Early and outside are adverbs. Early tells when, and outside tells where."
+      answer: "Early and nearby are adverbs. Early tells when, and nearby tells where."
     }
   ],
   parent: "On a walk, take turns describing things you see with an adjective (\"a tall tree\") and actions with an adverb (\"the dog ran quickly\"). Ask your child which word describes a thing and which describes an action.",
@@ -11184,7 +11186,7 @@ PP.addLesson({
             hints: [
               "For each word, find the word it tells about. Then decide if that word is a noun or an action.",
               "Ask which word steadily tells about, and which word kind tells about.",
-              "A man is a thing, not an action, so kind cannot tell about an action."
+              "Cross out the choice that says both words tell about actions."
             ],
             how: [
               "Find the word steadily tells about: worked, an action. It tells how they worked.",
@@ -11531,7 +11533,7 @@ PP.addLesson({
         "3.L.GC.1:R:use-adjectives-and-adverbs"
       ],
       passages: ["p4"],
-      prompt: "Near the end of the draft, Coach Lee grinned widely. What gives widely its job?",
+      prompt: "Near the end of the draft, Coach Lee grinned widely. What job does widely do?",
       choices: [
         {
           text: "Its job is adding detail to the verb grinned, saying how it happened.",
@@ -11750,35 +11752,35 @@ PP.addLesson({
         "3.L.GC.1:R:use-adjectives-and-adverbs"
       ],
       passages: ["p5"],
-      prompt: "Compare sticky and firmly in the dough-stirring line. Which claim is true?",
+      prompt: "Compare floury and cheerfully in the laughing line. Which claim is true?",
       choices: [
         {
-          text: "Sticky goes with the dough, while firmly goes with the stirring.",
+          text: "Floury goes with the nose, while cheerfully goes with the laughing.",
           correct: true
         },
         {
-          text: "Both go with the dough, so neither one tells about the stirring."
+          text: "Both go with the nose, so neither one tells about the laughing."
         },
         {
-          text: "Firmly goes with the dough, while sticky goes with the stirring."
+          text: "Cheerfully goes with the nose, while floury goes with the laughing."
         },
         {
-          text: "Both go with the stirring, so neither one tells about the dough."
+          text: "Both go with the laughing, so neither one tells about the nose."
         }
       ],
       clue: "For each word, find the word it describes. Then decide if that word is a thing or an action.",
       hints: [
         "For each word, find the word it describes. Then decide if that word is a thing or an action.",
-        "Ask which word sticky describes, and which word firmly describes.",
-        "Dough is a thing, so firmly cannot describe it. One choice can be ruled out."
+        "Ask which word floury describes, and which word cheerfully describes.",
+        "Cross out the choice that says both go with the nose, then compare the ones that are left."
       ],
       how: [
-        "Find the word sticky describes: dough, a noun.",
-        "Find the word firmly describes: stirred, an action.",
-        "The answer is \"Sticky goes with the dough, while firmly goes with the stirring.\""
+        "Find the word floury describes: nose, a noun.",
+        "Find the word cheerfully describes: laughed, an action.",
+        "The answer is \"Floury goes with the nose, while cheerfully goes with the laughing.\""
       ],
       misconception: "A common mix-up is thinking both words do the same job. One describes a noun and the other describes an action.",
-      why: "The answer is \"Sticky goes with the dough, while firmly goes with the stirring.\" Sticky is an adjective that describes the dough, and firmly is an adverb that describes the stirring.",
+      why: "The answer is \"Floury goes with the nose, while cheerfully goes with the laughing.\" Floury is an adjective that describes the nose, and cheerfully is an adverb that describes the laughing.",
       like: ["SK-GUM1-8-C10"]
     },
     {
@@ -12193,7 +12195,7 @@ PP.addLesson({
           "(5) The goalie, Omar, dove but missed it.",
           "(6) We scored again before halftime.",
           "(7) In the second half, the Bears fought back.",
-          "(8) Gianna blocked a shot near our net."
+          "(8) The defender, Gianna, blocked a shot near our net."
         ],
         [
           "(9) The referee blew his whistle.",
@@ -12381,35 +12383,35 @@ PP.addLesson({
               "3.L.GC.1:R:use-common-and-proper-nouns"
             ],
             passages: ["p1"],
-            prompt: "In sentence 5, Nora is a proper noun and friend is a common noun. Why?",
+            prompt: "In sentence 1, Pine Ridge Elementary is a proper noun and school is a common noun. Why?",
             choices: [
               {
-                text: "Nora is the special name of one person, while friend could mean anyone.",
+                text: "Pine Ridge Elementary is the special name of one school, while school could mean any school.",
                 correct: true
               },
               {
-                text: "Nora is longer than friend, and longer nouns are always proper nouns in writing."
+                text: "Pine Ridge Elementary is longer than school, and longer nouns are always proper nouns in writing."
               },
               {
-                text: "Nora comes last in the sentence, and the last noun is always proper."
+                text: "Pine Ridge Elementary comes last in the sentence, and the last noun is always proper."
               },
               {
-                text: "Nora names a person, while friend names a thing, so friend is common."
+                text: "Pine Ridge Elementary names a place, while school names a thing, so school is common."
               }
             ],
-            clue: "Compare the two words. Ask which one could be used for many different people.",
+            clue: "Compare the two names. Ask which one could be used for many different schools.",
             hints: [
-              "Compare the two words. Ask which one could be used for many different people.",
-              "Think about whether another person could also be called a friend.",
-              "A friend is a person, not a thing, so one reason can be ruled out."
+              "Compare the two names. Ask which one could be used for many different schools.",
+              "Think about whether another school could also be called a school.",
+              "A school is a place too, so that reason cannot separate the two words and can be ruled out."
             ],
             how: [
-              "Ask whether each word is a special name. Nora is the name of one person.",
-              "Friend could be about any friend, so it is a general word.",
-              "The answer is \"Nora is the special name of one person, while friend could mean anyone.\""
+              "Ask whether each phrase is a special name. Pine Ridge Elementary is the name of one school.",
+              "School could be about any school, so it is a general word.",
+              "The answer is \"Pine Ridge Elementary is the special name of one school, while school could mean any school.\""
             ],
             misconception: "A common mix-up is deciding by length or position. A proper noun is a special name.",
-            why: "The answer is \"Nora is the special name of one person, while friend could mean anyone.\" Nora is the special name of one person, while friend could mean anyone. Length and position do not decide a proper noun."
+            why: "The answer is \"Pine Ridge Elementary is the special name of one school, while school could mean any school.\" Pine Ridge Elementary is the special name of one school, while school could mean any school. Length and position do not decide a proper noun."
           }
         ]
       },
@@ -12454,20 +12456,20 @@ PP.addLesson({
             passages: ["p1"],
             prompt: "This question has two parts. Answer Part A, then Part B.",
             partA: {
-              prompt: "Which word in sentence 7 is a proper noun?",
+              prompt: "Which word in sentence 4 is a proper noun?",
               choices: [
                 {
-                  text: "Friday",
+                  text: "Mateo",
                   correct: true
                 },
                 {
-                  text: "school"
+                  text: "jersey"
                 },
                 {
-                  text: "gym"
+                  text: "team"
                 },
                 {
-                  text: "whole"
+                  text: "favorite"
                 }
               ]
             },
@@ -12475,33 +12477,33 @@ PP.addLesson({
               prompt: "What makes it a proper noun?",
               choices: [
                 {
-                  text: "It is the special name of one day.",
+                  text: "It is the special name of one boy.",
                   correct: true
                 },
                 {
-                  text: "It is a general word for any day."
+                  text: "It is a general word for any boy."
                 },
                 {
-                  text: "It names a place where people play."
+                  text: "It names a thing that people wear."
                 },
                 {
                   text: "It tells an action that someone does."
                 }
               ]
             },
-            clue: "In Part A, look for the name of one special day. In Part B, say what kind of word it is.",
+            clue: "In Part A, look for the word that names one particular person. In Part B, say what kind of word it is.",
             hints: [
-              "In Part A, look for the name of one special day. In Part B, say what kind of word it is.",
-              "Ask which word could be about any day and which one is a particular day.",
-              "Gym names a place, so it cannot be the name of a day."
+              "In Part A, look for the word that names one particular person. In Part B, say what kind of word it is.",
+              "Ask which word could be about any boy and which one is a particular boy.",
+              "Jersey names a thing to wear, so it cannot be the name of a person."
             ],
             how: [
-              "Part A: ask which word is the special name of a day. Friday is.",
-              "Part B: Friday names one day, so it is a proper noun.",
-              "The answers are Friday and \"It is the special name of one day.\" School and gym are common nouns."
+              "Part A: ask which word is the special name of a person. Mateo is.",
+              "Part B: Mateo names one boy, so it is a proper noun.",
+              "The answers are Mateo and \"It is the special name of one boy.\" Jersey and team are common nouns."
             ],
-            misconception: "A common mix-up is choosing a general place word. A proper noun is a special name.",
-            why: "Part A: \"Friday\" Part B: \"It is the special name of one day.\" Friday is the special name of one day, so it is a proper noun. School and gym are general words."
+            misconception: "A common mix-up is choosing a general word for a thing. A proper noun is a special name.",
+            why: "Part A: \"Mateo\" Part B: \"It is the special name of one boy.\" Mateo is the special name of one boy, so it is a proper noun. Jersey and team are general words."
           },
           {
             id: "SK-GUM1-9-C08",
@@ -12600,35 +12602,35 @@ PP.addLesson({
               "3.L.GC.1:R:use-common-and-proper-nouns"
             ],
             passages: ["p2"],
-            prompt: "Sentence 1 names Maple Street Library, and sentence 2 names the library. Which statement is true?",
+            prompt: "Sentence 8 names Oak Avenue and also mentions a bus. Which statement is true?",
             choices: [
               {
-                text: "Maple Street Library names one special place, and library could be any library.",
+                text: "Oak Avenue names one special street, and bus could be any bus.",
                 correct: true
               },
               {
-                text: "Both names mean one special place, so both of them need capital letters."
+                text: "Both names mean one special thing, so both of them need capital letters."
               },
               {
-                text: "Library names one special place, and Maple Street Library could be any library."
+                text: "Bus names one special street, and Oak Avenue could be any street."
               },
               {
-                text: "Both names are common nouns, since each one is a name for a building."
+                text: "Both names are common nouns, since each one names something you can see."
               }
             ],
-            clue: "Ask which phrase is a special name and which word could be about many buildings.",
+            clue: "Ask which phrase is a special name and which word could be about many vehicles.",
             hints: [
-              "Ask which phrase is a special name and which word could be about many buildings.",
-              "Compare: could library mean many different libraries? Could Maple Street Library?",
-              "Maple Street Library is a special name, so both cannot be common nouns."
+              "Ask which phrase is a special name and which word could be about many vehicles.",
+              "Compare: could bus mean many different buses? Could Oak Avenue?",
+              "Cross out the choice that says both are common nouns."
             ],
             how: [
-              "Library could be about any library, so it is a common noun.",
-              "Maple Street Library is the special name of one library, so it is a proper noun.",
-              "The answer is \"Maple Street Library names one special place, and library could be any library.\""
+              "Bus could be about any bus, so it is a common noun.",
+              "Oak Avenue is the special name of one street, so it is a proper noun.",
+              "The answer is \"Oak Avenue names one special street, and bus could be any bus.\""
             ],
-            misconception: "A common mix-up is thinking two names for the same kind of place are the same kind of noun. One is general and one is special.",
-            why: "The answer is \"Maple Street Library names one special place, and library could be any library.\" Maple Street Library is a proper noun for one special place, and library is a common noun that could be any library."
+            misconception: "A common mix-up is thinking two nouns in one sentence are the same kind. One is general and one is special.",
+            why: "The answer is \"Oak Avenue names one special street, and bus could be any bus.\" Oak Avenue is a proper noun for one special street, and bus is a common noun that could be any bus."
           }
         ]
       },
@@ -12934,11 +12936,11 @@ PP.addLesson({
         "3.L.GC.1:R:use-common-and-proper-nouns"
       ],
       passages: ["p4"],
-      prompt: "Pick the special name that fits for the goalie.",
-      text: "The goalie, {0}, dove but missed it.",
+      prompt: "Pick the special name that fits for the defender.",
+      text: "The defender, {0}, blocked a shot near our net.",
       slots: [
         {
-          options: ["Omar","the player","our team"],
+          options: ["Gianna","the player","our team"],
           answer: 0
         }
       ],
@@ -12946,15 +12948,15 @@ PP.addLesson({
       hints: [
         "The blank needs the name of one person. Check each choice.",
         "Ask which choice is a name and also names a person.",
-        "Our team names a group, so it cannot be the goalie's name."
+        "Our team names a group, so it cannot be the defender's name."
       ],
       how: [
         "The blank needs a proper noun for a person.",
         "The player is a general phrase, and our team is a group.",
-        "The answer is Omar. It is the special name of one person."
+        "The answer is Gianna. It is the special name of one person."
       ],
       misconception: "A common mix-up is choosing a general phrase. The blank needs a special name.",
-      why: "The answer is Omar. Omar is the special name of one person. The player is a general phrase, and our team is a group.",
+      why: "The answer is Gianna. Gianna is the special name of one person. The player is a general phrase, and our team is a group.",
       like: ["SK-GUM1-9-C04"]
     },
     {
@@ -13057,17 +13059,17 @@ PP.addLesson({
         prompt: "Which reason fits?",
         choices: [
           {
-            text: "Only one city goes by this name.",
+            text: "It names one particular city, not every city.",
             correct: true
           },
           {
-            text: "Cities everywhere go by this name."
+            text: "Cities everywhere go by this same name, so it is common."
           },
           {
-            text: "It sits last, so it is the proper one."
+            text: "It sits last in the sentence, so it is the proper one."
           },
           {
-            text: "Its job is showing what players do."
+            text: "Its job is showing what the players do in a game."
           }
         ]
       },
@@ -13079,11 +13081,11 @@ PP.addLesson({
       ],
       how: [
         "First half: ask which word is the special name of a place. Denver is.",
-        "Second half: Denver names one city, so it is a proper noun.",
-        "The answers are Denver and \"Only one city goes by this name.\" Month and tournament are common nouns."
+        "Second half: Denver names one particular city, not every city, so it is a proper noun.",
+        "The answers are Denver and \"It names one particular city, not every city.\" Month and tournament are common nouns."
       ],
       misconception: "A common mix-up is choosing the last noun in the sentence. A proper noun is a special name.",
-      why: "Part A: \"Denver\" Part B: \"Only one city goes by this name.\" Only one city goes by the name Denver, so it is a proper noun. Month and tournament are general words.",
+      why: "Part A: \"Denver\" Part B: \"It names one particular city, not every city.\" Denver names one particular city, not every city, so it is a proper noun. Month and tournament are general words.",
       like: ["SK-GUM1-9-C07"]
     },
     {
@@ -13250,27 +13252,27 @@ PP.addLesson({
         "3.L.GC.1:R:use-common-and-proper-nouns"
       ],
       passages: ["p5"],
-      prompt: "Which choice completes sentence 12?",
-      text: "On Sunday, we flew back to {0}.",
+      prompt: "Which choice completes sentence 6?",
+      text: "He grew up in a village in {0}.",
       slots: [
         {
-          options: ["Boston","airport","boston"],
+          options: ["Italy","country","italy"],
           answer: 0
         }
       ],
-      clue: "You need the special name of one city. Check each choice.",
+      clue: "You need the special name of one country. Check each choice.",
       hints: [
-        "You need the special name of one city. Check each choice.",
-        "Ask which choice names one particular city, and which could be about any city.",
+        "You need the special name of one country. Check each choice.",
+        "Ask which choice names one particular country, and which could be about any country.",
         "One choice is a general word for a place, so it cannot be a special name."
       ],
       how: [
-        "The blank needs a proper noun that names one city.",
-        "Airport is a general word, and boston is missing its capital letter.",
-        "The answer is Boston. It is the special name of one city."
+        "The blank needs a proper noun that names one country.",
+        "Country is a general word, and italy is missing its capital letter.",
+        "The answer is Italy. It is the special name of one country."
       ],
       misconception: "A common mix-up is leaving off the capital letter. A special name starts with a capital.",
-      why: "The answer is Boston. Boston is the special name of one city. Airport is a general word, and boston is missing its capital letter.",
+      why: "The answer is Italy. Italy is the special name of one country. Country is a general word, and italy is missing its capital letter.",
       like: ["SK-GUM1-9-C12"]
     },
     {
