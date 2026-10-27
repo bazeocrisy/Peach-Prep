@@ -8985,7 +8985,179 @@ PP.addLesson({
     }
   ],
   parent: "Play action charades: one person acts out a verb (hop, whisper, stir) and the other guesses it. Then have your child say a sentence with that verb.",
-  passages: [],
+  passages: [
+    /* B7a:passages:start */
+    {
+      id: "p1",
+      title: "The Rainy Recess",
+      byline: "A third grader's draft",
+      genre: "Student draft (narrative)",
+      draft: true,
+      paragraphs: [
+        [
+          "(1) It rained hard on Monday, so recess moved inside.",
+          "(2) Our teacher, Ms. Ortiz, handed out board games.",
+          "(3) Dev went to the shelf for more cards.",
+          "(4) I decided to play checkers with Jaylen."
+        ],
+        [
+          "(5) Jaylen whispered his plan to me.",
+          "(6) Kiara stacked the blocks into a tall tower.",
+          "(7) Then the tower wobbled and crashed to the floor.",
+          "(8) Everyone laughed and clapped."
+        ],
+        [
+          "(9) I imagined a castle made of rainbow blocks.",
+          "(10) Ms. Ortiz noticed the mess and smiled.",
+          "(11) We scooped up the blocks and tossed them in the bin.",
+          "(12) Soon the bell rang.",
+          "(13) We lined up at the door and marched down the hall.",
+          "(14) The room smelled like wet jackets."
+        ]
+      ]
+    },
+    {
+      id: "p2",
+      title: "Saturday at the Car Wash",
+      byline: "A third grader's draft",
+      genre: "Student draft (narrative)",
+      draft: true,
+      paragraphs: [
+        [
+          "(1) Our scout troop held a car wash on Saturday.",
+          "(2) Mr. Hall pulled up first in a muddy blue truck.",
+          "(3) Jin sprayed the truck with a long green hose.",
+          "(4) I scrubbed the doors and wiped the windows."
+        ],
+        [
+          "(5) Other scouts held signs and waved at the passing cars.",
+          "(6) A little dog barked at the soap bubbles.",
+          "(7) Then Mr. Hall got in his truck.",
+          "(8) A boy ran to the hose and splashed his friends."
+        ],
+        [
+          "(9) I realized the soap was running out.",
+          "(10) Everyone dried the cars with soft towels.",
+          "(11) We counted the money and cheered.",
+          "(12) Our troop earned enough for a camping trip.",
+          "(13) I hoped for more sunny days like that one."
+        ]
+      ]
+    },
+    {
+      id: "p3",
+      title: "Robins in Our Maple Tree",
+      byline: "A third grader's draft",
+      genre: "Student draft (informational)",
+      draft: true,
+      paragraphs: [
+        [
+          "(1) A family of robins built a nest in our maple tree.",
+          "(2) The mother bird gathered twigs and grass.",
+          "(3) She wove them into a small round cup.",
+          "(4) I watched from the porch with my binoculars."
+        ],
+        [
+          "(5) One morning, I counted three blue eggs in the nest.",
+          "(6) Soon the eggs cracked, and tiny chicks tumbled out.",
+          "(7) The chicks chirped loudly for food.",
+          "(8) The father bird swooped down with a juicy worm."
+        ],
+        [
+          "(9) He dropped it into a wide yellow beak.",
+          "(10) I learned that baby birds eat all day long.",
+          "(11) Soon the chicks flapped their wings in the nest.",
+          "(12) One day they leaped out and flew away.",
+          "(13) I missed them, but I hoped they would visit again."
+        ]
+      ]
+    },
+    {
+      id: "p4",
+      title: "Kayaking on the Lake",
+      byline: "A third grader's draft",
+      genre: "Student draft (narrative)",
+      draft: true,
+      paragraphs: [
+        [
+          "(1) Last summer my uncle taught me to kayak on Lake Hartwell.",
+          "(2) He showed me how to hold the paddle.",
+          "(3) I settled into the seat and pushed away from the dock.",
+          "(4) The kayak wobbled, but I steadied it."
+        ],
+        [
+          "(5) Then I went across the water.",
+          "(6) A turtle bobbed near my paddle.",
+          "(7) My uncle pointed at a heron on the bank.",
+          "(8) I decided to follow it quietly."
+        ],
+        [
+          "(9) Wind rippled the water and tugged at my hat.",
+          "(10) I paddled hard toward the dock.",
+          "(11) My arms ached, but I smiled the whole way.",
+          "(12) I imagined racing across an ocean someday.",
+          "(13) We ate crackers on the shore afterward."
+        ]
+      ]
+    },
+    {
+      id: "p5",
+      title: "Building a Treehouse",
+      byline: "A third grader's draft",
+      genre: "Student draft (narrative)",
+      draft: true,
+      paragraphs: [
+        [
+          "(1) Last month my dad and I built a treehouse.",
+          "(2) We measured the boards and sawed them to size.",
+          "(3) Dad hammered the nails while I held the ladder.",
+          "(4) Then I went up with the paint can."
+        ],
+        [
+          "(5) I brushed bright yellow paint on the walls.",
+          "(6) A bee buzzed around my head.",
+          "(7) I swatted it away and kept painting.",
+          "(8) Dad noticed the drips and wiped them up."
+        ],
+        [
+          "(9) I imagined a flag waving from the roof.",
+          "(10) My sister handed us juice and snacks.",
+          "(11) We gobbled the snacks and slurped the juice.",
+          "(12) By sunset, the treehouse stood tall and proud.",
+          "(13) I decided to sleep there on Friday."
+        ]
+      ]
+    },
+    {
+      id: "p6",
+      title: "A Magnet Experiment",
+      byline: "A third grader's draft",
+      genre: "Student draft (narrative)",
+      draft: true,
+      paragraphs: [
+        [
+          "(1) Our class tested magnets on Thursday.",
+          "(2) Ms. Park gave each team a tray of small objects.",
+          "(3) Mia dropped a paper clip near the magnet.",
+          "(4) It jumped to the magnet with a click."
+        ],
+        [
+          "(5) We tried coins, rubber bands, and spoons.",
+          "(6) The magnet grabbed the spoon but ignored the coin.",
+          "(7) I predicted the results before each test.",
+          "(8) Then I went to the board and wrote our results."
+        ],
+        [
+          "(9) Dev pulled a nail from the pile and hung paper clips from it.",
+          "(10) The clips dangled like a tiny chain.",
+          "(11) We noticed a pattern and recorded it.",
+          "(12) Ms. Park praised our careful work.",
+          "(13) I hoped to test more magnets soon."
+        ]
+      ]
+    }
+    /* B7a:passages:end */
+  ],
   practice: [
     { id: "SK-GUM1-7-P1", type: "mc", points: 1, dok: 1, passages: [],
       stem: "The children giggled at the silly puppet.",
@@ -9036,6 +9208,1158 @@ PP.addLesson({
       clue: "Some actions happen in your mind. What did Nina do?",
       why: "The answer is remembered. Remembering is something Nina does in her mind, so it is an action verb. Lunch and minute are nouns, and last describes the minute." }
   ],
+  /* B7a:core:start */
+  /* ---------- Expansion 2026-10-22, batch B7a (GUM Reinforce, first half) ----------
+     core: fifteen items in three sets of five. { ref } reuses a practice item; the other practice items stay in Practice Together.
+     Passages are used only by core and the similar bank; none is used by test.
+     Author log: docs/expansion-2026-10-22/batches/B7a-author-log.md. NOT ACCEPTED: needs independent review. */
+  core: {
+    rev: "1",
+    sets: [
+      {
+        title: "Set 1",
+        items: [
+          {
+            ref: "SK-GUM1-7-P2"
+          },
+          {
+            ref: "SK-GUM1-7-P5"
+          },
+          {
+            id: "SK-GUM1-7-C03",
+            type: "mc",
+            points: 1,
+            dok: 2,
+            std: [
+              "3.L.GC.1:R:use-action-verbs"
+            ],
+            passages: ["p1"],
+            prompt: "What is the action verb in sentence 6?",
+            choices: [
+              {
+                text: "stacked",
+                correct: true
+              },
+              {
+                text: "Kiara"
+              },
+              {
+                text: "the blocks"
+              },
+              {
+                text: "tall"
+              }
+            ],
+            clue: "Find who the sentence is about. Then ask what that person does.",
+            hints: [
+              "Find who the sentence is about. Then ask what that person does.",
+              "Say each word from sentence 6 by itself. Ask whether it names something Kiara does.",
+              "Tall describes the tower, so it cannot be something Kiara does."
+            ],
+            how: [
+              "Find who the sentence is about: Kiara.",
+              "Ask: what did Kiara do? She stacked the blocks.",
+              "The answer is stacked. Kiara is a person, the blocks are things, and tall describes the tower."
+            ],
+            misconception: "A common mix-up is choosing a word near the doer. Ask what the doer does instead.",
+            why: "The answer is \"stacked\" Stacked tells what Kiara did. Kiara and the blocks are not actions, and tall describes the tower."
+          },
+          {
+            id: "SK-GUM1-7-C04",
+            type: "dropdown",
+            points: 1,
+            dok: 2,
+            std: [
+              "3.L.GC.1:R:use-action-verbs"
+            ],
+            passages: ["p1"],
+            prompt: "Sentence 3 uses a weak verb. Choose the action verb that paints the clearest picture.",
+            text: "Dev {0} to the shelf for more cards.",
+            slots: [
+              {
+                options: ["hurried","got","shelves"],
+                answer: 0
+              }
+            ],
+            clue: "Think about how Dev might move if he needs more cards soon. Pick the verb that shows it.",
+            hints: [
+              "Think about how Dev might move if he needs more cards soon. Pick the verb that shows it.",
+              "Read the sentence with each verb and picture what Dev is doing.",
+              "Shelves names things, so it cannot show how Dev moved."
+            ],
+            how: [
+              "Compare the three words. Shelves names things, and got tells very little about how Dev moved.",
+              "A strong action verb paints a picture. Hurried shows Dev moving fast.",
+              "The answer is hurried. Got tells little, and shelves is not an action."
+            ],
+            misconception: "A common mix-up is thinking any verb is fine. A strong action verb helps readers picture what happened.",
+            why: "The answer is hurried. Hurried paints a clearer picture of how Dev moved. Got tells very little, and shelves is not an action."
+          },
+          {
+            id: "SK-GUM1-7-C05",
+            type: "mc",
+            points: 1,
+            dok: 3,
+            std: [
+              "3.L.GC.1:R:use-action-verbs"
+            ],
+            passages: ["p1"],
+            prompt: "Sentence 5 says Jaylen whispered his plan. Why is whispered a stronger verb than said?",
+            choices: [
+              {
+                text: "It tells how Jaylen spoke, so readers can picture it.",
+                correct: true
+              },
+              {
+                text: "It is a longer word, and longer verbs are always stronger."
+              },
+              {
+                text: "It tells who made the plan, so it names a person."
+              },
+              {
+                text: "It tells when Jaylen spoke, so it works like a clue word."
+              }
+            ],
+            clue: "Compare what whispered and said each tell the reader.",
+            hints: [
+              "Compare what whispered and said each tell the reader.",
+              "Think about the picture each verb puts in your mind.",
+              "The length of a word does not make it stronger, so one reason can be ruled out."
+            ],
+            how: [
+              "Compare the two verbs. Said only tells that Jaylen spoke.",
+              "Whispered also tells how Jaylen spoke: in a soft, quiet voice. That paints a clearer picture.",
+              "The answer is \"It tells how Jaylen spoke, so readers can picture it.\""
+            ],
+            misconception: "A common mix-up is thinking a longer verb is a stronger verb. A strong verb paints a picture.",
+            why: "The answer is \"It tells how Jaylen spoke, so readers can picture it.\" Whispered tells how Jaylen spoke, so readers can picture it. The length of a word does not make it stronger."
+          }
+        ]
+      },
+      {
+        title: "Set 2",
+        items: [
+          {
+            id: "SK-GUM1-7-C06",
+            type: "hottext",
+            points: 2,
+            dok: 2,
+            std: [
+              "3.L.GC.1:R:use-action-verbs"
+            ],
+            passages: ["p1"],
+            prompt: "Select the TWO shown sentences with an action verb that happens in the mind.",
+            targets: ["p1:1:2","p1:1:4","p1:2:2","p1:3:1","p1:3:5"],
+            answer: ["p1:1:4","p1:3:1"],
+            pick: 2,
+            clue: "Some actions happen inside a person's head. Look for verbs about deciding or picturing something.",
+            hints: [
+              "Some actions happen inside a person's head. Look for verbs about deciding or picturing something.",
+              "Ask for each shown sentence: can you see the doer do it, or does it happen in the mind?",
+              "Sentence 13 tells what the class did with their feet, so it can be ruled out."
+            ],
+            how: [
+              "Look for verbs that happen in the mind.",
+              "Decided in sentence 4 and imagined in sentence 9 happen in the mind.",
+              "Handed out, stacked and marched are things you can see people do."
+            ],
+            misconception: "A common mix-up is thinking an action verb must show something you can see. Actions in the mind count too.",
+            why: "The answers are sentences 4 and 9: \"I decided to play checkers with Jaylen.\" and \"I imagined a castle made of rainbow blocks.\". Decided and imagined happen in the mind. The other shown verbs are things you can see someone do."
+          },
+          {
+            id: "SK-GUM1-7-C07",
+            type: "ebsr",
+            points: 2,
+            dok: 3,
+            std: [
+              "3.L.GC.1:R:use-action-verbs"
+            ],
+            passages: ["p1"],
+            prompt: "This question has two parts. Answer Part A, then Part B.",
+            partA: {
+              prompt: "Which word is the action verb in sentence 3?",
+              choices: [
+                {
+                  text: "went",
+                  correct: true
+                },
+                {
+                  text: "Dev"
+                },
+                {
+                  text: "shelf"
+                },
+                {
+                  text: "cards"
+                }
+              ]
+            },
+            partB: {
+              prompt: "Which verb could replace it to paint a clearer picture?",
+              choices: [
+                {
+                  text: "dashed",
+                  correct: true
+                },
+                {
+                  text: "got"
+                },
+                {
+                  text: "quickly"
+                },
+                {
+                  text: "shelf"
+                }
+              ]
+            },
+            clue: "For Part A, ask what Dev does. For Part B, think about a verb that shows how he moves.",
+            hints: [
+              "For Part A, ask what Dev does. For Part B, think about a verb that shows how he moves.",
+              "Say sentence 3 with each Part B choice and picture what Dev does.",
+              "One Part B choice is a thing and cannot be an action, so it can be ruled out."
+            ],
+            how: [
+              "Part A: ask what Dev did. He went to the shelf, so went is the action verb.",
+              "Part B: a strong verb paints a picture. Dashed shows Dev moving fast.",
+              "The answer is dashed. Got is weak, quickly tells how but is not a verb, and shelf is a thing."
+            ],
+            misconception: "A common mix-up is choosing a word that tells how, like quickly. A strong action verb has to be the action itself.",
+            why: "Part A: \"went\" Part B: \"dashed\" Went is what Dev did, and dashed paints a clearer picture of it. Quickly tells how, and shelf is a thing."
+          },
+          {
+            id: "SK-GUM1-7-C08",
+            type: "ms",
+            points: 2,
+            dok: 2,
+            std: [
+              "3.L.GC.1:R:use-action-verbs"
+            ],
+            passages: [],
+            stem: "The pilot waved and steered the plane toward the bright runway.",
+            prompt: "Choose the TWO action verbs in the sentence.",
+            pick: 2,
+            choices: [
+              {
+                text: "pilot"
+              },
+              {
+                text: "waved",
+                correct: true
+              },
+              {
+                text: "plane"
+              },
+              {
+                text: "steered",
+                correct: true
+              },
+              {
+                text: "bright"
+              },
+              {
+                text: "runway"
+              }
+            ],
+            clue: "The pilot does two things in this sentence. Find both of them.",
+            hints: [
+              "The pilot does two things in this sentence. Find both of them.",
+              "Ask what the pilot did. Say each word and test whether it fits.",
+              "Bright describes the runway, so it cannot be something the pilot does."
+            ],
+            how: [
+              "Find who the sentence is about: the pilot.",
+              "Ask: what did the pilot do? The pilot waved and steered.",
+              "The answers are waved and steered. Pilot, plane and runway are things, and bright describes the runway."
+            ],
+            misconception: "A common mix-up is stopping after the first verb. Check whether the doer does more than one thing.",
+            why: "The answers are \"waved\" and \"steered\". Waved and steered are the two things the pilot did. The other words name things or describe them."
+          },
+          {
+            id: "SK-GUM1-7-C09",
+            type: "mc",
+            points: 1,
+            dok: 1,
+            std: [
+              "3.L.GC.1:R:use-action-verbs"
+            ],
+            passages: [],
+            stem: "Mia painted a poster for the fair.",
+            prompt: "Which word is the action verb?",
+            choices: [
+              {
+                text: "painted",
+                correct: true
+              },
+              {
+                text: "Mia"
+              },
+              {
+                text: "poster"
+              },
+              {
+                text: "the fair"
+              }
+            ],
+            clue: "Find who the sentence is about. Then ask what she did.",
+            hints: [
+              "Find who the sentence is about. Then ask what she did.",
+              "Say each word and ask whether it is something Mia does.",
+              "Poster and fair are things, so they cannot be what Mia does."
+            ],
+            how: [
+              "Find who the sentence is about: Mia.",
+              "Ask: what did Mia do? She painted a poster.",
+              "The answer is painted. Mia is a person, and poster and fair are things."
+            ],
+            misconception: "A common mix-up is choosing the doer or a thing. The verb tells what the doer does.",
+            why: "The answer is \"painted\" Painted tells what Mia did. Mia, poster and fair are nouns."
+          },
+          {
+            id: "SK-GUM1-7-C10",
+            type: "mc",
+            points: 1,
+            dok: 3,
+            std: [
+              "3.L.GC.1:R:use-action-verbs"
+            ],
+            passages: ["p2"],
+            prompt: "Sentence 7 uses got and sentence 3 uses sprayed. Which statement compares the two verbs best?",
+            choices: [
+              {
+                text: "Sprayed paints a clearer picture of the action than got does.",
+                correct: true
+              },
+              {
+                text: "Got is the stronger verb, because shorter verbs are always better."
+              },
+              {
+                text: "Both verbs paint the same picture, so they are equally strong."
+              },
+              {
+                text: "Sprayed is not an action verb, because it describes the truck."
+              }
+            ],
+            clue: "Think about the picture each verb gives you. Which one tells more about what happened?",
+            hints: [
+              "Think about the picture each verb gives you. Which one tells more about what happened?",
+              "Say each verb with its sentence. Which one lets you see the action?",
+              "One choice says a verb is not an action. Ask what Jin did to the truck."
+            ],
+            how: [
+              "Compare the pictures. Got only says that Mr. Hall climbed in somehow.",
+              "Sprayed shows exactly what Jin did with the hose. That paints a clearer picture.",
+              "The answer is \"Sprayed paints a clearer picture of the action than got does.\""
+            ],
+            misconception: "A common mix-up is thinking all action verbs are equally strong. Some verbs tell much more than others.",
+            why: "The answer is \"Sprayed paints a clearer picture of the action than got does.\" Sprayed shows what Jin did and how, and got shows very little. Both are action verbs, but sprayed is stronger."
+          }
+        ]
+      },
+      {
+        title: "Set 3",
+        items: [
+          {
+            id: "SK-GUM1-7-C11",
+            type: "hottext",
+            points: 2,
+            dok: 2,
+            std: [
+              "3.L.GC.1:R:use-action-verbs"
+            ],
+            passages: ["p2"],
+            prompt: "Select the TWO shown sentences that have exactly two action verbs.",
+            targets: ["p2:1:3","p2:1:4","p2:2:2","p2:2:4","p2:3:2"],
+            answer: ["p2:1:4","p2:2:4"],
+            pick: 2,
+            clue: "Count the things the doer does in each shown sentence.",
+            hints: [
+              "Count the things the doer does in each shown sentence.",
+              "Find each action verb and count them one sentence at a time.",
+              "Sentence 6 tells only one thing the dog did, so it can be ruled out."
+            ],
+            how: [
+              "Count the action verbs in each shown sentence.",
+              "Sentence 4 has scrubbed and wiped. Sentence 8 has ran and splashed.",
+              "Sentences 3, 6 and 10 each have only one: sprayed, barked and dried."
+            ],
+            misconception: "A common mix-up is counting only the first verb. Look for a second action after the word and.",
+            why: "The answers are sentences 4 and 8: \"I scrubbed the doors and wiped the windows.\" and \"A boy ran to the hose and splashed his friends.\". Sentences 4 and 8 each tell two things someone did. The other shown sentences tell only one."
+          },
+          {
+            id: "SK-GUM1-7-C12",
+            type: "dropdown",
+            points: 1,
+            dok: 2,
+            std: [
+              "3.L.GC.1:R:use-action-verbs"
+            ],
+            passages: ["p3"],
+            prompt: "Choose the action verb that completes sentence 8.",
+            text: "The father bird {0} down with a juicy worm.",
+            slots: [
+              {
+                options: ["swooped","yellow","quickly"],
+                answer: 0
+              }
+            ],
+            clue: "Ask what the father bird did. The missing word should tell the action.",
+            hints: [
+              "Ask what the father bird did. The missing word should tell the action.",
+              "Try each word in the blank. Which one is something a bird does?",
+              "Yellow describes something you can see, so it cannot be what the bird does."
+            ],
+            how: [
+              "Find who the sentence is about: the father bird.",
+              "Ask: what did the father bird do? The missing word should be an action.",
+              "The answer is swooped. Yellow describes, and quickly tells how."
+            ],
+            misconception: "A common mix-up is choosing a word that tells how, like quickly. The verb is the action itself.",
+            why: "The answer is swooped. Swooped is what the bird did. Yellow describes, and quickly tells how."
+          },
+          {
+            id: "SK-GUM1-7-C13",
+            type: "dropdown",
+            points: 2,
+            dok: 2,
+            std: [
+              "3.L.GC.1:R:use-action-verbs"
+            ],
+            passages: [],
+            prompt: "Choose the verb that paints the clearest picture in each blank.",
+            text: "The tired hikers {0} up the steep trail and {1} on a flat rock.",
+            slots: [
+              {
+                options: ["trudged","went","climbing"],
+                answer: 0
+              },
+              {
+                options: ["collapsed","went","exhausted"],
+                answer: 0
+              }
+            ],
+            clue: "Think about how tired hikers would move. Pick the verb that shows it.",
+            hints: [
+              "Think about how tired hikers would move. Pick the verb that shows it.",
+              "Read each half of the sentence with the verbs and picture what the hikers do.",
+              "Went tells almost nothing about how tired hikers moved, so it can be ruled out."
+            ],
+            how: [
+              "Compare the choices. Went tells very little, and the other wrong choices do not fit the sentence.",
+              "Trudged shows slow, heavy steps. Collapsed shows the hikers dropping down tired.",
+              "The answers are trudged and collapsed."
+            ],
+            misconception: "A common mix-up is choosing a verb that works but tells little. A strong verb paints a picture.",
+            why: "The answers are trudged and collapsed. Trudged and collapsed show how tired hikers move. Went tells very little, and the others do not fit."
+          },
+          {
+            id: "SK-GUM1-7-C14",
+            type: "hottext",
+            points: 1,
+            dok: 2,
+            std: [
+              "3.L.GC.1:R:use-action-verbs"
+            ],
+            passages: [],
+            stem: "A student wrote four sentences about a field trip.",
+            prompt: "Select the sentence with the weakest action verb.",
+            options: [
+              "The class went to the pond.",
+              "The guide pointed at a frog.",
+              "A frog leaped into the water.",
+              "We scribbled notes in our journals."
+            ],
+            answer: [0],
+            pick: 1,
+            clue: "Find the action verb in each sentence. Ask which one tells the reader the least.",
+            hints: [
+              "Find the action verb in each sentence. Ask which one tells the reader the least.",
+              "Picture each action. One verb gives almost no picture at all.",
+              "Leaped and scribbled each show a lot about how the action looked, so one of them can be ruled out."
+            ],
+            how: [
+              "Find the action verb in each sentence: went, pointed, leaped and scribbled.",
+              "Pointed, leaped and scribbled each paint a picture.",
+              "Went tells very little about how the class moved, so it is the weakest."
+            ],
+            misconception: "A common mix-up is picking the shortest sentence. Judge the verb, not the sentence.",
+            why: "The answer is \"The class went to the pond.\". Went tells very little. Pointed, leaped and scribbled each paint a picture."
+          },
+          {
+            id: "SK-GUM1-7-C15",
+            type: "mc",
+            points: 1,
+            dok: 3,
+            std: [
+              "3.L.GC.1:R:use-action-verbs"
+            ],
+            passages: [],
+            prompt: "Eli says, \"An action verb always shows something you can see.\" Which sentence shows that Eli is wrong?",
+            choices: [
+              {
+                text: "Ava dreamed about the summer trip.",
+                correct: true
+              },
+              {
+                text: "Ava hugged her friend at the door."
+              },
+              {
+                text: "Ava carried the bags to the car."
+              },
+              {
+                text: "Ava waved goodbye from the porch."
+              }
+            ],
+            clue: "To show that a claim is wrong, find an example that breaks it. Look for an action you cannot see.",
+            hints: [
+              "To show that a claim is wrong, find an example that breaks it. Look for an action you cannot see.",
+              "Ask for each sentence: can you watch Ava do it?",
+              "Hugging, carrying and waving can all be watched."
+            ],
+            how: [
+              "Eli says every action verb shows something you can see. Look for an action that happens in the mind.",
+              "Hugged, carried and waved can all be seen. Dreamed happens in Ava's mind.",
+              "The answer is \"Ava dreamed about the summer trip.\" It is still an action verb."
+            ],
+            misconception: "A common mix-up is thinking only visible actions count. Actions in the mind are action verbs too.",
+            why: "The answer is \"Ava dreamed about the summer trip.\" Dreamed happens in the mind, but it is still an action verb. The other verbs can be seen."
+          }
+        ]
+      }
+    ]
+  },
+  similar: [
+    {
+      id: "SK-GUM1-7-S01",
+      type: "hottext",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.L.GC.1:R:use-action-verbs"
+      ],
+      passages: [],
+      stem: "The clown juggled three balls and bowed.",
+      prompt: "Tap both words that show what the clown does.",
+      options: ["clown","juggled","balls","bowed","three"],
+      answer: [1,3],
+      pick: 2,
+      clue: "The clown does two things. Find both of them.",
+      hints: [
+        "The clown does two things. Find both of them.",
+        "Ask what the clown did, then test each word.",
+        "Three tells how many balls, so it cannot be something the clown does."
+      ],
+      how: [
+        "Find who the sentence is about: the clown.",
+        "Ask: what did the clown do? He juggled and bowed.",
+        "Clown and balls are nouns, and three tells how many."
+      ],
+      misconception: "A common mix-up is choosing only the first verb. The clown does two things.",
+      why: "The answers are \"juggled\" and \"bowed\". Juggled and bowed tell what the clown did. The other words are nouns or tell how many.",
+      like: ["SK-GUM1-7-P2"]
+    },
+    {
+      id: "SK-GUM1-7-S02",
+      type: "mc",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.L.GC.1:R:use-action-verbs"
+      ],
+      passages: [],
+      stem: "Nico doubted the strange rumor.",
+      prompt: "Pick the word that tells what Nico did.",
+      choices: [
+        {
+          text: "doubted",
+          correct: true
+        },
+        {
+          text: "Nico"
+        },
+        {
+          text: "strange"
+        },
+        {
+          text: "rumor"
+        }
+      ],
+      clue: "Some actions happen in the mind. Ask what Nico did.",
+      hints: [
+        "Some actions happen in the mind. Ask what Nico did.",
+        "Say each word and test whether it fits what Nico does.",
+        "Strange describes the rumor, so it cannot be what Nico does."
+      ],
+      how: [
+        "Find who the sentence is about: Nico.",
+        "Ask: what did Nico do? He doubted the rumor in his mind.",
+        "The answer is doubted. Nico and rumor are nouns, and strange describes the rumor."
+      ],
+      misconception: "A common mix-up is thinking an action must be visible. Doubting is something Nico does in his mind.",
+      why: "The answer is \"doubted\" Doubted is something Nico does in his mind. Nico and rumor are nouns, and strange describes.",
+      like: ["SK-GUM1-7-P5"]
+    },
+    {
+      id: "SK-GUM1-7-S03",
+      type: "mc",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.L.GC.1:R:use-action-verbs"
+      ],
+      passages: ["p4"],
+      prompt: "Sentence 6: which word names the turtle's action?",
+      choices: [
+        {
+          text: "bobbed",
+          correct: true
+        },
+        {
+          text: "turtle"
+        },
+        {
+          text: "near"
+        },
+        {
+          text: "paddle"
+        }
+      ],
+      clue: "Find the animal in sentence 6. Ask what it does.",
+      hints: [
+        "Find the animal in sentence 6. Ask what it does.",
+        "Test each word from the sentence. Which one names the turtle's action?",
+        "Near tells where, so it cannot be what the turtle does."
+      ],
+      how: [
+        "Find who the sentence is about: a turtle.",
+        "Ask: what did the turtle do? It bobbed.",
+        "The answer is bobbed. Turtle and paddle are things, and near tells where."
+      ],
+      misconception: "A common mix-up is picking a word that tells where. The verb is the action.",
+      why: "The answer is \"bobbed\" Bobbed tells what the turtle did. Turtle and paddle name things, and near tells where.",
+      like: ["SK-GUM1-7-C03"]
+    },
+    {
+      id: "SK-GUM1-7-S04",
+      type: "dropdown",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.L.GC.1:R:use-action-verbs"
+      ],
+      passages: ["p4"],
+      prompt: "Sentence 5 says the writer went across the water. Pick the word that lets readers see the move.",
+      text: "Then I {0} across the water.",
+      slots: [
+        {
+          options: ["glided","went","drifting"],
+          answer: 0
+        }
+      ],
+      clue: "Think about how a kayak moves over calm water. Pick the verb that shows it.",
+      hints: [
+        "Think about how a kayak moves over calm water. Pick the verb that shows it.",
+        "Say the sentence with each verb and picture the kayak.",
+        "Look at the word before the gap. One choice ends in -ing and does not fit after I."
+      ],
+      how: [
+        "Compare the three words. Drifting does not fit after I, and went tells very little about how the kayak moved.",
+        "Glided shows a smooth, easy movement.",
+        "The answer is glided. Went is the weak verb from the draft, and drifting does not fit."
+      ],
+      misconception: "A common mix-up is leaving the weak verb in place. A strong verb helps readers picture the action.",
+      why: "The answer is glided. Glided paints a clearer picture of how the kayak moved. Went tells very little, and drifting does not fit.",
+      like: ["SK-GUM1-7-C04"]
+    },
+    {
+      id: "SK-GUM1-7-S05",
+      type: "mc",
+      points: 1,
+      dok: 3,
+      std: [
+        "3.L.GC.1:R:use-action-verbs"
+      ],
+      passages: ["p4"],
+      prompt: "A writer swaps moved for rippled in the wind-and-water sentence. What does the swap add?",
+      choices: [
+        {
+          text: "A clear picture of small waves spreading over the water.",
+          correct: true
+        },
+        {
+          text: "A longer sentence, and longer sentences are always better."
+        },
+        {
+          text: "The name of the one who did the action in the story."
+        },
+        {
+          text: "A clue about the time of day when the wind blew."
+        }
+      ],
+      clue: "Compare what rippled and moved each tell the reader.",
+      hints: [
+        "Compare what rippled and moved each tell the reader.",
+        "Think about the picture each verb puts in your mind.",
+        "The number of letters does not make a verb stronger, so one reason can be ruled out."
+      ],
+      how: [
+        "Compare the two verbs. Moved only says the water changed somehow.",
+        "Rippled shows small waves moving across the water. That paints a clearer picture.",
+        "The answer is \"A clear picture of small waves spreading over the water.\""
+      ],
+      misconception: "A common mix-up is thinking a verb is stronger just because it is longer. A strong verb paints a picture.",
+      why: "The answer is \"A clear picture of small waves spreading over the water.\" Rippled adds a clear picture of small waves. A longer sentence does not make writing stronger.",
+      like: ["SK-GUM1-7-C05"]
+    },
+    {
+      id: "SK-GUM1-7-S06",
+      type: "hottext",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.L.GC.1:R:use-action-verbs"
+      ],
+      passages: ["p4"],
+      prompt: "Tap both lines that show a thought rather than a movement.",
+      targets: ["p4:1:2","p4:1:4","p4:2:4","p4:3:4","p4:3:5"],
+      answer: ["p4:2:4","p4:3:4"],
+      pick: 2,
+      clue: "Some actions happen inside a person's head. Look for verbs about choosing or picturing something.",
+      hints: [
+        "Some actions happen inside a person's head. Look for verbs about choosing or picturing something.",
+        "For each shown line, ask: can you watch the doer do it, or is it in the mind?",
+        "Line 13 tells what the writer ate, so it can be ruled out."
+      ],
+      how: [
+        "Look for verbs that happen in the mind.",
+        "Decided in line 8 and imagined in line 12 happen in the mind.",
+        "Showed, wobbled and ate are things you can see."
+      ],
+      misconception: "A common mix-up is thinking an action verb must show something you can see. Actions in the mind count too.",
+      why: "The answers are sentences 8 and 12: \"I decided to follow it quietly.\" and \"I imagined racing across an ocean someday.\". Decided and imagined happen in the mind. The other shown verbs are things you can see.",
+      like: ["SK-GUM1-7-C06"]
+    },
+    {
+      id: "SK-GUM1-7-S07",
+      type: "ebsr",
+      points: 2,
+      dok: 3,
+      std: [
+        "3.L.GC.1:R:use-action-verbs"
+      ],
+      passages: ["p5"],
+      prompt: "Sentence 4 needs a fix.",
+      partA: {
+        prompt: "Pick the vague action word in the line about going up.",
+        choices: [
+          {
+            text: "went",
+            correct: true
+          },
+          {
+            text: "Then"
+          },
+          {
+            text: "up"
+          },
+          {
+            text: "can"
+          }
+        ]
+      },
+      partB: {
+        prompt: "Choose a livelier word to swap in.",
+        choices: [
+          {
+            text: "scrambled",
+            correct: true
+          },
+          {
+            text: "did"
+          },
+          {
+            text: "slowly"
+          },
+          {
+            text: "the ladder"
+          }
+        ]
+      },
+      clue: "In the first half, ask what the writer did. In the second half, think of a verb that shows how.",
+      hints: [
+        "In the first half, ask what the writer did. In the second half, think of a verb that shows how.",
+        "Say sentence 4 with each second-half choice and picture the climb.",
+        "One second-half choice is a thing and cannot be an action, so it can be ruled out."
+      ],
+      how: [
+        "First half: ask what the writer did. The writer went up, so went is the action verb.",
+        "Second half: a strong verb paints a picture. Scrambled shows a quick, eager climb.",
+        "The answer is scrambled. Did is weak, slowly tells how but is not a verb, and the ladder is a thing."
+      ],
+      misconception: "A common mix-up is choosing a word that tells how. A strong action verb has to be the action itself.",
+      why: "Part A: \"went\" Part B: \"scrambled\" Went is what the writer did, and scrambled paints a clearer picture. Slowly tells how, and the ladder is a thing.",
+      like: ["SK-GUM1-7-C07"]
+    },
+    {
+      id: "SK-GUM1-7-S08",
+      type: "ms",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.L.GC.1:R:use-action-verbs"
+      ],
+      passages: [],
+      stem: "The farmer planted seeds and watered them each morning.",
+      prompt: "Select both words that tell the farmer's jobs.",
+      pick: 2,
+      choices: [
+        {
+          text: "farmer"
+        },
+        {
+          text: "planted",
+          correct: true
+        },
+        {
+          text: "seeds"
+        },
+        {
+          text: "watered",
+          correct: true
+        },
+        {
+          text: "morning"
+        }
+      ],
+      clue: "The farmer does two things. Find both of them.",
+      hints: [
+        "The farmer does two things. Find both of them.",
+        "Ask what the farmer did, then test each word.",
+        "Morning tells when, so it cannot be something the farmer does."
+      ],
+      how: [
+        "Find who the sentence is about: the farmer.",
+        "Ask: what did the farmer do? He planted and watered.",
+        "The answers are planted and watered. Farmer and seeds are nouns, and morning tells when."
+      ],
+      misconception: "A common mix-up is choosing only the first verb. The farmer does two things.",
+      why: "The answers are \"planted\" and \"watered\". Planted and watered tell what the farmer did. The other words are nouns.",
+      like: ["SK-GUM1-7-C08"]
+    },
+    {
+      id: "SK-GUM1-7-S09",
+      type: "mc",
+      points: 1,
+      dok: 1,
+      std: [
+        "3.L.GC.1:R:use-action-verbs"
+      ],
+      passages: [],
+      stem: "Leo mowed the lawn before lunch.",
+      prompt: "Which word shows what Leo did?",
+      choices: [
+        {
+          text: "mowed",
+          correct: true
+        },
+        {
+          text: "Leo"
+        },
+        {
+          text: "lawn"
+        },
+        {
+          text: "lunch"
+        }
+      ],
+      clue: "Find the doer. Then ask what that person did.",
+      hints: [
+        "Find the doer. Then ask what that person did.",
+        "Say each word and test whether Leo does it.",
+        "Lawn and lunch are things, so they cannot be what Leo does."
+      ],
+      how: [
+        "Find who the sentence is about: Leo.",
+        "Ask: what did Leo do? He mowed the lawn.",
+        "The answer is mowed. Leo is a person, and lawn and lunch are things."
+      ],
+      misconception: "A common mix-up is choosing a thing near the verb. The verb is the action.",
+      why: "The answer is \"mowed\" Mowed tells what Leo did. Leo, lawn and lunch are nouns.",
+      like: ["SK-GUM1-7-C09"]
+    },
+    {
+      id: "SK-GUM1-7-S10",
+      type: "mc",
+      points: 1,
+      dok: 3,
+      std: [
+        "3.L.GC.1:R:use-action-verbs"
+      ],
+      passages: ["p5"],
+      prompt: "Read went and brushed in the treehouse story. What can a reader say about them?",
+      choices: [
+        {
+          text: "Brushed lets us see how paint was spread, and went does not.",
+          correct: true
+        },
+        {
+          text: "Went is better, because short words always win in good writing."
+        },
+        {
+          text: "Neither one shows anything, so the two are equally clear."
+        },
+        {
+          text: "Brushed names the walls, so that word is really a noun."
+        }
+      ],
+      clue: "Think about what each verb lets the reader picture.",
+      hints: [
+        "Think about what each verb lets the reader picture.",
+        "Say each verb in its sentence. Which one shows more about the action?",
+        "One choice calls an action word a noun. Ask what the writer did to the walls."
+      ],
+      how: [
+        "Compare the pictures. Went only says the writer moved somehow.",
+        "Brushed shows how the writer put paint on the walls.",
+        "The answer is \"Brushed lets us see how paint was spread, and went does not.\""
+      ],
+      misconception: "A common mix-up is thinking all action verbs are equally strong. Some verbs show much more.",
+      why: "The answer is \"Brushed lets us see how paint was spread, and went does not.\" Brushed shows how the paint was put on. Went shows little, and both are action verbs.",
+      like: ["SK-GUM1-7-C10"]
+    },
+    {
+      id: "SK-GUM1-7-S11",
+      type: "hottext",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.L.GC.1:R:use-action-verbs"
+      ],
+      passages: ["p5"],
+      prompt: "Tap the TWO shown lines with exactly two action verbs.",
+      targets: ["p5:2:1","p5:2:2","p5:2:4","p5:3:2","p5:3:3"],
+      answer: ["p5:2:4","p5:3:3"],
+      pick: 2,
+      clue: "Count how many things the doer does in each shown line.",
+      hints: [
+        "Count how many things the doer does in each shown line.",
+        "Find each action verb and count them one line at a time.",
+        "Line 6 tells only one thing the bee did, so it can be ruled out."
+      ],
+      how: [
+        "Count the action verbs in each shown line.",
+        "Line 8 has noticed and wiped. Line 11 has gobbled and slurped.",
+        "Lines 5, 6 and 10 each have only one: brushed, buzzed and handed."
+      ],
+      misconception: "A common mix-up is counting only the first verb. Look for a second action after the word and.",
+      why: "The answers are sentences 8 and 11: \"Dad noticed the drips and wiped them up.\" and \"We gobbled the snacks and slurped the juice.\". Lines 8 and 11 each tell two things someone did. The other shown lines tell only one.",
+      like: ["SK-GUM1-7-C11"]
+    },
+    {
+      id: "SK-GUM1-7-S12",
+      type: "dropdown",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.L.GC.1:R:use-action-verbs"
+      ],
+      passages: ["p5"],
+      prompt: "Fill the gap with the word that shows the bee's move.",
+      text: "A bee {0} around my head.",
+      slots: [
+        {
+          options: ["buzzed","fuzzy","loudly"],
+          answer: 0
+        }
+      ],
+      clue: "Ask what the bee did. The missing word should be the action.",
+      hints: [
+        "Ask what the bee did. The missing word should be the action.",
+        "Try each word in the gap. Which one is something a bee does?",
+        "Fuzzy describes the bee, so it cannot be what the bee does."
+      ],
+      how: [
+        "Find who the sentence is about: the bee.",
+        "Ask: what did the bee do? The missing word should be an action.",
+        "The answer is buzzed. Fuzzy describes, and loudly tells how."
+      ],
+      misconception: "A common mix-up is choosing a word that tells how, like loudly. The verb is the action itself.",
+      why: "The answer is buzzed. Buzzed is what the bee did. Fuzzy describes, and loudly tells how.",
+      like: ["SK-GUM1-7-C12"]
+    },
+    {
+      id: "SK-GUM1-7-S13",
+      type: "dropdown",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.L.GC.1:R:use-action-verbs"
+      ],
+      passages: [],
+      prompt: "Which verbs make each gap come alive?",
+      text: "The soaked puppy {0} onto the bank and {1} water from its fur.",
+      slots: [
+        {
+          options: ["scrambled","went","struggling"],
+          answer: 0
+        },
+        {
+          options: ["shook","went","shivering"],
+          answer: 0
+        }
+      ],
+      clue: "Think about how a wet puppy moves and what it does to dry off. Pick verbs that show it.",
+      hints: [
+        "Think about how a wet puppy moves and what it does to dry off. Pick verbs that show it.",
+        "Read each half with the verbs and picture the puppy.",
+        "Went tells almost nothing about what the puppy did, so it can be ruled out."
+      ],
+      how: [
+        "Compare the choices. Went tells very little, and the other wrong choices do not fit the sentence.",
+        "Scrambled shows a quick, clumsy climb. Shook shows the puppy flinging water off.",
+        "The answers are scrambled and shook."
+      ],
+      misconception: "A common mix-up is choosing a verb that works but tells little. A strong verb paints a picture.",
+      why: "The answers are scrambled and shook. Scrambled and shook show what the puppy did. Went tells very little, and the others do not fit.",
+      like: ["SK-GUM1-7-C13"]
+    },
+    {
+      id: "SK-GUM1-7-S14",
+      type: "hottext",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.L.GC.1:R:use-action-verbs"
+      ],
+      passages: [],
+      stem: "A coach reads lines from a game report.",
+      prompt: "Which line gives readers the faintest picture of what happened?",
+      options: [
+        "The ball got to the other team.",
+        "Jada sprinted down the court.",
+        "The crowd roared when she scored.",
+        "Coach Lee waved her arms."
+      ],
+      answer: [0],
+      pick: 1,
+      clue: "Find the action verb in each sentence. Ask which one tells the reader the least.",
+      hints: [
+        "Find the action verb in each sentence. Ask which one tells the reader the least.",
+        "Picture each action. One verb gives almost no picture at all.",
+        "Sprinted and roared each show a lot about how the action looked or sounded, so one of them can be ruled out."
+      ],
+      how: [
+        "Find the action verbs: got, sprinted, roared and waved.",
+        "Sprinted, roared and waved each paint a picture.",
+        "Got tells very little about how the ball moved, so it is the weakest."
+      ],
+      misconception: "A common mix-up is picking the shortest sentence. Judge the verb, not the sentence.",
+      why: "The answer is \"The ball got to the other team.\". Got tells very little. Sprinted, roared and waved each paint a picture.",
+      like: ["SK-GUM1-7-C14"]
+    },
+    {
+      id: "SK-GUM1-7-S15",
+      type: "mc",
+      points: 1,
+      dok: 3,
+      std: [
+        "3.L.GC.1:R:use-action-verbs"
+      ],
+      passages: [],
+      prompt: "Zoe claims that only people can act. Which sentence proves her wrong?",
+      choices: [
+        {
+          text: "The wind rattled the old windows.",
+          correct: true
+        },
+        {
+          text: "My uncle painted the old garden fence."
+        },
+        {
+          text: "Ms. Park graded the spelling tests today."
+        },
+        {
+          text: "Jin sprayed the muddy truck with a hose."
+        }
+      ],
+      clue: "To show that a claim is wrong, find an example that breaks it. Look at who or what does each action.",
+      hints: [
+        "To show that a claim is wrong, find an example that breaks it. Look at who or what does each action.",
+        "Ask for each sentence: is the doer a person?",
+        "Painted, graded and sprayed are all done by people."
+      ],
+      how: [
+        "Zoe says only people do the action. Look for a sentence where a thing does the action.",
+        "My uncle, Ms. Park and Jin are all people. The wind is not a person.",
+        "The answer is \"The wind rattled the old windows.\" Rattled is still an action verb."
+      ],
+      misconception: "A common mix-up is thinking only people can act. Animals and things can do actions too.",
+      why: "The answer is \"The wind rattled the old windows.\" The wind is not a person, but rattled is still an action verb. The other doers are all people.",
+      like: ["SK-GUM1-7-C15"]
+    }
+  ],
+  addons: {
+    "SK-GUM1-7-P1": {
+      hints: [
+        "Find who the sentence is about. Then ask what the children did.",
+        "Say each word and ask whether it is something the children do.",
+        "Silly describes the puppet, so it cannot be what the children do."
+      ],
+      how: [
+        "Find who the sentence is about: the children.",
+        "Ask: what did the children do? They giggled. The answer is giggled."
+      ],
+      misconception: "A common mix-up is choosing a describing word. The verb is what the doer does."
+    },
+    "SK-GUM1-7-P2": {
+      hints: [
+        "Owen does two things in this sentence. Find both of them.",
+        "Ask what Owen did, then test each word.",
+        "Glove and field are things, so they cannot be what Owen does."
+      ],
+      how: [
+        "Find who the sentence is about: Owen.",
+        "Ask: what did Owen do? He grabbed his glove and raced. The answers are grabbed and raced."
+      ],
+      misconception: "A common mix-up is choosing only one verb. Owen does two things."
+    },
+    "SK-GUM1-7-P3": {
+      hints: [
+        "The sentence tells who. The missing word should tell what the rabbit did.",
+        "Try each word in the blank. Which one is something a rabbit does?",
+        "Orange is a color word, so it cannot be an action."
+      ],
+      how: [
+        "Find who the sentence is about: the rabbit.",
+        "Ask: what did the rabbit do to the carrot? It ate it. The answer is ate."
+      ],
+      misconception: "A common mix-up is choosing a word that tells how, like slowly. The verb is the action itself."
+    },
+    "SK-GUM1-7-P4": {
+      hints: [
+        "Ask what Grandma did. The words that answer are the action verbs.",
+        "Say each word from the sentence and test whether Grandma does it.",
+        "Song and soup are things, so they cannot be what Grandma does."
+      ],
+      how: [
+        "Ask: what did Grandma do?",
+        "Hummed and stirred are action verbs. Grandma, song and soup are nouns."
+      ],
+      misconception: "A common mix-up is sorting every word near the verb as an action. Ask what the doer does."
+    },
+    "SK-GUM1-7-P5": {
+      hints: [
+        "Some actions happen in your mind. What did Nina do?",
+        "Say each word and test whether it fits what Nina does.",
+        "Last describes the minute, so it cannot be what Nina does."
+      ],
+      how: [
+        "Find who the sentence is about: Nina.",
+        "Ask: what did Nina do? She remembered her lunch in her mind. The answer is remembered."
+      ],
+      misconception: "A common mix-up is thinking an action must be visible. Remembering is something Nina does in her mind."
+    }
+  },
+  /* B7a:core:end */
   test: [
     { id: "SK-GUM1-7-T1", type: "mc", points: 1, dok: 1, passages: [],
       stem: "A squirrel buried an acorn under the oak tree.",
