@@ -151,3 +151,10 @@ Corrections to the fourth-pass section:
 - Practice and core item edits: C06, C08, C12, S08, S10, S13. Check-item edits: T1 only.
 
 Still open: only one cursive face; Watch Me does not model every tricky letter; the s-gap is explained, not removed; coreException has no UI consumer. STATUS.md and `--record-versions` are the coordinator's.
+
+## Sixth-review fixes (wording only; no ids, points or keys changed)
+Final-file figures: `check-content --all` PASS (0 failures), `check-writing` 0 failures, `check-instructional-copy` 28 passed. Twins (all four tokenizers): 4.b worst 0.200, H.3.a worst 0.206. Hub: H.3.a 0 of 19 mc items have the key as unique hub (4.b 4 of 12, unchanged). Longest key: 4.b 5 of 27 and 0 of 5; H.3.a 3 of 39 and 0 of 3. Options per item: no duplicates, none under three in H.3.a (4.b P5 and S13 are two-column matches). Key checks (`ckms.js`) match the intended keys.
+- 4.b C04 basin slot is now `b / asin`, `ba / sin` (key), `basi / n`; S04 bacon slot is `ba / con` (key), `b / acon`, `baco / n`. The sayable wrong splits bas / in and bac / on are gone, so the how line "the other splits leave parts that cannot be said" is now true. Hints and why unchanged.
+- H.3.a S13: Copy is replaced by "Say the ending out loud again and again."; Trace is now "Trace over the scribble in pen." (no "and then move on"). Hint 3 still rules out tracing only; why updated. Key is not the unique hub.
+- H.3.a C06 how step 2: "four letters and a double l in the middle: tall."
+- H.3.a C08 sign changed to "Please set your boots on the mat." (choices: shoes on the mat; leave your boots on the mat; shoes on the rack), so it no longer shares words with the 3.T.T.4.b poem line. No other use in js/data. Key tied for hub, not unique.

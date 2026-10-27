@@ -615,7 +615,7 @@
               how: [
                 "Read each word: A brown rabbit hid in the tall grass.",
                 "The word after brown has six letters and two b's in a row: rabbit.",
-                "The word before grass has four letters: tall."
+                "The word before grass has four letters and a double l in the middle: tall."
               ],
               misconception: "A common mix-up is choosing a word that names the same kind of thing. Read every letter.",
               why: "The answers are \"rabbit\" and \"tall.\" The sentence says A brown rabbit hid in the tall grass. Robin, raccoon, long and high do not match the letters."
@@ -662,21 +662,21 @@
               passages: [],
               prompt: "Read the cursive sign. What does it tell you to do?",
               stem: [
-                "Cursive: Please hang your coat on the hook."
+                "Cursive: Please set your boots on the mat."
               ],
               choices: [
                 {
-                  text: "Please hang your coat on the hook.",
+                  text: "Please set your boots on the mat.",
                   correct: true
                 },
                 {
-                  text: "Please hang your hat on the hook."
+                  text: "Please set your shoes on the mat."
                 },
                 {
-                  text: "Please put your coat on the hook."
+                  text: "Please leave your boots on the mat."
                 },
                 {
-                  text: "Please hang your hat on the shelf."
+                  text: "Please set your shoes on the rack."
                 }
               ],
               clue: "Read the cursive sign one word at a time.",
@@ -687,11 +687,11 @@
               ],
               how: [
                 "Read the sign word by word.",
-                "The action word after Please is hang, and the thing after your is coat.",
-                "The place at the end is the hook. Only one choice has hang, coat and hook."
+                "The action word after Please is set, and the thing after your is boots.",
+                "The place at the end is the mat. Only one choice has set, boots and mat."
               ],
               misconception: "A common mix-up is picking a choice with one right part. Every part has to match.",
-              why: "The answer is \"Please hang your coat on the hook.\" The sign says to hang your coat on the hook. The other choices change the action, the thing, or the place. All four would make sense as a sign, so only the letters tell them apart."
+              why: "The answer is \"Please set your boots on the mat.\" The sign says to set your boots on the mat. The other choices change the action, the thing, or the place. All four would make sense as a sign, so only the letters tell them apart."
             },
             {
               id: "SK-FH3a-C09",
@@ -1528,13 +1528,13 @@
             correct: true
           },
           {
-            text: "Copy the scribble over and over until it looks clearer."
+            text: "Say the ending out loud again and again."
           },
           {
             text: "Choose any word that fits on the line, whatever its letters."
           },
           {
-            text: "Trace over the scribble in pen and then move on."
+            text: "Trace over the scribble in pen."
           }
         ],
         clue: "Think about how a reader works out a word they cannot read yet.",
@@ -1549,7 +1549,7 @@
           "So the best plan is to test words with that ending and see which fits."
         ],
         misconception: "A common mix-up is guessing without using the sentence. The other words give clues.",
-        why: "The answer is \"Test words with that ending and see which fits.\" The letters and the story together help work out the word. The other choices copy the scribble, ignore the letters, or only trace over it."
+        why: "The answer is \"Test words with that ending and see which fits.\" The letters and the story together help work out the word. The other choices only repeat the ending, ignore the letters, or only trace over it."
       },
       {
         id: "SK-FH3a-S14",

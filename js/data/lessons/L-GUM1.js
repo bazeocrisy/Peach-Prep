@@ -281,10 +281,92 @@ PP.addLesson({
         title: "Set 1",
         items: [
           {
-            ref: "SK-GUM1-1-P2"
+            id: "SK-GUM1-1-C01",
+            type: "match",
+            points: 2,
+            dok: 2,
+            std: [
+              "3.L.GC.1:R:use-nouns-and-verbs-to-form-complete-thoughts-in"
+            ],
+            passages: [],
+            prompt: "Check each group of words. Then match it to the part it is missing, if any.",
+            cols: ["Nothing missing","Missing the who or what","Missing the verb"],
+            rows: [
+              {
+                text: "Our science teacher showed us a map of the stars.",
+                answer: 0
+              },
+              {
+                text: "Jumped over the puddle without getting wet.",
+                answer: 1
+              },
+              {
+                text: "The squirrel with the fluffy tail in the oak tree.",
+                answer: 2
+              },
+              {
+                text: "Please line up quietly by the door.",
+                answer: 0
+              },
+              {
+                text: "Planted rows of corn behind the old barn.",
+                answer: 1
+              }
+            ],
+            clue: "Check each group of words for two parts, a who or what and a verb. Then decide which part, if any, is not there.",
+            hints: [
+              "Check each group of words for two parts, a who or what and a verb. Then decide which part, if any, is not there.",
+              "Do the groups you are sure about first. Say what the words are about, then listen for a word that tells what happens.",
+              "For each group, say which part you can find. The part you cannot find is the one that is missing."
+            ],
+            how: [
+              "Check one group of words at a time for a who or what and a verb.",
+              "Jumped over the puddle without getting wet and Planted rows of corn behind the old barn have verbs but no one who did them.",
+              "The squirrel with the fluffy tail in the oak tree names a thing but has no verb.",
+              "Our science teacher showed us a map of the stars has both parts. Please line up quietly by the door is a command, so the person told is the doer."
+            ],
+            misconception: "A common mix-up is sorting by what the words are about. Check for a who or what and a verb in each one.",
+            why: "Jumped over the puddle without getting wet and Planted rows of corn behind the old barn have no who. The squirrel with the fluffy tail in the oak tree has no verb. Our science teacher showed us a map of the stars and Please line up quietly by the door are complete."
           },
           {
-            ref: "SK-GUM1-1-P5"
+            id: "SK-GUM1-1-C02",
+            type: "mc",
+            points: 1,
+            dok: 2,
+            std: [
+              "3.L.GC.1:R:use-nouns-and-verbs-to-form-complete-thoughts-in"
+            ],
+            passages: [],
+            stem: "Many people at the farmers market on Saturday morning.",
+            prompt: "Which change makes this a complete sentence?",
+            choices: [
+              {
+                text: "Add a verb that tells what the people did",
+                correct: true
+              },
+              {
+                text: "Add a second group of people after the first one"
+              },
+              {
+                text: "Add a question mark at the end of the line"
+              },
+              {
+                text: "Move the word Saturday to the front of the line"
+              }
+            ],
+            clue: "Find the who or what in the group of words. Then look for a word that tells what that someone or something does.",
+            hints: [
+              "Find the who or what in the group of words. Then look for a word that tells what that someone or something does.",
+              "Read the words out loud and listen for a word that tells what happens. Does one appear?",
+              "A mark at the end of a line does not add a missing part. Think about the other choices."
+            ],
+            how: [
+              "Find the who or what: many people. That part is there.",
+              "Now look for a verb. No word tells what the people did.",
+              "The answer is \"Add a verb that tells what the people did\". A fix could be: Many people shopped at the farmers market on Saturday morning."
+            ],
+            misconception: "A common mix-up is moving words around or adding a mark. The group of words is missing a verb.",
+            why: "The answer is \"Add a verb that tells what the people did\" The people are named, but no verb tells what they did, so a verb is missing. More people, a mark or a moved word would not add one."
           },
           {
             id: "SK-GUM1-1-C03",
@@ -368,7 +450,7 @@ PP.addLesson({
             prompt: "Sentence 7 does not name a person, but it is a complete sentence. Which reason is right?",
             choices: [
               {
-                text: "It is a command, so the who is you even though the word is not written.",
+                text: "It is a command, so the person who is told to act is the doer.",
                 correct: true
               },
               {
@@ -389,12 +471,12 @@ PP.addLesson({
             ],
             how: [
               "Find the verb in sentence 7: put. It tells someone to do something.",
-              "A sentence that tells someone to do something is a command. The one who is told is you.",
-              "The answer is \"It is a command, so the who is you even though the word is not written.\" The name card is the thing being moved, not the one who moves it.",
+              "A sentence that tells someone to do something is a command. The person who is told is the one who acts.",
+              "The answer is \"It is a command, so the person who is told to act is the doer.\" The name card is the thing being moved, not the one who moves it.",
               "A period does not make a sentence, and a verb alone is not enough when no one is doing it."
             ],
-            misconception: "A common mix-up is thinking a sentence with no written who is always broken. A command is complete because the who is you.",
-            why: "The answer is \"It is a command, so the who is you even though the word is not written.\" Put is a verb that tells someone to act, so sentence 7 is a command. In a command the who is you. The name card is what gets moved, and a period or a verb alone does not make a sentence."
+            misconception: "A common mix-up is thinking a sentence with no written who is always broken. A command is complete because the person told is the doer.",
+            why: "The answer is \"It is a command, so the person who is told to act is the doer.\" Put is a verb that tells someone to act, so sentence 7 is a command, and the person told is the doer. The name card is what gets moved, and a period or a verb alone does not make a sentence."
           }
         ]
       },
@@ -522,7 +604,7 @@ PP.addLesson({
               "The answers are My brother and I, and carried. Read it back: My brother and I carried the groceries into the kitchen."
             ],
             misconception: "A common mix-up is filling a blank with any words that sound right. Each blank has one job, a who or a verb.",
-            why: "The answers are My brother and I and carried. My brother and I is the who, and carried is the verb that tells the action. Into the kitchen tells where, and heavy and cold, slowly and bags do not work as the missing parts."
+            why: "The answers are My brother and I and carried. My brother and I is the who, and carried is the verb that tells the action. Into the kitchen tells where, and heavy and cold, quietly and bags do not work as the missing parts."
           },
           {
             id: "SK-GUM1-1-C09",
@@ -573,35 +655,35 @@ PP.addLesson({
               "3.L.GC.1:R:use-nouns-and-verbs-to-form-complete-thoughts-in"
             ],
             passages: ["p2"],
-            prompt: "Sentences 9 and 10 both leave out a written who. Only one is a complete sentence. Which one is it, and why?",
+            prompt: "Kim says sentence 9 is a complete sentence because dropped is a verb. What does Kim miss?",
             choices: [
               {
-                text: "Sentence 10, because it is a command and the who is you.",
+                text: "A verb is only half of a sentence, and nothing says who dropped the bag.",
                 correct: true
               },
               {
-                text: "Sentence 9, because dropped is a verb, and a verb is all a sentence needs."
+                text: "Dropped is not really a verb, because a verb never ends with the letters -ed."
               },
               {
-                text: "Sentence 10, because please is the word that names who is bringing the gloves."
+                text: "A sentence must have a comma before the verb, and sentence 9 does not have one."
               },
               {
-                text: "Neither one, because a sentence has to say who in writing."
+                text: "A sentence about a bag must also tell where the bag came from in the first place."
               }
             ],
-            clue: "Every sentence needs a who or what and a verb. Check both sentences for each part.",
+            clue: "Every sentence needs two parts, a who or what and a verb. Check sentence 9 for each one.",
             hints: [
-              "Every sentence needs a who or what and a verb. Check both sentences for each part.",
-              "Read sentences 9 and 10 out loud, one after the other. Which one sounds like a whole thought?",
-              "Please is a polite word, but it does not name anyone. Look at the other reasons."
+              "Every sentence needs two parts, a who or what and a verb. Check sentence 9 for each one.",
+              "Read sentence 9 slowly and find the part of a sentence that Kim did not check.",
+              "Dropped really is a verb, so Kim did not get that part wrong. Look at the other three reasons."
             ],
             how: [
-              "Check sentence 9, Dropped the last bag into the bin by the gate. It has a verb, dropped, but nothing tells who dropped it.",
-              "Check sentence 10, Please bring your gloves back to the table. It tells someone to do something, so it is a command.",
-              "In a command, the who is you even though the word is not written. The answer is \"Sentence 10, because it is a command and the who is you.\""
+              "Check sentence 9, Dropped the last bag into the bin by the gate. It has a verb, dropped, so Kim is right about that part.",
+              "A verb is only one part of a sentence. Ask who dropped the bag. Nothing in the sentence says.",
+              "The answer is \"A verb is only half of a sentence, and nothing says who dropped the bag.\""
             ],
             misconception: "A common mix-up is thinking a verb alone makes a sentence. Sentence 9 has a verb but no one who does it.",
-            why: "The answer is \"Sentence 10, because it is a command and the who is you.\" Sentence 10 is a command, so the who is you. Sentence 9 has the verb dropped but no one who dropped the bag, and please does not name a person."
+            why: "The answer is \"A verb is only half of a sentence, and nothing says who dropped the bag.\" Dropped is a verb, but nothing says who dropped the bag, so sentence 9 is not complete. A comma or a place for the bag cannot add the missing who."
           }
         ]
       },
@@ -840,7 +922,7 @@ PP.addLesson({
       ],
       misconception: "A common mix-up is sorting by length. Check for a who and a verb.",
       why: "Raced down the hill on a red sled and Fell asleep in the car need a who or what. The old wooden bridge over the creek needs a verb. My neighbor watered the garden and Please wipe your feet on the mat are complete.",
-      like: ["SK-GUM1-1-P2"]
+      like: ["SK-GUM1-1-C01"]
     },
     {
       id: "SK-GUM1-1-S02",
@@ -868,9 +950,9 @@ PP.addLesson({
           text: "a comma placed near the very end"
         }
       ],
-      clue: "Check the group of words for a who or what, and then for a verb. Which one cannot you find?",
+      clue: "Check the group of words for a who or what, and then for a verb. Which one can't you find?",
       hints: [
-        "Check the group of words for a who or what, and then for a verb. Which one cannot you find?",
+        "Check the group of words for a who or what, and then for a verb. Which one can't you find?",
         "Find the naming part first. Then look for a word that tells what the thing does or is like.",
         "A title is not part of the thought itself. Decide among the rest."
       ],
@@ -881,7 +963,7 @@ PP.addLesson({
       ],
       misconception: "A common mix-up is blaming the punctuation. The thought is missing a verb, and no mark can fix that.",
       why: "The answer is \"an action word for the sunflowers\" The sunflowers are named, but no verb tells what they do, so an action word for the sunflowers is missing. A title or a comma would not add a verb.",
-      like: ["SK-GUM1-1-P5"]
+      like: ["SK-GUM1-1-C02"]
     },
     {
       id: "SK-GUM1-1-S03",
@@ -1118,7 +1200,7 @@ PP.addLesson({
         "The answers are Our teacher, and borrowed. Read it back: Our teacher borrowed two books about space."
       ],
       misconception: "A common mix-up is picking words that sound school-like. Match each blank to the part it needs.",
-      why: "The answers are Our teacher and borrowed. Our teacher is the who, and borrowed is the verb. Next to the shelf and beside tell where, and very interesting and shiny describe things.",
+      why: "The answers are Our teacher and borrowed. Our teacher is the who, and borrowed is the verb. Next to the shelf and underneath tell where, and very interesting and shiny describe things.",
       like: ["SK-GUM1-1-C08"]
     },
     {
@@ -1171,35 +1253,35 @@ PP.addLesson({
         "3.L.GC.1:R:use-nouns-and-verbs-to-form-complete-thoughts-in"
       ],
       passages: ["p5"],
-      prompt: "Lina claims lines 8 and 11 are both broken because neither one names anybody. Is she right?",
+      prompt: "Ravi thinks sentence 11 stands alone because waited is a verb. What is Ravi overlooking?",
       choices: [
         {
-          text: "Just 11. Number 8 is an order, so you are the one told.",
+          text: "A verb needs a doer too, and nobody is named as the one who waited.",
           correct: true
         },
         {
-          text: "Yes. A line cannot stand without a person's name inside."
+          text: "Waited is not an action, since waiting means that nothing is going on at all."
         },
         {
-          text: "Just 8. Line 11 holds an action word, which settles it."
+          text: "A line about paint needs a comma in front of the verb to be complete."
         },
         {
-          text: "No. Each holds an action word, so each stands alone."
+          text: "The line is too short, because a sentence has to hold at least ten words."
         }
       ],
-      clue: "Compare the two sentences. Ask what each one has and what each one lacks.",
+      clue: "A sentence needs two parts. Test sentence 11 for each of them.",
       hints: [
-        "Compare the two sentences. Ask what each one has and what each one lacks.",
-        "Say sentence 8 and sentence 11 out loud to a friend. Ask who is doing the action in each.",
-        "Each sentence does have an action word, so that alone cannot settle it. Look at who is doing it."
+        "A sentence needs two parts. Test sentence 11 for each of them.",
+        "Think about what Ravi has already found. Then look at the line for the part he has not checked.",
+        "Waiting is something a person can do, so it counts as an action. Think about the other choices."
       ],
       how: [
-        "Check sentence 11, Waited two days for the paint to dry. It has an action word, waited, but does not say who waited.",
-        "Check sentence 8, Hand me the small brush, please. It tells someone to do something, so it is a command.",
-        "In a command the who is you. The answer is \"Just 11. Number 8 is an order, so you are the one told.\""
+        "Check sentence 11, Waited two days for the paint to dry. It has the verb waited, so Ravi is right about that part.",
+        "A verb is only one part of a sentence. Ask who waited. The line does not say.",
+        "The answer is \"A verb needs a doer too, and nobody is named as the one who waited.\""
       ],
       misconception: "A common mix-up is trusting a verb without asking who does it. Waited has no one doing it.",
-      why: "The answer is \"Just 11. Number 8 is an order, so you are the one told.\" Sentence 8 is a command, so the one told, you, is the who. Sentence 11 has the verb waited but no one who waited, so Lina is right only about 11.",
+      why: "The answer is \"A verb needs a doer too, and nobody is named as the one who waited.\" Waited is a verb, but nobody is named as the one who waited, so sentence 11 is not complete. A comma or a longer line would not add the missing who.",
       like: ["SK-GUM1-1-C10"]
     },
     {
@@ -1256,7 +1338,7 @@ PP.addLesson({
       hints: [
         "Look at each group of words and ask: who or what is it about, and what does that thing do?",
         "Do one group of words at a time. Find the action word, if there is one, and check that someone is doing it.",
-        "A comma, a new paragraph and an exclamation point are about writing it down. These groups are missing a part of the thought itself."
+        "A comma is about how a sentence is written down. These groups are missing a part of the thought itself."
       ],
       how: [
         "Painted a mural on the gym wall has a verb, painted, but no word says who painted. It is missing a naming part.",
@@ -1406,7 +1488,7 @@ PP.addLesson({
       hints: [
         "Ask two questions about each group of words: who or what is it about, and what does that thing do?",
         "Start with the group of words you feel surest about, then do the rest. Some may already be finished.",
-        "Swam to the bottom of the pond has a verb. Ask who swam, and use the same question on the others."
+        "Use the same two questions on every group of words, and decide which part each one is missing."
       ],
       how: [
         "Look at one group of words at a time for a who or what and a verb.",

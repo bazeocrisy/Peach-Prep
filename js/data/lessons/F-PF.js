@@ -1783,7 +1783,7 @@ PP.addLesson({
               },
               {
                 options: [
-                  "bas / in",
+                  "b / asin",
                   "ba / sin",
                   "basi / n"
                 ],
@@ -2301,7 +2301,7 @@ PP.addLesson({
         {
           options: [
             "ba / con",
-            "bac / on",
+            "b / acon",
             "baco / n"
           ],
           answer: 0
