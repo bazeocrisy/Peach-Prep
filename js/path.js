@@ -74,6 +74,7 @@
     const step = stepFor(k);
     state.bookmark = { key: k, step }; save();
     if (k.startsWith("task:")) window.PP_WRITING.start(k.slice(5));
+    else if (window.PP_SKILLS.isCore(k)) window.PP_SKILLS.begin(k);   /* question-first: the saved or first practice question */
     else window.PP_SKILLS.open(k, step);
   }
   function button(label, action, cls) {
@@ -191,13 +192,13 @@
   function adultNote(k, step) {
     if (k.startsWith("task:")) return "Your child reads, plans and writes. A grown-up scores the finished essay with the rubric on the For parents tab.";
     const kind = window.PP_SKILLS.lessonKind(k);
+    /* question-first: a lesson with core practice opens at a question, five at a time, with Teach Me */
+    if (window.PP_SKILLS.isCore(k) && step !== "test") return "Your child starts with a practice question, five at a time. Teach Me is there when needed. " + (window.PP_PRACTICE && window.PP_PRACTICE.canSave() ? "You can stop after any five; the place is kept on this device." : "Saving is unavailable, so the place is kept only while the page stays open.");
     if (step === "learn") return "Grown-up: reveal the worked examples together, one step at a time.";
     if (step === "practice") return kind === "fluency" ? "Grown-up: listen to the one-minute read-aloud and tap any missed words."
       : kind === "trace" ? "Grown-up: print the tracing sheet and watch the handwriting."
       : "Grown-up: sit side by side. Help me gives hints. Practice questions start again from the first one.";
-    if (step === "try") return window.PP_SKILLS.isCore(k)
-      ? "Your child answers alone, in three sets of five. Hints and Show me how are there when needed. " + (window.PP_PRACTICE && window.PP_PRACTICE.canSave() ? "You can stop after a set; the place is kept on this device." : "Saving is unavailable, so the place is kept only while the page stays open.")
-      : "Your child answers alone. Help me opens after one wrong try. Questions start again from the first one.";
+    if (step === "try") return "Your child answers alone. Help me opens after one wrong try. Questions start again from the first one.";
     if (step === "test") return kind ? "Grown-up: do this step with your child, then tick the Check." : "Your child answers alone, with no hints.";
     return "Grown-up: read the short lesson together.";
   }
@@ -240,6 +241,9 @@
           const draft = window.PP_SKILLS.entryStatus(key) === "started";
           const tabs = [...document.querySelectorAll("#screen-write .wtabs [role=tab]")];
           text.appendChild(make("p", "np-step", "Opens at: " + (tabs[0] ? tabs[0].textContent : "1. Read") + " (tab 1 of " + (tabs.length || 5) + ")" + (draft ? ". Your saved plan and draft open with it." : "")));
+        } else if (window.PP_SKILLS.isCore(key)) {
+          const pl = window.PP_SKILLS.practiceLine(key);
+          text.appendChild(make("p", "np-step", "Opens at: " + (pl.all ? "your finished practice, where you can look back or take the skill check." : "a practice question (" + pl.note.charAt(0).toLowerCase() + pl.note.slice(1) + ").")));
         } else if (marked) {
           const ids = window.PP_SKILLS.stepIds(key), names = window.PP_SKILLS.stepNames(key);
           const i = Math.max(0, ids.indexOf(st));

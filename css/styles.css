@@ -1135,3 +1135,74 @@ a.sk-chip:hover .sk-chip-code{border-color:var(--peach-deep);text-decoration:und
 .cov-table td{font-size:.92rem;}
 .cov-plain{color:var(--muted);}
 .std-review-line{margin:0;}
+
+/* ===================== question-first (docs/question-first/DESIGN.md) ===================== */
+/* heading: the skill's title with its Georgia code beneath, kept small so the question gets the room */
+.player-head{padding-bottom:0;}
+.player-head .page-title{font-size:1.3rem;margin:2px 0 2px;}
+.player-codes{margin:0 0 2px;display:flex;flex-wrap:wrap;gap:4px 14px;font-size:.92rem;color:var(--muted);}
+.player-codes .sl-code{color:var(--sky);font-weight:700;display:inline-flex;align-items:center;min-height:44px;padding:0 2px;}
+@media (max-height:480px){.player-codes .sl-code{min-height:44px;}}
+.bar:has(+ .player-head){padding-top:8px;padding-bottom:6px;}
+.tabs{margin-top:4px;}
+.player-grid{margin-top:8px;}
+/* the answering row: Check Answer and Teach Me together; Next below; Previous is quiet */
+.q-controls.is-own{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;}
+.q-controls.is-own #q-next{grid-column:1 / -1;}
+.q-controls.is-own #q-similar{grid-column:1 / -1;}
+.q-controls.is-own #q-prev{grid-column:1 / -1;justify-self:start;background:none;border-color:transparent;color:var(--navy);text-decoration:underline;min-height:44px;padding:8px 6px;}
+.q-controls.is-own #q-prev:disabled{background:none;border-color:transparent;color:#8C7F70;text-decoration:none;}
+.q-controls.is-own .btn{padding:10px 14px;}
+.q-controls.is-own #q-teach{background:var(--plum-tint);border-color:var(--plum-edge);color:#4B33A8;}
+.q-more{margin-top:18px;border-top:1px solid var(--line-soft);padding-top:6px;}
+.q-more>summary{cursor:pointer;min-height:44px;display:flex;align-items:center;font-family:var(--head);font-weight:700;color:var(--navy);}
+.qm-list{list-style:none;margin:0;padding:0 0 8px;display:flex;flex-direction:column;gap:2px;}
+.qm-list li{padding:2px 0;}
+.qm-btn,.qm-link{min-height:44px;display:inline-flex;align-items:center;text-align:left;}
+.qm-list a.qm-link{padding:6px 0;}
+.qm-note{color:var(--muted);font-size:.95rem;}
+/* Teach Me */
+.teach-me{padding:0;}
+.tm-bar{position:sticky;top:0;z-index:6;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px 12px;background:#fff;padding:6px 0 10px;margin:0 0 6px;border-bottom:1px solid var(--line-soft);}
+.tm-title{font-size:1.2rem;color:var(--plum);}
+.tm-back{flex:0 1 auto;white-space:normal;}
+.tm-cards{display:flex;flex-direction:column;gap:10px;}
+.tm-card{background:var(--sky-tint);border:1px solid var(--sky-edge);border-left:5px solid var(--sky);border-radius:12px;padding:10px 14px;}
+.tm-card:focus{outline:3px solid var(--sky);outline-offset:2px;}
+.tm-card-h{font-size:.85rem;text-transform:uppercase;letter-spacing:.04em;color:var(--sky);margin:0 0 4px;}
+.tm-card p:last-child{margin-bottom:0;}
+.tm-quote{font-weight:700;color:var(--navy-deep);}
+.tm-note{color:var(--muted);font-size:.95rem;}
+.tm-big{font-weight:700;}
+.tm-word{margin:0 0 4px;font-size:.95rem;}
+.tm-sub{font-family:var(--head);font-weight:700;margin:6px 0 2px;font-size:.95rem;}
+.tm-list{margin:0 0 6px;padding-left:1.3em;}
+.tm-answer{background:var(--right-tint);border-color:var(--right-edge);border-left-color:var(--right);}
+.tm-answer .tm-card-h{color:var(--right);}
+.tm-final{font-size:1.05rem;}
+.tm-final-label{color:var(--right);}
+.tm-mix{font-style:italic;}
+.tm-hints{display:flex;flex-direction:column;gap:8px;margin-top:10px;}
+.tm-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px;}
+.tm-actions .btn,.tm-end .btn{flex:1 1 150px;white-space:normal;min-width:0;}
+.tm-explain{margin:8px 0 0;}
+.tm-end{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px;}
+.tm-show{margin-top:6px;}
+.tm-more{margin-top:18px;border-top:1px solid var(--line-soft);padding-top:6px;}
+.tm-more>summary{cursor:pointer;min-height:44px;display:flex;align-items:center;font-family:var(--head);font-weight:700;color:var(--navy);}
+.tm-more-body{display:flex;flex-direction:column;gap:12px;padding-bottom:6px;}
+.tm-example,.tm-lesson{background:var(--page);border:1px solid var(--line);border-radius:12px;padding:10px 14px;}
+.tm-overview{align-self:flex-start;}
+/* the part of the text Teach Me points to: a tint AND a thick left edge, never colour alone */
+.para.is-teach-focus{background:#FFE7A8;border-left:5px solid #C9961A;border-radius:6px;padding-left:4px;}
+.own-dot.is-taught .own-dot-mark{background:radial-gradient(circle,var(--plum) 40%,#fff 44%);border-color:var(--plum);}
+/* the Skill overview's question-first action, and the grown-up detail */
+.sk-practice{margin:10px 0 6px;padding:12px 14px;background:var(--peach-tint);border:1px solid var(--peach-edge);border-radius:var(--radius);}
+.sk-practice-lead{margin:0 0 8px;font-weight:700;}
+.std-lesson-acts{display:flex;flex-wrap:wrap;gap:10px;}
+.own-help{margin-top:10px;}
+.own-help>summary{cursor:pointer;min-height:44px;display:flex;align-items:center;font-weight:700;color:var(--navy);}
+.own-help-list{margin:0 0 8px;padding-left:1.3em;}
+@media (max-height:480px){
+  .tm-bar{position:static;}
+}

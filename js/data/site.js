@@ -14,7 +14,7 @@ window.PP_SITE = {
       url: "https://lor2.gadoe.org/gadoe/file/ba53bbce-40da-44a3-92ed-a8da5dfd28be/1/GM_Checklist_Gr3.pdf" },
     sampler: { title: "Online scoring samplers (how written answers are scored)", date: "",
       url: "https://lor2.gadoe.org/gadoe/file/d0d5b8f7-63d6-4a7f-8e5f-68df45b837d1/1/GM_Online_Scoring_Sampler_Infographic.pdf" },
-    experience: { title: "Experience Online (official practice and study guides)", date: "",
+    experience: { title: "Experience Online (GaDOE: practice with the test tools, not graded)", date: "",
       url: "https://www.gaexperienceonline.com/" }
   },
 
@@ -103,10 +103,10 @@ window.PP_SITE = {
 
   plan: [
     { step: "Choose how to start", text: "Follow the Learning Path for a suggested order, or choose a lesson from the list. Use the On the test filter to see the skills the Milestones checks." },
-    { step: "Pick a category, then one skill at a time", text: "Start from a category card (Reading, Writing, Vocabulary, Grammar or Foundations). Skills are listed in a building order, each with its id and Georgia code. Open one and go through its steps. Most skills have five: Learn It, Watch Me, Practice Together (Help me is on), Try It Yourself (Help me turns on after one wrong try) and Test Your Knowledge. Score at least 80% of the points on the skill check to pass it. On a 6- or 7-point check that means missing no more than 1 point. A few hands-on skills (reading aloud, cursive) have Learn It, Watch Me, Practice and a grown-up Check instead of a scored skill check." },
+    { step: "Pick a category, then one skill at a time", text: "Start from a category card (Reading, Writing, Vocabulary, Grammar or Foundations). Skills are listed in a building order, each with its id and Georgia code. Tap a skill and a practice question opens right away: your child answers, presses Check Answer, and can tap Teach Me at any time for help with that exact question. Practice comes five questions at a time (fifteen per skill, in three sets), and the place is saved on this device. The Skill overview (under About this skill, below a question) keeps the lesson, worked examples and guided practice. Score at least 80% of the points on the separate skill check to pass it. A few skills do not have fifteen practice questions yet; they open on their skill page with Learn It, Watch Me, Practice Together, Try It Yourself and a check, and the hands-on ones (reading aloud, cursive) have a grown-up Check." },
     { step: "Write every week", text: "Do the writing skills, then one opinion essay from sources each week (Mixed practice and practice tests, then Writing), checked with the Writer's Checklist and scored with the parent guide." },
     { step: "Put it together", text: "Once several skill checks are passed, try the mixed reading sets and the practice test. The real test mixes skills in one passage." },
-    { step: "Rehearse on the real screens", text: "Use GaDOE's free Experience Online practice (Test Practice, Guides and Samplers → Online Tools Training → Study Guide → Grade 3 ELA). It uses the real testing tools: highlighter, cross-off, line guide and more." },
+    { step: "Rehearse on the real screens", text: "GaDOE's free Experience Online (gaexperienceonline.com, checked October 2026) has a tools guide, a video tutorial, and study guides, scoring samplers and demonstration tests that use the real testing tools. GaDOE says these are not graded. They are for getting used to the format and the tools. Nothing carries over from Peach Prep, and Peach Prep is not part of it or endorsed by it. It works in Chrome." },
     { step: "Check progress", text: "Progress (lessons started, practice finished, skill checks passed and grown-up checks, with dates) is saved on this device only. If your child uses two devices, pick one for Peach Prep." }
   ]
 };

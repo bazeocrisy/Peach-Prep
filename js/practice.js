@@ -9,6 +9,10 @@
    } } }
    Rec = { r: response (engine index space), ord: choice order, w: wrong checks, h: hints taken (0-3),
            x: answer shown before solving, ok: solved with full points, howAfter: steps opened after solving,
+           (question-first, additive; absent = zero / false, so older records keep their meaning)
+           tm: times Teach Me was opened before the item was solved, tp: furthest Teach Me step reached,
+           tmAfter: Teach Me opened after the item was solved, sk: times skipped while unfinished,
+           f1: { ok, pre } the first Check: fully right or not, and whether help came before it (set once),
            cr: { text, checks, done } for a constructed response, set, pos, d: "YYYY-MM-DD",
            log: [ { t: "check"|"hint"|"how"|"cr", ... } ] (the full assistance history, last 40) }
 
@@ -34,6 +38,9 @@
     Object.keys(r).forEach(k => { if (BAD(k)) delete r[k]; });
     r.w = whole(v.w); r.h = whole(v.h, 3);
     r.x = v.x === true; r.ok = v.ok === true; r.howAfter = v.howAfter === true;
+    /* question-first (additive): absent means 0 / false, so records saved earlier mean what they meant */
+    r.tm = whole(v.tm, 99); r.tp = whole(v.tp, 99); r.sk = whole(v.sk, 99); r.tmAfter = v.tmAfter === true;
+    if (isObj(v.f1)) r.f1 = { ok: v.f1.ok === true, pre: v.f1.pre === true }; else delete r.f1;
     if (v.cr !== undefined) {
       if (isObj(v.cr)) r.cr = { text: typeof v.cr.text === "string" ? v.cr.text : "", checks: Array.isArray(v.cr.checks) ? v.cr.checks.map(x => x === true) : [], done: v.cr.done === true };
       else delete r.cr;
@@ -100,21 +107,23 @@
   function raw(k, id, similar) { const L = lesson(k); return L ? (L[similar ? "s" : "i"][id] || null) : null; }
   function rec(k, id, similar) { const r = raw(k, id, similar); return r && !stale(k, id, r) ? r : null; }
   function changed(k) { const L = lesson(k); if (!L) return 0; return ["i", "s"].reduce((n, f) => n + Object.keys(L[f]).filter(id => stale(k, id, L[f][id])).length, 0); }
-  const touched = r => !!r && (r.ok || r.x || r.w > 0 || r.h > 0 || r.howAfter || (r.cr && (r.cr.done || !!r.cr.text)) || r.r !== undefined);
+  const touched = r => !!r && (r.ok || r.x || r.w > 0 || r.h > 0 || r.tm > 0 || r.howAfter || r.tmAfter || (r.cr && (r.cr.done || !!r.cr.text)) || r.r !== undefined);
   /* one definition, used everywhere (§2.2.3) */
   const STATUS = {
     shown: "Answer shown",
+    taught: "Right after Teach Me",
     hints: "Right with hints",
     retry: "Right after another try",
     first: "Right on the first try",
     cr: "Written and checked against the list",
     none: "Not finished"
   };
-  const SHORT = { shown: "Answer shown", hints: "With hints", retry: "After a retry", first: "First try", cr: "Written", none: "Not finished" };
+  const SHORT = { shown: "Answer shown", taught: "After Teach Me", hints: "With hints", retry: "After a retry", first: "First try", cr: "Written", none: "Not finished" };
   function statusOf(r) {
     if (!r) return "none";
     if (r.x) return "shown";
     if (r.cr) return r.cr.done ? "cr" : "none";
+    if (r.ok && r.tm > 0) return "taught";   /* Teach Me before the answer: never independent */
     if (r.ok && r.h > 0) return "hints";
     if (r.ok && r.w > 0) return "retry";
     if (r.ok) return "first";
@@ -131,10 +140,24 @@
     if (L && L.at && L.at.set === setNo && st[L.at.pos] === "none") pos = L.at.pos;
     return { statuses: st, done, started, pos: pos < 0 ? 0 : pos, finishedCount: st.filter(s => s !== "none").length };
   }
+  /* Where a skill opens (question-first): the saved set if it is not finished, else the first unfinished
+     set at its first unfinished question; all finished -> { all: true }. Read only. */
+  function entry(k, sets) {
+    const L = lesson(k), states = sets.map((ids, i) => setState(k, ids, i + 1));
+    const atSet = L && L.at && states[L.at.set - 1] && !states[L.at.set - 1].done ? L.at.set : 0;
+    const first = atSet || (states.findIndex(s => !s.done) + 1);
+    if (!first) return { all: true, set: sets.length, pos: 0, started: true, states };
+    return { all: false, set: first, pos: states[first - 1].pos, started: states[first - 1].started, states };
+  }
+  /* Per-question help facts for grown-ups (read only). */
+  function helpOf(k, id) {
+    const r = rec(k, id) || {};
+    return { status: statusOf(r), wrong: r.w || 0, hints: r.h || 0, teach: r.tm || 0, step: r.tp || 0, shown: !!r.x, skips: r.sk || 0, first: r.f1 || null, finished: statusOf(r) !== "none" };
+  }
   function any(k) { const L = lesson(k); return !!L && (Object.keys(L.i).some(id => touched(L.i[id])) || Object.keys(L.s).some(id => touched(L.s[id]))); }
   function complete(k, ids) { return !!ids.length && ids.every(id => status(k, id) !== "none"); }
   function counts(k, ids) {
-    const c = { first: 0, retry: 0, hints: 0, shown: 0, cr: 0, none: 0 };
+    const c = { first: 0, retry: 0, hints: 0, taught: 0, shown: 0, cr: 0, none: 0 };
     ids.forEach(id => { c[status(k, id)]++; });
     return c;
   }
@@ -194,7 +217,7 @@
   }
 
   window.PP_PRACTICE = {
-    KEY, STATUS, SHORT, statusOf, status, rec, raw, changed, setSigs, lesson, setState, any, complete, counts, similarCounts, touched,
+    KEY, STATUS, SHORT, statusOf, status, rec, raw, changed, setSigs, lesson, setState, entry, helpOf, any, complete, counts, similarCounts, touched,
     update, log, place, notice, noticeText, canSave: () => writable(), damaged: () => damaged
   };
 })();

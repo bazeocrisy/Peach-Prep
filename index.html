@@ -158,6 +158,7 @@
       <h1 class="page-title" id="sk-title" tabindex="-1"></h1>
       <p class="page-sub" id="sk-plain"></p>
       <p class="sk-tags" id="sk-tags"></p>
+      <div class="sk-practice" id="sk-practice" hidden></div>
       <div class="steps" id="sk-steps" role="tablist" aria-label="Steps"></div>
       <div class="sk-panel" id="sk-panel" tabindex="-1" role="tabpanel"></div>
       <details class="sk-official" id="sk-official"></details>
@@ -272,6 +273,7 @@
     </header>
     <div class="player-head wrap">
       <h1 class="page-title" id="player-title" tabindex="-1"></h1>
+      <p class="player-codes" id="player-codes" hidden></p>
     </div>
     <div class="tabs" id="tabs" role="tablist" aria-label="Passage or question">
       <button type="button" role="tab" id="tab-passage" aria-selected="true" aria-controls="passage-pane">Read the passage</button>
@@ -286,28 +288,48 @@
       <div class="item-pane" id="item-pane" role="tabpanel" aria-labelledby="tab-question">
         <!-- work -->
         <div id="stage-work">
-          <nav class="q-nav" id="q-nav" aria-label="Questions" hidden></nav>
-          <div class="q-meta"><span id="q-count"></span><span class="q-points" id="q-points"></span></div>
-          <div class="q-track"><span id="q-bar"></span></div>
-          <h2 class="q-prompt" id="q-prompt" tabindex="-1"></h2>
-          <div id="q-body"></div>
-          <div id="q-help-steps" class="help-steps" aria-live="polite"></div>
-          <div id="q-how-steps" class="how-steps" hidden></div>
-          <div id="q-cr" class="cr-compare" hidden></div>
-          <div id="q-feedback" class="feedback" hidden></div>
-          <p id="q-say" class="sr" role="status" aria-live="polite"></p>
-          <div class="q-controls">
-            <button type="button" class="btn btn-soft" id="q-prev">Previous question</button>
-            <button type="button" class="btn btn-help" id="q-help">Help me</button>
-            <button type="button" class="btn btn-help" id="q-hint" hidden>Give me a hint</button>
-            <button type="button" class="btn btn-soft btn-how" id="q-how" hidden>Show me how <span class="how-warn">(shows the answer)</span></button>
-            <button type="button" class="btn btn-soft" id="q-flag" aria-pressed="false" hidden>Mark to review</button>
-            <button type="button" class="btn btn-primary" id="q-check">Check</button>
-            <button type="button" class="btn btn-soft" id="q-similar" hidden>Try a similar question</button>
-            <button type="button" class="btn btn-primary" id="q-next">Next</button>
+          <div id="q-main">
+            <nav class="q-nav" id="q-nav" aria-label="Questions" hidden></nav>
+            <div class="q-meta"><span id="q-count"></span><span class="q-points" id="q-points"></span></div>
+            <div class="q-track"><span id="q-bar"></span></div>
+            <h2 class="q-prompt" id="q-prompt" tabindex="-1"></h2>
+            <div id="q-body"></div>
+            <div id="q-help-steps" class="help-steps" aria-live="polite"></div>
+            <div id="q-cr" class="cr-compare" hidden></div>
+            <div id="q-feedback" class="feedback" hidden></div>
+            <p id="q-say" class="sr" role="status" aria-live="polite"></p>
+            <div class="q-controls" id="q-controls">
+              <button type="button" class="btn btn-soft" id="q-prev">Previous question</button>
+              <button type="button" class="btn btn-help" id="q-help">Help me</button>
+              <button type="button" class="btn btn-soft" id="q-flag" aria-pressed="false" hidden>Mark to review</button>
+              <button type="button" class="btn btn-primary" id="q-check">Check</button>
+              <button type="button" class="btn btn-help" id="q-teach" hidden>Teach Me</button>
+              <button type="button" class="btn btn-soft" id="q-similar" hidden>Try a fresh question like this</button>
+              <button type="button" class="btn btn-primary" id="q-next">Next</button>
+            </div>
+            <p class="note q-status" id="q-status" hidden></p>
+            <div id="q-storage"></div>
+            <details class="q-more" id="q-more" hidden></details>
           </div>
-          <p class="note q-status" id="q-status" hidden></p>
-          <div id="q-storage"></div>
+          <!-- Teach Me (question-first): replaces the question; the passage stays available -->
+          <div id="teach-panel" class="teach-me" hidden role="region" aria-labelledby="teach-title">
+            <div class="tm-bar">
+              <h2 class="tm-title" id="teach-title" tabindex="-1">Teach Me</h2>
+              <button type="button" class="btn btn-primary tm-back" id="teach-back">Back to My Question</button>
+            </div>
+            <div id="teach-cards" class="tm-cards" aria-live="polite"></div>
+            <div id="teach-hints" class="tm-hints" aria-live="polite"></div>
+            <div class="tm-actions">
+              <button type="button" class="btn btn-help" id="teach-hint">Give me a hint</button>
+              <button type="button" class="btn btn-soft" id="teach-next" aria-describedby="teach-explain">Show the next step</button>
+            </div>
+            <p class="note tm-explain" id="teach-explain"></p>
+            <div id="teach-end" class="tm-end" hidden>
+              <button type="button" class="btn btn-soft" id="teach-similar" hidden>Try a fresh question like this</button>
+              <button type="button" class="btn btn-primary tm-back" id="teach-back2">Back to My Question</button>
+            </div>
+            <div id="teach-more"></div>
+          </div>
         </div>
         <!-- test: confirm -->
         <div id="stage-confirm" class="panel" hidden>
@@ -423,6 +445,7 @@
   <script src="js/data/path.js"></script>
   <script src="js/engine/items.js"></script>
   <script src="js/practice.js"></script>
+  <script src="js/teach.js"></script>
   <script src="js/engine/player.js"></script>
   <script src="js/skills.js"></script>
   <script src="js/writing.js"></script>

@@ -132,13 +132,13 @@
     const d = make("details", "routine"); d.open = open && !SHORT();
     d.appendChild(make("summary", "routine-sum", "How a lesson works"));
     const body = make("div", "routine-body");
-    body.appendChild(make("p", "routine-lead", "Most lessons have five short steps. Do them in order, at your child's pace. One lesson can take more than one short session."));
+    body.appendChild(make("p", "routine-lead", "Pick a skill and a practice question opens right away. Do five questions at a time, at your child's pace. One skill can take more than one short session."));
     const ol = make("ol", "routine-steps");
-    [["Learn It", "Read a short lesson about the skill together."],
-     ["Watch Me", "See the skill done step by step in examples."],
-     ["Practice Together", "Answer questions side by side. Help me gives hints."],
-     ["Try It Yourself", "Your child answers alone. In most lessons, Help me opens after one wrong try. Lessons with fifteen practice questions in three sets offer hints and Show me how at any time, and you can stop after a set."],
-     ["Test Your Knowledge", "The skill check: no hints, and 80% of the points to pass. It starts fresh each time."]
+    [["Answer the question", "Read the question, choose your answer, and press Check Answer."],
+     ["Teach Me", "Stuck, or just curious? Teach Me explains this exact question step by step, with hints. It never counts as a mistake."],
+     ["Back to My Question", "You return to the same question with your answer still there, then try again or go on."],
+     ["Five at a time", "Fifteen questions in three sets of five. Stop after any five and come back later."],
+     ["The skill check", "A separate test: no hints, no Teach Me, and 80% of the points to pass. It starts fresh each time."]
     ].forEach(([name, line], i) => {
       const li = make("li", "rs");
       li.appendChild(make("span", "rs-n", String(i + 1)));
@@ -150,11 +150,11 @@
     const handsOn = keys.filter(k => window.PP_SKILLS.stepNames(k).indexOf("Check") >= 0).length;
     const nTasks = (PP.tasks || []).length;
     body.appendChild(make("p", "routine-except", "Some lessons are different. " +
-      (handsOn ? cap(PP.countWord(handsOn)) + " hands-on lesson" + (handsOn === 1 ? "" : "s") + ", for reading aloud and cursive, " + (handsOn === 1 ? "has" : "have") + " Learn It, Watch Me, Practice and a grown-up Check. " : "") +
+      "Skills that do not have fifteen practice questions yet still open on their skill page, with Learn It, Watch Me, Practice Together, Try It Yourself and a check. " + (handsOn ? cap(PP.countWord(handsOn)) + " hands-on lesson" + (handsOn === 1 ? "" : "s") + ", for reading aloud and cursive, " + (handsOn === 1 ? "has" : "have") + " a grown-up Check. " : "") +
       (nTasks ? "The " + PP.countWord(nTasks) + " essay task" + (nTasks === 1 ? " has" : "s have") + " Read, Plan, Write and Check, and a For parents tab for scoring." : "")));
     body.appendChild(make("h3", "routine-h3", "When a grown-up joins in"));
     const ul = make("ul", "routine-adult");
-    [["Practice Together", "sit side by side and talk through each answer."],
+    [["Practice questions", "sit nearby, or let your child work alone. Teach Me, and the older Practice Together on the Skill overview, are there for talking through an answer."],
      ["Reading aloud", "listen to your child read, then tick the Check."],
      ["Cursive", "watch your child write the letters, then tick the Check."],
      ["Short writing", "read it together and use the checklist."],
@@ -315,9 +315,17 @@
       const parts = h.split("/");
       if (parts[0] === "play" && PP.byId[parts[1]]) {
         const mode = parts[2] === "test" ? "test" : parts[2] === "try" ? "try" : "practice";
+        const teach = parts[3] === "teach" && mode === "try";
         const done = history.state && history.state.ppDone;
+        /* Teach Me is part of the address (.../try/teach): Back and Forward open and close it in place */
+        if (window.PP_PLAYER.routeTo(parts[1], mode, teach)) return;
         if (done && done.set === parts[1]) { window.PP_PLAYER.finished(parts[1], mode, done); return; }
-        window.PP_PLAYER.start(parts[1], mode); return;
+        window.PP_PLAYER.start(parts[1], mode, teach ? { teach: true } : undefined); return;
+      }
+      /* question-first: #practice/<skill key or Georgia code> opens that skill's saved or first question */
+      if (parts[0] === "practice") {
+        let code = ""; try { code = decodeURIComponent(parts[1] || ""); } catch (e) { code = ""; }
+        if (code && window.PP_SKILLS.begin(code, { routed: true })) return;
       }
       if (h === "choose") { window.PP_PATH.showChoice(); return; }
       if (h === "path") { window.PP_PATH.open(); return; }
@@ -428,6 +436,7 @@
       if (e.key !== "Escape") return;
       const t = e.target;
       if (t && (t.tagName === "TEXTAREA" || t.tagName === "INPUT" || t.tagName === "SELECT")) return;
+      if (current === "player" && window.PP_PLAYER.escape && window.PP_PLAYER.escape()) return;   /* Teach Me: Escape is Back to My Question */
       if (current === "player" || current === "write") back();
       else if (current !== "home") goHome();
     });
@@ -492,7 +501,22 @@
     openSection(key);
   }
   function track() { lastHash = location.hash; }
+  /* Where the Back button goes, in the child's words ("All skills", "Learning path", "Standard 3.T.RA.1.b") */
+  function backLabel() {
+    const r = returnTo;
+    if (!r) return window.PP_PATH.mode() === "path" ? "Learning path" : "All skills";
+    switch (r.kind) {
+      case "home": return window.PP_PATH.mode() === "path" ? "Learning path" : "All skills";
+      case "path": return "Learning path";
+      case "std": return "Standard " + (window.PP_STD.label ? window.PP_STD.label(r.code) : r.code);
+      case "skill": return "Skill overview";
+      case "parents": return "Parent guide";
+      case "section": return "Practice sets";
+      case "review": case "coverage": return "Reviews";
+      default: return "All skills";
+    }
+  }
 
-  window.PP_APP = { landBrowse: () => landHome(false, true, true), show, openSection, openMixed, openClues, openHabits, goHome, setHash, canLeave, rememberReturn, back, track, markDone, stepBackTo, current: () => current };
+  window.PP_APP = { backLabel, landBrowse: () => landHome(false, true, true), show, openSection, openMixed, openClues, openHabits, goHome, setHash, canLeave, rememberReturn, back, track, markDone, stepBackTo, current: () => current };
   document.addEventListener("DOMContentLoaded", init);
 })();

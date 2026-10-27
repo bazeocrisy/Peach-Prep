@@ -86,20 +86,28 @@
   }
   function lessonButton(k, primary) {
     const I = S().info(k);
+    const pl = S().practiceLine ? S().practiceLine(k) : null;
     const begun = I.state.id !== "new" && I.open && I.open.n > 1;
-    const b = make("button", "btn " + (primary ? "btn-primary" : "btn-soft") + " std-lesson-btn",
-      begun ? "Continue at " + I.open.name : "Start the lesson");
+    const text = pl ? pl.label : begun ? "Continue at " + I.open.name : "Start the lesson";
+    const b = make("button", "btn " + (primary ? "btn-primary" : "btn-soft") + " std-lesson-btn", text);
     b.type = "button"; b.dataset.lesson = k;
-    b.setAttribute("aria-label", (begun ? "Continue at " + I.open.name : "Start the lesson") + ": " + (I.id ? I.id + " " : "") + I.title);
-    b.addEventListener("click", () => S().open(k, begun ? I.open.id : undefined));
-    return b;
+    b.setAttribute("aria-label", text + (pl ? " (" + pl.note.charAt(0).toLowerCase() + pl.note.slice(1) + ")" : "") + ": " + (I.id ? I.id + " " : "") + I.title);
+    b.addEventListener("click", () => (pl ? S().begin(k) : S().open(k, begun ? I.open.id : undefined)));
+    if (!pl) return b;
+    /* a lesson with practice opens at a question; the five-step page is the secondary "Skill overview" */
+    const w = make("span", "std-lesson-acts"); w.appendChild(b);
+    const o = make("button", "btn btn-soft std-overview-btn", "Skill overview"); o.type = "button"; o.dataset.overview = k;
+    o.setAttribute("aria-label", "Skill overview: " + (I.id ? I.id + " " : "") + I.title);
+    o.addEventListener("click", () => S().open(k));
+    w.appendChild(o);
+    return w;
   }
   function practiceLines(k) {
     const I = S().info(k), PR = window.PP_PRACTICE;
     const ul = make("ul", "std-list");
     if (I.together) ul.appendChild(make("li", "", "Practice Together: " + words(I.together) + " guided question" + (I.together === 1 ? "" : "s") + ", with hints and a walk-through."));
     if (I.core) {
-      const li = make("li", "", "Practice on my own: fifteen questions in three sets of five, with optional hints and Show me how. ");
+      const li = make("li", "", "Practice on my own: fifteen questions in three sets of five, with Check Answer and Teach Me (hints, steps and the answer, when asked for). ");
       const st = I.core.sets.map((ids, i) => PR.setState(k, ids, i + 1));
       li.appendChild(make("span", "std-progress", "On this device: " + st.map((x, i) => "set " + (i + 1) + " " + (x.done ? "finished" : x.started ? "started" : "not started")).join(", ") + "."));
       ul.appendChild(li);
@@ -202,7 +210,7 @@
       const p = make("div", "std-also");
       p.appendChild(make("p", "std-h3", "Also practiced in"));
       const ul = make("ul", "std-list");
-      ls.also.forEach(k => { const li = make("li"); const b = make("button", "linkish", S().info(k).title); b.type = "button"; b.addEventListener("click", () => S().open(k)); li.appendChild(b); ul.appendChild(li); });
+      ls.also.forEach(k => { const li = make("li"); const b = make("button", "linkish", S().info(k).title); b.type = "button"; b.addEventListener("click", () => S().begin(k)); li.appendChild(b); ul.appendChild(li); });
       p.appendChild(ul); lsec.appendChild(p);
     }
     const mx = mixedSets(x.code);
@@ -240,7 +248,7 @@
       ls.main.forEach(k => {
         const I = S().info(k);
         const b = make("button", "btn btn-soft std-lesson-btn", (I.id ? I.id + " · " : "") + I.title); b.type = "button"; b.dataset.lesson = k;
-        b.addEventListener("click", () => S().open(k));
+        b.addEventListener("click", () => S().begin(k));
         const w = make("div", "std-comp-lesson"); w.appendChild(b); w.appendChild(make("span", "std-state", I.state.label)); acts.appendChild(w);
       });
       li.appendChild(acts);

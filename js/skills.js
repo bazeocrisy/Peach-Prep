@@ -382,6 +382,29 @@
   function tryDone(k, r) { return core[k] ? !!window.PP_PRACTICE && window.PP_PRACTICE.complete(k, coreIds(k)) : !!r.tried; }
   function resetProgress() { prog = Object.create(null); save(); }
 
+  /* ---------- question-first entry (docs/question-first/DESIGN.md section 3) ----------
+     Choosing a skill that has core practice opens its saved or first question. Lessons without core keep the
+     skill page and its five steps. The skill page itself stays at #skill/<key> as the "Skill overview". */
+  const setIdFor = (k, n) => "SK:" + k + ":" + (n === 1 ? "y" : "y" + n);
+  function entryOf(k) { return core[k] && window.PP_PRACTICE ? window.PP_PRACTICE.entry(k, core[k].sets) : null; }
+  /* "Start practice" / "Continue practice: set 2, question 3" / "Practice finished" (read only) */
+  function practiceLine(k) {
+    const e = entryOf(k); if (!e) return null;
+    if (e.all) return { label: "Look back at my practice", note: "All fifteen practice questions are finished on this device.", all: true, e };
+    return e.started ? { label: "Continue practice", note: "Set " + e.set + ", question " + (e.pos + 1), e } : { label: "Start practice", note: "Set 1, question 1", e };
+  }
+  function begin(id, opts) {
+    const k = lessons[id] ? id : lessonFor(id);
+    if (!k) return open(id);                       /* a habit or a code with no lesson: its existing page */
+    if (!core[k]) return open(k);                  /* no core practice yet: the five-step skill page, as before */
+    if (!window.PP_APP.canLeave()) return true;
+    cur = k; lastCode = k;
+    const e = entryOf(k);
+    if (e.all) { window.PP_APP.setHash("#play/" + setIdFor(k, e.set) + "/try"); window.PP_PLAYER.finished(setIdFor(k, e.set), "try", { all: true, n: 5 }); return true; }
+    window.PP_PLAYER.start(setIdFor(k, e.set), "try");
+    return true;
+  }
+
   /* ---------- labels ---------- */
   const TESTED = {
     reading: ["On the test", "On the Milestones: Reading questions"],
@@ -430,7 +453,7 @@
   }
   function openEntry(k) {
     if (isTask(k)) { window.PP_WRITING.start(k.slice(5)); return; }
-    open(k);
+    begin(k);
   }
   function nextIn(c) {
     for (const g of c.groups) for (const k of g.skills) if (!isTask(k) && lessons[k] && status(k) !== "mastered") return k;
@@ -649,12 +672,13 @@
       text.appendChild(make("p", "np-eyebrow", "Up next"));
       const b = make("button", "btn btn-primary un-btn", ids[k] + " · " + lessons[k].title);
       b.type = "button"; b.id = "up-next-btn";
+      const pl = practiceLine(k);
       const begun = status(k) === "started" ? firstOpenStep(k) : null;
-      b.addEventListener("click", () => open(k, begun ? begun.id : undefined));
+      b.addEventListener("click", () => (pl ? begin(k) : open(k, begun ? begun.id : undefined)));
       text.appendChild(b);
       const opened = (prog._ui || {}).lastCat === cat.id;
       text.appendChild(make("p", "np-step", "The first lesson without a passed check in " + cat.name + (opened ? ", the category you opened last." : ".") +
-        (begun ? " Already started: it opens at " + begun.name + "." : "")));
+        (pl ? " It opens at a practice question (" + pl.note.charAt(0).toLowerCase() + pl.note.slice(1) + ")." : begun ? " Already started: it opens at " + begun.name + "." : "")));
       host.appendChild(text);
     }
     const started = startedLessons("started").filter(x => x !== k).slice(0, 3);
@@ -663,13 +687,13 @@
       box.appendChild(make("p", "un-sub", "Lessons already started"));
       const ul = make("ul", "un-list");
       started.forEach(x => {
-        const st = firstOpenStep(x);
+        const st = firstOpenStep(x), pl = practiceLine(x);
         const li = make("li");
         const sb = make("button", "btn btn-soft un-started-btn");
         sb.type = "button"; sb.dataset.code = x;
         sb.appendChild(make("span", "usb-title", ids[x] + " · " + lessons[x].title.split(":")[0]));
-        sb.appendChild(make("span", "usb-step", "Opens at " + st.name));
-        sb.addEventListener("click", () => open(x, st.id));
+        sb.appendChild(make("span", "usb-step", pl ? pl.label + ": " + pl.note.charAt(0).toLowerCase() + pl.note.slice(1) : "Opens at " + st.name));
+        sb.addEventListener("click", () => (pl ? begin(x) : open(x, st.id)));
         li.appendChild(sb); ul.appendChild(li);
       });
       box.appendChild(ul); host.appendChild(box);
@@ -853,6 +877,7 @@
     });
     if (off.querySelector(".plist.ald")) off.appendChild(make("p", "note ald-note", "Passing a Peach Prep skill check is not a Milestones score or achievement level."));
     el("sk-steps").hidden = !L;
+    buildPracticeCta(k && core[k] ? k : null);
     render();
     if (!(opts && opts.keepScroll)) window.scrollTo(0, 0);
     window.PP_APP.show("skill");
@@ -863,6 +888,17 @@
     window.PP_APP.track();
     el("sk-title").focus();
     return true;
+  }
+  /* The Skill overview leads with the question-first action for a lesson that has core practice. */
+  function buildPracticeCta(k) {
+    const host = el("sk-practice"); clear(host);
+    host.hidden = !k;
+    if (!k) return;
+    const pl = practiceLine(k);
+    host.appendChild(make("p", "sk-practice-lead", "Ready to practice? Questions come first, and Teach Me is there when you need it."));
+    const b = make("button", "btn btn-primary", pl.label + " (" + pl.note.charAt(0).toLowerCase() + pl.note.slice(1) + ")"); b.type = "button"; b.id = "sk-practice-btn";
+    b.addEventListener("click", () => begin(k));
+    host.appendChild(b);
   }
   function fromStd() { const st = history.state; return st && typeof st.ppFrom === "string" && /^#std\//.test(st.ppFrom) ? st.ppFrom : null; }
   function decodeStd(h) { let c = h.slice(5); try { c = decodeURIComponent(c); } catch (e) { /* keep */ } const x = byCode[c]; return x ? codeLabel(x) : c; }
@@ -1075,13 +1111,29 @@
     const box = make("div", "own-summary");
     box.appendChild(make("h3", "own-sum-h", "All fifteen so far"));
     const dl = make("dl", "own-sum-list");
-    [["first", c.first], ["retry", c.retry], ["hints", c.hints], ["shown", c.shown], ["cr", c.cr], ["none", c.none]].forEach(([id, n]) => {
-      if (id === "cr" && !n) return;
+    [["first", c.first], ["retry", c.retry], ["hints", c.hints], ["taught", c.taught], ["shown", c.shown], ["cr", c.cr], ["none", c.none]].forEach(([id, n]) => {
+      if ((id === "cr" || id === "taught") && !n) return;
       dl.appendChild(make("dt", "is-" + id, PR.STATUS[id])); dl.appendChild(make("dd", "", String(n)));
     });
     box.appendChild(dl);
     box.appendChild(make("p", "note", sim.tried ? "Extra questions tried: " + words(sim.tried) + ", with " + words(sim.right) + " right without the answer shown. They are not part of the fifteen." : "Extra questions are not part of the fifteen."));
     box.appendChild(make("p", "note", "Practice is never scored and never counts as passing. The skill check is separate."));
+    /* For grown-ups: the help used on each question. Read only; a later right answer never erases it. */
+    const det = make("details", "own-help"); det.appendChild(make("summary", "", "For grown-ups: the help used on each question"));
+    const tb = make("ol", "own-help-list");
+    ids.forEach((id, i) => {
+      const h = PR.helpOf(k, id), set = Math.floor(i / 5) + 1;
+      const bits = [PR.STATUS[h.status]];
+      if (h.first) bits.push(h.first.ok ? (h.first.pre ? "first answer right, after help" : "first answer right on its own") : "first answer not right");
+      if (h.hints) bits.push(words(h.hints) + " hint" + (h.hints === 1 ? "" : "s"));
+      if (h.teach) bits.push("Teach Me opened " + (h.teach === 1 ? "once" : words(h.teach) + " times"));
+      if (h.wrong) bits.push(words(h.wrong) + " wrong " + (h.wrong === 1 ? "check" : "checks"));
+      if (h.skips) bits.push("skipped " + (h.skips === 1 ? "once" : words(h.skips) + " times"));
+      tb.appendChild(make("li", "", "Set " + set + ", question " + (i % 5 + 1) + ": " + bits.join("; ") + "."));
+    });
+    det.appendChild(tb);
+    det.appendChild(make("p", "note", "Only \u201Cright on the first try\u201D means the child got it on the first answer with no help. An answer shown in Teach Me is never counted as independent. Fresh questions are kept apart and are not part of these fifteen."));
+    box.appendChild(det);
     return box;
   }
   function renderOwn(host, L) {
@@ -1091,7 +1143,7 @@
     const states = sets.map((s, i) => PR.setState(K, C.sets[i], i + 1));
     const intro = make("div", "go-card own-intro");
     intro.appendChild(make("p", "", "Fifteen questions in three sets of five. Do one set at a time." + (PR.canSave() ? " You can stop after any set and come back." : "")));
-    intro.appendChild(make("p", "go-note", "Each question has Check my answer, Give me a hint, and Show me how. Show me how shows the answer, so that question then counts as answer shown, not as right on your own."));
+    intro.appendChild(make("p", "go-note", "Each question has Check Answer and Teach Me. Teach Me gives hints and walks through the question step by step. If it shows the answer, that question counts as answer shown, not as right on your own."));
     intro.appendChild(PR.notice());
     const rec0 = PR.lesson(K);
     /* ENG-06: say only what the code does. Changed questions are detected by their signature. */
@@ -1695,7 +1747,7 @@
   }
 
   window.PP_SKILLS = {
-    lessonsFor, info, codeLabel, shortCode, niceDate, coreIds, isCore: k => !!core[k], onTest: c => onTest(byCode[c]),
+    begin, practiceLine, lessonsFor, info, codeLabel, shortCode, niceDate, coreIds, isCore: k => !!core[k], onTest: c => onTest(byCode[c]),
     testedText: s => (TESTED[s.tested] || ["", ""]), stepBack: () => fromStd(),
     init, open, buildList, buildHabits, buildClues, afterTest, recordPractice, status, resetProgress, skillId: k => ids[k], lessonFor,
     answersSeen, testRev, reviewDue, passKind, passLabel,
