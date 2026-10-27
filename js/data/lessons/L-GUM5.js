@@ -2521,9 +2521,9 @@ PP.addLesson({
           correct: true
         }
       ],
-      clue: "Is no being said back to a person here, or is it just something the teacher gave?",
+      clue: "Is no being said back to a person here, or is it being reported?",
       hints: [
-        "Is no being said back to a person here, or is it just something the teacher gave?",
+        "Is no being said back to a person here, or is it being reported?",
         "Picture someone saying no back to a question. Ask where a comma would go, and why.",
         "Who is speaking does not decide where a comma goes. Check the other three."
       ],
@@ -2671,7 +2671,8 @@ PP.addLesson({
     points: [
       "You already know that one owner gets 's: one student's desk. Now there is more than one owner, so start with the plural word.",
       "Most plurals end in s. To show they own something, put the apostrophe after the s: the students' desks, the two dogs' bowls.",
-      "A few plurals do not end in s, like children, men and women. Add 's to these: the children's books, the women's team."
+      "A few plurals do not end in s, like children and geese. Add 's to these: the children's books, the geese's pond.",
+      "A plural that owns nothing needs no apostrophe at all: two cats sat on the step."
     ],
     words: [
       { term: "plural", means: "more than one" },
@@ -2710,7 +2711,164 @@ PP.addLesson({
     }
   ],
   parent: "Around the house, name things that belong to more than one person, like the boys' room or your grandparents' car. Have your child write the words on a sticky note and check where the apostrophe goes.",
-  passages: [],
+  passages: [
+    /* B8:passages:start */
+    {
+      id: "p1",
+      title: "Band Practice",
+      byline: "A third grader's draft",
+      genre: "Student draft (narrative)",
+      draft: true,
+      paragraphs: [
+        [
+          "(1) The school band met in the music room for its first practice of the new year.",
+          "(2) Mr. Hale said that the drummers sticks were stacked in a neat pile by the big drum.",
+          "(3) The girls music stands stood in a row near the tall window."
+        ],
+        [
+          "(4) Next, the flutists tuned up while the drummers warmed up their wrists.",
+          "(5) The clarinet players' reeds were soaking in a cup of water.",
+          "(6) A pair of trumpets sat on the table beside the spare mouthpieces.",
+          "(7) Mr. Hale checked the trombone players slides before the song began."
+        ],
+        [
+          "(8) The band played a loud march for the whole school on Friday morning.",
+          "(9) The parents' chairs filled up quickly with smiling faces.",
+          "(10) Everyone agreed that the band sounded better than ever before."
+        ]
+      ]
+    },
+    {
+      id: "p2",
+      title: "Coat Drive",
+      byline: "A third grader's draft",
+      genre: "Student draft (narrative)",
+      draft: true,
+      paragraphs: [
+        [
+          "(1) Our school held a coat drive to help families get ready for the cold months.",
+          "(2) The firefighters' truck brought the first boxes of coats to the front door.",
+          "(3) Two volunteers hung the mens jackets on a long metal rack.",
+          "(4) Piles of scarves and gloves sat beside the sorting table."
+        ],
+        [
+          "(5) The childrens' mittens were counted twice and packed in a bag.",
+          "(6) The fifth graders' notes were pinned to each box to say thank you.",
+          "(7) By noon, the shelves were full of warm things for the neighbors."
+        ],
+        [
+          "(8) The principal read a note about the families' kind gifts.",
+          "(9) Our two janitors carried the last boxes out to the truck.",
+          "(10) The janitors closet was empty by the end of the day."
+        ]
+      ]
+    },
+    {
+      id: "p3",
+      title: "Toboggan Hill",
+      byline: "A third grader's draft",
+      genre: "Student draft (narrative)",
+      draft: true,
+      paragraphs: [
+        [
+          "(1) The first snow of the winter covered Pine Hill on Saturday morning.",
+          "(2) Kids pulled their sleds up the slope and lined up at the top.",
+          "(3) The boys' sleds were red and the girls' sleds were blue.",
+          "(4) A long toboggan sat at the front of the line."
+        ],
+        [
+          "(5) Three of the dads waited at the bottom with warm drinks.",
+          "(6) Two dog's chased the sleds all the way down the hill.",
+          "(7) The riders' hats flew off as they raced over the bumps.",
+          "(8) Everyone laughed when the sleds spun in circles.",
+          "(9) The parents' cocoa was gone before the third run was over."
+        ],
+        [
+          "(10) The mens faces were red from the cold wind.",
+          "(11) At sunset, the families walked home with tired legs and happy smiles.",
+          "(12) I hope the snow comes back again next week."
+        ]
+      ]
+    },
+    {
+      id: "p4",
+      title: "Chili Cook-Off",
+      byline: "A third grader's draft",
+      genre: "Student draft (narrative)",
+      draft: true,
+      paragraphs: [
+        [
+          "(1) Our neighborhood held a chili cook-off behind the old library last Saturday.",
+          "(2) The cooks pots stood in a row along one long table in cool shade.",
+          "(3) The judges spoons clinked while tasting every bowl of spicy beans and sweet corn."
+        ],
+        [
+          "(4) First, neighbors brought their own bowls and napkins to share.",
+          "(5) The kids' table held mild chili and crackers.",
+          "(6) Three aprons hung on hooks near serving spoons.",
+          "(7) The winners trophies shone on trays along one long table."
+        ],
+        [
+          "(8) At two o'clock, our judges named three tasty winners.",
+          "(9) Winners' cheers rang across our lawn as clouds drifted away.",
+          "(10) Everyone agreed the chili tasted great."
+        ]
+      ]
+    },
+    {
+      id: "p5",
+      title: "Archery Lesson",
+      byline: "A third grader's draft",
+      genre: "Student draft (narrative)",
+      draft: true,
+      paragraphs: [
+        [
+          "(1) Our class took an archery lesson at a park on a bright spring morning.",
+          "(2) The instructors bows leaned against a post near our picnic shelter.",
+          "(3) Everyone put on safety glasses before our first arrow flew.",
+          "(4) Targets stood at the far end of a flat field."
+        ],
+        [
+          "(5) The boys's arrows rested in a long tube near our gate.",
+          "(6) Our teachers' voices carried across grass as they gave directions.",
+          "(7) Several archers hit center rings on their last turns."
+        ],
+        [
+          "(8) Our coach read a note about students' best scores.",
+          "(9) Our two coaches carried last bows back to their van.",
+          "(10) Our coaches van was parked beside the gate."
+        ]
+      ]
+    },
+    {
+      id: "p6",
+      title: "Seed Swap",
+      byline: "A third grader's draft",
+      genre: "Student draft (narrative)",
+      draft: true,
+      paragraphs: [
+        [
+          "(1) Our garden club held a seed swap in the hall on a rainy day.",
+          "(2) Families set packets of seeds on tables along one long wall.",
+          "(3) The girls' table had sunflower seeds while the boys' table had beans.",
+          "(4) Big signs told everyone where to put extra packets."
+        ],
+        [
+          "(5) Three moms checked every packet for clear labels.",
+          "(6) Two grandpa's helped kids count beans into small bags.",
+          "(7) Gardeners' tips were written on cards beside each jar.",
+          "(8) Everyone talked about seeds.",
+          "(9) Neighbors' extra packets went into a box for our class garden."
+        ],
+        [
+          "(10) The womens table ran out of marigold seeds before lunch.",
+          "(11) By dinner, the hall smelled like soil.",
+          "(12) I took home a packet of purple flowers."
+        ]
+      ]
+    }
+    /* B8:passages:end */
+  ],
   practice: [
     { id: "SK-GUM5-3-P1", type: "mc", points: 1, dok: 2, passages: [],
       prompt: "Which sentence is correct?",
@@ -2765,6 +2923,1020 @@ PP.addLesson({
       clue: "For each owner word, decide if it is plural. Then check where the apostrophe goes.",
       why: "The error is in \"The mens' choir sang at the fair.\" Men does not end in s, so it gets 's: the men's choir." }
   ],
+  /* B8:core:start */
+  /* ---------- Expansion 2026-10-22, batch B8 (GUM Introduce/Continue) ----------
+     core: fifteen items in three sets of five. { ref } reuses a practice item; the other practice items stay in Practice Together.
+     Passages are used only by core and the similar bank; none is used by test or testB.
+     Author log: docs/expansion-2026-10-22/batches/B8b-author-log.md. NEEDS INDEPENDENT REVIEW. */
+  core: {
+    rev: "1",
+    sets: [
+      {
+        title: "Set 1",
+        items: [
+          { ref: "SK-GUM5-3-P4" },
+          { ref: "SK-GUM5-3-P5" },
+          {
+            id: "SK-GUM5-3-C03",
+            type: "dropdown",
+            points: 1,
+            dok: 2,
+            std: [
+              "3.L.GC.1:I:use-apostrophes-to-form-plural-possessive-nouns"
+            ],
+            passages: ["p1"],
+            prompt: "Sentence 2 of the draft needs an apostrophe fix. The sticks belong to all five drummers. Choose the word that fixes it.",
+            text: "Mr. Hale said that the {0} sticks were stacked in a neat pile by the big drum.",
+            slots: [
+              {
+                options: ["drummer's", "drummers'", "drummers"],
+                answer: 1
+              }
+            ],
+            clue: "Count the owners. Then ask what shows that more than one owner has the sticks.",
+            hints: [
+              "Count the owners. Then ask what shows that more than one owner has the sticks.",
+              "Say each choice in the blank. Think about whether the word names one drummer or all of them, and where the apostrophe sits.",
+              "One choice has no apostrophe at all, so it names the drummers but does not show who owns the sticks. Decide between the other two."
+            ],
+            how: [
+              "Count the owners: the sticks belong to all five drummers.",
+              "Drummers is plural and ends in s, so only an apostrophe goes after the s.",
+              "The answer is drummers'."
+            ],
+            misconception: "A common mix-up is putting the apostrophe before the s. That shows only one owner.",
+            why: "The answer is drummers'. The sticks belong to all five drummers, so the plural word drummers needs an apostrophe after the s. Drummer's would mean only one drummer, and drummers alone does not show ownership."
+          },
+          {
+            id: "SK-GUM5-3-C04",
+            type: "mc",
+            points: 1,
+            dok: 1,
+            std: [
+              "3.L.GC.1:I:use-apostrophes-to-form-plural-possessive-nouns"
+            ],
+            passages: ["p1"],
+            prompt: "Sentence 3 of the draft tells about music stands that belong to several girls. Which choice shows the owners and the stands written correctly?",
+            choices: [
+              { text: "the girl's music stands" },
+              { text: "the girls's music stands" },
+              { text: "the girls' music stands", correct: true },
+              { text: "the girls music stands'" }
+            ],
+            clue: "Count the owners first. Then think about where the apostrophe goes when the plural already ends in s.",
+            hints: [
+              "Count the owners first. Then think about where the apostrophe goes when the plural already ends in s.",
+              "Look at the end of the word girls in each choice. Check what comes after it, and where the apostrophe sits.",
+              "One choice puts the apostrophe at the very end of the whole phrase, after stands. Decide among the other three."
+            ],
+            how: [
+              "Count the owners: several girls own the stands.",
+              "Girls is plural and already ends in s, so only an apostrophe goes after it.",
+              "The answer is the girls' music stands."
+            ],
+            misconception: "A common mix-up is adding an apostrophe and another s. When a plural ends in s, the apostrophe is all it needs.",
+            why: "The answer is the girls' music stands. Several girls own the stands, and girls ends in s, so only an apostrophe goes after the s. The girl's would mean one girl, the girls's adds an extra s, and the phrase with the apostrophe after stands puts it after the wrong word."
+          },
+          {
+            id: "SK-GUM5-3-C05",
+            type: "ebsr",
+            points: 2,
+            dok: 2,
+            std: [
+              "3.L.GC.1:I:use-apostrophes-to-form-plural-possessive-nouns"
+            ],
+            passages: ["p1"],
+            prompt: "This question has two parts. Answer Part A, then Part B.",
+            partA: {
+              prompt: "Which sentence in paragraph 2 of the draft needs an apostrophe?",
+              choices: [
+                { text: "The clarinet players' reeds were soaking in a cup of water." },
+                { text: "A pair of trumpets sat on the table beside the spare mouthpieces." },
+                { text: "Next, the flutists tuned up while the drummers warmed up their wrists." },
+                { text: "Mr. Hale checked the trombone players slides before the song began.", correct: true }
+              ]
+            },
+            partB: {
+              prompt: "Which rule explains why the sentence in Part A needs an apostrophe?",
+              choices: [
+                { text: "A plural noun that ends in s gets an apostrophe each time it is used, even when it owns nothing." },
+                { text: "A plural noun that ends in s gets an apostrophe after the s to show that it owns something.", correct: true },
+                { text: "A plural noun that ends in s gets an apostrophe and one more s to show that it owns something." },
+                { text: "A noun gets an apostrophe before its s whenever more than one person owns something." }
+              ]
+            },
+            clue: "Look for a noun that names more than one owner. Then ask which rule fits the sentence that is missing something.",
+            hints: [
+              "Look for a noun that names more than one owner. Then ask which rule fits the sentence that is missing something.",
+              "Check each sentence in paragraph 2. Ask whether any word shows that more than one person owns something.",
+              "The sentence about the clarinet players already has its apostrophe in the right place. Check the other three."
+            ],
+            how: [
+              "Part A: read each sentence in paragraph 2 and look for a plural owner.",
+              "In \"Mr. Hale checked the trombone players slides before the song began.\" the slides belong to the trombone players, but there is no apostrophe.",
+              "Part A answer: Mr. Hale checked the trombone players slides before the song began.",
+              "Part B answer: \"A plural noun that ends in s gets an apostrophe after the s to show that it owns something.\""
+            ],
+            misconception: "A common mix-up is adding an apostrophe to every plural that ends in s. Only a plural that owns something needs one.",
+            why: "Part A: Mr. Hale checked the trombone players slides before the song began. Part B: \"A plural noun that ends in s gets an apostrophe after the s to show that it owns something.\" The slides belong to the trombone players, so the sentence should say players' slides. The plural words in the other sentences name more than one thing but do not own anything, or already have the apostrophe."
+          }
+        ]
+      },
+      {
+        title: "Set 2",
+        items: [
+          {
+            id: "SK-GUM5-3-C06",
+            type: "hottext",
+            points: 2,
+            dok: 2,
+            std: [
+              "3.L.GC.1:I:use-apostrophes-to-form-plural-possessive-nouns"
+            ],
+            passages: ["p2"],
+            prompt: "Look at sentences 2 through 6 of the draft. Select the TWO sentences that have an apostrophe mistake.",
+            targets: ["p2:1:2", "p2:1:3", "p2:1:4", "p2:2:1", "p2:2:2"],
+            answer: ["p2:1:3", "p2:2:1"],
+            pick: 2,
+            clue: "Look at each word that names who owns something. Ask whether it is plural, and whether the apostrophe is placed the way that kind of plural needs.",
+            hints: [
+              "Look at each word that names who owns something. Ask whether it is plural, and whether the apostrophe is placed the way that kind of plural needs.",
+              "Read the five sentences one at a time. Pick TWO.",
+              "In sentence 6, the apostrophe comes after the s of a plural that ends in s, which is right. Check the other four."
+            ],
+            how: [
+              "Find each owner word and ask whether it is plural and how it ends.",
+              "In sentence 3, men does not end in s, so it needs 's: men's jackets.",
+              "In sentence 5, children does not end in s either, so it needs 's: children's mittens.",
+              "Sentences 2, 4 and 6 are already written correctly."
+            ],
+            misconception: "A common mix-up is thinking a word that ends in s' is always right. Plurals like men and children do not end in s, so they need 's.",
+            why: "The answers are sentence 3 and sentence 5. In sentence 3, the word men needs 's: men's jackets. In sentence 5, childrens' should be children's, because children does not end in s. Sentences 2, 4 and 6 are written correctly."
+          },
+          {
+            id: "SK-GUM5-3-C07",
+            type: "ms",
+            points: 2,
+            dok: 2,
+            std: [
+              "3.L.GC.1:I:use-apostrophes-to-form-plural-possessive-nouns"
+            ],
+            passages: [],
+            prompt: "Choose the TWO sentences that use apostrophes correctly.",
+            pick: 2,
+            choices: [
+              { text: "Both boys's jackets were on the floor." },
+              { text: "The nurses' office was closed on Monday.", correct: true },
+              { text: "The mens' team won the game." },
+              { text: "Two apple's fell from the tree." },
+              { text: "The women's club met in the library.", correct: true }
+            ],
+            clue: "Check each sentence for a word that names who owns something. Ask whether it is plural and how it ends.",
+            hints: [
+              "Check each sentence for a word that names who owns something. Ask whether it is plural and how it ends.",
+              "Pick TWO. In some sentences the apostrophe is in the wrong place, and in some a word has one that does not belong.",
+              "In the sentence about apples, the apostrophe sits on a plural that owns nothing. Decide about the other four."
+            ],
+            how: [
+              "Check each sentence for an owner word and for the way it ends.",
+              "Nurses ends in s, so \"The nurses' office was closed on Monday.\" needs only an apostrophe.",
+              "Women does not end in s, so \"The women's club met in the library.\" needs 's.",
+              "The other three are wrong: apple's owns nothing, boys's adds an extra s, and mens' puts the apostrophe where men needs 's."
+            ],
+            misconception: "A common mix-up is thinking more marks make a word more correct. A plural that ends in s needs only an apostrophe, and a plural that does not end in s needs 's.",
+            why: "The answers are \"The nurses' office was closed on Monday.\" and \"The women's club met in the library.\" Nurses ends in s, and women does not. The others should say \"Two apples fell from the tree.\", \"Both boys' jackets were on the floor.\" and \"The men's team won the game.\""
+          },
+          {
+            id: "SK-GUM5-3-C08",
+            type: "match",
+            points: 2,
+            dok: 2,
+            std: [
+              "3.L.GC.1:I:use-apostrophes-to-form-plural-possessive-nouns"
+            ],
+            passages: [],
+            prompt: "Each row names a group of owners. Decide how the group's word needs to end to show that the group owns something.",
+            cols: ["Add only an apostrophe", "Add an apostrophe and s"],
+            rows: [
+              { text: "players, when many players own the cleats", answer: 0 },
+              { text: "men, when many men own the boots", answer: 1 },
+              { text: "pilots, when two pilots share a plane", answer: 0 },
+              { text: "women, when several women own the shop", answer: 1 }
+            ],
+            clue: "Look at the last letter of each plural word. Ask whether it is s.",
+            hints: [
+              "Look at the last letter of each plural word. Ask whether it is s.",
+              "Do one row at a time. Say the plural word out loud and think about how it ends.",
+              "Pilots already ends in s. Decide about the other rows."
+            ],
+            how: [
+              "Look at the end of each plural: players, men, pilots and women.",
+              "Players and pilots end in s, so each needs only an apostrophe after the s.",
+              "Men and women do not end in s, so each needs an apostrophe and s."
+            ],
+            misconception: "A common mix-up is treating every plural the same way. The ending of the plural word decides what is added.",
+            why: "Players and pilots end in s, so they need only an apostrophe: players' cleats and pilots' plane. Men and women do not end in s, so they need an apostrophe and s: men's boots and women's shop."
+          },
+          {
+            id: "SK-GUM5-3-C09",
+            type: "mc",
+            points: 1,
+            dok: 3,
+            std: [
+              "3.L.GC.1:I:use-apostrophes-to-form-plural-possessive-nouns"
+            ],
+            passages: ["p2"],
+            prompt: "In the draft, sentence 7 uses the word neighbors and sentence 8 uses the word families'. Why does one word have an apostrophe and the other does not?",
+            choices: [
+              {
+                text: "Families' shows that the gifts belong to many families, and neighbors only names more than one person.",
+                correct: true
+              },
+              {
+                text: "Neighbors should have an apostrophe too, because every plural that ends in s needs one in any sentence at all."
+              },
+              { text: "Families' has an apostrophe only because it comes later in the draft than the word neighbors does." },
+              { text: "Sentence 8 is wrong, because an apostrophe is used only with a singular noun that owns something." }
+            ],
+            clue: "Ask what each word does in its sentence. Does it show that something belongs to someone, or does it only name more than one?",
+            hints: [
+              "Ask what each word does in its sentence. Does it show that something belongs to someone, or does it only name more than one?",
+              "Reread sentence 7 and sentence 8 side by side. Look at what comes right after each word.",
+              "Sentence 8 is not a mistake, so the answer cannot say that it is wrong. Check the other choices."
+            ],
+            how: [
+              "Read sentence 8: the gifts belong to the families, so families' shows ownership.",
+              "Read sentence 7: the things are for the neighbors. Nothing belongs to the neighbors, so the word only names more than one person.",
+              "The answer is \"Families' shows that the gifts belong to many families, and neighbors only names more than one person.\""
+            ],
+            misconception: "A common mix-up is thinking every plural that ends in s needs an apostrophe. A plural needs one only when it owns something.",
+            why: "The answer is \"Families' shows that the gifts belong to many families, and neighbors only names more than one person.\" The gifts belong to the families, so families' has an apostrophe. In sentence 7, the neighbors own nothing, so neighbors has none. Both sentences are correct."
+          },
+          {
+            id: "SK-GUM5-3-C10",
+            type: "dropdown",
+            points: 1,
+            dok: 1,
+            std: [
+              "3.L.GC.1:I:use-apostrophes-to-form-plural-possessive-nouns"
+            ],
+            passages: ["p2"],
+            prompt: "Sentence 10 of the draft needs a fix. The closet belongs to both janitors. Choose the word that fixes it.",
+            text: "The {0} closet was empty by the end of the day.",
+            slots: [
+              {
+                options: ["janitor's", "janitors'", "janitors"],
+                answer: 1
+              }
+            ],
+            clue: "Ask who owns the closet and how many owners there are.",
+            hints: [
+              "Ask who owns the closet and how many owners there are.",
+              "Say each choice in the blank and think about where the apostrophe sits.",
+              "One choice has no apostrophe, so it does not show who owns the closet. Decide between the other two."
+            ],
+            how: [
+              "Read sentence 10. The closet belongs to both janitors.",
+              "Janitors is plural and ends in s, so only an apostrophe goes after the s.",
+              "The answer is janitors'."
+            ],
+            misconception: "A common mix-up is putting the apostrophe before the s. That would mean only one janitor.",
+            why: "The answer is janitors'. Both janitors share the closet, so the plural word janitors needs an apostrophe after the s. Janitor's would mean one janitor, and janitors alone does not show ownership."
+          }
+        ]
+      },
+      {
+        title: "Set 3",
+        items: [
+          {
+            id: "SK-GUM5-3-C11",
+            type: "hottext",
+            points: 1,
+            dok: 2,
+            std: [
+              "3.L.GC.1:I:use-apostrophes-to-form-plural-possessive-nouns"
+            ],
+            passages: ["p3"],
+            prompt: "Look at sentences 5 through 9 of the draft. Select the sentence that has an apostrophe that does not belong.",
+            targets: ["p3:2:1", "p3:2:2", "p3:2:3", "p3:2:4", "p3:2:5"],
+            answer: ["p3:2:2"],
+            pick: 1,
+            clue: "An apostrophe needs a reason. Ask whether each one shows that something belongs to someone.",
+            hints: [
+              "An apostrophe needs a reason. Ask whether each one shows that something belongs to someone.",
+              "Read the five sentences one at a time. Pick ONE. Ask which words name owners and which only name more than one thing.",
+              "In sentence 9, the apostrophe shows that the cocoa belongs to the parents. Check the other four."
+            ],
+            how: [
+              "Find every apostrophe in the five sentences and ask what it shows.",
+              "In sentences 7 and 9, the apostrophes show that the hats and the cocoa belong to someone.",
+              "In sentence 6, nothing belongs to the dogs. The word dogs only names more than one dog, so it needs no apostrophe."
+            ],
+            misconception: "A common mix-up is adding an apostrophe to a plural just because it ends in s. A plural needs one only when it owns something.",
+            why: "The answer is sentence 6, \"Two dog's chased the sleds all the way down the hill.\" Nothing belongs to the dogs, so the word should be dogs, with no apostrophe. In sentences 7 and 9, the riders' hats and the parents' cocoa show ownership, and sentences 5 and 8 need no apostrophe."
+          },
+          {
+            id: "SK-GUM5-3-C12",
+            type: "dropdown",
+            points: 1,
+            dok: 2,
+            std: [
+              "3.L.GC.1:I:use-apostrophes-to-form-plural-possessive-nouns"
+            ],
+            passages: ["p3"],
+            prompt: "Sentence 10 of the draft needs an apostrophe fix. The faces belong to several men. Choose the words that fix it.",
+            text: "{0} faces were red from the cold wind.",
+            slots: [
+              {
+                options: ["The men's", "The mens'", "The mens"],
+                answer: 0
+              }
+            ],
+            clue: "Ask whether the plural word for several men ends in s. Then think about what an owner word needs.",
+            hints: [
+              "Ask whether the plural word for several men ends in s. Then think about what an owner word needs.",
+              "Say each choice at the start of the sentence. Look at where the apostrophe sits and what comes before it.",
+              "One choice has no apostrophe at all. Decide between the other two."
+            ],
+            how: [
+              "Read sentence 10. The faces belong to several men.",
+              "Men is plural, but it does not end in s, so it needs an apostrophe and s.",
+              "The answer is The men's."
+            ],
+            misconception: "A common mix-up is treating men like a plural that ends in s. Because men does not end in s, it needs 's.",
+            why: "The answer is The men's. The faces belong to several men. Men is already plural and does not end in s, so it gets an apostrophe and s. The mens' has the apostrophe in the wrong place, and The mens has none."
+          },
+          {
+            id: "SK-GUM5-3-C13",
+            type: "ms",
+            points: 2,
+            dok: 3,
+            std: [
+              "3.L.GC.1:I:use-apostrophes-to-form-plural-possessive-nouns"
+            ],
+            passages: [],
+            prompt: "Pat says, \"Every plural noun needs an apostrophe.\" Choose the TWO sentences that show Pat is not right.",
+            pick: 2,
+            choices: [
+              { text: "My cousins visit us every summer.", correct: true },
+              { text: "The cats' bowl was empty again by dinner." },
+              { text: "Three bakers sold pies at the fair.", correct: true },
+              { text: "The women's club met in the library on Friday." },
+              { text: "The bakers' oven was hot after the long morning." }
+            ],
+            clue: "Pat says each plural noun needs an apostrophe. Look for sentences that have a plural noun with no apostrophe and are still right.",
+            hints: [
+              "Pat says each plural noun needs an apostrophe. Look for sentences that have a plural noun with no apostrophe and are still right.",
+              "Pick TWO. Check whether a plural noun in each sentence owns something.",
+              "In the sentence about the club, the plural noun owns something and has its apostrophe. Decide about the other four."
+            ],
+            how: [
+              "Look for a sentence with a plural noun and no apostrophe that is still correct.",
+              "In \"Three bakers sold pies at the fair.\" and \"My cousins visit us every summer.\" the plural nouns own nothing, so they need no apostrophe.",
+              "The other three have a plural noun that owns something, so each has an apostrophe."
+            ],
+            misconception: "A common mix-up is choosing the sentences with apostrophes, because those follow Pat's rule. Pat is wrong when a plural noun owns nothing.",
+            why: "The answers are \"Three bakers sold pies at the fair.\" and \"My cousins visit us every summer.\" Their plural nouns own nothing, so they need no apostrophe. In the other three, the bakers, the cats and the women own something, so each plural noun has an apostrophe."
+          },
+          {
+            id: "SK-GUM5-3-C14",
+            type: "dropdown",
+            points: 2,
+            dok: 2,
+            std: [
+              "3.L.GC.1:I:use-apostrophes-to-form-plural-possessive-nouns"
+            ],
+            passages: [],
+            prompt: "The lunch boxes belong to both twins, and the coats belong to several women. Choose the words that finish the sentence.",
+            text: "Both {0} lunch boxes sat beside the {1} coats.",
+            slots: [
+              {
+                options: ["twin's", "twins'", "twins"],
+                answer: 1
+              },
+              {
+                options: ["women's", "womens'", "womens"],
+                answer: 0
+              }
+            ],
+            clue: "Count the owners for each blank. Then ask whether each plural word ends in s.",
+            hints: [
+              "Count the owners for each blank. Then ask whether each plural word ends in s.",
+              "Fill one blank at a time. Say each choice out loud and look at where the apostrophe sits.",
+              "In the second blank, one choice has no apostrophe. Decide about the other choices."
+            ],
+            how: [
+              "The first blank has two owners, the twins. Twins ends in s, so only an apostrophe goes after the s.",
+              "The second blank has several women. Women does not end in s, so it needs an apostrophe and s.",
+              "The answers are twins' and women's."
+            ],
+            misconception: "A common mix-up is using the same ending for both plurals. Twins ends in s, and women does not.",
+            why: "The answers are twins' and women's. Twins is plural and ends in s, so it needs only an apostrophe. Women is plural but does not end in s, so it needs an apostrophe and s. The other choices put the apostrophe in the wrong place or leave it out."
+          },
+          {
+            id: "SK-GUM5-3-C15",
+            type: "mc",
+            points: 1,
+            dok: 3,
+            std: [
+              "3.L.GC.1:I:use-apostrophes-to-form-plural-possessive-nouns"
+            ],
+            passages: [],
+            prompt: "Ravi wrote, \"The farmer's tractors were parked in the barn.\" Four farmers share the tractors. Ravi says the apostrophe belongs before the s, because tractors is the thing that is owned. Is Ravi right?",
+            choices: [
+              { text: "Yes. The apostrophe goes before the s, because the s on tractors shows what is owned." },
+              { text: "Yes. A plural owner needs only an s on the end, so farmer's already shows many farmers." },
+              { text: "No. Four farmers share the tractors, so the owner word needs an apostrophe and another s: farmers's." },
+              {
+                text: "No. Four farmers share the tractors, so the owner word must show more than one owner: farmers'.",
+                correct: true
+              }
+            ],
+            clue: "Count the owners. Then ask which word in the sentence names them and how it should end.",
+            hints: [
+              "Count the owners. Then ask which word in the sentence names them and how it should end.",
+              "Think about which word is the owner and which is the thing owned. The apostrophe goes on the owner word.",
+              "The word tractors names what is owned, so it is not where the apostrophe goes. Check the other choices."
+            ],
+            how: [
+              "Count the owners: four farmers share the tractors.",
+              "Farmers is plural and ends in s, so only an apostrophe goes after the s.",
+              "The answer is \"No. Four farmers share the tractors, so the owner word must show more than one owner: farmers'.\""
+            ],
+            misconception: "A common mix-up is looking at the thing owned instead of the owners. The apostrophe goes on the word that names who owns.",
+            why: "The answer is \"No. Four farmers share the tractors, so the owner word must show more than one owner: farmers'.\" Ravi should write farmers' tractors. Farmer's would mean one farmer, and farmers's adds a second s that a plural ending in s does not need."
+          }
+        ]
+      }
+    ]
+  },
+  similar: [
+    {
+      id: "SK-GUM5-3-S01",
+      type: "match",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.L.GC.1:I:use-apostrophes-to-form-plural-possessive-nouns"
+      ],
+      passages: [],
+      prompt: "Hide the mark and the s after it in every row. What kind of name is left, a single person or a crowd?",
+      cols: ["A single person", "A crowd"],
+      rows: [
+        { text: "the pilot's cap", answer: 0 },
+        { text: "the pilots' caps", answer: 1 },
+        { text: "the babies' blankets", answer: 1 },
+        { text: "my sister's room", answer: 0 }
+      ],
+      clue: "Look at the name that comes before the mark and ask whether it names one person or many.",
+      hints: [
+        "Look at the name that comes before the mark and ask whether it names one person or many.",
+        "Do one row at a time. Say who has the thing in each phrase.",
+        "In the phrase with sister, one person has the room. Decide about the other rows."
+      ],
+      how: [
+        "Look at the name before the mark in each phrase.",
+        "Pilot and sister name one person each, so those rows show a single person.",
+        "Pilots and babies name more than one, so those rows show a crowd."
+      ],
+      misconception: "A common mix-up is thinking a mark before an s always means many people. Check the name that comes before the mark.",
+      why: "The pilot's cap and my sister's room each show a single person. The pilots' caps and the babies' blankets each show a crowd, because pilots and babies name more than one.",
+      like: ["SK-GUM5-3-P4"]
+    },
+    {
+      id: "SK-GUM5-3-S02",
+      type: "hottext",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.L.GC.1:I:use-apostrophes-to-form-plural-possessive-nouns"
+      ],
+      passages: [],
+      prompt: "One of these lines has a mark in the wrong place. Which one is it?",
+      options: [
+        "The sailors' boots dried on the dock after the storm.",
+        "Three of the artists' brushes rolled under the easel.",
+        "The womens' soccer team won the final game.",
+        "My two uncles' truck needs a new tire.",
+        "The twins' lunch boxes were packed with grapes."
+      ],
+      answer: [2],
+      pick: 1,
+      clue: "For each word that names who has something, decide whether it names more than one. Then check how it ends and where its mark sits.",
+      hints: [
+        "For each word that names who has something, decide whether it names more than one. Then check how it ends and where its mark sits.",
+        "Read the five lines one at a time. Pick ONE line.",
+        "In the line about the sailors, the group's name ends in s and the mark follows it. Check the other four."
+      ],
+      how: [
+        "Check each group's name: sailors, artists, women, uncles and twins.",
+        "Sailors, artists, uncles and twins end in s, so each needs only the mark after the s, and each line has it.",
+        "Women does not end in s, so it needs 's: the women's soccer team."
+      ],
+      misconception: "A common mix-up is thinking the mark after the s is right for every group. A group name that does not end in s needs 's.",
+      why: "The error is in \"The womens' soccer team won the final game.\" Women does not end in s, so it gets an apostrophe and s: the women's soccer team. The other lines already have the marks they need.",
+      like: ["SK-GUM5-3-P5"]
+    },
+    {
+      id: "SK-GUM5-3-S03",
+      type: "dropdown",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.L.GC.1:I:use-apostrophes-to-form-plural-possessive-nouns"
+      ],
+      passages: ["p4"],
+      prompt: "Line 2 is missing a mark. A pot was brought by each cook in the cook-off. Pick the best word for the blank.",
+      text: "The {0} pots stood in a row along one long table in cool shade.",
+      slots: [
+        {
+          options: ["cook's", "cooks'", "cooks"],
+          answer: 1
+        }
+      ],
+      clue: "Think about how many people brought pots. Then ask what shows that more than one of them has pots.",
+      hints: [
+        "Think about how many people brought pots. Then ask what shows that more than one of them has pots.",
+        "Say each choice in the blank. Look at what comes after the k and where the mark sits.",
+        "One choice has no mark at all, so it only names the cooks. Decide between the other two."
+      ],
+      how: [
+        "Read line 2. The pots belong to all the cooks.",
+        "Cooks is a group name that ends in s, so only the mark goes after the s.",
+        "The answer is cooks'."
+      ],
+      misconception: "A common mix-up is putting the mark before the s. That would mean one cook.",
+      why: "The answer is cooks'. The pots belong to all the cooks, so the group name cooks needs a mark after the s. Cook's would mean one cook, and cooks alone does not show who has the pots.",
+      like: ["SK-GUM5-3-C03"]
+    },
+    {
+      id: "SK-GUM5-3-S04",
+      type: "mc",
+      points: 1,
+      dok: 1,
+      std: [
+        "3.L.GC.1:I:use-apostrophes-to-form-plural-possessive-nouns"
+      ],
+      passages: ["p4"],
+      prompt: "In line 3, spoons are held by the judges as they sample chili. Pick the phrase with the right punctuation.",
+      choices: [
+        { text: "judges' spoons", correct: true },
+        { text: "judge's spoons" },
+        { text: "judges's spoons" },
+        { text: "judges spoons'" }
+      ],
+      clue: "Think about how many people have the spoons. Then think about where the mark goes when the name already ends in s.",
+      hints: [
+        "Think about how many people have the spoons. Then think about where the mark goes when the name already ends in s.",
+        "Look at the name judges in each choice. Notice what follows its last letter.",
+        "One choice puts its mark at the very end of the phrase, after spoons. Decide among the other three."
+      ],
+      how: [
+        "Count the people: more than one judge has the spoons.",
+        "Judges already ends in s, so only the mark goes after it.",
+        "The answer is judges' spoons."
+      ],
+      misconception: "A common mix-up is adding the mark and another s. A name that ends in s needs only the mark.",
+      why: "The answer is judges' spoons. More than one judge has the spoons, and judges ends in s, so only the mark goes after it. Judge's would mean one judge, judges's adds an extra s, and the phrase with the mark after spoons puts it after the wrong word.",
+      like: ["SK-GUM5-3-C04"]
+    },
+    {
+      id: "SK-GUM5-3-S05",
+      type: "ebsr",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.L.GC.1:I:use-apostrophes-to-form-plural-possessive-nouns"
+      ],
+      passages: ["p4"],
+      prompt: "Answer both parts. Start with Part A.",
+      partA: {
+        prompt: "Paragraph 2 hides one line with a missing mark. Find that line.",
+        choices: [
+          { text: "First, neighbors brought their own bowls and napkins to share." },
+          { text: "The kids' table held mild chili and crackers." },
+          { text: "The winners trophies shone on trays along one long table.", correct: true },
+          { text: "Three aprons hung on hooks near serving spoons." }
+        ]
+      },
+      partB: {
+        prompt: "Which statement gives the reason for your choice in Part A?",
+        choices: [
+          {
+            text: "Prizes belong to groups whose names finish with s, so the mark sits right behind that letter.",
+            correct: true
+          },
+          { text: "Group names take the mark just ahead of their final letter, whatever that letter happens to be." },
+          { text: "Group names finishing with s take the mark plus a second s whenever prizes are held by them." },
+          { text: "Names for several people take the mark, even when those people hold nothing of any kind." }
+        ]
+      },
+      clue: "Look for a group of people who have something. Then ask which statement fits the line that is missing a mark.",
+      hints: [
+        "Look for a group of people who have something. Then ask which statement fits the line that is missing a mark.",
+        "Go through the four lines in paragraph 2. Ask whether anything in each one belongs to a group.",
+        "The line about the kids' table already has its mark where it belongs. Check the other three."
+      ],
+      how: [
+        "Part A: read each line in paragraph 2 and look for a group that has something.",
+        "In \"The winners trophies shone on trays along one long table.\" the trophies belong to the winners, but there is no mark.",
+        "Part A answer: The winners trophies shone on trays along one long table.",
+        "Part B answer: \"Prizes belong to groups whose names finish with s, so the mark sits right behind that letter.\""
+      ],
+      misconception: "A common mix-up is marking every group name that ends in s. Only a group that has something needs the mark.",
+      why: "Part A: The winners trophies shone on trays along one long table. Part B: \"Prizes belong to groups whose names finish with s, so the mark sits right behind that letter.\" The trophies belong to the winners, so the line should say winners' trophies. The other lines either name no group that has something or already have their marks.",
+      like: ["SK-GUM5-3-C05"]
+    },
+    {
+      id: "SK-GUM5-3-S06",
+      type: "hottext",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.L.GC.1:I:use-apostrophes-to-form-plural-possessive-nouns"
+      ],
+      passages: ["p5"],
+      prompt: "Two of the lines numbered 2 to 6 contain a group name with a wrong ending. Mark both lines.",
+      targets: ["p5:1:2", "p5:1:3", "p5:1:4", "p5:2:1", "p5:2:2"],
+      answer: ["p5:1:2", "p5:2:1"],
+      pick: 2,
+      clue: "Find each name for a group that has something. Check how it ends and where its mark sits.",
+      hints: [
+        "Find each name for a group that has something. Check how it ends and where its mark sits.",
+        "Go through the five lines one by one. Pick TWO.",
+        "In line 6, the mark follows the s of a group name, which is right. Check the other four."
+      ],
+      how: [
+        "Find each group name and ask how it should end.",
+        "In line 2, the bows belong to the instructors, but instructors has no mark: instructors' bows.",
+        "In line 5, boys's adds an extra s to a name that already ends in s: boys' arrows.",
+        "Lines 3, 4 and 6 are written correctly."
+      ],
+      misconception: "A common mix-up is thinking a word that ends in 's is always right. A group name that ends in s needs only the mark.",
+      why: "The answers are line 2 and line 5. In line 2, instructors needs a mark after the s: instructors' bows. In line 5, boys's should be boys', because the name already ends in s. Lines 3, 4 and 6 are written correctly.",
+      like: ["SK-GUM5-3-C06"]
+    },
+    {
+      id: "SK-GUM5-3-S07",
+      type: "ms",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.L.GC.1:I:use-apostrophes-to-form-plural-possessive-nouns"
+      ],
+      passages: [],
+      prompt: "Find the TWO lines where the marks are in the right spot.",
+      pick: 2,
+      choices: [
+        { text: "Six goat's ate all of the fresh hay that morning." },
+        { text: "The skaters' helmets hung by the door.", correct: true },
+        { text: "The nurses's masks were on the shelf by the sink." },
+        { text: "The children's table was set for lunch.", correct: true },
+        { text: "The womens' choir sang at noon in the big hall." }
+      ],
+      clue: "Look at each name for people or animals that have something. Check how it ends and where its mark sits.",
+      hints: [
+        "Look at each name for people or animals that have something. Check how it ends and where its mark sits.",
+        "Pick TWO. In some lines the mark sits in the wrong place, and in one a name has a mark it should not have.",
+        "In the line about goats, the mark is on a group that has nothing. Decide about the other four."
+      ],
+      how: [
+        "Check each name for a group that has something and how it ends.",
+        "Skaters ends in s, so \"The skaters' helmets hung by the door.\" needs only the mark.",
+        "Children does not end in s, so \"The children's table was set for lunch.\" needs 's.",
+        "The other three are wrong: goat's has nothing, nurses's adds an extra s, and womens' puts the mark where women needs 's."
+      ],
+      misconception: "A common mix-up is picking the lines with the most marks. A group name that ends in s needs only the mark, and one that does not end in s needs 's.",
+      why: "The answers are \"The skaters' helmets hung by the door.\" and \"The children's table was set for lunch.\" Skaters ends in s, and children does not. The others should say \"Six goats ate the fresh hay.\", \"The nurses' masks were on the shelf.\" and \"The women's choir sang at noon.\"",
+      like: ["SK-GUM5-3-C07"]
+    },
+    {
+      id: "SK-GUM5-3-S08",
+      type: "match",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.L.GC.1:I:use-apostrophes-to-form-plural-possessive-nouns"
+      ],
+      passages: [],
+      prompt: "Sort these groups by the way their names must finish when they have something.",
+      cols: ["The mark alone", "The mark plus s"],
+      rows: [
+        { text: "firefighters, four of them share a truck", answer: 0 },
+        { text: "children, many of them share a swing", answer: 1 },
+        { text: "neighbors, three of them share a fence", answer: 0 },
+        { text: "people, many of them share a park", answer: 1 }
+      ],
+      clue: "Look at how each group's name ends. Ask whether the last letter is s.",
+      hints: [
+        "Look at how each group's name ends. Ask whether the last letter is s.",
+        "Take one row at a time. Say the group's name aloud and look at its last letter.",
+        "Neighbors already ends in s. Decide about the other rows."
+      ],
+      how: [
+        "Look at the end of each name: firefighters, children, neighbors and people.",
+        "Firefighters and neighbors end in s, so each needs only the mark after the s.",
+        "Children and people do not end in s, so each needs the mark and s."
+      ],
+      misconception: "A common mix-up is giving every group the same finish. The last letter of the name decides what is added.",
+      why: "Firefighters and neighbors end in s, so they need only the mark: firefighters' truck and neighbors' fence. Children and people do not end in s, so they need the mark and s: children's swing and people's park.",
+      like: ["SK-GUM5-3-C08"]
+    },
+    {
+      id: "SK-GUM5-3-S09",
+      type: "mc",
+      points: 1,
+      dok: 3,
+      std: [
+        "3.L.GC.1:I:use-apostrophes-to-form-plural-possessive-nouns"
+      ],
+      passages: ["p5"],
+      prompt: "The word archers in line 7 has no mark, but students' in line 8 has one. Why?",
+      choices: [
+        { text: "Students have the best scores in line 8, yet archers have nothing in line 7.", correct: true },
+        { text: "Archers lost its mark by accident, as group names for people always end with one." },
+        { text: "Students' got its mark simply because line 8 names a coach, who is a grown-up." },
+        { text: "Line 8 is the faulty one, since that mark suits a lone person and no crowd." }
+      ],
+      clue: "Ask whether each word shows that something belongs to someone, or whether it only names a group.",
+      hints: [
+        "Ask whether each word shows that something belongs to someone, or whether it only names a group.",
+        "Look at what follows each word in its own line. Think about who has what.",
+        "Line 8 is not a mistake, so it cannot be the one that is wrong. Check the other choices."
+      ],
+      how: [
+        "Read line 8: the best scores belong to the students, so students' shows who has them.",
+        "Read line 7: the archers hit a ring, but nothing belongs to the archers, so the word only names a group.",
+        "The answer is \"Students have the best scores in line 8, yet archers have nothing in line 7.\""
+      ],
+      misconception: "A common mix-up is thinking a group name needs the mark every time. It needs the mark only when the group has something.",
+      why: "The answer is \"Students have the best scores in line 8, yet archers have nothing in line 7.\" In line 8, the scores belong to the students. In line 7, the archers have nothing. Both lines are correct.",
+      like: ["SK-GUM5-3-C09"]
+    },
+    {
+      id: "SK-GUM5-3-S10",
+      type: "dropdown",
+      points: 1,
+      dok: 1,
+      std: [
+        "3.L.GC.1:I:use-apostrophes-to-form-plural-possessive-nouns"
+      ],
+      passages: ["p5"],
+      prompt: "A white van waits beside a gate in the last line of the draft. It carries bows and targets for the archery team. Two coaches share it. Pick the word that is right.",
+      text: "Our {0} van was parked beside the gate.",
+      slots: [
+        {
+          options: ["coach's", "coaches'", "coaches's"],
+          answer: 1
+        }
+      ],
+      clue: "Ask who has the van and how many people that is.",
+      hints: [
+        "Ask who has the van and how many people that is.",
+        "Say each choice in the blank and notice where the mark sits.",
+        "One choice adds an extra s after the mark. Decide between the other two."
+      ],
+      how: [
+        "Read the last line. The van belongs to two coaches.",
+        "Coaches is a group name that ends in s, so only the mark goes after the s.",
+        "The answer is coaches'."
+      ],
+      misconception: "A common mix-up is putting the mark before the last s. That would mean one coach.",
+      why: "The answer is coaches'. Two coaches share the van, and coaches already ends in s, so only the mark goes after it. Coach's would mean one coach, and coaches's adds an extra s.",
+      like: ["SK-GUM5-3-C10"]
+    },
+    {
+      id: "SK-GUM5-3-S11",
+      type: "hottext",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.L.GC.1:I:use-apostrophes-to-form-plural-possessive-nouns"
+      ],
+      passages: ["p6"],
+      prompt: "Read sentences 5 through 9 of the draft. Which sentence has an apostrophe that should be taken out?",
+      targets: ["p6:2:1", "p6:2:2", "p6:2:3", "p6:2:4", "p6:2:5"],
+      answer: ["p6:2:2"],
+      pick: 1,
+      clue: "Every apostrophe needs a reason. Ask whether each one shows that something belongs to someone.",
+      hints: [
+        "Every apostrophe needs a reason. Ask whether each one shows that something belongs to someone.",
+        "Read the five sentences one at a time. Pick ONE. Ask which words name owners.",
+        "In sentence 7, the apostrophe shows that the tips belong to the gardeners. Check the other four."
+      ],
+      how: [
+        "Find every apostrophe in the five sentences and ask what it shows.",
+        "In sentences 7 and 9, the apostrophes show that the tips and the packets belong to someone.",
+        "In sentence 6, nothing belongs to the grandpas. The word only names more than one grandpa, so it needs no apostrophe."
+      ],
+      misconception: "A common mix-up is thinking a plural needs an apostrophe because it ends in s. A plural needs one only when it owns something.",
+      why: "The answer is sentence 6, \"Two grandpa's helped kids count the beans into small bags.\" Nothing belongs to the grandpas, so the word should be grandpas, with no apostrophe. In sentences 7 and 9, the gardeners' tips and the neighbors' packets show ownership, and sentences 5 and 8 need no apostrophe.",
+      like: ["SK-GUM5-3-C11"]
+    },
+    {
+      id: "SK-GUM5-3-S12",
+      type: "dropdown",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.L.GC.1:I:use-apostrophes-to-form-plural-possessive-nouns"
+      ],
+      passages: ["p6"],
+      prompt: "In the last paragraph of the draft, a table of seeds is described with the wrong ending. Several women ran that table. Pick the words that make line 10 correct.",
+      text: "{0} table ran out of marigold seeds before lunch.",
+      slots: [
+        {
+          options: ["The womens'", "The women's", "The womens"],
+          answer: 1
+        }
+      ],
+      clue: "Ask whether the word for several women ends in s. Then think about what the name needs.",
+      hints: [
+        "Ask whether the word for several women ends in s. Then think about what the name needs.",
+        "Say each choice at the start of the line. Look at where the mark sits and what comes before it.",
+        "One choice has no mark at all. Decide between the other two."
+      ],
+      how: [
+        "Read line 10. The table belongs to several women.",
+        "Women means more than one, but it does not end in s, so it needs 's.",
+        "The answer is The women's."
+      ],
+      misconception: "A common mix-up is adding an s to women first. Because women already means more than one, the ending is 's.",
+      why: "The answer is The women's. The table belongs to several women. Women already means more than one and does not end in s, so it gets an apostrophe and s. The womens' has the mark in the wrong place, and The womens has none.",
+      like: ["SK-GUM5-3-C12"]
+    },
+    {
+      id: "SK-GUM5-3-S13",
+      type: "ms",
+      points: 2,
+      dok: 3,
+      std: [
+        "3.L.GC.1:I:use-apostrophes-to-form-plural-possessive-nouns"
+      ],
+      passages: [],
+      prompt: "Lena says, \"Plural nouns that end in s always take an apostrophe.\" Pick the TWO sentences that prove Lena wrong.",
+      pick: 2,
+      choices: [
+        { text: "The neighbors' fence was freshly painted yesterday." },
+        { text: "Our neighbors planted tulips along the sunny fence.", correct: true },
+        { text: "The sparrows' nest was tucked under the old roof." },
+        { text: "The children's yard was full of orange leaves." },
+        { text: "Two sparrows sat on the wire near the barn.", correct: true }
+      ],
+      clue: "Lena says a plural noun that ends in s needs an apostrophe each time. Look for sentences that have such a noun with no apostrophe and are still right.",
+      hints: [
+        "Lena says a plural noun that ends in s needs an apostrophe each time. Look for sentences that have such a noun with no apostrophe and are still right.",
+        "Pick TWO. Check whether a plural noun in each sentence owns something.",
+        "In the sentence about the nest, the plural noun owns something and has its apostrophe. Decide about the other four."
+      ],
+      how: [
+        "Look for a sentence with a plural noun that ends in s and has no apostrophe, but is still correct.",
+        "In \"Our neighbors planted tulips along the sunny fence.\" and \"Two sparrows sat on the wire near the barn.\" the plural nouns own nothing, so they need no apostrophe.",
+        "In the other three, a plural noun owns something, so each has an apostrophe."
+      ],
+      misconception: "A common mix-up is choosing the sentences with apostrophes, because those follow Lena's rule. She is wrong when a plural noun owns nothing.",
+      why: "The answers are \"Our neighbors planted tulips along the sunny fence.\" and \"Two sparrows sat on the wire near the barn.\" Their plural nouns own nothing, so they need no apostrophe. In the other three, the sparrows, the neighbors and the children own something, so each plural noun has an apostrophe.",
+      like: ["SK-GUM5-3-C13"]
+    },
+    {
+      id: "SK-GUM5-3-S14",
+      type: "dropdown",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.L.GC.1:I:use-apostrophes-to-form-plural-possessive-nouns"
+      ],
+      passages: [],
+      prompt: "The caps are owned by skaters, and the cheese is owned by mice. Pick the words that complete the line below.",
+      text: "Some {0} caps lay near a pile of {1} cheese.",
+      slots: [
+        {
+          options: ["skater's", "skaters'", "skaters"],
+          answer: 1
+        },
+        {
+          options: ["mice's", "mices'", "mices"],
+          answer: 0
+        }
+      ],
+      clue: "Think about how many have something in each blank. Then look at how each group's name ends.",
+      hints: [
+        "Think about how many have something in each blank. Then look at how each group's name ends.",
+        "Work on one blank at a time. Say each choice aloud and notice where the mark sits.",
+        "In the first blank, one choice has no mark at all. Decide about the other choices."
+      ],
+      how: [
+        "The first blank has several skaters. Skaters ends in s, so only the mark goes after the s.",
+        "The second blank has some mice. Mice does not end in s, so it needs the mark and s.",
+        "The answers are skaters' and mice's."
+      ],
+      misconception: "A common mix-up is giving both groups the same finish. Skaters ends in s, and mice does not.",
+      why: "The answers are skaters' and mice's. Skaters is a group name that ends in s, so it needs only the mark. Mice means more than one but does not end in s, so it needs the mark and s. The other choices put the mark in the wrong place or leave it out.",
+      like: ["SK-GUM5-3-C14"]
+    },
+    {
+      id: "SK-GUM5-3-S15",
+      type: "mc",
+      points: 1,
+      dok: 3,
+      std: [
+        "3.L.GC.1:I:use-apostrophes-to-form-plural-possessive-nouns"
+      ],
+      passages: [],
+      prompt: "Mia reads her line aloud: \"The pilot's caps hung on the wall.\" Six pilots have the caps. She believes the line is fine, because a name with a mark always looks like pilot's. Is she correct?",
+      choices: [
+        { text: "Mia is right because a name with a mark takes it ahead of the s, however many people there are." },
+        {
+          text: "Mia is wrong because six pilots hold the caps, so the mark sits right behind the s in pilots.",
+          correct: true
+        },
+        { text: "Mia is right because caps names the thing that needs the mark, as the caps hang there." },
+        { text: "Mia is wrong because six pilots hold the caps, so the name should end with a mark and a second s." }
+      ],
+      clue: "Count the people who have the caps. Then ask which word names them and what its ending should be.",
+      hints: [
+        "Count the people who have the caps. Then ask which word names them and what its ending should be.",
+        "Think about which word names the people and which names the thing they have. The mark goes on the people word.",
+        "The word caps names the thing that is had, not the people. Check the other choices."
+      ],
+      how: [
+        "Count the people: six pilots have the caps.",
+        "Pilots already ends in s, so only the mark goes after the s.",
+        "The answer is \"Mia is wrong because six pilots hold the caps, so the mark sits right behind the s in pilots.\""
+      ],
+      misconception: "A common mix-up is thinking one pattern fits every name. The ending of the name, and the number of people, decide where the mark goes.",
+      why: "The answer is \"Mia is wrong because six pilots hold the caps, so the mark sits right behind the s in pilots.\" Mia should write pilots' caps. Pilot's would mean one pilot, and the extra s in pilots's is not needed.",
+      like: ["SK-GUM5-3-C15"]
+    }
+  ],
+  addons: {
+    "SK-GUM5-3-P1": {
+      hints: [
+        "Count the owners in each sentence. Then check how each owner word ends and where its apostrophe sits.",
+        "Read the sentences one at a time. Look at each word that shows who owns something.",
+        "\"Our dogs's leashes\" adds an extra s to a plural that already ends in s. Check the other three."
+      ],
+      how: [
+        "Count the owners and check how each owner word ends.",
+        "Children does not end in s, so it needs 's. Teachers and dogs end in s, so each needs only an apostrophe.",
+        "The answer is \"All four players' shirts were muddy after the game.\" Players ends in s and has its apostrophe after it."
+      ],
+      misconception: "A common mix-up is putting the apostrophe before the s for every plural. When a plural ends in s, the apostrophe goes after it."
+    },
+    "SK-GUM5-3-P2": {
+      hints: [
+        "Count the owners in each blank. Then ask whether each plural word ends in s.",
+        "Fill one blank at a time. Say each choice out loud and look at where the apostrophe sits.",
+        "In the first blank, one choice has no apostrophe at all. Decide about the other choices."
+      ],
+      how: [
+        "Both blanks show more than one owner, so write each plural first.",
+        "Students ends in s, so only an apostrophe goes after the s.",
+        "Children does not end in s, so it needs an apostrophe and s. The answers are students' and children's."
+      ],
+      misconception: "A common mix-up is using the same ending for both plurals. Students ends in s, and children does not."
+    },
+    "SK-GUM5-3-P3": {
+      hints: [
+        "Start with the plural word for many birds. Then decide where the apostrophe goes.",
+        "Look at the end of the word birds in each choice. Check what comes after it.",
+        "One choice puts the apostrophe after the whole phrase, at the very end. Decide among the other three."
+      ],
+      how: [
+        "Many birds own the nests, so start with the plural birds.",
+        "Birds already ends in s, so only an apostrophe goes after it.",
+        "The answer is the birds' nests."
+      ],
+      misconception: "A common mix-up is putting the apostrophe before the s. That would mean only one bird."
+    },
+    "SK-GUM5-3-P4": {
+      hints: [
+        "Cover the apostrophe and any s after it. Ask whether the word that is left names one owner or more than one.",
+        "Do one row at a time. Look at where the apostrophe sits in each phrase.",
+        "In the phrase about the brother, the word before the apostrophe names one person. Decide about the other rows."
+      ],
+      how: [
+        "Cover the apostrophe and any s after it, and look at the word that is left.",
+        "Girl and brother name one person each, so those rows have one owner.",
+        "Girls and children name more than one person, so those rows have more than one owner."
+      ],
+      misconception: "A common mix-up is thinking every apostrophe before an s shows many owners. Count the owners in the word before the apostrophe."
+    },
+    "SK-GUM5-3-P5": {
+      hints: [
+        "For each owner word, decide whether it is plural. Then check how the plural ends and where the apostrophe goes.",
+        "Read the five sentences one at a time. Pick ONE.",
+        "The sentence about the babies already has its apostrophe after the s of a plural that ends in s. Check the other four."
+      ],
+      how: [
+        "Check each owner word: babies, aunts, men, cousins and kittens.",
+        "Babies, aunts, cousins and kittens end in s, so each needs only an apostrophe after the s, and each sentence has one.",
+        "Men does not end in s, so it needs 's. The error is mens' in \"The mens' choir sang at the fair.\""
+      ],
+      misconception: "A common mix-up is thinking an apostrophe after s is right for every plural. A plural like men needs 's."
+    }
+  },
+  /* B8:core:end */
   test: [
     { id: "SK-GUM5-3-T1", type: "mc", points: 1, dok: 1, passages: [],
       prompt: "Which words show the hats that belong to many women?",

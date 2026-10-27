@@ -2993,7 +2993,9 @@ PP.addLesson({
     points: [
       "The noun a pronoun stands for is called its antecedent. In \"Ava lost her mitten,\" the pronoun her stands for Ava.",
       "If the noun means one, use a pronoun for one, like he, she, it, him, her, his or its. If the noun means more than one, use they, them or their.",
-      "Match boy, girl or thing, too. Use he, him or his for a boy or man, she or her for a girl or woman, and it or its for a thing."
+      "Match boy, girl or thing, too. Use he, him or his for a boy or man, she or her for a girl or woman, and it or its for a thing.",
+      "Two nouns joined by and mean more than one. In \"Dan and Rosa hung their coats,\" the pronoun their stands for both children.",
+      "A pronoun for a thing that owns something is its, with no apostrophe. The word it's is short for it is, so it cannot show ownership."
     ],
     words: [
       { term: "pronoun", means: "a word that takes the place of a noun, like she, it or them" },
@@ -3026,10 +3028,173 @@ PP.addLesson({
         "Use the pronoun for one thing."
       ],
       answer: "It, because the quilt is one thing."
+    },
+    {
+      show: ["Dan and Rosa hung ___ coats on the hooks by the door."],
+      ask: "Which pronoun fits: his, her or their?",
+      steps: [
+        "Find the nouns the pronoun stands for. The coats belong to Dan and Rosa.",
+        "Two nouns joined by and add up to more than one person.",
+        "Choose the pronoun for more than one."
+      ],
+      answer: "Their, because Dan and Rosa are more than one person."
     }
   ],
   parent: "While you read together, stop at a pronoun like they or her and ask, \"Who is that?\" Your child points to the noun the pronoun stands for.",
-  passages: [],
+  passages: [
+    /* B8a:passages:start */
+    {
+      id: "p1",
+      title: "Our Library Visit",
+      byline: "A third grader's draft",
+      genre: "Student draft (narrative)",
+      draft: true,
+      paragraphs: [
+        [
+          "(1) On Friday, our class walked to the school library.",
+          "(2) Mrs. Pratt put on his glasses and read the rules to us.",
+          "(3) The first graders were already there, and they sat on a big rug."
+        ],
+        [
+          "(4) The boys picked up her books and looked for a quiet table.",
+          "(5) My friend Ana found a book about birds, and she showed it to me.",
+          "(6) The new globe is huge, and it spins on their stand."
+        ],
+        [
+          "(7) Luis and I chose a mystery book and read it together.",
+          "(8) The books about space were my favorite, so I carried it home.",
+          "(9) Mrs. Pratt thanked the class and gave us a big smile.",
+          "(10) We hope to go back to the library soon."
+        ]
+      ]
+    },
+    {
+      id: "p2",
+      title: "The Fire Station Visit",
+      byline: "A third grader's draft",
+      genre: "Student draft (narrative)",
+      draft: true,
+      paragraphs: [
+        [
+          "(1) Our class visited the fire station on Tuesday.",
+          "(2) Chief Romero met us at the door with a big smile.",
+          "(3) Mr. Davis put on his boots and climbed the tall ladder."
+        ],
+        [
+          "(4) The ladder is heavy, so the crew carries them with two hands.",
+          "(5) Ms. Chen showed us the truck, and he explained how the siren works.",
+          "(6) The truck is red, and it has a loud siren on its roof."
+        ],
+        [
+          "(7) Two firefighters slid down the pole and landed on her feet.",
+          "(8) We asked many questions, and the chief answered them all.",
+          "(9) My brother wants to be a firefighter, so he took notes.",
+          "(10) At the end, we thanked the firefighters for their time."
+        ]
+      ]
+    },
+    {
+      id: "p3",
+      title: "Our Camping Trip",
+      byline: "A third grader's draft",
+      genre: "Student draft (narrative)",
+      draft: true,
+      paragraphs: [
+        [
+          "(1) Last weekend, my family went camping by a lake.",
+          "(2) Dad put up the tent, and Mom helped him hold the poles.",
+          "(3) Grandma packed the food, and he put it in the cooler.",
+          "(4) The tent was small, but it kept us dry in the storm."
+        ],
+        [
+          "(5) The lantern gave a soft glow, and we loved their light.",
+          "(6) Mom cooked the fish, and we ate it with warm rice.",
+          "(7) Grandpa told a story, and he made us laugh."
+        ],
+        [
+          "(8) My uncles arrived late, and he set up camp quickly.",
+          "(9) We watched the stars until our eyes felt heavy.",
+          "(10) I hope we can go camping again next summer."
+        ]
+      ]
+    },
+    {
+      id: "p4",
+      title: "Art Class",
+      byline: "A third grader's draft",
+      genre: "Student draft (narrative)",
+      draft: true,
+      paragraphs: [
+        [
+          "(1) In art class, we painted pictures of the zoo.",
+          "(2) Mr. Brooks mixed the paint and wiped her brush on a rag.",
+          "(3) The twins shared their blue paint with the girls at the next table."
+        ],
+        [
+          "(4) The girls hung her pictures on the long wall.",
+          "(5) Sam drew a big tent, and he colored it bright red.",
+          "(6) Ella's brush fell on the floor, so she picked them up."
+        ],
+        [
+          "(7) Ms. Gomez smiled and told us that she loved our colors.",
+          "(8) The pictures looked great, so we took it home to show our families.",
+          "(9) Eli and Ben carried the brushes back, and they washed them.",
+          "(10) Our class will paint again on Friday."
+        ]
+      ]
+    },
+    {
+      id: "p5",
+      title: "The Bake Sale",
+      byline: "A third grader's draft",
+      genre: "Student draft (narrative)",
+      draft: true,
+      paragraphs: [
+        [
+          "(1) Our neighbors held a bake sale on Saturday.",
+          "(2) Mrs. Park spread a long cloth on the table and laid out her best pies.",
+          "(3) The pie is warm, so the baker covers them with a towel."
+        ],
+        [
+          "(4) Mr. Reed sold bread, and she wrapped it in paper.",
+          "(5) The twins ran the cash box, and they counted the coins.",
+          "(6) The sign is bright, and it hangs on its pole by the road."
+        ],
+        [
+          "(7) Two workers loaded the chairs and drove his truck home.",
+          "(8) We counted the money, and the total made us proud.",
+          "(9) My aunt baked a cake, so she gave us a slice.",
+          "(10) We thanked the bakers for their hard work."
+        ]
+      ]
+    },
+    {
+      id: "p6",
+      title: "A Day at the Beach",
+      byline: "A third grader's draft",
+      genre: "Student draft (narrative)",
+      draft: true,
+      paragraphs: [
+        [
+          "(1) Last July, my family spent a day at the beach.",
+          "(2) Dad carried the cooler, and Mom brought the umbrella.",
+          "(3) My brothers dug a big hole, and he filled it with water."
+        ],
+        [
+          "(4) The waves were big, and they splashed on the rocks.",
+          "(5) My sister built a sandcastle with tall towers and decorated it with shells.",
+          "(6) The gulls flew over us, and we watched them dive."
+        ],
+        [
+          "(7) Grandma sat under the umbrella and read her book.",
+          "(8) My aunts walked slowly along the sandy shore beside the rolling waves, and he looked for pink shells and smooth stones.",
+          "(9) The sun set, and its light turned the sky orange.",
+          "(10) We packed our things and drove home after a long, happy day."
+        ]
+      ]
+    }
+    /* B8a:passages:end */
+  ],
   practice: [
     { id: "SK-GUM4-3-P1", type: "dropdown", points: 1, dok: 1, passages: [],
       prompt: "Choose the pronoun that stands for Mr. Okafor.",
@@ -3076,6 +3241,1221 @@ PP.addLesson({
       clue: "Ask two questions for each noun: one or more than one? A boy or man, a girl or woman, or a thing?",
       why: "Uncle Ray is one man, so he. My aunt is one woman, so she. The bicycle is one thing, so it. The students means more than one, so they." }
   ],
+  /* B8a:core:start */
+  /* ---------- Expansion 2026-10-22, batch B8a (GUM Reinforce, first half) ----------
+     core: fifteen items in three sets of five. { ref } reuses a practice item; the other practice items stay in Practice Together.
+     Passages are used only by core and the similar bank; none is used by test.
+     Author log: docs/expansion-2026-10-22/batches/B8a-author-log.md. NOT ACCEPTED: needs independent review. */
+  core: {
+    rev: "1",
+    sets: [
+      {
+        title: "Set 1",
+        items: [
+          {
+            ref: "SK-GUM4-3-P5"
+          },
+          {
+            id: "SK-GUM4-3-C03",
+            type: "mc",
+            points: 1,
+            dok: 2,
+            std: [
+              "3.L.GC.1:C:ensure-pronoun-antecedent-agreement"
+            ],
+            passages: ["p1"],
+            prompt: "In sentence 5 of the draft, which noun does the pronoun it stand for?",
+            choices: [
+              {
+                text: "a book about birds",
+                correct: true
+              },
+              {
+                text: "my friend Ana"
+              },
+              {
+                text: "the birds in the book"
+              },
+              {
+                text: "Ana and me"
+              }
+            ],
+            clue: "A pronoun stands for a noun named earlier. Find the pronoun, then look back for its noun.",
+            hints: [
+              "A pronoun stands for a noun named earlier. Find the pronoun, then look back for its noun.",
+              "Look at the first half of the sentence, before the word and. Then say the sentence with each choice in place of the pronoun.",
+              "Ana is a person, so a pronoun for a thing cannot stand for her."
+            ],
+            how: [
+              "Find the pronoun in sentence 5: it.",
+              "Look back for the noun it replaces. Ana found a book about birds, and then she showed it.",
+              "The answer is a book about birds. Ana and me are people, and the birds are only what the book is about."
+            ],
+            misconception: "A common mix-up is picking the noun closest to the pronoun. The pronoun stands for the thing that was found and then shown.",
+            why: "The answer is \"a book about birds\" It stands for the thing Ana found and showed, which is a book about birds. Ana and me are people, and the birds are only what the book is about."
+          },
+          {
+            id: "SK-GUM4-3-C04",
+            type: "dropdown",
+            points: 1,
+            dok: 2,
+            std: [
+              "3.L.GC.1:C:ensure-pronoun-antecedent-agreement"
+            ],
+            passages: ["p1"],
+            prompt: "Sentence 4 of the draft has a mistake. Choose the pronoun that fixes it.",
+            text: "The boys picked up {0} books and looked for a quiet table.",
+            slots: [
+              {
+                options: ["their","his","him","theirs"],
+                answer: 0
+              }
+            ],
+            clue: "Find the noun that the blank stands for. Then ask how many it names.",
+            hints: [
+              "Find the noun that the blank stands for. Then ask how many it names.",
+              "Look at the first two words of the sentence to see who owns the books.",
+              "An ownership word that can stand alone never comes right before a noun, so one choice is not the fix."
+            ],
+            how: [
+              "Find the noun the blank stands for: the boys.",
+              "The boys means more than one, so the pronoun must mean more than one.",
+              "The answer is their. His and him are for one boy, and theirs cannot come before a noun."
+            ],
+            misconception: "A common mix-up is trusting the pronoun that is already in the draft. Check it against the noun it stands for.",
+            why: "The answer is their. The boys means more than one, so the pronoun is their. His and him are for one boy, and theirs cannot come right before a noun like books."
+          },
+          {
+            id: "SK-GUM4-3-C05",
+            type: "hottext",
+            points: 1,
+            dok: 2,
+            std: [
+              "3.L.GC.1:C:ensure-pronoun-antecedent-agreement"
+            ],
+            passages: ["p1"],
+            prompt: "From sentences 3, 5, 6, 7 and 9, select the ONE where a pronoun fails to match its noun.",
+            targets: ["p1:1:3","p1:2:2","p1:2:3","p1:3:1","p1:3:3"],
+            answer: ["p1:2:3"],
+            pick: 1,
+            clue: "Find each pronoun in the shown sentences. Then find the noun each one stands for.",
+            hints: [
+              "Find each pronoun in the shown sentences. Then find the noun each one stands for.",
+              "For each pronoun, ask one question: does it match its noun in number and in boy, girl or thing?",
+              "In sentence 7, the pronoun stands for a book, and it fits a thing."
+            ],
+            how: [
+              "Find the pronouns: they in sentence 3, she and it in sentence 5, it and their in sentence 6, and it in sentence 7.",
+              "They stands for the first graders, she stands for Ana, and it stands for a book in sentences 5 and 7.",
+              "In sentence 6, it stands for the globe, but their means more than one, and the globe is one thing, so the sentence needs its."
+            ],
+            misconception: "A common mix-up is checking only the first pronoun in a sentence. Check every pronoun against its noun.",
+            why: "The answer is sentence 6: \"The new globe is huge, and it spins on their stand.\" Their means more than one, but the globe is one thing, so the sentence needs its. In the other shown sentences each pronoun matches its noun."
+          },
+          {
+            id: "SK-GUM4-3-C06",
+            type: "ebsr",
+            points: 2,
+            dok: 3,
+            std: [
+              "3.L.GC.1:C:ensure-pronoun-antecedent-agreement"
+            ],
+            passages: ["p1"],
+            prompt: "This question has two parts. Work on Part A, then move to Part B.",
+            partA: {
+              prompt: "Sentence 8 has a mistake. Which revision fixes it?",
+              choices: [
+                {
+                  text: "The books about space were my favorite, so I carried them home.",
+                  correct: true
+                },
+                {
+                  text: "The books about space were my favorite, so I carried it home."
+                },
+                {
+                  text: "The books about space were my favorite, so I carried him home."
+                },
+                {
+                  text: "The books about space were my favorite, so I carried theirs home."
+                }
+              ]
+            },
+            partB: {
+              prompt: "Which fact explains why the correct revision is right?",
+              choices: [
+                {
+                  text: "Books means more than one, so the pronoun must mean more than one.",
+                  correct: true
+                },
+                {
+                  text: "Space is the main word in the sentence, so the pronoun must stand for a place."
+                },
+                {
+                  text: "Favorite describes the pronoun, so the pronoun must stand for a person."
+                },
+                {
+                  text: "Home is one thing, so the pronoun must be a pronoun for one thing."
+                }
+              ]
+            },
+            clue: "Find the noun that the pronoun in sentence 8 stands for. Then ask whether that noun means one or more than one.",
+            hints: [
+              "Find the noun that the pronoun in sentence 8 stands for. Then ask whether that noun means one or more than one.",
+              "For Part A, try each pronoun in place of the one in the draft. For Part B, look for the fact about the noun the pronoun stands for.",
+              "Theirs shows who owns something, and this sentence does not say whose books they are."
+            ],
+            how: [
+              "Part A: the pronoun stands for the books, which is more than one thing. The answer is \"The books about space were my favorite, so I carried them home.\"",
+              "It is for one thing, him is for one boy, and theirs shows who owns something.",
+              "Part B: the fact is \"Books means more than one, so the pronoun must mean more than one.\""
+            ],
+            misconception: "A common mix-up is choosing the pronoun that sits next to home. The pronoun must match the books.",
+            why: "Part A: \"The books about space were my favorite, so I carried them home.\" Part B: \"Books means more than one, so the pronoun must mean more than one.\" Books means more than one, so the pronoun must be them. It is for one thing, him is for one boy, and theirs shows who owns something."
+          }
+        ]
+      },
+      {
+        title: "Set 2",
+        items: [
+          {
+            id: "SK-GUM4-3-C07",
+            type: "dropdown",
+            points: 1,
+            dok: 2,
+            std: [
+              "3.L.GC.1:C:ensure-pronoun-antecedent-agreement"
+            ],
+            passages: ["p2"],
+            prompt: "The pronoun in sentence 4 does not suit its noun. Pick the word for the blank that repairs it.",
+            text: "The ladder is heavy, so the crew carries {0} with two hands.",
+            slots: [
+              {
+                options: ["it","them","him","her"],
+                answer: 0
+              }
+            ],
+            clue: "Find the noun that the blank stands for. Then ask whether that noun is one thing or more than one.",
+            hints: [
+              "Find the noun that the blank stands for. Then ask whether that noun is one thing or more than one.",
+              "Read the words that come before the comma, and name the thing they describe.",
+              "Her is a pronoun for a girl or woman, and nothing in this sentence is one."
+            ],
+            how: [
+              "Find the noun the blank stands for: the ladder.",
+              "A ladder is one thing, not a person, so the pronoun must be the one for a thing.",
+              "The answer is it. Them is for more than one, and him and her are for people."
+            ],
+            misconception: "A common mix-up is choosing a pronoun for the crew. The blank stands for the thing that is heavy.",
+            why: "The answer is it. The ladder is one thing, so the pronoun is it. Them is for more than one, and him and her are for people."
+          },
+          {
+            id: "SK-GUM4-3-C08",
+            type: "hottext",
+            points: 1,
+            dok: 2,
+            std: [
+              "3.L.GC.1:C:ensure-pronoun-antecedent-agreement"
+            ],
+            passages: ["p2"],
+            prompt: "Look at sentences 3, 5, 6, 8 and 10 on the draft. Select the ONE of them in which a pronoun does not match the noun it stands for.",
+            targets: ["p2:1:3","p2:2:2","p2:2:3","p2:3:2","p2:3:4"],
+            answer: ["p2:2:2"],
+            pick: 1,
+            clue: "Find each pronoun and the noun it stands for. Then compare the two.",
+            hints: [
+              "Find each pronoun and the noun it stands for. Then compare the two.",
+              "For each pronoun, check whether its noun is a boy or man, a girl or woman, or a thing.",
+              "In sentence 8, the pronoun stands for the questions, which is more than one, and the pronoun fits."
+            ],
+            how: [
+              "Find the pronouns: his in sentence 3, he in sentence 5, it and its in sentence 6, them in sentence 8, and their in sentence 10.",
+              "His stands for Mr. Davis, it and its stand for the truck, them stands for the questions, and their stands for the firefighters.",
+              "He in sentence 5 stands for Ms. Chen, who is a woman, so the sentence needs she."
+            ],
+            misconception: "A common mix-up is trusting a pronoun because it sounds natural. Check that it matches a boy, a girl or a thing.",
+            why: "The answer is sentence 5: \"Ms. Chen showed us the truck, and he explained how the siren works.\" Ms. Chen is a woman, so the pronoun must be she. In the other shown sentences each pronoun matches its noun."
+          },
+          {
+            id: "SK-GUM4-3-C09",
+            type: "mc",
+            points: 1,
+            dok: 3,
+            std: [
+              "3.L.GC.1:C:ensure-pronoun-antecedent-agreement"
+            ],
+            passages: ["p2"],
+            prompt: "In sentence 7, a classmate says that her is fine because the firefighters could be women. What is the best response?",
+            choices: [
+              {
+                text: "Two firefighters means more than one, so the pronoun must be a plural one such as their.",
+                correct: true
+              },
+              {
+                text: "Firefighters is the name of a job, so the pronoun should be a pronoun for a thing."
+              },
+              {
+                text: "Her is right only when it stands for one girl or woman, so the sentence should say his instead of her."
+              },
+              {
+                text: "Landed is an action, so a pronoun for a thing should come right before it."
+              }
+            ],
+            clue: "Look at the noun that the pronoun stands for. Ask what that noun tells you about how many.",
+            hints: [
+              "Look at the noun that the pronoun stands for. Ask what that noun tells you about how many.",
+              "Reread the first words of sentence 7 and decide what matters most here: how many, or boy or girl.",
+              "A firefighter is a person, so a response that calls the firefighters a thing cannot be right."
+            ],
+            how: [
+              "Find the pronoun in sentence 7: her. It stands for two firefighters.",
+              "Two firefighters means more than one. A pronoun for more than one fits, whether the firefighters are men or women.",
+              "The answer is \"Two firefighters means more than one, so the pronoun must be a plural one such as their.\""
+            ],
+            misconception: "A common mix-up is checking only boy or girl. First check whether the noun means one or more than one.",
+            why: "The answer is \"Two firefighters means more than one, so the pronoun must be a plural one such as their.\" Two firefighters means more than one, so the pronoun must be a plural one such as their. Her is for one woman, so it cannot fit two firefighters, whoever they are."
+          },
+          {
+            id: "SK-GUM4-3-C10",
+            type: "ms",
+            points: 2,
+            dok: 2,
+            std: [
+              "3.L.GC.1:C:ensure-pronoun-antecedent-agreement"
+            ],
+            passages: [],
+            prompt: "Which TWO sentences have a pronoun that matches the noun it stands for?",
+            pick: 2,
+            choices: [
+              {
+                text: "The swimmers waved their towels at the crowd.",
+                correct: true
+              },
+              {
+                text: "Mr. Rivera blew his whistle before the race.",
+                correct: true
+              },
+              {
+                text: "The goalie caught the ball and threw them back."
+              },
+              {
+                text: "The runner tied its shoes and stepped to the line."
+              },
+              {
+                text: "The players cheered for her team all season."
+              }
+            ],
+            clue: "For each sentence, find the pronoun and the noun it stands for. Then check whether the two match.",
+            hints: [
+              "For each sentence, find the pronoun and the noun it stands for. Then check whether the two match.",
+              "Keep the sentences in which the noun and the pronoun agree about how many and about boy, girl or thing.",
+              "A runner is a person, so a pronoun for a thing cannot stand for one."
+            ],
+            how: [
+              "Find the pronoun and its noun in each sentence.",
+              "In \"The swimmers waved their towels at the crowd.\" their stands for the swimmers. In \"Mr. Rivera blew his whistle before the race.\" his stands for Mr. Rivera. Each pair agrees.",
+              "In the other sentences, them stands for one ball, its stands for a runner, and her stands for the players."
+            ],
+            misconception: "A common mix-up is picking a sentence because the pronoun sounds familiar. Check each pronoun against its noun.",
+            why: "The answers are \"The swimmers waved their towels at the crowd.\" and \"Mr. Rivera blew his whistle before the race.\" Their matches the swimmers, which is more than one, and his matches Mr. Rivera, who is one man. In the other sentences them is used for one ball, its for a runner, and her for the players."
+          },
+          {
+            id: "SK-GUM4-3-C11",
+            type: "mc",
+            points: 1,
+            dok: 3,
+            std: [
+              "3.L.GC.1:C:ensure-pronoun-antecedent-agreement"
+            ],
+            passages: [],
+            stem: "Sentence A: Aunt Rosa opened her umbrella. Sentence B: The neighbors opened their umbrellas.",
+            prompt: "How are the pronouns in the two sentences alike and different?",
+            choices: [
+              {
+                text: "Both show who owns the umbrellas, but her stands for one woman and their stands for more than one person.",
+                correct: true
+              },
+              {
+                text: "Both show who owns the umbrellas, but her stands for more than one woman and their stands for one person."
+              },
+              {
+                text: "Both stand for things, but her is for one umbrella and their is for many umbrellas."
+              },
+              {
+                text: "Neither stands for a noun, because a pronoun cannot show who owns something."
+              }
+            ],
+            clue: "Find each pronoun, then find the noun each one stands for.",
+            hints: [
+              "Find each pronoun, then find the noun each one stands for.",
+              "Compare the two nouns. Ask how many people each one names.",
+              "The pronouns stand for the people who opened the umbrellas, so a choice about umbrellas cannot be right."
+            ],
+            how: [
+              "In Sentence A, her stands for Aunt Rosa. In Sentence B, their stands for the neighbors.",
+              "Aunt Rosa is one woman, and the neighbors means more than one person.",
+              "Both pronouns show ownership, so the answer is \"Both show who owns the umbrellas, but her stands for one woman and their stands for more than one person.\""
+            ],
+            misconception: "A common mix-up is thinking the pronoun stands for the nearest noun. Her and their stand for the people who did the opening.",
+            why: "The answer is \"Both show who owns the umbrellas, but her stands for one woman and their stands for more than one person.\" Her stands for Aunt Rosa, who is one woman, and their stands for the neighbors, who are more than one person. Both pronouns show ownership."
+          }
+        ]
+      },
+      {
+        title: "Set 3",
+        items: [
+          {
+            id: "SK-GUM4-3-C12",
+            type: "dropdown",
+            points: 1,
+            dok: 2,
+            std: [
+              "3.L.GC.1:C:ensure-pronoun-antecedent-agreement"
+            ],
+            passages: ["p3"],
+            prompt: "Pick the blank word that repairs sentence 3, where the pronoun does not suit its noun.",
+            text: "Grandma packed the food, and {0} put it in the cooler.",
+            slots: [
+              {
+                options: ["she","he","they","it"],
+                answer: 0
+              }
+            ],
+            clue: "Find the noun that the blank stands for. Then decide: boy or man, girl or woman, or thing?",
+            hints: [
+              "Find the noun that the blank stands for. Then decide: boy or man, girl or woman, or thing?",
+              "Check who did the packing in the opening words.",
+              "They is for more than one, and the packing was done by one person."
+            ],
+            how: [
+              "Find the noun the blank stands for: Grandma.",
+              "Grandma is one woman, so the pronoun must be the one for a woman.",
+              "The answer is she. He is for a man, they is for more than one, and it is for a thing."
+            ],
+            misconception: "A common mix-up is picking the pronoun for the nearest noun. The blank stands for the person who packed the food.",
+            why: "The answer is she. Grandma is one woman, so the pronoun is she. He is for a man, they is for more than one, and it is for a thing."
+          },
+          {
+            id: "SK-GUM4-3-C13",
+            type: "ms",
+            points: 2,
+            dok: 3,
+            std: [
+              "3.L.GC.1:C:ensure-pronoun-antecedent-agreement"
+            ],
+            passages: ["p3"],
+            prompt: "Sentence 8 of the draft has a mistake. Choose the TWO revisions that fix it.",
+            pick: 2,
+            choices: [
+              {
+                text: "My uncles arrived late, and they set up camp quickly.",
+                correct: true
+              },
+              {
+                text: "My uncle arrived late, and he set up camp quickly.",
+                correct: true
+              },
+              {
+                text: "My uncles arrived late, and it set up camp quickly."
+              },
+              {
+                text: "My uncle arrived late, and they set up camp quickly."
+              },
+              {
+                text: "My uncles arrived late, and she set up camp quickly."
+              }
+            ],
+            clue: "A pronoun and its noun must agree. A fix may change either one.",
+            hints: [
+              "A pronoun and its noun must agree. A fix may change either one.",
+              "Check each revision: find the noun and the pronoun, then see whether they agree about how many.",
+              "She is for a girl or woman, and uncles are men."
+            ],
+            how: [
+              "The draft pairs uncles, which is more than one, with he, which is one.",
+              "A fix can make the pronoun match the noun, or make the noun match the pronoun.",
+              "The answers are \"My uncles arrived late, and they set up camp quickly.\" and \"My uncle arrived late, and he set up camp quickly.\" In the others, it is for a thing, they does not match one uncle, and she is for a woman."
+            ],
+            misconception: "A common mix-up is thinking only the pronoun can change. The noun can change, too, as long as the two match.",
+            why: "The answers are \"My uncles arrived late, and they set up camp quickly.\" and \"My uncle arrived late, and he set up camp quickly.\" They matches uncles, and he matches one uncle. In the other revisions it is for a thing, they does not match one uncle, and she is for a woman."
+          },
+          {
+            id: "SK-GUM4-3-C14",
+            type: "mc",
+            points: 1,
+            dok: 2,
+            std: [
+              "3.L.GC.1:C:ensure-pronoun-antecedent-agreement"
+            ],
+            passages: [],
+            prompt: "Which sentence has two pronouns that both match their nouns?",
+            choices: [
+              {
+                text: "The neighbors planted a tree, and they watered it every day.",
+                correct: true
+              },
+              {
+                text: "The neighbors planted a tree, and they watered them every day."
+              },
+              {
+                text: "The neighbors planted a tree, and he watered it every day."
+              },
+              {
+                text: "The neighbors planted a tree, and it watered them every day."
+              }
+            ],
+            clue: "Each sentence has two pronouns. Find the noun each pronoun stands for.",
+            hints: [
+              "Each sentence has two pronouns. Find the noun each pronoun stands for.",
+              "Check the pronoun before the action word and the pronoun after it, one at a time.",
+              "A tree cannot water anything, so one choice has a pronoun that stands for the wrong noun."
+            ],
+            how: [
+              "Find the nouns: the neighbors, which is more than one, and a tree, which is one thing.",
+              "The first pronoun stands for the neighbors, so it must mean more than one. The second stands for the tree, so it must mean one thing.",
+              "The answer is \"The neighbors planted a tree, and they watered it every day.\" The others pair a pronoun for one person or thing with the neighbors, or use them for the tree."
+            ],
+            misconception: "A common mix-up is checking only one pronoun. Check both of them against their nouns.",
+            why: "The answer is \"The neighbors planted a tree, and they watered it every day.\" They matches the neighbors, which is more than one, and it matches the tree, which is one thing. In the other sentences the pronoun for the neighbors or for the tree does not match."
+          },
+          {
+            id: "SK-GUM4-3-C15",
+            type: "dropdown",
+            points: 2,
+            dok: 2,
+            std: [
+              "3.L.GC.1:C:ensure-pronoun-antecedent-agreement"
+            ],
+            passages: [],
+            prompt: "Choose the pronouns that make the sentence correct.",
+            text: "Mr. Lopez and his son washed {0} truck, and the truck shone in {1} new paint.",
+            slots: [
+              {
+                options: ["their","theirs","its","it's"],
+                answer: 0
+              },
+              {
+                options: ["its","their","theirs","it's"],
+                answer: 0
+              }
+            ],
+            clue: "Find the noun that each blank stands for. Then decide how many and what kind it is.",
+            hints: [
+              "Find the noun that each blank stands for. Then decide how many and what kind it is.",
+              "For the first blank, count the people who washed the truck. For the second blank, look at what the new paint is on.",
+              "It's is short for it is, so it does not show ownership."
+            ],
+            how: [
+              "The first blank stands for Mr. Lopez and his son, which is more than one person. The second blank stands for the truck, which is one thing.",
+              "A pronoun for more than one person goes in the first blank. A pronoun for one thing goes in the second.",
+              "The answers are their and its. Theirs cannot come before a noun, and it's means it is."
+            ],
+            misconception: "A common mix-up is leaving out the second washer. The first blank stands for both of them.",
+            why: "The answers are their and its. Mr. Lopez and his son are more than one person, so the first blank needs their. The truck is one thing, so the second blank needs its. It's means it is, so it does not show ownership."
+          },
+          {
+            id: "SK-GUM4-3-C16",
+            type: "mc",
+            points: 1,
+            dok: 3,
+            std: [
+              "3.L.GC.1:C:ensure-pronoun-antecedent-agreement"
+            ],
+            passages: [],
+            stem: "The gloves were wet, so Dana hung it on the line to dry.",
+            prompt: "Which explanation shows why the pronoun it is wrong in this sentence?",
+            choices: [
+              {
+                text: "Gloves means more than one thing, so a pronoun for one thing does not match.",
+                correct: true
+              },
+              {
+                text: "Dana is a girl, so the pronoun should show that a girl owns the gloves."
+              },
+              {
+                text: "Line is a thing, so the pronoun should stand for the line instead of the gloves."
+              },
+              {
+                text: "Dry is an action, so the pronoun should be a pronoun for an action."
+              }
+            ],
+            clue: "Find the noun that the pronoun it stands for. Then ask what that noun tells you about how many.",
+            hints: [
+              "Find the noun that the pronoun it stands for. Then ask what that noun tells you about how many.",
+              "Compare the noun with the pronoun. Do the two agree about how many?",
+              "Dry is an action word, and a pronoun in this sentence does not stand for an action."
+            ],
+            how: [
+              "The pronoun it stands for the gloves, because the gloves are what Dana hung.",
+              "Gloves means more than one thing, but it is for one thing, so the two do not match.",
+              "The answer is \"Gloves means more than one thing, so a pronoun for one thing does not match.\""
+            ],
+            misconception: "A common mix-up is blaming the nearest noun. The pronoun must match the noun it stands for.",
+            why: "The answer is \"Gloves means more than one thing, so a pronoun for one thing does not match.\" Gloves means more than one thing, and it is a pronoun for one thing, so they do not match. The sentence needs them."
+          }
+        ]
+      }
+    ]
+  },
+  similar: [
+    {
+      id: "SK-GUM4-3-S01",
+      type: "match",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.L.GC.1:C:ensure-pronoun-antecedent-agreement"
+      ],
+      passages: [],
+      prompt: "Pick the owning word that goes with each owner.",
+      cols: ["his","her","its","their"],
+      rows: [
+        {
+          text: "Ben",
+          answer: 0
+        },
+        {
+          text: "Ms. Cruz",
+          answer: 1
+        },
+        {
+          text: "the nest",
+          answer: 2
+        },
+        {
+          text: "the pilots",
+          answer: 3
+        },
+        {
+          text: "my grandfather",
+          answer: 0
+        }
+      ],
+      clue: "Ask two questions about each owner: how many, and what kind?",
+      hints: [
+        "Ask two questions about each owner: how many, and what kind?",
+        "Fill in the owners you are sure about first, and then use the same two questions on the rest.",
+        "A nest is not a person, so the words for a man or a woman cannot go with it."
+      ],
+      how: [
+        "Ask how many and what kind for each owner.",
+        "Ben and my grandfather are each one man, and Ms. Cruz is one woman.",
+        "The nest is one thing, and the pilots are more than one person."
+      ],
+      misconception: "A common mix-up is matching by how a name sounds. Ask how many and what kind.",
+      why: "Ben and my grandfather are each one man, so his. Ms. Cruz is one woman, so her. The nest is one thing, so its. The pilots are more than one person, so their.",
+      like: ["SK-GUM4-3-P5"]
+    },
+    {
+      id: "SK-GUM4-3-S02",
+      type: "mc",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.L.GC.1:C:ensure-pronoun-antecedent-agreement"
+      ],
+      passages: ["p4"],
+      stem: "Sam drew a big tent, and he colored it bright red. Then he added a green flag on top.",
+      prompt: "In the first sentence above, what does the word it point back to?",
+      choices: [
+        {
+          text: "a big tent",
+          correct: true
+        },
+        {
+          text: "Sam, the boy who held the red crayon"
+        },
+        {
+          text: "the zoo in the picture"
+        },
+        {
+          text: "bright red paint"
+        }
+      ],
+      clue: "A pronoun replaces a noun that was already named. Look back to find that noun.",
+      hints: [
+        "A pronoun replaces a noun that was already named. Look back to find that noun.",
+        "Read the words before the comma. Then say the sentence with each choice in place of the pronoun.",
+        "Sam is a person, so a word for a thing cannot replace him."
+      ],
+      how: [
+        "Find the pronoun: it.",
+        "Look back for the noun it replaces. Sam drew a big tent, and then he colored it.",
+        "The answer is a big tent. Sam is a person, the zoo is another noun, and bright red paint tells how the tent was colored."
+      ],
+      misconception: "A common mix-up is choosing the name at the start of the sentence. The pronoun stands for the thing that was drawn.",
+      why: "The answer is \"a big tent\" It replaces the thing Sam drew, which is a big tent. Sam is a person, the zoo is a different noun, and bright red paint is a color.",
+      like: ["SK-GUM4-3-C03"]
+    },
+    {
+      id: "SK-GUM4-3-S03",
+      type: "dropdown",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.L.GC.1:C:ensure-pronoun-antecedent-agreement"
+      ],
+      passages: ["p4"],
+      prompt: "The writer picked a wrong ownership word in the second line below. Choose the repair.",
+      text: "In art class, we painted pictures of zoo animals with bright markers. The girls hung {0} pictures on the long wall.",
+      slots: [
+        {
+          options: ["their","its","theirs","them"],
+          answer: 0
+        }
+      ],
+      clue: "Find the noun the blank stands for, then count how many it names.",
+      hints: [
+        "Find the noun the blank stands for, then count how many it names.",
+        "Look at the second word of the second sentence.",
+        "An ownership word that can stand alone never comes right before a noun, so one choice is not the answer."
+      ],
+      how: [
+        "The blank stands for the girls.",
+        "The girls means more than one, so the pronoun must mean more than one.",
+        "The answer is their. Its is for a thing, theirs cannot come before a noun, and them does not show ownership."
+      ],
+      misconception: "A common mix-up is leaving the pronoun that is in the draft. Check it against the noun it stands for.",
+      why: "The answer is their. The girls means more than one, so the pronoun is their. Its is for a thing, theirs cannot come before a noun, and them does not show ownership.",
+      like: ["SK-GUM4-3-C04"]
+    },
+    {
+      id: "SK-GUM4-3-S04",
+      type: "hottext",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.L.GC.1:C:ensure-pronoun-antecedent-agreement"
+      ],
+      passages: ["p4"],
+      prompt: "Lines from a classmate's painting-class account are numbered below. Choose the single line in which a replacement word clashes with whatever it stands for.",
+      targets: ["p4:1:3","p4:2:2","p4:2:3","p4:3:1","p4:3:3"],
+      answer: ["p4:2:3"],
+      pick: 1,
+      clue: "Find every pronoun in the five sentences and the noun each one replaces.",
+      hints: [
+        "Find every pronoun in the five sentences and the noun each one replaces.",
+        "Ask of each pronoun: does it agree with its noun about how many and about boy, girl or thing?",
+        "In sentence 9, both pronouns stand for people or things that they match."
+      ],
+      how: [
+        "Find the pronouns: their in sentence 3, he and it in sentence 5, she and them in sentence 6, she in sentence 7, and they and them in sentence 9.",
+        "Each pronoun matches its noun except one pair.",
+        "In sentence 6, them stands for one brush, but them means more than one, so the sentence needs it."
+      ],
+      misconception: "A common mix-up is checking only the first pronoun in a sentence. Check every pronoun against its noun.",
+      why: "The answer is sentence 6: \"Ella's brush fell on the floor, so she picked them up.\" Ella's brush is one thing, but them means more than one, so the sentence needs it. In the other sentences each pronoun matches its noun.",
+      like: ["SK-GUM4-3-C05"]
+    },
+    {
+      id: "SK-GUM4-3-S05",
+      type: "ebsr",
+      points: 2,
+      dok: 3,
+      std: [
+        "3.L.GC.1:C:ensure-pronoun-antecedent-agreement"
+      ],
+      passages: ["p4"],
+      prompt: "Finish Part A first, and after that finish Part B.",
+      partA: {
+        prompt: "Which change repairs line 8 of the art class story?",
+        choices: [
+          {
+            text: "Swap it for them.",
+            correct: true
+          },
+          {
+            text: "Swap it for her."
+          },
+          {
+            text: "Swap it for hers."
+          },
+          {
+            text: "Swap families for family."
+          }
+        ]
+      },
+      partB: {
+        prompt: "Which statement supports that change?",
+        choices: [
+          {
+            text: "Pictures names several things, and a replacement for several things is needed.",
+            correct: true
+          },
+          {
+            text: "Families comes last, and a replacement for the last noun listed in the line is needed here."
+          },
+          {
+            text: "Great describes the replacement, and a replacement for a person is needed."
+          },
+          {
+            text: "Show tells what the class did, and a replacement for an action is needed."
+          }
+        ]
+      },
+      clue: "Find the noun that the pronoun in sentence 8 replaces, and decide whether it means one or more than one.",
+      hints: [
+        "Find the noun that the pronoun in sentence 8 replaces, and decide whether it means one or more than one.",
+        "For Part A, try each change in the draft sentence. For Part B, look for the statement about the noun that the pronoun replaces.",
+        "Hers shows who owns something, and the sentence does not say whose pictures they are."
+      ],
+      how: [
+        "Part A: the pronoun replaces the pictures, which is more than one thing. The answer is \"Swap it for them.\"",
+        "Her is for one girl, hers shows who owns something, and changing families does not fix the pronoun.",
+        "Part B: the statement is \"Pictures names several things, and a replacement for several things is needed.\""
+      ],
+      misconception: "A common mix-up is changing a different noun. The pronoun is what does not match, so the pronoun is what changes.",
+      why: "Part A: \"Swap it for them.\" Part B: \"Pictures names several things, and a replacement for several things is needed.\" Pictures names several things, so the pronoun has to be them. Her is for one girl, hers shows who owns something, and changing families leaves the pronoun wrong.",
+      like: ["SK-GUM4-3-C06"]
+    },
+    {
+      id: "SK-GUM4-3-S06",
+      type: "dropdown",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.L.GC.1:C:ensure-pronoun-antecedent-agreement"
+      ],
+      passages: ["p5"],
+      prompt: "Which choice repairs the second sentence below?",
+      text: "Our neighbors held a bake sale on Saturday. The pie is warm, so the baker covers {0} with a clean towel until noon.",
+      slots: [
+        {
+          options: ["it","them","us","you"],
+          answer: 0
+        }
+      ],
+      clue: "Find the noun the blank stands for, and ask whether that noun is one thing or more than one.",
+      hints: [
+        "Find the noun the blank stands for, and ask whether that noun is one thing or more than one.",
+        "Read the first part of the second sentence, before the comma, and name what is warm.",
+        "Us includes the speaker, and the baker is covering something that is not a person."
+      ],
+      how: [
+        "Find the noun the blank stands for: the pie.",
+        "A pie is one thing, not a person, so the pronoun must be the one for a thing.",
+        "The answer is it. Them is for more than one, and us and you are for people."
+      ],
+      misconception: "A common mix-up is choosing a pronoun for the baker. The blank stands for the warm pie.",
+      why: "The answer is it. The pie is one thing, so the pronoun is it. Them is for more than one, and us and you are for people.",
+      like: ["SK-GUM4-3-C07"]
+    },
+    {
+      id: "SK-GUM4-3-S07",
+      type: "hottext",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.L.GC.1:C:ensure-pronoun-antecedent-agreement"
+      ],
+      passages: ["p5"],
+      prompt: "From one student's account of a neighborhood bake sale full of freshly baked treats, five numbered lines are shown. Exactly one links an owner or doer word to the wrong kind of person or thing. Select it.",
+      targets: ["p5:1:2","p5:2:1","p5:2:3","p5:3:2","p5:3:4"],
+      answer: ["p5:2:1"],
+      pick: 1,
+      clue: "Find each pronoun and the noun it replaces. Then compare the two.",
+      hints: [
+        "Find each pronoun and the noun it replaces. Then compare the two.",
+        "For each pronoun, check whether its noun is a boy or man, a girl or woman, or a thing.",
+        "Sentence 10 has a pronoun for the bakers, which is more than one, and the pronoun fits."
+      ],
+      how: [
+        "Find the pronouns: her in sentence 2, she and it in sentence 4, it and its in sentence 6, us in sentence 8, and their in sentence 10.",
+        "Her stands for Mrs. Park, it and its stand for the sign, us stands for the writer's group, and their stands for the bakers.",
+        "She in sentence 4 stands for Mr. Reed, who is a man, so the sentence needs he."
+      ],
+      misconception: "A common mix-up is trusting a pronoun because it sounds natural. Check that it matches a boy, a girl or a thing.",
+      why: "The answer is sentence 4: \"Mr. Reed sold bread, and she wrapped it in paper.\" Mr. Reed is a man, so the pronoun must be he. In the other sentences each pronoun matches its noun.",
+      like: ["SK-GUM4-3-C08"]
+    },
+    {
+      id: "SK-GUM4-3-S08",
+      type: "mc",
+      points: 1,
+      dok: 3,
+      std: [
+        "3.L.GC.1:C:ensure-pronoun-antecedent-agreement"
+      ],
+      passages: ["p5"],
+      prompt: "A student wrote that two workers drove his truck home. Which fix for sentence 7, with its reason, is best?",
+      choices: [
+        {
+          text: "their, since the workers add up to more than one person",
+          correct: true
+        },
+        {
+          text: "its, since a truck is a thing and not a person at all, whatever else is true"
+        },
+        {
+          text: "hers, since both workers might turn out to be women"
+        },
+        {
+          text: "our, since the writer was standing there to watch them work all day"
+        }
+      ],
+      clue: "Find the noun that his stands for, and ask what it tells you about how many.",
+      hints: [
+        "Find the noun that his stands for, and ask what it tells you about how many.",
+        "Reread the first words of sentence 7. Decide whether the number of workers or their gender matters more.",
+        "A truck is not a worker, so a fix that wants a pronoun for the truck cannot be right."
+      ],
+      how: [
+        "Find the pronoun in sentence 7: his. It stands for two workers.",
+        "Two workers is more than one. A pronoun for more than one fits, even if both workers are men.",
+        "The answer is \"their, since the workers add up to more than one person.\""
+      ],
+      misconception: "A common mix-up is thinking a boy pronoun fits two boys. His is for one man, and their is for more than one.",
+      why: "The answer is \"their, since the workers add up to more than one person\" Two workers is more than one person, so the pronoun must be their. His is for one man, so it cannot fit two workers.",
+      like: ["SK-GUM4-3-C09"]
+    },
+    {
+      id: "SK-GUM4-3-S09",
+      type: "ms",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.L.GC.1:C:ensure-pronoun-antecedent-agreement"
+      ],
+      passages: [],
+      prompt: "Pick the pair of sentences in which each pronoun agrees with whatever it replaces.",
+      pick: 2,
+      choices: [
+        {
+          text: "Dancers lifted their arms high above the shining stage lights.",
+          correct: true
+        },
+        {
+          text: "Mr. Park tuned his guitar slowly before the concert began.",
+          correct: true
+        },
+        {
+          text: "A singer waved to its fans from the balcony of the old theater."
+        },
+        {
+          text: "Drummers packed their drums and carried it to a van outside."
+        },
+        {
+          text: "Mrs. Cole read a story to the class and then closed them."
+        }
+      ],
+      clue: "In each sentence, find every pronoun and what it replaces. Then see whether the two agree.",
+      hints: [
+        "In each sentence, find every pronoun and what it replaces. Then see whether the two agree.",
+        "Keep a sentence only if all of its pronouns agree with their nouns about how many and about boy, girl or thing.",
+        "A singer is a person, so a pronoun for a thing cannot replace one."
+      ],
+      how: [
+        "Find every pronoun and what it replaces.",
+        "In \"Dancers lifted their arms high above the shining stage lights.\" their replaces the dancers. In \"Mr. Park tuned his guitar slowly before the concert began.\" his replaces Mr. Park. Each pair agrees.",
+        "In the other sentences, its replaces a singer, it replaces drums, and them replaces one story."
+      ],
+      misconception: "A common mix-up is checking only the first pronoun in a sentence. Every pronoun has to agree with its noun.",
+      why: "The answers are \"Dancers lifted their arms high above the shining stage lights.\" and \"Mr. Park tuned his guitar slowly before the concert began.\" Their agrees with the dancers, and his agrees with Mr. Park. In the other sentences its is used for a singer, it for several drums, and them for one story.",
+      like: ["SK-GUM4-3-C10"]
+    },
+    {
+      id: "SK-GUM4-3-S10",
+      type: "mc",
+      points: 1,
+      dok: 3,
+      std: [
+        "3.L.GC.1:C:ensure-pronoun-antecedent-agreement"
+      ],
+      passages: [],
+      stem: "Sentence A: The farmer fed his goats. Sentence B: The farmers fed their goats.",
+      prompt: "What does each pronoun tell the reader?",
+      choices: [
+        {
+          text: "His points to a single man, and their points to a group of people.",
+          correct: true
+        },
+        {
+          text: "His points to a single goat, and their points to a group of goats."
+        },
+        {
+          text: "His points to a group of men, and their points to a single person."
+        },
+        {
+          text: "Neither one points to anyone, because a pronoun cannot replace a noun."
+        }
+      ],
+      clue: "Find each pronoun, then find the noun that each one replaces.",
+      hints: [
+        "Find each pronoun, then find the noun that each one replaces.",
+        "Count the farmers in each sentence.",
+        "The pronouns replace the people who did the feeding, so a choice about goats cannot be right."
+      ],
+      how: [
+        "In Sentence A, his replaces the farmer. In Sentence B, their replaces the farmers.",
+        "The farmer is one man, and the farmers are more than one person.",
+        "The answer is \"His points to a single man, and their points to a group of people.\""
+      ],
+      misconception: "A common mix-up is thinking the pronoun replaces the goats. It replaces the people who did the feeding.",
+      why: "The answer is \"His points to a single man, and their points to a group of people.\" His replaces the farmer, who is one man, and their replaces the farmers, who are more than one person.",
+      like: ["SK-GUM4-3-C11"]
+    },
+    {
+      id: "SK-GUM4-3-S11",
+      type: "dropdown",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.L.GC.1:C:ensure-pronoun-antecedent-agreement"
+      ],
+      passages: ["p6"],
+      prompt: "One word in the second line below clashes with its subject. Pick the fix.",
+      text: "Last July, my family spent a sunny day at the beach near our grandparents' cabin. My brothers dug a big hole, and {0} filled it with water from a blue bucket.",
+      slots: [
+        {
+          options: ["they","he","them","us"],
+          answer: 0
+        }
+      ],
+      clue: "Find the noun the blank stands for, and ask how many it names.",
+      hints: [
+        "Find the noun the blank stands for, and ask how many it names.",
+        "Check who did the digging in the opening words of the second line.",
+        "Them is not able to act, so the line does not need it."
+      ],
+      how: [
+        "The blank stands for my brothers.",
+        "My brothers means more than one, so the pronoun must be one for more than one that can do an action.",
+        "The answer is they. He is for one boy, them cannot do an action, and us includes the speaker."
+      ],
+      misconception: "A common mix-up is picking the pronoun for the hole. The blank stands for the people who dug.",
+      why: "The answer is they. My brothers means more than one, so the pronoun is they. He is for one boy, them cannot do an action, and us includes the speaker.",
+      like: ["SK-GUM4-3-C12"]
+    },
+    {
+      id: "SK-GUM4-3-S12",
+      type: "ms",
+      points: 2,
+      dok: 3,
+      std: [
+        "3.L.GC.1:C:ensure-pronoun-antecedent-agreement"
+      ],
+      passages: ["p6"],
+      prompt: "Which pair of new versions repairs line 8 of the seaside story told by a cousin?",
+      pick: 2,
+      choices: [
+        {
+          text: "My aunts walked slowly along the sandy shore beside the rolling waves, and they looked for pink shells and smooth stones.",
+          correct: true
+        },
+        {
+          text: "My aunt walked slowly along the sandy shore beside the rolling waves, and she looked for pink shells and smooth stones.",
+          correct: true
+        },
+        {
+          text: "My aunts walked slowly along the sandy shore beside the rolling waves, and it looked for pink shells and smooth stones."
+        },
+        {
+          text: "My aunt walked slowly along the sandy shore beside the rolling waves, and they looked for pink shells and smooth stones."
+        },
+        {
+          text: "My aunts walked slowly along the sandy shore beside the rolling waves, and he looked for pink shells and smooth stones."
+        }
+      ],
+      clue: "A pronoun and its noun must agree. Either one can change to make the pair match.",
+      hints: [
+        "A pronoun and its noun must agree. Either one can change to make the pair match.",
+        "Check each version: find the noun and the pronoun, then see whether they agree about how many.",
+        "It is a pronoun for a thing, and aunts are people, not things."
+      ],
+      how: [
+        "The draft pairs aunts, which is more than one, with he, which is one man.",
+        "A repair can make the pronoun match the noun, or make the noun match the pronoun.",
+        "The answers are \"My aunts walked slowly along the sandy shore beside the rolling waves, and they looked for pink shells and smooth stones.\" and \"My aunt walked slowly along the sandy shore beside the rolling waves, and she looked for pink shells and smooth stones.\" In the others, it is for a thing, they does not match one aunt, and he is for a man."
+      ],
+      misconception: "A common mix-up is thinking only the pronoun can change. The noun can change, too, as long as the pair matches.",
+      why: "The answers are \"My aunts walked slowly along the sandy shore beside the rolling waves, and they looked for pink shells and smooth stones.\" and \"My aunt walked slowly along the sandy shore beside the rolling waves, and she looked for pink shells and smooth stones.\" They matches aunts, and she matches one aunt. In the other versions it is for a thing, they does not match one aunt, and he is for a man.",
+      like: ["SK-GUM4-3-C13"]
+    },
+    {
+      id: "SK-GUM4-3-S13",
+      type: "mc",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.L.GC.1:C:ensure-pronoun-antecedent-agreement"
+      ],
+      passages: [],
+      prompt: "Pick the line in which every stand-in word suits whatever it replaces, whether children or toys.",
+      choices: [
+        {
+          text: "The twins grabbed a bright yellow kite, and they flew it high above the windy field.",
+          correct: true
+        },
+        {
+          text: "The twins grabbed a bright yellow kite, and they flew them high above the windy field."
+        },
+        {
+          text: "The twins grabbed a bright yellow kite, and he flew it high above the windy field."
+        },
+        {
+          text: "The twins grabbed a bright yellow kite, and it flew them high above the windy field."
+        }
+      ],
+      clue: "Each line has two stand-in words. Find the noun that each one replaces.",
+      hints: [
+        "Each line has two stand-in words. Find the noun that each one replaces.",
+        "Check the one before the action word and the one after it, one at a time.",
+        "A kite cannot fly anything above a field, so one choice has a stand-in word for the wrong noun."
+      ],
+      how: [
+        "Find the nouns: the twins, which is more than one, and a bright yellow kite, which is one thing.",
+        "The first pronoun replaces the twins, so it must mean more than one. The second replaces the kite, so it must mean one thing.",
+        "The answer is \"The twins grabbed a bright yellow kite, and they flew it high above the windy field.\" The others use he for the twins, or them for the kite, or it for the twins."
+      ],
+      misconception: "A common mix-up is checking only one of the two pronouns. Check both against their nouns.",
+      why: "The answer is \"The twins grabbed a bright yellow kite, and they flew it high above the windy field.\" They matches the twins, and it matches the kite. In the other lines he is used for the twins, them for the kite, or it for the twins.",
+      like: ["SK-GUM4-3-C14"]
+    },
+    {
+      id: "SK-GUM4-3-S14",
+      type: "dropdown",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.L.GC.1:C:ensure-pronoun-antecedent-agreement"
+      ],
+      passages: [],
+      prompt: "Pick the words that finish this story about a fence.",
+      text: "Mrs. Webb and her daughter painted {0} fence, and the fence looked bright in {1} fresh color.",
+      slots: [
+        {
+          options: ["their","theirs","them","they"],
+          answer: 0
+        },
+        {
+          options: ["its","hers","it","his"],
+          answer: 0
+        }
+      ],
+      clue: "Find the noun each blank stands for. Then work out how many and what kind each noun is.",
+      hints: [
+        "Find the noun each blank stands for. Then work out how many and what kind each noun is.",
+        "For the first blank, count the painters. For the second blank, look at what the fresh color covers.",
+        "Hers shows who owns something, and the fence does not belong to a woman in this sentence."
+      ],
+      how: [
+        "The first blank stands for Mrs. Webb and her daughter, which is more than one person. The second blank stands for the fence, which is one thing.",
+        "The first blank needs a word for several people, and the second needs a word for a single thing.",
+        "The answers are their and its. Theirs cannot come before a noun, them and they do not show ownership, and it does not show ownership either."
+      ],
+      misconception: "A common mix-up is leaving out the daughter. The first blank stands for both painters.",
+      why: "The answers are their and its. Mrs. Webb and her daughter are more than one person, so the first blank needs their. The fence is one thing, so the second blank needs its. Hers is for a woman, and his is for a man.",
+      like: ["SK-GUM4-3-C15"]
+    },
+    {
+      id: "SK-GUM4-3-S15",
+      type: "mc",
+      points: 1,
+      dok: 3,
+      std: [
+        "3.L.GC.1:C:ensure-pronoun-antecedent-agreement"
+      ],
+      passages: [],
+      stem: "The lamp glowed brightly while Dad turned them off before bed.",
+      prompt: "What makes them a poor choice in this line about a bedroom lamp?",
+      choices: [
+        {
+          text: "The word lamp names a single thing, but them points to several, and the two clash.",
+          correct: true
+        },
+        {
+          text: "Dad is a man, and a word that shows a man is needed to stand in for the lamp; he is better."
+        },
+        {
+          text: "Off is the last word, and the stand-in ought to point to the word off, since it ends the line."
+        },
+        {
+          text: "Bright is a describing word, and a stand-in ought to point to a describing word in the line."
+        }
+      ],
+      clue: "Find the noun that the word them replaces. Then ask what that noun tells you about how many.",
+      hints: [
+        "Find the noun that the word them replaces. Then ask what that noun tells you about how many.",
+        "Put the noun and the pronoun side by side. Do they agree about how many?",
+        "Bright is a describing word, and nothing in the line asks for a stand-in about a describing word."
+      ],
+      how: [
+        "The word them replaces the lamp, because the lamp is what Dad turned off.",
+        "Lamp names a single thing, but them points to several things, so the two do not agree.",
+        "The answer is \"The word lamp names a single thing, but them points to several, and the two clash.\""
+      ],
+      misconception: "A common mix-up is blaming the closest word. The pronoun has to agree with the noun it replaces.",
+      why: "The answer is \"The word lamp names a single thing, but them points to several, and the two clash.\" Lamp names a single thing, and them points to several things, so they do not agree. The sentence needs it.",
+      like: ["SK-GUM4-3-C16"]
+    }
+  ],
+  addons: {
+    "SK-GUM4-3-P1": {
+      hints: [
+        "Find the noun that the blank stands for. Then ask how many and what kind.",
+        "Look at the name and the title at the start of the sentence.",
+        "Its is for a thing, and a man is not a thing of any kind."
+      ],
+      how: [
+        "Find the noun the blank stands for: Mr. Okafor.",
+        "He is one man, so the pronoun must be the one for a man.",
+        "The answer is his. Her is for a woman, their is for more than one, and its is for a thing."
+      ],
+      misconception: "A common mix-up is picking the pronoun that sounds closest to the noun. Check one or more than one, and boy, girl or thing."
+    },
+    "SK-GUM4-3-P2": {
+      hints: [
+        "Find the noun that the blank stands for, and ask whether it means one or more than one.",
+        "Look at the first noun in the sentence and at the action word before the blank.",
+        "Him is for a boy or man, and no one in the sentence is one."
+      ],
+      how: [
+        "Find the noun: cookies.",
+        "Cookies means more than one, so the pronoun must mean more than one.",
+        "The answer is them. It stands for one thing, and him and her stand for one person."
+      ],
+      misconception: "A common mix-up is choosing it because cookies is a thing. Check whether the noun means one or more than one."
+    },
+    "SK-GUM4-3-P3": {
+      hints: [
+        "A pronoun stands for a noun that is already in the sentence. Find the pronoun first.",
+        "Their means more than one, so look at what each choice names and how many it is.",
+        "Mr. Hill is one person, so a pronoun for more than one cannot stand for him alone."
+      ],
+      how: [
+        "Find the pronoun: their.",
+        "Their means more than one, so look for a choice that names more than one person who made the project.",
+        "The answer is the girls. Mr. Hill is one person, and the project is the thing they showed."
+      ],
+      misconception: "A common mix-up is picking the noun next to the pronoun. The pronoun stands for the people who did the showing."
+    },
+    "SK-GUM4-3-P4": {
+      hints: [
+        "In each sentence, find the pronoun and the noun it stands for.",
+        "Check each noun: is it one thing or more than one? Then check the pronoun against it.",
+        "The cups are many, and the pronoun in that sentence is for one thing."
+      ],
+      how: [
+        "Find the pronoun and its noun in each sentence.",
+        "Books means more than one, so them matches. Book and lamp are one thing each, and cups is more than one.",
+        "The answer is \"The books fell, so Omar picked them up.\" The others pair them with one thing or it with many."
+      ],
+      misconception: "A common mix-up is picking the sentence that sounds smoothest. Check each pronoun against its noun."
+    },
+    "SK-GUM4-3-P5": {
+      hints: [
+        "Ask two questions about each noun: one or more than one? Boy, girl or thing?",
+        "Do the nouns you are sure about first. Then use the same two questions for the rest.",
+        "A bicycle is not a person, so the pronouns for people cannot stand for it."
+      ],
+      how: [
+        "Ask how many and what kind for each noun.",
+        "Uncle Ray is one man, and my aunt is one woman.",
+        "The bicycle is one thing, and the students means more than one."
+      ],
+      misconception: "A common mix-up is matching by the length of the noun. Ask how many and what kind."
+    }
+  },
+  /* B8a:core:end */
   test: [
     { id: "SK-GUM4-3-T1", type: "dropdown", points: 1, dok: 1, passages: [],
       prompt: "Choose the pronoun that stands for the blankets.",

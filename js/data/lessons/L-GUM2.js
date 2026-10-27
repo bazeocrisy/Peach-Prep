@@ -8336,14 +8336,14 @@ PP.addLesson({
       answer: "Their. The twins left their jackets on the bus."
     },
     {
-      show: ["___ and Dana ran to the bus stop. (She or Her)"],
-      ask: "Which pronoun fits the sentence?",
+      show: ["___ and Dana ran to the bus stop. (She or Her)", "The green scooter by the gate is ___. (my or mine)"],
+      ask: "Which word fits each sentence?",
       steps: [
-        "Cover up and Dana. The sentence becomes ___ ran to the bus stop.",
-        "She ran to the bus stop sounds right. Her ran to the bus stop does not.",
-        "The pronoun does the running, so it is a subject pronoun: she."
+        "In the first sentence, cover up and Dana. She ran to the bus stop sounds right, because the pronoun does the running.",
+        "In the second sentence, no noun comes after the blank, so the word must stand alone. My comes before a noun, as in my scooter.",
+        "Use she, a subject pronoun, in the first sentence. Use mine, an owning word that stands alone, in the second."
       ],
-      answer: "She. She and Dana ran to the bus stop."
+      answer: "She and mine. She and Dana ran to the bus stop. The green scooter by the gate is mine."
     }
   ],
   parent: "When your child says something like \"Me and Sam played,\" ask them to say it with just themselves (\"I played\") and then try again. Praise it when they say \"Sam and I played.\"",
@@ -8393,7 +8393,7 @@ PP.addLesson({
         ],
         [
           "(7) After supper, Dad joined us at the table.",
-          "(8) He had never played this game before, so we taught him the rules.",
+          "(8) He had never played this game before, so us taught him the rules.",
           "(9) By bedtime, the rain had stopped, and the grass was shiny.",
           "(10) I hope it rains again next Sunday."
         ]
@@ -8413,7 +8413,7 @@ PP.addLesson({
         ],
         [
           "(4) Him and Caleb found a long shelf of comic books near the window.",
-          "(5) The librarian told they to whisper.",
+          "(5) The librarian told I to whisper.",
           "(6) Pia asked for help, and Ms. Gold gave her a stool.",
           "(7) Me and Pia searched the top shelf together for a book about sharks."
         ],
@@ -8463,13 +8463,13 @@ PP.addLesson({
         ],
         [
           "(4) Us hammered the nails while Grandpa watched.",
-          "(5) The shiny red toolbox on the high shelf is hers.",
+          "(5) Grandma left her tools here, and the shiny red toolbox on the high shelf is hers.",
           "(6) I asked him why his saw was so old."
         ],
         [
           "(7) Grandpa said his father gave him that saw long ago.",
           "(8) When we finished, the stool stood straight and strong on its four legs.",
-          "(9) Grandpa painted it blue and let it dry in the warm sun all afternoon.",
+          "(9) Grandpa painted it blue, and us let it dry in the warm sun all afternoon.",
           "(10) We all agreed it was the best stool in the world."
         ]
       ]
@@ -8754,54 +8754,54 @@ PP.addLesson({
             ],
             "prompt": "Answer Part A first. Then use it to answer Part B.",
             "partA": {
-              "prompt": "What is wrong with the pronoun in sentence 2?",
+              "prompt": "What is wrong with the pronoun in sentence 8?",
               "choices": [
                 {
-                  "text": "I does the action, but here the pronoun gets the cards, so it should be me.",
+                  "text": "Us gets the action, but here the pronoun does the teaching, so it should be we.",
                   "correct": true
                 },
                 {
-                  "text": "I gets the action, but here the pronoun owns the cards, so it should be my."
+                  "text": "Us does the action, but here the pronoun owns the rules, so it should be our."
                 },
                 {
-                  "text": "I does the action, but here the pronoun is plural, so it should be us."
+                  "text": "Us gets the teaching, so it is correct, but the word him should be changed to he."
                 },
                 {
-                  "text": "I gets the cards, so it is correct, but the word Ben should be He."
+                  "text": "Us does the action, but here the pronoun is a single speaker, so it should be I."
                 }
               ]
             },
             "partB": {
-              "prompt": "Which version fixes sentence 2?",
+              "prompt": "Which version fixes sentence 8?",
               "choices": [
                 {
-                  "text": "Mom gave Ben and me a deck of cards.",
+                  "text": "He had never played this game before, so we taught him the rules.",
                   "correct": true
                 },
                 {
-                  "text": "Mom gave Ben and I a deck of cards."
+                  "text": "He had never played this game before, so us taught him the rules."
                 },
                 {
-                  "text": "Mom gave Ben and we a deck of cards."
+                  "text": "He had never played this game before, so our taught him the rules."
                 },
                 {
-                  "text": "Mom gave Ben and mine a deck of cards."
+                  "text": "He had never played this game before, so ours taught him the rules."
                 }
               ]
             },
-            "clue": "Cover up Ben and, and read the sentence with just the pronoun. Ask whether the pronoun does the action or gets it.",
+            "clue": "Say sentence 8 aloud. Ask who is doing the teaching.",
             "hints": [
-              "Cover up Ben and, and read the sentence with just the pronoun. Ask whether the pronoun does the action or gets it.",
-              "In Part B, cover up Ben and in each rewrite and test the sentence with just the pronoun.",
-              "Mine stands alone and does not fit after the word and here. Think about the other rewrites."
+              "Say sentence 8 aloud. Ask who is doing the teaching.",
+              "In Part B, test each version by saying the word before taught with the rest of the sentence.",
+              "Ours stands alone and does not start a clause like this. Think about the other versions."
             ],
             "how": [
-              "Part A: Mom gave I a deck of cards sounds wrong. The pronoun gets the cards.",
-              "Part B: a pronoun that gets the action must be an object pronoun, so me fits.",
-              "The answers are \"I does the action, but here the pronoun gets the cards, so it should be me.\" and \"Mom gave Ben and me a deck of cards.\""
+              "Part A: the pronoun in sentence 8 is the one doing the teaching.",
+              "Part B: a pronoun that does the action is a subject pronoun, so we fits.",
+              "The answers are \"Us gets the action, but here the pronoun does the teaching, so it should be we.\" and \"He had never played this game before, so we taught him the rules.\""
             ],
-            "misconception": "A common mix-up is thinking Ben and I always sounds more polite. The job of the pronoun decides.",
-            "why": "Part A: \"I does the action, but here the pronoun gets the cards, so it should be me.\" Part B: \"Mom gave Ben and me a deck of cards.\" Mom gave me sounds right. Mom gave I and Mom gave we do not.",
+            "misconception": "A common mix-up is using us whenever a sentence is about a group. Us names a receiver and does not do the action.",
+            "why": "Part A: \"Us gets the action, but here the pronoun does the teaching, so it should be we.\" Part B: \"He had never played this game before, so we taught him the rules.\" We taught sounds right. Us taught does not.",
             "like": [
               "SK-GUM2-6-S07"
             ]
@@ -8906,35 +8906,35 @@ PP.addLesson({
             "passages": [
               "p2"
             ],
-            "prompt": "Kai says sentence 2 is correct because Ben and I sounds more polite than Ben and me. Which reply is best?",
+            "prompt": "Kai says sentence 1 should say Ben and me because me sounds friendlier than I. Which reply is best?",
             "choices": [
               {
-                "text": "Cover up Ben, and Mom gave I a deck of cards sounds wrong, so me is needed.",
+                "text": "Cover up Ben, and Me stayed in the house sounds wrong, so I is right.",
                 "correct": true
               },
               {
-                "text": "Ben and I always sounds right, so Kai is correct and the sentence needs no change."
+                "text": "Ben and me is warmer to say, so Kai is correct and the sentence needs a change."
               },
               {
-                "text": "Polite people say I, so the sentence is fine and only the word gave needs fixing."
+                "text": "Kai is right because the name Ben comes first, so the word after Ben has to be me."
               },
               {
-                "text": "Ben comes first in the sentence, so the word after Ben has to be I."
+                "text": "The sentence starts with a day, so the pronoun in it must be an object pronoun."
               }
             ],
-            "clue": "Think about what Kai is trusting. Is it the job of the pronoun, or how polite the words sound?",
+            "clue": "Think about what Kai is trusting. Is it the job of the pronoun, or how the words sound together?",
             "hints": [
-              "Think about what Kai is trusting. Is it the job of the pronoun, or how polite the words sound?",
-              "Take Ben out of sentence 2 and read the sentence with just the pronoun.",
-              "Sounding polite does not decide which pronoun is right. Think about the other choices."
+              "Think about what Kai is trusting. Is it the job of the pronoun, or how the words sound together?",
+              "Take Ben out of sentence 1 and read the sentence with just the pronoun.",
+              "Sounding friendly does not decide which pronoun is right. Think about the other choices."
             ],
             "how": [
               "Take Ben out of the sentence and see which pronoun is left.",
-              "Mom gave I a deck of cards does not sound right, but Mom gave me a deck of cards does.",
-              "The answer is \"Cover up Ben, and Mom gave I a deck of cards sounds wrong, so me is needed.\""
+              "Me stayed in the house does not sound right, but I stayed in the house does.",
+              "The answer is \"Cover up Ben, and Me stayed in the house sounds wrong, so I is right.\""
             ],
-            "misconception": "A common mix-up is thinking I is always more polite than me. The job of the pronoun decides.",
-            "why": "The answer is \"Cover up Ben, and Mom gave I a deck of cards sounds wrong, so me is needed.\" The pronoun gets the cards, so it must be an object pronoun. Sounding polite does not change that.",
+            "misconception": "A common mix-up is thinking me is friendlier than I. The job of the pronoun decides.",
+            "why": "The answer is \"Cover up Ben, and Me stayed in the house sounds wrong, so I is right.\" The pronoun does the staying, so it must be a subject pronoun. Sounding friendly does not change that.",
             "like": [
               "SK-GUM2-6-S10"
             ]
@@ -8977,10 +8977,10 @@ PP.addLesson({
             "how": [
               "Go through the sentences one at a time and test each pronoun.",
               "Sentence 3 has she doing the opening, and sentence 6 has her receiving the stool. Both fit.",
-              "Sentences 4, 5 and 7 use him, they and me in jobs where they do not fit."
+              "Sentences 4, 5 and 7 use him, I and me in jobs where they do not fit."
             ],
             "misconception": "A common mix-up is choosing a sentence because the pronoun sounds familiar. Check what the pronoun does.",
-            "why": "The answers are \"Zoe grabbed a whale book, and she opened it right away.\" and \"Pia asked for help, and Ms. Gold gave her a stool.\" She does the opening, and her receives the stool. Sentence 4 needs He, sentence 5 needs them, and sentence 7 needs I.",
+            "why": "The answers are \"Zoe grabbed a whale book, and she opened it right away.\" and \"Pia asked for help, and Ms. Gold gave her a stool.\" She does the opening, and her receives the stool. Sentence 4 needs He, sentence 5 needs me, and sentence 7 needs I.",
             "like": [
               "SK-GUM2-6-S11"
             ]
@@ -8996,14 +8996,14 @@ PP.addLesson({
             "passages": [
               "p3"
             ],
-            "prompt": "Sentence 5 has the wrong pronoun. Choose the pronoun that fixes it.",
+            "prompt": "Which pronoun repairs the line about the librarian?",
             "text": "The librarian told {0} to whisper.",
             "slots": [
               {
                 "options": [
-                  "they",
-                  "them",
-                  "their"
+                  "I",
+                  "me",
+                  "my"
                 ],
                 "answer": 1
               }
@@ -9011,16 +9011,16 @@ PP.addLesson({
             "clue": "A pronoun takes the place of a noun. Decide what job the blank does in the sentence.",
             "hints": [
               "A pronoun takes the place of a noun. Decide what job the blank does in the sentence.",
-              "Find the verb that comes right before the blank, and ask who gets the telling.",
-              "Their tells who owns something, and it needs a noun after it. Look at what follows the blank."
+              "Look at the word that comes right before the blank.",
+              "My tells who owns something, and it needs a noun after it. Look at what follows the blank."
             ],
             "how": [
               "The librarian does the telling, and the blank gets it.",
               "A pronoun that gets the action is an object pronoun.",
-              "The answer is them. They does the action, and their tells who owns something."
+              "The answer is me. I does the action, and my tells who owns something."
             ],
-            "misconception": "A common mix-up is using they because it sounds like a word for more than one person. They does the action and does not get it.",
-            "why": "The answer is them. The librarian does the telling, so the blank gets the action and needs an object pronoun. They does the action, and their must be followed by a noun.",
+            "misconception": "A common mix-up is using I because the writer is the one speaking. I does the action and does not get it.",
+            "why": "The answer is me. The librarian does the telling, so the blank gets the action and needs an object pronoun. I does the action, and my must be followed by a noun.",
             "like": [
               "SK-GUM2-6-S12"
             ]
@@ -9080,7 +9080,7 @@ PP.addLesson({
               "3.L.GC.1:R:use-personal-pronouns-subject-object-possessive"
             ],
             "passages": [],
-            "prompt": "Choose the sentence in which a standalone owning word sits before a noun.",
+            "prompt": "Which sentence puts an owning word where it does not belong?",
             "options": [
               "That bike with the blue seat is mine.",
               "Our team practiced after school.",
@@ -9203,7 +9203,7 @@ PP.addLesson({
         "3.L.GC.1:R:use-personal-pronouns-subject-object-possessive"
       ],
       "passages": [],
-      "prompt": "Place each pronoun in the group where it belongs.",
+      "prompt": "Sort each pronoun into the group it belongs to.",
       "cols": [
         "Subject pronoun",
         "Object pronoun",
@@ -9367,7 +9367,7 @@ PP.addLesson({
       "hints": [
         "Look at the two sentences side by side. Ask what Noah is doing or getting in each one.",
         "Take Noah out of each sentence and read it with just the pronoun.",
-        "How long a sentence is, or where it sits in a draft, does not choose the pronoun. Think about the other choices."
+        "Whether a name is a leader or a helper does not decide the pronoun. Think about the other choices."
       ],
       "how": [
         "Sentence 2: Noah and the speaker were chosen. Sentence 3: Mr. Hart handed something to them.",
@@ -9432,56 +9432,56 @@ PP.addLesson({
       "passages": [
         "p5"
       ],
-      "prompt": "Finish the first part before you move on to the second part.",
+      "prompt": "Work through the two parts in order.",
       "partA": {
-        "prompt": "Why does sentence 4 need fixing?",
+        "prompt": "Why is the word us a poor fit in sentence 9?",
         "choices": [
           {
-            "text": "Us names the receiver, yet the hammering needs a word that names the doer.",
+            "text": "Us goes with words that receive, but this spot is for the one who lets.",
             "correct": true
           },
           {
-            "text": "Us names the doer, yet the hammering needs a word that names the receiver."
+            "text": "Us belongs to words that do things, but this spot is for the one who receives."
           },
           {
-            "text": "Us names one person, yet the hammering needs a word that stands for a group."
+            "text": "Us is for a crowd, but this spot is for a single helper at the table."
           },
           {
-            "text": "Us tells whose nails they are, yet the hammering needs a word for the receiver."
+            "text": "Us shows ownership, but this spot is for the one who receives something."
           }
         ]
       },
       "partB": {
-        "prompt": "Pick the best fix for sentence 4.",
+        "prompt": "Pick the best fix for sentence 9.",
         "choices": [
           {
-            "text": "We hammered the nails while Grandpa watched.",
+            "text": "Grandpa painted it blue, and we let it dry in the warm sun all afternoon.",
             "correct": true
           },
           {
-            "text": "Us hammered the nails while Grandpa watched."
+            "text": "Grandpa painted it blue, and us let it dry in the warm sun all afternoon."
           },
           {
-            "text": "Our hammered the nails while Grandpa watched."
+            "text": "Grandpa painted it blue, and our let it dry in the warm sun all afternoon."
           },
           {
-            "text": "Ours hammered the nails while Grandpa watched."
+            "text": "Grandpa painted it blue, and ours let it dry in the warm sun all afternoon."
           }
         ]
       },
-      "clue": "Say sentence 4 aloud. Ask who is doing the hammering.",
+      "clue": "Say sentence 9 aloud. Ask who is doing the letting.",
       "hints": [
-        "Say sentence 4 aloud. Ask who is doing the hammering.",
-        "In Part B, test each version by saying the first word with the rest of the sentence.",
-        "Ours stands alone and does not start a sentence like this. Think about the other versions."
+        "Say sentence 9 aloud. Ask who is doing the letting.",
+        "In Part B, test each version by saying the word after and with the rest of the sentence.",
+        "Ours stands alone and does not start a clause like this. Think about the other versions."
       ],
       "how": [
-        "Part A: the pronoun in sentence 4 is the one doing the hammering.",
+        "Part A: the pronoun in sentence 9 is the one doing the letting.",
         "Part B: a pronoun that does the action is a subject pronoun, so we fits.",
-        "The answers are \"Us names the receiver, yet the hammering needs a word that names the doer.\" and \"We hammered the nails while Grandpa watched.\""
+        "The answers are \"Us goes with words that receive, but this spot is for the one who lets.\" and \"Grandpa painted it blue, and we let it dry in the warm sun all afternoon.\""
       ],
       "misconception": "A common mix-up is using us whenever a sentence is about a group. Us names a receiver and does not do the action.",
-      "why": "Part A: \"Us names the receiver, yet the hammering needs a word that names the doer.\" Part B: \"We hammered the nails while Grandpa watched.\" We hammered sounds right. Us hammered does not.",
+      "why": "Part A: \"Us goes with words that receive, but this spot is for the one who lets.\" Part B: \"Grandpa painted it blue, and we let it dry in the warm sun all afternoon.\" We let sounds right. Us let does not.",
       "like": [
         "SK-GUM2-6-C07"
       ]
@@ -9586,35 +9586,35 @@ PP.addLesson({
       "passages": [
         "p5"
       ],
-      "prompt": "Tess wants to replace hers in sentence 5 with her. How should you respond?",
+      "prompt": "A classmate rewrites sentence 1 as my cousins and me visit. Is that edit an improvement?",
       "choices": [
         {
-          "text": "Hers works by itself when no noun follows it, so sentence 5 already works.",
+          "text": "No, since I belongs there when it names whoever does the visiting.",
           "correct": true
         },
         {
-          "text": "Her is the only owning word in the draft, so hers must always be replaced."
+          "text": "Yes, since any word following a plural noun must be an object form."
         },
         {
-          "text": "Hers goes right before a noun, so the toolbox needs a different word in front."
+          "text": "Yes, since a short word like me is safer than a long one."
         },
         {
-          "text": "Toolbox sentences use her by rule, since a toolbox always has one single owner."
+          "text": "No, since sentence 1 must use an owning word for the workshop."
         }
       ],
-      "clue": "Think about which owning words go before a noun and which come without one.",
+      "clue": "Think about the job the pronoun has in sentence 1. Does it do the action or get it?",
       "hints": [
-        "Think about which owning words go before a noun and which come without one.",
-        "Look at what comes after hers in sentence 5.",
-        "What a sentence is about does not choose the owning word. Think about the other choices."
+        "Think about the job the pronoun has in sentence 1. Does it do the action or get it?",
+        "Take my cousins and out, and say the sentence with just the pronoun.",
+        "The length of a pronoun does not decide anything. Think about the other choices."
       ],
       "how": [
-        "Sentence 5 ends with hers, and no noun comes after it.",
-        "An owning word that stands alone, such as hers, is right when no noun comes after it.",
-        "The answer is \"Hers works by itself when no noun follows it, so sentence 5 already works.\""
+        "Take the cousins out and see which pronoun is left.",
+        "Me visit does not sound right, but I visit does.",
+        "The answer is \"No, since I belongs there when it names whoever does the visiting.\""
       ],
-      "misconception": "A common mix-up is thinking her and hers are the same word. Her comes before a noun, and hers stands alone.",
-      "why": "The answer is \"Hers works by itself when no noun follows it, so sentence 5 already works.\" Her would need a noun after it, as in her toolbox. Here the sentence ends with hers.",
+      "misconception": "A common mix-up is thinking me sounds nicer than I. The job of the pronoun decides.",
+      "why": "The answer is \"No, since I belongs there when it names whoever does the visiting.\" The pronoun does the action, so it needs a subject pronoun. How short or soft it sounds does not change that.",
       "like": [
         "SK-GUM2-6-C10"
       ]
@@ -9630,7 +9630,7 @@ PP.addLesson({
       "passages": [
         "p6"
       ],
-      "prompt": "In sentences 3 to 7, which two use a pronoun correctly? Tap them.",
+      "prompt": "Tap the two sentences, numbered 3 through 7, where the pronoun does its job.",
       "targets": [
         "p6:1:3",
         "p6:2:1",
@@ -9709,7 +9709,7 @@ PP.addLesson({
         "3.L.GC.1:R:use-personal-pronouns-subject-object-possessive"
       ],
       "passages": [],
-      "prompt": "Complete each gap with the correct pronoun.",
+      "prompt": "Fill both gaps so the sentence reads well.",
       "text": "Pedro washed {0} bike, and Mom helped {1} dry it.",
       "slots": [
         {
@@ -9755,7 +9755,7 @@ PP.addLesson({
         "3.L.GC.1:R:use-personal-pronouns-subject-object-possessive"
       ],
       "passages": [],
-      "prompt": "Which line uses an owning word in the wrong spot?",
+      "prompt": "Pick the line where an owning word sits in the wrong spot.",
       "options": [
         "The green coat hanging on the hook is hers.",
         "Is this lunch box on the shelf ours or theirs?",
@@ -9948,7 +9948,7 @@ PP.addLesson({
   teach: {
     big: "A preposition is a small word that starts a group of words and links it to the rest of the sentence. Many show where or when, like in, on, under, before and after.",
     points: [
-      "Some prepositions tell where: in, on, under, over, behind, beside, between, across, through and near.",
+      "Some prepositions tell where: in, on, under, over, behind, beside, between, across, through, along, toward and near.",
       "Some prepositions tell when: before, after, during and until. Some, like through, can tell where or when: through the woods, through the night.",
       "A preposition starts a group of words that ends with a noun, like under the bed or during the game. The group adds a detail to the sentence. Some prepositions tell other things, like with, for, to and about: a walk with Dad.",
       "Choose the preposition that says exactly what you mean. The cat is on the box and the cat is in the box tell about different places."
@@ -9969,7 +9969,7 @@ PP.addLesson({
       ask: "Which preposition fits the sentence?",
       steps: [
         "Picture the ducks and the pond. The blank needs a word that tells where the ducks swam.",
-        "During tells when, not where. Between needs two things, and there is only one pond.",
+        "During tells when, not where. Between usually goes with two things, and there is only one pond.",
         "Across shows the ducks moving from one side of the pond to the other."
       ],
       answer: "Across. The ducks swam across the pond."
@@ -10015,7 +10015,7 @@ PP.addLesson({
           "(6) A turtle rested until a warm log and watched us closely."
         ],
         [
-          "(7) We stayed at the lake until the sun began to set behind the hills.",
+          "(7) We stayed at the lake until sunset and watched the hills turn gold.",
           "(8) Before we left, we picked up all of our trash and cans.",
           "(9) The ride home was quiet, and I fell asleep in the car.",
           "(10) I hope we visit the lake again next summer."
@@ -10032,7 +10032,7 @@ PP.addLesson({
         [
           "(1) Our class held a pet parade on the playground last Friday.",
           "(2) Every child waited during the front gate with a leash or a box.",
-          "(3) Mr. Ortiz checked each pet and each leash carefully before the parade began."
+          "(3) Mr. Ortiz checked each pet and each leash carefully before the parade."
         ],
         [
           "(4) Jin's rabbit hopped beside the long line of excited kids.",
@@ -10040,9 +10040,9 @@ PP.addLesson({
           "(6) Pedro's puppy hid until a bench and would not come out."
         ],
         [
-          "(7) After the parade, we gave each pet a snack of seeds or carrots.",
+          "(7) After the parade, we sat until the shady tree and gave each pet a snack.",
           "(8) Mr. Ortiz said the parade could return in the spring.",
-          "(9) We stayed outside until the bell rang for lunch.",
+          "(9) We stayed outside until the end of recess.",
           "(10) Everyone went inside happy and a little dusty."
         ]
       ]
@@ -10062,7 +10062,7 @@ PP.addLesson({
         [
           "(4) Aunt Pilar set the muffin tin across the oven for twenty minutes.",
           "(5) Steam drifted up from the oven and curled between the ceiling.",
-          "(6) After the timer rang, we pulled the hot pan out of the oven.",
+          "(6) After the buzzer, we pulled the hot pan out of the oven.",
           "(7) We let the muffins cool until a wire rack."
         ],
         [
@@ -10115,7 +10115,7 @@ PP.addLesson({
           "(6) Leah stood beside me and counted every pass out loud."
         ],
         [
-          "(7) After practice, we drank cold water from a big cooler.",
+          "(7) After practice, we drank cold water during a big cooler.",
           "(8) Coach Rivera clapped and said we played well during the windy afternoon.",
           "(9) We packed our bags and walked home before dark.",
           "(10) I am excited for our first game next week."
@@ -10276,7 +10276,7 @@ PP.addLesson({
             "slots": [
               {
                 "options": [
-                  "on",
+                  "near",
                   "until",
                   "during"
                 ],
@@ -10286,16 +10286,16 @@ PP.addLesson({
             "clue": "Decide whether the log is a place or a time.",
             "hints": [
               "Decide whether the log is a place or a time.",
-              "Picture the turtle and the log. The blank needs a preposition for where the turtle rested.",
+              "Picture the turtle and the log, and say each choice in the sentence.",
               "During tells when something happens. Look at the other choices."
             ],
             "how": [
               "The group of words ends with the noun log, which is a place.",
               "The blank needs a word that tells where the turtle rested.",
-              "The answer is on. Until and during both tell when."
+              "The answer is near. Until and during both tell when."
             ],
             "misconception": "A common mix-up is choosing until because it sounds like a small joining word. Until tells when, and a log is a place.",
-            "why": "The answer is on. A log is a place, so the blank needs a word that tells where. Until and during tell when, so they do not fit.",
+            "why": "The answer is near. A log is a place, so the blank needs a word that tells where. Until and during tell when, so they do not fit.",
             "like": [
               "SK-GUM2-7-S04"
             ]
@@ -10334,12 +10334,12 @@ PP.addLesson({
               "Until tells when, so one of the choices cannot be true. Think about the other choices."
             ],
             "how": [
-              "Sentence 6: until a warm log. Sentence 7: until the sun began to set.",
-              "A sun setting is a time, and a log is a place.",
+              "Sentence 6: until a warm log. Sentence 7: until sunset.",
+              "Sunset is a time, and a log is a place.",
               "The answer is \"In sentence 7 until goes with a time, but in sentence 6 it goes with a place.\""
             ],
             "misconception": "A common mix-up is thinking a word is right or wrong by itself. The noun that follows it decides.",
-            "why": "The answer is \"In sentence 7 until goes with a time, but in sentence 6 it goes with a place.\" Until tells when, so it fits the setting sun. It does not fit a log.",
+            "why": "The answer is \"In sentence 7 until goes with a time, but in sentence 6 it goes with a place.\" Until tells when, so it fits sunset. It does not fit a log.",
             "like": [
               "SK-GUM2-7-S05"
             ]
@@ -10403,54 +10403,54 @@ PP.addLesson({
             ],
             "prompt": "Complete Part A, then move to Part B.",
             "partA": {
-              "prompt": "What is wrong with the preposition in sentence 2?",
+              "prompt": "What is wrong with the preposition in sentence 7?",
               "choices": [
                 {
-                  "text": "During tells when, but the front gate is a place, so a word for where is needed.",
+                  "text": "Until tells when, but the shady tree is a place, so a word for where is needed.",
                   "correct": true
                 },
                 {
-                  "text": "During tells where, but the front gate is a time, so a word for when is needed."
+                  "text": "Until tells where, but the shady tree is a time, so a word for when is needed."
                 },
                 {
-                  "text": "During is correct as written, but waited should change to waits to match the leash."
+                  "text": "Until is correct as written, but sat should change to sits to match the tree."
                 },
                 {
-                  "text": "During starts the group correctly, but the group should end with a verb, not a noun."
+                  "text": "Until starts the group correctly, but the group should end with a verb, not a noun."
                 }
               ]
             },
             "partB": {
-              "prompt": "Pick the version that repairs sentence 2.",
+              "prompt": "Pick the version that repairs sentence 7.",
               "choices": [
                 {
-                  "text": "Every child waited at the front gate with a leash or a box.",
+                  "text": "After the parade, we sat under the shady tree and gave each pet a snack.",
                   "correct": true
                 },
                 {
-                  "text": "Every child waited until the front gate with a leash or a box."
+                  "text": "After the parade, we sat until the shady tree and gave each pet a snack."
                 },
                 {
-                  "text": "Every child waited among the front gate with a leash or a box."
+                  "text": "After the parade, we sat among the shady tree and gave each pet a snack."
                 },
                 {
-                  "text": "Every child waited during the front gate with a leash or a box."
+                  "text": "After the parade, we sat during the shady tree and gave each pet a snack."
                 }
               ]
             },
-            "clue": "Find the group of words that starts with during. Ask what kind of noun ends the group.",
+            "clue": "Find the group of words that starts with until. Ask what kind of noun ends the group.",
             "hints": [
-              "Find the group of words that starts with during. Ask what kind of noun ends the group.",
-              "In Part B, read each version and picture the child at the gate.",
+              "Find the group of words that starts with until. Ask what kind of noun ends the group.",
+              "In Part B, read each version and picture where the children sat.",
               "Among usually goes with several things. Think about the other versions."
             ],
             "how": [
-              "Part A: the group ends with the noun gate, which names a place.",
-              "Part B: the fix needs a preposition that tells where the child waited.",
-              "The answers are \"During tells when, but the front gate is a place, so a word for where is needed.\" and \"Every child waited at the front gate with a leash or a box.\""
+              "Part A: the group ends with the noun tree, which names a place.",
+              "Part B: the fix needs a preposition that tells where the children sat.",
+              "The answers are \"Until tells when, but the shady tree is a place, so a word for where is needed.\" and \"After the parade, we sat under the shady tree and gave each pet a snack.\""
             ],
             "misconception": "A common mix-up is trusting the first preposition that sounds familiar. Check the noun that follows it.",
-            "why": "Part A: \"During tells when, but the front gate is a place, so a word for where is needed.\" Part B: \"Every child waited at the front gate with a leash or a box.\" At tells where the child waited. Until and during tell when.",
+            "why": "Part A: \"Until tells when, but the shady tree is a place, so a word for where is needed.\" Part B: \"After the parade, we sat under the shady tree and gave each pet a snack.\" Under tells where the children sat. Until and during tell when.",
             "like": [
               "SK-GUM2-7-S07"
             ]
@@ -10556,14 +10556,14 @@ PP.addLesson({
             "passages": [
               "p2"
             ],
-            "prompt": "Ana says until in sentence 9 is wrong because a bell is not a time. Which reply is best?",
+            "prompt": "Ana says until in sentence 9 is wrong because the end of recess is not a time. Which reply is best?",
             "choices": [
               {
-                "text": "Until tells how long the kids stayed, and the bell ringing is the moment it ended.",
+                "text": "Until tells how long the kids stayed, and the end of recess is when it stopped.",
                 "correct": true
               },
               {
-                "text": "Objects such as bells always need a word for where, so Ana has the better idea."
+                "text": "Events such as recess always need a word for where, so Ana has the better idea."
               },
               {
                 "text": "Until can only be followed by a day or a month, so Ana is correct about sentence 9."
@@ -10575,16 +10575,16 @@ PP.addLesson({
             "clue": "Think about what Ana is trusting. Is it the kind of noun, or what until tells?",
             "hints": [
               "Think about what Ana is trusting. Is it the kind of noun, or what until tells?",
-              "Read sentence 9 and ask what happens when the bell rings.",
+              "Read sentence 9 and ask what happens at the end of recess.",
               "Until does not need a day or a name after it. Think about the other choices."
             ],
             "how": [
               "Until tells when something stops.",
-              "The kids stayed outside, and the bell ringing ended it. That is a time idea.",
-              "The answer is \"Until tells how long the kids stayed, and the bell ringing is the moment it ended.\""
+              "The kids stayed outside, and the end of recess stopped it. That is a time idea.",
+              "The answer is \"Until tells how long the kids stayed, and the end of recess is when it stopped.\""
             ],
             "misconception": "A common mix-up is thinking a time word must be followed by a clock time. An event can name a time too.",
-            "why": "The answer is \"Until tells how long the kids stayed, and the bell ringing is the moment it ended.\" Until tells when, and the bell marks the moment. Until does not need a day or a name.",
+            "why": "The answer is \"Until tells how long the kids stayed, and the end of recess is when it stopped.\" Until tells when, and the end of recess marks the moment. Until does not need a day or a name.",
             "like": [
               "SK-GUM2-7-S10"
             ]
@@ -10630,7 +10630,7 @@ PP.addLesson({
               "Sentences 4, 5 and 7 use across, between and until in places where they do not fit."
             ],
             "misconception": "A common mix-up is choosing a sentence because it sounds familiar. Picture what the preposition says.",
-            "why": "The answers are \"We mixed the flour and eggs inside a huge steel bowl.\" and \"After the timer rang, we pulled the hot pan out of the oven.\" Inside a bowl and out of the oven make sense. Across the oven, between the ceiling and until a wire rack do not.",
+            "why": "The answers are \"We mixed the flour and eggs inside a huge steel bowl.\" and \"After the buzzer, we pulled the hot pan out of the oven.\" Inside a bowl and out of the oven make sense. Across the oven, between the ceiling and until a wire rack do not.",
             "like": [
               "SK-GUM2-7-S11"
             ]
@@ -10652,7 +10652,7 @@ PP.addLesson({
               {
                 "options": [
                   "on",
-                  "until",
+                  "since",
                   "among"
                 ],
                 "answer": 0
@@ -10661,16 +10661,16 @@ PP.addLesson({
             "clue": "Decide whether the wire rack is a place or a time.",
             "hints": [
               "Decide whether the wire rack is a place or a time.",
-              "Picture the muffins cooling. The blank needs a word that tells where they sit.",
+              "Picture the muffins and the wire rack, and say each choice in the sentence.",
               "Among usually goes with several things. Look at the other choices."
             ],
             "how": [
               "The group ends with the noun rack, which is a place.",
               "The blank needs a word that tells where the muffins cooled.",
-              "The answer is on. Until tells when, and among goes with several things."
+              "The answer is on. Since tells when, and among goes with several things."
             ],
-            "misconception": "A common mix-up is picking until because the muffins cool for a while. The noun after it is a place.",
-            "why": "The answer is on. A wire rack is a place, so the blank needs a word that tells where. Until tells when, and among goes with several things.",
+            "misconception": "A common mix-up is picking since because the muffins cool for a while. The noun after it is a place.",
+            "why": "The answer is on. A wire rack is a place, so the blank needs a word that tells where. Since tells when, and among goes with several things.",
             "like": [
               "SK-GUM2-7-S12"
             ]
@@ -10684,7 +10684,7 @@ PP.addLesson({
               "3.L.GC.1:R:use-frequently-occurring-prepositions"
             ],
             "passages": [],
-            "prompt": "Select the best preposition for each blank.",
+            "prompt": "Pick a preposition to fill each blank.",
             "text": "The mail carrier walks {0} our street every day and stops {1} noon to eat lunch.",
             "slots": [
               {
@@ -10734,7 +10734,7 @@ PP.addLesson({
             "options": [
               "Zara rode her bike along the quiet trail.",
               "The movers carried the couch through the narrow door.",
-              "Our class waited inside until the rain stopped.",
+              "Our class waited inside until lunch.",
               "Leo found his missing shoe between the sofa and the wall.",
               "The cookies cooled during the kitchen counter."
             ],
@@ -10750,7 +10750,7 @@ PP.addLesson({
             ],
             "how": [
               "Look at the noun after each preposition.",
-              "Trail, door, rain stopping and the sofa and the wall all fit their prepositions.",
+              "Trail, door, lunch and the sofa and the wall all fit their prepositions.",
               "The answer is \"The cookies cooled during the kitchen counter.\" A counter is a place, so the sentence should say on."
             ],
             "misconception": "A common mix-up is thinking during works anywhere. During tells when, so it needs a time.",
@@ -10817,7 +10817,7 @@ PP.addLesson({
       "passages": [],
       "prompt": "Tap the line with a preposition that does not fit.",
       "options": [
-        "The ferry sailed across the wide bay on Sunday.",
+        "The ferry sailed across the wide harbor on Sunday.",
         "Our class lined up beside the yellow school bus.",
         "The sled raced over the snowy hill at top speed.",
         "Dad parked the truck until the garage.",
@@ -10835,7 +10835,7 @@ PP.addLesson({
       ],
       "how": [
         "Look at the noun after each preposition.",
-        "Across the bay, beside the bus, over the hill and around the campfire all tell where.",
+        "Across the harbor, beside the bus, over the hill and around the campfire all tell where.",
         "The answer is \"Dad parked the truck until the garage.\" A garage is a place, but until tells when."
       ],
       "misconception": "A common mix-up is picking a line because it is short. Check what the preposition tells.",
@@ -10956,13 +10956,13 @@ PP.addLesson({
       "passages": [
         "p4"
       ],
-      "prompt": "Which word fits sentence 6 best?",
+      "prompt": "Pick the preposition that suits the line about Omar's display.",
       "text": "A boy named Omar set his magnet display {0} the window.",
       "slots": [
         {
           "options": [
-            "near",
-            "until",
+            "by",
+            "since",
             "between"
           ],
           "answer": 0
@@ -10977,10 +10977,10 @@ PP.addLesson({
       "how": [
         "The group ends with the noun window, which is a place.",
         "The blank needs a word that tells where the display sat.",
-        "The answer is near. Until tells when, and between usually goes with two things."
+        "The answer is by. Since tells when, and between usually goes with two things."
       ],
       "misconception": "A common mix-up is choosing between because it sounds like a place word. It usually goes with two things.",
-      "why": "The answer is near. A window is a place, so the blank needs a word that tells where. Until tells when, and between usually goes with two things.",
+      "why": "The answer is by. A window is a place, so the blank needs a word that tells where. Since tells when, and between usually goes with two things.",
       "like": [
         "SK-GUM2-7-C04"
       ]
@@ -11083,54 +11083,54 @@ PP.addLesson({
       ],
       "prompt": "Part A comes first, and it sets up what you need for the second part.",
       "partA": {
-        "prompt": "Why does sentence 5 read oddly?",
+        "prompt": "Why does the line about the water sound odd?",
         "choices": [
           {
-            "text": "Until is a word about time, yet the fence names a place the ball is heading to.",
+            "text": "During is a word about time, yet the big cooler names a place the water came from.",
             "correct": true
           },
           {
-            "text": "Until is a word about place, yet the fence names a time the ball is heading to."
+            "text": "During is a word about place, yet the big cooler names a time the water came from."
           },
           {
-            "text": "Until is a word about speed, yet the fence names how fast the wind is blowing."
+            "text": "During is a word about speed, yet the big cooler names how fast the water was poured."
           },
           {
-            "text": "Until is a word about people, yet the fence names a group the boy is chasing."
+            "text": "During is a word about people, yet the big cooler names a group the kids were with."
           }
         ]
       },
       "partB": {
-        "prompt": "Choose the rewrite that corrects sentence 5.",
+        "prompt": "Choose the rewrite that corrects the line about the water.",
         "choices": [
           {
-            "text": "The wind blew the ball toward the fence, and a boy chased it.",
+            "text": "After practice, we drank cold water from a big cooler.",
             "correct": true
           },
           {
-            "text": "The wind blew the ball after the fence, and a boy chased it."
+            "text": "After practice, we drank cold water since a big cooler."
           },
           {
-            "text": "The wind blew the ball since the fence, and a boy chased it."
+            "text": "After practice, we drank cold water between a big cooler."
           },
           {
-            "text": "The wind blew the ball between the fence, and a boy chased it."
+            "text": "After practice, we drank cold water during a big cooler."
           }
         ]
       },
-      "clue": "Find the group that starts with until, and ask what kind of noun ends it.",
+      "clue": "Find the group that starts with during, and ask what kind of noun ends it.",
       "hints": [
-        "Find the group that starts with until, and ask what kind of noun ends it.",
-        "In Part B, read each sentence and picture the ball and the fence.",
+        "Find the group that starts with during, and ask what kind of noun ends it.",
+        "In Part B, read each sentence and picture the water and the cooler.",
         "Since tells when. Think about the other choices, and picture each one."
       ],
       "how": [
-        "Part A: the group ends with the noun fence, which names a place.",
-        "Part B: the fix needs a preposition that fits a ball heading to a fence.",
-        "The answers are \"Until is a word about time, yet the fence names a place the ball is heading to.\" and \"The wind blew the ball toward the fence, and a boy chased it.\""
+        "Part A: the group ends with the noun cooler, which names a place.",
+        "Part B: the fix needs a preposition that fits water coming out of a cooler.",
+        "The answers are \"During is a word about time, yet the big cooler names a place the water came from.\" and \"After practice, we drank cold water from a big cooler.\""
       ],
       "misconception": "A common mix-up is picking any preposition that sounds familiar. Check the noun that follows it.",
-      "why": "Part A: \"Until is a word about time, yet the fence names a place the ball is heading to.\" Part B: \"The wind blew the ball toward the fence, and a boy chased it.\" Toward fits a ball moving to a fence. After, since and between do not.",
+      "why": "Part A: \"During is a word about time, yet the big cooler names a place the water came from.\" Part B: \"After practice, we drank cold water from a big cooler.\" From fits water coming out of a cooler. Since, between and during do not.",
       "like": [
         "SK-GUM2-7-C07"
       ]
@@ -11148,7 +11148,7 @@ PP.addLesson({
       "pick": 2,
       "choices": [
         {
-          "text": "Yuki feeds the chickens before the sun comes up.",
+          "text": "Yuki feeds the chickens before sunrise.",
           "correct": true
         },
         {
@@ -11173,11 +11173,11 @@ PP.addLesson({
       ],
       "how": [
         "Look at the noun after each preposition.",
-        "The sun coming up and six name times. The garage wall, the maple tree and a flowerpot name places.",
-        "The answers are before the sun comes up and at six."
+        "Sunrise and six name times. The garage wall, the maple tree and a flowerpot name places.",
+        "The answers are before sunrise and at six."
       ],
       "misconception": "A common mix-up is picking a sentence because it mentions a day of the week. The preposition itself has to tell when.",
-      "why": "The answers are \"Yuki feeds the chickens before the sun comes up.\" and \"The skating rink opens at six on Fridays.\" Before and at tell when. Against, in and under tell where.",
+      "why": "The answers are \"Yuki feeds the chickens before sunrise.\" and \"The skating rink opens at six on Fridays.\" Before and at tell when. Against, in and under tell where.",
       "like": [
         "SK-GUM2-7-C08"
       ]
@@ -11236,20 +11236,20 @@ PP.addLesson({
       "passages": [
         "p5"
       ],
-      "prompt": "Dani thinks under would read better than before in sentence 9. What is your best answer?",
+      "prompt": "Dani wants to swap before for under in sentence 9. How would you respond?",
       "choices": [
         {
-          "text": "Walking home before dark describes a moment, so before already suits the sentence.",
+          "text": "Dark is a moment, so before already suits sentence 9.",
           "correct": true
         },
         {
-          "text": "Dani is right, because going home is a trip, and every trip needs the word under."
+          "text": "Dani is right, since going home is a trip, and every trip needs the word under."
         },
         {
-          "text": "Dani is right, because under always reads better than before in any kind of draft."
+          "text": "Dani is right, since under reads more smoothly than before in every draft."
         },
         {
-          "text": "Dani is wrong only because under cannot begin a phrase in any sentence."
+          "text": "Dani is wrong since under is a word for water, and the sentence is about dry land."
         }
       ],
       "clue": "Think about what the last noun in sentence 9 names.",
@@ -11261,10 +11261,10 @@ PP.addLesson({
       "how": [
         "Sentence 9 says walked home before dark.",
         "Dark names a moment, and before can point to a moment.",
-        "The answer is \"Walking home before dark describes a moment, so before already suits the sentence.\""
+        "The answer is \"Dark is a moment, so before already suits sentence 9.\""
       ],
       "misconception": "A common mix-up is thinking before only points to a spot. Before can also point to a moment.",
-      "why": "The answer is \"Walking home before dark describes a moment, so before already suits the sentence.\" Under would point to a spot, and the sentence needs a moment.",
+      "why": "The answer is \"Dark is a moment, so before already suits sentence 9.\" Under would point to a spot, and the sentence needs a moment.",
       "like": [
         "SK-GUM2-7-C10"
       ]
@@ -11326,7 +11326,7 @@ PP.addLesson({
       "slots": [
         {
           "options": [
-            "beside",
+            "at",
             "during",
             "under"
           ],
@@ -11336,16 +11336,16 @@ PP.addLesson({
       "clue": "Decide whether my side is a place or a time.",
       "hints": [
         "Decide whether my side is a place or a time.",
-        "Picture Ms. Vega and the swimmer. The blank needs a word that tells where she waited.",
+        "Picture Ms. Vega and the swimmer, and say each choice in the sentence.",
         "During tells when something happens. Look at the other choices."
       ],
       "how": [
         "The group ends with the noun side, which is a place.",
         "The blank needs a word that tells where Ms. Vega waited.",
-        "The answer is beside. During tells when, and under puts her below the swimmer."
+        "The answer is at. During tells when, and under puts her below the swimmer."
       ],
       "misconception": "A common mix-up is picking during because the lap takes a while. The noun after it is a place.",
-      "why": "The answer is beside. My side is a place, so the blank needs a word that tells where. During tells when, and under does not fit a teacher standing next to a swimmer.",
+      "why": "The answer is at. My side is a place, so the blank needs a word that tells where. During tells when, and under does not fit a teacher standing next to a swimmer.",
       "like": [
         "SK-GUM2-7-C12"
       ]
@@ -11379,9 +11379,9 @@ PP.addLesson({
           "answer": 0
         }
       ],
-      "clue": "The two gaps follow different ideas. Decide what each noun names.",
+      "clue": "Both gaps need a preposition. Decide what each noun names.",
       "hints": [
-        "The two gaps follow different ideas. Decide what each noun names.",
+        "Both gaps need a preposition. Decide what each noun names.",
         "The first gap comes before canyon. The second gap comes before stars.",
         "During tells when. Look at the choices for the second gap."
       ],
@@ -11405,7 +11405,7 @@ PP.addLesson({
         "3.L.GC.1:R:use-frequently-occurring-prepositions"
       ],
       "passages": [],
-      "prompt": "One line pairs a small word with the wrong kind of noun. Tap it.",
+      "prompt": "In one line, a small word and its noun do not match. Tap it.",
       "options": [
         "A cyclist pedaled up the winding street at dusk.",
         "The soccer team practiced after the sun went down.",
@@ -11521,7 +11521,7 @@ PP.addLesson({
       "hints": [
         "Look at the noun after each preposition.",
         "Ask whether each noun is a place or a time.",
-        "Bridge, barn and river are things you can stand near. Use that to sort some of the groups first."
+        "Use the noun at the end of one group to sort it first."
       ],
       "how": [
         "Look at the noun at the end of each group.",
@@ -11578,8 +11578,8 @@ PP.addLesson({
     { id: "SK-GUM2-7-T4", type: "hottext", points: 1, dok: 2, passages: [],
       prompt: "Select the sentence where the preposition does not make sense.",
       options: [
-        "The sun set behind the mountains.",
-        "Rosa put a stamp on the envelope.",
+        "The sun set behind the mountains near our town.",
+        "Rosa put a stamp on the envelope for her aunt.",
         "We slept through the noisy thunderstorm.",
         "The bus stopped under the corner to pick us up.",
         "A spider crawled up the wall."
@@ -11645,14 +11645,14 @@ PP.addLesson({
       answer: "My cousin lives in Dalton, Georgia. She moved there on March 3, 2019."
     },
     {
-      show: ["My aunt lives at 31 Elm Road Provo Utah."],
+      show: ["Dear Uncle Tom", "Thank you for the sweater.", "Your niece", "Kim"],
       ask: "Where do the commas go?",
       steps: [
-        "Find the address. It has a street, a city and a state: 31 Elm Road, Provo, and Utah.",
-        "Put a comma after the street, and put a comma between the city and the state.",
-        "Do not put a comma between the number and the street name."
+        "Find the greeting. It is the hello at the top of the letter: Dear Uncle Tom.",
+        "Put a comma after the whole greeting. Then find the closing near the end: Your niece.",
+        "Put a comma after the closing too. The name below it needs none."
       ],
-      answer: "My aunt lives at 31 Elm Road, Provo, Utah."
+      answer: "Dear Uncle Tom, and Your niece,"
     }
   ],
   parent: "Write a short thank-you note together. Let your child add the date, the greeting, the closing and a list of three things, and check each comma with you.",
@@ -11666,7 +11666,7 @@ PP.addLesson({
       "draft": true,
       "paragraphs": [
         [
-          "(1) July 9 2026",
+          "(1) June 14 2026",
           "(2) Dear Grandma,"
         ],
         [
@@ -11683,7 +11683,7 @@ PP.addLesson({
           "(11) My new friends are kind and funny and we play games."
         ],
         [
-          "(12) Your granddaughter",
+          "(12) Your granddaughter,",
           "(13) Zoe"
         ]
       ]
@@ -11715,7 +11715,7 @@ PP.addLesson({
           "(13) That would make all of us very happy."
         ],
         [
-          "(14) Your friend,",
+          "(14) Your friend",
           "(15) Mateo"
         ]
       ]
@@ -11806,7 +11806,7 @@ PP.addLesson({
           "(11) The siren was the loudest sound I ever heard."
         ],
         [
-          "(12) Your friend,",
+          "(12) Yours truly",
           "(13) Rin"
         ]
       ]
@@ -11923,14 +11923,14 @@ PP.addLesson({
             "prompt": "Line 1 has a comma mistake. What is the mistake?",
             "choices": [
               {
-                "text": "A comma is missing after the day, so it should read July 9, 2026.",
+                "text": "A comma is missing after the day, so it should read June 14, 2026.",
                 "correct": true
               },
               {
-                "text": "A comma is missing after the month, so it should read July, 9 2026."
+                "text": "A comma is missing after the month, so it should read June, 14 2026."
               },
               {
-                "text": "Two commas are needed, one after July and one after 9, so it should read July, 9, 2026."
+                "text": "Two commas are needed, one after June and one after 14, so it should read June, 14, 2026."
               },
               {
                 "text": "The date is correct, but the line should finish with a period after the year."
@@ -11943,12 +11943,12 @@ PP.addLesson({
               "A date is not a full sentence, so it does not end with a period. Think about the other choices."
             ],
             "how": [
-              "Line 1 has the month July, the day 9 and the year 2026.",
+              "Line 1 has the month June, the day 14 and the year 2026.",
               "A date needs one comma, and it keeps the day and the year apart.",
-              "The answer is \"A comma is missing after the day, so it should read July 9, 2026.\""
+              "The answer is \"A comma is missing after the day, so it should read June 14, 2026.\""
             ],
             "misconception": "A common mix-up is putting the comma right after the month. The comma goes after the day.",
-            "why": "The answer is \"A comma is missing after the day, so it should read July 9, 2026.\" A date has one comma, between the day and the year. A comma after the month, or two commas, do not match the rule.",
+            "why": "The answer is \"A comma is missing after the day, so it should read June 14, 2026.\" A date has one comma, between the day and the year. A comma after the month, or two commas, do not match the rule.",
             "like": [
               "SK-GUM2-8-S03"
             ]
@@ -11964,7 +11964,7 @@ PP.addLesson({
             "passages": [
               "p1"
             ],
-            "prompt": "Line 3 needs a comma. Choose the city and state that are written correctly.",
+            "prompt": "Which version of the place name is right for line 3?",
             "text": "I am having a wonderful time at a big summer camp in {0}.",
             "slots": [
               {
@@ -12011,20 +12011,20 @@ PP.addLesson({
                 "correct": true
               },
               {
-                "text": "Line 3 is about a camp, and a camp name always takes a comma in front of it."
+                "text": "Line 3 is a plain sentence, so a place name inside it can go without a comma."
               },
               {
-                "text": "Line 7 is an address, and addresses are the sole kind of line where commas may appear."
+                "text": "Both lines are fine, since the comma may be skipped when a city and state are said together."
               },
               {
-                "text": "Dayton is spelled two different ways, so one of the lines is a spelling mistake."
+                "text": "Line 7 is the mistake, because a comma should come only after the state, not before it."
               }
             ],
             "clue": "Look closely at line 3 and at line 7.",
             "hints": [
               "Look closely at line 3 and at line 7.",
               "Compare the two lines word by word.",
-              "Check how Dayton is spelled in both lines. Think about the other choices."
+              "Where a place name appears does not change its rule. Think about the other choices."
             ],
             "how": [
               "Line 3 says Dayton Ohio, and line 7 says Dayton, Ohio.",
@@ -12096,54 +12096,54 @@ PP.addLesson({
             ],
             "prompt": "Answer Part A, and then go on to Part B.",
             "partA": {
-              "prompt": "What is wrong with line 2?",
+              "prompt": "What is wrong with line 14?",
               "choices": [
                 {
-                  "text": "A greeting must end with a comma, so line 2 needs one after Okafor.",
+                  "text": "Nothing follows friend, and a closing always needs a comma at its end.",
                   "correct": true
                 },
                 {
-                  "text": "A greeting must end with a period, so line 2 needs one after Okafor."
+                  "text": "Line 14 should end with a period, since a closing finishes off the entire letter."
                 },
                 {
-                  "text": "A greeting must have a comma after Dear, so line 2 should read Dear, Ms. Okafor."
+                  "text": "Line 14 needs a comma after Your, since a closing pauses after its first word."
                 },
                 {
-                  "text": "A greeting must have two commas, one after Dear and one after Okafor, so both are missing."
+                  "text": "Line 14 needs two commas, one after Your and one after friend, as a closing has two words."
                 }
               ]
             },
             "partB": {
-              "prompt": "Pick the version that repairs line 2.",
+              "prompt": "Pick the version that repairs line 14.",
               "choices": [
                 {
-                  "text": "Dear Ms. Okafor,",
+                  "text": "Your friend,",
                   "correct": true
                 },
                 {
-                  "text": "Dear, Ms. Okafor"
+                  "text": "Your, friend"
                 },
                 {
-                  "text": "Dear Ms. Okafor."
+                  "text": "Your friend."
                 },
                 {
-                  "text": "Dear, Ms. Okafor,"
+                  "text": "Your, friend,"
                 }
               ]
             },
-            "clue": "Look at how a letter greeting ends in the other letters you have seen.",
+            "clue": "Look at how the last lines of a letter are written, the closing and then the name.",
             "hints": [
-              "Look at how a letter greeting ends in the other letters you have seen.",
-              "In Part B, compare each version with the greeting in a letter you know.",
-              "A period ends a sentence, and a greeting is not a sentence. Think about the other versions."
+              "Look at how the last lines of a letter are written, the closing and then the name.",
+              "In Part B, compare each version with the closings in the lesson.",
+              "A period ends a sentence, and a closing is not a sentence. Think about the other versions."
             ],
             "how": [
-              "Part A: the greeting in line 2 has no mark after Okafor.",
-              "Part B: the repaired greeting has one comma at the end.",
-              "The answers are \"A greeting must end with a comma, so line 2 needs one after Okafor.\" and \"Dear Ms. Okafor,\""
+              "Part A: the closing in line 14 has no mark after friend.",
+              "Part B: the repaired closing has one comma at the end.",
+              "The answers are \"Nothing follows friend, and a closing always needs a comma at its end.\" and \"Your friend,\""
             ],
-            "misconception": "A common mix-up is adding a comma after Dear. The comma goes at the end of the greeting.",
-            "why": "Part A: \"A greeting must end with a comma, so line 2 needs one after Okafor.\" Part B: \"Dear Ms. Okafor,\" The comma goes after the whole name, not after Dear.",
+            "misconception": "A common mix-up is adding a comma after Your. The comma goes at the end of the closing.",
+            "why": "Part A: \"Nothing follows friend, and a closing always needs a comma at its end.\" Part B: \"Your friend,\" The comma goes after the whole closing, not after Your.",
             "like": [
               "SK-GUM2-8-S07"
             ]
@@ -12249,35 +12249,35 @@ PP.addLesson({
             "passages": [
               "p2"
             ],
-            "prompt": "Kai says line 1 is wrong because a date should never have a comma. Which reply is best?",
+            "prompt": "Kai crosses out the commas in line 7, saying an address is just one thing. Which reply is best?",
             "choices": [
               {
-                "text": "Line 1 has its comma after the day and before the year, which is where a date needs it.",
+                "text": "Line 7 is correct, because commas keep the parts of an address apart.",
                 "correct": true
               },
               {
-                "text": "Kai is right, because a date is only numbers and numbers never take commas."
+                "text": "Kai is right, since an address names a single place, and one place never needs a comma."
               },
               {
-                "text": "Kai is right, because the comma belongs right after the month instead."
+                "text": "Line 7 needs only one comma, since only the last two parts are kept apart."
               },
               {
-                "text": "A date needs two commas, one after the month and one after the day, so line 1 is wrong."
+                "text": "Kai is right, because the comma after the street should be a period."
               }
             ],
-            "clue": "Look at line 1 and at how it is written. Think about where a comma belongs in a date.",
+            "clue": "Look at line 7 and think about the parts an address has.",
             "hints": [
-              "Look at line 1 and at how it is written. Think about where a comma belongs in a date.",
-              "Ask which two parts of a date a comma keeps apart.",
-              "A date can have a month written as a word, so it is not only numbers. Think about the other choices."
+              "Look at line 7 and think about the parts an address has.",
+              "Ask what job a comma does inside an address.",
+              "An address names one place, yet it is still made of parts. Think about the other choices."
             ],
             "how": [
-              "Line 1 says May 20, 2026.",
-              "The comma sits between the day and the year, which is where a date needs it.",
-              "The answer is \"Line 1 has its comma after the day and before the year, which is where a date needs it.\""
+              "Line 7 says 18 Elm Street, Tulsa, Oklahoma.",
+              "Each comma keeps one part of the address apart from the next.",
+              "The answer is \"Line 7 is correct, because commas keep the parts of an address apart.\""
             ],
-            "misconception": "A common mix-up is thinking a date never needs a comma. A date needs one comma, between the day and the year.",
-            "why": "The answer is \"Line 1 has its comma after the day and before the year, which is where a date needs it.\" May 20, 2026 has its comma in the right place, so Kai is wrong.",
+            "misconception": "A common mix-up is thinking an address is one piece of information. It has parts, and commas keep them apart.",
+            "why": "The answer is \"Line 7 is correct, because commas keep the parts of an address apart.\" The commas in line 7 are in the right places, so Kai is wrong.",
             "like": [
               "SK-GUM2-8-S10"
             ]
@@ -12339,7 +12339,7 @@ PP.addLesson({
             "passages": [
               "p3"
             ],
-            "prompt": "Line 5 needs a comma. Pick the correct way to write its date.",
+            "prompt": "Which date fits line 5?",
             "text": "The new gear could arrive by {0}.",
             "slots": [
               {
@@ -12523,7 +12523,7 @@ PP.addLesson({
       "clue": "Check the greeting, the list, the date and the closing.",
       "hints": [
         "Check the greeting, the list, the date and the closing.",
-        "A date needs a comma between the day and the year.",
+        "Say what each comma in the lines is separating.",
         "The list and the greeting are written correctly. Think about the rest."
       ],
       "how": [
@@ -12651,7 +12651,7 @@ PP.addLesson({
       "passages": [
         "p4"
       ],
-      "prompt": "Which version of the place name is right for line 3?",
+      "prompt": "Choose the city and state as they should appear in line 3.",
       "text": "Our class rode a long bus to the zoo in {0}.",
       "slots": [
         {
@@ -12694,17 +12694,17 @@ PP.addLesson({
       "prompt": "Line 4 and line 5 each hold three items. What makes line 5 the flawed one?",
       "choices": [
         {
-          "text": "Each item in line 4 is separated from the next by a comma, while line 5 runs two of them together.",
+          "text": "Each item in line 4 is separated from the next by a comma, while line 5 runs two together.",
           "correct": true
         },
         {
-          "text": "Line 5 mentions a gift shop, and anything bought in a gift shop cannot be listed with commas."
+          "text": "Line 5 is longer than line 4, so it needs extra commas that line 4 can skip."
         },
         {
           "text": "Line 4 has animals in it, so it needs commas, while line 5 has objects, so it does not need any."
         },
         {
-          "text": "Both lines hold three items, so they must each have the same number of words in them as well, no matter what."
+          "text": "Neither line has a flaw, since lists of three never need any marks between the things."
         }
       ],
       "clue": "Count the items held in each of lines 4 and 5.",
@@ -12716,10 +12716,10 @@ PP.addLesson({
       "how": [
         "Line 4: monkeys, parrots, and snakes. Line 5: a map a hat, and a water bottle.",
         "A list needs a comma after each item before and. Line 5 is missing the first one.",
-        "The answer is \"Each item in line 4 is separated from the next by a comma, while line 5 runs two of them together.\""
+        "The answer is \"Each item in line 4 is separated from the next by a comma, while line 5 runs two together.\""
       ],
       "misconception": "A common mix-up is thinking commas depend on what is listed. A list needs the same commas for animals or for objects.",
-      "why": "The answer is \"Each item in line 4 is separated from the next by a comma, while line 5 runs two of them together.\" Animals and objects are punctuated the same way in a list.",
+      "why": "The answer is \"Each item in line 4 is separated from the next by a comma, while line 5 runs two together.\" Animals and objects are punctuated the same way in a list.",
       "like": [
         "SK-GUM2-8-C05"
       ]
@@ -12735,7 +12735,7 @@ PP.addLesson({
       "passages": [
         "p5"
       ],
-      "prompt": "Which two of lines 2 to 6 contain a comma error? Tap both.",
+      "prompt": "Tap the pair of numbered lines 2 to 6 that need comma repairs.",
       "targets": [
         "p5:1:2",
         "p5:2:1",
@@ -12778,54 +12778,54 @@ PP.addLesson({
       ],
       "prompt": "Work through both halves of this question.",
       "partA": {
-        "prompt": "Why does line 3 need fixing?",
+        "prompt": "Why does line 12 need fixing?",
         "choices": [
           {
-            "text": "Billings and Montana run together, so a comma is needed between them.",
+            "text": "Yours truly stands alone with no mark, yet a closing should end with a comma.",
             "correct": true
           },
           {
-            "text": "Billings and Montana run together, so a dash is needed between them."
+            "text": "Yours truly stands alone with no mark, yet a closing should end with a dash."
           },
           {
-            "text": "Billings comes after Montana, so the two names need to switch places."
+            "text": "A comma follows Yours in line 12, yet a closing should have none inside it."
           },
           {
-            "text": "The names are fine, but the word fire needs a comma of its own."
+            "text": "Line 12 is a full sentence, yet it has no period at the end to finish the thought."
           }
         ]
       },
       "partB": {
-        "prompt": "Choose the rewrite that corrects line 3.",
+        "prompt": "Choose the rewrite that corrects line 12.",
         "choices": [
           {
-            "text": "Our class loved climbing into the big red fire truck in Billings, Montana.",
+            "text": "Yours truly,",
             "correct": true
           },
           {
-            "text": "Our class loved climbing into the big red fire truck in Billings - Montana."
+            "text": "Yours truly-"
           },
           {
-            "text": "Our class loved climbing into the big red fire truck in Billings Montana,."
+            "text": "Yours, truly"
           },
           {
-            "text": "Our class loved, climbing into the big red fire truck in Billings Montana."
+            "text": "Yours truly."
           }
         ]
       },
-      "clue": "Find the two place names in line 3. Ask what separates them.",
+      "clue": "Look at the closing in line 12 and at what comes right after it.",
       "hints": [
-        "Find the two place names in line 3. Ask what separates them.",
+        "Look at the closing in line 12 and at what comes right after it.",
         "In Part B, read each rewrite and look at where its mark sits.",
         "A dash is not a comma. Think about the other rewrites."
       ],
       "how": [
-        "Part A: line 3 has no mark between Billings and Montana.",
-        "Part B: the rewrite needs one comma between the two place names.",
-        "The answers are \"Billings and Montana run together, so a comma is needed between them.\" and \"Our class loved climbing into the big red fire truck in Billings, Montana.\""
+        "Part A: line 12 has no mark after truly.",
+        "Part B: the rewrite needs one comma at the end of the closing.",
+        "The answers are \"Yours truly stands alone with no mark, yet a closing should end with a comma.\" and \"Yours truly,\""
       ],
-      "misconception": "A common mix-up is putting a mark at the end of the line instead of between the names. The comma goes between the city and the state.",
-      "why": "Part A: \"Billings and Montana run together, so a comma is needed between them.\" Part B: \"Our class loved climbing into the big red fire truck in Billings, Montana.\" The comma goes between the city and the state.",
+      "misconception": "A common mix-up is putting a mark inside the closing instead of after it. The comma goes at the end.",
+      "why": "Part A: \"Yours truly stands alone with no mark, yet a closing should end with a comma.\" Part B: \"Yours truly,\" The comma goes after the whole closing.",
       "like": [
         "SK-GUM2-8-C07"
       ]
@@ -12843,7 +12843,7 @@ PP.addLesson({
       "pick": 2,
       "choices": [
         {
-          "text": "Dad packed sandwiches, apples, and juice.",
+          "text": "Dad packed pretzels, grapes, and juice.",
           "correct": true
         },
         {
@@ -12872,7 +12872,7 @@ PP.addLesson({
         "Helena Montana needs a comma, the kitten has a comma it does not need, and the August date needs one."
       ],
       "misconception": "A common mix-up is choosing a sentence because it has a comma in it. Check that every needed comma is there.",
-      "why": "The answers are \"Dad packed sandwiches, apples, and juice.\" and \"The recital is on November 3, 2026.\" The list and the date have every comma they need. The other three sentences have a missing or an extra comma.",
+      "why": "The answers are \"Dad packed pretzels, grapes, and juice.\" and \"The recital is on November 3, 2026.\" The list and the date have every comma they need. The other three sentences have a missing or an extra comma.",
       "like": [
         "SK-GUM2-8-C08"
       ]
@@ -12931,35 +12931,35 @@ PP.addLesson({
       "passages": [
         "p5"
       ],
-      "prompt": "Rin argues that line 4 is too short for commas. How would you respond?",
+      "prompt": "Tara wants to take out the first mark in the address line of her note. Is that wise?",
       "choices": [
         {
-          "text": "Three items in a row form a list, and a list needs commas even in a brief line.",
+          "text": "No, Hill Road and Billings are two separate things, so the mark stays.",
           "correct": true
         },
         {
-          "text": "Brief lines never use commas of any kind, which proves Rin right about her letter."
+          "text": "Yes, because Hill Road and Billings read together as one single long label."
         },
         {
-          "text": "Just lines holding a date ever require commas, which proves Rin right about line 4."
+          "text": "Yes, because only the final mark before Montana is ever needed here."
         },
         {
-          "text": "Each comma is needed, but all of them belong after the final item in the line."
+          "text": "No, but a second one belongs after Montana to finish the line off."
         }
       ],
-      "clue": "Read line 4 and count how many things it names.",
+      "clue": "Read line 7 and think about the parts an address has.",
       "hints": [
-        "Read line 4 and count how many things it names.",
-        "Ask what keeps them apart.",
-        "The length of a line does not decide its commas. Think about the other choices."
+        "Read line 7 and think about the parts an address has.",
+        "Name the parts that sit on each side of that comma.",
+        "The size of a place does not decide where commas go. Think about the other choices."
       ],
       "how": [
-        "Line 4 names helmets, boots and gloves.",
-        "Three in a row make a list, and a list needs commas between its parts.",
-        "The answer is \"Three items in a row form a list, and a list needs commas even in a brief line.\""
+        "Line 7 says 6 Hill Road, Billings, Montana.",
+        "The comma after Road keeps the street apart from the city.",
+        "The answer is \"No, Hill Road and Billings are two separate things, so the mark stays.\""
       ],
-      "misconception": "A common mix-up is thinking a short line needs fewer commas. The list decides the commas.",
-      "why": "The answer is \"Three items in a row form a list, and a list needs commas even in a brief line.\" Helmets, boots and gloves are a list, so they need commas.",
+      "misconception": "A common mix-up is thinking a street and a city are one thing. They are separate parts, and a comma keeps them apart.",
+      "why": "The answer is \"No, Hill Road and Billings are two separate things, so the mark stays.\" Each comma in line 7 keeps two parts of the address apart.",
       "like": [
         "SK-GUM2-8-C10"
       ]
@@ -13016,7 +13016,7 @@ PP.addLesson({
       "passages": [
         "p6"
       ],
-      "prompt": "Which date fits line 5?",
+      "prompt": "Pick how the deadline should look in line 5.",
       "text": "Our benches will be ready for use by {0}.",
       "slots": [
         {
@@ -13100,12 +13100,12 @@ PP.addLesson({
         "3.L.GC.1:R:use-commas-in-a-series-and-in-dates-addresses-sa"
       ],
       "passages": [],
-      "prompt": "Pick the sentence where a needed comma is missing.",
+      "prompt": "Find the sentence that needs one more comma.",
       "options": [
         "Pack your shorts, shirts, and socks for camp.",
         "Write to us at 3 Reed Road Austin, Texas.",
-        "The race is on April 9, 2027.",
-        "My uncle lives in Fargo, North Dakota.",
+        "The race is on October 9, 2026.",
+        "My cousin lives in Ames, Iowa.",
         "Mia sang, danced, and played the drums."
       ],
       "answer": [
@@ -13120,7 +13120,7 @@ PP.addLesson({
       ],
       "how": [
         "Check each list, date and place for every comma it needs.",
-        "The shorts, the race date, Fargo, North Dakota and Mia's list all have the commas they need.",
+        "The shorts, the race date, Ames, Iowa and Mia's list all have the commas they need.",
         "The answer is \"Write to us at 3 Reed Road Austin, Texas.\" An address needs a comma after the street."
       ],
       "misconception": "A common mix-up is stopping once you see one comma. An address needs a comma after the street and another between the city and the state.",
@@ -13202,7 +13202,7 @@ PP.addLesson({
     "SK-GUM2-8-P3": {
       "hints": [
         "Check the date, the list, the greeting and the closing.",
-        "A greeting and a closing each end with a comma.",
+        "Ask what each part of the letter needs after it, if anything.",
         "The date and the list are written correctly. Think about the rest."
       ],
       "how": [
@@ -13338,14 +13338,14 @@ PP.addLesson({
       answer: "Baked. Last week, we baked a cake for Grandma."
     },
     {
-      show: ["Every night, Dad ___ about the weather. (worry)"],
-      ask: "How do you spell the verb?",
+      show: ["Every night, Dad ___ about the weather. (worry)", "Every afternoon, my cat ___ on the sofa. (stay)"],
+      ask: "How do you spell each verb?",
       steps: [
-        "One person, Dad, does the action, and it happens every night. So the verb needs an ending.",
-        "Look at how worry ends. It ends in a consonant, r, and then y.",
-        "Change the y to i and add -es: worries."
+        "One person or animal does each action every time, so each verb needs an ending.",
+        "Worry ends in a consonant, r, and then y, so the y changes to i. Stay ends in a vowel, a, and then y, so the y stays.",
+        "Add -es to the changed word: worries. Just add -s to stay: stays."
       ],
-      answer: "Worries. Every night, Dad worries about the weather."
+      answer: "Worries and stays. Every night, Dad worries about the weather. Every afternoon, my cat stays on the sofa."
     }
   ],
   parent: "As you do chores, name each one in a sentence about someone else (Dad washes, Grandma fixes, the baby cries). Have your child spell the verb aloud and say which ending it needs.",
@@ -13394,7 +13394,7 @@ PP.addLesson({
           "(6) A bee landed on a cup, and Jin scared it away."
         ],
         [
-          "(7) Later, the families admired every flower bed.",
+          "(7) Later, the families admireed every flower bed.",
           "(8) Our teacher thanked us for all our hard work.",
           "(9) We cleaned up the cups and the napkins.",
           "(10) The garden looked lovely when the sun went down.",
@@ -13414,8 +13414,8 @@ PP.addLesson({
           "(2) Mom sweeps the porch and stacks the chairs by the front door."
         ],
         [
-          "(3) My brother emptys the trash can by the garage each night.",
-          "(4) Uncle Ray fixes the leaky faucet with a wrench.",
+          "(3) My brother sprayes the garden with the hose each night.",
+          "(4) Uncle Ray patches the leaky faucet with a wrench.",
           "(5) I pushs the vacuum across the rug in the hall.",
           "(6) Grandpa dries the plates and puts them away.",
           "(7) Dad do the grocery shopping on Sunday morning."
@@ -13436,7 +13436,7 @@ PP.addLesson({
       "paragraphs": [
         [
           "(1) On our farm, everyone starts work when the sun comes up.",
-          "(2) My aunt catchs the loose hen near the wooden gate.",
+          "(2) My aunt latchs the wooden gate near the hen house.",
           "(3) Uncle Joe mends the old fence with wire and nails."
         ],
         [
@@ -13470,7 +13470,7 @@ PP.addLesson({
           "(6) After the show, the judges praised each actor on the big stage."
         ],
         [
-          "(7) Then everyone gathered backstage for juice and cookies.",
+          "(7) Then the cast celebrateed backstage with juice and cookies.",
           "(8) My friend Leo tripped on his cape, but he laughed about it later.",
           "(9) Our teacher hugged us all and told us we did a great job.",
           "(10) I will remember that play for the rest of my life."
@@ -13489,7 +13489,7 @@ PP.addLesson({
           "(2) She keeps the garden neat and tidy all year long."
         ],
         [
-          "(3) Grandpa replys to every letter from his old friends within a day.",
+          "(3) Grandpa enjoyes every letter from his old friends.",
           "(4) Aunt Rose reaches the top shelf without a stool.",
           "(5) Cousin Max boxs the apples for the market stand.",
           "(6) Pop tries a new tool every single week.",
@@ -13588,13 +13588,13 @@ PP.addLesson({
                 "correct": true
               },
               {
-                "text": "Brush finishes with a consonant plus y, which means the y turns into i before -es."
+                "text": "Brush ends in a consonant plus y, so the spelling should change to brushies."
               },
               {
                 "text": "Brush ends in e, so the verb needs only -d and should be spelled brushed."
               },
               {
-                "text": "Brush needs only -s, so the spelling is fine and the mistake is the word his."
+                "text": "Brush is a short verb, so the ending is -ing and it should be spelled brushing."
               }
             ],
             "clue": "Find the verb in sentence 2 that has an ending added.",
@@ -13735,7 +13735,7 @@ PP.addLesson({
             ],
             "how": [
               "Check each verb one sentence at a time.",
-              "Shared, smiled, waved and scared all just add -d to a verb that ends in e or e plus a letter.",
+              "Shared, smiled, waved and scared are all spelled correctly.",
               "In sentences 2 and 5, the verbs are spelled with the wrong ending."
             ],
             "misconception": "A common mix-up is trusting a verb because it looks long and careful. Check its ending against its plain form.",
@@ -13757,54 +13757,54 @@ PP.addLesson({
             ],
             "prompt": "Take Part A first, and then do Part B.",
             "partA": {
-              "prompt": "Why is the verb in sentence 2 spelled wrong?",
+              "prompt": "Why is the verb in sentence 7 spelled wrong?",
               "choices": [
                 {
-                  "text": "Invite ends in e already, which means -d alone is enough, giving invited.",
+                  "text": "Admire ends in e already, which means -d alone is enough, giving admired.",
                   "correct": true
                 },
                 {
-                  "text": "Invite finishes in a consonant plus y, which means the y turns into i before -es."
+                  "text": "Admire is already in past form, so nothing more is needed, giving admire."
                 },
                 {
-                  "text": "Invite shows an action that happens now, so the ending should be -s, giving invites."
+                  "text": "Admire shows an action that happens now, so the ending should be -s, giving admires."
                 },
                 {
-                  "text": "Invite ends in e, so the e should be dropped and -ing added, giving inviting."
+                  "text": "Admire ends in e, so the e should be dropped and -ing added, giving admiring."
                 }
               ]
             },
             "partB": {
-              "prompt": "Which sentence correctly repairs sentence 2?",
+              "prompt": "Which sentence correctly repairs sentence 7?",
               "choices": [
                 {
-                  "text": "Mrs. Diaz invited every parent with a bright paper card.",
+                  "text": "Later, the families admired every flower bed.",
                   "correct": true
                 },
                 {
-                  "text": "Mrs. Diaz invitd every parent with a bright paper card."
+                  "text": "Later, the families admird every flower bed."
                 },
                 {
-                  "text": "Mrs. Diaz invites every parent with a bright paper card."
+                  "text": "Later, the families admires every flower bed."
                 },
                 {
-                  "text": "Mrs. Diaz inviteed every parent with a bright paper card."
+                  "text": "Later, the families admireed every flower bed."
                 }
               ]
             },
-            "clue": "Think of the plain verb in sentence 2. Look at how it ends.",
+            "clue": "Think of the plain verb in sentence 7. Look at how it ends.",
             "hints": [
-              "Think of the plain verb in sentence 2. Look at how it ends.",
+              "Think of the plain verb in sentence 7. Look at how it ends.",
               "In Part B, read each version and think about whether the sentence tells about the past.",
-              "Inviting is a different form of the verb. Think about the other versions."
+              "Adding -ing changes the time the verb tells about. Think about the other choices."
             ],
             "how": [
-              "Part A: the plain verb is invite, and it ends in e.",
-              "Part B: the sentence tells about last Friday, so the verb needs a past ending.",
-              "The answers are \"Invite ends in e already, which means -d alone is enough, giving invited.\" and \"Mrs. Diaz invited every parent with a bright paper card.\""
+              "Part A: the plain verb is admire, and it ends in e.",
+              "Part B: the sentence begins with Later, so the verb needs a past ending.",
+              "The answers are \"Admire ends in e already, which means -d alone is enough, giving admired.\" and \"Later, the families admired every flower bed.\""
             ],
             "misconception": "A common mix-up is adding a whole -ed to a verb that already ends in e. Only -d is added.",
-            "why": "Part A: \"Invite ends in e already, which means -d alone is enough, giving invited.\" Part B: \"Mrs. Diaz invited every parent with a bright paper card.\" Invites would not tell about the past.",
+            "why": "Part A: \"Admire ends in e already, which means -d alone is enough, giving admired.\" Part B: \"Later, the families admired every flower bed.\" Admires would not tell about the past.",
             "like": [
               "SK-GUM2-9-S07"
             ]
@@ -13909,35 +13909,35 @@ PP.addLesson({
             "passages": [
               "p2"
             ],
-            "prompt": "Ben says dancd in sentence 5 is fine because the e must be dropped before -d. Which reply is best?",
+            "prompt": "Ben says cleaned in sentence 9 should be cleand because past verbs only take -d. Which reply is best?",
             "choices": [
               {
-                "text": "The last letter of dance, an e, stays put, and only -d is added, giving danced.",
+                "text": "Clean has no final e, so it keeps the full -ed, and cleaned is already right.",
                 "correct": true
               },
               {
-                "text": "Ben is right, because any verb that ends in e must lose it before an ending is added."
+                "text": "Ben is right, because every past verb takes just -d, so cleand is the spelling."
               },
               {
-                "text": "Ben is right, because endings are meant to trim a word down."
+                "text": "Ben is right, since shorter endings are always the correct ones."
               },
               {
-                "text": "Dance needs -ed, so the spelling should be danceed with two e letters."
+                "text": "Clean ends in n, so it needs -es, which gives the spelling cleanes."
               }
             ],
             "clue": "Think about what Ben is trusting. Is it the plain verb, or a guess about letters?",
             "hints": [
               "Think about what Ben is trusting. Is it the plain verb, or a guess about letters?",
-              "Look at how dance ends, and what Ben says happens when the ending joins.",
-              "A past ending adds letters. It does not take them away. Think about the other choices."
+              "Look at how clean ends, and whether it ends in e.",
+              "The ending depends on how the plain verb finishes. Think about the other choices."
             ],
             "how": [
-              "Dance ends in e.",
-              "Only -d is added to a verb that ends in e, and the e stays in the word.",
-              "The answer is \"The last letter of dance, an e, stays put, and only -d is added, giving danced.\""
+              "Clean ends in n.",
+              "Only -d is added to a verb that ends in e, and clean does not end in e.",
+              "The answer is \"Clean has no final e, so it keeps the full -ed, and cleaned is already right.\""
             ],
-            "misconception": "A common mix-up is dropping the e before -d. The e stays, and only -d is added.",
-            "why": "The answer is \"The last letter of dance, an e, stays put, and only -d is added, giving danced.\" Dancd loses the e that the word needs, and danceed adds a second one.",
+            "misconception": "A common mix-up is using just -d for every verb. Only verbs that end in e take just -d.",
+            "why": "The answer is \"Clean has no final e, so it keeps the full -ed, and cleaned is already right.\" Cleand is not a word, and cleanes uses an ending for the present.",
             "like": [
               "SK-GUM2-9-S10"
             ]
@@ -13979,11 +13979,11 @@ PP.addLesson({
             ],
             "how": [
               "Check each sentence one at a time.",
-              "Fixes and dries have the endings that match their plain verbs.",
-              "Emptys, pushs and do do not match."
+              "Patches and dries have the endings that match their plain verbs.",
+              "Sprayes, pushs and do do not match."
             ],
             "misconception": "A common mix-up is picking a sentence because it looks simple. Check each verb's ending.",
-            "why": "The answers are \"Uncle Ray fixes the leaky faucet with a wrench.\" and \"Grandpa dries the plates and puts them away.\" Fix ends in x, so it adds -es. Dry ends in a consonant and y, so the y changes to i. Emptys, pushs and do are wrong.",
+            "why": "The answers are \"Uncle Ray patches the leaky faucet with a wrench.\" and \"Grandpa dries the plates and puts them away.\" Patch ends in ch, so it adds -es. Dry ends in a consonant and y, so the y changes to i. Sprayes, pushs and do are wrong.",
             "like": [
               "SK-GUM2-9-S11"
             ]
@@ -13999,31 +13999,31 @@ PP.addLesson({
             "passages": [
               "p3"
             ],
-            "prompt": "Sentence 3 has a verb spelled wrong. Pick the correct spelling.",
-            "text": "My brother {0} the trash can by the garage each night.",
+            "prompt": "Which spelling of the verb finishes the line about the garden hose?",
+            "text": "My brother {0} the garden with the hose each night.",
             "slots": [
               {
                 "options": [
-                  "empties",
-                  "emptys",
-                  "emptyes"
+                  "sprays",
+                  "sprayes",
+                  "spraies"
                 ],
                 "answer": 0
               }
             ],
-            "clue": "Think of the plain verb. Then look at the letter in front of the y.",
+            "clue": "Think of the plain verb, and look at its last two letters.",
             "hints": [
-              "Think of the plain verb. Then look at the letter in front of the y.",
-              "Decide whether that letter is a vowel (a, e, i, o or u) or a consonant.",
-              "Just adding -s after a consonant and a y does not follow the rule. Look at the other choices."
+              "Think of the plain verb, and look at its last two letters.",
+              "Ask whether the y has a vowel or a consonant in front of it.",
+              "Adding -es after a y is not needed for every verb. Look at the other choices."
             ],
             "how": [
-              "The plain verb is empty. The letter in front of the y is t.",
-              "T is a consonant, so the y changes to i and -es is added.",
-              "The answer is empties."
+              "The plain verb is spray. The letter in front of the y is a.",
+              "A is a vowel, so the y stays and just -s is added.",
+              "The answer is sprays."
             ],
-            "misconception": "A common mix-up is adding only -s to a verb that ends in y. A consonant before the y means the y changes.",
-            "why": "The answer is empties. Empty has a t, a consonant, before the y, so the y changes to i and -es is added.",
+            "misconception": "A common mix-up is changing the y to i every time. A vowel before the y means the y stays.",
+            "why": "The answer is sprays. Spray has an a, a vowel, before the y, so the y stays and just -s is added.",
             "like": [
               "SK-GUM2-9-S12"
             ]
@@ -14038,13 +14038,13 @@ PP.addLesson({
             ],
             "passages": [],
             "prompt": "Select the spelling that suits each blank.",
-            "text": "Every day, Ben {0} to practice, and he {1} his homework first.",
+            "text": "Every day, Ben {0} his lunch to school, and he {1} his homework first.",
             "slots": [
               {
                 "options": [
-                  "goes",
-                  "gos",
-                  "goies"
+                  "carries",
+                  "carrys",
+                  "carryes"
                 ],
                 "answer": 0
               },
@@ -14057,19 +14057,19 @@ PP.addLesson({
                 "answer": 0
               }
             ],
-            "clue": "The two blanks need different endings. Think of each plain verb.",
+            "clue": "Each blank needs a verb that tells about one person now. Think of each plain verb.",
             "hints": [
-              "The two blanks need different endings. Think of each plain verb.",
-              "The first plain verb is go. The second ends in sh.",
+              "Each blank needs a verb that tells about one person now. Think of each plain verb.",
+              "The first plain verb is carry. The second ends in sh.",
               "Just adding -s after sh does not follow the rule. Look at the choices for the second blank."
             ],
             "how": [
-              "Go is one of the two short verbs that add -es. Finish ends in sh, so it adds -es.",
-              "Each blank needs -es, but neither one changes a letter.",
-              "The answers are goes and finishes."
+              "Carry ends in a consonant and y, so the y changes to i. Finish ends in sh, so it adds -es.",
+              "The first blank changes a letter, and the second one does not.",
+              "The answers are carries and finishes."
             ],
-            "misconception": "A common mix-up is adding only -s to both verbs. Go and finish both need -es.",
-            "why": "The answers are goes and finishes. Go adds -es, and finish ends in sh, so it adds -es too.",
+            "misconception": "A common mix-up is adding only -s to both verbs. Carry changes its y, and finish needs -es.",
+            "why": "The answers are carries and finishes. Carry has an r before the y, so the y changes to i and -es is added. Finish ends in sh, so it adds -es.",
             "like": [
               "SK-GUM2-9-S13"
             ]
@@ -14089,7 +14089,7 @@ PP.addLesson({
               "Grandma hurries to the door when the bell rings.",
               "Our cat stretchs in the sun every afternoon.",
               "Last night, we hiked along the river.",
-              "The mechanic fixes the engine for free."
+              "The mechanic tightens the bolt for free."
             ],
             "answer": [
               2
@@ -14103,7 +14103,7 @@ PP.addLesson({
             ],
             "how": [
               "Look at each verb and how its plain form ends.",
-              "Sneezes, hurries, hiked and fixes all have endings that match their plain verbs.",
+              "Sneezes, hurries, hiked and tightens all have endings that match their plain verbs.",
               "The answer is \"Our cat stretchs in the sun every afternoon.\" Stretch ends in ch, so it needs -es."
             ],
             "misconception": "A common mix-up is adding only -s after ch. Verbs that end in ch need -es.",
@@ -14214,11 +14214,11 @@ PP.addLesson({
       ],
       "rows": [
         {
-          "text": "Last winter, the twins ___ a snack. (share)",
+          "text": "Long ago, the twins ___ a snack. (share)",
           "answer": 0
         },
         {
-          "text": "At bedtime, Gran ___ me goodnight. (kiss)",
+          "text": "On Mondays, Gran ___ me goodnight. (kiss)",
           "answer": 1
         },
         {
@@ -14226,15 +14226,15 @@ PP.addLesson({
           "answer": 2
         },
         {
-          "text": "Last Sunday, we ___ up the hill. (hike)",
+          "text": "Yesterday, we ___ up the hill. (hike)",
           "answer": 0
         },
         {
-          "text": "Before dawn, Rosa ___ on a star. (wish)",
+          "text": "On weekends, Rosa ___ on a star. (wish)",
           "answer": 1
         },
         {
-          "text": "Quickly, Dara ___ to her mom. (reply)",
+          "text": "Each week, Dara ___ to her mom. (reply)",
           "answer": 2
         }
       ],
@@ -14242,7 +14242,7 @@ PP.addLesson({
       "hints": [
         "Think of each plain verb in ( ) and how it ends.",
         "An e at the end, an s, sh, ch, x or z at the end, and a consonant plus y at the end each get a different ending.",
-        "Use words like Last winter to see which verbs tell about the past."
+        "Use words like Long ago to see which verbs tell about the past."
       ],
       "how": [
         "Look at the last letters of each plain verb.",
@@ -14269,32 +14269,32 @@ PP.addLesson({
       "prompt": "Pick the spelling that repairs the verb in line two of the farm story, with its reason.",
       "choices": [
         {
-          "text": "catches, since verbs ending in ch take -es",
+          "text": "latches, since verbs ending in ch take -es",
           "correct": true
         },
         {
-          "text": "catchies, since verbs ending in ch take -ies"
+          "text": "latchies, since verbs ending in ch take -ies"
         },
         {
-          "text": "catchd, since every farm verb takes just -d"
+          "text": "latchd, since every farm verb takes just -d"
         },
         {
-          "text": "catchs, since every verb for one person takes just -s"
+          "text": "latchs, since every verb for one person takes just -s"
         }
       ],
       "clue": "Find the verb in sentence 2 that has an ending added.",
       "hints": [
         "Find the verb in sentence 2 that has an ending added.",
-        "Look at how the plain verb catch ends.",
-        "Look at the very last letter of catch. Think about the other choices."
+        "Look at how the plain verb latch ends.",
+        "Look at the very last letter of latch. Think about the other choices."
       ],
       "how": [
         "The plain verb is catch. Its last two letters are ch.",
         "A verb that ends in ch adds -es when one person does the action now.",
-        "The answer is \"catches, since verbs ending in ch take -es\"."
+        "The answer is \"latches, since verbs ending in ch take -es\"."
       ],
       "misconception": "A common mix-up is adding only -s to every verb. Verbs that end in ch need -es.",
-      "why": "The answer is \"catches, since verbs ending in ch take -es\". Catch does not end in e or y, and adding only -s leaves the ending hard to say.",
+      "why": "The answer is \"latches, since verbs ending in ch take -es\". Catch does not end in e or y, and adding only -s leaves the ending hard to say.",
       "like": [
         "SK-GUM2-9-C03"
       ]
@@ -14437,7 +14437,7 @@ PP.addLesson({
       ],
       "prompt": "Take both halves of this question in order.",
       "partA": {
-        "prompt": "Which rule did the writer forget in sentence 2?",
+        "prompt": "Which rule did the writer forget in sentence 7?",
         "choices": [
           {
             "text": "A verb already ending in e only takes -d.",
@@ -14455,36 +14455,36 @@ PP.addLesson({
         ]
       },
       "partB": {
-        "prompt": "Pick the rewrite that fixes sentence 2.",
+        "prompt": "Pick the rewrite that fixes sentence 7.",
         "choices": [
           {
-            "text": "Mr. Park shaped a shiny cardboard sword for the knight by hand.",
+            "text": "Then the cast celebrated backstage with juice and cookies.",
             "correct": true
           },
           {
-            "text": "Mr. Park shapd a shiny cardboard sword for the knight by hand."
+            "text": "Then the cast celebratd backstage with juice and cookies."
           },
           {
-            "text": "Mr. Park shapes a shiny cardboard sword for the knight by hand."
+            "text": "Then the cast celebrates backstage with juice and cookies."
           },
           {
-            "text": "Mr. Park shapeed a shiny cardboard sword for the knight by hand."
+            "text": "Then the cast celebrateed backstage with juice and cookies."
           }
         ]
       },
-      "clue": "Think of the plain verb in sentence 2. Look at how it ends.",
+      "clue": "Think of the plain verb in sentence 7. Look at how it ends.",
       "hints": [
-        "Think of the plain verb in sentence 2. Look at how it ends.",
+        "Think of the plain verb in sentence 7. Look at how it ends.",
         "In the second half, read each rewrite and think about whether the story is in the past.",
-        "Shaping is a different form of the verb. Think about the other rewrites."
+        "Dropping the e and adding -ing changes the time the verb tells about. Think about the other choices."
       ],
       "how": [
-        "Part A: the plain verb is shape, and it ends in e.",
+        "Part A: the plain verb is celebrate, and it ends in e.",
         "Part B: the story is about last spring, so the verb needs a past ending.",
-        "The answers are \"A verb already ending in e only takes -d.\" and \"Mr. Park shaped a shiny cardboard sword for the knight by hand.\""
+        "The answers are \"A verb already ending in e only takes -d.\" and \"Then the cast celebrated backstage with juice and cookies.\""
       ],
       "misconception": "A common mix-up is adding a whole -ed to a verb that already ends in e. Only -d is added.",
-      "why": "Part A: \"A verb already ending in e only takes -d.\" Part B: \"Mr. Park shaped a shiny cardboard sword for the knight by hand.\" Shapes would not tell about the past.",
+      "why": "Part A: \"A verb already ending in e only takes -d.\" Part B: \"Then the cast celebrated backstage with juice and cookies.\" Celebrates would not tell about the past.",
       "like": [
         "SK-GUM2-9-C07"
       ]
@@ -14502,7 +14502,7 @@ PP.addLesson({
       "pick": 2,
       "choices": [
         {
-          "text": "The girl watches the stars from the roof after dark.",
+          "text": "The girl munches popcorn on the roof after dark.",
           "correct": true
         },
         {
@@ -14526,12 +14526,12 @@ PP.addLesson({
         "Compare each ending with the last letters of its plain verb, one sentence at a time."
       ],
       "how": [
-        "Look at each plain verb: watch, race, push, glue and try.",
-        "Watch ends in ch, so it adds -es. Race ends in e, so it just adds -d.",
+        "Look at each plain verb: munch, race, push, glue and try.",
+        "Munch ends in ch, so it adds -es. Race ends in e, so it just adds -d.",
         "Push needs -es, glue needs only -d, and try needs the y changed to i."
       ],
       "misconception": "A common mix-up is choosing a sentence because the verb looks familiar. Check the ending against the plain verb.",
-      "why": "The answers are \"The girl watches the stars from the roof after dark.\" and \"My cousins raced along the dusty road in June.\" Watch adds -es, and race just adds -d. Pushs, glueed and trys are misspelled.",
+      "why": "The answers are \"The girl munches popcorn on the roof after dark.\" and \"My cousins raced along the dusty road in June.\" Munch adds -es, and race just adds -d. Pushs, glueed and trys are misspelled.",
       "like": [
         "SK-GUM2-9-C08"
       ]
@@ -14589,35 +14589,35 @@ PP.addLesson({
       "passages": [
         "p5"
       ],
-      "prompt": "Rita prefers lovd in sentence 5 since it takes up less room. What do you say?",
+      "prompt": "Rita crosses out the e in bowed and writes bowd. How should you answer?",
       "choices": [
         {
-          "text": "Love already has its e, so the ending adds one letter, d, to make loved.",
+          "text": "Bowed is correct: bow lacks a final e, so a full -ed attaches.",
           "correct": true
         },
         {
-          "text": "Less room is always better, so lovd wins and loved has to go."
+          "text": "Bowd is better: a short ending saves space whenever a verb finishes with a consonant."
         },
         {
-          "text": "Loved is correct, yet only because past words must have at least five letters."
+          "text": "Bowes is better: bow finishes with w, a letter that demands a plural-style ending."
         },
         {
-          "text": "Lovd is correct, since a long e sound cannot be kept when more letters join."
+          "text": "Neither works: the ending after bow should be a lone letter, never a pair."
         }
       ],
-      "clue": "Think about whether room on the page decides how a verb is spelled.",
+      "clue": "Think about whether every past verb is built the same way.",
       "hints": [
-        "Think about whether room on the page decides how a verb is spelled.",
-        "Look at how that verb ends, and what happens to it.",
-        "Spelling follows rules about letters, not room. Think about the other choices."
+        "Think about whether every past verb is built the same way.",
+        "Look at how bow ends, and whether it ends in e.",
+        "The ending depends on the last letter of the plain verb. Think about the other choices."
       ],
       "how": [
-        "Love ends in e.",
-        "A verb that ends in e only takes -d, and the e stays in the word.",
-        "The answer is \"Love already has its e, so the ending adds one letter, d, to make loved.\""
+        "Bow ends in w.",
+        "A verb that ends in e only takes -d, and bow does not end in e.",
+        "The answer is \"Bowed is correct: bow lacks a final e, so a full -ed attaches.\""
       ],
-      "misconception": "A common mix-up is dropping the e before -d. The e stays, and only -d is added.",
-      "why": "The answer is \"Love already has its e, so the ending adds one letter, d, to make loved.\" Lovd loses the e that the word needs, and loveed adds a second one.",
+      "misconception": "A common mix-up is using just -d for every verb. Only verbs that end in e take just -d.",
+      "why": "The answer is \"Bowed is correct: bow lacks a final e, so a full -ed attaches.\" Bowd is not a word, and bowes uses a present ending.",
       "like": [
         "SK-GUM2-9-C10"
       ]
@@ -14633,7 +14633,7 @@ PP.addLesson({
       "passages": [
         "p6"
       ],
-      "prompt": "Which two of sentences 3 to 7 have verbs that are spelled and used correctly? Tap them.",
+      "prompt": "Tap the pair in sentences 3 through 7 whose verbs fit their sentences.",
       "targets": [
         "p6:2:1",
         "p6:2:2",
@@ -14655,10 +14655,10 @@ PP.addLesson({
       "how": [
         "Check each sentence one at a time.",
         "Reaches and tries have the endings that match their plain verbs.",
-        "Replys, boxs and do do not match."
+        "Enjoyes, boxs and do do not match."
       ],
       "misconception": "A common mix-up is picking a sentence because it looks simple. Check each verb's ending.",
-      "why": "The answers are \"Aunt Rose reaches the top shelf without a stool.\" and \"Pop tries a new tool every single week.\" Reach ends in ch, so it adds -es. Try ends in a consonant and y, so the y changes to i. Replys, boxs and do are wrong.",
+      "why": "The answers are \"Aunt Rose reaches the top shelf without a stool.\" and \"Pop tries a new tool every single week.\" Reach ends in ch, so it adds -es. Try ends in a consonant and y, so the y changes to i. Enjoyes, boxs and do are wrong.",
       "like": [
         "SK-GUM2-9-C11"
       ]
@@ -14674,31 +14674,31 @@ PP.addLesson({
       "passages": [
         "p6"
       ],
-      "prompt": "Which spelling fits sentence 3?",
-      "text": "Grandpa {0} to every letter from his old friends within a day.",
+      "prompt": "Pick the right form of the verb in the line about Grandpa and his letters.",
+      "text": "Grandpa {0} every letter from his old friends.",
       "slots": [
         {
           "options": [
-            "replies",
-            "replys",
-            "replyes"
+            "enjoys",
+            "enjoyes",
+            "enjoies"
           ],
           "answer": 0
         }
       ],
-      "clue": "Think of the plain verb. Then look at the letter in front of the y.",
+      "clue": "Think of the plain verb, and look at its last two letters.",
       "hints": [
-        "Think of the plain verb. Then look at the letter in front of the y.",
-        "Decide whether that letter is a vowel (a, e, i, o or u) or a consonant.",
-        "Just adding -s after a consonant and a y does not follow the rule. Look at the other choices."
+        "Think of the plain verb, and look at its last two letters.",
+        "Ask whether the y has a vowel or a consonant in front of it.",
+        "Adding -es after a y is not needed for every verb. Look at the other choices."
       ],
       "how": [
-        "The plain verb is reply. The letter in front of the y is l.",
-        "L is a consonant, so the y changes to i and -es is added.",
-        "The answer is replies."
+        "The plain verb is enjoy. The letter in front of the y is o.",
+        "O is a vowel, so the y stays and just -s is added.",
+        "The answer is enjoys."
       ],
-      "misconception": "A common mix-up is adding only -s to a verb that ends in y. A consonant before the y means the y changes.",
-      "why": "The answer is replies. Reply has an l, a consonant, before the y, so the y changes to i and -es is added.",
+      "misconception": "A common mix-up is changing the y to i every time. A vowel before the y means the y stays.",
+      "why": "The answer is enjoys. Enjoy has an o, a vowel, before the y, so the y stays and just -s is added.",
       "like": [
         "SK-GUM2-9-C12"
       ]
@@ -14713,38 +14713,38 @@ PP.addLesson({
       ],
       "passages": [],
       "prompt": "Fill each gap with the spelling that fits.",
-      "text": "Each night, Mia {0} her chores, and she {1} her teeth first.",
+      "text": "Each night, Mia {0} her notes, and she {1} the cat's ears before bed.",
       "slots": [
         {
           "options": [
-            "does",
-            "dos",
-            "doies"
+            "copies",
+            "copys",
+            "copyes"
           ],
           "answer": 0
         },
         {
           "options": [
-            "brushes",
-            "brushs",
-            "brushies"
+            "scratches",
+            "scratchs",
+            "scratchies"
           ],
           "answer": 0
         }
       ],
-      "clue": "The two gaps need different endings. Think of each plain verb.",
+      "clue": "Each gap needs a verb that tells about one person now. Think of each plain verb.",
       "hints": [
-        "The two gaps need different endings. Think of each plain verb.",
-        "The first plain verb is do. The second ends in sh.",
-        "Just adding -s after sh does not follow the rule. Look at the choices for the second gap."
+        "Each gap needs a verb that tells about one person now. Think of each plain verb.",
+        "The first plain verb is copy. The second ends in ch.",
+        "Just adding -s after ch does not follow the rule. Look at the choices for the second gap."
       ],
       "how": [
-        "Do is one of the two short verbs that add -es. Brush ends in sh, so it adds -es.",
-        "Each gap needs -es, but neither one changes a letter.",
-        "The answers are does and brushes."
+        "Copy ends in a consonant and y, so the y changes to i. Scratch ends in ch, so it adds -es.",
+        "The first gap changes a letter, and the second one does not.",
+        "The answers are copies and scratches."
       ],
-      "misconception": "A common mix-up is adding only -s to both verbs. Do and brush both need -es.",
-      "why": "The answers are does and brushes. Do adds -es, and brush ends in sh, so it adds -es too.",
+      "misconception": "A common mix-up is adding only -s to both verbs. Copy changes its y, and scratch needs -es.",
+      "why": "The answers are copies and scratches. Copy has a p before the y, so the y changes to i and -es is added. Scratch ends in ch, so it adds -es.",
       "like": [
         "SK-GUM2-9-C13"
       ]
@@ -14799,7 +14799,7 @@ PP.addLesson({
       "prompt": "Rob claims that a verb for one person never needs more than -s. Which sentence proves him mistaken?",
       "choices": [
         {
-          "text": "My sister washes the car on Saturdays.",
+          "text": "My sister polishes the car on Saturdays.",
           "correct": true
         },
         {
@@ -14821,10 +14821,10 @@ PP.addLesson({
       "how": [
         "Rob says every verb just adds -s. Look for a verb that needs more.",
         "Dig, sing and walk just add -s.",
-        "The answer is \"My sister washes the car on Saturdays.\""
+        "The answer is \"My sister polishes the car on Saturdays.\""
       ],
       "misconception": "A common mix-up is thinking every verb adds only -s. Verbs that end in ch, sh, s, x or z need -es.",
-      "why": "The answer is \"My sister washes the car on Saturdays.\" Wash ends in sh, so it needs -es. That proves Rob mistaken. Digs, sings and walks just add -s.",
+      "why": "The answer is \"My sister polishes the car on Saturdays.\" Polish ends in sh, so it needs -es. That proves Rob mistaken. Digs, sings and walks just add -s.",
       "like": [
         "SK-GUM2-9-C15"
       ]
