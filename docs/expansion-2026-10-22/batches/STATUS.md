@@ -21,9 +21,9 @@
 | B2 | 3.T.C.1.b | ACCEPTED | B2-rereview-SC-2.md |
 | B5 comp | TF-FEAT | ACCEPTED | text features (headings, maps, captions, text boxes, contents, chapters and sections); B5-comp-review.md (fifth review, light); open SHOULDs: S09~C09 all-token similarity 0.238/0.290, S09 row 4 sight-match, S07 'word antenna' |
 | B5 comp | TF-DIG | ACCEPTED | digital, audio and spoken features; B5-comp-review.md (fifth review, light); open SHOULDs: T2 blank 1 repeats C03, T5 word-match key |
-| B5 b5a | 3.L.GC.2.a | NOT ACCEPTED: awaiting independent review | AUTHORED (B5 b5a), NEEDS INDEPENDENT REVIEW; B5-b5a-author-log.md; js/data/lessons/L-GC2.js |
-| B5 b5a | 3.L.GC.2.b | NOT ACCEPTED: awaiting independent review | AUTHORED (B5 b5a), NEEDS INDEPENDENT REVIEW; B5-b5a-author-log.md; js/data/lessons/L-GC2.js |
-| B5 b5a | 3.L.GC.2.c | NOT ACCEPTED: awaiting independent review | AUTHORED (B5 b5a), NEEDS INDEPENDENT REVIEW; B5-b5a-author-log.md; js/data/lessons/L-GC2.js |
+| B5 b5a | 3.L.GC.2.a | ACCEPTED | B5-b5a-review.md (third and fourth light review); open SHOULD: S10 hint 3 edited text-only |
+| B5 b5a | 3.L.GC.2.b | ACCEPTED | B5-b5a-review.md (third and fourth light review); open SHOULDs: C05 scenario shares key with SK-GUM3-4-T1 (different code); C08 HOW1 should say 1 to 8; Learn It phrase 'and or gives a choice' |
+| B5 b5a | 3.L.GC.2.c | ACCEPTED | B5-b5a-review.md (third and fourth light review); open SHOULD: hint wording edited text-only |
 | B5 b5a | 3.L.GC.2.d | ACCEPTED | B5-b5a-review.md (third review); open SHOULD: C14 key reuses passage word |
 | B5 b5b | 3.L.V.1.a | NOT ACCEPTED: awaiting independent review | AUTHORED (B5 b5b), NEEDS INDEPENDENT REVIEW; B5-b5b-author-log.md; js/data/lessons/L-V12.js |
 | B5 b5b | 3.L.V.1.b | NOT ACCEPTED: awaiting independent review | AUTHORED (B5 b5b), NEEDS INDEPENDENT REVIEW; B5-b5b-author-log.md; js/data/lessons/L-V12.js |
