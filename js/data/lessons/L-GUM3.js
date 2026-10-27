@@ -9406,7 +9406,162 @@ PP.addLesson({
     }
   ],
   parent: "Write long words like button, puppy and sunflower on paper. Ask your child to clap each one, then draw a line where it could be split and say which rule they used.",
-  passages: [],
+  passages: [
+    /* B6:passages:start */
+    {
+      id: "p1",
+      title: "Packing a Suitcase",
+      byline: "A third grader's draft",
+      genre: "Student draft (narrative; | marks the end of a line)",
+      draft: true,
+      paragraphs: [
+        [
+          "(1) Tomorrow we fly to see Grandma, so I need to pack my suit- | case.",
+          "(2) First, I put in my blan- | ket and my teddy bear.",
+          "(3) Mom told me to take a warm jack- | et."
+        ],
+        [
+          "(4) Next, I packed a yellow rib- | bon for the party.",
+          "(5) I found my toothb- | rush under the bed.",
+          "(6) Dad put my pil | -low in the backpack."
+        ],
+        [
+          "(7) At the airport, we waited in a long li- | ne.",
+          "(8) The pilot said the flight would be smooth.",
+          "(9) I held my ticket tight and looked out the win- | dow."
+        ],
+        [
+          "(10) I can't wait to hug Grandma at the gate."
+        ]
+      ]
+    },
+    {
+      id: "p2",
+      title: "Basement Clean-Up",
+      byline: "A third grader's draft",
+      genre: "Student draft (narrative; | marks the end of a line)",
+      draft: true,
+      paragraphs: [
+        [
+          "(1) On Saturday, our whole family cleaned the basement.",
+          "(2) Dad found a dusty flash- | light behind the shelf.",
+          "(3) My sister swept the cement floor with a stiff broom."
+        ],
+        [
+          "(4) I stacked the old card- | board boxes by the door.",
+          "(5) Mom used a lad- | der to reach the top shelf.",
+          "(6) Under it, we found a rubb- | er ball and a tin cup."
+        ],
+        [
+          "(7) Dad hung a heavy picture of our dog on the wall.",
+          "(8) My brother carried the pail to the sink.",
+          "(9) We rested and ate our lun- | ch on the stairs."
+        ],
+        [
+          "(10) By dark, the basement looked clean and bright."
+        ]
+      ]
+    },
+    {
+      id: "p3",
+      title: "Train Museum Trip",
+      byline: "A third grader's draft",
+      genre: "Student draft (report; | marks the end of a line)",
+      draft: true,
+      paragraphs: [
+        [
+          "(1) Our class took a bus to the train museum last Friday.",
+          "(2) The guide showed us an old engine with a shiny bell.",
+          "(3) She told us how the cond- | uctor used to call out each stop."
+        ],
+        [
+          "(4) Next, we climbed into a bright red box- | car.",
+          "(5) The seats had thin cush- | ions.",
+          "(6) The guide handed each of us a tic- | ket for the ride."
+        ],
+        [
+          "(7) After lunch, we saw a model village with a bridge and a wind- | mill.",
+          "(8) My friend Leo bought a postc- | ard for his grandma."
+        ],
+        [
+          "(9) The bus took us back to school before the last bell."
+        ]
+      ]
+    },
+    {
+      id: "p4",
+      title: "Campsite Chores",
+      byline: "A third grader's draft",
+      genre: "Student draft (narrative; | marks the end of a line)",
+      draft: true,
+      paragraphs: [
+        [
+          "(1) Our family spent the weekend at a campsite by the lake.",
+          "(2) First, Dad put up the tent while I unpacked my back- | pack.",
+          "(3) Mom filled the ket- | tle with cold water."
+        ],
+        [
+          "(4) We toasted some marshmallows over the bonf- | ire.",
+          "(5) My brother dropped a peb | -ble in the lake.",
+          "(6) Later, we sat by the stre- | am and listened to the frogs."
+        ],
+        [
+          "(7) After dark, I curled up in my ham- | mock and watched the stars.",
+          "(8) On Sunday, we packed up and drove home."
+        ],
+        ["(9) I can't wait for our next trip."]
+      ]
+    },
+    {
+      id: "p5",
+      title: "Grocery Store Helper",
+      byline: "A third grader's draft",
+      genre: "Student draft (narrative; | marks the end of a line)",
+      draft: true,
+      paragraphs: [
+        [
+          "(1) Every Saturday, I help my aunt at her small grocery store.",
+          "(2) First, I stack the cans and wipe the coun- | ter.",
+          "(3) Next, I sort the fresh carr- | ots by size."
+        ],
+        [
+          "(4) Customers often ask me where the pep- | per is.",
+          "(5) I point to the right aisle and say, \"It's on the shelf over the bread.\"",
+          "(6) One customer thanked me and bought a pump- | kin."
+        ],
+        [
+          "(7) Then I take out the trash and sweep the flo- | or.",
+          "(8) My aunt gives me a candy bar when the work is done."
+        ],
+        ["(9) I love helping at the store."]
+      ]
+    },
+    {
+      id: "p6",
+      title: "Pond Cleanup Day",
+      byline: "A third grader's draft",
+      genre: "Student draft (report; | marks the end of a line)",
+      draft: true,
+      paragraphs: [
+        [
+          "(1) Our class went to the pond near school to clean up.",
+          "(2) Mr. Ortiz gave each of us a plastic bag and a pair of gloves.",
+          "(3) We learned that trash can hurt the tur- | tles and fish."
+        ],
+        [
+          "(4) By the cat- | tails, I found an empty bot- | tle.",
+          "(5) Maya spotted a tiny mi- | nnow near the rocks.",
+          "(6) Soon every bag was full of cans and a torn rain- | coat."
+        ],
+        [
+          "(7) The sun was bright, and the sunl- | ight sparkled on the pond.",
+          "(8) A duck shook the water from its feat- | hers.",
+          "(9) We waved goodbye to the pond and walked back to school."
+        ]
+      ]
+    }
+    /* B6:passages:end */
+  ],
   practice: [
     { id: "SK-GUM3-8-P1", type: "mc", points: 1, dok: 2, passages: [],
       prompt: "Look at how the word doctor is split. Is it split correctly?",
@@ -9458,6 +9613,1012 @@ PP.addLesson({
       clue: "Clap the word. Then use the split rules from the lesson: two different consonants, a double letter, or two smaller words. Remember that some letter pairs stay together.",
       why: "The answer is birth- | day. Birthday is made of two smaller words, birth and day, so the split goes between them. Bir- | thday breaks up th, which makes one sound and stays together. Birthd- | ay does not split between the two beats, birth and day." }
   ],
+  /* B6:core:start */
+  /* ---------- Expansion 2026-10-22, batch B6 (GUM Master) ----------
+     core: fifteen items in three sets of five. { ref } reuses a practice item; the other practice items stay in Practice Together.
+     Passages are used only by core and the similar bank; none is used by test or testB.
+     Author log: docs/expansion-2026-10-22/batches/B6-author-log.md. NEEDS INDEPENDENT REVIEW. */
+  core: {
+    rev: "1",
+    sets: [
+      {
+        title: "Set 1",
+        items: [
+          { ref: "SK-GUM3-8-P3" },
+          { ref: "SK-GUM3-8-P4" },
+          {
+            id: "SK-GUM3-8-C03",
+            type: "dropdown",
+            points: 1,
+            dok: 2,
+            std: [
+              "3.L.GC.1:M:use-hyphens-to-divide-words-at-line-breaks"
+            ],
+            passages: ["p1"],
+            prompt: "Sentence 5 of the draft splits the word toothbrush in the wrong place. Choose the correct split. The | mark shows where the line ends.",
+            text: "The word toothbrush is split correctly as {0}",
+            slots: [
+              {
+                options: ["tooth- | brush", "toothb- | rush", "toot- | hbrush"],
+                answer: 0
+              }
+            ],
+            clue: "Say the whole word. Ask whether it is made of smaller words, and where one of them ends.",
+            hints: [
+              "Say the whole word. Ask whether it is made of smaller words, and where one of them ends.",
+              "Read sentence 5 and say each choice. Check whether the break falls between the smaller words.",
+              "Toot- | hbrush cuts the first small word in half. Decide between the other two."
+            ],
+            how: [
+              "Say the whole word: toothbrush.",
+              "It is made of two smaller words, tooth and brush. A word made of two smaller words is split between them.",
+              "The answer is tooth- | brush. The other splits cut one of the smaller words apart."
+            ],
+            misconception: "A common mix-up is splitting where the line happens to run out. Split where the two smaller words meet.",
+            why: "The answer is tooth- | brush. Toothbrush is made of the smaller words tooth and brush, so it is split between them. Toothb- | rush and toot- | hbrush cut a smaller word apart."
+          },
+          {
+            id: "SK-GUM3-8-C04",
+            type: "mc",
+            points: 1,
+            dok: 2,
+            std: [
+              "3.L.GC.1:M:use-hyphens-to-divide-words-at-line-breaks"
+            ],
+            passages: ["p1"],
+            prompt: "Sentence 6 of the draft has the hyphen in the wrong place. Which revision fixes it? The | mark shows where the line ends.",
+            choices: [
+              { text: "Dad put my pil | -low in the backpack." },
+              { text: "Dad put my pil- | low in the backpack.", correct: true },
+              { text: "Dad put my pill- | ow in the backpack." },
+              { text: "Dad put my pillow- | in the backpack." }
+            ],
+            clue: "Check where the hyphen sits. Remember which line it belongs on.",
+            hints: [
+              "Check where the hyphen sits. Remember which line it belongs on.",
+              "Read sentence 6 and find the | mark. Ask which side of the mark the hyphen is on, and where the word breaks.",
+              "The draft has the hyphen after the | mark, and it needs to be fixed. Check the other three."
+            ],
+            how: [
+              "The hyphen belongs at the end of the first line, before the | mark, not at the start of the next line.",
+              "Pillow has a double l in the middle, so it is split between the two l's: pil- | low.",
+              "The answer is \"Dad put my pil- | low in the backpack.\" Pill- | ow splits after both l's, and pillow- | does not split the word."
+            ],
+            misconception: "A common mix-up is putting the hyphen at the start of the next line. The hyphen goes at the end of the first line.",
+            why: "The answer is \"Dad put my pil- | low in the backpack.\" The hyphen goes at the end of the first line, and the double l is split between the two letters. The draft has the hyphen on the second line, pill- | ow splits in the wrong place, and pillow- | does not split the word at all."
+          },
+          {
+            id: "SK-GUM3-8-C05",
+            type: "ebsr",
+            points: 2,
+            dok: 2,
+            std: [
+              "3.L.GC.1:M:use-hyphens-to-divide-words-at-line-breaks"
+            ],
+            passages: ["p1"],
+            prompt: "This question has two parts. Answer Part A, then Part B.",
+            partA: {
+              prompt: "Sentence 7 of the draft splits a word that should not be split. How should the writer fix it?",
+              choices: [
+                { text: "Move the hyphen to the start of the next line." },
+                { text: "Split the word after the first letter instead." },
+                { text: "Write the whole word on the next line.", correct: true },
+                { text: "Add a second hyphen to show where it ends." }
+              ]
+            },
+            partB: {
+              prompt: "Which fact from the lesson supports the answer to Part A?",
+              choices: [
+                { text: "A word with only one syllable is never split.", correct: true },
+                { text: "A hyphen goes at the end of the first line." },
+                { text: "Two different consonants in the middle are split between them." },
+                { text: "A word made of two smaller words is split between them." }
+              ]
+            },
+            clue: "Clap the word that is split in sentence 7. Count the beats.",
+            hints: [
+              "Clap the word that is split in sentence 7. Count the beats.",
+              "For Part A, say the word out loud and clap it. For Part B, think about which rule tells you when a word cannot be split.",
+              "In Part A, moving the hyphen would still leave the word split. Check the other choices."
+            ],
+            how: [
+              "Part A: clap the word in sentence 7. Line has one beat, so it has only one syllable.",
+              "A word with one syllable cannot be split, so the whole word must go on the next line.",
+              "Part A answer: \"Write the whole word on the next line.\"",
+              "Part B answer: \"A word with only one syllable is never split.\""
+            ],
+            misconception: "A common mix-up is thinking any word can be split if the hyphen is in the right place. A word with one beat is never split.",
+            why: "Part A: \"Write the whole word on the next line.\" Part B: \"A word with only one syllable is never split.\" Line has only one beat, so it stays whole. Moving the hyphen or splitting after the first letter still breaks the word, and a second hyphen does not help. The other facts are true, but they do not explain this fix."
+          }
+        ]
+      },
+      {
+        title: "Set 2",
+        items: [
+          {
+            id: "SK-GUM3-8-C06",
+            type: "hottext",
+            points: 2,
+            dok: 2,
+            std: [
+              "3.L.GC.1:M:use-hyphens-to-divide-words-at-line-breaks"
+            ],
+            passages: ["p2"],
+            prompt: "Select the TWO sentences that have a word split in the wrong way. The | mark shows where the line ends.",
+            targets: ["p2:1:2", "p2:2:1", "p2:2:2", "p2:2:3", "p2:3:3"],
+            answer: ["p2:2:3", "p2:3:3"],
+            pick: 2,
+            clue: "Clap each split word. Then check the break against the rules.",
+            hints: [
+              "Clap each split word. Then check the break against the rules.",
+              "Say each split word whole. Ask whether the break follows a rule, and whether the word has more than one beat.",
+              "Lad- | der splits between the double d, which is correct. Check the other four sentences."
+            ],
+            how: [
+              "Say each split word whole, clap it, and check the break.",
+              "Flash- | light and card- | board split between two smaller words, and lad- | der splits between the double d. Those are correct.",
+              "Rubb- | er should be rub- | ber, between the double b. Lun- | ch has only one beat, so it should not be split at all."
+            ],
+            misconception: "A common mix-up is thinking a split is right if it comes after a few letters. Check the break against the rules.",
+            why: "The wrong splits are in \"Under it, we found a rubb- | er ball and a tin cup.\" and \"We rested and ate our lun- | ch on the stairs.\" Rubber should be rub- | ber, and lunch has only one syllable. Flash- | light, card- | board and lad- | der are split correctly."
+          },
+          {
+            id: "SK-GUM3-8-C07",
+            type: "ms",
+            points: 2,
+            dok: 2,
+            std: [
+              "3.L.GC.1:M:use-hyphens-to-divide-words-at-line-breaks"
+            ],
+            passages: [],
+            prompt: "The | mark shows where the first line ends. Choose the TWO words that are NOT split correctly.",
+            pick: 2,
+            choices: [
+              { text: "pitch- | er" },
+              { text: "pe- | ncil", correct: true },
+              { text: "pup- | pet" },
+              { text: "trum- | pet" },
+              { text: "wa- | sher", correct: true }
+            ],
+            clue: "Clap each word. Then check each break against the split rules.",
+            hints: [
+              "Clap each word. Then check each break against the split rules.",
+              "Say each word whole, then check the letters at the break. Ask whether the break follows a rule.",
+              "Trum- | pet splits between the consonants m and p. Decide about the other four."
+            ],
+            how: [
+              "Say each word whole and check the break.",
+              "Pencil has n and c between vowels, so it should be pen- | cil. Washer has the letters sh, which stay together, so it should be wash- | er.",
+              "Trum- | pet, pitch- | er and pup- | pet follow the rules."
+            ],
+            misconception: "A common mix-up is splitting after the first vowel. Look at the consonants and split by the rules.",
+            why: "The answers are pe- | ncil and wa- | sher. Pencil should be pen- | cil, between the consonants n and c. Washer should be wash- | er, because the letters sh stay together. Trum- | pet, pitch- | er and pup- | pet follow the rules."
+          },
+          {
+            id: "SK-GUM3-8-C08",
+            type: "mc",
+            points: 1,
+            dok: 1,
+            std: [
+              "3.L.GC.1:M:use-hyphens-to-divide-words-at-line-breaks"
+            ],
+            passages: [],
+            prompt: "Which word is split correctly between the double letters? The | mark shows where the line ends.",
+            choices: [
+              { text: "ra- | bbit" },
+              { text: "rabb- | it" },
+              { text: "rabbi- | t" },
+              { text: "rab- | bit", correct: true }
+            ],
+            clue: "Look for the two matching letters in the middle of the word. Where should the break go?",
+            hints: [
+              "Look for the two matching letters in the middle of the word. Where should the break go?",
+              "Say the word and find the two matching letters. Then check where each choice puts the break.",
+              "Rabbi- | t leaves a single letter alone on the next line. Check the other three."
+            ],
+            how: [
+              "Find the two matching letters in rabbit: bb.",
+              "When the same consonant comes twice in the middle, the split goes between the two letters.",
+              "The answer is rab- | bit. The other choices put the break before both b's, after both b's, or after the i."
+            ],
+            misconception: "A common mix-up is putting both matching letters on one line. Split between them.",
+            why: "The answer is rab- | bit. The same consonant comes twice in the middle, so the split goes between the two b's. Ra- | bbit puts both b's on the second line, rabb- | it puts both on the first line, and rabbi- | t leaves one letter alone."
+          },
+          {
+            id: "SK-GUM3-8-C09",
+            type: "mc",
+            points: 1,
+            dok: 3,
+            std: [
+              "3.L.GC.1:M:use-hyphens-to-divide-words-at-line-breaks"
+            ],
+            passages: [],
+            prompt: "Two students split the same word. Which statement is true?",
+            stem: [
+              "The word bucket will not fit at the end of a line.",
+              "Pia split it like this: buck- | et",
+              "Sam split it like this: bu- | cket"
+            ],
+            choices: [
+              { text: "Only Pia's split is correct.", correct: true },
+              { text: "Only Sam's split is correct." },
+              { text: "Both splits are correct." },
+              { text: "Neither split is correct." }
+            ],
+            clue: "Check each split against the rules. Remember that some letters stay together.",
+            hints: [
+              "Check each split against the rules. Remember that some letters stay together.",
+              "Look at the letters on each side of the break in both splits. Ask whether any letters that make one sound were pulled apart.",
+              "In Sam's split, the c and the k are on different lines. Check what that means."
+            ],
+            how: [
+              "Bucket has two beats, so it can be split.",
+              "The letters ck make one sound, so they stay together. The split goes after them: buck- | et.",
+              "Pia kept ck together, and Sam pulled it apart. The answer is \"Only Pia's split is correct.\""
+            ],
+            misconception: "A common mix-up is splitting before the k because the k starts the second beat. The letters ck stay together.",
+            why: "The answer is \"Only Pia's split is correct.\" The letters ck make one sound and stay together, so bucket splits as buck- | et. Sam pulled the c and the k apart."
+          },
+          {
+            id: "SK-GUM3-8-C10",
+            type: "dropdown",
+            points: 2,
+            dok: 2,
+            std: [
+              "3.L.GC.1:M:use-hyphens-to-divide-words-at-line-breaks"
+            ],
+            passages: [],
+            prompt: "Neither word will fit at the end of a line. The | mark shows where the line ends. Choose the correct split for each word.",
+            text: "Split tunnel like this: {0} Split cupcake like this: {1}",
+            slots: [
+              {
+                options: ["tu- | nnel", "tun- | nel", "tunn- | el"],
+                answer: 1
+              },
+              {
+                options: ["cupc- | ake", "cu- | pcake", "cup- | cake"],
+                answer: 2
+              }
+            ],
+            clue: "Say each word whole. Ask whether it has a double letter, or whether it is made of two smaller words.",
+            hints: [
+              "Say each word whole. Ask whether it has a double letter, or whether it is made of two smaller words.",
+              "Look at the middle of each word. Then check where each choice puts the break.",
+              "Cu- | pcake cuts the first small word in half. Decide the rest."
+            ],
+            how: [
+              "Tunnel has a double n in the middle, so it is split between the two n's.",
+              "Cupcake is made of the smaller words cup and cake, so it is split between them.",
+              "The answers are tun- | nel and cup- | cake."
+            ],
+            misconception: "A common mix-up is using the same rule for both words. Tunnel has a double letter, and cupcake is made of two smaller words.",
+            why: "The answers are tun- | nel and cup- | cake. Tunnel has a double n, so it splits between the two n's. Cupcake is made of cup and cake, so it splits between the two smaller words."
+          }
+        ]
+      },
+      {
+        title: "Set 3",
+        items: [
+          {
+            id: "SK-GUM3-8-C11",
+            type: "hottext",
+            points: 2,
+            dok: 2,
+            std: [
+              "3.L.GC.1:M:use-hyphens-to-divide-words-at-line-breaks"
+            ],
+            passages: ["p3"],
+            prompt: "Two sentences in the report break a word where a break does not belong. Select both. The | mark shows where the line ends.",
+            targets: ["p3:1:3", "p3:2:1", "p3:2:2", "p3:3:1", "p3:3:2"],
+            answer: ["p3:1:3", "p3:3:2"],
+            pick: 2,
+            clue: "Say each split word whole. Then check the break against the rules.",
+            hints: [
+              "Say each split word whole. Then check the break against the rules.",
+              "Clap each split word. Ask whether the break comes between two consonants, between two smaller words, or between double letters.",
+              "Box- | car splits between two smaller words, so it is correct. Check the other four sentences."
+            ],
+            how: [
+              "Say each split word whole, clap it, and check the break.",
+              "Box- | car and wind- | mill split between two smaller words, and cush- | ions keeps sh together. Those are correct.",
+              "Cond- | uctor should be con- | ductor, between n and d. Postc- | ard should be post- | card, between the two smaller words."
+            ],
+            misconception: "A common mix-up is thinking a split is right if the first part looks like a word. Check the break against the rules.",
+            why: "The wrong splits are in \"She told us how the cond- | uctor used to call out each stop.\" and \"My friend Leo bought a postc- | ard for his grandma.\" Conductor should be con- | ductor, and postcard should be post- | card. Box- | car, cush- | ions and wind- | mill are split correctly."
+          },
+          {
+            id: "SK-GUM3-8-C12",
+            type: "mc",
+            points: 1,
+            dok: 2,
+            std: [
+              "3.L.GC.1:M:use-hyphens-to-divide-words-at-line-breaks"
+            ],
+            passages: ["p3"],
+            prompt: "Sentence 6 of the draft splits ticket in the wrong place. Which revision fixes it? The | mark shows where the line ends.",
+            choices: [
+              { text: "The guide handed each of us a tic- | ket for the ride." },
+              { text: "The guide handed each of us a ti- | cket for the ride." },
+              { text: "The guide handed each of us a tick- | et for the ride.", correct: true },
+              { text: "The guide handed each of us a ticke- | t for the ride." }
+            ],
+            clue: "Look for letters that make one sound together. Those letters stay on the same line.",
+            hints: [
+              "Look for letters that make one sound together. Those letters stay on the same line.",
+              "Read sentence 6 and find the break. Ask which letters sit on each side of it.",
+              "The draft splits the word as tic- | ket, so that is the one that needs fixing. Check the other three."
+            ],
+            how: [
+              "Say ticket. It has two beats, so it can be split.",
+              "The letters ck make one sound, so they stay together. The split goes after them: tick- | et.",
+              "The answer is \"The guide handed each of us a tick- | et for the ride.\" The other choices pull the c and k apart or leave one letter alone."
+            ],
+            misconception: "A common mix-up is splitting before the k. The letters ck make one sound and stay together.",
+            why: "The answer is \"The guide handed each of us a tick- | et for the ride.\" The letters ck make one sound and stay together, so the split goes after them. Tic- | ket and ti- | cket pull the c and k apart, and ticke- | t leaves one letter alone."
+          },
+          {
+            id: "SK-GUM3-8-C13",
+            type: "ms",
+            points: 2,
+            dok: 3,
+            std: [
+              "3.L.GC.1:M:use-hyphens-to-divide-words-at-line-breaks"
+            ],
+            passages: [],
+            prompt: "The word lantern is split as lan- | tern. Choose the TWO reasons that explain why this split is correct.",
+            pick: 2,
+            choices: [
+              { text: "The letters nt make one sound, so they must stay together." },
+              { text: "Lantern has two beats, so it can be split.", correct: true },
+              { text: "Lantern is made of two smaller words, lan and tern." },
+              { text: "Two different consonants, n and t, sit between the vowels, so the split goes between them.", correct: true },
+              { text: "The same consonant comes twice in the middle." }
+            ],
+            clue: "Look at the middle letters of lantern. Check each reason against the word.",
+            hints: [
+              "Look at the middle letters of lantern. Check each reason against the word.",
+              "Say the word and clap it. Then check each reason against the letters in the word.",
+              "Lantern does not have any double letters. Decide about the other four."
+            ],
+            how: [
+              "Clap lantern: two beats, so it can be split. Look at the middle letters: n and t are two different consonants between two vowels.",
+              "The rule says to split between them, so the reasons that fit are the two beats and the two different consonants.",
+              "The other reasons do not fit: there is no double letter, lan is not a word, and nt does not make one sound."
+            ],
+            misconception: "A common mix-up is picking a rule because it sounds familiar. Check that the rule matches the letters in the word.",
+            why: "The answers are \"Two different consonants, n and t, sit between the vowels, so the split goes between them.\" and \"Lantern has two beats, so it can be split.\" Lantern has no double letter, lan is not a word, and n and t do not make one sound together."
+          },
+          {
+            id: "SK-GUM3-8-C14",
+            type: "match",
+            points: 2,
+            dok: 2,
+            std: [
+              "3.L.GC.1:M:use-hyphens-to-divide-words-at-line-breaks"
+            ],
+            passages: [],
+            prompt: "Match each word to the rule that tells where to split it.",
+            cols: ["Two different consonants", "Double letter", "Two smaller words", "Letters that stay together"],
+            rows: [
+              { text: "pocket", answer: 3 },
+              { text: "candle", answer: 0 },
+              { text: "football", answer: 2 },
+              { text: "hammer", answer: 1 }
+            ],
+            clue: "Say each word and look at the middle letters. Ask which rule fits them best.",
+            hints: [
+              "Say each word and look at the middle letters. Ask which rule fits them best.",
+              "Start with the word you are surest about. Then decide the rest one at a time.",
+              "Football is made of two smaller words. Decide the other rows."
+            ],
+            how: [
+              "Look at the middle letters of each word.",
+              "Candle has the different consonants n and d. Hammer has the double letter m.",
+              "Football is made of foot and ball. Pocket has ck, which makes one sound and stays together."
+            ],
+            misconception: "A common mix-up is matching by how the word starts. Look at the middle letters.",
+            why: "Candle has two different consonants, n and d. Hammer has a double m. Football is made of two smaller words. Pocket has the letters ck, which stay together."
+          },
+          {
+            id: "SK-GUM3-8-C15",
+            type: "dropdown",
+            points: 1,
+            dok: 1,
+            std: [
+              "3.L.GC.1:M:use-hyphens-to-divide-words-at-line-breaks"
+            ],
+            passages: [],
+            prompt: "The word magnet will not fit at the end of a line. The | mark shows where the line ends. Choose the correct split.",
+            text: "{0} is how to split magnet.",
+            slots: [
+              {
+                options: ["mag- | net", "ma- | gnet", "magn- | et"],
+                answer: 0
+              }
+            ],
+            clue: "Say the word and look at the letters in the middle. Ask which rule fits them.",
+            hints: [
+              "Say the word and look at the letters in the middle. Ask which rule fits them.",
+              "Find the consonants between the two vowels. Then check where each choice puts the break.",
+              "Magn- | et leaves two consonants with the first part and pulls them from the e. Decide between the other two."
+            ],
+            how: [
+              "Magnet has two beats, so it can be split.",
+              "The letters g and n are two different consonants between two vowels, so the split goes between them.",
+              "The answer is mag- | net."
+            ],
+            misconception: "A common mix-up is putting the break after the first vowel. When two different consonants sit in the middle, split between them.",
+            why: "The answer is mag- | net. The consonants g and n are different, so the split goes between them. Ma- | gnet puts both consonants on the second line, and magn- | et puts both on the first line."
+          }
+        ]
+      }
+    ]
+  },
+  similar: [
+    {
+      id: "SK-GUM3-8-S01",
+      type: "match",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.L.GC.1:M:use-hyphens-to-divide-words-at-line-breaks"
+      ],
+      passages: [],
+      prompt: "Some words were split at the end of a line. The | mark shows where the first line ends. Is each split correct?",
+      cols: ["Correct", "Not correct"],
+      rows: [
+        { text: "tur- | key", answer: 0 },
+        { text: "ro- | cket", answer: 1 },
+        { text: "ten- | nis", answer: 0 },
+        { text: "clo- | ck", answer: 1 }
+      ],
+      clue: "Clap each word first. Then look at the letters in the middle.",
+      hints: [
+        "Clap each word first. Then look at the letters in the middle.",
+        "Say each word whole and check the break. Remember that a word with one beat is never split.",
+        "Clock has one beat, so it is not split. Decide the other rows."
+      ],
+      how: [
+        "Clap each word and look at the middle letters.",
+        "Turkey has the consonants r and k, so tur- | key is correct. Tennis has a double n, so ten- | nis is correct.",
+        "Rocket should be rock- | et, because ck stays together. Clock has one beat, so it is never split."
+      ],
+      misconception: "A common mix-up is splitting after the first vowel. Check the letters in the middle against the rules.",
+      why: "Tur- | key and ten- | nis are correct. Rocket should be rock- | et, because the letters ck stay together. Clock has only one syllable, so it should not be split at all.",
+      like: ["SK-GUM3-8-P3"]
+    },
+    {
+      id: "SK-GUM3-8-S02",
+      type: "ms",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.L.GC.1:M:use-hyphens-to-divide-words-at-line-breaks"
+      ],
+      passages: [],
+      prompt: "The | mark shows where the first line ends. Choose the TWO words that are split correctly.",
+      pick: 2,
+      choices: [
+        { text: "bu- | tter" },
+        { text: "cir- | cus", correct: true },
+        { text: "hel- | p" },
+        { text: "sun- | flower", correct: true },
+        { text: "gla- | ss" }
+      ],
+      clue: "Clap each word. Then use the rules: two consonants, a double letter, or two small words.",
+      hints: [
+        "Clap each word. Then use the rules: two consonants, a double letter, or two small words.",
+        "Say each word whole. Ask whether the break follows a rule, and whether the word has more than one beat.",
+        "Help has only one beat, so it cannot be split. Decide about the other four."
+      ],
+      how: [
+        "Clap each word and check the break.",
+        "Circus has the consonants r and c, so it splits between them. Sunflower is made of sun and flower.",
+        "Butter should be but- | ter, glass has one beat, and help has one beat."
+      ],
+      misconception: "A common mix-up is thinking every word can be split. A word with one beat never is.",
+      why: "The answers are cir- | cus and sun- | flower. Circus splits between the consonants r and c. Sunflower is made of two smaller words. Butter should be but- | ter, and glass and help each have only one syllable.",
+      like: ["SK-GUM3-8-P4"]
+    },
+    {
+      id: "SK-GUM3-8-S03",
+      type: "dropdown",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.L.GC.1:M:use-hyphens-to-divide-words-at-line-breaks"
+      ],
+      passages: ["p4"],
+      prompt: "Sentence 4 of the draft splits the word bonfire in the wrong place. Choose the correct split. The | mark shows where the line ends.",
+      text: "Bonfire should be split as {0}",
+      slots: [
+        {
+          options: ["bon- | fire", "bonf- | ire", "bo- | nfire"],
+          answer: 0
+        }
+      ],
+      clue: "Say the whole word. Ask whether it is made of smaller words.",
+      hints: [
+        "Say the whole word. Ask whether it is made of smaller words.",
+        "Read sentence 4 and say each choice. Check where the smaller words meet.",
+        "Bo- | nfire starts the break before the first small word is done. Decide between the other two."
+      ],
+      how: [
+        "Say the whole word: bonfire.",
+        "It is made of the smaller words bon and fire. A word made of two smaller words is split between them.",
+        "The answer is bon- | fire. Bonf- | ire and bo- | nfire cut a smaller word apart."
+      ],
+      misconception: "A common mix-up is splitting where the line happens to run out. Split where the smaller words meet.",
+      why: "The answer is bon- | fire. Bonfire is made of the smaller words bon and fire, so it splits between them. Bonf- | ire and bo- | nfire cut a smaller word apart.",
+      like: ["SK-GUM3-8-C03"]
+    },
+    {
+      id: "SK-GUM3-8-S04",
+      type: "mc",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.L.GC.1:M:use-hyphens-to-divide-words-at-line-breaks"
+      ],
+      passages: ["p4"],
+      prompt: "Sentence 5 of the draft puts the hyphen in the wrong place. Which revision fixes it? The | mark shows where the line ends.",
+      choices: [
+        { text: "My brother dropped a peb | -ble in the lake." },
+        { text: "My brother dropped a pe- | bble in the lake." },
+        { text: "My brother dropped a pebble- | in the lake." },
+        { text: "My brother dropped a peb- | ble in the lake.", correct: true }
+      ],
+      clue: "Check where the hyphen sits. Remember which line it belongs on.",
+      hints: [
+        "Check where the hyphen sits. Remember which line it belongs on.",
+        "Read sentence 5 and find the | mark. Ask which side of the mark the hyphen is on.",
+        "The draft has the hyphen after the | mark, and it needs to be fixed. Check the other three."
+      ],
+      how: [
+        "The hyphen belongs at the end of the first line, before the | mark.",
+        "Pebble has a double b in the middle, so it splits between the two b's: peb- | ble.",
+        "The answer is \"My brother dropped a peb- | ble in the lake.\" Pe- | bble puts both b's on the second line, and pebble- | does not split the word."
+      ],
+      misconception: "A common mix-up is putting the hyphen at the start of the next line. The hyphen goes at the end of the first line.",
+      why: "The answer is \"My brother dropped a peb- | ble in the lake.\" The hyphen goes at the end of the first line, and the double b is split between the two letters. The draft has the hyphen on the second line, pe- | bble splits in the wrong place, and pebble- | does not split the word at all.",
+      like: ["SK-GUM3-8-C04"]
+    },
+    {
+      id: "SK-GUM3-8-S05",
+      type: "ebsr",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.L.GC.1:M:use-hyphens-to-divide-words-at-line-breaks"
+      ],
+      passages: ["p4"],
+      prompt: "This question has two parts. Answer Part A, then Part B.",
+      partA: {
+        prompt: "Sentence 6 of the draft splits a word that should not be split. How should the writer fix it?",
+        choices: [
+          { text: "Move the hyphen to the start of the next line." },
+          { text: "Write the whole word on the next line.", correct: true },
+          { text: "Split the word after the first two letters." },
+          { text: "Put a second hyphen after the word." }
+        ]
+      },
+      partB: {
+        prompt: "Which fact from the lesson supports the answer to Part A?",
+        choices: [
+          { text: "A word made of two smaller words is split between them." },
+          { text: "Letters like th and sh stay together at a break." },
+          { text: "A word with only one beat is never split.", correct: true },
+          { text: "A hyphen goes at the end of the first line." }
+        ]
+      },
+      clue: "Clap the word that is split in sentence 6. Count the beats.",
+      hints: [
+        "Clap the word that is split in sentence 6. Count the beats.",
+        "For Part A, say the word and clap it. For Part B, think about which fact tells you when a word cannot be split.",
+        "In Part A, moving the hyphen would still leave the word split. Check the other choices."
+      ],
+      how: [
+        "Part A: clap the word in sentence 6. Stream has one beat, so it has only one syllable.",
+        "A word with one syllable cannot be split, so the whole word must go on the next line.",
+        "Part A answer: \"Write the whole word on the next line.\"",
+        "Part B answer: \"A word with only one beat is never split.\""
+      ],
+      misconception: "A common mix-up is thinking any word can be split if the hyphen is in the right place. A word with one beat is never split.",
+      why: "Part A: \"Write the whole word on the next line.\" Part B: \"A word with only one beat is never split.\" Stream has only one beat, so it stays whole. Moving the hyphen, splitting after two letters, or adding a second hyphen still breaks the word. The other facts are true, but they do not explain this fix.",
+      like: ["SK-GUM3-8-C05"]
+    },
+    {
+      id: "SK-GUM3-8-S06",
+      type: "hottext",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.L.GC.1:M:use-hyphens-to-divide-words-at-line-breaks"
+      ],
+      passages: ["p5"],
+      prompt: "Select the TWO sentences that have a word split in the wrong way. The | mark shows where the line ends.",
+      targets: ["p5:1:2", "p5:1:3", "p5:2:1", "p5:2:3", "p5:3:1"],
+      answer: ["p5:1:3", "p5:3:1"],
+      pick: 2,
+      clue: "Say each split word whole. Then check the break against the rules.",
+      hints: [
+        "Say each split word whole. Then check the break against the rules.",
+        "Clap each split word. Ask whether the break follows a rule, and whether the word has more than one beat.",
+        "Pump- | kin splits between the consonants m and p, which is correct. Check the other four sentences."
+      ],
+      how: [
+        "Say each split word whole, clap it, and check the break.",
+        "Coun- | ter, pep- | per and pump- | kin follow the rules.",
+        "Carr- | ots should be car- | rots, between the double r. Flo- | or has only one beat, so it should not be split."
+      ],
+      misconception: "A common mix-up is thinking a split is right if it comes after a few letters. Check the break against the rules.",
+      why: "The wrong splits are in \"Next, I sort the fresh carr- | ots by size.\" and \"Then I take out the trash and sweep the flo- | or.\" Carrots should be car- | rots, and floor has one syllable. Coun- | ter, pep- | per and pump- | kin are split correctly.",
+      like: ["SK-GUM3-8-C06"]
+    },
+    {
+      id: "SK-GUM3-8-S07",
+      type: "ms",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.L.GC.1:M:use-hyphens-to-divide-words-at-line-breaks"
+      ],
+      passages: [],
+      prompt: "The | mark shows where the first line ends. Choose the TWO words that are NOT split correctly.",
+      pick: 2,
+      choices: [
+        { text: "bu- | tton", correct: true },
+        { text: "sun- | set" },
+        { text: "tra- | ctor", correct: true },
+        { text: "mar- | ket" },
+        { text: "yel- | low" }
+      ],
+      clue: "Clap each word. Then use the rules: two different consonants, a double letter, or two smaller words.",
+      hints: [
+        "Clap each word. Then use the rules: two different consonants, a double letter, or two smaller words.",
+        "Say each word whole, then check the letters at the break. Ask whether the break follows a rule.",
+        "Sun- | set is made of two smaller words, so it is correct. Decide about the other four."
+      ],
+      how: [
+        "Say each word whole and check the break.",
+        "Tractor has c and t between vowels, so it should be trac- | tor. Button has a double t, so it should be but- | ton.",
+        "Yel- | low, sun- | set and mar- | ket follow the rules."
+      ],
+      misconception: "A common mix-up is splitting after the first vowel. Look at the consonants and split by the rules.",
+      why: "The answers are tra- | ctor and bu- | tton. Tractor should be trac- | tor, between the consonants c and t. Button should be but- | ton, between the double t. Yel- | low, sun- | set and mar- | ket follow the rules.",
+      like: ["SK-GUM3-8-C07"]
+    },
+    {
+      id: "SK-GUM3-8-S08",
+      type: "mc",
+      points: 1,
+      dok: 1,
+      std: [
+        "3.L.GC.1:M:use-hyphens-to-divide-words-at-line-breaks"
+      ],
+      passages: [],
+      prompt: "Which split of puppy is in the right place? The | mark shows where the line ends.",
+      choices: [
+        { text: "pu- | ppy" },
+        { text: "pup- | py", correct: true },
+        { text: "pupp- | y" },
+        { text: "p- | uppy" }
+      ],
+      clue: "Look for the two matching letters in the middle. Where should the break go?",
+      hints: [
+        "Look for the two matching letters in the middle. Where should the break go?",
+        "Say the word and find the two matching letters. Then check where each choice puts the break.",
+        "P- | uppy leaves a single letter alone on the first line. Check the other three."
+      ],
+      how: [
+        "Find the two matching letters in puppy: pp.",
+        "When the same consonant comes twice in the middle, the split goes between the two letters.",
+        "The answer is pup- | py. The other choices put the break before both p's, after both p's, or after the first letter."
+      ],
+      misconception: "A common mix-up is keeping both matching letters together. Split between them.",
+      why: "The answer is pup- | py. The same consonant comes twice in the middle, so the split goes between the two p's. Pu- | ppy puts both p's on the second line, pupp- | y puts both on the first line, and p- | uppy leaves one letter alone.",
+      like: ["SK-GUM3-8-C08"]
+    },
+    {
+      id: "SK-GUM3-8-S09",
+      type: "mc",
+      points: 1,
+      dok: 3,
+      std: [
+        "3.L.GC.1:M:use-hyphens-to-divide-words-at-line-breaks"
+      ],
+      passages: [],
+      prompt: "Two students split the same word. Which statement is true?",
+      stem: [
+        "The word mother will not fit at the end of a line.",
+        "Lia split it like this: mo- | ther",
+        "Omar split it like this: moth- | er"
+      ],
+      choices: [
+        { text: "Lia is right, because a break should come right after a vowel." },
+        { text: "Lia is right, because t and h are two consonants that must be split." },
+        { text: "Omar is right, because th makes one sound and stays together.", correct: true },
+        { text: "Both are right, because a word can be split in any place." }
+      ],
+      clue: "Check each split against the rules.",
+      hints: [
+        "Check each split against the rules.",
+        "Look at the letters on each side of the break in both splits. Ask which split pulled a pair of letters apart.",
+        "In Lia's split, the t and the h are on different lines. Check what that means."
+      ],
+      how: [
+        "Mother has two beats, so it can be split.",
+        "The letters th make one sound, so they stay together. The split goes after them: moth- | er.",
+        "Omar kept th together, and Lia pulled it apart. The answer is \"Omar is right, because th makes one sound and stays together.\""
+      ],
+      misconception: "A common mix-up is splitting right after the first vowel. The letters th stay together.",
+      why: "The answer is \"Omar is right, because th makes one sound and stays together.\" Mother splits as moth- | er. Lia pulled the t and the h apart.",
+      like: ["SK-GUM3-8-C09"]
+    },
+    {
+      id: "SK-GUM3-8-S10",
+      type: "dropdown",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.L.GC.1:M:use-hyphens-to-divide-words-at-line-breaks"
+      ],
+      passages: [],
+      prompt: "Neither word will fit at the end of a line. The | mark shows where the line ends. Choose the correct split for each word.",
+      text: "{0} is the way to split happen, and {1} is the way to split doorbell.",
+      slots: [
+        {
+          options: ["ha- | ppen", "hap- | pen", "happ- | en"],
+          answer: 1
+        },
+        {
+          options: ["door- | bell", "doo- | rbell", "doorb- | ell"],
+          answer: 0
+        }
+      ],
+      clue: "Say each word whole. Ask whether it has a double letter, or whether it is made of two smaller words.",
+      hints: [
+        "Say each word whole. Ask whether it has a double letter, or whether it is made of two smaller words.",
+        "Look at the middle of each word. Then check where each choice puts the break.",
+        "Doo- | rbell cuts the first small word in half. Decide the rest."
+      ],
+      how: [
+        "Happen has a double p in the middle, so it is split between the two p's.",
+        "Doorbell is made of the smaller words door and bell, so it is split between them.",
+        "The answers are hap- | pen and door- | bell."
+      ],
+      misconception: "A common mix-up is using the same rule for both words. Happen has a double letter, and doorbell is made of two smaller words.",
+      why: "The answers are hap- | pen and door- | bell. Happen has a double p, so it splits between the two p's. Doorbell is made of door and bell, so it splits between the two smaller words.",
+      like: ["SK-GUM3-8-C10"]
+    },
+    {
+      id: "SK-GUM3-8-S11",
+      type: "hottext",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.L.GC.1:M:use-hyphens-to-divide-words-at-line-breaks"
+      ],
+      passages: ["p6"],
+      prompt: "Select the TWO sentences that have a word split in the wrong way. The | mark shows where the line ends.",
+      targets: ["p6:1:3", "p6:2:1", "p6:2:2", "p6:2:3", "p6:3:1"],
+      answer: ["p6:2:2", "p6:3:1"],
+      pick: 2,
+      clue: "Say each split word whole. Then check the break against the rules.",
+      hints: [
+        "Say each split word whole. Then check the break against the rules.",
+        "Clap each split word. Ask whether the break comes between two consonants, between double letters, or between two smaller words.",
+        "Rain- | coat splits between two smaller words, so it is correct. Check the other four sentences."
+      ],
+      how: [
+        "Say each split word whole, clap it, and check the break.",
+        "Tur- | tles splits between r and t. Cat- | tails and bot- | tle split between double letters. Rain- | coat splits between two smaller words.",
+        "Mi- | nnow should be min- | now, between n and n. Sunl- | ight should be sun- | light, between the two smaller words."
+      ],
+      misconception: "A common mix-up is thinking a split is right if the first part looks like a word. Check the break against the rules.",
+      why: "The wrong splits are in \"Maya spotted a tiny mi- | nnow near the rocks.\" and \"The sun was bright, and the sunl- | ight sparkled on the pond.\" Minnow should be min- | now, and sunlight should be sun- | light. Tur- | tles, cat- | tails, bot- | tle and rain- | coat are split correctly.",
+      like: ["SK-GUM3-8-C11"]
+    },
+    {
+      id: "SK-GUM3-8-S12",
+      type: "mc",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.L.GC.1:M:use-hyphens-to-divide-words-at-line-breaks"
+      ],
+      passages: ["p6"],
+      prompt: "Sentence 8 of the draft splits feathers in the wrong place. Which revision fixes it? The | mark shows where the line ends.",
+      choices: [
+        { text: "A duck shook the water from its feath- | ers.", correct: true },
+        { text: "A duck shook the water from its feat- | hers." },
+        { text: "A duck shook the water from its fea- | thers." },
+        { text: "A duck shook the water from its feathe- | rs." }
+      ],
+      clue: "Look for letters that make one sound together. Those letters stay on the same line.",
+      hints: [
+        "Look for letters that make one sound together. Those letters stay on the same line.",
+        "Read sentence 8 and find the break. Ask which letters sit on each side of it.",
+        "The draft splits the word as feat- | hers, so that is the one that needs fixing. Check the other three."
+      ],
+      how: [
+        "Say feathers. It has two beats, so it can be split.",
+        "The letters th make one sound, so they stay together. The split goes after them: feath- | ers.",
+        "The answer is \"A duck shook the water from its feath- | ers.\" The other choices pull the t and h apart or leave letters alone."
+      ],
+      misconception: "A common mix-up is splitting between the t and the h. The letters th make one sound and stay together.",
+      why: "The answer is \"A duck shook the water from its feath- | ers.\" The letters th make one sound and stay together, so the split goes after them. Feat- | hers and fea- | thers pull the t and h apart, and feathe- | rs leaves two letters alone.",
+      like: ["SK-GUM3-8-C12"]
+    },
+    {
+      id: "SK-GUM3-8-S13",
+      type: "ms",
+      points: 2,
+      dok: 3,
+      std: [
+        "3.L.GC.1:M:use-hyphens-to-divide-words-at-line-breaks"
+      ],
+      passages: [],
+      prompt: "The word dentist is split as den- | tist. Choose the TWO reasons that explain why this split is correct.",
+      pick: 2,
+      choices: [
+        { text: "The same letter appears twice in the middle." },
+        { text: "The letters nt must stay together because they make one sound." },
+        {
+          text: "The consonants n and t are different and sit between two vowels, so the break goes between them.",
+          correct: true
+        },
+        { text: "Dentist is made of the smaller words den and tist." },
+        { text: "Dentist has more than one syllable, so it can be split.", correct: true }
+      ],
+      clue: "Look at the middle letters of dentist. Check each reason against the word.",
+      hints: [
+        "Look at the middle letters of dentist. Check each reason against the word.",
+        "Say the word and clap it. Then check each reason against the letters in the word.",
+        "Dentist does not have any double letters. Decide about the other four."
+      ],
+      how: [
+        "Clap dentist: two beats, so it can be split. Look at the middle letters: n and t are two different consonants between two vowels.",
+        "The rule says to split between them, so the reasons that fit are the two beats and the two different consonants.",
+        "The other reasons do not fit: there is no double letter, tist is not a word, and nt does not make one sound."
+      ],
+      misconception: "A common mix-up is picking a rule because it sounds familiar. Check that the rule matches the letters in the word.",
+      why: "The answers are \"The consonants n and t are different and sit between two vowels, so the break goes between them.\" and \"Dentist has more than one syllable, so it can be split.\" Dentist has no double letter, tist is not a word, and n and t do not make one sound together.",
+      like: ["SK-GUM3-8-C13"]
+    },
+    {
+      id: "SK-GUM3-8-S14",
+      type: "match",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.L.GC.1:M:use-hyphens-to-divide-words-at-line-breaks"
+      ],
+      passages: [],
+      prompt: "Match each word to the rule that tells where to split it.",
+      cols: ["Different consonants", "Double consonant", "Two small words", "Letters that go together"],
+      rows: [
+        { text: "chicken", answer: 3 },
+        { text: "pancake", answer: 2 },
+        { text: "problem", answer: 0 },
+        { text: "button", answer: 1 }
+      ],
+      clue: "Say each word and look at the middle letters. Ask which rule fits them best.",
+      hints: [
+        "Say each word and look at the middle letters. Ask which rule fits them best.",
+        "Start with the word you are surest about. Then decide the rest one at a time.",
+        "Pancake is made of two smaller words. Decide the other rows."
+      ],
+      how: [
+        "Look at the middle letters of each word.",
+        "Problem has the different consonants b and l. Button has the double letter t.",
+        "Pancake is made of pan and cake. Chicken has ck, which makes one sound and stays together."
+      ],
+      misconception: "A common mix-up is matching by how the word starts. Look at the middle letters.",
+      why: "Problem has two different consonants, b and l. Button has a double t. Pancake is made of two smaller words. Chicken has the letters ck, which stay together.",
+      like: ["SK-GUM3-8-C14"]
+    },
+    {
+      id: "SK-GUM3-8-S15",
+      type: "dropdown",
+      points: 1,
+      dok: 1,
+      std: [
+        "3.L.GC.1:M:use-hyphens-to-divide-words-at-line-breaks"
+      ],
+      passages: [],
+      prompt: "The word insect will not fit at the end of a line. The | mark shows where the line ends. Choose the correct split.",
+      text: "{0} is the best way to split insect.",
+      slots: [
+        {
+          options: ["in- | sect", "ins- | ect", "i- | nsect"],
+          answer: 0
+        }
+      ],
+      clue: "Say the word and look at the letters in the middle. Ask which rule fits them.",
+      hints: [
+        "Say the word and look at the letters in the middle. Ask which rule fits them.",
+        "Find the consonants between the two vowels. Then check where each choice puts the break.",
+        "I- | nsect leaves one letter alone on the first line. Decide between the other two."
+      ],
+      how: [
+        "Insect has two beats, so it can be split.",
+        "The letters n and s are two different consonants between two vowels, so the split goes between them.",
+        "The answer is in- | sect."
+      ],
+      misconception: "A common mix-up is putting the break after the first vowel. When two different consonants sit in the middle, split between them.",
+      why: "The answer is in- | sect. The consonants n and s are different, so the split goes between them. I- | nsect leaves one letter alone, and ins- | ect puts both consonants on the first line.",
+      like: ["SK-GUM3-8-C15"]
+    }
+  ],
+  addons: {
+    "SK-GUM3-8-P1": {
+      hints: [
+        "Clap the word. Then look at the letters in the middle and at where the hyphen sits.",
+        "Say doctor out loud. Check where the hyphen is, and which letters sit on each side of the break.",
+        "Doctor has two beats, so a reason that calls it one syllable cannot be right. Decide about the other three."
+      ],
+      how: [
+        "Clap doctor: two beats, so it can be split.",
+        "The letters c and t are two different consonants between vowels, so the split goes between them. The hyphen is at the end of the first line.",
+        "The answer is \"Yes, because it is split between the consonants c and t.\""
+      ],
+      misconception: "A common mix-up is thinking the hyphen starts the next line. The hyphen goes at the end of the first line."
+    },
+    "SK-GUM3-8-P2": {
+      hints: [
+        "Clap each word. A word can only be split if it has more than one beat.",
+        "Say each word and count the beats. Remember that a word with one beat is never split.",
+        "Bright has only one beat. Decide about the other three."
+      ],
+      how: [
+        "Clap each word and count the beats.",
+        "Carpet has two beats, car and pet, so it can be split.",
+        "School, bright and friend each have one beat, so none of them can be split."
+      ],
+      misconception: "A common mix-up is thinking a long-looking word has many beats. Count the beats, not the letters."
+    },
+    "SK-GUM3-8-P3": {
+      hints: [
+        "Clap each word first. Then look for two consonants or a double letter in the middle.",
+        "Check each row one at a time. Ask whether the break follows a rule, and whether the word has more than one beat.",
+        "Bright has only one beat, so it is not split. Decide the other rows."
+      ],
+      how: [
+        "Clap each word and look at the middle letters.",
+        "Muffin and summer have double letters, and the splits fall between them.",
+        "Winter should be win- | ter, and bright has one beat, so it should not be split."
+      ],
+      misconception: "A common mix-up is thinking any break is fine if the hyphen is there. The break has to follow a rule."
+    },
+    "SK-GUM3-8-P4": {
+      hints: [
+        "Clap each word. Then use the rules: two consonants, a double letter, or two small words.",
+        "Say each word whole, then check the break. Ask whether the break follows a rule.",
+        "Jump has only one beat, so it is not split. Decide about the other four."
+      ],
+      how: [
+        "Clap each word and check the break.",
+        "Basket splits between s and k. Popcorn is made of pop and corn.",
+        "Letter should be let- | ter, monkey should be mon- | key, and jump cannot be split."
+      ],
+      misconception: "A common mix-up is splitting before a double letter. The split goes between the two letters."
+    },
+    "SK-GUM3-8-P5": {
+      hints: [
+        "Clap the word. Then use the split rules from the lesson.",
+        "Say birthday whole and ask whether it is made of two smaller words. Check where each choice puts the break.",
+        "Birthd- | ay cuts the second small word in half. Decide between the other two."
+      ],
+      how: [
+        "Say the whole word: birthday.",
+        "It is made of the smaller words birth and day, so the split goes between them.",
+        "The answer is birth- | day. Bir- | thday breaks up th."
+      ],
+      misconception: "A common mix-up is splitting th apart. The letters th make one sound and stay together."
+    }
+  },
+  /* B6:core:end */
   test: [
     { id: "SK-GUM3-8-T1", type: "mc", points: 1, dok: 2, passages: [],
       prompt: "Four words are split at the ends of lines. Which word is split correctly?",
