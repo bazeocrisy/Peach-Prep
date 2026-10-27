@@ -127,3 +127,27 @@ Corrections to earlier log statements:
 - F-B5 S07: prompt is "Starfish has two halves. Which kind of syllable begins it, and which kind ends it?" Options are r-controlled, vowel team, consonant-le and vowel team, closed, consonant-le. I dropped silent-e rather than switch to vowel-consonant-e, because vowel-consonant-e raised the twin overlap with C07 to 0.31 (it is 0.200 now). mis and why say "kind" and name vowel team and consonant-le.
 
 Still open: only one cursive face; Watch Me does not model every tricky letter; the s-gap is explained, not removed; coreException has no UI consumer. STATUS.md and `--record-versions` are the coordinator's.
+
+## Fifth fix pass after review 5 (B9-review.md, "Fifth review")
+Measured on the final files: `check-content --all` PASS (0 failures, 98 warnings), `check-writing` 0 failures, `check-instructional-copy` 28 passed. Twin similarity (word-set, multiset, whole hyphenated words, both): 4.b worst 0.200, H.3.a worst 0.186. Hub check: H.3.a key is the unique hub in 0 of 19 mc items; 4.b 4 of 12 (unchanged, accepted lesson). Longest key: 4.b 5 of 27 single and 0 of 5 choose-two; H.3.a 3 of 39 and 0 of 3. A script count of options per item found none with duplicates and none under three in H.3.a; in 4.b P5 and S13 are two-column matches (as before). The script counts options, not what a hint leaves live; I re-read hint 3 on each changed item.
+
+Corrections to the fourth-pass section:
+- It said the H.3.a twin worst was 0.206 on S06~C05. The pair was S13~C12 (S06~C05 was 0.17). Now S13~C12 is 0.186 after the S13 distractors changed.
+- It said the pillow replacement was a clean fix. It was not: pill / ow is a sayable split, so the item had two defensible answers by its own criterion, and pil / low is also the key of SK-GUM3-8-C04. Replaced below.
+- It did not list T1 (clue and why did not rule out choice B), and it did not say C08 "Please wipe your feet before you come in." repeats the key of SK-GUM2 ("...before you come inside."). Both fixed below.
+- The hub fix left ties, not unique hubs, in several items (river, window, Zoe, Tessa and others). The tie counts are not in the figure above because the script reports unique hubs only.
+
+3.F.P.4.b (accepted lesson; wording and distractors on one similar item; key now pup / pet):
+- S04: "Puppet splits as {0}." with options `pu / ppet`, `pup / pet` (key), `puppe / t`. Merriam-Webster pup·pet (not re-fetched this pass; the reviewer cited it). The two wrong splits leave parts that cannot be said, so the item's own "real syllables" criterion picks one answer. How and why name puppet. `grep` of js/data finds no other use of puppet as a split or of `pup / pet`.
+- Not done: S07 still avoids vowel-consonant-e. With it, the twin overlap with C07 was 0.31 (measured last pass), so it does not fit.
+- New warnings from `check-content` on 4.b C08 and S08 ("hint 1 is much longer than hint 3") come from the one-word hint 3 change last pass; I left them.
+
+3.F.H.3.a (all SHOULDs; no ids, points, types or keys changed on check items):
+- T1 (check item, wording): clue "Check every word, especially the second word and the word after it." Why: "The second word is swim, the third word is in and the last word is lake. Swing, at and lane each change one of them."
+- C08 sign is now "Please hang your coat on the hook." Choices: hang your hat on the hook; put your coat on the hook; hang your hat on the shelf. Hub: key tied, not unique. No match in js/data for the sentence. Hints 2 and 3, how, why and mis rewritten.
+- C12 and S13: weak distractors replaced. C12: "Look only at the last letter and choose a word that ends like it." and "Say every letter of the word out loud, then stop." (print option kept). S13: "Copy the scribble over and over until it looks clearer." and "Choose any word that fits on the line, whatever its letters." and "Trace over the scribble in pen and then move on." Hint 2 on both now asks which words around the hard word can already be read, instead of stating the idea. Hint 3 rules out one option (print / tracing). Why lines updated.
+- S08: step 2 is now "Read one word at a time." (taught in Learn It). Teach point 3 now also says "If you are still stuck, skip ahead, read on, and come back to the word with clues from the words around it." so skip-and-return is taught. S08 twin overlap with C07 is 0.17.
+- C06 slot 2 is tall / long / high and S10 slot 1 is wash / scrub / rinse, so the idiom no longer gives the answer. Hint wording unchanged (letter counts still fit); why lines updated.
+- Practice and core item edits: C06, C08, C12, S08, S10, S13. Check-item edits: T1 only.
+
+Still open: only one cursive face; Watch Me does not model every tricky letter; the s-gap is explained, not removed; coreException has no UI consumer. STATUS.md and `--record-versions` are the coordinator's.

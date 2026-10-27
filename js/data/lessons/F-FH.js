@@ -237,7 +237,7 @@
       points: [
         "In cursive, the letters in a word connect, so look for where one letter ends and the next begins.",
         "Some letters look very different in cursive. Watch for lowercase r, s, z and f, and capital letters like G, Q, S, T and Z.",
-        "Read cursive one word at a time. If a word is hard, find the letters you are sure of first, then think about what word would make sense.",
+        "Read cursive one word at a time. If a word is hard, find the letters you are sure of first, then think about what word would make sense. If you are still stuck, skip ahead, read on, and come back to the word with clues from the words around it.",
         "Spaces between words still show where each word ends. In this font, the letter s can leave a small gap after it, so look at the whole word and use the wider spaces to find where words end."
       ],
       examples: [
@@ -600,8 +600,8 @@
                 {
                   options: [
                     "tall",
-                    "thick",
-                    "wet"
+                    "long",
+                    "high"
                   ],
                   answer: 0
                 }
@@ -618,7 +618,7 @@
                 "The word before grass has four letters: tall."
               ],
               misconception: "A common mix-up is choosing a word that names the same kind of thing. Read every letter.",
-              why: "The answers are \"rabbit\" and \"tall.\" The sentence says A brown rabbit hid in the tall grass. Robin, raccoon, thick and wet do not match the letters."
+              why: "The answers are \"rabbit\" and \"tall.\" The sentence says A brown rabbit hid in the tall grass. Robin, raccoon, long and high do not match the letters."
             },
             {
               id: "SK-FH3a-C07",
@@ -662,36 +662,36 @@
               passages: [],
               prompt: "Read the cursive sign. What does it tell you to do?",
               stem: [
-                "Cursive: Please wipe your feet before you come in."
+                "Cursive: Please hang your coat on the hook."
               ],
               choices: [
                 {
-                  text: "Please wipe your feet before you come in.",
+                  text: "Please hang your coat on the hook.",
                   correct: true
                 },
                 {
-                  text: "Please wash your hands before you come in."
+                  text: "Please hang your hat on the hook."
                 },
                 {
-                  text: "Please take off your shoes before you come in."
+                  text: "Please put your coat on the hook."
                 },
                 {
-                  text: "Please wipe your shoes before you come in."
+                  text: "Please hang your hat on the shelf."
                 }
               ],
               clue: "Read the cursive sign one word at a time.",
               hints: [
                 "Read the cursive sign one word at a time.",
                 "Every choice would make a sensible sign, so only the letters can tell you which one is written. Read the word right after Please.",
-                "Compare the action word and the word after your with each choice."
+                "Compare the action word and the thing after your with each choice."
               ],
               how: [
                 "Read the sign word by word.",
-                "The action word after Please is wipe, and the word after your is feet.",
-                "The rest says before you come in. Only one choice has wipe and feet."
+                "The action word after Please is hang, and the thing after your is coat.",
+                "The place at the end is the hook. Only one choice has hang, coat and hook."
               ],
-              misconception: "A common mix-up is picking a choice with one right part. Both parts have to match.",
-              why: "The answer is \"Please wipe your feet before you come in.\" The sign says to wipe your feet. The other choices change the action, the thing, or both. All four would make sense as a sign, so only the letters tell them apart."
+              misconception: "A common mix-up is picking a choice with one right part. Every part has to match.",
+              why: "The answer is \"Please hang your coat on the hook.\" The sign says to hang your coat on the hook. The other choices change the action, the thing, or the place. All four would make sense as a sign, so only the letters tell them apart."
             },
             {
               id: "SK-FH3a-C09",
@@ -856,10 +856,10 @@
                   correct: true
                 },
                 {
-                  text: "Skip the note and read only the capital letters."
+                  text: "Look only at the last letter and choose a word that ends like it."
                 },
                 {
-                  text: "Guess any long word that starts with the same letter."
+                  text: "Say every letter of the word out loud, then stop."
                 },
                 {
                   text: "Print the word and read it out loud two times."
@@ -868,7 +868,7 @@
               clue: "Think about how a reader works out a word they cannot read yet.",
               hints: [
                 "Think about how a reader works out a word they cannot read yet.",
-                "Think about what the rest of the sentence can tell Leo.",
+                "Which of the words around the hard word can Leo already read?",
                 "Printing the word does not read it. Decide which of the other choices helps Leo read the word."
               ],
               how: [
@@ -877,7 +877,7 @@
                 "So he should use the letters he knows and think about what fits."
               ],
               misconception: "A common mix-up is guessing without using the sentence. The other words give clues.",
-              why: "The answer is \"Use the letters he knows and think about what fits.\" The letters and the other words together help him work out the word. The other choices skip the note, guess, or change the word to print."
+              why: "The answer is \"Use the letters he knows and think about what fits.\" The letters and the other words together help him work out the word. The other choices use only one letter, stop after saying letters, or change the word to print."
             },
             {
               id: "SK-FH3a-C13",
@@ -1294,7 +1294,7 @@
         prompt: "Put these in order for a stuck reader.",
         steps: [
           "Start at the capital letter.",
-          "Say each word quietly.",
+          "Read one word at a time.",
           "Skip ahead if you get stuck.",
           "Come back with clues from nearby words."
         ],
@@ -1306,12 +1306,12 @@
         ],
         how: [
           "First, start at the capital letter.",
-          "Second, say each word quietly.",
+          "Second, read one word at a time.",
           "Third, skip ahead if you get stuck.",
           "Fourth, come back with clues from nearby words."
         ],
         misconception: "A common mix-up is staying stuck on the hard word. Move on and come back.",
-        why: "The order is: start at the capital letter; say each word quietly; skip ahead if you get stuck; come back with clues from nearby words."
+        why: "The order is: start at the capital letter; read one word at a time; skip ahead if you get stuck; come back with clues from nearby words."
       },
       {
         id: "SK-FH3a-S09",
@@ -1379,8 +1379,8 @@
           {
             options: [
               "wash",
-              "dry",
-              "wipe"
+              "scrub",
+              "rinse"
             ],
             answer: 0
           },
@@ -1405,7 +1405,7 @@
           "The last word is cups."
         ],
         misconception: "A common mix-up is guessing a word that makes sense but does not match the letters. Read every letter.",
-        why: "The answers are \"wash\" and \"cups.\" The line says Wash the pans and stack the cups. Dry, wipe, bowls and plates do not match the letters."
+        why: "The answers are \"wash\" and \"cups.\" The line says Wash the pans and stack the cups. Scrub, rinse, bowls and plates do not match the letters."
       },
       {
         id: "SK-FH3a-S11",
@@ -1528,20 +1528,20 @@
             correct: true
           },
           {
-            text: "Tear out the page and begin a new one."
+            text: "Copy the scribble over and over until it looks clearer."
           },
           {
-            text: "Choose whichever word looks the longest on the page."
+            text: "Choose any word that fits on the line, whatever its letters."
           },
           {
-            text: "Rewrite it in print and stop thinking about it."
+            text: "Trace over the scribble in pen and then move on."
           }
         ],
         clue: "Think about how a reader works out a word they cannot read yet.",
         hints: [
           "Think about how a reader works out a word they cannot read yet.",
-          "Think about what the rest of the sentence can tell the pupil.",
-          "Rewriting the word in print does not read it. Decide which of the other choices helps the pupil read the word."
+          "Which of the words around the scribble can the pupil already read?",
+          "Tracing over the scribble does not read it. Decide which of the other choices helps the pupil read the word."
         ],
         how: [
           "The pupil can read the ending.",
@@ -1549,7 +1549,7 @@
           "So the best plan is to test words with that ending and see which fits."
         ],
         misconception: "A common mix-up is guessing without using the sentence. The other words give clues.",
-        why: "The answer is \"Test words with that ending and see which fits.\" The letters and the story together help work out the word. The other choices give up, guess, or only change the word to print."
+        why: "The answer is \"Test words with that ending and see which fits.\" The letters and the story together help work out the word. The other choices copy the scribble, ignore the letters, or only trace over it."
       },
       {
         id: "SK-FH3a-S14",
@@ -1724,8 +1724,8 @@
           { text: "We swing in the lane." },
           { text: "We swim at the lake." }
         ],
-        clue: "Check every word, especially the second word and the last word.",
-        why: "The answer is \"We swim in the lake.\" The second word is swim and the last word is lake." },
+        clue: "Check every word, especially the second word and the word after it.",
+        why: "The answer is \"We swim in the lake.\" The second word is swim, the third word is in and the last word is lake. Swing, at and lane each change one of them." },
       { id: "SK-FH3a-T2", type: "mc", points: 1, dok: 1, passages: [],
         prompt: "Read the cursive word. What word is it?",
         stem: "Cursive: river",

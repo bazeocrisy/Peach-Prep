@@ -2288,13 +2288,13 @@ PP.addLesson({
         "SK-FP4b-C04"
       ],
       prompt: "Pick the split that makes real syllables.",
-      text: "Pillow splits as {0}. Bacon splits as {1}.",
+      text: "Puppet splits as {0}. Bacon splits as {1}.",
       slots: [
         {
           options: [
-            "pi / llow",
-            "pil / low",
-            "pill / ow"
+            "pu / ppet",
+            "pup / pet",
+            "puppe / t"
           ],
           answer: 1
         },
@@ -2314,12 +2314,12 @@ PP.addLesson({
         "Say each choice out loud. Ask which one gives parts you can say as real syllables."
       ],
       how: [
-        "Pillow has two consonants, l and l, between the vowels, so split between them: pil / low.",
+        "Puppet has two consonants, p and p, between the vowels, so split between them: pup / pet.",
         "Bacon has one consonant between the vowels. Splitting before it gives ba / con, a word you know.",
         "The other splits leave parts that cannot be said."
       ],
       misconception: "A common mix-up is splitting anywhere. Split where each part can be said as a syllable.",
-      why: "Pillow splits as pil / low, between the two consonants. Bacon splits as ba / con, before the one consonant. The other choices make parts that are not syllables."
+      why: "Puppet splits as pup / pet, between the two consonants. Bacon splits as ba / con, before the one consonant. The other choices make parts that are not syllables."
     },
     {
       id: "SK-FP4b-S05",
