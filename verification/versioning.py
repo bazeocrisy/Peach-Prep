@@ -85,6 +85,12 @@ lesson(*WORD)
 rc, out = cc(); rc2, out2 = cc("--release")
 check("N.3 a wording-only edit of a check is a warning in both modes (same ids, points and keys), not a failure of the version rule",
       "wording only" in out and "versions:" in out and not [l for l in out2.splitlines() if l.startswith("  FAIL  versions")], out[-300:])
+rc, out = cc()
+check("N.3b a reworded prompt that keeps the id, points and answer position is named as such ('the question text itself ... changed on SK-TT1c-T1'), still only a warning",
+      rc == 0 and "question text itself" in out and "SK-TT1c-T1" in out, out[-300:])
+lesson("How does he treat Amara when she tries to talk?", "How does he treat Amara when she tries to talk to him?")
+rc, out = cc()
+check("N.3c a clue-only edit is a wording-only edit and is not reported as a changed question", "wording only" in out and "question text itself" not in out, out[-300:])
 lesson(*KEYMOVE)
 rc, out = cc(); rc2, out2 = cc("--release")
 check("N.4 an answer key moved with the same testRev: a warning by default, a FAILURE with --release",
@@ -102,8 +108,8 @@ rc2, out2 = cc("--release")
 check("N.8 with testRev raised, --record-versions records the new version and the version rule is clean again, even in --release",
       rc == 0 and "recorded" in out and not [l for l in out2.splitlines() if l.startswith("  FAIL  versions") or l.startswith("  warn  versions")], (out, out2[-300:]))
 vj = json.loads((tmp / "verification/assessment-versions.json").read_text())
-check("N.9 the record holds rev, hash and a material hash per form; the changed form has rev 2 and every other form's record is unchanged",
-      vj["forms"][KEY + ":A"]["rev"] == "2" and set(vj["forms"][KEY + ":A"]) == {"rev", "hash", "mat"}
+check("N.9 the record holds rev, hash, a material hash and a per-item question hash per form; the changed form has rev 2 and every other form's record is unchanged",
+      vj["forms"][KEY + ":A"]["rev"] == "2" and set(vj["forms"][KEY + ":A"]) == {"rev", "hash", "mat", "q"}
       and all(v == BASE_V["forms"][k] for k, v in vj["forms"].items() if k != KEY + ":A") and vj["inputs"]["rev"] in ("1", "2"), vj["forms"][KEY + ":A"])
 for bad, why in (('testRev: { A: "" }', "empty A"), ('testRev: { C: "1" }', "unknown form"), ('testRev: { B: "" }', "empty B"), ('testRev: "2"', "not an object")):
     reset_records(); lesson(); (tmp / LESSON).write_text(ORIG.replace(REVA[0], '\n  code: "3.T.T.1.c",\n  ' + bad + ",", 1))

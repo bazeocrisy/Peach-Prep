@@ -714,6 +714,9 @@ function keyFacts(v, pth, out) {
   return out;
 }
 const materialOf = items => sha((items || []).map(it => keyFacts(it, "", [])));
+/* The question text of each item (prompt, stem, passage text of a text-box item), as a short hash, so a record can name the items
+   whose question was reworded. Clues, hints and explanations are left out on purpose. */
+const questionOf = items => { const o = {}; (items || []).forEach(it => { o[it.id] = sha([it.prompt, it.stem, it.text, it.choices && it.choices.map(c => c && c.text)]).slice(0, 12); }); return o; };
 const lessonKeyOf = L => L.key || L.code;
 function coreResolved(L) {
   const prac = {}; (L.practice || []).forEach(it => { prac[it.id] = it; });
@@ -729,8 +732,8 @@ function currentForms() {
   const out = {};
   lessons.forEach(L => {
     const k = lessonKeyOf(L);
-    if ((L.test || []).length) out[k + ":A"] = { rev: revOf(L, "A"), hash: sha(L.test), mat: materialOf(L.test) };
-    if (Array.isArray(L.testB) && L.testB.length) out[k + ":B"] = { rev: revOf(L, "B"), hash: sha(L.testB), mat: materialOf(L.testB) };
+    if ((L.test || []).length) out[k + ":A"] = { rev: revOf(L, "A"), hash: sha(L.test), mat: materialOf(L.test), q: questionOf(L.test) };
+    if (Array.isArray(L.testB) && L.testB.length) out[k + ":B"] = { rev: revOf(L, "B"), hash: sha(L.testB), mat: materialOf(L.testB), q: questionOf(L.testB) };
   });
   return out;
 }
@@ -758,7 +761,7 @@ if (ARGV.includes("--record-versions")) {
   Object.keys(cur).sort().forEach(k => {
     const o = old[k], c = cur[k];
     if (o && o.mat !== c.mat && o.rev === c.rev) { refused.push(k + " (material change, testRev still \"" + c.rev + "\")"); forms[k] = o; }
-    else forms[k] = { rev: c.rev, hash: c.hash, mat: c.mat };
+    else forms[k] = { rev: c.rev, hash: c.hash, mat: c.mat, q: c.q };
   });
   if (refused.length) { console.log("NOT RECORDED: a check changed materially (ids, points or answer keys) without a new testRev. Raise testRev in the lesson first: " + refused.join("; ")); process.exit(1); }
   const inp = currentInputs(), oi = (readJson(VERS_FILE) || {}).inputs;
@@ -827,6 +830,10 @@ if (ARGV.includes("--record-review")) {
     if (added.length) lev(C, added.length + " check form" + (added.length === 1 ? " has" : "s have") + " no version record: " + list(added) + ". Run --record-versions");
     if (gone.length) lev(C, "the version record lists forms that no longer exist: " + list(gone));
     if (edit.length) W(C, edit.length + " check form" + (edit.length === 1 ? " was" : "s were") + " edited in wording only since the record (same ids, points and keys): " + list(edit) + ". testRev stays; run --record-versions to refresh the hash");
+    /* a reworded question can keep its id, points and answer position and still be a different question: name those items */
+    const reworded = [];
+    edit.concat(mat).forEach(k => { const o = V.forms[k], c = cur[k]; if (o && o.q) Object.keys(c.q).forEach(id => { if (o.q[id] && o.q[id] !== c.q[id]) reworded.push(id); }); });
+    if (reworded.length) W(C, "the question text itself (prompt, stem or choices, not only clue or explanation) changed on " + list(reworded) + " while the id, points and answer position stayed. If this is a different question, raise testRev; if it is a correction, leave it");
     const inp = currentInputs(), ih = sha({ accepted: inp.accepted, groups: inp.groups, forms: inp.forms });
     if (V.inputs && V.inputs.hash !== ih) lev(C, "the inputs of the reviews (accepted lessons, their checks' answer keys, the standard groups) changed since the record: run --record-versions, which raises the reviews' rev");
   }
