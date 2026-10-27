@@ -61,7 +61,7 @@
 | B6 | 3.L.GC.1:M:use-collective-and-abstract-nouns | ACCEPTED | Fifth independent review ACCEPT; open SHOULDs in B6-review.md |
 | B6 | 3.L.GC.1:M:use-reflexive-pronouns | ACCEPTED | Fourth independent review ACCEPT; open SHOULDs in B6-review.md |
 | B6 | 3.L.GC.1:M:use-commas-with-coordinating-conjunctions-to-joi | ACCEPTED | Third independent review ACCEPT; see B6-review.md and B6-author-log.md (open NOTEs/SHOULDs listed there) |
-| B6 | 3.L.GC.1:M:use-hyphens-to-divide-words-at-line-breaks | NOT ACCEPTED: awaiting independent review | B6-author-log.md; authored, not reviewed |
+| B6 | 3.L.GC.1:M:use-hyphens-to-divide-words-at-line-breaks | ACCEPTED | Seventh independent review ACCEPT; open SHOULDs S1 (S01/C07 Teach rule), S2 (T4 columns: record versions after final edit) in B6-review.md |
 | B7a | 3.L.GC.1:R:use-nouns-and-verbs-to-form-complete-thoughts-in | NOT ACCEPTED: awaiting independent review | B7a-author-log.md; authored, not reviewed |
 | B7a | 3.L.GC.1:R:form-and-use-singular-and-plural-nouns-in-speech | NOT ACCEPTED: awaiting independent review | B7a-author-log.md; authored, not reviewed |
 | B7a | 3.L.GC.1:R:use-interrogatives-to-ask-questions-in-speech | NOT ACCEPTED: awaiting independent review | B7a-author-log.md; authored, not reviewed |

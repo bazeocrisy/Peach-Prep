@@ -2006,9 +2006,9 @@ PP.addLesson({
                 text: "Bright and colorful always make a noun plural, so posters and banners are correct for that reason."
               }
             ],
-            clue: "Clue words like each, every and a go with one thing. Number words and many go with more than one.",
+            clue: "Clue words like each, every and a go with one noun at a time. Number words and many go with more than one.",
             hints: [
-              "Clue words like each, every and a go with one thing. Number words and many go with more than one.",
+              "Clue words like each, every and a go with one noun at a time. Number words and many go with more than one.",
               "Look at the word that comes before table, then at the nouns after covered with.",
               "Describing words like bright and colorful do not change how many things a noun names. Check the other reasons."
             ],
@@ -2596,9 +2596,9 @@ PP.addLesson({
           text: "Nouns in the same line must end the same way."
         }
       ],
-      clue: "Clue words that start a phrase can mean one thing or more than one. Sort every and a into one of those groups.",
+      clue: "Clue words that start a phrase can mean one or more than one. Sort every and a into one of those groups.",
       hints: [
-        "Clue words that start a phrase can mean one thing or more than one. Sort every and a into one of those groups.",
+        "Clue words that start a phrase can mean one or more than one. Sort every and a into one of those groups.",
         "Look at the word in front of class, then the word in front of banner.",
         "Words in a line do not have to look alike. Check the reasons that say they do."
       ],
@@ -3169,6 +3169,16 @@ PP.addLesson({
         "The question word for a reason is why."
       ],
       answer: "Why did you stay home?"
+    },
+    {
+      show: ["Answer: She cut the paper with scissors."],
+      ask: "Which question word would you use to ask for this answer?",
+      steps: [
+        "Find the new information in the answer. It is with scissors.",
+        "Decide what kind of information it is. The scissors tell the way the paper was cut.",
+        "The question word for a way is how."
+      ],
+      answer: "How did she cut the paper?"
     }
   ],
   parent: "This skill is about asking questions out loud. Play a quick game: you say an answer (\"At the grocery store\") and your child asks a question that fits it (\"Where did you buy the milk?\"). Try to use all six question words.",
@@ -3748,24 +3758,24 @@ PP.addLesson({
               "3.L.GC.1:R:use-interrogatives-to-ask-questions-in-speech"
             ],
             passages: ["p3"],
-            prompt: "Among sentences 3 to 9, select the TWO shown sentences that answer a when question.",
-            targets: ["p3:1:3","p3:1:4","p3:2:3","p3:3:1","p3:3:2"],
+            prompt: "Among sentences 3 to 10, select the TWO shown sentences that answer a when question.",
+            targets: ["p3:1:3","p3:2:1","p3:3:1","p3:3:2","p3:3:3"],
             answer: ["p3:3:1","p3:3:2"],
             pick: 2,
             clue: "A when question asks about a time. Look for words that set a moment in time.",
             hints: [
               "A when question asks about a time. Look for words that set a moment in time.",
               "Check each shown sentence for a word that tells when something happened or was planned.",
-              "Sentence 7 gives a reason and no moment in time."
+              "Sentence 5 tells what the class scooped up and where, and gives no moment in time."
             ],
             how: [
               "A when question asks about a time, so look for words that set a moment.",
               "Sentence 8 says the class put the animals back when they finished. That sets the moment.",
               "Sentence 9 says lunch was at noon. Noon is a time of day.",
-              "Sentences 3, 4 and 7 tell who and where, what, and why, so they answer other questions."
+              "Sentences 3, 5 and 10 tell who and where, what, and how, so they answer other questions."
             ],
             misconception: "A common mix-up is picking a sentence just because it tells what happened. A when answer has to name a time.",
-            why: "The answers are sentences 8 and 9: \"We put every animal back in the water when we finished.\" and \"Lunch was at noon under the oak trees.\". When we finished and at noon both set a time. The other shown sentences tell who and where, what, and why."
+            why: "The answers are sentences 8 and 9: \"We put every animal back in the water when we finished.\" and \"Lunch was at noon under the oak trees.\". When we finished and at noon both set a time. The other shown sentences tell who and where, what, and how."
           },
           {
             id: "SK-GUM1-3-C12",
@@ -3851,29 +3861,29 @@ PP.addLesson({
               "3.L.GC.1:R:use-interrogatives-to-ask-questions-in-speech"
             ],
             passages: [],
-            stem: "A volunteer lists four questions for the town mural project.",
-            prompt: "Select the question that asks about a person.",
+            stem: "A volunteer for the town mural project hears this answer: With big rollers and long poles.",
+            prompt: "Select the line that has this answer.",
             options: [
-              "Who painted the mural on the old wall?",
+              "How did the crew paint the tall wall?",
               "Where will the new mural go next spring?",
-              "When did the painting crew arrive today?",
+              "When will the painters return to the wall?",
               "Why is the paint on the sign so bright?"
             ],
             answer: [0],
             pick: 1,
-            clue: "Say a possible answer for each question aloud. Then ask what kind of answer you gave.",
+            clue: "Decide what kind of information the answer gives: a person, a place, a time, a reason or a way.",
             hints: [
-              "Say a possible answer for each question aloud. Then ask what kind of answer you gave.",
+              "Decide what kind of information the answer gives: a person, a place, a time, a reason or a way.",
               "Read the first word of each question and think about what it asks for.",
-              "A question that begins with the word why asks for a reason, so it cannot be about a person."
+              "The answer does not give a reason, so one line can be ruled out."
             ],
             how: [
-              "Say a possible answer to each question.",
-              "The answer to Who painted the mural on the old wall? would be a name, like Ms. Ortiz.",
-              "The other answers would be a place, a time and a reason."
+              "Decide what kind of information the answer gives. With big rollers and long poles tells the way the job was done.",
+              "The question word that asks for a way is how.",
+              "The answer is \"How did the crew paint the tall wall?\" The other questions ask for a place, a time and a reason."
             ],
-            misconception: "A common mix-up is picking the question that mentions a worker or a crew. Pick the question whose answer is a person.",
-            why: "The answer is \"Who painted the mural on the old wall?\". Who asks about a person. The other questions ask for a place, a time and a reason."
+            misconception: "A common mix-up is picking the line that sounds most like a mural. Match the kind of information in the answer.",
+            why: "The answer is \"How did the crew paint the tall wall?\". With big rollers and long poles tells a way, and how asks about a way. The other questions ask for a place, a time and a reason."
           },
           {
             id: "SK-GUM1-3-C15",
@@ -3929,10 +3939,10 @@ PP.addLesson({
       ],
       passages: [],
       stem: "After the Saturday scrimmage, Coach Lee keeps a blue bin of forgotten gloves, scarves and water bottles beside the equipment shed.",
-      prompt: "He finds one lone red mitten and hopes to learn the spot where it turned up. Pick the best question for him to ask the players.",
+      prompt: "He picks up one lone red mitten and hopes to learn the place its owner dropped it. Pick the best question for him to ask the players.",
       choices: [
         {
-          text: "Where did this mitten turn up?",
+          text: "Where did the owner drop this mitten?",
           correct: true
         },
         {
@@ -3952,12 +3962,12 @@ PP.addLesson({
         "Coach Lee is not asking about an amount, so one question can be ruled out."
       ],
       how: [
-        "Find what the coach wants to learn: the spot where the mitten turned up.",
+        "Find what the coach wants to learn: the place the owner dropped the mitten.",
         "A spot is a place, and the question word for a place is where.",
-        "The answer is \"Where did this mitten turn up?\" The other questions ask about an amount, a thing and a reason."
+        "The answer is \"Where did the owner drop this mitten?\" The other questions ask about an amount, a thing and a reason."
       ],
       misconception: "A common mix-up is picking the question that mentions gloves or the shed. Pick the question word that asks for what the coach wants.",
-      why: "The answer is \"Where did this mitten turn up?\" A spot is a place, and where asks about a place. The other questions ask about an amount, a thing and a reason.",
+      why: "The answer is \"Where did the owner drop this mitten?\" A spot is a place, and where asks about a place. The other questions ask about an amount, a thing and a reason.",
       like: ["SK-GUM1-3-P3"]
     },
     {
@@ -4005,7 +4015,7 @@ PP.addLesson({
       ],
       passages: ["p4"],
       stem: "Parents at the pool read the swim team's recap in the printed program.",
-      prompt: "Sentence 3 is the reply to a reader's question. Pick that question.",
+      prompt: "Sentence 3 answers something a parent asked. Which one was it?",
       choices: [
         {
           text: "When did the first swim race of the morning begin?",
@@ -4078,7 +4088,7 @@ PP.addLesson({
         "3.L.GC.1:R:use-interrogatives-to-ask-questions-in-speech"
       ],
       passages: ["p4"],
-      prompt: "Read Their parents cheered loudly from the top row, number 8 in the draft. Ben thinks the line shows a place. Cy thinks it shows a moment. Whose idea fits?",
+      prompt: "Number 8 says, \"Their parents cheered loudly from the top row.\" Ben thinks the line shows a place. Cy thinks it shows a moment. Whose idea fits?",
       choices: [
         {
           text: "Ben's idea fits: the top row is a spot in the stands.",
@@ -4314,7 +4324,7 @@ PP.addLesson({
       clue: "Test each question against sentence 5 first. Then test it against sentence 6.",
       hints: [
         "Test each question against sentence 5 first. Then test it against sentence 6.",
-        "Sentence 5 is about the pan on the stove. Sentence 6 is about what Dad does with a tool.",
+        "Compare what each sentence tells about the cooking.",
         "One question asks how long the pan sizzles, and sentence 5 gives two minutes."
       ],
       how: [
@@ -4344,7 +4354,7 @@ PP.addLesson({
       hints: [
         "A time line names a day or a moment, such as a weekday or now.",
         "Check each shown line for a word that sets a day or a moment.",
-        "Line 6 tells what Uncle Marcus did and when it happened is not given."
+        "Line 6 tells what Uncle Marcus did and gives no moment in time."
       ],
       how: [
         "A time line names a day or a moment.",
@@ -4366,7 +4376,7 @@ PP.addLesson({
       ],
       passages: ["p6"],
       stem: "Uncle Marcus is teaching me to fix a flat tire, one small step at a time.",
-      prompt: "The reply to this ask sits in sentence 4. Which word fits the gap?",
+      prompt: "Sentence 4 gives the reply to this question. Which word fits the gap?",
       text: "{0} did he pull out the tube?",
       slots: [
         {
@@ -4407,7 +4417,7 @@ PP.addLesson({
           correct: true
         },
         {
-          text: "Who is bringing the snacks to practice?",
+          text: "Who is bringing the snacks to the circle?",
           correct: true
         },
         {
@@ -4428,11 +4438,11 @@ PP.addLesson({
       ],
       how: [
         "Look at the first word of each line.",
-        "Who asks about a person, and two lines begin with it: Who taught the class to knit? and Who is bringing the snacks to practice?",
+        "Who asks about a person, and two lines begin with it: Who taught the class to knit? and Who is bringing the snacks to the circle?",
         "Where asks about a place, how many asks about an amount and why asks for a reason."
       ],
       misconception: "A common mix-up is choosing a line because it mentions the class. Pick by the question word.",
-      why: "The answers are \"Who taught the class to knit?\" and \"Who is bringing the snacks to practice?\". Both lines begin with who, which asks about a person. The other three ask about a place, an amount and a reason.",
+      why: "The answers are \"Who taught the class to knit?\" and \"Who is bringing the snacks to the circle?\". Both lines begin with who, which asks about a person. The other three ask about a place, an amount and a reason.",
       like: ["SK-GUM1-3-C13"]
     },
     {
@@ -4629,11 +4639,11 @@ PP.addLesson({
   code: "3.L.GC.1:R:capitalize-the-first-word-of-a-sentence-and-the-",
   title: "Capital letters: the first word and I",
   teach: {
-    big: "Every sentence starts with a capital letter, and the word I is always a capital letter.",
+    big: "Begin every sentence with a capital letter, and write the word I as a capital.",
     points: [
       "The first word of every sentence begins with a capital letter, even a short word like the or on.",
-      "When you write about yourself, the word I is always a capital letter, no matter where it is in the sentence.",
-      "I stays a capital in short forms like I'm and I'll, too."
+      "When you write about yourself, use a capital I every time, in any spot in the sentence.",
+      "When I joins another word, as in I'm or I'll, the first letter keeps its capital."
     ],
     example: {
       label: "Example",
@@ -4684,7 +4694,7 @@ PP.addLesson({
         [
           "(6) then i swam out to the floating dock.",
           "(7) Mom said I could stay in the water for an hour.",
-          "(8) After that, we skipped stones across the lake."
+          "(8) after that, we skipped stones across the lake."
         ],
         [
           "(9) i found a smooth gray stone that skipped five times.",
@@ -4909,10 +4919,84 @@ PP.addLesson({
         title: "Set 1",
         items: [
           {
-            ref: "SK-GUM1-4-P3"
+            id: "SK-GUM1-4-C01",
+            type: "match",
+            points: 2,
+            dok: 2,
+            std: [
+              "3.L.GC.1:R:capitalize-the-first-word-of-a-sentence-and-the-"
+            ],
+            passages: [],
+            prompt: "Read each sentence from a classroom poster. Match it to what it needs.",
+            cols: ["Written correctly","Needs a capital letter"],
+            rows: [
+              {
+                text: "The librarian and I picked a mystery story.",
+                answer: 0
+              },
+              {
+                text: "my team practiced on the field every afternoon.",
+                answer: 1
+              },
+              {
+                text: "Jada said i could go first.",
+                answer: 1
+              },
+              {
+                text: "Please tell Grandma where I left the scarf.",
+                answer: 0
+              },
+              {
+                text: "Today I'm making the posters for the fair.",
+                answer: 0
+              }
+            ],
+            clue: "For each sentence, test the first word, and then test any I that comes later.",
+            hints: [
+              "For each sentence, test the first word, and then test any I that comes later.",
+              "Sort the sentences you are sure about first, then check the rest one more time.",
+              "A capital I that comes after other words is not a mistake, so keep checking in the middle."
+            ],
+            how: [
+              "Check the first letter and every I in each sentence.",
+              "The librarian and I picked a mystery story., Please tell Grandma where I left the scarf. and Today I'm making the posters for the fair. are written correctly.",
+              "my team practiced on the field every afternoon. begins with a small m, and Jada said i could go first. has a small i."
+            ],
+            misconception: "A common mix-up is checking only the first word. A small i in the middle is also a mistake.",
+            why: "The librarian and I picked a mystery story, Please tell Grandma where I left the scarf and Today I'm making the posters for the fair are correct. The other two need a capital."
           },
           {
-            ref: "SK-GUM1-4-P5"
+            id: "SK-GUM1-4-C02",
+            type: "hottext",
+            points: 2,
+            dok: 2,
+            std: [
+              "3.L.GC.1:R:capitalize-the-first-word-of-a-sentence-and-the-"
+            ],
+            passages: [],
+            prompt: "Select the TWO sentences that follow both capital-letter rules.",
+            options: [
+              "Last night, Ana and I set the table.",
+              "Where did you put the extra chairs?",
+              "my brother and I carried the plates.",
+              "Then i poured the water into cups.",
+              "after we ate, everyone helped clean up."
+            ],
+            answer: [0,1],
+            pick: 2,
+            clue: "Check two rules in each sentence: the first letter, and the word I.",
+            hints: [
+              "Check two rules in each sentence: the first letter, and the word I.",
+              "Cross out every sentence that starts with a small letter. Then look inside the rest.",
+              "One sentence has a small i in the middle, so it cannot follow both rules."
+            ],
+            how: [
+              "Check the first letter and every I in each sentence.",
+              "Last night, Ana and I set the table. and Where did you put the extra chairs? start with capitals and use a capital I.",
+              "The other three begin with a small letter or have a small i."
+            ],
+            misconception: "A common mix-up is picking a sentence because it has a capital I. The first letter must be a capital too.",
+            why: "The answers are \"Last night, Ana and I set the table.\" and \"Where did you put the extra chairs?\". Both sentences begin with capitals and use a capital I. The other three start with a small letter or have a small i."
           },
           {
             id: "SK-GUM1-4-C03",
@@ -4996,32 +5080,32 @@ PP.addLesson({
             prompt: "Sentence 7 has a capital I in the middle. Why is that correct?",
             choices: [
               {
-                text: "The word I is always a capital letter, even in the middle of a sentence.",
+                text: "I names the writer, and that word keeps a capital in every spot of a sentence.",
                 correct: true
               },
               {
                 text: "Any word that comes right after said must be a capital letter in a sentence."
               },
               {
-                text: "Only the first word of a sentence can be a capital letter, so this one is a mistake."
+                text: "Capital letters are allowed anywhere, so a writer may pick a capital whenever she wants."
               },
               {
-                text: "The word could needs a capital letter, and the I shares it with could."
+                text: "The capital shows that I is the most important word in the sentence, so it is larger."
               }
             ],
             clue: "Think about the two capital-letter rules: the first word of a sentence, and the word I.",
             hints: [
               "Think about the two capital-letter rules: the first word of a sentence, and the word I.",
               "Look at the word before I and the word after I. Ask whether either one changes how I is written.",
-              "One choice says only the first word can be a capital, but sentence 7 is already written correctly."
+              "A capital letter follows a rule, and a writer does not add one for fun. Check the other reasons."
             ],
             how: [
               "Find the capital I in sentence 7: Mom said I could stay in the water for an hour.",
-              "The word I is always a capital, wherever it is.",
-              "The answer is \"The word I is always a capital letter, even in the middle of a sentence.\" The words said and could do not change how I is written."
+              "I names the writer, and that word is written as a capital in every spot.",
+              "The answer is \"I names the writer, and that word keeps a capital in every spot of a sentence.\" The words said and could do not change how I is written."
             ],
             misconception: "A common mix-up is thinking a capital letter in the middle of a sentence must be a mistake. The word I is always a capital.",
-            why: "The answer is \"The word I is always a capital letter, even in the middle of a sentence.\" The word I is always written as a capital. The word before it and the word after it do not change that."
+            why: "The answer is \"I names the writer, and that word keeps a capital in every spot of a sentence.\" I names the writer, and that word keeps a capital in every spot. The word before it and the word after it do not change that, and a capital is never just a choice."
           }
         ]
       },
@@ -5038,22 +5122,22 @@ PP.addLesson({
             ],
             passages: ["p1"],
             prompt: "Select the TWO shown sentences whose first word needs a capital letter.",
-            targets: ["p1:1:2","p1:1:4","p1:1:5","p1:2:1","p1:2:2"],
-            answer: ["p1:1:2","p1:2:1"],
+            targets: ["p1:1:2","p1:1:4","p1:1:5","p1:2:3","p1:3:2"],
+            answer: ["p1:1:2","p1:2:3"],
             pick: 2,
             clue: "Look at the first letter of each shown sentence. A small letter at the start is a mistake.",
             hints: [
               "Look at the first letter of each shown sentence. A small letter at the start is a mistake.",
               "Read only the first word of each shown sentence. Is it written with a capital?",
-              "Sentence 7 begins with a capital M, so it can be ruled out."
+              "Sentence 10 begins with a capital I, so it can be ruled out."
             ],
             how: [
               "Check the first letter of each shown sentence.",
-              "Sentence 2 begins with a small w, and sentence 6 begins with a small t.",
-              "Sentences 4, 5 and 7 begin with the capitals D, T and M."
+              "Sentence 2 begins with a small w, and sentence 8 begins with a small a.",
+              "Sentences 4, 5 and 10 begin with the capitals D, T and I."
             ],
             misconception: "A common mix-up is hunting for the word I only. The first word of every sentence needs a capital too.",
-            why: "The answers are sentences 2 and 6: \"we parked near the picnic tables.\" and \"then i swam out to the floating dock.\". Sentence 2 starts with we and sentence 6 starts with then, both with small letters. The other shown sentences begin with capitals."
+            why: "The answers are sentences 2 and 8: \"we parked near the picnic tables.\" and \"after that, we skipped stones across the lake.\". Sentence 2 starts with we and sentence 8 starts with after, both with small letters. The other shown sentences begin with capitals."
           },
           {
             id: "SK-GUM1-4-C07",
@@ -5104,7 +5188,7 @@ PP.addLesson({
             clue: "Check the first word of sentence 3 and then every I.",
             hints: [
               "Check the first word of sentence 3 and then every I.",
-              "For Part A, look at the very first word, including short forms. For Part B, compare each revision with the original.",
+              "For Part A, check each word against the two capital-letter rules. For Part B, compare each revision with the original.",
               "One revision in Part B adds a capital to a word that does not need one."
             ],
             how: [
@@ -5227,8 +5311,8 @@ PP.addLesson({
             clue: "Think about which two words I'll stands for.",
             hints: [
               "Think about which two words I'll stands for.",
-              "Break the short form into the two words it stands for. Which of them is the word I?",
-              "One choice says the rule about the word I does not reach short forms. Compare that with what you know about I'm and I'll."
+              "Think about what sits inside a short form, and about where a capital letter is needed.",
+              "One choice says a short form follows its own rules. Compare that with the rules you know."
             ],
             how: [
               "I'll is a short form of I will. It still has the word I in it.",
@@ -5345,7 +5429,7 @@ PP.addLesson({
               "3.L.GC.1:R:capitalize-the-first-word-of-a-sentence-and-the-"
             ],
             passages: [],
-            stem: "A student writes four sentences for the class newsletter.",
+            stem: "A student types four sentences for the school newsletter.",
             prompt: "Select the sentence that has a capital-letter error.",
             options: [
               "We painted a bright mural on the long gym wall.",
@@ -5456,7 +5540,7 @@ PP.addLesson({
       ],
       misconception: "A common mix-up is checking only the first word. A small i in the middle is also a mistake.",
       why: "Grandpa and I fixed the bike and Where did I leave my cap are fine. The other two have a small first letter or a small i.",
-      like: ["SK-GUM1-4-P3"]
+      like: ["SK-GUM1-4-C01"]
     },
     {
       id: "SK-GUM1-4-S02",
@@ -5472,7 +5556,7 @@ PP.addLesson({
         "Our team won, and I scored twice.",
         "Is it time to feed the fish?",
         "i packed my lunch before school.",
-        "the bus stopped at the corner.",
+        "the bus stopped by the library.",
         "After dinner, i watched TV with Dad."
       ],
       answer: [0,1],
@@ -5490,7 +5574,7 @@ PP.addLesson({
       ],
       misconception: "A common mix-up is picking a line because it looks neat. Check the first letter and every I.",
       why: "The answers are \"Our team won, and I scored twice.\" and \"Is it time to feed the fish?\". Both lines begin with capitals and use a capital I. The other three have small first letters or a small i.",
-      like: ["SK-GUM1-4-P5"]
+      like: ["SK-GUM1-4-C02"]
     },
     {
       id: "SK-GUM1-4-S03",
@@ -5788,41 +5872,40 @@ PP.addLesson({
       id: "SK-GUM1-4-S10",
       type: "mc",
       points: 1,
-      dok: 2,
+      dok: 3,
       std: [
         "3.L.GC.1:R:capitalize-the-first-word-of-a-sentence-and-the-"
       ],
-      passages: ["p5"],
-      stem: "At read-aloud practice, a volunteer insists number 10 of the market draft looks fine, since if comes just before the small i.",
-      prompt: "What edit does that line need?",
+      passages: ["p4"],
+      prompt: "Pia thinks the small i at the front of number 11 is fine because i'm joins two words together. Do you agree?",
       choices: [
         {
-          text: "Turn that single letter into a big one.",
+          text: "Disagree. Joining I and am keeps the writer's word inside, and it is capitalized every time.",
           correct: true
         },
         {
-          text: "Swap that single letter for a name from the story."
+          text: "Agree. Two words that get joined turn into a brand new word, free of the old rule about capitals."
         },
         {
-          text: "Slide that single letter to the front of the line."
+          text: "Agree. Joined words are written small, no matter which letters they hold or where they sit."
         },
         {
-          text: "Keep all the letters just as typed."
+          text: "Disagree. Only the apostrophe has to change, because it is the one part that is hard to see."
         }
       ],
-      clue: "Look for any single letter that stands alone.",
+      clue: "Say the two words that get joined, one after the other.",
       hints: [
-        "Look for any single letter that stands alone.",
-        "Decide whether that letter follows a capital-letter rule.",
-        "One choice leaves everything as written, so ask yourself whether the draft is already correct."
+        "Say the two words that get joined, one after the other.",
+        "Think about how each of those two words is written when it stands alone.",
+        "An apostrophe is a mark, and a mark cannot be a capital letter. Compare the other three choices."
       ],
       how: [
-        "Find the lone letter: the small i in if i could.",
-        "The word I is always a capital, no matter where it sits, so the small i must change.",
-        "The answer is \"Turn that single letter into a big one.\""
+        "Find the first word of number 11: i'm. It joins the words I and am.",
+        "The word I is a capital every time, even when it is joined to another word.",
+        "The answer is \"Disagree. Joining I and am keeps the writer's word inside, and it is capitalized every time.\""
       ],
-      misconception: "A common mix-up is thinking the middle of a sentence is a safe place for a small i. It is not.",
-      why: "The answer is \"Turn that single letter into a big one.\" The word I is a capital no matter where it sits, so the small i must change. Grandma already has its capital.",
+      misconception: "A common mix-up is thinking a joined word is new and can stay small. It still holds the word I.",
+      why: "The answer is \"Disagree. Joining I and am keeps the writer's word inside, and it is capitalized every time.\" I'm joins I and am, so the writer's word is still inside, and that word is always a capital. Joining words does not make a new rule, and the apostrophe is a mark, not a capital letter.",
       like: ["SK-GUM1-4-C10"]
     },
     {
@@ -6121,17 +6204,17 @@ PP.addLesson({
   teach: {
     big: "Most nouns add -s to mean more than one, but nouns that end in s, x, z, ch or sh add -es.",
     points: [
-      "To make most nouns mean more than one, add -s: one lamp, two lamps.",
-      "If a noun ends in s, x, z, ch or sh, add -es: one box, two boxes. One dish, two dishes.",
-      "Say the plural out loud. When you add -es, you hear an extra beat at the end: box-es, dish-es."
+      "To make most nouns mean more than one, add -s: one flag, two flags.",
+      "If a noun ends in s, x, z, ch or sh, add -es: one mess, two messes. One ditch, two ditches.",
+      "Say the plural out loud. When you add -es, you hear an extra beat at the end: mess-es, ditch-es."
     ],
     words: [
       { term: "plural", means: "a word that names more than one" }
     ],
     example: {
       label: "Example",
-      lines: ["one bus, two buses", "one peach, three peaches", "one crayon, four crayons"],
-      note: "Bus ends in s and peach ends in ch, so they add -es. Crayon does not, so it just adds -s."
+      lines: ["one princess, two princesses", "one trench, three trenches", "one marble, four marbles"],
+      note: "Princess ends in s and trench ends in ch, so they add -es. Marble does not, so it just adds -s."
     },
     tip: "On the test, look at the last letters of the noun before you choose -s or -es."
   },
@@ -6179,7 +6262,7 @@ PP.addLesson({
           "(7) The flames made orange sparks that floated up."
         ],
         [
-          "(8) After dinner, we scrubbed the pans with sand.",
+          "(8) After dinner, we heard two loud crashs in the woods.",
           "(9) My brother made two big splashs in the stream.",
           "(10) We watched the ashes glow after dark."
         ],
@@ -6299,34 +6382,6 @@ PP.addLesson({
           "(12) We felt proud of our hard work.",
           "(13) The sun shone warm on our backs.",
           "(14) Mrs. Rivera took pictures of us."
-        ]
-      ]
-    },
-    {
-      id: "p6",
-      title: "Cleaning the Garage",
-      byline: "A third grader's draft",
-      genre: "Student draft (narrative)",
-      draft: true,
-      paragraphs: [
-        [
-          "(1) On Saturday my dad and I cleaned the garage.",
-          "(2) We found old toys, bike tires and paint cans.",
-          "(3) Dad swept the dusty corners with a stiff broom.",
-          "(4) I sorted the screws and nails into small jars."
-        ],
-        [
-          "(5) Dad hung his wrenchs on hooks above the table.",
-          "(6) He kept three hammeres in a red toolbox.",
-          "(7) Under the ladder, I discovered two lost marbles.",
-          "(8) I rolled them across the floor to test the slope."
-        ],
-        [
-          "(9) Mom brought cold drinks and two plates of cookies.",
-          "(10) We ate the cookies on the front steps.",
-          "(11) By dinner, the garage looked brand new.",
-          "(12) The old radio still played music.",
-          "(13) We laughed at our dusty faces."
         ]
       ]
     }
@@ -6479,35 +6534,35 @@ PP.addLesson({
               "3.L.GC.1:R:form-regular-plural-nouns-with-s-or-es"
             ],
             passages: ["p1"],
-            prompt: "Sentence 10 uses ashes and sentence 12 uses tents. Why does one plural add -es while the other adds only -s?",
+            prompt: "Sentence 10 uses ashes and sentence 11 uses stars. Why does one plural add -es while the other adds only -s?",
             choices: [
               {
-                text: "Ash ends in sh, so it adds -es, but tent ends in t, so it adds only -s.",
+                text: "Ash ends in sh, so it adds -es, but star ends in r, so it adds only -s.",
                 correct: true
               },
               {
-                text: "Ashes is a longer word than tents, so its plural needs a longer ending."
+                text: "Ashes is a longer word than stars, so its plural needs a longer ending."
               },
               {
-                text: "Tent ends in a letter that sounds like s, so a plural of tent needs no -es."
+                text: "Star is the shorter word, so its plural can get by with only an s."
               },
               {
                 text: "Both words end in letters other than s, so both of them must add -es."
               }
             ],
-            clue: "Compare the last letters of ash and tent. Look at how each one ends.",
+            clue: "Compare the last letters of ash and star. Look at how each one finishes.",
             hints: [
-              "Compare the last letters of ash and tent. Look at how each one ends.",
-              "Think about the list of endings that add -es. Check whether each word ends that way.",
+              "Compare the last letters of ash and star. Look at how each one finishes.",
+              "Think about the list of endings that add -es. Check whether each word finishes that way.",
               "The length of a word does not decide which ending it takes, so one reason can be ruled out."
             ],
             how: [
-              "Look at the last letters: ash ends in sh, and tent ends in t.",
+              "Look at the last letters: ash ends in sh, and star ends in r.",
               "Nouns that end in s, x, z, ch or sh add -es. Other nouns add only -s.",
-              "The answer is \"Ash ends in sh, so it adds -es, but tent ends in t, so it adds only -s.\" The length of the word does not matter."
+              "The answer is \"Ash ends in sh, so it adds -es, but star ends in r, so it adds only -s.\" The length of the word does not matter."
             ],
             misconception: "A common mix-up is thinking every plural needs -es, or that the length of a word decides the ending. The last letters decide.",
-            why: "The answer is \"Ash ends in sh, so it adds -es, but tent ends in t, so it adds only -s.\" Ash ends in sh, which adds -es, and tent ends in t, which adds only -s. The length of a word does not decide the ending."
+            why: "The answer is \"Ash ends in sh, so it adds -es, but star ends in r, so it adds only -s.\" Ash ends in sh, which adds -es, and star ends in r, which adds only -s. The length of a word does not decide the ending."
           }
         ]
       },
@@ -6524,22 +6579,22 @@ PP.addLesson({
             ],
             passages: ["p1"],
             prompt: "Select the TWO shown sentences with a plural noun that needs -es but ends with only -s.",
-            targets: ["p1:1:3","p1:1:4","p1:2:1","p1:2:2","p1:3:1"],
-            answer: ["p1:1:3","p1:1:4"],
+            targets: ["p1:1:4","p1:2:1","p1:2:2","p1:2:3","p1:3:1"],
+            answer: ["p1:1:4","p1:3:1"],
             pick: 2,
             clue: "Find each noun that means more than one. Check whether the single noun ends in s, x, z, ch or sh.",
             hints: [
               "Find each noun that means more than one. Check whether the single noun ends in s, x, z, ch or sh.",
               "Read each shown sentence and say its plural noun out loud. Listen for a missing beat.",
-              "Sentence 8 has a plural noun that ends in n and s, so it can be ruled out."
+              "Sentence 7 has a plural that comes from a noun ending in k, so it can be ruled out."
             ],
             how: [
               "Find the plural noun in each shown sentence and look at the single noun's last letters.",
-              "Pouchs in sentence 3 and branchs in sentence 4 come from nouns that end in ch, so they need -es.",
-              "Rocks, marshmallows, sticks and pans come from nouns that do not end in s, x, z, ch or sh, so -s is right."
+              "Branchs in sentence 4 comes from a noun that ends in ch, and crashs in sentence 8 comes from a noun that ends in sh, so both need -es.",
+              "Rocks, marshmallows, sticks and sparks come from nouns that do not end in s, x, z, ch or sh, so -s is right."
             ],
             misconception: "A common mix-up is picking every plural noun. Only a noun that ends in s, x, z, ch or sh needs -es.",
-            why: "The answers are sentences 3 and 4: \"Dad packed six pouchs of trail mix in a big cooler.\" and \"My sister gathered branchs for the campfire.\". Pouch and branch both end in ch, so they need -es. The other shown sentences have nouns that correctly add only -s."
+            why: "The answers are sentences 4 and 8: \"My sister gathered branchs for the campfire.\" and \"After dinner, we heard two loud crashs in the woods.\". Branch ends in ch and crash ends in sh, so both need -es. The other shown sentences have nouns that correctly add only -s."
           },
           {
             id: "SK-GUM1-5-C07",
@@ -6674,7 +6729,7 @@ PP.addLesson({
             hints: [
               "Look at the last letters of each noun.",
               "Check each noun against the list of endings that add -es: s, x, z, ch and sh.",
-              "Cabin, mitten and ladder end in n, n and r, so check them against the list."
+              "Mitten ends in n, so check it against the list."
             ],
             how: [
               "Look at the last letters of each noun.",
@@ -6693,35 +6748,35 @@ PP.addLesson({
               "3.L.GC.1:R:form-regular-plural-nouns-with-s-or-es"
             ],
             passages: ["p2"],
-            prompt: "Kim thinks candlees in sentence 6 is correct, since candle ends in e and so needs -es. Is Kim right?",
+            prompt: "Kim thinks dresses in sentence 8 should be dresss, since dress already ends in s. Is Kim right?",
             choices: [
               {
-                text: "No. Candle does not end in s, x, z, ch or sh, so it adds only -s.",
+                text: "No. Dress ends in s, so it adds -es, and dresses is the right plural.",
                 correct: true
               },
               {
-                text: "Yes. Any noun that ends in e needs -es to mean more than one."
+                text: "Yes. A noun that already ends in s needs only one more s to mean more than one."
               },
               {
-                text: "Yes. A plural is correct when it has more letters than the single noun."
+                text: "Yes. A plural is correct when it has fewer letters than the single noun."
               },
               {
-                text: "No. Candle ends in ch, so it should add -es, not just -s."
+                text: "No. Dress names a thing people wear, so its plural never changes spelling."
               }
             ],
-            clue: "Look at the last letters of candle, not at the whole word.",
+            clue: "Look at the last letters of dress, not at the whole word.",
             hints: [
-              "Look at the last letters of candle, not at the whole word.",
-              "Check whether candle ends in one of the endings that add -es.",
-              "One choice says candle ends in ch. Look at the word again."
+              "Look at the last letters of dress, not at the whole word.",
+              "Check whether dress ends in one of the endings that add -es.",
+              "A spelling is not right just because it is shorter. Look at the other reasons."
             ],
             how: [
-              "Look at the last letters of candle. It ends in le, with the letter e at the end.",
-              "Nouns that add -es end in s, x, z, ch or sh. Candle does not.",
-              "The answer is \"No. Candle does not end in s, x, z, ch or sh, so it adds only -s.\" The plural is candles."
+              "Look at the last letters of dress. It ends in s.",
+              "Nouns that end in s, x, z, ch or sh add -es. Dress ends in s.",
+              "The answer is \"No. Dress ends in s, so it adds -es, and dresses is the right plural.\""
             ],
-            misconception: "A common mix-up is adding -es whenever a noun ends in the letter e. Check for s, x, z, ch and sh.",
-            why: "The answer is \"No. Candle does not end in s, x, z, ch or sh, so it adds only -s.\" Candle does not end in s, x, z, ch or sh, so it adds only -s. The plural is candles."
+            misconception: "A common mix-up is adding only -s because the noun already ends in s. Nouns that end in s add -es.",
+            why: "The answer is \"No. Dress ends in s, so it adds -es, and dresses is the right plural.\" Dress ends in s, so it adds -es, and dresses is the right plural. A noun that already ends in s still needs the extra beat, and a shorter spelling is not a better one."
           }
         ]
       },
@@ -6738,7 +6793,7 @@ PP.addLesson({
             ],
             passages: ["p2"],
             prompt: "Select the TWO shown sentences with a plural noun that is spelled wrong.",
-            targets: ["p2:1:3","p2:1:4","p2:2:2","p2:2:4","p2:3:1"],
+            targets: ["p2:1:3","p2:1:4","p2:2:2","p2:3:1","p2:3:2"],
             answer: ["p2:1:3","p2:2:2"],
             pick: 2,
             clue: "Find each plural noun and think about its single noun. Check the ending against what that noun needs.",
@@ -6751,10 +6806,10 @@ PP.addLesson({
               "Find each plural noun and check the ending that its single noun needs.",
               "Patchs in sentence 3 should be patches, because patch ends in ch.",
               "Candlees in sentence 6 should be candles, because candle does not need -es.",
-              "Birds, dresses and faces are spelled correctly."
+              "Birds, faces and classes are spelled correctly."
             ],
             misconception: "A common mix-up is thinking a mistake always means a missing e. A plural can also have extra letters.",
-            why: "The answers are sentences 3 and 6: \"One woman sold quilts with colorful patchs.\" and \"I bought two candlees that smelled like pine.\". Patchs leaves out an e, and candlees adds letters it does not need. Birds, dresses and faces are all spelled correctly."
+            why: "The answers are sentences 3 and 6: \"One woman sold quilts with colorful patchs.\" and \"I bought two candlees that smelled like pine.\". Patchs leaves out an e, and candlees adds letters it does not need. Birds, faces and classes are all spelled correctly."
           },
           {
             id: "SK-GUM1-5-C12",
@@ -6808,9 +6863,9 @@ PP.addLesson({
                 answer: 0
               }
             ],
-            clue: "Each blank follows a number word, so each needs a plural. Check the last letters of each noun.",
+            clue: "Each blank follows a number word. Check the last letters of each noun.",
             hints: [
-              "Each blank follows a number word, so each needs a plural. Check the last letters of each noun.",
+              "Each blank follows a number word. Check the last letters of each noun.",
               "Say the first noun with each ending, then the second noun. Listen for an extra beat.",
               "One noun ends in w, so it does not need the extra beat that -es gives."
             ],
@@ -6884,7 +6939,7 @@ PP.addLesson({
             hints: [
               "To show that a rule is wrong, find an example that breaks it. Look at how each noun ends.",
               "Find the noun that ends in a consonant but does not add -es.",
-              "Wax, gas and tax end in x, s and x, which are on the list of endings that add -es."
+              "Wax ends in x, which is on the list of endings that add -es."
             ],
             how: [
               "Ben's rule says every noun that ends in a consonant adds -es. Look for a noun that ends in a consonant and adds only -s.",
@@ -6942,35 +6997,34 @@ PP.addLesson({
     {
       id: "SK-GUM1-5-S02",
       type: "hottext",
-      points: 2,
+      points: 1,
       dok: 2,
       std: [
         "3.L.GC.1:R:form-regular-plural-nouns-with-s-or-es"
       ],
       passages: [],
-      prompt: "Tap the TWO sentences that spell the plural noun correctly.",
+      prompt: "Tap the sentence that has a plural noun spelled wrong.",
       options: [
         "Two classes visited the pond today.",
         "She tied bright ribbons around the gifts.",
         "The team lost three matchs this season.",
-        "A hen laid six eggses in the nest.",
-        "I found two patchs on my jacket."
+        "A hen laid six eggs in the nest."
       ],
-      answer: [0,1],
-      pick: 2,
+      answer: [2],
+      pick: 1,
       clue: "Check the ending of each plural noun against its single noun.",
       hints: [
         "Check the ending of each plural noun against its single noun.",
         "Say each plural out loud and listen for the extra beat.",
-        "One sentence has a plural that adds letters to a noun ending in g."
+        "One sentence has a plural from a noun that ends in g."
       ],
       how: [
         "Check the single noun's last letters for each plural.",
-        "Class ends in s, so classes is right. Ribbon ends in n, so ribbons is right.",
-        "Matchs and patchs leave out the e, and eggses adds extra letters."
+        "Class ends in s, so classes is right. Ribbon ends in n, so ribbons is right. Egg ends in g, so eggs is right.",
+        "Match ends in ch, so the plural is matches. The answer is \"The team lost three matchs this season.\""
       ],
-      misconception: "A common mix-up is picking plurals that look longer. Check the last letters of the single noun.",
-      why: "The answers are \"Two classes visited the pond today.\" and \"She tied bright ribbons around the gifts.\". Classes and ribbons follow the rules. The other plurals leave out an e or add extra letters.",
+      misconception: "A common mix-up is picking a plural that looks longer. Check the last letters of the single noun.",
+      why: "The answer is \"The team lost three matchs this season.\". Match ends in ch, so it needs -es. Classes, ribbons and eggs are spelled correctly.",
       like: ["SK-GUM1-5-P4"]
     },
     {
@@ -7126,20 +7180,20 @@ PP.addLesson({
       passages: ["p5"],
       prompt: "Work through the first half, then the second half.",
       partA: {
-        prompt: "Which fact about the noun in sentence 4 explains the mistake?",
+        prompt: "Which fact explains what went wrong in sentence 4?",
         choices: [
           {
-            text: "The noun finishes with a plain letter, so one s is enough.",
+            text: "Row finishes with w, a letter with no extra beat, so a plain s works.",
             correct: true
           },
           {
-            text: "The noun finishes with a hissing sound, so -es is called for."
+            text: "Row finishes with a hissing sound, so the plural has to carry an e."
           },
           {
-            text: "The noun is full-grown already, so the writer should leave it untouched."
+            text: "Row stands for a group already, so the writer should not add anything."
           },
           {
-            text: "The noun is missing a small mark above the line before the last letter."
+            text: "Row wants a tiny mark placed ahead of its final letter to name many."
           }
         ]
       },
@@ -7168,12 +7222,12 @@ PP.addLesson({
         "A mark that shows ownership does not make a noun mean more than one, so one rewrite can be ruled out."
       ],
       how: [
-        "First half: row ends in w, which is not on the list of endings that add -es. The answer is \"The noun finishes with a plain letter, so one s is enough.\"",
+        "First half: row ends in w, which is not on the list of endings that add -es. The answer is \"Row finishes with w, a letter with no extra beat, so a plain s works.\"",
         "Second half: the plural is rows. The answer is \"Each group planted two rows of beans.\"",
         "The other rewrites add an apostrophe, add extra letters, or keep the mistake."
       ],
       misconception: "A common mix-up is adding -es to a noun just because the plural sounds longer. Check the last letter first.",
-      why: "Part A: \"The noun finishes with a plain letter, so one s is enough.\" Part B: \"Each group planted two rows of beans.\" Row ends in w, so it takes only -s. The other rewrites add an apostrophe or extra letters.",
+      why: "Part A: \"Row finishes with w, a letter with no extra beat, so a plain s works.\" Part B: \"Each group planted two rows of beans.\" Row ends in w, so it takes only -s. The other rewrites add an apostrophe or extra letters.",
       like: ["SK-GUM1-5-C07"]
     },
     {
@@ -7252,7 +7306,7 @@ PP.addLesson({
       hints: [
         "Study how each word ends.",
         "Compare each ending with the list: s, x, z, ch and sh.",
-        "Jacket and basket both end in t, so check them against the list."
+        "Jacket ends in t, so check it against the list."
       ],
       how: [
         "Look at the last letters of each word.",
@@ -7272,36 +7326,35 @@ PP.addLesson({
         "3.L.GC.1:R:form-regular-plural-nouns-with-s-or-es"
       ],
       passages: ["p5"],
-      stem: "An editor needs a margin note beside rowes in sentence 4 of the garden draft.",
-      prompt: "Which note should the editor write?",
+      prompt: "A classmate's margin note beside line 9 claims the spelling is fine because the base word finishes with an s. Pick the reply that helps most.",
       choices: [
         {
-          text: "Row finishes with a plain letter, so keep the short plural: rows.",
+          text: "Base words finishing with s take -es, giving classes an extra beat.",
           correct: true
         },
         {
-          text: "Row sounds long when it is said aloud, so rowes is the careful spelling."
+          text: "One more s is the whole job here, because the base word has the sound already."
         },
         {
-          text: "Plurals always grow by two letters, so rowes is right as typed."
+          text: "Shorter spellings are tidier, so leave it as typed."
         },
         {
-          text: "Row finishes with an x sound, so rowes is needed."
+          text: "Group names look the same for one or many, so nothing changes."
         }
       ],
-      clue: "Look at how row is spelled at its very end, not at how it sounds.",
+      clue: "Look at how the base word finishes before you choose a reply.",
       hints: [
-        "Look at how row is spelled at its very end, not at how it sounds.",
-        "Decide whether row finishes with one of the special endings that add -es.",
-        "One note says row finishes with an x sound. Look at the word again."
+        "Look at how the base word finishes before you choose a reply.",
+        "Think about whether the word finishes with one of the special endings you know.",
+        "Spelling a word shorter does not make it correct. Skip that reply."
       ],
       how: [
-        "Look at how row finishes: with w, a plain letter.",
-        "Only nouns finishing with s, x, z, ch or sh get -es. Row does not.",
-        "The answer is \"Row finishes with a plain letter, so keep the short plural: rows.\""
+        "Look at how class finishes: with s.",
+        "Nouns that finish with s, x, z, ch or sh get -es, and class is one of them.",
+        "The answer is \"Base words finishing with s take -es, giving classes an extra beat.\""
       ],
-      misconception: "A common mix-up is adding -es when a plural seems to need more sound. Check the last letter of the single noun.",
-      why: "The answer is \"Row finishes with a plain letter, so keep the short plural: rows.\" Row finishes with w, not with s, x, z, ch or sh, so it gets only -s. The plural is rows.",
+      misconception: "A common mix-up is adding one more s to a word that already ends with s. Say the plural out loud.",
+      why: "The answer is \"Base words finishing with s take -es, giving classes an extra beat.\" Class ends with s, so it gets -es and an extra beat, and classes is the spelling to use. One more s leaves out the beat, and a shorter word is not a better one.",
       like: ["SK-GUM1-5-C10"]
     },
     {
@@ -7340,13 +7393,13 @@ PP.addLesson({
       std: [
         "3.L.GC.1:R:form-regular-plural-nouns-with-s-or-es"
       ],
-      passages: ["p5"],
-      stem: "A visitor list for the garden open house is missing one word.",
-      prompt: "Which spelling completes the list?",
-      text: "Two other {0} came to see our work.",
+      passages: ["p4"],
+      stem: "A reader checks one line of the tennis journal.",
+      prompt: "Which spelling completes the line?",
+      text: "We started with {0} to warm up our arms.",
       slots: [
         {
-          options: ["classes","classs","class's"],
+          options: ["stretches","stretchs","stretch's"],
           answer: 0
         }
       ],
@@ -7357,12 +7410,12 @@ PP.addLesson({
         "One choice has a mark that shows ownership, which does not fit here."
       ],
       how: [
-        "The noun is class. Two other means more than one.",
-        "Class ends in s, so it adds -es. Say it: class-es.",
-        "The answer is classes. Classs leaves out the e, and class's shows ownership."
+        "The noun is stretch. The line needs the plural.",
+        "Stretch ends in ch, so it adds -es. Say it: stretch-es.",
+        "The answer is stretches. Stretchs leaves out the e, and stretch's shows ownership."
       ],
-      misconception: "A common mix-up is adding only -s to a noun that already ends in s. Say the plural out loud.",
-      why: "The answer is classes. Class ends in s, so it adds -es. Classs leaves out the e, and class's shows ownership.",
+      misconception: "A common mix-up is adding only -s to a noun that sounds like it has an extra beat. Say the plural out loud.",
+      why: "The answer is stretches. Stretch ends in ch, so it adds -es. Stretchs leaves out the e, and stretch's shows ownership.",
       like: ["SK-GUM1-5-C12"]
     },
     {
@@ -7386,9 +7439,9 @@ PP.addLesson({
           answer: 0
         }
       ],
-      clue: "Each gap follows a number word, so each needs a plural. Study the last letters of each noun.",
+      clue: "Each gap follows a number word. Study the last letters of each noun.",
       hints: [
-        "Each gap follows a number word, so each needs a plural. Study the last letters of each noun.",
+        "Each gap follows a number word. Study the last letters of each noun.",
         "Say the first noun with each ending, then the second. Listen for an extra beat.",
         "One noun ends in t, so it does not need the extra beat that -es gives."
       ],
@@ -7444,36 +7497,36 @@ PP.addLesson({
         "3.L.GC.1:R:form-regular-plural-nouns-with-s-or-es"
       ],
       passages: [],
-      stem: "A poster in the hall claims that every noun with an e on the end needs -es.",
+      stem: "A poster in the hall claims that every noun with an h on the end needs -es.",
       prompt: "Which example proves the poster wrong?",
       choices: [
         {
-          text: "One kite, two kites.",
+          text: "One path, two paths.",
           correct: true
         },
         {
-          text: "One ax, two axes."
+          text: "One dish, two dishes."
         },
         {
-          text: "One inch, two inches."
+          text: "One bench, two benches."
         },
         {
-          text: "One ranch, two ranches."
+          text: "One brush, two brushes."
         }
       ],
       clue: "To prove a claim wrong, find an example that breaks it. Look at how each noun finishes.",
       hints: [
         "To prove a claim wrong, find an example that breaks it. Look at how each noun finishes.",
-        "Find the noun that has an e on the end but does not get -es.",
-        "Ax finishes with x, not with e, so one example can be set aside."
+        "Find the noun that has an h on the end but does not get -es.",
+        "Dish finishes with sh, which is on the list of endings that add -es."
       ],
       how: [
-        "The poster says nouns with an e on the end get -es. Look for one that gets only -s.",
-        "Kite finishes with e, and the plural is kites. That breaks the claim.",
-        "The answer is \"One kite, two kites.\" Ax, inch and ranch do not finish with e."
+        "The poster says nouns with an h on the end get -es. Look for one that gets only -s.",
+        "Path finishes with th, and the plural is paths. That breaks the claim.",
+        "The answer is \"One path, two paths.\" Dish, bench and brush finish with sh or ch, so they do get -es."
       ],
-      misconception: "A common mix-up is adding -es whenever a noun ends in the letter e. Check for s, x, z, ch and sh instead.",
-      why: "The answer is \"One kite, two kites.\" Kite finishes with e but gets only -s, so the poster is wrong. The other nouns do not finish with e.",
+      misconception: "A common mix-up is adding -es whenever a noun ends in the letter h. Only the endings ch and sh need it.",
+      why: "The answer is \"One path, two paths.\" Path finishes with th but gets only -s, so the poster is wrong. Dish, bench and brush finish with sh or ch, so they follow the real rule.",
       like: ["SK-GUM1-5-C15"]
     }
   ],
@@ -7506,7 +7559,7 @@ PP.addLesson({
       hints: [
         "Find the plural noun in each sentence and check its last letters.",
         "Say each plural out loud and listen for an extra beat.",
-        "Toy ends in y after a vowel, so the plural in one sentence follows the usual rule."
+        "One sentence adds -es to a noun that ends in y, which is not on the list."
       ],
       how: [
         "Find each plural noun and check the last letters of its single noun.",

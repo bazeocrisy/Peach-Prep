@@ -3345,10 +3345,173 @@ PP.addLesson({
         "Morning is a time of day, not the name of a day or a holiday, so it should be small too."
       ],
       answer: "My teacher, Mr. Reed, reads to us every morning."
+    },
+    {
+      show: ["My neighbor Mr. Singh drives to lake Norman every august."],
+      ask: "Which words need capital letters?",
+      steps: [
+        "Look for the name of a person. Mr. Singh is a title and a name, and it already has capitals. Neighbor is an everyday word, so it stays small.",
+        "Look for the name of a place. Lake Norman is the name of one lake, so both words need capitals.",
+        "Look for a month. August is a month, so it needs a capital."
+      ],
+      answer: "My neighbor Mr. Singh drives to Lake Norman every August."
     }
   ],
   parent: "Look at a calendar or a piece of mail together. Have your child point to each word with a capital letter and tell you whether it names a person, a place, a day, a month or a holiday.",
-  passages: [],
+  passages: [
+    /* B7b:passages:start */
+    {
+      "id": "p1",
+      "title": "Camping Weekend",
+      "byline": "A third grader's draft",
+      "genre": "Student draft (narrative)",
+      "draft": true,
+      "paragraphs": [
+        [
+          "(1) Last weekend, my cousin Jada and I went camping in the mountains of Georgia.",
+          "(2) We left on friday after school in her uncle's truck.",
+          "(3) Uncle Marcus drove us past a farm and through the town of Dahlonega.",
+          "(4) Our tent went up beside Lake Burton."
+        ],
+        [
+          "(5) A ranger named ms. Patel gave us a map of the trails.",
+          "(6) On Saturday, we hiked up a steep hill and found a small cave.",
+          "(7) Jada's dog, Pepper, chased a squirrel around a big oak tree."
+        ],
+        [
+          "(8) Back at camp, we cooked beans on a little stove.",
+          "(9) By Sunday morning, our sleeping bags smelled like smoke.",
+          "(10) We packed up the tent and drove home with sleepy smiles."
+        ]
+      ]
+    },
+    {
+      "id": "p2",
+      "title": "The Museum Trip",
+      "byline": "A third grader's draft",
+      "genre": "Student draft (narrative)",
+      "draft": true,
+      "paragraphs": [
+        [
+          "(1) On Tuesday, we all went by yellow bus to the science museum in Atlanta.",
+          "(2) Our teacher, Mr. Brooks, counted us twice at the door.",
+          "(3) A guide named Ms. Lopez led us into a room full of old maps."
+        ],
+        [
+          "(4) Her favorite map showed the atlantic ocean and a tiny ship.",
+          "(5) Later, we ate lunch at a Park across the street.",
+          "(6) Eli found a coin by the fountain and gave it to a guard."
+        ],
+        [
+          "(7) On the ride home, we sang songs about the sea.",
+          "(8) We got back to school just before three o'clock.",
+          "(9) That night, I told my family about every map I saw.",
+          "(10) Now I want to see the real ocean someday."
+        ]
+      ]
+    },
+    {
+      "id": "p3",
+      "title": "Parade Day",
+      "byline": "A third grader's draft",
+      "genre": "Student draft (narrative)",
+      "draft": true,
+      "paragraphs": [
+        [
+          "(1) Our town holds a big parade every November on Veterans Day.",
+          "(2) The parade starts on Cedar street and ends at the fire station.",
+          "(3) Mayor Hale rides in front on a shiny red wagon.",
+          "(4) The Jackson Elementary band plays loud drums and horns."
+        ],
+        [
+          "(5) My neighbor, mrs. Ortiz, waves a flag from her porch.",
+          "(6) Little kids on the Sidewalk throw candy to the crowd.",
+          "(7) A float shaped like a giant Peach rolls past the library."
+        ],
+        [
+          "(8) By noon, everyone is tired but happy and a little bit sunburned.",
+          "(9) We watch the last band march away beyond the bridge.",
+          "(10) Next year, I want to ride on a float of my own."
+        ]
+      ]
+    },
+    {
+      "id": "p4",
+      "title": "A Day at the Zoo",
+      "byline": "A third grader's draft",
+      "genre": "Student draft (narrative)",
+      "draft": true,
+      "paragraphs": [
+        [
+          "(1) Last spring, our class took a long trip to the zoo in Memphis.",
+          "(2) Our bus rolled out early on wednesday, packed with snacks.",
+          "(3) My grandpa came along as a helper for our whole class.",
+          "(4) Grandpa Leo carried a camera and a floppy hat."
+        ],
+        [
+          "(5) The otters were shown to us by dr. Rowe, a keeper.",
+          "(6) The zoo sits beside the Mississippi River.",
+          "(7) A seal clapped its flippers when the crowd cheered and laughed."
+        ],
+        [
+          "(8) After a picnic lunch, we bought small gifts at the shop.",
+          "(9) Grandpa Leo picked a toy tiger for my sister.",
+          "(10) We rode home tired and happy, and I fell asleep before dinner."
+        ]
+      ]
+    },
+    {
+      "id": "p5",
+      "title": "The Bake Sale",
+      "byline": "A third grader's draft",
+      "genre": "Student draft (narrative)",
+      "draft": true,
+      "paragraphs": [
+        [
+          "(1) On Saturday, our school held a big bake sale in the lunchroom.",
+          "(2) Mrs. Haynes, the principal, cut the first cake.",
+          "(3) A parent named Mr. Tran brought a pan of lemon bars."
+        ],
+        [
+          "(4) Some cookies came from a shop in tampa.",
+          "(5) My friend Ana sold muffins at the Table by the door.",
+          "(6) A boy bought three cupcakes with a crumpled five-dollar bill."
+        ],
+        [
+          "(7) By noon, every pie and every loaf of bread was gone.",
+          "(8) We counted all the money in the office with the secretary.",
+          "(9) We plan to buy more books for our library with it.",
+          "(10) Everyone agreed it was a sweet and happy morning."
+        ]
+      ]
+    },
+    {
+      "id": "p6",
+      "title": "Moving Day",
+      "byline": "A third grader's draft",
+      "genre": "Student draft (narrative)",
+      "draft": true,
+      "paragraphs": [
+        [
+          "(1) In January, my whole family moved into a different house.",
+          "(2) Our street is called birch lane, and it ends at a pond.",
+          "(3) Coach Dunn, who lives next door, helped us carry boxes.",
+          "(4) His daughter, tia, brought us warm bread."
+        ],
+        [
+          "(5) My brother carried a lamp up the Stairs.",
+          "(6) We unpacked the kitchen boxes before supper that night.",
+          "(7) Next sunday, we plan a picnic by the pond with all our new friends."
+        ],
+        [
+          "(8) The first meal in our new home was soup eaten on the floor.",
+          "(9) Our new neighbor waved at us from across the lane.",
+          "(10) I think we will like it here very much, and I cannot wait."
+        ]
+      ]
+    }
+    /* B7b:passages:end */
+  ],
   practice: [
     { id: "SK-GUM2-3-P1", type: "hottext", points: 1, dok: 2, passages: [],
       prompt: "Select the sentence that has a capitalization error.",
@@ -3405,6 +3568,1364 @@ PP.addLesson({
       clue: "Ask: Does this word name one special day, place or holiday? Or is it a word for any day, place or person?",
       why: "Saturday, Mexico and Thanksgiving are names of a special day, country and holiday, so they need capitals. Holiday, country and teacher are common nouns, so they stay small." }
   ],
+  /* B7b:core:start */
+  /* ---------- Expansion 2026-10-22, batch B7b (GUM Reinforce, second half) ----------
+     core: fifteen items in three sets of five. { ref } reuses a practice item; the other practice items stay in Practice Together.
+     Passages are used only by core and the similar bank; none is used by test.
+     Author log: docs/expansion-2026-10-22/batches/B7b-author-log.md. NOT ACCEPTED: needs independent review. */
+  core: {
+    "rev": "1",
+    "sets": [
+      {
+        "title": "Set 1",
+        "items": [
+          {
+            "ref": "SK-GUM2-3-P4"
+          },
+          {
+            "ref": "SK-GUM2-3-P5"
+          },
+          {
+            "id": "SK-GUM2-3-C03",
+            "type": "mc",
+            "points": 1,
+            "dok": 2,
+            "std": [
+              "3.L.GC.1:R:capitalize-proper-nouns"
+            ],
+            "passages": [
+              "p1"
+            ],
+            "prompt": "There is a capital-letter mistake in sentence 2. What is it?",
+            "choices": [
+              {
+                "text": "Friday names one day of the week, and it must begin with a capital F.",
+                "correct": true
+              },
+              {
+                "text": "School names a place where we learn, and it must begin with a capital S."
+              },
+              {
+                "text": "Truck names a vehicle that rolls, and it must begin with a capital T."
+              },
+              {
+                "text": "Left names an action word, and it must begin with a capital L."
+              }
+            ],
+            "clue": "Capital letters go on the names of one special person, place, day, month or holiday. Look for one in sentence 2.",
+            "hints": [
+              "Capital letters go on the names of one special person, place, day, month or holiday. Look for one in sentence 2.",
+              "Read sentence 2 and find each noun. Decide which ones are names and which are everyday words.",
+              "Left tells what the group did. It is an action word, not a name, so check the other choices."
+            ],
+            "how": [
+              "Sentence 2 says friday with a small f.",
+              "Friday is the name of one day of the week, so it needs a capital F. School and truck are everyday words.",
+              "The answer is \"Friday names one day of the week, and it must begin with a capital F.\" Left is an action word, so it stays small."
+            ],
+            "misconception": "A common mix-up is thinking every noun needs a capital letter. Only the name of one special thing does, so school and truck stay small.",
+            "why": "The answer is \"Friday names one day of the week, and it must begin with a capital F.\" Friday is the name of a day. School, truck and left are everyday words, so they stay small.",
+            "like": [
+              "SK-GUM2-3-S03"
+            ]
+          },
+          {
+            "id": "SK-GUM2-3-C04",
+            "type": "dropdown",
+            "points": 1,
+            "dok": 2,
+            "std": [
+              "3.L.GC.1:R:capitalize-proper-nouns"
+            ],
+            "passages": [
+              "p1"
+            ],
+            "prompt": "Sentence 5 writes a person's title and name the wrong way. Pick the correct version.",
+            "text": "A ranger named {0} gave us a map of the trails.",
+            "slots": [
+              {
+                "options": [
+                  "Ms. Patel",
+                  "ms. Patel",
+                  "Ms. patel"
+                ],
+                "answer": 0
+              }
+            ],
+            "clue": "A person's name and the title in front of it follow the same capital-letter rules. Look at both parts in each choice.",
+            "hints": [
+              "A person's name and the title in front of it follow the same capital-letter rules. Look at both parts in each choice.",
+              "Say the name as it is written in the sentence. Compare it with how each choice starts.",
+              "The three choices differ in whether the title and the last name start with capitals."
+            ],
+            "how": [
+              "Ms. Patel is the name of one person, with a title in front of it.",
+              "A title right before a name is part of the name, so the title and the last name both start with capitals.",
+              "The answer is Ms. Patel. The draft wrote ms. with a small m, and Ms. patel leaves the last name small."
+            ],
+            "misconception": "A common mix-up is fixing only the last name. A title in front of a name needs a capital letter too.",
+            "why": "The answer is Ms. Patel. A title right before a person's name is part of the name, so the title and the last name both start with capitals.",
+            "like": [
+              "SK-GUM2-3-S04"
+            ]
+          },
+          {
+            "id": "SK-GUM2-3-C05",
+            "type": "mc",
+            "points": 1,
+            "dok": 3,
+            "std": [
+              "3.L.GC.1:R:capitalize-proper-nouns"
+            ],
+            "passages": [
+              "p1"
+            ],
+            "prompt": "Sentence 2 writes her uncle's truck, but sentence 3 writes Uncle Marcus. Why does only the second one have a capital letter?",
+            "choices": [
+              {
+                "text": "Marcus follows Uncle in sentence 3 to make a name; no name follows uncle's in sentence 2.",
+                "correct": true
+              },
+              {
+                "text": "Both sentences are right, because every word for a relative always needs a capital letter."
+              },
+              {
+                "text": "Sentence 2 is wrong, because uncle's names a family member and so needs a capital letter."
+              },
+              {
+                "text": "Sentence 3 is wrong, because Uncle is an everyday word that should always stay small."
+              }
+            ],
+            "clue": "Compare how the word uncle is written in each sentence. Then think about what the word is doing in each one.",
+            "hints": [
+              "Compare how the word uncle is written in each sentence. Then think about what the word is doing in each one.",
+              "Read the words around uncle in each sentence out loud.",
+              "Words like aunt and cousin are written small in everyday sentences. Think about the other choices."
+            ],
+            "how": [
+              "Sentence 2 says her uncle's truck. Sentence 3 says Uncle Marcus.",
+              "A word like uncle gets a capital letter when it comes right before a person's name. It stays small when it is just a word for a relative.",
+              "The answer is \"Marcus follows Uncle in sentence 3 to make a name; no name follows uncle's in sentence 2.\""
+            ],
+            "misconception": "A common mix-up is capitalizing every family word. Uncle, aunt and grandpa get capitals only when they come right before a name.",
+            "why": "The answer is \"Marcus follows Uncle in sentence 3 to make a name; no name follows uncle's in sentence 2.\" In sentence 3 the word is part of a name, so it needs a capital. In sentence 2 it is only a word for a relative, so it stays small.",
+            "like": [
+              "SK-GUM2-3-S05"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Set 2",
+        "items": [
+          {
+            "id": "SK-GUM2-3-C06",
+            "type": "hottext",
+            "points": 2,
+            "dok": 2,
+            "std": [
+              "3.L.GC.1:R:capitalize-proper-nouns"
+            ],
+            "passages": [
+              "p2"
+            ],
+            "prompt": "Look at sentences 2 through 6. Select the TWO sentences with a capital-letter mistake.",
+            "targets": [
+              "p2:1:2",
+              "p2:1:3",
+              "p2:2:1",
+              "p2:2:2",
+              "p2:2:3"
+            ],
+            "answer": [
+              "p2:2:1",
+              "p2:2:2"
+            ],
+            "pick": 2,
+            "clue": "Check each sentence for names of one special person, place or title. Also look for capital letters on words that are not names.",
+            "hints": [
+              "Check each sentence for names of one special person, place or title. Also look for capital letters on words that are not names.",
+              "Take sentences 2 through 6 one at a time. For every capital letter, ask whether the word names one special thing. For every small letter, ask whether it should.",
+              "Sentence 6 uses fountain with a small letter, and that matches an everyday thing. Think about the rest."
+            ],
+            "how": [
+              "Check sentences 2 through 6 one at a time.",
+              "Sentence 4 names one special ocean, so both words need capitals. Sentence 5 has a park with no name, so it should stay small.",
+              "Mr. Brooks, Ms. Lopez and the fountain in sentences 2, 3 and 6 are written correctly."
+            ],
+            "misconception": "A common mix-up is thinking a capital letter makes a word look important. Only names of one special thing get one.",
+            "why": "The answers are \"Her favorite map showed the atlantic ocean and a tiny ship.\" and \"Later, we ate lunch at a Park across the street.\" Atlantic Ocean is the name of one ocean, so both words need capitals. The park has no name, so it stays small. Sentences 2, 3 and 6 are correct.",
+            "like": [
+              "SK-GUM2-3-S06"
+            ]
+          },
+          {
+            "id": "SK-GUM2-3-C07",
+            "type": "ebsr",
+            "points": 2,
+            "dok": 3,
+            "std": [
+              "3.L.GC.1:R:capitalize-proper-nouns"
+            ],
+            "passages": [
+              "p2"
+            ],
+            "prompt": "This question has two parts. Answer Part A, then Part B.",
+            "partA": {
+              "prompt": "What mistake does sentence 4 have with capital letters?",
+              "choices": [
+                {
+                  "text": "Atlantic Ocean names one special ocean, so both words must start with capitals.",
+                  "correct": true
+                },
+                {
+                  "text": "Ocean is an everyday noun, so only Atlantic should start big in this sentence."
+                },
+                {
+                  "text": "Ship names one famous vessel, so it needs to begin with a capital S in this sentence."
+                },
+                {
+                  "text": "Favorite begins a new idea, so it should start with an F in this sentence."
+                }
+              ]
+            },
+            "partB": {
+              "prompt": "Which version of sentence 4 fixes the problem?",
+              "choices": [
+                {
+                  "text": "Her favorite map showed the Atlantic Ocean and a tiny ship.",
+                  "correct": true
+                },
+                {
+                  "text": "Her favorite map showed the Atlantic ocean and a tiny ship."
+                },
+                {
+                  "text": "Her favorite Map showed the Atlantic Ocean and a tiny ship."
+                },
+                {
+                  "text": "Her favorite map showed the atlantic Ocean and a tiny Ship."
+                }
+              ]
+            },
+            "clue": "Look at the name of the water in sentence 4. Decide how many words belong to that name.",
+            "hints": [
+              "Look at the name of the water in sentence 4. Decide how many words belong to that name.",
+              "In Part B, compare how each rewrite writes the name of the water. Then check the other nouns too.",
+              "Map and ship are everyday nouns, not names. Think about the other choices."
+            ],
+            "how": [
+              "Part A: Atlantic Ocean is the name of one special ocean, so every word in the name starts with a capital.",
+              "Part B: the rewrite must capitalize both words in the name and leave the everyday nouns small.",
+              "The answers are \"Atlantic Ocean names one special ocean, so both words must start with capitals.\" and \"Her favorite map showed the Atlantic Ocean and a tiny ship.\""
+            ],
+            "misconception": "A common mix-up is capitalizing only the first word of a name. Every important word in the name of an ocean needs a capital.",
+            "why": "Part A: \"Atlantic Ocean names one special ocean, so both words must start with capitals.\" Part B: \"Her favorite map showed the Atlantic Ocean and a tiny ship.\" Map and ship are everyday nouns, so they stay small.",
+            "like": [
+              "SK-GUM2-3-S07"
+            ]
+          },
+          {
+            "id": "SK-GUM2-3-C08",
+            "type": "ms",
+            "points": 2,
+            "dok": 2,
+            "std": [
+              "3.L.GC.1:R:capitalize-proper-nouns"
+            ],
+            "passages": [],
+            "prompt": "Choose the TWO sentences that use capital letters correctly.",
+            "pick": 2,
+            "choices": [
+              {
+                "text": "Grandma Ruth sent us a box of peaches from Georgia.",
+                "correct": true
+              },
+              {
+                "text": "Our family eats pancakes every Sunday in the spring.",
+                "correct": true
+              },
+              {
+                "text": "We visited aunt Nell in Orlando with my cousins last week."
+              },
+              {
+                "text": "Our Teacher read a poem about Winter to the whole class."
+              },
+              {
+                "text": "In march, the Class planted beans in the garden by the fence."
+              }
+            ],
+            "clue": "Check each capital letter and each small letter in the choices. Ask whether each word is a name.",
+            "hints": [
+              "Check each capital letter and each small letter in the choices. Ask whether each word is a name.",
+              "Look at the names of people, places, days and months in each choice. Then look at the seasons and the everyday nouns.",
+              "One choice has a name with a title in front of it that is spelled with a small letter. Think about which one."
+            ],
+            "how": [
+              "Look for names that begin with a small letter and everyday words that begin with a capital.",
+              "Grandma Ruth, Georgia and Sunday are written correctly, and spring and pancakes stay small.",
+              "Aunt Nell needs a capital A, teacher and winter stay small, and March needs a capital M while class stays small."
+            ],
+            "misconception": "A common mix-up is capitalizing a season. Spring, summer, fall and winter are not names, so they stay small.",
+            "why": "The answers are \"Grandma Ruth sent us a box of peaches from Georgia.\" and \"Our family eats pancakes every Sunday in the spring.\" Ruth, Georgia and Sunday are names, and spring is a season. The other choices have a title, a month, a season or an everyday noun written the wrong way.",
+            "like": [
+              "SK-GUM2-3-S08"
+            ]
+          },
+          {
+            "id": "SK-GUM2-3-C09",
+            "type": "mc",
+            "points": 1,
+            "dok": 1,
+            "std": [
+              "3.L.GC.1:R:capitalize-proper-nouns"
+            ],
+            "passages": [],
+            "prompt": "Which choice has every capital letter in the right place?",
+            "choices": [
+              {
+                "text": "We played soccer on Thursday.",
+                "correct": true
+              },
+              {
+                "text": "we played soccer on Thursday."
+              },
+              {
+                "text": "We played Soccer on Thursday."
+              },
+              {
+                "text": "We played soccer on thursday."
+              }
+            ],
+            "clue": "Check the first word of the sentence and the name of the day.",
+            "hints": [
+              "Check the first word of the sentence and the name of the day.",
+              "Look for a name that should have a capital letter and for an everyday word that should not.",
+              "Soccer is the name of a game, not the name of one special thing. Think about the other choices."
+            ],
+            "how": [
+              "The first word of every sentence starts with a capital letter.",
+              "Thursday is the name of a day, so it needs a capital T. Soccer is an everyday word, so it stays small.",
+              "The answer is \"We played soccer on Thursday.\""
+            ],
+            "misconception": "A common mix-up is capitalizing the name of a game or sport. Soccer stays small.",
+            "why": "The answer is \"We played soccer on Thursday.\" The sentence starts with a capital, Thursday is a day so it has a capital, and soccer is an everyday word so it stays small.",
+            "like": [
+              "SK-GUM2-3-S09"
+            ]
+          },
+          {
+            "id": "SK-GUM2-3-C10",
+            "type": "mc",
+            "points": 1,
+            "dok": 3,
+            "std": [
+              "3.L.GC.1:R:capitalize-proper-nouns"
+            ],
+            "passages": [
+              "p2"
+            ],
+            "prompt": "Ravi says Park in sentence 5 is correct because every place needs a capital letter. Which reply shows the problem with his idea?",
+            "choices": [
+              {
+                "text": "A capital goes only on a place's own name, and this park has none.",
+                "correct": true
+              },
+              {
+                "text": "A capital letter belongs on any word that names a place, so Ravi is right about Park."
+              },
+              {
+                "text": "A capital letter belongs on any word that comes late in a sentence, so Ravi is right."
+              },
+              {
+                "text": "A capital letter belongs only on people's names, so no place ever gets one."
+              }
+            ],
+            "clue": "Think about the difference between one particular place and any place of that kind.",
+            "hints": [
+              "Think about the difference between one particular place and any place of that kind.",
+              "Read sentence 5 again. Does the sentence say which park it is?",
+              "Some places do get capital letters, such as Atlanta in sentence 1. Think about the other choices."
+            ],
+            "how": [
+              "Ravi's idea is that every place word gets a capital.",
+              "Atlanta is the name of one special city, so it gets a capital. A park across the street with no name is just any park.",
+              "The answer is \"A capital goes only on a place's own name, and this park has none.\""
+            ],
+            "misconception": "A common mix-up is capitalizing a word because it names a place. Only the name of one special place gets a capital.",
+            "why": "The answer is \"A capital goes only on a place's own name, and this park has none.\" Atlanta is a special place with a name. The park in sentence 5 is just any park, so it should be written park.",
+            "like": [
+              "SK-GUM2-3-S10"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Set 3",
+        "items": [
+          {
+            "id": "SK-GUM2-3-C11",
+            "type": "hottext",
+            "points": 2,
+            "dok": 2,
+            "std": [
+              "3.L.GC.1:R:capitalize-proper-nouns"
+            ],
+            "passages": [
+              "p3"
+            ],
+            "prompt": "Look at sentences 3 through 7. Pick the TWO sentences written with the right capital letters.",
+            "targets": [
+              "p3:1:3",
+              "p3:1:4",
+              "p3:2:1",
+              "p3:2:2",
+              "p3:2:3"
+            ],
+            "answer": [
+              "p3:1:3",
+              "p3:1:4"
+            ],
+            "pick": 2,
+            "clue": "Check each sentence for names of people and places. Also check for capital letters on everyday words.",
+            "hints": [
+              "Check each sentence for names of people and places. Also check for capital letters on everyday words.",
+              "Take sentences 3 through 7 one at a time. Mark each name that starts with a capital, and mark each everyday word that starts with a capital.",
+              "The sentence about the float has a fruit word written with a capital. Think about the rest."
+            ],
+            "how": [
+              "Test each sentence for a title, a name or an everyday noun written the wrong way.",
+              "Sentence 3 has a title and a name that both start with capitals. Sentence 4 has the name of a school written with capitals.",
+              "Sentence 5 needs Mrs., sentence 6 needs sidewalk, and sentence 7 needs peach."
+            ],
+            "misconception": "A common mix-up is stopping once you find one sentence that looks right. Check every sentence in the range.",
+            "why": "The answers are \"Mayor Hale rides in front on a shiny red wagon.\" and \"The Jackson Elementary band plays loud drums and horns.\" Mayor Hale is a title and a name. Jackson Elementary is the name of a school. The other three sentences have a title with a small letter or an everyday noun with a capital.",
+            "like": [
+              "SK-GUM2-3-S11"
+            ]
+          },
+          {
+            "id": "SK-GUM2-3-C12",
+            "type": "dropdown",
+            "points": 1,
+            "dok": 2,
+            "std": [
+              "3.L.GC.1:R:capitalize-proper-nouns"
+            ],
+            "passages": [
+              "p3"
+            ],
+            "prompt": "Sentence 2 spells the street's name the wrong way. Pick the correct way.",
+            "text": "The parade starts on {0} and ends at the fire station.",
+            "slots": [
+              {
+                "options": [
+                  "Cedar Street",
+                  "Cedar street",
+                  "cedar street"
+                ],
+                "answer": 0
+              }
+            ],
+            "clue": "A name for one special street is a proper noun. Check how each choice writes the name of the street.",
+            "hints": [
+              "A name for one special street is a proper noun. Check how each choice writes the name of the street.",
+              "Look at both words in the name. The three choices start them in different ways.",
+              "The fire station is an everyday place, so it is not written with capitals. Look at the choices for the street."
+            ],
+            "how": [
+              "Cedar Street is the name of one special street.",
+              "A name with more than one word needs a capital on every important word.",
+              "The answer is Cedar Street. The draft left the word street small, and cedar street leaves both words small."
+            ],
+            "misconception": "A common mix-up is capitalizing only the first word of a name. Both words in the name of a street need capitals.",
+            "why": "The answer is Cedar Street. It is the name of one special street, so both Cedar and Street start with capitals. The fire station is an everyday place, so it stays small.",
+            "like": [
+              "SK-GUM2-3-S12"
+            ]
+          },
+          {
+            "id": "SK-GUM2-3-C13",
+            "type": "dropdown",
+            "points": 2,
+            "dok": 2,
+            "std": [
+              "3.L.GC.1:R:capitalize-proper-nouns"
+            ],
+            "passages": [],
+            "prompt": "Pick the right words for the two blanks.",
+            "text": "Our class cleans the shore of {0} every year on {1}.",
+            "slots": [
+              {
+                "options": [
+                  "Lake Erie",
+                  "lake Erie",
+                  "Lake erie"
+                ],
+                "answer": 0
+              },
+              {
+                "options": [
+                  "Earth Day",
+                  "earth day",
+                  "Earth day"
+                ],
+                "answer": 0
+              }
+            ],
+            "clue": "One blank holds the name of a lake and the other holds the name of a holiday. Check how each choice starts its words.",
+            "hints": [
+              "One blank holds the name of a lake and the other holds the name of a holiday. Check how each choice starts its words.",
+              "Names of holidays and names of lakes follow the same rule. Look at every word in each choice.",
+              "Both words in the name of a holiday are important words. Look at the choices for the second blank."
+            ],
+            "how": [
+              "The first blank is the name of one lake, and the second blank is the name of one holiday.",
+              "In both names, every important word starts with a capital letter.",
+              "The answers are Lake Erie and Earth Day."
+            ],
+            "misconception": "A common mix-up is leaving the kind of place small, as in lake Erie. The word Lake is part of the name.",
+            "why": "The answers are Lake Erie and Earth Day. Lake Erie is the name of one lake, and Earth Day is the name of a holiday, so each word in them starts with a capital.",
+            "like": [
+              "SK-GUM2-3-S13"
+            ]
+          },
+          {
+            "id": "SK-GUM2-3-C14",
+            "type": "hottext",
+            "points": 1,
+            "dok": 2,
+            "std": [
+              "3.L.GC.1:R:capitalize-proper-nouns"
+            ],
+            "passages": [],
+            "prompt": "Select the sentence in which a word has a capital letter that it should not have.",
+            "options": [
+              "Mayor Chu cut the ribbon at the new library.",
+              "My brother plays drums in a band called the Wildcats.",
+              "We camped near the Colorado River last summer.",
+              "My Cousin lives in Tennessee.",
+              "A man on Harper Road sold us peaches."
+            ],
+            "answer": [
+              3
+            ],
+            "pick": 1,
+            "clue": "Check each capital letter. Ask whether the word is the name of one special person, place or thing.",
+            "hints": [
+              "Check each capital letter. Ask whether the word is the name of one special person, place or thing.",
+              "Look at the everyday words that come in the middle of each sentence, such as the words for kinds of people and places.",
+              "The sentence about the river names one special river. Think about the rest."
+            ],
+            "how": [
+              "Every capital in the middle of a sentence should be part of a name.",
+              "Mayor Chu, the Wildcats, the Colorado River, Tennessee and Harper Road are all names.",
+              "The answer is \"My Cousin lives in Tennessee.\" Cousin is an everyday word here, so it should stay small."
+            ],
+            "misconception": "A common mix-up is capitalizing a word for a relative. It gets a capital only right before a name.",
+            "why": "The answer is \"My Cousin lives in Tennessee.\" Cousin does not come right before a name, so it should be cousin. The other sentences capitalize only names.",
+            "like": [
+              "SK-GUM2-3-S14"
+            ]
+          },
+          {
+            "id": "SK-GUM2-3-C15",
+            "type": "mc",
+            "points": 1,
+            "dok": 3,
+            "std": [
+              "3.L.GC.1:R:capitalize-proper-nouns"
+            ],
+            "passages": [],
+            "prompt": "Ben says, \"Any word that names a person needs a capital letter.\" Which sentence shows that Ben is wrong?",
+            "choices": [
+              {
+                "text": "Our neighbor waved at the crowd from her porch.",
+                "correct": true
+              },
+              {
+                "text": "Principal Wu waved at the crowd from the stage."
+              },
+              {
+                "text": "Nurse Cole waved at the crowd from the doorway."
+              },
+              {
+                "text": "Dr. Ames waved at the crowd from the hallway."
+              }
+            ],
+            "clue": "To show an idea is wrong, find a sentence where the idea does not work. Look at how each sentence writes the word that names a person.",
+            "hints": [
+              "To show an idea is wrong, find a sentence where the idea does not work. Look at how each sentence writes the word that names a person.",
+              "In each choice, find the word or words that name a person and check whether they begin with a capital letter.",
+              "Three choices put a title right before a name. Think about whether those can show that Ben is wrong."
+            ],
+            "how": [
+              "Ben's idea says every word for a person gets a capital. Look for a person word that does not.",
+              "A title right before a name is part of the name, so it gets a capital. A plain word like neighbor is not a name.",
+              "The answer is \"Our neighbor waved at the crowd from her porch.\""
+            ],
+            "misconception": "A common mix-up is thinking all person words are names. A word like neighbor names a kind of person, not one special person.",
+            "why": "The answer is \"Our neighbor waved at the crowd from her porch.\" Neighbor names a person but is not the name of one special person, so it stays small. That proves Ben wrong. The other sentences use titles with names.",
+            "like": [
+              "SK-GUM2-3-S15"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  similar: [
+    {
+      "id": "SK-GUM2-3-S01",
+      "type": "ms",
+      "points": 2,
+      "dok": 2,
+      "std": [
+        "3.L.GC.1:R:capitalize-proper-nouns"
+      ],
+      "passages": [],
+      "prompt": "Jo is fixing a postcard for her grandma. Tap three spots where Jo's note needs capitals.",
+      "stem": "Our neighbor sells peaches at a stand on mill road in dalton.",
+      "pick": 3,
+      "choices": [
+        {
+          "text": "mill",
+          "correct": true
+        },
+        {
+          "text": "road",
+          "correct": true
+        },
+        {
+          "text": "dalton",
+          "correct": true
+        },
+        {
+          "text": "neighbor"
+        },
+        {
+          "text": "peaches"
+        },
+        {
+          "text": "stand"
+        }
+      ],
+      "clue": "Look for the name of a road and the name of a town. Then check every word in each name.",
+      "hints": [
+        "Look for the name of a road and the name of a town. Then check every word in each name.",
+        "A name can have more than one word. Look at each word in the sentence and ask if it belongs to a name.",
+        "Peaches is an everyday word. Think about the other choices."
+      ],
+      "how": [
+        "Find the name of a road and the name of a town.",
+        "Mill Road is the name of one road, so both words need capitals. Dalton is the name of a town.",
+        "The answers are mill, road and dalton. Neighbor, peaches and stand are everyday words."
+      ],
+      "misconception": "A common mix-up is leaving the kind of place small. Road is part of the name Mill Road.",
+      "why": "The answers are mill, road and dalton. Mill Road is the name of one road, and Dalton is a town. Neighbor, peaches and stand are everyday words.",
+      "like": [
+        "SK-GUM2-3-P4"
+      ]
+    },
+    {
+      "id": "SK-GUM2-3-S02",
+      "type": "match",
+      "points": 2,
+      "dok": 2,
+      "std": [
+        "3.L.GC.1:R:capitalize-proper-nouns"
+      ],
+      "passages": [],
+      "prompt": "Decide how each word should be written.",
+      "cols": [
+        "Capital letter",
+        "Small letter"
+      ],
+      "rows": [
+        {
+          "text": "tuesday",
+          "answer": 0
+        },
+        {
+          "text": "weekday",
+          "answer": 1
+        },
+        {
+          "text": "canada",
+          "answer": 0
+        },
+        {
+          "text": "island",
+          "answer": 1
+        },
+        {
+          "text": "easter",
+          "answer": 0
+        },
+        {
+          "text": "principal",
+          "answer": 1
+        }
+      ],
+      "clue": "Ask whether the word is the name of one special thing or a word for a whole group of things.",
+      "hints": [
+        "Ask whether the word is the name of one special thing or a word for a whole group of things.",
+        "Make a sentence for each word, such as We visit ___ in the summer. See if the word names one special thing.",
+        "Names of weekdays, countries and holidays begin with capitals, while words for a whole group of things do not."
+      ],
+      "how": [
+        "Think about whether each word names one special day, place or holiday.",
+        "Tuesday, Canada and Easter are names. Weekday, island and principal are everyday words.",
+        "Place each word in the column that matches."
+      ],
+      "misconception": "A common mix-up is capitalizing a word because it sounds important. Principal is a job word, not a name.",
+      "why": "Tuesday, Canada and Easter are the names of a day, a country and a holiday, so they get capitals. Weekday, island and principal are everyday words, so they stay small.",
+      "like": [
+        "SK-GUM2-3-P5"
+      ]
+    },
+    {
+      "id": "SK-GUM2-3-S03",
+      "type": "mc",
+      "points": 1,
+      "dok": 2,
+      "std": [
+        "3.L.GC.1:R:capitalize-proper-nouns"
+      ],
+      "passages": [
+        "p4"
+      ],
+      "prompt": "Which version of sentence 2 has no mistakes?",
+      "choices": [
+        {
+          "text": "Our bus rolled out early on Wednesday, packed with snacks.",
+          "correct": true
+        },
+        {
+          "text": "Our bus rolled out early on Wednesday, packed with Snacks."
+        },
+        {
+          "text": "Our Bus rolled out early on wednesday, packed with snacks."
+        },
+        {
+          "text": "Our bus rolled out early on wednesday, packed with snacks."
+        }
+      ],
+      "clue": "Look for a name that must begin with a capital letter. Then check whether any everyday noun has been given one.",
+      "hints": [
+        "Look for a name that must begin with a capital letter. Then check whether any everyday noun has been given one.",
+        "Check the name of the day in each rewrite, and then check the nouns snacks and bus.",
+        "Bus and snacks are things anyone can ride in or eat. Think about the other choices."
+      ],
+      "how": [
+        "Sentence 2 has a day of the week that begins with a small letter.",
+        "Wednesday is the name of a day, so it needs a capital W. Snacks and bus stay small.",
+        "The answer is \"Our bus rolled out early on Wednesday, packed with snacks.\""
+      ],
+      "misconception": "A common mix-up is fixing the name and then adding capitals to other nouns too. Only the name changes.",
+      "why": "The answer is \"Our bus rolled out early on Wednesday, packed with snacks.\" Wednesday is the name of a day. Snacks and bus are everyday nouns, so they stay small.",
+      "like": [
+        "SK-GUM2-3-C03"
+      ]
+    },
+    {
+      "id": "SK-GUM2-3-S04",
+      "type": "dropdown",
+      "points": 1,
+      "dok": 2,
+      "std": [
+        "3.L.GC.1:R:capitalize-proper-nouns"
+      ],
+      "passages": [
+        "p4"
+      ],
+      "prompt": "Pick the way to write the keeper's name.",
+      "text": "The otters were shown to us by {0}, a keeper.",
+      "slots": [
+        {
+          "options": [
+            "Dr. Rowe",
+            "dr. Rowe",
+            "Dr. rowe"
+          ],
+          "answer": 0
+        }
+      ],
+      "clue": "A title before a person's name and the name itself follow the same rules for first letters. Look at both parts of each choice.",
+      "hints": [
+        "A title before a person's name and the name itself follow the same rules for first letters. Look at both parts of each choice.",
+        "Read the name aloud as it is written in the draft. Compare it with how each choice begins.",
+        "The three choices differ in whether the title and the last name begin with capitals."
+      ],
+      "how": [
+        "Dr. Rowe is one person's name with a title.",
+        "The title is part of the name, so it and the last name both begin with capitals.",
+        "The answer is Dr. Rowe. The draft wrote dr. with a small d, and Dr. rowe leaves the last name small."
+      ],
+      "misconception": "A common mix-up is thinking a short title like Dr. does not need a capital. It does when it comes right before a name.",
+      "why": "The answer is Dr. Rowe. A title right before a name is part of the name, so Dr. and Rowe both begin with capitals.",
+      "like": [
+        "SK-GUM2-3-C04"
+      ]
+    },
+    {
+      "id": "SK-GUM2-3-S05",
+      "type": "mc",
+      "points": 1,
+      "dok": 3,
+      "std": [
+        "3.L.GC.1:R:capitalize-proper-nouns"
+      ],
+      "passages": [
+        "p4"
+      ],
+      "prompt": "Sentence 4 spells Grandpa with a big G, while sentence 3 spells grandpa with a little g. Which fact explains this?",
+      "choices": [
+        {
+          "text": "Leo follows Grandpa in sentence 4, forming a name, while my comes first in sentence 3.",
+          "correct": true
+        },
+        {
+          "text": "The mistake is in sentence 3, since grandpa is spelled with a G on every page."
+        },
+        {
+          "text": "The mistake is in sentence 4, since words for relatives take a lowercase g everywhere."
+        },
+        {
+          "text": "Later lines in a draft take capitals, so the fourth line is capitalized and the third is not."
+        }
+      ],
+      "clue": "Compare the two places. Notice what sits beside the word each time.",
+      "hints": [
+        "Compare the two places. Notice what sits beside the word each time.",
+        "Say each phrase out loud: my grandpa and Grandpa Leo. Notice what the word does in each one.",
+        "One and the same relative word can start with a big letter in one place and a little letter in another. Think about the other choices."
+      ],
+      "how": [
+        "Sentence 3 uses my grandpa. Sentence 4 uses Grandpa Leo.",
+        "A relative word gets a capital when it is joined to a person's name. With the word my in front, it stays small.",
+        "The answer is \"Leo follows Grandpa in sentence 4, forming a name, while my comes first in sentence 3.\""
+      ],
+      "misconception": "A common mix-up is thinking that a relative word always needs a capital. It needs one only when it is part of a name.",
+      "why": "The answer is \"Leo follows Grandpa in sentence 4, forming a name, while my comes first in sentence 3.\" In sentence 4 the word is part of his name. In sentence 3 it is an everyday noun with my in front of it.",
+      "like": [
+        "SK-GUM2-3-C05"
+      ]
+    },
+    {
+      "id": "SK-GUM2-3-S06",
+      "type": "hottext",
+      "points": 2,
+      "dok": 2,
+      "std": [
+        "3.L.GC.1:R:capitalize-proper-nouns"
+      ],
+      "passages": [
+        "p5"
+      ],
+      "prompt": "In sentences 2 to 6, two words are capitalized wrongly. Tap those sentences.",
+      "targets": [
+        "p5:1:2",
+        "p5:1:3",
+        "p5:2:1",
+        "p5:2:2",
+        "p5:2:3"
+      ],
+      "answer": [
+        "p5:2:1",
+        "p5:2:2"
+      ],
+      "pick": 2,
+      "clue": "Look for names that should begin with capitals and for everyday words that should not.",
+      "hints": [
+        "Look for names that should begin with capitals and for everyday words that should not.",
+        "Go through sentences 2 to 6 in order. Check each title, each place and each object.",
+        "Sentence 3 has a title and a name that are both written with capitals. Think about the rest."
+      ],
+      "how": [
+        "Read each sentence and look at every word that begins with a capital or a small letter.",
+        "Sentence 4 names a city with a small letter, and sentence 5 gives a capital to an everyday piece of furniture.",
+        "Sentences 2, 3 and 6 are fine."
+      ],
+      "misconception": "A common mix-up is stopping after the first mistake you find. Check every sentence in the range.",
+      "why": "The answers are \"Some cookies came from a shop in tampa.\" and \"My friend Ana sold muffins at the Table by the door.\" Tampa is a city and needs a capital. A table by a door has no special name, so it stays small. Sentences 2, 3 and 6 are correct.",
+      "like": [
+        "SK-GUM2-3-C06"
+      ]
+    },
+    {
+      "id": "SK-GUM2-3-S07",
+      "type": "ebsr",
+      "points": 2,
+      "dok": 3,
+      "std": [
+        "3.L.GC.1:R:capitalize-proper-nouns"
+      ],
+      "passages": [
+        "p5"
+      ],
+      "prompt": "Answer the first half, then use your answer for the second half.",
+      "partA": {
+        "prompt": "Which statement describes the mistake in sentence 4?",
+        "choices": [
+          {
+            "text": "Tampa is a certain city, and writing its name with a small t is the error.",
+            "correct": true
+          },
+          {
+            "text": "Shop is one particular store in town, and writing it with a small s is the error."
+          },
+          {
+            "text": "Cookies is a snack brand, and writing it with a small c is the error."
+          },
+          {
+            "text": "Some opens the sentence, so a comma should come right after it."
+          }
+        ]
+      },
+      "partB": {
+        "prompt": "Which version of sentence 4 is correct?",
+        "choices": [
+          {
+            "text": "Some cookies came from a shop in Tampa.",
+            "correct": true
+          },
+          {
+            "text": "Some cookies came from a Shop in Tampa."
+          },
+          {
+            "text": "Some Cookies came from a shop in Tampa."
+          },
+          {
+            "text": "Some cookies came from a shop in tampa."
+          }
+        ]
+      },
+      "clue": "Find the nouns in sentence 4. Ask which ones point to one special thing.",
+      "hints": [
+        "Find the nouns in sentence 4. Ask which ones point to one special thing.",
+        "In the second half, compare how each version writes the place and the other nouns.",
+        "Cookies is an everyday food word, not a brand name."
+      ],
+      "how": [
+        "Part A: the city in sentence 4 has its own name.",
+        "Part B: the correct version gives the city a capital and leaves the everyday nouns small.",
+        "The answers are \"Tampa is a certain city, and writing its name with a small t is the error.\" and \"Some cookies came from a shop in Tampa.\""
+      ],
+      "misconception": "A common mix-up is capitalizing the kind of place and not the name. The name of the city is what needs the capital.",
+      "why": "Part A: \"Tampa is a certain city, and writing its name with a small t is the error.\" Part B: \"Some cookies came from a shop in Tampa.\" Shop and cookies are everyday nouns, so they stay small.",
+      "like": [
+        "SK-GUM2-3-C07"
+      ]
+    },
+    {
+      "id": "SK-GUM2-3-S08",
+      "type": "ms",
+      "points": 2,
+      "dok": 2,
+      "std": [
+        "3.L.GC.1:R:capitalize-proper-nouns"
+      ],
+      "passages": [],
+      "prompt": "Tap both sentences that have the right capital letters.",
+      "pick": 2,
+      "choices": [
+        {
+          "text": "Uncle Ben took the twins to the fair in August.",
+          "correct": true
+        },
+        {
+          "text": "Her favorite game is checkers, and she plays on Saturdays.",
+          "correct": true
+        },
+        {
+          "text": "My Brother lives in Ohio near lake Erie."
+        },
+        {
+          "text": "We celebrate Mother's day with a picnic each May."
+        },
+        {
+          "text": "Mr. rios, our coach, ran onto the field."
+        }
+      ],
+      "clue": "Look at each name and each everyday noun. Ask whether its first letter is right.",
+      "hints": [
+        "Look at each name and each everyday noun. Ask whether its first letter is right.",
+        "Check the sentences you think are wrong as well as the ones you think are right. Look for titles and holidays too.",
+        "One choice names a holiday with a small letter. Think about which one."
+      ],
+      "how": [
+        "Check the first letter of each name and each everyday noun.",
+        "Uncle Ben, August, checkers and Saturdays are all written correctly.",
+        "The other three sentences give a capital to brother, give a small letter to a holiday, or give a small letter to a coach's title name."
+      ],
+      "misconception": "A common mix-up is thinking a day or month written in the plural is not a name. Saturdays still starts with a capital.",
+      "why": "The answers are \"Uncle Ben took the twins to the fair in August.\" and \"Her favorite game is checkers, and she plays on Saturdays.\" Uncle Ben is a title and name, and August and Saturdays are names. The other choices have a name or title with a small letter, or an everyday noun with a capital.",
+      "like": [
+        "SK-GUM2-3-C08"
+      ]
+    },
+    {
+      "id": "SK-GUM2-3-S09",
+      "type": "mc",
+      "points": 1,
+      "dok": 1,
+      "std": [
+        "3.L.GC.1:R:capitalize-proper-nouns"
+      ],
+      "passages": [],
+      "prompt": "Pick the sentence with no capital-letter mistakes.",
+      "choices": [
+        {
+          "text": "Our library is closed on Monday.",
+          "correct": true
+        },
+        {
+          "text": "Our Library is closed on Monday."
+        },
+        {
+          "text": "Our library is closed on monday."
+        },
+        {
+          "text": "our library is closed on Monday."
+        }
+      ],
+      "clue": "Check the first word of the sentence and the name of the day.",
+      "hints": [
+        "Check the first word of the sentence and the name of the day.",
+        "Look for an everyday noun that does not need a capital, and a name that does.",
+        "The first word of every sentence is capitalized. Think about the other choices."
+      ],
+      "how": [
+        "Library is an everyday word here, not the name of one place.",
+        "Monday is the name of a day, so it needs a capital M.",
+        "The answer is \"Our library is closed on Monday.\""
+      ],
+      "misconception": "A common mix-up is capitalizing a place word that has no name. Library stays small.",
+      "why": "The answer is \"Our library is closed on Monday.\" The sentence begins with a capital, Monday is a day, and library is an everyday word.",
+      "like": [
+        "SK-GUM2-3-C09"
+      ]
+    },
+    {
+      "id": "SK-GUM2-3-S10",
+      "type": "mc",
+      "points": 1,
+      "dok": 3,
+      "std": [
+        "3.L.GC.1:R:capitalize-proper-nouns"
+      ],
+      "passages": [
+        "p5"
+      ],
+      "prompt": "In sentence 5, Ana capitalized Table because a sale needs tables. How would you answer her?",
+      "choices": [
+        {
+          "text": "The table has no special title of its own, so it should not be capitalized.",
+          "correct": true
+        },
+        {
+          "text": "Anything useful at an event should be capitalized, so Table is fine."
+        },
+        {
+          "text": "Words near the end of a sentence should be capitalized, so Table is fine."
+        },
+        {
+          "text": "Only people's names should be capitalized, so even Ana should be written ana."
+        }
+      ],
+      "clue": "Think about why a word gets a capital. Is it because the word is important, or because of something else?",
+      "hints": [
+        "Think about why a word gets a capital. Is it because the word is important, or because of something else?",
+        "Read sentence 5 again. Does it give the table a name of its own?",
+        "Some people and places in the draft do get capitals, such as Tampa and Ana. Think about the other choices."
+      ],
+      "how": [
+        "Ana's idea is that important things get capitals.",
+        "Capitals go on the names of people, places and things. A table by the door has no name of its own.",
+        "The answer is \"The table has no special title of its own, so it should not be capitalized.\""
+      ],
+      "misconception": "A common mix-up is capitalizing a word because it seems important. Capitals mark names, not importance.",
+      "why": "The answer is \"The table has no special title of its own, so it should not be capitalized.\" Ana and Tampa are names, so they get capitals. The table has no special name.",
+      "like": [
+        "SK-GUM2-3-C10"
+      ]
+    },
+    {
+      "id": "SK-GUM2-3-S11",
+      "type": "hottext",
+      "points": 2,
+      "dok": 2,
+      "std": [
+        "3.L.GC.1:R:capitalize-proper-nouns"
+      ],
+      "passages": [
+        "p6"
+      ],
+      "prompt": "Which two lines are written with correct capital letters? Tap them.",
+      "targets": [
+        "p6:1:3",
+        "p6:1:4",
+        "p6:2:1",
+        "p6:2:2",
+        "p6:2:3"
+      ],
+      "answer": [
+        "p6:1:3",
+        "p6:2:2"
+      ],
+      "pick": 2,
+      "clue": "Check each sentence for names and titles and for everyday nouns that have been given capitals.",
+      "hints": [
+        "Check each sentence for names and titles and for everyday nouns that have been given capitals.",
+        "Go through lines 3 to 7 in order. Mark each word that starts with a capital and ask whether it is a name.",
+        "In the line about the boxes, nothing needs a capital except the first word. Think about the rest."
+      ],
+      "how": [
+        "Look at the title, the name, the furniture word and the day in each line.",
+        "Coach Dunn is a title and a name. The kitchen boxes are everyday objects, so they stay small.",
+        "The other three lines have a name with a small letter or an everyday word with a capital."
+      ],
+      "misconception": "A common mix-up is picking a line because it has a capital letter. Check whether each capital belongs.",
+      "why": "The answers are \"Coach Dunn, who lives next door, helped us carry boxes.\" and \"We unpacked the kitchen boxes before supper that night.\" Coach Dunn is a title and name. The other lines have tia, Stairs or sunday written the wrong way.",
+      "like": [
+        "SK-GUM2-3-C11"
+      ]
+    },
+    {
+      "id": "SK-GUM2-3-S12",
+      "type": "dropdown",
+      "points": 1,
+      "dok": 2,
+      "std": [
+        "3.L.GC.1:R:capitalize-proper-nouns"
+      ],
+      "passages": [
+        "p6"
+      ],
+      "prompt": "Which choice writes the name of the street correctly?",
+      "text": "Our street is called {0}, and it ends at a pond.",
+      "slots": [
+        {
+          "options": [
+            "Birch Lane",
+            "Birch lane",
+            "birch lane"
+          ],
+          "answer": 0
+        }
+      ],
+      "clue": "A name for one special street is a proper noun. Check how each choice writes the street's name.",
+      "hints": [
+        "A name for one special street is a proper noun. Check how each choice writes the street's name.",
+        "Look at both words in the name. The three choices start them in different ways.",
+        "The pond is an everyday place, so it is not written with capitals. Focus on the choices for the street."
+      ],
+      "how": [
+        "Birch Lane is the name of one special street.",
+        "Every important word in a name begins with a capital.",
+        "The answer is Birch Lane. The draft wrote it with small letters, and Birch lane leaves the second word small."
+      ],
+      "misconception": "A common mix-up is capitalizing only the first word. Both words in the street's name need capitals.",
+      "why": "The answer is Birch Lane. It is the name of one special street, so Birch and Lane both begin with capitals. The pond is an everyday place and stays small.",
+      "like": [
+        "SK-GUM2-3-C12"
+      ]
+    },
+    {
+      "id": "SK-GUM2-3-S13",
+      "type": "dropdown",
+      "points": 2,
+      "dok": 2,
+      "std": [
+        "3.L.GC.1:R:capitalize-proper-nouns"
+      ],
+      "passages": [],
+      "prompt": "Complete each blank with the best words.",
+      "text": "Soon we will paddle down {0} to celebrate {1}.",
+      "slots": [
+        {
+          "options": [
+            "Cedar Creek",
+            "cedar creek",
+            "Cedar creek"
+          ],
+          "answer": 0
+        },
+        {
+          "options": [
+            "New Year's Day",
+            "new year's day",
+            "New Year's day"
+          ],
+          "answer": 0
+        }
+      ],
+      "clue": "One blank holds the name of a creek and the other holds the name of a holiday. Look at how each choice starts its words.",
+      "hints": [
+        "One blank holds the name of a creek and the other holds the name of a holiday. Look at how each choice starts its words.",
+        "Names of creeks and names of holidays follow the same rule. Check every word in each choice.",
+        "The second blank names a holiday, and the day word is an important word in that name."
+      ],
+      "how": [
+        "The first blank is the name of one creek, and the second blank is the name of one holiday.",
+        "In both names, every important word begins with a capital letter.",
+        "The answers are Cedar Creek and New Year's Day."
+      ],
+      "misconception": "A common mix-up is leaving the word Day small. It is part of the name of the holiday.",
+      "why": "The answers are Cedar Creek and New Year's Day. Each is the name of one special thing, so each important word begins with a capital.",
+      "like": [
+        "SK-GUM2-3-C13"
+      ]
+    },
+    {
+      "id": "SK-GUM2-3-S14",
+      "type": "hottext",
+      "points": 1,
+      "dok": 2,
+      "std": [
+        "3.L.GC.1:R:capitalize-proper-nouns"
+      ],
+      "passages": [],
+      "prompt": "Tap the line where a word is capitalized that should stay small.",
+      "options": [
+        "Our dentist, Dr. Fong, keeps a fish tank.",
+        "We rode bikes along the Ohio River.",
+        "Aunt Lila bakes bread on Fridays.",
+        "The Squirrels in our yard hide nuts.",
+        "On Friday, we visit Peach Park."
+      ],
+      "answer": [
+        3
+      ],
+      "pick": 1,
+      "clue": "Check each capital letter. Ask whether the word is the name of one special person, place, day or thing.",
+      "hints": [
+        "Check each capital letter. Ask whether the word is the name of one special person, place, day or thing.",
+        "Look at the everyday nouns in the middle of each line, such as animals, jobs and places.",
+        "The line about the river names one special river. Think about the rest."
+      ],
+      "how": [
+        "Every capital in the middle of a sentence should belong to a name.",
+        "Dr. Fong, the Ohio River, Aunt Lila, Fridays and Peach Park are all names.",
+        "The answer is \"The Squirrels in our yard hide nuts.\" Squirrels is an everyday word, so it should stay small."
+      ],
+      "misconception": "A common mix-up is capitalizing an animal word. Names of animals as a kind stay small.",
+      "why": "The answer is \"The Squirrels in our yard hide nuts.\" Squirrels names a kind of animal, so it should be written squirrels. The other lines capitalize only names.",
+      "like": [
+        "SK-GUM2-3-C14"
+      ]
+    },
+    {
+      "id": "SK-GUM2-3-S15",
+      "type": "mc",
+      "points": 1,
+      "dok": 3,
+      "std": [
+        "3.L.GC.1:R:capitalize-proper-nouns"
+      ],
+      "passages": [],
+      "prompt": "Mia says, \"Place words are always capitalized.\" Which sentence proves Mia is mistaken?",
+      "choices": [
+        {
+          "text": "We sat on a bench in the park near the school.",
+          "correct": true
+        },
+        {
+          "text": "We sat on a bench in Hill Park near Lee School."
+        },
+        {
+          "text": "We sat on a bench in Rosa Park near Ford School."
+        },
+        {
+          "text": "We sat on a bench in Elm Park near Lake School."
+        }
+      ],
+      "clue": "To show an idea is mistaken, find a sentence where the idea fails. Look at how each sentence writes the words for places.",
+      "hints": [
+        "To show an idea is mistaken, find a sentence where the idea fails. Look at how each sentence writes the words for places.",
+        "In each choice, find the place words and check how they begin.",
+        "Three choices give special names to the park and the school. Think about whether those can prove Mia mistaken."
+      ],
+      "how": [
+        "Mia's idea says every place word gets a capital. Look for a place word that does not.",
+        "Names of special places get capitals. A plain word like park, with no name, does not.",
+        "The answer is \"We sat on a bench in the park near the school.\""
+      ],
+      "misconception": "A common mix-up is thinking all place words are names. The words park and school name kinds of places.",
+      "why": "The answer is \"We sat on a bench in the park near the school.\" Park and school do not name one special place, so they stay small. That proves Mia mistaken. The other sentences use names.",
+      "like": [
+        "SK-GUM2-3-C15"
+      ]
+    }
+  ],
+  addons: {
+    "SK-GUM2-3-P1": {
+      "hints": [
+        "Look for the name of a special person, place, day, month or holiday in each sentence. Check how it begins.",
+        "Check the sentences one at a time. Find every name and see whether its first letter is a capital.",
+        "The sentence about Memorial Day names a holiday, and both of its big words begin with capitals. Think about the rest."
+      ],
+      "how": [
+        "Find the names in each sentence.",
+        "Memorial Day, Alabama and Ms. Rivera are written with capitals. Dallas is the name of a city, but it begins with a small d.",
+        "The answer is \"My best friend moved to dallas last year.\" Summer is a season, so it stays small."
+      ],
+      "misconception": "A common mix-up is picking the sentence with summer because it is a word for a time of year. Seasons are not names, so they stay small."
+    },
+    "SK-GUM2-3-P2": {
+      "hints": [
+        "Find the month and the town in each choice. Check how each one begins.",
+        "Then check the other nouns. A pumpkin farm is not the name of one special place.",
+        "Choose a sentence where the month starts with a capital letter."
+      ],
+      "how": [
+        "Find the month, the town and the farm in each choice.",
+        "October is a month and Athens is a town, so each needs a capital. A pumpkin farm is only a kind of place, so it stays small.",
+        "The answer is \"In October, we visited a pumpkin farm near Athens.\""
+      ],
+      "misconception": "A common mix-up is capitalizing a farm because it is a place. Only the name of one special place gets a capital."
+    },
+    "SK-GUM2-3-P3": {
+      "hints": [
+        "Is this the name of a holiday? Decide whether it names one special day.",
+        "July is the name of a month, so check how each choice writes it.",
+        "Compare the three choices. They differ in the first letter of Fourth and the first letter of July."
+      ],
+      "how": [
+        "Fourth of July is the name of a holiday.",
+        "Important words in a holiday name begin with capitals. A small joining word like of stays small.",
+        "The answer is Fourth of July."
+      ],
+      "misconception": "A common mix-up is capitalizing the small word of. Small joining words stay small inside a name."
+    },
+    "SK-GUM2-3-P4": {
+      "hints": [
+        "Look for the name of a street and the name of a city. Names of places begin with capital letters.",
+        "A street name can have more than one word. Check each word in the name.",
+        "City is an everyday word for any city, not the name of one. Think about the other choices."
+      ],
+      "how": [
+        "Find the name of a street and the name of a city.",
+        "Maple Street is the name of one street, so both words need capitals. Macon is the name of a city.",
+        "The answers are maple, street and macon. Cousin and city are everyday nouns, and lives is an action word."
+      ],
+      "misconception": "A common mix-up is leaving street small. When Street is part of the name, it needs a capital."
+    },
+    "SK-GUM2-3-P5": {
+      "hints": [
+        "Ask whether the word names one special day, place or holiday, or whether it is an everyday word for a whole group.",
+        "Make a sentence for each word, such as We visit ___ in the summer. Decide whether it names one special thing.",
+        "Names of weekdays, countries and holidays begin with capitals, while words for a whole group of things do not."
+      ],
+      "how": [
+        "Decide whether each word is a name or an everyday word.",
+        "Saturday, Mexico and Thanksgiving are names, so they need capitals.",
+        "Holiday, country and teacher are everyday words, so they stay small."
+      ],
+      "misconception": "A common mix-up is capitalizing holiday because it sounds like Thanksgiving. Holiday is a word for any holiday."
+    }
+  },
+  /* B7b:core:end */
   test: [
     { id: "SK-GUM2-3-T1", type: "hottext", points: 1, dok: 2, passages: [],
       prompt: "Select the sentence that has a capitalization error.",
@@ -3506,10 +5027,173 @@ PP.addLesson({
         "A telling sentence ends with a period."
       ],
       answer: "I wonder why the sky is blue."
+    },
+    {
+      show: ["Could you pass me the glue"],
+      ask: "Which end mark does this sentence need?",
+      steps: [
+        "Look at the first words. Could you asks someone to do something.",
+        "The speaker wants an answer, and the speaker wants the glue passed. The sentence is not just telling a fact.",
+        "A sentence that asks ends with a question mark."
+      ],
+      answer: "Could you pass me the glue?"
     }
   ],
   parent: "Take turns saying one sentence three ways: telling, asking and excited (We have pizza. Do we have pizza? We have pizza!). Have your child name the end mark for each one.",
-  passages: [],
+  passages: [
+    /* B7b:passages:start */
+    {
+      "id": "p1",
+      "title": "The Lost Kitten",
+      "byline": "A third grader's draft",
+      "genre": "Student draft (narrative)",
+      "draft": true,
+      "paragraphs": [
+        [
+          "(1) Last night, a tiny gray kitten with white paws wandered into our yard.",
+          "(2) Where did she come from?",
+          "(3) I looked all around the yard and under the porch for her owner."
+        ],
+        [
+          "(4) Her fur was wet from the rain, and she was shaking.",
+          "(5) She was the softest kitten I had ever held.",
+          "(6) My sister asked if we could keep her?"
+        ],
+        [
+          "(7) Dad said we should call the animal shelter first thing in the morning.",
+          "(8) Do you think her owner is looking for her.",
+          "(9) We put up a paper sign at the end of our street.",
+          "(10) By morning, a girl named Tia came running down the sidewalk!"
+        ]
+      ]
+    },
+    {
+      "id": "p2",
+      "title": "At the Pool",
+      "byline": "A third grader's draft",
+      "genre": "Student draft (narrative)",
+      "draft": true,
+      "paragraphs": [
+        [
+          "(1) On Saturday morning, my cousin Dan took me to the town pool.",
+          "(2) How deep is the water at the shallow end?",
+          "(3) The lifeguard told us to walk, not run?"
+        ],
+        [
+          "(4) Dan jumped in first and made a giant splash that got everyone wet!",
+          "(5) Can you swim across the whole pool.",
+          "(6) I held my breath and kicked as hard as I could until I reached the wall."
+        ],
+        [
+          "(7) We ate cold ice pops on the warm cement beside the fence.",
+          "(8) Then Dan asked what time the pool closed.",
+          "(9) I wondered if we could stay for one more swim.",
+          "(10) Hooray, we still had an hour left!"
+        ]
+      ]
+    },
+    {
+      "id": "p3",
+      "title": "Field Day",
+      "byline": "A third grader's draft",
+      "genre": "Student draft (narrative)",
+      "draft": true,
+      "paragraphs": [
+        [
+          "(1) Field Day was the best day of the whole school year, and the sun was out.",
+          "(2) Who was ready for the sack race?",
+          "(3) Hooray, the sack race had finally begun!"
+        ],
+        [
+          "(4) Do you know who won the big relay race.",
+          "(5) My team crossed the finish line first, ahead of the other three teams.",
+          "(6) I wonder how we ran so fast?",
+          "(7) Did the whole crowd cheer loudly for us."
+        ],
+        [
+          "(8) After all the games, we drank cold water in the shade of a big oak tree.",
+          "(9) Mr. Fenn asked who wanted to hold the trophy.",
+          "(10) We cannot wait for next year's Field Day to come back around."
+        ]
+      ]
+    },
+    {
+      "id": "p4",
+      "title": "The Magic Show",
+      "byline": "A third grader's draft",
+      "genre": "Student draft (narrative)",
+      "draft": true,
+      "paragraphs": [
+        [
+          "(1) Last Friday afternoon, our whole school had a magic show in the gym.",
+          "(2) Who wanted to help the magician?",
+          "(3) Everyone in the room raised a hand and waved it around.",
+          "(4) The magician chose a boy named Omar from the front row."
+        ],
+        [
+          "(5) What was hiding inside the tall black hat?",
+          "(6) Omar asked if the rabbit was real?",
+          "(7) The magician smiled and held up one finger, and the room went quiet."
+        ],
+        [
+          "(8) Where did the rabbit go after the show.",
+          "(9) I clapped until my hands turned red and sore.",
+          "(10) After the show, we all walked back to class and told our friends."
+        ]
+      ]
+    },
+    {
+      "id": "p5",
+      "title": "The Class Garden",
+      "byline": "A third grader's draft",
+      "genre": "Student draft (narrative)",
+      "draft": true,
+      "paragraphs": [
+        [
+          "(1) In April, our class planted a big garden behind the school.",
+          "(2) What kind of seeds did Mr. Lee bring?",
+          "(3) Mr. Lee showed us how deep each hole should be?"
+        ],
+        [
+          "(4) Nina dug a long row of tiny holes with a spoon.",
+          "(5) Will the sunflowers grow taller than the fence.",
+          "(6) Each of us watered the seeds with a paper cup from the sink."
+        ],
+        [
+          "(7) Sam asked when the first sprout would appear.",
+          "(8) Two weeks later, a green shoot poked up!",
+          "(9) We jumped up and down with joy and gave Nina a high five.",
+          "(10) Now we check the garden every single morning before class."
+        ]
+      ]
+    },
+    {
+      "id": "p6",
+      "title": "The Soccer Game",
+      "byline": "A third grader's draft",
+      "genre": "Student draft (narrative)",
+      "draft": true,
+      "paragraphs": [
+        [
+          "(1) On Sunday, our soccer team played against the Tigers at the park.",
+          "(2) Could you hear the crowd from the parking lot?",
+          "(3) Whew, our goalie caught the ball with both hands!",
+          "(4) Who kicked the ball straight into the net."
+        ],
+        [
+          "(5) The Tigers scored a goal late in the game.",
+          "(6) I asked my coach how much time was left in the game?",
+          "(7) Did our team win by one point."
+        ],
+        [
+          "(8) After the whistle, we shook hands with every Tiger.",
+          "(9) Our coach bought us orange slices and cold juice for the long ride home.",
+          "(10) It was the best Sunday I have had all season, even with the tired legs."
+        ]
+      ]
+    }
+    /* B7b:passages:end */
+  ],
   practice: [
     { id: "SK-GUM2-4-P1", type: "dropdown", points: 1, dok: 1, passages: [],
       prompt: "Choose the correct end mark for the sentence.",
@@ -3559,6 +5243,1351 @@ PP.addLesson({
       clue: "Decide what kind of sentence each one is: telling, asking or showing strong feeling. Then check whether its end mark fits.",
       why: "The answer is \"Please wipe your feet before you come inside.\" It politely tells someone what to do, so a period fits. The sentences that begin with when and did ask questions and need question marks. The sentence about the bread tells something, so it needs a period." }
   ],
+  /* B7b:core:start */
+  /* ---------- Expansion 2026-10-22, batch B7b (GUM Reinforce, second half) ----------
+     core: fifteen items in three sets of five. { ref } reuses a practice item; the other practice items stay in Practice Together.
+     Passages are used only by core and the similar bank; none is used by test.
+     Author log: docs/expansion-2026-10-22/batches/B7b-author-log.md. NOT ACCEPTED: needs independent review. */
+  core: {
+    "rev": "1",
+    "sets": [
+      {
+        "title": "Set 1",
+        "items": [
+          {
+            "ref": "SK-GUM2-4-P3"
+          },
+          {
+            "ref": "SK-GUM2-4-P4"
+          },
+          {
+            "id": "SK-GUM2-4-C03",
+            "type": "mc",
+            "points": 1,
+            "dok": 2,
+            "std": [
+              "3.L.GC.1:R:use-end-punctuation-period-exclamation-point-que"
+            ],
+            "passages": [
+              "p1"
+            ],
+            "prompt": "Sentence 8 ends with the wrong mark. What is the mistake?",
+            "choices": [
+              {
+                "text": "It asks about something, so it needs a question mark in place of the period.",
+                "correct": true
+              },
+              {
+                "text": "It shows strong feeling, so it needs an exclamation point in place of the period."
+              },
+              {
+                "text": "It tells what someone thinks, so the period is already the right mark."
+              },
+              {
+                "text": "It asks about something, so it needs both a question mark and a period."
+              }
+            ],
+            "clue": "Say sentence 8 aloud the way a person would. Decide whether it tells, asks or shows strong feeling.",
+            "hints": [
+              "Say sentence 8 aloud the way a person would. Decide whether it tells, asks or shows strong feeling.",
+              "Look at the first word of sentence 8 and ask whether the writer wants an answer.",
+              "Nothing in sentence 8 shows surprise or fear. Think about the other choices."
+            ],
+            "how": [
+              "Sentence 8 begins with Do and wants an answer from the reader.",
+              "A sentence that wants an answer is an asking sentence, and it ends with a question mark.",
+              "The answer is \"It asks about something, so it needs a question mark in place of the period.\" A sentence ends with only one mark."
+            ],
+            "misconception": "A common mix-up is thinking the word think makes a sentence a telling sentence. Here the reader is asked to answer.",
+            "why": "The answer is \"It asks about something, so it needs a question mark in place of the period.\" Sentence 8 begins with Do and wants an answer. It shows no strong feeling, and a sentence ends with only one mark.",
+            "like": [
+              "SK-GUM2-4-S03"
+            ]
+          },
+          {
+            "id": "SK-GUM2-4-C04",
+            "type": "dropdown",
+            "points": 1,
+            "dok": 2,
+            "std": [
+              "3.L.GC.1:R:use-end-punctuation-period-exclamation-point-que"
+            ],
+            "passages": [
+              "p1"
+            ],
+            "prompt": "Sentence 6 has the wrong end mark. Choose the mark that fixes it.",
+            "text": "My sister asked if we could keep her{0}",
+            "slots": [
+              {
+                "options": [
+                  ".",
+                  "?",
+                  "!"
+                ],
+                "answer": 0
+              }
+            ],
+            "clue": "Decide whether the sentence tells, asks or shows strong feeling. Read it as a speaker would say it.",
+            "hints": [
+              "Decide whether the sentence tells, asks or shows strong feeling. Read it as a speaker would say it.",
+              "Ask who is wanting an answer. Is the writer asking the reader something, or is the writer reporting what someone else did?",
+              "A strong feeling sentence often starts with a word such as wow or oops. Look at how this sentence starts."
+            ],
+            "how": [
+              "The sentence says what the sister asked. It does not ask the reader anything.",
+              "A sentence that only tells about a question is a telling sentence, so it ends with a period.",
+              "The answer is the period (.). A question mark would be used only if the writer were asking the reader."
+            ],
+            "misconception": "A common mix-up is seeing the word asked and adding a question mark. Words like asked and wonder can sit inside a telling sentence.",
+            "why": "The answer is the period (.). The sentence tells what the sister asked and does not ask the reader a question. It shows no strong feeling, so it does not take an exclamation point.",
+            "like": [
+              "SK-GUM2-4-S04"
+            ]
+          },
+          {
+            "id": "SK-GUM2-4-C05",
+            "type": "mc",
+            "points": 1,
+            "dok": 3,
+            "std": [
+              "3.L.GC.1:R:use-end-punctuation-period-exclamation-point-que"
+            ],
+            "passages": [
+              "p1"
+            ],
+            "prompt": "Sentence 6 uses the word asked, yet it should end with a period, not a question mark. Why?",
+            "choices": [
+              {
+                "text": "It tells what the sister asked and does not ask the reader a question.",
+                "correct": true
+              },
+              {
+                "text": "It is the sixth sentence, and sentences late in a draft end with periods."
+              },
+              {
+                "text": "The word asked shows strong feeling, so it needs an exclamation point instead."
+              },
+              {
+                "text": "A question told in a story always ends with a period, even when the writer asks it."
+              }
+            ],
+            "clue": "Compare sentence 2 with sentence 6. Think about who is asking in each one.",
+            "hints": [
+              "Compare sentence 2 with sentence 6. Think about who is asking in each one.",
+              "Say each sentence aloud. In which one does the writer want you to give an answer?",
+              "Where a sentence sits in a draft does not decide its end mark. Think about the other choices."
+            ],
+            "how": [
+              "Sentence 2 asks the reader a question. Sentence 6 says that someone else asked a question.",
+              "A sentence that reports a question is a telling sentence, so it ends with a period.",
+              "The answer is \"It tells what the sister asked and does not ask the reader a question.\""
+            ],
+            "misconception": "A common mix-up is thinking every sentence with the word asked is a question. Only a sentence that asks the reader is.",
+            "why": "The answer is \"It tells what the sister asked and does not ask the reader a question.\" Sentence 2 asks directly, so it takes a question mark. Sentence 6 only reports a question, so it takes a period.",
+            "like": [
+              "SK-GUM2-4-S05"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Set 2",
+        "items": [
+          {
+            "id": "SK-GUM2-4-C06",
+            "type": "hottext",
+            "points": 2,
+            "dok": 2,
+            "std": [
+              "3.L.GC.1:R:use-end-punctuation-period-exclamation-point-que"
+            ],
+            "passages": [
+              "p2"
+            ],
+            "prompt": "Look at sentences 2 through 6. Select the TWO sentences with the wrong end mark.",
+            "targets": [
+              "p2:1:2",
+              "p2:1:3",
+              "p2:2:1",
+              "p2:2:2",
+              "p2:2:3"
+            ],
+            "answer": [
+              "p2:1:3",
+              "p2:2:2"
+            ],
+            "pick": 2,
+            "clue": "Decide whether each sentence tells, asks or shows strong feeling. Then check its end mark.",
+            "hints": [
+              "Decide whether each sentence tells, asks or shows strong feeling. Then check its end mark.",
+              "Go through sentences 2 through 6 one at a time. Read each one aloud the way a person would say it.",
+              "The sentence about the giant splash shows strong feeling and ends with an exclamation point. Think about the rest."
+            ],
+            "how": [
+              "Check each end mark against what the sentence does.",
+              "Sentence 3 tells what the lifeguard said, but it ends with a question mark. Sentence 5 asks, but it ends with a period.",
+              "Sentences 2, 4 and 6 have end marks that fit."
+            ],
+            "misconception": "A common mix-up is trusting the end mark instead of reading the sentence. Decide first what the sentence does.",
+            "why": "The answers are \"The lifeguard told us to walk, not run?\" and \"Can you swim across the whole pool.\" The first one tells something, so it needs a period. The second one asks something, so it needs a question mark. Sentences 2, 4 and 6 are correct.",
+            "like": [
+              "SK-GUM2-4-S06"
+            ]
+          },
+          {
+            "id": "SK-GUM2-4-C07",
+            "type": "ebsr",
+            "points": 2,
+            "dok": 3,
+            "std": [
+              "3.L.GC.1:R:use-end-punctuation-period-exclamation-point-que"
+            ],
+            "passages": [
+              "p2"
+            ],
+            "prompt": "This question has two parts. Answer Part A, then Part B.",
+            "partA": {
+              "prompt": "What kind of sentence is sentence 5?",
+              "choices": [
+                {
+                  "text": "An asking sentence, so it needs a question mark.",
+                  "correct": true
+                },
+                {
+                  "text": "A telling sentence, so the period is already correct."
+                },
+                {
+                  "text": "A feeling sentence, so it needs an exclamation point."
+                },
+                {
+                  "text": "A telling sentence, so it needs a comma instead."
+                }
+              ]
+            },
+            "partB": {
+              "prompt": "Which words in sentence 5 are the best clue?",
+              "choices": [
+                {
+                  "text": "Can you swim",
+                  "correct": true
+                },
+                {
+                  "text": "across the whole pool"
+                },
+                {
+                  "text": "the whole pool"
+                },
+                {
+                  "text": "swim across"
+                }
+              ]
+            },
+            "clue": "Read sentence 5 aloud. Decide whether the writer wants an answer from the reader.",
+            "hints": [
+              "Read sentence 5 aloud. Decide whether the writer wants an answer from the reader.",
+              "In Part B, look at how the sentence begins. A group of words at the start can show the kind of sentence.",
+              "The words the whole pool tell where, but they do not show the kind of sentence."
+            ],
+            "how": [
+              "Part A: the sentence wants the reader to say whether he or she can swim across the pool.",
+              "Part B: the first three words begin the sentence the way an asking sentence often begins.",
+              "The answers are \"An asking sentence, so it needs a question mark.\" and \"Can you swim\"."
+            ],
+            "misconception": "A common mix-up is picking words from the end of the sentence. The first words are the clue.",
+            "why": "Part A: \"An asking sentence, so it needs a question mark.\" Part B: \"Can you swim\". The sentence begins with words that ask, and it wants an answer, so it takes a question mark.",
+            "like": [
+              "SK-GUM2-4-S07"
+            ]
+          },
+          {
+            "id": "SK-GUM2-4-C08",
+            "type": "ms",
+            "points": 2,
+            "dok": 2,
+            "std": [
+              "3.L.GC.1:R:use-end-punctuation-period-exclamation-point-que"
+            ],
+            "passages": [],
+            "prompt": "Choose the TWO sentences that have the correct end mark.",
+            "pick": 2,
+            "choices": [
+              {
+                "text": "Will you help me hang this poster?",
+                "correct": true
+              },
+              {
+                "text": "I asked who made the cookies.",
+                "correct": true
+              },
+              {
+                "text": "What time does the show start."
+              },
+              {
+                "text": "The parade is coming down our street?"
+              },
+              {
+                "text": "Can we go outside when the rain stops."
+              }
+            ],
+            "clue": "Decide whether each sentence asks, tells or shows strong feeling. Then look at its end mark.",
+            "hints": [
+              "Decide whether each sentence asks, tells or shows strong feeling. Then look at its end mark.",
+              "Check all five sentences, including the ones that look right at first glance.",
+              "One choice has the word asked in it. Think about whether it asks the reader something."
+            ],
+            "how": [
+              "Say each sentence aloud and decide what kind it is.",
+              "Will you help me hang this poster asks, so a question mark fits. I asked who made the cookies tells, so a period fits.",
+              "What time does the show start and Can we go outside both ask, so they need question marks. The parade sentence tells, so it needs a period."
+            ],
+            "misconception": "A common mix-up is thinking a sentence is a question because it has a question word. I asked who made the cookies only tells.",
+            "why": "The answers are \"Will you help me hang this poster?\" and \"I asked who made the cookies.\" The first asks the listener, and the second tells what the speaker asked. The other three have the wrong end mark.",
+            "like": [
+              "SK-GUM2-4-S08"
+            ]
+          },
+          {
+            "id": "SK-GUM2-4-C09",
+            "type": "mc",
+            "points": 1,
+            "dok": 1,
+            "std": [
+              "3.L.GC.1:R:use-end-punctuation-period-exclamation-point-que"
+            ],
+            "passages": [],
+            "prompt": "Which end mark belongs at the end of this sentence? Where did the ball roll",
+            "choices": [
+              {
+                "text": "a question mark",
+                "correct": true
+              },
+              {
+                "text": "a period"
+              },
+              {
+                "text": "an exclamation point"
+              },
+              {
+                "text": "a comma"
+              }
+            ],
+            "clue": "Say the sentence aloud. Decide whether it tells, asks or shows strong feeling.",
+            "hints": [
+              "Say the sentence aloud. Decide whether it tells, asks or shows strong feeling.",
+              "Look at the first word. Think about what kind of sentence starts that way.",
+              "A comma is not an end mark. Think about the other choices."
+            ],
+            "how": [
+              "The sentence begins with Where, and the speaker wants an answer.",
+              "A sentence that asks for an answer ends with a question mark.",
+              "The answer is a question mark."
+            ],
+            "misconception": "A common mix-up is choosing a period for every sentence. Check whether the speaker wants an answer.",
+            "why": "The answer is a question mark. The sentence begins with where and asks for an answer. It does not tell a fact or show strong feeling.",
+            "like": [
+              "SK-GUM2-4-S09"
+            ]
+          },
+          {
+            "id": "SK-GUM2-4-C10",
+            "type": "mc",
+            "points": 1,
+            "dok": 3,
+            "std": [
+              "3.L.GC.1:R:use-end-punctuation-period-exclamation-point-que"
+            ],
+            "passages": [
+              "p2"
+            ],
+            "prompt": "Zoe says sentence 8 needs a question mark because Dan asked something. Which reply explains the mistake in her idea?",
+            "choices": [
+              {
+                "text": "The sentence tells what Dan asked and does not ask the reader, so it takes a period.",
+                "correct": true
+              },
+              {
+                "text": "A sentence about asking shows strong feeling, so it takes an exclamation point."
+              },
+              {
+                "text": "Any sentence with the word what in it takes a question mark, so Zoe is right."
+              },
+              {
+                "text": "A sentence in the middle of a story never takes a question mark, so the period is right."
+              }
+            ],
+            "clue": "Think about who is asking in sentence 8. Is it the writer or someone in the story?",
+            "hints": [
+              "Think about who is asking in sentence 8. Is it the writer or someone in the story?",
+              "Read sentence 8 aloud. Does it want you to give an answer?",
+              "Strong feeling sentences usually have a word like hooray or wow. Think about the other choices."
+            ],
+            "how": [
+              "Sentence 8 says that Dan asked something. The writer is not asking the reader.",
+              "A sentence that reports a question tells what happened, so it ends with a period.",
+              "The answer is \"The sentence tells what Dan asked and does not ask the reader, so it takes a period.\""
+            ],
+            "misconception": "A common mix-up is seeing a question word and adding a question mark. The sentence has to ask the reader something.",
+            "why": "The answer is \"The sentence tells what Dan asked and does not ask the reader, so it takes a period.\" Sentence 8 reports a question, so it is a telling sentence. Zoe's idea would work only if the writer were asking.",
+            "like": [
+              "SK-GUM2-4-S10"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Set 3",
+        "items": [
+          {
+            "id": "SK-GUM2-4-C11",
+            "type": "hottext",
+            "points": 2,
+            "dok": 2,
+            "std": [
+              "3.L.GC.1:R:use-end-punctuation-period-exclamation-point-que"
+            ],
+            "passages": [
+              "p3"
+            ],
+            "prompt": "Look at sentences 3 through 7. Pick the TWO sentences that end with the right mark.",
+            "targets": [
+              "p3:1:3",
+              "p3:2:1",
+              "p3:2:2",
+              "p3:2:3",
+              "p3:2:4"
+            ],
+            "answer": [
+              "p3:1:3",
+              "p3:2:2"
+            ],
+            "pick": 2,
+            "clue": "Decide whether each sentence tells, asks or shows strong feeling. Then check its end mark.",
+            "hints": [
+              "Decide whether each sentence tells, asks or shows strong feeling. Then check its end mark.",
+              "Go through sentences 3 through 7 in order. Say each one aloud and listen to what it does.",
+              "Two of the sentences ask something, and one of those ends with a period. Think about the rest."
+            ],
+            "how": [
+              "Match each sentence's job to its end mark.",
+              "Sentence 3 shows strong joy with Hooray and ends with an exclamation point. Sentence 5 tells and ends with a period.",
+              "Sentences 4 and 7 ask but end with periods, and sentence 6 only tells what the writer wonders but ends with a question mark."
+            ],
+            "misconception": "A common mix-up is picking a sentence that looks right once you have found one mistake. Check all five sentences.",
+            "why": "The answers are \"Hooray, the sack race had finally begun!\" and \"My team crossed the finish line first.\" The first shows strong joy, and the second tells. Sentences 4 and 7 ask and need question marks. Sentence 6 only tells what the writer wonders, so it needs a period.",
+            "like": [
+              "SK-GUM2-4-S11"
+            ]
+          },
+          {
+            "id": "SK-GUM2-4-C12",
+            "type": "dropdown",
+            "points": 1,
+            "dok": 2,
+            "std": [
+              "3.L.GC.1:R:use-end-punctuation-period-exclamation-point-que"
+            ],
+            "passages": [
+              "p3"
+            ],
+            "prompt": "Sentence 4 has the wrong end mark. Choose the mark that fixes it.",
+            "text": "Do you know who won the big relay race{0}",
+            "slots": [
+              {
+                "options": [
+                  ".",
+                  "?",
+                  "!"
+                ],
+                "answer": 1
+              }
+            ],
+            "clue": "Decide whether the sentence tells, asks or shows strong feeling. Read it as a speaker would say it.",
+            "hints": [
+              "Decide whether the sentence tells, asks or shows strong feeling. Read it as a speaker would say it.",
+              "Ask whether the speaker wants an answer from the person listening.",
+              "A strong feeling sentence often starts with a word such as wow or oops. Look at how this sentence starts."
+            ],
+            "how": [
+              "The speaker wants the listener to say whether he or she knows who won.",
+              "A sentence that wants an answer is an asking sentence, so it ends with a question mark.",
+              "The answer is the question mark (?)."
+            ],
+            "misconception": "A common mix-up is choosing a period because the sentence is long. Length does not decide the end mark.",
+            "why": "The answer is the question mark (?). The sentence begins with Do and wants an answer. It shows no strong feeling, so it does not take an exclamation point.",
+            "like": [
+              "SK-GUM2-4-S12"
+            ]
+          },
+          {
+            "id": "SK-GUM2-4-C13",
+            "type": "dropdown",
+            "points": 2,
+            "dok": 2,
+            "std": [
+              "3.L.GC.1:R:use-end-punctuation-period-exclamation-point-que"
+            ],
+            "passages": [],
+            "prompt": "Pick the right mark for each blank.",
+            "text": "Maya wonders when the bus will come{0} When will it get here{1}",
+            "slots": [
+              {
+                "options": [
+                  ".",
+                  "?",
+                  "!"
+                ],
+                "answer": 0
+              },
+              {
+                "options": [
+                  ".",
+                  "?",
+                  "!"
+                ],
+                "answer": 1
+              }
+            ],
+            "clue": "The two sentences are about the same idea, but they do different jobs. Decide what each one does.",
+            "hints": [
+              "The two sentences are about the same idea, but they do different jobs. Decide what each one does.",
+              "For each blank, ask whether the sentence tells about a question or asks the question itself.",
+              "A strong feeling sentence often starts with a word such as wow or oops. Look at how these sentences start."
+            ],
+            "how": [
+              "The first sentence tells what Maya wonders. The second sentence asks the question out loud.",
+              "A telling sentence ends with a period, and an asking sentence ends with a question mark.",
+              "The answers are the period (.) and the question mark (?)."
+            ],
+            "misconception": "A common mix-up is giving both sentences the same mark because they share the same idea. They do different jobs.",
+            "why": "The answers are the period (.) and the question mark (?). The first sentence tells what Maya wonders, and the second sentence asks when the bus will arrive. Neither shows strong feeling.",
+            "like": [
+              "SK-GUM2-4-S13"
+            ]
+          },
+          {
+            "id": "SK-GUM2-4-C14",
+            "type": "hottext",
+            "points": 1,
+            "dok": 2,
+            "std": [
+              "3.L.GC.1:R:use-end-punctuation-period-exclamation-point-que"
+            ],
+            "passages": [],
+            "prompt": "These sentences have no end marks. Select the one that should end with an exclamation point.",
+            "options": [
+              "Whoa, the roller coaster just dropped",
+              "The roller coaster opens at ten",
+              "Does the roller coaster have a loop",
+              "My brother asked if the roller coaster was fast",
+              "We rode the roller coaster twice"
+            ],
+            "answer": [
+              0
+            ],
+            "pick": 1,
+            "clue": "Think about how the speaker feels in each one. Which one is said with a strong feeling?",
+            "hints": [
+              "Think about how the speaker feels in each one. Which one is said with a strong feeling?",
+              "Look at the first word of each sentence. Some words are shouted when people are surprised.",
+              "A sentence that begins with Does asks a question. Think about the rest."
+            ],
+            "how": [
+              "Say each sentence aloud as a person would. Which one would be said loudly?",
+              "Whoa is a word people shout when they are surprised.",
+              "The answer is \"Whoa, the roller coaster just dropped\". The other four tell or ask."
+            ],
+            "misconception": "A common mix-up is putting an exclamation point on every sentence about something exciting. The words must show strong feeling.",
+            "why": "The answer is \"Whoa, the roller coaster just dropped\" because it shows surprise. The sentence with Does asks, and the other three tell.",
+            "like": [
+              "SK-GUM2-4-S14"
+            ]
+          },
+          {
+            "id": "SK-GUM2-4-C15",
+            "type": "mc",
+            "points": 1,
+            "dok": 3,
+            "std": [
+              "3.L.GC.1:R:use-end-punctuation-period-exclamation-point-que"
+            ],
+            "passages": [],
+            "prompt": "Lee says, \"Any sentence with the word asked needs a question mark.\" Which sentence shows that Lee is wrong?",
+            "choices": [
+              {
+                "text": "Mr. Cole asked us to line up at the door.",
+                "correct": true
+              },
+              {
+                "text": "Who asked for the red marker from the supply closet?"
+              },
+              {
+                "text": "Did anyone ask where the extra glue sticks went?"
+              },
+              {
+                "text": "What did Mr. Cole ask us to bring to the picnic?"
+              }
+            ],
+            "clue": "To show an idea is wrong, find a sentence where it does not work. Look at the end mark of each sentence that has the word asked.",
+            "hints": [
+              "To show an idea is wrong, find a sentence where it does not work. Look at the end mark of each sentence that has the word asked.",
+              "Find the sentence that has the word asked in it. Then decide whether that sentence asks the reader something.",
+              "Three of the choices are questions with a question mark. Think about whether those can show Lee is wrong."
+            ],
+            "how": [
+              "Lee's idea says the word asked always means a question mark. Look for asked in a sentence that does not ask.",
+              "Mr. Cole asked us to line up only tells what Mr. Cole did. It tells, so it ends with a period.",
+              "The answer is \"Mr. Cole asked us to line up at the door.\""
+            ],
+            "misconception": "A common mix-up is thinking a clue word decides the end mark. What the whole sentence does decides it.",
+            "why": "The answer is \"Mr. Cole asked us to line up at the door.\" It has the word asked, but it only tells what happened, so it ends with a period. That proves Lee wrong. The other three sentences ask questions.",
+            "like": [
+              "SK-GUM2-4-S15"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  similar: [
+    {
+      "id": "SK-GUM2-4-S01",
+      "type": "hottext",
+      "points": 1,
+      "dok": 2,
+      "std": [
+        "3.L.GC.1:R:use-end-punctuation-period-exclamation-point-que"
+      ],
+      "passages": [],
+      "prompt": "Tap the line that ends with the wrong mark.",
+      "options": [
+        "Our class is learning about volcanoes.",
+        "What time does recess begin?",
+        "Hooray, I finished my whole book!",
+        "My aunt asked if I wanted pancakes?",
+        "Who knows where my glove went?"
+      ],
+      "answer": [
+        3
+      ],
+      "pick": 1,
+      "clue": "Decide whether each line tells, asks or shows strong feeling. Then check how it ends.",
+      "hints": [
+        "Decide whether each line tells, asks or shows strong feeling. Then check how it ends.",
+        "Read each line the way a person would say it. Check the mark at the end.",
+        "The line about volcanoes tells something and ends with a period. Think about the rest."
+      ],
+      "how": [
+        "Look at what each line does and compare it with its mark.",
+        "My aunt asked if I wanted pancakes reports a question, but the writer is not asking the reader.",
+        "The answer is \"My aunt asked if I wanted pancakes?\" It should end with a period."
+      ],
+      "misconception": "A common mix-up is trusting a question mark because the line has the word asked. The line only tells.",
+      "why": "The answer is \"My aunt asked if I wanted pancakes?\" It tells what the aunt asked, so it needs a period. The other lines have marks that fit.",
+      "like": [
+        "SK-GUM2-4-P3"
+      ]
+    },
+    {
+      "id": "SK-GUM2-4-S02",
+      "type": "match",
+      "points": 2,
+      "dok": 2,
+      "std": [
+        "3.L.GC.1:R:use-end-punctuation-period-exclamation-point-que"
+      ],
+      "passages": [],
+      "prompt": "Decide which mark finishes each line, then sort the lines.",
+      "cols": [
+        "Ends with .",
+        "Ends with ?",
+        "Ends with !"
+      ],
+      "rows": [
+        {
+          "text": "Our teacher reads aloud every Friday",
+          "answer": 0
+        },
+        {
+          "text": "Are the crayons in the red box",
+          "answer": 1
+        },
+        {
+          "text": "Whoa, that kite is flying so high",
+          "answer": 2
+        },
+        {
+          "text": "Pablo wonders where the crayons went",
+          "answer": 0
+        },
+        {
+          "text": "Can we borrow your jump rope",
+          "answer": 1
+        },
+        {
+          "text": "Oh my, the ice cream is melting",
+          "answer": 2
+        }
+      ],
+      "clue": "For each line, ask whether it tells, asks or shows strong feeling. A line that only tells about a question is a telling line.",
+      "hints": [
+        "For each line, ask whether it tells, asks or shows strong feeling. A line that only tells about a question is a telling line.",
+        "Say each line aloud. Think about whether the speaker wants an answer or is feeling something strongly.",
+        "Lines that begin with Whoa or Oh my show feeling. Use that to sort some of the lines first."
+      ],
+      "how": [
+        "Decide what each line does.",
+        "Our teacher reads aloud every Friday and Pablo wonders where the crayons went tell. Are the crayons in the red box and Can we borrow your jump rope ask.",
+        "Whoa, that kite is flying so high and Oh my, the ice cream is melting show strong feeling."
+      ],
+      "misconception": "A common mix-up is putting Pablo wonders where the crayons went with the questions. It only tells.",
+      "why": "Our teacher reads aloud every Friday and Pablo wonders where the crayons went tell, so they end with a period. Are the crayons in the red box and Can we borrow your jump rope ask, so they end with a question mark. Whoa, that kite is flying so high and Oh my, the ice cream is melting show strong feeling, so they end with an exclamation point.",
+      "like": [
+        "SK-GUM2-4-P4"
+      ]
+    },
+    {
+      "id": "SK-GUM2-4-S03",
+      "type": "mc",
+      "points": 1,
+      "dok": 2,
+      "std": [
+        "3.L.GC.1:R:use-end-punctuation-period-exclamation-point-que"
+      ],
+      "passages": [
+        "p4"
+      ],
+      "prompt": "Which fix is needed at the end of sentence 8?",
+      "choices": [
+        {
+          "text": "It wants an answer, so it should end with (?) instead.",
+          "correct": true
+        },
+        {
+          "text": "It names a place, so it should end with (!) instead."
+        },
+        {
+          "text": "It tells a fact, so it should end with (,) instead."
+        },
+        {
+          "text": "It is long, so it should end with two (.) marks."
+        }
+      ],
+      "clue": "Read sentence 8 aloud. Decide whether it tells, asks or shows strong feeling.",
+      "hints": [
+        "Read sentence 8 aloud. Decide whether it tells, asks or shows strong feeling.",
+        "Look at the first word of sentence 8 and think about what kind of sentence begins that way.",
+        "A comma is not an end mark. Think about the other choices."
+      ],
+      "how": [
+        "Sentence 8 begins with Where and asks the reader about the rabbit.",
+        "A sentence that asks gets the mark that shows a question.",
+        "The answer is \"It wants an answer, so it should end with (?) instead.\""
+      ],
+      "misconception": "A common mix-up is thinking a sentence with a place word tells where something is. This one asks where.",
+      "why": "The answer is \"It wants an answer, so it should end with (?) instead.\" Sentence 8 begins with Where and asks about the rabbit. It does not show strong feeling, and a comma is not an end mark.",
+      "like": [
+        "SK-GUM2-4-C03"
+      ]
+    },
+    {
+      "id": "SK-GUM2-4-S04",
+      "type": "dropdown",
+      "points": 1,
+      "dok": 2,
+      "std": [
+        "3.L.GC.1:R:use-end-punctuation-period-exclamation-point-que"
+      ],
+      "passages": [
+        "p4"
+      ],
+      "prompt": "Which mark should finish sentence 6?",
+      "text": "Omar asked if the rabbit was real{0}",
+      "slots": [
+        {
+          "options": [
+            ".",
+            "?",
+            "!"
+          ],
+          "answer": 0
+        }
+      ],
+      "clue": "Read the sentence aloud. Decide who wants an answer in it.",
+      "hints": [
+        "Read the sentence aloud. Decide who wants an answer in it.",
+        "Ask whether the writer is putting a question to the reader, or telling about something Omar did.",
+        "A strong feeling sentence often starts with a word such as wow or oops. Look at how this sentence begins."
+      ],
+      "how": [
+        "The sentence says what Omar asked. The writer is not asking the reader.",
+        "A sentence that reports a question tells what happened, so it ends with a period.",
+        "The answer is the period (.)."
+      ],
+      "misconception": "A common mix-up is adding a question mark whenever a sentence mentions a question. This sentence only tells.",
+      "why": "The answer is the period (.). The sentence tells what Omar asked and does not ask the reader. It shows no strong feeling, so it does not take an exclamation point.",
+      "like": [
+        "SK-GUM2-4-C04"
+      ]
+    },
+    {
+      "id": "SK-GUM2-4-S05",
+      "type": "mc",
+      "points": 1,
+      "dok": 3,
+      "std": [
+        "3.L.GC.1:R:use-end-punctuation-period-exclamation-point-que"
+      ],
+      "passages": [
+        "p4"
+      ],
+      "prompt": "A friend says sentence 6 is fine because Omar was curious. How could you explain the problem?",
+      "choices": [
+        {
+          "text": "The writer only reports a question and does not ask one, so (.) is the right way to stop.",
+          "correct": true
+        },
+        {
+          "text": "Being curious makes a sentence a question, so Omar's sentence keeps its (?) at the end."
+        },
+        {
+          "text": "Curious feelings are strong feelings, so Omar's sentence needs (!) at the end instead."
+        },
+        {
+          "text": "Any sentence in the middle of a paragraph can finish with any mark at all, so it is fine."
+        }
+      ],
+      "clue": "Think about who is speaking and who is being asked. Is the writer putting a question to you?",
+      "hints": [
+        "Think about who is speaking and who is being asked. Is the writer putting a question to you?",
+        "Say sentence 6 aloud and listen for whether it wants an answer from you.",
+        "Strong feeling sentences usually start with a word like hooray or whew. Think about the other choices."
+      ],
+      "how": [
+        "Sentence 5 puts a question to the reader. Sentence 6 says that Omar asked one.",
+        "A sentence that reports a question tells what happened, so it stops with a period.",
+        "The answer is \"The writer only reports a question and does not ask one, so (.) is the right way to stop.\""
+      ],
+      "misconception": "A common mix-up is thinking a curious person makes a sentence a question. The writer must ask the reader.",
+      "why": "The answer is \"The writer only reports a question and does not ask one, so (.) is the right way to stop.\" Sentence 5 asks directly, but sentence 6 only reports what Omar asked.",
+      "like": [
+        "SK-GUM2-4-C05"
+      ]
+    },
+    {
+      "id": "SK-GUM2-4-S06",
+      "type": "hottext",
+      "points": 2,
+      "dok": 2,
+      "std": [
+        "3.L.GC.1:R:use-end-punctuation-period-exclamation-point-que"
+      ],
+      "passages": [
+        "p5"
+      ],
+      "prompt": "In sentences 2 to 6, two lines have the wrong mark at the end. Tap them.",
+      "targets": [
+        "p5:1:2",
+        "p5:1:3",
+        "p5:2:1",
+        "p5:2:2",
+        "p5:2:3"
+      ],
+      "answer": [
+        "p5:1:3",
+        "p5:2:2"
+      ],
+      "pick": 2,
+      "clue": "Decide what each sentence does. Then compare that with the mark that finishes it.",
+      "hints": [
+        "Decide what each sentence does. Then compare that with the mark that finishes it.",
+        "Take sentences 2 to 6 in order. Read each aloud and ask whether it wants an answer.",
+        "Sentence 4 tells what Nina did and ends with a period. Think about the rest."
+      ],
+      "how": [
+        "Read each sentence aloud and check its job against its mark.",
+        "Sentence 3 tells how deep the holes should be but ends with a question mark. Sentence 5 asks about the sunflowers but ends with a period.",
+        "Sentences 2, 4 and 6 are correct."
+      ],
+      "misconception": "A common mix-up is stopping after the first mistake. Check each sentence in the range.",
+      "why": "The answers are \"Mr. Lee showed us how deep each hole should be?\" and \"Will the sunflowers grow taller than the fence.\" The first only tells, so it needs a period. The second asks, so it needs a question mark. Sentences 2, 4 and 6 are correct.",
+      "like": [
+        "SK-GUM2-4-C06"
+      ]
+    },
+    {
+      "id": "SK-GUM2-4-S07",
+      "type": "ebsr",
+      "points": 2,
+      "dok": 3,
+      "std": [
+        "3.L.GC.1:R:use-end-punctuation-period-exclamation-point-que"
+      ],
+      "passages": [
+        "p5"
+      ],
+      "prompt": "Answer the first half, then use your answer for the second half.",
+      "partA": {
+        "prompt": "How should sentence 3 be described?",
+        "choices": [
+          {
+            "text": "Telling: it states what Mr. Lee did, so it should finish with (.)",
+            "correct": true
+          },
+          {
+            "text": "Asking: it wants an answer, so (?) is the right mark."
+          },
+          {
+            "text": "Feeling: it shows surprise, so it should finish with (!)"
+          },
+          {
+            "text": "Asking: it wants an answer, so it should finish with (,)"
+          }
+        ]
+      },
+      "partB": {
+        "prompt": "Which group of words in sentence 3 best supports your answer?",
+        "choices": [
+          {
+            "text": "Mr. Lee showed us",
+            "correct": true
+          },
+          {
+            "text": "how deep each hole"
+          },
+          {
+            "text": "each hole should be"
+          },
+          {
+            "text": "deep each hole should"
+          }
+        ]
+      },
+      "clue": "Read sentence 3 aloud. Decide whether the writer is asking something or reporting what happened.",
+      "hints": [
+        "Read sentence 3 aloud. Decide whether the writer is asking something or reporting what happened.",
+        "In the second half, look for the words that say who did what. A sentence that reports an action tells.",
+        "The words how deep may look like an asking phrase, but think about whether they begin the sentence."
+      ],
+      "how": [
+        "Part A: the sentence says what Mr. Lee did, and it does not want an answer.",
+        "Part B: the first words name the person and the action, which is how a telling sentence often begins.",
+        "The answers are \"Telling: it states what Mr. Lee did, so it should finish with (.)\" and \"Mr. Lee showed us\"."
+      ],
+      "misconception": "A common mix-up is picking how deep because it looks like a question word. The clue is who did what.",
+      "why": "Part A: \"Telling: it states what Mr. Lee did, so it should finish with (.)\" Part B: \"Mr. Lee showed us\". The sentence says what Mr. Lee did and does not ask the reader anything.",
+      "like": [
+        "SK-GUM2-4-C07"
+      ]
+    },
+    {
+      "id": "SK-GUM2-4-S08",
+      "type": "ms",
+      "points": 2,
+      "dok": 2,
+      "std": [
+        "3.L.GC.1:R:use-end-punctuation-period-exclamation-point-que"
+      ],
+      "passages": [],
+      "prompt": "Tap the two sentences below that are punctuated correctly.",
+      "pick": 2,
+      "choices": [
+        {
+          "text": "Did the bus leave without us?",
+          "correct": true
+        },
+        {
+          "text": "My mom wonders where the keys went.",
+          "correct": true
+        },
+        {
+          "text": "Where did we park the car."
+        },
+        {
+          "text": "The snow is falling very fast?"
+        },
+        {
+          "text": "Could you pass me the salt."
+        }
+      ],
+      "clue": "Say each sentence aloud. Decide whether it asks, tells or shows strong feeling, and then look at its mark.",
+      "hints": [
+        "Say each sentence aloud. Decide whether it asks, tells or shows strong feeling, and then look at its mark.",
+        "Check every sentence, including the ones that look right at first glance.",
+        "One sentence has the word wonders in it. Think about whether it asks the reader something."
+      ],
+      "how": [
+        "Decide what each sentence does.",
+        "Did the bus leave without us asks, so the question mark fits. My mom wonders where the keys went tells, so the period fits.",
+        "Where did we park the car and Could you pass me the salt ask, so they need question marks. The snow sentence tells, so it needs a period."
+      ],
+      "misconception": "A common mix-up is thinking the word wonders turns a sentence into a question. It only tells what someone thinks.",
+      "why": "The answers are \"Did the bus leave without us?\" and \"My mom wonders where the keys went.\" The first asks, and the second tells what the mom wonders. The other three have the wrong mark.",
+      "like": [
+        "SK-GUM2-4-C08"
+      ]
+    },
+    {
+      "id": "SK-GUM2-4-S09",
+      "type": "mc",
+      "points": 1,
+      "dok": 1,
+      "std": [
+        "3.L.GC.1:R:use-end-punctuation-period-exclamation-point-que"
+      ],
+      "passages": [],
+      "prompt": "Which mark finishes this sentence? Our dog loves to chase the mail truck",
+      "choices": [
+        {
+          "text": ".",
+          "correct": true
+        },
+        {
+          "text": "?"
+        },
+        {
+          "text": "!"
+        },
+        {
+          "text": ","
+        }
+      ],
+      "clue": "Say the sentence aloud. Decide whether it tells, asks or shows strong feeling.",
+      "hints": [
+        "Say the sentence aloud. Decide whether it tells, asks or shows strong feeling.",
+        "Look at the first word and the last word. Think about what kind of sentence this is.",
+        "A comma is not an end mark. Think about the other choices."
+      ],
+      "how": [
+        "The sentence tells what the dog loves to do.",
+        "A telling sentence ends with a period.",
+        "The answer is a period."
+      ],
+      "misconception": "A common mix-up is picking an exclamation point for anything about a dog. The sentence must show strong feeling.",
+      "why": "The answer is a period. The sentence tells a fact about the dog. It does not ask anything and shows no strong feeling.",
+      "like": [
+        "SK-GUM2-4-C09"
+      ]
+    },
+    {
+      "id": "SK-GUM2-4-S10",
+      "type": "mc",
+      "points": 1,
+      "dok": 3,
+      "std": [
+        "3.L.GC.1:R:use-end-punctuation-period-exclamation-point-que"
+      ],
+      "passages": [
+        "p5"
+      ],
+      "prompt": "A classmate wants to change the end of sentence 7 to (?). What should you tell her?",
+      "choices": [
+        {
+          "text": "Keep the (.) because the sentence reports Sam's question instead of asking one.",
+          "correct": true
+        },
+        {
+          "text": "Change it to (?) because every sentence about waiting for plants asks something."
+        },
+        {
+          "text": "Change it to (?) because the word when always starts a question in a sentence."
+        },
+        {
+          "text": "Change it to (!) because waiting for a sprout to appear is very exciting."
+        }
+      ],
+      "clue": "Think about who is asking and who is being asked. Is the writer putting a question to you?",
+      "hints": [
+        "Think about who is asking and who is being asked. Is the writer putting a question to you?",
+        "Read sentence 7 aloud. Does it want an answer from you?",
+        "Strong feeling needs a word that shows it. Look for such a word in the sentence."
+      ],
+      "how": [
+        "Sentence 7 says that Sam asked something. The writer is not asking the reader.",
+        "A sentence that reports a question is a telling sentence, so it ends with a period.",
+        "The answer is \"Keep the (.) because the sentence reports Sam's question instead of asking one.\""
+      ],
+      "misconception": "A common mix-up is thinking the word when always starts a question. Here it sits inside a telling sentence.",
+      "why": "The answer is \"Keep the (.) because the sentence reports Sam's question instead of asking one.\" The word when can begin a question, but here it sits inside a telling sentence.",
+      "like": [
+        "SK-GUM2-4-C10"
+      ]
+    },
+    {
+      "id": "SK-GUM2-4-S11",
+      "type": "hottext",
+      "points": 2,
+      "dok": 2,
+      "std": [
+        "3.L.GC.1:R:use-end-punctuation-period-exclamation-point-que"
+      ],
+      "passages": [
+        "p6"
+      ],
+      "prompt": "Which two lines among 3 to 7 end with the right mark? Tap them.",
+      "targets": [
+        "p6:1:3",
+        "p6:1:4",
+        "p6:2:1",
+        "p6:2:2",
+        "p6:2:3"
+      ],
+      "answer": [
+        "p6:1:3",
+        "p6:2:1"
+      ],
+      "pick": 2,
+      "clue": "Decide what each sentence does. Then compare it with the mark at the end.",
+      "hints": [
+        "Decide what each sentence does. Then compare it with the mark at the end.",
+        "Say each line aloud, one at a time, and listen to whether it asks, tells or shows strong feeling.",
+        "Two lines in this group ask a question but end with a period. Think about the rest."
+      ],
+      "how": [
+        "Match what each line does with its mark.",
+        "Whew shows relief and fits an exclamation point. The Tigers sentence tells and fits a period.",
+        "The lines about who kicked and about winning ask and need question marks. The coach line only tells."
+      ],
+      "misconception": "A common mix-up is choosing a line just because it ends in a familiar mark. Compare the mark with the job.",
+      "why": "The answers are \"Whew, our goalie caught the ball with both hands!\" and \"The Tigers scored a goal late in the game.\" The first shows relief, and the second tells. Sentences 4 and 7 ask and need question marks. Sentence 6 only tells and needs a period.",
+      "like": [
+        "SK-GUM2-4-C11"
+      ]
+    },
+    {
+      "id": "SK-GUM2-4-S12",
+      "type": "dropdown",
+      "points": 1,
+      "dok": 2,
+      "std": [
+        "3.L.GC.1:R:use-end-punctuation-period-exclamation-point-que"
+      ],
+      "passages": [
+        "p6"
+      ],
+      "prompt": "Which mark should finish sentence 4?",
+      "text": "Who kicked the ball straight into the net{0}",
+      "slots": [
+        {
+          "options": [
+            ".",
+            "?",
+            "!"
+          ],
+          "answer": 1
+        }
+      ],
+      "clue": "Read the sentence aloud. Decide whether the speaker wants an answer.",
+      "hints": [
+        "Read the sentence aloud. Decide whether the speaker wants an answer.",
+        "Look at the first word. Think about what kind of sentence begins that way.",
+        "A strong feeling sentence often starts with a word such as wow or oops. Look at how this sentence begins."
+      ],
+      "how": [
+        "The speaker wants someone to say who kicked the ball.",
+        "A sentence that wants an answer is an asking sentence, so it ends with a question mark.",
+        "The answer is the question mark (?)."
+      ],
+      "misconception": "A common mix-up is choosing a period because the sentence is about a past event. Check whether it wants an answer.",
+      "why": "The answer is the question mark (?). The sentence begins with Who and wants an answer. It shows no strong feeling, so it does not take an exclamation point.",
+      "like": [
+        "SK-GUM2-4-C12"
+      ]
+    },
+    {
+      "id": "SK-GUM2-4-S13",
+      "type": "dropdown",
+      "points": 2,
+      "dok": 2,
+      "std": [
+        "3.L.GC.1:R:use-end-punctuation-period-exclamation-point-que"
+      ],
+      "passages": [],
+      "prompt": "Fill in the mark that ends each sentence.",
+      "text": "Tess wants to know why the sky turns red{0} Why does the sky turn red{1}",
+      "slots": [
+        {
+          "options": [
+            ".",
+            "?",
+            "!"
+          ],
+          "answer": 0
+        },
+        {
+          "options": [
+            ".",
+            "?",
+            "!"
+          ],
+          "answer": 1
+        }
+      ],
+      "clue": "The two sentences share one idea but do different jobs. Decide what each one does.",
+      "hints": [
+        "The two sentences share one idea but do different jobs. Decide what each one does.",
+        "For each blank, ask whether the sentence reports a question or puts the question itself.",
+        "A strong feeling sentence often starts with a word such as wow or oops. Look at how these sentences start."
+      ],
+      "how": [
+        "The first sentence reports what Tess wants to know. The second asks the question out loud.",
+        "A telling sentence ends with a period, and an asking sentence ends with a question mark.",
+        "The answers are the period (.) and the question mark (?)."
+      ],
+      "misconception": "A common mix-up is giving both sentences the same mark because the idea is the same. They do different jobs.",
+      "why": "The answers are the period (.) and the question mark (?). The first sentence tells what Tess wants to know, and the second asks why the sky turns red. Neither shows strong feeling.",
+      "like": [
+        "SK-GUM2-4-C13"
+      ]
+    },
+    {
+      "id": "SK-GUM2-4-S14",
+      "type": "hottext",
+      "points": 1,
+      "dok": 2,
+      "std": [
+        "3.L.GC.1:R:use-end-punctuation-period-exclamation-point-que"
+      ],
+      "passages": [],
+      "prompt": "Tap the line that needs an exclamation point at the end.",
+      "options": [
+        "Oh no, the pizza is burning",
+        "The pizza comes with extra cheese",
+        "Is the pizza ready yet",
+        "I wonder how long the pizza will bake",
+        "Dad baked the pizza for supper"
+      ],
+      "answer": [
+        0
+      ],
+      "pick": 1,
+      "clue": "Think about how the speaker feels in each line. Which one is said with a strong feeling?",
+      "hints": [
+        "Think about how the speaker feels in each line. Which one is said with a strong feeling?",
+        "Look at the first word of each line. Some words are called out when people are worried or surprised.",
+        "A line that begins with Is asks a question. Think about the rest."
+      ],
+      "how": [
+        "Say each line aloud as a person would. Which one would be said loudly?",
+        "Oh no is what people say when they are worried.",
+        "The answer is \"Oh no, the pizza is burning\". The other four tell or ask."
+      ],
+      "misconception": "A common mix-up is adding an exclamation point to a line that is only about something tasty. The words must show strong feeling.",
+      "why": "The answer is \"Oh no, the pizza is burning\" because it shows worry. The line with Is asks, and the other three tell.",
+      "like": [
+        "SK-GUM2-4-C14"
+      ]
+    },
+    {
+      "id": "SK-GUM2-4-S15",
+      "type": "mc",
+      "points": 1,
+      "dok": 3,
+      "std": [
+        "3.L.GC.1:R:use-end-punctuation-period-exclamation-point-que"
+      ],
+      "passages": [],
+      "prompt": "Ana says, \"Whenever a sentence has the word who in it, it ends with a question mark.\" Which sentence proves Ana wrong?",
+      "choices": [
+        {
+          "text": "My neighbor knows who built the old clock tower.",
+          "correct": true
+        },
+        {
+          "text": "Who built the old clock tower on Main Street?"
+        },
+        {
+          "text": "Who told you the story about the clock tower?"
+        },
+        {
+          "text": "Can anyone tell me who painted the old clock tower?"
+        }
+      ],
+      "clue": "To show an idea is wrong, find a sentence where it does not hold. Look at the end mark of each sentence that has who.",
+      "hints": [
+        "To show an idea is wrong, find a sentence where it does not hold. Look at the end mark of each sentence that has who.",
+        "All four sentences have the word who in them. Decide which of them asks the reader something.",
+        "Three choices ask a question and end with a question mark. Think about whether those can prove Ana wrong."
+      ],
+      "how": [
+        "Ana's idea says the word who always means a question mark. Look for who in a sentence that does not ask.",
+        "My neighbor knows who built the tower only tells what the neighbor knows. It ends with a period.",
+        "The answer is \"My neighbor knows who built the old clock tower.\""
+      ],
+      "misconception": "A common mix-up is thinking a question word always makes a question. What the whole sentence does decides.",
+      "why": "The answer is \"My neighbor knows who built the old clock tower.\" It has the word who, but it only tells what the neighbor knows, so it ends with a period. That proves Ana wrong.",
+      "like": [
+        "SK-GUM2-4-C15"
+      ]
+    }
+  ],
+  addons: {
+    "SK-GUM2-4-P1": {
+      "hints": [
+        "Decide whether the speaker is telling something, asking something or showing strong feeling.",
+        "Read the sentence aloud the way a person would say it. Does the speaker want an answer?",
+        "A strong feeling sentence often starts with a word such as wow or oops. Look at how this sentence starts."
+      ],
+      "how": [
+        "Say the sentence aloud. The speaker wants someone to help.",
+        "A sentence that begins with Can you asks for something.",
+        "The answer is the question mark (?)."
+      ],
+      "misconception": "A common mix-up is thinking a request is a telling sentence. A sentence that begins with Can you asks."
+    },
+    "SK-GUM2-4-P2": {
+      "hints": [
+        "Think about how the speaker feels. Is it a plain fact or a strong feeling?",
+        "Look at the first word. Some words are said when people feel pain or surprise.",
+        "Nothing in the sentence asks for an answer. Think about the other two marks."
+      ],
+      "how": [
+        "The speaker says Ouch, which shows a strong feeling.",
+        "A sentence that shows strong feeling ends with an exclamation point.",
+        "The answer is the exclamation point (!)."
+      ],
+      "misconception": "A common mix-up is choosing a period because the sentence tells what happened. The word Ouch shows strong feeling."
+    },
+    "SK-GUM2-4-P3": {
+      "hints": [
+        "Decide whether each sentence tells, asks or shows strong feeling. Then check its end mark.",
+        "Read each sentence aloud the way a person would say it. Check the mark at the end.",
+        "The sentence about the spider asks a question and ends with a question mark. Think about the rest."
+      ],
+      "how": [
+        "Look at what each sentence does and compare it with its mark.",
+        "Who left the milk out on the counter asks for an answer, but it ends with a period.",
+        "The answer is \"Who left the milk out on the counter.\" It should end with a question mark."
+      ],
+      "misconception": "A common mix-up is skipping a question that looks long. Any sentence that asks for an answer needs a question mark."
+    },
+    "SK-GUM2-4-P4": {
+      "hints": [
+        "For each sentence, ask whether it tells, asks or shows strong feeling. A sentence that only tells about a question is a telling sentence.",
+        "Say each sentence aloud. Think about whether the speaker wants an answer or is feeling something strongly.",
+        "Sentences that begin with Hooray or Oh no show feeling. Use that to sort some of the sentences first."
+      ],
+      "how": [
+        "Decide what each sentence does.",
+        "The bakery closes at noon and I wonder what time it is tell. Do owls sleep during the day and Is your birthday in June ask.",
+        "Hooray, we won the spelling bee and Oh no, our boat floated away show strong feeling."
+      ],
+      "misconception": "A common mix-up is putting I wonder what time it is with the questions. It only tells."
+    },
+    "SK-GUM2-4-P5": {
+      "hints": [
+        "Decide what kind of sentence each choice is: telling, asking or showing strong feeling.",
+        "Then check whether its end mark fits what the sentence does.",
+        "A sentence that begins with When or Did asks a question. Think about the other choices."
+      ],
+      "how": [
+        "Decide what each sentence does.",
+        "Please wipe your feet before you come inside tells someone what to do, so a period fits.",
+        "The answer is \"Please wipe your feet before you come inside.\" The sentences with When and Did ask, and the bread sentence tells."
+      ],
+      "misconception": "A common mix-up is thinking a polite request must end with a question mark. A sentence that begins with Please usually tells."
+    }
+  },
+  /* B7b:core:end */
   test: [
     { id: "SK-GUM2-4-T1", type: "dropdown", points: 1, dok: 1, passages: [],
       prompt: "Choose the correct end mark for the sentence.",
