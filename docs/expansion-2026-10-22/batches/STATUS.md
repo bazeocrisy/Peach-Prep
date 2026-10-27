@@ -51,12 +51,12 @@
 | B4 | 3.T.SS.1.d | ACCEPTED | B4-review-SS1d2b.md (third review; open SHOULDs: key-longest cue in C10/C01/S01/S03, S14 multiset 0.23, C07/C08 "jobs" wording, C04 hay) |
 | B4–B9 | see 04-content-plan.md | NOT STARTED | — |
 | B6 | 3.L.GC.1:M:use-apostrophes-in-contractions-and-singular-pos | NOT ACCEPTED: awaiting independent review | B6-author-log.md; authored, not reviewed |
-| B6 | 3.L.GC.1:M:form-and-use-irregular-plural-nouns | NOT ACCEPTED: awaiting independent review | B6-author-log.md; authored, not reviewed |
-| B6 | 3.L.GC.1:M:form-and-use-the-past-tense-of-irregular-verbs | NOT ACCEPTED: awaiting independent review | B6-author-log.md; authored, not reviewed |
-| B6 | 3.L.GC.1:M:use-coordinating-conjunctions-to-join-words-phra | NOT ACCEPTED: awaiting independent review | B6-author-log.md; authored, not reviewed |
+| B6 | 3.L.GC.1:M:form-and-use-irregular-plural-nouns | ACCEPTED | Third independent review ACCEPT; see B6-review.md and B6-author-log.md (open NOTEs/SHOULDs listed there) |
+| B6 | 3.L.GC.1:M:form-and-use-the-past-tense-of-irregular-verbs | ACCEPTED | Third independent review ACCEPT; see B6-review.md and B6-author-log.md (open NOTEs/SHOULDs listed there) |
+| B6 | 3.L.GC.1:M:use-coordinating-conjunctions-to-join-words-phra | ACCEPTED | Third independent review ACCEPT; see B6-review.md and B6-author-log.md (open NOTEs/SHOULDs listed there) |
 | B6 | 3.L.GC.1:M:use-collective-and-abstract-nouns | NOT ACCEPTED: awaiting independent review | B6-author-log.md; authored, not reviewed |
 | B6 | 3.L.GC.1:M:use-reflexive-pronouns | NOT ACCEPTED: awaiting independent review | B6-author-log.md; authored, not reviewed |
-| B6 | 3.L.GC.1:M:use-commas-with-coordinating-conjunctions-to-joi | NOT ACCEPTED: awaiting independent review | B6-author-log.md; authored, not reviewed |
+| B6 | 3.L.GC.1:M:use-commas-with-coordinating-conjunctions-to-joi | ACCEPTED | Third independent review ACCEPT; see B6-review.md and B6-author-log.md (open NOTEs/SHOULDs listed there) |
 | B6 | 3.L.GC.1:M:use-hyphens-to-divide-words-at-line-breaks | NOT ACCEPTED: awaiting independent review | B6-author-log.md; authored, not reviewed |
 
 "Accepted" means an independent reviewer blind-solved the items, found every key defensible, and found no hint ladder that leaves only the key (see AUTHOR-BRIEF rules). It does not mean the lesson has been tried by a child.

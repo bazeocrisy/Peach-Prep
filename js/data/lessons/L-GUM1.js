@@ -1171,7 +1171,7 @@ PP.addLesson({
         "3.L.GC.1:R:use-nouns-and-verbs-to-form-complete-thoughts-in"
       ],
       passages: ["p5"],
-      prompt: "Lina says number 8 and number 11 are broken, since neither names a person. Is she right?",
+      prompt: "Lina claims lines 8 and 11 are both broken because neither one names anybody. Is she right?",
       choices: [
         {
           text: "Just 11. Number 8 is an order, so you are the one told.",
@@ -1181,10 +1181,10 @@ PP.addLesson({
           text: "Yes. A line cannot stand without a person's name inside."
         },
         {
-          text: "Just 8. Number 11 has an action word, so it is done."
+          text: "Just 8. Line 11 holds an action word, which settles it."
         },
         {
-          text: "No. Each has an action word, so each is done."
+          text: "No. Each holds an action word, so each stands alone."
         }
       ],
       clue: "Compare the two sentences. Ask what each one has and what each one lacks.",
@@ -3054,7 +3054,171 @@ PP.addLesson({
       "Asked whole questions, not just one word (for example, \"Where did you buy the milk?\", not just \"Where?\")."
     ]
   },
-  passages: [],
+  passages: [
+    /* B7a:passages:start */
+    {
+      id: "p1",
+      title: "Mr. Dale the Crossing Guard",
+      byline: "A third grader's draft",
+      genre: "Student draft (informational)",
+      draft: true,
+      paragraphs: [
+        [
+          "(1) Mr. Dale is the crossing guard at our school.",
+          "(2) He stands at the corner of Pine Street.",
+          "(3) He starts his shift at seven o'clock.",
+          "(4) He wears a bright orange vest so drivers can see him."
+        ],
+        [
+          "(5) He holds up a round red sign to stop the cars.",
+          "(6) My cousin Tara crosses the street with him every day.",
+          "(7) She says he always waves at the children with a big smile."
+        ],
+        [
+          "(8) Last week our class wrote thank-you cards for him.",
+          "(9) We left the cards in a basket by the front door.",
+          "(10) Mr. Dale read them at lunch in the cafeteria.",
+          "(11) He said they made his whole week."
+        ]
+      ]
+    },
+    {
+      id: "p2",
+      title: "Story Hour at the Library",
+      byline: "A third grader's draft",
+      genre: "Student draft (news)",
+      draft: true,
+      paragraphs: [
+        [
+          "(1) The Maple Street Library hosts a story hour for kids.",
+          "(2) It begins at ten o'clock on Saturday morning.",
+          "(3) Ms. Reyes reads the stories out loud.",
+          "(4) She picks funny books because the little kids love to laugh."
+        ],
+        [
+          "(5) The kids sit on soft rugs near the window.",
+          "(6) Each child can borrow three books for a week.",
+          "(7) A helper stamps the books with a red stamp.",
+          "(8) Parents wait in the lobby with cups of tea."
+        ],
+        [
+          "(9) Last week forty children came to listen.",
+          "(10) The library will add a second story hour in June.",
+          "(11) So many families asked for more stories that Ms. Reyes said yes.",
+          "(12) Everyone is welcome to join us."
+        ]
+      ]
+    },
+    {
+      id: "p3",
+      title: "Our Trip to the Salt Marsh",
+      byline: "A third grader's draft",
+      genre: "Student draft (narrative)",
+      draft: true,
+      paragraphs: [
+        [
+          "(1) Our class visited the salt marsh near Tybee Island.",
+          "(2) We rode a yellow bus for one hour.",
+          "(3) A guide named Mr. Kim met us at the dock.",
+          "(4) He gave each of us a net and a bucket."
+        ],
+        [
+          "(5) We scooped up tiny crabs and snails from the mud.",
+          "(6) Mr. Kim said the marsh is a nursery for baby fish.",
+          "(7) Baby fish hide in the tall grass so big fish cannot catch them."
+        ],
+        [
+          "(8) We put every animal back in the water when we finished.",
+          "(9) Lunch was at noon under the oak trees.",
+          "(10) I learned that crabs walk sideways to move quickly.",
+          "(11) The ride back to school felt much shorter."
+        ]
+      ]
+    },
+    {
+      id: "p4",
+      title: "Swim Meet at the Pool",
+      byline: "A third grader's draft",
+      genre: "Student draft (informational)",
+      draft: true,
+      paragraphs: [
+        [
+          "(1) The Columbus Dolphins swim team had a meet on Saturday.",
+          "(2) Coach Rivera warmed up the swimmers in the shallow lane.",
+          "(3) The first race began at nine o'clock.",
+          "(4) Jada won the freestyle race by half a second."
+        ],
+        [
+          "(5) She kicked hard so she could pass the swimmer in the next lane.",
+          "(6) Her little brother held up a sign because he was so proud of her.",
+          "(7) He sat in the bleachers beside the snack table.",
+          "(8) Their parents cheered loudly from the top row."
+        ],
+        [
+          "(9) After the meet, every swimmer got a blue ribbon.",
+          "(10) The team ate pizza in the parking lot.",
+          "(11) Coach Rivera said everyone worked hard.",
+          "(12) The next meet is in two weeks."
+        ]
+      ]
+    },
+    {
+      id: "p5",
+      title: "Pancake Morning",
+      byline: "A third grader's draft",
+      genre: "Student draft (narrative)",
+      draft: true,
+      paragraphs: [
+        [
+          "(1) Every Sunday my dad makes pancakes for our family.",
+          "(2) He mixes the batter in a big yellow bowl.",
+          "(3) My sister Nia cracks the eggs.",
+          "(4) She likes to hear the shells snap."
+        ],
+        [
+          "(5) The pan sizzles on the stove for two minutes.",
+          "(6) Dad flips each pancake with a wide spatula.",
+          "(7) We top them with sliced bananas and honey.",
+          "(8) Grandma says honey tastes best on warm pancakes."
+        ],
+        [
+          "(9) We eat at the round table on the back porch.",
+          "(10) After breakfast, I wash the plates in the sink.",
+          "(11) Nia dries them with a soft towel.",
+          "(12) We finish before the church bells ring.",
+          "(13) The whole kitchen smells sweet until noon."
+        ]
+      ]
+    },
+    {
+      id: "p6",
+      title: "Fixing My Bike",
+      byline: "A third grader's draft",
+      genre: "Student draft (how-to)",
+      draft: true,
+      paragraphs: [
+        [
+          "(1) My bike had a flat tire on Thursday.",
+          "(2) Uncle Marcus showed me how to fix it in the garage.",
+          "(3) First, we took the wheel off the frame.",
+          "(4) Then he pulled out the tube with a small tool."
+        ],
+        [
+          "(5) We found a tiny nail stuck in the tire.",
+          "(6) Uncle Marcus put a patch over the hole.",
+          "(7) He said the glue must dry for five minutes."
+        ],
+        [
+          "(8) Next, I pumped air into the tube.",
+          "(9) We slid the wheel back onto the bike.",
+          "(10) I rode down the driveway to test it.",
+          "(11) Now I can ride to the park again.",
+          "(12) I felt proud of my hard work."
+        ]
+      ]
+    }
+    /* B7a:passages:end */
+  ],
   practice: [
     { id: "SK-GUM1-3-P1", type: "dropdown", points: 1, dok: 1, passages: [],
       stem: "Answer: My party is on Saturday.",
@@ -3104,6 +3268,1187 @@ PP.addLesson({
       clue: "The answer tells the way the job got done. Which question word asks about a way?",
       why: "The answer is How. With a patch kit tells the way they fixed the tire, and how asks about the way something happens." }
   ],
+  /* B7a:core:start */
+  /* ---------- Expansion 2026-10-22, batch B7a (GUM Reinforce, first half) ----------
+     core: fifteen items in three sets of five. { ref } reuses a practice item; the other practice items stay in Practice Together.
+     Passages are used only by core and the similar bank; none is used by test.
+     Author log: docs/expansion-2026-10-22/batches/B7a-author-log.md. NOT ACCEPTED: needs independent review. */
+  core: {
+    rev: "1",
+    sets: [
+      {
+        title: "Set 1",
+        items: [
+          {
+            ref: "SK-GUM1-3-P3"
+          },
+          {
+            ref: "SK-GUM1-3-P4"
+          },
+          {
+            id: "SK-GUM1-3-C03",
+            type: "mc",
+            points: 1,
+            dok: 2,
+            std: [
+              "3.L.GC.1:R:use-interrogatives-to-ask-questions-in-speech"
+            ],
+            passages: ["p1"],
+            prompt: "Which question does sentence 2 answer?",
+            choices: [
+              {
+                text: "Where does Mr. Dale stand every day?",
+                correct: true
+              },
+              {
+                text: "When does Mr. Dale stand beside the busy street?"
+              },
+              {
+                text: "Why does Mr. Dale stand in the road all morning?"
+              },
+              {
+                text: "How does Mr. Dale stand with the stop sign?"
+              }
+            ],
+            clue: "Find the information sentence 2 gives. Ask whether it is about a person, a place, a time, a reason or a way.",
+            hints: [
+              "Find the information sentence 2 gives. Ask whether it is about a person, a place, a time, a reason or a way.",
+              "Read the end of sentence 2 again. Say what kind of information those last words give.",
+              "Sentence 2 does not explain why Mr. Dale does anything, so one question can be ruled out."
+            ],
+            how: [
+              "Find the new information in sentence 2: at the corner of Pine Street.",
+              "Those words name a place. The question word for a place is where.",
+              "The answer is \"Where does Mr. Dale stand every day?\" Sentence 2 gives no time, no reason and no way, so the other questions are not answered."
+            ],
+            misconception: "A common mix-up is picking the question that sounds most like the sentence. First decide what kind of information the sentence gives.",
+            why: "The answer is \"Where does Mr. Dale stand every day?\" The words at the corner of Pine Street name a place, and where asks about a place. The other question words ask about a time, a reason or a way."
+          },
+          {
+            id: "SK-GUM1-3-C04",
+            type: "dropdown",
+            points: 1,
+            dok: 2,
+            std: [
+              "3.L.GC.1:R:use-interrogatives-to-ask-questions-in-speech"
+            ],
+            passages: ["p1"],
+            prompt: "Sentence 4 gives the answer to a question. Choose the question word that completes that question.",
+            text: "{0} does Mr. Dale wear a bright orange vest?",
+            slots: [
+              {
+                options: ["Why","When","Where"],
+                answer: 0
+              }
+            ],
+            clue: "Find the information that sentence 4 adds. Decide if it is a person, a place, a time, a reason or a way.",
+            hints: [
+              "Find the information that sentence 4 adds. Decide if it is a person, a place, a time, a reason or a way.",
+              "Read the part of sentence 4 that comes after the word vest. Say what it explains.",
+              "Sentence 4 does not give a time of day, so one choice can be ruled out."
+            ],
+            how: [
+              "Find the new information in sentence 4: so drivers can see him.",
+              "Those words explain the reason Mr. Dale wears the vest. The question word for a reason is why.",
+              "The answer is Why. Sentence 4 names no time and no place, so when and where do not fit."
+            ],
+            misconception: "A common mix-up is choosing the question word for the topic, here the vest, instead of the kind of information the sentence gives.",
+            why: "The answer is Why. The words so drivers can see him give a reason, and why asks for a reason. Sentence 4 names no time and no place."
+          },
+          {
+            id: "SK-GUM1-3-C05",
+            type: "mc",
+            points: 1,
+            dok: 3,
+            std: [
+              "3.L.GC.1:R:use-interrogatives-to-ask-questions-in-speech"
+            ],
+            passages: ["p1"],
+            stem: "Rob wrote: Where does Mr. Dale start his shift?  Mia wrote: When does Mr. Dale start his shift?",
+            prompt: "Sentence 3 says He starts his shift at seven o'clock. Whose question does it answer, and why?",
+            choices: [
+              {
+                text: "Mia's, since seven o'clock names a time and when asks about a time.",
+                correct: true
+              },
+              {
+                text: "Rob's, since a shift is a kind of place and where asks about a place."
+              },
+              {
+                text: "Both, since any question about Mr. Dale's shift has this sentence as its answer."
+              },
+              {
+                text: "Neither, since sentence 3 can only answer a question that begins with who."
+              }
+            ],
+            clue: "Decide what kind of information sentence 3 gives. Then see which question asks for that kind.",
+            hints: [
+              "Decide what kind of information sentence 3 gives. Then see which question asks for that kind.",
+              "Look at the words at seven o'clock. Think about what they tell about the shift.",
+              "One choice says every question about the shift fits. A sentence answers only a question that asks for the information it gives."
+            ],
+            how: [
+              "Find the new information in sentence 3: at seven o'clock.",
+              "Seven o'clock is a time, and when asks about a time. A shift is not a place, so where does not fit.",
+              "The answer is \"Mia's, since seven o'clock names a time and when asks about a time.\"",
+              "A sentence answers only the question that asks for the kind of information it gives."
+            ],
+            misconception: "A common mix-up is thinking a sentence answers every question about the same topic. It answers only the question that matches the information it gives.",
+            why: "The answer is \"Mia's, since seven o'clock names a time and when asks about a time.\" Seven o'clock names a time, so Mia's question with when fits. A shift is not a place, so Rob's question with where does not."
+          }
+        ]
+      },
+      {
+        title: "Set 2",
+        items: [
+          {
+            id: "SK-GUM1-3-C06",
+            type: "hottext",
+            points: 2,
+            dok: 2,
+            std: [
+              "3.L.GC.1:R:use-interrogatives-to-ask-questions-in-speech"
+            ],
+            passages: ["p2"],
+            prompt: "Among sentences 2 to 8, select the TWO shown sentences that answer a where question.",
+            targets: ["p2:1:2","p2:1:4","p2:2:1","p2:2:2","p2:2:4"],
+            answer: ["p2:2:1","p2:2:4"],
+            pick: 2,
+            clue: "A where question asks about a place. Look for words that name a spot.",
+            hints: [
+              "A where question asks about a place. Look for words that name a spot.",
+              "Read each shown sentence and ask whether it tells a spot where someone or something is.",
+              "Sentence 6 tells how long a child can keep the books, so it does not name a place."
+            ],
+            how: [
+              "A where question asks about a place, so look for sentences that name a spot.",
+              "Sentence 5 says the kids sit on soft rugs near the window. Near the window is a place.",
+              "Sentence 8 says parents wait in the lobby. The lobby is a place.",
+              "Sentences 2, 4 and 6 give a time, a reason and a length of time, so they answer other questions."
+            ],
+            misconception: "A common mix-up is picking a sentence just because it mentions an object. A where answer has to name a place.",
+            why: "The answers are sentences 5 and 8: \"The kids sit on soft rugs near the window.\" and \"Parents wait in the lobby with cups of tea.\". Near the window and in the lobby both name places. The other shown sentences give a time, a reason and a length of time."
+          },
+          {
+            id: "SK-GUM1-3-C07",
+            type: "ebsr",
+            points: 2,
+            dok: 3,
+            std: [
+              "3.L.GC.1:R:use-interrogatives-to-ask-questions-in-speech"
+            ],
+            passages: ["p2"],
+            prompt: "This question has two parts. Answer Part A, then Part B.",
+            partA: {
+              prompt: "What kind of information does sentence 4 give?",
+              choices: [
+                {
+                  text: "A reason for something Ms. Reyes does",
+                  correct: true
+                },
+                {
+                  text: "A place where Ms. Reyes reads the stories"
+                },
+                {
+                  text: "A time when the story hour begins"
+                },
+                {
+                  text: "A person who comes to the story hour"
+                }
+              ]
+            },
+            partB: {
+              prompt: "Which question does sentence 4 answer?",
+              choices: [
+                {
+                  text: "Why does Ms. Reyes pick funny books?",
+                  correct: true
+                },
+                {
+                  text: "Where does Ms. Reyes pick funny books?"
+                },
+                {
+                  text: "When does Ms. Reyes pick funny books?"
+                },
+                {
+                  text: "How does Ms. Reyes pick funny books?"
+                }
+              ]
+            },
+            clue: "Read sentence 4 and decide what it adds to the story hour.",
+            hints: [
+              "Read sentence 4 and decide what it adds to the story hour.",
+              "For Part A, name the kind of information. For Part B, find the question word that asks for that kind.",
+              "Sentence 4 contains no time words, so one question in Part B can be ruled out."
+            ],
+            how: [
+              "Part A: sentence 4 says she picks funny books because the little kids love to laugh. That explains why she does something, so it is a reason.",
+              "Part B: the question word that asks for a reason is why.",
+              "The other questions ask for a place, a time or a way, and sentence 4 gives none of those."
+            ],
+            misconception: "A common mix-up is answering Part B first. Name the kind of information in Part A, then pick the matching question word.",
+            why: "Part A: \"A reason for something Ms. Reyes does\" Part B: \"Why does Ms. Reyes pick funny books?\" The words because the little kids love to laugh give a reason, so the question needs why. The other question words ask for a place, a time or a way."
+          },
+          {
+            id: "SK-GUM1-3-C08",
+            type: "dropdown",
+            points: 2,
+            dok: 2,
+            std: [
+              "3.L.GC.1:R:use-interrogatives-to-ask-questions-in-speech"
+            ],
+            passages: [],
+            stem: "Answer 1: Tomorrow morning.  Answer 2: Our neighbor, Mr. Hale.",
+            prompt: "Each answer fits one question. Choose a question word for each blank.",
+            text: "{0} will the mechanic fix the truck?  {1} will pay for it?",
+            slots: [
+              {
+                options: ["When","Where","Why"],
+                answer: 0
+              },
+              {
+                options: ["Who","Where","How"],
+                answer: 0
+              }
+            ],
+            clue: "Match each answer to a blank. Ask what kind of information each answer gives.",
+            hints: [
+              "Match each answer to a blank. Ask what kind of information each answer gives.",
+              "Look at the first answer, then at the second answer. Decide for each whether it names a person, a place, a time, a reason or a way.",
+              "Neither answer gives a reason, so one choice in the first blank can be ruled out."
+            ],
+            how: [
+              "The first answer is Tomorrow morning. That names a time, so the first blank needs when.",
+              "The second answer is Our neighbor, Mr. Hale. That names a person, so the second blank needs who.",
+              "The answers are When and Who. Read each back: When will the mechanic fix the truck? Who will pay for it?"
+            ],
+            misconception: "A common mix-up is using the same question word in both blanks. Each answer gives its own kind of information.",
+            why: "The answers are When and Who. Tomorrow morning names a time, and when asks about a time. Our neighbor, Mr. Hale is a person, and who asks about a person."
+          },
+          {
+            id: "SK-GUM1-3-C09",
+            type: "match",
+            points: 2,
+            dok: 2,
+            std: [
+              "3.L.GC.1:R:use-interrogatives-to-ask-questions-in-speech"
+            ],
+            passages: [],
+            prompt: "Match each answer to the question word that asks for it.",
+            cols: ["Who","Where","When","Why"],
+            rows: [
+              {
+                text: "My aunt Rita",
+                answer: 0
+              },
+              {
+                text: "In the cafeteria",
+                answer: 1
+              },
+              {
+                text: "At half past two",
+                answer: 2
+              },
+              {
+                text: "Because it was cold",
+                answer: 3
+              }
+            ],
+            clue: "Ask what kind of information each answer gives: a person, a place, a time or a reason.",
+            hints: [
+              "Ask what kind of information each answer gives: a person, a place, a time or a reason.",
+              "Match the answers you feel surest about first. Then match the rest.",
+              "One answer begins with a word that signals a reason. Think about which question word asks for a reason."
+            ],
+            how: [
+              "Find the kind of information in each answer.",
+              "My aunt Rita is a person, so it fits who. In the cafeteria is a place, so it fits where.",
+              "At half past two is a time, so it fits when. Because it was cold is a reason, so it fits why."
+            ],
+            misconception: "A common mix-up is matching by length or by how the answer sounds. Match by the kind of information the answer gives.",
+            why: "My aunt Rita is a person, in the cafeteria is a place, at half past two is a time and because it was cold is a reason."
+          },
+          {
+            id: "SK-GUM1-3-C10",
+            type: "mc",
+            points: 1,
+            dok: 3,
+            std: [
+              "3.L.GC.1:R:use-interrogatives-to-ask-questions-in-speech"
+            ],
+            passages: ["p3"],
+            prompt: "Sentences 6 and 7 are both about baby fish. Which question can sentence 7 answer but sentence 6 cannot?",
+            choices: [
+              {
+                text: "Why do baby fish hide in the tall grass?",
+                correct: true
+              },
+              {
+                text: "What is the marsh, according to Mr. Kim?"
+              },
+              {
+                text: "What did Mr. Kim say about the marsh and baby fish?"
+              },
+              {
+                text: "Who said the marsh is a nursery for baby fish?"
+              }
+            ],
+            clue: "Test each question against sentence 6 first. Then test it against sentence 7.",
+            hints: [
+              "Test each question against sentence 6 first. Then test it against sentence 7.",
+              "Sentence 6 reports what Mr. Kim said. Sentence 7 tells what baby fish do and adds something more.",
+              "One question asks who said it, and sentence 6 already names Mr. Kim."
+            ],
+            how: [
+              "Test each question against sentence 6. It says Mr. Kim said the marsh is a nursery for baby fish.",
+              "Sentence 6 already answers who said it, what the marsh is, and what Mr. Kim said.",
+              "Sentence 7 also tells why baby fish hide: so big fish cannot catch them. Sentence 6 gives no reason.",
+              "The answer is \"Why do baby fish hide in the tall grass?\""
+            ],
+            misconception: "A common mix-up is picking a question that sounds like it fits sentence 7 without checking whether sentence 6 already answers it.",
+            why: "The answer is \"Why do baby fish hide in the tall grass?\" Sentence 7 gives a reason: so big fish cannot catch them. Sentence 6 gives no reason, but it already answers the other three questions."
+          }
+        ]
+      },
+      {
+        title: "Set 3",
+        items: [
+          {
+            id: "SK-GUM1-3-C11",
+            type: "hottext",
+            points: 2,
+            dok: 2,
+            std: [
+              "3.L.GC.1:R:use-interrogatives-to-ask-questions-in-speech"
+            ],
+            passages: ["p3"],
+            prompt: "Among sentences 3 to 9, select the TWO shown sentences that answer a when question.",
+            targets: ["p3:1:3","p3:1:4","p3:2:3","p3:3:1","p3:3:2"],
+            answer: ["p3:3:1","p3:3:2"],
+            pick: 2,
+            clue: "A when question asks about a time. Look for words that set a moment in time.",
+            hints: [
+              "A when question asks about a time. Look for words that set a moment in time.",
+              "Check each shown sentence for a word that tells when something happened or was planned.",
+              "Sentence 7 gives a reason and no moment in time."
+            ],
+            how: [
+              "A when question asks about a time, so look for words that set a moment.",
+              "Sentence 8 says the class put the animals back when they finished. That sets the moment.",
+              "Sentence 9 says lunch was at noon. Noon is a time of day.",
+              "Sentences 3, 4 and 7 tell who and where, what, and why, so they answer other questions."
+            ],
+            misconception: "A common mix-up is picking a sentence just because it tells what happened. A when answer has to name a time.",
+            why: "The answers are sentences 8 and 9: \"We put every animal back in the water when we finished.\" and \"Lunch was at noon under the oak trees.\". When we finished and at noon both set a time. The other shown sentences tell who and where, what, and why."
+          },
+          {
+            id: "SK-GUM1-3-C12",
+            type: "dropdown",
+            points: 1,
+            dok: 2,
+            std: [
+              "3.L.GC.1:R:use-interrogatives-to-ask-questions-in-speech"
+            ],
+            passages: ["p3"],
+            prompt: "Sentence 4 answers the question below. Choose the question word that completes it.",
+            text: "{0} did Mr. Kim give each student?",
+            slots: [
+              {
+                options: ["What","When","Where"],
+                answer: 0
+              }
+            ],
+            clue: "Find the new information in sentence 4. Decide whether it names a thing, a place, a time or a person.",
+            hints: [
+              "Find the new information in sentence 4. Decide whether it names a thing, a place, a time or a person.",
+              "Read the words that come after gave. Decide which kind of information they name.",
+              "Sentence 4 gives no time of day, so one choice can be ruled out."
+            ],
+            how: [
+              "Find the new information in sentence 4: a net and a bucket.",
+              "A net and a bucket are things. The question word for a thing is what.",
+              "The answer is What. Sentence 4 names no time and no place, so when and where do not fit."
+            ],
+            misconception: "A common mix-up is picking the question word for the place in the sentence before it. Check the sentence the question asks about.",
+            why: "The answer is What. A net and a bucket are things, and what asks about a thing. Sentence 4 names no time and no place."
+          },
+          {
+            id: "SK-GUM1-3-C13",
+            type: "ms",
+            points: 2,
+            dok: 2,
+            std: [
+              "3.L.GC.1:R:use-interrogatives-to-ask-questions-in-speech"
+            ],
+            passages: [],
+            prompt: "Choose the TWO questions that ask for a reason.",
+            pick: 2,
+            choices: [
+              {
+                text: "Why do owls sleep during the day?",
+                correct: true
+              },
+              {
+                text: "Why did the pond freeze so early this year?",
+                correct: true
+              },
+              {
+                text: "How many owls live in the old barn?"
+              },
+              {
+                text: "Where do owls build their nests in winter?"
+              },
+              {
+                text: "When do owls start to hunt at night?"
+              }
+            ],
+            clue: "A reason question asks for the cause of something. Check which question words ask for a cause.",
+            hints: [
+              "A reason question asks for the cause of something. Check which question words ask for a cause.",
+              "Read each choice and name the question word that begins it.",
+              "How many asks about an amount, so that choice is not asking for a reason."
+            ],
+            how: [
+              "Name the question word that begins each choice.",
+              "Why asks for a reason, and two choices begin with it: Why do owls sleep during the day? and Why did the pond freeze so early this year?",
+              "How many asks about an amount, where asks about a place and when asks about a time."
+            ],
+            misconception: "A common mix-up is picking a question because it is about the same animal. Pick by the question word and the kind of answer it wants.",
+            why: "The answers are \"Why do owls sleep during the day?\" and \"Why did the pond freeze so early this year?\". Both questions begin with why, which asks for a reason. The other three ask about an amount, a place and a time."
+          },
+          {
+            id: "SK-GUM1-3-C14",
+            type: "hottext",
+            points: 1,
+            dok: 2,
+            std: [
+              "3.L.GC.1:R:use-interrogatives-to-ask-questions-in-speech"
+            ],
+            passages: [],
+            stem: "A volunteer lists four questions for the town mural project.",
+            prompt: "Select the question that asks about a person.",
+            options: [
+              "Who painted the mural on the old wall?",
+              "Where will the new mural go next spring?",
+              "When did the painting crew arrive today?",
+              "Why is the paint on the sign so bright?"
+            ],
+            answer: [0],
+            pick: 1,
+            clue: "Say a possible answer for each question aloud. Then ask what kind of answer you gave.",
+            hints: [
+              "Say a possible answer for each question aloud. Then ask what kind of answer you gave.",
+              "Read the first word of each question and think about what it asks for.",
+              "A question that begins with the word why asks for a reason, so it cannot be about a person."
+            ],
+            how: [
+              "Say a possible answer to each question.",
+              "The answer to Who painted the mural on the old wall? would be a name, like Ms. Ortiz.",
+              "The other answers would be a place, a time and a reason."
+            ],
+            misconception: "A common mix-up is picking the question that mentions a worker or a crew. Pick the question whose answer is a person.",
+            why: "The answer is \"Who painted the mural on the old wall?\". Who asks about a person. The other questions ask for a place, a time and a reason."
+          },
+          {
+            id: "SK-GUM1-3-C15",
+            type: "mc",
+            points: 1,
+            dok: 3,
+            std: [
+              "3.L.GC.1:R:use-interrogatives-to-ask-questions-in-speech"
+            ],
+            passages: [],
+            prompt: "Jo says, \"The word what can only ask about a thing, never an action.\" Which question shows that Jo is wrong?",
+            choices: [
+              {
+                text: "What did the otters do when we came near?",
+                correct: true
+              },
+              {
+                text: "What is floating in the pond by the dock?"
+              },
+              {
+                text: "What did the guide hand to each of the students?"
+              },
+              {
+                text: "What kind of shell is lying on the sand?"
+              }
+            ],
+            clue: "To show that a rule is wrong, find an example that breaks it. Check what each question asks about.",
+            hints: [
+              "To show that a rule is wrong, find an example that breaks it. Check what each question asks about.",
+              "Ask what the answer to each question would be: a thing, or something that someone or something does.",
+              "The question about what was handed out asks about a thing, so it follows Jo's rule."
+            ],
+            how: [
+              "Jo says what only asks about things. Look for a question where the answer is an action.",
+              "Floating things, handed things and shells are all things. They follow Jo's rule.",
+              "The answer is \"What did the otters do when we came near?\" The answer would be an action, like swam away."
+            ],
+            misconception: "A common mix-up is thinking what always asks about an object. It can also ask about an action.",
+            why: "The answer is \"What did the otters do when we came near?\" The answer to the otter question would be an action, so what can ask about an action. The other questions ask about things."
+          }
+        ]
+      }
+    ]
+  },
+  similar: [
+    {
+      id: "SK-GUM1-3-S01",
+      type: "mc",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.L.GC.1:R:use-interrogatives-to-ask-questions-in-speech"
+      ],
+      passages: [],
+      stem: "After the Saturday scrimmage, Coach Lee keeps a blue bin of forgotten gloves, scarves and water bottles beside the equipment shed.",
+      prompt: "He finds one lone red mitten and hopes to learn the spot where it turned up. Pick the best question for him to ask the players.",
+      choices: [
+        {
+          text: "Where did this mitten turn up?",
+          correct: true
+        },
+        {
+          text: "How many gloves are in the blue bin?"
+        },
+        {
+          text: "What color is the equipment shed behind us?"
+        },
+        {
+          text: "Why are the scarves so dusty after the game?"
+        }
+      ],
+      clue: "Work out what kind of information the coach wants.",
+      hints: [
+        "Work out what kind of information the coach wants.",
+        "Read the sentence about the mitten again. Find the words that tell what he hopes to learn.",
+        "Coach Lee is not asking about an amount, so one question can be ruled out."
+      ],
+      how: [
+        "Find what the coach wants to learn: the spot where the mitten turned up.",
+        "A spot is a place, and the question word for a place is where.",
+        "The answer is \"Where did this mitten turn up?\" The other questions ask about an amount, a thing and a reason."
+      ],
+      misconception: "A common mix-up is picking the question that mentions gloves or the shed. Pick the question word that asks for what the coach wants.",
+      why: "The answer is \"Where did this mitten turn up?\" A spot is a place, and where asks about a place. The other questions ask about an amount, a thing and a reason.",
+      like: ["SK-GUM1-3-P3"]
+    },
+    {
+      id: "SK-GUM1-3-S02",
+      type: "hottext",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.L.GC.1:R:use-interrogatives-to-ask-questions-in-speech"
+      ],
+      passages: [],
+      stem: "Mr. Fox, the bus driver, reads five notes from his clipboard before the long drive to the city zoo.",
+      prompt: "Tap the TWO lines that ask for a time.",
+      options: [
+        "When does the bus leave for the zoo?",
+        "When will the pizza arrive tonight?",
+        "How many seats are left on the bus today?",
+        "What is inside the lunch cooler?",
+        "Why is the lake frozen today?"
+      ],
+      answer: [0,1],
+      pick: 2,
+      clue: "A time question asks for a moment, like a clock time or a day.",
+      hints: [
+        "A time question asks for a moment, like a clock time or a day.",
+        "Look at the first word of every line and think about what it asks for.",
+        "One line begins with two words that ask about an amount."
+      ],
+      how: [
+        "Look at the first word of each line.",
+        "The lines about the bus and the pizza both begin with when, which asks for a time.",
+        "The other lines ask for an amount, a thing and a reason."
+      ],
+      misconception: "A common mix-up is picking a line because it has a time word like today. Pick by the question word at the start.",
+      why: "The answers are \"When does the bus leave for the zoo?\" and \"When will the pizza arrive tonight?\". When asks for a time, and two lines begin with it. The other lines ask for an amount, a thing and a reason.",
+      like: ["SK-GUM1-3-P4"]
+    },
+    {
+      id: "SK-GUM1-3-S03",
+      type: "mc",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.L.GC.1:R:use-interrogatives-to-ask-questions-in-speech"
+      ],
+      passages: ["p4"],
+      stem: "Parents at the pool read the swim team's recap in the printed program.",
+      prompt: "Sentence 3 is the reply to a reader's question. Pick that question.",
+      choices: [
+        {
+          text: "When did the first swim race of the morning begin?",
+          correct: true
+        },
+        {
+          text: "Where did the Dolphins warm up before the first race?"
+        },
+        {
+          text: "Why was the first race of the day cut so short?"
+        },
+        {
+          text: "Who started the first race for the swim team?"
+        }
+      ],
+      clue: "Decide what kind of information sentence 3 gives. Then pick the question that asks for it.",
+      hints: [
+        "Decide what kind of information sentence 3 gives. Then pick the question that asks for it.",
+        "Look at the last words of sentence 3 and think about what they tell.",
+        "Sentence 3 does not say why anything happens, so one question can be ruled out."
+      ],
+      how: [
+        "Find the new information in sentence 3: at nine o'clock.",
+        "Nine o'clock is a time, and the question word for a time is when.",
+        "The answer is \"When did the first swim race of the morning begin?\" Sentence 3 names no place, no reason and no person."
+      ],
+      misconception: "A common mix-up is choosing a question just because it uses the words first race. Look at the information the sentence gives.",
+      why: "The answer is \"When did the first swim race of the morning begin?\" Nine o'clock names a time, and when asks about a time. Sentence 3 does not name a place, a reason or a person.",
+      like: ["SK-GUM1-3-C03"]
+    },
+    {
+      id: "SK-GUM1-3-S04",
+      type: "dropdown",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.L.GC.1:R:use-interrogatives-to-ask-questions-in-speech"
+      ],
+      passages: ["p4"],
+      stem: "Jada's mom is writing an email to the swim team about the freestyle race and the last lap.",
+      prompt: "She needs one question that sentence 5 answers. Pick the word that finishes it.",
+      text: "{0} did Jada kick so hard?",
+      slots: [
+        {
+          options: ["Why","Who","Where"],
+          answer: 0
+        }
+      ],
+      clue: "Think about the words in sentence 5 that tell more about the kicking.",
+      hints: [
+        "Think about the words in sentence 5 that tell more about the kicking.",
+        "Read the part of sentence 5 after the word hard. Ask what it explains.",
+        "Sentence 5 does not name a place, so one choice can be ruled out."
+      ],
+      how: [
+        "Find the extra information in sentence 5: so she could pass the swimmer.",
+        "Those words explain the reason Jada kicked hard. The question word for a reason is why.",
+        "The answer is Why. Sentence 5 names no place, and the person who kicked is already Jada."
+      ],
+      misconception: "A common mix-up is choosing the question word for the person named in the sentence. Check what the question asks about.",
+      why: "The answer is Why. The words so she could pass the swimmer give a reason, and why asks for a reason. Sentence 5 names no place.",
+      like: ["SK-GUM1-3-C04"]
+    },
+    {
+      id: "SK-GUM1-3-S05",
+      type: "mc",
+      points: 1,
+      dok: 3,
+      std: [
+        "3.L.GC.1:R:use-interrogatives-to-ask-questions-in-speech"
+      ],
+      passages: ["p4"],
+      prompt: "Read Their parents cheered loudly from the top row, number 8 in the draft. Ben thinks the line shows a place. Cy thinks it shows a moment. Whose idea fits?",
+      choices: [
+        {
+          text: "Ben's idea fits: the top row is a spot in the stands.",
+          correct: true
+        },
+        {
+          text: "Cy's idea fits: cheered happens at a clock hour."
+        },
+        {
+          text: "Ben and Cy are both right: each line shows every sort of fact."
+        },
+        {
+          text: "Nobody is right: a line like this can only show a person."
+        }
+      ],
+      clue: "Find the words in number 8 that tell something about the cheering besides who did it.",
+      hints: [
+        "Find the words in number 8 that tell something about the cheering besides who did it.",
+        "Think about whether those words name a place, a moment or a cause.",
+        "One choice says each line shows every sort of fact. Only the information the line really holds counts."
+      ],
+      how: [
+        "Find the extra information in number 8: from the top row.",
+        "The top row is a spot, so it names a place. Where asks about a place.",
+        "The line names no clock hour, so Cy's idea does not fit.",
+        "The answer is \"Ben's idea fits: the top row is a spot in the stands.\""
+      ],
+      misconception: "A common mix-up is thinking a verb like cheered always points to a time. A time needs a clock or calendar word.",
+      why: "The answer is \"Ben's idea fits: the top row is a spot in the stands.\" The top row is a spot, so Ben's place idea fits. The line gives no clock hour, so Cy's moment idea does not.",
+      like: ["SK-GUM1-3-C05"]
+    },
+    {
+      id: "SK-GUM1-3-S06",
+      type: "hottext",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.L.GC.1:R:use-interrogatives-to-ask-questions-in-speech"
+      ],
+      passages: ["p4"],
+      prompt: "Look at the marked lines from 2 to 9. Tap the TWO lines that give a reason.",
+      targets: ["p4:1:2","p4:1:3","p4:2:1","p4:2:2","p4:3:1"],
+      answer: ["p4:2:1","p4:2:2"],
+      pick: 2,
+      clue: "A reason explains why something happens. Look for words that give a cause.",
+      hints: [
+        "A reason explains why something happens. Look for words that give a cause.",
+        "Read each shown line and ask whether it explains why someone did something.",
+        "Line 9 starts with a time word and gives no cause."
+      ],
+      how: [
+        "A reason explains why. Look for lines that explain why someone did something.",
+        "Line 5 says Jada kicked hard so she could pass the swimmer. That explains why she kicked.",
+        "Line 6 says the brother held up a sign because he was so proud. That explains why he held it.",
+        "Lines 2, 3 and 9 tell where, when and what happened, so they do not give a reason."
+      ],
+      misconception: "A common mix-up is picking a line about the winner. A reason line has to explain why something was done.",
+      why: "The answers are sentences 5 and 6: \"She kicked hard so she could pass the swimmer in the next lane.\" and \"Her little brother held up a sign because he was so proud of her.\". So she could pass the swimmer and because he was so proud both give a reason. The other shown lines tell where, when and what.",
+      like: ["SK-GUM1-3-C06"]
+    },
+    {
+      id: "SK-GUM1-3-S07",
+      type: "ebsr",
+      points: 2,
+      dok: 3,
+      std: [
+        "3.L.GC.1:R:use-interrogatives-to-ask-questions-in-speech"
+      ],
+      passages: ["p5"],
+      prompt: "Work through the first half, then the second half.",
+      partA: {
+        prompt: "Which fact about the meal appears in sentence 9?",
+        choices: [
+          {
+            text: "The spot where the family sits to eat",
+            correct: true
+          },
+          {
+            text: "The moment the family starts eating"
+          },
+          {
+            text: "The cook behind the pancakes"
+          },
+          {
+            text: "The cause for eating breakfast outside"
+          }
+        ]
+      },
+      partB: {
+        prompt: "Pick the question that sentence 9 answers.",
+        choices: [
+          {
+            text: "Where does the family eat breakfast on Sundays?",
+            correct: true
+          },
+          {
+            text: "How many pancakes does Dad flip for each person?"
+          },
+          {
+            text: "What does Grandma put on warm pancakes?"
+          },
+          {
+            text: "Which sister cracks the eggs for the batter?"
+          }
+        ]
+      },
+      clue: "Read sentence 9 and decide what it adds about the meal.",
+      hints: [
+        "Read sentence 9 and decide what it adds about the meal.",
+        "In the first half, say what the new words tell about. In the second half, find the question that asks for that.",
+        "Sentence 9 gives no amount, so one question in the second half can be ruled out."
+      ],
+      how: [
+        "First half: sentence 9 says they eat at the round table on the back porch. Those words name a spot, a place.",
+        "Second half: the question word that asks for a place is where. The answer is \"Where does the family eat breakfast on Sundays?\"",
+        "The other questions ask for an amount, a thing and a sister, and sentence 9 gives none of those."
+      ],
+      misconception: "A common mix-up is picking the question about eating because the sentence mentions eating. Pick by the information given.",
+      why: "Part A: \"The spot where the family sits to eat\" Part B: \"Where does the family eat breakfast on Sundays?\" The round table on the back porch names a place, so the question needs where. Sentence 9 gives no amount, no thing and no sister.",
+      like: ["SK-GUM1-3-C07"]
+    },
+    {
+      id: "SK-GUM1-3-S08",
+      type: "dropdown",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.L.GC.1:R:use-interrogatives-to-ask-questions-in-speech"
+      ],
+      passages: [],
+      stem: "The soccer team posted a flyer with two gaps that a volunteer must fill in.  Reply 1: Every Friday.  Reply 2: Coach Davis.",
+      prompt: "Pick a term for every gap.",
+      text: "{0} does the team practice?  {1} drives the van?",
+      slots: [
+        {
+          options: ["When","What","How"],
+          answer: 0
+        },
+        {
+          options: ["Who","Which","How"],
+          answer: 0
+        }
+      ],
+      clue: "Pair each reply with a gap. Think about what kind of information each reply holds.",
+      hints: [
+        "Pair each reply with a gap. Think about what kind of information each reply holds.",
+        "Take the first reply, then the second. Decide whether it is a name, a spot, a time or a cause.",
+        "The first reply does not name a thing, so one choice in the first gap can be set aside."
+      ],
+      how: [
+        "The first reply is Every Friday. That names a time, so the first gap needs when.",
+        "The second reply is Coach Davis. That names a person, so the second gap needs who.",
+        "The answers are When and Who. Read each back: When does the team practice? Who drives the van?"
+      ],
+      misconception: "A common mix-up is thinking both gaps need the same word because the replies come together. Each reply gives its own kind of information.",
+      why: "The answers are When and Who. Every Friday names a time, and when asks about a time. Coach Davis is a person, and who asks about a person.",
+      like: ["SK-GUM1-3-C08"]
+    },
+    {
+      id: "SK-GUM1-3-S09",
+      type: "match",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.L.GC.1:R:use-interrogatives-to-ask-questions-in-speech"
+      ],
+      passages: [],
+      prompt: "Draw a line from each question to the reply that fits it best.",
+      cols: [
+        "Under the flowerpot",
+        "My grandpa",
+        "Around nine",
+        "A storm knocked down a wire"
+      ],
+      rows: [
+        {
+          text: "Where is the spare key?",
+          answer: 0
+        },
+        {
+          text: "Who taught you to swim?",
+          answer: 1
+        },
+        {
+          text: "When does the show end?",
+          answer: 2
+        },
+        {
+          text: "Why did the lights go out?",
+          answer: 3
+        }
+      ],
+      clue: "Look at the first word of each question and decide what it asks for.",
+      hints: [
+        "Look at the first word of each question and decide what it asks for.",
+        "Match the questions you feel surest about first, then use what is left.",
+        "Only one reply names a cause. Find the question that asks for a cause."
+      ],
+      how: [
+        "Name the question word and the information it asks for.",
+        "Where asks for a place, so it fits Under the flowerpot. Who asks for a person, so it fits My grandpa.",
+        "When asks for a time, so it fits Around nine. Why asks for a reason, so it fits A storm knocked down a wire."
+      ],
+      misconception: "A common mix-up is matching a question to a reply that shares a topic word. Match by the kind of information the question asks for.",
+      why: "Where goes with a place, who with a person, when with a time and why with a reason.",
+      like: ["SK-GUM1-3-C09"]
+    },
+    {
+      id: "SK-GUM1-3-S10",
+      type: "mc",
+      points: 1,
+      dok: 3,
+      std: [
+        "3.L.GC.1:R:use-interrogatives-to-ask-questions-in-speech"
+      ],
+      passages: ["p5"],
+      prompt: "Numbers 5 and 6 of the draft each describe cooking. Pick the question that number 6 could answer while number 5 could not.",
+      choices: [
+        {
+          text: "How does Dad flip each pancake?",
+          correct: true
+        },
+        {
+          text: "Where does the pan sizzle for two minutes?"
+        },
+        {
+          text: "How long does the pan sizzle on the stove?"
+        },
+        {
+          text: "What sizzles on the stove for two minutes?"
+        }
+      ],
+      clue: "Test each question against sentence 5 first. Then test it against sentence 6.",
+      hints: [
+        "Test each question against sentence 5 first. Then test it against sentence 6.",
+        "Sentence 5 is about the pan on the stove. Sentence 6 is about what Dad does with a tool.",
+        "One question asks how long the pan sizzles, and sentence 5 gives two minutes."
+      ],
+      how: [
+        "Test each question against sentence 5. It says the pan sizzles on the stove for two minutes.",
+        "Sentence 5 already answers where it sizzles, how long it sizzles and what sizzles.",
+        "Sentence 6 says Dad flips each pancake with a wide spatula. That tells the way he flips them.",
+        "The answer is \"How does Dad flip each pancake?\""
+      ],
+      misconception: "A common mix-up is picking a question because it mentions the stove or the pan. First check whether sentence 5 already answers it.",
+      why: "The answer is \"How does Dad flip each pancake?\" Sentence 6 tells the way Dad flips pancakes: with a wide spatula. Sentence 5 gives no way, but it already answers the other three questions.",
+      like: ["SK-GUM1-3-C10"]
+    },
+    {
+      id: "SK-GUM1-3-S11",
+      type: "hottext",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.L.GC.1:R:use-interrogatives-to-ask-questions-in-speech"
+      ],
+      passages: ["p6"],
+      prompt: "In lines 1 to 11, tap the TWO shown lines that tell a time.",
+      targets: ["p6:1:1","p6:1:2","p6:2:2","p6:3:3","p6:3:4"],
+      answer: ["p6:1:1","p6:3:4"],
+      pick: 2,
+      clue: "A time line names a day or a moment, such as a weekday or now.",
+      hints: [
+        "A time line names a day or a moment, such as a weekday or now.",
+        "Check each shown line for a word that sets a day or a moment.",
+        "Line 6 tells what Uncle Marcus did and when it happened is not given."
+      ],
+      how: [
+        "A time line names a day or a moment.",
+        "Line 1 says the flat tire happened on Thursday. Thursday is a day.",
+        "Line 11 says now I can ride to the park again. Now is a moment in time.",
+        "Lines 2, 6 and 10 tell where and what, so they do not give a time."
+      ],
+      misconception: "A common mix-up is picking a line because it says what happened. A time line has to name a day or a moment.",
+      why: "The answers are sentences 1 and 11: \"My bike had a flat tire on Thursday.\" and \"Now I can ride to the park again.\". On Thursday and now both set a time. The other shown lines tell where and what.",
+      like: ["SK-GUM1-3-C11"]
+    },
+    {
+      id: "SK-GUM1-3-S12",
+      type: "dropdown",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.L.GC.1:R:use-interrogatives-to-ask-questions-in-speech"
+      ],
+      passages: ["p6"],
+      stem: "Uncle Marcus is teaching me to fix a flat tire, one small step at a time.",
+      prompt: "The reply to this ask sits in sentence 4. Which word fits the gap?",
+      text: "{0} did he pull out the tube?",
+      slots: [
+        {
+          options: ["How","Who","Why"],
+          answer: 0
+        }
+      ],
+      clue: "Look at the words after tube in sentence 4. Decide which kind of information they name.",
+      hints: [
+        "Look at the words after tube in sentence 4. Decide which kind of information they name.",
+        "Think about a person, a cause, a spot or a way. Pick the one the last words give.",
+        "Sentence 4 gives no cause, so one choice can be ruled out."
+      ],
+      how: [
+        "Find the new information in sentence 4: with a small tool.",
+        "A small tool tells the way he did the job. The question word for a way is how.",
+        "The answer is How. Sentence 4 names no new person and no reason, so who and why do not fit."
+      ],
+      misconception: "A common mix-up is choosing who because a person is in the sentence. Check what the blank is asking about.",
+      why: "The answer is How. With a small tool tells the way the tube came out, and how asks about a way. The sentence gives no new person and no reason.",
+      like: ["SK-GUM1-3-C12"]
+    },
+    {
+      id: "SK-GUM1-3-S13",
+      type: "ms",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.L.GC.1:R:use-interrogatives-to-ask-questions-in-speech"
+      ],
+      passages: [],
+      stem: "A club leader pins five lines to a clipboard for the winter knitting circle in the art room.",
+      prompt: "Pick the TWO lines whose reply would be a name.",
+      pick: 2,
+      choices: [
+        {
+          text: "Who taught the class to knit?",
+          correct: true
+        },
+        {
+          text: "Who is bringing the snacks to practice?",
+          correct: true
+        },
+        {
+          text: "Where did the class meet to knit?"
+        },
+        {
+          text: "How many scarves were finished by Friday?"
+        },
+        {
+          text: "Why was the yarn so tangled?"
+        }
+      ],
+      clue: "A line about a person wants a name or a title as its reply. Think of a reply for each line.",
+      hints: [
+        "A line about a person wants a name or a title as its reply. Think of a reply for each line.",
+        "Look at the first word of every line.",
+        "How many asks for a number, so that line is not about a person."
+      ],
+      how: [
+        "Look at the first word of each line.",
+        "Who asks about a person, and two lines begin with it: Who taught the class to knit? and Who is bringing the snacks to practice?",
+        "Where asks about a place, how many asks about an amount and why asks for a reason."
+      ],
+      misconception: "A common mix-up is choosing a line because it mentions the class. Pick by the question word.",
+      why: "The answers are \"Who taught the class to knit?\" and \"Who is bringing the snacks to practice?\". Both lines begin with who, which asks about a person. The other three ask about a place, an amount and a reason.",
+      like: ["SK-GUM1-3-C13"]
+    },
+    {
+      id: "SK-GUM1-3-S14",
+      type: "hottext",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.L.GC.1:R:use-interrogatives-to-ask-questions-in-speech"
+      ],
+      passages: [],
+      stem: "Here are four lines from a quiz about explorers who sailed across the ocean long ago.",
+      prompt: "Which line has a spot as its answer? Select it.",
+      options: [
+        "Where did the explorers build their camp for the winter?",
+        "Who drew the detailed map of the island for the crew?",
+        "When did the tall ship reach the shore of the quiet bay at last?",
+        "Why did the crew pack extra rope before the long voyage?"
+      ],
+      answer: [0],
+      pick: 1,
+      clue: "Make up a short reply for each line and ask what it would be.",
+      hints: [
+        "Make up a short reply for each line and ask what it would be.",
+        "Look at the first word of every line and think about what it asks for.",
+        "A line that begins with the word who asks about a person, so it cannot have a spot as its answer."
+      ],
+      how: [
+        "Say a possible reply to each line.",
+        "The reply to Where did the explorers build their camp for the winter? would be a place, like on the beach.",
+        "The other replies would be a person, a time and a reason."
+      ],
+      misconception: "A common mix-up is picking the line that mentions the island or the shore. Pick the line whose reply is a place.",
+      why: "The answer is \"Where did the explorers build their camp for the winter?\". Where asks about a place. The other lines ask for a person, a time and a reason.",
+      like: ["SK-GUM1-3-C14"]
+    },
+    {
+      id: "SK-GUM1-3-S15",
+      type: "mc",
+      points: 1,
+      dok: 3,
+      std: [
+        "3.L.GC.1:R:use-interrogatives-to-ask-questions-in-speech"
+      ],
+      passages: [],
+      prompt: "Kai says, \"The word how can only ask about the way someone does something.\" Which question proves Kai wrong?",
+      choices: [
+        {
+          text: "How much sugar goes into the batter?",
+          correct: true
+        },
+        {
+          text: "How did Dad flip the pancake so high?"
+        },
+        {
+          text: "How do bees turn nectar into honey?"
+        },
+        {
+          text: "How can I fix a flat tire on my bike?"
+        }
+      ],
+      clue: "To prove a rule wrong, find a question that breaks it. Check what each question wants as an answer.",
+      hints: [
+        "To prove a rule wrong, find a question that breaks it. Check what each question wants as an answer.",
+        "Think of an answer for each question: a way of doing something, or something else.",
+        "The question about bees asks for the way something is made, which fits Kai's rule."
+      ],
+      how: [
+        "Kai says how only asks about a way. Look for a question where the answer is not a way.",
+        "Flipping a pancake, turning nectar into honey and fixing a tire are all ways of doing something.",
+        "The answer is \"How much sugar goes into the batter?\" The answer would be an amount, like two cups."
+      ],
+      misconception: "A common mix-up is thinking how always asks about the way something is done. With much or many it asks about an amount.",
+      why: "The answer is \"How much sugar goes into the batter?\" How much asks about an amount, so how can ask about more than a way. The other questions ask for a way of doing something.",
+      like: ["SK-GUM1-3-C15"]
+    }
+  ],
+  addons: {
+    "SK-GUM1-3-P1": {
+      hints: [
+        "Look at the new information in the answer and decide what kind it is.",
+        "Find the word in the answer that is the new information.",
+        "The answer does not name a person, so one choice can be ruled out."
+      ],
+      how: [
+        "Find the new information in the answer: Saturday.",
+        "Saturday is a time, and the question word for a time is when."
+      ],
+      misconception: "A common mix-up is choosing the question word that sounds like the sentence. Decide what kind of information the answer gives first."
+    },
+    "SK-GUM1-3-P2": {
+      hints: [
+        "Try a quick question with each word.",
+        "Match the words you know best first.",
+        "One word asks for a name. Start there."
+      ],
+      how: [
+        "Think of an answer to a question with each word.",
+        "Who gets a name, where gets a spot, when gets a time and why gets a cause."
+      ],
+      misconception: "A common mix-up is guessing from how the words sound. Think about the kind of answer each word wants."
+    },
+    "SK-GUM1-3-P3": {
+      hints: [
+        "Find the kind of information Kenji wants. Then look for the question word that asks for it.",
+        "Read the sentence about Kenji again and find the words that name what he wants to learn.",
+        "Kenji is not asking about a time, so one question can be ruled out."
+      ],
+      how: [
+        "Find what Kenji wants to know: the reason the park closed.",
+        "The question word for a reason is why.",
+        "The answer is \"Why did the park close today?\" Only one question begins with that word."
+      ],
+      misconception: "A common mix-up is picking the question that mentions the park and the day. Pick by the kind of information Kenji wants."
+    },
+    "SK-GUM1-3-P4": {
+      hints: [
+        "Think about the answer each question would need. A place answer sounds like at the park.",
+        "Read the first word of each question.",
+        "One of the questions begins with a word that asks about a time."
+      ],
+      how: [
+        "Read the first word of each question.",
+        "Two questions begin with the word that asks about a place.",
+        "The others ask about a time, a person and a reason."
+      ],
+      misconception: "A common mix-up is picking a question because it mentions an animal or a thing. Pick by the question word."
+    },
+    "SK-GUM1-3-P5": {
+      hints: [
+        "Find the part of the answer that gives the new information.",
+        "Look at the words with a patch kit. Decide whether they name a person, a time or a way.",
+        "The answer does not name a person, so one choice can be ruled out."
+      ],
+      how: [
+        "Find the new information in the answer: with a patch kit.",
+        "Those words tell the way the job got done. The question word for a way is how."
+      ],
+      misconception: "A common mix-up is picking when because fixing a tire takes time. Check what the answer actually tells."
+    }
+  },
+  /* B7a:core:end */
   test: [
     { id: "SK-GUM1-3-T1", type: "dropdown", points: 1, dok: 1, passages: [],
       stem: "Answer: Ms. Ortiz drives the school bus.",
@@ -3194,7 +4539,181 @@ PP.addLesson({
     }
   ],
   parent: "When your child writes a note or a grocery list sentence, have them do a two-step check: circle the first letter of each sentence and every I, and make sure each one is a capital.",
-  passages: [],
+  passages: [
+    /* B7a:passages:start */
+    {
+      id: "p1",
+      title: "A Day at Lake Lanier",
+      byline: "A third grader's draft",
+      genre: "Student draft (narrative)",
+      draft: true,
+      paragraphs: [
+        [
+          "(1) Last Saturday my family drove to Lake Lanier.",
+          "(2) we parked near the picnic tables.",
+          "(3) My brother and i built a sand castle.",
+          "(4) Dad grilled hot dogs for lunch.",
+          "(5) The smell of smoke drifted over the whole beach."
+        ],
+        [
+          "(6) then i swam out to the floating dock.",
+          "(7) Mom said I could stay in the water for an hour.",
+          "(8) After that, we skipped stones across the lake."
+        ],
+        [
+          "(9) i found a smooth gray stone that skipped five times.",
+          "(10) I'm going to keep it in my room.",
+          "(11) By the time we left, the sun was low.",
+          "(12) i hope we can go back next summer.",
+          "(13) We fell asleep in the car."
+        ]
+      ]
+    },
+    {
+      id: "p2",
+      title: "The Class Spelling Bee",
+      byline: "A third grader's draft",
+      genre: "Student draft (narrative)",
+      draft: true,
+      paragraphs: [
+        [
+          "(1) Our class held a spelling bee on Thursday.",
+          "(2) Mrs. Greer read each word two times.",
+          "(3) i'm good at long words, and I like spelling them.",
+          "(4) My friend Dev went first.",
+          "(5) Everyone sat on the gym floor and waited."
+        ],
+        [
+          "(6) he spelled every word right.",
+          "(7) Then it was my turn.",
+          "(8) I stood up and took a deep breath.",
+          "(9) The room was quiet while each speller thought.",
+          "(10) My mom says i'll do better with practice."
+        ],
+        [
+          "(11) The last word was freedom.",
+          "(12) Dev and I both made it to the next round.",
+          "(13) our teacher clapped for us.",
+          "(14) We cannot wait for the finals.",
+          "(15) Mrs. Greer smiled at every speller."
+        ]
+      ]
+    },
+    {
+      id: "p3",
+      title: "A Trip to the Aquarium",
+      byline: "A third grader's draft",
+      genre: "Student draft (narrative)",
+      draft: true,
+      paragraphs: [
+        [
+          "(1) On Friday our class rode a bus to the aquarium.",
+          "(2) the guide met us at the front desk.",
+          "(3) She asked who wanted to see the sharks first.",
+          "(4) My hand shot up before anyone else's.",
+          "(5) Pia held a map of the building."
+        ],
+        [
+          "(6) wow, the tank was as big as a gym!",
+          "(7) A giant turtle swam right past me.",
+          "(8) The water glowed a soft blue color.",
+          "(9) Then my friend Pia and i fed the fish.",
+          "(10) the guide said we could use two fingers."
+        ],
+        [
+          "(11) Next, we ate lunch near the penguin show.",
+          "(12) i liked the jellyfish best because they glowed.",
+          "(13) I wish we could stay all day."
+        ]
+      ]
+    },
+    {
+      id: "p4",
+      title: "Saturday at the Roller Rink",
+      byline: "A third grader's draft",
+      genre: "Student draft (narrative)",
+      draft: true,
+      paragraphs: [
+        [
+          "(1) Last Saturday my cousin invited me to the roller rink.",
+          "(2) we laced up our skates by the snack bar.",
+          "(3) Mia and i held the wall at first.",
+          "(4) The music was loud and the lights spun in circles."
+        ],
+        [
+          "(5) then a worker showed us how to glide.",
+          "(6) I leaned forward and pushed off with one foot.",
+          "(7) i rolled all the way to the corner!",
+          "(8) My cousin clapped and laughed.",
+          "(9) The floor felt smooth under my skates."
+        ],
+        [
+          "(10) After an hour, I could skate backward.",
+          "(11) i'm going to ask for skates for my birthday.",
+          "(12) Mom says i'll need a helmet too.",
+          "(13) We ate popcorn before the ride home."
+        ]
+      ]
+    },
+    {
+      id: "p5",
+      title: "Farmers Market Morning",
+      byline: "A third grader's draft",
+      genre: "Student draft (narrative)",
+      draft: true,
+      paragraphs: [
+        [
+          "(1) Every Sunday my grandma shops at the farmers market.",
+          "(2) today i went with her to carry the bags.",
+          "(3) The tables were piled with corn and peaches.",
+          "(4) a man in a straw hat gave me a taste of honey."
+        ],
+        [
+          "(5) I told him it was the sweetest thing I ever ate.",
+          "(6) Grandma bought a basket of tomatoes.",
+          "(7) The air smelled like fresh bread.",
+          "(8) she let me pick the ripest ones."
+        ],
+        [
+          "(9) Then we stopped to listen to a fiddle player.",
+          "(10) I asked Grandma if i could buy a lemonade.",
+          "(11) She smiled and handed me two dollars.",
+          "(12) i sipped it slowly on the walk back.",
+          "(13) We got home before noon."
+        ]
+      ]
+    },
+    {
+      id: "p6",
+      title: "My Volcano Project",
+      byline: "A third grader's draft",
+      genre: "Student draft (narrative)",
+      draft: true,
+      paragraphs: [
+        [
+          "(1) For the science fair, I built a volcano from clay.",
+          "(2) my dad helped me mix the baking soda and vinegar.",
+          "(3) We tested it in the backyard first.",
+          "(4) The red foam rose slowly at the top.",
+          "(5) The mixture fizzed for almost a minute."
+        ],
+        [
+          "(6) then it spilled down the sides like lava!",
+          "(7) My little sister cheered and i laughed.",
+          "(8) Everyone leaned in to watch.",
+          "(9) Our teacher, Ms. Hall, gave me a blue ribbon."
+        ],
+        [
+          "(10) i could not stop smiling.",
+          "(11) Next year, I'm planning to build an earthquake model.",
+          "(12) Mom thinks i'll need more clay.",
+          "(13) We will start in January.",
+          "(14) all my friends want to help."
+        ]
+      ]
+    }
+    /* B7a:passages:end */
+  ],
   practice: [
     { id: "SK-GUM1-4-P1", type: "mc", points: 1, dok: 1, passages: [],
       prompt: "Which sentence is correct?",
@@ -3252,6 +4771,1169 @@ PP.addLesson({
       clue: "Check the first letter of each sentence, then look for the word I.",
       why: "The answers are \"Tomorrow I will visit Aunt Rosa.\" and \"Our garden has six sunflowers.\" The others start with a small letter: i, may and the should be I, May and The." }
   ],
+  /* B7a:core:start */
+  /* ---------- Expansion 2026-10-22, batch B7a (GUM Reinforce, first half) ----------
+     core: fifteen items in three sets of five. { ref } reuses a practice item; the other practice items stay in Practice Together.
+     Passages are used only by core and the similar bank; none is used by test.
+     Author log: docs/expansion-2026-10-22/batches/B7a-author-log.md. NOT ACCEPTED: needs independent review. */
+  core: {
+    rev: "1",
+    sets: [
+      {
+        title: "Set 1",
+        items: [
+          {
+            ref: "SK-GUM1-4-P3"
+          },
+          {
+            ref: "SK-GUM1-4-P5"
+          },
+          {
+            id: "SK-GUM1-4-C03",
+            type: "mc",
+            points: 1,
+            dok: 2,
+            std: [
+              "3.L.GC.1:R:capitalize-the-first-word-of-a-sentence-and-the-"
+            ],
+            passages: ["p1"],
+            prompt: "Sentence 3 has a capital-letter mistake. Which revision fixes it?",
+            choices: [
+              {
+                text: "My brother and I built a sand castle.",
+                correct: true
+              },
+              {
+                text: "My Brother and I built a sand castle."
+              },
+              {
+                text: "my brother and I built a sand castle."
+              },
+              {
+                text: "My brother and i built a sand castle."
+              }
+            ],
+            clue: "Check the first word of sentence 3, then look for the word I by itself.",
+            hints: [
+              "Check the first word of sentence 3, then look for the word I by itself.",
+              "Read sentence 3 slowly and point to the word that means the person writing. Check how it is written.",
+              "A word in the middle of a sentence gets a capital only when it is I or a name, so one choice adds a capital that is not needed."
+            ],
+            how: [
+              "Check the first word: My already begins with a capital M.",
+              "Now find the word I. In sentence 3 it is a small i, and I must always be a capital.",
+              "The answer is \"My brother and I built a sand castle.\" The other choices add a capital to brother, make my small, or leave the small i."
+            ],
+            misconception: "A common mix-up is fixing the first word and forgetting the word I in the middle. Check both.",
+            why: "The answer is \"My brother and I built a sand castle.\" The word I is always a capital, so the small i must change. My already has its capital, and brother is not a name."
+          },
+          {
+            id: "SK-GUM1-4-C04",
+            type: "dropdown",
+            points: 1,
+            dok: 2,
+            std: [
+              "3.L.GC.1:R:capitalize-the-first-word-of-a-sentence-and-the-"
+            ],
+            passages: ["p1"],
+            prompt: "Sentence 6 has two capital-letter mistakes. Choose the words that fix it.",
+            text: "{0} swam out to the floating dock.",
+            slots: [
+              {
+                options: ["Then I","then I","Then i","then i"],
+                answer: 0
+              }
+            ],
+            clue: "Check the first word of the sentence, then check the word that tells who swam.",
+            hints: [
+              "Check the first word of the sentence, then check the word that tells who swam.",
+              "Try each choice at the front of the sentence. Test both the first letter and the word for the person.",
+              "One choice leaves the sentence exactly as it was written in the draft."
+            ],
+            how: [
+              "Check the first word. Then is the first word of the sentence, so it needs a capital T.",
+              "Check the word that tells who swam. The word I must always be a capital.",
+              "The answer is Then I. The other choices leave a small letter at the start, a small i, or both."
+            ],
+            misconception: "A common mix-up is fixing only one of the two mistakes. Check the first word and the word I every time.",
+            why: "The answer is Then I. Then starts the sentence, so it needs a capital T, and the word I is always a capital."
+          },
+          {
+            id: "SK-GUM1-4-C05",
+            type: "mc",
+            points: 1,
+            dok: 3,
+            std: [
+              "3.L.GC.1:R:capitalize-the-first-word-of-a-sentence-and-the-"
+            ],
+            passages: ["p1"],
+            prompt: "Sentence 7 has a capital I in the middle. Why is that correct?",
+            choices: [
+              {
+                text: "The word I is always a capital letter, even in the middle of a sentence.",
+                correct: true
+              },
+              {
+                text: "Any word that comes right after said must be a capital letter in a sentence."
+              },
+              {
+                text: "Only the first word of a sentence can be a capital letter, so this one is a mistake."
+              },
+              {
+                text: "The word could needs a capital letter, and the I shares it with could."
+              }
+            ],
+            clue: "Think about the two capital-letter rules: the first word of a sentence, and the word I.",
+            hints: [
+              "Think about the two capital-letter rules: the first word of a sentence, and the word I.",
+              "Look at the word before I and the word after I. Ask whether either one changes how I is written.",
+              "One choice says only the first word can be a capital, but sentence 7 is already written correctly."
+            ],
+            how: [
+              "Find the capital I in sentence 7: Mom said I could stay in the water for an hour.",
+              "The word I is always a capital, wherever it is.",
+              "The answer is \"The word I is always a capital letter, even in the middle of a sentence.\" The words said and could do not change how I is written."
+            ],
+            misconception: "A common mix-up is thinking a capital letter in the middle of a sentence must be a mistake. The word I is always a capital.",
+            why: "The answer is \"The word I is always a capital letter, even in the middle of a sentence.\" The word I is always written as a capital. The word before it and the word after it do not change that."
+          }
+        ]
+      },
+      {
+        title: "Set 2",
+        items: [
+          {
+            id: "SK-GUM1-4-C06",
+            type: "hottext",
+            points: 2,
+            dok: 2,
+            std: [
+              "3.L.GC.1:R:capitalize-the-first-word-of-a-sentence-and-the-"
+            ],
+            passages: ["p1"],
+            prompt: "Select the TWO shown sentences whose first word needs a capital letter.",
+            targets: ["p1:1:2","p1:1:4","p1:1:5","p1:2:1","p1:2:2"],
+            answer: ["p1:1:2","p1:2:1"],
+            pick: 2,
+            clue: "Look at the first letter of each shown sentence. A small letter at the start is a mistake.",
+            hints: [
+              "Look at the first letter of each shown sentence. A small letter at the start is a mistake.",
+              "Read only the first word of each shown sentence. Is it written with a capital?",
+              "Sentence 7 begins with a capital M, so it can be ruled out."
+            ],
+            how: [
+              "Check the first letter of each shown sentence.",
+              "Sentence 2 begins with a small w, and sentence 6 begins with a small t.",
+              "Sentences 4, 5 and 7 begin with the capitals D, T and M."
+            ],
+            misconception: "A common mix-up is hunting for the word I only. The first word of every sentence needs a capital too.",
+            why: "The answers are sentences 2 and 6: \"we parked near the picnic tables.\" and \"then i swam out to the floating dock.\". Sentence 2 starts with we and sentence 6 starts with then, both with small letters. The other shown sentences begin with capitals."
+          },
+          {
+            id: "SK-GUM1-4-C07",
+            type: "ebsr",
+            points: 2,
+            dok: 3,
+            std: [
+              "3.L.GC.1:R:capitalize-the-first-word-of-a-sentence-and-the-"
+            ],
+            passages: ["p2"],
+            prompt: "This question has two parts. Answer Part A, then Part B.",
+            partA: {
+              prompt: "Which word in sentence 3 needs a capital letter?",
+              choices: [
+                {
+                  text: "i'm",
+                  correct: true
+                },
+                {
+                  text: "words"
+                },
+                {
+                  text: "spelling"
+                },
+                {
+                  text: "I"
+                }
+              ]
+            },
+            partB: {
+              prompt: "Which revision of sentence 3 is correct?",
+              choices: [
+                {
+                  text: "I'm good at long words, and I like spelling them.",
+                  correct: true
+                },
+                {
+                  text: "I'm good at long words, and i like spelling them."
+                },
+                {
+                  text: "i'm good at long words, and I like spelling them."
+                },
+                {
+                  text: "I'm Good at long words, and I like spelling them."
+                }
+              ]
+            },
+            clue: "Check the first word of sentence 3 and then every I.",
+            hints: [
+              "Check the first word of sentence 3 and then every I.",
+              "For Part A, look at the very first word, including short forms. For Part B, compare each revision with the original.",
+              "One revision in Part B adds a capital to a word that does not need one."
+            ],
+            how: [
+              "Part A: the first word of sentence 3 is i'm, and it starts with a small letter. I'm is a short form of I am, so it needs a capital I.",
+              "Part B: only the first word needs a change. The word I later in the sentence is already a capital. The answer is \"I'm good at long words, and I like spelling them.\"",
+              "The other revisions leave a small letter, change the wrong word, or add a capital to Good."
+            ],
+            misconception: "A common mix-up is thinking a short form like I'm is not the word I. It is, so it needs a capital.",
+            why: "Part A: \"i'm\" Part B: \"I'm good at long words, and I like spelling them.\" I'm is a short form that includes the word I, so it needs a capital. The word I later in the sentence is already correct."
+          },
+          {
+            id: "SK-GUM1-4-C08",
+            type: "ms",
+            points: 2,
+            dok: 2,
+            std: [
+              "3.L.GC.1:R:capitalize-the-first-word-of-a-sentence-and-the-"
+            ],
+            passages: [],
+            prompt: "Choose the TWO sentences that are written correctly.",
+            pick: 2,
+            choices: [
+              {
+                text: "Dad and I painted the old fence.",
+                correct: true
+              },
+              {
+                text: "Can I help you pack the bags?",
+                correct: true
+              },
+              {
+                text: "may I sit by the window?"
+              },
+              {
+                text: "My sister and i rode the bus."
+              },
+              {
+                text: "then we ate lunch outside."
+              }
+            ],
+            clue: "Check the first letter of each sentence. Then look for the word I.",
+            hints: [
+              "Check the first letter of each sentence. Then look for the word I.",
+              "Cross out any sentence that begins with a small letter. Then check the rest for a small i.",
+              "One choice has a small i in the middle of the sentence."
+            ],
+            how: [
+              "Check the first letter and every I in each sentence.",
+              "Dad and I painted the old fence. and Can I help you pack the bags? start with capitals and have a capital I.",
+              "The word may starts with a small m, then starts with a small t, and the small i in My sister and i rode the bus. is a mistake."
+            ],
+            misconception: "A common mix-up is accepting a sentence because most of it looks fine. One small letter at the start or a small i makes it wrong.",
+            why: "The answers are \"Dad and I painted the old fence.\" and \"Can I help you pack the bags?\". Both start with a capital and have only capital Is. The other three have a small first letter or a small i."
+          },
+          {
+            id: "SK-GUM1-4-C09",
+            type: "mc",
+            points: 1,
+            dok: 2,
+            std: [
+              "3.L.GC.1:R:capitalize-the-first-word-of-a-sentence-and-the-"
+            ],
+            passages: [],
+            stem: "Maya wrote, \"my cousin and i are coming over after school. i'll bring snacks.\"",
+            prompt: "How many words in her note need a capital letter but do not have one?",
+            choices: [
+              {
+                text: "1"
+              },
+              {
+                text: "2"
+              },
+              {
+                text: "3",
+                correct: true
+              },
+              {
+                text: "4"
+              }
+            ],
+            clue: "Check the first word of each sentence, then look for the word I.",
+            hints: [
+              "Check the first word of each sentence, then look for the word I.",
+              "The note has two sentences. Check how each one begins, then check the middle of each.",
+              "The note has more than one mistake, so one choice can be ruled out."
+            ],
+            how: [
+              "Check the first word of each sentence. The words my and i'll both start with small letters.",
+              "Look for the word I in the middle. The small i in the first sentence is another mistake.",
+              "That makes three words: my, i and i'll. The answer is 3."
+            ],
+            misconception: "A common mix-up is counting only the first words. A small i in the middle needs a capital too.",
+            why: "The answer is \"3\" My and i'll start sentences with small letters, and the i in the middle is small too. That is three words."
+          },
+          {
+            id: "SK-GUM1-4-C10",
+            type: "mc",
+            points: 1,
+            dok: 3,
+            std: [
+              "3.L.GC.1:R:capitalize-the-first-word-of-a-sentence-and-the-"
+            ],
+            passages: ["p2"],
+            prompt: "Sam says, \"The i in sentence 10 is part of the short form i'll, not the word I, so it can stay small.\" Is Sam right?",
+            choices: [
+              {
+                text: "No. A short form like I'll still has the word I, so it needs a capital.",
+                correct: true
+              },
+              {
+                text: "Yes. A short form is a different word, so it follows its own rules."
+              },
+              {
+                text: "Yes. A capital is needed only at the start of a sentence, and this is the middle."
+              },
+              {
+                text: "No. The word after I'll needs the capital letter instead of the I."
+              }
+            ],
+            clue: "Think about which two words I'll stands for.",
+            hints: [
+              "Think about which two words I'll stands for.",
+              "Break the short form into the two words it stands for. Which of them is the word I?",
+              "One choice says the rule about the word I does not reach short forms. Compare that with what you know about I'm and I'll."
+            ],
+            how: [
+              "I'll is a short form of I will. It still has the word I in it.",
+              "The word I is always a capital, even inside a short form like I'll.",
+              "The answer is \"No. A short form like I'll still has the word I, so it needs a capital.\" The sentence is not at the start, but the rule for I does not depend on position."
+            ],
+            misconception: "A common mix-up is thinking a short form is a different word that can stay small. It still has the word I.",
+            why: "The answer is \"No. A short form like I'll still has the word I, so it needs a capital.\" I'll is short for I will, so it contains the word I, which is always a capital. Where the word sits in the sentence does not matter."
+          }
+        ]
+      },
+      {
+        title: "Set 3",
+        items: [
+          {
+            id: "SK-GUM1-4-C11",
+            type: "hottext",
+            points: 2,
+            dok: 2,
+            std: [
+              "3.L.GC.1:R:capitalize-the-first-word-of-a-sentence-and-the-"
+            ],
+            passages: ["p3"],
+            prompt: "Select the TWO shown sentences that contain a small i where a capital I belongs.",
+            targets: ["p3:1:2","p3:2:1","p3:2:4","p3:2:5","p3:3:2"],
+            answer: ["p3:2:4","p3:3:2"],
+            pick: 2,
+            clue: "Look for the letter i standing alone. The word I should be a capital.",
+            hints: [
+              "Look for the letter i standing alone. The word I should be a capital.",
+              "Read each shown sentence and check whether it has a small i that means the person writing.",
+              "Sentence 6 has no word that means the person writing, so it can be ruled out."
+            ],
+            how: [
+              "Look for the word I standing alone, written as a small i.",
+              "Sentence 9 says my friend Pia and i fed the fish. The small i means the person writing.",
+              "Sentence 12 begins with a small i that also means the person writing. Sentences 2, 6 and 10 have small first letters, but no small i."
+            ],
+            misconception: "A common mix-up is picking every sentence with a small letter at the start. This question asks only about a small i that should be a capital I.",
+            why: "The answers are sentences 9 and 12: \"Then my friend Pia and i fed the fish.\" and \"i liked the jellyfish best because they glowed.\". Sentences 9 and 12 both have a small i that means the person writing. The other shown sentences have other mistakes, but no small i."
+          },
+          {
+            id: "SK-GUM1-4-C12",
+            type: "dropdown",
+            points: 1,
+            dok: 2,
+            std: [
+              "3.L.GC.1:R:capitalize-the-first-word-of-a-sentence-and-the-"
+            ],
+            passages: ["p3"],
+            prompt: "Sentence 6 starts with a mistake. Choose the correct beginning.",
+            text: "{0} tank was as big as a gym!",
+            slots: [
+              {
+                options: ["Wow, the","wow, the","Wow, The"],
+                answer: 0
+              }
+            ],
+            clue: "Check the first word, then check the word after the comma.",
+            hints: [
+              "Check the first word, then check the word after the comma.",
+              "Say the beginning of the sentence with each choice. Look at the first letter of both words.",
+              "A capital in the middle of a sentence is needed only for I or a name, so one choice can be ruled out."
+            ],
+            how: [
+              "Check the first word: wow starts the sentence, so it needs a capital W.",
+              "Check the word after the comma: the is in the middle of the sentence and is not a name, so it stays small.",
+              "The answer is Wow, the. The other choices leave a small w or add a capital to The."
+            ],
+            misconception: "A common mix-up is adding a capital to every word that follows a comma. Only the first word of a sentence needs one.",
+            why: "The answer is Wow, the. Wow starts the sentence, so it needs a capital W. The word the is in the middle and is not a name."
+          },
+          {
+            id: "SK-GUM1-4-C13",
+            type: "dropdown",
+            points: 2,
+            dok: 2,
+            std: [
+              "3.L.GC.1:R:capitalize-the-first-word-of-a-sentence-and-the-"
+            ],
+            passages: [],
+            prompt: "Choose the correct words for each blank.",
+            text: "{0} bus came late, so {1} walked the rest of the way.",
+            slots: [
+              {
+                options: ["Today the","today the","Today The"],
+                answer: 0
+              },
+              {
+                options: ["my brother and I","My brother and I","my brother and i"],
+                answer: 0
+              }
+            ],
+            clue: "Check the first word of the sentence, then look for words that might need a capital in the middle.",
+            hints: [
+              "Check the first word of the sentence, then look for words that might need a capital in the middle.",
+              "In the first blank, look at both words. In the second blank, check the first word and the word I.",
+              "A word in the middle of a sentence gets a capital only if it is I or a name, so one choice in the second blank can be ruled out."
+            ],
+            how: [
+              "First blank: Today begins the sentence, so it needs a capital T. The word the is in the middle and stays small.",
+              "Second blank: these words begin in the middle of the sentence, so my stays small. The word I is always a capital.",
+              "The answers are Today the and my brother and I."
+            ],
+            misconception: "A common mix-up is adding capitals to every word that looks important. Only the first word of a sentence and the word I need them here.",
+            why: "The answers are Today the and my brother and I. Today begins the sentence, so it needs a capital. My brother and I comes in the middle, so only the word I is a capital."
+          },
+          {
+            id: "SK-GUM1-4-C14",
+            type: "hottext",
+            points: 1,
+            dok: 2,
+            std: [
+              "3.L.GC.1:R:capitalize-the-first-word-of-a-sentence-and-the-"
+            ],
+            passages: [],
+            stem: "A student writes four sentences for the class newsletter.",
+            prompt: "Select the sentence that has a capital-letter error.",
+            options: [
+              "We painted a bright mural on the long gym wall.",
+              "Mr. Ortiz said I could add the sky and the clouds.",
+              "Last week i joined the art club after school.",
+              "Can you guess which part of the mural I painted?"
+            ],
+            answer: [2],
+            pick: 1,
+            clue: "Check the first letter of each sentence. Then look for the word I.",
+            hints: [
+              "Check the first letter of each sentence. Then look for the word I.",
+              "Read the sentences one at a time and point to every I.",
+              "The sentence about the mural on the gym wall has no I, and it begins with a capital, so it can be ruled out."
+            ],
+            how: [
+              "Check the first letter and every I in each sentence.",
+              "Last week i joined the art club after school. has a small i in the middle, and I must always be a capital.",
+              "The other sentences begin with capitals and use a capital I."
+            ],
+            misconception: "A common mix-up is checking only the first word. The word I can be wrong in the middle.",
+            why: "The answer is \"Last week i joined the art club after school.\". The small i in the middle of the sentence should be a capital I. The other sentences begin with capitals and use a capital I."
+          },
+          {
+            id: "SK-GUM1-4-C15",
+            type: "mc",
+            points: 1,
+            dok: 3,
+            std: [
+              "3.L.GC.1:R:capitalize-the-first-word-of-a-sentence-and-the-"
+            ],
+            passages: [],
+            prompt: "Lena says, \"The word I is a capital only at the start of a sentence.\" Which sentence shows that Lena is wrong?",
+            choices: [
+              {
+                text: "Last night, Dad and I watched the stars.",
+                correct: true
+              },
+              {
+                text: "I watched the stars with Dad last night."
+              },
+              {
+                text: "Dad watched the stars with Lena last night."
+              },
+              {
+                text: "I'm sure the stars were bright last night."
+              }
+            ],
+            clue: "To show that a rule is wrong, find an example that breaks it. Look at where the word I is in each sentence.",
+            hints: [
+              "To show that a rule is wrong, find an example that breaks it. Look at where the word I is in each sentence.",
+              "Find the sentences that have the word I. Ask whether I is at the start or somewhere else.",
+              "One sentence does not have the word I at all, so it cannot show anything about I."
+            ],
+            how: [
+              "Lena says I is a capital only at the start. Look for a sentence where I is a capital in the middle.",
+              "Two sentences begin with I, and one has no I at all.",
+              "The answer is \"Last night, Dad and I watched the stars.\" The I comes late in the sentence, and it is still a capital."
+            ],
+            misconception: "A common mix-up is picking a sentence that starts with I. That fits Lena's rule, so it cannot prove her wrong.",
+            why: "The answer is \"Last night, Dad and I watched the stars.\" The I in the middle of that sentence is still a capital, so Lena's rule is wrong. The other sentences either start with I or have no I."
+          }
+        ]
+      }
+    ]
+  },
+  similar: [
+    {
+      id: "SK-GUM1-4-S01",
+      type: "match",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.L.GC.1:R:capitalize-the-first-word-of-a-sentence-and-the-"
+      ],
+      passages: [],
+      stem: "A helper checks short notes that classmates wrote for the lunch line.",
+      prompt: "Sort every line into the box that fits it.",
+      cols: ["No fix needed","A capital is missing"],
+      rows: [
+        {
+          text: "Grandpa and I fixed the bike.",
+          answer: 0
+        },
+        {
+          text: "my aunt baked a pie.",
+          answer: 1
+        },
+        {
+          text: "We asked if i could stay.",
+          answer: 1
+        },
+        {
+          text: "Where did I leave my cap?",
+          answer: 0
+        }
+      ],
+      clue: "Look at the first letter of each line, then scan for the word I.",
+      hints: [
+        "Look at the first letter of each line, then scan for the word I.",
+        "Decide about the lines you feel surest of first, then handle the rest.",
+        "One line begins with a small letter. Find it before you move on."
+      ],
+      how: [
+        "Check the first letter and every I in each line.",
+        "Grandpa and I fixed the bike. and Where did I leave my cap? are written correctly.",
+        "my aunt baked a pie. begins with a small m, and We asked if i could stay. has a small i."
+      ],
+      misconception: "A common mix-up is checking only the first word. A small i in the middle is also a mistake.",
+      why: "Grandpa and I fixed the bike and Where did I leave my cap are fine. The other two have a small first letter or a small i.",
+      like: ["SK-GUM1-4-P3"]
+    },
+    {
+      id: "SK-GUM1-4-S02",
+      type: "hottext",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.L.GC.1:R:capitalize-the-first-word-of-a-sentence-and-the-"
+      ],
+      passages: [],
+      prompt: "Tap the TWO lines with no capital-letter mistakes.",
+      options: [
+        "Our team won, and I scored twice.",
+        "Is it time to feed the fish?",
+        "i packed my lunch before school.",
+        "the bus stopped at the corner.",
+        "After dinner, i watched TV with Dad."
+      ],
+      answer: [0,1],
+      pick: 2,
+      clue: "Check the first letter of every line, then every I.",
+      hints: [
+        "Check the first letter of every line, then every I.",
+        "Cross out any line that begins with a small letter.",
+        "One line has a small i in the middle."
+      ],
+      how: [
+        "Check the first letter and every I in each line.",
+        "Our team won, and I scored twice. and Is it time to feed the fish? are written correctly.",
+        "The other three begin with a small letter or have a small i."
+      ],
+      misconception: "A common mix-up is picking a line because it looks neat. Check the first letter and every I.",
+      why: "The answers are \"Our team won, and I scored twice.\" and \"Is it time to feed the fish?\". Both lines begin with capitals and use a capital I. The other three have small first letters or a small i.",
+      like: ["SK-GUM1-4-P5"]
+    },
+    {
+      id: "SK-GUM1-4-S03",
+      type: "mc",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.L.GC.1:R:capitalize-the-first-word-of-a-sentence-and-the-"
+      ],
+      passages: ["p4"],
+      stem: "A coach reads this draft about the skating rink aloud to the whole class.",
+      prompt: "Sentence 3 breaks a capital-letter rule. Pick the correct rewrite.",
+      choices: [
+        {
+          text: "Mia and I held the wall at first.",
+          correct: true
+        },
+        {
+          text: "Mia And I held the wall at first."
+        },
+        {
+          text: "Mia and I Held the wall at first."
+        },
+        {
+          text: "Mia and i held the wall at first."
+        }
+      ],
+      clue: "Look at the first word, then at any word that stands for the person writing.",
+      hints: [
+        "Look at the first word, then at any word that stands for the person writing.",
+        "Compare the small letters in the sentence with the choices. Which word is written the wrong way now?",
+        "A capital on a plain word in the middle of a sentence is not needed, so one choice can be ruled out."
+      ],
+      how: [
+        "Check the first word: Mia already starts with a capital.",
+        "Find the word that stands for the person writing. In sentence 3 it is a small i, and it must be a capital.",
+        "The answer is \"Mia and I held the wall at first.\" The other choices capitalize a plain word or keep the small i."
+      ],
+      misconception: "A common mix-up is adding capitals to plain words in the middle. Only I and names need them there.",
+      why: "The answer is \"Mia and I held the wall at first.\" The small i must become I. And and held are plain words, so they stay small.",
+      like: ["SK-GUM1-4-C03"]
+    },
+    {
+      id: "SK-GUM1-4-S04",
+      type: "dropdown",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.L.GC.1:R:capitalize-the-first-word-of-a-sentence-and-the-"
+      ],
+      passages: ["p4"],
+      stem: "A reader marks up the skating draft with a red pen before it goes on the bulletin board.",
+      prompt: "Which opening makes sentence 5 follow the rules?",
+      text: "{0} worker showed us how to glide.",
+      slots: [
+        {
+          options: ["Then a","then a","Then A"],
+          answer: 0
+        }
+      ],
+      clue: "Look at the first word and at the word right after it.",
+      hints: [
+        "Look at the first word and at the word right after it.",
+        "Say the beginning of the sentence with each choice, and check which letters are capitals.",
+        "A plain word that is neither I nor a name should stay small in the middle of a sentence, so one choice can be ruled out."
+      ],
+      how: [
+        "The first word is then, and it starts the sentence, so it needs a capital T.",
+        "The word a is a plain word in the middle of the sentence, so it stays small.",
+        "The answer is Then a. The other choices leave a small t or add a capital to A."
+      ],
+      misconception: "A common mix-up is putting a capital on the second word too. Only the first word of the sentence needs one.",
+      why: "The answer is Then a. Then starts the sentence, so it needs a capital T. The word a is in the middle and stays small.",
+      like: ["SK-GUM1-4-C04"]
+    },
+    {
+      id: "SK-GUM1-4-S05",
+      type: "mc",
+      points: 1,
+      dok: 3,
+      std: [
+        "3.L.GC.1:R:capitalize-the-first-word-of-a-sentence-and-the-"
+      ],
+      passages: ["p4"],
+      stem: "Coach Davis reads the roller rink draft aloud while the class follows along on paper.",
+      prompt: "Number 10 in the draft has an I right after a comma. What explains the way it is written?",
+      choices: [
+        {
+          text: "Writers make I a capital wherever it lands.",
+          correct: true
+        },
+        {
+          text: "Every word behind a comma gets one too."
+        },
+        {
+          text: "A comma tells the reader a new sentence has begun."
+        },
+        {
+          text: "Words that name a person all get them."
+        }
+      ],
+      clue: "Think about the rules you know for the start of a sentence and for the word that stands for the writer.",
+      hints: [
+        "Think about the rules you know for the start of a sentence and for the word that stands for the writer.",
+        "Ask whether the comma changes anything about how the word is written.",
+        "A comma does not start a new sentence, so one reason can be ruled out."
+      ],
+      how: [
+        "Find the word in question: I, in After an hour, I could skate backward.",
+        "The comma does not change anything. The word I is always a capital.",
+        "The answer is \"Writers make I a capital wherever it lands.\" Words after commas do not get capitals, and capitals do not go on every word that names a person."
+      ],
+      misconception: "A common mix-up is thinking a comma makes the next word a capital. A comma does not start a new sentence.",
+      why: "The answer is \"Writers make I a capital wherever it lands.\" The word I is always a capital. A comma does not start a new sentence, and plain words about people do not get capitals.",
+      like: ["SK-GUM1-4-C05"]
+    },
+    {
+      id: "SK-GUM1-4-S06",
+      type: "hottext",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.L.GC.1:R:capitalize-the-first-word-of-a-sentence-and-the-"
+      ],
+      passages: ["p4"],
+      stem: "A tired helper typed the roller rink draft very fast.",
+      prompt: "Of the shown sentences, tap the TWO that open with a letter that should be a capital.",
+      targets: ["p4:1:2","p4:1:4","p4:2:1","p4:2:2","p4:2:4"],
+      answer: ["p4:1:2","p4:2:1"],
+      pick: 2,
+      clue: "Look at the very first letter of each shown sentence.",
+      hints: [
+        "Look at the very first letter of each shown sentence.",
+        "Read just the opening word of each shown sentence. A small letter there is a mistake.",
+        "Sentence 8 begins with a capital M, so it can be ruled out."
+      ],
+      how: [
+        "Check the opening letter of each shown sentence.",
+        "Sentence 2 opens with a small w, and sentence 5 opens with a small t.",
+        "Sentences 4, 6 and 8 open with the capitals T, I and M."
+      ],
+      misconception: "A common mix-up is skipping a sentence because it has a capital I in it. Check the opening letter of every sentence.",
+      why: "The answers are sentences 2 and 5: \"we laced up our skates by the snack bar.\" and \"then a worker showed us how to glide.\". Sentences 2 and 5 open with we and then, both small. The other shown sentences open with capitals.",
+      like: ["SK-GUM1-4-C06"]
+    },
+    {
+      id: "SK-GUM1-4-S07",
+      type: "ebsr",
+      points: 2,
+      dok: 3,
+      std: [
+        "3.L.GC.1:R:capitalize-the-first-word-of-a-sentence-and-the-"
+      ],
+      passages: ["p5"],
+      prompt: "Work through the first half, then the second half.",
+      partA: {
+        prompt: "Which change would an editor make to sentence 12?",
+        choices: [
+          {
+            text: "Write its first letter as a capital",
+            correct: true
+          },
+          {
+            text: "Add a capital letter to the word slowly"
+          },
+          {
+            text: "End it with an exclamation mark at the back"
+          },
+          {
+            text: "Move the word walk to the front of it"
+          }
+        ]
+      },
+      partB: {
+        prompt: "Pick the version an editor would approve.",
+        choices: [
+          {
+            text: "I sipped it slowly on the walk back.",
+            correct: true
+          },
+          {
+            text: "i sipped it slowly on the walk Back."
+          },
+          {
+            text: "I Sipped it slowly on the walk back."
+          },
+          {
+            text: "I sipped it slowly On the walk back."
+          }
+        ]
+      },
+      clue: "Check how sentence 12 begins.",
+      hints: [
+        "Check how sentence 12 begins.",
+        "In the first half, find the change that matches a capital-letter rule. In the second half, compare each version with the original.",
+        "One version adds a capital to a plain word at the end of the sentence."
+      ],
+      how: [
+        "First half: sentence 12 begins with a small i. That is the word I, so its first letter needs a capital.",
+        "Second half: only that first word needs a change. The other words are plain words and stay small.",
+        "The answer is \"I sipped it slowly on the walk back.\" The other versions capitalize plain words or leave the small i."
+      ],
+      misconception: "A common mix-up is capitalizing the last word as well. Only the first word needs a capital here.",
+      why: "Part A: \"Write its first letter as a capital\" Part B: \"I sipped it slowly on the walk back.\" The small i begins the sentence and is also the word I, so it needs a capital. Plain words like sipped and walk stay small.",
+      like: ["SK-GUM1-4-C07"]
+    },
+    {
+      id: "SK-GUM1-4-S08",
+      type: "ms",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.L.GC.1:R:capitalize-the-first-word-of-a-sentence-and-the-"
+      ],
+      passages: [],
+      stem: "A club secretary typed five lines for the weekend newsletter.",
+      prompt: "Pick the TWO lines that break a capital-letter rule.",
+      pick: 2,
+      choices: [
+        {
+          text: "my uncle and I fixed the old roof.",
+          correct: true
+        },
+        {
+          text: "We can leave when i finish my chores.",
+          correct: true
+        },
+        {
+          text: "Dan and I walked home together after school."
+        },
+        {
+          text: "Is it time for me to go to the store now?"
+        },
+        {
+          text: "After lunch, I read my book under the tree."
+        }
+      ],
+      clue: "Look at the first letter of every line, then at every I.",
+      hints: [
+        "Look at the first letter of every line, then at every I.",
+        "Cross out the lines that begin with a capital and use only capital Is.",
+        "One line has a small i in the middle."
+      ],
+      how: [
+        "Check the first letter and every I in each line.",
+        "my uncle and I fixed the old roof. begins with a small m, and We can leave when i finish my chores. has a small i.",
+        "The other three begin with capitals and use a capital I."
+      ],
+      misconception: "A common mix-up is trusting a line because it has a capital I. The first letter can still be wrong.",
+      why: "The answers are \"my uncle and I fixed the old roof.\" and \"We can leave when i finish my chores.\". One line begins with a small letter, and one has a small i. The other three follow both rules.",
+      like: ["SK-GUM1-4-C08"]
+    },
+    {
+      id: "SK-GUM1-4-S09",
+      type: "mc",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.L.GC.1:R:capitalize-the-first-word-of-a-sentence-and-the-"
+      ],
+      passages: [],
+      stem: "Ava texted, \"mom says i should pack soon. then i'll find my boots.\"",
+      prompt: "Count the words in Ava's text that are missing a needed capital.",
+      choices: [
+        {
+          text: "1"
+        },
+        {
+          text: "2"
+        },
+        {
+          text: "3"
+        },
+        {
+          text: "4",
+          correct: true
+        }
+      ],
+      clue: "Check how each sentence begins, then check the middle of each.",
+      hints: [
+        "Check how each sentence begins, then check the middle of each.",
+        "The text has two sentences. Write down every word that has a small letter but needs a capital.",
+        "The text has more than two mistakes, so two choices can be ruled out."
+      ],
+      how: [
+        "Check the opening word of each sentence. The words mom and then both start with small letters.",
+        "Look for the word I and the short form i'll. The small i in the first sentence and i'll in the second are both mistakes.",
+        "That makes four words: mom, i, then and i'll. The answer is 4."
+      ],
+      misconception: "A common mix-up is forgetting that a short form like i'll needs a capital. It contains the word I.",
+      why: "The answer is \"4\" Mom and then start sentences with small letters, and the i and the i'll are small too. That is four words.",
+      like: ["SK-GUM1-4-C09"]
+    },
+    {
+      id: "SK-GUM1-4-S10",
+      type: "mc",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.L.GC.1:R:capitalize-the-first-word-of-a-sentence-and-the-"
+      ],
+      passages: ["p5"],
+      stem: "At read-aloud practice, a volunteer insists number 10 of the market draft looks fine, since if comes just before the small i.",
+      prompt: "What edit does that line need?",
+      choices: [
+        {
+          text: "Turn that single letter into a big one.",
+          correct: true
+        },
+        {
+          text: "Swap that single letter for a name from the story."
+        },
+        {
+          text: "Slide that single letter to the front of the line."
+        },
+        {
+          text: "Keep all the letters just as typed."
+        }
+      ],
+      clue: "Look for any single letter that stands alone.",
+      hints: [
+        "Look for any single letter that stands alone.",
+        "Decide whether that letter follows a capital-letter rule.",
+        "One choice leaves everything as written, so ask yourself whether the draft is already correct."
+      ],
+      how: [
+        "Find the lone letter: the small i in if i could.",
+        "The word I is always a capital, no matter where it sits, so the small i must change.",
+        "The answer is \"Turn that single letter into a big one.\""
+      ],
+      misconception: "A common mix-up is thinking the middle of a sentence is a safe place for a small i. It is not.",
+      why: "The answer is \"Turn that single letter into a big one.\" The word I is a capital no matter where it sits, so the small i must change. Grandma already has its capital.",
+      like: ["SK-GUM1-4-C10"]
+    },
+    {
+      id: "SK-GUM1-4-S11",
+      type: "hottext",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.L.GC.1:R:capitalize-the-first-word-of-a-sentence-and-the-"
+      ],
+      passages: ["p6"],
+      prompt: "Pick the TWO shown sentences that have a small i where a capital I belongs.",
+      targets: ["p6:2:2","p6:2:4","p6:3:2","p6:3:3","p6:3:5"],
+      answer: ["p6:2:2","p6:3:3"],
+      pick: 2,
+      clue: "Hunt for an i standing alone or at the front of a short form.",
+      hints: [
+        "Hunt for an i standing alone or at the front of a short form.",
+        "Check each shown sentence for a small i that stands for the writer.",
+        "Sentence 14 has no word that stands for the writer, so it can be ruled out."
+      ],
+      how: [
+        "Look for a small i that stands for the writer.",
+        "Sentence 7 says My little sister cheered and i laughed. The small i stands for the writer.",
+        "Sentence 12 has the short form i'll, which includes the word I. Sentence 14 has a small first letter, but no small i."
+      ],
+      misconception: "A common mix-up is picking the sentence with a small first letter. This question asks only about a small i.",
+      why: "The answers are sentences 7 and 12: \"My little sister cheered and i laughed.\" and \"Mom thinks i'll need more clay.\". Sentences 7 and 12 each have a small i that stands for the writer. The other shown sentences have no small i.",
+      like: ["SK-GUM1-4-C11"]
+    },
+    {
+      id: "SK-GUM1-4-S12",
+      type: "dropdown",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.L.GC.1:R:capitalize-the-first-word-of-a-sentence-and-the-"
+      ],
+      passages: ["p6"],
+      prompt: "Sentence 6 begins with a mistake. Pick the right words.",
+      text: "{0} spilled down the sides like lava!",
+      slots: [
+        {
+          options: ["Then it","then it","Then It"],
+          answer: 0
+        }
+      ],
+      clue: "Look at both words at the start of the sentence.",
+      hints: [
+        "Look at both words at the start of the sentence.",
+        "Say the beginning of the sentence with each choice and look at the first letter of each word.",
+        "A plain word in the middle of a sentence should stay small, so one choice can be ruled out."
+      ],
+      how: [
+        "The first word starts the sentence, so it needs a capital T.",
+        "The word it is a plain word in the middle of the sentence, so it stays small.",
+        "The answer is Then it. The other choices leave a small t or capitalize It."
+      ],
+      misconception: "A common mix-up is capitalizing every word at the front. Only the first word needs it.",
+      why: "The answer is Then it. Then starts the sentence, so it needs a capital T. The word it is not a name and stays small.",
+      like: ["SK-GUM1-4-C12"]
+    },
+    {
+      id: "SK-GUM1-4-S13",
+      type: "dropdown",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.L.GC.1:R:capitalize-the-first-word-of-a-sentence-and-the-"
+      ],
+      passages: [],
+      stem: "A camp counselor is fixing tonight's weather log.",
+      prompt: "Complete both gaps.",
+      text: "{0} air was chilly, so {1} wore thick jackets.",
+      slots: [
+        {
+          options: ["This evening the","this evening the","This Evening the"],
+          answer: 0
+        },
+        {
+          options: ["Ben and I","ben and I","Ben And I"],
+          answer: 0
+        }
+      ],
+      clue: "Think about which words in each gap need a capital letter and which do not.",
+      hints: [
+        "Think about which words in each gap need a capital letter and which do not.",
+        "In the first gap, check the very first word. In the second gap, check the name and the word I.",
+        "A plain word in the middle of a sentence stays small, so one choice in the second gap can be ruled out."
+      ],
+      how: [
+        "First gap: This begins the sentence, so it needs a capital T. The other words stay small.",
+        "Second gap: Ben is a name and I is always a capital, but and is a plain word.",
+        "The answers are This evening the and Ben and I."
+      ],
+      misconception: "A common mix-up is capitalizing every word in a phrase. Plain words stay small unless they start the sentence.",
+      why: "The answers are This evening the and Ben and I. This starts the sentence, so it needs a capital. In Ben and I, the name and I have capitals and the word and stays small.",
+      like: ["SK-GUM1-4-C13"]
+    },
+    {
+      id: "SK-GUM1-4-S14",
+      type: "hottext",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.L.GC.1:R:capitalize-the-first-word-of-a-sentence-and-the-"
+      ],
+      passages: [],
+      stem: "A librarian posts one sentence from each of four stories on the reading wall.",
+      prompt: "Which sentence breaks a rule about capitals? Tap it.",
+      options: [
+        "On Sunday my cousins and i flew kites.",
+        "Kites filled the whole sky above the park.",
+        "I ran faster than the wind.",
+        "Can you believe how high they went?"
+      ],
+      answer: [0],
+      pick: 1,
+      clue: "Look at how each sentence begins, then look for the word I.",
+      hints: [
+        "Look at how each sentence begins, then look for the word I.",
+        "Read each sentence and point to every I.",
+        "The sentence about kites in the sky has a capital at the start and no I, so it can be ruled out."
+      ],
+      how: [
+        "Check the first letter and every I in each sentence.",
+        "On Sunday my cousins and i flew kites. has a small i, and the word I must be a capital.",
+        "The other sentences begin with capitals and have no small i."
+      ],
+      misconception: "A common mix-up is checking only how a sentence begins. The word I can be wrong in the middle.",
+      why: "The answer is \"On Sunday my cousins and i flew kites.\". The small i in the middle should be a capital I. The other sentences follow both rules.",
+      like: ["SK-GUM1-4-C14"]
+    },
+    {
+      id: "SK-GUM1-4-S15",
+      type: "mc",
+      points: 1,
+      dok: 3,
+      std: [
+        "3.L.GC.1:R:capitalize-the-first-word-of-a-sentence-and-the-"
+      ],
+      passages: [],
+      prompt: "Omar says, \"I'm and I'll can stay small when they are not the first word.\" Which sentence proves Omar wrong?",
+      choices: [
+        {
+          text: "This weekend, I'm helping my aunt paint.",
+          correct: true
+        },
+        {
+          text: "I'm helping my aunt paint this weekend."
+        },
+        {
+          text: "My aunt will paint her kitchen this weekend."
+        },
+        {
+          text: "I'll help my aunt paint this weekend."
+        }
+      ],
+      clue: "To prove a rule wrong, find an example that breaks it. Look at where the short form sits in each sentence.",
+      hints: [
+        "To prove a rule wrong, find an example that breaks it. Look at where the short form sits in each sentence.",
+        "Find the sentences with a short form. Ask whether it is the first word or later in the sentence.",
+        "One sentence has no short form at all, so it cannot show anything about them."
+      ],
+      how: [
+        "Omar says short forms can stay small later in a sentence. Look for one that is a capital there.",
+        "Two sentences begin with a short form, and one has none.",
+        "The answer is \"This weekend, I'm helping my aunt paint.\" The short form is not the first word, and it is still a capital."
+      ],
+      misconception: "A common mix-up is picking a sentence that starts with a short form. That fits Omar's idea, so it cannot prove him wrong.",
+      why: "The answer is \"This weekend, I'm helping my aunt paint.\" The short form I'm is later in the sentence and is still a capital, so Omar is wrong. The other sentences start with a short form or have none.",
+      like: ["SK-GUM1-4-C15"]
+    }
+  ],
+  addons: {
+    "SK-GUM1-4-P1": {
+      hints: [
+        "Check the first letter, then every I.",
+        "Cross out any sentence that begins with a small letter.",
+        "One sentence has a small i in the middle."
+      ],
+      how: [
+        "Check the first letter and every I in each sentence.",
+        "The answer is \"My friend and I built a fort.\" It starts with a capital and has a capital I."
+      ],
+      misconception: "A common mix-up is checking only the first word. The word I can be wrong in the middle."
+    },
+    "SK-GUM1-4-P2": {
+      hints: [
+        "Look past the first word and find every place the word I is used.",
+        "Check whether each I is written as a capital.",
+        "The sentence about the baby has no word that stands for the writer."
+      ],
+      how: [
+        "Look past the first word for each I.",
+        "The answer is \"We went to the pool, and i swam.\" The word I must always be a capital."
+      ],
+      misconception: "A common mix-up is checking only how each sentence starts. The mistake here is in the middle."
+    },
+    "SK-GUM1-4-P3": {
+      hints: [
+        "For each sentence, check the first letter and look for the word I.",
+        "Sort the sentences you feel surest of first.",
+        "Two of the four sentences begin with a small letter, so check those first."
+      ],
+      how: [
+        "Check the first letter and every I in each sentence.",
+        "Grace and I sang a song. and Is it time for lunch? are correct. The other two need a capital."
+      ],
+      misconception: "A common mix-up is trusting a sentence with a capital I. Check the first letter too."
+    },
+    "SK-GUM1-4-P4": {
+      hints: [
+        "Think about the two capital-letter rules.",
+        "Look at the very first word of the sentence.",
+        "Fishing is a plain word in the middle of the sentence."
+      ],
+      how: [
+        "Think about the first-word rule and the rule for I.",
+        "The answer is on. It is the first word, so it should be On."
+      ],
+      misconception: "A common mix-up is looking for the word I only. The first word needs a capital too."
+    },
+    "SK-GUM1-4-P5": {
+      hints: [
+        "Check the first letter of each sentence, then look for the word I.",
+        "Cross out every sentence that begins with a small letter.",
+        "Two sentences begin with a small letter, and one more starts with a small word that is a question."
+      ],
+      how: [
+        "Check the first letter and every I.",
+        "The answers are \"Tomorrow I will visit Aunt Rosa.\" and \"Our garden has six sunflowers.\" The others start with small letters."
+      ],
+      misconception: "A common mix-up is picking a sentence just because it has a capital I. The first letter must be a capital too."
+    }
+  },
+  /* B7a:core:end */
   test: [
     { id: "SK-GUM1-4-T1", type: "mc", points: 1, dok: 1, passages: [],
       prompt: "Which sentence is correct?",
