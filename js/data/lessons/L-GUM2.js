@@ -387,9 +387,9 @@ PP.addLesson({
                 "text": "Paints ends in -s because it comes after the word Every, which makes verbs plural."
               }
             ],
-            "clue": "A verb changes its form for a reason. Look for the clue or the helping word in sentences 7 and 8.",
+            "clue": "A verb changes for a reason. Look for the clue or the helping word in sentences 7 and 8.",
             "hints": [
-              "A verb changes its form for a reason. Look for the clue or the helping word in sentences 7 and 8.",
+              "A verb changes for a reason. Look for the clue or the helping word in sentences 7 and 8.",
               "In sentence 7, find the helping word in front of pick. In sentence 8, find the clue at the start and count who does the painting.",
               "Neither sentence 7 nor sentence 8 begins with a clue about the past. Think about the choices again."
             ],
@@ -634,7 +634,7 @@ PP.addLesson({
             "clue": "To judge someone's idea, ask what the time clue shows. Then check whether his verb shows the same time.",
             "hints": [
               "To judge someone's idea, ask what the time clue shows. Then check whether his verb shows the same time.",
-              "Find the time clue in sentence 5 and say whether it points to the past, present or future.",
+              "Find the time clue in sentence 5 and say what time it shows.",
               "How the swings are today does not change the time that the clue words show. Think about the other choices."
             ],
             "how": [
@@ -1554,7 +1554,7 @@ PP.addLesson({
       "hints": [
         "Future tense tells about something that has not happened yet. Look at how each verb is built.",
         "Check each sentence for the helping word that shows the future.",
-        "Two of the sentences tell about things that are over. Think about the other two."
+        "Practiced tells about something that is over. Think about the other three choices."
       ],
       "how": [
         "Check each sentence for a verb that shows later.",
@@ -1567,7 +1567,7 @@ PP.addLesson({
       "hints": [
         "Check that the time word in each sentence and its verb tell the same time.",
         "Take the sentences one at a time. Underline the time word, then the verb.",
-        "Two sentences use will or Next week, and they match. Think about the rest."
+        "The sentence about next week has a clue and a helping word that agree. Think about the rest."
       ],
       "how": [
         "Read each time word and its verb.",
