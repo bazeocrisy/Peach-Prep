@@ -15,3 +15,9 @@ Done: `js/teach.js` (new), `js/practice.js` (tm/tp/sk/tmAfter/f1, status `taught
 Smoke-tested by script on 3.T.RA.1.b at 390x844: `#practice/3.T.RA.1.b` opens question 1; Teach Me opens, hint, steps, answer; Back to My Question returns; record shows tm/tp/h/x/sk.
 Next: copy updates (routine block, parents plan, site.js), run old suites against this tree, adapt tests (TEST-CHANGES.md), write verification/qf.py and teach-coverage.js, viewports and screenshots.
 Baseline suites (unmodified 9eba382) run in the scratchpad `qf/baseline/status`.
+
+## Checkpoint 2 (2026-10-27) - implementation, tests and copy complete; roll-out list produced
+Built: everything in Checkpoint 1 plus copy (routine block, parents plan and Experience Online card, site.js), Skill overview button on the Learning Path card, header and tag fixes (mode tag never clipped; long back label wraps; short landscape header is one row), `verification/qf.py` (59 checks, seven viewports, 39 screenshots, axe), `verification/teach-coverage.js`, `docs/question-first/TEST-CHANGES.md`.
+Decisions: hints exist only inside Teach Me, so a hint counts as a Teach Me visit (status "Right after Teach Me"); a fresh question is offered only after help or a wrong try; Teach Me "tm" counts each visit; the check never has Teach Me.
+Verified in a real browser (Playwright Chromium, frozen copy run4): see the final report for counts. Simulated: none of the touch behaviour is on a real phone; viewports are emulated. Not verified: real screen readers (axe only), real Safari/iOS.
+Limitations: 404 of 660 core items have a non-final `how` step that quotes a correct choice (the answer can be seen before the Answer card; status still records Teach Me, never independent); 350 evidence hints name no paragraph; 82 items have no matching teaching point; 57 lessons keep the five-step flow. Baseline failures unchanged: path.py 9, versioning.py 1.

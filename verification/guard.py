@@ -506,7 +506,7 @@ with sync_playwright() as p:
     # 11.1 opening a lesson from the list writes nothing
     fresh()
     pg.click('#skill-list .skill-line[data-code="%s"]' % A); pg.wait_for_timeout(100)
-    ok("11.1 opening a lesson from the skill list writes no progress", pg.evaluate("PP_APP.current()") == "skill" and pg.evaluate(PROG) is None, pg.evaluate(PROG))
+    ok("11.1 opening a lesson from the skill list writes no progress", pg.evaluate("PP_APP.current()") in ("skill", "player") and pg.evaluate(PROG) is None, pg.evaluate(PROG))
     # 11.2 the test items cannot be run as hinted practice
     pg.goto(BASE + "#play/SK:%s:t/practice" % A); pg.wait_for_timeout(400)
     lp = pg.evaluate("({s:PP_PLAYER.state(), help:document.getElementById('q-help').offsetParent!==null, hash:location.hash})")
@@ -901,7 +901,7 @@ with sync_playwright() as p:
     q = page12(1366, 900, False)
     goto12(q)
     ok("14.0 the fixture lesson has a form B check set (SK:<k>:tB) outside the Practice -> Try -> Test chain; form A and B are worth the same points",
-       q.evaluate("(k=>!!PP.byId['SK:'+k+':tB']&&PP_SKILLS.hasFormB(k)&&PP.byId['SK:'+k+':t'].next===null&&PP.byId['SK:'+k+':tB'].next===null&&PP.byId['SK:'+k+':y'].next.id==='SK:'+k+':t'"
+       q.evaluate("(k=>!!PP.byId['SK:'+k+':tB']&&PP_SKILLS.hasFormB(k)&&PP.byId['SK:'+k+':t'].next===null&&PP.byId['SK:'+k+':tB'].next===null&&(PP.byId['SK:'+k+':y3']||PP.byId['SK:'+k+':y']).next.id==='SK:'+k+':t'"
                   "&&PP.byId['SK:'+k+':t'].items.reduce((a,i)=>a+i.points,0)===PP.byId['SK:'+k+':tB'].items.reduce((a,i)=>a+i.points,0))(%s)" % jk))
     # 14.1 form selection: first ever -> A; after any attempt -> the other form; a review after a pass -> the form not used for the pass
     seed14(q, None)
@@ -943,9 +943,11 @@ with sync_playwright() as p:
     m2 = q.evaluate("PP_PLAYER.state().mode"); q.evaluate("PP_PLAYER.abandon()")
     rp = q.evaluate(P14)[K14]
     seed14(q, {K14: {"tries": 1, "attempts": [{"d": T14, "got": 0, "max": 7, "ok": False, "n": 1, "afterAnswers": False, "form": "A"}]}})
-    q.evaluate("PP_PLAYER.start('SK:%s:y','try')" % K14); q.wait_for_timeout(80)
-    for i in range(q.evaluate("PP_PLAYER.state().total")):
-        q.evaluate(CORRECT); q.evaluate("document.getElementById('q-check').click(); document.getElementById('q-next').click()"); q.wait_for_timeout(20)
+    # question-first: a core lesson's practice is three sets of five (y, y2, y3); the last one leads to the check
+    for part in [x for x in ("y", "y2", "y3") if q.evaluate("!!PP.byId['SK:%s:%s']" % (K14, x))]:
+        q.evaluate("PP_PLAYER.start('SK:%s:%s','try')" % (K14, part)); q.wait_for_timeout(80)
+        for i in range(q.evaluate("PP_PLAYER.state().total")):
+            q.evaluate(CORRECT); q.evaluate("document.getElementById('q-check').click(); document.getElementById('q-next').click()"); q.wait_for_timeout(20)
     q.click("#done-test"); q.wait_for_timeout(80)
     dt = q.evaluate("PP_PLAYER.state()"); q.evaluate("PP_PLAYER.abandon()")
     ok("14.3 SK:<k>:tB never runs as practice and never records practice; Try It Yourself's 'Take the skill check' opens the form the site picks",
@@ -1127,7 +1129,10 @@ with sync_playwright() as p:
         q = page12(w, 700, True)
         goto12(q)
         mixed = q.evaluate("PP.sets.find(s=>s.section!=='skill').id")
-        for sid, mode in (("SK:3.T.C.1.b:p", "practice"), ("SK:3.T.C.1.b:y", "try"), ("SK:3.T.C.1.b:t", "test"), (mixed, "test")):
+        # question-first: 3.T.C.1.b has core practice, so its :y set is Practice on my own (tag "Practice"); the old "Try it yourself" tag
+        # is checked on a lesson without core practice (docs/question-first/TEST-CHANGES.md)
+        legacy_y = q.evaluate("(Object.keys(PP.lessons).find(k=>!PP.lessons[k].core&&PP.byId['SK:'+k+':y'])||null)")
+        for sid, mode in (("SK:3.T.C.1.b:p", "practice"), ("SK:3.T.C.1.b:y", "try"), ("SK:%s:y" % legacy_y if legacy_y else "SK:3.T.C.1.b:y", "try"), ("SK:3.T.C.1.b:t", "test"), (mixed, "test")):
             q.evaluate("PP_PLAYER.start(%s,'%s')" % (json.dumps(sid), mode)); q.wait_for_timeout(60)
             v = q.evaluate(TAG16)
             if not v or v["cut"]: cut16.append((w, sid, v))

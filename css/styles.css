@@ -1215,3 +1215,6 @@ a.sk-chip:hover .sk-chip-code{border-color:var(--peach-deep);text-decoration:und
 /* question-first: a short or narrow header leaves the room to the question */
 @media (max-height:520px){ #screen-player .player-head{display:flex;flex-wrap:nowrap;align-items:center;justify-content:space-between;gap:12px;} #screen-player .player-head .page-title{font-size:1.1rem;margin:0;} #screen-player .bar{padding-top:4px;padding-bottom:4px;} }
 @media (max-width:360px){ #screen-player .player-head .page-title{font-size:1.1rem;line-height:1.2;} }
+
+/* question-first: a long back label ("← Standard 3.T.C.1.a", "← Learning path") wraps instead of widening the bar on a 320px phone */
+#screen-player #player-back{flex:0 1 auto;min-width:0;white-space:normal;text-align:left;line-height:1.15;overflow-wrap:anywhere;}

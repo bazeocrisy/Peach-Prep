@@ -257,6 +257,24 @@ with sync_playwright() as pw:
           r3["ok"] is True and fin["st"] == "shown" and "answer shown" in fin["fb"].lower() and r3["f1"] == {"ok": False, "pre": True}, (r3, fin))
     close_page(q)
 
+    # ---------------- Q2b. evidence in the text ----------------
+    for (w, h) in ((1366, 900), (390, 844)):
+        q = page(pw, w, h, errors=errors); ready(q, "#browse"); q.evaluate("localStorage.clear()")
+        ev = q.evaluate("""(k=>{for(const part of ['y','y2','y3']){const s=PP.byId['SK:'+k+':'+part];for(let i=0;i<s.items.length;i++){const it=s.items[i];
+            if((it.passages||[]).length&&PP_TEACH.evidenceRefs(it,(it.hints||[])[1]).length)return {sid:s.id,pos:i,id:it.id,refs:PP_TEACH.evidenceRefs(it,it.hints[1])}}}return null})(%s)""" % json.dumps(K))
+        q.evaluate("PP_PLAYER.start(%s,'try',{pos:%d})" % (json.dumps(ev["sid"]), ev["pos"])); q.wait_for_timeout(150)
+        teach(q)
+        while not vis(q, "#teach-cards [data-tm-show]") and vis(q, "#teach-next"):
+            q.click("#teach-next"); q.wait_for_timeout(20)
+        q.click("#teach-cards [data-tm-show]"); q.wait_for_timeout(150)
+        hl = q.evaluate("({n:document.querySelectorAll('#passage-pane-body .is-teach-focus').length, pane:document.getElementById('player-grid').dataset.pane||'', note:(document.getElementById('passage-note')||{}).textContent||'', vis:!!document.querySelector('#passage-pane-body .is-teach-focus') && document.querySelector('#passage-pane-body .is-teach-focus').offsetParent!==null})")
+        qtab(q)
+        back_q(q)
+        gone = q.evaluate("document.querySelectorAll('#passage-pane-body .is-teach-focus').length")
+        check("Q2b.1 at %dpx: 'Show it in the text' highlights the paragraph(s) the hint names (a visible edge, not colour alone) in the open passage%s; coming back to the question clears the highlight" % (w, " and moves a phone to the passage tab" if w < 980 else ""),
+              hl["n"] >= 1 and hl["vis"] and (w >= 980 or hl["pane"] == "passage") and gone == 0, (ev, hl, gone))
+        close_page(q)
+
     # ---------------- Q3. Back / Forward / reload / direct links / Escape ----------------
     q = page(pw, errors=errors); ready(q, "#browse"); q.evaluate("localStorage.clear()")
     q.evaluate("PP_SKILLS.begin(%s)" % json.dumps(K)); q.wait_for_timeout(200)

@@ -1,6 +1,6 @@
 # Question-first design (Peach Prep)
 
-Status: implemented for every lesson with `core` practice (34 of 99). Lessons without `core` keep today's five-step flow until their content exists. Baseline commit 9eba382. Read with `01-architecture.md` (engine) and `UX-LOG.md` (decisions, tests).
+Status: implemented for every lesson with `core` practice (44 lessons in this tree; 57 have none yet). Lessons without `core` keep today's five-step flow until their content exists. Baseline commit 9eba382. Read with `01-architecture.md` (engine) and `UX-LOG.md` (decisions, tests).
 
 ## 1. Flow
 Choose a skill (list, search, Up next, Learning Path, standard page) -> the first or saved question opens -> Check Answer or Teach Me -> Back to My Question -> Next -> five questions -> session screen (next five, or stop) -> separate skill check.
@@ -48,4 +48,6 @@ Verified 2026-10-27: https://gaexperienceonline.com/ (GaDOE, built by its test v
 ## 10. Storage
 No new key. `pp.practice.v1` stays version 1: the new fields (`tm`, `tp`, `tmAfter`, `sk`, `f1`) are optional and additive; absent means zero or false, so old records mean what they meant. Status `taught` is derived and only applies where `tm > 0`. Read, never rewritten on load: `pp.progress.v1` (`tried`, passes, attempts), `pp.path.v1` (bookmark step `try` now means "practice"), `pp.review.v1`, writing keys. Teach Me step, panel state and scroll are session memory. Blocked, full or damaged storage keeps working for the visit with the existing notice; reload restarts the practice and says so.
 
-New: `js/teach.js`, routes `#practice/...` and `.../try/teach`, five record fields, one derived status, the Teach Me and session screens, copy changes, `verification/qf.py`, `verification/teach-coverage.js`.
+New: `js/teach.js`, routes `#practice/...` and `.../try/teach`, five record fields, one derived status, the Teach Me and session screens, a Skill overview button on the Learning Path card, copy changes, `verification/qf.py`, `verification/teach-coverage.js`. Test adaptations: `TEST-CHANGES.md`.
+
+Note: hints exist only inside Teach Me, so opening Teach Me for a hint also counts as a Teach Me visit; "Right with hints" therefore appears only for records saved before this build.
