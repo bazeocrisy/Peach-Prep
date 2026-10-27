@@ -349,3 +349,15 @@ Learn It (DIG) now also teaches Home button, scroll bar, plus and minus buttons,
 ### 12.4 Changed items for the fourth blind review
 DIG: Learn It point 1 and 2, C04, S03, S04, P1, P2, T2, T5, C11, S11, C13 (hint 3).
 FEAT: C07, S07, P3, T4, C11 (Part B prompt), S11 (Part B prompt and decoy), passage p6 (fourth sentence).
+
+## 13. Fourth-review light fixes (after ACCEPT)
+
+- FEAT S11: hint 3 and why now say the article follows one oyster from a speck of grit to a pearl (the passage says "Some oysters take longer than others").
+- FEAT C09 and S09: the label row and the text-box extra-fact row are replaced. New facts: an index shows every page where a topic is found; a Try It! box gives the reader a job to do. Concept grep: "index" as a feature (glossary, bold words, index lists) is keyed in no SK-TC1b or SK-SS1a check item; bold words are left out because the T-C.js lesson covers them. FEAT C07's label fact no longer appears in C09/S09.
+- FEAT S07 reworded (shorter stem, new options): S07~C07 J=0.121, bag 0.140 (all-token, with passages); lowest mode 0.093/0.134. A clue-word warning ("spot") was fixed.
+- DIG T5 changed to "According to the script, when do viewers hear [snap of a stem]?" (reading the script position), so the farm and hot-sun cues no longer give the answer.
+- DIG T2 changed: blank 1 now asks which control returns to the last orchard page (Back arrow, with Home button and play button as decoys); blank 2 keeps the full-screen button. The speaker button row stays only in P2.
+- Strawberry wording: the script and T3 now say "pinch the stem just above the berry, and twist gently" (the NC State guidance cited by the reviewer).
+- Not changed: optional DIG C08 hint note.
+- Gates: check-content PASS (0 failures, 29 warnings), check-writing 0 failures, check-instructional-copy 28 passed. Similarity in all four modes: 0 pairs over 0.21; highest S12~C12 0.193 and S09~C09 bag 0.200; shared options 0.
+- Changed items for the light blind check: FEAT S11 (hint 3, why), FEAT C09, S09, S07; DIG T2, T5, T3 (step 2 text and why), passage p3 (paragraph 6).

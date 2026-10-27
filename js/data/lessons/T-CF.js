@@ -382,29 +382,29 @@ PP.addLesson({
         misconception: "A common mix-up is guessing a reason the text never gives. Look at the order of the places the sections name.",
         why: "The answer is \"The sections follow the path a walker takes around the trail.\" The sections start at the parking lot, go around the pond to the tower, and end back at the start. The brochure never ranks the parts of the trail." },
       { id: "SK-TFF-C09", type: "match", points: 2, dok: 2, std: ["3.T.SS.1.a", "3.T.C.1.b"], passages: [],
-        stem: ["A page in a book about grasshoppers has these four features."],
+        stem: ["A book about grasshoppers has these four features."],
         prompt: "Match each feature to its job.",
-        cols: ["Tells what one section is about", "Tells what a whole picture shows", "Names one part of a picture", "Adds an extra fact"],
+        cols: ["Tells what one section is about", "Tells what a whole picture shows", "Shows every page where a topic is found", "Gives the reader a job to do"],
         rows: [
           { text: "The title Big Legs for Jumping, above a few paragraphs", answer: 0 },
           { text: "The sentence A grasshopper rests on a blade of grass, printed beside a photo", answer: 1 },
-          { text: "The word leg, with a line that points to one part of a drawing", answer: 2 },
-          { text: "A box that says Did You Know? Some grasshoppers buzz by rubbing their legs on their wings.", answer: 3 }
+          { text: "An ABC list at the back of the book that says legs, 6, 9", answer: 2 },
+          { text: "A box that says Try It! Jump as far as you can, and measure your jump.", answer: 3 }
         ],
-        clue: "Each feature on a page has its own job. Ask what each one does for the reader.",
+        clue: "Each feature in a book has its own job. Ask what each one does for the reader.",
         hints: [
-          "Each feature on a page has its own job. Ask what each one does for the reader.",
-          "Look at where each feature sits: above a section, beside a whole picture, with a line that points into a picture, or set apart in a box.",
-          "The word with the line points into the drawing and names something inside it, so match that row to the job that names one part. Decide the other three rows yourself."
+          "Each feature in a book has its own job. Ask what each one does for the reader.",
+          "Look at where each feature sits: above a section, beside a whole picture, at the back of the book in ABC order, or set apart in a box.",
+          "The ABC list at the back gives page numbers for topics, so match that row to the job about pages. Decide the other three rows yourself."
         ],
         how: [
           "The title above the paragraphs is a heading. It tells what that section is about.",
           "The sentence beside the photo is a caption. It tells what the whole picture shows.",
-          "The word leg has a line that points to one part of the drawing, so it is a label. It names one part of a picture.",
-          "The box that says Did You Know? sets one extra fact apart from the sections."
+          "The ABC list at the back of the book is an index. It shows every page where a topic is found.",
+          "The box that says Try It! asks the reader to do something, so it gives the reader a job to do."
         ],
-        misconception: "A common mix-up is treating a label and a caption as the same thing. A label names one part, and a caption tells about the whole picture.",
-        why: "The heading tells what one section is about. The caption beside the photo tells what the whole picture shows. The word leg is a label, so it names one part of a picture. The box that says Did You Know? adds an extra fact." },
+        misconception: "A common mix-up is treating a heading and an index as the same thing, since both are words. A heading tells about one section, but an index shows every page for a topic.",
+        why: "The heading tells what one section is about. The caption beside the photo tells what the whole picture shows. The ABC list at the back is an index, so it shows every page where a topic is found. The Try It! box gives the reader a job to do." },
       { id: "SK-TFF-C10", type: "ms", points: 2, dok: 2, std: ["3.T.SS.1.a"], passages: ["p2"], pick: 2,
         prompt: "A visitor wants to see wild animals on the trail. Which TWO sections should the visitor read? Choose TWO answers.",
         choices: [
@@ -687,25 +687,25 @@ PP.addLesson({
       misconception: "A common mix-up is choosing any place in the top half of the map. Straight north means directly above the bench.",
       why: "The answer is \"the flagpole.\" North is at the top, so straight north of the bench is directly above it. The garden and the swings are higher than the bench but off to the side, and the sandbox is straight east." },
     { id: "SK-TFF-S07", type: "dropdown", points: 1, dok: 2, std: ["3.T.SS.1.a", "3.T.C.1.b"], passages: [], like: ["SK-TFF-C07"],
-      stem: ["Tyler drew a ladybug for a bug page. He wrote the word antenna and drew a short line from it to a thin feeler on the ladybug's head."],
-      prompt: "Pick the words that tell what Tyler's word does.",
-      text: "Tyler's word antenna {0}.",
+      stem: ["Tyler drew a ladybug for a bug page. A short line joins antenna to a thin feeler on the ladybug's head."],
+      prompt: "Which choice tells what Tyler's antenna does?",
+      text: "Tyler's antenna {0}.",
       slots: [
-        { options: ["tells which part of the bug its line touches", "sums up what the entire page is about", "adds an event the drawing cannot show"], answer: 0 }
+        { options: ["names the spot where the line stops", "sums up what the entire bug page is about", "adds an event that the drawing cannot show"], answer: 0 }
       ],
       clue: "A word joined to a drawing by a line has a job. Ask which part of the drawing it tells about.",
       hints: [
         "A word joined to a drawing by a line has a job. Ask which part of the drawing it tells about.",
-        "Read what Tyler drew. Then ask whether his word tells about one spot or about everything.",
-        "A word that sums up a whole page is a title, not a line-joined word, so rule out that choice. Check the other two."
+        "Read what Tyler drew. Then ask whether the word tells about one spot or about everything.",
+        "A word that sums up a whole page is a title, not a word joined by a line, so rule out that choice. Check the other two."
       ],
       how: [
         "Tyler joined the word antenna to the ladybug with a short line.",
-        "The line ends at a thin feeler on the head, so the word names that spot.",
-        "The answer is \"tells which part of the bug its line touches.\" It does not sum up the page, and it does not add an event."
+        "The line stops at a thin feeler on the head, so the word names that spot.",
+        "The answer is \"names the spot where the line stops.\" It does not sum up the page, and it does not add an event."
       ],
       misconception: "A common mix-up is thinking a word on a drawing sums up the whole page. A word with a line names one spot.",
-      why: "The answer is \"tells which part of the bug its line touches.\" The line joins the word to the feeler, so the word names that part. It does not sum up the page, and a drawing's words do not add an event." },
+      why: "The answer is \"names the spot where the line stops.\" The line joins the word to the feeler, so the word names that part. It does not sum up the page, and a drawing's words do not add an event." },
     { id: "SK-TFF-S08", type: "mc", points: 1, dok: 3, std: ["3.T.SS.1.a"], passages: [], like: ["SK-TFF-C08"],
       stem: ["A river boat brochure lists four headings, each with a first sentence.", "Leaving the Dock: Climb aboard at the town dock and find a seat.", "Under the Old Bridge: Soon the boat slides under an old stone bridge.", "Past the Tall Trees: Next, you float past big trees whose roots stand in the water.", "Back to Shore: At the end, the boat turns around and returns to the dock."],
       prompt: "What is the reason for the order of these four sections?",
@@ -730,29 +730,29 @@ PP.addLesson({
       misconception: "A common mix-up is guessing a reason the text never gives. Look at the order of the places the sections name.",
       why: "The answer is \"They match the order in which a rider sees each place on the trip.\" They start at the dock and end back at the dock. The brochure never compares what the stops cost, how old they are or how loud they are." },
     { id: "SK-TFF-S09", type: "match", points: 2, dok: 2, std: ["3.T.SS.1.a", "3.T.C.1.b"], passages: [], like: ["SK-TFF-C09"],
-      stem: ["Below are four pieces of a page about giraffes."],
-      prompt: "Match each piece of the giraffe page to its name.",
-      cols: ["a heading", "a caption", "a label", "a text box"],
+      stem: ["Below are four pieces of a book about giraffes."],
+      prompt: "Match each piece of the giraffe book to its name.",
+      cols: ["a heading", "a caption", "an index", "a Try It! box"],
       rows: [
         { text: "Meet the Giraffe, in big letters over the text that follows", answer: 0 },
         { text: "Beneath the image: A giraffe bends down to drink at a river", answer: 1 },
-        { text: "Neck, with an arrow pointing to the neck in the sketch", answer: 2 },
-        { text: "Wow! A giraffe's neck has seven bones, like yours, in a shaded square", answer: 3 }
+        { text: "neck, 4, 9 and spots, 3, 12, listed from A to Z on the last page", answer: 2 },
+        { text: "Try It! Stretch your neck up as tall as you can, in a shaded square", answer: 3 }
       ],
-      clue: "Features on a page each have their own name and job. Ask what each one does for the reader.",
+      clue: "Pieces of a book each have their own name and job. Ask what each one does for the reader.",
       hints: [
-        "Features on a page each have their own name and job. Ask what each one does for the reader.",
-        "Notice where each feature sits: over paragraphs, under a whole picture, joined to a part by a line, or set apart in a box.",
-        "The word with the line is joined to one piece inside the drawing, so it is the label. Decide the other three rows yourself."
+        "Pieces of a book each have their own name and job. Ask what each one does for the reader.",
+        "Notice where each piece sits: over paragraphs, under a whole picture, on the last page in A to Z order, or set apart in a box.",
+        "The list on the last page gives page numbers for topics, so it is the index. Decide the other three rows yourself."
       ],
       how: [
         "The title over the paragraphs is a heading. It tells what that section is about.",
         "The line under the photo is a caption. It tells what the whole picture shows.",
-        "The word neck has a line to one part of the drawing, so it is a label that names one part of the picture.",
-        "The shaded square is a text box. It holds an extra fact set apart from the sections."
+        "The A to Z list on the last page, with page numbers, is an index.",
+        "The shaded square says Try It!, so it is a box that asks the reader to do something."
       ],
-      misconception: "A common mix-up is thinking a label and a caption do the same job. A label names one part of a picture, and a caption tells what the whole picture shows.",
-      why: "The heading tells what its section is about. The caption tells what the whole picture shows. The word neck is a label that names one part of the picture. The shaded square is a text box that adds an extra fact." },
+      misconception: "A common mix-up is thinking an index and a heading do the same job. A heading names one section, and an index lists pages for topics.",
+      why: "The heading tells what its section is about. The caption tells what the whole picture shows. The A to Z list on the last page, with page numbers, is an index. The shaded square is a Try It! box that asks the reader to do something." },
     { id: "SK-TFF-S10", type: "ms", points: 2, dok: 2, std: ["3.T.SS.1.a"], passages: [], pick: 2, like: ["SK-TFF-C10"],
       stem: ["A flyer for Science Night at Maple Elementary has these sections.", "What to Bring: Bring a flashlight and a pencil. Dress for the weather.", "Fun Stations: Try a bubble lab and a paper plane race. Each station takes ten minutes.", "Snack Time: Free apple slices and water will be near the gym doors at seven o'clock.", "In Case of Rain: If it rains, Science Night will move into the gym.", "Box: Questions? Call the school office."],
       prompt: "A parent wants to know what the family should carry and what happens if it rains. Which TWO sections should the parent read? Choose TWO answers.",
@@ -797,7 +797,7 @@ PP.addLesson({
       hints: [
         "Sections can be arranged so that each one needs the one that came earlier. Ask what you must know first to understand each section.",
         "For Part A, read the three headings in order and think about what each section tells. For Part B, reread the last section and ask which sentence points back to the middle section.",
-        "The article never talks about more than one oyster or shore, so rule out that Part A choice. Decide the rest yourself."
+        "The article follows one oyster from a speck of grit to a pearl, so rule out the Part A choice about separate oysters at separate shores. Decide the rest yourself."
       ],
       how: [
         "The headings go A Tiny Visitor, Layer by Layer and A Pearl at Last.",
@@ -806,7 +806,7 @@ PP.addLesson({
         "The sentence about adding a layer each day is in the middle section, so it is what the last section builds on."
       ],
       misconception: "A common mix-up is choosing a sentence from the earlier section. Part B asks which sentence in the later section looks back.",
-      why: "Part A: \"Events come as time goes by, and every step leads to another.\" Part B: \"After a few years, nacre has covered the grit completely.\" It goes back to the nacre in the section before. The article tells about one oyster." },
+      why: "Part A: \"Events come as time goes by, and every step leads to another.\" Part B: \"After a few years, nacre has covered the grit completely.\" It goes back to the nacre in the section before. The article follows one oyster from a speck of grit to a pearl." },
     { id: "SK-TFF-S12", type: "dropdown", points: 1, dok: 2, std: ["3.T.SS.1.a"], passages: [], like: ["SK-TFF-C12"],
       stem: ["The back of Castles Long Ago has an index, which lists topics from A to Z with their pages.", "drawbridge: 10, 11", "knights: 20, 21", "moat: 10, 16", "towers: 3, 22"],
       prompt: "Leo needs a page that covers both the moat and the drawbridge. Which page should he open?",
@@ -1117,7 +1117,7 @@ PP.addLesson({
         ["NARRATOR: Welcome to Berry Hill Farm.", "Today we will pick strawberries.", "Wear a hat, because the sun is hot.", "Please stay on the path."],
         ["NARRATOR: First, look for berries that are red all over.", "Green or white spots mean a berry is not ready.", "Each row has a number on a wooden sign.", "Take your time."],
         ["[snap of a stem]"],
-        ["NARRATOR: Next, hold the berry by its stem, and pull gently.", "Place it in your basket, and do not squeeze it."],
+        ["NARRATOR: Next, pinch the stem just above the berry, and twist gently.", "Place it in your basket, and do not squeeze it."],
         ["[pause]"],
         ["NARRATOR: Last, wash the berries at home before you eat them.", "They taste best when they are cold."]
       ] }
@@ -1937,25 +1937,25 @@ PP.addLesson({
       clue: "The progress bar shows where you are in a recording. Ask what moving the dot along the bar does.",
       why: "The answer is \"the last part of the recording.\" The dot on a progress bar shows the spot being played, and dragging it near the end jumps to the last part. It does not start over, change the speed or write out the words." },
     { id: "SK-TFD-T2", type: "dropdown", points: 2, dok: 2, std: ["3.T.C.1.b"], passages: [],
-      stem: ["A video page about picking apples has a play button, a CC button, a speaker button and a full-screen button."],
+      stem: ["Eli tapped through two pages about orchards and then reached a video page about picking apples. The video page has a play button, a CC button and a full-screen button. At the top are a Back arrow and a Home button."],
       prompt: "Choose the words that best complete the sentences.",
-      text: "To make the narrator's voice louder, Eli taps the {0}. To make the video fill his whole screen, he taps the {1}.",
+      text: "To return to the last orchard page he read, Eli taps the {0}. To make the video fill his whole screen, he taps the {1}.",
       slots: [
-        { options: ["speaker button", "play button", "CC button"], answer: 0 },
+        { options: ["Back arrow", "Home button", "play button"], answer: 0 },
         { options: ["full-screen button", "play button", "CC button"], answer: 0 }
       ],
-      clue: "A button's name often tells its job. Ask which button changes the sound and which changes the size of the picture.",
-      why: "The answers are speaker button and full-screen button. The speaker button changes how loud the sound is. The full-screen button makes the video fill the screen." },
+      clue: "Ask where Eli wants to go in the first blank, and what he wants the picture to do in the second.",
+      why: "The answers are Back arrow and full-screen button. The Back arrow returns to the page he just left, and the Home button goes to the first page. The full-screen button makes the video fill the screen." },
     { id: "SK-TFD-T3", type: "order", points: 2, dok: 2, std: ["3.T.C.1.b"], passages: ["p3"],
       prompt: "Put the steps in the order the narrator tells them.",
       steps: [
         "Look for berries that are red all over.",
-        "Hold a berry by its stem and pull gently.",
+        "Pinch the stem above a berry and twist gently.",
         "Place the berry in the basket.",
         "Wash the berries at home."
       ],
       clue: "The narrator uses words such as first, next and last. Look for them at the start of the lines.",
-      why: "The order is look for red berries, hold a berry by its stem and pull, place it in the basket, and wash the berries at home. The words First, Next and Last tell the order." },
+      why: "The order is look for red berries, pinch the stem above a berry and twist, place it in the basket, and wash the berries at home. The words First, Next and Last tell the order." },
     { id: "SK-TFD-T4", type: "mc", points: 1, dok: 3, std: ["3.T.C.1.b"], passages: [],
       stem: ["Noah tells his class a safety rule: \"Walk, do not run, in the hall.\" Then he says the rule a second time, slowly."],
       prompt: "Why is it a good idea for Noah to say the rule twice?",
@@ -1968,14 +1968,14 @@ PP.addLesson({
       clue: "A listener hears a talk only once. Ask what a speaker can do so that an important fact stays with the listener.",
       why: "The answer is \"Listeners cannot look back, so a second time gives them another chance to catch it.\" A speaker repeats an important fact because listeners cannot go back over it. Resting the voice and deciding whether to agree are not reasons to repeat a safety rule, and Noah says it slowly, not in a whisper." },
     { id: "SK-TFD-T5", type: "mc", points: 1, dok: 2, std: ["3.T.C.1.b"], passages: ["p3"],
-      prompt: "The script begins with [birds chirping] before anyone speaks. What does this sound help viewers picture?",
+      prompt: "According to the script, when do viewers hear [snap of a stem]?",
       choices: [
-        { text: "an outdoor farm on a sunny day", correct: true },
-        { text: "a classroom where a teacher is talking" },
-        { text: "a kitchen where the berries are washed" },
-        { text: "a store with shelves full of fruit" }
+        { text: "right before the narrator tells how to pinch a stem", correct: true },
+        { text: "right after the narrator says to wash the berries" },
+        { text: "right after the narrator says to wear a hat" },
+        { text: "right after the narrator says to stay on the path" }
       ],
-      clue: "Birds make this sound in a certain kind of place. Then read what the narrator says first.",
-      why: "The answer is \"an outdoor farm on a sunny day.\" Birds chirp outside, and the narrator welcomes viewers to a farm and says the sun is hot. A classroom, a kitchen and a store are indoors." }
+      clue: "A script lists things in the order they happen. Find the words in brackets, and read the line that comes next.",
+      why: "The answer is \"right before the narrator tells how to pinch a stem.\" In the script, [snap of a stem] sits just above the line that starts, \"Next, pinch the stem.\" The other lines are not next to the sound." }
   ]
 });
