@@ -71,6 +71,15 @@
 | B7a | 3.L.GC.1:R:use-action-verbs | ACCEPTED | Second independent review ACCEPT; open SHOULDs in B7a-review.md |
 | B7a | 3.L.GC.1:R:use-adjectives-and-adverbs | NOT ACCEPTED: awaiting independent review | B7a-author-log.md; authored, not reviewed |
 | B7a | 3.L.GC.1:R:use-common-and-proper-nouns | ACCEPTED | Second independent review ACCEPT; open SHOULDs in B7a-review.md |
+| B7b | 3.L.GC.1:R:form-and-use-simple-verb-tenses | NOT ACCEPTED: awaiting independent review | B7b-author-log.md; authored, not reviewed |
+| B7b | 3.L.GC.1:R:use-determiners-articles-possessive-and-demonstr | NOT ACCEPTED: awaiting independent review | B7b-author-log.md; authored, not reviewed |
+| B7b | 3.L.GC.1:R:capitalize-proper-nouns | NOT ACCEPTED: awaiting independent review | B7b-author-log.md; authored, not reviewed |
+| B7b | 3.L.GC.1:R:use-end-punctuation-period-exclamation-point-que | NOT ACCEPTED: awaiting independent review | B7b-author-log.md; authored, not reviewed |
+| B7b | 3.L.GC.1:R:form-plural-nouns-by-changing-y-to-ies | NOT ACCEPTED: awaiting independent review | B7b-author-log.md; authored, not reviewed |
+| B7b | 3.L.GC.1:R:use-personal-pronouns-subject-object-possessive | NOT ACCEPTED: awaiting independent review | B7b-author-log.md; authored, not reviewed |
+| B7b | 3.L.GC.1:R:use-frequently-occurring-prepositions | NOT ACCEPTED: awaiting independent review | B7b-author-log.md; authored, not reviewed |
+| B7b | 3.L.GC.1:R:use-commas-in-a-series-and-in-dates-addresses-sa | NOT ACCEPTED: awaiting independent review | B7b-author-log.md; authored, not reviewed |
+| B7b | 3.L.GC.1:R:form-and-use-verbs-by-adding-d-or-es | NOT ACCEPTED: awaiting independent review | B7b-author-log.md; authored, not reviewed |
 
 "Accepted" means an independent reviewer blind-solved the items, found every key defensible, and found no hint ladder that leaves only the key (see AUTHOR-BRIEF rules). It does not mean the lesson has been tried by a child.
 

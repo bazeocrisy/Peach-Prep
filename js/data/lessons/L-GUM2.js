@@ -5665,7 +5665,7 @@ PP.addLesson({
             "hints": [
               "Decide whether each sentence tells, asks or shows strong feeling. Then check its end mark.",
               "Go through sentences 3 through 7 in order. Say each one aloud and listen to what it does.",
-              "Two of the sentences ask something, and one of those ends with a period. Think about the rest."
+              "Sentence 6 tells about something the writer wonders and is not a question itself. Think about the rest."
             ],
             "how": [
               "Match each sentence's job to its end mark.",
@@ -5831,7 +5831,7 @@ PP.addLesson({
             "hints": [
               "To show an idea is wrong, find a sentence where it does not work. Look at the end mark of each sentence that has the word asked.",
               "Find the sentence that has the word asked in it. Then decide whether that sentence asks the reader something.",
-              "Three of the choices are questions with a question mark. Think about whether those can show Lee is wrong."
+              "Lee's idea is about the word asked. Think about the other choices."
             ],
             "how": [
               "Lee's idea says the word asked always means a question mark. Look for asked in a sentence that does not ask.",
@@ -6340,7 +6340,7 @@ PP.addLesson({
       "hints": [
         "Decide what each sentence does. Then compare it with the mark at the end.",
         "Say each line aloud, one at a time, and listen to whether it asks, tells or shows strong feeling.",
-        "Two lines in this group ask a question but end with a period. Think about the rest."
+        "Line 6 tells about something the writer asked and is not a question itself. Think about the rest."
       ],
       "how": [
         "Match what each line does with its mark.",
@@ -6506,7 +6506,7 @@ PP.addLesson({
       "hints": [
         "To show an idea is wrong, find a sentence where it does not hold. Look at the end mark of each sentence that has who.",
         "All four sentences have the word who in them. Decide which of them asks the reader something.",
-        "Three choices ask a question and end with a question mark. Think about whether those can prove Ana wrong."
+        "Ana's idea is about the word who. Think about the other choices."
       ],
       "how": [
         "Ana's idea says the word who always means a question mark. Look for who in a sentence that does not ask.",
@@ -7485,7 +7485,7 @@ PP.addLesson({
             "hints": [
               "To show a rule is wrong, find an example that breaks it. Think of the letter just before the y in each word.",
               "All four words end in y. Look at the letter just before the y in each one.",
-              "Three of the pairs follow Dee's rule and the rule works for them. Think about which one does not."
+              "Dee's rule is about the letter before the y. Think about the other choices."
             ],
             "how": [
               "Dee's rule changes every y to i. Look for a word where that would make a mistake.",
@@ -7866,7 +7866,7 @@ PP.addLesson({
       "hints": [
         "Think of the word for one for each choice. Look at the letter next to its y.",
         "Check all five choices, including the ones that look right. A vowel and a consonant next to the y lead to different endings.",
-        "Two choices keep the y and two change it in a way that does not fit. Think about which ones fit."
+        "Look for the two choices whose endings match the letter next to the y."
       ],
       "how": [
         "Find the letter next to the y in melody, runway, bully, display and cavity.",
@@ -8158,8 +8158,8 @@ PP.addLesson({
       "clue": "A claim fails if one example breaks it. Look at how each plural ends.",
       "hints": [
         "A claim fails if one example breaks it. Look at how each plural ends.",
-        "Three of the plurals end in -ies. Think about whether those can show Ravi is mistaken.",
-        "Look for a word where a vowel comes next to the y. Think about which choice has one."
+        "Look at how each plural ends, and ask whether it fits Ravi's claim.",
+        "Think about what the letter next to the y does in each word. Think about the other choices."
       ],
       "how": [
         "Ravi's claim says no plural ends in -ys. Look for one that does.",
@@ -9138,7 +9138,7 @@ PP.addLesson({
             "hints": [
               "To show a rule is wrong, find an example that breaks it. Look at what each pronoun is doing.",
               "In each sentence, cover up Ravi and and say the sentence with just the pronoun.",
-              "Three of the sentences follow Tia's rule and sound right. Think about which one does not follow it."
+              "Tia's rule is about the words Ravi and plus a pronoun. Think about the other choices."
             ],
             "how": [
               "Tia's rule says I is always right. Look for a sentence where I would be wrong.",
@@ -9181,11 +9181,11 @@ PP.addLesson({
       "hints": [
         "Find the pronoun in each line. Ask what job it does.",
         "When a name is joined to a pronoun, cover up the name and say the line with just the pronoun.",
-        "The line about the kitten uses an owning word before a noun, and it fits. Think about the rest."
+        "The line about the goat uses an owning word before a noun, and it fits. Think about the rest."
       ],
       "how": [
         "Test each pronoun by itself.",
-        "The kitten licked its paw, the map to me, that seat is yours, and they found their coats all fit.",
+        "The goat chewed its rope, the map to me, that seat is yours, and they found their coats all fit.",
         "The answer is \"The note was left for Dana and I.\" A note left for me sounds right, so it should be Dana and me."
       ],
       "misconception": "A common mix-up is picking I after the word for. The pronoun gets the action there, so it needs me.",
@@ -9647,7 +9647,7 @@ PP.addLesson({
       "hints": [
         "Find each pronoun in sentences 3 to 7. Ask what job each one does.",
         "When a name is joined to a pronoun, cover up the name and say the sentence with just the pronoun.",
-        "The sentence about the neighbors uses an owning word before a noun, and it fits. Think about the rest."
+        "Sentence 7 has a pronoun that does not fit its job. Think about the rest."
       ],
       "how": [
         "Test each pronoun one sentence at a time.",
@@ -9813,7 +9813,7 @@ PP.addLesson({
       "hints": [
         "To prove an idea false, find an example that breaks it. Look at what each pronoun is doing.",
         "In each sentence, take Dev out and say the sentence with just the pronoun.",
-        "Three of the sentences follow Ruben's idea and sound right. Think about which one does not follow it."
+        "Ruben's idea is about the words Dev and plus a pronoun. Think about the other choices."
       ],
       "how": [
         "Ruben's idea says me is always right. Look for a sentence where me would be wrong.",
@@ -10489,7 +10489,7 @@ PP.addLesson({
             "hints": [
               "Find the preposition in each sentence. Ask what the noun that follows it names.",
               "Check all five choices, including the ones that look right at first glance. A time word and a place word lead to different answers.",
-              "Three choices end their groups with places. Think about which two do not."
+              "One choice has a long group of words. Be sure to check its last noun too."
             ],
             "how": [
               "Look at the noun after each preposition.",
@@ -10622,7 +10622,7 @@ PP.addLesson({
             "hints": [
               "Find the preposition in each of sentences 3 to 7. Ask what each one is supposed to show.",
               "Picture each sentence. Check whether the noun that comes next fits a where or a when idea.",
-              "The sentence about the steam uses a word that goes with two things. Think about the rest."
+              "The sentence about the steam uses a word that usually goes with two things. Think about the rest."
             ],
             "how": [
               "Check each sentence one at a time.",
@@ -10708,7 +10708,7 @@ PP.addLesson({
             "hints": [
               "The two blanks need different kinds of prepositions. Decide whether each noun is a place or a time.",
               "The first blank comes before street. The second blank comes before noon.",
-              "Between goes with two things. Look at the choices for the second blank."
+              "Between usually goes with two things. Look at the choices for the second blank."
             ],
             "how": [
               "The first blank tells where the carrier walks. The second blank tells when the carrier stops.",
@@ -10746,7 +10746,7 @@ PP.addLesson({
             "hints": [
               "Find the preposition in each sentence. Ask whether the noun after it names a place or a time.",
               "Picture each sentence and check that the small word makes sense with the words after it.",
-              "The sentence about the shoe uses a word that goes with two things, and it fits. Think about the rest."
+              "The sentence about the shoe uses a word that usually goes with two things, and it fits. Think about the rest."
             ],
             "how": [
               "Look at the noun after each preposition.",
@@ -10788,7 +10788,7 @@ PP.addLesson({
             "hints": [
               "To test a statement, look for an example that breaks it. Look at what each preposition tells.",
               "In each sentence, ask whether the preposition tells a place or a time.",
-              "Three of the sentences tell where. Think about which one does not."
+              "The claim is about what prepositions tell. Think about the other choices."
             ],
             "how": [
               "Kai says every preposition tells where. Look for one that tells when.",
@@ -10940,7 +10940,7 @@ PP.addLesson({
         "The answer is \"Swap in on, since the posters were stuck against one wall.\""
       ],
       "misconception": "A common mix-up is changing the word to another time word. The posters need a word that tells where.",
-      "why": "The answer is \"Swap in on, since the posters were stuck against one wall.\" Between goes with two things, and the sentence names one wall. During, among and until do not fit one wall.",
+      "why": "The answer is \"Swap in on, since the posters were stuck against one wall.\" Between usually goes with two things, and the sentence names one wall. During, among and until do not fit one wall.",
       "like": [
         "SK-GUM2-7-C03"
       ]
@@ -10977,10 +10977,10 @@ PP.addLesson({
       "how": [
         "The group ends with the noun window, which is a place.",
         "The blank needs a word that tells where the display sat.",
-        "The answer is near. Until tells when, and between needs two things."
+        "The answer is near. Until tells when, and between usually goes with two things."
       ],
-      "misconception": "A common mix-up is choosing between because it sounds like a place word. It needs two things.",
-      "why": "The answer is near. A window is a place, so the blank needs a word that tells where. Until tells when, and between goes with two things.",
+      "misconception": "A common mix-up is choosing between because it sounds like a place word. It usually goes with two things.",
+      "why": "The answer is near. A window is a place, so the blank needs a word that tells where. Until tells when, and between usually goes with two things.",
       "like": [
         "SK-GUM2-7-C04"
       ]
@@ -11169,7 +11169,7 @@ PP.addLesson({
       "hints": [
         "Find the preposition in each sentence. Ask what the noun that follows it names.",
         "Check every sentence, including the ones that look right. A moment and a spot lead to different answers.",
-        "Three sentences end their groups with places. Think about which two do not."
+        "One choice has a long group of words. Be sure to check its last noun too."
       ],
       "how": [
         "Look at the noun after each preposition.",
@@ -11463,7 +11463,7 @@ PP.addLesson({
       "hints": [
         "To prove a claim wrong, find an example that breaks it. Look at what each preposition tells.",
         "In each sentence, ask whether the preposition tells a place or a time.",
-        "Three of the sentences tell when. Think about which one does not."
+        "The claim is about what prepositions tell. Think about the other choices."
       ],
       "how": [
         "Mina says every preposition tells a time. Look for one that tells where.",
@@ -11489,7 +11489,7 @@ PP.addLesson({
         "Try each word. Across, through and between do not fit one refrigerator.",
         "The answer is in."
       ],
-      "misconception": "A common mix-up is choosing between because it sounds like a place word. Between goes with two things."
+      "misconception": "A common mix-up is choosing between because it sounds like a place word. Between usually goes with two things."
     },
     "SK-GUM2-7-P2": {
       "hints": [
@@ -12182,7 +12182,7 @@ PP.addLesson({
             "hints": [
               "Look at what each comma separates. Ask whether it belongs there.",
               "Check all five choices, including the ones that look right at first glance. A comma in the wrong spot is a mistake too.",
-              "Three choices put a comma where it does not belong. Think about which two do not."
+              "Each choice has at least one comma. Check where each one sits."
             ],
             "how": [
               "Check where each comma sits.",
@@ -12315,7 +12315,7 @@ PP.addLesson({
             "hints": [
               "Check each of lines 3 to 7 for a list, a date, or an address.",
               "In a full address, commas separate the parts of the address.",
-              "Some of these lines are missing commas, and one has a comma where it does not belong. Think about the rest."
+              "Check each line for a missing comma and for a comma that does not belong."
             ],
             "how": [
               "Check each line one at a time.",
@@ -12481,7 +12481,7 @@ PP.addLesson({
             "hints": [
               "To test a statement, look for an example that breaks it. Look at what each comma separates.",
               "In each sentence, ask whether the commas separate a list or something else.",
-              "Three of the sentences have lists. Think about which one does not."
+              "The claim is about what commas do. Think about the other choices."
             ],
             "how": [
               "Lee says commas are only for lists. Look for a comma that does something else.",
@@ -12864,7 +12864,7 @@ PP.addLesson({
       "hints": [
         "Look at what each comma separates. Ask whether it belongs there.",
         "Check every sentence, including the ones that look right. A missing comma is a mistake too.",
-        "Three sentences have a comma in the wrong place or none where one is needed. Think about which two do not."
+        "Check what each comma separates, and look for sentences that have none."
       ],
       "how": [
         "Check where each comma sits and whether one is missing.",
@@ -12992,7 +12992,7 @@ PP.addLesson({
       "hints": [
         "Check each of lines 3 to 7 for a list, a date, or an address.",
         "In a full address, commas separate the parts of the address.",
-        "Some of these lines are missing commas, and one has a comma where it does not belong. Think about the rest."
+        "Check each line for a missing comma and for a comma that does not belong."
       ],
       "how": [
         "Check each line one at a time.",
@@ -13158,7 +13158,7 @@ PP.addLesson({
       "hints": [
         "To test a thought, look for an example that breaks it. Look at what each comma separates.",
         "In each sentence, ask whether the comma is part of a date or something else.",
-        "Three of the sentences have dates. Think about which one does not."
+        "The claim is about what commas do. Think about the other choices."
       ],
       "how": [
         "Dee says commas are only for dates. Look for a comma that does something else.",
@@ -13843,7 +13843,7 @@ PP.addLesson({
             "hints": [
               "Find the verb in each sentence. Think of its plain form and look at how it ends.",
               "Check all five choices, including the ones that look right at first glance. Each plain verb needs the ending that fits the way it ends.",
-              "Three choices have a verb with the wrong ending. Think about which two do not."
+              "Compare each ending with the last letters of its plain verb, one sentence at a time."
             ],
             "how": [
               "Look at each plain verb: mix, hike, catch, rake and cry.",
@@ -13975,7 +13975,7 @@ PP.addLesson({
             "hints": [
               "Find the verb in each of sentences 3 to 7. Ask what its plain form ends in.",
               "Check the ending that was added, and whether it matches one person doing the action now.",
-              "Some of these verbs have the wrong ending, and one is the wrong word for one person. Think about the rest."
+              "Check each sentence for a wrong ending and for a wrong word for one person."
             ],
             "how": [
               "Check each sentence one at a time.",
@@ -14141,7 +14141,7 @@ PP.addLesson({
             "hints": [
               "To test a rule, look for an example that breaks it. Look at how each verb ends.",
               "In each sentence, think of the plain verb and what it ends in.",
-              "Three of the verbs follow Lia's rule. Think about which one does not."
+              "Lia's rule is about the ending added to a verb. Think about the other choices."
             ],
             "how": [
               "Lia says every verb just adds -s. Look for a verb that needs more.",
@@ -14523,7 +14523,7 @@ PP.addLesson({
       "hints": [
         "Find the verb in each sentence. Think of its plain form and how it ends.",
         "Check every sentence, including the ones that look right. Each plain verb needs the ending that fits the way it ends.",
-        "Three sentences have a verb with the wrong ending. Think about which two do not."
+        "Compare each ending with the last letters of its plain verb, one sentence at a time."
       ],
       "how": [
         "Look at each plain verb: watch, race, push, glue and try.",
@@ -14650,7 +14650,7 @@ PP.addLesson({
       "hints": [
         "Find the verb in each of sentences 3 to 7. Ask what its plain form ends in.",
         "Check the ending that was added, and whether it matches one person doing the action now.",
-        "Some of these verbs have the wrong ending, and one is the wrong word for one person. Think about the rest."
+        "Check each sentence for a wrong ending and for a wrong word for one person."
       ],
       "how": [
         "Check each sentence one at a time.",
@@ -14816,7 +14816,7 @@ PP.addLesson({
       "hints": [
         "To test a claim, look for an example that breaks it. Look at how each verb ends.",
         "In each sentence, think of the plain verb and what it ends in.",
-        "Three of the verbs follow Rob's claim. Think about which one does not."
+        "Rob's claim is about the ending added to a verb. Think about the other choices."
       ],
       "how": [
         "Rob says every verb just adds -s. Look for a verb that needs more.",
