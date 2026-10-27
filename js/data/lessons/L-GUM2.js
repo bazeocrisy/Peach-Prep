@@ -71,7 +71,7 @@ PP.addLesson({
           "(3) Yesterday, Jada will count the cans and bottles in the gym."
         ],
         [
-          "(4) Today, two helpers sort the paper into tall stacks.",
+          "(4) Today, two helpers sort the old paper into tall stacks.",
           "(5) Last Monday, we weighed the stacks on a big scale.",
           "(6) Next week, the class collects the cardboard from every room."
         ],
@@ -117,7 +117,7 @@ PP.addLesson({
         [
           "(1) Last spring, my dad placed a rain barrel behind our house.",
           "(2) Every time it rains, water runs down the roof into the barrel.",
-          "(3) Today, the barrel holds enough water for the whole garden.",
+          "(3) Today, the barrel holds a lot of water for the whole garden.",
           "(4) Yesterday, we watered the tomato plants with a small can."
         ],
         [
@@ -141,11 +141,11 @@ PP.addLesson({
       "paragraphs": [
         [
           "(1) Every Monday, Mr. Sims opens the lost-and-found box in the lunchroom.",
-          "(2) Last week, the box contained three jackets and a lunch bag.",
+          "(2) Last week, the box held three jackets and a lunch bag.",
           "(3) Yesterday, two students returned a blue scarf to its owner."
         ],
         [
-          "(4) Today, Kiana lists the lost items on a chart.",
+          "(4) Today, Kiana lists all the lost items on a chart.",
           "(5) Last Tuesday, she tapes the chart by the office door.",
           "(6) Tomorrow, the helpers sorted the extra mittens by size."
         ],
@@ -168,7 +168,7 @@ PP.addLesson({
           "(1) Every November, our street holds a soup supper at the community hall.",
           "(2) Last year, neighbors carried twelve pots of soup to the tables.",
           "(3) Yesterday, Mrs. Hall stirs a huge pot of bean soup.",
-          "(4) This week, the twins fold the paper napkins by the door.",
+          "(4) These days, the twins fold the paper napkins by the door.",
           "(5) Tomorrow, volunteers lined the long benches with cloths.",
           "(6) Three days ago, Mrs. Ortiz baked twenty loaves of warm bread for the supper."
         ],
@@ -189,7 +189,7 @@ PP.addLesson({
       "paragraphs": [
         [
           "(1) Three days ago, my cousin and I tested three kinds of lemonade in the backyard.",
-          "(2) This week, the cups sit on the porch rail in the cool shade.",
+          "(2) These days, the cups sit on the porch rail in the cool shade.",
           "(3) Two hours ago, we measured the sugar with a tiny spoon and a paper cup.",
           "(4) Later today, our neighbors will taste each cup and vote."
         ],
@@ -706,7 +706,7 @@ PP.addLesson({
             "passages": [
               "p3"
             ],
-            "prompt": "Sentence 6 does not match its time clue. Choose the verb that fixes it.",
+            "prompt": "Line 6 has a verb that clashes with its opening words. Which verb fixes it?",
             "text": "Last Sunday, I {0} the lid bright blue.",
             "slots": [
               {
@@ -1016,7 +1016,7 @@ PP.addLesson({
       "passages": [
         "p4"
       ],
-      "prompt": "Pick the verb form that repairs sentence 6.",
+      "prompt": "Which choice repairs the mismatch in line 6?",
       "text": "Tomorrow, the helpers {0} the extra mittens by size.",
       "slots": [
         {
@@ -1122,7 +1122,7 @@ PP.addLesson({
       "how": [
         "Check sentences 2 through 6 one at a time.",
         "Yesterday is past, but stirs is present. Tomorrow is future, but lined is past.",
-        "Sentences 2, 4 and 6 match: Last year with carried, This week with fold, and Three days ago with baked."
+        "Sentences 2, 4 and 6 match: Last year with carried, These days with fold, and Three days ago with baked."
       ],
       "misconception": "A common mix-up is picking the sentence that sounds odd rather than checking the clue and verb. Compare them one by one.",
       "why": "The answers are \"Yesterday, Mrs. Hall stirs a huge pot of bean soup.\" and \"Tomorrow, volunteers lined the long benches with cloths.\" Yesterday needs a past verb, and Tomorrow needs will plus a plain verb. The other sentences match.",
@@ -1222,19 +1222,19 @@ PP.addLesson({
           "text": "Later this winter, the pond will freeze near the old bridge."
         },
         {
-          "text": "This week, the water drips from the car roof."
+          "text": "These days, the water drips from the car roof."
         }
       ],
       "clue": "Look for clue words that mean a habit, and check that the verb is in the present.",
       "hints": [
         "Look for clue words that mean a habit, and check that the verb is in the present.",
         "Read the clue at the start of each sentence. Ask whether it tells about one time or about every time.",
-        "This week tells about one stretch of time. Decide among the rest."
+        "These days tells about a stretch of time. Decide among the rest."
       ],
       "how": [
         "Find the clue in each sentence.",
         "On Saturdays and Each winter mean again and again, and washes and freezes are present tense verbs.",
-        "Two Saturdays ago and Later this winter tell about one time, and This week tells about the present."
+        "Two Saturdays ago and Later this winter tell about one time, and These days tells about the present."
       ],
       "misconception": "A common mix-up is picking sentences about the same people and things. The clue shows whether it repeats.",
       "why": "The answers are \"On Saturdays, my dad washes the car in the driveway.\" and \"Each winter, the pond freezes near the old bridge.\" Both have clues that mean again and again and present tense verbs. The other sentences tell about one time.",
@@ -1381,7 +1381,7 @@ PP.addLesson({
       "passages": [
         "p6"
       ],
-      "prompt": "Repair sentence 5 by picking the best verb.",
+      "prompt": "Pick the choice that mends the mix-up in sentence 5.",
       "text": "Last night, I {0} the juice too fast.",
       "slots": [
         {

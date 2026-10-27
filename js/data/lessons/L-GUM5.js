@@ -1376,7 +1376,164 @@ PP.addLesson({
     }
   ],
   parent: "Ask your child yes-or-no questions and have them write one answer on a sticky note with the comma, like \"Yes, I want more beans.\" Then help them write a short note to a family member that starts with that person's name and a comma.",
-  passages: [],
+  passages: [
+    /* B8:passages:start */
+    {
+      id: "p1",
+      title: "Building a Cardboard Fort",
+      byline: "A third grader's draft",
+      genre: "Student draft (play script)",
+      draft: true,
+      paragraphs: [
+        [
+          "(1) Three friends build a fort from big boxes in Mia's garage on a cloudy afternoon.",
+          "(2) Mia: Ben please hold this box while I tape it.",
+          "(3) Ben: Yes I can hold it with both hands."
+        ],
+        [
+          "(4) Tess: Mia, where should we put the door?",
+          "(5) Mia: Put it on the long side, Tess.",
+          "(6) Ben: No, the tape will not stick to that rough part.",
+          "(7) Tess: Ben can you find the other roll of tape?"
+        ],
+        [
+          "(8) Ben: Here it is, Mia.",
+          "(9) Mia: Thank you, Ben. Now we can add a roof.",
+          "(10) Tess: This fort is the best one on our street!"
+        ]
+      ]
+    },
+    {
+      id: "p2",
+      title: "The Class Hamster",
+      byline: "A third grader's draft",
+      genre: "Student draft (play script)",
+      draft: true,
+      paragraphs: [
+        [
+          "(1) Two students search the room after the class hamster escapes from his cage.",
+          "(2) Dev: Nina, have you seen him under the shelf?",
+          "(3) Nina: No I looked there already.",
+          "(4) Dev: Then we should check the reading corner, Nina."
+        ],
+        [
+          "(5) Nina: Dev he is hiding behind the big pillow!",
+          "(6) Dev: Yes, that is him, and he looks very sleepy.",
+          "(7) Nina: I will get a small box from the shelf."
+        ],
+        [
+          "(8) Dev: Please hold the box low, Nina, while he walks in.",
+          "(9) Nina: He is in! Now we can shut the lid.",
+          "(10) Dev: Thank you Nina. I think he is happy to be home."
+        ]
+      ]
+    },
+    {
+      id: "p3",
+      title: "A Rainy Day Picnic",
+      byline: "A third grader's draft",
+      genre: "Student draft (play script)",
+      draft: true,
+      paragraphs: [
+        [
+          "(1) The family picnic moves inside the gym because heavy rain starts to fall.",
+          "(2) Mom: Grandpa, please sit by the window.",
+          "(3) Grandpa: Yes, I can see the whole room from here.",
+          "(4) Lee: Rosa, can you bring me a napkin?"
+        ],
+        [
+          "(5) Rosa: Yes, I have a big stack of them.",
+          "(6) Rosa, handed the napkins to Lee and Mom.",
+          "(7) Lee: Thank you, Rosa.",
+          "(8) Mom: Grandpa, would you like some warm soup?",
+          "(9) Grandpa: No, I am full already."
+        ],
+        [
+          "(10) Mom: Please hang your wet coat on the hook Lee.",
+          "(11) Lee: Yes, Mom, I will do it right now.",
+          "(12) Rosa: I will hang mine there too."
+        ]
+      ]
+    },
+    {
+      id: "p4",
+      title: "Puppet Show Rehearsal",
+      byline: "A third grader's draft",
+      genre: "Student draft (play script)",
+      draft: true,
+      paragraphs: [
+        [
+          "(1) Three classmates practice a puppet show behind a tall cloth screen.",
+          "(2) Omar: Jade lift the dragon a little higher.",
+          "(3) Jade: Yes I see him now."
+        ],
+        [
+          "(4) Pablo: Omar, the curtain is stuck again.",
+          "(5) Omar: Slide it over to the left, Pablo.",
+          "(6) Jade: No, the dragon needs more room on that side.",
+          "(7) Pablo: Jade can you hold the curtain open?"
+        ],
+        [
+          "(8) Jade: I have it, Omar.",
+          "(9) Omar: Thank you, Jade. Now we can start the show.",
+          "(10) Pablo: Our puppets look great together!"
+        ]
+      ]
+    },
+    {
+      id: "p5",
+      title: "Washing the Car",
+      byline: "A third grader's draft",
+      genre: "Student draft (play script)",
+      draft: true,
+      paragraphs: [
+        [
+          "(1) Two cousins wash the family car on a sunny Saturday.",
+          "(2) Raj: Ana please hand me the big sponge.",
+          "(3) Ana: Yes, I have one right here.",
+          "(4) Raj: Then rinse the roof, Ana."
+        ],
+        [
+          "(5) Ana: The hose is leaking again, Raj!",
+          "(6) Raj: Yes I see the puddle by the tire.",
+          "(7) Ana: I will turn off the water."
+        ],
+        [
+          "(8) Raj: We can rest, Ana, after we dry the wheels.",
+          "(9) Ana: It shines like a new coin!",
+          "(10) Raj: Ana you did a great job today."
+        ]
+      ]
+    },
+    {
+      id: "p6",
+      title: "Moving Day",
+      byline: "A third grader's draft",
+      genre: "Student draft (play script)",
+      draft: true,
+      paragraphs: [
+        [
+          "(1) A family carries boxes into a new apartment on moving day.",
+          "(2) Dad: Zoe, please carry the lamp.",
+          "(3) Zoe: Yes, I have it.",
+          "(4) Luis: Zoe can you open the door for me?"
+        ],
+        [
+          "(5) Zoe: Yes, I am coming.",
+          "(6) Zoe, pushed the heavy door open with her foot.",
+          "(7) Luis: Thank you, Zoe.",
+          "(8) Dad: Luis, do you need help with that box?",
+          "(9) Luis: No, I can carry it myself."
+        ],
+        [
+          "(10) Dad: Set the plants by the window Luis.",
+          "(11) Luis: Yes, Dad, I will do it right away.",
+          "(12) Zoe: I will water them after dinner."
+        ]
+      ]
+    }
+    /* B8:passages:end */
+  ],
   practice: [
     { id: "SK-GUM5-2-P1", type: "mc", points: 1, dok: 2, passages: [],
       prompt: "Which sentence is correct?",
@@ -1432,6 +1589,1009 @@ PP.addLesson({
       clue: "Check each name. Is the speaker talking to that person? Then check each yes or no at the start.",
       why: "The answers are \"No, we are not going to the pool today.\" and \"Let's go outside, Kayla.\" No starts the answer, and the speaker talks to Kayla. The others should say \"Yes, I can\" and \"Wait for me, Andre!\" In the Mom sentence, we are telling about Mom, so there should be no comma." }
   ],
+  /* B8:core:start */
+  /* ---------- Expansion 2026-10-22, batch B8 (GUM Introduce/Continue) ----------
+     core: fifteen items in three sets of five. { ref } reuses a practice item; the other practice items stay in Practice Together.
+     Passages are used only by core and the similar bank; none is used by test or testB.
+     Author log: docs/expansion-2026-10-22/batches/B8b-author-log.md. NEEDS INDEPENDENT REVIEW. */
+  core: {
+    rev: "1",
+    sets: [
+      {
+        title: "Set 1",
+        items: [
+          { ref: "SK-GUM5-2-P3" },
+          { ref: "SK-GUM5-2-P5" },
+          {
+            id: "SK-GUM5-2-C03",
+            type: "dropdown",
+            points: 1,
+            dok: 2,
+            std: [
+              "3.L.GC.1:I:use-commas-for-direct-address-and-to-set-off-yes"
+            ],
+            passages: ["p1"],
+            prompt: "Sentence 2 of the draft is missing a comma. Choose the words that fix it.",
+            text: "Mia: {0} hold this box while I tape it.",
+            slots: [
+              {
+                options: ["Ben please", "Ben, please", "Ben please,"],
+                answer: 1
+              }
+            ],
+            clue: "Ask whether the speaker is talking to a person by name. Then ask what should separate that name from the words after it.",
+            hints: [
+              "Ask whether the speaker is talking to a person by name. Then ask what should separate that name from the words after it.",
+              "Say each choice out loud and think about where a small pause would go. Look at where the mark sits.",
+              "One choice puts the mark after the request word instead of after the name. Decide between the other two."
+            ],
+            how: [
+              "Read sentence 2. Mia is talking to Ben and asks him to do something.",
+              "When you talk to a person by name, a comma separates the name from the rest of the sentence.",
+              "The answer is Ben, please."
+            ],
+            misconception: "A common mix-up is leaving out the comma because the sentence reads smoothly. A name used to speak to someone still needs a comma.",
+            why: "The answer is Ben, please. Mia is talking to Ben, so a comma separates his name from the rest of the sentence. Ben please leaves out the comma, and Ben please, puts it in the wrong place."
+          },
+          {
+            id: "SK-GUM5-2-C04",
+            type: "mc",
+            points: 1,
+            dok: 1,
+            std: [
+              "3.L.GC.1:I:use-commas-for-direct-address-and-to-set-off-yes"
+            ],
+            passages: ["p1"],
+            prompt: "Which choice shows sentence 3 of the draft written correctly?",
+            choices: [
+              { text: "Yes I can hold it." },
+              { text: "Yes I, can hold it." },
+              { text: "Yes, I can hold it.", correct: true },
+              { text: "Yes, I can, hold it." }
+            ],
+            clue: "Look at the first word of the line. Ask what kind of word it is and what it does at the start of a reply.",
+            hints: [
+              "Look at the first word of the line. Ask what kind of word it is and what it does at the start of a reply.",
+              "Read each choice out loud. Count the commas, and ask whether each one has a reason.",
+              "One choice puts its only comma after I, between the speaker and the rest of what he says. Decide among the other three."
+            ],
+            how: [
+              "Look at the first word. Yes begins Ben's answer.",
+              "When yes starts an answer, a comma comes right after it.",
+              "The answer is \"Yes, I can hold it.\""
+            ],
+            misconception: "A common mix-up is putting the comma later in the line. The comma goes right after yes.",
+            why: "The answer is \"Yes, I can hold it.\" Yes begins Ben's answer, so a comma comes right after it. The other choices leave out the comma or put commas where they do not belong."
+          },
+          {
+            id: "SK-GUM5-2-C05",
+            type: "ebsr",
+            points: 2,
+            dok: 2,
+            std: [
+              "3.L.GC.1:I:use-commas-for-direct-address-and-to-set-off-yes"
+            ],
+            passages: ["p1"],
+            prompt: "This question has two parts. Answer Part A, then Part B.",
+            partA: {
+              prompt: "Which sentence in paragraph 2 of the draft is missing a comma?",
+              choices: [
+                { text: "Put it on the long side, Tess." },
+                { text: "No, the tape will not stick to that rough part." },
+                { text: "Ben can you find the other roll of tape?", correct: true },
+                { text: "Mia, where should we put the door?" }
+              ]
+            },
+            partB: {
+              prompt: "Which rule explains why the sentence in Part A needs a comma?",
+              choices: [
+                { text: "A comma goes after the first word of every question." },
+                { text: "A comma goes before the word can when a sentence asks for help." },
+                { text: "A comma goes after any name, even in a sentence that only tells about a person." },
+                { text: "A comma sets off the name of a person who is spoken to.", correct: true }
+              ]
+            },
+            clue: "Ask who is being spoken to in each sentence. Then ask which rule fits the sentence that is missing a mark.",
+            hints: [
+              "Ask who is being spoken to in each sentence. Then ask which rule fits the sentence that is missing a mark.",
+              "Check each sentence in paragraph 2 and look for a name. For Part B, think about what the commas in the other sentences are doing.",
+              "The sentence about the tape not sticking starts with an answer word and already has its comma. Check the other three."
+            ],
+            how: [
+              "Part A: read each sentence in paragraph 2 and ask who is being spoken to.",
+              "In \"Ben can you find the other roll of tape?\" Tess is talking to Ben, but nothing sets his name off.",
+              "Part A answer: Ben can you find the other roll of tape?",
+              "Part B answer: \"A comma sets off the name of a person who is spoken to.\""
+            ],
+            misconception: "A common mix-up is thinking a question needs a comma after its first word. The comma is there to set off the name of the person who is spoken to.",
+            why: "Part A: Ben can you find the other roll of tape? Part B: \"A comma sets off the name of a person who is spoken to.\" Tess is talking to Ben, so a comma must separate his name from the rest of the question: Ben, can you find the other roll of tape? The other three sentences already have the commas they need."
+          }
+        ]
+      },
+      {
+        title: "Set 2",
+        items: [
+          {
+            id: "SK-GUM5-2-C06",
+            type: "hottext",
+            points: 2,
+            dok: 2,
+            std: [
+              "3.L.GC.1:I:use-commas-for-direct-address-and-to-set-off-yes"
+            ],
+            passages: ["p2"],
+            prompt: "Look at sentences 2 through 6 of the draft. Select the TWO sentences that are missing a comma.",
+            targets: ["p2:1:2", "p2:1:3", "p2:1:4", "p2:2:1", "p2:2:2"],
+            answer: ["p2:1:3", "p2:2:1"],
+            pick: 2,
+            clue: "Ask who is being spoken to, and whether a line starts with an answer word. Then check each line for the comma that should be there.",
+            hints: [
+              "Ask who is being spoken to, and whether a line starts with an answer word. Then check each line for the comma that should be there.",
+              "Read the five sentences one at a time. Pick TWO.",
+              "In sentence 6, the answer word already has its comma. Check the other four."
+            ],
+            how: [
+              "Check each sentence for a name that is spoken to and for yes or no at the start.",
+              "Sentence 3 starts with an answer word and has no comma after it: \"No, I looked there already.\"",
+              "Sentence 5 speaks to Dev, but his name has no comma after it: \"Dev, he is hiding behind the big pillow!\"",
+              "Sentences 2, 4 and 6 already have the commas they need."
+            ],
+            misconception: "A common mix-up is picking every sentence that has a name in it. Pick only the sentences where a needed comma is missing.",
+            why: "The answers are sentence 3 and sentence 5. In sentence 3, the answer word No needs a comma right after it. In sentence 5, Nina is talking to Dev, so his name needs a comma after it. Sentences 2, 4 and 6 already have the commas they need."
+          },
+          {
+            id: "SK-GUM5-2-C07",
+            type: "ms",
+            points: 2,
+            dok: 2,
+            std: [
+              "3.L.GC.1:I:use-commas-for-direct-address-and-to-set-off-yes"
+            ],
+            passages: [],
+            prompt: "Choose the TWO sentences that use commas correctly.",
+            pick: 2,
+            choices: [
+              { text: "Mom made, dinner for all of us." },
+              { text: "Please sit down, Mr. Cho.", correct: true },
+              { text: "Cara asked Dad, to drive us home." },
+              { text: "No, I did not take the last cookie.", correct: true },
+              { text: "Yes I brought my library book." }
+            ],
+            clue: "Check each sentence for a name that is spoken to and for yes or no that starts an answer. Ask whether each comma has a reason, and whether any comma is missing.",
+            hints: [
+              "Check each sentence for a name that is spoken to and for yes or no that starts an answer. Ask whether each comma has a reason, and whether any comma is missing.",
+              "Pick TWO. Some sentences leave out a comma they need, and some have a comma that does not belong.",
+              "In the Cara sentence, the comma splits the person who is asked from what the person is asked to do. Decide about the other four."
+            ],
+            how: [
+              "Check each sentence: is a name spoken to, and does yes or no start an answer?",
+              "\"Please sit down, Mr. Cho.\" speaks to Mr. Cho, so a comma comes before his name.",
+              "\"No, I did not take the last cookie.\" has a comma right after No.",
+              "The other three are wrong: Yes I needs a comma after Yes, and the commas after made and after Dad do not belong."
+            ],
+            misconception: "A common mix-up is thinking more commas make a sentence better. A comma belongs only next to a name that is spoken to or after yes or no that starts an answer.",
+            why: "The answers are \"Please sit down, Mr. Cho.\" and \"No, I did not take the last cookie.\" The first speaks to Mr. Cho, and the second starts with an answer word. The others should say \"Yes, I brought my library book.\", \"Mom made dinner for all of us.\" and \"Cara asked Dad to drive us home.\""
+          },
+          {
+            id: "SK-GUM5-2-C08",
+            type: "match",
+            points: 2,
+            dok: 2,
+            std: [
+              "3.L.GC.1:I:use-commas-for-direct-address-and-to-set-off-yes"
+            ],
+            passages: [],
+            prompt: "None of these sentences has a comma yet. Each one speaks to a person by name. Decide where the comma belongs.",
+            cols: ["Before the name", "After the name"],
+            rows: [
+              { text: "Please pass the salt Dad.", answer: 0 },
+              { text: "Mia please help me with this.", answer: 1 },
+              { text: "Can you see the board Mrs. Fox?", answer: 0 },
+              { text: "Grandma I made this for you.", answer: 1 }
+            ],
+            clue: "Find the name of the person who is spoken to in each sentence. Ask whether the name comes first or last.",
+            hints: [
+              "Find the name of the person who is spoken to in each sentence. Ask whether the name comes first or last.",
+              "Do one row at a time. Say the sentence out loud and listen for where the pause comes next to the name.",
+              "In the sentence with Mrs. Fox, the name comes last. Decide about the other rows."
+            ],
+            how: [
+              "Find the name in each sentence: Dad, Mia, Mrs. Fox and Grandma.",
+              "A name at the end of a sentence gets a comma before it. A name at the start gets a comma after it.",
+              "Dad and Mrs. Fox come last, so the comma goes before the name. Mia and Grandma come first, so the comma goes after the name."
+            ],
+            misconception: "A common mix-up is putting the comma on the same side of every name. The comma goes between the name and the rest of the sentence, so its side depends on where the name sits.",
+            why: "The commas go before Dad and before Mrs. Fox, because those names come at the end: \"Please pass the salt, Dad.\" and \"Can you see the board, Mrs. Fox?\" The commas go after Mia and after Grandma, because those names come first: \"Mia, please help me with this.\" and \"Grandma, I made this for you.\""
+          },
+          {
+            id: "SK-GUM5-2-C09",
+            type: "mc",
+            points: 1,
+            dok: 3,
+            std: [
+              "3.L.GC.1:I:use-commas-for-direct-address-and-to-set-off-yes"
+            ],
+            passages: ["p2"],
+            prompt: "In sentence 8 of the draft, Nina has a comma on each side: \"Please hold the box low, Nina, while he walks in.\" Why does her name need two commas?",
+            choices: [
+              { text: "Dev is only telling about Nina, so her name needs a comma on each side." },
+              { text: "Dev is talking to Nina, and her name is in the middle, so a comma goes on each side.", correct: true },
+              { text: "The second comma is there because the word while always needs a comma before it." },
+              { text: "A name needs two commas whenever a sentence has more than six words in it." }
+            ],
+            clue: "Ask who is being spoken to in the sentence, and where the name sits. Then ask what the commas do for the name.",
+            hints: [
+              "Ask who is being spoken to in the sentence, and where the name sits. Then ask what the commas do for the name.",
+              "Read the sentence again without the name. Ask what changes when the name is added.",
+              "Dev is not telling a story about Nina, so one choice cannot be right. Check the other three."
+            ],
+            how: [
+              "Read sentence 8. Dev is speaking right to Nina.",
+              "The name is in the middle of the sentence, so it needs a comma before it and a comma after it.",
+              "The answer is \"Dev is talking to Nina, and her name is in the middle, so a comma goes on each side.\""
+            ],
+            misconception: "A common mix-up is thinking commas depend on how long the sentence is. They depend on whether the name is spoken to and where it sits.",
+            why: "The answer is \"Dev is talking to Nina, and her name is in the middle, so a comma goes on each side.\" A name in the middle of a sentence is set off on both sides. The length of the sentence and the word while do not decide where the commas go."
+          },
+          {
+            id: "SK-GUM5-2-C10",
+            type: "dropdown",
+            points: 1,
+            dok: 1,
+            std: [
+              "3.L.GC.1:I:use-commas-for-direct-address-and-to-set-off-yes"
+            ],
+            passages: ["p2"],
+            prompt: "Sentence 10 of the draft is missing a comma. Choose the words that fix it.",
+            text: "Dev: {0} I think he is happy to be home.",
+            slots: [
+              {
+                options: ["Thank you, Nina.", "Thank you Nina.", "Thank, you Nina."],
+                answer: 0
+              }
+            ],
+            clue: "Ask who Dev is thanking, and think about what should separate that name from the rest.",
+            hints: [
+              "Ask who Dev is thanking, and think about what should separate that name from the rest.",
+              "Say each choice out loud. Listen for where the speaker would pause.",
+              "One choice puts the comma after the first word, where the speaker would not pause. Decide between the other two."
+            ],
+            how: [
+              "Read sentence 10. Dev is talking to Nina.",
+              "When you talk to a person by name, a comma separates the name from the other words.",
+              "The answer is Thank you, Nina."
+            ],
+            misconception: "A common mix-up is leaving the comma off when the name is at the end. The comma goes before the name.",
+            why: "The answer is Thank you, Nina. Dev is talking to Nina, so a comma comes before her name. Thank you Nina. leaves out the comma, and Thank, you Nina. puts it in the wrong place."
+          }
+        ]
+      },
+      {
+        title: "Set 3",
+        items: [
+          {
+            id: "SK-GUM5-2-C11",
+            type: "hottext",
+            points: 1,
+            dok: 2,
+            std: [
+              "3.L.GC.1:I:use-commas-for-direct-address-and-to-set-off-yes"
+            ],
+            passages: ["p3"],
+            prompt: "Look at sentences 5 through 9 of the draft. Select the sentence that has a comma that does not belong.",
+            targets: ["p3:2:1", "p3:2:2", "p3:2:3", "p3:2:4", "p3:2:5"],
+            answer: ["p3:2:2"],
+            pick: 1,
+            clue: "A comma should have a reason. Ask whether each comma sets off a name that is spoken to, or an answer word.",
+            hints: [
+              "A comma should have a reason. Ask whether each comma sets off a name that is spoken to, or an answer word.",
+              "Read the five sentences one at a time. Pick ONE. Ask who each sentence speaks to or tells about.",
+              "In sentence 7, Lee speaks right to Rosa, and the comma sets off her name. Check the other four."
+            ],
+            how: [
+              "Find every comma in the five sentences and ask what it is doing.",
+              "Sentences 5, 7, 8 and 9 each have a comma after yes, no or a name that is spoken to.",
+              "In sentence 6, nobody is talking to Rosa. The sentence only tells what Rosa did, so the comma does not belong."
+            ],
+            misconception: "A common mix-up is thinking a name always needs a comma next to it. A comma belongs only when the sentence speaks to that person.",
+            why: "The answer is sentence 6, \"Rosa, handed the napkins to Lee and Mom.\" Nobody is talking to Rosa. The sentence only tells what she did, so the comma should be taken out. In the other four sentences, each comma sets off a spoken-to name or an answer word."
+          },
+          {
+            id: "SK-GUM5-2-C12",
+            type: "dropdown",
+            points: 1,
+            dok: 2,
+            std: [
+              "3.L.GC.1:I:use-commas-for-direct-address-and-to-set-off-yes"
+            ],
+            passages: ["p3"],
+            prompt: "Sentence 10 of the draft is missing a comma. Choose the words that fix it.",
+            text: "Mom: Please hang your wet coat on the {0}",
+            slots: [
+              {
+                options: ["hook, Lee.", "hook Lee.", "hook Lee,"],
+                answer: 0
+              }
+            ],
+            clue: "Ask who Mom is talking to, and where that name sits in the sentence.",
+            hints: [
+              "Ask who Mom is talking to, and where that name sits in the sentence.",
+              "Say each choice at the end of the sentence. Listen for the pause between the last two words.",
+              "One choice leaves its comma at the very end, where nothing follows it. Decide between the other two."
+            ],
+            how: [
+              "Read sentence 10. Mom is talking to Lee, and his name comes last.",
+              "A name at the end of a sentence gets a comma before it.",
+              "The answer is hook, Lee."
+            ],
+            misconception: "A common mix-up is putting the comma after the name instead of before it. A name at the end needs its comma on the left.",
+            why: "The answer is hook, Lee. Mom is talking to Lee, and his name comes last, so the comma goes before it. Hook Lee. leaves the comma out, and hook Lee, puts it after the name where nothing follows."
+          },
+          {
+            id: "SK-GUM5-2-C13",
+            type: "ms",
+            points: 2,
+            dok: 3,
+            std: [
+              "3.L.GC.1:I:use-commas-for-direct-address-and-to-set-off-yes"
+            ],
+            passages: [],
+            prompt: "Kai says, \"A name always needs a comma next to it.\" Choose the TWO sentences that show Kai is not right.",
+            pick: 2,
+            choices: [
+              { text: "Mom hugged Tim at the door.", correct: true },
+              { text: "Is the pizza ready, Tim?" },
+              { text: "Tim carried the box to the car.", correct: true },
+              { text: "Please wait here, Tim, and sit." },
+              { text: "Tim, carry the box to the car." }
+            ],
+            clue: "Kai says a name needs a comma every time. Look for sentences where a name has no comma next to it and the sentence is still right.",
+            hints: [
+              "Kai says a name needs a comma every time. Look for sentences where a name has no comma next to it and the sentence is still right.",
+              "Pick TWO. Check whether each sentence speaks to the person or only tells about the person.",
+              "The sentence that starts with Tim, speaks right to Tim. Decide about the other four."
+            ],
+            how: [
+              "Look for a name with no comma next to it in a sentence that is correct.",
+              "\"Tim carried the box to the car.\" and \"Mom hugged Tim at the door.\" only tell about Tim, so no comma is needed.",
+              "The other three speak right to Tim, so each has a comma next to his name."
+            ],
+            misconception: "A common mix-up is picking sentences that have commas. Kai is wrong when a sentence only tells about a person, so the name needs no comma.",
+            why: "The answers are \"Tim carried the box to the car.\" and \"Mom hugged Tim at the door.\" Both only tell about Tim, so his name needs no comma. In the other three, someone is talking to Tim, so a comma sets off his name."
+          },
+          {
+            id: "SK-GUM5-2-C14",
+            type: "dropdown",
+            points: 2,
+            dok: 2,
+            std: [
+              "3.L.GC.1:I:use-commas-for-direct-address-and-to-set-off-yes"
+            ],
+            passages: [],
+            prompt: "Aunt Bea talks to Leo, and Leo answers her. Choose the words that finish what each one says.",
+            text: "Aunt Bea: {0} Leo: {1}",
+            slots: [
+              {
+                options: ["Leo, can you carry this box?", "Leo can you carry this box?", "Leo can, you carry this box?"],
+                answer: 0
+              },
+              {
+                options: ["No, it is too heavy for me.", "No it is too heavy for me.", "No it is, too heavy for me."],
+                answer: 0
+              }
+            ],
+            clue: "Ask who is talking to whom in each line. Then ask what should separate the name, or the answer word, from the rest of the line.",
+            hints: [
+              "Ask who is talking to whom in each line. Then ask what should separate the name, or the answer word, from the rest of the line.",
+              "Fill one blank at a time. Say each choice out loud and listen for where the speaker pauses.",
+              "In the second blank, one choice puts its only comma after the word is. Decide about the other choices."
+            ],
+            how: [
+              "The first blank is Aunt Bea talking to Leo. His name starts the line, so a comma comes right after it.",
+              "The second blank is Leo's answer. No starts the answer, so a comma comes right after it.",
+              "The answers are \"Leo, can you carry this box?\" and \"No, it is too heavy for me.\""
+            ],
+            misconception: "A common mix-up is putting the comma later in the line. The comma goes right after the name and right after the answer word.",
+            why: "The answers are \"Leo, can you carry this box?\" and \"No, it is too heavy for me.\" Aunt Bea speaks to Leo, so his name is followed by a comma. No starts Leo's answer, so it is followed by a comma. The other choices leave the comma out or put it in the wrong place."
+          },
+          {
+            id: "SK-GUM5-2-C15",
+            type: "mc",
+            points: 1,
+            dok: 3,
+            std: [
+              "3.L.GC.1:I:use-commas-for-direct-address-and-to-set-off-yes"
+            ],
+            passages: [],
+            prompt: "Sam wrote, \"Mom said yes to the sleepover.\" He thinks it needs a comma after yes, because yes always needs one. Is Sam right?",
+            choices: [
+              { text: "No. Yes needs a comma only when it starts an answer, and here it tells what Mom said.", correct: true },
+              { text: "Yes. The word yes needs a comma every time it is used in a sentence." },
+              { text: "Yes. A comma is needed after any word that tells what a person said." },
+              { text: "No. Yes needs a comma only when it comes at the end of a sentence." }
+            ],
+            clue: "Ask what the word yes is doing in the sentence. Is it the start of an answer, or is it telling what Mom said?",
+            hints: [
+              "Ask what the word yes is doing in the sentence. Is it the start of an answer, or is it telling what Mom said?",
+              "Think about a reply that starts with yes. Ask where its comma goes, and why.",
+              "The end of a sentence is not the reason a word needs a comma. Check the other three."
+            ],
+            how: [
+              "Ask what yes is doing. Mom is not answering anyone in this sentence.",
+              "Yes is just telling what Mom said, so it needs no comma after it.",
+              "The answer is \"No. Yes needs a comma only when it starts an answer, and here it tells what Mom said.\""
+            ],
+            misconception: "A common mix-up is thinking the word yes always gets a comma. The comma is for a yes that starts an answer.",
+            why: "The answer is \"No. Yes needs a comma only when it starts an answer, and here it tells what Mom said.\" Sam should leave the sentence as it is. A comma follows yes in a reply like \"Yes, we can go.\" It does not follow yes when the word only tells what someone said."
+          }
+        ]
+      }
+    ]
+  },
+  similar: [
+    {
+      id: "SK-GUM5-2-S01",
+      type: "match",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.L.GC.1:I:use-commas-for-direct-address-and-to-set-off-yes"
+      ],
+      passages: [],
+      prompt: "Each sentence below has a name in it. Decide whether the sentence needs a comma next to that name.",
+      cols: ["Add a comma", "Leave as is"],
+      rows: [
+        { text: "Omar close the gate.", answer: 0 },
+        { text: "Omar closed the gate.", answer: 1 },
+        { text: "Bring me a towel Priya.", answer: 0 },
+        { text: "Priya brought a towel.", answer: 1 }
+      ],
+      clue: "Ask whether each sentence talks TO the person or only tells ABOUT the person.",
+      hints: [
+        "Ask whether each sentence talks TO the person or only tells ABOUT the person.",
+        "Do one row at a time. Say each sentence as if you were reading it to the person who is named.",
+        "In the sentence about Omar closing the gate, nobody is being spoken to. Decide about the other rows."
+      ],
+      how: [
+        "Ask about each row: is someone talking to the person, or telling about the person?",
+        "\"Omar close the gate.\" and \"Bring me a towel Priya.\" speak right to a person, so each needs a comma next to the name.",
+        "\"Omar closed the gate.\" and \"Priya brought a towel.\" only tell about people, so they stay as they are."
+      ],
+      misconception: "A common mix-up is adding a comma next to every name. Add one only when the sentence speaks to that person.",
+      why: "\"Omar, close the gate.\" and \"Bring me a towel, Priya.\" need commas because someone is talking to Omar and Priya. \"Omar closed the gate.\" and \"Priya brought a towel.\" only tell about them, so nothing is added.",
+      like: ["SK-GUM5-2-P3"]
+    },
+    {
+      id: "SK-GUM5-2-S02",
+      type: "ms",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.L.GC.1:I:use-commas-for-direct-address-and-to-set-off-yes"
+      ],
+      passages: [],
+      prompt: "Select the TWO sentences with correct commas.",
+      pick: 2,
+      choices: [
+        { text: "Pass me the bread, Rita.", correct: true },
+        { text: "No I do not like peas." },
+        { text: "Yes, the soup is ready now.", correct: true },
+        { text: "Kiran poured milk, for Rita." },
+        { text: "Dad stirred, the soup slowly." }
+      ],
+      clue: "For each sentence, ask whether it starts with an answer word or speaks to a person by name. Then ask whether its commas are right.",
+      hints: [
+        "For each sentence, ask whether it starts with an answer word or speaks to a person by name. Then ask whether its commas are right.",
+        "Pick TWO. In some sentences a comma is missing, and in some a comma does not belong.",
+        "The sentence that starts with No needs a mark that it does not have. Decide about the other four."
+      ],
+      how: [
+        "Check each sentence for an answer word at the start or a person who is spoken to.",
+        "\"Yes, the soup is ready now.\" has a comma right after Yes.",
+        "\"Pass me the bread, Rita.\" speaks to Rita, so a comma comes before her name.",
+        "The other three are wrong: No I needs a comma after No, and the commas after stirred and milk do not belong."
+      ],
+      misconception: "A common mix-up is thinking a comma can go wherever you would take a breath. It belongs after an answer word or next to a name that is spoken to.",
+      why: "The answers are \"Yes, the soup is ready now.\" and \"Pass me the bread, Rita.\" The first starts with an answer word, and the second speaks to Rita. The others should say \"No, I do not like peas.\", \"Dad stirred the soup slowly.\" and \"Kiran poured milk for Rita.\"",
+      like: ["SK-GUM5-2-P5"]
+    },
+    {
+      id: "SK-GUM5-2-S03",
+      type: "dropdown",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.L.GC.1:I:use-commas-for-direct-address-and-to-set-off-yes"
+      ],
+      passages: ["p4"],
+      prompt: "One line in paragraph 1 of the draft needs a mark. Pick the version that is right.",
+      text: "Omar: {0} the dragon a little higher.",
+      slots: [
+        {
+          options: ["Jade lift", "Jade, lift", "Jade lift,"],
+          answer: 1
+        }
+      ],
+      clue: "Ask who Omar is talking to. Then ask what should separate that name from the rest of the line.",
+      hints: [
+        "Ask who Omar is talking to. Then ask what should separate that name from the rest of the line.",
+        "Say each choice out loud and notice where a pause would fall.",
+        "One choice puts the mark after the action word instead of after the name. Decide between the other two."
+      ],
+      how: [
+        "Read sentence 2. Omar is talking to Jade and tells her what to do.",
+        "A name used to speak to someone is separated from the rest of the sentence by a comma.",
+        "The answer is Jade, lift."
+      ],
+      misconception: "A common mix-up is skipping the comma because the line is short. A short line still needs a comma after the name.",
+      why: "The answer is Jade, lift. Omar is talking to Jade, so a comma comes right after her name. Jade lift leaves the comma out, and Jade lift, puts it after the wrong word.",
+      like: ["SK-GUM5-2-C03"]
+    },
+    {
+      id: "SK-GUM5-2-S04",
+      type: "mc",
+      points: 1,
+      dok: 1,
+      std: [
+        "3.L.GC.1:I:use-commas-for-direct-address-and-to-set-off-yes"
+      ],
+      passages: ["p4"],
+      prompt: "Pick the way sentence 3 should be written.",
+      choices: [
+        { text: "Yes, I see him now.", correct: true },
+        { text: "Yes I see him now." },
+        { text: "Yes I, see him now." },
+        { text: "Yes, I see, him now." }
+      ],
+      clue: "Look at the first word of the line and ask what it does at the start of a reply.",
+      hints: [
+        "Look at the first word of the line and ask what it does at the start of a reply.",
+        "Read each choice out loud. Check where each comma sits, and ask whether it has a reason.",
+        "One choice puts its only comma after I, between the speaker and what he sees. Decide among the other three."
+      ],
+      how: [
+        "The line starts with yes, and yes begins Jade's reply.",
+        "When yes starts a reply, a comma comes right after it.",
+        "The answer is \"Yes, I see him now.\""
+      ],
+      misconception: "A common mix-up is putting the comma after the first few words. The comma goes right after yes.",
+      why: "The answer is \"Yes, I see him now.\" Yes begins Jade's reply, so a comma comes right after it. The other choices leave out the comma or put commas in places where they do not belong.",
+      like: ["SK-GUM5-2-C04"]
+    },
+    {
+      id: "SK-GUM5-2-S05",
+      type: "ebsr",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.L.GC.1:I:use-commas-for-direct-address-and-to-set-off-yes"
+      ],
+      passages: ["p4"],
+      prompt: "This question has two parts. Answer Part A, then Part B.",
+      partA: {
+        prompt: "Which line from paragraph 2 should have a comma but does not?",
+        choices: [
+          { text: "Slide it over to the left, Pablo." },
+          { text: "Jade can you hold the curtain open?", correct: true },
+          { text: "No, the dragon needs more room on that side." },
+          { text: "Omar, the curtain is stuck again." }
+        ]
+      },
+      partB: {
+        prompt: "Which reason fits the line you chose in Part A?",
+        choices: [
+          { text: "A comma comes before every word that begins a question." },
+          { text: "Every name in a line must be followed by a comma." },
+          { text: "A comma separates the name of the one being talked to from the other words.", correct: true },
+          { text: "A comma is needed after the second word of each request." }
+        ]
+      },
+      clue: "Think about who is talking to whom in each line. Then ask which reason fits the line that is missing a mark.",
+      hints: [
+        "Think about who is talking to whom in each line. Then ask which reason fits the line that is missing a mark.",
+        "Look at the four lines in paragraph 2 and find the names. For Part B, think about what the commas in the other lines are doing.",
+        "The line that starts with No already has its comma. Check the other three."
+      ],
+      how: [
+        "Part A: read each line in paragraph 2 and find the person who is talked to.",
+        "In \"Jade can you hold the curtain open?\" Pablo is talking to Jade, but nothing sets her name off.",
+        "Part A answer: Jade can you hold the curtain open?",
+        "Part B answer: \"A comma separates the name of the one being talked to from the other words.\""
+      ],
+      misconception: "A common mix-up is thinking every name needs a comma after it. The comma is for the name of the person who is talked to.",
+      why: "Part A: Jade can you hold the curtain open? Part B: \"A comma separates the name of the one being talked to from the other words.\" Pablo is talking to Jade, so her name needs a comma after it: Jade, can you hold the curtain open? The other three lines already have the commas they need.",
+      like: ["SK-GUM5-2-C05"]
+    },
+    {
+      id: "SK-GUM5-2-S06",
+      type: "hottext",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.L.GC.1:I:use-commas-for-direct-address-and-to-set-off-yes"
+      ],
+      passages: ["p5"],
+      prompt: "Read sentences 2 through 6 of the draft. Select the TWO sentences that leave out a comma they need.",
+      targets: ["p5:1:2", "p5:1:3", "p5:1:4", "p5:2:1", "p5:2:2"],
+      answer: ["p5:1:2", "p5:2:2"],
+      pick: 2,
+      clue: "Ask who is spoken to, and whether a line starts with an answer word. Then check each line for the comma it should have.",
+      hints: [
+        "Ask who is spoken to, and whether a line starts with an answer word. Then check each line for the comma it should have.",
+        "Go through the five sentences one by one. Pick TWO.",
+        "In sentence 4, the name at the end already has a comma before it. Check the other four."
+      ],
+      how: [
+        "Check each sentence for a spoken-to name and for yes or no at the start.",
+        "Sentence 2 speaks to Ana, but her name has no comma after it: \"Ana, please hand me the big sponge.\"",
+        "Sentence 6 starts with an answer word and has no comma after it: \"Yes, I see the puddle by the tire.\"",
+        "Sentences 3, 4 and 5 already have the commas they need."
+      ],
+      misconception: "A common mix-up is picking a sentence just because it has a comma in it. Pick only the sentences where a needed comma is missing.",
+      why: "The answers are sentence 2 and sentence 6. In sentence 2, Raj is talking to Ana, so her name needs a comma after it. In sentence 6, the answer word Yes needs a comma right after it. Sentences 3, 4 and 5 already have the commas they need.",
+      like: ["SK-GUM5-2-C06"]
+    },
+    {
+      id: "SK-GUM5-2-S07",
+      type: "ms",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.L.GC.1:I:use-commas-for-direct-address-and-to-set-off-yes"
+      ],
+      passages: [],
+      prompt: "Pick the TWO lines in which the commas are placed correctly.",
+      pick: 2,
+      choices: [
+        { text: "No I did not see the movie." },
+        { text: "Come inside, Mrs. Hale.", correct: true },
+        { text: "My sister baked, cookies for the team." },
+        { text: "Tell the story to Gran, again." },
+        { text: "Yes, the park is open on Sunday.", correct: true }
+      ],
+      clue: "Look at each line for a spoken-to name or an answer word at the start. Ask whether its commas are right, and whether any is missing.",
+      hints: [
+        "Look at each line for a spoken-to name or an answer word at the start. Ask whether its commas are right, and whether any is missing.",
+        "Choose TWO. A few lines leave a needed comma out, and a few have one that has no reason to be there.",
+        "In the Gran line, the comma comes between a request and the word again. Decide about the other four."
+      ],
+      how: [
+        "Check each line for a person who is spoken to or for yes or no at the start.",
+        "\"Come inside, Mrs. Hale.\" speaks to Mrs. Hale, so a comma comes before her name.",
+        "\"Yes, the park is open on Sunday.\" has a comma right after Yes.",
+        "The other three are wrong: No I needs a comma after No, and the commas after baked and after Gran do not belong."
+      ],
+      misconception: "A common mix-up is putting a comma wherever a line seems to pause. A comma goes next to a spoken-to name or after an answer word.",
+      why: "The answers are \"Come inside, Mrs. Hale.\" and \"Yes, the park is open on Sunday.\" One speaks to Mrs. Hale, and the other starts with an answer word. The rest should say \"No, I did not see the movie.\", \"My sister baked cookies for the team.\" and \"Tell the story to Gran again.\"",
+      like: ["SK-GUM5-2-C07"]
+    },
+    {
+      id: "SK-GUM5-2-S08",
+      type: "match",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.L.GC.1:I:use-commas-for-direct-address-and-to-set-off-yes"
+      ],
+      passages: [],
+      prompt: "Each line below speaks to someone by name but has no comma. Decide on which side of the name the comma belongs.",
+      cols: ["Left of the name", "Right of the name"],
+      rows: [
+        { text: "Look at this shell Aunt Jo.", answer: 0 },
+        { text: "Sam did you hear that noise?", answer: 1 },
+        { text: "Hold the rope tight Ruth.", answer: 0 },
+        { text: "Papa I lost a tooth today!", answer: 1 }
+      ],
+      clue: "Find the name of the person who is spoken to in each line. Notice whether it opens or closes the line.",
+      hints: [
+        "Find the name of the person who is spoken to in each line. Notice whether it opens or closes the line.",
+        "Take one row at a time. Read the line aloud and listen for the pause beside the name.",
+        "In the line with Ruth, the name closes the line. Decide about the other rows."
+      ],
+      how: [
+        "Find the name in each line: Aunt Jo, Sam, Ruth and Papa.",
+        "A name that closes a line gets a comma on its left. A name that opens a line gets a comma on its right.",
+        "Aunt Jo and Ruth close their lines, so the comma goes on the left. Sam and Papa open their lines, so it goes on the right."
+      ],
+      misconception: "A common mix-up is putting the comma on the same side of every name. The comma sits between the name and the other words.",
+      why: "The commas go to the left of Aunt Jo and Ruth, because those names close their lines: \"Look at this shell, Aunt Jo.\" and \"Hold the rope tight, Ruth.\" The commas go to the right of Sam and Papa, because those names open their lines: \"Sam, did you hear that noise?\" and \"Papa, I lost a tooth today!\"",
+      like: ["SK-GUM5-2-C08"]
+    },
+    {
+      id: "SK-GUM5-2-S09",
+      type: "mc",
+      points: 1,
+      dok: 3,
+      std: [
+        "3.L.GC.1:I:use-commas-for-direct-address-and-to-set-off-yes"
+      ],
+      passages: ["p5"],
+      prompt: "In sentence 8 of the draft, Ana's name sits between two commas: \"We can rest, Ana, after we dry the wheels.\" What do the pair of commas tell the reader?",
+      choices: [
+        { text: "Ana is being told about, and the commas show she is the subject of the sentence." },
+        { text: "The words between the commas are the most important ones in the sentence." },
+        { text: "Ana is being spoken to, and the commas keep her name apart from the other words.", correct: true },
+        { text: "Any word that sits in the middle of a sentence needs a comma on each side." }
+      ],
+      clue: "Ask who Raj is talking to and what the commas do for that name.",
+      hints: [
+        "Ask who Raj is talking to and what the commas do for that name.",
+        "Read the sentence once with the name and once without it. Think about what the commas are doing.",
+        "The commas have nothing to do with how important a word is. Check the other three."
+      ],
+      how: [
+        "Read sentence 8. Raj is speaking right to Ana.",
+        "Her name is in the middle, so the commas keep it apart from the other words.",
+        "The answer is \"Ana is being spoken to, and the commas keep her name apart from the other words.\""
+      ],
+      misconception: "A common mix-up is thinking the commas mark an important word. They mark a name that is spoken to.",
+      why: "The answer is \"Ana is being spoken to, and the commas keep her name apart from the other words.\" Raj talks right to Ana, and her name sits in the middle, so it has a comma on each side. A middle word does not get commas just for being in the middle.",
+      like: ["SK-GUM5-2-C09"]
+    },
+    {
+      id: "SK-GUM5-2-S10",
+      type: "dropdown",
+      points: 1,
+      dok: 1,
+      std: [
+        "3.L.GC.1:I:use-commas-for-direct-address-and-to-set-off-yes"
+      ],
+      passages: ["p5"],
+      prompt: "The last line of the draft needs a mark. Choose the words that make it right.",
+      text: "Raj: {0} did a great job today.",
+      slots: [
+        {
+          options: ["Ana, you", "Ana you", "Ana you,"],
+          answer: 0
+        }
+      ],
+      clue: "Ask who Raj is talking to, and think about what should come between that name and the next word.",
+      hints: [
+        "Ask who Raj is talking to, and think about what should come between that name and the next word.",
+        "Say each choice out loud and listen for the pause.",
+        "One choice puts the mark at the end, after the word you. Decide between the other two."
+      ],
+      how: [
+        "Read sentence 10. Raj is talking to Ana.",
+        "A name at the start of a sentence is followed by a comma.",
+        "The answer is Ana, you."
+      ],
+      misconception: "A common mix-up is leaving out the comma because the name and the next word seem to go together. A spoken-to name still needs its comma.",
+      why: "The answer is Ana, you. Raj is talking to Ana, so a comma comes right after her name. Ana you leaves it out, and Ana you, puts it after the wrong word.",
+      like: ["SK-GUM5-2-C10"]
+    },
+    {
+      id: "SK-GUM5-2-S11",
+      type: "hottext",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.L.GC.1:I:use-commas-for-direct-address-and-to-set-off-yes"
+      ],
+      passages: ["p6"],
+      prompt: "Read sentences 5 through 9 of the draft. Select the sentence in which a comma should be taken out.",
+      targets: ["p6:2:1", "p6:2:2", "p6:2:3", "p6:2:4", "p6:2:5"],
+      answer: ["p6:2:2"],
+      pick: 1,
+      clue: "Every comma needs a reason. Ask whether each one follows an answer word or sets off a name that is spoken to.",
+      hints: [
+        "Every comma needs a reason. Ask whether each one follows an answer word or sets off a name that is spoken to.",
+        "Go through the five sentences one by one. Pick ONE. Ask who is spoken to and who is only told about.",
+        "In sentence 8, Dad speaks right to Luis, and the comma sets off his name. Check the other four."
+      ],
+      how: [
+        "Find each comma in the five sentences and ask what it does.",
+        "Sentences 5, 7, 8 and 9 each have a comma after yes, no or a name that is spoken to.",
+        "In sentence 6, nobody is talking to Zoe. The sentence only tells what she did, so the comma does not belong."
+      ],
+      misconception: "A common mix-up is leaving every comma that sits beside a name. A comma stays only when the sentence speaks to that person.",
+      why: "The answer is sentence 6, \"Zoe, pushed the heavy door open with her foot.\" Nobody is talking to Zoe, because the line only tells what she did. The comma should come out. In the other four sentences, each comma follows an answer word or sets off a name that is spoken to.",
+      like: ["SK-GUM5-2-C11"]
+    },
+    {
+      id: "SK-GUM5-2-S12",
+      type: "dropdown",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.L.GC.1:I:use-commas-for-direct-address-and-to-set-off-yes"
+      ],
+      passages: ["p6"],
+      prompt: "The line near the end of the draft has no comma where one belongs. Pick the right ending.",
+      text: "Dad: Set the plants by the {0}",
+      slots: [
+        {
+          options: ["window, Luis.", "window Luis.", "window Luis,"],
+          answer: 0
+        }
+      ],
+      clue: "Ask who Dad is talking to, and where that name falls in the line.",
+      hints: [
+        "Ask who Dad is talking to, and where that name falls in the line.",
+        "Say each choice at the end of the line and listen for the pause before the last word.",
+        "One choice puts a comma after the name, where nothing comes next. Decide between the other two."
+      ],
+      how: [
+        "Read sentence 10. Dad is talking to Luis, and his name is last.",
+        "A name at the end of a sentence has a comma before it.",
+        "The answer is window, Luis."
+      ],
+      misconception: "A common mix-up is putting the comma after the name. At the end of a sentence, the comma goes before it.",
+      why: "The answer is window, Luis. Dad is talking to Luis, and the name closes the line, so the comma goes before it. Window Luis. leaves it out, and window Luis, puts it after the name.",
+      like: ["SK-GUM5-2-C12"]
+    },
+    {
+      id: "SK-GUM5-2-S13",
+      type: "ms",
+      points: 2,
+      dok: 3,
+      std: [
+        "3.L.GC.1:I:use-commas-for-direct-address-and-to-set-off-yes"
+      ],
+      passages: [],
+      prompt: "Gus says, \"Any sentence with a name in it has to have commas.\" Pick the TWO sentences that prove Gus wrong.",
+      pick: 2,
+      choices: [
+        { text: "Dan, look at this seashell." },
+        { text: "Dan found a seashell on the beach.", correct: true },
+        { text: "I think, Dan, that it is time to go." },
+        { text: "Our team cheered for Nell.", correct: true },
+        { text: "Can you swim, Nell?" }
+      ],
+      clue: "Gus says every sentence with a name has commas. Look for sentences that have a name, no commas, and are still right.",
+      hints: [
+        "Gus says every sentence with a name has commas. Look for sentences that have a name, no commas, and are still right.",
+        "Pick TWO. Ask whether each sentence speaks to a person or only tells about a person.",
+        "The sentence with I think speaks to Dan in the middle of a line. Decide about the other four."
+      ],
+      how: [
+        "Look for a sentence that has a name and no commas and is still right.",
+        "\"Dan found a seashell on the beach.\" and \"Our team cheered for Nell.\" only tell about people, so they need no commas.",
+        "The other three speak right to Dan or Nell, so each has commas next to the name."
+      ],
+      misconception: "A common mix-up is choosing sentences with commas, because those are the ones that follow the rule. Gus is wrong where a name needs no commas.",
+      why: "The answers are \"Dan found a seashell on the beach.\" and \"Our team cheered for Nell.\" Both only tell about a person, so no commas are needed. In the other three, someone speaks to Dan or Nell, so commas set off the name.",
+      like: ["SK-GUM5-2-C13"]
+    },
+    {
+      id: "SK-GUM5-2-S14",
+      type: "dropdown",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.L.GC.1:I:use-commas-for-direct-address-and-to-set-off-yes"
+      ],
+      passages: [],
+      prompt: "Uncle Joe asks a question, and Pia answers it. Pick the words that complete each line.",
+      text: "Uncle Joe: {0} Pia: {1}",
+      slots: [
+        {
+          options: ["Pia, did you feed the fish?", "Pia did you feed the fish?", "Pia did, you feed the fish?"],
+          answer: 0
+        },
+        {
+          options: ["Yes, I fed them this morning.", "Yes I fed them this morning.", "Yes I fed, them this morning."],
+          answer: 0
+        }
+      ],
+      clue: "Think about who speaks to whom in each line, and which words should be set off.",
+      hints: [
+        "Think about who speaks to whom in each line, and which words should be set off.",
+        "Work on one blank at a time. Read each choice aloud and notice where the speaker would pause.",
+        "In the second blank, one choice has its only comma after the word fed. Decide about the other choices."
+      ],
+      how: [
+        "In the first blank, Uncle Joe speaks to Pia. Her name opens the line, so a comma follows it.",
+        "In the second blank, Pia answers with yes. Yes opens her answer, so a comma follows it.",
+        "The answers are \"Pia, did you feed the fish?\" and \"Yes, I fed them this morning.\""
+      ],
+      misconception: "A common mix-up is putting the comma deeper into the line. It goes right after the name and right after the answer word.",
+      why: "The answers are \"Pia, did you feed the fish?\" and \"Yes, I fed them this morning.\" Uncle Joe speaks to Pia, so her name gets a comma after it. Yes opens Pia's answer, so it gets a comma after it. The other choices leave the comma out or put it in the wrong place.",
+      like: ["SK-GUM5-2-C14"]
+    },
+    {
+      id: "SK-GUM5-2-S15",
+      type: "mc",
+      points: 1,
+      dok: 3,
+      std: [
+        "3.L.GC.1:I:use-commas-for-direct-address-and-to-set-off-yes"
+      ],
+      passages: [],
+      prompt: "Rita wrote, \"Dad said no to a second dessert.\" She believes a comma belongs after no, because no must always have one. Is she correct?",
+      choices: [
+        { text: "Yes. Every no in a sentence has to be followed by a comma." },
+        { text: "Yes. A comma belongs after any word that comes right after said." },
+        { text: "Not here. A comma follows no only when the sentence also has a name in it." },
+        {
+          text: "Not here. A comma follows no when it opens a reply, but here the word only names what Dad answered.",
+          correct: true
+        }
+      ],
+      clue: "Think about what the word no is doing in the sentence. Does it open a reply, or does it only name an answer?",
+      hints: [
+        "Think about what the word no is doing in the sentence. Does it open a reply, or does it only name an answer?",
+        "Picture someone replying with no. Ask where a comma would go in that reply, and why.",
+        "The reason for a comma does not depend on a name being in the sentence. Check the other three."
+      ],
+      how: [
+        "Ask what no is doing. Nobody is replying to Dad in this sentence.",
+        "No just names the answer Dad gave, so no comma follows it.",
+        "The answer is \"Not here. A comma follows no when it opens a reply, but here the word only names what Dad answered.\""
+      ],
+      misconception: "A common mix-up is thinking the word no always needs a comma. The comma is for a no that opens a reply.",
+      why: "The answer is \"Not here. A comma follows no when it opens a reply, but here the word only names what Dad answered.\" Rita should leave the sentence as it is. A reply like \"No, thank you\" has a comma after no, but this sentence only reports what Dad said.",
+      like: ["SK-GUM5-2-C15"]
+    }
+  ],
+  addons: {
+    "SK-GUM5-2-P1": {
+      hints: [
+        "Check each sentence for a spoken-to name and for yes or no at the start. Ask whether each comma is where it belongs.",
+        "Read the four sentences one at a time. In each, ask whether a comma is missing or whether one is there for no reason.",
+        "The sentence about Ella has a comma, but nobody is talking to Ella. Check the other three."
+      ],
+      how: [
+        "Check each sentence for a spoken-to name and for yes or no at the start.",
+        "\"Yes the library is open today.\" needs a comma after Yes, and \"Can you hear the thunder Malik?\" needs one before Malik.",
+        "In the Ella sentence, the comma does not belong because the sentence only tells about Ella. The answer is \"Grandma, will you braid my hair?\""
+      ],
+      misconception: "A common mix-up is thinking a comma after a name is always right. It is right only when the sentence speaks to that person."
+    },
+    "SK-GUM5-2-P2": {
+      hints: [
+        "Look at the first word. Ask what kind of word it is and what it does at the start of an answer.",
+        "Say each choice out loud and listen for where the pause comes.",
+        "One choice puts the comma after I, where the speaker would not pause. Decide between the other two."
+      ],
+      how: [
+        "The sentence starts with yes, and yes begins an answer.",
+        "A comma comes right after yes when it starts an answer.",
+        "The answer is Yes, I."
+      ],
+      misconception: "A common mix-up is putting the comma later in the line. The comma goes right after yes."
+    },
+    "SK-GUM5-2-P3": {
+      hints: [
+        "Ask whether each sentence talks TO the person or only tells ABOUT the person.",
+        "Do one row at a time. Say each sentence as if you were reading it to the person who is named.",
+        "\"Nora tied her shoe.\" tells what Nora did. Decide about the other rows."
+      ],
+      how: [
+        "Ask about each row: is someone talking to the person, or telling about the person?",
+        "\"Nora your shoe is untied.\" and \"Diego come see this bug!\" speak right to a person, so each needs a comma after the name.",
+        "\"Nora tied her shoe.\" and \"Diego found a bug on the step.\" only tell about people, so they need no comma."
+      ],
+      misconception: "A common mix-up is adding a comma after every name. Add one only when the sentence speaks to that person."
+    },
+    "SK-GUM5-2-P4": {
+      hints: [
+        "Ask who is spoken to, and whether a line starts with an answer word. Check each line for the comma it should have.",
+        "Read the five sentences one at a time. Pick ONE.",
+        "\"Sofia waved to her friends from the bus.\" only tells about Sofia, so it needs no comma. Check the other four."
+      ],
+      how: [
+        "Check each sentence for a spoken-to name and for yes or no at the start.",
+        "The sentences that start with Yes, No and Aunt Rosa have the commas they need, and the Sofia sentence only tells about Sofia.",
+        "In \"Owen please pass the crayons.\" the speaker talks to Owen, so a comma belongs after his name."
+      ],
+      misconception: "A common mix-up is picking the sentence that has no comma at all. That sentence needs none, because it only tells about a person."
+    },
+    "SK-GUM5-2-P5": {
+      hints: [
+        "Check each name to see whether the speaker talks to that person. Then check each yes or no at the start.",
+        "Pick TWO. In some of the sentences, a needed comma is missing.",
+        "In the Mom sentence, nobody is talking to Mom, but a comma follows her name. Decide about the other four."
+      ],
+      how: [
+        "Check each sentence for a spoken-to name and for yes or no at the start.",
+        "\"No, we are not going to the pool today.\" has a comma after No, and \"Let's go outside, Kayla.\" has a comma before Kayla.",
+        "The other three are wrong: Yes I and Wait for me Andre! each need a comma, and the comma after Mom does not belong."
+      ],
+      misconception: "A common mix-up is thinking every name needs a comma. A comma is needed only when the sentence speaks to that person."
+    }
+  },
+  /* B8:core:end */
   test: [
     { id: "SK-GUM5-2-T1", type: "mc", points: 1, dok: 2, passages: [],
       prompt: "Which sentence is correct?",

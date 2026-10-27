@@ -4645,7 +4645,8 @@ PP.addLesson({
     points: [
       "The first word of every sentence begins with a capital letter, even a short word like the or on.",
       "When you write about yourself, use a capital I every time, in any spot in the sentence.",
-      "A short form joins I to another word, as in I'm or I'll. The first letter keeps its capital."
+      "A short form joins I to another word, as in I'm or I'll. The first letter keeps its capital.",
+      "Other words in the middle of a sentence stay small, even after a comma, unless the word is I or the name of a person."
     ],
     example: {
       label: "Example",
@@ -5210,40 +5211,44 @@ PP.addLesson({
               "3.L.GC.1:R:capitalize-the-first-word-of-a-sentence-and-the-"
             ],
             passages: [],
-            prompt: "Choose the TWO sentences that are written correctly.",
+            stem: "A student typed: \"after class, my friend and i read a book.\"",
+            prompt: "Choose the TWO words in the line that need a capital letter.",
             pick: 2,
             choices: [
               {
-                text: "Dad and I painted the old fence.",
+                text: "after",
                 correct: true
               },
               {
-                text: "Can I help you pack the bags?",
+                text: "class"
+              },
+              {
+                text: "friend"
+              },
+              {
+                text: "i",
                 correct: true
               },
               {
-                text: "may I sit by the window?"
+                text: "read"
               },
               {
-                text: "My sister and i rode the bus."
-              },
-              {
-                text: "then we ate lunch outside."
+                text: "book"
               }
             ],
-            clue: "Check the first letter of each sentence. Then look for the word I.",
+            clue: "Check the first word of the line, then look for the word I.",
             hints: [
-              "Check the first letter of each sentence. Then look for the word I.",
-              "Cross out any sentence that begins with a small letter. Then check the rest for a small i.",
-              "One choice has a small i in the middle of the sentence."
+              "Check the first word of the line, then look for the word I.",
+              "Cross out each word that is fine in a small letter. Keep the two that are not.",
+              "Book is a plain word that stays small, so it can be ruled out."
             ],
             how: [
-              "Check the first letter and every I in each sentence.",
-              "Dad and I painted the old fence. and Can I help you pack the bags? start with capitals and have a capital I.",
-              "The word may starts with a small m, then starts with a small t, and the small i in My sister and i rode the bus. is a mistake."
+              "Check the first word of the line and every I.",
+              "After starts the line, so it needs a capital A. The word I is typed small, so it needs a capital.",
+              "The answers are after and i. Class, friend, read and book are plain words and stay small."
             ],
-            misconception: "A common mix-up is accepting a sentence because most of it looks fine. One small letter at the start or a small i makes it wrong.",
-            why: "The answers are \"Dad and I painted the old fence.\" and \"Can I help you pack the bags?\". Both start with a capital and have only capital Is. The other three have a small first letter or a small i."
+            misconception: "A common mix-up is capitalizing every noun. Only the first word and the word I need capitals here.",
+            why: "The answers are \"after\" and \"i\". After begins the line and i is the word I, so both need capitals. The other words are plain words and stay small."
           },
           {
             id: "SK-GUM1-4-C09",
@@ -5274,7 +5279,7 @@ PP.addLesson({
             clue: "Check the first word of each sentence.",
             hints: [
               "Check the first word of each sentence.",
-              "The note has three sentences. Check how each one begins.",
+              "Read the note one sentence at a time and check how each one begins.",
               "The note has more than one mistake, so one choice can be ruled out."
             ],
             how: [
@@ -5298,7 +5303,7 @@ PP.addLesson({
             prompt: "Is Mia right?",
             choices: [
               {
-                text: "No. The word after a comma stays small unless it is I, so We should be we.",
+                text: "No. The word after a comma stays small unless it is I or a name, so We should be we.",
                 correct: true
               },
               {
@@ -5308,7 +5313,7 @@ PP.addLesson({
                 text: "Yes. The first word of a sentence needs a capital, and We is first in its part."
               },
               {
-                text: "No. The word After should be small, because only the word I needs a capital in the middle."
+                text: "No. The word After should be small, because only the word I or a name needs a capital in the middle."
               }
             ],
             clue: "Think about which words in the sentence need a capital letter.",
@@ -5318,12 +5323,12 @@ PP.addLesson({
               "One choice says After should be small. Check how the whole sentence begins."
             ],
             how: [
-              "Check the rules: the first word of a sentence gets a capital, and so does the word I.",
-              "After is the first word of the whole sentence, so it keeps its capital. We comes after a comma in the middle and is not the word I, so it stays small.",
-              "The answer is \"No. The word after a comma stays small unless it is I, so We should be we.\""
+              "Check the rules: the first word of a sentence gets a capital, and so do the word I and names.",
+              "After is the first word of the whole sentence, so it keeps its capital. We comes after a comma in the middle and is neither the word I nor a name, so it stays small.",
+              "The answer is \"No. The word after a comma stays small unless it is I or a name, so We should be we.\""
             ],
-            misconception: "A common mix-up is thinking a comma starts a new sentence. A comma does not call for a capital letter.",
-            why: "The answer is \"No. The word after a comma stays small unless it is I, so We should be we.\" No. The word after a comma stays small unless it is I, so We should be we. After is the first word of the sentence, so it keeps its capital."
+            misconception: "A common mix-up is thinking a comma starts a new sentence. A comma does not call for a capital letter. Only a name or the word I does that.",
+            why: "The answer is \"No. The word after a comma stays small unless it is I or a name, so We should be we.\" No. The word after a comma stays small unless it is I or a name, so We should be we. After is the first word of the sentence, so it keeps its capital."
           }
         ]
       },
@@ -5793,41 +5798,41 @@ PP.addLesson({
         "3.L.GC.1:R:capitalize-the-first-word-of-a-sentence-and-the-"
       ],
       passages: [],
-      stem: "A club secretary typed five lines for the weekend newsletter.",
-      prompt: "Pick the TWO lines that break a capital-letter rule.",
+      stem: "A club secretary wrote: \"then our cousins and i built a fort.\"",
+      prompt: "Select both items that ought to begin with a big letter.",
       pick: 2,
       choices: [
         {
-          text: "my uncle and I fixed the old roof.",
+          text: "then",
           correct: true
         },
         {
-          text: "We can leave when i finish my chores.",
+          text: "cousins"
+        },
+        {
+          text: "i",
           correct: true
         },
         {
-          text: "Dan and I walked home together after school."
+          text: "built"
         },
         {
-          text: "Is it time for me to go to the store now?"
-        },
-        {
-          text: "After lunch, I read my book under the tree."
+          text: "fort"
         }
       ],
-      clue: "Look at the first letter of every line, then at every I.",
+      clue: "Look at how the line starts, and also hunt for the word I.",
       hints: [
-        "Look at the first letter of every line, then at every I.",
-        "Cross out the lines that begin with a capital and use only capital Is.",
-        "The line about Dan begins with a capital and has a capital I, so it can be ruled out."
+        "Look at how the line starts, and also hunt for the word I.",
+        "Strike out each word that is fine in lowercase. Keep the two that are not.",
+        "Fort is an ordinary word that remains lowercase, so it can be ruled out."
       ],
       how: [
-        "Check the first letter and every I in each line.",
-        "my uncle and I fixed the old roof. begins with a small m, and We can leave when i finish my chores. has a small i.",
-        "The other three begin with capitals and use a capital I."
+        "Check the opening word and every I.",
+        "Then opens the line, so a big T is required. The word I was typed small, so it needs a big letter too.",
+        "The answers are then and i. Cousins, built and fort are ordinary words that remain lowercase."
       ],
-      misconception: "A common mix-up is trusting a line because it has a capital I. The first letter can still be wrong.",
-      why: "The answers are \"my uncle and I fixed the old roof.\" and \"We can leave when i finish my chores.\". One line begins with a small letter, and one has a small i. The other three follow both rules.",
+      misconception: "A common mix-up is raising the family word. Just the opener and the word I need big letters here.",
+      why: "The answers are \"then\" and \"i\". Then opens the line and i is the word I, so both need big letters. The other words are ordinary words that remain lowercase.",
       like: ["SK-GUM1-4-C08"]
     },
     {
@@ -5859,7 +5864,7 @@ PP.addLesson({
       clue: "Check how each sentence begins.",
       hints: [
         "Check how each sentence begins.",
-        "The text has four sentences. Write down each first word that has a small letter.",
+        "Read the text one sentence at a time and check how each one begins.",
         "The text has more than one mistake, so one choice can be ruled out."
       ],
       how: [
@@ -5880,11 +5885,11 @@ PP.addLesson({
         "3.L.GC.1:R:capitalize-the-first-word-of-a-sentence-and-the-"
       ],
       passages: [],
-      stem: "Ned believes the final word in any sentence deserves a big starting letter, so he wrote: \"The puppy barked at the Moon.\"",
+      stem: "Ned believes the final word in any sentence deserves a big starting letter, so he wrote: \"The puppy barked at the mailman.\"",
       prompt: "Is Ned correct?",
       choices: [
         {
-          text: "Not correct. Just the opener and the pronoun I begin big, so Moon belongs in small letters.",
+          text: "Not correct. Just the opener, the pronoun I and names begin big, so mailman belongs in small letters.",
           correct: true
         },
         {
@@ -5894,7 +5899,7 @@ PP.addLesson({
           text: "Correct. Writers always give the last term a big beginning before the period."
         },
         {
-          text: "Not correct. The opener The ought to be written small, because only the pronoun I begins big."
+          text: "Not correct. The opener The ought to be written small, because only the pronoun I or a name begins big."
         }
       ],
       clue: "Look at how the whole line begins and how it ends.",
@@ -5904,12 +5909,12 @@ PP.addLesson({
         "One choice says The should be written small. Check how the whole line begins."
       ],
       how: [
-        "Check the rules: the first word of a sentence gets a capital, and so does the word I.",
-        "The begins the line, so it keeps its capital. Moon sits at the end and is not the word I, so it stays small.",
-        "The answer is \"Not correct. Just the opener and the pronoun I begin big, so Moon belongs in small letters.\""
+        "Check the rules: the first word of a sentence gets a capital, and so do the word I and names.",
+        "The begins the line, so it keeps its capital. Mailman sits at the end and is neither the word I nor a name, so it stays small.",
+        "The answer is \"Not correct. Just the opener, the pronoun I and names begin big, so mailman belongs in small letters.\""
       ],
-      misconception: "A common mix-up is thinking the last word of a sentence is special. Only the first word and the word I get capitals.",
-      why: "The answer is \"Not correct. Just the opener and the pronoun I begin big, so Moon belongs in small letters.\" Just the opener and the pronoun I begin big, so Moon belongs in small letters. The begins the line, so it keeps its capital.",
+      misconception: "A common mix-up is thinking the last word of a sentence is special. Only the first word, the word I and names get capitals.",
+      why: "The answer is \"Not correct. Just the opener, the pronoun I and names begin big, so mailman belongs in small letters.\" Just the opener, the pronoun I and names begin big, so mailman belongs in small letters. The begins the line, so it keeps its capital.",
       like: ["SK-GUM1-4-C10"]
     },
     {
@@ -5929,7 +5934,7 @@ PP.addLesson({
       hints: [
         "Hunt for an i standing alone or at the front of a short form.",
         "Check each shown sentence for a small i that stands for the writer.",
-        "Sentence 14 has no word that stands for the writer, so it can be ruled out."
+        "Sentence 14 has no small i in it, so it can be ruled out."
       ],
       how: [
         "Look for a small i that stands for the writer.",
@@ -6101,7 +6106,7 @@ PP.addLesson({
       hints: [
         "Look past the first word and find every place the word I is used.",
         "Check whether each I is written as a capital.",
-        "The sentence about the baby has no word that stands for the writer."
+        "One sentence has no word I at all, so it can be ruled out."
       ],
       how: [
         "Look past the first word for each I.",
