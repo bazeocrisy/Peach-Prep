@@ -8,7 +8,7 @@ PP.addLesson({
     big: "Titles like Mr. and Dr., short forms of names like Jan. and St., and describing words made from place names like American all start with a capital letter.",
     points: [
       "A title right before a person's name starts with a capital letter: Mr. Cole, Dr. Shah, Mayor Green. The short titles Mr., Mrs., Ms. and Dr. end with a period. When no name comes after it, a word like mayor or doctor usually stays lowercase.",
-      "An abbreviation is a short way to write a word. We use short forms of days, months and streets in addresses, dates and schedules, not in ordinary sentences. If the long word is a name, the short form gets a capital too: Mon. for Monday, Jan. for January, Pine St. for Pine Street, Oak Ave. for Oak Avenue, Lake Rd. for Lake Road.",
+      "An abbreviation is a short way to write a word. We use short forms of days, months and streets in addresses, dates and schedules, not in ordinary sentences. If the long word is a name, the short form gets a capital too: Mon. for Monday, Jan. for January, Pine St. for Pine Street, Lake Rd. for Lake Road, Elm Blvd. for Elm Boulevard.",
       "Some describing words are made from names, like the names of places. Mexico is a place, and Mexican is a describing word: Mexican food. These words start with a capital: an American flag, a Chinese kite."
     ],
     words: [

@@ -80,6 +80,7 @@
 | B7b | 3.L.GC.1:R:use-frequently-occurring-prepositions | NOT ACCEPTED: awaiting independent review | B7b-author-log.md; authored, not reviewed |
 | B7b | 3.L.GC.1:R:use-commas-in-a-series-and-in-dates-addresses-sa | NOT ACCEPTED: awaiting independent review | B7b-author-log.md; authored, not reviewed |
 | B7b | 3.L.GC.1:R:form-and-use-verbs-by-adding-d-or-es | NOT ACCEPTED: awaiting independent review | B7b-author-log.md; authored, not reviewed |
+| B8a | 3.L.GC.1:C:form-and-use-prepositional-phrases | NOT ACCEPTED: awaiting independent review | B8a-author-log.md; authored, not reviewed |
 
 "Accepted" means an independent reviewer blind-solved the items, found every key defensible, and found no hint ladder that leaves only the key (see AUTHOR-BRIEF rules). It does not mean the lesson has been tried by a child.
 
