@@ -282,3 +282,246 @@ L1: P4, P5, C03, C04, C05, C06, C07, C08, C09, C10, C11, C12 (except the `how` t
 ### 8. Files used (all in the scratchpad folder)
 
 `/tmp/claude-0/-home-claude/e539678b-b5ce-5aba-86fc-30dcadc6e172/scratchpad/`: `load.js`, `blind.js`, `blind.txt`, `hidden-perm.json`, `ans1.txt` to `ans4.txt`, `cmp.js`, `dump.js` and `dump.txt` (full keyed dump used for the audits), `longest.js`, `jac.js`, `dups.js`, `xfile.js`, `keyaud.js`, `keyaud2.js`, `pre.js`, `run390.py` and `run390.txt`, `pass.py`, and the frozen copy `frozen/`.
+
+---
+
+## Second review (all eight lessons, 2026-10-27)
+
+**Role:** independent reviewer, fresh eyes. I did not write the lessons and I did not take part in either first review. **Scope:** the eight GUM Master lessons in `js/data/lessons/L-GUM3.js` after the author's review fixes (commit 86e5daa, "awaiting second review"). **Read-only:** no lesson, set or engine file was edited and no git command was run. The only repo file I touched is this one (append). I worked on a frozen copy (`scratchpad/frozen`, `L-GUM3.js` byte-identical to the live file at the start). Test servers ran on ports 8761 and 8762 and were killed by pid.
+
+### Verdicts
+
+| Lesson | Verdict | MUST | SHOULD | NOTE |
+|---|---|---|---|---|
+| 1 Apostrophes | **CHANGES REQUIRED** | 1 | 3 | 3 |
+| 2 Irregular plurals | **CHANGES REQUIRED** | 6 | 5 | 2 |
+| 3 Irregular past tense | **CHANGES REQUIRED** | 3 | 2 | 2 |
+| 4 Coordinating conjunctions | **CHANGES REQUIRED** | 3 | 2 | 4 |
+| 5 Collective and abstract nouns | **CHANGES REQUIRED** | 1 | 5 | 3 |
+| 6 Reflexive pronouns | **CHANGES REQUIRED** | 2 | 4 | 2 |
+| 7 Commas with and/but/or/so | **CHANGES REQUIRED** | 3 | 2 | 2 |
+| 8 Hyphens at line breaks | **CHANGES REQUIRED** | 2 | 2 | 4 |
+
+Nothing is ACCEPT yet, but every remaining fix is a small wording or data edit. Of the 16 earlier MUSTs (section 3), 13 are genuinely fixed in the files. Three are not (L4 C08, L4 C04/S04 Part B hint 2, L7 P2 hint 3), and two author-log claims are false in the files (L2 S04 "now uses sheeps", L4 P5 "so so fits" fixed). Lesson 8 now passes the twin-overlap ceiling; lessons 1 to 7 do not (ruling below).
+
+### 1. Blind solve
+
+- Same method as the brief: a Node `vm` loader, a seeded LCG shuffle (seed 4242 + 91 x lesson index) of choices, options and hot-text options, and a whitelist dump with no `correct`, `answer`, `why`, `hints`, `how`, `clue`, `like`, `misconception` or `sample`. Passages were printed in full. I grepped the dump for those field names before reading it. The shuffle map went to `hidden-perm.json`, which I did not open until the answers were saved to `ans-1..8.txt`.
+- Solved blind: **315 items** (core 120 with refs resolved, similar 120, Together and Test A/B items 75).
+- **Agreement with the keys: 315 of 315.** No wrong key. (My first compare run showed 34 mismatches on hot-text; that was my script comparing string targets as indices, fixed and rerun.)
+- Fully blind except one caveat: before solving I printed the top-level lesson field names and the item field names to build the whitelist. I never printed an item's keys, hints, how or why before the answers were saved. The author log and both first reviews were read only after the answers were saved.
+- Agreement does not mean no defects. The defects below are text, passage and hint problems, not wrong keys.
+
+### 2. Ruling on twin overlap (set and multiset Jaccard, brief ceiling 0.21)
+
+**Ruling: the ceiling is not met by lessons 1 to 7. Lesson 8 meets it. The first reviewers' "acceptable at about 0.40" has no basis in the brief; I do not follow it.** The B4 batch authors measured the same whole-text raw-token Jaccard, treated 0.21 as the ceiling, and fixed every pair above it. B6 is held to the same bar.
+
+- Measure (`jac.js`): lower-case raw tokens (`/[a-z']+/g`) over prompt, stem, text, choices, slot options, match rows and columns, ebsr parts and the sentences a hot-text item targets; each similar item against its `like` core item. With the passage text added the numbers move by 0.00 to 0.04 (max withP: L1 0.35, L2 0.43, L3 0.32, L4 0.39, L5 0.35, L6 0.42, L7 0.42, L8 0.24).
+- Pairs above 0.21 (either measure): L1 13 of 15, L2 13, L3 11, L4 13, L5 13, L6 15, L7 13, **L8 0**. Maximum per lesson, set / multiset: L1 0.37/0.36, L2 0.38/0.43, L3 0.38/0.35, L4 0.39/0.39, L5 0.40/0.41, L6 0.41/0.43, L7 0.42/0.46, **L8 0.21/0.21**. The author log's figures match mine; the author chose not to push lessons 1 to 7.
+- **Severity.** Pairs at 0.30 or more on either measure are **MUST** (B4 precedent: same frame at 0.30 or more). That is 56 pairs:
+  - L1: S05, S07, S08, S10, S15
+  - L2: S02, S03, S06, S10, S12, S13
+  - L3: S02, S03, S04, S05, S10, S12, S13, S14, S15
+  - L4: S01, S04, S06, S07, S08, S09, S10, S15
+  - L5: S02, S05, S07, S09, S10, S11, S13
+  - L6: S02, S03, S04, S05, S06, S07, S08, S09, S11, S12, S13, S15
+  - L7: S01, S03, S05, S06, S09, S10, S11, S12, S14
+  - The worst: L7 S03/C03 0.41/0.46, L6 S03/C03 0.39/0.43, L2 S02/P5 0.35/0.43 and S10/C10 0.38/0.41, L5 S05/C05 0.40/0.41, L7 S14/C14 0.42/0.39, L6 S12/C12 0.41, L6 S13/C13 0.42 multiset.
+  - The other 35 pairs between 0.22 and 0.29 are **SHOULD**.
+- **Shared exact options** (project bar: at most one). Pairs sharing two or more: L2 S02/P5 (3); L4 S02/C02 (3), S09/C09 (3), S14/C14 (2), S15/C15 (4); L6 S02/P5 (4), S03/C03 (3), S10/C10 (4), S14/C14 (2); L7 S03/C03 (3), S10/C10 (6), S14/C14 (3). For the and/but/or/so dropdowns in L4 some sharing is unavoidable (four fixed words); for L6 S10/C10 and L7 S10/C10 it is not. These are inside the same MUST.
+- **Why this is a light edit, not a rewrite.** With stop words removed (`jac_cw.js`) the maximum content-word overlap is 0.27 (L6), and no lesson has a pair at 0.30. So there is no near-copy of content. Almost all the overlap is stock frame words ("Choose the word that correctly completes the sentence", "Sentence N of the draft ...", "Which revision fixes it?") and shared stock options. **Fix:** vary the prompt wording per twin, change the frame word order, and do not reuse the same distractor strings; the distinctness rule (plan section 6, two of four ways) is already met on content.
+
+### 3. Earlier MUSTs: genuinely fixed in the files?
+
+| Earlier MUST | In the files now | Result |
+|---|---|---|
+| L1-1 C13/S13 hints 2-3 leave one live | H2 is a pointer ("which word tells you how many"); H3 removes only `players's`; three live | FIXED |
+| L2-1 S05 keys on wrong choices | keys on `wolves` and the f-to-v reason; matches how/why | FIXED (but see new L2 M3: Part B hint 2) |
+| L2-2 S14 hint 3 names `children` | now "One of the choices names only one child" | FIXED |
+| L2-3 C14/S14 hint 1 narrows to `oxen` | H1 "say the noun for one, then more than one" | FIXED |
+| L2-4 P5 hint 2 names key | "ask how many went on the trip" | FIXED |
+| L2-5 P5 repeats Watch Me 1 (mice) | slot 2 is now geese/goose | FIXED for the Watch Me collision (geese and children are still Learn It words: SHOULD) |
+| L3-1 P5/S02 hint 1 narrows | H1 now "Last Saturday/night already happened"; H3 removes one; two live | FIXED |
+| L4-1 C08 repeats Watch Me 3 / Learn It | rows replaced, but row 1 "The path was muddy, ___ we kept going" (yet) is the Watch Me 3 frame "The hill was steep, yet we climbed ..." and row 2 "Tomas did not wave, ___ did he smile" (nor) is the Learn It frame "I did not call, nor did I write" | **NOT FIXED** (L4 M1) |
+| L4-2 C04/S04 Part B hint 2 paraphrases key | now "decide which sentence tells you something about choosing"; only one option mentions choosing | **NOT FIXED** (L4 M2). The first reviewer's own suggested wording is the cause; it still leaves one live choice. |
+| L4-3 Part B distractors implausible | distractors are now draft sentences that carry joining words | FIXED |
+| L5 S06 stale "committee" | hint 3, how, why say panel, group, litter | FIXED |
+| L6 C13/S13 ambiguous stem | "Choose the TWO sentences where myself is used when I or me should be used" | FIXED |
+| L7 S05 Part B flag | `correct` is on "Both sides have their own naming part ... comma goes before and" | FIXED |
+| L7 P2/S01 hint 3 "sentence 4" | now "The tag sentence already has its comma in the right place." Works in S01 (option D is "We played tag, and Dad watched."). In **P2** there is no tag sentence (option D is "We picked apples, and Dad made applesauce.") | **NOT FIXED for P2** (L7 M1) |
+| L8 S06 "coun- | ter" | replaced by cab- | bage (Merriam-Webster cab·bage) | FIXED |
+| L8 C11 extra wrong sentence 6 | sentence 6 is now tick- | et (correct); C12 and S12 have no passage | FIXED |
+
+Author-log claims I checked and found **false in the files**:
+- "L2 S04 now uses sheeps instead of bisons": the passage (p4 sentence 4) still says "five bisons", while S04's how and why say "five sheeps" and "Sheeps is wrong". See L2 M1.
+- "The P5 'so so fits' wording was fixed" (L4): P5 how step 2 still reads "so so fits ... so and fits", and C08 how step 3 reads "so so fits".
+
+### 4. Findings by lesson
+
+#### Lesson 1: Apostrophes (CHANGES REQUIRED)
+
+**MUST**
+- **L1 M1 twin overlap (ruling above):** S05, S07, S08, S10, S15 at 0.32 to 0.37 (S10/C10 0.37/0.36, S15/C15 0.35/0.34). Reword the prompts and do not reuse option strings.
+
+**SHOULD**
+- **S12 vs Watch Me 3 (plan 4.3 rule 4).** Watch Me 3 is "The snail (wont / won't) leave (its / it's) ..." and Teach point 2 says "Will not becomes won't". S12 asks won't / wo'nt / wont (key won't) in the first blank. Same key fact and the same wrong form. Use a different contraction (for example hasn't or they'd) for S12 blank 1.
+- **Drafts over the plan's length.** p3 and p6 have 12 numbered sentences and about 89 and 88 words (plan 4.3: a draft is six to ten sentences, or a text of 100 to 250 words). Trim to ten sentences.
+- The other 8 pairs above 0.21 (between 0.22 and 0.29): reword with the MUST.
+
+**NOTE**
+- The C10 change (Mom's vs She's) no longer shares `star's` with C08 (checked). C07's prompt "Sentence 6 of the draft has a mistake with an apostrophe" still tells the child that the it's sentence in C06 is wrong; the author log leaves it open (first review SHOULD-L1-1, second half).
+- The misconception line "A common mix-up is putting the apostrophe at the end of the word, or in the middle ..." appears word for word in eleven older test sets (T-C, T-CF, T-RA, T-SS, T-T1, T-T2, T-T34, T-TS and others). The L1 line was copied from them; harmless.
+- Teach point 5 (its/it's, you're/they're) goes beyond "singular possessive nouns" (first review NOTE-L1-2). Still two core items or fewer.
+
+#### Lesson 2: Irregular plurals (CHANGES REQUIRED)
+
+**MUST**
+- **L2 M1 SK-GUM3-2-S04 (hot text, p4): text and passage disagree, and the key sentence rests on a variant.** The passage sentence 4 (the key) says "we counted five **bisons** near the fence". The how step 3 says "Sheeps is wrong, because sheep stays the same: one sheep, five sheep" and the why says "five **sheeps**". A child who presses Show me how reads a sentence that is not on the page. The author log says S04 was changed to sheeps; only the explanation was changed. Merriam-Webster and Wiktionary also accept `bisons` (first review SHOULD-L2-3). Fix: change p4 sentence 4 to "we counted five sheeps near the fence" (check that nothing else on p4 uses `bison`). `bisons` occurs only once in the file.
+- **L2 M2 SK-GUM3-2-S06 (mc, p5): the options do not belong to the passage.** The stem says "the third sentence of the draft" and attaches p5 (the blizzard draft), whose sentence 3 is "We looked out the window and saw two mans shoveling snow." The options are "Late at night, we heard mices scratching inside the walls." (mice / mices / mouse / mouses'). No passage in the lesson contains that sentence. The child opens the passage, finds a different error, and cannot match the options. Fix: attach S06 to a draft that holds the mice sentence (or add that sentence to p2, C06's draft, with its own number) and quote the sentence number correctly.
+- **L2 M3 SK-GUM3-2-S05 (ebsr): Part B hint 2 narrows Part B to the key.** H2: "For Part B, think about which other nouns end in f and what happens to them." Of the four Part B options only the key mentions f ("Wolf ends in f, and an f like this changes to v ..."). Live in Part B after hint 2: 1. Fix: "For Part B, think about the pattern the plural of wolf follows, and which of the four patterns it matches."
+- **L2 M4 SK-GUM3-2-C07 (core, hot text): the keyed error `deers` is a dictionary variant.** Merriam-Webster (https://www.merriam-webster.com/dictionary/deer) gives "plural deer also deers". The key marks "four deers" as a wrongly spelled plural. The author log leaves it as an open concern; the plan (section 6.4) requires one defensible answer. Fix: use `sheeps` or `mooses` (never standard; https://www.merriam-webster.com/dictionary/mooses lists the plural as moose).
+- **L2 M5 extra errors outside the offered sentences (stem says "the TWO sentences").**
+  - C07: sentence 5 "six gooses flew over the roof" is also wrong and is not offered.
+  - C11: sentence 7 "care for the oxes" is also wrong and is not offered (it is C14's key).
+  - S07: sentence 3 "two mans shoveling snow" is also wrong and is not offered.
+  - This is the same defect the first review rated MUST for L8 C11, and the author fixed it there. Fix: repair the extra sentence in the shared draft (give C14, S06 and similar items their own sentence or draft), or move the extra error to a sentence that is not in the draft.
+- **L2 M6 twin overlap:** S02/P5 0.35/0.43 (3 shared options), S03 0.33/0.35, S06 0.34, S10/C10 0.38/0.41 (same four-column match), S12, S13.
+
+**SHOULD**
+- P5 keys `children` and `geese` are both Learn It words (Teach point 3 "child becomes children"; point 2 "goose becomes geese"). Use one non-listed noun.
+- C12/S12 stay noun-swap twins (first review SHOULD-L2-6, left open).
+- Draft length: p3 12 sentences/97 words, p5 and p6 11 sentences under 100 words (plan: six to ten sentences or 100 words).
+- Test A T4 (match) still has the row tooth/teeth, which is the Learn It example ("The child lost a tooth. The children lost three teeth." and Teach point 2). The first review asked for rows that Learn It does not name; three of four are now new. Replace the tooth row (for example with `leaf/leaves` or `life/lives`).
+- Watch Me 2 ("two deer") and P3 row 4 ("deer") share the key fact; P3 is Together, so this is low risk.
+
+**NOTE**
+- Halves/halfs and elves/elfs are standard items (checked).
+- p5 passage and S07 now share the "mans" sentence; once M2 is fixed make sure S06 uses a different sentence than S07.
+
+#### Lesson 3: Irregular past tense (CHANGES REQUIRED)
+
+**MUST**
+- **L3 M1 SK-GUM3-3-C10 (core, dropdown) repeats the new Watch Me 3.** The author added a third Watch Me "Last week, the coach (cutted / cut) the long rope in two." (cut stays cut, cutted is not a word). C10 slot 1 is "Then Ava {cuts / cut / cutted} the first slice" with the same key and the same wrong form. Plan 4.3 rule 4 and the first review's own MUST pattern (L2 P5, L4 C08). Fix: change C10 slot 1 to another unchanged verb (hit, hurt, shut, let) or change Watch Me 3 to one of those.
+- **L3 M2 extra errors outside the offered sentences.**
+  - C06: sentence 9 "Ava cutted the first slice, and her fork sinked ..." is wrong twice and is not offered (C10 uses it).
+  - C11: sentence 8 "We spended the money" is wrong and not offered.
+  - S06: sentence 8 "creeped ... finded" is wrong and not offered.
+  - S11: sentence 8 "I knowed it was hard to do" is wrong and not offered.
+  - All four stems say "Select the TWO sentences". Same fix as L2 M5.
+- **L3 M3 twin overlap:** nine pairs at 0.30 or more (S02, S03, S04, S05 0.38/0.35, S10, S12, S13, S14, S15).
+
+**SHOULD**
+- Drafts p3, p4 and p6 have 11 sentences and under 100 words (plan: six to ten sentences or 100 words).
+- The other 2 pairs above 0.21 (between 0.22 and 0.29): reword with the MUST.
+
+**NOTE**
+- `wake / woke`: the irregular-verb list used by the first review shows `waked` as a regular alternative; no option offers it. `sprang` is offered without `sprung`, so only one accepted form is in play.
+- Hint ladders recounted for every item: two live or more after hints 1 to 3.
+
+#### Lesson 4: Coordinating conjunctions (CHANGES REQUIRED)
+
+**MUST**
+- **L4 M1 SK-GUM3-4-C08 (core, match) still paraphrases Learn It and Watch Me.** Row 1 "The path was muddy, ___ we kept going." (yet) has the frame and key of Watch Me 3 "The hill was steep, (yet / so) we climbed all the way to the top." Row 2 "Tomas did not wave, ___ did he smile." (nor) has the frame and key of Teach point 5 "I did not call, nor did I write." Changing the nouns does not satisfy the plan ("never reuse, paraphrase or share the key fact"). Fix: change row 1 to a different relationship (for example a reason: "Bring a hat, ___ the sun is strong" is already row 4; use a result or a choice) and row 2 to a nor sentence with a different structure, or move nor out of this item.
+- **L4 M2 SK-GUM3-4-C04 and S04 (ebsr): Part B hint 2 still points to the key's topic.** H2: "For Part B, reread the draft and decide which sentence tells you something about choosing." C04: only "Mr. Lee will pick only one place on Friday." is about choosing (other options: breathing, feeling silly, yoga is fun). S04: only "You only need one rope, so choose the one you like." mentions choosing. Live Part B choices after hint 2: 1 in both. Fix: "For Part B, reread the draft and ask which sentence gives a reason for the joining word you chose." and make one distractor also contain "pick" or "choose" in a non-supporting way.
+- **L4 M3 twin overlap:** S01, S04 (0.36), S06 (0.38), S07, S08, S09, S10, S15 (0.39/0.39, 4 shared options).
+
+**SHOULD**
+- P5 how step 2 and C08 how step 3 still read "so so fits", "so and fits", "so yet fits" (the log says fixed). Rephrase: "The joining word so fits here."
+- C13 (for versus so) remains the item where `for` is formal; keep as is (first review SHOULD-L4-3 left open).
+- Passage p1 has 11 sentences (125 words, so it qualifies as a text).
+
+**NOTE**
+- S08 row 3 is now "Pam felt ill, ___ she stayed in bed." (so): unambiguous.
+- `nor` still appears in C07, S07, C08, S08 (first review NOTE-L4-4).
+- S13 was rewritten (0.21/0.13): good.
+
+#### Lesson 5: Collective and abstract nouns (CHANGES REQUIRED)
+
+**MUST**
+- **L5 M1 twin overlap:** S05/C05 0.40/0.41 (Part A and Part B options are close paraphrases), S10 0.36/0.35, S11 0.35/0.37, S13 0.33/0.31, S02, S07, S09.
+
+**SHOULD**
+- **C05 and S05 Part B hint 1 echoes the key.** H1: "Ask which word you cannot see or touch." The key options are "You can see him climb, but you cannot touch courage itself." and "You can see sandwiches being shared, but not generosity itself." The other options (a group of sailors / a place on the pier / what the brother did; a group of birds / a person / how sandwiches tasted) have no see-or-touch wording. After hint 1 one Part B option is left in each. Make hint 1 the general definition only ("An abstract noun names an idea, a feeling or a quality") and let the see-or-touch test be hint 3.
+- **S14 reuses the Watch Me 1 noun.** Watch Me 1 is "The herd crossed the muddy road slowly." and the Teach list says "a herd of cows". S14 is "Each morning, the herd {walk / walks / walking} to the river together." Use a different group noun.
+- **Teach words are keys.** The Teach/Learn swap (pride, freedom, patience, trust) moved the pre-answers: `patience` is the key of core C06, `pride` of P1, `freedom` of T4, `trust` of S02. Use words that no item keys.
+- **Stem premise.** C14, S14 and C07 state "acts together as one" in the stem, so the verb choice is a mechanical -s test (the same fact is hint 2 in C07). This was a deliberate decision to avoid British agreement (author log) and is consistent with https://learnersdictionary.com/qa/Are-Collective-Nouns-Singular-or-Plural-verb-agreement ("in American English collective nouns usually take a singular verb"); keep it, but vary at least one of the three stems so it does not hand the rule over.
+- Drafts p3 and p6 have 11 sentences and about 92 and 93 words.
+
+**NOTE**
+- S06 option 3 "The panel have chosen a winner, and the group have cheered." uses plural verbs with collective nouns (valid in British English). It is a non-key option of an abstract-noun item, so no keyed claim is affected.
+- p4 FK is exactly 4.5 (the ceiling is not exceeded).
+- Hint 3 leaves exactly two live in C05 Part A (rope, courage): acceptable, watch.
+
+#### Lesson 6: Reflexive pronouns (CHANGES REQUIRED)
+
+**MUST**
+- **L6 M1 SK-GUM3-6-C10 (core, dropdown) repeats both Watch Me examples and the Teach "not words" line.** Watch Me 1: himself, not hisself. Watch Me 2: themselves, not theirselves. Teach point 5: "Hisself and theirselves are not correct words." C10 slot 0 "taught {themselves / theirselves / himself}" and slot 1 "taught {himself / hisself / itself}" ask exactly those two facts with exactly those two wrong forms. Fix: use another pair (for example herself/ourselves with `hisself` removed) or move the two non-words into a different Watch Me.
+- **L6 M2 twin overlap:** the worst lesson: 12 pairs at 0.30 or more (S03/C03 0.39/0.43 with 3 shared options, S12/C12 0.41/0.27, S13/C13 0.33/0.42, S15, S02/P5 with 4 shared options, S10/C10 with 4 shared options) and 15 of 15 above 0.21.
+
+**SHOULD**
+- C03, S03 and the "Dad and myself" items (C11) use the Teach point 5 frame "Sam and I walked" and Watch Me 3 "Tia and (myself / I) planted" ("Luis and {I} carried the boards"). The key fact is the lesson rule, but the frame repeats three times; change C03's subject structure.
+- The "We V ourself a N" frame still appears in C07, S01, P2 and T4 (the log leaves it open).
+- P4 is close to the older L-GRM-01 hot-text with hisself (log leaves it open); P4 key is also 1.28 times longer than the next option (legacy).
+- Drafts p1 and p3 have 11 sentences and under 100 words.
+
+**NOTE**
+- `themself` is avoided on purpose (https://www.scribbr.com/nouns-and-pronouns/reflexive-pronouns/ lists it as debated).
+- C13/S13 now unambiguous in the browser and in the blind solve (I picked the keyed pair).
+
+#### Lesson 7: Commas (CHANGES REQUIRED)
+
+**MUST**
+- **L7 M1 SK-GUM3-7-P2 (core, hot text) hint 3 refers to a sentence that is not there.** H3 "The tag sentence already has its comma in the right place." P2's options are: Grandpa grilled corn and baked a pie / The bus was late this morning so we missed the first bell (key) / Rosa likes cats and dogs / We picked apples, and Dad made applesauce. There is no tag sentence in P2 (the text was copied from S01). Fix: "The sentence that already has its comma in the right place is not the one that needs it. Check the other three." (Do not number it; the options are shuffled and unnumbered.)
+- **L7 M2 SK-GUM3-7-S01 (hot text): the key is by far the longest option.** The author's short-clause fix lengthened the key to "It started to snow hard so we built a tall snowman in the yard." (63 characters); the distractors are 33, 32 and 31 characters. Ratio 1.91. The only long compound sentence is the one that needs the comma, so a child can pick by length. P2 has the same shape at 1.38 (58 against 42; legacy, SHOULD). Fix: lengthen the distractors to similar length ("Mara baked bread and made soup for the whole class.").
+- **L7 M3 twin overlap:** S03/C03 0.41/0.46 (3 shared options), S14/C14 0.42/0.39 (3 shared), S10/C10 0.37/0.42 (**6 shared options**), S05 0.39, S06 0.33/0.36, S09, S01, S11, S12.
+
+**SHOULD**
+- C03/C14 (both ", so") and C04/C14 still share key logic (log leaves open).
+- Short-clause exception: the author lengthened the arguable clauses (C08 row 3, S08 row 2, S07 options, S01 key, P3 row 3, T3, T4). Purdue OWL states the rule without the exception (https://owl.purdue.edu/owl/general_writing/punctuation/commas/index.html and the extended-rules page, both fetched). Chicago/Grammarbook allow omitting the comma for very short clauses (first review URLs, not refetched). With every judged clause now six words or more, no keyed answer depends on the exception. Add one sentence to Teach so a child who has met the exception is not marked wrong in test sets.
+
+**NOTE**
+- C06/S06 stems are now scoped ("Look at sentences 3 through 8"), which removes the unmarked sentence 9; good, and the same device can be used for the L2/L3 extras where the extra sentence is outside the range.
+- 7-S04 and T-T1 share "I took a deep breath and" (first review NOTE, left).
+
+#### Lesson 8: Hyphens at line breaks (CHANGES REQUIRED)
+
+**MUST**
+- **L8 M1 SK-GUM3-8-S11 (hot text, p6): sentence 8 is a third wrong split and is not offered.** Sentence 8 reads "A duck shook the water from its feat- | hers." (feathers is feath·ers; the split is wrong). S11's stem says "Select the TWO sentences ..." and keys sentences 5 (mi- | nnow) and 7 (sunl- | ight). The first review gave the same finding as SHOULD with "same fix" as C11; the author fixed C11 only. S12 (its own twin) now has no passage. Fix: change sentence 8 to a correct split ("its feath- | ers") or drop the split from the sentence.
+- **L8 M2 SK-GUM3-8-C05 and S05 (ebsr): Part B hint 2 narrows to the key.** C05 H2: "For Part B, think about which rule tells you when a word cannot be split." S05 H2: "... which fact tells you when a word cannot be split." The key is "A word with only one syllable is never split" / "A one-beat word cannot be divided". The other three Part B options are about where to split (end of line, two consonants, two smaller words; or th/sh pair, small words, mark on the upper line). Live Part B choices after hint 2: 1. Fix: "For Part B, think about what you counted in Part A."
+
+**SHOULD**
+- **Core P3 row 2 is the Learn It example.** Teach point 2: "A word with only one syllable, like school or bright, is never split." Core P3 row 2 is "brig- | ht" (key: not correct), and Watch Me 3 is school. P2 (Together) also has `bright`. Use a different one-syllable word in P3 (for example `stream`, `thick`, `plant`).
+- **Typographic caveat for two-letter syllables.** buck-et, tick-et, moth-er, wash-er, pitch-er, rock-et are the syllable-correct splits (Merriam-Webster) but some typographic guides avoid carrying a two-letter syllable. The lesson is syllable-based and says so; no change, but state "split by syllables" once in Teach.
+
+**NOTE**
+- **Twin overlap passes**: maximum 0.21/0.21 over the item text (0.24 multiset with passage text added), no shared options. This is the standard the other seven lessons should reach.
+- Dictionary check: see section 6. No wrong split found.
+- Hint ladders: P5 H3, C03 H3, C10 H3, C15 H3, S15 H3 leave exactly two live in one slot; acceptable.
+- C13/S13: `tern` and `den` are real words; the item says "lan is not a word" and "tist is not a word", which is true.
+
+### 5. Cross-cutting checks
+
+- **Hint ladder, live choices after hints 1 to 3, recounted for every item (core, similar, Together, plus every ebsr part).** After hint 3 two or more choices are live in every mc, dropdown slot, hot text and match item. The only collapses are the ebsr **Part B** hints listed above (L2 S05, L4 C04/S04, L8 C05/S05), and the L5 hint 1 echo. Hint 3 leaves exactly two live in L5 C05 Part A, L7 C09/S09, L8 P5/C03/C15/S15; I counted these as passing.
+- **Longest-key cue** (`longest.js`, 226 slots, parts and choose-two keys counted): 27 slots have the key uniquely longest or both choose-two keys the longest (12%, chance about 25%). Worst: L7 S01 1.91 (MUST above), L7 P2 1.38, L6 P4 1.28, L2 S01 1.22, S05 Part B 1.15, S10 L1 1.13, L3 C05 Part B 1.13. Lesson 8: 0 of 18 slots. Everything else is under 1.1 (NOTE).
+- **Learn It / Watch Me duplication** (`dup.js`, `dup2.js`): no six-word run is shared between any Learn It or Watch Me sentence and any core, similar or test item. Key-fact reuse found: L3 C10 / Watch Me 3 (MUST), L4 C08 / Watch Me 3 and Teach 5 (MUST), L6 C10 / Watch Me 1-2 and Teach 5 (MUST), L1 S12 / Watch Me 3, L5 S14 / Watch Me 1, L8 P3 row 2 / Teach 2, L2 P5 / Teach 2-3 and L5 C06 / Teach 4 (SHOULD). 
+- **Concept duplicates over all `js/data`** (44 other data files; 6-gram and 8-gram scans of every B6 string): no whole-item or whole-sentence duplicate. The hits are stock frames and boilerplate ("This question has two parts. Answer Part A, then Part B.", "Start with the row you are surest about ...", "Which sentence from the draft best supports the answer to Part A?"), the L1 misconception line copied from the older T-* tests, and "We are going to the zoo." (L-GUM2, L-GUM4) in L1 Watch Me. The same-standard older items (L-GRM-01, L-GRM-02, L-GUM1 to L-GUM5, L-GC2, PT-1) cover the same skills with different sentences.
+- **Passages.** `verification/readability.py`: all 48 passages at FK 1.0 to 4.5 (L5 p4 = 4.5, not above the ceiling). Sentence numbering (1) to (n) is sequential and contiguous in all 48 drafts. All hot-text targets (`pX:r:c`) resolve to the numbered sentence they should, and every "sentence N" reference in a prompt matches the passage except L2 S06 (M2). **Length:** the author log says "every B6 passage is at least 100 words", but the count includes the (n) markers. Without them 38 of 48 are 88 to 99 words, and 16 have 11 or 12 sentences. Twelve satisfy neither plan alternative (100 to 250 words, or six to ten sentences): L1 p3, p6; L2 p3, p5, p6; L3 p3, p4, p6; L5 p3, p6; L6 p1, p3. SHOULD (trim each to ten sentences).
+- **Browser, 390 x 844, touch, mobile viewport (Playwright, one browser per set, `br.py`).** All 120 core items (eight lessons, three sets of five) were opened through `#play/SK:<code>:y|y2|y3/try`, the passage tab was switched to Question where present, the keyed answer was set through the engine's own response state, and Check my answer was pressed: **120 of 120 accepted ("That's right!", "Right on the first try")**. No horizontal scroll (`scrollWidth` 390 on every item), no element wider than the viewport, no control under 44 px high by my selector, no page errors. Real taps were also checked on L8 C06 (two taps on the two wrong splits, the Check button tapped): accepted. Hot-text items show only the offered sentences as tappable options, and the draft is on the other tab; that is why the unoffered extra errors cannot be answered (L2, L3, L8 findings). Screenshots are in `scratchpad/b6rev3/shots/`. NOTE for the engine owner, outside B6: the "Show me how (shows the answer)" button wraps onto three lines at 390 px.
+
+### 6. Web and dictionary checks (fetched 2026-10-27)
+
+- Apostrophes: https://owl.purdue.edu/owl/general_writing/punctuation/apostrophe_introduction.html (contractions mark omitted letters; add 's for singular possession; it's is it is, its is possessive and takes no apostrophe; no apostrophe for plurals). Supports L1 keys.
+- Commas: https://owl.purdue.edu/owl/general_writing/punctuation/commas/index.html and https://owl.purdue.edu/owl/general_writing/punctuation/commas/extended_rules_for_commas.html ("Use commas to separate independent clauses when they are joined by any of these seven coordinating conjunctions"; no short-clause exception on either page; the exception comes from Chicago via the first review's URLs).
+- Irregular plurals: https://www.merriam-webster.com/dictionary/deer ("plural deer also deers": a variant, L2 M4); https://www.merriam-webster.com/dictionary/mooses (plural moose; `mooses` not a standard form). Bison and `bisons`: first review's M-W simple entry, not refetched. Sheep, fish, moose and -ves, -men, -en keys checked against the same pages and the first review's lists.
+- Irregular verbs: keys checked against the lists in the first review (woodwardenglish and libretexts irregular-verb lists); the only variants in the options are `wake`/`waked` (not offered) and none of dove, lit, spit, snuck, shone, hung is used.
+- Collective nouns: https://learnersdictionary.com/qa/Are-Collective-Nouns-Singular-or-Plural-verb-agreement (American English: singular verb when the group acts as a unit; plural allowed when members act separately). The L5 stems all say "acts together as one", so each keyed verb is the American-English answer.
+- Reflexives: https://www.scribbr.com/nouns-and-pronouns/reflexive-pronouns/ (standard list; myself is not a polite I or me; hisself, theirselves and theirself are misspellings; themself is debated) and https://writingexplained.org/himself-or-hisself-difference ("hisself" substandard).
+- Syllable rules: https://www.howmanysyllables.com/syllable_rules/divideintosyllables (split between consonants, between double consonants, never split th/sh/ch/wh). The page puts "-ckle" words as tack·le, buck·le, which matches the ck rule (no item uses -ckle words).
+- **Dictionary check of the Lesson 8 split words.** Each word below was fetched from `https://www.merriam-webster.com/dictionary/<word>` and its headword syllables match the lesson's split (59 words): pencil pen·cil; washer wash·er; bucket buck·et; pumpkin pump·kin; cushion cush·ion; pitcher pitch·er; conductor con·duc·tor; rocket rock·et; turtle tur·tle; tractor trac·tor; magnet mag·net; ticket tick·et; feather feath·er; insect in·sect; pocket pock·et; monkey mon·key; lantern lan·tern; turkey tur·key; sunflower sun·flow·er; birthday birth·day; cupcake cup·cake; mother moth·er; chicken chick·en; dentist den·tist; pancake pan·cake; bonfire bon·fire; flashlight flash·light; windmill wind·mill; basket bas·ket; blanket blan·ket; bottle bot·tle; bubble bub·ble; cactus cac·tus; carpet car·pet; hammock ham·mock; circus cir·cus; helmet hel·met; jacket jack·et; kettle ket·tle; kitten kit·ten; muffin muf·fin; mitten mit·ten; napkin nap·kin; puppet pup·pet; rabbit rab·bit; tunnel tun·nel; rubber rub·ber; window win·dow; pebble peb·ble; winter win·ter; raincoat rain·coat; sunset sun·set; cabbage cab·bage; cattail cat·tail; hammer ham·mer; trumpet trum·pet; ladder lad·der; picnic pic·nic; pepper pep·per.
+- **Not individually fetched (limit, stated honestly).** The proxy allows a dictionary page only after a search returns its address, so I could not open all of them. About 35 more split words (backpack, boxcar, butter, button, butterfly, candy, carrot, cardboard, doorbell, fisher, garden, happen, happy, letter, locker, marble, market, minnow, pillow, popcorn, postcard, puppy, railroad, silver, sister, suitcase, summer, sunlight, toothbrush, yellow, candle, football, problem, tennis) were checked only by pyphen en_US and the split rules. pyphen agrees with every one except `lantern` (not hyphenated; confirmed by M-W above) and `sunflower` (partial, confirmed by M-W). The first review fetched min·now (Merriam-Webster) and monkey, lantern, feather (syllable pages). All are plain consonant-consonant, double-letter or compound words, so I expect no difference, but the brief's "verify every split in a dictionary" is not fully met. No wrong split found.
+
+### 7. What I did not do
+
+- No lesson edit, no git, no republish. Servers on 8761 and 8762 were killed by pid. Other agents' servers on ports 8770 to 8792 were left alone.
+- I did not re-solve the legacy tests (T-*) outside L-GUM3; they were solved blind (Test A and B) and agree with the keys.
+- Per the author log, Together `addons` hints are not shown in the Together UI; I audited them anyway because they merge into the item (as for P2 above).
