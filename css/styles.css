@@ -1211,3 +1211,7 @@ a.sk-chip:hover .sk-chip-code{border-color:var(--peach-deep);text-decoration:und
 #screen-player .bar-tag{flex:0 0 auto;}
 #screen-player .bar .nav-btn{min-width:0;}
 @media (max-width:360px){ #screen-player .bar{gap:6px;padding-left:12px;padding-right:12px;} #screen-player .bar .nav-btn{padding-left:12px;padding-right:12px;} }
+
+/* question-first: a short or narrow header leaves the room to the question */
+@media (max-height:520px){ #screen-player .player-head{display:flex;flex-wrap:nowrap;align-items:center;justify-content:space-between;gap:12px;} #screen-player .player-head .page-title{font-size:1.1rem;margin:0;} #screen-player .bar{padding-top:4px;padding-bottom:4px;} }
+@media (max-width:360px){ #screen-player .player-head .page-title{font-size:1.1rem;line-height:1.2;} }

@@ -258,6 +258,11 @@
         next.appendChild(text);
         const b = button(marked ? "Continue the Learning Path" : "Start this lesson", () => openActivity(key), "btn-primary np-btn"); b.id = "path-next";
         next.appendChild(b);
+        if (!key.startsWith("task:") && window.PP_SKILLS.isCore(key)) {
+          /* the five-step lesson (Learn It, Watch Me, Practice Together) stays one tap away */
+          const ov = button("Skill overview", () => { if (!window.PP_APP.canLeave()) return; state.mode = "path"; state.introduced = true; state.bookmark = { key, step: st }; save(); window.PP_SKILLS.open(key, st === "try" ? "teach" : st); }, "btn-soft np-overview");
+          ov.id = "path-overview"; next.appendChild(ov);
+        }
         /* QA-08: after the primary, in DOM and tab order, and visually quieter */
         if (first && first !== key) {
           const s = button("Suggested next on the path: " + label(first), () => openActivity(first), "linkish np-drift");

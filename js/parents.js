@@ -252,7 +252,7 @@
     host.appendChild(p("A Peach Prep skill check is not a Georgia Milestones score and does not predict an achievement level. The real test mixes skills across longer passages."));
     host.appendChild(p("Come back to a passed skill about a week later, and again a few weeks after that. If your child still gets it right, it has stuck. The skill list marks a passed skill \u201creview\u201d seven days after a dated pass, or when the last try did not pass."));
     host.appendChild(p("Hands-on skills (reading aloud and cursive) have no scored check. A grown-up ticks a checklist instead, and the site shows these as \u201cChecked by a grown-up\u201d, kept apart from passed skill checks. The read-aloud timer is a home practice tool, not a formal test or screener."));
-    const l = make("p"); l.appendChild(document.createTextNode("Official practice: ")); l.appendChild(link(S.sources.experience));
+    const l = make("p"); l.appendChild(document.createTextNode("Practice with the real test tools (GaDOE; not graded, nothing carries over from Peach Prep): ")); l.appendChild(link(S.sources.experience));
     host.appendChild(l);
   }
 

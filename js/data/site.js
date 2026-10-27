@@ -15,7 +15,7 @@ window.PP_SITE = {
     sampler: { title: "Online scoring samplers (how written answers are scored)", date: "",
       url: "https://lor2.gadoe.org/gadoe/file/d0d5b8f7-63d6-4a7f-8e5f-68df45b837d1/1/GM_Online_Scoring_Sampler_Infographic.pdf" },
     experience: { title: "Experience Online (GaDOE: practice with the test tools, not graded)", date: "",
-      url: "https://www.gaexperienceonline.com/" }
+      url: "https://gaexperienceonline.com/" }
   },
 
   sections: [

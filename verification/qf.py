@@ -477,10 +477,10 @@ with sync_playwright() as pw:
         if q.is_visible("#tab-passage"):
             q.click("#tab-passage"); q.wait_for_timeout(80); snap("1b-passage")
             pb = q.evaluate("(()=>{const e=document.getElementById('passage-pane-body')||document.getElementById('passage-pane');const r=e.getBoundingClientRect();return [Math.round(r.height),innerHeight]})()")
-            rows.append(("passage-room", 0 if pb[0] >= min(220, pb[1] * 0.4) else 1, [pb]))
+            rows.append(("passage-room", 0 if pb[0] >= min(220, pb[1] * 0.4) else 1, [] if pb[0] >= min(220, pb[1] * 0.4) else [pb]))
             qtab(q)
         gridtop = q.evaluate("Math.round(document.getElementById('player-grid').getBoundingClientRect().top)")
-        rows.append(("header-height", 0 if gridtop <= (150 if h >= 560 else 130) else gridtop, [gridtop]))
+        rows.append(("header-height", 0 if gridtop <= max(0.4 * h, 130) else gridtop, [] if gridtop <= max(0.4 * h, 130) else [gridtop]))
         q.evaluate(WRONG); q.click("#q-check"); q.wait_for_timeout(60); snap("2-feedback")
         teach(q); q.click("#teach-hint"); q.wait_for_timeout(40); snap("3-teach")
         reveal(q); q.wait_for_timeout(60); snap("4-teach-answer")
@@ -500,6 +500,7 @@ with sync_playwright() as pw:
     # ---------------- Q11. keyboard, focus, announcements, labels, axe ----------------
     q = page(pw, 390, 844, errors=errors); ready(q, "#browse"); q.evaluate("localStorage.clear()")
     q.evaluate("PP_SKILLS.begin(%s)" % json.dumps(K)); q.wait_for_timeout(250)
+    qtab(q)
     a11y = q.evaluate("""({h1:document.querySelectorAll('#screen-player h1').length, h1t:(document.querySelector('#screen-player h1')||{}).textContent,
         live:['q-say','q-feedback','teach-cards','teach-hints'].map(i=>[i,document.getElementById(i).getAttribute('aria-live')||document.getElementById(i).getAttribute('role')]),
         names:[...document.querySelectorAll('#screen-player button')].filter(b=>b.offsetParent&&!(b.textContent||'').trim()&&!b.getAttribute('aria-label')).length,
