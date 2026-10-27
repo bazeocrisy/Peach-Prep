@@ -22,7 +22,7 @@ did not weaken assertions in a way that hides a regression today. But the answer
 check without a new `testRev` does not always fail. The "material hash" covers only fields named `correct/answer/answers/pick/points/type/id`,
 so every change of an answer key that is expressed through *text* or *position* rather than a flag escapes (details F-1). The ledger
 is an honest-process record, not a control: it can be forged with one command and cannot show that a reviewer saw the content that is
-hashed (F-5, F-6). Seven MUSTs, none of them touching saved child data.
+hashed (F-5, F-6). Six MUSTs, none of them touching saved child data.
 
 ## 0. Gates in the frozen copy
 
@@ -80,9 +80,10 @@ Two facts make the warning weaker than the doc implies:
 1. `--record-versions` refreshes `hash` and `q` in one step (E11 in `e2e2.py`: after the command the reword is gone from every later
    run). The runbook in 10.8 runs it as step 2, right after "read the `versions:` lines". The decision is never recorded.
 2. The committed record has no `q` yet (`grep -c '"q"' verification/assessment-versions.json` is 0), so today the warning cannot name any item.
-   Measured against the record's commit (`7c69e78`) with `qdiff.js`, ten forms were reworded without a rev change:
-   3.L.GC.2.b:B (TB5), 3.L.GC.1:M apostrophes:A (T1, T3), irregular-plural:B (TB3), commas:A (T4), 3.L.V.2.b:A (T2), TF-FEAT:A (T2, T4),
-   TF-DIG:A (T1, T2, T4, T5), plus 3.L.V.2.a:A/B (T4, correctly flagged material). The 10.8 table lists only some of them (the three
+   Measured against the record's commit (`7c69e78`) with `qdiff.js` (`node rv3/qdiff.js rv3/old frozen`), ten forms differ from the record. Seven of
+   them had question text reworded under an unchanged rev and only warn: 3.L.GC.2.b:B (TB5), 3.L.GC.1:M apostrophes:A (T1, T3), irregular-plural:B (TB3),
+   commas:A (T4), 3.L.V.2.b:A (T2), TF-FEAT:A (T2, T4), TF-DIG:A (T1, T2, T4, T5); irregular-plural:A changed without a question edit; 3.L.V.2.a:A/B (T4) is
+   correctly material and already has `testRev` 2. The 10.8 table lists only some of them (the three
    3.L.GC.1:M forms are missing from it).
 
 **Recommendation (question 1).** Yes, it should fail in `--release` for lessons with core, but not as an unconditional failure,
@@ -140,12 +141,12 @@ reviewer name against today's hash". To make it mean what 01-architecture rule 1
 rev string, so a reused rev makes an attempt on version 2a read as version 2b. Keep a `history` array of revs per form in the record and refuse
 (or require `--allow-rev-reuse`) a rev that was used before; or require numeric strings and strictly increasing.
 
-**M-7. A crash instead of a message on a wrongly shaped record.** `{"forms": null}` and `{"lessons": null}` pass the `typeof ... !== "object"`
-test (`typeof null` is "object") and then throw an uncaught `TypeError` with a Node stack trace (E3a, E3b), in default mode as well. The exit
-code is 1 so nothing slips through, but the message is useless in the middle of a release. Validate with `Array.isArray`/`=== null`. (Low risk; listed
-as MUST only because the same checks are also what M-3 needs.)
-
 ### SHOULD
+
+**S-0. A crash instead of a message on a wrongly shaped record.** `{"forms": null}` and `{"lessons": null}` pass the `typeof ... !== "object"`
+test (`typeof null` is "object") and then throw an uncaught `TypeError` with a Node stack trace (E3a, E3b), in default mode as well. The exit
+code is 1 so nothing slips through, but the message is useless in the middle of a release. Validate with `Array.isArray`/`=== null`; the same
+validation is what M-3 needs.
 
 **S-1. Review result signature ignores keys, wording, passages and `testRev`.** `js/review.js:66` hashes `id:type:points`. A key change to a check
 that feeds a review (M2, M3) leaves stored review results unmarked ("The questions have changed since." is not shown). 10.8 says
@@ -181,9 +182,9 @@ current version" would avoid a misleading label. An old record with no `attempts
 N-2. The pass note "the check uses the same questions each time" (`js/skills.js:1282`) is untrue after a rev bump; add "on the same version".
 N-3. Pre-existing, not phase 4: `renderTest` throws on a `null` entry in `attempts` (`js/skills.js:1281`, `att.find(a => a.ok ...)`): the whole skill
 screen fails to render (br.py T2 "null entry"). The same `find` appears since 2026-10-20 (`cb099dd`). One-line guard.
-N-4. A `testRev` that is too long still gives a "record differs" line before the shape failure; harmless, both are reported.
+N-4. A `testRev` that is too long gives both the shape FAIL and a "record differs" line; harmless.
 N-5. `today()` is local time, the ledger date is a string; fine.
-N-6. 5.1: `readJson` swallows every error including permission errors; a single message naming the parse error would help.
+N-6. `readJson` swallows every error including permission errors; a single message naming the parse error would help.
 
 ## 3. Saved-data semantics (question 2): they hold
 
@@ -243,7 +244,7 @@ lose protection and should get a small addition.
 |---|---|---|
 | ledger/versions missing | warn default, FAIL release, no crash | E8a, E8b |
 | ledger/versions unparseable | warn default, FAIL release; **record commands overwrite or bypass** | E2, E4, M-3 |
-| `forms: null`, `lessons: null` | uncaught TypeError | E3a, E3b, M-7 |
+| `forms: null`, `lessons: null` | uncaught TypeError | E3a, E3b, S-0 |
 | `forms: []`, ledger `[]` | handled ("no version record", "unreadable") | E3c, E3d |
 | review file deleted after record | invalid entry, FAIL in every mode | E8c |
 | testRev `{A: 2}`, `" "`, 13 chars | FAIL in every mode | E9 |

@@ -389,3 +389,184 @@ Re-run after the fixes: twin Jaccard (the five near-ceiling pairs), the ladder a
 - **N-2.** Matrix 4.a says oo and ou are "taught+adult-observed". C09 to C11 and S10 to S12 assess them, so the matrix understates; update to "taught+practised+assessed" or drop the items.
 - **N-3.** The author log reports "single-key unique-longest 23% / 30% / 25% / 13%". My counts (section 2.3) use a different base (mc items only, by character length), so the percentages do not line up. I did not reconcile them; the only longest-key cue I would act on is S-H7.
 - **N-4.** Word repeats inside a lesson (bread, before, again, misuse) are lesson vocabulary, not twins.
+
+---
+
+## Second review (B9)
+
+**Role:** independent content reviewer 2 (fresh eyes; I wrote nothing in B9 and did not take part in review 1).
+**Read-only:** I changed no lesson, code or data file and ran no git. This section is the only thing I wrote. My frozen-copy server (port 8871, pid 735) was killed after the review.
+**Order of work:** blind solve and saved answers first, then keys, then the author log and the first review above.
+**Scratch work:** `/tmp/claude-0/-home-claude/e539678b-b5ce-5aba-86fc-30dcadc6e172/scratchpad/b9rev2/` (blind.js, blind2.js, myans-*.SAVED.txt, cmp.js, dump-*.txt, ana1-5.js, ui.py, gal.py, shots/).
+
+### S0. Verdicts at a glance
+
+| Lesson / sequence | Verdict | Open MUST |
+|---|---|---|
+| 3.F.P.4.a Letters that can make more than one sound | **CHANGES REQUIRED** (small) | M2-A1 |
+| 3.F.P.4.b Syllable types | **CHANGES REQUIRED** | M2-B1 (wrong key), M2-B2 |
+| 3.F.P.4.c Prefixes and suffixes | **CHANGES REQUIRED** (small) | M2-C1 |
+| 3.F.H.3.a Reading cursive | **CHANGES REQUIRED** | M2-H1 |
+| 3.F.F.1.a exception | **ACCEPT** | none |
+| 3.F.F.1.b exception | **ACCEPT** | none |
+| 3.F.F.1.c exception | **ACCEPT** | none |
+| 3.F.F.1.d exception | **ACCEPT** (M-E1 fixed) | none |
+| 3.F.H.4.a exception | **ACCEPT** | none |
+| 3.F.H.4.b exception | **ACCEPT** | none |
+
+The most important result: **a blind solve with 158 of 158 agreement still hid a wrong key** (4.b S04). Agreement with keys proves the items are solvable, not that they are right. The key was only caught by checking every word's syllable division in a dictionary.
+
+### S1. Blind solve (integrity statement)
+
+- All 120 core and similar items, 18 Together items and 20 form A test items (158 in all) were printed by a Node `vm` loader with `correct`, `answer`, `why`, hints, `how` and `misconception` stripped and choices shuffled. Cursive stems were printed as plain text, so I did not test the font in the blind pass (that was checked separately in S6).
+- Answers were saved to `myans-*.SAVED.txt` before any key was shown. **Agreement: 158 of 158.** I did not read the author log or review 1 until after that.
+- Merit check beyond agreement: M2-B1 (S04 key wrong), and the weaker items listed in S3 to S6.
+
+### S2. Cross-cutting checks
+
+**Twin Jaccard** (stimulus text: prompt, stem, choices, slots, rows, steps; 60 pairs). Ceiling 0.21, MUST at 0.30.
+
+| Lesson | Worst pair | Word set | Multiset |
+|---|---|---|---|
+| 4.a | S13 ~ C12 | 0.186 | 0.181 |
+| 4.b | S03 ~ C03 / S07 ~ C07 | 0.200 | 0.189 / 0.152 |
+| 4.c | S04 ~ C04 | 0.207 | 0.200 |
+| H.3.a | S13 ~ C12 | 0.206 | 0.206 |
+
+Maximum over all 60 pairs: set 0.208, multiset 0.206. **All pass.** The author log figures match mine. (Twin pairs inside one item list that repeat a whole item, e.g. H.3.a C08 ~ P3, are a separate within-set issue, S-H-dup below.)
+
+**Longest key.** No lesson has a systematic longest-key tell. Unique-longest mc keys: 4.a 1 of 4 core, 4.b 2 of 4, 4.c 2 of 4, H.3.a 0 of 6. Choose-two items where both keys are the longest: 4.b P6, 4.b S14, 4.b T4, H.3.a S05, H.3.a T4 (each 5 or 6 letters, ties, not decisive). **The log claim "choose-two both-longest: 0 everywhere" is not true of the files** (the five above), and its percentages (23, 22, 28, 6) do not reproduce on any base I tried. Neither is harmful. Both are log-accuracy flags.
+
+**Duplicate scan, all of js/data including test keys.**
+- No multi-word key equals another lesson's test or set key (0 hits).
+- Cross-lesson near-duplicate stems: 4.c S01 ~ 3.T.T.1.e S01 ("pick the word that fits each"), 4.c T3 ~ 3.L.GC.1 T5 ("which is the correct way to..."). Generic frames, NOTE only.
+- **Within the lesson, key equals a Together or test key:** 4.a S14 key "fence" = test T6 key (MUST, M2-A1). 4.a S15 "head" = Together P1 key (SHOULD). 4.b C07 "closed", C11 "consonant le" and S07 "r controlled" repeat keys of T3 and P2 (matching a syllable type name is unavoidable, NOTE). H.3.a S14 key "Friday" repeats the word in test T3 (SHOULD).
+
+**Ladder (hints 1 to 3), live choices recounted for every item.** The engine removes no choices mechanically (no item uses hintNarrow), so I counted what hint wording leaves open. Of 120 items, the following fail:
+- 4.b C01 hint 3 gives the count (M2-B2).
+- 4.c S03 and S05 hint 3 give a test that misleads (M2-C1).
+- Near-narrowing, SHOULD: 4.b C07 h3; 4.b C12 and P7 h3 (two choices left); H.3.a C06 h3 ("living thing" also fits grass); H.3.a C12 and S13 h3 echo the key's wording.
+
+### S3. 3.F.P.4.a: CHANGES REQUIRED (one MUST)
+
+**M2-A1 (leak and repeat key). S14 key "fence" equals test T6 key "fence".** A learner who sees S14 in practice and then T6 in the test is answering from memory. Fix: change S14's word (for example "face" or "dance"), keep T6.
+
+SHOULD
+- **S-A1.** P6 hint 2 says one word has no c, but all four words contain c. False. Fix: "listen for the sound c makes in each word".
+- **S-A2.** S15 / P1 share the key "head" and a head collides with the Watch Me example. Replace S15's key with another short-e ea word (bread is already C-material; use "spread" or "weather").
+- **S-A3.** The log says Teach was changed to add a y-as-a-vowel point; it is present and the items do not contradict it (checked: no 4.a item has y as a vowel in its key).
+
+Item verdicts: all items ACCEPT except S14 (CHANGES REQUIRED, M2-A1); P6 and S15 ACCEPT after SHOULD.
+
+### S4. 3.F.P.4.b: CHANGES REQUIRED (two MUSTs)
+
+**M2-B1 (wrong key). S04 key "co / ver" is wrong.** Merriam-Webster divides cover as cov·er, pronounced ˈkə-vər (https://www.merriam-webster.com/dictionary/cover). The first vowel is short, so the open split "co / ver" is not what the dictionary says, and the word is one of the standard exceptions to the open-syllable rule. A child who splits cov / er is correct. Fix: replace the word with a regular open-syllable word (pi·lot, ba·con, po·ny, mu·sic are all confirmed open below), and update how, why and hints.
+
+**M2-B2. C01 hint 3 gives the count of the key** instead of a scaffold. Fix: replace with a location hint that does not state how many syllables or choices remain.
+
+SHOULD
+- **S-B1.** S11 labels drift from the Teach terms ("vowel pair" vs "vowel team"). Use the Teach terms exactly.
+- **S-B2.** S13 asks for the "middle letter" of frozen; frozen has a middle that depends on counting (fro·zen). Reword to "which letter ends the first syllable".
+- **S-B3.** C07 h3 and C12 / P7 h3 each leave two live choices after hint 3 and come close to naming the key; tighten to leave three.
+- **S-B4.** The log says ribbon is now rib / bon. Verified: C04 uses ribbon (rib·bon), and the how and why are consistent with the Teach rule on two separate consonants. Earlier M-B1 genuinely fixed.
+
+**Syllable verification (dictionary, not pyphen).** Merriam-Webster headwords, each fetched by me:
+- Sep·tem·ber (https://www.merriam-webster.com/dictionary/September)
+- nap·kin (https://www.merriam-webster.com/dictionary/napkin)
+- peb·ble (https://www.merriam-webster.com/dictionary/pebble)
+- po·ny (https://www.merriam-webster.com/dictionary/pony)
+- in·sect (https://www.merriam-webster.com/dictionary/insect)
+- gar·den (https://www.merriam-webster.com/dictionary/garden)
+- ba·con (https://www.merriam-webster.com/dictionary/bacon)
+- mar·ble (https://www.merriam-webster.com/dictionary/marble)
+- pi·lot (https://www.merriam-webster.com/dictionary/pilot)
+- cam·el (https://www.merriam-webster.com/dictionary/camel)
+- cup·cake (https://www.merriam-webster.com/dictionary/cupcake)
+- cov·er: contradicts the key (above)
+
+**Not verified by me in a dictionary:** seven, paper, hotel. The hotel page was blocked by robots, and I ran out of web calls for seven and paper. They are very regular (sev·en, pa·per, ho·tel) and I expect them to be right, but this review does not confirm them. The other 4.b words not listed above are common words whose division matched the lesson (rib·bon is covered by S-B4 under pyphen and the Teach rule). A third check should do these.
+
+Item verdicts: S04 CHANGES REQUIRED; C01 CHANGES REQUIRED; the rest ACCEPT (with SHOULDs).
+
+### S5. 3.F.P.4.c: CHANGES REQUIRED (one MUST)
+
+**M2-C1. S03 how2 and h3 are wrong; S05 h3 has the same flaw.** S03 (the word unit): the hint says to cover "un" and look at what is left ("Nit is left"). Covering "un" in unit leaves "it", which is not the base word, because unit does not have the prefix un-. The test misleads a learner into thinking unit is "un + it". The lesson is meant to teach that the cover test only works if what is left is a real word with the meaning you expect. S05 (umbrella, starts "um") has the same flaw in h3. Fix: use the cover test only with real prefixes (undo, unfair), or add "then check: does the word still mean 'not' plus the rest?"
+
+SHOULD
+- **S-C1.** S15 `like` points at P7; it should point at C04 (the mis-, re-, pre- item).
+- **S-C2.** C03 / P5 and C01 / C04 are near-duplicates within set 1 (same frame, same affix types). Swap one of each pair to another affix.
+- **S-C3.** The Watch Me still does not model y to i; the log honestly moved the matrix wording to "not modelled". Keep that wording until Watch Me is extended.
+- **S-C4.** Teach y-as-vowel point present (checked); no contradiction found.
+
+Item verdicts: S03 and S05 CHANGES REQUIRED; all other items ACCEPT.
+
+### S6. 3.F.H.3.a: CHANGES REQUIRED (one MUST)
+
+**M2-H1. The hottext items print the answer options in plain text, so the cursive is never needed.** Items C03, C06, S03 and S07 show their options as ordinary type ("Choose ONE answer" with the words listed), and S04 prints the row words next to the cursive. A child can answer by reading the printed words and ignore the cursive stimulus. That defeats the standard (read cursive). Fix: render the cursive as the only place the word appears; options should be printed as letters (A, B, C) or as cursive tokens, not the same words in print.
+
+SHOULD
+- **S-H1.** S05 prompt says "Two foods" but lists three.
+- **S-H2.** C06 h3 "living thing" includes grass.
+- **S-H3.** C12 and S13 h3 echo the key (and the twin scores 0.206 set, the highest in the lesson).
+- **S-H4.** C08 ~ P3 are near-duplicates within one set (Jaccard 0.41 on whole-item text). Replace one.
+- **S-H5.** S14 / C11 use "Friday", which is also test T3's word.
+- **S-H6.** Cursive rendering at 390x844 (Playwright screenshots, `shots/gal0-gal7.png`). Every word in every H.3.a stem was rendered with the PP Cursive face. Joins hold for all letters except after s: **s followed by d, o or other round letters shows a visible gap** in scooter, stack, snowmen, scarf, swim and sunny. The author log says only that it avoided s plus d or o, "I did not check other words on a phone". A child may read the gap as two words. Fix: avoid those words or add a short Teach line that "in this font s may leave a small gap".
+- **S-H7.** Single cursive face ruling (plan: one face is acceptable if declared). The coverage matrix row says "two cursive renderings" is not met and the log says no second face exists. **Ruling: SHOULD, not a MUST,** because the plan allows a single face if it is recorded and the matrix says so. The matrix must keep "one typeface only; no handwritten samples" and must not claim "modelled" for letters the Watch Me does not model.
+- **S-H8.** "Quail" replaced quiet as the S03 key (T4 key was quiet): confirmed in the file. Earlier M-H1 / M-H2 fixed.
+
+Item verdicts: C03, C06, S03, S04, S07 CHANGES REQUIRED (M2-H1); C12, S13 ACCEPT after SHOULD; the rest ACCEPT.
+
+### S7. Phonics decisions and web facts
+
+Verified by me this round: Merriam-Webster headwords above. The author-cited sources for hard g before e or i (https://en.wikipedia.org/wiki/Hard_and_soft_G) and ough variants (https://en.wikipedia.org/wiki/Ough_(orthography)) are the same ones recorded in review 1 section 8; I did not re-fetch them. I did not independently re-verify soft c/g, ea long-a words or the y-as-a-vowel claim on the web in this round; I relied on review 1 section 7 and on the blind solve. State this plainly in any acceptance note.
+
+### S8. The six coreException sequences (all read in full)
+
+Each has kind, rationale and three tasks with title, how and a three-line checklist. All six ids are in `practice-exceptions.json` with matching kind and a shorter rationale (the longer rationale in the lesson is fine; the json is consumed by check-content). Substantive and honest: yes.
+
+- **3.F.F.1.a ACCEPT.** S-E1 (eight irregular words, two look-alike pairs) and S-E2 (quick means about one second, no sounding out) are in the files. The rationale honestly says the seven practice items stay.
+- **3.F.F.1.b ACCEPT.** S-E3 fixed: "about 19 right out of every 20 words as a rough guide ... It is a guide, not a pass mark." S-E4 fixed: compare by mistakes per 100 words and a poem may be harder. The Teach line and the timer text in F-FH.js were reported as changed or left; I did not find the 95 percent wording as a pass mark in the sequence. NOTE: the engine-facing timer copy that mentions "about 95%" was left (author log says so); it is existing copy, not part of this sequence.
+- **3.F.F.1.c ACCEPT.** S-E5 fixed: yes/no questions rise, who/what/where/why questions fall, with "Are you coming?" as the model. The retell is added.
+- **3.F.F.1.d ACCEPT; M-E1 genuinely fixed.** Round 1 now waits about five seconds, then marks self-fixed or told (no longer "the grown-up did not give the word"). Round 3 compares self-fixed and told, then adds a silent step (point to a spot where you went back, say what you fixed, record it as a silent fix) and a retell. The rationale now says aloud correction is easiest to observe and silent correction is checked by pointing. This matches the standard "silently or aloud". NOTE: kind is "observation" while the other five are "performance"; check-content accepted it (log says PASS) and the json matches, so no change needed.
+- **3.F.H.4.a ACCEPT.** S-E6 fixed: the capitals T, W, O and P are named and "follow your school's model if it is different" is added; the b, o, v, w swing point is in Session 2. NOTE: review 1 could verify only P and W as non-joining; T and O are still not verified by me. The sequence is honest because it says "in this model" and defers to the school.
+- **3.F.H.4.b ACCEPT.** Joined letters check is added to Session 1. NOTE: no cursive example is shown to the grown-up; the sequence relies on the school's model.
+- NOTE (shared): `coreException` has no UI consumer yet, so none of these six is visible to a learner or parent. They are honest on paper, but until a consumer exists the standards they cover have only the supporting practice items in front of the child.
+
+### S9. Confirming the earlier MUSTs against the files (not the log)
+
+| Review 1 MUST | Fixed in the files? |
+|---|---|
+| M-A1 (C06 / S14 hint 3 quotes key) | Yes (hints no longer quote). But S14 now has a new problem, M2-A1. |
+| M-A2 (broom ambiguous) | Yes, C09 uses spoon. |
+| M-A3 | Yes. |
+| M-B1 (ribbon) | Yes, rib / bon, how and why rewritten. |
+| M-B2 (cobra) | Yes, S09 uses robot. |
+| M-B3 (C12 / P7 h3) | Partly: now rules out one distractor but still near-narrows (S-B3). |
+| M-C1 | Yes, S01 and C01 h3 no longer name a key; stale "pre-" removed. |
+| M-H1 / M-H2 | Yes for the hints and keys listed; the new problem is M2-H1. |
+| M-E1 | Yes (S8). |
+
+### S10. Author-log claims that are not true of the files
+
+1. "Choose-two both-longest: 0 everywhere." False: 4.b P6, S14, T4 and H.3.a S05, T4 tie as longest (S2).
+2. "Single-key unique-longest 23 / 22 / 28 / 6 percent." Not reproducible on any base I tried (S2). Not harmful.
+3. "Keys rechecked with ckms.js after every edit." The 4.b S04 key is still wrong (M2-B1), so the check is not a guarantee of correctness.
+4. "Teach: removed 'girl' from the get/give hard-g line." True. But the claim that hint ladders no longer narrow is false for 4.b C07, C12 and P7.
+5. "I did not check other words on a phone" is honest, and the answer is that several s words have visible gaps (S-H6).
+6. The log is silent on the 4.a S14 and T6 repeat, and on the printed hottext options in H.3.a.
+
+### S11. Fix list for the lead (shortest path to acceptance)
+
+1. 4.b S04: replace cover with a regular open-syllable word; update how, why and hints (M2-B1).
+2. 4.b C01 h3: remove the count (M2-B2).
+3. 4.c S03 and S05: fix how2 and h3 so the cover test only uses real prefixes (M2-C1).
+4. 4.a S14: change the key so it is not "fence" (M2-A1).
+5. H.3.a C03, C06, S03, S04, S07: stop printing the answer words next to the cursive (M2-H1).
+6. Then the SHOULDs: 4.a P6 h2 and S15; 4.b S11, S13, C07, C12, P7; 4.c S15 `like`, C03 / P5, C01 / C04; H.3.a S05, C06, C12, S13, C08 ~ P3, S14, the s gap, and the single-face note.
+7. A third check should confirm seven, paper and hotel in a dictionary, and the phonics claims I relied on from review 1.
+8. After the fixes: rerun the twin Jaccard on any changed item and the ladder check on any changed hint, and re-solve changed items blind. No coverage matrix row may be marked VERIFIED yet. This review plus review 1 is the two-review requirement, but both found MUSTs, so every row needs a clean re-check.
+
+### S12. Notes for memory
+
+- A 158-of-158 blind solve does not prove keys right. Dictionary syllable checks found a wrong key (cover) that every solver would accept.
+- Hottext items that print the answer words defeat a cursive-reading standard.
