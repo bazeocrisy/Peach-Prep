@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 280" role="img" aria-labelledby="t">
+  <title id="t">A drawing of an owl standing on a thick tree branch. Labels name the owl and the branch.</title>
+  <rect x="0" y="0" width="320" height="280" fill="#F4F8FC"/>
+  <path d="M0 196 Q80 184 160 192 Q240 200 320 186 L320 210 Q240 224 160 216 Q80 208 0 220 Z" fill="#7A5A3A" stroke="#4A3320" stroke-width="3"/>
+  <ellipse cx="160" cy="130" rx="46" ry="62" fill="#B58B5E" stroke="#4A3320" stroke-width="3"/>
+  <ellipse cx="160" cy="146" rx="28" ry="38" fill="#E8D5B8"/>
+  <circle cx="160" cy="76" r="34" fill="#B58B5E" stroke="#4A3320" stroke-width="3"/>
+  <path d="M132 56 L128 32 L148 46 Z M188 56 L192 32 L172 46 Z" fill="#B58B5E" stroke="#4A3320" stroke-width="3"/>
+  <circle cx="148" cy="76" r="10" fill="#fff" stroke="#111" stroke-width="2"/><circle cx="172" cy="76" r="10" fill="#fff" stroke="#111" stroke-width="2"/>
+  <circle cx="148" cy="76" r="4" fill="#111"/><circle cx="172" cy="76" r="4" fill="#111"/>
+  <path d="M154 90 L160 102 L166 90 Z" fill="#E0A030" stroke="#4A3320" stroke-width="2"/>
+  <path d="M138 192 l-6 14 m14 -14 l-2 16 m30 -16 l2 16 m14 -16 l6 14" stroke="#E0A030" stroke-width="4" stroke-linecap="round"/>
+  <g font-family="Arial, Helvetica, sans-serif" font-size="22" fill="#111">
+    <text x="224" y="60">owl</text><path d="M224 66 L196 90" stroke="#111" stroke-width="2"/>
+    <text x="8" y="264">branch</text><path d="M60 250 L84 214" stroke="#111" stroke-width="2"/>
+  </g>
+</svg>

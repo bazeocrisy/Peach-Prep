@@ -180,3 +180,182 @@ Rule from plan 4.5: hint 3 may rule out one distractor or complete one of two sl
 - **Standard alignment.** All sixty core items sit under their `official` wording. 1.a uses real content-area words and phrases; 1.b tests substitution and register as the standard says ("enhance communication in a variety of settings"); 2.a tests roots and affixes; 2.b tests suffix to part-of-speech, plus false suffixes.
 - **Grade 3 suitability.** Nothing is kindergarten-like. Words that are a stretch for grade 3 and worth watching: "manner" and "trait" (2.b S15, S09). The long-option dropdowns in 1.a are readable at 390 px.
 - **Re-review.** Re-review the changed items after the author's second pass: 1.a C10, S09, P4; 1.b C05, C15, S15; 2.a C09, S09, C10, S10; 2.b C11, C14, C08, S08, T2.
+
+---
+
+## Second review
+
+**Role:** independent content reviewer (blind solver), second pass. I did not write these lessons. I read the author log and the first review only after my blind answers were saved.
+**Scope:** the four lessons in a frozen copy of `js/data/lessons/L-V12.js` taken at the start of this pass (the live file has since gained new 3.L.V.2.c work from another author; I did not review that). All core items (refs resolved), Together, similar S01 to S15, form A, and 2.a form B. Items re-checked cold: 1.a C10, S10; 1.b C05, C15; 2.a C09, S09; 2.b C08, C11, C14.
+**Read-only:** I changed no lesson or code file and ran no git. This section is the only thing I wrote. Scratch files are in `scratchpad/b5brev2/`. The one server (port 8761, pid 4977) was stopped by pid.
+
+### Verdicts
+
+| Lesson | Verdict | MUST | SHOULD | Headline |
+|---|---|---|---|---|
+| 3.L.V.1.a | **ACCEPT** | 0 | 4 | All first-review MUSTs fixed. C10's new key is true (NPS and SC Encyclopedia). Remaining items are hint wording and Learn It coverage. |
+| 3.L.V.1.b | **ACCEPT** | 0 | 3 | C15 and S15 are now 2 points; C05, C09 and S09 are fixed. S15 reuses C15's "Can everyone in the back..." line. |
+| 3.L.V.2.a | **CHANGES REQUIRED** | 2 | 6 | C09 and S09 and C10 and S10 are fixed. New: P1 hint 3 leaves only the key (missed first time). T4 and TB4 changed key with the same id and the same `testRev`. |
+| 3.L.V.2.b | **CHANGES REQUIRED** | 2 | 6 | C11 river, C14, C08/S08 and T2 are fixed. New: C11 still has a second defensible word (joker). P5, S10 and S01 hint 3 leave only the key (missed first time). |
+
+I own the misses in the "missed first time" items: they were in the first pass's material and my first ladder count did not catch them. They are the same fault the B0 reviews found most often.
+
+### 1. Blind solve (new seed)
+
+- **Method.** A new `blind.js` (seed 20271103 plus 1313 per lesson, not the first review's seed) loads a frozen copy of `L-V12.js` in a Node `vm` sandbox with a mock `PP.addLesson`. It prints passages and every item with seeded shuffles of choices, slot options, match rows and columns, and ebsr parts. It strips `correct`, `answer`, `why`, `clue`, `hints`, `how`, `misconception`, `like`, `sample` and a few more field names. I grepped the output for those names and printed no raw item source. I wrote answers to `ans-1a.json`, `ans-1b.json`, `ans-2a.json` and `ans-2b.json` before running `cmp.js` against the keys.
+- **Result: 156 of 156 agree (100%).** That is core (refs resolved), Together, similar, form A, and form B for 2.a. I proved the comparer is live by flipping one answer (155 of 156 with a named mismatch), then restoring it.
+- **The solve was fully blind** for the keys. I had read the first review's text (which names the changed items) only after saving answers, and the author log only after that. I had no figure items to solve: none of these four lessons has a figure, so there was no alt text to check.
+- **Agreement still hides arguable items.** Cold-solve notes on the focus items:
+  - 1.a C10: I chose B and C, and I judge them the only defensible pair. The sentence containing the word ("Deerskins were very valuable") only repeats it. Part A has no rival.
+  - 1.a S10: Part A "Few people ever found one" and Part B "Most prospectors found only a few tiny bits..." are the only consistent pair. The wording of Part A ("Pick the idea that fits") is thin; see SHOULD.
+  - 1.b C05: describe in blank 1 and explain in blank 2, using Teach's two new definitions. "Explain the shape and color" and "describe why bees help" read oddly, so the single answer is defensible.
+  - 1.b C15: the sentences (7) and (10) are the only two that need a live audience.
+  - 2.a C09, S09: tearful and sleepless; painful and hopeless. Nothing else leaves a word when the ending is covered, with one caveat on angry (see 2.a SHOULD).
+  - 2.b C08: payment and sadness. The paragraph numbers alone also isolate both keys (see SHOULD).
+  - 2.b C11: finger and river. **Joker is a third word that leaves a non-word under the item's own test; see MUST.**
+  - 2.b C14: neighbor, one defensible answer.
+
+### 2. Verification of the first-review MUSTs against the author's second pass
+
+| First-review MUST | Result |
+|---|---|
+| 1.a C10 false blanket claim | **Fixed and true.** Part B key is now "Traders gave cloth, pots and even guns for them." NPS Ocmulgee lists guns, coats of broadcloth, duffel blankets, hatchets, knives, axes and hoes for deerskins (about 1716: 35 skins for a gun, 30 for a broadcloth coat). The page does not mention pots. South Carolina Encyclopedia: "exchanged dressed deerskins for blankets, firearms, shot, gunpowder, cloth, axes, hoes, and brass kettles", and gives "metal cooking pots". "Cloth, pots and even guns" is therefore accurate. Passage p3 paragraph 4 agrees with Part B, WHY, HOW and hint 2. https://www.nps.gov/ocmu/learn/historyculture/upload/Accessible-British-Trading-Post.pdf , https://scencyclopedia.org/sce/entries/deerskin-trade/ |
+| 1.a S09 hints 1 to 2 | **Fixed.** Hint 2 reads "Find the words panning for gold. Read the whole paragraph. Where does the author show what the people did?" The word "before" is gone. `leak.js` reports 0 hits. |
+| 1.a P4 hint 1 | **Fixed.** Hint 1 is a strategy ("Ask what the special way helps the grass do"), hint 2 asks what the grass does about the salt. Hint 3 rules out only "turn white". |
+| 1.b C15, S15 points | **Fixed.** Both are 2 points. A script check of points against keys across all four lessons (core, Together, similar, form A, form B) found 0 mismatches. Core set totals are 6/8/8, 7/8/8, 8/8/8, 7/8/8. |
+| 1.b C15, S15 hint 2 | **Fixed.** Hint 2 asks whether a report reader would need each sentence. Passage p4 is rewritten and numbered 1 to 10; a talk-only line sits mid-list (7), though the second key (10) is still the last target (see SHOULD). |
+| 1.b C05 describe vs explain | **Fixed.** Teach defines both words. Blank 1 is cued by "shape and color", blank 2 by "why bees help", and the third options differ per blank. |
+| 1.b C09, S09 | **Fixed.** A fourth column is added, and hint 2 gives the question to ask, not the three answers. |
+| 2.a C09, S09 real words | **Fixed.** C09 distractors are family, ugly, city; S09 distractors are puppy, angry, candy. None leaves a word under the cover test (belly, silly, only and bully are gone). One caveat on angry (SHOULD below). |
+| 2.a C10, S10 hint 3 | **Fixed and true.** "One of the words has two endings and no prefix." C10: carelessly. S10: hopelessly. |
+| 2.a T4, TB4 | Now single-answer mc with new keys. **Not a re-skin of P4 any more, but the id and the `testRev` did not change; see MUST.** |
+| 2.b C11 number | **Half fixed.** River replaces number (riv is not a word). But the item now has a different defensible third word (joker). See MUST. |
+| 2.b C14, S14 | **Fixed.** C14 now offers neighbor, visitor, actor, worker; passage p4 gained "A visitor and an actor from the town play clapped for them." Hint 3 rules out worker only (3 live). S14 offers tiger, farmer, painter, barn (3 live after hint 3). |
+| 2.b C08, S08 | **Fixed for the ladder.** Each blank now has three suffixed nouns; hint 3 removes none. See SHOULD on the paragraph cue in C08. |
+| 2.b T2 | **Fixed.** T2 now asks which sentence has an -ly word that tells how. Word-set Jaccard against P2 is well below the first 0.50. |
+
+### 3. Mechanical checks
+
+| Check | Result |
+|---|---|
+| Gates (run in the live repo, read-only) | `check-content.js --all`: no failures for these four lessons (the 6 failures in the output are all 3.L.V.2.c, another author's work in progress). `check-writing.js` 0 failures. `check-instructional-copy.js` 28 passed. Warnings on my four lessons: short passages; "hint 2 shares X only with the key" on 1.a C06 (money), S03 (living things), S10 (people), 2.a S14 (write), 2.b C09 (noun); and the version warning below. |
+| Passage FK (`readability.py`) | Highest 4.0 (1.a p2 and p5, 1.b p2). Limit 4.5. Pass. |
+| Passage numbering | 1.b passages p1 to p6 are numbered 1 to n with no gaps (p1 10, p2 10, p3 8, p4 10, p5 8, p6 8). Items cite the right sentence numbers (checked C02, C06, C07, C11 and the form A items). The other three lessons are unnumbered and cite "paragraph N"; every cited paragraph holds the word (checked all core, Together and form items). Pass. |
+| Similar vs core `like` (`jac.js`, word-set and multiset, match columns, ebsr parts and hottext targets included) | Max per lesson: 1.a 0.21 (S03 to C03 0.21/0.19; S10 to C10 0.18/0.21); 1.b 0.21 (S03 to P5 0.21/0.17; S15 to C15 0.20/0.19); 2.a 0.20 (S03 to C03, S14 to C14); 2.b 0.20 (S15 to C15). All 60 twins at or under 0.21. The ebsr twins sit at the limit because the directions sentence counts. |
+| Distinctness inside a lesson (all groups) | Worst: 2.a T2 vs TB2 0.48 and T1 vs TB1 0.46 (form A/B parallel by design); 2.a P2 vs TB2 0.45 and P1 vs P2 0.43 (existing practice frames, not new work); 2.b C15 vs T3 0.48 and C09 vs C15 0.42 (three ebsr items sharing the directions sentence; different skills). No new item is a re-skin of another. |
+| Longest-key cue, single-key mc and ebsr (`lkmc.js`, same metric as the author's lk2) | **Reproduced exactly: 1.a 5 of 28 (18%), 1.b 5 of 17 (29%), 2.a 7 of 33 (21%), 2.b 5 of 21 (24%).** Chance is about 29%. The author's figures are right. By words rather than letters: 14%, 0%, 15%, 5%. |
+| Longest-key cue, wider view | Counting dropdown slots and hottext option lists too (`lk.js`): 1.a 29%, 1.b 35%, 2.a 29%, 2.b 31%, near chance. **Choose-two sets are not at chance: in 8 of 19 the two keys are the two longest options (about 10% would be chance for five options):** 1.a S08; 1.b C10, S14; 2.a P5, C09, C15, S07, S09. In 2.a the keys are 3 to 5 letters longer. See SHOULD in 2.a. |
+| Word-match cue (`wm.js`) | Key has strictly the highest word overlap with stem or passage in 10 of 66 sets (15%, below chance). Highest: 1.a S10 Part A 0.75 vs 0.33, S11 0.67 vs 0.23, 2.a C06 0.67 vs 0.33. Nothing systematic. |
+| Keyed text beside hints (`leak.js`) | 0 automatic hits (S09 and S10 are clear). Hand reading found echoes; see below. |
+| Points | See section 2. All correct. |
+| Versions (`check-content.js` warning) | `2 check forms changed materially (ids, points or answer keys) with the same testRev: 3.L.V.2.a:A, 3.L.V.2.a:B.` Recorded rev is 1 for these forms. See 2.a MUST. 2.b form A shows as wording-only. |
+
+### 4. Hint ladders: live choices after hints 1 to 3 (all changed items recounted, plus a full read of every hint 3)
+
+Rule from plan 4.5: hint 3 may rule out one distractor or complete one of two slots. It must not leave only the key, and no hint may state a key.
+
+| Item | Live after hint 3 | Verdict |
+|---|---|---|
+| 1.a P4 | 3 of 4 (only "turn white" removed) | pass |
+| 1.a C10 | Part A 4; Part B 3 (the sentence holding the word is removed) | pass |
+| 1.a S09 | 3 of 4 (last paragraph removed) | pass |
+| 1.a S10 | Part A 4; Part B 3 | pass (hint 2 near the key, SHOULD) |
+| 1.a S08 | 4 of 5, choose two (swirling removed) | pass |
+| 1.a C06, C09, C11, S03, S04, S11 | 3 each (S04: 2) | pass |
+| 1.b C05 | 3 per blank by elimination, but hint 3 states both definitions | pass (floor) |
+| 1.b C09, S09 | one row completed; two rows over three columns left | pass |
+| 1.b C15, S15 | 3 of 5, choose two (3 pairs) | pass |
+| 2.a C09, S09 | 5 of 5 (hint 3 names no word) | pass |
+| 2.a C10, S10 | 4 of 5 (one distractor named) | pass |
+| 2.a C13, S06, S11, S13, P6 | at least 2 (S13: 2) | pass; S13 hint 3 is heavy (SHOULD) |
+| 2.a **P1** | **1: "Full of hope would be a different word. Check which choice says the opposite."** The only choice that says the opposite is the key. | **MUST** |
+| 2.b C11 | 5 of 5 | pass |
+| 2.b C14, S14 | 3 each | pass |
+| 2.b C08, S08 | no word removed | pass (but see SHOULD) |
+| 2.b **P5, S10** | **1: "Three of the words name someone who does an action. Look for the one that compares."** Three of four options are named away. | **MUST** |
+| 2.b **S01** | **1: "Names, counts and colors are jobs for other kinds of words."** Options A (counts), B (names, a title) and C (color) are all removed. | **MUST** |
+| 2.b C05, S05, C06, C12, S12, S07, S13, C13 | at least 2 (C05, S05 exactly 2) | pass |
+
+### 5. Word meanings and facts (web)
+
+- **Deerskin trade (1.a C10).** See section 2. NPS and SC Encyclopedia URLs above. Verified.
+- **aqua = water (2.a S12).** Etymonline: *aquatic* "from Latin *aquaticus* 'growing in water; bringing rain,' from *aqua* 'water'." https://www.etymonline.com/word/aquatic . Verified.
+- **therm = heat (2.a S12).** Etymonline: *therm* is a "Latinized form of Greek *thermē* 'heat, feverish heat'". https://www.etymonline.com/word/therm . Verified. The earlier NOTE that this needed confirming is closed. The sentence "A thermos keeps a drink from losing heat" is true for hot drinks only; a thermos also keeps cold drinks cold (Vocabulary.com, from the first review). First-review SHOULD stays open (S12).
+- **angry (2.a S09 distractor).** Etymonline: angry is "from anger (n.) + -y". https://www.etymonline.com/word/angrily . So *angry* does have a real base word, anger, behind it, although covering -y leaves "angr". The WHY ("no real word is left") is true only for the cover test. See 2.a SHOULD.
+- **puppy.** "uncertain origin but likely French *poupée*"; *pup* is a shortening of *puppy* (1760). https://www.etymonline.com/word/pup . Fine as a distractor.
+- **Earlier verified, unchanged:** abrupt, xylophone, biography, dictate, auditorium, construct, visible, spectator, neighbor, finger, Georgia gold rush "late 1820s", salt-marsh grass, loggerhead nesting (see the first review's section 3 for the URLs).
+- **Standard wording** is unchanged and every item sits under it. I checked against `standards.js` only.
+
+### 6. Browser run (390 x 844, touch, real controls)
+
+- **Result.** The same driver as the first review (`real.py`, `ui5.py`, `eb3.py`, `dd3.py`, pointed at a frozen copy served on port 8761). All 60 core items opened, were answered through the real controls and accepted. No page errors, no horizontal scroll, no tap target under 36 px.
+- **Driver limit, not a defect.** `real.py` reports dropdown failures on 1.a C07, C12 and C15 because blank 1 is a button list. `dd3.py` answered all three with the real controls and each showed "That's right!".
+- **ebsr.** The six ebsr core items (1.a C03, C10; 2.a C03, C14; 2.b C09, C15) show "You got part of it (1 of 2 points)" for Part A right and Part B wrong. All three hints appear in order.
+- Screenshots of 1.b C15 (five numbered targets, two points) and 1.a C10 look correct at 390 px.
+
+### 7. Findings by lesson
+
+#### 3.L.V.1.a. Verdict: ACCEPT
+
+| # | Level | Item | Finding | Fix |
+|---|---|---|---|---|
+| 1 | SHOULD | S10 hint 2, `leak` warning | "How much gold did most people find?" asks the question whose answer is Part B's key and Part A's idea. | "Find rare in paragraph 3 and read the sentences after it." |
+| 2 | SHOULD | S10 Part A wording | "The writer calls big nuggets rare. Pick the idea that fits." is vague for a vocabulary item. | "What does rare tell you about big nuggets?" |
+| 3 | SHOULD | S03 hint 2 | "Ask what those living things do" echoes the key "living things which turn what has died into bits". | "Ask what those animals do." |
+| 4 | SHOULD | Learn It and Watch Me | Unchanged from the first review (SHOULD 8). The three Learn It examples model "is a", "next sentence" and "after the comma". The fifteen also ask: judge a claim (C05, S05), pick the sentence that explains a word (C13, S13), name the author's technique (C09, S09), and use a meaning in a math problem (C15, S15). Teach point 4 now covers clues "just before the word". | One worked example for a claim check or for the author's technique. |
+| 5 | SHOULD | Form A passage p2 | Unchanged from the first review (SHOULD 6): water-cycle sentences repeat `T-T2.js` 3.T.T.2.b and `T-SS.js` 3.T.SS.1.a. Form A is already recorded at rev 1, so a rewrite needs a new `testRev`. | Decide with the lead; if rewritten, bump `testRev`. |
+| 6 | NOTE | S06 hint 3 | "work in a stream with a pan": the passage says a metal pan and no stream. | Say "work with a pan". |
+| 7 | NOTE | S13 option 2 | "The word camouflage comes from a language spoken in another country" is true (it is French). Harmless as a distractor, but it is not wrong. | None. |
+| 8 | NOTE | C06 hint 2 | "What do they say about money?" points at the clue sentence; acceptable as where-to-look. | None. |
+| 9 | NOTE | Cross-lesson words | patient, eager, shallow, tide, satellite, stethoscope, goods, barter, rare appear in other lessons only as passage words or options, never as the tested word. No duplicate. | None. |
+
+#### 3.L.V.1.b. Verdict: ACCEPT
+
+| # | Level | Item | Finding | Fix |
+|---|---|---|---|---|
+| 1 | SHOULD | S15 vs C15 | S15's key line "Can everyone in the back hear me?" repeats C15's key "Can everyone in the back see my car?" almost word for word. After C15, the twin's first key is known. Jaccard 0.20 hides it. | Use a different talk-only line in S15, for example "Raise your hand if you have seen a bean sprout." |
+| 2 | SHOULD | C04 hint 3 | "...or about plants grown for food" echoes the key "Crops includes every plant grown for food". | "Decide whether the sentence is about one kind of plant or about many kinds." |
+| 3 | SHOULD | C15 key position | Keys are the third and the fifth (last) of five targets. A child who knows talks end with "thank you" gets one point without thinking about the report. | Optional: add a closing talk line before a fact sentence, or move the thank-you earlier. |
+| 4 | NOTE | C05 | Reads oddly if swapped ("explain the shape and color"), which is what protects the key. Teach defines both words. | None. |
+| 5 | NOTE | C09, S09 | Unused columns ("thank-you card", "poem") make the match free of elimination. | None. |
+| 6 | NOTE | Learn It and Watch Me | Unchanged: Watch Me covers only word replacement; register (C08, C09), rewrite (C10), correct use (C14) and cutting talk lines (C15) have no Watch Me. Teach point 5 and the second example now carry the register idea. | Optional Watch Me for register. |
+| 7 | NOTE | Longest key | Figures at chance now (29%). Choose-two C10 and S14 keys are the two longest, by 7 and 5 letters. | Pad C10, S14 distractors. |
+
+#### 3.L.V.2.a. Verdict: CHANGES REQUIRED (two MUSTs)
+
+| # | Level | Item | Finding | Fix |
+|---|---|---|---|---|
+| 1 | **MUST** | P1 hint 3 | "Full of hope would be a different word. Check which choice says the opposite." One distractor is removed, and the hint then says to pick the choice that is the opposite. Of "without hope", "hoping again", "hoping before", only the key is an opposite. Hint 3 leaves only the key. P1 is also pre-answered by Teach example 1 ("So hopeless means without hope"). | Hint 3: "Check each choice against the meaning the question gives for -less." Change the Teach example to another word (carefree or careless is taken by T3; use "endless"). |
+| 2 | **MUST** | T4, TB4 `testRev` | The keys of T4 and TB4 changed (match to one-answer mc) under the same ids with `testRev` at its default of 1; `check-content` warns and `--record-versions` will refuse. Plan 2.4: a material change needs new ids and a bumped `testRev`. A saved form A or form B result from the shipped version would be read as the new check. | Set `testRev: { A: "2", B: "2" }` in 3.L.V.2.a, then the lead runs `--record-versions`. (Or give T4 and TB4 new ids.) |
+| 3 | SHOULD | S09 | Angry is a distractor, but it is *anger + -y* (etymonline). A child who says "angry is anger plus y" is not wrong. The WHY says no real word is left. | Replace angry with a word with no real base, for example **pony** or **penny**. Keep puppy and candy. |
+| 4 | SHOULD | C09, S09 longest key | The two keys are still the two longest words (C09 tearful and sleepless 7 and 9 against 6, 4, 4; S09 7 and 8 against 5, 5, 5). The suffix words are naturally longer. Same for C15 (9 and 10 against 5, 5, 6), P5, S07. In the 2.a choose-two sets, length alone gives both points. | Use longer decoys (for example **umbrella** or **yesterday** for non-suffix words; **grapefruit** or **grasshopper** for look-alikes that do not hold graph). |
+| 5 | SHOULD | C14 and S14 hint 3 | "For Part A, only one choice uses both roots" / "has both saying and writing in it" identifies the key by a property. S13 hint 3 ("Only one choice matches the root") does the same. | "Check each choice against both root meanings." |
+| 6 | SHOULD | S14 hint 2 | "Which action has words being spoken for others to write?" restates the key (`check-content` warns "write"). | "Think about a classroom. Which action matches what dict means?" |
+| 7 | SHOULD | TB1, TB3, TB4 vs other sets | TB1 (unbreakable, not able to be broken) and TB3 (preheat) repeat `L-VOC-02` keys; TB2 (misread) is a row there. TB4 key "gently" is also a row in 2.b C13 and a tested adverb in `L-GC2.js` 3.L.GC.2.d. Form B can be answered after the quick set. Unchanged from the first review. | Use other words in TB1, TB3, TB4. |
+| 8 | SHOULD | C12 and S12 | Unchanged from the first review: C12's second blank is guessable (sound against light or heat), S12's "thermos keeps a drink from losing heat" is true only for hot drinks. | Stronger distractors; "keeps a drink hot or cold". |
+| 9 | NOTE | S03 Part B | The distractor "The puzzle had one thousand pieces" is not in Mia's note. Unchanged. | Quote the note. |
+| 10 | NOTE | P7 and Teach vs `3.L.V.2.c` | P7 (transport) is the key of a form item in the existing 2.c (T8, port = carry). Teach's examples "port = carry, as in portable" and "rupt = break, as in interrupt" are the keys of 2.c P7. These are cross-lesson pre-answers in existing work. | Re-run the duplicate scan when the new 2.c lands. |
+
+#### 3.L.V.2.b. Verdict: CHANGES REQUIRED (two MUSTs)
+
+| # | Level | Item | Finding | Fix |
+|---|---|---|---|---|
+| 1 | **MUST** | C11 | "Which TWO words end in -er, but nothing is left when you cover the ending?" Finger and river are the keys. **Joker** also leaves a non-word when you cover -er ("jok"); only a child who knows joke plus r gets to "joke". The WHY and HOW say "Joke is left", which is false for the cover test the item sets. Three words qualify under the stem's own rule, and a choose-two item allows two. Same class of fault as the first review's number and numb. | Replace joker with a word whose base keeps its letters, for example **hunter** (hunt), **farmer** or **teacher**. Fix WHY and HOW. (P1 has the same slip in "Cover -er in juggler. Juggle is left"; that is a NOTE, and "the base word is juggle" would be accurate.) |
+| 2 | **MUST** | P5 and S10 hint 3 | "Three of the words name someone who does an action. Look for the one that compares." This removes three of four options and names the survivor's job. Live choices after hint 3: 1. Unchanged from the first draft and missed in the first review. | "Cover -er in each word. Ask whether the word left is an action or a describing word." |
+| 3 | **MUST** | S01 hint 3 | "Names, counts and colors are jobs for other kinds of words." That removes A (counts), B (gives a title) and C (colors). Only D, the key, is left. | "Decide whether smoothly tells about the pilot, the plane, or the way the plane landed." (does not remove options) |
+| 4 | SHOULD | C08 | The paragraph numbers alone isolate both keys (payment is the only choice in paragraph 4, sadness the only one in paragraph 1). A child can get both blanks without looking at the word parts. Hint 3 points at that. | Put all three choices in the same paragraph for each blank, or drop the paragraph cue from the stem. |
+| 5 | SHOULD | C03 | "Choose the sentence in paragraph 3" but two of the four targets are in paragraph 2. Unchanged from the first review. | "in paragraphs 2 and 3". |
+| 6 | SHOULD | C04 | "from paragraphs 2 and 4": all three distractors sit elsewhere, so location eliminates them. Unchanged. | Say "from the passage" and use one distractor from paragraph 2 or 4. |
+| 7 | SHOULD | Teach example pre-answers | Teach: "Visitor (visit + or) names a person who visits" is the key of T1; "Excitement ... names a feeling" is a P4 row. Unchanged. Form A is recorded at rev 1. | Use other words in the Teach example. |
+| 8 | SHOULD | C09 Part B, S09, S15 wording | Unchanged: "quickly" is not in the Lost Dog passage; S09 Part A "Pick the result" is obscure; S15 uses "manner". | Use passage words; use "how" for "manner". |
+| 9 | SHOULD | P3 | firefighter leaves "firefight" when the ending is covered. Unchanged. | Use "driver" or "teacher". |
+| 10 | NOTE | T5 hiker, P1 juggler | Both are base word plus -r after a dropped e; the Teach and the HOW say "cover -er". Not a defect for the "person who" question. | None. |
+| 11 | NOTE | Duplicates over `js/data` | river, visitor, actor, tiger, mirror, ladder, finger, illness and winter appear elsewhere only as passage or option words (L-GC2, T-C, T-CF, T-T1, T-T2, L-VOC-01); never as a tested word. painter is a key in the existing 2.c test (a "repaint / painter / painless" item) and a distractor in S14. kindness is a distractor in `L-VOC-02` item 5. gently: see 2.a SHOULD 7. | None except the TB4 word. |
+| 12 | NOTE | DOK | C09 and C15 ebsr marked DOK 3 are recognition. Unchanged. | Consider DOK 2. |
+
+### 8. Cross-lesson notes
+
+- **What changed for the better.** Every fact claim now checks out. The hint ladders on the first review's named items now leave at least two live choices. Passage numbering and FK are clean. All 60 core items run through real controls.
+- **What the first review missed.** A full read of every hint 3 turned up four more hints that leave one option (2.a P1; 2.b P5, S10, S01). Authors should count hint 3 on every item, not only on items that were changed.
+- **Open author choices that I do not need to block on.** Learn It coverage (1.a), Teach pre-answers (2.a P1 is a MUST because of the hint; 2.b visitor and excitement stay SHOULD), `L-VOC-02` overlap for form B, and the form A water-cycle passage. The form A and form B items are recorded at rev 1; changing any of them needs a `testRev` bump and a `--record-versions` run by the lead.
+- **Re-review.** After the fixes, re-check: 2.a P1 (hint 3, Teach), `testRev`, S09; 2.b C11, S11 (new word), P5, S10, S01. 1.a and 1.b need no further review if the SHOULDs are skipped.

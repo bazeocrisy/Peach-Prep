@@ -6812,7 +6812,79 @@ PP.addLesson({
     rows: 8
   },
   parent: "Pick a base word at breakfast, like kind, play or use, and take turns building new words from it (kindness, unkind, kindly). Each person has to use their new word in a sentence. Try it with a root too: how many words can you build with port (carry) or phon (sound)? If a word only looks like it has port, like airport, talk about why carry does not fit.",
-  passages: [],
+  passages: [
+    /* B5-b5b:passages:start */
+    {
+      id: "p1",
+      title: "Cleaning the Shed",
+      genre: "Literary text",
+      paragraphs: [
+        [
+          "On Saturday, Dad and I cleaned our shed.",
+          "Rakes leaned on the wall, and tall stacks of boxes leaned too."
+        ],
+        [
+          "First, we moved all the boxes outside.",
+          "Then we restacked them by the door, with the heavy ones on the bottom."
+        ],
+        [
+          "Dad counted the paint cans, but he miscounted, so he began again.",
+          "We worked busily until the sun was high."
+        ],
+        [
+          "At last the floor was clear.",
+          "Dad said the shed looked ready for a new season."
+        ]
+      ]
+    },
+    {
+      id: "p2",
+      title: "Leaf Watch",
+      genre: "Informational text",
+      paragraphs: [
+        [
+          "Nolan studied the leaves on the big oak tree near his school.",
+          "Each week he picked a few and put them in small bags."
+        ],
+        [
+          "He wrote a name on every bag.",
+          "One day he saw that one bag was mislabeled.",
+          "A green leaf had the word red on its bag."
+        ],
+        [
+          "In September, most leaves were still green.",
+          "A few were discolored.",
+          "They had dull brown spots where the green should have been.",
+          "Nolan did not keep those leaves."
+        ],
+        [
+          "In the end, he laid the good leaves flat and wrote a note for each one."
+        ]
+      ]
+    },
+    {
+      id: "p3",
+      title: "Our Cardboard Periscope",
+      genre: "Informational text",
+      paragraphs: [
+        [
+          "Our science club built a periscope out of a milk carton.",
+          "Ms. Okafor helped us cut the carton with scissors."
+        ],
+        [
+          "First, we cut a hole near the top of one side and a hole near the bottom of the other side.",
+          "Next, we taped a small mirror behind each hole.",
+          "The mirrors faced each other and were tilted a little."
+        ],
+        [
+          "Zadie stood by a wall and looked in the bottom hole.",
+          "She saw the hallway around the corner.",
+          "The picture was dim, so we wiped the mirrors."
+        ]
+      ]
+    }
+    /* B5-b5b:passages:end */
+  ],
   practice: [
     { id: "SK-V2c-P2", type: "mc", points: 1, dok: 1, passages: [],
       prompt: "Add a prefix to the base word pay. Which new word means \"to pay before\"?",
@@ -6876,6 +6948,1399 @@ PP.addLesson({
       clue: "For the radio, which root means carry? For the thunder, which root means break? Find the word with that root.",
       why: "The first answer is portable. Port means carry and -able means can be, and a light radio with a handle can be carried. Breakable and washable have -able but no root that means carry. The second answer is interrupted. Rupt means break, and the thunder broke into the picnic so it had to stop. Inspected has spect (look), and reported has port (carry)." }
   ],
+  /* B5-b5b:core:start */
+  /* ---------- Expansion 2026-10-22, batch B5 (author b5b) ----------
+     core: fifteen items in three sets of five. { ref } reuses a practice item; the other practice items stay in Practice Together.
+     Author log: docs/expansion-2026-10-22/batches/B5-b5b-author-log.md. NEEDS INDEPENDENT REVIEW. */
+  core: {
+    rev: "1",
+    sets: [
+      {
+        title: "Set 1",
+        items: [
+          {
+            id: "SK-V2c-C01",
+            type: "mc",
+            points: 1,
+            dok: 2,
+            std: [
+              "3.L.V.2.c"
+            ],
+            passages: [
+              "p1"
+            ],
+            prompt: "What does restacked mean in paragraph 2?",
+            choices: [
+              {
+                text: "stacked a second time",
+                correct: true
+              },
+              {
+                text: "stacked the wrong way"
+              },
+              {
+                text: "stacked before"
+              },
+              {
+                text: "not able to be stacked"
+              }
+            ],
+            clue: "Split the word into a prefix and a base word. Think about what that prefix usually means.",
+            hints: [
+              "Split the word into a prefix and a base word. Think about what that prefix usually means.",
+              "Read the sentence the word is in and the sentence just before it. Look for what happened to the boxes.",
+              "The prefix re- does not mean before or not. Check the choices that use one of those meanings."
+            ],
+            how: [
+              "Split the word: re + stacked. The base word is stack.",
+              "Re- means again, so restacked means stacked again.",
+              "Check paragraph 2: the boxes were moved outside and then stacked a second time by the door."
+            ],
+            misconception: "A common mix-up is picking a meaning from the parts without checking the sentence. The parts and the sentence must agree.",
+            why: "The answer is \"stacked a second time.\" Re- means again, and the family moved the boxes and then stacked them again by the door. Nothing in the sentence says the boxes were stacked the wrong way, and the boxes can be stacked."
+          },
+          {
+            id: "SK-V2c-C02",
+            type: "dropdown",
+            points: 2,
+            dok: 2,
+            std: [
+              "3.L.V.2.c"
+            ],
+            passages: [
+              "p1"
+            ],
+            prompt: "Choose the word that fits each blank.",
+            text: "Dad counted the paint cans the wrong way, so he {0} them. Then he counted them a second time, so he {1} them.",
+            slots: [
+              {
+                options: [
+                  "miscounted",
+                  "recounted",
+                  "uncounted"
+                ],
+                answer: 0
+              },
+              {
+                options: [
+                  "recounted",
+                  "miscounted",
+                  "discounted"
+                ],
+                answer: 0
+              }
+            ],
+            clue: "Each blank tells what Dad did. Find the prefix that matches that meaning.",
+            hints: [
+              "Each blank tells what Dad did. Find the prefix that matches that meaning.",
+              "Say what Dad did in each blank in your own words. Then look at the front part of each choice.",
+              "Start with the first blank. Which front part means wrongly, and which front parts mean something else?"
+            ],
+            how: [
+              "Blank one: Dad counted the wrong way. Mis- means wrongly, so he miscounted.",
+              "Blank two: Dad counted a second time. Re- means again, so he recounted.",
+              "Uncounted means not counted, and discounted means made cheaper, so neither fits."
+            ],
+            misconception: "A common mix-up is using the same prefix in both blanks. Each blank has its own meaning.",
+            why: "The answers are \"miscounted\" and \"recounted.\" Mis- means wrongly, so counting the wrong way is miscounting. Re- means again, so counting a second time is recounting. Uncounted and discounted do not fit either sentence."
+          },
+          {
+            id: "SK-V2c-C03",
+            type: "mc",
+            points: 1,
+            dok: 2,
+            std: [
+              "3.L.V.2.c"
+            ],
+            passages: [
+              "p1"
+            ],
+            prompt: "Ben wrote busy + ly = busily. Which rule explains why the y became an i?",
+            choices: [
+              {
+                text: "A word ending in a consonant and y changes the y to i before an ending.",
+                correct: true
+              },
+              {
+                text: "A word ending in a vowel and y changes the y to i before an ending."
+              },
+              {
+                text: "Every ending that begins with the letter l needs an i put in front of it."
+              },
+              {
+                text: "A word that has two syllables always drops its y before an ending."
+              }
+            ],
+            clue: "Look at the last two letters of busy. Ask what kind of letter comes before the y.",
+            hints: [
+              "Look at the last two letters of busy. Ask what kind of letter comes before the y.",
+              "Say the rule you would use for a word like happy. Then test it on busy.",
+              "Two of the choices say the y changes to i. Decide what kind of letter comes before the y in busy."
+            ],
+            how: [
+              "Busy ends in s and then y. The letter before the y is s, a consonant.",
+              "When a word ends in a consonant and y, change the y to i before adding an ending.",
+              "So busy becomes busi, and busi + ly makes busily."
+            ],
+            misconception: "A common mix-up is thinking the rule is about the ending only. The letter before the y matters.",
+            why: "The answer is \"A word ending in a consonant and y changes the y to i before an ending.\" The s in busy is a consonant, so the y changes to i. The rule is not about the letter l or about syllables."
+          },
+          {
+            id: "SK-V2c-C04",
+            type: "ms",
+            points: 2,
+            dok: 2,
+            std: [
+              "3.L.V.2.c"
+            ],
+            passages: [],
+            prompt: "Each base word ends in a consonant and y. Choose the TWO words where the y was changed to i correctly.",
+            pick: 2,
+            choices: [
+              {
+                text: "sleepiness",
+                correct: true
+              },
+              {
+                text: "heavily",
+                correct: true
+              },
+              {
+                text: "tidyness"
+              },
+              {
+                text: "luckyly"
+              },
+              {
+                text: "bumpyness"
+              }
+            ],
+            clue: "Find the base word in each choice. Look at the end of it before the new ending.",
+            hints: [
+              "Find the base word in each choice. Look at the end of it before the new ending.",
+              "Say each base word, then spell it with its ending. Does the y stay or change?",
+              "Check the spelling right where the base word and the ending meet. Look at the letter just before the ending."
+            ],
+            how: [
+              "Sleepy ends in p and y, so change the y to i: sleepiness.",
+              "Heavy ends in v and y, so change the y to i: heavily.",
+              "Tidyness, luckyly and bumpyness keep the y, so they do not follow the rule."
+            ],
+            misconception: "A common mix-up is leaving the y because the word looks right. Change the y to i when a consonant comes before it.",
+            why: "The answers are \"sleepiness\" and \"heavily.\" Sleepy and heavy each end in a consonant and y, so the y changes to i before the ending. Tidyness, luckyly and bumpyness keep the y, and the correct spellings are tidiness, luckily and bumpiness."
+          },
+          {
+            ref: "SK-V2c-P3"
+          }
+        ]
+      },
+      {
+        title: "Set 2",
+        items: [
+          {
+            id: "SK-V2c-C05",
+            type: "hottext",
+            points: 1,
+            dok: 2,
+            std: [
+              "3.L.V.2.c"
+            ],
+            passages: [
+              "p2"
+            ],
+            prompt: "Choose the sentence that has a word meaning \"labeled wrongly.\"",
+            targets: [
+              "p2:1:2",
+              "p2:2:1",
+              "p2:2:2",
+              "p2:2:3",
+              "p2:3:2"
+            ],
+            answer: [
+              "p2:2:2"
+            ],
+            pick: 1,
+            clue: "Look for a word that starts with a part meaning wrongly. Remember which prefix has that meaning.",
+            hints: [
+              "Look for a word that starts with a part meaning wrongly. Remember which prefix has that meaning.",
+              "Read the sentences one at a time. In each one, look for a word that has a prefix.",
+              "A sentence can tell about a label without having a word that means labeled wrongly. Check that the word itself is in the sentence."
+            ],
+            how: [
+              "The prefix mis- means wrongly, and a label is a name put on something.",
+              "\"One day he saw that one bag was mislabeled.\" has mislabeled: mis + labeled, labeled wrongly.",
+              "The sentence about the green leaf tells how the label was wrong, but it has no word with a prefix that means wrongly."
+            ],
+            misconception: "A common mix-up is choosing the sentence that shows the mistake instead of the sentence that has the word. Find the word first.",
+            why: "The answer is \"One day he saw that one bag was mislabeled.\" Mis- means wrongly, so mislabeled means labeled wrongly. The next sentence shows the mistake, but it has no word that means labeled wrongly."
+          },
+          {
+            id: "SK-V2c-C06",
+            type: "ebsr",
+            points: 2,
+            dok: 3,
+            std: [
+              "3.L.V.2.c"
+            ],
+            passages: [
+              "p2"
+            ],
+            prompt: "This question has two parts. Answer Part A, then Part B.",
+            partA: {
+              prompt: "What does discolored mean in paragraph 3?",
+              choices: [
+                {
+                  text: "not the right color",
+                  correct: true
+                },
+                {
+                  text: "colored one more time"
+                },
+                {
+                  text: "colored at an earlier time"
+                },
+                {
+                  text: "made full of color"
+                }
+              ]
+            },
+            partB: {
+              prompt: "Which detail from the passage best supports Part A?",
+              choices: [
+                {
+                  text: "They had dull brown spots where the green should have been.",
+                  correct: true
+                },
+                {
+                  text: "Nolan studied the leaves on the big oak tree near his school."
+                },
+                {
+                  text: "Each week he picked a few and put them in small bags."
+                },
+                {
+                  text: "A green leaf had the word red on its bag."
+                }
+              ]
+            },
+            clue: "Split the word into a prefix and a base word, and think about what the prefix means. For Part B, look for the line that shows the meaning, not only a line about leaves.",
+            hints: [
+              "Split the word into a prefix and a base word, and think about what the prefix means. For Part B, look for the line that shows the meaning, not only a line about leaves.",
+              "Think about the whole passage, not only the part with the word. Which details are about the color of the leaves?",
+              "For Part A, dis- does not mean again or before. For Part B, a true detail about the leaves may not show the meaning."
+            ],
+            how: [
+              "Part A: split the word: dis + colored. Dis- means not, so discolored means not the right color.",
+              "Part B: look for the detail that shows the color was not right.",
+              "The brown spots were where the green should have been, so the color was wrong.",
+              "The other details are true, but none of them is about a wrong color on a leaf."
+            ],
+            misconception: "A common mix-up is picking a true detail about the leaves. The detail must show the meaning of the word.",
+            why: "Part A: not the right color. Dis- means not, so discolored means not the right color. Part B: \"They had dull brown spots where the green should have been.\" Brown where green should be is a wrong color. The other details are true, but they do not show a wrong color."
+          },
+          {
+            id: "SK-V2c-C07",
+            type: "mc",
+            points: 1,
+            dok: 2,
+            std: [
+              "3.L.V.2.c"
+            ],
+            passages: [],
+            prompt: "Which word means \"full of grace\" and best completes the sentence?",
+            stem: [
+              "The crowd clapped for the gymnast's smooth, ______ routine."
+            ],
+            choices: [
+              {
+                text: "graceful",
+                correct: true
+              },
+              {
+                text: "graceless"
+              },
+              {
+                text: "gracefully"
+              },
+              {
+                text: "graces"
+              }
+            ],
+            clue: "Think about which part you add to the end of grace to mean full of.",
+            hints: [
+              "Think about which part you add to the end of grace to mean full of.",
+              "Read the sentence and the blank. Ask whether the blank needs a word that describes the routine or a word that tells how.",
+              "The blank comes right before the word routine. Decide what job the missing word should do."
+            ],
+            how: [
+              "Grace + ful means full of grace.",
+              "The blank comes before routine, so it needs a word that describes the routine.",
+              "Graceless means without grace, gracefully tells how, and graces is the plural of a noun."
+            ],
+            misconception: "A common mix-up is picking the word with the right base but the wrong job. Check what the blank needs.",
+            why: "The answer is \"graceful.\" Grace + ful means full of grace, and the word describes the routine. Graceless means without grace, gracefully tells how something is done, and graces names more than one grace."
+          },
+          {
+            id: "SK-V2c-C08",
+            type: "ms",
+            points: 2,
+            dok: 3,
+            std: [
+              "3.L.V.2.c"
+            ],
+            passages: [],
+            prompt: "Choose the TWO sentences where the word with a prefix is used correctly.",
+            pick: 2,
+            choices: [
+              {
+                text: "We took a pretest on Monday so our teacher could see what we knew before the unit.",
+                correct: true
+              },
+              {
+                text: "Dad restacked the logs a second time after the wind knocked them over.",
+                correct: true
+              },
+              {
+                text: "She misread the sign, so she read every word just the way it was written."
+              },
+              {
+                text: "Mom rewashed the shirt for the very first time, and it was never washed before."
+              },
+              {
+                text: "My sister's mislabeled box had every one of its labels on the right things."
+              }
+            ],
+            clue: "Find the word with a prefix in each sentence and say what the prefix means.",
+            hints: [
+              "Find the word with a prefix in each sentence and say what the prefix means.",
+              "Put the meaning of that word into the sentence. Does the whole sentence still make sense?",
+              "Check whether the rest of the sentence agrees with the prefix or says something that does not fit it."
+            ],
+            how: [
+              "Pre- means before, so a pretest comes before the unit. \"We took a pretest on Monday so our teacher could see what we knew before the unit.\" fits.",
+              "Re- means again, so restacked logs were stacked a second time. \"Dad restacked the logs a second time after the wind knocked them over.\" fits.",
+              "Misread means read wrongly, rewashed means washed again, and mislabeled means labeled wrongly, but each of those sentences says the opposite."
+            ],
+            misconception: "A common mix-up is noticing the prefix and stopping. Check that the whole sentence agrees with what the prefix means.",
+            why: "The answers are \"We took a pretest on Monday so our teacher could see what we knew before the unit.\" and \"Dad restacked the logs a second time after the wind knocked them over.\" Pre- means before and re- means again, and both sentences agree with those meanings. In the other three, the prefix says one thing and the sentence says the opposite."
+          },
+          {
+            ref: "SK-V2c-P6"
+          }
+        ]
+      },
+      {
+        title: "Set 3",
+        items: [
+          {
+            id: "SK-V2c-C09",
+            type: "dropdown",
+            points: 2,
+            dok: 2,
+            std: [
+              "3.L.V.2.c"
+            ],
+            passages: [],
+            prompt: "Use the number parts to finish each sentence.",
+            stem: [
+              "tri- means three. bi- means two."
+            ],
+            text: "A shape with three sides is a {0}. To {1} an angle means to cut it into two equal parts.",
+            slots: [
+              {
+                options: [
+                  "triangle",
+                  "tripod",
+                  "tricycle"
+                ],
+                answer: 0
+              },
+              {
+                options: [
+                  "bisect",
+                  "trisect",
+                  "rebuild"
+                ],
+                answer: 0
+              }
+            ],
+            clue: "Each blank needs a word with the right number part. Use the meanings in the box.",
+            hints: [
+              "Each blank needs a word with the right number part. Use the meanings in the box.",
+              "Read what each blank says is being made or done. Count the number it names.",
+              "Look at the second blank. Decide whether the blank asks for two parts or for three parts."
+            ],
+            how: [
+              "Blank one: a shape with three sides. Tri- means three, so the word is triangle.",
+              "Blank two: cut into two equal parts. Bi- means two, so the word is bisect.",
+              "A tripod and a tricycle have three legs or wheels, not a shape with three sides, and trisect means cut into three parts."
+            ],
+            misconception: "A common mix-up is choosing a word with the right prefix that names the wrong thing. Match the whole meaning.",
+            why: "The answers are \"triangle\" and \"bisect.\" Tri- means three, and a triangle has three sides. Bi- means two, and to bisect an angle is to cut it into two equal parts. A tripod and a tricycle are not shapes, trisect means three parts, and rebuild has no number part."
+          },
+          {
+            id: "SK-V2c-C10",
+            type: "mc",
+            points: 1,
+            dok: 2,
+            std: [
+              "3.L.V.2.c"
+            ],
+            passages: [],
+            prompt: "Hana's brother wrote a note that was unreadable. What does unreadable mean?",
+            stem: [
+              "Parts: un- (not), read, -able (can be)."
+            ],
+            choices: [
+              {
+                text: "not able to be read",
+                correct: true
+              },
+              {
+                text: "can be read easily"
+              },
+              {
+                text: "has not been read yet"
+              },
+              {
+                text: "can be read again"
+              }
+            ],
+            clue: "Break the word into three parts and say what each part means.",
+            hints: [
+              "Break the word into three parts and say what each part means.",
+              "Put the three meanings together in order, from the front part to the end part.",
+              "Un- changes the meaning to the opposite, and -able tells what can happen. Check which choices keep both parts."
+            ],
+            how: [
+              "Split the word: un + read + able.",
+              "Un- means not, and -able means can be, so unreadable means not able to be read.",
+              "Has not been read yet leaves out -able, and the other two leave out un-."
+            ],
+            misconception: "A common mix-up is using only the first part or the last part. Use every part you can find.",
+            why: "The answer is \"not able to be read.\" Un- means not, read is the base word, and -able means can be. So unreadable means not able to be read. The other choices leave out the meaning of one of the parts."
+          },
+          {
+            id: "SK-V2c-C11",
+            type: "mc",
+            points: 1,
+            dok: 2,
+            std: [
+              "3.L.V.2.c"
+            ],
+            passages: [],
+            prompt: "Mr. Lopez teaches geology. What does geology mean?",
+            stem: [
+              "geo means earth. -logy means the study of."
+            ],
+            choices: [
+              {
+                text: "the study of the earth",
+                correct: true
+              },
+              {
+                text: "the study of animals"
+              },
+              {
+                text: "a tool for measuring the earth"
+              },
+              {
+                text: "the study of the stars"
+              }
+            ],
+            clue: "Find the two parts in the word. The box tells you what each one means.",
+            hints: [
+              "Find the two parts in the word. The box tells you what each one means.",
+              "Say the meaning of the first part, then the meaning of the second part. Put them in order.",
+              "One part tells what is studied, and the other tells what kind of word it is. Check that each choice uses both parts."
+            ],
+            how: [
+              "Split the word: geo + logy. Geo means earth, and -logy means the study of.",
+              "Put them together: the study of the earth.",
+              "Animals and stars are not the earth, and nothing in the word means a tool."
+            ],
+            misconception: "A common mix-up is guessing from the subject of the class. Use the meanings of the parts.",
+            why: "The answer is \"the study of the earth.\" Geo means earth and -logy means the study of. Studying animals and stars would use different word parts, and the word does not name a tool."
+          },
+          {
+            id: "SK-V2c-C12",
+            type: "ebsr",
+            points: 2,
+            dok: 3,
+            std: [
+              "3.L.V.2.c"
+            ],
+            passages: [
+              "p3"
+            ],
+            prompt: "This question has two parts. Answer Part A, then Part B.",
+            partA: {
+              prompt: "The root peri means \"around,\" and scope means \"to look.\" What does periscope mean as the club uses it?",
+              choices: [
+                {
+                  text: "a tool for looking around something",
+                  correct: true
+                },
+                {
+                  text: "a tool for looking at tiny things"
+                },
+                {
+                  text: "a tool for looking far away"
+                },
+                {
+                  text: "a tool for looking back in time"
+                }
+              ]
+            },
+            partB: {
+              prompt: "Which detail best shows what the club's tool lets a person do?",
+              choices: [
+                {
+                  text: "She saw the hallway around the corner.",
+                  correct: true
+                },
+                {
+                  text: "The mirrors faced each other and were tilted a little."
+                },
+                {
+                  text: "Ms. Okafor helped us cut the carton with scissors."
+                },
+                {
+                  text: "The picture was dim, so we wiped the mirrors."
+                }
+              ]
+            },
+            clue: "Put the meaning of peri together with the meaning of scope. For Part B, look for the detail that shows the tool being used.",
+            hints: [
+              "Put the meaning of peri together with the meaning of scope. For Part B, look for the detail that shows the tool being used.",
+              "Think about the whole passage, not only the part about the carton. Which details tell what a person sees?",
+              "For Part A, one choice has a tool for looking, but it looks in a different way. For Part B, a true detail about the mirrors may not show what Zadie could see."
+            ],
+            how: [
+              "Part A: peri means around and scope means to look, so a periscope is a tool for looking around something.",
+              "Part B: look for the detail that shows someone looking around something.",
+              "Zadie stood by a wall and saw the hallway around the corner.",
+              "The other details tell how it was built or fixed, not what a person could see."
+            ],
+            misconception: "A common mix-up is picking a true detail about building the tool. The detail must show what the tool lets you do.",
+            why: "Part A: a tool for looking around something. Peri means around and scope means to look. Part B: \"She saw the hallway around the corner.\" It shows the tool letting Zadie look around a corner. The other details tell how the tool was built or cleaned."
+          },
+          {
+            ref: "SK-V2c-P7"
+          }
+        ]
+      }
+    ]
+  },
+  similar: [
+    {
+      id: "SK-V2c-S01",
+      type: "mc",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.L.V.2.c"
+      ],
+      passages: [],
+      like: [
+        "SK-V2c-C01"
+      ],
+      prompt: "Read the sentence. Which meaning fits reprint?",
+      stem: [
+        "The first pages were smudged, so we had to reprint them before the class could use them."
+      ],
+      choices: [
+        {
+          text: "print once more",
+          correct: true
+        },
+        {
+          text: "print earlier"
+        },
+        {
+          text: "print with mistakes"
+        },
+        {
+          text: "impossible to print"
+        }
+      ],
+      clue: "Cut the word into a prefix and a base word. Say what the prefix means.",
+      hints: [
+        "Cut the word into a prefix and a base word. Say what the prefix means.",
+        "Read the sentence the word is in. Look at what was wrong with the pages.",
+        "The prefix re- does not mean before or wrongly. Check the choices that use one of those meanings."
+      ],
+      how: [
+        "Split the word: re + print. The base word is print.",
+        "Re- means again, so reprint means print once more.",
+        "The pages were smudged, so printing them a second time fixes the problem."
+      ],
+      misconception: "A common mix-up is picking a meaning that sounds close. The prefix and the sentence must agree.",
+      why: "The answer is \"print once more.\" Re- means again, and smudged pages need to be printed a second time. Nothing in the sentence says the pages were printed before or wrongly."
+    },
+    {
+      id: "SK-V2c-S02",
+      type: "dropdown",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.L.V.2.c"
+      ],
+      passages: [],
+      like: [
+        "SK-V2c-C02"
+      ],
+      prompt: "Fill both blanks with the best words.",
+      text: "Wendell cut a board too short because of a mistake in his measuring, so he {0} it. Next he measured it once more, so he {1} it.",
+      slots: [
+        {
+          options: [
+            "mismeasured",
+            "remeasured",
+            "unmeasured"
+          ],
+          answer: 0
+        },
+        {
+          options: [
+            "remeasured",
+            "mismeasured",
+            "measurement"
+          ],
+          answer: 0
+        }
+      ],
+      clue: "Each blank tells what Wendell did with the board. Find the prefix that matches that meaning.",
+      hints: [
+        "Each blank tells what Wendell did with the board. Find the prefix that matches that meaning.",
+        "Say what he did in each blank in your own words. Then look at the front part of each choice.",
+        "Start with the second blank. Which front part means again, and which front parts mean something else?"
+      ],
+      how: [
+        "Blank one: he measured the wrong way. Mis- means wrongly, so he mismeasured.",
+        "Blank two: he measured once more. Re- means again, so he remeasured.",
+        "Unmeasured means not measured, and measurement is a noun, so neither fits."
+      ],
+      misconception: "A common mix-up is using the same prefix in both blanks. Each blank has its own meaning.",
+      why: "The answers are \"mismeasured\" and \"remeasured.\" Mis- means wrongly and re- means again. Unmeasured means not measured, and measurement names the act, so neither fits."
+    },
+    {
+      id: "SK-V2c-S03",
+      type: "mc",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.L.V.2.c"
+      ],
+      passages: [],
+      like: [
+        "SK-V2c-C03"
+      ],
+      prompt: "Why does the y stay in play + ful = playful?",
+      choices: [
+        {
+          text: "A vowel sits just ahead of the y, so the y stays.",
+          correct: true
+        },
+        {
+          text: "A consonant sits just ahead of the y, so the y stays."
+        },
+        {
+          text: "The ending -ful is too long to change the base word."
+        },
+        {
+          text: "Short words never lose or change any letters at all."
+        }
+      ],
+      clue: "Look at the letters at the end of play. Ask which letter comes just before the y.",
+      hints: [
+        "Look at the letters at the end of play. Ask which letter comes just before the y.",
+        "Think about how play differs from a word like busy. Compare the letter before the y in each one.",
+        "Two choices talk about the letter before the y. Decide whether the letter before the y in play is a vowel or a consonant."
+      ],
+      how: [
+        "Play ends in a and then y. The letter before the y is a, a vowel.",
+        "When a vowel comes before the y, the y stays the same when you add an ending.",
+        "So play + ful = playful, with no change."
+      ],
+      misconception: "A common mix-up is thinking every y changes to i. Check what kind of letter comes before the y.",
+      why: "The answer is \"A vowel sits just ahead of the y, so the y stays.\" The a in play is a vowel. A consonant before the y is the case where the y changes to i. The length of the ending and the length of the word do not matter."
+    },
+    {
+      id: "SK-V2c-S04",
+      type: "ms",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.L.V.2.c"
+      ],
+      passages: [],
+      like: [
+        "SK-V2c-C04"
+      ],
+      prompt: "Choose the TWO words that were spelled correctly after the ending was added.",
+      pick: 2,
+      choices: [
+        {
+          text: "noisily",
+          correct: true
+        },
+        {
+          text: "tininess",
+          correct: true
+        },
+        {
+          text: "cozyness"
+        },
+        {
+          text: "crazyly"
+        },
+        {
+          text: "windyness"
+        }
+      ],
+      clue: "Find the base word in each choice. Look at how the base word ends.",
+      hints: [
+        "Find the base word in each choice. Look at how the base word ends.",
+        "Say each base word, then spell it with its ending. Does the y stay or change?",
+        "Check the spelling right where the base word and the ending meet. Look at the letter just before the ending."
+      ],
+      how: [
+        "Noisy ends in s and y, so change the y to i: noisily.",
+        "Tiny ends in n and y, so change the y to i: tininess.",
+        "Cozyness, crazyly and windyness keep the y, so they do not follow the rule."
+      ],
+      misconception: "A common mix-up is leaving the y because the word looks right. Change the y to i when a consonant comes before it.",
+      why: "The answers are \"noisily\" and \"tininess.\" Noisy and tiny each end in a consonant and y, so the y changes to i. The correct spellings of the others are coziness, crazily and windiness."
+    },
+    {
+      id: "SK-V2c-S05",
+      type: "match",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.L.V.2.c"
+      ],
+      passages: [],
+      like: [
+        "SK-V2c-P3"
+      ],
+      prompt: "Which meaning goes with each word?",
+      cols: [
+        "plant once more",
+        "not safe",
+        "lacking care",
+        "filled with joy"
+      ],
+      rows: [
+        {
+          text: "replant",
+          answer: 0
+        },
+        {
+          text: "unsafe",
+          answer: 1
+        },
+        {
+          text: "careless",
+          answer: 2
+        },
+        {
+          text: "joyful",
+          answer: 3
+        }
+      ],
+      clue: "Find the base word in each word first. Then look at the part that was added.",
+      hints: [
+        "Find the base word in each word first. Then look at the part that was added.",
+        "Say what the front or end part means: again, not, without or full of. Then look for it in the meanings.",
+        "Start with the row that has a part at the end. Decide whether that ending means without or full of."
+      ],
+      how: [
+        "Replant: re + plant. Re- means again, so plant once more.",
+        "Unsafe: un + safe. Un- means not, so not safe.",
+        "Careless: care + less. -less means without, so lacking care. Joyful: joy + ful. -ful means full of, so filled with joy."
+      ],
+      misconception: "A common mix-up is matching by the base word alone. Use the part that was added.",
+      why: "Re- means again, so replant is plant once more. Un- means not, so unsafe is not safe. -less means without, so careless is lacking care. -ful means full of, so joyful is filled with joy."
+    },
+    {
+      id: "SK-V2c-S06",
+      type: "hottext",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.L.V.2.c"
+      ],
+      passages: [],
+      like: [
+        "SK-V2c-C05"
+      ],
+      prompt: "Which sentence has a word that means \"packed wrongly\"?",
+      stem: [
+        "Notes from moving day:"
+      ],
+      options: [
+        "The movers mispacked the lamp, so it broke in the truck.",
+        "The movers wrapped each plate in soft paper.",
+        "Dad repacked the box after the tape came off.",
+        "Mom carried the plants to the front porch."
+      ],
+      answer: [
+        0
+      ],
+      pick: 1,
+      clue: "Look for a word that starts with a part meaning wrongly. Remember which prefix has that meaning.",
+      hints: [
+        "Look for a word that starts with a part meaning wrongly. Remember which prefix has that meaning.",
+        "Read the sentences one at a time. In each one, look for a word that has a prefix.",
+        "A sentence can have a word with a prefix and still not mean wrongly. Check what the prefix means."
+      ],
+      how: [
+        "The prefix mis- means wrongly.",
+        "Mispacked is mis + packed, packed wrongly.",
+        "Repacked has re-, which means again, and the other two sentences have no prefix that means wrongly."
+      ],
+      misconception: "A common mix-up is choosing a word with any prefix. The prefix has to mean wrongly.",
+      why: "The answer is the sentence with mispacked. Mis- means wrongly, so mispacked means packed wrongly. Repacked means packed again, and the other sentences have no word like that."
+    },
+    {
+      id: "SK-V2c-S07",
+      type: "ebsr",
+      points: 2,
+      dok: 3,
+      std: [
+        "3.L.V.2.c"
+      ],
+      passages: [],
+      like: [
+        "SK-V2c-C06"
+      ],
+      prompt: "This question has two parts. Answer Part A, then Part B.",
+      stem: [
+        "Zadie's note: \"Mom said not to touch the cake. My brother misbehaved. He took a large piece and ate it. The cake sat on the kitchen table. Afterward, he licked the frosting off every finger, dried them with a towel and hurried upstairs.\""
+      ],
+      partA: {
+        prompt: "Which meaning fits misbehaved in the note?",
+        choices: [
+          {
+            text: "acted in a bad way",
+            correct: true
+          },
+          {
+            text: "acted once more"
+          },
+          {
+            text: "acted ahead of schedule"
+          },
+          {
+            text: "acted in a kind way"
+          }
+        ]
+      },
+      partB: {
+        prompt: "Which line proves the brother misbehaved?",
+        choices: [
+          {
+            text: "He took a large piece and ate it.",
+            correct: true
+          },
+          {
+            text: "Mom said not to touch the cake."
+          },
+          {
+            text: "The cake sat on the kitchen table."
+          },
+          {
+            text: "My brother misbehaved."
+          }
+        ]
+      },
+      clue: "Split the word into a prefix and a base word, and think about what the prefix means. For Part B, look for the line that shows what the brother did.",
+      hints: [
+        "Split the word into a prefix and a base word, and think about what the prefix means. For Part B, look for the line that shows what the brother did.",
+        "Think about the whole note, not only the first sentences. Which detail tells what the brother did that he should not have done?",
+        "For Part A, mis- does not mean again or before. For Part B, a line about the rule may not show what the brother did."
+      ],
+      how: [
+        "Part A: split the word: mis + behaved. Mis- means wrongly, so misbehaved means behaved wrongly.",
+        "Part B: look for the detail that shows the wrong thing he did.",
+        "He took a piece of the cake after Mom said not to touch it.",
+        "The other details tell the rule, the place or repeat the word."
+      ],
+      misconception: "A common mix-up is picking the sentence that holds the word. The detail has to show the meaning.",
+      why: "Part A: acted the wrong way. Mis- means wrongly, so misbehaved means behaved wrongly. Part B: \"He took a large piece and ate it.\" That is what he did after being told not to touch the cake. The other lines do not show the wrong action."
+    },
+    {
+      id: "SK-V2c-S08",
+      type: "mc",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.L.V.2.c"
+      ],
+      passages: [],
+      like: [
+        "SK-V2c-C07"
+      ],
+      prompt: "Pick the word meaning \"with lots of flavor\" for the sentence.",
+      stem: [
+        "Grandma's soup was so ______ that everyone asked for more."
+      ],
+      choices: [
+        {
+          text: "flavorful",
+          correct: true
+        },
+        {
+          text: "flavorless"
+        },
+        {
+          text: "flavoring"
+        },
+        {
+          text: "flavored"
+        }
+      ],
+      clue: "Think about which part you add to the end of flavor to mean full of.",
+      hints: [
+        "Think about which part you add to the end of flavor to mean full of.",
+        "Read the sentence and the blank. Ask what the blank needs to say about the soup.",
+        "The blank comes after the word so. Decide whether it needs a word that describes the soup or a word that names a thing."
+      ],
+      how: [
+        "Flavor + ful means full of flavor.",
+        "The blank describes the soup, and people asked for more, so the soup had a lot of flavor.",
+        "Flavorless means without flavor, flavoring is a noun, and flavored does not fit after so."
+      ],
+      misconception: "A common mix-up is picking the word with the right base but the wrong meaning. Check what the ending means.",
+      why: "The answer is \"flavorful.\" Flavor + ful means full of flavor, which fits soup everyone wanted more of. Flavorless means the opposite, and flavoring names a thing you add to food."
+    },
+    {
+      id: "SK-V2c-S09",
+      type: "ms",
+      points: 2,
+      dok: 3,
+      std: [
+        "3.L.V.2.c"
+      ],
+      passages: [],
+      like: [
+        "SK-V2c-C08"
+      ],
+      prompt: "Which TWO sentences use the prefixed word the right way?",
+      pick: 2,
+      choices: [
+        {
+          text: "Grandma precut the carrots so dinner would be ready fast.",
+          correct: true
+        },
+        {
+          text: "The class retook the quiz when the first try went badly.",
+          correct: true
+        },
+        {
+          text: "Sam precut the cake once all the guests were done eating."
+        },
+        {
+          text: "Ana retook the picture of the new kitten, and it was her only try."
+        },
+        {
+          text: "Lee miscut the board, so it was the perfect length."
+        }
+      ],
+      clue: "Find the word with a prefix in each sentence and say what the prefix means.",
+      hints: [
+        "Find the word with a prefix in each sentence and say what the prefix means.",
+        "Put the meaning of that word into the sentence. Does the whole sentence still make sense?",
+        "Check whether the rest of the sentence agrees with the prefix or says something that does not fit it."
+      ],
+      how: [
+        "Pre- means before, so precut carrots were cut before cooking. \"Grandma precut the carrots so dinner would be ready fast.\" fits.",
+        "Re- means again, so retook means took a second time. \"The class retook the quiz when the first try went badly.\" fits.",
+        "Cutting a cake after it was eaten, taking a first photo again, and a wrongly cut board that is perfect all contradict their prefixes."
+      ],
+      misconception: "A common mix-up is noticing the prefix and stopping. Check that the whole sentence agrees with what the prefix means.",
+      why: "The answers are \"Grandma precut the carrots so dinner would be ready fast.\" and \"The class retook the quiz when the first try went badly.\" Pre- means before and re- means again, and both sentences agree. In the others, the prefix and the sentence disagree."
+    },
+    {
+      id: "SK-V2c-S10",
+      type: "mc",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.L.V.2.c"
+      ],
+      passages: [],
+      like: [
+        "SK-V2c-P6"
+      ],
+      prompt: "Pick the word that means \"to pull toward.\" Its parts are at- (toward) and tract (pull).",
+      choices: [
+        {
+          text: "attract",
+          correct: true
+        },
+        {
+          text: "report"
+        },
+        {
+          text: "predict"
+        },
+        {
+          text: "telephone"
+        }
+      ],
+      clue: "You need TWO parts: one that means toward and one that means pull. Check that both parts are in your word.",
+      hints: [
+        "You need TWO parts: one that means toward and one that means pull. Check that both parts are in your word.",
+        "Cover the front part of each choice and say what is left. Then look at the front part.",
+        "Some choices have a root that means something else, like carry or say. Decide which root each choice has."
+      ],
+      how: [
+        "At- means toward, and tract means pull, so attract means to pull toward.",
+        "Report has port, which means carry. Predict has dict, which means say.",
+        "Telephone has tele and phon, which mean far and sound."
+      ],
+      misconception: "A common mix-up is picking a word because it starts with a familiar part. Check the root too.",
+      why: "The answer is \"attract.\" At- (toward) + tract (pull) = attract, like a magnet that pulls toward it. Report has a root that means carry, predict has a root that means say, and telephone is built from far and sound."
+    },
+    {
+      id: "SK-V2c-S11",
+      type: "dropdown",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.L.V.2.c"
+      ],
+      passages: [],
+      like: [
+        "SK-V2c-C09"
+      ],
+      prompt: "Finish each sentence with a word built from the number part.",
+      stem: [
+        "semi- means half. mono- means one."
+      ],
+      text: "Cut a circle in half, and each piece is a {0}. A train that rides on one rail is a {1}.",
+      slots: [
+        {
+          options: [
+            "semicircle",
+            "semifinal",
+            "monorail"
+          ],
+          answer: 0
+        },
+        {
+          options: [
+            "monorail",
+            "monologue",
+            "semicircle"
+          ],
+          answer: 0
+        }
+      ],
+      clue: "Each blank needs a word with the right number part. Use the meanings in the box.",
+      hints: [
+        "Each blank needs a word with the right number part. Use the meanings in the box.",
+        "Read what each blank says is being named. Find the part of the sentence that says half or one.",
+        "Look at the first blank. Decide whether it asks for half of something or for one of something."
+      ],
+      how: [
+        "Blank one: half of a circle. Semi- means half, so the word is semicircle.",
+        "Blank two: a train on one rail. Mono- means one, so the word is monorail.",
+        "A semifinal is a game before the last one, and a monologue is one person talking, so neither fits."
+      ],
+      misconception: "A common mix-up is choosing a word with the right prefix that names the wrong thing. Match the whole meaning.",
+      why: "The answers are \"semicircle\" and \"monorail.\" Semi- means half, so a semicircle is half of a circle. Mono- means one, so a monorail rides on one rail. A semifinal is a game and a monologue is a speech."
+    },
+    {
+      id: "SK-V2c-S12",
+      type: "mc",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.L.V.2.c"
+      ],
+      passages: [],
+      like: [
+        "SK-V2c-C10"
+      ],
+      prompt: "What does the word unbeatable tell about the team?",
+      stem: [
+        "The coach called the champion team unbeatable. (The front part means not. The end part means is able to happen.)"
+      ],
+      choices: [
+        {
+          text: "No other team is able to beat it.",
+          correct: true
+        },
+        {
+          text: "Any team can beat it with ease."
+        },
+        {
+          text: "No team has played against it yet."
+        },
+        {
+          text: "It plays each game a second time."
+        }
+      ],
+      clue: "Break the word into three parts and say what each part means.",
+      hints: [
+        "Break the word into three parts and say what each part means.",
+        "Put the three meanings together in order, from the front part to the end part.",
+        "Un- changes the meaning to the opposite, and -able tells what can happen. Check which choices keep both parts."
+      ],
+      how: [
+        "Split the word: un + beat + able.",
+        "Un- means not and -able means can be, so unbeatable means not able to be beaten.",
+        "Has not played yet leaves out -able, and the other two leave out un-."
+      ],
+      misconception: "A common mix-up is using only the first part or the last part. Use every part you can find.",
+      why: "The answer is \"No other team is able to beat it.\" Un- means not, and -able means can be, so an unbeatable team cannot be beaten. The other choices leave out the meaning of one of the parts."
+    },
+    {
+      id: "SK-V2c-S13",
+      type: "mc",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.L.V.2.c"
+      ],
+      passages: [],
+      like: [
+        "SK-V2c-C11"
+      ],
+      prompt: "Read the sign. About how long is the trail?",
+      stem: [
+        "Sign: The trail is one kilometer long. (kilo- = a thousand; a meter is a unit of length.)"
+      ],
+      choices: [
+        {
+          text: "a thousand meters",
+          correct: true
+        },
+        {
+          text: "one meter"
+        },
+        {
+          text: "a hundred meters"
+        },
+        {
+          text: "ten meters"
+        }
+      ],
+      clue: "Find the two parts in the word kilometer. The note tells you what each one means.",
+      hints: [
+        "Find the two parts in the word kilometer. The note tells you what each one means.",
+        "Say the meaning of the first part, then the meaning of the second part. Put them in order.",
+        "The first part tells how many, and the second part tells what is counted. Check that each choice uses both parts."
+      ],
+      how: [
+        "Split the word: kilo + meter. Kilo means a thousand, and a meter is a unit of length.",
+        "Put them together: a thousand meters.",
+        "One meter, a hundred meters and ten meters all use the wrong number."
+      ],
+      misconception: "A common mix-up is picking the number you know best. Use the meaning of kilo-.",
+      why: "The answer is \"a thousand meters.\" Kilo- means a thousand, and a meter is a unit of length. The other choices use a different number."
+    },
+    {
+      id: "SK-V2c-S14",
+      type: "ebsr",
+      points: 2,
+      dok: 3,
+      std: [
+        "3.L.V.2.c"
+      ],
+      passages: [],
+      like: [
+        "SK-V2c-C12"
+      ],
+      prompt: "This question has two parts. Answer Part A, then Part B.",
+      stem: [
+        "Pilot's notebook: \"At the start of the long flight, I turned on the autopilot. The plane flew straight and level while I checked the map. The tower called to ask about the weather over the hills. Later, the sky grew dark and rain began to fall.\""
+      ],
+      partA: {
+        prompt: "The prefix auto- means \"self.\" What does autopilot mean here?",
+        choices: [
+          {
+            text: "a system that steers by itself",
+            correct: true
+          },
+          {
+            text: "a system that steers again"
+          },
+          {
+            text: "a system that steers before takeoff"
+          },
+          {
+            text: "a system that steers wrongly"
+          }
+        ]
+      },
+      partB: {
+        prompt: "Which detail shows what the autopilot does?",
+        choices: [
+          {
+            text: "The plane flew straight and level while I checked the map.",
+            correct: true
+          },
+          {
+            text: "At the start of the long flight, I turned on the autopilot."
+          },
+          {
+            text: "The tower called to ask about the weather over the hills."
+          },
+          {
+            text: "Later, the sky grew dark and rain began to fall."
+          }
+        ]
+      },
+      clue: "Put the meaning of auto- together with the base word pilot. For Part B, look for the detail that shows the plane being steered.",
+      hints: [
+        "Put the meaning of auto- together with the base word pilot. For Part B, look for the detail that shows the plane being steered.",
+        "Think about the whole notebook, not only the first sentence. Which details tell what the plane did?",
+        "For Part A, auto- does not mean again or before. For Part B, a true detail about the flight may not show who steered."
+      ],
+      how: [
+        "Part A: auto means self, and a pilot steers a plane, so autopilot steers by itself.",
+        "Part B: look for the detail that shows the plane being steered without the pilot.",
+        "The plane flew straight and level while the pilot checked the map.",
+        "The other details tell what the pilot did first, who called, or the weather."
+      ],
+      misconception: "A common mix-up is picking the sentence that holds the word. The detail has to show what the autopilot does.",
+      why: "Part A: a system that steers by itself. Auto- means self. Part B: \"The plane flew straight and level while I checked the map.\" The pilot was busy and the plane stayed steady. The other details do not show the plane steering itself."
+    },
+    {
+      id: "SK-V2c-S15",
+      type: "dropdown",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.L.V.2.c"
+      ],
+      passages: [],
+      like: [
+        "SK-V2c-P7"
+      ],
+      prompt: "Choose the word built from the root that fits each sentence.",
+      stem: [
+        "ject means throw. scrib means write."
+      ],
+      text: "When the toast is ready, the toaster will {0} it into the air. In my journal I will {1} my day.",
+      slots: [
+        {
+          options: [
+            "eject",
+            "describe",
+            "export"
+          ],
+          answer: 0
+        },
+        {
+          options: [
+            "describe",
+            "eject",
+            "inspect"
+          ],
+          answer: 0
+        }
+      ],
+      clue: "Each blank needs a word built on a root. Think about what the sentence needs.",
+      hints: [
+        "Each blank needs a word built on a root. Think about what the sentence needs.",
+        "Read each sentence and decide which root meaning it needs, throw or write.",
+        "Settle the first blank first. Cover the front part of each choice and say what root is left."
+      ],
+      how: [
+        "Blank one: the toaster throws the toast out. E- means out and ject means throw, so eject.",
+        "Blank two: writing about my day in a journal. Scrib means write, so describe.",
+        "Export has port, which means carry, and inspect has spect, which means look."
+      ],
+      misconception: "A common mix-up is guessing from the story alone. Use the root meanings the box gives you.",
+      why: "The answers are \"eject\" and \"describe.\" Ject means throw, so a toaster ejects toast. Scrib means write, so you describe your day by writing. Export and inspect are built on other roots."
+    }
+  ],
+  addons: {
+    "SK-V2c-P2": {
+      hints: [
+        "Think about the meaning you want, before. Which front part has that meaning?",
+        "Say each choice and cover the front part. Is the word pay still there?",
+        "Some choices change pay in a way that does not mean before. Check what each front or end part means."
+      ],
+      how: [
+        "Pre- means before, so pre + pay means to pay before.",
+        "Repay means pay again or pay back, and unpaid means not paid.",
+        "Payment is a noun made with an ending, not a word that means to pay before."
+      ],
+      misconception: "A common mix-up is picking the word that sounds most like pay. Check the meaning of the front part."
+    },
+    "SK-V2c-P3": {
+      hints: [
+        "For each meaning, find the base word first. Then find the part that was added.",
+        "Say what each part means: again, not, without and full of. Then look for that part in the words.",
+        "Start with the meaning that says without. Look for the ending that means that."
+      ],
+      how: [
+        "Retell: re + tell. Re- means again.",
+        "Dishonest: dis + honest. Dis- means not. Harmless: harm + less. -less means without.",
+        "Powerful: power + ful. -ful means full of."
+      ],
+      misconception: "A common mix-up is matching by the base word alone. Use the part that was added."
+    },
+    "SK-V2c-P4": {
+      hints: [
+        "Look at the last two letters of easy before you add the ending.",
+        "Say the rule for a word that ends in a consonant and y. Then spell each choice.",
+        "Look at the letters between the s and the ly in each choice."
+      ],
+      how: [
+        "Easy ends in s and then y. The s is a consonant.",
+        "When a consonant comes before the y, change the y to i.",
+        "So easy + ly becomes easily."
+      ],
+      misconception: "A common mix-up is keeping the y because the word looks familiar. Change the y to i after a consonant."
+    },
+    "SK-V2c-P5": {
+      hints: [
+        "Find the front part that means not. Think about which word means the same as not happy.",
+        "Read the choices and cover the front or end part. Which ones still have happy in them with a part that means not?",
+        "Happily and happiness change the job of the word. Decide whether the sentence needs a new job for the word."
+      ],
+      how: [
+        "Un- means not, so un + happy means not happy.",
+        "Happily tells how, happiness is a noun, and happier means more happy.",
+        "The sentence needs a word for the same job as not happy."
+      ],
+      misconception: "A common mix-up is picking any word that starts with happy. Check what the added part means."
+    },
+    "SK-V2c-P6": {
+      hints: [
+        "Find the parts that mean out and break. A word that means both needs both parts.",
+        "Cover the front part of each choice and say what is left. Then check the front part.",
+        "Look for a choice that has a root meaning break but no part that means out."
+      ],
+      how: [
+        "E- means out and rupt means break, so erupt means break out.",
+        "Export has ex-, which also means out, but port means carry.",
+        "Rupture has rupt but nothing that means out, and inspect has spect, which means look."
+      ],
+      misconception: "A common mix-up is stopping when you see one part you know. Check that both parts are there."
+    },
+    "SK-V2c-P7": {
+      hints: [
+        "Each blank needs a word built on a root. Think about the meaning the sentence needs.",
+        "Read each sentence and decide which root meaning it needs, carry or break.",
+        "Settle the first blank first. Cover the ending of each choice and say which root is left."
+      ],
+      how: [
+        "Port means carry and -able means can be, so portable means can be carried.",
+        "Rupt means break, so interrupted means broke in on something.",
+        "Breakable and washable have the same ending but no root that means carry."
+      ],
+      misconception: "A common mix-up is choosing a word that sounds right in the sentence. Use the meaning of the root."
+    }
+  },
+  /* B5-b5b:core:end */
   test: [
     { id: "SK-V2c-T1", type: "dropdown", points: 1, dok: 2, passages: [],
       prompt: "Choose the word that best completes the sentence.",

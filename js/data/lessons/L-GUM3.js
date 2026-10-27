@@ -48,7 +48,165 @@ PP.addLesson({
     }
   ],
   parent: "Hunt for apostrophes on cereal boxes, signs and mail together. For each one, ask your child: Is it a short word with letters left out, or does it show that something belongs to someone?",
-  passages: [],
+  passages: [
+    /* B6:passages:start */
+    {
+      id: "p1",
+      title: "Getting Ready for the Pep Rally",
+      byline: "A third grader's draft",
+      genre: "Student draft (narrative)",
+      draft: true,
+      paragraphs: [
+        [
+          "(1) Every Thursday, our class helps Mr. Alvarez set up the gym.",
+          "(2) This week, we are hanging banners for the big pep rally.",
+          "(3) We wont have time to paint one more sign."
+        ],
+        [
+          "(4) Our school has just one mascot, a tiger named Rumble.",
+          "(5) The mascots costume was too big, so Simone pinned the sleeves.",
+          "(6) The costume lost its tail, but it's still fun to wear."
+        ],
+        [
+          "(7) By lunch, four banners were hanging from the ceiling.",
+          "(8) Mr. Alvarez said he'll check the ropes before the rally.",
+          "(9) On Friday, we hope the whole school will cheer!"
+        ]
+      ]
+    },
+    {
+      id: "p2",
+      title: "Stargazing on the Back Steps",
+      byline: "A third grader's draft",
+      genre: "Student draft (narrative)",
+      draft: true,
+      paragraphs: [
+        [
+          "(1) Last Saturday night, my sister and I watched the sky from our back steps.",
+          "(2) The moon's light was so bright that we did not need a lamp.",
+          "(3) Dad said that Jupiter isn't a star at all."
+        ],
+        [
+          "(4) Mom's flashlight had a red cover, so it did not hurt our eyes.",
+          "(5) My sister counted the star's in the Big Dipper.",
+          "(6) We also saw an airplane, and it's lights blinked as it crossed the sky."
+        ],
+        [
+          "(7) Then clouds rolled in, so we couldnt see anything else.",
+          "(8) She's going to draw the sky tomorrow.",
+          "(9) I hope the next clear night comes soon."
+        ]
+      ]
+    },
+    {
+      id: "p3",
+      title: "Flea Market Flyer",
+      byline: "A third grader's draft",
+      genre: "Student draft (flyer)",
+      draft: true,
+      paragraphs: [
+        [
+          "(1) Join us at the Saturday flea market on Maple Street!",
+          "(2) Families will sell toys, books and old tools.",
+          "(3) You can buy a used bike for five dollars."
+        ],
+        [
+          "(4) Dont forget to bring your own bags.",
+          "(5) The school band's concert starts at noon.",
+          "(6) Our principal's lemonade stand will be near the stage."
+        ],
+        [
+          "(7) Kids can win prize's at the ring toss.",
+          "(8) It's going to be a great day!",
+          "(9) We hope you'll come."
+        ],
+        ["(10) Parking is free behind the church.", "(11) Come early to get the best deals!"]
+      ]
+    },
+    {
+      id: "p4",
+      title: "Our Toy Drive",
+      byline: "A third grader's draft",
+      genre: "Student draft (narrative)",
+      draft: true,
+      paragraphs: [
+        [
+          "(1) In December, our class ran a toy drive for the hospital downtown.",
+          "(2) Every morning, we checked the big cardboard box by the door.",
+          "(3) Malik says the box wasnt even half full on Monday."
+        ],
+        [
+          "(4) Imani found a teddy bear in the box, but the bears nose was missing.",
+          "(5) The robot beeped when its batteries were new, and it's quiet now.",
+          "(6) Our teacher said she'd drive everything to the hospital."
+        ],
+        [
+          "(7) By Friday, we had counted nine puzzles and six games.",
+          "(8) We felt proud of ourselves.",
+          "(9) Thanks to everyone who gave a toy!"
+        ],
+        [
+          "(10) Next year, we want to collect even more."
+        ]
+      ]
+    },
+    {
+      id: "p5",
+      title: "A Cookout at the Lake",
+      byline: "A third grader's draft",
+      genre: "Student draft (narrative)",
+      draft: true,
+      paragraphs: [
+        [
+          "(1) On Sunday, my cousins and I went to a cookout at the lake.",
+          "(2) Uncle Ray's grill was already hot when we got there.",
+          "(3) We couldn't wait to eat."
+        ],
+        [
+          "(4) Aunt Tia brought two big watermelons in her truck.",
+          "(5) My cousin cut the watermelon's into thick slices.",
+          "(6) A duck waddled over, and it's beak was full of bread."
+        ],
+        [
+          "(7) Dad told me I shouldnt feed the ducks.",
+          "(8) They're wild, and they find food on their own.",
+          "(9) After lunch, the duck flapped its wings and flew away."
+        ],
+        [
+          "(10) We packed up our chairs and drove home before dark."
+        ]
+      ]
+    },
+    {
+      id: "p6",
+      title: "Dog Wash Sign-Up Sheet",
+      byline: "A third grader's draft",
+      genre: "Student draft (sign)",
+      draft: true,
+      paragraphs: [
+        [
+          "(1) Bring your dog to our dog wash on Saturday morning!",
+          "(2) We're raising money for the animal shelter.",
+          "(3) Each wash costs four dollars."
+        ],
+        [
+          "(4) Please keep your dog on it's leash.",
+          "(5) We will have three big tubs and lots of towel's.",
+          "(6) The shelter's director will thank every dog owner."
+        ],
+        [
+          "(7) It's easy to sign up.",
+          "(8) Just write your dog's name on the sheet.",
+          "(9) We can't wait to meet your dog!"
+        ],
+        [
+          "(10) Every dollar helps a dog find a new home.",
+          "(11) Bring a friend, and bring a smile!"
+        ]
+      ]
+    }
+    /* B6:passages:end */
+  ],
   practice: [
     { id: "SK-GUM3-1-P1", type: "dropdown", points: 1, dok: 1, passages: [],
       prompt: "Choose the word that correctly completes the sentence.",
@@ -100,6 +258,1021 @@ PP.addLesson({
       clue: "For each sentence, find every word that needs an apostrophe. Then check that the apostrophe is there and that no plain plural has one.",
       why: "The answers are \"The baby's blanket is soft and blue.\" and \"We'll eat lunch under the big oak tree.\" The blanket belongs to the baby, and we'll is short for we will. The others should say can't (cannot), books (just more than one) and its (belonging to the tree, not \"it is\")." }
   ],
+  /* B6:core:start */
+  /* ---------- Expansion 2026-10-22, batch B6 (GUM Master) ----------
+     core: fifteen items in three sets of five. { ref } reuses a practice item; the other practice items stay in Practice Together.
+     Passages are used only by core and the similar bank; none is used by test or testB.
+     Author log: docs/expansion-2026-10-22/batches/B6-author-log.md. NEEDS INDEPENDENT REVIEW. */
+  core: {
+    rev: "1",
+    sets: [
+      {
+        title: "Set 1",
+        items: [
+          { ref: "SK-GUM3-1-P4" },
+          { ref: "SK-GUM3-1-P5" },
+          {
+            id: "SK-GUM3-1-C03",
+            type: "mc",
+            points: 1,
+            dok: 2,
+            std: [
+              "3.L.GC.1:M:use-apostrophes-in-contractions-and-singular-pos"
+            ],
+            passages: ["p1"],
+            prompt: "Sentence 3 of the draft needs an apostrophe. Which revision is correct?",
+            choices: [
+              { text: "We wo'nt have time to paint one more sign." },
+              { text: "We won't have time to paint one more sign.", correct: true },
+              { text: "We wont' have time to paint one more sign." },
+              { text: "We will'nt have time to paint one more sign." }
+            ],
+            clue: "A contraction squeezes two words into one. Think of the two words first, then decide which letters were left out.",
+            hints: [
+              "A contraction squeezes two words into one. Think of the two words first, then decide which letters were left out.",
+              "Read sentence 3 and say the two words that the short word stands for. Then look at where the letters are missing.",
+              "In a contraction, the apostrophe is not placed at the end of the word. Check where each choice puts it."
+            ],
+            how: [
+              "Find the short word in sentence 3 that is missing its apostrophe: wont. It stands for will not.",
+              "Will not squeezes into won't. The apostrophe takes the place of the o in not, so it sits between n and t.",
+              "The answer is \"We won't have time to paint one more sign.\" The other choices put the apostrophe in the wrong spot or squeeze the words together the wrong way."
+            ],
+            misconception: "A common mix-up is putting the apostrophe at the end of the word, or in the middle of the first part. It goes where the letters were left out.",
+            why: "The answer is \"We won't have time to paint one more sign.\" Will not becomes won't, and the apostrophe stands where the o in not was left out. Wo'nt and wont' put the apostrophe in the wrong spot, and will'nt does not squeeze the words the way English does."
+          },
+          {
+            id: "SK-GUM3-1-C04",
+            type: "dropdown",
+            points: 1,
+            dok: 2,
+            std: [
+              "3.L.GC.1:M:use-apostrophes-in-contractions-and-singular-pos"
+            ],
+            passages: ["p1"],
+            prompt: "Sentence 5 of the draft needs an apostrophe. Choose the word that fixes it.",
+            text: "The {0} costume was too big, so Simone pinned the sleeves.",
+            slots: [
+              {
+                options: ["mascots", "mascot's", "mascots'"],
+                answer: 1
+              }
+            ],
+            clue: "Ask who or what the costume belongs to, and whether that is one or more than one.",
+            hints: [
+              "Ask who or what the costume belongs to, and whether that is one or more than one.",
+              "Look at sentence 4 to see how many mascots the school has. Then read sentence 5.",
+              "A word that only means more than one has no apostrophe. Decide whether more than one mascot is what the draft says."
+            ],
+            how: [
+              "Ask who owns the costume. It belongs to the mascot.",
+              "Sentence 4 says the school has just one mascot, so there is one owner. For one owner, add an apostrophe and s right after the word.",
+              "The answer is mascot's. Mascots only means more than one, and mascots' is for more than one owner."
+            ],
+            misconception: "A common mix-up is leaving off the apostrophe because the word already ends in s once you add it. The apostrophe shows the costume belongs to one mascot.",
+            why: "The answer is mascot's. Sentence 4 says the school has just one mascot, and the costume belongs to it, so the word needs 's. Mascots means more than one and shows no owner, and mascots' would mean the costume belongs to several mascots."
+          },
+          {
+            id: "SK-GUM3-1-C05",
+            type: "mc",
+            points: 1,
+            dok: 3,
+            std: [
+              "3.L.GC.1:M:use-apostrophes-in-contractions-and-singular-pos"
+            ],
+            passages: ["p1"],
+            prompt: "Sentence 6 uses both its and it's, and both are correct. Which explanation is right?",
+            choices: [
+              { text: "Its shows that the tail belongs to the costume, and it's is short for it is.", correct: true },
+              { text: "It's shows that the tail belongs to the costume, and its is short for it is." },
+              { text: "Both words show that something belongs to the costume, but only one needs an apostrophe." },
+              { text: "Its is plural, so it has no apostrophe, and it's is singular, so it has one." }
+            ],
+            clue: "Say the sentence with the two words it is in place of each word. If the sentence still makes sense, that word is a contraction.",
+            hints: [
+              "Say the sentence with the two words it is in place of each word. If the sentence still makes sense, that word is a contraction.",
+              "Try it on sentence 6. Read it once with it is in place of its, then again with it is in place of it's.",
+              "The costume has one tail, so plural and singular will not help you here. Use the it is test on both words."
+            ],
+            how: [
+              "Put it is in place of its: \"The costume lost it is tail.\" That does not make sense, so its is not a contraction.",
+              "Its shows that the tail belongs to the costume, so it has no apostrophe.",
+              "Put it is in place of it's: \"it is still fun to wear.\" That makes sense, so it's is short for it is.",
+              "Check the other explanations: they swap the jobs, say both show belonging, or bring in plural and singular, which has nothing to do with it."
+            ],
+            misconception: "A common mix-up is thinking that its needs an apostrophe because it shows belonging, like Rosa's. Its is the exception.",
+            why: "The answer is \"Its shows that the tail belongs to the costume, and it's is short for it is.\" Try it is in place of each word: it is tail makes no sense, but it is still fun to wear does. Its with no apostrophe shows belonging, and it's stands for it is. Plural and singular do not decide which one to use."
+          }
+        ]
+      },
+      {
+        title: "Set 2",
+        items: [
+          {
+            id: "SK-GUM3-1-C06",
+            type: "hottext",
+            points: 2,
+            dok: 2,
+            std: [
+              "3.L.GC.1:M:use-apostrophes-in-contractions-and-singular-pos"
+            ],
+            passages: ["p2"],
+            prompt: "Select the TWO sentences in which an apostrophe correctly stands for missing letters.",
+            targets: ["p2:1:2", "p2:1:3", "p2:2:1", "p2:2:3", "p2:3:2"],
+            answer: ["p2:1:3", "p2:3:2"],
+            pick: 2,
+            clue: "A contraction is two words squeezed into one. Look for a short word you can stretch back into two words.",
+            hints: [
+              "A contraction is two words squeezed into one. Look for a short word you can stretch back into two words.",
+              "Read the sentences with apostrophes in the draft. For each apostrophe, ask whether it shows belonging or stands for missing letters.",
+              "Two of the apostrophes show that something belongs to someone. Look at the sentences that are left."
+            ],
+            how: [
+              "For each sentence, find the word with an apostrophe and try to stretch it into two words.",
+              "Isn't stretches into is not, and she's stretches into she is. Both make sense in their sentences.",
+              "Moon's and Mom's show belonging: the light belongs to the moon, and the flashlight belongs to Mom. They cannot be stretched into two words that make sense.",
+              "Sentence 6 has an apostrophe too, but it's lights does not make sense as it is lights, so that sentence is not a contraction."
+            ],
+            misconception: "A common mix-up is thinking every 's is a contraction. It can also show that something belongs to one person or thing.",
+            why: "The answers are \"Dad said that Jupiter isn't a star at all.\" and \"She's going to draw the sky tomorrow.\" Isn't is short for is not, and she's is short for she is. Moon's and Mom's show belonging, and it's in sentence 6 cannot be stretched into two words that make sense."
+          },
+          {
+            id: "SK-GUM3-1-C07",
+            type: "ebsr",
+            points: 2,
+            dok: 3,
+            std: [
+              "3.L.GC.1:M:use-apostrophes-in-contractions-and-singular-pos"
+            ],
+            passages: ["p2"],
+            prompt: "This question has two parts. Answer Part A, then Part B.",
+            partA: {
+              prompt: "Sentence 6 of the draft has a mistake with an apostrophe. Which revision fixes it?",
+              choices: [
+                { text: "We also saw an airplane, and its' lights blinked as it crossed the sky." },
+                { text: "We also saw an airplane, and it's light's blinked as it crossed the sky." },
+                { text: "We also saw an airplane, and its lights blinked as it crossed the sky.", correct: true },
+                { text: "We also saw an airplane, and it is lights blinked as it crossed the sky." }
+              ]
+            },
+            partB: {
+              prompt: "Which reason best explains the revision in Part A?",
+              choices: [
+                { text: "The word means it is, so it needs an apostrophe to show that two words were squeezed together." },
+                { text: "The lights belong to the airplane, so the word shows belonging and has no apostrophe.", correct: true },
+                { text: "The word shows that the airplane owns something, so it needs 's like Mom's." },
+                { text: "The word is plural, so it needs an apostrophe after the letter s." }
+              ]
+            },
+            clue: "Try it is in place of the word with the apostrophe. If the sentence stops making sense, the apostrophe is wrong.",
+            hints: [
+              "Try it is in place of the word with the apostrophe. If the sentence stops making sense, the apostrophe is wrong.",
+              "For Part A, read sentence 6 with the two words it is in place of it's. For Part B, ask what the lights have to do with the airplane.",
+              "In Part A, one choice adds an apostrophe after the s. Think about whether any word in English is spelled that way."
+            ],
+            how: [
+              "Part A: read sentence 6 with it is in place of it's: \"it is lights blinked.\" That does not make sense, so the apostrophe is wrong.",
+              "The lights belong to the airplane. The word that shows belonging to it has no apostrophe: its.",
+              "Part A answer: \"We also saw an airplane, and its lights blinked as it crossed the sky.\"",
+              "Part B answer: the lights belong to the airplane, so the word shows belonging and has no apostrophe. It's would only be right if it could mean it is."
+            ],
+            misconception: "A common mix-up is thinking that a word that shows belonging needs 's. With it, belonging is the one time you leave the apostrophe out.",
+            why: "Part A: \"We also saw an airplane, and its lights blinked as it crossed the sky.\" Part B: \"The lights belong to the airplane, so the word shows belonging and has no apostrophe.\" It's means it is, and it is lights makes no sense. Its' is not a word, and light's would break the plain plural lights."
+          },
+          {
+            id: "SK-GUM3-1-C08",
+            type: "ms",
+            points: 2,
+            dok: 3,
+            std: [
+              "3.L.GC.1:M:use-apostrophes-in-contractions-and-singular-pos"
+            ],
+            passages: ["p2"],
+            prompt: "Which TWO changes would fix mistakes in the draft?",
+            pick: 2,
+            choices: [
+              { text: "In sentence 3, change isn't to is'nt." },
+              { text: "In sentence 5, change star's to stars.", correct: true },
+              { text: "In sentence 4, change Mom's to Moms." },
+              { text: "In sentence 7, change couldnt to couldn't.", correct: true },
+              { text: "In sentence 2, change moon's to moons." }
+            ],
+            clue: "A good fix makes a word match its job. Check whether each word in the choices shows belonging, stands for two words, or just means more than one.",
+            hints: [
+              "A good fix makes a word match its job. Check whether each word in the choices shows belonging, stands for two words, or just means more than one.",
+              "Look back at sentences 2, 3, 4, 5 and 7 in the draft. For each, decide whether the word is already doing its job correctly.",
+              "Two of the changes would take an apostrophe out of a word that shows belonging. Check the other three."
+            ],
+            how: [
+              "Check each sentence and decide whether its apostrophe is already doing a job.",
+              "Moon's and Mom's show belonging, so they are correct. Isn't stands for is not, and the apostrophe is already where the o was left out.",
+              "Sentence 5: star's only means more than one, so it should be stars.",
+              "Sentence 7: couldnt stands for could not, so it needs the apostrophe where the o was left out: couldn't."
+            ],
+            misconception: "A common mix-up is taking the apostrophe out of a word that shows belonging, because it also ends in s.",
+            why: "The answers are \"In sentence 5, change star's to stars.\" and \"In sentence 7, change couldnt to couldn't.\" Star's only means more than one, so it needs no apostrophe, and couldn't needs one in place of the o. Moon's and Mom's show belonging and are correct. Is'nt puts the apostrophe in the wrong place."
+          },
+          {
+            id: "SK-GUM3-1-C09",
+            type: "dropdown",
+            points: 1,
+            dok: 2,
+            std: [
+              "3.L.GC.1:M:use-apostrophes-in-contractions-and-singular-pos"
+            ],
+            passages: [],
+            prompt: "Choose the word that correctly completes the sentence.",
+            text: "A hungry owl watched the {0} den, where one young fox slept.",
+            slots: [
+              {
+                options: ["foxes", "fox's", "foxes'"],
+                answer: 1
+              }
+            ],
+            clue: "Decide who owns the den, and whether that is one animal or more than one.",
+            hints: [
+              "Decide who owns the den, and whether that is one animal or more than one.",
+              "Look for the clue about how many foxes are in the den. Then ask whose den it is.",
+              "Foxes is the plural of fox. Decide whether the sentence tells you that the den belongs to a group or to one animal."
+            ],
+            how: [
+              "Ask who owns the den. It belongs to a fox.",
+              "A den belongs to one animal here, so add an apostrophe and s right after the owner: fox's.",
+              "Foxes means more than one fox, and nothing in the sentence shows an owner. Foxes' would mean the den belongs to several foxes."
+            ],
+            misconception: "A common mix-up is adding -es the way you do for more than one, when the word needs to show that something belongs to one animal.",
+            why: "The answer is fox's. One fox owns the den, so the word needs an apostrophe and s. Foxes means more than one fox, and foxes' would mean the den belongs to several foxes."
+          },
+          {
+            id: "SK-GUM3-1-C10",
+            type: "mc",
+            points: 1,
+            dok: 3,
+            std: [
+              "3.L.GC.1:M:use-apostrophes-in-contractions-and-singular-pos"
+            ],
+            passages: ["p2"],
+            prompt: "Sentence 2 has moon's with an apostrophe, and sentence 5 has star's with an apostrophe. Why is only one of them correct?",
+            choices: [
+              { text: "Moon's is short for moon is, but star's is short for star has." },
+              { text: "Both words end in s, so each one needs an apostrophe before the s." },
+              {
+                text: "Moon's is correct because the apostrophe makes moon mean more than one, and star's is wrong because there is only one star."
+              },
+              {
+                text: "The light belongs to the moon, but star's only means more than one, so it needs no apostrophe.",
+                correct: true
+              }
+            ],
+            clue: "An apostrophe needs a job: missing letters, or belonging to one owner. Ask what job each word is doing.",
+            hints: [
+              "An apostrophe needs a job: missing letters, or belonging to one owner. Ask what job each word is doing.",
+              "Read sentences 2 and 5 side by side. In each one, ask what the word after the apostrophe word has to do with it.",
+              "Try stretching moon's into two words. Then try stretching star's. Check whether either one makes sense."
+            ],
+            how: [
+              "Ask what job each apostrophe is doing.",
+              "In sentence 2, the light belongs to the moon. Moon's shows belonging to one owner, so it is correct.",
+              "In sentence 5, the sentence counts the stars. Nothing belongs to them, and star's only means more than one. It should be stars.",
+              "The answer is that the light belongs to the moon, but star's only means more than one."
+            ],
+            misconception: "A common mix-up is thinking every word that ends in s needs an apostrophe before the s.",
+            why: "The answer is that the light belongs to the moon, but star's only means more than one, so it needs no apostrophe. Moon's cannot be stretched into moon is or moon has in this sentence, so the apostrophe shows belonging. Ending in s does not decide it."
+          }
+        ]
+      },
+      {
+        title: "Set 3",
+        items: [
+          {
+            id: "SK-GUM3-1-C11",
+            type: "hottext",
+            points: 2,
+            dok: 2,
+            std: [
+              "3.L.GC.1:M:use-apostrophes-in-contractions-and-singular-pos"
+            ],
+            passages: ["p3"],
+            prompt: "Select the TWO sentences in the flyer that have a mistake with an apostrophe.",
+            targets: ["p3:2:1", "p3:2:2", "p3:3:1", "p3:3:2", "p3:3:3"],
+            answer: ["p3:2:1", "p3:3:1"],
+            pick: 2,
+            clue: "Check every apostrophe, and every word that might need one. Ask what job it does.",
+            hints: [
+              "Check every apostrophe, and every word that might need one. Ask what job it does.",
+              "Look at sentences 4 to 9. Some words have an apostrophe, and one word is missing its apostrophe.",
+              "Sentence 5 shows belonging and is written correctly. Check the other four."
+            ],
+            how: [
+              "Go through each sentence and find the word that might need an apostrophe.",
+              "Sentence 4: Dont is short for do not, so it needs an apostrophe: Don't.",
+              "Sentence 7: prize's only means more than one, so it should be prizes.",
+              "Sentence 5 (band's) shows belonging, sentence 8 (It's) stands for it is, and sentence 9 (you'll) stands for you will, so they are correct."
+            ],
+            misconception: "A common mix-up is spotting only one kind of mistake. Look for a missing apostrophe and for an extra one.",
+            why: "The answers are sentence 4 and sentence 7. Dont needs an apostrophe because it is short for do not. Prize's has an apostrophe it does not need, because it only means more than one. Band's shows belonging, it's stands for it is, and you'll stands for you will."
+          },
+          {
+            id: "SK-GUM3-1-C12",
+            type: "dropdown",
+            points: 2,
+            dok: 2,
+            std: [
+              "3.L.GC.1:M:use-apostrophes-in-contractions-and-singular-pos"
+            ],
+            passages: [],
+            prompt: "Choose the words that correctly complete the note.",
+            text: "The twins {0} here yet, so we {1} start the relay without them.",
+            slots: [
+              {
+                options: ["aren't", "are'nt", "arent"],
+                answer: 0
+              },
+              {
+                options: ["can't", "ca'nt", "cant"],
+                answer: 0
+              }
+            ],
+            clue: "Each blank stands for two words squeezed into one. Say the two words first.",
+            hints: [
+              "Each blank stands for two words squeezed into one. Say the two words first.",
+              "For each blank, stretch the short word into two words. Then think about where the letters are missing.",
+              "In the second blank, a word that ends with nt and has no apostrophe is not a contraction. Decide about the first blank on your own."
+            ],
+            how: [
+              "Blank 1: the twins are not here yet. Are not squeezes into aren't, with the apostrophe where the o in not was left out.",
+              "Blank 2: we can not start without them. Can not squeezes into can't, with the apostrophe where the no in not was left out.",
+              "Check the other options: are'nt and ca'nt put the apostrophe in the wrong place, and arent and cant leave it out."
+            ],
+            misconception: "A common mix-up is leaving out the apostrophe, or putting it right after the first word.",
+            why: "The answers are aren't and can't. Are not squeezes into aren't, and cannot squeezes into can't. The apostrophe stands where the letters were left out, so are'nt and ca'nt are wrong, and arent and cant have no apostrophe at all."
+          },
+          {
+            id: "SK-GUM3-1-C13",
+            type: "mc",
+            points: 1,
+            dok: 2,
+            std: [
+              "3.L.GC.1:M:use-apostrophes-in-contractions-and-singular-pos"
+            ],
+            passages: [],
+            prompt: "This sentence from Coach's note has one mistake. Which revision fixes it?",
+            stem: "Bring each players hat to the game on Friday.",
+            choices: [
+              { text: "Bring each players' hat to the game on Friday." },
+              { text: "Bring each player's hat's to the game on Friday." },
+              { text: "Bring each player's hat to the game on Friday.", correct: true },
+              { text: "Bring each players's hat to the game on Friday." }
+            ],
+            clue: "Ask who owns the hat, and whether that is one person or more than one.",
+            hints: [
+              "Ask who owns the hat, and whether that is one person or more than one.",
+              "Look at the word each in the sentence. Ask whether it points to one player at a time or to a whole group at once.",
+              "Adding two apostrophes to the same sentence is not a fix. Check what the other choices do to the word hat."
+            ],
+            how: [
+              "Find the word that is missing its apostrophe. Hat belongs to a player.",
+              "Each player means one player at a time, so there is one owner. Add an apostrophe and s right after the owner: player's.",
+              "Players' is for several owners. A second apostrophe in hat's would turn a plain noun into a possessive."
+            ],
+            misconception: "A common mix-up is putting the apostrophe after the s because there are many players. Each player is one owner at a time.",
+            why: "The answer is \"Bring each player's hat to the game on Friday.\" The word each points to one player at a time, so the word needs 's. Players' is for more than one owner. The other choices add letters or apostrophes that do not belong."
+          },
+          {
+            id: "SK-GUM3-1-C14",
+            type: "mc",
+            points: 1,
+            dok: 2,
+            std: [
+              "3.L.GC.1:M:use-apostrophes-in-contractions-and-singular-pos"
+            ],
+            passages: [],
+            prompt: "Which sentence uses you're correctly?",
+            choices: [
+              { text: "I hope you're coach lets you swim first." },
+              { text: "You're the fastest swimmer on our team.", correct: true },
+              { text: "Is this you're towel on the bench?" },
+              { text: "Please put you're goggles in the blue bin." }
+            ],
+            clue: "You're is a contraction, so it must stand for two words that fit in the sentence. Try putting the two words in its place.",
+            hints: [
+              "You're is a contraction, so it must stand for two words that fit in the sentence. Try putting the two words in its place.",
+              "Read each sentence with the words you are in place of you're. Only keep a choice if the sentence still makes sense.",
+              "Try the words you are in the sentence about the coach. Check whether it still makes sense."
+            ],
+            how: [
+              "You're is short for you are. Try you are in place of you're in each sentence.",
+              "\"You are the fastest swimmer on our team.\" makes sense.",
+              "In the other three, you are does not make sense: \"you are coach,\" \"you are towel\" and \"you are goggles.\" In each one the word is used to show belonging."
+            ],
+            misconception: "A common mix-up is using you're where a word that shows belonging should go. If you are does not fit, it is the wrong word.",
+            why: "The answer is \"You're the fastest swimmer on our team.\" You are fits in place of you're. In the other sentences, you are does not make sense: coach, towel and goggles belong to someone, and you're cannot show belonging."
+          },
+          {
+            id: "SK-GUM3-1-C15",
+            type: "mc",
+            points: 1,
+            dok: 3,
+            std: [
+              "3.L.GC.1:M:use-apostrophes-in-contractions-and-singular-pos"
+            ],
+            passages: [],
+            prompt: "Read both sentences. The same ending, 's, does a different job in each. Which explanation is right?",
+            stem: ["Zuri's tired after the game.", "Zuri's backpack is open."],
+            choices: [
+              {
+                text: "In the first sentence, Zuri's means Zuri is. In the second, Zuri's shows that the backpack belongs to Zuri.",
+                correct: true
+              },
+              { text: "In the first sentence, Zuri's shows that the game belongs to Zuri. In the second, Zuri's means Zuri is." },
+              { text: "In both sentences, Zuri's shows that something belongs to Zuri." },
+              { text: "In both sentences, Zuri's is short for two words." }
+            ],
+            clue: "Try stretching the word with the apostrophe into two words. Then try it in the other sentence.",
+            hints: [
+              "Try stretching the word with the apostrophe into two words. Then try it in the other sentence.",
+              "Say the first sentence with Zuri is in place of Zuri's. Then say the second sentence with Zuri is in place of Zuri's.",
+              "The word after Zuri's in the second sentence names a thing a person can own. Check whether is fits in front of it."
+            ],
+            how: [
+              "Try Zuri is in place of Zuri's in the first sentence: \"Zuri is tired after the game.\" It makes sense, so the 's is a contraction.",
+              "Try it in the second sentence: \"Zuri is backpack is open.\" It does not make sense. The backpack belongs to Zuri, so the 's shows belonging.",
+              "The answer is that the first Zuri's means Zuri is and the second shows belonging."
+            ],
+            misconception: "A common mix-up is thinking 's always shows belonging. It can also be short for is.",
+            why: "The answer is \"In the first sentence, Zuri's means Zuri is. In the second, Zuri's shows that the backpack belongs to Zuri.\" Zuri is tired makes sense, but Zuri is backpack does not. The same two letters can do two different jobs."
+          }
+        ]
+      }
+    ]
+  },
+  similar: [
+    {
+      id: "SK-GUM3-1-S01",
+      type: "hottext",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.L.GC.1:M:use-apostrophes-in-contractions-and-singular-pos"
+      ],
+      passages: [],
+      prompt: "Select the sentence that has an error.",
+      options: [
+        "Maria's umbrella is on the bus.",
+        "The two truck's blocked our street.",
+        "We haven't seen that movie yet.",
+        "She's learning to play the drums."
+      ],
+      answer: [1],
+      pick: 1,
+      clue: "Check each word with an apostrophe. Ask whether it stands for missing letters, shows belonging, or only means more than one.",
+      hints: [
+        "Check each word with an apostrophe. Ask whether it stands for missing letters, shows belonging, or only means more than one.",
+        "Find the word in each sentence that ends in s, and ask whether anything belongs to it.",
+        "Haven't stands for have not, and the apostrophe is in the right place. Check the other three."
+      ],
+      how: [
+        "Find each word with an apostrophe and ask what job it does.",
+        "Maria's umbrella: the umbrella belongs to Maria. Haven't is short for have not. She's is short for she is.",
+        "The two truck's blocked our street: nothing belongs to the trucks, and the word only means more than one. It should be trucks."
+      ],
+      misconception: "A common mix-up is thinking every word that ends in s needs an apostrophe.",
+      why: "The error is in \"The two truck's blocked our street.\" Trucks only means more than one truck, so it needs no apostrophe. Maria's shows belonging, haven't is short for have not, and she's is short for she is.",
+      like: ["SK-GUM3-1-P4"]
+    },
+    {
+      id: "SK-GUM3-1-S02",
+      type: "ms",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.L.GC.1:M:use-apostrophes-in-contractions-and-singular-pos"
+      ],
+      passages: [],
+      prompt: "Choose the TWO sentences that use apostrophes correctly.",
+      pick: 2,
+      choices: [
+        { text: "Dad said we shouldnt run near the pool." },
+        { text: "My neighbor's dog naps on our porch.", correct: true },
+        { text: "The farmer sold six pumpkin's at his stand." },
+        { text: "They've planted tomatoes along the fence.", correct: true },
+        { text: "The goat scratched it's ear on the gate." }
+      ],
+      clue: "For each sentence, find every word that needs an apostrophe. Then check that it is there and that no plain plural has one.",
+      hints: [
+        "For each sentence, find every word that needs an apostrophe. Then check that it is there and that no plain plural has one.",
+        "Say each short word as two words, and ask who owns each thing. Look for a plain plural that has an apostrophe.",
+        "One of the sentences uses it's where a word that shows belonging should go. Check the other four."
+      ],
+      how: [
+        "Check each sentence for a contraction, a word that shows belonging, and a plain plural.",
+        "\"My neighbor's dog naps on our porch.\" The dog belongs to the neighbor. \"They've planted tomatoes along the fence.\" They've is short for they have.",
+        "The others are wrong: shouldnt needs an apostrophe (shouldn't), pumpkin's should be pumpkins, and it's should be its."
+      ],
+      misconception: "A common mix-up is adding an apostrophe to a plain plural, or using it's where the word shows belonging.",
+      why: "The answers are \"My neighbor's dog naps on our porch.\" and \"They've planted tomatoes along the fence.\" The first shows belonging, and the second is short for they have. The others should say shouldn't, pumpkins and its.",
+      like: ["SK-GUM3-1-P5"]
+    },
+    {
+      id: "SK-GUM3-1-S03",
+      type: "mc",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.L.GC.1:M:use-apostrophes-in-contractions-and-singular-pos"
+      ],
+      passages: ["p4"],
+      prompt: "Sentence 3 of this draft is missing an apostrophe. Choose the correct revision.",
+      choices: [
+        { text: "Malik says the box was'nt even half full on Monday." },
+        { text: "Malik says the box wasnt' even half full on Monday." },
+        { text: "Malik says the box wa'snt even half full on Monday." },
+        { text: "Malik says the box wasn't even half full on Monday.", correct: true }
+      ],
+      clue: "A contraction squeezes two words into one. Say the two words first, then find which letter was left out.",
+      hints: [
+        "A contraction squeezes two words into one. Say the two words first, then find which letter was left out.",
+        "Stretch the short word in sentence 3 into two words. The apostrophe takes the place of the missing letter.",
+        "An apostrophe does not go at the very end of a contraction. Check where each choice puts it."
+      ],
+      how: [
+        "Find the short word that is missing its apostrophe: wasnt. It stands for was not.",
+        "The o in not is left out, so the apostrophe takes its place between n and t: wasn't.",
+        "The answer is \"Malik says the box wasn't even half full on Monday.\" The other choices put the apostrophe in the wrong spot."
+      ],
+      misconception: "A common mix-up is putting the apostrophe where the two words meet, instead of where the letter was left out.",
+      why: "The answer is \"Malik says the box wasn't even half full on Monday.\" Was not becomes wasn't, and the apostrophe stands where the o in not was left out. Was'nt, wasnt' and wa'snt put the apostrophe in the wrong spot.",
+      like: ["SK-GUM3-1-C03"]
+    },
+    {
+      id: "SK-GUM3-1-S04",
+      type: "dropdown",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.L.GC.1:M:use-apostrophes-in-contractions-and-singular-pos"
+      ],
+      passages: ["p4"],
+      prompt: "Sentence 4 of the draft needs an apostrophe. Choose the word that fixes it.",
+      text: "Imani found a teddy bear in the box, but the {0} nose was missing.",
+      slots: [
+        {
+          options: ["bears", "bear's", "bears'"],
+          answer: 1
+        }
+      ],
+      clue: "Ask who the nose belongs to, and whether that is one or more than one.",
+      hints: [
+        "Ask who the nose belongs to, and whether that is one or more than one.",
+        "Look at the first part of the sentence to see how many bears Imani found.",
+        "A word that only means more than one has no apostrophe. Decide whether that is what this sentence needs."
+      ],
+      how: [
+        "Ask who owns the nose. It belongs to the bear.",
+        "Imani found a teddy bear, so there is one owner. For one owner, add an apostrophe and s right after the word.",
+        "The answer is bear's. Bears only means more than one bear, and bears' is for more than one owner."
+      ],
+      misconception: "A common mix-up is leaving off the apostrophe because the word already looks complete with an s.",
+      why: "The answer is bear's. Imani found one teddy bear, and the nose belongs to it, so the word needs 's. Bears means more than one and shows no owner, and bears' would mean the nose belongs to several bears.",
+      like: ["SK-GUM3-1-C04"]
+    },
+    {
+      id: "SK-GUM3-1-S05",
+      type: "ms",
+      points: 2,
+      dok: 3,
+      std: [
+        "3.L.GC.1:M:use-apostrophes-in-contractions-and-singular-pos"
+      ],
+      passages: ["p4"],
+      prompt: "Sentence 5 uses its and it's correctly. Which TWO statements about the sentence are true?",
+      pick: 2,
+      choices: [
+        { text: "It's can be stretched into it is and still make sense.", correct: true },
+        { text: "Its can be stretched into it is and still make sense." },
+        { text: "Its shows that the batteries belong to the robot.", correct: true },
+        { text: "Both words need an apostrophe because the robot is one thing." },
+        { text: "It's shows that the robot owns the batteries." }
+      ],
+      clue: "Try saying it is in place of each word. A contraction can be stretched into two words that still make sense.",
+      hints: [
+        "Try saying it is in place of each word. A contraction can be stretched into two words that still make sense.",
+        "Read sentence 5 two times, once with it is in place of its and once with it is in place of it's.",
+        "The robot is one thing, but that fact does not decide which word gets an apostrophe. Use the it is test on each word."
+      ],
+      how: [
+        "Put it is in place of its: \"The robot beeped when it is batteries were new.\" That does not make sense, so its shows belonging.",
+        "Put it is in place of it's: \"it is quiet now.\" That makes sense, so it's is short for it is.",
+        "So its shows that the batteries belong to the robot, and it's can be stretched into it is."
+      ],
+      misconception: "A common mix-up is thinking its needs an apostrophe because it shows belonging. With it, belonging is the one time you leave it out.",
+      why: "The answers are \"Its shows that the batteries belong to the robot.\" and \"It's can be stretched into it is and still make sense.\" It is batteries makes no sense, but it is quiet now does. The robot being one thing does not decide it.",
+      like: ["SK-GUM3-1-C05"]
+    },
+    {
+      id: "SK-GUM3-1-S06",
+      type: "hottext",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.L.GC.1:M:use-apostrophes-in-contractions-and-singular-pos"
+      ],
+      passages: ["p5"],
+      prompt: "Select the TWO sentences in which an apostrophe correctly stands for missing letters.",
+      targets: ["p5:1:2", "p5:1:3", "p5:2:3", "p5:3:1", "p5:3:2"],
+      answer: ["p5:1:3", "p5:3:2"],
+      pick: 2,
+      clue: "A contraction is two words squeezed into one, and the apostrophe stands for the letters that were left out.",
+      hints: [
+        "A contraction is two words squeezed into one, and the apostrophe stands for the letters that were left out.",
+        "Read the sentences with apostrophes in the draft. For each one, try stretching the word into two words.",
+        "Uncle Ray's grill shows belonging, so that sentence is not a contraction. Check the other four."
+      ],
+      how: [
+        "For each sentence, find the word with an apostrophe and try to stretch it into two words.",
+        "Couldn't stretches into could not, and they're stretches into they are. Both make sense in their sentences.",
+        "Ray's shows belonging. The word it's in sentence 6 and the missing apostrophe in shouldnt are mistakes, not correct contractions."
+      ],
+      misconception: "A common mix-up is picking a sentence with an apostrophe that is used wrongly. Check that the apostrophe is both needed and in the right place.",
+      why: "The answers are \"We couldn't wait to eat.\" and \"They're wild, and they find food on their own.\" Couldn't is short for could not, and they're is short for they are. Ray's shows belonging, it's in sentence 6 cannot be stretched into two words that make sense, and shouldnt has no apostrophe at all.",
+      like: ["SK-GUM3-1-C06"]
+    },
+    {
+      id: "SK-GUM3-1-S07",
+      type: "ebsr",
+      points: 2,
+      dok: 3,
+      std: [
+        "3.L.GC.1:M:use-apostrophes-in-contractions-and-singular-pos"
+      ],
+      passages: ["p5"],
+      prompt: "This question has two parts. Answer Part A, then Part B.",
+      partA: {
+        prompt: "Which sentence in the draft has a mistake with its or it's?",
+        choices: [
+          { text: "(9) After lunch, the duck flapped its wings and flew away." },
+          { text: "(6) A duck waddled over, and it's beak was full of bread.", correct: true },
+          { text: "(3) We couldn't wait to eat." },
+          { text: "(2) Uncle Ray's grill was already hot when we got there." }
+        ]
+      },
+      partB: {
+        prompt: "Which revision fixes the sentence you chose in Part A?",
+        choices: [
+          { text: "A duck waddled over, and its' beak was full of bread." },
+          { text: "A duck waddled over, and it is beak was full of bread." },
+          { text: "A duck waddled over, and it's beak's was full of bread." },
+          { text: "A duck waddled over, and its beak was full of bread.", correct: true }
+        ]
+      },
+      clue: "Try it is in place of a word with it in it. If the sentence stops making sense, the word is wrong.",
+      hints: [
+        "Try it is in place of a word with it in it. If the sentence stops making sense, the word is wrong.",
+        "For Part A, find the sentences that have its or it's, and test each one with it is. For Part B, ask what the beak has to do with the duck.",
+        "In Part B, no word in English ends with an apostrophe after the s of its. Check the other choices."
+      ],
+      how: [
+        "Part A: find the sentences with its or it's. Sentence 9 says its wings, which makes sense because the wings belong to the duck.",
+        "Sentence 6 says it's beak. Put it is in place of it's: \"it is beak was full of bread.\" That does not make sense, so the apostrophe is wrong.",
+        "Part B: the beak belongs to the duck, so the word that shows belonging has no apostrophe: its.",
+        "Part B answer: \"A duck waddled over, and its beak was full of bread.\""
+      ],
+      misconception: "A common mix-up is thinking a word that shows belonging needs an apostrophe. With it, it is the other way around.",
+      why: "Part A: \"(6) A duck waddled over, and it's beak was full of bread.\" Part B: \"A duck waddled over, and its beak was full of bread.\" The beak belongs to the duck, so the word that shows belonging is its, with no apostrophe. It's would only be right if it could mean it is.",
+      like: ["SK-GUM3-1-C07"]
+    },
+    {
+      id: "SK-GUM3-1-S08",
+      type: "ms",
+      points: 2,
+      dok: 3,
+      std: [
+        "3.L.GC.1:M:use-apostrophes-in-contractions-and-singular-pos"
+      ],
+      passages: ["p5"],
+      prompt: "Which TWO changes would fix mistakes in the draft?",
+      pick: 2,
+      choices: [
+        { text: "In sentence 2, change Ray's to Rays." },
+        { text: "In sentence 5, change watermelon's to watermelons.", correct: true },
+        { text: "In sentence 3, change couldn't to could'nt." },
+        { text: "In sentence 8, change They're to Theyre." },
+        { text: "In sentence 7, change shouldnt to shouldn't.", correct: true }
+      ],
+      clue: "A good fix makes a word match its job. Check whether each word in the choices shows belonging, stands for two words, or just means more than one.",
+      hints: [
+        "A good fix makes a word match its job. Check whether each word in the choices shows belonging, stands for two words, or just means more than one.",
+        "Look back at sentences 2, 3, 5, 7 and 8 in the draft. For each, decide whether the word is already doing its job correctly.",
+        "Two of the changes would take an apostrophe out of a word that is already correct. Check the other three."
+      ],
+      how: [
+        "Check each sentence and decide whether its apostrophe is already doing a job.",
+        "Ray's shows belonging, couldn't stands for could not, and they're stands for they are. Those three are correct as they are.",
+        "Sentence 5: watermelon's only means more than one, so it should be watermelons.",
+        "Sentence 7: shouldnt stands for should not, so it needs the apostrophe where the o was left out: shouldn't."
+      ],
+      misconception: "A common mix-up is taking the apostrophe out of a word that is already correct, because it ends in s or looks too long.",
+      why: "The answers are \"In sentence 5, change watermelon's to watermelons.\" and \"In sentence 7, change shouldnt to shouldn't.\" Watermelon's only means more than one, so it needs no apostrophe, and shouldn't needs one in place of the o. Ray's, couldn't and they're are already correct.",
+      like: ["SK-GUM3-1-C08"]
+    },
+    {
+      id: "SK-GUM3-1-S09",
+      type: "dropdown",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.L.GC.1:M:use-apostrophes-in-contractions-and-singular-pos"
+      ],
+      passages: [],
+      prompt: "Choose the word that correctly completes the sentence.",
+      text: "The park bench was old, and the {0} legs were wobbly.",
+      slots: [
+        {
+          options: ["benches", "bench's", "benches'"],
+          answer: 1
+        }
+      ],
+      clue: "Ask who owns the legs, and whether that is one thing or more than one.",
+      hints: [
+        "Ask who owns the legs, and whether that is one thing or more than one.",
+        "Look at the first part of the sentence to see how many benches there are.",
+        "A word that only means more than one has no apostrophe. Decide whether this sentence is about more than one bench."
+      ],
+      how: [
+        "Ask who owns the legs. They belong to the bench.",
+        "The first part of the sentence talks about one bench, so there is one owner. Add an apostrophe and s right after it: bench's.",
+        "Benches means more than one bench, and benches' would mean the legs belong to several benches."
+      ],
+      misconception: "A common mix-up is adding -es the way you do for more than one, when the word needs to show that something belongs to one thing.",
+      why: "The answer is bench's. The sentence is about one bench, and the legs belong to it, so the word needs 's. Benches means more than one bench, and benches' would mean the legs belong to several benches.",
+      like: ["SK-GUM3-1-C09"]
+    },
+    {
+      id: "SK-GUM3-1-S10",
+      type: "mc",
+      points: 1,
+      dok: 3,
+      std: [
+        "3.L.GC.1:M:use-apostrophes-in-contractions-and-singular-pos"
+      ],
+      passages: ["p5"],
+      prompt: "Sentence 3 has couldn't with an apostrophe, and sentence 5 has watermelon's with an apostrophe. Why is only one of them correct?",
+      choices: [
+        { text: "Couldn't is wrong because nothing in sentence 3 belongs to anyone, but watermelon's is correct." },
+        { text: "Both are correct, because every short word with a t or an s needs an apostrophe." },
+        {
+          text: "Couldn't stands for could not, but watermelon's only means more than one, so it needs no apostrophe.",
+          correct: true
+        },
+        { text: "Watermelon's is correct because an apostrophe makes a word mean more than one." }
+      ],
+      clue: "An apostrophe needs a job: missing letters, or belonging to one owner. Ask what job each word is doing.",
+      hints: [
+        "An apostrophe needs a job: missing letters, or belonging to one owner. Ask what job each word is doing.",
+        "Read sentences 3 and 5 side by side. Try stretching the word in each one into two words.",
+        "Sentence 4 tells you that there is more than one watermelon. Use that to check what watermelon's means in sentence 5."
+      ],
+      how: [
+        "Ask what job each apostrophe is doing.",
+        "In sentence 3, couldn't stretches into could not, so the apostrophe stands for a missing letter.",
+        "In sentence 5, nothing belongs to the watermelons. Sentence 4 says there are two, so the word only means more than one and should be watermelons.",
+        "The answer is that couldn't stands for could not, but watermelon's only means more than one."
+      ],
+      misconception: "A common mix-up is thinking an apostrophe can make a word mean more than one.",
+      why: "The answer is that couldn't stands for could not, but watermelon's only means more than one, so it needs no apostrophe. Apostrophes show missing letters or belonging. They do not make a word mean more than one.",
+      like: ["SK-GUM3-1-C10"]
+    },
+    {
+      id: "SK-GUM3-1-S11",
+      type: "hottext",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.L.GC.1:M:use-apostrophes-in-contractions-and-singular-pos"
+      ],
+      passages: ["p6"],
+      prompt: "Select the TWO sentences in the sign-up sheet that have a mistake with an apostrophe.",
+      targets: ["p6:2:1", "p6:2:2", "p6:2:3", "p6:3:1", "p6:3:3"],
+      answer: ["p6:2:1", "p6:2:2"],
+      pick: 2,
+      clue: "Check every apostrophe, and every word that might need one. Ask what job it does.",
+      hints: [
+        "Check every apostrophe, and every word that might need one. Ask what job it does.",
+        "Look at the sentences with apostrophes in the middle and end of the sheet. Say each short word as two words, and ask who owns each thing.",
+        "Sentence 6 shows belonging and is written correctly. Check the other four."
+      ],
+      how: [
+        "Go through each sentence and find the word with an apostrophe.",
+        "Sentence 4: it's would mean it is, but the leash belongs to the dog, so the word should be its.",
+        "Sentence 5: towel's only means more than one, so it should be towels.",
+        "Sentence 6 (shelter's) shows belonging, sentence 7 (It's) stands for it is, and sentence 9 (can't) stands for cannot, so they are correct."
+      ],
+      misconception: "A common mix-up is spotting only one kind of mistake. Look for an apostrophe that stands for the wrong thing, and for one that is not needed.",
+      why: "The answers are sentence 4 and sentence 5. It's is wrong because the leash belongs to the dog, so the word should be its. Towel's only means more than one, so it needs no apostrophe. Shelter's shows belonging, it's stands for it is, and can't stands for cannot.",
+      like: ["SK-GUM3-1-C11"]
+    },
+    {
+      id: "SK-GUM3-1-S12",
+      type: "dropdown",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.L.GC.1:M:use-apostrophes-in-contractions-and-singular-pos"
+      ],
+      passages: [],
+      prompt: "Choose the words that correctly complete the sentence.",
+      text: "The coach says the game {0} start until noon, and the field {1} dry yet.",
+      slots: [
+        {
+          options: ["won't", "wo'nt", "wont"],
+          answer: 0
+        },
+        {
+          options: ["isn't", "is'nt", "isnt"],
+          answer: 0
+        }
+      ],
+      clue: "Each blank stands for two words squeezed into one. Say the two words first.",
+      hints: [
+        "Each blank stands for two words squeezed into one. Say the two words first.",
+        "For each blank, stretch the short word into two words. Then think about where the letters are missing.",
+        "In the second blank, a word with no apostrophe is not a contraction. Decide about the first blank on your own."
+      ],
+      how: [
+        "Blank 1: the game will not start until noon. Will not squeezes into won't, with the apostrophe where the o in not was left out.",
+        "Blank 2: the field is not dry yet. Is not squeezes into isn't, with the apostrophe where the o was left out.",
+        "The other options put the apostrophe in the wrong place or leave it out."
+      ],
+      misconception: "A common mix-up is putting the apostrophe where the two words meet, or leaving it out.",
+      why: "The answers are won't and isn't. Will not becomes won't, and is not becomes isn't. The apostrophe stands where the o in not was left out, so wo'nt and is'nt are wrong, and wont and isnt have no apostrophe at all.",
+      like: ["SK-GUM3-1-C12"]
+    },
+    {
+      id: "SK-GUM3-1-S13",
+      type: "mc",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.L.GC.1:M:use-apostrophes-in-contractions-and-singular-pos"
+      ],
+      passages: [],
+      prompt: "This sentence from a teacher's note has one mistake. Which revision fixes it?",
+      stem: "Please tape each students name to the cubby.",
+      choices: [
+        { text: "Please tape each students' name to the cubby." },
+        { text: "Please tape each student's name's to the cubby." },
+        { text: "Please tape each students's name to the cubby." },
+        { text: "Please tape each student's name to the cubby.", correct: true }
+      ],
+      clue: "Ask who owns the name, and whether that is one person or more than one.",
+      hints: [
+        "Ask who owns the name, and whether that is one person or more than one.",
+        "Look at the word each in the sentence. Ask whether it points to one student at a time or to a whole group at once.",
+        "Adding two apostrophes to the same sentence is not a fix. Check what the other choices do to the word name."
+      ],
+      how: [
+        "Find the word that is missing its apostrophe. The name belongs to a student.",
+        "Each student means one student at a time, so there is one owner. Add an apostrophe and s right after the owner: student's.",
+        "Students' is for several owners, and name's would turn a plain noun into a word that shows belonging."
+      ],
+      misconception: "A common mix-up is putting the apostrophe after the s because there are many students. Each student is one owner at a time.",
+      why: "The answer is \"Please tape each student's name to the cubby.\" The word each points to one student at a time, so the word needs 's. Students' is for more than one owner, and the other choices add letters or apostrophes that do not belong.",
+      like: ["SK-GUM3-1-C13"]
+    },
+    {
+      id: "SK-GUM3-1-S14",
+      type: "mc",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.L.GC.1:M:use-apostrophes-in-contractions-and-singular-pos"
+      ],
+      passages: [],
+      prompt: "Which sentence uses they're correctly?",
+      choices: [
+        { text: "They're the best team in our league.", correct: true },
+        { text: "The players left they're bags in the van." },
+        { text: "Is that they're coach on the field?" },
+        { text: "We cheered for they're first goal." }
+      ],
+      clue: "They're is a contraction, so it must stand for two words that fit in the sentence. Try putting the two words in its place.",
+      hints: [
+        "They're is a contraction, so it must stand for two words that fit in the sentence. Try putting the two words in its place.",
+        "Read each sentence with the words they are in place of they're. Only keep a choice if the sentence still makes sense.",
+        "Try the words they are in the sentence about the bags. Check whether it still makes sense."
+      ],
+      how: [
+        "They're is short for they are. Try they are in place of they're in each sentence.",
+        "\"They are the best team in our league.\" makes sense.",
+        "In the other three, they are does not make sense: \"they are bags,\" \"they are coach\" and \"they are first goal.\" In each one the word is used to show belonging."
+      ],
+      misconception: "A common mix-up is using they're where a word that shows belonging should go. If they are does not fit, it is the wrong word.",
+      why: "The answer is \"They're the best team in our league.\" They are fits in place of they're. In the other sentences, they are does not make sense: bags, coach and goal belong to someone, and they're cannot show belonging.",
+      like: ["SK-GUM3-1-C14"]
+    },
+    {
+      id: "SK-GUM3-1-S15",
+      type: "ms",
+      points: 2,
+      dok: 3,
+      std: [
+        "3.L.GC.1:M:use-apostrophes-in-contractions-and-singular-pos"
+      ],
+      passages: [],
+      prompt: "Read the two sentences. Which TWO statements are true?",
+      stem: ["Ben's hungry.", "Ben's lunch is in the bag."],
+      pick: 2,
+      choices: [
+        { text: "In the second sentence, Ben's can be stretched into Ben is." },
+        { text: "In the first sentence, Ben's can be stretched into Ben is.", correct: true },
+        { text: "In both sentences, Ben's is short for two words." },
+        { text: "In the second sentence, Ben's shows that the lunch belongs to Ben.", correct: true },
+        { text: "In the first sentence, Ben's shows that something belongs to Ben." }
+      ],
+      clue: "Try stretching the word with the apostrophe into two words. Then try it in the other sentence.",
+      hints: [
+        "Try stretching the word with the apostrophe into two words. Then try it in the other sentence.",
+        "Say the first sentence with Ben is in place of Ben's. Then say the second sentence with Ben is in place of Ben's.",
+        "The word after Ben's in the second sentence names a thing a person can own. Check whether is fits in front of it."
+      ],
+      how: [
+        "Try Ben is in place of Ben's in the first sentence: \"Ben is hungry.\" It makes sense, so the 's is a contraction.",
+        "Try it in the second sentence: \"Ben is lunch is in the bag.\" It does not make sense. The lunch belongs to Ben, so the 's shows belonging.",
+        "So the true statements are that the first Ben's can be stretched into Ben is, and that the second Ben's shows the lunch belongs to Ben."
+      ],
+      misconception: "A common mix-up is thinking 's always shows belonging. It can also be short for is.",
+      why: "The answers are \"In the first sentence, Ben's can be stretched into Ben is.\" and \"In the second sentence, Ben's shows that the lunch belongs to Ben.\" Ben is hungry makes sense, but Ben is lunch does not. The same two letters do two different jobs.",
+      like: ["SK-GUM3-1-C15"]
+    }
+  ],
+  addons: {
+    "SK-GUM3-1-P1": {
+      hints: [
+        "A short word with an apostrophe stands for two words. Ask whether two words fit in the blank.",
+        "Say the sentence with it is in the blank, then say it again with the other word. Which one sounds right?",
+        "Its' is not a word in English. Decide between the other two choices."
+      ],
+      how: [
+        "Read the sentence: \"Grandpa says ___ going to rain later today.\"",
+        "Try it is in the blank: \"Grandpa says it is going to rain later today.\" That makes sense, so you need a word that squeezes it is together.",
+        "It is squeezes into it's, with the apostrophe where the i in is was left out. Its with no apostrophe would show belonging, and that does not fit here."
+      ],
+      misconception: "A common mix-up is using its because it looks shorter. Its is the word that shows belonging."
+    },
+    "SK-GUM3-1-P2": {
+      hints: [
+        "Check each word with an apostrophe or one that might need one. Ask whether it stands for missing letters, shows belonging, or just means more than one.",
+        "Look at the four sentences one at a time. Find the word in each that is the likely problem.",
+        "Two of the sentences are missing an apostrophe. Check the other two."
+      ],
+      how: [
+        "Look at each sentence and find the word that might need an apostrophe.",
+        "\"Our teacher's desk is next to the window.\" The desk belongs to the teacher, so teacher's is right.",
+        "The others are wrong: puppy's only means more than one, dont needs an apostrophe (don't), and Lenas needs an apostrophe because the wagon belongs to Lena."
+      ],
+      misconception: "A common mix-up is adding an apostrophe to every word that ends in s."
+    },
+    "SK-GUM3-1-P3": {
+      hints: [
+        "Try to stretch each word into two words. If you can, it is a contraction. If something belongs to someone, it shows belonging.",
+        "Start with the row you are surest about, and decide the rest one at a time.",
+        "Try stretching they'll into two words. Does it make sense? Then decide the other rows."
+      ],
+      how: [
+        "Try stretching each word. Wasn't becomes was not, and they'll becomes they will. Both are short for two words.",
+        "Andre's lunch box: the lunch box belongs to Andre. The bird's nest: the nest belongs to the bird.",
+        "So wasn't and they'll go in the first column, and the other two go in the second."
+      ],
+      misconception: "A common mix-up is thinking every word with 's is a contraction. Belonging also uses 's."
+    },
+    "SK-GUM3-1-P4": {
+      hints: [
+        "An apostrophe has two jobs: standing for missing letters, or showing that something belongs to one owner. A word that only means more than one needs neither.",
+        "Find each word with an apostrophe and say what job it does: missing letters or belonging.",
+        "Can't stands for cannot, so that sentence is correct. Check the other three."
+      ],
+      how: [
+        "Find each word with an apostrophe and ask what job it does.",
+        "Hana's garden: the garden belongs to Hana. Can't is short for cannot, and I'm and you're are short for I am and you are.",
+        "Three frog's sat on a log: nothing belongs to the frogs, and the word only means more than one. It should be frogs."
+      ],
+      misconception: "A common mix-up is thinking every word that ends in s needs an apostrophe."
+    },
+    "SK-GUM3-1-P5": {
+      hints: [
+        "For each sentence, find every word that needs an apostrophe. Then check that it is there and that no plain plural has one.",
+        "Say each short word as two words, and ask who owns each thing. Look for a word that only means more than one.",
+        "One of the sentences uses it's where a word that shows belonging should go. Check the other four."
+      ],
+      how: [
+        "Check each sentence for a contraction, a word that shows belonging, and a plain plural.",
+        "\"The baby's blanket is soft and blue.\" The blanket belongs to the baby. \"We'll eat lunch under the big oak tree.\" We'll is short for we will.",
+        "The others are wrong: cant needs an apostrophe (can't), book's should be books, and it's should be its."
+      ],
+      misconception: "A common mix-up is adding an apostrophe to a plain plural, or using it's where the word shows belonging."
+    }
+  },
+  /* B6:core:end */
   test: [
     { id: "SK-GUM3-1-T1", type: "dropdown", points: 2, dok: 2, passages: [],
       prompt: "Choose the words that correctly complete the sentence.",
