@@ -153,10 +153,10 @@ Reviewer: independent (did not author). Lessons: 6 verb endings -s/-ed/-ing (`..
 
 | Lesson | Verdict | MUST | SHOULD | NOTE |
 |---|---|---|---|---|
-| 6 Verb endings (-s, -ed, -ing) | CHANGES REQUIRED | 4 | 8 | 6 |
+| 6 Verb endings (-s, -ed, -ing) | CHANGES REQUIRED | 3 | 8 | 6 |
 | 7 Action verbs | CHANGES REQUIRED | 3 | 9 | 5 |
-| 8 Adjectives and adverbs | CHANGES REQUIRED | 1 | 7 | 5 |
-| 9 Common and proper nouns | ACCEPT (the SHOULDs are worth doing, none blocks) | 0 | 6 | 5 |
+| 8 Adjectives and adverbs | CHANGES REQUIRED | 1 | 7 | 6 |
+| 9 Common and proper nouns | ACCEPT (the SHOULDs are worth doing, none blocks) | 0 | 6 | 6 |
 
 ### Method and blindness
 
@@ -192,7 +192,6 @@ Reviewer: independent (did not author). Lessons: 6 verb endings -s/-ed/-ing (`..
 | MUST | 6-C03, 6-C04 -> 6-C06 | Giveaway inside core. C03's stem says "Sentence 2 has a verb that does not fit"; C04's says "Sentence 6 has a verb that does not fit". Both are in set 1. C06 (set 2) asks which TWO shown sentences (2-6) need -ed. The key is sentences 2 and 6. A child who read C03 and C04 has the whole answer. | Move C03/C04 to other sentences of p1 (not 2, 6), or retarget C06 at two other sentences; keep each key sentence out of every other core stem. |
 | MUST | 6-C15, 6-S15 | Hint 3 enumerates the three wrong choices ("Three choices have no -ed verb at all" / "no verb ending in -s"), so exactly one choice is live. The design is the cause: the key is the only choice containing an -ed (S15: -s) verb, so hint 1 ("Look for a verb with -ed") already finds it with no understanding of Mia's/the poster's claim. | Rewrite so at least two choices contain the ending in different roles (e.g. an -ed word used as an adjective, or a past-tense sentence next to a present sentence that also carries the ending), and drop the "three choices" hint. |
 | MUST | Hints, how, why across the lesson (C03, C04, C07, C09, C12, S02, S03, S04, S07, S09, S12, P1, P5 ...) | "An -ing verb needs a helper word like started or kept." Started and kept are not helping (auxiliary) verbs. A helping verb is a form of be/have/do or a modal, and the progressive is "was jumping". This repo's own L-GUM4 lesson teaches exactly that, and this lesson's Teach says "words like love, start, stop and keep" while the hints say "helper word". Feedback tells children something false and contradictory. | Say "a word like started, kept or loves right before it" in all hints, how and why. Optionally add one Teach line on "was/is + -ing" so the progressive is not left to the wrong-answer feedback. |
-| MUST | 6-S15, 6-C15 (also the same structure in 7-C15/S15) | Counterexample items. See also SHOULD below. | (with the first fix) |
 | SHOULD | Core coverage | Not one core item has an -ing key. Learn It 2 (started laughing) models it and -ing is a third of the standard ("by adding -ing, -ed, or -s"); in core it appears only as a distractor (C08 D, C14 A, S08 D, S14 D) and in Together P3 / tests T2, T3. | Make one of C03/C09/C12 an -ing item (after started/keeps/loves). |
 | SHOULD | Learn It / Watch Me | No -s example (one vs more than one doer) although 6-C05, C07, C08, C10, C11, C13 and S-twins hinge on it. | Add a third Watch Me on the doer count (the author added a third to lesson 1). |
 | SHOULD | 6-C03, C04, C12, P5, S03, S04, S12 | Same task seven times ("sentence N has a verb that does not fit its time clue, pick the fix"), differing by verb only. | Vary one or two (e.g. an -s fix, or an -ing fix). |
