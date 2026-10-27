@@ -344,3 +344,29 @@ node verification/check-content.js --all --record-review 3.T.SS.2.b,3.T.SS.1.d -
 4. Check: `node verification/check-content.js --all --release` should show no `ledger` or `versions` failure for the accepted lessons. It will still fail on lessons with core that are not yet accepted (no ledger entry) and on the 44 legacy lessons that have neither core nor a documented exception; that is the intended state until they are migrated.
 
 **Fixtures made stable (this phase).** `verification/path.py` no longer hard-codes 101 activities, 99 lessons or 53 practice codes: it reads the lesson and task counts from the page and the practice codes from the coverage matrix, then checks that the path lists every lesson and task once. `verification/guard.py` section 14 no longer depends on 3.L.GC.2.b having no core: the Try step is `:y3` when the lesson has core and `:y` when it does not, point totals are read from the lesson, and if the lesson ever stops having two equal forms the first lesson that does is used. All assertions keep their meaning. The question of the version file in the question-first branch is unchanged (additive).
+
+### 10.9 Final gates, fresh frozen copy `scratchpad/eng/snap7` (2026-10-27T13:20:34Z, 136 files; `snap7-md5.txt`)
+One sequence (`run7.sh`, `node verification/serve.js . 8790`), the plain guard last, as one pass.
+
+| Suite | Result |
+|---|---|
+| check-content `--all` and manifest | PASS, 0 failures, 72 warnings (101 lessons; 59 core lessons, 885 core items, 885 similar) |
+| check-writing | 0 failures, 0 warnings |
+| readability | exit 0 |
+| copy | 28 assertions passed |
+| path.py | 148 passed, 0 failed (numbers now derived from the data) |
+| path-headers | 48 passed, 0 failed |
+| path-a11y (axe) | 12 + 12 + 12 runs, 0 violations, 0 contrast failures |
+| skills-recovery | 67 passed, 0 failed |
+| writing-recovery | 75 passed, 0 failed |
+| first-visit | 124 passed, 0 failed |
+| practice-own | 73 passed, 0 failed |
+| review | 28 passed, 0 failed (see note) |
+| versioning | 40 passed, 0 failed |
+| guard.py, plain, one pass | 120 passed, 0 failed, exit 0 |
+
+Note on review.py: the first run failed R.5 because all four cumulative areas now have an accepted lesson, so the hub no longer says "Not available yet" anywhere; the check asserted that text unconditionally. It now asserts the text exactly when some area has no accepted lesson (read from the page). I copied only `verification/review.py` into the frozen copy and re-ran it there: 28 passed. Other test changes in this phase: versioning.py builds its own records inside its scratch copy (so it no longer depends on how far the committed records are behind the lessons), and N.22 and N.3b/N.3c are new.
+
+Changed in this phase: `verification/path.py`, `verification/guard.py` (section 14 only), `verification/check-content.js`, `verification/versioning.py`, `verification/review.py`, and this file. Lesson files, `accepted.js`, `assessment-versions.json` and the ledger were not touched.
+
+**Open question (new).** A reworded question can keep its id, points and answer position (3.L.V.2.b item 2 did). The tool now names such items but only warns. Should that be a failure in `--release` for lessons that have core? I left it a warning, in line with the decision on wording-only edits.
