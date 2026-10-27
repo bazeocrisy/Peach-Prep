@@ -48,14 +48,14 @@ PP.addLesson({
       answer: "The word japanese should be Japanese: \"Grandma showed us how to fold a Japanese paper crane.\""
     },
     {
-      show: ["The yard sale is on wed., aug. 14, at 9 Hill rd."],
+      show: ["The picnic is on tues., sept. 8, at 9 Rose rd."],
       ask: "Which short forms need capital letters?",
       steps: [
-        "Find the short forms. Wed. is short for Wednesday, aug. is short for August, and rd. is short for Road.",
-        "Ask: Is each long word a name? Wednesday and August are names, and Road is part of the street name Hill Road.",
+        "Find the short forms. Tues. is short for Tuesday, sept. is short for September, and rd. is short for Road.",
+        "Ask: Is each long word a name? Tuesday and September are names, and Road is part of the street name Rose Road.",
         "If the long word is a name, the short form gets a capital too."
       ],
-      answer: "All three need capitals: \"The yard sale is on Wed., Aug. 14, at 9 Hill Rd.\""
+      answer: "All three need capitals: \"The picnic is on Tues., Sept. 8, at 9 Rose Rd.\""
     }
   ],
   parent: "When you see street signs, menus or mail, point out short forms like Dr., St. and Ave. and words like Mexican or Korean. Ask your child why each one starts with a capital letter.",
@@ -107,7 +107,7 @@ PP.addLesson({
         [
           "(8) By evening, a jamaican band played happy music in the park.",
           "(9) We filled thirty bags and cleaned every ditch on our block.",
-          "(10) I cannot wait for the next clean-up day."
+          "(10) I hope our block holds another clean-up day soon."
         ]
       ]
     },
@@ -144,7 +144,7 @@ PP.addLesson({
       draft: true,
       paragraphs: [
         [
-          "(1) Our class planted a garden behind the school on fri., Apr. 9.",
+          "(1) Our class built a vegetable garden next to the gym on fri., Apr. 9.",
           "(2) First, nurse Alba showed us how to wash our hands after digging.",
           "(3) Mr. Lang brought bags of soil and small tools in his truck."
         ],
@@ -170,7 +170,7 @@ PP.addLesson({
       paragraphs: [
         [
           "(1) Our town library held a reading night on Wed., Dec. 2, for every family.",
-          "(2) After dinner, Chief Dunn of the fire station read us a story about a brave dog.",
+          "(2) After dinner, Chief Dunn of the fire station told us a funny tale about a brave dog.",
           "(3) Then sheriff Moss helped us find the best picture books on the top shelf.",
           "(4) Ms. Reyes handed out free bookmarks at the front desk."
         ],
@@ -207,7 +207,7 @@ PP.addLesson({
           "(7) My brother swam the last lap and finished in third place.",
           "(8) Our team did not win, yet every swimmer heard loud claps from the fans.",
           "(9) Later, everyone ate lunch together at the park on Hill Ave.",
-          "(10) The last meet of the year is on sun., Aug. 15, at the pool."
+          "(10) Come cheer for us at the pool on sun., Aug. 15."
         ]
       ]
     }
@@ -364,10 +364,10 @@ PP.addLesson({
             partB: {
               prompt: "Why does the word in Part A need a capital letter?",
               choices: [
-                { text: "It is a short form of a day, a month or a street name." },
-                { text: "It is made from Peru, the name of a country, and tells what kind of tale.", correct: true },
-                { text: "It is the name of the friend who found the book at the fair." },
-                { text: "It is a title that comes right before the name of a person." }
+                { text: "Short forms of days, months and streets start with capitals." },
+                { text: "Words made from a country's name start with capitals.", correct: true },
+                { text: "The names of friends and classmates start with capitals." },
+                { text: "Titles right before a person's name start with capitals." }
               ]
             },
             clue: "Ask what each word in the sentence does. Is it made from the name of a place? Then ask why that matters.",
@@ -380,10 +380,10 @@ PP.addLesson({
               "Part A: read sentence 4 and check each word. Peruvian tells what kind of folk tale, and it comes from Peru.",
               "Peru is the name of a country, so a describing word made from it starts with a capital letter.",
               "Part A answer: peruvian.",
-              "Part B answer: \"It is made from Peru, the name of a country, and tells what kind of tale.\""
+              "Part B answer: \"Words made from a country's name start with capitals.\""
             ],
             misconception: "A common mix-up is keeping a describing word small because it is not a name itself. A word made from a place name still gets a capital.",
-            why: "Part A: peruvian. Part B: \"It is made from Peru, the name of a country, and tells what kind of tale.\" Peruvian is a describing word made from a place name, so it starts with a capital letter: Peruvian. It is not a title and not a person's name."
+            why: "Part A: peruvian. Part B: \"Words made from a country's name start with capitals.\" Peruvian is a describing word made from a place name, so it starts with a capital letter: Peruvian. It is not a title and not a person's name."
           }
         ]
       },
@@ -851,37 +851,37 @@ PP.addLesson({
       passages: ["p4"],
       prompt: "Start with A, and finish with B.",
       partA: {
-        prompt: "Which word in sentence 6 should be written with a capital?",
+        prompt: "Sentence 6 has one word with a mistake. Pick it.",
         choices: [
           { text: "haitian", correct: true },
+          { text: "planted" },
           { text: "pepper" },
-          { text: "seeds" },
-          { text: "grows" }
+          { text: "seeds" }
         ]
       },
       partB: {
-        prompt: "What is the reason for your choice in Part A?",
+        prompt: "Which reason explains that choice?",
         choices: [
-          { text: "Because it is a short form of a day, a month or a street name." },
-          { text: "Because it names the student who plants seeds in the garden row." },
-          { text: "Because it is a title that stands right before a teacher's name." },
-          { text: "Because it tells what kind of pepper, using the name of a country, Haiti.", correct: true }
+          { text: "Because it comes ahead of a teacher's last name, as Dr. or Mr. would." },
+          { text: "Because it shortens the word for one calendar day." },
+          { text: "Because it names the gardener who planted these seeds." },
+          { text: "Because it describes the pepper and comes from Haiti, a place.", correct: true }
         ]
       },
-      clue: "Ask which word in the sentence tells what kind of something. Then ask what that word is made from.",
+      clue: "Ask which word in the sentence tells what sort of something. Then ask where that word comes from.",
       hints: [
-        "Ask which word in the sentence tells what kind of something. Then ask what that word is made from.",
+        "Ask which word in the sentence tells what sort of something. Then ask where that word comes from.",
         "Reread sentence 6 and ask about each word. For Part B, think about which Learn It rule the word follows.",
-        "In Part A, grows is a verb that tells what the pepper does. Decide among the other three."
+        "In Part A, planted is a verb that tells what Kai did. Decide among the other three."
       ],
       how: [
-        "Part A: read sentence 6. Haitian tells what kind of pepper it is, and it is made from Haiti.",
+        "Part A: read sentence 6. Haitian tells what sort of pepper it is, and it comes from Haiti.",
         "Haiti is the name of a country, so a describing word made from it needs a capital letter.",
         "Part A answer: haitian.",
-        "Part B answer: \"Because it tells what kind of pepper, using the name of a country, Haiti.\""
+        "Part B answer: \"Because it describes the pepper and comes from Haiti, a place.\""
       ],
       misconception: "A common mix-up is leaving the word small because it sits in the middle of a sentence. Describing words made from place names always get capitals.",
-      why: "Part A: haitian. Part B: \"Because it tells what kind of pepper, using the name of a country, Haiti.\" Haitian is made from a place name, so it starts with a capital letter: Haitian. It is not the name of a person and not a title.",
+      why: "Part A: haitian. Part B: \"Because it describes the pepper and comes from Haiti, a place.\" Haitian is made from a place name, so it starts with a capital letter: Haitian. It is not a teacher's name and not a title.",
       like: ["SK-GUM5-1-C05"]
     },
     {
@@ -987,27 +987,27 @@ PP.addLesson({
       std: [
         "3.L.GC.1:I:use-conventional-capitalization-in-abbreviations"
       ],
-      passages: ["p5"],
-      prompt: "Compare chief in sentences 2 and 7 of the draft. Which statement is true?",
+      passages: [],
+      prompt: "Which pair of sentences shows one title used with a name and then used alone, with the capital letters right in both?",
       choices: [
-        { text: "A name follows chief in sentence 2, so it is a title there, and sentence 7 only names a job.", correct: true },
-        { text: "Chief names a person in both sentences, so the chief in sentence 7 needs a capital too." },
-        { text: "Neither sentence needs a capital for chief, so Chief in sentence 2 is the one with a mistake." },
-        { text: "Only the first paragraph may show a title with a capital, and later paragraphs use small letters." }
+        { text: "professor Lin spoke first. Then the professor asked a question." },
+        { text: "Professor Lin spoke first. Then the Professor asked a question." },
+        { text: "Professor Lin spoke first. Then the professor asked a question.", correct: true },
+        { text: "professor Lin spoke first. Then the Professor asked a question." }
       ],
-      clue: "Compare how the word chief is used in the two sentences. Ask what is different about the words around it.",
+      clue: "Look at the title in each pair of sentences. Ask what comes right after it each time.",
       hints: [
-        "Compare how the word chief is used in the two sentences. Ask what is different about the words around it.",
-        "Look at sentence 2 and sentence 7 together. Ask whether either one has a mistake.",
-        "Neither sentence has a mistake. Check the choices that call one of them wrong."
+        "Look at the title in each pair of sentences. Ask what comes right after it each time.",
+        "Check the first sentence of a pair, then the second. Each one needs its own check.",
+        "In one pair the title is small both times. Decide among the other three."
       ],
       how: [
-        "In sentence 2, the name Dunn comes right after Chief, so Chief is a title.",
-        "In sentence 7, the chief has no name after it, so it only names a job.",
-        "The answer is \"A name follows chief in sentence 2, so it is a title there, and sentence 7 only names a job.\""
+        "Check the first sentence of each pair. A name comes right after the title, so the title needs a capital.",
+        "Check the second sentence. No name follows the title there, so it stays small.",
+        "The answer is \"Professor Lin spoke first. Then the professor asked a question.\""
       ],
       misconception: "A common mix-up is thinking a title needs a capital letter every time. It needs one only when a name comes right after it.",
-      why: "The answer is \"A name follows chief in sentence 2, so it is a title there, and sentence 7 only names a job.\" In sentence 2, Chief Dunn is a title and a name. In sentence 7, the chief has no name after it. Both sentences are correct.",
+      why: "The answer is \"Professor Lin spoke first. Then the professor asked a question.\" Professor comes right before the name Lin, so it has a capital. In the second sentence no name follows, so the professor stays small. The other pairs miss one of those two rules.",
       like: ["SK-GUM5-1-C09"]
     },
     {
@@ -1079,8 +1079,8 @@ PP.addLesson({
         "3.L.GC.1:I:use-conventional-capitalization-in-abbreviations"
       ],
       passages: ["p6"],
-      prompt: "Pick the best way to write the date in sentence 10.",
-      text: "The last meet of the year is on {0}, at the pool.",
+      prompt: "Which version of the date in sentence 10 is written correctly?",
+      text: "Come cheer for us at the pool on {0}.",
       slots: [
         {
           options: ["Sun., aug. 15", "sun., Aug. 15", "Sun., Aug. 15"],
@@ -1182,10 +1182,10 @@ PP.addLesson({
       passages: [],
       prompt: "A student labeled a photo, \"A moroccan weaver at work.\" Her partner thinks the label is fine as typed, because weaver is a plain job word. What is the best reply?",
       choices: [
-        { text: "The label is fine, because a capital is needed only for the opening word of a label." },
-        { text: "The label is fine, because a describing word never takes a capital before a job word." },
-        { text: "Moroccan comes from Morocco, a country, so it should begin with a capital.", correct: true },
-        { text: "Weaver is the word that needs a capital, since it names a worker." }
+        { text: "Leave it, since capitals are for the opening word of a label only." },
+        { text: "Leave it, since describing words never take capitals next to job words." },
+        { text: "Change it to Moroccan, since the word is built from Morocco, a place.", correct: true },
+        { text: "Change weaver instead, since it names a worker." }
       ],
       clue: "Ask what moroccan tells about the weaver and where the word comes from. Then ask whether the next word changes that.",
       hints: [
@@ -1195,11 +1195,11 @@ PP.addLesson({
       ],
       how: [
         "Ask what moroccan tells: where the weaver is from.",
-        "Moroccan comes from Morocco, the name of a country, so it is a describing word from a place name.",
-        "The answer is \"Moroccan comes from Morocco, a country, so it should begin with a capital.\""
+        "Moroccan is built from Morocco, the name of a country, so it is a describing word from a place name.",
+        "The answer is \"Change it to Moroccan, since the word is built from Morocco, a place.\""
       ],
       misconception: "A common mix-up is letting the next word decide. A word made from a place name needs a capital wherever it appears.",
-      why: "The answer is \"Moroccan comes from Morocco, a country, so it should begin with a capital.\" It does not matter that weaver is a plain job word. A describing word made from a place name always starts with a capital letter.",
+      why: "The answer is \"Change it to Moroccan, since the word is built from Morocco, a place.\" It does not matter that weaver is a plain job word. A describing word made from a place name always starts with a capital letter.",
       like: ["SK-GUM5-1-C15"]
     }
   ],
@@ -1246,7 +1246,7 @@ PP.addLesson({
     "SK-GUM5-1-P4": {
       hints: [
         "Ask whether each word is a title before a name or is made from the name of a place.",
-        "Check the four words one at a time. Ask what each one tells about the restaurant.",
+        "Check the four words one at a time. Ask what each word is doing in the sentence.",
         "Downtown is an everyday word for part of a town, not a name. Check the other three."
       ],
       how: [
