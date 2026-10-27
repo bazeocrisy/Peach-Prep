@@ -433,3 +433,127 @@ Strengths: the s/x/z/ch/sh rule is applied consistently; the Teach examples (fla
 - Core x core overlaps over 0.21 (L3 C04/C12, L4 C05/C10, L5 C04/C12) reflect shared frames; text, context and key differ, so they pass the plan 6 two-of-four test.
 - Remaining legacy items are the same easy ones listed by the first review; they sit in Together/Test or as core refs in L2, L3, L5.
 - Items I could not mark down: all 75 core and 75 twin keys have exactly one defensible answer; hot-text scopes, sentence references in stems, `why` and `how` match the passages.
+
+## Second review (lessons 6-9)
+
+Reviewer: independent second reviewer (did not author, did not write the first review). Scope: the revised last four B7a lessons in `js/data/lessons/L-GUM1.js` (array indices 5-8): 6 verb endings, 7 action verbs, 8 adjectives and adverbs, 9 common and proper nouns. Frozen copy `/home/claude/pp-content`. Read-only: no lesson edits, no git. Test server (port 8933) killed by pid.
+
+### Verdicts
+
+| Lesson | Verdict | MUST | SHOULD | NOTE |
+|---|---|---|---|---|
+| 6 Verb endings | ACCEPT (SHOULDs recommended) | 0 | 4 | 5 |
+| 7 Action verbs | ACCEPT (SHOULDs recommended) | 0 | 4 | 5 |
+| 8 Adjectives and adverbs | CHANGES REQUIRED | 1 | 3 | 4 |
+| 9 Common and proper nouns | ACCEPT (SHOULDs recommended) | 0 | 4 | 5 |
+
+All first-review MUSTs are genuinely fixed in the files. One new MUST: 8 Teach prints the key sentence of 8-C12. The log has two small false claims (below).
+
+### Method and blindness
+
+- Own Node vm loader (scratchpad `b7b/blind.js`): prints passages and every core item (refs resolved), S01-S15, Together and test, seeded shuffle, no key, why, hints, how, clue, misconception or like. Hot-text targets printed as passage refs and resolved by hand. 152 items (38 per lesson). Answers saved (`b7b/ans6-9.json`) before any key was extracted.
+- **Agreement 152 of 152 (100%).** Fully blind: before solving I printed only field names and counts (no values of keys). The first review, author log and keyed dumps were read after the answers were saved.
+- Close calls solved as keyed but open to challenge: 6-C15 (distractor "worried" is an -ed word, an adjective), 7-S06 (sentence 8 "decided to follow" has a thought and a movement), 8-C11 (sentence 6 "all morning"), 9-S13 slot 0 (spring fits but is not a special name).
+- Scripts (`b7b/`): `keyed.js` (keyed dump), `jac.js`, `longest.js`, `leak.js` and `keyleak.js` (same-draft and key giveaways), `keyaud.js` (key text vs why/hints), `sentchk.js` and `sentmatch.js` (sentence numbers and quotes against passages), `learn.js` (Teach/Learn overlap), `fk2.js`, `run390.py`.
+- Mechanical results:
+  - Keys appear in `why` for every item. Sentence numbers in `why`/`how`/hints match the key targets and passages in every hot-text item. Every cited sentence exists and the item text reproduces it.
+  - Twin overlap, item text (stem, prompt, text, choices, options, rows, columns, ebsr parts, resolved target sentences), all 15 x 15 pairs per lesson: set / multiset maxima 0.196/0.209 (L6), 0.200/0.196 (L7), 0.194/0.195 (L8), 0.203/0.195 (L9). All at or under 0.21. Matched `like` pairs at most 0.206. Twin vs Together/Test at most 0.222 set (7-S03 x P1, multiset 0.167). With the passage text added (my extension, not the ceiling's definition) the multiset reaches 0.231 (6-S12/C04) and 0.222 (7-S07/C03); NOTE only.
+  - Every `like` is a distinct core item of the same type (15 of 15 each lesson).
+  - Passages (20): 102-121 words excluding "(n)", numbering sequential. Flesch-Kincaid: repo `readability.py` formula highest 4.07 (6-p3), then 3.87 (6-p1), 3.67 (9-p5); pyphen syllables highest 3.48. All at or under 4.5. Merriam-Webster syllable breaks were reachable for only two entries (calm-ness, care-ful); both agree with the heuristic.
+  - Longest key (new core and twin, mc, ms, ebsr parts, dropdown slots): none uniquely longest. Ties only. Choose-two with both keys the two longest: 7-S08 (three-way tie at seven letters). Hot-text sentence targets where the two keys are the longest sentences differ by 1-4 characters (6-C11, 9-C11): NOTE. Uniquely longest legacy items: 6-T2 slot 0, 6-T4, 7-P5 (core ref: remembered 10 vs 4-6), 7-T4, 8-P4 slot 1, 9-P3, 9-P4 (core ref), 9-P5, 9-T1, 9-T5. Unchanged originals, already known to the author (NOTE).
+  - "helper word": gone. In lessons 6-9 the only "helper" is a person (9-p1, 6-S11). L-GUM3's "helper word like has" is correct.
+  - Duplicates over all `js/data` (6-word runs, the first review's method reused by `xdup`-style scan of `keyleak.js`/`learn.js` against Teach and Learn): no new item or passage is copied. House-style prompts repeat only.
+  - `check-content.js --all`: PASS, 0 failures; only 9 hint-length warnings on lesson 9.
+- Browser (Chromium 390x844, touch, mobile; one browser process per lesson; `PP_PLAYER.start` on the three core sets; real taps on every control, Check pressed, passage tab opened for every passage item): **60 of 60 core items accepted, no horizontal scroll, no page errors, no passage mismatch.** The first run of 9-P2 timed out because the harness matched "river" inside "Chattahoochee River"; rerun with an exact match: 15 of 15.
+
+### Live-choice recount (every item, hints 1-3, by hand against the printed choices)
+
+After hint 3 at least two choices remain live for every item in all four lessons, and hint 3 names a distractor in each item (hot-text pick-two keeps four or more). The three items the first review named are fixed: 6-C15 and 6-S15 (hint 3 removes only the "yesterday"/"worried" choice), 7-C15 and 7-S15 (one choice, "waving"/"kicking"), 7-S04 (glided / traveled / got, two live). Exceptions where the hint text removes more than it says (all leave two live, but "one choice can be ruled out" is not accurate):
+
+| Item | Hint 3 | Live after |
+|---|---|---|
+| 8-C10 | "A man is a thing, not an action, so kind cannot tell about an action" removes C and D | A, B |
+| 8-S10 | "Dough is a thing, so firmly cannot describe it. One choice can be ruled out" removes B and C | A, D |
+| 9-C10 | "Maple Street Library is a special name, so both cannot be common nouns" removes C and D (C says the name could be any library) | A, B |
+| 7-C14, 7-S14 | "Leaped and scribbled each show a lot ... so one of them can be ruled out" removes both | two |
+| 6-S08 | "One sentence has a plural doer with a verb ending in -s" describes key B (in C08 the same wording describes a distractor) | four, but one key is named |
+
+### Web sources (this session)
+
+- Helping verbs are forms of do, be, have and modals; started, kept, love are not listed: https://www.gallaudet.edu/tutorial-and-instructional-programs/english-center/grammar-and-vocabulary/verbs/helping-verbs-and-modals
+- River otters slide down muddy hills, hold their breath about eight minutes, mothers push pups into the water for lessons; the page does not say river otters hold hands: https://www.nationalgeographic.com/animals/mammals/facts/north-american-river-otter (6-p3 now consistent).
+- Predicate adjective (8-C12, "tasted sweet"): "smell, taste, look and feel sometimes, but not always, function as linking verbs ... If the word following one of these verbs describes the subject, use an adjective": https://digfir-published.macmillanusa.com/writershelp2e/writershelp2e_ch14_121.html
+- Titles and family names: "Dr. Mary Richards", "Mrs. Wilson" capitalized before a name, not after; Aunt as a name capitalized, generic not: https://uniontestprep.com/english-basics/study-guide/capitalization/pages/2 ; Aunt Bessie capitalized, "her aunt's" lowercase: https://www.grammarly.com/blog/punctuation-capitalization/capitalization-family-title/ ; "Aunt Abigail", days, months, holidays capitalized, seasons lowercase: https://owl.purdue.edu/owl/general_writing/mechanics/help_with_capitals.html . Purdue does not name Mr. or Dr.; the union page does. Teach line and items are correct.
+- Mental action verbs: thesaurus.com lists think, imagine, dream, remember (not decide, guess, realize, notice): https://www.thesaurus.com/e/grammar/action-verbs/ ; lingbase lists guess, imagine, realize, remember as stative: https://lingbase.com/en/english/grammar/stative-verbs . Result: "realized" is gone from every item (one untested use remains in 7-p2 sentence 9). 7-T4 still tests "guessed".
+- Unverified words from the log, now checked: calm / calmly (adverb) / calmness (noun, "calm-ness") https://merriam-webster.com/dictionary/calm and https://www.merriam-webster.com/dictionary/Calmness ; carefully (adverb of careful) https://merriam-webster.com/dictionary/careful ; patiently (adverb, "in a way that shows that you are able to wait") https://www.oxfordlearnersdictionaries.com/definition/english/patiently ; flopped (flop, "to throw or move oneself down in a heavy, clumsy, or relaxed way") https://www.merriam-webster.com/dictionary/floppers ; crawled (crawl, "on your hands and knees or with your body close to the ground") https://www.oxfordlearnersdictionaries.com/definition/english/crawl ; skillfully (adverb) and skillfulness (noun) https://merriam-webster.com/dictionary/skillful . Not fetchable (not on the allowlist): excitedly, trudged, today, soon (ordinary words; no concern).
+- Other cities are named Denver (Denver, North Carolina; Denver, Pennsylvania): https://en.wikipedia.org/wiki/Denver_(disambiguation) (see 9-S07).
+
+### First-review items: confirmed fixed in the files
+
+- Lesson 6: C03/C04 giveaway to C06 (C06 keys are now sentences 4 and 10; `leak.js` finds no stem naming them). C15/S15 hint 3. "Helper word" rule (removed everywhere). -ing key in core (C03). Watch Me on -s (third). C10, C05, S05, C13, S13 hint 2 now strategy. S10 `like` honest (plural doer). C10 no longer names a C11 key sentence. Otter passage. All confirmed.
+- Lesson 7: C15/S15, S04, C04/C07 same sentence (C07 now p6 sentence 8), `realized`, Teach pair (strolled/walked), third Watch Me, S05 stem, unused p6 now used by C07, S15 `like`. All confirmed.
+- Lesson 8: C03/C05 giveaway to C06, C12 predicate adjective, S07 "how", S15 non-ly distractor, tiredly replaced, unused passages removed, C07 hint 2. All confirmed.
+- Lesson 9: Teach title line, hint 2 of C12/C13/S12/S13 and C15, "spirit week" removed, S10 "name", unused passages removed. Confirmed.
+
+### Lesson 6: verb endings -- ACCEPT
+
+| Sev | Item | Finding | Fix |
+|---|---|---|---|
+| SHOULD | 6-S07 -> 6-S11 | S07 asks about "the mistake in sentence 3" (Joy and I stacks); sentence 3 is half of S11's key (3 and 5). Partial giveaway inside the twin bank (the same pattern the first review marked SHOULD for 6-C10). | Move S07 to another sentence of p5 (not 3, 5). |
+| SHOULD | 6-S08 h3 | "One sentence has a plural doer with a verb ending in -s" is the description of key B ("The neighbors waves"). It names a key; in the twin C08 the same sentence removes a distractor. | Use a hint about a correct sentence (e.g. "Keeps asking has -ing after keeps"). |
+| SHOULD | 6-S15 | Only choice A has an -s verb (the others carry -ed, -ing, plain), so h2 ("which verb ends in -s") finds the key without reading the claim. The first review asked for two choices carrying the ending. | Reword h2 to "Think about when each action happens" and add a second choice with an -s verb in a different role, so the -s ending alone does not find the key. |
+| SHOULD | 6-S11 and log | Log says "S06 and S11 now say sentences". S06 does; S11 prompt still says "lines" and its how says "Line 3", "Lines 1, 8 and 10", while why says "sentences 3 and 5". False log claim (minor). | Say "sentences" in S11 prompt and how. |
+| NOTE | 6-C15 | Distractor "feels tired and worried" is an -ed word right now (an adjective), the child must see that Mia's rule is about verbs. h3 names it. Fine and arguably good. | none |
+| NOTE | "-ing needs a word like started or kept" (hints, how, why of C04, C12, S04, S12, P1, P5 ...) | True for the options shown, but incomplete: was/is + -ing ("was knocking") is not taught anywhere. Not false, but a child may conclude -ing can never follow a be verb. Teach and Learn It 2 say "after words like love, start, stop and keep" (accurate: "often"). | Optional Teach line: "is, was or were also go before -ing". |
+| NOTE | Watch Me | Third Watch Me shows -s for one doer; no Watch Me shows a plural doer keeping the plain verb (C05, C07, C10, C11, S05, S07, S10, S11 depend on it; Teach states it). | Optional. |
+| NOTE | 6-T4 | Contains Learn It 2's sentence ("started laughing at the clown") as a non-key option; legacy. | none |
+| NOTE | Task repeat | C04, C12, S04, S12 and Together P1, P5 are the same "fix the verb by its time clue" dropdown/mc; C03 (-ing) and C13 vary. Acceptable. | none |
+
+### Lesson 7: action verbs -- ACCEPT
+
+| Sev | Item | Finding | Fix |
+|---|---|---|---|
+| SHOULD | 7-C14, 7-S14 h3 | "Leaped and scribbled each show a lot ... so one of them can be ruled out" removes both strong verbs (hint says one). Two live, but the count in the text is wrong and the hint nearly gives the answer. | Name one sentence only ("Leaped paints a clear picture, so that sentence cannot be the weakest"). |
+| SHOULD | 7-S10 -> 7-S07 | S10 names "went" as the weak verb in the treehouse story; S07 Part A asks for the vague word in the line about going up (key "went"). Partial giveaway in the twin bank. | S10: compare "brushed" with a different weak verb (e.g. "got") or drop the word "went". |
+| SHOULD | 7-T4 (legacy), also noted for P5 | "guessed" is an action verb in the key. thesaurus.com does not list guess; lingbase lists guess as stative. The first review made the same point; the log does not mention T4. A teacher can dispute it. | Use "imagined" or "wondered". (7-P5 "remembered" is on the thesaurus.com list, so it stands.) |
+| SHOULD | 7-C06 / 7-S06 stems | C06 asks for "an action verb that happens in the mind" (decided, imagined). S06 asks for a sentence that shows "a thought rather than a movement"; sentence 8 is "I decided to follow it quietly", which has a movement verb (follow). Key still unique, but the stricter stem makes the key arguable. | Use the C06 wording in S06 or choose a sentence with no movement verb. |
+| NOTE | 7-C04 | Stem "Sentence 3 uses a weak verb" plus h3 (walked ruled out) leaves dashed and went; the passage shows went in sentence 3. Two live by count, effectively one for a child who opens the passage. S04 fixed this by not naming the word; C04 does the same without the word but the passage gives it. | Optional: "Sentence 3 uses a verb that tells little." |
+| NOTE | 7-p2 sentence 9 | "I realized ..." remains in the passage. No item targets it. | none |
+| NOTE | 7-C13 slot 1 | "rested" and "stopped" are fine verbs for tired hikers; the key rests on "clearest picture". Defensible. | none |
+| NOTE | 7-C11, S11, C07, S07 | Verified: exactly the keyed two sentences have two action verbs; p6 sentence 8 first half has went; S07 B options "did", "slowly" do not fit. | none |
+| NOTE | Overlap | Item text 0.200/0.196; with passage multiset 0.222. | none |
+
+### Lesson 8: adjectives and adverbs -- CHANGES REQUIRED
+
+| Sev | Item | Finding | Fix |
+|---|---|---|---|
+| MUST | 8 Teach vs 8-C12 | Teach point 4 reads "An adjective can also come after a word like is, was or tasted: The soup tasted sweet." 8-C12 is "After the long hike, the soup tasted ___" with key "sweet". The Teach example is the key sentence (`learn.js` finds the 4-word run "the soup tasted sweet"). A child who reads Teach has the answer. | Change the Teach example (for example "The room felt cold", or "The pie smelled wonderful" avoiding sweet/soup), keep the rule. |
+| SHOULD | 8-C10 h3 and 8-S10 h3 | Each hint says "one choice can be ruled out" but its logic eliminates two (C and D; B and C), leaving a 50 percent guess between the key and one other. | Name one choice only (C10: "Both words tell about actions" ; S10: "Both go with the dough"). |
+| SHOULD | 8-S10 -> 8-S12 | S10's prompt prints "sticky and firmly in the dough-stirring line"; S12's blank is that line ("She stirred the ___ dough firmly") with key "sticky". Full giveaway of S12's key inside the twin bank. | Use a different line for S10 or S12 (not both on sentence 4). |
+| SHOULD | 8-S05 | "What gives widely its job?" is ungrammatical for grade 3 and unclear ("What is the job of widely?"). | Reword the prompt. |
+| NOTE | 8-P3 h3, 8-S01 h3 | "One word tells when the bird sang / the carrying will happen. Find it before you move on" names one row key (Yesterday / Tomorrow). Same for 9-P2 and 9-S01 h3 ("One noun names a day / month. Place it first."). Match items have four to six rows, so the narrowing is mild. | Optional: "Sort the words you are surest about first." (already h2). |
+| NOTE | 8-C11 sentence 6 | "They worked steadily all morning" has a time phrase (all morning); a careful child can defend it as "tells when". The stem says adverb; key stands. | Optional. |
+| NOTE | 8-S01 | "three" counts as "describes a person or thing" (number adjective). Teach says adjectives tell "how many", so it is taught. | none |
+| NOTE | 8-T4 vs Learn It 3 | Learn It 3 says "outside" is an adverb of place; T4 row 1 is "Outside". The Teach line "early and outside" is likely original; the Watch Me is new in phase 2. A form-A test row is therefore modelled in Learn It. | Optional: use "nearby" or "inside" in Learn It. |
+
+### Lesson 9: common and proper nouns -- ACCEPT
+
+| Sev | Item | Finding | Fix |
+|---|---|---|---|
+| SHOULD | 9-C05 -> 9-C03 | Same set, same sentence 5. C05's stem prints "Nora is a proper noun and friend is a common noun", the answer to C03 ("Which word in sentence 5 is a proper noun?"). C03 comes first, but the pair gives the key if revisited or reordered. | Move C05 to another sentence (e.g. "Pine Ridge Elementary" and "school", sentence 1). |
+| SHOULD | 9-S04 -> 9-S06, 9-S12 -> 9-S11, 9-C07 -> 9-C06, 9-C10 -> 9-C11 | Each names or prints half of the hot-text key: S04 prints sentence 5 "The goalie, Omar" (S06 key 2 and 5); S12 prints sentence 12 Boston (S11 key 1 and 12); C07 prints sentence 7 Friday (C06 key 3 and 7); C10 prints sentence 1 Maple Street Library (C11 key 1 and 6). Names are plainly special names in the sentence anyway, so the damage is small. | Move one of each pair to a different sentence; at least S04 and S12 (twin bank) are easy. |
+| SHOULD | 9-C10 h3 | Removes C and D (see recount). | Name one choice. |
+| SHOULD | 9-S07 Part B | "Only one city goes by this name" is not true of Denver (Denver, NC and Denver, PA exist). A teacher or parent can challenge a false statement. | "It is the special name of one particular city." |
+| NOTE | 9-C07 h1 | "In Part A, look for the name of one special day" echoes the Part B key ("It is the special name of one day"). | Say "look for the word that names a particular day". |
+| NOTE | 9-C12, C13, S12, S13 | After h3, the remaining two options differ only by capital letters; it is a capitalization item more than a noun-class item, but only three of fifteen. | none |
+| NOTE | 9-S13 slot 0 | spring is a correct completion but not a special name; prompt asks for the special name. | Optional: use "fall" lowercase is the same issue; leave. |
+| NOTE | Learn It | Two Watch Mes; Teach covers titles and sentence-initial common nouns (C15) in words only. | Optional third Watch Me on a capitalized common noun at sentence start. |
+| NOTE | Overlap | 0.203/0.195. | none |
+
+### Log accuracy
+
+- "After hint 3 at least two choices stay live" and "hint 3 removes at most one choice" are true for live counts (two or more remain everywhere) but false as stated for 8-C10, 8-S10, 9-C10, 7-C14, 7-S14 (they remove two) and 6-S08 (names a key).
+- "S06 and S11 now say sentences": true for S06, not S11 (6).
+- "Every remaining passage is used by at least one item": true (checked).
+- Claim of 0 `SK-GUM1-*` warnings in lessons 1 to 8 and 11 in lesson 9: I see 9 lesson-9 hint-length warnings and none elsewhere; harmless.
+- Web section says "calm / calmly / calmness, carefully, patiently, flopped, crawled" not verified: now verified (above).

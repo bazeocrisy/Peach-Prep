@@ -67,10 +67,10 @@
 | B7a | 3.L.GC.1:R:use-interrogatives-to-ask-questions-in-speech | ACCEPTED | Second independent review ACCEPT; open SHOULDs in B7a-review.md |
 | B7a | 3.L.GC.1:R:capitalize-the-first-word-of-a-sentence-and-the- | NOT ACCEPTED: awaiting independent review | B7a-author-log.md; authored, not reviewed |
 | B7a | 3.L.GC.1:R:form-regular-plural-nouns-with-s-or-es | ACCEPTED | Second independent review ACCEPT; open SHOULDs in B7a-review.md |
-| B7a | 3.L.GC.1:R:form-and-use-verbs-with-ing-ed-or-s | NOT ACCEPTED: awaiting independent review | B7a-author-log.md; authored, not reviewed |
-| B7a | 3.L.GC.1:R:use-action-verbs | NOT ACCEPTED: awaiting independent review | B7a-author-log.md; authored, not reviewed |
+| B7a | 3.L.GC.1:R:form-and-use-verbs-with-ing-ed-or-s | ACCEPTED | Second independent review ACCEPT; open SHOULDs in B7a-review.md |
+| B7a | 3.L.GC.1:R:use-action-verbs | ACCEPTED | Second independent review ACCEPT; open SHOULDs in B7a-review.md |
 | B7a | 3.L.GC.1:R:use-adjectives-and-adverbs | NOT ACCEPTED: awaiting independent review | B7a-author-log.md; authored, not reviewed |
-| B7a | 3.L.GC.1:R:use-common-and-proper-nouns | NOT ACCEPTED: awaiting independent review | B7a-author-log.md; authored, not reviewed |
+| B7a | 3.L.GC.1:R:use-common-and-proper-nouns | ACCEPTED | Second independent review ACCEPT; open SHOULDs in B7a-review.md |
 
 "Accepted" means an independent reviewer blind-solved the items, found every key defensible, and found no hint ladder that leaves only the key (see AUTHOR-BRIEF rules). It does not mean the lesson has been tried by a child.
 
