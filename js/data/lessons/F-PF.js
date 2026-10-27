@@ -434,7 +434,7 @@ PP.addLesson({
                 correct: true
               },
               {
-                text: "cabin"
+                text: "cabinet"
               },
               {
                 text: "coat"
@@ -452,10 +452,10 @@ PP.addLesson({
             how: [
               "Find the c in each word and look at the next letter.",
               "In dance, c comes before e. In spice, c comes before e. Both are soft.",
-              "In cabin, coat and cliff, c comes before a, o and l, so each is hard."
+              "In cabinet, coat and cliff, c comes before a, o and l, so each is hard."
             ],
             misconception: "A common mix-up is choosing words because they have a c. Look at the letter after it.",
-            why: "The answers are \"dance\" and \"spice.\" The c comes before e in both words, so it is soft and says s. Cabin, coat and cliff have a hard c, like k."
+            why: "The answers are \"dance\" and \"spice.\" The c comes before e in both words, so it is soft and says s. Cabinet, coat and cliff have a hard c, like k."
           },
           {
             id: "SK-FP4a-C08",
@@ -1269,16 +1269,16 @@ PP.addLesson({
       ],
       prompt: "Tap the word spelled with c but said with s.",
       stem: [
-        "A fox hid by the fence in the cold."
+        "A fox found the dice in the cold."
       ],
       options: [
         "fox",
-        "fence",
-        "cold",
-        "hid"
+        "found",
+        "dice",
+        "cold"
       ],
       answer: [
-        1
+        2
       ],
       pick: 1,
       clue: "Find each c. Then look at the letter right after it.",
@@ -1288,12 +1288,12 @@ PP.addLesson({
         "Cold has a c too. Look at the letter right after it and compare it with the rule for a c that says s."
       ],
       how: [
-        "Find the words with a c: fence and cold.",
+        "Find the words with a c: dice and cold.",
         "In cold, c comes before o, so it is hard.",
-        "In fence, c comes before e, so it is soft."
+        "In dice, c comes before e, so it is soft."
       ],
       misconception: "A common mix-up is choosing the first word with a c. Check the letter after the c.",
-      why: "The answer is \"fence.\" The c comes before e, so it says s. In cold, c is hard, and fox and hid have no c."
+      why: "The answer is \"dice.\" The c comes before e, so it says s. In cold, c is hard, and fox and found have no c."
     },
     {
       id: "SK-FP4a-S15",
@@ -1308,13 +1308,13 @@ PP.addLesson({
         "SK-FP4a-P7"
       ],
       prompt: "Which spelling goes in the blank?",
-      text: "Dad bumped his {0} on the shelf.",
+      text: "Mom likes to {0} jam on toast.",
       slots: [
         {
           options: [
-            "head",
-            "hed",
-            "heed"
+            "spread",
+            "spred",
+            "spreed"
           ],
           answer: 0
         }
@@ -1323,15 +1323,15 @@ PP.addLesson({
       hints: [
         "Say the word that fits the sentence. Then picture how it looks.",
         "Some of these are real words that mean something else. Read each one in the sentence.",
-        "Think about the part of the body that fits, and which letters can spell the vowel in bed."
+        "Think about what you do with jam on toast, and which letters can spell the vowel in bed."
       ],
       how: [
-        "Read the sentence and think of the part of the body that can bump a shelf.",
-        "That word is spelled h-e-a-d.",
-        "Heed is a real word, but it means to pay attention. Hed is not a word."
+        "Read the sentence and think of what you do with jam on toast.",
+        "That word is spelled s-p-r-e-a-d.",
+        "Spreed is not a word, and spred is not spelled that way."
       ],
-      misconception: "A common mix-up is picking a spelling that sounds right but is a different word.",
-      why: "The answer is head. A head is a body part, and the short e sound is spelled e-a here. Heed means to pay attention, and hed is not a word."
+      misconception: "A common mix-up is picking a spelling that sounds right but is not the real one.",
+      why: "The answer is spread. The short e sound is spelled e-a here. Spred and spreed are not how the word is spelled."
     }
   ],
   addons: {
@@ -1403,7 +1403,7 @@ PP.addLesson({
     "SK-FP4a-P6": {
       hints: [
         "Find each c in the sentence. Then look at the letter right after it.",
-        "Only some of the words have a c. Find them first.",
+        "Say each word and listen to the sound that c makes.",
         "Say Carla and cut out loud. Ask whether each c says k or s."
       ],
       how: [
@@ -1631,12 +1631,12 @@ PP.addLesson({
       choices: [
         { text: "bubble", correct: true },
         { text: "turtle", correct: true },
-        { text: "tunnel" },
+        { text: "channel" },
         { text: "travel" },
         { text: "sunset" }
       ],
       clue: "Look at the last three letters of each word. Is it a consonant followed by l and e, in that order?",
-      why: "Bubble ends with ble and turtle ends with tle, so both end with a consonant-le syllable. Tunnel and travel end with el, not le. Sunset ends with a closed syllable." },
+      why: "Bubble ends with ble and turtle ends with tle, so both end with a consonant-le syllable. Channel and travel end with el, not le. Sunset ends with a closed syllable." },
     { id: "SK-FP4b-P7", type: "dropdown", points: 1, dok: 2, passages: [],
       prompt: "Choose the word that is spelled correctly.",
       text: "Please blow out the {0} on the cake.",
@@ -1683,7 +1683,7 @@ PP.addLesson({
             hints: [
               "Say the word slowly and clap once for each beat.",
               "Find each vowel sound in the word. Each vowel sound is one syllable.",
-              "Say but, then ter, then fly, and count how many parts you said."
+              "Say the word at a normal speed, then once more very slowly, and count your claps."
             ],
             how: [
               "Clap the word: but-ter-fly.",
@@ -1928,7 +1928,7 @@ PP.addLesson({
             hints: [
               "Split the word into two syllables. Then look at how each one ends.",
               "Look at each syllable. Ask whether it ends with a consonant, a vowel, or a silent e.",
-              "Start with shine. Look for a silent e at the end."
+              "Start with shine. Look at its last letter and the letter before it."
             ],
             how: [
               "Split the word: sun / shine.",
@@ -2141,7 +2141,7 @@ PP.addLesson({
             hints: [
               "Say each word one syllable at a time. Write what you hear.",
               "Check that each syllable has a vowel. Check how the last syllable is spelled.",
-              "Start with the second blank. Jungul ends in a vowel and a consonant. Ask whether that matches how a consonant-le syllable is spelled."
+              "Start with the second blank. Say its last syllable by itself and ask which spelling looks like the end of a word you know."
             ],
             how: [
               "Pumpkin has two syllables: pump / kin. Each syllable has a vowel.",
@@ -2288,7 +2288,7 @@ PP.addLesson({
         "SK-FP4b-C04"
       ],
       prompt: "Pick the split that makes real syllables.",
-      text: "Magnet splits as {0}. Cover splits as {1}.",
+      text: "Magnet splits as {0}. Bacon splits as {1}.",
       slots: [
         {
           options: [
@@ -2300,9 +2300,9 @@ PP.addLesson({
         },
         {
           options: [
-            "co / ver",
-            "cov / er",
-            "c / over"
+            "ba / con",
+            "bac / on",
+            "baco / n"
           ],
           answer: 0
         }
@@ -2311,15 +2311,15 @@ PP.addLesson({
       hints: [
         "Find the vowels, then look at the consonants between them.",
         "Try a split and say each part. Check whether the parts are real syllables.",
-        "For cover, try splitting before the v first. Say it and ask if it is a real word."
+        "For bacon, try splitting before the c first. Say it and ask if it is a real word."
       ],
       how: [
         "Magnet has two consonants, g and n, between the vowels, so split between them: mag / net.",
-        "Cover has one consonant between the vowels. Splitting before it gives co / ver, a word you know.",
+        "Bacon has one consonant between the vowels. Splitting before it gives ba / con, a word you know.",
         "The other splits leave parts that cannot be said."
       ],
       misconception: "A common mix-up is splitting anywhere. Split where each part can be said as a syllable.",
-      why: "Magnet splits as mag / net, between the two consonants. Cover splits as co / ver, before the one consonant. The other choices make parts that are not syllables."
+      why: "Magnet splits as mag / net, between the two consonants. Bacon splits as ba / con, before the one consonant. The other choices make parts that are not syllables."
     },
     {
       id: "SK-FP4b-S05",
@@ -2594,9 +2594,9 @@ PP.addLesson({
       ],
       prompt: "Sort each word by how its last syllable is built.",
       cols: [
-        "-le ending",
-        "silent e ending",
-        "two-vowel ending"
+        "consonant-le",
+        "r-controlled",
+        "closed"
       ],
       rows: [
         {
@@ -2604,11 +2604,11 @@ PP.addLesson({
           answer: 0
         },
         {
-          text: "complete",
+          text: "spider",
           answer: 1
         },
         {
-          text: "raincoat",
+          text: "rabbit",
           answer: 2
         },
         {
@@ -2619,16 +2619,16 @@ PP.addLesson({
       clue: "Look at how each word ends. Split off the last syllable.",
       hints: [
         "Look at how each word ends. Split off the last syllable.",
-        "Ask whether the last syllable has a consonant plus le, a silent e, or two vowels side by side.",
-        "Start with raincoat. Look at the last syllable."
+        "Ask whether the last syllable has a consonant plus le, a vowel followed by r, or a vowel with a consonant after it.",
+        "Start with spider. Look at the last syllable."
       ],
       how: [
         "Split off the last syllable of each word.",
         "Bottle ends in tle and middle ends in dle, both consonant-le.",
-        "Complete ends with a silent e, and raincoat ends with the team oa."
+        "Spider ends in der, with a vowel followed by r, and rabbit ends in bit, a closed syllable."
       ],
-      misconception: "A common mix-up is matching words that end with e to the same kind. Look at the whole last syllable.",
-      why: "Bottle and middle end with consonant-le syllables. Complete ends with a vowel-consonant-e syllable. Raincoat ends with the vowel team oa."
+      misconception: "A common mix-up is matching words by their last letter. Look at the whole last syllable.",
+      why: "Bottle and middle end with consonant-le syllables. Spider ends with the r-controlled syllable der. Rabbit ends with the closed syllable bit."
     },
     {
       id: "SK-FP4b-S12",
@@ -2688,10 +2688,10 @@ PP.addLesson({
       like: [
         "SK-FP4b-P5"
       ],
-      prompt: "Where does each word get cut? Match.",
+      prompt: "Sort the words by the last letter of their first syllable.",
       cols: [
-        "ahead of the middle letter",
-        "behind the middle letter"
+        "a vowel",
+        "a consonant"
       ],
       rows: [
         {
@@ -2699,15 +2699,15 @@ PP.addLesson({
           answer: 0
         },
         {
-          text: "melon",
+          text: "lemon",
           answer: 1
         },
         {
-          text: "frozen",
+          text: "robot",
           answer: 0
         },
         {
-          text: "visit",
+          text: "melon",
           answer: 1
         }
       ],
@@ -2715,15 +2715,15 @@ PP.addLesson({
       hints: [
         "Each word has one consonant between two vowels. Try splitting before it first.",
         "Say each word both ways. Ask which split gives a real word.",
-        "Start with visit. Say vi / sit, then say vis / it."
+        "Start with lemon. Say le / mon, then say lem / on."
       ],
       how: [
         "Try splitting before the consonant first.",
-        "Pu / pil and fro / zen are real words, so they split before the consonant.",
-        "Vi / sit is not the word, so visit splits vis / it. Melon splits mel / on."
+        "Pu / pil and ro / bot are real words, so their first syllables end with a vowel.",
+        "Le / mon is not the word, so lemon splits lem / on. Melon splits mel / on."
       ],
       misconception: "A common mix-up is always splitting the same way. Test both splits and keep the real word.",
-      why: "Pupil and frozen split before the consonant: pu / pil and fro / zen. Melon and visit split after it: mel / on and vis / it."
+      why: "Pupil and robot split before the consonant: pu / pil and ro / bot, so the first syllable ends with a vowel. Lemon and melon split after it: lem / on and mel / on, so the first syllable ends with a consonant."
     },
     {
       id: "SK-FP4b-S14",
@@ -2752,7 +2752,7 @@ PP.addLesson({
           text: "kennel"
         },
         {
-          text: "panel"
+          text: "pretzel"
         },
         {
           text: "tunnel"
@@ -2762,15 +2762,15 @@ PP.addLesson({
       hints: [
         "Look at how each word ends. Look at the last three letters.",
         "Say each word. Ask whether the end is a consonant plus le.",
-        "Check tunnel and panel. Do they end in a consonant plus le?"
+        "Check tunnel and pretzel. Do they end in a consonant plus le?"
       ],
       how: [
         "Look at the last three letters of each word.",
         "Kettle ends in tle, and cattle ends in tle. Both are consonant-le.",
-        "Kennel, panel and tunnel end in el, not a consonant plus le."
+        "Kennel, pretzel and tunnel end in el, not a consonant plus le."
       ],
       misconception: "A common mix-up is choosing words that end with l. The ending has to be a consonant plus le.",
-      why: "The answers are \"kettle\" and \"cattle.\" Both end with the consonant-le syllable tle. Kennel, panel and tunnel end in el."
+      why: "The answers are \"kettle\" and \"cattle.\" Both end with the consonant-le syllable tle. Kennel, pretzel and tunnel end in el."
     },
     {
       id: "SK-FP4b-S15",
@@ -2894,7 +2894,7 @@ PP.addLesson({
       hints: [
         "Say the word that fits the sentence. Then picture how it looks.",
         "Check how the last syllable is spelled.",
-        "Candal ends in a vowel and a consonant. Ask whether that matches how a consonant-le syllable is spelled."
+        "Say the last syllable of each choice by itself. Ask which spelling looks like the end of a word you know."
       ],
       how: [
         "Read the sentence and think of what you blow out on a cake.",
@@ -2944,10 +2944,10 @@ PP.addLesson({
         { text: "seven", correct: true },
         { text: "paper" },
         { text: "baby" },
-        { text: "hotel" }
+        { text: "silent" }
       ],
       clue: "Say each word and listen to the first vowel. Is it short, or does it say its name?",
-      why: "Robin (rob / in) and seven (sev / en) have a short first vowel, so the first syllable is closed. Paper (pa / per), baby (ba / by) and hotel (ho / tel) have a long first vowel, so they split before the consonant." },
+      why: "Robin (rob / in) and seven (sev / en) have a short first vowel, so the first syllable is closed. Paper (pa / per), baby (ba / by) and silent (si / lent) have a long first vowel, so they split before the consonant." },
     { id: "SK-FP4b-T5", type: "order", points: 2, dok: 1, passages: [],
       prompt: "Put the syllables in order to build the word umbrella.",
       steps: ["um", "brel", "la"],
@@ -3138,13 +3138,13 @@ PP.addLesson({
             ],
             passages: [],
             prompt: "Finish each meaning.",
-            text: "Mislabel means to label {0}. Relabel means to label {1}.",
+            text: "Unlock means to {0} a lock. Relock means to lock it {1}.",
             slots: [
               {
                 options: [
-                  "wrongly",
-                  "again",
-                  "before"
+                  "open",
+                  "check",
+                  "paint"
                 ],
                 answer: 0
               },
@@ -3161,15 +3161,15 @@ PP.addLesson({
             hints: [
               "Cover the front part of each word. Think about what the front part adds.",
               "Say the base word. Then think about the meaning of each front part.",
-              "Start with relabel. Look at its front part and ask what it adds."
+              "Start with relock. Look at its front part and ask what it adds."
             ],
             how: [
-              "Cover the front part of each word. Label is left in both.",
-              "Mis- means wrongly, so mislabel means to label wrongly.",
-              "Re- means again, so relabel means to label again."
+              "Cover the front part of each word. Lock is left in both.",
+              "Un- undoes the base word, so unlock means to open a lock.",
+              "Re- means again, so relock means to lock it again."
             ],
-            misconception: "A common mix-up is giving both words the same meaning. Mis- and re- are different prefixes.",
-            why: "Mislabel means to label wrongly, because mis- means wrongly. Relabel means to label again, because re- means again. Before is the meaning of pre-."
+            misconception: "A common mix-up is giving both words the same meaning. Un- and re- are different prefixes.",
+            why: "Unlock means to open a lock, because un- undoes the word. Relock means to lock it again, because re- means again."
           },
           {
             id: "SK-FP4c-C02",
@@ -3224,31 +3224,31 @@ PP.addLesson({
             passages: [],
             prompt: "Read the sentence. Choose the word that has a prefix meaning not.",
             stem: [
-              "The uncle was unable to open the door."
+              "The cook was displeased with the dirty dish and the cold dinner."
             ],
             options: [
-              "uncle",
-              "unable",
-              "open",
-              "door"
+              "displeased",
+              "dish",
+              "dinner",
+              "cold"
             ],
             answer: [
-              1
+              0
             ],
             pick: 1,
             clue: "A prefix is a word part at the front.",
             hints: [
               "A prefix is a word part at the front.",
-              "Cover the un in each word. Ask whether a real word is left and whether un means not.",
-              "Cover un in uncle. Is a word left?"
+              "Cover the dis in each word. Ask whether a real word is left and whether dis means not.",
+              "Cover dis in dish. Is a word left?"
             ],
             how: [
-              "Cover un in unable. Able is left, so un- is a prefix meaning not.",
-              "Cover un in uncle. Cle is left, which is not a word, so the un is not a prefix.",
-              "Open and door do not start with un."
+              "Cover dis in displeased. Pleased is left, so dis- is a prefix meaning not.",
+              "Cover dis in dish. Only h is left, which is not a word, so the dis is not a prefix.",
+              "Dinner and cold do not start with dis."
             ],
-            misconception: "A common mix-up is choosing every word that starts with un. A real prefix leaves a real word.",
-            why: "The answer is \"unable.\" Cover un and able is left, so un- means not. In uncle, the un is part of the word, because cle is not a word."
+            misconception: "A common mix-up is choosing every word that starts with dis. A real prefix leaves a real word.",
+            why: "The answer is \"displeased.\" Cover dis and pleased is left, so dis- means not. In dish, the dis is part of the word. Dinner and cold do not start with dis."
           },
           {
             id: "SK-FP4c-C04",
@@ -3745,31 +3745,31 @@ PP.addLesson({
       ],
       prompt: "Tap the word whose first two letters are a true prefix.",
       stem: [
-        "The map was unclear, so the unit turned back."
+        "The map under the bed was unclear."
       ],
       options: [
         "map",
-        "unclear",
-        "unit",
-        "turned"
+        "under",
+        "bed",
+        "unclear"
       ],
       answer: [
-        1
+        3
       ],
       pick: 1,
       clue: "A prefix is a word part at the front.",
       hints: [
         "A prefix is a word part at the front.",
         "Cover the un in each word. Ask whether a real word is left.",
-        "Cover un in unit. Is a word left?"
+        "Cover un in under. Is a word left?"
       ],
       how: [
         "Cover un in unclear. Clear is left, so un- means not.",
-        "Cover un in unit. Nit is left, which does not fit, so the un is not a prefix.",
-        "Map and turned do not start with un."
+        "Cover un in under. Der is left, which is not a word, so the un is part of the word.",
+        "Map and bed do not start with un."
       ],
       misconception: "A common mix-up is choosing every word that starts with un. A real prefix leaves a real word.",
-      why: "The answer is \"unclear.\" Cover un and clear is left, so un- means not. In unit, the un is part of the word. Map and turned do not start with un."
+      why: "The answer is \"unclear.\" Cover un and clear is left, so un- means not. In under, the un is part of the word. Map and bed do not start with un."
     },
     {
       id: "SK-FP4c-S04",
@@ -3845,10 +3845,10 @@ PP.addLesson({
           correct: true
         },
         {
-          text: "unit"
+          text: "under"
         },
         {
-          text: "umbrella"
+          text: "until"
         },
         {
           text: "rebuild"
@@ -3858,15 +3858,15 @@ PP.addLesson({
       hints: [
         "A prefix at the front can change a word into its opposite.",
         "Cover the front of each word. Ask whether a real word is left and whether the meaning flipped.",
-        "Cover the first two letters of umbrella and unit. Is a real word left?"
+        "Cover the first two letters of under and until. Is a real word left?"
       ],
       how: [
         "Cover the front of each word.",
         "Sure is left in unsure, and honest is left in dishonest. The front parts mean not.",
-        "Unit and umbrella leave no base word, and rebuild means build again."
+        "Under and until leave no base word, and rebuild means build again."
       ],
       misconception: "A common mix-up is choosing words that only start with un. The front part has to be a prefix that flips the meaning.",
-      why: "The answers are \"unsure\" and \"dishonest.\" Un- and dis- both mean not, and real words are left. Unit and umbrella do not have prefixes, and re- in rebuild means again."
+      why: "The answers are \"unsure\" and \"dishonest.\" Un- and dis- both mean not, and real words are left. Under and until do not have prefixes, and re- in rebuild means again."
     },
     {
       id: "SK-FP4c-S06",
@@ -4265,43 +4265,43 @@ PP.addLesson({
       like: [
         "SK-FP4c-P7"
       ],
-      prompt: "Which meaning does each front part give? Match.",
+      prompt: "Pair every word with what its part adds.",
       cols: [
-        "wrongly",
-        "again",
-        "before"
+        "the reverse of",
+        "with lots of",
+        "free of"
       ],
       rows: [
         {
-          text: "miscount",
+          text: "unwise",
           answer: 0
         },
         {
-          text: "refresh",
+          text: "powerful",
           answer: 1
         },
         {
-          text: "preset",
+          text: "harmless",
           answer: 2
         },
         {
-          text: "mismatch",
+          text: "disloyal",
           answer: 0
         }
       ],
-      clue: "Cover the front part of each word. Think about what it adds.",
+      clue: "Cover the front part or the ending. Think about what it adds.",
       hints: [
-        "Cover the front part of each word. Think about what it adds.",
-        "Ask whether the front part means wrongly, again, or before.",
-        "Start with preset. Look at the front part."
+        "Cover the front part or the ending. Think about what it adds.",
+        "Ask whether the part means the reverse of, with lots of, or free of.",
+        "Start with harmless. Look at the ending."
       ],
       how: [
-        "Find the prefix in each word.",
-        "Mis- means wrongly, so miscount and mismatch go together.",
-        "Re- means again, and pre- means before."
+        "Find the prefix or suffix in each word.",
+        "Un- and dis- mean the reverse of, so unwise and disloyal go together.",
+        "-Ful means with lots of, and -less means free of."
       ],
-      misconception: "A common mix-up is guessing from the base word. Look at the prefix.",
-      why: "Miscount and mismatch have mis-, wrongly. Refresh has re-, again. Preset has pre-, before."
+      misconception: "A common mix-up is guessing from the base word. Look at the prefix or suffix.",
+      why: "Unwise and disloyal have prefixes that mean the reverse of. Powerful has -ful, with lots of. Harmless has -less, free of."
     }
   ],
   addons: {

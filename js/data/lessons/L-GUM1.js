@@ -43,6 +43,16 @@ PP.addLesson({
         "Add a noun at the start to tell who did the action."
       ],
       answer: "It is not complete because it does not tell who chased the ball. A fix is: The puppy chased the ball into the yard."
+    },
+    {
+      show: ["Wash your hands before lunch."],
+      ask: "No who is written. Is this a complete sentence?",
+      steps: [
+        "Look for the verb. Wash tells someone to do something.",
+        "A sentence that tells someone to do something is a command.",
+        "In a command, the who is you, even though the word is not written."
+      ],
+      answer: "It is a complete sentence. It is a command, so the who is you."
     }
   ],
   parent: "This skill is about speaking in complete thoughts, so practice it out loud. When your child answers with a few words, like \"the park,\" ask them to say it again as a whole sentence, such as \"We went to the park.\"",
@@ -298,7 +308,7 @@ PP.addLesson({
                 text: "Next to the new bookshelf by the big window near the table."
               },
               {
-                text: "The new bookshelf with the lamp by the big window near the table."
+                text: "The new bookshelf with the lamp and rugs by the big window near the table."
               }
             ],
             clue: "Check the group of words for the two things every sentence needs: a who or what, and a verb.",
@@ -496,7 +506,7 @@ PP.addLesson({
                 answer: 0
               },
               {
-                options: ["carried","slowly","bags"],
+                options: ["carried","quietly","bags"],
                 answer: 0
               }
             ],
@@ -842,26 +852,26 @@ PP.addLesson({
       ],
       passages: [],
       stem: "A row of tall sunflowers by the fence.",
-      prompt: "What would you add to finish this thought?",
+      prompt: "Which addition completes the idea?",
       choices: [
         {
           text: "an action word for the sunflowers",
           correct: true
         },
         {
-          text: "a name for the farmer"
+          text: "a name for the farmer who planted them"
         },
         {
-          text: "a title above the words"
+          text: "a title written above all the words"
         },
         {
-          text: "a comma near the end"
+          text: "a comma placed near the very end"
         }
       ],
       clue: "Check the group of words for a who or what, and then for a verb. Which one cannot you find?",
       hints: [
         "Check the group of words for a who or what, and then for a verb. Which one cannot you find?",
-        "Find the naming part first. Then look for a word that tells an action or what the thing is like.",
+        "Find the naming part first. Then look for a word that tells what the thing does or is like.",
         "A title is not part of the thought itself. Decide among the rest."
       ],
       how: [
@@ -954,20 +964,20 @@ PP.addLesson({
         "3.L.GC.1:R:use-nouns-and-verbs-to-form-complete-thoughts-in"
       ],
       passages: ["p4"],
-      prompt: "Nothing in sentence 7 names who should stay low, yet it counts as a whole sentence. What explains this?",
+      prompt: "Number 7 leaves out the doer of stay low, yet it is a whole thought. What explains this?",
       choices: [
         {
-          text: "It gives an order, so the one being told is you.",
+          text: "Orders are aimed at the listener, and that listener is you.",
           correct: true
         },
         {
-          text: "Eyes are named, so they are the ones doing the action."
+          text: "Eyes are mentioned, so the eyes do the action."
         },
         {
-          text: "Starting with an action word always makes a sentence."
+          text: "Opening with a verb settles it, whatever else may be missing."
         },
         {
-          text: "A period at the end finishes any group of words."
+          text: "A final period finishes any line of words."
         }
       ],
       clue: "A whole thought needs a naming part and a verb. Look at sentence 7 for both.",
@@ -979,10 +989,10 @@ PP.addLesson({
       how: [
         "Find the verbs in sentence 7: stay and keep. Both tell someone what to do.",
         "A sentence that tells someone what to do is a command. The one who is told is you.",
-        "The answer is \"It gives an order, so the one being told is you.\" Eyes are what the reader should watch, not the one doing the action."
+        "The answer is \"Orders are aimed at the listener, and that listener is you.\" Eyes are what the reader should watch, not the one doing the action."
       ],
       misconception: "A common mix-up is hunting for a written who and giving up when there is none. In a command, the who is you.",
-      why: "The answer is \"It gives an order, so the one being told is you.\" Stay and keep are verbs that tell someone what to do, so the sentence is a command and its who is you. Eyes are the thing being watched, and a verb or a period alone does not make a sentence.",
+      why: "The answer is \"Orders are aimed at the listener, and that listener is you.\" Stay and keep are verbs that tell someone what to do, so the sentence is a command and its who is you. Eyes are the thing being watched, and a verb or a period alone does not make a sentence.",
       like: ["SK-GUM1-1-C05"]
     },
     {
@@ -1025,7 +1035,7 @@ PP.addLesson({
       passages: ["p5"],
       prompt: "Finish Part A before you move on to Part B.",
       partA: {
-        prompt: "What would turn sentence 6 into a whole thought?",
+        prompt: "What would make number 6 a whole thought?",
         choices: [
           {
             text: "Adding an action word for the sawdust",
@@ -1035,7 +1045,7 @@ PP.addLesson({
             text: "Adding the name of a helper"
           },
           {
-            text: "Adding more floor spaces to the list"
+            text: "Adding more floor spaces to the long list"
           },
           {
             text: "Adding a bigger first letter"
@@ -1050,7 +1060,7 @@ PP.addLesson({
             correct: true
           },
           {
-            text: "The sawdust on the floor, on the bench and on my shoes."
+            text: "The sawdust on the floor, on the bench and on all my shoes."
           },
           {
             text: "Sawdust on the floor and on my shoes and in the garage."
@@ -1063,7 +1073,7 @@ PP.addLesson({
       clue: "Find the naming part in sentence 6, then check whether anything tells what it does or is.",
       hints: [
         "Find the naming part in sentence 6, then check whether anything tells what it does or is.",
-        "For Part A, ask what the sawdust did. For Part B, read each rewrite and listen for an action word.",
+        "For Part A, ask what the thing in number 6 did. For Part B, read each rewrite and listen for the word that tells what happened.",
         "Adding a longer list of places or things would not add an action. Think about the rest."
       ],
       how: [
@@ -1092,7 +1102,7 @@ PP.addLesson({
           answer: 0
         },
         {
-          options: ["borrowed","beside","shiny"],
+          options: ["borrowed","underneath","shiny"],
           answer: 0
         }
       ],
@@ -1161,35 +1171,35 @@ PP.addLesson({
         "3.L.GC.1:R:use-nouns-and-verbs-to-form-complete-thoughts-in"
       ],
       passages: ["p5"],
-      prompt: "Sentence 8 and sentence 11 both skip a person's name. Which one stands as a whole sentence, and why?",
+      prompt: "Lina says number 8 and number 11 are broken, since neither names a person. Is she right?",
       choices: [
         {
-          text: "Sentence 8, since it gives an order and the one told is you.",
+          text: "Just 11. Number 8 is an order, so you are the one told.",
           correct: true
         },
         {
-          text: "Sentence 11, since waited alone is enough to finish it."
+          text: "Yes. A line cannot stand without a person's name inside."
         },
         {
-          text: "Sentence 8, since please is the name of the one asked."
+          text: "Just 8. Number 11 has an action word, so it is done."
         },
         {
-          text: "Neither, since a sentence always shows a name."
+          text: "No. Each has an action word, so each is done."
         }
       ],
-      clue: "A complete sentence has a who or what and a verb. Compare the two sentences for each part.",
+      clue: "Compare the two sentences. Ask what each one has and what each one lacks.",
       hints: [
-        "A complete sentence has a who or what and a verb. Compare the two sentences for each part.",
-        "Say sentence 8 and sentence 11 out loud to a friend. Which one would you be able to say all by itself?",
-        "Please is a polite word, but it does not name a person. Look at the other reasons."
+        "Compare the two sentences. Ask what each one has and what each one lacks.",
+        "Say sentence 8 and sentence 11 out loud to a friend. Ask who is doing the action in each.",
+        "Each sentence does have an action word, so that alone cannot settle it. Look at who is doing it."
       ],
       how: [
-        "Check sentence 11, Waited two days for the paint to dry. It has a verb, waited, but does not say who waited.",
+        "Check sentence 11, Waited two days for the paint to dry. It has an action word, waited, but does not say who waited.",
         "Check sentence 8, Hand me the small brush, please. It tells someone to do something, so it is a command.",
-        "In a command the who is you. The answer is \"Sentence 8, since it gives an order and the one told is you.\""
+        "In a command the who is you. The answer is \"Just 11. Number 8 is an order, so you are the one told.\""
       ],
       misconception: "A common mix-up is trusting a verb without asking who does it. Waited has no one doing it.",
-      why: "The answer is \"Sentence 8, since it gives an order and the one told is you.\" Sentence 8 is a command, and the who in a command is you. Sentence 11 has the verb waited but no one who waited, and please does not name a person.",
+      why: "The answer is \"Just 11. Number 8 is an order, so you are the one told.\" Sentence 8 is a command, so the one told, you, is the who. Sentence 11 has the verb waited but no one who waited, so Lina is right only about 11.",
       like: ["SK-GUM1-1-C10"]
     },
     {
@@ -1238,7 +1248,7 @@ PP.addLesson({
           answer: 0
         },
         {
-          options: ["a naming part","an action word","an end mark"],
+          options: ["a naming part","an action word","an exclamation point"],
           answer: 1
         }
       ],
@@ -1246,14 +1256,14 @@ PP.addLesson({
       hints: [
         "Look at each group of words and ask: who or what is it about, and what does that thing do?",
         "Do one group of words at a time. Find the action word, if there is one, and check that someone is doing it.",
-        "A comma, a new paragraph and an end mark are about writing it down. These groups are missing a part of the thought itself."
+        "A comma, a new paragraph and an exclamation point are about writing it down. These groups are missing a part of the thought itself."
       ],
       how: [
         "Painted a mural on the gym wall has a verb, painted, but no word says who painted. It is missing a naming part.",
         "Our new neighbors from Ohio names people but tells nothing they did. It lacks an action word, a verb.",
         "The answers are a naming part, and an action word."
       ],
-      misconception: "A common mix-up is naming a punctuation mark. A comma or end mark cannot add a missing who or verb.",
+      misconception: "A common mix-up is naming a punctuation mark. A comma or an exclamation point cannot add a missing who or verb.",
       why: "The answers are a naming part and an action word. Painted is a verb but nothing says who painted, so the first group is missing a naming part. Our new neighbors from Ohio names people but has no verb.",
       like: ["SK-GUM1-1-C12"]
     },
@@ -1266,7 +1276,7 @@ PP.addLesson({
         "3.L.GC.1:R:use-nouns-and-verbs-to-form-complete-thoughts-in"
       ],
       passages: [],
-      prompt: "Choose the TWO word groups that would turn into sentences with just a naming part added.",
+      prompt: "Pick TWO lines that become sentences once a naming part is put in front.",
       pick: 2,
       choices: [
         {
@@ -1312,13 +1322,13 @@ PP.addLesson({
         "3.L.GC.1:R:use-nouns-and-verbs-to-form-complete-thoughts-in"
       ],
       passages: [],
-      stem: "A student posts four lines on the library bulletin board.",
-      prompt: "Tap the line that stands as a whole sentence.",
+      stem: "Four lines are pinned to the library bulletin board.",
+      prompt: "Tap the one line that can stand alone.",
       options: [
-        "Our book club meets every Thursday.",
+        "The book club meets every Thursday.",
         "Meeting every Thursday after the bell.",
         "The book club in the library on Thursday.",
-        "In the library every Thursday after school."
+        "Behind the stage every Thursday at noon."
       ],
       answer: [0],
       pick: 1,
@@ -1330,11 +1340,11 @@ PP.addLesson({
       ],
       how: [
         "Check each line for a naming part and a verb.",
-        "Our book club names who, and meets tells what they do. That is a whole thought.",
-        "The answer is \"Our book club meets every Thursday.\" The other lines only tell where or when, or leave out the verb."
+        "The book club names who, and meets tells what they do. That is a whole thought.",
+        "The answer is \"The book club meets every Thursday.\" The other lines only tell where or when, or leave out the verb."
       ],
       misconception: "A common mix-up is picking the line that sounds like a poster title. Check for a who and a verb.",
-      why: "The answer is \"Our book club meets every Thursday.\". Our book club is the who, and meets is the verb. The other lines lack a who, a verb or both.",
+      why: "The answer is \"The book club meets every Thursday.\". The book club is the who, and meets is the verb. The other lines lack a who, a verb or both.",
       like: ["SK-GUM1-1-C14"]
     },
     {
@@ -1554,7 +1564,160 @@ PP.addLesson({
       "When you repeated a mix-up back the right way (\"three cups\"), said it the right way too."
     ]
   },
-  passages: [],
+  passages: [
+    /* B7a:passages:start */
+    {
+      id: "p1",
+      title: "Book Fair Week",
+      byline: "A third grader's draft",
+      genre: "Student draft (narrative)",
+      draft: true,
+      paragraphs: [
+        [
+          "(1) Last week, our school held a book fair in the gym.",
+          "(2) Several neighbor stopped by on Monday after school.",
+          "(3) Mrs. Park set up two long table near the door.",
+          "(4) Each table was covered with colorful posters and bright banners."
+        ],
+        [
+          "(5) I spent my five dollars on a joke book and three bookmark.",
+          "(6) Every student in my class bought at least one book.",
+          "(7) A teacher read a funny chapter to a few kids in the corner."
+        ],
+        [
+          "(8) My friend Jamal chose two comic book about robots.",
+          "(9) By Friday, the librarian counted over four hundred sold book.",
+          "(10) We hope our school holds another book fair next year."
+        ]
+      ]
+    },
+    {
+      id: "p2",
+      title: "Yard Sale on Maple Street",
+      byline: "A third grader's draft",
+      genre: "Student draft (flyer)",
+      draft: true,
+      paragraphs: [
+        [
+          "(1) Our street will hold a big yard sale this Saturday morning from nine until noon.",
+          "(2) Each family will bring a table and a box of old toys.",
+          "(3) You can buy a book for fifty cents.",
+          "(4) Several shirt hang on a long rope by the fence."
+        ],
+        [
+          "(5) Many lamp sit on the porch of the blue house.",
+          "(6) Every buyer gets a free cup of lemonade.",
+          "(7) A few puzzle are missing a piece."
+        ],
+        [
+          "(8) Mr. Evans brought one old radio and two clock.",
+          "(9) Every neighbor on our street helped plan the sale and make the signs.",
+          "(10) Please come early because the best deals go fast every year."
+        ]
+      ]
+    },
+    {
+      id: "p3",
+      title: "A Walk to the Pond",
+      byline: "A third grader's draft",
+      genre: "Student draft (narrative)",
+      draft: true,
+      paragraphs: [
+        [
+          "(1) Our class took a long walk to the pond behind the school on Tuesday.",
+          "(2) We saw a heron standing very still in the shallow water.",
+          "(3) Two beetle crawled over the reeds near the bank.",
+          "(4) Many minnow swam close to the edge of the pond."
+        ],
+        [
+          "(5) Each student wrote one new fact in a journal.",
+          "(6) Ms. Lopez gave every group a magnifying glass for close looks.",
+          "(7) We found three feather beside the muddy path."
+        ],
+        [
+          "(8) A few cattail grew along the water.",
+          "(9) Everyone in the class drew a picture of the pond and the sky.",
+          "(10) Back at school, we hung four drawing on the wall of our classroom."
+        ]
+      ]
+    },
+    {
+      id: "p4",
+      title: "Field Day at Our School",
+      byline: "A third grader's draft",
+      genre: "Student draft (narrative)",
+      draft: true,
+      paragraphs: [
+        [
+          "(1) Our school held field day on a bright, sunny morning in May.",
+          "(2) Every class marched out to the big field with a banner.",
+          "(3) Several runner lined up at the starting line of the first race.",
+          "(4) Mr. Cole handed out two red ribbon to the winners."
+        ],
+        [
+          "(5) Each team got a long rope for the big tug-of-war contest.",
+          "(6) Many cheer rose from the crowd near the fence by the gym.",
+          "(7) A few parent clapped from the shady bench."
+        ],
+        [
+          "(8) After lunch, we played five game on the grass behind the gym.",
+          "(9) My team won one game and lost two.",
+          "(10) Everyone went home tired and happy after the long day."
+        ]
+      ]
+    },
+    {
+      id: "p5",
+      title: "Sunday Dinner at Our House",
+      byline: "A third grader's draft",
+      genre: "Student draft (narrative)",
+      draft: true,
+      paragraphs: [
+        [
+          "(1) Every Sunday, my whole family eats dinner together at Aunt Rita's house.",
+          "(2) Three cousin always arrive early.",
+          "(3) They help Aunt Rita set one plate at each seat.",
+          "(4) Then they put out the napkins and the forks."
+        ],
+        [
+          "(5) Grandpa carries a big pot of beans to the table with both hands.",
+          "(6) Many pan crowd the counter by the stove and the sink.",
+          "(7) I carry two bowl of rice from the kitchen to the table before we sit down."
+        ],
+        [
+          "(8) A few neighbor join us when the weather is cold.",
+          "(9) After dinner, we wash every spoon and fork together.",
+          "(10) My little brother stacks four cup in the sink.",
+          "(11) Mom will wash them when the guests go home."
+        ]
+      ]
+    },
+    {
+      id: "p6",
+      title: "Our Rock Collection",
+      byline: "A third grader's draft",
+      genre: "Student draft (narrative)",
+      draft: true,
+      paragraphs: [
+        [
+          "(1) Our science class started a rock collection at the beginning of this month.",
+          "(2) Each student brought one rock from home or from a trip.",
+          "(3) Several rock came from the creek behind the library."
+        ],
+        [
+          "(4) Mr. Singh gave us a magnifying lens and a small scale to share.",
+          "(5) We weighed two shell and wrote the numbers down in our notebooks.",
+          "(6) A few pebble were very smooth and almost perfectly round."
+        ],
+        [
+          "(7) Every rock got a label with its name and where we found it.",
+          "(8) We lined up six sample on a long tray by the window.",
+          "(9) Next week, we will sort them by color and by size."
+        ]
+      ]
+    }
+    /* B7a:passages:end */
+  ],
   practice: [
     { id: "SK-GUM1-2-P1", type: "dropdown", points: 1, dok: 1, passages: [],
       prompt: "Choose the word that correctly completes the sentence.",
@@ -1605,6 +1768,1180 @@ PP.addLesson({
       clue: "Match each noun to its clue word. Words like each and a go with one. Number words above one go with more than one.",
       why: "The answer is \"Each student got a new folder.\" Each and a go with one, and student and folder are singular. The others should say five students, a flower and four ducks." }
   ],
+  /* B7a:core:start */
+  /* ---------- Expansion 2026-10-22, batch B7a (GUM Reinforce, first half) ----------
+     core: fifteen items in three sets of five. { ref } reuses a practice item; the other practice items stay in Practice Together.
+     Passages are used only by core and the similar bank; none is used by test.
+     Author log: docs/expansion-2026-10-22/batches/B7a-author-log.md. NOT ACCEPTED: needs independent review. */
+  core: {
+    rev: "1",
+    sets: [
+      {
+        title: "Set 1",
+        items: [
+          {
+            ref: "SK-GUM1-2-P3"
+          },
+          {
+            ref: "SK-GUM1-2-P4"
+          },
+          {
+            id: "SK-GUM1-2-C03",
+            type: "mc",
+            points: 1,
+            dok: 2,
+            std: [
+              "3.L.GC.1:R:form-and-use-singular-and-plural-nouns-in-speech"
+            ],
+            passages: ["p1"],
+            prompt: "Sentence 3 has a mistake with a noun. Which revision fixes it?",
+            choices: [
+              {
+                text: "Mrs. Park set up two long tables near the door.",
+                correct: true
+              },
+              {
+                text: "Mrs. Park set up two long table's near the door."
+              },
+              {
+                text: "Mrs. Park set up two long tabless near the door."
+              },
+              {
+                text: "Mrs. Park set up a long tables near the door."
+              }
+            ],
+            clue: "Look for a number word or clue word near the noun. Decide whether it means one or more than one.",
+            hints: [
+              "Look for a number word or clue word near the noun. Decide whether it means one or more than one.",
+              "Find the number word right before the noun table in sentence 3. Then say how the noun should sound.",
+              "A noun that means more than one does not need an apostrophe. Check the other choices too."
+            ],
+            how: [
+              "Find the clue word before the noun in sentence 3: two. Two means more than one.",
+              "A noun that means more than one needs its plural form, which ends in -s.",
+              "The answer is \"Mrs. Park set up two long tables near the door.\" Table's has an apostrophe it does not need, tabless is not spelled right, and a long tables mixes a one word with a plural noun."
+            ],
+            misconception: "A common mix-up is leaving the noun alone because the number word already shows how many. The noun has to change too.",
+            why: "The answer is \"Mrs. Park set up two long tables near the door.\" Two means more than one, so table must become tables. Table's adds an apostrophe that does not belong, and tabless is not a word. A long tables puts a one word in front of a plural noun."
+          },
+          {
+            id: "SK-GUM1-2-C04",
+            type: "dropdown",
+            points: 1,
+            dok: 2,
+            std: [
+              "3.L.GC.1:R:form-and-use-singular-and-plural-nouns-in-speech"
+            ],
+            passages: ["p1"],
+            prompt: "Choose the word that fixes sentence 5.",
+            text: "I spent my five dollars on a joke book and three {0}.",
+            slots: [
+              {
+                options: ["bookmarks","bookmark","bookmarkes"],
+                answer: 0
+              }
+            ],
+            clue: "Find the number word before the blank. Decide if it means one or more than one.",
+            hints: [
+              "Find the number word before the blank. Decide if it means one or more than one.",
+              "Read the end of sentence 5 aloud with each choice in the blank. Listen for the one that sounds like more than one.",
+              "Bookmarkes has an extra letter this noun does not need. Choose between the other two."
+            ],
+            how: [
+              "Find the number word before the blank: three. Three means more than one.",
+              "A noun after three needs its plural form. Add -s to bookmark.",
+              "The answer is bookmarks. Bookmark names only one, and bookmarkes is not spelled right."
+            ],
+            misconception: "A common mix-up is leaving the noun in its one form when the number word is already there. The noun must change too.",
+            why: "The answer is bookmarks. Three means more than one, so bookmark needs -s. Bookmark names only one thing, and bookmarkes has an extra e."
+          },
+          {
+            id: "SK-GUM1-2-C05",
+            type: "mc",
+            points: 1,
+            dok: 3,
+            std: [
+              "3.L.GC.1:R:form-and-use-singular-and-plural-nouns-in-speech"
+            ],
+            passages: ["p1"],
+            prompt: "Sentence 4 says each table and also posters and banners. Why is each noun form correct?",
+            choices: [
+              {
+                text: "Each points to one table, while posters and banners name more than one of each thing.",
+                correct: true
+              },
+              {
+                text: "Each means more than one, so table should have been written as tables in that sentence of the draft."
+              },
+              {
+                text: "Posters and banners end in -s only because they come after the word covered with."
+              },
+              {
+                text: "Every noun in a sentence must use the same form, so the table should be tables."
+              }
+            ],
+            clue: "Clue words like each, every and a go with one thing. Number words and many go with more than one.",
+            hints: [
+              "Clue words like each, every and a go with one thing. Number words and many go with more than one.",
+              "Look at the word that comes before table, then at the nouns after covered with.",
+              "Each does not mean more than one. Check the reasons that say it does."
+            ],
+            how: [
+              "Find the clue word before table: each. Each goes with just one thing at a time, so table stays in its one form.",
+              "Now look at posters and banners. They name more than one poster and more than one banner, so they use the plural form.",
+              "The answer is \"Each points to one table, while posters and banners name more than one of each thing.\"",
+              "The nouns in a sentence do not all have to match. Each noun follows its own clue."
+            ],
+            misconception: "A common mix-up is thinking that every noun in a sentence must be plural, or that each means more than one.",
+            why: "The answer is \"Each points to one table, while posters and banners name more than one of each thing.\" Each goes with one thing, so table is right. Posters and banners are plural because they name more than one. Each does not mean more than one, and nouns do not all have to match."
+          }
+        ]
+      },
+      {
+        title: "Set 2",
+        items: [
+          {
+            id: "SK-GUM1-2-C06",
+            type: "hottext",
+            points: 2,
+            dok: 2,
+            std: [
+              "3.L.GC.1:R:form-and-use-singular-and-plural-nouns-in-speech"
+            ],
+            passages: ["p2"],
+            prompt: "Look at sentences 2 through 6. Select the TWO sentences with a noun that does not match its clue word.",
+            targets: ["p2:1:2","p2:1:3","p2:1:4","p2:2:1","p2:2:2"],
+            answer: ["p2:1:4","p2:2:1"],
+            pick: 2,
+            clue: "Find the clue word before each noun. Check that the noun matches: one with one, more than one with more than one.",
+            hints: [
+              "Find the clue word before each noun. Check that the noun matches: one with one, more than one with more than one.",
+              "Go through the sentences one at a time. Underline each clue word, then look at the noun after it.",
+              "Sentence 6 has the clue word every. Think about whether the noun after it fits."
+            ],
+            how: [
+              "Check each sentence from 2 to 6 for a clue word and the noun after it.",
+              "Sentence 4 says several shirt. Several means more than one, so it should be shirts.",
+              "Sentence 5 says many lamp. Many means more than one, so it should be lamps.",
+              "Sentences 2, 3 and 6 match: each family, a book and every buyer all go with one."
+            ],
+            misconception: "A common mix-up is thinking a noun ending without -s is always wrong. Each family and every buyer are right because the clue word means one.",
+            why: "The answers are sentences 4 and 5: \"Several shirt hang on a long rope by the fence.\" and \"Many lamp sit on the porch of the blue house.\". Several and many mean more than one, so shirt and lamp need -s. Each family, a book and every buyer all use one-thing clue words with one-thing nouns."
+          },
+          {
+            id: "SK-GUM1-2-C07",
+            type: "ebsr",
+            points: 2,
+            dok: 3,
+            std: [
+              "3.L.GC.1:R:form-and-use-singular-and-plural-nouns-in-speech"
+            ],
+            passages: ["p2"],
+            prompt: "This question has two parts. Answer Part A, then Part B.",
+            partA: {
+              prompt: "What is wrong in sentence 7?",
+              choices: [
+                {
+                  text: "A few means more than one, but puzzle names only one.",
+                  correct: true
+                },
+                {
+                  text: "A few means just one, so puzzle is right but are is wrong."
+                },
+                {
+                  text: "Puzzle should have a capital letter at the start."
+                },
+                {
+                  text: "The word piece should be pieces."
+                }
+              ]
+            },
+            partB: {
+              prompt: "Which revision of sentence 7 fixes the mistake from Part A?",
+              choices: [
+                {
+                  text: "A few puzzles are missing a piece.",
+                  correct: true
+                },
+                {
+                  text: "A few puzzle's are missing a piece."
+                },
+                {
+                  text: "A few puzzle is missing a piece."
+                },
+                {
+                  text: "A puzzles are missing a piece."
+                }
+              ]
+            },
+            clue: "Find the clue word and the noun it goes with. Ask whether they match.",
+            hints: [
+              "Find the clue word and the noun it goes with. Ask whether they match.",
+              "For Part A, think about what a few tells you about how many. For Part B, read each revision aloud.",
+              "An apostrophe shows that something belongs to a person or thing. Think about the other choices."
+            ],
+            how: [
+              "Part A: a few means more than one. The noun after it must also mean more than one. Puzzle names only one.",
+              "Part B: add -s to puzzle. A few puzzles are missing a piece matches the clue word.",
+              "The other revisions add an apostrophe, change the verb only, or switch to a one word."
+            ],
+            misconception: "A common mix-up is fixing the verb and leaving the noun alone. Start with the noun that follows the clue word.",
+            why: "Part A: \"A few means more than one, but puzzle names only one.\" Part B: \"A few puzzles are missing a piece.\" A few means more than one, so puzzle must become puzzles. The other revisions keep the noun in its one form or add an apostrophe."
+          },
+          {
+            id: "SK-GUM1-2-C08",
+            type: "dropdown",
+            points: 2,
+            dok: 2,
+            std: [
+              "3.L.GC.1:R:form-and-use-singular-and-plural-nouns-in-speech"
+            ],
+            passages: [],
+            prompt: "Complete the sentence. Choose a noun for each blank.",
+            text: "Every {0} on our street has a mailbox, and five {1} share one fence.",
+            slots: [
+              {
+                options: ["house","houses","house's"],
+                answer: 0
+              },
+              {
+                options: ["neighbors","neighbor","neighbors'"],
+                answer: 0
+              }
+            ],
+            clue: "Each blank has its own clue word. Match each noun to the clue word right before it.",
+            hints: [
+              "Each blank has its own clue word. Match each noun to the clue word right before it.",
+              "Read the first blank with every, and the second blank with five. Say whether each one means one or more than one.",
+              "A mark after the last letter would show ownership. Neither blank needs to show belonging."
+            ],
+            how: [
+              "The first blank follows every. Every goes with just one house at a time, so use house.",
+              "The second blank follows five. Five means more than one, so use neighbors.",
+              "The answers are house and neighbors. Read it back: Every house on our street has a mailbox, and five neighbors share one fence."
+            ],
+            misconception: "A common mix-up is putting -s on both nouns because the sentence talks about a whole street. Check each clue word on its own.",
+            why: "The answers are house and neighbors. Every goes with one thing, so house stays in its one form. Five means more than one, so neighbors needs -s. Neither blank shows belonging, so no apostrophe fits."
+          },
+          {
+            id: "SK-GUM1-2-C09",
+            type: "mc",
+            points: 1,
+            dok: 3,
+            std: [
+              "3.L.GC.1:R:form-and-use-singular-and-plural-nouns-in-speech"
+            ],
+            passages: [],
+            stem: "Ana wrote: A bees buzzed near each flowers.  Ben wrote: Several bees buzzed near each flower.",
+            prompt: "Whose sentence matches its clue words, and why?",
+            choices: [
+              {
+                text: "Ben's, because several goes with bees and each goes with flower.",
+                correct: true
+              },
+              {
+                text: "Ana's, because a and each both go with nouns that end in -s."
+              },
+              {
+                text: "Ben's, because every noun in a sentence must end in -s."
+              },
+              {
+                text: "Neither, because buzzed shows that all the nouns must be plural."
+              }
+            ],
+            clue: "Check each clue word and the noun after it in both sentences.",
+            hints: [
+              "Check each clue word and the noun after it in both sentences.",
+              "Make two lists: the clue words that mean one and the clue words that mean more than one. Then match each noun.",
+              "Not every noun in a sentence has to end in -s. Check the reasons that say it does."
+            ],
+            how: [
+              "Ana's sentence pairs a with bees and each with flowers. A and each go with one thing, so both nouns are wrong.",
+              "Ben's sentence pairs several with bees and each with flower. Several means more than one, and each means one.",
+              "The answer is \"Ben's, because several goes with bees and each goes with flower.\""
+            ],
+            misconception: "A common mix-up is thinking the whole sentence should be plural, or that it should be all one. Each clue word needs its own match.",
+            why: "The answer is \"Ben's, because several goes with bees and each goes with flower.\" Ben pairs several with bees and each with flower, so both nouns match their clue words. Ana pairs a and each with plural nouns, which is wrong."
+          },
+          {
+            id: "SK-GUM1-2-C10",
+            type: "mc",
+            points: 1,
+            dok: 3,
+            std: [
+              "3.L.GC.1:R:form-and-use-singular-and-plural-nouns-in-speech"
+            ],
+            passages: ["p2"],
+            prompt: "Sentences 8 and 9 each have a clue word. Only one of them needs a change. Which one is it, and what is the reason?",
+            choices: [
+              {
+                text: "Sentence 8, because two needs the plural clocks.",
+                correct: true
+              },
+              {
+                text: "Sentence 9, because every means neighbor should be neighbors."
+              },
+              {
+                text: "Sentence 8, because one needs the plural radios."
+              },
+              {
+                text: "Both sentences, because every noun after a clue word needs -s."
+              }
+            ],
+            clue: "Find the clue word in each sentence and the noun that follows it.",
+            hints: [
+              "Find the clue word in each sentence and the noun that follows it.",
+              "Check sentence 8 for two clue words, and sentence 9 for one. Ask which clue word means one and which means more than one.",
+              "Every does not mean more than one. Look at the other reasons."
+            ],
+            how: [
+              "Sentence 8 has two clue words. One goes with radio, which is one thing, so it is right. Two goes with clock, which should be plural.",
+              "Sentence 9 has every. Every goes with one thing, so neighbor is right.",
+              "The answer is \"Sentence 8, because two needs the plural clocks.\""
+            ],
+            misconception: "A common mix-up is thinking every means more than one. Every goes with one thing at a time.",
+            why: "The answer is \"Sentence 8, because two needs the plural clocks.\" Two means more than one, so clock must become clocks. One radio is right, and every neighbor is right because every goes with one thing."
+          }
+        ]
+      },
+      {
+        title: "Set 3",
+        items: [
+          {
+            id: "SK-GUM1-2-C11",
+            type: "hottext",
+            points: 2,
+            dok: 2,
+            std: [
+              "3.L.GC.1:R:form-and-use-singular-and-plural-nouns-in-speech"
+            ],
+            passages: ["p3"],
+            prompt: "Look at sentences 2 through 5. Select the TWO sentences where the noun should be written in its more-than-one form.",
+            targets: ["p3:1:2","p3:1:3","p3:1:4","p3:2:1"],
+            answer: ["p3:1:3","p3:1:4"],
+            pick: 2,
+            clue: "Look for number words and clue words like two, many and several. A noun that goes with one of these must mean more than one.",
+            hints: [
+              "Look for number words and clue words like two, many and several. A noun that goes with one of these must mean more than one.",
+              "Read sentences 2 through 5 one at a time. Say how many animals or students each sentence is about.",
+              "Sentence 5 has the clue words each and one. Think about whether the nouns there are right."
+            ],
+            how: [
+              "Check each sentence from 2 to 5 for a clue word and its noun.",
+              "Sentence 3 says two beetle. Two means more than one, so it should be beetles.",
+              "Sentence 4 says many minnow. Many means more than one, so it should be minnows.",
+              "Sentence 2 has a heron, one bird, and sentence 5 has each student and one fact. Those match."
+            ],
+            misconception: "A common mix-up is changing a noun that already matches its clue word, like heron after a.",
+            why: "The answers are sentences 3 and 4: \"Two beetle crawled over the reeds near the bank.\" and \"Many minnow swam close to the edge of the pond.\". Two and many mean more than one, so beetle and minnow need -s. A heron, each student and one fact all go with one thing."
+          },
+          {
+            id: "SK-GUM1-2-C12",
+            type: "dropdown",
+            points: 1,
+            dok: 2,
+            std: [
+              "3.L.GC.1:R:form-and-use-singular-and-plural-nouns-in-speech"
+            ],
+            passages: [],
+            prompt: "Pick the noun that completes the sentence.",
+            text: "Only a few {0} were left on the shelf by closing time.",
+            slots: [
+              {
+                options: ["cans","can","cants"],
+                answer: 0
+              }
+            ],
+            clue: "Look at the clue words before the blank. Decide if they mean one or more than one.",
+            hints: [
+              "Look at the clue words before the blank. Decide if they mean one or more than one.",
+              "Read the sentence with each choice and listen to how the clue words and the noun sound together.",
+              "Cants is not a word in this sentence. Decide between the other two choices."
+            ],
+            how: [
+              "The clue words before the blank are a few. A few means more than one.",
+              "A noun that goes with a few needs its plural form: add -s to can.",
+              "The answer is cans. Can names only one."
+            ],
+            misconception: "A common mix-up is hearing the word a and choosing the one form. A few is a clue for more than one.",
+            why: "The answer is cans. A few means more than one, so can needs -s. Can names just one thing, and cants is not a word."
+          },
+          {
+            id: "SK-GUM1-2-C13",
+            type: "ms",
+            points: 2,
+            dok: 3,
+            std: [
+              "3.L.GC.1:R:form-and-use-singular-and-plural-nouns-in-speech"
+            ],
+            passages: [],
+            prompt: "Choose the TWO sentences in which each noun matches its clue word.",
+            pick: 2,
+            choices: [
+              {
+                text: "We carried four buckets of water to the garden.",
+                correct: true
+              },
+              {
+                text: "Every seed in the tray needs sun and water.",
+                correct: true
+              },
+              {
+                text: "Many seed sprouted in the warm spring weather."
+              },
+              {
+                text: "A rakes leaned against the old wooden fence."
+              },
+              {
+                text: "Several gardener planted rows of beans by the gate."
+              }
+            ],
+            clue: "For each sentence, find the clue word and check the noun that follows it.",
+            hints: [
+              "For each sentence, find the clue word and check the noun that follows it.",
+              "Sort the sentences into two piles: ones where the clue word and noun match, and ones where they do not.",
+              "Several and many mean more than one. Check the sentences that use them."
+            ],
+            how: [
+              "Check each clue word and the noun that follows it.",
+              "Four buckets: four means more than one, and buckets has -s. Every seed: every means one, and seed is one thing.",
+              "Many seed, A rakes and Several gardener each pair a clue word with the wrong form.",
+              "So the two correct sentences are We carried four buckets of water to the garden. and Every seed in the tray needs sun and water."
+            ],
+            misconception: "A common mix-up is picking the sentences that look plural. A noun can also be right in its one form, like every seed.",
+            why: "The answers are \"We carried four buckets of water to the garden.\" and \"Every seed in the tray needs sun and water.\". Four goes with buckets, and every goes with seed. In the other three, many, several and a are paired with the wrong form."
+          },
+          {
+            id: "SK-GUM1-2-C14",
+            type: "hottext",
+            points: 1,
+            dok: 2,
+            std: [
+              "3.L.GC.1:R:form-and-use-singular-and-plural-nouns-in-speech"
+            ],
+            passages: [],
+            stem: "A student writes four sentences for a science report.",
+            prompt: "Select the sentence that has a plural error.",
+            options: [
+              "The experiment used three cups of water.",
+              "Each plant sat in one sunny window.",
+              "We measured the stems every day with two ruler.",
+              "A few leaves turned yellow by the end of the second week."
+            ],
+            answer: [2],
+            pick: 1,
+            clue: "Find each clue word and check the noun that comes after it.",
+            hints: [
+              "Find each clue word and check the noun that comes after it.",
+              "Read the sentences one at a time. Say how many things each noun names, then check its ending.",
+              "A few leaves is a correct match of a clue word and a noun. Decide among the rest."
+            ],
+            how: [
+              "Check the clue word and noun in each sentence.",
+              "Three cups, each plant, one window and a few leaves all match their clue words.",
+              "We measured the stems every day with two ruler does not match, because two means more than one. It should say two rulers."
+            ],
+            misconception: "A common mix-up is picking a sentence with an -s noun after a one word. Check that the clue word and noun agree.",
+            why: "The answer is \"We measured the stems every day with two ruler.\". Two means more than one, so ruler should be rulers. The other sentences pair their clue words with nouns in the right form."
+          },
+          {
+            id: "SK-GUM1-2-C15",
+            type: "mc",
+            points: 1,
+            dok: 3,
+            std: [
+              "3.L.GC.1:R:form-and-use-singular-and-plural-nouns-in-speech"
+            ],
+            passages: [],
+            prompt: "Lee says, \"You can only tell a noun is plural when a number word is nearby.\" Which sentence shows that Lee is wrong?",
+            choices: [
+              {
+                text: "The tents by the lake were soaked after the storm.",
+                correct: true
+              },
+              {
+                text: "Four tents stood by the lake last night after dinner."
+              },
+              {
+                text: "Every camper packed one tent for the whole trip."
+              },
+              {
+                text: "A tent stood by the lake in the cold rain."
+              }
+            ],
+            clue: "To show that a rule is wrong, look for an example that breaks it. Check each sentence for number words and plural nouns.",
+            hints: [
+              "To show that a rule is wrong, look for an example that breaks it. Check each sentence for number words and plural nouns.",
+              "Find the sentences that have a plural noun. Then ask whether a number word is close by.",
+              "Four is a number word, so the sentence with four cannot show Lee is wrong. Think about the rest."
+            ],
+            how: [
+              "Lee says a plural needs a number word nearby. Look for a plural noun with no number word.",
+              "Four tents has the number word four. Every camper and one tent go with one thing, and a tent is one thing.",
+              "The answer is \"The tents by the lake were soaked after the storm.\" Tents is plural, and there is no number word near it."
+            ],
+            misconception: "A common mix-up is thinking a plural always needs a number word. Many plurals are shown only by the -s ending.",
+            why: "The answer is \"The tents by the lake were soaked after the storm.\" The word tents ends in -s and names more than one, yet no number word is near it. That shows plurals do not always need a number word."
+          }
+        ]
+      }
+    ]
+  },
+  similar: [
+    {
+      id: "SK-GUM1-2-S01",
+      type: "match",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.L.GC.1:R:form-and-use-singular-and-plural-nouns-in-speech"
+      ],
+      passages: [],
+      prompt: "Decide whether each phrase names a single thing or several things, then match it to a label.",
+      cols: ["A single thing","Several things"],
+      rows: [
+        {
+          text: "each spoon",
+          answer: 0
+        },
+        {
+          text: "four blankets",
+          answer: 1
+        },
+        {
+          text: "a ladder",
+          answer: 0
+        },
+        {
+          text: "several boots",
+          answer: 1
+        },
+        {
+          text: "every neighbor",
+          answer: 0
+        },
+        {
+          text: "a few flags",
+          answer: 1
+        }
+      ],
+      clue: "Look at the clue word at the front of each phrase, then at the end of the noun.",
+      hints: [
+        "Look at the clue word at the front of each phrase, then at the end of the noun.",
+        "Do the phrases you feel surest about first. Then come back to the others.",
+        "The word every may sound like many, but think about what it means before you sort."
+      ],
+      how: [
+        "Read the clue word first. Each, a and every go with one thing. Four, several and a few go with more than one.",
+        "Each spoon, a ladder and every neighbor name a single thing.",
+        "Four blankets, several boots and a few flags name several things, and each noun ends in -s."
+      ],
+      misconception: "A common mix-up is putting every in the plural group because it sounds like all. Every goes with one thing at a time.",
+      why: "Each spoon, a ladder and every neighbor name a single thing. Four blankets, several boots and a few flags name several things.",
+      like: ["SK-GUM1-2-P3"]
+    },
+    {
+      id: "SK-GUM1-2-S02",
+      type: "hottext",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.L.GC.1:R:form-and-use-singular-and-plural-nouns-in-speech"
+      ],
+      passages: [],
+      prompt: "Tap the one line where the noun and the counting word disagree.",
+      options: [
+        "Rosa kicked three goals in the game.",
+        "Each runner wore a number on one sleeve.",
+        "Several fan waved flags from the stands.",
+        "We packed a snack for the long bus ride."
+      ],
+      answer: [2],
+      pick: 1,
+      clue: "For each line, find the word that tells how many, then look at the noun after it.",
+      hints: [
+        "For each line, find the word that tells how many, then look at the noun after it.",
+        "Read the lines one by one. Ask yourself how many things the clue word promises.",
+        "Rosa kicked three goals pairs three with goals. Check the other lines."
+      ],
+      how: [
+        "Find the clue word and noun in each line.",
+        "Three goals, each runner, one sleeve and a snack all match.",
+        "Several fan does not match, because several means more than one. It should say several fans."
+      ],
+      misconception: "A common mix-up is changing a noun that already matches, like each runner. Check the clue word first.",
+      why: "The answer is \"Several fan waved flags from the stands.\". Several means more than one, so fan should be fans. The other lines pair their clue words with nouns in the right form.",
+      like: ["SK-GUM1-2-P4"]
+    },
+    {
+      id: "SK-GUM1-2-S03",
+      type: "mc",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.L.GC.1:R:form-and-use-singular-and-plural-nouns-in-speech"
+      ],
+      passages: ["p4"],
+      prompt: "Number 4 needs a fix for its noun. Which rewrite is correct?",
+      choices: [
+        {
+          text: "Mr. Cole handed out two red ribbons to the winners.",
+          correct: true
+        },
+        {
+          text: "Mr. Cole handed out two red ribbon's to the winners."
+        },
+        {
+          text: "Mr. Cole handed out two red ribbonss to the winners."
+        },
+        {
+          text: "Mr. Cole handed out a red ribbons to the winners."
+        }
+      ],
+      clue: "Spot the word near the noun that says how many, and decide what the noun has to look like.",
+      hints: [
+        "Spot the word near the noun that says how many, and decide what the noun has to look like.",
+        "Find the number in number 4 and say the noun the way you would for that many.",
+        "An apostrophe belongs to something owned, and nothing is owned here. Think about the rest."
+      ],
+      how: [
+        "The number word in number 4 is two, which means more than one.",
+        "Ribbon has to become the form for more than one: ribbons.",
+        "The answer is \"Mr. Cole handed out two red ribbons to the winners.\" Ribbon's adds an apostrophe, ribbonss adds an extra s, and a red ribbons mixes one with several."
+      ],
+      misconception: "A common mix-up is stopping once the number is in the sentence. The noun after it has to change as well.",
+      why: "The answer is \"Mr. Cole handed out two red ribbons to the winners.\" Two means more than one, so ribbon becomes ribbons. An apostrophe or a double s is not the plural, and a mixes one with several.",
+      like: ["SK-GUM1-2-C03"]
+    },
+    {
+      id: "SK-GUM1-2-S04",
+      type: "dropdown",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.L.GC.1:R:form-and-use-singular-and-plural-nouns-in-speech"
+      ],
+      passages: ["p4"],
+      prompt: "Pick the best word for the gap in number 8.",
+      text: "After lunch, we played five {0} on the grass behind the gym.",
+      slots: [
+        {
+          options: ["games","game","gamess"],
+          answer: 0
+        }
+      ],
+      clue: "Look for the number just before the gap. Does it point to a single thing or to several?",
+      hints: [
+        "Look for the number just before the gap. Does it point to a single thing or to several?",
+        "Say number 8 aloud with each word in the gap. Notice which one sounds natural after the number.",
+        "One choice has a doubled letter at the end that no plural needs. Choose between the other two words."
+      ],
+      how: [
+        "The number before the gap is five, which means more than one.",
+        "The noun must have its plural form: game plus -s.",
+        "The answer is games. Game would fit only after a single-thing word like one."
+      ],
+      misconception: "A common mix-up is trusting the way the first word of a phrase sounds. Look at the number word.",
+      why: "The answer is games. Five means more than one, so game becomes games. Game is the single form, and gamess is not spelled right.",
+      like: ["SK-GUM1-2-C04"]
+    },
+    {
+      id: "SK-GUM1-2-S05",
+      type: "mc",
+      points: 1,
+      dok: 3,
+      std: [
+        "3.L.GC.1:R:form-and-use-singular-and-plural-nouns-in-speech"
+      ],
+      passages: ["p4"],
+      prompt: "Number 2 has every class and also a banner. Why do both nouns stay in the single form?",
+      choices: [
+        {
+          text: "Every and a both point to just one thing at a time.",
+          correct: true
+        },
+        {
+          text: "Every means several things, but a cancels it out."
+        },
+        {
+          text: "Class has to stay single since a banner comes afterward."
+        },
+        {
+          text: "Nouns in the same line must end the same way."
+        }
+      ],
+      clue: "Words that start a phrase can say a single thing or several. Sort every and a into one of those groups.",
+      hints: [
+        "Words that start a phrase can say a single thing or several. Sort every and a into one of those groups.",
+        "Look at the word in front of class, then the word in front of banner.",
+        "Words in a line do not have to look alike. Check the reasons that say they do."
+      ],
+      how: [
+        "Find the word in front of class: every. Every points to one class at a time.",
+        "Find the word in front of banner: a. A means one banner.",
+        "The answer is \"Every and a both point to just one thing at a time.\" Each noun follows its own clue word."
+      ],
+      misconception: "A common mix-up is thinking every means a crowd. Every names one at a time.",
+      why: "The answer is \"Every and a both point to just one thing at a time.\" Every and a both point to one thing, so class and banner stay in the single form. One word does not cancel another, and nouns do not need to end alike.",
+      like: ["SK-GUM1-2-C05"]
+    },
+    {
+      id: "SK-GUM1-2-S06",
+      type: "hottext",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.L.GC.1:R:form-and-use-singular-and-plural-nouns-in-speech"
+      ],
+      passages: ["p5"],
+      prompt: "Reading numbers 1 to 6, tap the TWO lines whose noun fails to fit the word before it.",
+      targets: ["p5:1:1","p5:1:2","p5:1:3","p5:2:1","p5:2:2"],
+      answer: ["p5:1:2","p5:2:2"],
+      pick: 2,
+      clue: "Spot the word that says how many in each line. The noun right after it has to fit.",
+      hints: [
+        "Spot the word that says how many in each line. The noun right after it has to fit.",
+        "Take the lines in order. For each, count what the clue word promises: a single thing or several.",
+        "The line with a big pot of beans pairs a with pot. Think about whether that fits."
+      ],
+      how: [
+        "Look at the word that says how many and the noun it goes with, line by line.",
+        "Number 2 says three cousin. Three promises several, so it should be cousins.",
+        "Number 6 says many pan. Many promises several, so it should be pans.",
+        "Numbers 1, 3 and 5 match: every Sunday, one plate and a big pot all go with a single thing."
+      ],
+      misconception: "A common mix-up is changing nouns that already match. Every Sunday and one plate are right.",
+      why: "The answers are sentences 2 and 6: \"Three cousin always arrive early.\" and \"Many pan crowd the counter by the stove and the sink.\". Three and many promise several things, so cousin and pan need -s. The other lines pair a single-thing word with a single thing.",
+      like: ["SK-GUM1-2-C06"]
+    },
+    {
+      id: "SK-GUM1-2-S07",
+      type: "ebsr",
+      points: 2,
+      dok: 3,
+      std: [
+        "3.L.GC.1:R:form-and-use-singular-and-plural-nouns-in-speech"
+      ],
+      passages: ["p5"],
+      prompt: "Do Part A first and Part B second.",
+      partA: {
+        prompt: "What is off in number 10?",
+        choices: [
+          {
+            text: "Four promises several, yet cup names a single one.",
+            correct: true
+          },
+          {
+            text: "Four promises a single cup, so the verb should change."
+          },
+          {
+            text: "Sink needs to be capital because it is a place."
+          },
+          {
+            text: "Brother should be written as brothers."
+          }
+        ]
+      },
+      partB: {
+        prompt: "Which rewrite of number 10 repairs it?",
+        choices: [
+          {
+            text: "My little brother stacks four cups in the sink.",
+            correct: true
+          },
+          {
+            text: "My little brother stacks four cup's in the sink."
+          },
+          {
+            text: "My little brother stack four cup in the sink."
+          },
+          {
+            text: "My little brothers stacks four cup in the sink."
+          }
+        ]
+      },
+      clue: "Find the word that says how many in number 10 and check the noun that goes with it.",
+      hints: [
+        "Find the word that says how many in number 10 and check the noun that goes with it.",
+        "For Part A, ask what four tells you about how many. For Part B, say each rewrite out loud.",
+        "Apostrophes show who owns something, and no cup owns anything here. Think about the rest."
+      ],
+      how: [
+        "Part A: four means several, but cup names a single one.",
+        "Part B: add -s to cup. My little brother stacks four cups in the sink fixes the noun.",
+        "The other rewrites add an apostrophe, change the verb, or change the wrong noun."
+      ],
+      misconception: "A common mix-up is fixing a different word. Start with the noun that follows the number.",
+      why: "Part A: \"Four promises several, yet cup names a single one.\" Part B: \"My little brother stacks four cups in the sink.\" Four promises several, so cup becomes cups. The other rewrites change the verb, add an apostrophe or touch the wrong noun.",
+      like: ["SK-GUM1-2-C07"]
+    },
+    {
+      id: "SK-GUM1-2-S08",
+      type: "dropdown",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.L.GC.1:R:form-and-use-singular-and-plural-nouns-in-speech"
+      ],
+      passages: [],
+      prompt: "Fill both gaps with the best nouns.",
+      text: "Each {0} in our class has a locker, and three {1} keep brushes inside.",
+      slots: [
+        {
+          options: ["student","students","student's"],
+          answer: 0
+        },
+        {
+          options: ["artists","artist","artists'"],
+          answer: 0
+        }
+      ],
+      clue: "Every gap has a word right before it that says how many. Let that word choose the noun.",
+      hints: [
+        "Every gap has a word right before it that says how many. Let that word choose the noun.",
+        "Try the first gap with each, then the second gap with three. Ask whether each noun should name one or several.",
+        "A mark after the final letter would show ownership, and nobody owns anything here. Rule that out in each gap."
+      ],
+      how: [
+        "The first gap follows each. Each points to a single student, so use student.",
+        "The second gap follows three. Three means several, so use artists.",
+        "The answers are student and artists. Read it back: Each student in our class has a locker, and three artists keep brushes inside."
+      ],
+      misconception: "A common mix-up is making both nouns plural because the class is a big group. Let each word before a gap decide.",
+      why: "The answers are student and artists. Each goes with a single thing, so student stays single. Three means several, so artists needs -s. No gap needs an apostrophe.",
+      like: ["SK-GUM1-2-C08"]
+    },
+    {
+      id: "SK-GUM1-2-S09",
+      type: "mc",
+      points: 1,
+      dok: 3,
+      std: [
+        "3.L.GC.1:R:form-and-use-singular-and-plural-nouns-in-speech"
+      ],
+      passages: [],
+      stem: "Mia: One magnets pulled every nails.  Noah: One magnet pulled several nails.",
+      prompt: "Who matched each counting word to a fitting noun, and what proves it?",
+      choices: [
+        {
+          text: "Noah, since one fits magnet and several fits nails.",
+          correct: true
+        },
+        {
+          text: "Mia, since one and every match nouns that end in -s."
+        },
+        {
+          text: "Noah, since sentences always use a single noun first and a plural noun second."
+        },
+        {
+          text: "Neither, since pulled would need to be plural as well."
+        }
+      ],
+      clue: "Take each writer's sentence alone. Match every clue word with the noun that follows.",
+      hints: [
+        "Take each writer's sentence alone. Match every clue word with the noun that follows.",
+        "Write down which clue words mean a single thing and which mean several. Then check each noun.",
+        "Sentences do not follow an order of single then plural. Check the reasons that say they do."
+      ],
+      how: [
+        "Mia's sentence puts one with magnets and every with nails. Both clue words mean a single thing, so both nouns are wrong.",
+        "Noah's sentence puts one with magnet and several with nails. One means a single thing, and several means more than one.",
+        "The answer is \"Noah, since one fits magnet and several fits nails.\""
+      ],
+      misconception: "A common mix-up is thinking the order of the nouns matters. Only the clue word in front of each noun matters.",
+      why: "The answer is \"Noah, since one fits magnet and several fits nails.\" Noah matches one with magnet and several with nails. Mia pairs a single-thing word with magnets and nails, which is wrong.",
+      like: ["SK-GUM1-2-C09"]
+    },
+    {
+      id: "SK-GUM1-2-S10",
+      type: "mc",
+      points: 1,
+      dok: 3,
+      std: [
+        "3.L.GC.1:R:form-and-use-singular-and-plural-nouns-in-speech"
+      ],
+      passages: ["p5"],
+      prompt: "Lines 7 and 9 each use a counting word. Just one line is faulty. Name it and give the cause.",
+      choices: [
+        {
+          text: "Line 7, as two asks for bowls instead of bowl.",
+          correct: true
+        },
+        {
+          text: "Line 9, as every wants spoons plus forks instead."
+        },
+        {
+          text: "Line 7, as rice is the one that has to change."
+        },
+        {
+          text: "All lines, as any word following a counting word takes -s."
+        }
+      ],
+      clue: "Find the word that says how many in each of the two lines.",
+      hints: [
+        "Find the word that says how many in each of the two lines.",
+        "Compare the two. Ask which of those words promises several and which promises one at a time.",
+        "Every promises one at a time. Look at the other reasons."
+      ],
+      how: [
+        "Number 7 says two bowl. Two promises several, so bowl should be bowls.",
+        "Number 9 says every spoon and fork. Every promises one at a time, so spoon and fork are right.",
+        "The answer is \"Line 7, as two asks for bowls instead of bowl.\""
+      ],
+      misconception: "A common mix-up is trusting every to mean a crowd. It names one at a time.",
+      why: "The answer is \"Line 7, as two asks for bowls instead of bowl.\" Two promises several, so bowl needs -s. Every spoon and fork is right. Rice is not counted, so it does not change.",
+      like: ["SK-GUM1-2-C10"]
+    },
+    {
+      id: "SK-GUM1-2-S11",
+      type: "hottext",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.L.GC.1:R:form-and-use-singular-and-plural-nouns-in-speech"
+      ],
+      passages: ["p6"],
+      prompt: "Among numbers 2 to 5, tap the TWO lines where the noun must show several.",
+      targets: ["p6:1:2","p6:1:3","p6:2:1","p6:2:2"],
+      answer: ["p6:1:3","p6:2:2"],
+      pick: 2,
+      clue: "Look for words that promise several, like several, two or many. The noun next to one of them must show several.",
+      hints: [
+        "Look for words that promise several, like several, two or many. The noun next to one of them must show several.",
+        "Go through numbers 2 to 5 one by one. Ask how many rocks, tools or shells each line talks about.",
+        "Number 4 has a and one single-thing word group. Think about whether the nouns there fit."
+      ],
+      how: [
+        "Check each line from 2 to 5 for a word that says how many, and its noun.",
+        "Number 3 says several rock. Several promises more than one, so it should be rocks.",
+        "Number 5 says two shell. Two promises more than one, so it should be shells.",
+        "Numbers 2 and 4 match: each student, one rock, a magnifying lens and a small scale all go with single things."
+      ],
+      misconception: "A common mix-up is changing a noun that already fits, like one rock.",
+      why: "The answers are sentences 3 and 5: \"Several rock came from the creek behind the library.\" and \"We weighed two shell and wrote the numbers down in our notebooks.\". Several and two promise more than one, so rock and shell need -s. Each student, one rock, a lens and a scale are all single things.",
+      like: ["SK-GUM1-2-C11"]
+    },
+    {
+      id: "SK-GUM1-2-S12",
+      type: "dropdown",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.L.GC.1:R:form-and-use-singular-and-plural-nouns-in-speech"
+      ],
+      passages: [],
+      prompt: "Which word fits the gap?",
+      text: "Before noon, several {0} had already gone home.",
+      slots: [
+        {
+          options: ["guests","guest","guestes"],
+          answer: 0
+        }
+      ],
+      clue: "Look at the word before the gap that says how many. Decide whether it means a single thing or several.",
+      hints: [
+        "Look at the word before the gap that says how many. Decide whether it means a single thing or several.",
+        "Say the thought with each noun and listen for the one that agrees with the word before it.",
+        "Guestes has letters that this noun does not need. Choose between the other two."
+      ],
+      how: [
+        "The word before the gap is several, which means more than one.",
+        "The noun needs its plural form: guest plus -s.",
+        "The answer is guests. Guest names only one person."
+      ],
+      misconception: "A common mix-up is leaving the noun alone because the sentence already sounds plural. The noun must change.",
+      why: "The answer is guests. Several means more than one, so guest becomes guests. Guest is the single form, and guestes has extra letters.",
+      like: ["SK-GUM1-2-C12"]
+    },
+    {
+      id: "SK-GUM1-2-S13",
+      type: "ms",
+      points: 2,
+      dok: 3,
+      std: [
+        "3.L.GC.1:R:form-and-use-singular-and-plural-nouns-in-speech"
+      ],
+      passages: [],
+      prompt: "Pick the TWO lines in which every noun fits the word before it.",
+      pick: 2,
+      choices: [
+        {
+          text: "The class painted six posters for the hallway.",
+          correct: true
+        },
+        {
+          text: "Each reader chose one book from the shelf.",
+          correct: true
+        },
+        {
+          text: "Several teacher walked to the front office."
+        },
+        {
+          text: "A desks sat near the open window."
+        },
+        {
+          text: "Many chair stood against the wall."
+        }
+      ],
+      clue: "In each line, find the word that says how many and check the noun next to it.",
+      hints: [
+        "In each line, find the word that says how many and check the noun next to it.",
+        "Make two piles: lines where the pairing fits, and lines where it does not.",
+        "Many promises several. Check the line that uses it."
+      ],
+      how: [
+        "Check the word that says how many and the noun next to it in each line.",
+        "Six posters: six promises several, and posters has -s. Each reader and one book: each and one promise a single thing.",
+        "Several teacher, A desks and Many chair each pair a word with the wrong form.",
+        "So the two lines that fit are The class painted six posters for the hallway. and Each reader chose one book from the shelf."
+      ],
+      misconception: "A common mix-up is picking lines that merely look plural. A noun is right when it fits its own clue word.",
+      why: "The answers are \"The class painted six posters for the hallway.\" and \"Each reader chose one book from the shelf.\". Six goes with posters, and each and one go with single nouns. In the other lines, several, a and many are paired with the wrong form.",
+      like: ["SK-GUM1-2-C13"]
+    },
+    {
+      id: "SK-GUM1-2-S14",
+      type: "hottext",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.L.GC.1:R:form-and-use-singular-and-plural-nouns-in-speech"
+      ],
+      passages: [],
+      stem: "A volunteer lists four lines for a park sign.",
+      prompt: "Tap the line whose noun is wrong for the word in front of it.",
+      options: [
+        "Please put every cup in the bin.",
+        "We planted two tree near the gate.",
+        "Several benches need fresh paint.",
+        "A friendly guide walks each group around."
+      ],
+      answer: [1],
+      pick: 1,
+      clue: "Look at each line's clue word, then at the noun after it.",
+      hints: [
+        "Look at each line's clue word, then at the noun after it.",
+        "Go line by line and ask how many things each clue word promises.",
+        "Several benches pairs several with a plural noun. Decide among the rest."
+      ],
+      how: [
+        "Find the clue word and noun in each line.",
+        "Every cup, several benches, a friendly guide and each group all fit.",
+        "Two tree does not fit, because two means more than one. It should be two trees."
+      ],
+      misconception: "A common mix-up is picking the line with the plural noun. Check whether the noun matches its own clue word.",
+      why: "The answer is \"We planted two tree near the gate.\". Two means more than one, so tree should be trees. The other lines fit.",
+      like: ["SK-GUM1-2-C14"]
+    },
+    {
+      id: "SK-GUM1-2-S15",
+      type: "mc",
+      points: 1,
+      dok: 3,
+      std: [
+        "3.L.GC.1:R:form-and-use-singular-and-plural-nouns-in-speech"
+      ],
+      passages: [],
+      prompt: "Sam says, \"A noun ending in -s always means more than one.\" Which pair of lines shows that Sam is wrong?",
+      choices: [
+        {
+          text: "The word class names a single group, and the word glass names a single cup.",
+          correct: true
+        },
+        {
+          text: "The word dogs names several animals, and the word cats names several pets."
+        },
+        {
+          text: "The word dog names a single animal, and the word cat names a single pet."
+        },
+        {
+          text: "The word birds names several animals, and the word bird names a single one."
+        }
+      ],
+      clue: "Sam is making a rule. Look for words that break it.",
+      hints: [
+        "Sam is making a rule. Look for words that break it.",
+        "Check each pair for a word that ends in -s but names only one thing.",
+        "Dogs and cats both end in -s and both name several. Think about the others."
+      ],
+      how: [
+        "Sam says that every noun with -s names several.",
+        "Dogs and cats follow the rule. Dog, cat and bird have no -s.",
+        "The answer is \"The word class names a single group, and the word glass names a single cup.\" Both end in -s but name one."
+      ],
+      misconception: "A common mix-up is thinking the -s ending is the only sign of a plural. A few single nouns end in s too.",
+      why: "The answer is \"The word class names a single group, and the word glass names a single cup.\" Class and glass end in -s but name one thing, so Sam is wrong. The other pairs do not break the rule.",
+      like: ["SK-GUM1-2-C15"]
+    }
+  ],
+  addons: {
+    "SK-GUM1-2-P1": {
+      hints: [
+        "Look at the number word before the blank. Decide if it means one or more than one.",
+        "Read the sentence with each choice and listen to how three and the noun sound together.",
+        "An apostrophe would show that something belongs to the melon. Rule that choice out."
+      ],
+      how: [
+        "Find the number word before the blank: three. Three means more than one.",
+        "A noun after three needs its plural form: melons.",
+        "Melon names only one, and melon's shows belonging."
+      ],
+      misconception: "A common mix-up is leaving the noun alone because the number word already says how many."
+    },
+    "SK-GUM1-2-P2": {
+      hints: [
+        "Each blank has its own number word. Match each noun to the one right before it.",
+        "Say the first half and then the second half of the sentence with your choices.",
+        "Apple's and cookie's show belonging, and nothing here belongs to anyone. Rule those out."
+      ],
+      how: [
+        "The first blank follows one, which means a single thing: apple.",
+        "The second blank follows two, which means more than one: cookies.",
+        "The answers are apple and cookies."
+      ],
+      misconception: "A common mix-up is putting -s on both nouns because the lunch box holds several things."
+    },
+    "SK-GUM1-2-P3": {
+      hints: [
+        "Look at the clue word at the start of each phrase and at the end of the noun.",
+        "Do the phrases you feel surest about first, then the others.",
+        "Several and many both promise more than one. Use that to sort two of the phrases."
+      ],
+      how: [
+        "Read the clue word first. A, one and an go with one thing. Several and many go with more than one.",
+        "A pencil, one notebook and an eraser are singular.",
+        "Several crayons and many markers are plural."
+      ],
+      misconception: "A common mix-up is sorting by the length of the phrase instead of by the clue word."
+    },
+    "SK-GUM1-2-P4": {
+      hints: [
+        "Find each clue word that means more than one and check the noun after it.",
+        "Read the sentences one at a time and ask how many things each noun names.",
+        "Two of the sentences use a, and a goes with just one thing. Check the others."
+      ],
+      how: [
+        "Find the clue word and noun in each sentence.",
+        "Two shells, a log and three dogs all match.",
+        "We saw many bird does not match: many means more than one, so it should say many birds."
+      ],
+      misconception: "A common mix-up is changing a noun that already fits its clue word, like a frog."
+    },
+    "SK-GUM1-2-P5": {
+      hints: [
+        "Match each noun to its clue word. Words like each and a go with one.",
+        "Say each sentence aloud and listen for a clue word that does not fit its noun.",
+        "Five and four both promise more than one. Check which sentences leave their nouns alone."
+      ],
+      how: [
+        "Look at the clue word and the noun in each sentence.",
+        "Each student got a new folder pairs each and a with single nouns.",
+        "The others should say five students, a flower and four ducks."
+      ],
+      misconception: "A common mix-up is picking the sentence that looks plural. Check that each noun fits its clue word."
+    }
+  },
+  /* B7a:core:end */
   test: [
     { id: "SK-GUM1-2-T1", type: "dropdown", points: 1, dok: 1, passages: [],
       prompt: "Choose the word that correctly completes the sentence.",

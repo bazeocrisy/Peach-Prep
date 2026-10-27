@@ -238,7 +238,7 @@
         "In cursive, the letters in a word connect, so look for where one letter ends and the next begins.",
         "Some letters look very different in cursive. Watch for lowercase r, s, z and f, and capital letters like G, Q, S, T and Z.",
         "Read cursive one word at a time. If a word is hard, find the letters you are sure of first, then think about what word would make sense.",
-        "Spaces between words still show where each word ends."
+        "Spaces between words still show where each word ends. In this font, the letter s can leave a small gap after it, so look at the whole word and use the wider spaces to find where words end."
       ],
       examples: [
         { label: "Print and cursive", lines: ["Print: I like to read.", "Cursive: I like to read."], note: "Same words, same letters. In cursive the letters in each word are joined." },
@@ -426,40 +426,49 @@
             },
             {
               id: "SK-FH3a-C03",
-              type: "hottext",
-              points: 1,
+              type: "dropdown",
+              points: 2,
               dok: 2,
               std: [
                 "3.F.H.3.a"
               ],
               passages: [],
-              prompt: "Read the cursive sentence. Choose the word that has the letter z.",
+              prompt: "Which words match the cursive sentence?",
               stem: [
                 "Cursive: The baby dozed in a warm chair."
               ],
-              options: [
-                "baby",
-                "dozed",
-                "warm",
-                "chair"
+              text: "The baby {0} in a {1} chair.",
+              slots: [
+                {
+                  options: [
+                    "dozed",
+                    "dived",
+                    "danced"
+                  ],
+                  answer: 0
+                },
+                {
+                  options: [
+                    "warm",
+                    "ward",
+                    "wall"
+                  ],
+                  answer: 0
+                }
               ],
-              answer: [
-                1
-              ],
-              pick: 1,
               clue: "Read the cursive sentence one word at a time.",
               hints: [
                 "Read the cursive sentence one word at a time.",
-                "Look for a letter that looks very different from print.",
-                "Check the letters in the middle of each word."
+                "Find the word right after baby, then the word right before chair.",
+                "Look at the letters in the middle of the word after baby, and at the last letter of the word before chair."
               ],
               how: [
                 "Read each word in the sentence: The baby dozed in a warm chair.",
-                "Look at the letters in each word.",
-                "Dozed has a z in the middle, and the other words do not."
+                "The word after baby has a z in the middle: dozed.",
+                "The word before chair has four letters: warm."
               ],
-              misconception: "A common mix-up is choosing the longest word. Read each word and look for the z.",
-              why: "The answer is \"dozed.\" It is spelled d-o-z-e-d, so it has a z. Baby, warm and chair have no z."
+              misconception: "A common mix-up is choosing a word that starts the same way. Read every letter.",
+              why: "The answers are \"dozed\" and \"warm.\" The sentence says The baby dozed in a warm chair. Dived, danced, ward and wall do not match the letters."
             },
             {
               id: "SK-FH3a-C04",
@@ -475,27 +484,27 @@
                 "Cursive: Nia ran home fast."
               ],
               cols: [
-                "Nia",
-                "ran",
                 "home",
-                "fast"
+                "Nia",
+                "fast",
+                "ran"
               ],
               rows: [
                 {
                   text: "last word",
-                  answer: 3
-                },
-                {
-                  text: "first word",
-                  answer: 0
-                },
-                {
-                  text: "third word",
                   answer: 2
                 },
                 {
-                  text: "second word",
+                  text: "first word",
                   answer: 1
+                },
+                {
+                  text: "third word",
+                  answer: 0
+                },
+                {
+                  text: "second word",
+                  answer: 3
                 }
               ],
               clue: "Use the spaces to find where each word begins and ends.",
@@ -564,40 +573,49 @@
             },
             {
               id: "SK-FH3a-C06",
-              type: "hottext",
-              points: 1,
+              type: "dropdown",
+              points: 2,
               dok: 2,
               std: [
                 "3.F.H.3.a"
               ],
               passages: [],
-              prompt: "Read the cursive sentence. Choose the word that names an animal.",
+              prompt: "Finish the cursive sentence with the right words.",
               stem: [
                 "Cursive: A brown rabbit hid in the tall grass."
               ],
-              options: [
-                "brown",
-                "rabbit",
-                "hid",
-                "grass"
+              text: "A brown {0} hid in the {1} grass.",
+              slots: [
+                {
+                  options: [
+                    "rabbit",
+                    "robin",
+                    "raccoon"
+                  ],
+                  answer: 0
+                },
+                {
+                  options: [
+                    "tall",
+                    "tail",
+                    "toll"
+                  ],
+                  answer: 0
+                }
               ],
-              answer: [
-                1
-              ],
-              pick: 1,
               clue: "Read the cursive sentence one word at a time.",
               hints: [
                 "Read the cursive sentence one word at a time.",
-                "Think about what each word names or tells.",
-                "Hid tells what something did, so it names no animal. Read the other words and ask which one names a living thing."
+                "Find the word right after brown, then the word right before grass.",
+                "Count the letters in the word after brown, and look at the middle letters of the word before grass."
               ],
               how: [
                 "Read each word: A brown rabbit hid in the tall grass.",
-                "Ask which word is a living thing.",
-                "Rabbit is an animal."
+                "The word after brown has six letters and two b's in a row: rabbit.",
+                "The word before grass has four letters: tall."
               ],
-              misconception: "A common mix-up is choosing a color word. Think about what each word names.",
-              why: "The answer is \"rabbit.\" A rabbit is an animal. Brown is a color, hid tells what the rabbit did, and grass is a plant."
+              misconception: "A common mix-up is choosing a word that names the same kind of thing. Read every letter.",
+              why: "The answers are \"rabbit\" and \"tall.\" The sentence says A brown rabbit hid in the tall grass. Robin, raccoon, tail and toll do not match the letters."
             },
             {
               id: "SK-FH3a-C07",
@@ -639,38 +657,38 @@
                 "3.F.H.3.a"
               ],
               passages: [],
-              prompt: "Read the cursive note. What does it ask you to do?",
+              prompt: "Read the cursive sign. What does it tell you to do?",
               stem: [
-                "Cursive: Please water the plants and shut the gate."
+                "Cursive: Always knock before you open the door."
               ],
               choices: [
                 {
-                  text: "Water the plants and shut the gate.",
+                  text: "Knock before opening the door.",
                   correct: true
                 },
                 {
-                  text: "Water the plants and open the gate."
+                  text: "Knock after opening the door."
                 },
                 {
-                  text: "Plant the seeds and shut the gate."
+                  text: "Lock the door before knocking."
                 },
                 {
-                  text: "Water the lawn and shut the garage."
+                  text: "Knock before closing the door."
                 }
               ],
-              clue: "Read the cursive note one word at a time.",
+              clue: "Read the cursive sign one word at a time.",
               hints: [
-                "Read the cursive note one word at a time.",
-                "Find the two action words in the note.",
-                "Compare each action word and its object with each choice."
+                "Read the cursive sign one word at a time.",
+                "Find the action word that comes first and the small word that tells when.",
+                "Compare the small word that tells when, and the last action, with each choice."
               ],
               how: [
-                "Read the note word by word.",
-                "The first action is water, and the object is the plants.",
-                "The second action is shut, and the object is the gate."
+                "Read the sign word by word.",
+                "The first action is knock, and the small word is before.",
+                "The second action is open, and its object is the door."
               ],
               misconception: "A common mix-up is picking a choice with one right part. Both parts have to match.",
-              why: "The answer is \"Water the plants and shut the gate.\" The note says to water the plants and shut the gate. The other choices change an action or an object."
+              why: "The answer is \"Knock before opening the door.\" The sign says to knock before you open the door. The other choices change when, the action, or the order."
             },
             {
               id: "SK-FH3a-C09",
@@ -777,7 +795,7 @@
               prompt: "Read the cursive schedule. Match each day to its activity.",
               stem: [
                 "Cursive: Monday: swim class",
-                "Cursive: Friday: art club",
+                "Cursive: Tuesday: art club",
                 "Cursive: Saturday: piano",
                 "Cursive: Sunday: judo"
               ],
@@ -801,7 +819,7 @@
                   answer: 0
                 },
                 {
-                  text: "Friday",
+                  text: "Tuesday",
                   answer: 3
                 }
               ],
@@ -817,7 +835,7 @@
                 "Match each day to the activity after its colon."
               ],
               misconception: "A common mix-up is matching by position. Read each line to find the day and its activity.",
-              why: "Monday is swim class, Friday is art club, Saturday is piano, and Sunday is judo."
+              why: "Monday is swim class, Tuesday is art club, Saturday is piano, and Sunday is judo."
             },
             {
               id: "SK-FH3a-C12",
@@ -848,7 +866,7 @@
               hints: [
                 "Think about how a reader works out a word they cannot read yet.",
                 "Think about what the rest of the sentence can tell Leo.",
-                "Skipping the note does not tell Leo what the word says. Ask which choice uses what he can already see."
+                "Printing the word does not read it, and skipping the note does not read it either. Decide which of the other two choices helps Leo read the word."
               ],
               how: [
                 "Leo knows some letters of the word.",
@@ -1008,8 +1026,8 @@
       },
       {
         id: "SK-FH3a-S03",
-        type: "hottext",
-        points: 1,
+        type: "dropdown",
+        points: 2,
         dok: 2,
         std: [
           "3.F.H.3.a"
@@ -1018,33 +1036,42 @@
         like: [
           "SK-FH3a-C03"
         ],
-        prompt: "Tap the one spelled with a q.",
+        prompt: "Pick the words that complete the cursive sentence.",
         stem: [
           "Cursive: A quail ran past our rusty boat."
         ],
-        options: [
-          "quail",
-          "ran",
-          "past",
-          "boat"
+        text: "A {0} ran past our {1} boat.",
+        slots: [
+          {
+            options: [
+              "quail",
+              "quilt",
+              "quill"
+            ],
+            answer: 0
+          },
+          {
+            options: [
+              "rusty",
+              "dusty",
+              "musty"
+            ],
+            answer: 0
+          }
         ],
-        answer: [
-          0
-        ],
-        pick: 1,
         clue: "Go through the cursive line one piece at a time.",
         hints: [
           "Go through the cursive line one piece at a time.",
-          "Look for a letter with a long tail that is easy to spot.",
+          "Find the word right after A, then the word right before boat.",
           "Check each piece letter by letter, not only the first letter."
         ],
         how: [
           "Read each piece of the line.",
-          "Look at the letters in each one.",
-          "Quail starts with q, and the others do not have one."
+          "The word after A starts with q and has five letters: quail.",
+          "The word before boat has five letters and starts with r: rusty."
         ],
-        misconception: "A common mix-up is choosing a word that looks tall. Look for the q itself.",
-        why: "The answer is \"quail.\" It is spelled q-u-a-i-l. Ran, past and boat have no q."
+        misconception: "A common mix-up is choosing a word that looks close. Read every letter.",
+        why: "The answers are \"quail\" and \"rusty.\" The line says A quail ran past our rusty boat. Quilt, quill, dusty and musty do not match the letters."
       },
       {
         id: "SK-FH3a-S04",
@@ -1058,47 +1085,47 @@
         like: [
           "SK-FH3a-C04"
         ],
-        prompt: "What kind of word is each one? Match.",
+        prompt: "Which word fits each clue about the cursive line? Match.",
         stem: [
           "Cursive: Sam took eight plates."
         ],
         cols: [
-          "a name",
-          "an action",
-          "a number",
-          "a thing"
+          "eight",
+          "Sam",
+          "plates",
+          "took"
         ],
         rows: [
           {
-            text: "plates",
+            text: "starts the sentence",
+            answer: 1
+          },
+          {
+            text: "comes right after Sam",
             answer: 3
           },
           {
-            text: "Sam",
+            text: "comes right before plates",
             answer: 0
           },
           {
-            text: "eight",
+            text: "ends the sentence",
             answer: 2
-          },
-          {
-            text: "took",
-            answer: 1
           }
         ],
         clue: "Use the spaces to see where each word stops.",
         hints: [
           "Use the spaces to see where each word stops.",
-          "Read one word at a time and think about what it tells.",
+          "Read the cursive line one word at a time and put the words in order.",
           "Start with the first word. It has a capital letter."
         ],
         how: [
           "Find the four words using the spaces.",
-          "Read them: Sam, took, eight, plates.",
-          "Sam is a name, took is an action, eight is a number, and plates are things."
+          "Read them in order: Sam, took, eight, plates.",
+          "Match each clue to the word that sits there."
         ],
-        misconception: "A common mix-up is matching by position. Read each word and think about what it tells.",
-        why: "Sam is a name, took is an action, eight is a number, and plates are things."
+        misconception: "A common mix-up is guessing from the clue words. Read the cursive to see the order.",
+        why: "Sam starts the sentence. Took comes right after Sam. Eight comes right before plates. Plates ends the sentence."
       },
       {
         id: "SK-FH3a-S05",
@@ -1112,7 +1139,7 @@
         like: [
           "SK-FH3a-P4"
         ],
-        prompt: "Two foods are named above. Choose them.",
+        prompt: "Pick the pair written above.",
         stem: [
           "Cursive: pears",
           "Cursive: honey",
@@ -1132,7 +1159,7 @@
             text: "peas"
           },
           {
-            text: "hams"
+            text: "sausage"
           },
           {
             text: "jelly"
@@ -1147,10 +1174,10 @@
         how: [
           "Read each line: pears, honey and rolls.",
           "Check each choice against the list.",
-          "Pears and rolls are on the list. Peas, hams and jelly are not."
+          "Pears and rolls are on the list. Peas, sausage and jelly are not."
         ],
         misconception: "A common mix-up is choosing a word that looks close. Read every letter.",
-        why: "The answers are \"pears\" and \"rolls.\" The list says pears, honey and rolls. Peas, hams and jelly are not on it."
+        why: "The answers are \"pears\" and \"rolls.\" The list says pears, honey and rolls. Peas, sausage and jelly are not on it."
       },
       {
         id: "SK-FH3a-S06",
@@ -1199,8 +1226,8 @@
       },
       {
         id: "SK-FH3a-S07",
-        type: "hottext",
-        points: 1,
+        type: "dropdown",
+        points: 2,
         dok: 2,
         std: [
           "3.F.H.3.a"
@@ -1209,33 +1236,42 @@
         like: [
           "SK-FH3a-C06"
         ],
-        prompt: "Tap the one that tells a color.",
+        prompt: "Choose the words that complete the cursive line.",
         stem: [
           "Cursive: My aunt knits a purple scarf every winter."
         ],
-        options: [
-          "aunt",
-          "knits",
-          "purple",
-          "winter"
+        text: "My {0} knits a {1} scarf every winter.",
+        slots: [
+          {
+            options: [
+              "aunt",
+              "ant",
+              "art"
+            ],
+            answer: 0
+          },
+          {
+            options: [
+              "purple",
+              "people",
+              "purse"
+            ],
+            answer: 0
+          }
         ],
-        answer: [
-          2
-        ],
-        pick: 1,
         clue: "Go through the cursive line one piece at a time.",
         hints: [
           "Go through the cursive line one piece at a time.",
-          "Think about what each piece names or tells.",
-          "Knits tells what someone does. Read the other words and ask which one tells how something looks."
+          "Find the word right after My, then the word right before scarf.",
+          "Count the letters in the word after My, and look at the middle letters of the word before scarf."
         ],
         how: [
           "Read each piece of the line.",
-          "Ask which one describes how something looks.",
-          "Purple is a color."
+          "The word after My has four letters and starts with a: aunt.",
+          "The word before scarf has six letters: purple."
         ],
-        misconception: "A common mix-up is choosing a thing instead of a color. Think about what each piece tells.",
-        why: "The answer is \"purple.\" Purple is a color. Aunt names a person, knits tells an action, and winter names a season."
+        misconception: "A common mix-up is choosing a word that looks close. Read every letter.",
+        why: "The answers are \"aunt\" and \"purple.\" The line says My aunt knits a purple scarf every winter. Ant, art, people and purse do not match the letters."
       },
       {
         id: "SK-FH3a-S08",
@@ -1499,7 +1535,7 @@
         hints: [
           "Think about how a reader works out a word they cannot read yet.",
           "Think about what the rest of the sentence can tell the pupil.",
-          "Tearing out the page does not help the pupil read the word. Ask which choice uses what the pupil can already see."
+          "Rewriting the word in print does not read it, and tearing out the page does not read it either. Decide which of the other two choices helps the pupil read the word."
         ],
         how: [
           "The pupil can read the ending.",
@@ -1523,7 +1559,7 @@
         ],
         prompt: "Where and when? Complete the message.",
         stem: [
-          "Cursive: Meet me by the fountain on Friday. Jo"
+          "Cursive: Meet me by the fountain on Wednesday. Jo"
         ],
         text: "Meet by the {0} on {1}.",
         slots: [
@@ -1537,9 +1573,9 @@
           },
           {
             options: [
-              "Friday",
+              "Wednesday",
               "Tuesday",
-              "Wednesday"
+              "Monday"
             ],
             answer: 0
           }
@@ -1551,12 +1587,12 @@
           "Check the first letter and the last letter of each answer word."
         ],
         how: [
-          "Read the message: Meet me by the fountain on Friday.",
+          "Read the message: Meet me by the fountain on Wednesday.",
           "The word after by the is fountain.",
-          "The word after on is Friday."
+          "The word after on is Wednesday."
         ],
         misconception: "A common mix-up is picking a word that looks close. Read every letter.",
-        why: "The answers are \"fountain\" and \"Friday.\" The message says to meet by the fountain on Friday. Mountain, fortune, Tuesday and Wednesday do not match."
+        why: "The answers are \"fountain\" and \"Wednesday.\" The message says to meet by the fountain on Wednesday. Mountain, fortune, Tuesday and Monday do not match."
       },
       {
         id: "SK-FH3a-S15",
@@ -1714,11 +1750,11 @@
           { text: "quiet", correct: true },
           { text: "zebra", correct: true },
           { text: "queen" },
-          { text: "zero" },
+          { text: "zigzag" },
           { text: "funny" }
         ],
         clue: "Read each word slowly. Look at the first letter and at the end of each one.",
-        why: "The answers are quiet and zebra. The box says quiet, zebra and sunny. Queen, zero and funny are not there." },
+        why: "The answers are quiet and zebra. The box says quiet, zebra and sunny. Queen, zigzag and funny are not there." },
       { id: "SK-FH3a-T5", type: "mc", points: 1, dok: 2, passages: [],
         prompt: "Read the cursive sentence. Which sentence matches it?",
         stem: "Cursive: Grandma baked us a pie.",

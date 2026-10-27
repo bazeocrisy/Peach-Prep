@@ -42,3 +42,35 @@ Not done or still open:
 - Twin hints are copied between a twin and its core item in some pairs (reviewer N-1); only the ones that named a key were changed.
 - Open SHOULDs on accepted 3.L.V.3.a (not applied): C04 "row after row"; C11 key "A strong current pulled the raft downstream."; C02, S02, C06 hint 1 names the clue type; S10 key is the longest.
 - STATUS.md (in the Project) still needs the B9 rows. `--record-versions` is the coordinator's.
+
+## Second fix pass after review 2 (B9-review.md, "Second review")
+All numbers below were measured on the final files with `lk4.js` (longest key, ties counted for choose-two), `an.js` (twin similarity) and `ckms.js` (keys), plus `check-content --all` (PASS, 0 failures), `check-writing` (0 failures) and `check-instructional-copy` (28 passed). These supersede the figures in the first fix pass.
+
+Method for longest key: every mc, ms and dropdown slot in core (not refs), practice, similar and test forms. "Unique-longest" counts single-key picks whose key has more characters than every distractor. "Both-longest" counts choose-two items where the shorter key is at least as long as the longest distractor (ties count). The first fix pass counted ties differently, which is why review 2 found five choose-two items the log said did not exist.
+
+| Lesson | Worst twin (set and multiset) | Unique-longest single keys | Both-longest choose-two |
+|---|---|---|---|
+| 4.a | 0.186 | 5 of 22 (23%) | 0 of 5 |
+| 4.b | 0.200 | 6 of 27 (22%) | 0 of 5 |
+| 4.c | 0.207 | 8 of 32 (25%) | 0 of 5 |
+| H.3.a | 0.208 | 4 of 39 (10%) | 0 of 3 |
+
+MUSTs fixed:
+- 4.b S04: "cover" is cov-er in Merriam-Webster, so it was replaced by "bacon" (ba-con). Hints, how and why rewritten.
+- 4.b C01 hint 3 no longer gives the count. C07 hint 3 and the C12 and P7 hint 3 now leave all three choices live.
+- 4.c S03 and S05: the cover test now uses only words where covering the front leaves a non-word (under, until), and the wrong "Nit is left" line is gone. C03 now tests dis- (displeased, dish).
+- 4.a S14: key is now "dice" (was "fence", which is test T6's key).
+- H.3.a: C03, C06, S03, S07 are now fill-in-the-blank items whose printed choices are look-alike words, so the child must read the cursive to choose. S04 now asks for clue-to-word matches that depend on word order in the cursive, with the words printed in scrambled order. C04's printed words are scrambled for the same reason. C08 was replaced (new sign "Always knock before you open the door.").
+- Choose-two ties fixed: 4.a C07 (cabin became cabinet), 4.b P6 (tunnel became channel), 4.b S14 (panel became pretzel), 4.b T4 (hotel became silent), H.3.a S05 (hams became sausage), H.3.a T4 (zero became zigzag). P6, T4 and the H.3.a T4 are existing practice or test items; only a distractor and the why were changed, no key.
+
+SHOULDs taken: 4.a P6 hint 2 (it said one word had no c; all have a c) and S15 (now "spread", not Together P1's key "head"); 4.b S11 (Teach terms, no drift), S13 (asks for the last letter of the first syllable; frozen and visit removed); 4.c S15 (still a twin of P7; its labels are plain words) and C01 (unlock/relock, so it no longer repeats C04); H.3.a S05 prompt, C12 and S13 hint 3, C11 and S14 (Friday removed, it is a T3 word), and a Teach sentence that the letter s can leave a small gap in this font.
+
+Syllable divisions checked in Merriam-Webster (fetched this pass): pock-et, sev-en, pa-per, ho-tel (via a Merriam-Webster mirror page), mag-net, ba-sin, win-ter, si-lent, pu-pil, mit-ten, mo-tel, ro-bot, pen-cil, spi-der, ti-ger, lem-on, riv-er, lim-it, ba-by, rib-bon, ba-con, bas-ket, mu-sic, fan-tas-tic, kit-ten, ti-ny, pup-py, rab-bit, plan-et, mel-on, pic-nic, cac-tus, tu-lip, wag-on, tab-let, pump-kin, win-dow, sand-wich, car-pet, teach-er, chip-munk, vis-it (mirror page). Review 2 also checked Sep-tem-ber, nap-kin, peb-ble, po-ny, in-sect, gar-den, mar-ble, pi-lot, cam-el, cup-cake. Not found on Merriam-Webster by me: morning (morn-ing from howmanysyllables.com only), table, frozen (no longer used), doctor (not used). Cover is cov-er, which is why S04 changed.
+
+Phonics claims re-checked on the web this pass:
+- Soft c and g before e, i, y, with exceptions (soft g: get, girl, gift): https://readinguniverse.org/skill-explainer/phonics-patterns/soft-c-and-soft-g-skill-explainer/an-overview-of-soft-c-and-soft-g . That page does not list "give". "Give" is supported by https://en.wikipedia.org/wiki/Hard_and_soft_G . The Teach line says "get and give".
+- ea says long a in great, steak, break; short e in bread, head, spread: https://www.orchidsinternationalschool.com/english-concepts/ea-words
+- y at the end of a one-syllable word says long i; at the end of a longer word it says long e: https://readinguniverse.org/skill-explainer/phonics-patterns/y-as-a-vowel-skill-explainer/explicitly-teaching-y-as-a-vowel
+- ough variants: https://en.wikipedia.org/wiki/Ough_(orthography)
+
+Still open: second cursive face (none exists); Watch Me models only s and capital S in H.3.a and does not model y to i in 4.c (matrix wording says so); the s-gap in the font is explained in Teach, not removed; coreException has no UI consumer. H.3.a now has five dropdown items in the core, all "read the cursive, fill the blanks". Accepted 3.L.V.3.a SHOULDs from the earlier log are unchanged. STATUS.md and `--record-versions` are still the coordinator's.
