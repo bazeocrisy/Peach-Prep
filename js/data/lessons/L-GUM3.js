@@ -726,12 +726,12 @@ PP.addLesson({
         "3.L.GC.1:M:use-apostrophes-in-contractions-and-singular-pos"
       ],
       passages: [],
-      prompt: "Select the sentence that has an error.",
+      prompt: "Which one line breaks an apostrophe rule?",
       options: [
         "Maria's umbrella is on the bus.",
         "The two truck's blocked our street.",
-        "We haven't seen that movie yet.",
-        "She's learning to play the drums."
+        "Our class hasn't seen that movie yet.",
+        "Pia's learning to play the drums."
       ],
       answer: [1],
       pick: 1,
@@ -759,14 +759,14 @@ PP.addLesson({
         "3.L.GC.1:M:use-apostrophes-in-contractions-and-singular-pos"
       ],
       passages: [],
-      prompt: "Choose the TWO sentences that use apostrophes correctly.",
+      prompt: "Pick the TWO lines where every apostrophe is right.",
       pick: 2,
       choices: [
         { text: "Dad said we shouldnt run near the pool." },
         { text: "My neighbor's dog naps on our porch.", correct: true },
         { text: "The farmer sold six pumpkin's at his stand." },
         { text: "They've planted tomatoes along the fence.", correct: true },
-        { text: "The goat scratched it's ear on the gate." }
+        { text: "Mia put the cup's on the shelf." }
       ],
       clue: "For each sentence, find every word that needs an apostrophe. Then check that it is there and that no plain plural has one.",
       hints: [
@@ -792,7 +792,7 @@ PP.addLesson({
         "3.L.GC.1:M:use-apostrophes-in-contractions-and-singular-pos"
       ],
       passages: ["p4"],
-      prompt: "Sentence 3 of this draft is missing an apostrophe. Choose the correct revision.",
+      prompt: "The third sentence of the draft needs one apostrophe added. Pick the right fix.",
       choices: [
         { text: "Malik says the box was'nt even half full on Monday." },
         { text: "Malik says the box wasnt' even half full on Monday." },
@@ -855,14 +855,14 @@ PP.addLesson({
         "3.L.GC.1:M:use-apostrophes-in-contractions-and-singular-pos"
       ],
       passages: ["p4"],
-      prompt: "Sentence 5 uses its and it's correctly. Which TWO statements about the sentence are true?",
+      prompt: "Sentence 5 has no mistakes. Pick the TWO true statements about the pair it contains.",
       pick: 2,
       choices: [
-        { text: "It's can be stretched into it is and still make sense.", correct: true },
-        { text: "Its can be stretched into it is and still make sense." },
-        { text: "Its shows that the batteries belong to the robot.", correct: true },
-        { text: "Both words need an apostrophe because the robot is one thing." },
-        { text: "It's shows that the robot owns the batteries." }
+        { text: "Say it's as two words and the line still reads fine.", correct: true },
+        { text: "Say its as two words and the line still reads fine." },
+        { text: "The robot owns the batteries, which is the job of its here.", correct: true },
+        { text: "A robot is a single object, so each tiny word takes a mark." },
+        { text: "Who owns the batteries? The robot, says it's." }
       ],
       clue: "Try saying it is in place of each word. A contraction can be stretched into two words that still make sense.",
       hints: [
@@ -873,10 +873,10 @@ PP.addLesson({
       how: [
         "Put it is in place of its: \"The robot beeped when it is batteries were new.\" That does not make sense, so its shows belonging.",
         "Put it is in place of it's: \"it is quiet now.\" That makes sense, so it's is short for it is.",
-        "So its shows that the batteries belong to the robot, and it's can be stretched into it is."
+        "So the robot owns the batteries, which is the job of its here, and it's can be said as two words, it is."
       ],
       misconception: "A common mix-up is thinking its needs an apostrophe because it shows belonging. With it, belonging is the one time you leave it out.",
-      why: "The answers are \"Its shows that the batteries belong to the robot.\" and \"It's can be stretched into it is and still make sense.\" It is batteries makes no sense, but it is quiet now does. The robot being one thing does not decide it.",
+      why: "The answers are \"The robot owns the batteries, which is the job of its here.\" and \"Say it's as two words and the line still reads fine.\" It is batteries makes no sense, but it is quiet now does. The robot being one thing does not decide it.",
       like: ["SK-GUM3-1-C05"]
     },
     {
@@ -888,7 +888,7 @@ PP.addLesson({
         "3.L.GC.1:M:use-apostrophes-in-contractions-and-singular-pos"
       ],
       passages: ["p5"],
-      prompt: "Select the TWO sentences in which an apostrophe correctly stands for missing letters.",
+      prompt: "Two lines in the draft hold an apostrophe that rightly replaces letters. Select both.",
       targets: ["p5:1:2", "p5:1:3", "p5:2:3", "p5:3:1", "p5:3:2"],
       answer: ["p5:1:3", "p5:3:2"],
       pick: 2,
@@ -916,9 +916,9 @@ PP.addLesson({
         "3.L.GC.1:M:use-apostrophes-in-contractions-and-singular-pos"
       ],
       passages: ["p5"],
-      prompt: "This question has two parts. Answer Part A, then Part B.",
+      prompt: "Do the steps in order, A and then B.",
       partA: {
-        prompt: "Which sentence in the draft has a mistake with its or it's?",
+        prompt: "Find the draft line where its or it's is used wrongly.",
         choices: [
           { text: "(9) After lunch, the duck flapped its wings and flew away." },
           { text: "(6) A duck waddled over, and it's beak was full of bread.", correct: true },
@@ -927,7 +927,7 @@ PP.addLesson({
         ]
       },
       partB: {
-        prompt: "Which revision fixes the sentence you chose in Part A?",
+        prompt: "Choose the repair for the line you picked above.",
         choices: [
           { text: "A duck waddled over, and its' beak was full of bread." },
           { text: "A duck waddled over, and it is beak was full of bread." },
@@ -960,7 +960,7 @@ PP.addLesson({
         "3.L.GC.1:M:use-apostrophes-in-contractions-and-singular-pos"
       ],
       passages: ["p5"],
-      prompt: "Which TWO changes would fix mistakes in the draft?",
+      prompt: "Choose two edits that repair this piece of writing.",
       pick: 2,
       choices: [
         { text: "Take the apostrophe out of Ray's in sentence 2." },
@@ -994,7 +994,7 @@ PP.addLesson({
         "3.L.GC.1:M:use-apostrophes-in-contractions-and-singular-pos"
       ],
       passages: [],
-      prompt: "Choose the word that correctly completes the sentence.",
+      prompt: "Which choice fits the blank?",
       text: "The park bench was old, and the {0} legs were wobbly.",
       slots: [
         {
@@ -1026,15 +1026,15 @@ PP.addLesson({
         "3.L.GC.1:M:use-apostrophes-in-contractions-and-singular-pos"
       ],
       passages: ["p5"],
-      prompt: "Sentences 3 and 5 each have a word with an apostrophe. Which explanation of the two words is right?",
+      prompt: "Sentences 3 and 5 each hold one apostrophe word. Which statement about them is accurate?",
       choices: [
-        { text: "Couldn't is wrong because nobody owns anything in sentence 3, but watermelon's is right." },
-        { text: "Both words are right, because any word that ends in t or s needs an apostrophe." },
+        { text: "Couldn't is mistaken, since nobody owns anything in sentence 3, yet watermelon's is fine." },
+        { text: "Each is fine, as any word finishing in t or s takes an apostrophe." },
         {
-          text: "Couldn't is short for could not, but watermelon's only counts the melons and should be watermelons.",
+          text: "Couldn't is a squeezed form of could not, while watermelon's merely counts melons and ought to read watermelons.",
           correct: true
         },
-        { text: "Watermelon's is right because an apostrophe tells the reader there is more than one." }
+        { text: "Watermelon's is fine, since an apostrophe signals more than one melon." }
       ],
       clue: "An apostrophe needs a job: missing letters, or belonging to one owner. Ask what job each word is doing.",
       hints: [
@@ -1046,10 +1046,10 @@ PP.addLesson({
         "Ask what job each apostrophe is doing.",
         "In sentence 3, couldn't stretches into could not, so the apostrophe stands for a missing letter.",
         "In sentence 5, nothing belongs to the watermelons. Sentence 4 says there are two, so the word only means more than one and should be watermelons.",
-        "The answer is that couldn't is short for could not, but watermelon's only counts the melons."
+        "The answer is that couldn't is a squeezed form of could not, while watermelon's merely counts melons."
       ],
       misconception: "A common mix-up is thinking an apostrophe can make a word mean more than one.",
-      why: "The answer is \"Couldn't is short for could not, but watermelon's only counts the melons and should be watermelons.\" Apostrophes show missing letters or belonging. They do not make a word mean more than one.",
+      why: "The answer is \"Couldn't is a squeezed form of could not, while watermelon's merely counts melons and ought to read watermelons.\" Apostrophes show missing letters or belonging. They do not make a word mean more than one.",
       like: ["SK-GUM3-1-C10"]
     },
     {
@@ -1061,7 +1061,7 @@ PP.addLesson({
         "3.L.GC.1:M:use-apostrophes-in-contractions-and-singular-pos"
       ],
       passages: ["p6"],
-      prompt: "Select the TWO sentences in the sign-up sheet that have a mistake with an apostrophe.",
+      prompt: "Find the two lines on the sign-up sheet where an apostrophe goes wrong.",
       targets: ["p6:2:1", "p6:2:2", "p6:2:3", "p6:3:1", "p6:3:3"],
       answer: ["p6:2:1", "p6:2:2"],
       pick: 2,
@@ -1090,11 +1090,11 @@ PP.addLesson({
         "3.L.GC.1:M:use-apostrophes-in-contractions-and-singular-pos"
       ],
       passages: [],
-      prompt: "Choose the words that correctly complete the sentence.",
+      prompt: "Fill both blanks with the right short forms.",
       text: "The coach says the game {0} start until noon, and the field {1} dry yet.",
       slots: [
         {
-          options: ["won't", "wo'nt", "wont"],
+          options: ["doesn't", "does'nt", "doesnt"],
           answer: 0
         },
         {
@@ -1109,12 +1109,12 @@ PP.addLesson({
         "In the second blank, a word with no apostrophe is not a contraction. Decide about the first blank on your own."
       ],
       how: [
-        "Blank 1: the game will not start until noon. Will not squeezes into won't, with the apostrophe where the o in not was left out.",
+        "Blank 1: the game does not start until noon. Does not squeezes into doesn't, with the apostrophe where the o in not was left out.",
         "Blank 2: the field is not dry yet. Is not squeezes into isn't, with the apostrophe where the o was left out.",
         "The other options put the apostrophe in the wrong place or leave it out."
       ],
       misconception: "A common mix-up is putting the apostrophe where the two words meet, or leaving it out.",
-      why: "The answers are won't and isn't. Will not becomes won't, and is not becomes isn't. The apostrophe stands where the o in not was left out, so wo'nt and is'nt are wrong, and wont and isnt have no apostrophe at all.",
+      why: "The answers are doesn't and isn't. Does not becomes doesn't, and is not becomes isn't. The apostrophe stands where the o in not was left out, so does'nt and is'nt are wrong, and doesnt and isnt have no apostrophe at all.",
       like: ["SK-GUM3-1-C12"]
     },
     {
@@ -1126,7 +1126,7 @@ PP.addLesson({
         "3.L.GC.1:M:use-apostrophes-in-contractions-and-singular-pos"
       ],
       passages: [],
-      prompt: "Choose the correct way to write this sentence from a teacher's note.",
+      prompt: "Which version of this teacher's note is written correctly?",
       stem: "Please tape each students name to the cubby.",
       choices: [
         { text: "Please tape each students' name to the cubby." },
@@ -1158,26 +1158,26 @@ PP.addLesson({
         "3.L.GC.1:M:use-apostrophes-in-contractions-and-singular-pos"
       ],
       passages: [],
-      prompt: "Which sentence uses they're correctly?",
+      prompt: "Pick the line where they're is written the right way.",
       choices: [
-        { text: "They're the best team in our league.", correct: true },
-        { text: "The players left they're bags in the van." },
-        { text: "Is that they're coach on the field?" },
-        { text: "We cheered for they're first goal." }
+        { text: "They're walking home after the game.", correct: true },
+        { text: "Our friends put they're shoes by the door." },
+        { text: "Where is they're dog today?" },
+        { text: "Everyone clapped for they're song." }
       ],
       clue: "They're is a contraction, so it must stand for two words that fit in the sentence. Try putting the two words in its place.",
       hints: [
         "They're is a contraction, so it must stand for two words that fit in the sentence. Try putting the two words in its place.",
         "Read each sentence with the words they are in place of they're. Only keep a choice if the sentence still makes sense.",
-        "Try the words they are in the sentence about the bags. Check whether it still makes sense."
+        "Try the words they are in the sentence about the shoes. Check whether it still makes sense."
       ],
       how: [
         "They're is short for they are. Try they are in place of they're in each sentence.",
-        "\"They are the best team in our league.\" makes sense.",
-        "In the other three, they are does not make sense: \"they are bags,\" \"they are coach\" and \"they are first goal.\" In each one the word is used to show belonging."
+        "\"They are walking home after the game.\" makes sense.",
+        "In the other three, they are does not make sense: \"they are shoes,\" \"they are dog\" and \"they are song.\" In each one the word is used to show belonging."
       ],
       misconception: "A common mix-up is using they're where a word that shows belonging should go. If they are does not fit, it is the wrong word.",
-      why: "The answer is \"They're the best team in our league.\" They are fits in place of they're. In the other sentences, they are does not make sense: bags, coach and goal belong to someone, and they're cannot show belonging.",
+      why: "The answer is \"They're walking home after the game.\" They are fits in place of they're. In the other sentences, they are does not make sense: shoes, dog and song belong to someone, and they're cannot show belonging.",
       like: ["SK-GUM3-1-C14"]
     },
     {
@@ -1189,15 +1189,15 @@ PP.addLesson({
         "3.L.GC.1:M:use-apostrophes-in-contractions-and-singular-pos"
       ],
       passages: [],
-      prompt: "Look at the two sentences. Which TWO statements about Ben's are true?",
+      prompt: "Compare the pair. Pick the TWO true statements about the word Ben's.",
       stem: ["Ben's hungry.", "Ben's lunch is in the bag."],
       pick: 2,
       choices: [
-        { text: "In the second sentence, Ben's can be stretched into Ben is." },
-        { text: "In the first sentence, Ben's can be stretched into Ben is.", correct: true },
-        { text: "In both sentences, Ben's is short for two words." },
-        { text: "In the second sentence, Ben's shows that the lunch belongs to Ben.", correct: true },
-        { text: "In the first sentence, Ben's shows that something belongs to Ben." }
+        { text: "Sentence two lets you swap Ben's for Ben is." },
+        { text: "Sentence one lets you swap Ben's for Ben is.", correct: true },
+        { text: "Both lines use Ben's as a squeezed pair of words." },
+        { text: "Sentence two uses Ben's to say the lunch is his.", correct: true },
+        { text: "Sentence one uses Ben's to say something is his." }
       ],
       clue: "Try stretching the word with the apostrophe into two words. Then try it in the other sentence.",
       hints: [
@@ -1208,10 +1208,10 @@ PP.addLesson({
       how: [
         "Try Ben is in place of Ben's in the first sentence: \"Ben is hungry.\" It makes sense, so the 's is a contraction.",
         "Try it in the second sentence: \"Ben is lunch is in the bag.\" It does not make sense. The lunch belongs to Ben, so the 's shows belonging.",
-        "So the true statements are that the first Ben's can be stretched into Ben is, and that the second Ben's shows the lunch belongs to Ben."
+        "So the true statements are that sentence one lets you swap Ben's for Ben is, and that sentence two uses Ben's to say the lunch is his."
       ],
       misconception: "A common mix-up is thinking 's always shows belonging. It can also be short for is.",
-      why: "The answers are \"In the first sentence, Ben's can be stretched into Ben is.\" and \"In the second sentence, Ben's shows that the lunch belongs to Ben.\" Ben is hungry makes sense, but Ben is lunch does not. The same two letters do two different jobs.",
+      why: "The answers are \"Sentence one lets you swap Ben's for Ben is.\" and \"Sentence two uses Ben's to say the lunch is his.\" Ben is hungry makes sense, but Ben is lunch does not. The same two letters do two different jobs.",
       like: ["SK-GUM3-1-C15"]
     }
   ],
