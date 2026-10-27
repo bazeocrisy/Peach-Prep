@@ -2037,9 +2037,9 @@ PP.addLesson({
                 "text": "An is used because the sentence names Omar, who is a partner."
               }
             ],
-            "clue": "Look at the word, but listen to it too. The choice between a and an depends on the sound that comes next.",
+            "clue": "Look at the word, but listen to it too. The choice between a and an depends on what you hear next.",
             "hints": [
-              "Look at the word, but listen to it too. The choice between a and an depends on the sound that comes next.",
+              "Look at the word, but listen to it too. The choice between a and an depends on what you hear next.",
               "Say hourglass out loud, slowly. Notice whether your mouth makes a puff of air at the start.",
               "Words like hat and hill begin with the same letter but take a. Think about the other choices."
             ],
@@ -2151,8 +2151,8 @@ PP.addLesson({
             "clue": "Find the small word before legs in sentence 7. Ask what job it should do: point, name or show who owns.",
             "hints": [
               "Find the small word before legs in sentence 7. Ask what job it should do: point, name or show who owns.",
-              "In Part A, decide what the word before legs should tell. In Part B, check each rewrite for a word that shows owning and is spelled right.",
-              "In Part B, one rewrite puts an apostrophe in the owning word. Think about whether an apostrophe belongs there."
+              "In Part A, decide what the word before legs should tell. In Part B, check each rewrite for a word that does the job and is spelled right.",
+              "In Part B, one rewrite puts an apostrophe in the word before legs. Think about whether an apostrophe belongs there."
             ],
             "how": [
               "Part A: the legs belong to the crab, so the word before legs must show owning. It is not an owning word.",
