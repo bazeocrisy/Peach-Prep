@@ -1449,7 +1449,8 @@ PP.addLesson({
         [
           "(7) Mom put the dishes on two shelfs by the stove.",
           "(8) Dad told stories until the fire burned low.",
-          "(9) We hoped to come back to the cabin next winter."
+          "(9) We hoped to come back to the cabin next winter.",
+          "(10) On the last night, we all sat by the window and watched the snow."
         ]
       ]
     },
@@ -1475,7 +1476,11 @@ PP.addLesson({
           "(8) Wear sturdy shoes, because the paths can get muddy.",
           "(9) We hope you enjoy your visit."
         ],
-        ["(10) Come back soon to see what is new."]
+        [
+          "(10) Come back soon to see what is new.",
+          "(11) Ask any helper at the gate if you have a question.",
+          "(12) The gift shop is open until four o'clock every day."
+        ]
       ]
     },
     {
@@ -1501,7 +1506,8 @@ PP.addLesson({
           "(9) By three o'clock, we were ready to go home."
         ],
         [
-          "(10) I hope we can visit again next year."
+          "(10) I hope we can visit again next year.",
+          "(11) My favorite part was the quiet forest exhibit."
         ]
       ]
     },
@@ -1527,7 +1533,7 @@ PP.addLesson({
           "(8) We played board games by the window.",
           "(9) The next day, the sun came out and the snow began to melt."
         ],
-        ["(10) It was the best snow day ever."]
+        ["(10) It was the best snow day ever.", "(11) I hope it snows again next year."]
       ]
     },
     {
@@ -1552,7 +1558,10 @@ PP.addLesson({
           "(8) We will serve hot chocolate and warm pretzels.",
           "(9) We hope to see you there!"
         ],
-        ["(10) Bring a friend, and bring a smile."]
+        [
+          "(10) Bring a friend, and bring a smile.",
+          "(11) Questions can be sent to the main office at the town hall."
+        ]
       ]
     }
     /* B6:passages:end */
@@ -5461,10 +5470,183 @@ PP.addLesson({
         "You cannot touch kindness. It names a way of being, so it is an abstract noun."
       ],
       answer: "Kindness is the abstract noun."
+    },
+    {
+      show: ["The audience (clap / claps) when the show ends."],
+      ask: "Which verb goes with the group noun?",
+      steps: [
+        "Find the group noun: audience. It names a whole group of people.",
+        "The audience claps together, so it acts as one thing.",
+        "A group that acts as one takes the verb for one. In the present tense, that verb ends in -s."
+      ],
+      answer: "The audience claps when the show ends."
     }
   ],
   parent: "At the park or the store, name groups together (a crowd of shoppers, a flock of pigeons). At bedtime, ask your child to name one feeling or idea from the day, like joy, fear or patience.",
-  passages: [],
+  passages: [
+    /* B6:passages:start */
+    {
+      id: "p1",
+      title: "Fleet Day at the Harbor",
+      byline: "A third grader's draft",
+      genre: "Student draft (narrative)",
+      draft: true,
+      paragraphs: [
+        [
+          "(1) Every June, our town holds Fleet Day at the harbor.",
+          "(2) A fleet of fishing boats sails past the dock in a long line.",
+          "(3) The whole crowd gathers on the pier to watch."
+        ],
+        [
+          "(4) Together, the crowd cheer for the lead boat.",
+          "(5) The crew on that boat is proud of its bright flag.",
+          "(6) My uncle waved from the deck of his own boat."
+        ],
+        [
+          "(7) After the parade, a band played songs by the water.",
+          "(8) My little brother showed courage when he climbed the rope net.",
+          "(9) We stayed until the sun went down."
+        ],
+        [
+          "(10) I cannot wait for Fleet Day next year."
+        ]
+      ]
+    },
+    {
+      id: "p2",
+      title: "Orchestra Rehearsal",
+      byline: "A third grader's draft",
+      genre: "Student draft (narrative)",
+      draft: true,
+      paragraphs: [
+        [
+          "(1) On Tuesday, our school orchestra practiced for the spring concert.",
+          "(2) A small audience of teachers sat in the back of the hall.",
+          "(3) The whole orchestra were ready to play, and the audience were quiet."
+        ],
+        [
+          "(4) At first, the violins played too fast.",
+          "(5) Mr. Bell showed patience and asked us to start again.",
+          "(6) Soon the group sounded smooth and clear."
+        ],
+        [
+          "(7) After rehearsal, the class felt excitement about the concert.",
+          "(8) The staff in the front office clapped from the hall.",
+          "(9) I hope my family comes to hear us.",
+          "(10) The concert is on Friday at seven o'clock."
+        ]
+      ]
+    },
+    {
+      id: "p3",
+      title: "Our Class Ant Farm",
+      byline: "A third grader's draft",
+      genre: "Student draft (report)",
+      draft: true,
+      paragraphs: [
+        [
+          "(1) Last week, our class set up an ant farm.",
+          "(2) A colony of ants moved into the clear plastic box.",
+          "(3) Ms. Ruiz told us to be gentle with them."
+        ],
+        [
+          "(4) Each day, we watch the ants dig tunnels.",
+          "(5) The colony work together to find food.",
+          "(6) Their teamwork amazes everyone."
+        ],
+        [
+          "(7) Every student feels curiosity about the tiny tunnels.",
+          "(8) Our class keeps a log of what the ants do.",
+          "(9) We hope the colony stay healthy."
+        ],
+        [
+          "(10) Next week, we will make a chart of our findings.",
+          "(11) Ms. Ruiz says we can watch the farm for two more weeks."
+        ]
+      ]
+    },
+    {
+      id: "p4",
+      title: "The Ferry Ride",
+      byline: "A third grader's draft",
+      genre: "Student draft (narrative)",
+      draft: true,
+      paragraphs: [
+        [
+          "(1) Every Saturday, a ferry carries visitors to the island.",
+          "(2) A pod of dolphins often swims beside the boat.",
+          "(3) The whole crowd rushes to the rail to look."
+        ],
+        [
+          "(4) Together, the crowd gasp when a dolphin jumps.",
+          "(5) The crew on the ferry is kind to every rider.",
+          "(6) My aunt felt great surprise when she saw a baby dolphin."
+        ],
+        [
+          "(7) After the ride, a group of fiddlers played songs on the dock.",
+          "(8) My cousin showed generosity when he shared his sandwiches with a hungry seagull.",
+          "(9) We stayed on the dock until the last ferry left."
+        ],
+        [
+          "(10) I want to ride the ferry again soon."
+        ]
+      ]
+    },
+    {
+      id: "p5",
+      title: "Pet Show Day",
+      byline: "A third grader's draft",
+      genre: "Student draft (narrative)",
+      draft: true,
+      paragraphs: [
+        [
+          "(1) On Saturday, our town held a pet show at the park.",
+          "(2) The judge, Ms. Ortega, held up a gold ribbon.",
+          "(3) The panel have chosen a winner, and the group have cheered."
+        ],
+        [
+          "(4) At first, the puppies ran in circles.",
+          "(5) My neighbor's old dog showed loyalty, because it stayed by her side.",
+          "(6) A litter of kittens slept in a basket near the gate.",
+          "(7) Soon the judges chose a winner."
+        ],
+        [
+          "(8) After the show, my sister felt relief because her dog behaved.",
+          "(9) Everyone agreed that it was a fun day.",
+          "(10) We took home a blue ribbon and a bag of treats."
+        ]
+      ]
+    },
+    {
+      id: "p6",
+      title: "Bird Watching Club",
+      byline: "A third grader's draft",
+      genre: "Student draft (report)",
+      draft: true,
+      paragraphs: [
+        [
+          "(1) Last month, our class started a bird watching club.",
+          "(2) A flock of geese landed on the field behind the school.",
+          "(3) Mr. Haas told us to stay quiet and still."
+        ],
+        [
+          "(4) Each morning, we count the birds that visit the field.",
+          "(5) The flock stay together when they eat.",
+          "(6) Their beauty is amazing."
+        ],
+        [
+          "(7) Every member feels delight about spotting a new bird.",
+          "(8) Our club keeps a log of every bird we see.",
+          "(9) We hope the flock return tomorrow."
+        ],
+        [
+          "(10) Next month, we will draw pictures of our favorite birds.",
+          "(11) I hope to see a hawk someday."
+        ]
+      ]
+    }
+    /* B6:passages:end */
+  ],
   practice: [
     { id: "SK-GUM3-5-P1", type: "mc", points: 1, dok: 1, passages: [],
       prompt: "Which word in the sentence is an abstract noun?",
@@ -5518,6 +5700,1000 @@ PP.addLesson({
       clue: "Check each noun. Can you see it, hear it or touch it? Find the one you cannot.",
       why: "The answer is \"Our friendship began in first grade.\" Friendship is an idea you cannot touch, so it is an abstract noun. Goat, grass, shoes, door, rain and roof are all things you can see or touch." }
   ],
+  /* B6:core:start */
+  /* ---------- Expansion 2026-10-22, batch B6 (GUM Master) ----------
+     core: fifteen items in three sets of five. { ref } reuses a practice item; the other practice items stay in Practice Together.
+     Passages are used only by core and the similar bank; none is used by test or testB.
+     Author log: docs/expansion-2026-10-22/batches/B6-author-log.md. NEEDS INDEPENDENT REVIEW. */
+  core: {
+    rev: "1",
+    sets: [
+      {
+        title: "Set 1",
+        items: [
+          { ref: "SK-GUM3-5-P4" },
+          { ref: "SK-GUM3-5-P5" },
+          {
+            id: "SK-GUM3-5-C03",
+            type: "mc",
+            points: 1,
+            dok: 1,
+            std: [
+              "3.L.GC.1:M:use-collective-and-abstract-nouns"
+            ],
+            passages: ["p1"],
+            prompt: "Which word in sentence 2 of the draft is a collective noun?",
+            choices: [
+              { text: "fleet", correct: true },
+              { text: "boats" },
+              { text: "dock" },
+              { text: "sails" }
+            ],
+            clue: "A collective noun is one word that names a whole group. Look for a word that stands for many things together.",
+            hints: [
+              "A collective noun is one word that names a whole group. Look for a word that stands for many things together.",
+              "Read sentence 2 and find the nouns. Ask which noun names a group and which only names things.",
+              "Sails is a verb, not a noun. Decide among the other three."
+            ],
+            how: [
+              "Find the nouns in sentence 2: fleet, boats, dock and line.",
+              "Boats is a plural noun, and dock names one place. Neither names a group as one thing.",
+              "The answer is fleet. A fleet is one word for a group of boats."
+            ],
+            misconception: "A common mix-up is picking boats because it means more than one. A collective noun is one word that names a whole group.",
+            why: "The answer is fleet. A fleet is one word that names a group of boats. Boats is a plural, dock names one place, and sails is a verb."
+          },
+          {
+            id: "SK-GUM3-5-C04",
+            type: "dropdown",
+            points: 1,
+            dok: 2,
+            std: [
+              "3.L.GC.1:M:use-collective-and-abstract-nouns"
+            ],
+            passages: ["p1"],
+            prompt: "Sentence 4 of the draft has a verb that does not match the group. The crowd acts together as one. Choose the word that fixes it.",
+            text: "Together, the crowd {0} for the lead boat.",
+            slots: [
+              {
+                options: ["cheer", "cheers", "cheering"],
+                answer: 1
+              }
+            ],
+            clue: "Is the crowd one group or many separate people? Think about which verb goes with that.",
+            hints: [
+              "Is the crowd one group or many separate people? Think about which verb goes with that.",
+              "Read sentence 4 and say each choice in the blank. Listen for the one that goes with a single group.",
+              "Cheering needs a helper word like is, and the sentence has none. Decide between the other two."
+            ],
+            how: [
+              "The word together tells you the crowd acts as one group.",
+              "A collective noun that acts as one takes the verb for one thing. For present tense, that verb ends in -s.",
+              "The answer is cheers. Cheer is the verb for many, and cheering needs a helper word."
+            ],
+            misconception: "A common mix-up is choosing the plural verb because a crowd has many people. When the group acts together, use the verb for one.",
+            why: "The answer is cheers. Crowd is a collective noun, and the crowd acts together as one. A group that acts as one takes the verb for one: cheers."
+          },
+          {
+            id: "SK-GUM3-5-C05",
+            type: "ebsr",
+            points: 2,
+            dok: 2,
+            std: [
+              "3.L.GC.1:M:use-collective-and-abstract-nouns"
+            ],
+            passages: ["p1"],
+            prompt: "This question has two parts. Answer Part A, then Part B.",
+            partA: {
+              prompt: "Which word in sentence 8 of the draft is an abstract noun?",
+              choices: [
+                { text: "brother" },
+                { text: "rope" },
+                { text: "courage", correct: true },
+                { text: "net" }
+              ]
+            },
+            partB: {
+              prompt: "Why is the word in Part A an abstract noun?",
+              choices: [
+                { text: "It names a group of sailors who work together on a boat." },
+                { text: "It names a place on the pier where children like to play." },
+                { text: "It tells what the little brother did on the rope net." },
+                { text: "You can see him climb, but you cannot touch courage itself.", correct: true }
+              ]
+            },
+            clue: "An abstract noun names an idea, a feeling or a quality. Ask which word you cannot see or touch.",
+            hints: [
+              "An abstract noun names an idea, a feeling or a quality. Ask which word you cannot see or touch.",
+              "For Part A, find the nouns in sentence 8. For Part B, think about what makes an abstract noun different from the others.",
+              "In Part A, a brother can be seen and a net can be touched. Check the other choices."
+            ],
+            how: [
+              "Part A: find the nouns in sentence 8: brother, courage, rope and net.",
+              "You can see a brother, a rope and a net. Courage is a quality that you cannot touch.",
+              "Part A answer: courage.",
+              "Part B answer: \"You can see him climb, but you cannot touch courage itself.\""
+            ],
+            misconception: "A common mix-up is thinking an abstract noun names an action. Courage names a quality, not an action.",
+            why: "Part A: courage. Part B: \"You can see him climb, but you cannot touch courage itself.\" Courage names a quality, so it is abstract. A group noun names a group, a place noun names a place, and a verb tells what someone did."
+          }
+        ]
+      },
+      {
+        title: "Set 2",
+        items: [
+          {
+            id: "SK-GUM3-5-C06",
+            type: "hottext",
+            points: 2,
+            dok: 2,
+            std: [
+              "3.L.GC.1:M:use-collective-and-abstract-nouns"
+            ],
+            passages: ["p2"],
+            prompt: "Select the TWO sentences that have an abstract noun.",
+            targets: ["p2:1:1", "p2:2:2", "p2:2:3", "p2:3:1", "p2:3:2"],
+            answer: ["p2:2:2", "p2:3:1"],
+            pick: 2,
+            clue: "An abstract noun names an idea, a feeling or a quality. Look for words you cannot see or touch.",
+            hints: [
+              "An abstract noun names an idea, a feeling or a quality. Look for words you cannot see or touch.",
+              "Read the nouns in each of the five sentences. Ask whether you could see or touch the thing the noun names.",
+              "In sentence 1, orchestra names a group of people. Check the other four sentences."
+            ],
+            how: [
+              "Find the nouns in each sentence and ask whether you could see or touch the thing.",
+              "Orchestra, group and staff name groups of people. A group can be seen.",
+              "Sentence 5 has patience, and sentence 7 has excitement. You cannot see or touch either one, so both are abstract nouns."
+            ],
+            misconception: "A common mix-up is picking a sentence with a group noun. A group of people can be seen, so it is not abstract.",
+            why: "The answers are \"Mr. Bell showed patience and asked us to start again.\" and \"After rehearsal, the class felt excitement about the concert.\" Patience and excitement name a quality and a feeling, so they are abstract nouns. Orchestra, group and staff name groups of people."
+          },
+          {
+            id: "SK-GUM3-5-C07",
+            type: "ms",
+            points: 2,
+            dok: 2,
+            std: [
+              "3.L.GC.1:M:use-collective-and-abstract-nouns"
+            ],
+            passages: [],
+            prompt: "Each group acts together as one. Choose the TWO sentences where the verb goes with the group noun.",
+            pick: 2,
+            choices: [
+              { text: "The crew paint the fence together." },
+              { text: "Our club meets in the library on Fridays.", correct: true },
+              { text: "The class walk to the library as one." },
+              { text: "The herd drinks at the river each evening.", correct: true },
+              { text: "The family eat dinner at six o'clock." }
+            ],
+            clue: "Find the group noun in each sentence. A group that acts as one takes the verb for one.",
+            hints: [
+              "Find the group noun in each sentence. A group that acts as one takes the verb for one.",
+              "Say each verb aloud. The verb for one group usually ends in -s when it tells about now.",
+              "Eat does not end in -s, so it is the verb for many. Decide about the other four."
+            ],
+            how: [
+              "Find the group noun in each sentence: club, herd, crew, family and class.",
+              "Each group acts as one, so the verb should be the one for a single thing. In the present tense it ends in -s.",
+              "Meets and drinks are correct. Paint, eat and walk are the verbs for many, so they do not match."
+            ],
+            misconception: "A common mix-up is choosing the plural verb because a group has many members. When the group acts as one, the verb is for one.",
+            why: "The answers are \"Our club meets in the library on Fridays.\" and \"The herd drinks at the river each evening.\" Club and herd are group nouns that act as one, so they take the verbs meets and drinks. The others use paint, eat and walk, which are the verbs for many."
+          },
+          {
+            id: "SK-GUM3-5-C08",
+            type: "match",
+            points: 2,
+            dok: 1,
+            std: [
+              "3.L.GC.1:M:use-collective-and-abstract-nouns"
+            ],
+            passages: [],
+            prompt: "Match each group of things to the collective noun that names it.",
+            cols: ["pack", "school", "flock", "bunch"],
+            rows: [
+              { text: "grapes", answer: 3 },
+              { text: "wolves", answer: 0 },
+              { text: "sheep", answer: 2 },
+              { text: "fish", answer: 1 }
+            ],
+            clue: "Say each group out loud with of in front of it, as in a ___ of grapes. Which collective noun sounds right?",
+            hints: [
+              "Say each group out loud with of in front of it, as in a ___ of grapes. Which collective noun sounds right?",
+              "Start with the group you know best. Then decide the rest one at a time.",
+              "A pack goes with animals that hunt together. Decide the other rows."
+            ],
+            how: [
+              "Say a ___ of for each group of things.",
+              "A pack of wolves, a school of fish, a flock of sheep and a bunch of grapes are the usual names.",
+              "Each collective noun is one word that names the whole group."
+            ],
+            misconception: "A common mix-up is guessing from the animal's size. Each collective noun is a name you learn with its group.",
+            why: "A bunch of grapes, a pack of wolves, a flock of sheep and a school of fish. Each collective noun is one word that names a whole group."
+          },
+          {
+            id: "SK-GUM3-5-C09",
+            type: "mc",
+            points: 1,
+            dok: 3,
+            std: [
+              "3.L.GC.1:M:use-collective-and-abstract-nouns"
+            ],
+            passages: [],
+            prompt: "Which sentence has BOTH a collective noun and an abstract noun?",
+            choices: [
+              { text: "The squad ran two laps around the track." },
+              { text: "Fear grew as the storm moved closer." },
+              { text: "The squad felt fear before the race.", correct: true },
+              { text: "The runners drank water after the race." }
+            ],
+            clue: "Look for one group word and one idea or feeling word in the same sentence.",
+            hints: [
+              "Look for one group word and one idea or feeling word in the same sentence.",
+              "Check each choice for two things: a word that names a group, and a word you cannot see or touch.",
+              "The runners drank water has no feeling or idea word. Check the other three."
+            ],
+            how: [
+              "Check each sentence for a collective noun and an abstract noun.",
+              "\"The squad felt fear before the race.\" has squad, a group, and fear, a feeling.",
+              "The other choices have only one kind of noun: squad alone, fear alone, or neither."
+            ],
+            misconception: "A common mix-up is picking a sentence that has only one of the two kinds. The sentence needs both.",
+            why: "The answer is \"The squad felt fear before the race.\" Squad is a collective noun, and fear is an abstract noun. One choice has only squad, one has only fear, and one has neither."
+          },
+          {
+            id: "SK-GUM3-5-C10",
+            type: "dropdown",
+            points: 2,
+            dok: 2,
+            std: [
+              "3.L.GC.1:M:use-collective-and-abstract-nouns"
+            ],
+            passages: ["p2"],
+            prompt: "Sentence 3 of the draft has two verbs that do not match the groups. Each group acts together as one. Choose the words that fix them.",
+            text: "The whole orchestra {0} ready to play, and the audience {1} quiet.",
+            slots: [
+              {
+                options: ["were", "was", "are"],
+                answer: 1
+              },
+              {
+                options: ["is", "was", "were"],
+                answer: 1
+              }
+            ],
+            clue: "Is each group one thing or many separate people? Think about which verb goes with that.",
+            hints: [
+              "Is each group one thing or many separate people? Think about which verb goes with that.",
+              "Read sentence 3 and say each choice in its blank. The draft tells about Tuesday, so both verbs must tell about the past.",
+              "Are tells about now, but the draft tells about Tuesday. Decide the rest."
+            ],
+            how: [
+              "Both groups act together as one, so each needs the verb for one thing.",
+              "The draft tells about something that already happened on Tuesday, so the verb must tell about the past.",
+              "The answers are was and was. Were is the past verb for many, and is and are tell about now."
+            ],
+            misconception: "A common mix-up is choosing were because orchestra and audience have many people. A group that acts as one takes was.",
+            why: "The answers are was and was. Orchestra and audience are collective nouns that act as one, and the draft tells about the past. Was matches one group in the past, while were is for many, and is and are tell about now."
+          }
+        ]
+      },
+      {
+        title: "Set 3",
+        items: [
+          {
+            id: "SK-GUM3-5-C11",
+            type: "hottext",
+            points: 2,
+            dok: 2,
+            std: [
+              "3.L.GC.1:M:use-collective-and-abstract-nouns"
+            ],
+            passages: ["p3"],
+            prompt: "Select the TWO sentences where the verb does not match the collective noun.",
+            targets: ["p3:1:2", "p3:2:2", "p3:3:1", "p3:3:2", "p3:3:3"],
+            answer: ["p3:2:2", "p3:3:3"],
+            pick: 2,
+            clue: "Find the group word in a sentence, then check its verb. A group that acts as one needs the verb for one.",
+            hints: [
+              "Find the group word in a sentence, then check its verb. A group that acts as one needs the verb for one.",
+              "Read each sentence and say its verb. Ask whether the verb matches one group or many.",
+              "Sentence 8 uses keeps, and it matches the group class. Check the other four sentences."
+            ],
+            how: [
+              "Find the collective noun in each sentence and check its verb.",
+              "Sentence 2 uses moved, sentence 7 has no group noun, and sentence 8 uses keeps with class. Those are correct.",
+              "Sentence 5 says the colony work, and sentence 9 says the colony stay. A colony acts as one, so the verbs should be works and stays."
+            ],
+            misconception: "A common mix-up is thinking a verb is right because it follows the word ants. The subject is colony, which is one group.",
+            why: "The errors are in \"The colony work together to find food.\" and \"We hope the colony stay healthy.\" Colony is one group, so the verbs should be works and stays. Sentences 2, 7 and 8 are correct."
+          },
+          {
+            id: "SK-GUM3-5-C12",
+            type: "mc",
+            points: 1,
+            dok: 2,
+            std: [
+              "3.L.GC.1:M:use-collective-and-abstract-nouns"
+            ],
+            passages: [],
+            prompt: "Which word is NOT a collective noun?",
+            choices: [
+              { text: "pack" },
+              { text: "dogs", correct: true },
+              { text: "herd" },
+              { text: "crew" }
+            ],
+            clue: "A collective noun is one word that names a whole group. Look for the word that does not do that.",
+            hints: [
+              "A collective noun is one word that names a whole group. Look for the word that does not do that.",
+              "Say a ___ of for each word. Ask which word is just the plural of one animal.",
+              "A crew names a group of workers. Decide among the other three."
+            ],
+            how: [
+              "Ask whether each word is one word for a whole group.",
+              "A pack, a herd and a crew each name a group as one thing.",
+              "Dogs is the plural of dog. It means more than one, but it is not a name for a group."
+            ],
+            misconception: "A common mix-up is thinking every word that means many is a collective noun. A plural is not a collective noun.",
+            why: "The answer is dogs. Dogs is the plural of dog, so it just means more than one. Pack, herd and crew are each one word that names a whole group."
+          },
+          {
+            id: "SK-GUM3-5-C13",
+            type: "ms",
+            points: 2,
+            dok: 3,
+            std: [
+              "3.L.GC.1:M:use-collective-and-abstract-nouns"
+            ],
+            passages: [],
+            prompt: "Mia says, \"Every abstract noun names a feeling.\" Which TWO sentences show that Mia is wrong?",
+            pick: 2,
+            choices: [
+              { text: "Anger made his face turn red." },
+              { text: "Her strength surprised everyone at the gym.", correct: true },
+              { text: "Excitement filled the room." },
+              { text: "Teamwork helped our class win the relay.", correct: true },
+              { text: "Fear grew as the thunder got louder." }
+            ],
+            clue: "To test a rule, look for examples that break it. Find the abstract noun in each sentence and ask whether it is a feeling.",
+            hints: [
+              "To test a rule, look for examples that break it. Find the abstract noun in each sentence and ask whether it is a feeling.",
+              "Read each sentence and name the idea or feeling word. Ask whether a person could feel it inside.",
+              "Fear is a feeling, so that sentence does not break Mia's rule. Decide about the other four."
+            ],
+            how: [
+              "Find the abstract noun in each sentence.",
+              "Fear, anger and excitement are feelings, so they follow Mia's rule.",
+              "Teamwork and strength are not feelings. Teamwork is working together, and strength is a quality, so those two sentences show the rule is wrong."
+            ],
+            misconception: "A common mix-up is thinking every abstract noun is a feeling. Some name qualities or ideas.",
+            why: "The answers are \"Teamwork helped our class win the relay.\" and \"Her strength surprised everyone at the gym.\" Teamwork and strength are abstract nouns that are not feelings. Fear, anger and excitement are feelings, so they match Mia's rule."
+          },
+          {
+            id: "SK-GUM3-5-C14",
+            type: "dropdown",
+            points: 1,
+            dok: 2,
+            std: [
+              "3.L.GC.1:M:use-collective-and-abstract-nouns"
+            ],
+            passages: [],
+            prompt: "Choose the word that correctly completes the sentence. The troop acts together as one.",
+            text: "Every Friday, the troop {0} a hike together.",
+            slots: [
+              {
+                options: ["take", "takes", "taking"],
+                answer: 1
+              }
+            ],
+            clue: "Is the troop one group or many separate people? Think about which verb goes with that.",
+            hints: [
+              "Is the troop one group or many separate people? Think about which verb goes with that.",
+              "Say each choice in the blank. Listen for the one that goes with one group.",
+              "Taking needs a helper word like is, and the sentence has none. Decide between the other two."
+            ],
+            how: [
+              "The word together tells you the troop acts as one group.",
+              "A group that acts as one takes the verb for one thing, which ends in -s in the present tense.",
+              "The answer is takes. Take is the verb for many, and taking needs a helper word."
+            ],
+            misconception: "A common mix-up is choosing take because a troop has many members. A group that acts as one takes the verb for one.",
+            why: "The answer is takes. Troop is a collective noun that acts as one, so it takes the verb for one: takes. Take is the verb for many, and taking needs a helper word."
+          },
+          {
+            id: "SK-GUM3-5-C15",
+            type: "mc",
+            points: 1,
+            dok: 2,
+            std: [
+              "3.L.GC.1:M:use-collective-and-abstract-nouns"
+            ],
+            passages: [],
+            prompt: "Which sentence has a collective noun that names a group of people?",
+            choices: [
+              { text: "A school of fish swam under the dock." },
+              { text: "A colony of ants crossed the path." },
+              { text: "A pack of wolves howled at the moon." },
+              { text: "The committee chose a new mascot.", correct: true }
+            ],
+            clue: "A collective noun is one word that names a group. Ask who or what is in each group.",
+            hints: [
+              "A collective noun is one word that names a group. Ask who or what is in each group.",
+              "Find the group word in each sentence. Ask whether the group is made of people or of animals.",
+              "Fish are animals, not people. Decide among the other choices."
+            ],
+            how: [
+              "Find the collective noun in each sentence: school, colony, pack and committee.",
+              "A school of fish, a colony of ants and a pack of wolves are groups of animals.",
+              "The answer is \"The committee chose a new mascot.\" A committee is a group of people."
+            ],
+            misconception: "A common mix-up is picking the first group word you see. Check whether the group is made of people.",
+            why: "The answer is \"The committee chose a new mascot.\" A committee is a group of people. The other sentences name groups of fish, ants and wolves."
+          }
+        ]
+      }
+    ]
+  },
+  similar: [
+    {
+      id: "SK-GUM3-5-S01",
+      type: "ms",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.L.GC.1:M:use-collective-and-abstract-nouns"
+      ],
+      passages: [],
+      prompt: "Choose the TWO sentences that use a collective noun.",
+      pick: 2,
+      choices: [
+        { text: "The jury listened to the story.", correct: true },
+        { text: "Mateo felt calm at the lake." },
+        { text: "A troop of scouts hiked up the trail.", correct: true },
+        { text: "The hungry goats ate the hay." },
+        { text: "Five mice ran across the floor." }
+      ],
+      clue: "Look for one word that stands for a whole group. A word that only means more than one does not count.",
+      hints: [
+        "Look for one word that stands for a whole group. A word that only means more than one does not count.",
+        "Read each sentence and find the nouns. Ask which noun is one word for a group of people or animals.",
+        "Mice means more than one, but it does not name a group. Decide about the other four."
+      ],
+      how: [
+        "Find the nouns in each sentence and ask which one names a whole group.",
+        "Troop names a group of scouts, and jury names a group of people who listen and decide.",
+        "Mice and goats are plurals, and calm names a feeling, so those sentences have no collective noun."
+      ],
+      misconception: "A common mix-up is picking a plural noun. Mice and goats mean more than one, but each is not a name for a group.",
+      why: "The answers are \"A troop of scouts hiked up the trail.\" and \"The jury listened to the story.\" Troop and jury each name a group as one thing. Mice and goats are plurals, and calm is a feeling.",
+      like: ["SK-GUM3-5-P4"]
+    },
+    {
+      id: "SK-GUM3-5-S02",
+      type: "hottext",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.L.GC.1:M:use-collective-and-abstract-nouns"
+      ],
+      passages: [],
+      prompt: "Select the sentence that has an abstract noun.",
+      options: [
+        "The baker put the bread in the oven.",
+        "A strong wind shook the old fence.",
+        "Her honesty made everyone trust her.",
+        "Three ducks sat on the wooden dock."
+      ],
+      answer: [2],
+      pick: 1,
+      clue: "Check each noun. Can you see it, hear it or touch it? Find the one you cannot.",
+      hints: [
+        "Check each noun. Can you see it, hear it or touch it? Find the one you cannot.",
+        "Read the nouns in each sentence and ask whether they name things that can be seen or touched.",
+        "Bread, oven, wind and fence can all be seen or felt. Check the other sentences."
+      ],
+      how: [
+        "Check the nouns in each sentence.",
+        "Baker, bread, oven, fence, ducks and dock can be seen or touched.",
+        "Honesty is a quality that you cannot touch, so it is an abstract noun."
+      ],
+      misconception: "A common mix-up is picking a noun for something you can feel, like wind. An abstract noun names an idea, a feeling or a quality.",
+      why: "The answer is \"Her honesty made everyone trust her.\" Honesty is a quality you cannot see or touch, so it is an abstract noun. The other sentences have only nouns for things you can see or touch.",
+      like: ["SK-GUM3-5-P5"]
+    },
+    {
+      id: "SK-GUM3-5-S03",
+      type: "mc",
+      points: 1,
+      dok: 1,
+      std: [
+        "3.L.GC.1:M:use-collective-and-abstract-nouns"
+      ],
+      passages: ["p4"],
+      prompt: "Look at the second sentence of the draft. Which word names a group as one thing?",
+      choices: [
+        { text: "swims" },
+        { text: "dolphins" },
+        { text: "pod", correct: true },
+        { text: "boat" }
+      ],
+      clue: "A collective noun is one word that names a whole group. Look for a word that stands for many things together.",
+      hints: [
+        "A collective noun is one word that names a whole group. Look for a word that stands for many things together.",
+        "Read sentence 2 and find the nouns. Ask which noun names a group and which only names things.",
+        "Swims is a verb, not a noun. Decide among the other three."
+      ],
+      how: [
+        "Find the nouns in sentence 2: pod, dolphins and boat.",
+        "Dolphins is a plural noun, and boat names one thing. Neither names a group as one thing.",
+        "The answer is pod. A pod is one word for a group of dolphins."
+      ],
+      misconception: "A common mix-up is picking dolphins because it means more than one. A collective noun is one word that names a whole group.",
+      why: "The answer is pod. A pod is one word that names a group of dolphins. Dolphins is a plural, boat names one thing, and swims is a verb.",
+      like: ["SK-GUM3-5-C03"]
+    },
+    {
+      id: "SK-GUM3-5-S04",
+      type: "dropdown",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.L.GC.1:M:use-collective-and-abstract-nouns"
+      ],
+      passages: ["p4"],
+      prompt: "In sentence 4, the crowd acts as one. Which verb belongs in the blank?",
+      text: "Together, the crowd {0} when a dolphin jumps.",
+      slots: [
+        {
+          options: ["gasp", "gasps", "gasping"],
+          answer: 1
+        }
+      ],
+      clue: "Is the crowd one group or many separate people? Think about which verb goes with that.",
+      hints: [
+        "Is the crowd one group or many separate people? Think about which verb goes with that.",
+        "Read sentence 4 and say each choice in the blank. Listen for the one that goes with a single group.",
+        "Gasping needs a helper word like is, and the sentence has none. Decide between the other two."
+      ],
+      how: [
+        "The word together tells you the crowd acts as one group.",
+        "A collective noun that acts as one takes the verb for one thing. For present tense, that verb ends in -s.",
+        "The answer is gasps. Gasp is the verb for many, and gasping needs a helper word."
+      ],
+      misconception: "A common mix-up is choosing the plural verb because a crowd has many people. When the group acts together, use the verb for one.",
+      why: "The answer is gasps. Crowd is a collective noun, and the crowd acts together as one. A group that acts as one takes the verb for one: gasps.",
+      like: ["SK-GUM3-5-C04"]
+    },
+    {
+      id: "SK-GUM3-5-S05",
+      type: "ebsr",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.L.GC.1:M:use-collective-and-abstract-nouns"
+      ],
+      passages: ["p4"],
+      prompt: "This question has two parts. Answer Part A, then Part B.",
+      partA: {
+        prompt: "Which word in sentence 8 of the draft names a quality instead of a thing?",
+        choices: [
+          { text: "cousin" },
+          { text: "generosity", correct: true },
+          { text: "sandwiches" },
+          { text: "seagull" }
+        ]
+      },
+      partB: {
+        prompt: "What makes the word in Part A an abstract noun?",
+        choices: [
+          { text: "You can see sandwiches being shared, but not generosity itself.", correct: true },
+          { text: "It names a group of birds that fly together over the water." },
+          { text: "It names a person who likes to give things to other people." },
+          { text: "It tells how the sandwiches tasted when everyone ate them." }
+        ]
+      },
+      clue: "An abstract noun names an idea, a feeling or a quality. Ask which word you cannot see or touch.",
+      hints: [
+        "An abstract noun names an idea, a feeling or a quality. Ask which word you cannot see or touch.",
+        "For Part A, find the nouns in the sentence. For Part B, think about what makes an abstract noun different from the others.",
+        "In Part A, a cousin can be seen and sandwiches can be touched. Check the other choices."
+      ],
+      how: [
+        "Part A: find the nouns in sentence 8: cousin, generosity, sandwiches and seagull.",
+        "You can see a cousin, sandwiches and a seagull. Generosity is a quality that you cannot touch.",
+        "Part A answer: generosity.",
+        "Part B answer: \"You can see sandwiches being shared, but not generosity itself.\""
+      ],
+      misconception: "A common mix-up is thinking an abstract noun names a person. Generosity names a quality, not the person.",
+      why: "Part A: generosity. Part B: \"You can see sandwiches being shared, but not generosity itself.\" Generosity names a quality, so it is abstract. A group noun names a group, a person noun names a person, and a describing word tells how something tasted.",
+      like: ["SK-GUM3-5-C05"]
+    },
+    {
+      id: "SK-GUM3-5-S06",
+      type: "hottext",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.L.GC.1:M:use-collective-and-abstract-nouns"
+      ],
+      passages: ["p5"],
+      prompt: "Select the TWO sentences that have an abstract noun.",
+      targets: ["p5:1:3", "p5:2:2", "p5:2:3", "p5:3:1", "p5:3:2"],
+      answer: ["p5:2:2", "p5:3:1"],
+      pick: 2,
+      clue: "An abstract noun names an idea, a feeling or a quality. Look for words you cannot see or touch.",
+      hints: [
+        "An abstract noun names an idea, a feeling or a quality. Look for words you cannot see or touch.",
+        "Read the nouns in each of the five sentences. Ask whether you could see or touch the thing the noun names.",
+        "In sentence 3, committee names a group of people. Check the other four sentences."
+      ],
+      how: [
+        "Find the nouns in each sentence and ask whether you could see or touch the thing.",
+        "Committee, group and litter name groups, and a group can be seen.",
+        "Sentence 5 has loyalty, and sentence 8 has relief. You cannot see or touch either one, so both are abstract nouns."
+      ],
+      misconception: "A common mix-up is picking a sentence with a group noun. A group of people or animals can be seen, so it is not abstract.",
+      why: "The answers are \"My neighbor's old dog showed loyalty, because it stayed by her side.\" and \"After the show, my sister felt relief because her dog behaved.\" Loyalty and relief name a quality and a feeling, so they are abstract nouns. Committee, group and litter name groups.",
+      like: ["SK-GUM3-5-C06"]
+    },
+    {
+      id: "SK-GUM3-5-S07",
+      type: "ms",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.L.GC.1:M:use-collective-and-abstract-nouns"
+      ],
+      passages: [],
+      prompt: "Each group acts together as one. Which TWO sentences have a verb that goes with the group noun?",
+      pick: 2,
+      choices: [
+        { text: "The staff clean the room after lunch." },
+        { text: "The band plays at every home game.", correct: true },
+        { text: "The choir sing in the gym today." },
+        { text: "My class visit the zoo in May." },
+        { text: "Our team wins when we help each other.", correct: true }
+      ],
+      clue: "Find the group noun in each sentence. A group that acts as one takes the verb for one.",
+      hints: [
+        "Find the group noun in each sentence. A group that acts as one takes the verb for one.",
+        "Say each verb aloud. The verb for one group usually ends in -s when it tells about now.",
+        "Sing does not end in -s, so it is the verb for many. Decide about the other four."
+      ],
+      how: [
+        "Find the group noun in each sentence: band, team, choir, staff and class.",
+        "Each group acts as one, so the verb should be the one for a single thing. In the present tense it ends in -s.",
+        "Plays and wins are correct. Sing, clean and visit are the verbs for many, so they do not match."
+      ],
+      misconception: "A common mix-up is choosing the plural verb because a group has many members. When the group acts as one, the verb is for one.",
+      why: "The answers are \"The band plays at every home game.\" and \"Our team wins when we help each other.\" Band and team are group nouns that act as one, so they take the verbs plays and wins. The others use sing, clean and visit, which are the verbs for many.",
+      like: ["SK-GUM3-5-C07"]
+    },
+    {
+      id: "SK-GUM3-5-S08",
+      type: "match",
+      points: 2,
+      dok: 1,
+      std: [
+        "3.L.GC.1:M:use-collective-and-abstract-nouns"
+      ],
+      passages: [],
+      prompt: "Which collective noun names each group of living things?",
+      cols: ["litter", "pod", "colony", "troop"],
+      rows: [
+        { text: "scouts", answer: 3 },
+        { text: "kittens", answer: 0 },
+        { text: "ants", answer: 2 },
+        { text: "whales", answer: 1 }
+      ],
+      clue: "Say each group out loud with of in front of it, as in a ___ of kittens. Which collective noun sounds right?",
+      hints: [
+        "Say each group out loud with of in front of it, as in a ___ of kittens. Which collective noun sounds right?",
+        "Start with the group you know best. Then decide the rest one at a time.",
+        "A litter goes with newborn animals. Decide the other rows."
+      ],
+      how: [
+        "Say a ___ of for each group of things.",
+        "A troop of scouts, a litter of kittens, a colony of ants and a pod of whales are the usual names.",
+        "Each collective noun is one word that names the whole group."
+      ],
+      misconception: "A common mix-up is guessing from the animal's size. Each collective noun is a name you learn with its group.",
+      why: "A troop of scouts, a litter of kittens, a colony of ants and a pod of whales. Each collective noun is one word that names a whole group.",
+      like: ["SK-GUM3-5-C08"]
+    },
+    {
+      id: "SK-GUM3-5-S09",
+      type: "mc",
+      points: 1,
+      dok: 3,
+      std: [
+        "3.L.GC.1:M:use-collective-and-abstract-nouns"
+      ],
+      passages: [],
+      prompt: "Which sentence has BOTH a collective noun and an abstract noun?",
+      choices: [
+        { text: "The crew showed bravery during the storm.", correct: true },
+        { text: "The crew painted the old ship bright blue." },
+        { text: "Bravery helped her climb the steep hill alone." },
+        { text: "The sailors tied the heavy ropes to the dock." }
+      ],
+      clue: "Look for one group word and one idea or feeling word in the same sentence.",
+      hints: [
+        "Look for one group word and one idea or feeling word in the same sentence.",
+        "Check each choice for two things: a word that names a group, and a word you cannot see or touch.",
+        "The sailors tied the heavy ropes to the dock has no feeling or idea word. Check the other three."
+      ],
+      how: [
+        "Check each sentence for a collective noun and an abstract noun.",
+        "\"The crew showed bravery during the storm.\" has crew, a group, and bravery, a quality.",
+        "The other choices have only one kind of noun: crew alone, bravery alone, or neither."
+      ],
+      misconception: "A common mix-up is picking a sentence that has only one of the two kinds. The sentence needs both.",
+      why: "The answer is \"The crew showed bravery during the storm.\" Crew is a collective noun, and bravery is an abstract noun. One choice has only crew, one has only bravery, and one has neither.",
+      like: ["SK-GUM3-5-C09"]
+    },
+    {
+      id: "SK-GUM3-5-S10",
+      type: "dropdown",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.L.GC.1:M:use-collective-and-abstract-nouns"
+      ],
+      passages: ["p5"],
+      prompt: "Each group in sentence 3 of the draft acts together as one. Which helper words make the verbs match?",
+      text: "The panel {0} chosen a winner, and the group {1} cheered.",
+      slots: [
+        {
+          options: ["have", "has", "having"],
+          answer: 1
+        },
+        {
+          options: ["have", "has", "are"],
+          answer: 1
+        }
+      ],
+      clue: "Is each group one thing or many separate people? Think about which helper verb goes with that.",
+      hints: [
+        "Is each group one thing or many separate people? Think about which helper verb goes with that.",
+        "Read sentence 3 and say each choice in its blank. Listen for the helper verb that goes with one group.",
+        "Having cannot stand alone as the helper verb here. Decide the rest."
+      ],
+      how: [
+        "Both groups act together as one, so each needs the helper verb for one thing.",
+        "Has goes with one group, and have goes with many.",
+        "The answers are has and has. Having does not work as the helper verb here, and are does not go with cheered."
+      ],
+      misconception: "A common mix-up is choosing have because a panel and a group have many people. A group that acts as one takes has.",
+      why: "The answers are has and has. Panel and group are collective nouns that act as one, so each takes has. Have is for many, having cannot stand alone as the helper verb, and are does not go with cheered.",
+      like: ["SK-GUM3-5-C10"]
+    },
+    {
+      id: "SK-GUM3-5-S11",
+      type: "hottext",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.L.GC.1:M:use-collective-and-abstract-nouns"
+      ],
+      passages: ["p6"],
+      prompt: "Select the TWO sentences where the verb does not go with the collective noun.",
+      targets: ["p6:1:2", "p6:2:2", "p6:3:1", "p6:3:2", "p6:3:3"],
+      answer: ["p6:2:2", "p6:3:3"],
+      pick: 2,
+      clue: "Find the group word in a sentence, then check its verb. A group that acts as one needs the verb for one.",
+      hints: [
+        "Find the group word in a sentence, then check its verb. A group that acts as one needs the verb for one.",
+        "Read each sentence and say its verb. Ask whether the verb matches one group or many.",
+        "Sentence 8 uses keeps, and it matches the group club. Check the other four sentences."
+      ],
+      how: [
+        "Find the collective noun in each sentence and check its verb.",
+        "Sentence 2 uses landed, sentence 7 has no group noun, and sentence 8 uses keeps with club. Those are correct.",
+        "Sentence 5 says the flock stay, and sentence 9 says the flock return. A flock acts as one, so the verbs should be stays and returns."
+      ],
+      misconception: "A common mix-up is thinking a verb is right because it follows the word birds. The subject is flock, which is one group.",
+      why: "The errors are in \"The flock stay together when they eat.\" and \"We hope the flock return tomorrow.\" Flock is one group, so the verbs should be stays and returns. Sentences 2, 7 and 8 are correct.",
+      like: ["SK-GUM3-5-C11"]
+    },
+    {
+      id: "SK-GUM3-5-S12",
+      type: "mc",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.L.GC.1:M:use-collective-and-abstract-nouns"
+      ],
+      passages: [],
+      prompt: "Which word does NOT name a group as one thing?",
+      choices: [
+        { text: "herd" },
+        { text: "fleet" },
+        { text: "aunts", correct: true },
+        { text: "family" }
+      ],
+      clue: "Look for the word that means more than one person but is not one word for the whole group.",
+      hints: [
+        "Look for the word that means more than one person but is not one word for the whole group.",
+        "Say a ___ of for each word. Ask which word is just the plural of one relative.",
+        "A herd names a group of animals. Decide among the other three."
+      ],
+      how: [
+        "Ask whether each word is one word for a whole group.",
+        "A herd, a fleet and a family each name a group as one thing.",
+        "Aunts is the plural of aunt. It means more than one, but it is not a name for a group."
+      ],
+      misconception: "A common mix-up is thinking every word that means many is a collective noun. A plural is not a collective noun.",
+      why: "The answer is aunts. Aunts is the plural of aunt, so it just means more than one. Herd, fleet and family are each one word that names a whole group.",
+      like: ["SK-GUM3-5-C12"]
+    },
+    {
+      id: "SK-GUM3-5-S13",
+      type: "ms",
+      points: 2,
+      dok: 3,
+      std: [
+        "3.L.GC.1:M:use-collective-and-abstract-nouns"
+      ],
+      passages: [],
+      prompt: "Jay says, \"Every abstract noun names a feeling.\" Which TWO sentences show that Jay is wrong?",
+      pick: 2,
+      choices: [
+        { text: "Sadness filled the quiet room." },
+        { text: "Joy lit up her face." },
+        { text: "Wisdom helps people make good choices.", correct: true },
+        { text: "His worry grew all night." },
+        { text: "Her beauty was in the way she sang.", correct: true }
+      ],
+      clue: "To test a rule, look for examples that break it. Find the abstract noun in each sentence and ask whether it is a feeling.",
+      hints: [
+        "To test a rule, look for examples that break it. Find the abstract noun in each sentence and ask whether it is a feeling.",
+        "Read each sentence and name the idea or feeling word. Ask whether a person could feel it inside.",
+        "Worry is a feeling, so that sentence does not break Jay's rule. Decide about the other four."
+      ],
+      how: [
+        "Find the abstract noun in each sentence.",
+        "Sadness, worry and joy are feelings, so they follow Jay's rule.",
+        "Wisdom and beauty are not feelings. Wisdom is a quality of thinking, and beauty is a quality of how something looks or sounds, so those two sentences show the rule is wrong."
+      ],
+      misconception: "A common mix-up is thinking every abstract noun is a feeling. Some name qualities or ideas.",
+      why: "The answers are \"Wisdom helps people make good choices.\" and \"Her beauty was in the way she sang.\" Wisdom and beauty are abstract nouns that are not feelings. Sadness, worry and joy are feelings, so they match Jay's rule.",
+      like: ["SK-GUM3-5-C13"]
+    },
+    {
+      id: "SK-GUM3-5-S14",
+      type: "dropdown",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.L.GC.1:M:use-collective-and-abstract-nouns"
+      ],
+      passages: [],
+      prompt: "Which verb goes with the group? The herd moves as one.",
+      text: "Each morning, the herd {0} to the river together.",
+      slots: [
+        {
+          options: ["walk", "walks", "walking"],
+          answer: 1
+        }
+      ],
+      clue: "Is the herd one group or many separate animals? Think about which verb goes with that.",
+      hints: [
+        "Is the herd one group or many separate animals? Think about which verb goes with that.",
+        "Say each choice in the blank. Listen for the one that goes with one group.",
+        "Walking needs a helper word like is, and the sentence has none. Decide between the other two."
+      ],
+      how: [
+        "The word together tells you the herd acts as one group.",
+        "A group that acts as one takes the verb for one thing, which ends in -s in the present tense.",
+        "The answer is walks. Walk is the verb for many, and walking needs a helper word."
+      ],
+      misconception: "A common mix-up is choosing walk because a herd has many animals. A group that acts as one takes the verb for one.",
+      why: "The answer is walks. Herd is a collective noun that acts as one, so it takes the verb for one: walks. Walk is the verb for many, and walking needs a helper word.",
+      like: ["SK-GUM3-5-C14"]
+    },
+    {
+      id: "SK-GUM3-5-S15",
+      type: "mc",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.L.GC.1:M:use-collective-and-abstract-nouns"
+      ],
+      passages: [],
+      prompt: "Which sentence has a collective noun that names a group of animals?",
+      choices: [
+        { text: "The staff planned the field trip for May." },
+        { text: "A gaggle of geese crossed the road.", correct: true },
+        { text: "The council met in the town hall on Tuesday." },
+        { text: "The class lined up outside the cafeteria for lunch." }
+      ],
+      clue: "A collective noun is one word that names a group. Ask who or what is in each group.",
+      hints: [
+        "A collective noun is one word that names a group. Ask who or what is in each group.",
+        "Find the group word in each sentence. Ask whether the group is made of people or of animals.",
+        "A class is a group of students, not animals. Decide among the other choices."
+      ],
+      how: [
+        "Find the collective noun in each sentence: staff, gaggle, council and class.",
+        "A staff, a council and a class are groups of people.",
+        "The answer is \"A gaggle of geese crossed the road.\" A gaggle is a group of geese."
+      ],
+      misconception: "A common mix-up is picking the first group word you see. Check whether the group is made of animals.",
+      why: "The answer is \"A gaggle of geese crossed the road.\" A gaggle is a group of geese. The other sentences name groups of people.",
+      like: ["SK-GUM3-5-C15"]
+    }
+  ],
+  addons: {
+    "SK-GUM3-5-P1": {
+      hints: [
+        "An abstract noun names a feeling or an idea. Which word names something you cannot see or touch?",
+        "Find the nouns in the sentence, then ask whether you could see or touch each one.",
+        "Finished is a verb, not a noun. Decide among the other three."
+      ],
+      how: [
+        "Find the nouns: Amara, pride and puzzle.",
+        "You can see Amara and the puzzle. Pride is a feeling you cannot touch.",
+        "The answer is pride, and finished is a verb."
+      ],
+      misconception: "A common mix-up is picking a name. Amara is a person you can see, so it is not abstract."
+    },
+    "SK-GUM3-5-P2": {
+      hints: [
+        "Is a choir one group or many separate things? Think about which verb goes with that.",
+        "Say each choice in the blank. Listen for the one that goes with one group.",
+        "Singing needs a helper word like is, and the sentence has none. Decide between the other two."
+      ],
+      how: [
+        "Choir is a collective noun that acts as one group.",
+        "A group that acts as one takes the verb for one thing, which ends in -s in the present tense.",
+        "The answer is sings. Sing is the verb for many, and singing needs a helper word."
+      ],
+      misconception: "A common mix-up is choosing sing because a choir has many singers. A group that acts as one takes the verb for one."
+    },
+    "SK-GUM3-5-P3": {
+      hints: [
+        "Ask: Does this word name a group of people or animals? Or does it name something you cannot touch?",
+        "Start with the word you are surest about. Then decide the rest one at a time.",
+        "Honesty is a quality. Decide the other rows."
+      ],
+      how: [
+        "Ask whether each word names a group or an idea.",
+        "Team, flock and crowd each name a group.",
+        "Honesty and bravery name qualities you cannot touch."
+      ],
+      misconception: "A common mix-up is thinking a word for people must be a collective noun. Only a word for a whole group counts."
+    },
+    "SK-GUM3-5-P4": {
+      hints: [
+        "Look for one word that stands for a whole group. A word that just adds -s, like cats, does not count.",
+        "Read each sentence and find the nouns. Ask which noun is one word for a group.",
+        "Dogs is a plural, not a group word. Decide about the other four."
+      ],
+      how: [
+        "Find the nouns in each sentence and ask which one names a whole group.",
+        "Swarm names a group of bees, and family names a group of people.",
+        "Dogs and kittens are plurals, and happy is a feeling word."
+      ],
+      misconception: "A common mix-up is picking a plural noun. Dogs means more than one, but it is not a name for a group."
+    },
+    "SK-GUM3-5-P5": {
+      hints: [
+        "Check each noun. Can you see it, hear it or touch it? Find the one you cannot.",
+        "Read the nouns in each sentence and ask whether they name things that can be seen or touched.",
+        "Goat, grass, shoes and door can all be seen. Check the other sentences."
+      ],
+      how: [
+        "Check the nouns in each sentence.",
+        "Goat, grass, shoes, door, rain and roof can be seen or touched.",
+        "Friendship is an idea you cannot touch, so it is an abstract noun."
+      ],
+      misconception: "A common mix-up is picking a noun for something you can feel, like rain. An abstract noun names an idea, a feeling or a quality."
+    }
+  },
+  /* B6:core:end */
   test: [
     { id: "SK-GUM3-5-T1", type: "mc", points: 1, dok: 1, passages: [],
       prompt: "Which word in the sentence is an abstract noun?",

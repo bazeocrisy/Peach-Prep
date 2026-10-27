@@ -868,7 +868,11 @@ with sync_playwright() as p:
     q.close()
 
     # ---------- 14. PP-004: alternate check forms (testB) and Retained behind PP_FLAGS (docs/audits/PP-004-MASTERY-RECOMMENDATIONS.md) ----------
-    K14 = "3.L.GC.2.b"                     # the one lesson with a fixture form B (docs/audits/work/pp004-forms.md)
+    # Fixture lesson: 3.L.GC.2.b has the documented form B (docs/audits/work/pp004-forms.md). The section must not depend on whether
+    # that lesson has moved to core practice, nor on its point total, so the page is asked: the Try step is the last own set (:y3)
+    # when the lesson has core and :y when it does not, and the point total is read from form A. If the lesson ever loses its form B
+    # or its two forms stop being worth the same, the first lesson that has two equal forms is used instead.
+    K14 = "3.L.GC.2.b"
     tA, tB = "SK:%s:t" % K14, "SK:%s:tB" % K14
     P14 = "JSON.parse(localStorage.getItem('pp.progress.v1')||'null')"
     T14 = date.today().isoformat()
@@ -893,13 +897,19 @@ with sync_playwright() as p:
         sid = qq.evaluate("PP_PLAYER.state().setId")
         answer14(qq, right)
         return sid
-    passA10 = lambda d: {K14: {"tries": 1, "best": {"got": 7, "max": 7}, "bestMax": 7, "mastered": True, "passedAt": d, "passTry": 1, "passBy": "test", "passForm": "A", "lastPassAt": d,
-                               "attempts": [{"d": d, "got": 7, "max": 7, "ok": True, "n": 1, "afterAnswers": False, "form": "A"}]}}
+    passA10 = lambda d: {K14: {"tries": 1, "best": {"got": PTS14, "max": PTS14}, "bestMax": PTS14, "mastered": True, "passedAt": d, "passTry": 1, "passBy": "test", "passForm": "A", "lastPassAt": d,
+                               "attempts": [{"d": d, "got": PTS14, "max": PTS14, "ok": True, "n": 1, "afterAnswers": False, "form": "A"}]}}
     RFIELDS = ("retainedAt", "retainedForm")
     q = page12(1366, 900, False)
     goto12(q)
+    K14 = q.evaluate("""(k=>{const eq=x=>!!PP.byId['SK:'+x+':tB']&&PP_SKILLS.hasFormB(x)&&PP.byId['SK:'+x+':t'].items.reduce((a,i)=>a+i.points,0)===PP.byId['SK:'+x+':tB'].items.reduce((a,i)=>a+i.points,0);
+        return eq(k)?k:Object.keys(PP.lessons).find(eq)})(%s)""" % json.dumps(K14))
+    tA, tB = "SK:%s:t" % K14, "SK:%s:tB" % K14
+    jk = json.dumps(K14)
+    PTS14 = q.evaluate("(k=>PP.byId['SK:'+k+':t'].items.reduce((a,i)=>a+i.points,0))(%s)" % jk)
+    TRY14 = q.evaluate("(k=>PP.lessons[k].core?'SK:'+k+':y3':'SK:'+k+':y')(%s)" % jk)
     ok("14.0 the fixture lesson has a form B check set (SK:<k>:tB) outside the Practice -> Try -> Test chain; form A and B are worth the same points",
-       q.evaluate("(k=>!!PP.byId['SK:'+k+':tB']&&PP_SKILLS.hasFormB(k)&&PP.byId['SK:'+k+':t'].next===null&&PP.byId['SK:'+k+':tB'].next===null&&PP.byId['SK:'+k+':y'].next.id==='SK:'+k+':t'"
+       q.evaluate("(k=>!!PP.byId['SK:'+k+':tB']&&PP_SKILLS.hasFormB(k)&&PP.byId['SK:'+k+':t'].next===null&&PP.byId['SK:'+k+':tB'].next===null&&PP.byId[(PP.lessons[k].core?'SK:'+k+':y3':'SK:'+k+':y')].next.id==='SK:'+k+':t'"
                   "&&PP.byId['SK:'+k+':t'].items.reduce((a,i)=>a+i.points,0)===PP.byId['SK:'+k+':tB'].items.reduce((a,i)=>a+i.points,0))(%s)" % jk))
     # 14.1 form selection: first ever -> A; after any attempt -> the other form; a review after a pass -> the form not used for the pass
     seed14(q, None)
@@ -914,10 +924,10 @@ with sync_playwright() as p:
     r14 = q.evaluate(P14)[K14]
     picks = {}
     for name, seed in (("nothing", None),
-                       ("2.1 record", {K14: {"taught": True, "tries": 2, "best": {"got": 7, "max": 7}, "mastered": True}}),
-                       ("PP-003 pass (no form logged)", {K14: {"tries": 1, "best": {"got": 7, "max": 7}, "mastered": True, "passedAt": d10, "passTry": 1, "passBy": "test", "lastPassAt": d10,
-                                                             "attempts": [{"d": d10, "got": 7, "max": 7, "ok": True, "n": 1, "afterAnswers": False}]}}),
-                       ("pass on B", {K14: {"tries": 1, "mastered": True, "attempts": [{"d": d10, "got": 7, "max": 7, "ok": True, "n": 1, "afterAnswers": False, "form": "B"}]}})):
+                       ("2.1 record", {K14: {"taught": True, "tries": 2, "best": {"got": PTS14, "max": PTS14}, "mastered": True}}),
+                       ("PP-003 pass (no form logged)", {K14: {"tries": 1, "best": {"got": PTS14, "max": PTS14}, "mastered": True, "passedAt": d10, "passTry": 1, "passBy": "test", "lastPassAt": d10,
+                                                             "attempts": [{"d": d10, "got": PTS14, "max": PTS14, "ok": True, "n": 1, "afterAnswers": False}]}}),
+                       ("pass on B", {K14: {"tries": 1, "mastered": True, "attempts": [{"d": d10, "got": PTS14, "max": PTS14, "ok": True, "n": 1, "afterAnswers": False, "form": "B"}]}})):
         seed14(q, seed); picks[name] = q.evaluate("PP_SKILLS.checkSetId(%s)" % jk)
     one = next(k for k in quiz if not q.evaluate("PP_SKILLS.hasFormB(%s)" % json.dumps(k)))
     seed14(q, None)
@@ -940,8 +950,8 @@ with sync_playwright() as p:
     q.evaluate("PP_PLAYER.start(%s,'practice')" % json.dumps(tB)); q.wait_for_timeout(60)
     m2 = q.evaluate("PP_PLAYER.state().mode"); q.evaluate("PP_PLAYER.abandon()")
     rp = q.evaluate(P14)[K14]
-    seed14(q, {K14: {"tries": 1, "attempts": [{"d": T14, "got": 0, "max": 7, "ok": False, "n": 1, "afterAnswers": False, "form": "A"}]}})
-    q.evaluate("PP_PLAYER.start('SK:%s:y','try')" % K14); q.wait_for_timeout(80)
+    seed14(q, {K14: {"tries": 1, "attempts": [{"d": T14, "got": 0, "max": PTS14, "ok": False, "n": 1, "afterAnswers": False, "form": "A"}]}})
+    q.evaluate("PP_PLAYER.start(%s,'try')" % json.dumps(TRY14)); q.wait_for_timeout(80)
     for i in range(q.evaluate("PP_PLAYER.state().total")):
         q.evaluate(CORRECT); q.evaluate("document.getElementById('q-check').click(); document.getElementById('q-next').click()"); q.wait_for_timeout(20)
     q.click("#done-test"); q.wait_for_timeout(80)
@@ -967,13 +977,13 @@ with sync_playwright() as p:
     seed14(q, passA10(d3), dev=True); res5["pick 3 days"] = take14(q, True); res5["3 days"] = q.evaluate(P14)[K14]
     ts = T14 + "T08:00:00.000Z"
     seenB = passA10(d10); seenB[K14].update({"tries": 2, "answersSeenAt": ts, "answersSeenBy": {"B": ts}})
-    seenB[K14]["attempts"].append({"d": T14, "got": 0, "max": 7, "ok": False, "n": 2, "afterAnswers": False, "form": "B"})
+    seenB[K14]["attempts"].append({"d": T14, "got": 0, "max": PTS14, "ok": False, "n": 2, "afterAnswers": False, "form": "B"})
     seed14(q, seenB, dev=True); take14(q, True, tB); res5["after answers"] = q.evaluate(P14)[K14]
     seed14(q, passA10((date.today() - timedelta(days=30)).isoformat()), dev=True)
     t0 = q.evaluate("localStorage.getItem('pp.progress.v1')")
     q.evaluate("PP_SKILLS.open(%s,'test')" % jk); q.wait_for_timeout(60); q.evaluate("PP_APP.goHome()"); q.wait_for_timeout(60)
     res5["time alone"] = [q.evaluate("localStorage.getItem('pp.progress.v1')") == t0, q.evaluate("PP_SKILLS.displayState(%s).id" % jk)]
-    seed14(q, {K14: {"taught": True, "tries": 2, "best": {"got": 7, "max": 7}, "mastered": True}}, dev=True)
+    seed14(q, {K14: {"taught": True, "tries": 2, "best": {"got": PTS14, "max": PTS14}, "mastered": True}}, dev=True)
     res5["pick legacy"] = take14(q, True); res5["legacy"] = q.evaluate(P14)[K14]
     seed14(q, passA10(d10), dev=True)
     res5["pick valid"] = take14(q, True); res5["valid"] = q.evaluate(P14)[K14]
@@ -996,11 +1006,11 @@ with sync_playwright() as p:
        and res5["row"]["ret"] and "Retained." in res5["row"]["aria"] and "Retained: passed again on form B" in res5["card"]
        and res5["state"] == {"id": "retained", "label": "Retained"} and res5["pp.dev key"] is True, {k: res5[k] for k in ("pick valid", "valid", "row", "state", "pp.dev key")})
     # 14.6 a seeded 2.1-era record and a seeded PP-003 record load unchanged (flag off and on); rendering writes nothing
-    rec21 = {K14: {"taught": True, "tries": 2, "best": {"got": 7, "max": 7}, "mastered": True}, "_ui": {"lastCat": "language"}}
-    rec03 = {K14: {"taught": True, "learned": True, "practiced": True, "tried": True, "tries": 2, "best": {"got": 7, "max": 7}, "bestMax": 7, "mastered": True,
+    rec21 = {K14: {"taught": True, "tries": 2, "best": {"got": PTS14, "max": PTS14}, "mastered": True}, "_ui": {"lastCat": "language"}}
+    rec03 = {K14: {"taught": True, "learned": True, "practiced": True, "tried": True, "tries": 2, "best": {"got": PTS14, "max": PTS14}, "bestMax": PTS14, "mastered": True,
                    "passedAt": d10, "passTry": 2, "passBy": "test", "lastPassAt": d10, "answersSeenAt": d10 + "T15:00:00.000Z",
-                   "attempts": [{"d": d10, "got": 3, "max": 7, "ok": False, "n": 1, "afterAnswers": False}, {"d": d10, "got": 7, "max": 7, "ok": True, "n": 2, "afterAnswers": True}]},
-             one: {"tries": 1, "best": {"got": 1, "max": 7}, "bestMax": 7, "attempts": [{"d": d3, "got": 1, "max": 7, "ok": False, "n": 1, "afterAnswers": False}]}, "_ui": {"lastCat": "reading"}}
+                   "attempts": [{"d": d10, "got": 3, "max": PTS14, "ok": False, "n": 1, "afterAnswers": False}, {"d": d10, "got": PTS14, "max": PTS14, "ok": True, "n": 2, "afterAnswers": True}]},
+             one: {"tries": 1, "best": {"got": 1, "max": PTS14}, "bestMax": PTS14, "attempts": [{"d": d3, "got": 1, "max": PTS14, "ok": False, "n": 1, "afterAnswers": False}]}, "_ui": {"lastCat": "reading"}}
     res6 = {}
     for dev in (False, True):
         seed14(q, rec21, dev=dev)

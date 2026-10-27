@@ -359,3 +359,219 @@ Rule from plan 4.5: hint 3 may rule out one distractor or complete one of two sl
 - **What the first review missed.** A full read of every hint 3 turned up four more hints that leave one option (2.a P1; 2.b P5, S10, S01). Authors should count hint 3 on every item, not only on items that were changed.
 - **Open author choices that I do not need to block on.** Learn It coverage (1.a), Teach pre-answers (2.a P1 is a MUST because of the hint; 2.b visitor and excitement stay SHOULD), `L-VOC-02` overlap for form B, and the form A water-cycle passage. The form A and form B items are recorded at rev 1; changing any of them needs a `testRev` bump and a `--record-versions` run by the lead.
 - **Re-review.** After the fixes, re-check: 2.a P1 (hint 3, Teach), `testRev`, S09; 2.b C11, S11 (new word), P5, S10, S01. 1.a and 1.b need no further review if the SHOULDs are skipped.
+
+
+---
+
+## Third review (light, 2.a/2.b)
+
+**Role:** independent content reviewer (blind solver), third pass on two lessons, plus a first review of three new ones (next section). I did not write any of this. I read the author log and the earlier reviews only after my answers were saved.
+**Read-only:** I changed no lesson, code or data file and ran no git. This file is the only thing I wrote. Scratch files are in `scratchpad/b5brev3/` (frozen copy of the worktree taken at the start of the pass). My one server (port 8793, pid 18918) was stopped by pid. Two other `serve.js` processes (ports 8770 and 8780) belong to someone else and were left alone.
+
+### Verdicts
+
+| Lesson | Verdict | MUST | SHOULD | Headline |
+|---|---|---|---|---|
+| 3.L.V.2.a | **CHANGES REQUIRED** | 2 | 3 | All three second-review MUSTs are closed (P1 hint 3 and Teach, `testRev`). The choose-two rebalance added two new third answers: unicorn (S07) and strawberry (S09). |
+| 3.L.V.2.b | **ACCEPT** | 0 | 2 | C11 (hunter), P5, S10 and S01 hint 3, C03 and C04 prompts are all fixed. No new MUST. |
+
+### 1. Blind solve (new seed, one run for all five lessons)
+
+- **Method.** `b5brev3/blind.js` loads a frozen copy of `L-V12.js` and `L-V3.js` in a Node `vm` sandbox with a mock `PP.addLesson`. Seed 20271027 + 7717 per lesson. It prints passages, figure alt text, and every item (core with refs resolved, Together, similar S01-S15, form A, and form B where present) with seeded shuffles of choices, slot options, match rows and columns, and ebsr parts. It strips `correct`, `answer`, `why`, `clue`, `hints`, `how`, `misconception`, `like`, `sample`. I did not print raw item source before solving. I saved answers to `ans-2a.txt` ... `ans-3b.txt` first, then ran `cmp.js`.
+- **Result for 2.a and 2.b: 80 of 80 agree (100%)** (2.a 43 of 43; 2.b 37 of 37 once a comparer bug on hottext target ids is corrected; see below).
+- **Fully blind?** Yes for every key. Three disclosures: (1) I listed field names (not values) of the stripped item schema before solving to write the printer; (2) I printed the opening Teach text of 3.L.V.3.a from the source while checking the file layout (Teach is not an item); (3) after all five answer files were saved, I printed one match row and one dropdown slot answer while probing the key format. None of this changed an answer.
+- **Comparer note.** `cmp.js` first reported six hottext "mismatches". Five were a bug in my comparer (hottext keys that are target ids like `p4:2:3` were compared to a number) and one was a typo of mine ("A" for option 1). All six are agreements once corrected. The two real disagreements are in the new lessons (see the next section).
+
+### 2. Verification of the second-review MUSTs
+
+| Second-review MUST | Result |
+|---|---|
+| 2.a P1 hint 3 leaves only the key; P1 pre-answered by Teach | **Closed.** Hint 3 is now "Check each choice against the meaning the question gives for -less." All four choices stay live. Teach example 1 is now endless (end + less), and no item uses endless. |
+| 2.a T4 and TB4 changed key under the same id and `testRev` 1 | **Closed in the lesson.** `testRev: {A:"2", B:"2"}` is set. `check-content --all` now warns "testRev differs from the record for 3.L.V.2.a:A and :B (record rev 1, testRev 2). Run --record-versions". That is the lead's step; nothing else is needed from the author. |
+| 2.b C11 joker is a third word that leaves a non-word | **Closed.** Hunter replaces joker. Singer, keeper and hunter each leave an action word (sing, keep, hunt). Finger (fing) and river (riv) are the only two. WHY and HOW now say "Hunt is left". |
+| 2.b P5 and S10 hint 3 remove three options | **Closed.** Both now read "Cover -er in each word. Ask whether the word left is an action or a describing word." No option is removed. Four live. |
+| 2.b S01 hint 3 removes three options | **Closed.** Hint 3 now names three things the word could tell about (pilot, plane, the way the plane landed). Four options stay live. `leak3.js` shows a 0.75 word overlap with the key's wording, which is a NOTE only. |
+| 2.b C03 and C04 prompts (SHOULDs taken) | **Closed.** C03 says "in paragraphs 2 and 3" and the four targets sit in paragraphs 2 and 3. C04 says "from the passage" and all five words are in the passage. |
+
+### 3. Mechanical checks on the third-pass items
+
+- **Live choices after hints 1 to 3 (recounted).** 2.a P1 4; P5 6; C09 5; S09 5; C15 5; S07 5; C14 Part A 4, Part B 2 (hint 3 says some sentences are about Mrs. Dixon and some about Kendra's work); S14 Part A 4, Part B 3; S13 4. 2.b C11 5; S11 5; P5 4; S10 4; S01 4; C03 3 (hint 3 removes the "how" sentence); C04 5. No hint names, removes down to, or restates a key.
+- **Longest-key for choose-two.** 2.a C09 keys 7 and 9 letters against butterfly 9, assembly 8, family 6; S09 7 and 8 against strawberry 10, monopoly 8, pony 4; C15 9 and 10 against grapefruit 10, grasshopper 11, gravel 6; S07 7 and 6 against restaurant 10; P5 6 and 8 against mistletoe 9, reindeer 8. In no set are the two keys the two longest. 2.b: none either.
+- **Twin similarity (word-set and multiset, with and without stopwords, including hottext, match and ebsr).** Worst like-pair: 2.a S05~C05 0.217 / 0.200 (hottext); 2.b S03~C03 0.143. Worst non-like pair 2.b S07~C13 0.222 / 0.207 (match). Every like-pair is the same type as its core item. Every core item has at least one twin.
+- **Points and set totals.** All items match the type rule (mc 1, hottext 1, ms 2, ebsr 2, match 2, dropdown = slots). 2.a sets 8/8/8; 2.b 7/8/8.
+- **Gates (frozen copy).** `check-content.js --all` PASS, 0 failures, 50 warnings. `check-writing.js` 0 failures. `check-instructional-copy.js` 28 passed. Readability FK for 2.a and 2.b passages 1.7 to 3.6.
+
+### 4. Findings
+
+#### 3.L.V.2.a. Verdict: CHANGES REQUIRED (two MUSTs, both from the new rebalance)
+
+| # | Level | Item | Finding | Fix |
+|---|---|---|---|---|
+| 1 | **MUST** | S07 | "Choose the TWO words that begin with a real prefix." Unicorn is a distractor, but it begins with the real prefix uni- ("one"; Latin unicornis, uni- + cornu "horn": https://www.etymonline.com/word/unicorn), and covering uni- leaves **corn**, a real word. Hint 1 says "Cover the letters at the front ... If a real word is left, that word may have a prefix." So unicorn passes the item's own cover test and is a third defensible answer in a choose-two (same class of fault as joker). WHY says "the letters left over are not words that fit". | Replace unicorn with a look-alike that leaves nothing, for example **under** (un + der). Keep restaurant and mister. Update WHY and HOW. |
+| 2 | **MUST** | S09 (and C09) | S09 asks which words have "an ending that can come off and leave a whole word." **Strawberry** leaves **straw** when berry is covered, and monopoly leaves "mono", also a word. The author's own hint 1 ("Cover the ending of each word. If a whole word is left...") makes strawberry a second defensible third answer. HOW and WHY say "no real word is left", which is false for strawberry. C09 has the same false statement for **butterfly** (butter is left when fly is covered), but C09's stem says "a real suffix", so its key is still unique. | S09: replace strawberry and monopoly with words that leave nothing and are not compounds, for example **history** and **plenty**. C09: replace butterfly with a non-compound such as **story** or **monkey**, and change HOW and WHY to say the letters that look like a suffix are not a suffix. |
+| 3 | SHOULD | P5 vs Teach | Teach point 5 says "Uncle and ready start with un and re, but nothing is left that is a word, so they have no prefix." Uncle is a P5 distractor. | Use another look-alike in Teach (for example "uncle" -> "under"). |
+| 4 | SHOULD | C14 hint 2 | "Which sentence tells you what Kendra's class made, not only a fact about the person?" Only the key sentence names the class. Hint 3 restores two live choices for Part B, so this is not a MUST. | "Which sentences are about Kendra's work, and which are about Mrs. Dixon?" |
+| 5 | SHOULD | TB1, TB3, TB4, C12, S12 | Unchanged from the second review (word overlap with `L-VOC-02`; C12/S12 distractors; S12 "keeps a drink from losing heat"). The author chose not to take them. | Carry forward; not blocking. |
+| 6 | NOTE | Learn It | "Playful" (Learn It 2) is also the key of 2.c S03's equation (play + ful). Different skill; no change needed. | None. |
+| 7 | NOTE | `--record-versions` | `check-content` warns about 2.a testRev (expected) and says "3.L.V.2.b:A edited in wording only since the record". | The lead runs `--record-versions` after merging the fixes. |
+
+#### 3.L.V.2.b. Verdict: ACCEPT
+
+| # | Level | Item | Finding | Fix |
+|---|---|---|---|---|
+| 1 | SHOULD | S01 hint 3 | Names three candidates (pilot, plane, the way the plane landed). The last is the key's wording, but it is one of three and all four options stay live. | Optional: "Decide whether smoothly tells about a person, a thing, or an action." |
+| 2 | SHOULD | Teach pre-answers | Unchanged from the second review (visitor, excitement). Teach point 5 uses family and sister, and family is a 2.a C09 option. | Carry forward. |
+| 3 | NOTE | C11 and S11 | Hunter, jumper, buyer and speaker each leave a real action word; finger, river, ladder and winter leave non-words. No third defensible word found. | None. |
+| 4 | NOTE | C14 | Neighbor is the only -or word with no action word (neighb); actor and visitor leave act and visit. One defensible answer. | None. |
+
+---
+
+## First review (2.c, 3.a, 3.b)
+
+**Scope.** The three new lessons in a frozen copy of the worktree: 3.L.V.2.c (`L-V12.js`), 3.L.V.3.a and 3.L.V.3.b (`L-V3.js`). Every core item (refs resolved), Together item, similar S01-S15, form A, and (for 3.a) form B. The pre-existing form items and Together items were solved too; findings on them are NOTEs only.
+**Blind solve.** Same run as above, one seed for all five lessons. Result for these three lessons: **2.c 39 of 39; 3.a 45 of 46; 3.b 38 of 39. Total 122 of 124 = 98.4%.** Combined with 2.a and 2.b, **202 of 204 = 99.0%**, with the two disagreements named below. The solve was blind for the keys (disclosures in the previous section).
+
+### Verdicts
+
+| Lesson | Verdict | MUST | SHOULD | Headline |
+|---|---|---|---|---|
+| 3.L.V.2.c | **ACCEPT** | 0 | 6 | Sound items, true word origins, clean hint ladders. The SHOULDs are a passage giveaway in C02, a Teach example that pre-answers P7, and Learn It coverage. |
+| 3.L.V.3.a | **CHANGES REQUIRED** | 2 | 6 | S04's key marks the wrong choice (the WHY and HOW both say the answer is "like", the data says "like the old mill"). The key is also the longest choice far more often than chance, and the author's 25% understates it. |
+| 3.L.V.3.b | **ACCEPT** | 0 | 7 | Every key agrees with my solve except one defensible alternative in S04 Part B. Camp-letter passage duplicates the title and a sentence of an existing test passage. |
+
+### 1. Blind-solve disagreements
+
+- **3.a S04 (MUST).** I chose "which means" and "like". The key marks "which means" and "like the old mill". The item's own HOW says "the word like comes right before a list of examples" and lists "like the old mill" among the choices that are *not* signals; WHY says "The answers are 'which means' and 'like.'" So the key and the WHY disagree. A child who picks "like" is marked wrong.
+- **3.b S04 Part B (SHOULD).** I chose "The ants in the yard were minute." The key is "I had to use a magnifying glass to see them." The key is better, but a child can argue the first sentence "best backs up" the meaning because it holds the word. See SHOULD below.
+
+### 2. Mechanical checks
+
+- **Points, set totals, DOK.** All items match the type rule. Core set points: 2.c 8/7/8; 3.a 7/6/6 (19; single-slot dropdowns are one point); 3.b 7/8/9. DOK: 2.c 12 x2, 3 x3; 3.a 12 x2, 3 x3; 3.b 13 x2, 3 x2. `like` types all match their core item.
+- **Keyed text beside WHY/HOW/hints (leak scan, all core, Together and similar).** Two warnings only: 3.b S15 hint 3 ("whether quick and fast point the same way", against the key "mean about the same") and the 2.b S01 NOTE above. I also read every hint 3 by eye (see section 3).
+- **Twin similarity (word-set / multiset, no stopwords, includes ebsr, match, hottext).** Like-pairs: 2.c worst S15~P7 0.207 / 0.200; 3.a worst S13~C12 0.210 / 0.198; 3.b worst S12~C10 0.212 / 0.183 (the author's 0.21 is right). Non-like pairs: 3.a S13~C02 0.238 (ebsr boilerplate, not content); 3.b S07~C05 0.217. None is a re-skin.
+- **Longest-key cue (unique longest key, my count; the author reports 11% / 25% / 11%).** My method counts every keyed choice list in the core and similar items.
+
+| Lesson | mc | ebsr parts | dropdown slots | choose-two | mc + ebsr, core only | mc + ebsr, core + similar |
+|---|---|---|---|---|---|---|
+| 3.L.V.2.c | 1 of 12 | 1 of 8 | 5 of 12 | 0 of 4 | 1 of 10 (10%) | 2 of 20 (10%) |
+| 3.L.V.3.a | **7 of 12** | 3 of 12 | **5 of 6** | 1 of 2 | 4 of 12 (33%) | **10 of 24 (42%)** |
+| 3.L.V.3.b | 1 of 8 | 3 of 8 | 3 of 12 | 1 of 4 | 1 of 8 (13%) | 4 of 16 (25%) |
+
+  3.a is the outlier: with dropdown slots and choose-two included, 16 of 32 keyed picks (50%) are the unique longest, against about 27% by chance. The core dropdowns P3, C09 and P7 all have the key as the longest option (24/19/20, 32/24/31, 32/19/17), and S10 (35/18/13), S14 (37/20/30), S11 (36/26/31) and S01 (29/22/23/24) are far ahead. 2.c's dropdown figure (5 of 12) is at chance for three options (33%) and is not a finding. 3.b is at chance.
+- **Word-match keys (key shares more passage or stem words than any distractor).** 2.c 4 of 20, 3.a 4 of 24, 3.b 1 of 16. They are definition-clue items where the key is a paraphrase of the clue, so this is expected. The only one worth a note is 3.a C11, whose key repeats "strong current" from the story sentence.
+- **Passage numbering and FK.** Every "paragraph N" reference in the three lessons points at the right paragraph (checked item by item). FK (readability.py): 2.c 1.3 to 3.4; 3.a 1.4 to 4.4 (p2 4.4 and p3 4.1 are pre-existing); 3.b 1.7 to 3.7. All at or below 4.5. `check-content` warns only that the new passages are short (59 to 94 words).
+- **Gates.** `check-content --all` PASS, 0 failures. `check-writing` 0 failures. `check-instructional-copy` 28 passed.
+- **Duplicates over all `js/data` (lessons, sets, tasks, forms; whole-word scan of every string except the five lessons themselves).** The tested words of 2.c (restacked, miscounted, mislabeled, discolored, pretest, bisect, unreadable, periscope, geology, kilometer, prewash, ...) appear nowhere else as tested words. Overlaps found:
+  - 3.b passage p3 "A Letter from Camp" has the **same title** as the passage in `T-SS.js` 3.T.SS.2.a, and the same sentence shape: "At night, we sit by the campfire and sing songs" (T-SS) against "At night, we sit by the fire and sing songs" (3.b).
+  - 3.a p4 "Weaving Day" shares only the topic with a weaving line in `T-T2.js` 3.T.T.2.c and a how line in `T-T1.js`. Not a duplicate.
+  - 3.b p5 "Market Day": "market" appears in about fifteen other units as a setting word. Tested words (generous, selfish, delighted, noisy) are not tested there. `R-LIT-01` has "generous" as a match column; no overlap in skill.
+  - 3.a C08 "den": `L-V12.js` 3.L.V.1.b T2 uses "den" as a distractor with a definition in the WHY. Not a duplicate.
+  - 3.a "heron" (T7): `L-V12.js` 3.L.V.1.a passage p3 says "A tall heron stands very still in the shallow water" (pre-existing cross-lesson pre-answer for T7).
+  - 2.c P7 key "portable" is also a key in `L-VOC-02` item 9; P5 "unhappy" is a key in `L-VOC-02` item 7. Pre-existing practice items.
+- **Browser (390 x 844, touch, Chromium).** All 75 core items of the five lessons run through real controls (choice buttons, selects, hottext targets, match buttons, ebsr part buttons) and a real "Check my answer" click. Correct answers are accepted everywhere; there is no horizontal scroll and no tap target under 36 px. Two single-slot dropdowns without a passage on screen (3.a C09 and P7) render as three choice buttons, not a select; my script's select path failed on them, and I confirmed both by hand with real clicks ("That's right!"). Figure items (3.a C07, C08, C09) show the figure at 295 px with the right alt text.
+
+### 3. Hint ladders: live choices after hints 1 to 3 (all core, Together and similar items read; the table lists every item with two or fewer live, plus every borderline one)
+
+| Item | Live after h3 | Note |
+|---|---|---|
+| 2.c C01 / S01 | 2 | h3 removes "before" and "not". Key and "wrong way" stay. |
+| 2.c C06 Part A / S07 Part A / S14 Part A | 2 | h3 "dis-/mis-/auto- does not mean again or before" removes two. |
+| 2.c S10 | 2 | h3 names carry and say (report, predict). |
+| 2.c P5 | 2 | h3 removes happily and happiness. |
+| 3.a C07 | 2 | h3 "about an amount, not color or weather". |
+| 3.a C08 | 2 | h3 "Decide which choices are places" keeps den and trail. |
+| 3.a C11 | 2 | Key and the electric-current sentence. |
+| 3.a S08, S12 | 2 | Same pattern. |
+| 3.a C09 / S10 | **1 by reasoning** | h3 "The meaning must fit what the table lists." The table lists animals, so only "animals that are hunted for food" fits; S10's table is "Where the Squirrel Looks for Food" and the key is "to look around for something to eat". SHOULD (3.a #5). |
+| 3.a C02 Part B / S02 Part B | 2 | h1 says "look for the sentence that gives [examples]", which names the clue type and so points at the only sentence with "such as" / "like". SHOULD (3.a #4). |
+| 3.a C06 Part B | 2 | h1 says "look for a sentence about how things were before summer"; only the key sentence has winter. SHOULD (3.a #4). |
+| 3.b C01 slot 2 / S01 slot 2 | **1 by reasoning** | h2 names what each blank needs ("a thing you can carry or a word that tells about a color"; "something you do or something a scale tells") and h3 restates it. Every other slot keeps at least two. SHOULD (3.b #1). |
+| 3.b C10 Part B / S12 Part B | 2 | "Look for how she felt" leaves the key and the smile line. |
+| all others | 3 or 4 | No hint names the key, restates it, or removes all but one option. |
+
+---
+
+### 3.L.V.2.c. Verdict: ACCEPT
+
+Blind solve 39 of 39. All 15 core items are original and aligned with "Construct words using common roots, root words, and affixes" (official, p. 22; matrix `tested: writing`). Items are one answer, distractors are plausible, passages agree with answers, and every `like` mapping is honest.
+
+**Word origins and facts (web).**
+- periscope: Greek peri "around" + skopein "to look"; formed in English in 1899 for a submarine viewer ("a device for seeing around or beyond an obstacle"): https://www.etymonline.com/word/periscope
+- erupt: Latin erumpere = ex-/e- "out" + rumpere "to break": https://www.etymonline.com/word/erupt (supports P6, S15's e- and the "e- means out" claim)
+- kilo-: Greek chilioi "a thousand"; kilometer = one thousand meters: https://www.dictionary.com/browse/kilo
+- unicorn: Latin unicornis, uni- "one" + cornu "horn": https://www.etymonline.com/word/unicorn (used in the 2.a S07 MUST)
+- geology (geo + -logy), autopilot, attract (at- = ad-, tract = pull), eject (e- + ject), describe (de- + scrib), semi-, mono-, bi-, tri-, micro-, phon: from standard etymology; I could not reach the other dictionary pages in this session (the fetch tool's allowlist refused Merriam-Webster, Wiktionary and the remaining etymonline pages), so these are checked against my own knowledge only.
+
+| # | Level | Item | Finding | Fix |
+|---|---|---|---|---|
+| 1 | SHOULD | C02 vs passage p1 | C02 is attached to "Cleaning the Shed". The passage says "Dad counted the paint cans, but he miscounted, so he began again." Blank 1's key (miscounted) is in the passage, and "began again" cues blank 2. A child can copy the answer without the prefix reasoning. | Detach p1 from C02 (the item is complete without it) or move miscounted out of the passage (the passage can keep "so he began again"). |
+| 2 | SHOULD | P7 vs Teach | Teach example 2 lists "port + able = portable (can be carried)". P7 blank 1 is "portable" (light radio with a handle). A pre-answer. | Change the Teach word to portable's neighbor, for example "transport" or "import". |
+| 3 | SHOULD | C08 vs C01, C05 | C08's key sentence "Dad restacked the logs a second time..." repeats C01's key and C01's wording ("stacked a second time"). Distractor E uses mislabeled (C05's key) in the same set. | Use words not tested in C01 or C05 (for example "rewound", "premixed"). |
+| 4 | SHOULD | Standard fit | Official 3.L.V.2.c says "Construct". C01, C05, C06, C10, C11 and C12 ask the child to decode a built word, which is 3.L.V.2.a's skill. Nine of fifteen core items construct or choose a built word. | Optional: convert two of the six (for example C01 and C10) to "Which word would you build?" |
+| 5 | SHOULD | Learn It / Watch Me | The three Learn It examples build (autograph), choose (rewrite) and spell (happiness). Not modelled: reading a built word in a passage (C01, C05, C06), a number part (C09, S11, S13), judging a sentence for correct use (C08, S09), or Part B evidence (C06, C12). | One worked example on a number part or on checking a sentence. |
+| 6 | SHOULD | C10 hint 3 / S12 hint 3 | "Check which choices keep both parts." With the parts given in the stem, this applies to all four choices and only the key keeps both. All four are still live, but this is the one hint that makes the key mechanical. | "Say the meaning of each choice with un- and -able, then compare." |
+| 7 | NOTE | C12 passage | "The mirrors ... were tilted a little" (real periscopes use 45 degrees) and a vertical-offset periscope sees over a wall more than around a corner. Acceptable for a grade-3 text. | None. |
+| 8 | NOTE | C09 | "Bisect an angle" is above grade-3 vocabulary, but the item defines it ("cut it into two equal parts"). | None. |
+| 9 | NOTE | C07, S08 | The prompt already gives the meaning ("full of grace"), so the child picks the -ful word. Fair for a build item. | None. |
+| 10 | NOTE | Test forms | The existing T-items (T1, T4-T8) agree with my solve. T8's WHY (passport = harbor or gate) is correct. No `testRev` is set and none is needed. | None. |
+
+### 3.L.V.3.a. Verdict: CHANGES REQUIRED (two MUSTs)
+
+Blind solve 45 of 46 (S04). Alt text and figures checked; context items are original and fit "Use context (e.g., images and graphs) within and beyond a sentence ... multiple-meaning words and phrases" (official, p. 23). Eight of fifteen core items use a picture or graph (C07, C08, C09, P6) or a multiple-meaning word or phrase (C10, C11, C12, P7), which covers the standard well.
+
+**Facts (web).** Arctic fox: dens are dug in well-drained soil, tunnels 6 to 12 feet underground, winter coat white, lemmings are a main summer prey (with the caveat that coastal foxes depend on seabirds): https://www.adfg.alaska.gov/static/education/wns/arctic_fox.pdf . The passage and the table say "Lemming, most days"; adding "inland" to the table title or stem would make this exact (NOTE). Word meanings (loom, taut, hues, barren, thaw, scant, abundant, ravenous, forage, perch, under the weather, call it a day, pitch in) are standard; the dictionary pages were not reachable (see above).
+
+**Figures (all seven new SVGs rendered and read).**
+
+| Figure | Used in | Alt text accurate? | Reveals its answer? | Licensing |
+|---|---|---|---|---|
+| `v3a-c-daylight-graph.svg` | C07 | Yes: title, "hours", 12/9/5/3, shortest bar December | No; the child still has to infer "scant" from the trend | Original, hand-written SVG |
+| `v3a-c-fox-den.svg` | C08 | Yes: cutaway, tunnel, room, two cubs, three labels | The picture is the clue by design and the word den is not on it. The cubs look like small white cats (NOTE) | Original |
+| `v3a-c-fox-table.svg` | C09 | Yes | Title "Animals the Arctic Fox Hunts" paraphrases the key (see SHOULD 5) | Original |
+| `v3a-s-owl-perch.svg` | S09 | Yes | Picture is the clue; labels owl and branch, not perch | Original |
+| `v3a-s-palm.svg` | S14 | Yes (alt avoids the word palm) | Picture is the clue | Original |
+| `v3a-s-pumpkin-graph.svg` | S08 | Yes: Row A 3, Row B 14, Row C 5 | No | Original |
+| `v3a-s-squirrel-table.svg` | S10 | Yes | Title "Where the Squirrel Looks for Food" paraphrases the key (SHOULD 5) | Original |
+
+None of the SVGs contains an `<image>` element, an external href or a license comment, so there is no third-party art. All seven have role="img" and a `<title>` equal to the alt.
+
+| # | Level | Item | Finding | Fix |
+|---|---|---|---|---|
+| 1 | **MUST** | S04 | The key is wrong. Choices are "which means", "like the old mill", "a map", "I also", "like". `correct` is set on "which means" and "like the old mill". WHY says "The answers are 'which means' and 'like.'" and HOW says "the word like comes right before a list of examples" and puts "like the old mill" among the choices that "nothing explains a word after". My blind answer (which means + like) agrees with the WHY and HOW. A child who gives the correct pair is marked wrong. The mismarked key also happens to be the two longest choices (11 and 17 letters against 5, 6, 4). | Mark "like" correct and "like the old mill" incorrect. Then lengthen the distractors so neither pair is the longest. |
+| 2 | **MUST** | Longest-key cue, whole lesson | 16 of 32 keyed picks (mc, ebsr parts, dropdown slots, choose-two) are the unique longest, against about 27% by chance; mc 7 of 12, dropdown 5 of 6, core dropdowns 3 of 3. The author reports 25%. A child who always picks the longest choice scores about twice what luck gives. | Lengthen or pad the distractors in C05, C10, S01, S08, S09, S11, S14 (mc) and P3, C09, S10, S05 (dropdown) to within two or three characters of the key. |
+| 3 | SHOULD | C04 | "Which TWO word groups in paragraphs 2 and 3 are signals?" "Row after row" is in paragraph 4, so location, not reasoning, removes it. | Replace "row after row" with a phrase from paragraph 2 or 3 (for example "the long threads"). |
+| 4 | SHOULD | C02, S02, C06 Part B hint 1 | Hint 1 names the clue type or the key's property ("look for the sentence that gives [examples]"; "a sentence about how things were before summer"). Each reduces Part B to the one sentence that fits. Hint 3 keeps two choices live, so not a MUST. | "Look for the sentence that helps you most, not only one that mentions the word." |
+| 5 | SHOULD | C09, S10 (figure titles, hint 3) | C09's table title "Animals the Arctic Fox Hunts" paraphrases the key ("animals that are hunted for food"). S10's title "Where the Squirrel Looks for Food" paraphrases its key. Hint 3 ("The meaning must fit what the table lists") then rules out the other two. The graph/picture items (C07, C08, S08, S09, S14) do not have this problem. | Retitle the tables ("Arctic Fox Meals", "Squirrel Search Spots") and make hint 3 "Put each meaning in the sentence and check it against the table." |
+| 6 | SHOULD | C06 Part B | "No trees grow there, and the ground is frozen hard in winter" is the key, but "Birds fly in to nest, and insects hum over the ponds" (ponds, summer) also suggests melting. "BEST" does not settle it. | Add "in winter" to the Part B prompt ("Which sentence about winter ...") or drop the pond sentence from the options. |
+| 7 | SHOULD | C11 | The key "A strong current pulled the raft downstream" is the only option that repeats "strong" from the story sentence. | Use "A swift current pulled the raft downstream" or put "strong" in a distractor ("The strong smell of paint ...", with a different meaning of strong). |
+| 8 | SHOULD | Learn It / Watch Me | Three examples: antonym clue (sturdy), graph (precipitation), multiple meaning (pitcher). Not modelled: a phrase or idiom (C12, P7, S13, S15), a synonym clue (P3, S05), a picture (C08, S09, S14), a table (C09, S10), Part B evidence (C02, C06, C12). Teach point 4 names phrases but no example. | One worked phrase example and one picture example. |
+| 9 | NOTE | C03, S03 | Options "taut", "pull", "helped" (C03) and "scorching", "soup", "lemonade" (S03) are weak: only two real candidates. | Add an adjective distractor from another sentence. |
+| 10 | NOTE | C07 graph | Daylight 12, 9, 5, 3 hours from September to December is plausible near 65 degrees north. | None. |
+| 11 | NOTE | Test forms | T7's caption "A heron hunts for fish in the shallow water" and its alt text echo the key; pre-existing figure. TB5's balloon figure is correct (vent at the very top). T2 and TB3 Part B (choose two) are consistent with my solve. | None. |
+
+### 3.L.V.3.b. Verdict: ACCEPT
+
+Blind solve 38 of 39 (S04 Part B, which I judge a defensible-alternative SHOULD). Aligned with "Identify homophones and homographs and use the relationship between synonyms and antonyms to clarify word meanings" (official, p. 23): homophones C01, C02, C11, P6; homographs C03, C04, P4, P3; synonyms C05, C06, C10; antonyms C07, C08, C09, C12, P5; relationships C13. DOK is 2 for thirteen items and 3 for two (C04, C13); C13 is recognition (NOTE).
+
+**Facts (web).** pail/pale, meat/meet, sale/sail, hear/here, flour/flower, tale/tail, steal/steel, mail/male, week/weak, right/write, wound (rhymes with sound) and minute (my-NOOT) are standard; the dictionary pages were not reachable in this session, so these are from my own knowledge. "Pall" in C01 is a distractor, not offered as a homophone of pail.
+
+| # | Level | Item | Finding | Fix |
+|---|---|---|---|---|
+| 1 | SHOULD | C01 and S01 hints | C01 hint 2 names what each blank needs ("a thing you can carry or a word that tells about a color"), and hint 3 restates it. For slot 2 (pail, pole, pale) only pale is a describing word, so slot 2 has one live choice after hint 3. S01 hint 2 does the same ("something you do or something a scale tells"). Not a MUST because the child still has to decide which blank is which. | "Read the words around each blank. What does each blank need to mean?" |
+| 2 | SHOULD | S04 Part B | The first sentence holds the word ("The ants in the yard were minute.") and a child can argue it "best backs up" Part A. The key is the magnifying-glass line. Also "Said my-NOOT" in Part A is an awkward pronunciation cue. | Part B: "Which detail shows the ants were tiny?" Part A: "Read minute as my-NOOT. What does it mean?" |
+| 3 | SHOULD | Passage p3 "A Letter from Camp" | The title is identical to `T-SS.js` 3.T.SS.2.a's passage, and "At night, we sit by the fire and sing songs" repeats that passage's "At night, we sit by the campfire and sing songs." | Retitle (for example "Tessa Writes Home") and change the night-time sentence. |
+| 4 | SHOULD | S15 vs C01 | S15 uses "Pale and pail" as its homophone example: C01's two keys. After C01 the first blank is known. | Use a pair that is not tested in the lesson (for example "bear and bare"). |
+| 5 | SHOULD | C08, S09 | Options are "quiet, market, closing, noon" and "deep, splashed, grown, end": the key is the only describing word. An easy item with a Part-of-speech giveaway. | Add one describing word as a distractor (for example "small" in C08, "wide" in S09's sentence). |
+| 6 | SHOULD | C06 and S07 | The two keys are among the longest words (scared, afraid 6; hushed 6) by a letter. Distractors are very weak (brave, calm, tired). | Use plausible near-synonyms as distractors (nervous, upset). |
+| 7 | SHOULD | Learn It / Watch Me | Pear/pair, record (homograph), simple/difficult. Not modelled: finding a wrong homophone in a draft (C02, C11, S02, S13), synonym clue and Part B evidence (C10, S12), and the relationship vocabulary of C13. | One worked example on a wrong homophone in a sentence. |
+| 8 | NOTE | Teach pre-answers | Teach point 2 gives tear/tear (the key of T2). Pre-existing item. | None. |
+| 9 | NOTE | Passage numbering | The new passages p3 to p5 are numbered by paragraph; every "paragraph N" reference checks out. | None. |
+| 10 | NOTE | C02 HOW | "Check each sound-alike word: sail, sail, hear" skips the third sentence ("sit by the fire"). Harmless. | None. |
+| 11 | NOTE | Set points | Set 3 is 9 points, set 1 is 7. | None. |
+
+### 4. Cross-lesson notes and for the author
+
+- **Pattern behind the 2.a MUSTs.** Every choose-two item with a "real word left" cover test needs distractors that are neither compounds (butterfly, strawberry, monopoly) nor words whose front letters are a real prefix (unicorn). I checked the other choose-two sets in the three new lessons the same way: 2.c C04 (heavily, sleepiness; tidyness, luckyly, bumpyness) and S04 (noisily, tininess) have no third answer; 3.b C11, S13 and 2.b S11 also have none.
+- **3.a S04 should be fixed first.** It is a data-entry error, not a content problem; the item reads well.
+- **Not reviewed by me:** the pre-existing Together and test items in 2.c, 3.a and 3.b were solved and agree, but I did not re-review their hints.
+- **Re-review after fixes.** 2.a: S07, S09, C09 (HOW, WHY). 3.a: S04 (key), longest-key (re-run my counter: `b5brev3/lk2.js`), plus C09 and S10 hint 3 if taken. 2.c and 3.b need no further review if the SHOULDs are skipped.
