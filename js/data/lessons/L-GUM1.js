@@ -2651,25 +2651,25 @@ PP.addLesson({
       passages: ["p5"],
       prompt: "Do Part A first and Part B second.",
       partA: {
-        prompt: "What is off in number 10?",
+        prompt: "Where does number 10 go wrong?",
         choices: [
           {
-            text: "Four goes with more than one, yet cup names just one.",
+            text: "Four tells about several things, yet cup is written for one.",
             correct: true
           },
           {
             text: "Four goes with just one cup, so the verb should change."
           },
           {
-            text: "Sink needs to be capital because it is a place."
+            text: "The word sink names a place, so it needs a bigger first letter."
           },
           {
-            text: "Brother should be written as brothers."
+            text: "Brother is one person, so stacks must be changed to stack."
           }
         ]
       },
       partB: {
-        prompt: "Which rewrite of number 10 repairs it?",
+        prompt: "Choose the rewrite that repairs number 10.",
         choices: [
           {
             text: "My little brother stacks four cups in the sink.",
@@ -2693,12 +2693,12 @@ PP.addLesson({
         "Apostrophes show who owns something, and no cup owns anything here. Think about the rest."
       ],
       how: [
-        "Part A: four means more than one, but cup names just one.",
+        "Part A: four tells about several things, but cup is written for one.",
         "Part B: add -s to cup. My little brother stacks four cups in the sink fixes the noun.",
         "The other rewrites add an apostrophe, change the verb, or change the wrong noun."
       ],
       misconception: "A common mix-up is fixing a different word. Start with the noun that follows the number.",
-      why: "Part A: \"Four goes with more than one, yet cup names just one.\" Part B: \"My little brother stacks four cups in the sink.\" Four means more than one, so cup becomes cups. The other rewrites change the verb, add an apostrophe or touch the wrong noun.",
+      why: "Part A: \"Four tells about several things, yet cup is written for one.\" Part B: \"My little brother stacks four cups in the sink.\" Four means more than one, so cup becomes cups. The other rewrites change the verb, add an apostrophe or touch the wrong noun.",
       like: ["SK-GUM1-2-C07"]
     },
     {
@@ -2754,13 +2754,13 @@ PP.addLesson({
           correct: true
         },
         {
-          text: "Mia, since one and every match nouns that end in -s."
+          text: "Mia, since one and every work with nouns that finish in -s."
         },
         {
           text: "Noah, since sentences always use a single noun first and a plural noun second."
         },
         {
-          text: "Neither, since pulled would need to be plural as well."
+          text: "Neither, since the verb pulled would have to change too."
         }
       ],
       clue: "Take each writer's sentence alone. Match every clue word with the noun that follows.",
@@ -2790,17 +2790,17 @@ PP.addLesson({
       prompt: "Teo says number 7 should read two bowl's. Do you agree?",
       choices: [
         {
-          text: "Disagree. Two needs bowls, since the mark in bowl's would show that something belongs to a bowl.",
+          text: "Disagree. Two needs bowls, since bowl's would show that a bowl owns something.",
           correct: true
         },
         {
-          text: "Agree. A plural noun is written with a mark first and then an s at the end."
+          text: "Agree. Plural nouns are written with a mark, then a final s, like bowl's."
         },
         {
           text: "Disagree. The word two leaves bowl alone, and only the word rice should be changed."
         },
         {
-          text: "Agree. A noun that follows a number must carry a mark so that readers can count it."
+          text: "Agree. Any word after a number must change, so rice needs a change as well."
         }
       ],
       clue: "Find the clue word in number 7 and the noun after it. Decide what the noun should look like.",
@@ -2812,10 +2812,10 @@ PP.addLesson({
       how: [
         "Find the clue word before bowl in number 7: two. Two means more than one, so the noun needs its plural form.",
         "The plural form is bowls. A mark inside the noun shows belonging, and no bowl owns anything here.",
-        "The answer is \"Disagree. Two needs bowls, since the mark in bowl's would show that something belongs to a bowl.\""
+        "The answer is \"Disagree. Two needs bowls, since bowl's would show that a bowl owns something.\""
       ],
       misconception: "A common mix-up is adding a mark to show that there is more than one. The -s does that job, and the mark shows belonging.",
-      why: "The answer is \"Disagree. Two needs bowls, since the mark in bowl's would show that something belongs to a bowl.\" Two needs bowls, since the mark in bowl's would show that something belongs to a bowl. The -s alone makes the plural, and rice is not counted, so it stays as it is.",
+      why: "The answer is \"Disagree. Two needs bowls, since bowl's would show that a bowl owns something.\" Two needs bowls, since the mark in bowl's would show that a bowl owns something. The -s alone makes the plural, and rice is not counted, so it stays as it is.",
       like: ["SK-GUM1-2-C10"]
     },
     {
