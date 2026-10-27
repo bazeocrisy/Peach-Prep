@@ -149,6 +149,1284 @@ PP.addLesson({
       clue: "Some of these are real words that mean something else. Read each one in the sentence, then picture the word on a bag at the store.",
       why: "The answer is bread. The food is spelled with ea, which makes a short e sound in this word. Bred and breed are different words." }
   ],
+  /* B9:core:start */
+  /* Expansion 2026-10-22, batch B9 (Foundations). core: fifteen items in three sets of five; { ref } reuses a practice item. NEEDS INDEPENDENT REVIEW. Author log: docs/expansion-2026-10-22/batches/B9-author-log.md */
+  core: {
+    rev: "1",
+    sets: [
+      {
+        title: "Set 1",
+        items: [
+          {
+            id: "SK-FP4a-C01",
+            type: "hottext",
+            points: 1,
+            dok: 1,
+            std: [
+              "3.F.P.4.a"
+            ],
+            passages: [],
+            prompt: "Read the sentence. Choose the word in which ea says long a.",
+            stem: [
+              "Please break the bread and eat the beans."
+            ],
+            options: [
+              "break",
+              "bread",
+              "eat",
+              "beans"
+            ],
+            answer: [
+              0
+            ],
+            pick: 1,
+            clue: "Say each word out loud and listen to the ea.",
+            hints: [
+              "Say each word out loud and listen to the ea.",
+              "Find the words that have ea in them. Then say each one slowly.",
+              "Say bread and eat again. Listen for whether their vowels are the sound in day."
+            ],
+            how: [
+              "Long a is the sound in day.",
+              "Break has ea with the long a sound.",
+              "Bread has short e, and eat and beans have long e."
+            ],
+            misconception: "A common mix-up is thinking ea always says long e. In a few words, ea says long a.",
+            why: "The answer is \"break.\" The ea in break says long a, like the a in day. Bread has short e, and eat and beans have long e."
+          },
+          {
+            id: "SK-FP4a-C02",
+            type: "match",
+            points: 2,
+            dok: 2,
+            std: [
+              "3.F.P.4.a"
+            ],
+            passages: [],
+            prompt: "Sort the words by the sound ea makes.",
+            cols: [
+              "long e (bead)",
+              "short e (bread)"
+            ],
+            rows: [
+              {
+                text: "reach",
+                answer: 0
+              },
+              {
+                text: "health",
+                answer: 1
+              },
+              {
+                text: "steam",
+                answer: 0
+              },
+              {
+                text: "heavy",
+                answer: 1
+              }
+            ],
+            clue: "Say each word out loud and listen to the ea. Compare it with bead and bread.",
+            hints: [
+              "Say each word out loud and listen to the ea. Compare it with bead and bread.",
+              "Try the long e sound first. Ask whether that makes a real word you know.",
+              "Start with health. Say it with the long e sound, then with the short e sound, and decide which is a real word."
+            ],
+            how: [
+              "Say each word slowly.",
+              "Reach and steam have the long e sound, like bead.",
+              "Health and heavy have the short e sound, like bread."
+            ],
+            misconception: "A common mix-up is thinking ea always says long e. In some words, it says short e.",
+            why: "Reach and steam have long e, like bead. Health and heavy have short e, like bread."
+          },
+          {
+            id: "SK-FP4a-C03",
+            type: "dropdown",
+            points: 2,
+            dok: 2,
+            std: [
+              "3.F.P.4.a"
+            ],
+            passages: [],
+            prompt: "Think about how each word rhymes.",
+            stem: [
+              "The clown sat on a yellow pillow."
+            ],
+            text: "Clown rhymes with {0}. The end of yellow rhymes with {1}.",
+            slots: [
+              {
+                options: [
+                  "frown",
+                  "snow",
+                  "moon"
+                ],
+                answer: 0
+              },
+              {
+                options: [
+                  "now",
+                  "go",
+                  "soon"
+                ],
+                answer: 1
+              }
+            ],
+            clue: "Say each word out loud. The letters ow can make two different sounds.",
+            hints: [
+              "Say each word out loud. The letters ow can make two different sounds.",
+              "Say each word one slow sound at a time and listen to the ow.",
+              "Start with yellow. Listen to the last sound. Does it sound like ouch or like go?"
+            ],
+            how: [
+              "Say clown. It rhymes with frown, so the ow sounds like the sound in cow.",
+              "Say the end of yellow. It rhymes with go, so ow says long o.",
+              "Moon and soon have the oo sound, which does not fit either word."
+            ],
+            misconception: "A common mix-up is using the same sound for ow in every word. Say the word to hear which sound it has.",
+            why: "Clown rhymes with frown, so its ow sounds like the ow in cow. The end of yellow rhymes with go, so its ow says long o. Snow, now, moon and soon do not fit those blanks."
+          },
+          {
+            id: "SK-FP4a-C04",
+            type: "mc",
+            points: 1,
+            dok: 2,
+            std: [
+              "3.F.P.4.a"
+            ],
+            passages: [],
+            prompt: "Read the sentence. Which word has ow with the sound in cow?",
+            stem: [
+              "Dad will follow the slow truck down the road."
+            ],
+            choices: [
+              {
+                text: "follow",
+                correct: true
+              },
+              {
+                text: "slow"
+              },
+              {
+                text: "down"
+              },
+              {
+                text: "road"
+              }
+            ],
+            clue: "Say each word and listen for the sound in cow.",
+            hints: [
+              "Say each word and listen for the sound in cow.",
+              "Look at the letters in each word. Ask which words have ow in them.",
+              "Say follow and slow slowly. Ask whether the ow sounds like ouch or like the o in go."
+            ],
+            how: [
+              "Say cow. The ow makes the sound you hear in ouch.",
+              "Follow and slow have ow, but it says long o, like in go.",
+              "Down has ow with the sound in cow. Road has oa, not ow."
+            ],
+            misconception: "A common mix-up is choosing any word that has the letters ow. Say each word to hear its sound.",
+            why: "The answer is \"down.\" The ow in down sounds like the ow in cow. In follow and slow, ow says long o, and road has oa, not ow."
+          },
+          {
+            ref: "SK-FP4a-P5"
+          }
+        ]
+      },
+      {
+        title: "Set 2",
+        items: [
+          {
+            id: "SK-FP4a-C05",
+            type: "mc",
+            points: 1,
+            dok: 2,
+            std: [
+              "3.F.P.4.a"
+            ],
+            passages: [],
+            prompt: "Which word has a hard c AND a soft c?",
+            choices: [
+              {
+                text: "cancel",
+                correct: true
+              },
+              {
+                text: "coconut"
+              },
+              {
+                text: "cactus"
+              },
+              {
+                text: "juice"
+              }
+            ],
+            clue: "Find every c in each word. Then look at the letter after each c.",
+            hints: [
+              "Find every c in each word. Then look at the letter after each c.",
+              "Count the c's in each word. Then look at the letter after each one.",
+              "In each word with two c's, ask whether the two c's sound the same or different."
+            ],
+            how: [
+              "Find each c and look at the letter right after it.",
+              "In cancel, c before a is hard, and c before e is soft. That is one of each.",
+              "Coconut and cactus have two c's, but both are hard. Juice has one c."
+            ],
+            misconception: "A common mix-up is choosing a word with two c's. The two c's have to sound different.",
+            why: "The answer is \"cancel.\" The first c comes before a, so it is hard. The second c comes before e, so it is soft. In coconut and cactus, both c's are hard, and juice has only one c."
+          },
+          {
+            id: "SK-FP4a-C06",
+            type: "hottext",
+            points: 1,
+            dok: 2,
+            std: [
+              "3.F.P.4.a"
+            ],
+            passages: [],
+            prompt: "Read the sentence. Which word has a soft g, the kind that says j?",
+            stem: [
+              "The band stood on the stage and played a game."
+            ],
+            options: [
+              "band",
+              "stood",
+              "stage",
+              "game"
+            ],
+            answer: [
+              2
+            ],
+            pick: 1,
+            clue: "Find each g. Then look at the letter right after it.",
+            hints: [
+              "Find each g. Then look at the letter right after it.",
+              "Only some of these words have a g in them. Find those words first.",
+              "Say stage and game out loud. Ask whether each g sounds like the g in go or like j."
+            ],
+            how: [
+              "Find the words with a g: stage and game.",
+              "In game, g comes before a, so it is hard.",
+              "In stage, g comes before e, so it is soft and says j."
+            ],
+            misconception: "A common mix-up is choosing a word because it has a g. Check the letter after the g.",
+            why: "The answer is \"stage.\" The g comes before e, so it is soft and says j. In game, g comes before a, so it is hard. Band and stood do not have a g."
+          },
+          {
+            id: "SK-FP4a-C07",
+            type: "ms",
+            points: 2,
+            dok: 2,
+            std: [
+              "3.F.P.4.a"
+            ],
+            passages: [],
+            prompt: "Which TWO words have a soft c that says s?",
+            pick: 2,
+            choices: [
+              {
+                text: "dance",
+                correct: true
+              },
+              {
+                text: "cabin",
+                correct: true
+              },
+              {
+                text: "spice"
+              },
+              {
+                text: "coat"
+              },
+              {
+                text: "cliff"
+              }
+            ],
+            clue: "Find the c in each word. Then look at the letter right after it.",
+            hints: [
+              "Find the c in each word. Then look at the letter right after it.",
+              "A soft c has a certain kind of letter after it. Check the letter after the c in each word.",
+              "Check cliff. Is the c followed by e, i or y, or by another letter?"
+            ],
+            how: [
+              "Find the c in each word and look at the next letter.",
+              "In dance, c comes before e. In spice, c comes before e. Both are soft.",
+              "In cabin, coat and cliff, c comes before a, o and l, so each is hard."
+            ],
+            misconception: "A common mix-up is choosing words because they have a c. Look at the letter after it.",
+            why: "The answers are \"dance\" and \"spice.\" The c comes before e in both words, so it is soft and says s. Cabin, coat and cliff have a hard c, like k."
+          },
+          {
+            id: "SK-FP4a-C08",
+            type: "match",
+            points: 2,
+            dok: 2,
+            std: [
+              "3.F.P.4.a"
+            ],
+            passages: [],
+            prompt: "Sort the words by the sound g makes.",
+            cols: [
+              "hard g, as in go",
+              "soft g, as in gem"
+            ],
+            rows: [
+              {
+                text: "hinge",
+                answer: 1
+              },
+              {
+                text: "flag",
+                answer: 0
+              },
+              {
+                text: "orange",
+                answer: 1
+              },
+              {
+                text: "wiggle",
+                answer: 0
+              }
+            ],
+            clue: "Find the g in each word. Look at the letter right after it.",
+            hints: [
+              "Find the g in each word. Look at the letter right after it.",
+              "Say each word out loud. Ask whether the g sounds like the one in go or like j.",
+              "Start with flag. Look at what comes after the g."
+            ],
+            how: [
+              "Find each g and the letter after it.",
+              "In hinge and orange, g comes before e, so it is soft and says j.",
+              "In flag and wiggle, g comes before the end or before l, so it is hard."
+            ],
+            misconception: "A common mix-up is thinking g is soft only before i. It can be soft before e or y too.",
+            why: "Hinge and orange have a soft g, because e comes after it. Flag and wiggle have a hard g, like the g in go."
+          },
+          {
+            ref: "SK-FP4a-P6"
+          }
+        ]
+      },
+      {
+        title: "Set 3",
+        items: [
+          {
+            id: "SK-FP4a-C09",
+            type: "mc",
+            points: 1,
+            dok: 2,
+            std: [
+              "3.F.P.4.a"
+            ],
+            passages: [],
+            prompt: "Say book. Which word has an oo that sounds the same?",
+            choices: [
+              {
+                text: "wool",
+                correct: true
+              },
+              {
+                text: "pool"
+              },
+              {
+                text: "broom"
+              },
+              {
+                text: "noon"
+              }
+            ],
+            clue: "Say book out loud and listen to its oo. Then say each choice.",
+            hints: [
+              "Say book out loud and listen to its oo. Then say each choice.",
+              "Say each choice slowly. Ask whether the oo is a short sound, like book, or a long sound, like moon.",
+              "Say each word again and listen to the letters after oo. Compare each oo with the oo in book."
+            ],
+            how: [
+              "Say book. The oo is short, as in look.",
+              "Say each choice. Wool has the short oo sound.",
+              "Pool, broom and noon have the long oo sound, like in moon."
+            ],
+            misconception: "A common mix-up is thinking oo always sounds like moon. In some words it is short.",
+            why: "The answer is \"wool.\" The oo in wool is short, like the oo in book. Pool, broom and noon have the long oo, like in moon."
+          },
+          {
+            id: "SK-FP4a-C10",
+            type: "match",
+            points: 2,
+            dok: 2,
+            std: [
+              "3.F.P.4.a"
+            ],
+            passages: [],
+            prompt: "Sort the words by the sound ou makes.",
+            cols: [
+              "ou as in out",
+              "ou as in soup"
+            ],
+            rows: [
+              {
+                text: "mouth",
+                answer: 0
+              },
+              {
+                text: "youth",
+                answer: 1
+              },
+              {
+                text: "ground",
+                answer: 0
+              },
+              {
+                text: "coupon",
+                answer: 1
+              }
+            ],
+            clue: "Say each word out loud and listen to the ou. Compare it with out and soup.",
+            hints: [
+              "Say each word out loud and listen to the ou. Compare it with out and soup.",
+              "Say each word slowly. Ask whether the ou sounds like ow in cow or like oo in moon.",
+              "Start with mouth. Say it out loud, then decide which sound you hear."
+            ],
+            how: [
+              "Say each word and listen to the ou.",
+              "Mouth and ground have the sound in out.",
+              "Youth and coupon have the sound in soup."
+            ],
+            misconception: "A common mix-up is using one sound for ou in every word. Say each word to hear it.",
+            why: "Mouth and ground have the ou sound in out. Youth and coupon have the ou sound in soup."
+          },
+          {
+            id: "SK-FP4a-C11",
+            type: "mc",
+            points: 1,
+            dok: 3,
+            std: [
+              "3.F.P.4.a"
+            ],
+            passages: [],
+            prompt: "Zan says the ough in thought and in rough the same way. What should Zan do?",
+            choices: [
+              {
+                text: "Say each word on its own, because ough can sound different in different words.",
+                correct: true
+              },
+              {
+                text: "Keep the same sound for both, because the letters ough match in each word."
+              },
+              {
+                text: "Say both like the ou in out, because ou usually says that sound."
+              },
+              {
+                text: "Say both with the long o, because ough has an o in the middle."
+              }
+            ],
+            clue: "Think about how the letters ough are used in more than one word.",
+            hints: [
+              "Think about how the letters ough are used in more than one word.",
+              "Say thought and rough out loud. Listen to whether the ending sounds match.",
+              "Compare each choice with what you heard when you said both words."
+            ],
+            how: [
+              "Say thought and rough out loud.",
+              "The ough does not sound the same in both words.",
+              "So Zan should say each word on its own, because ough can sound different in different words."
+            ],
+            misconception: "A common mix-up is trusting the letters to give the sound. Some letter groups, like ough, change from word to word.",
+            why: "The answer is \"Say each word on its own, because ough can sound different in different words.\" Thought and rough end with different sounds. The other choices pick one sound for all ough words."
+          },
+          {
+            id: "SK-FP4a-C12",
+            type: "order",
+            points: 2,
+            dok: 2,
+            std: [
+              "3.F.P.4.a"
+            ],
+            passages: [],
+            prompt: "Put the steps in order for reading a word that does not sound right.",
+            steps: [
+              "Say the word with the sound you know first.",
+              "Ask if it is a real word that fits the sentence.",
+              "If it does not fit, try the other sound the letters can make.",
+              "Read the sentence again to check the word."
+            ],
+            clue: "Think about what you do first when you see a word.",
+            hints: [
+              "Think about what you do first when you see a word.",
+              "Think about what you should check before you try something new.",
+              "The last step is a way to make sure the word is right."
+            ],
+            how: [
+              "First, say the word with the sound you know.",
+              "Second, ask whether it is a real word that fits the sentence.",
+              "Third, if it does not fit, try the other sound.",
+              "Fourth, read the sentence again to check the word."
+            ],
+            misconception: "A common mix-up is trying the other sound before checking the first. Check first, then change.",
+            why: "The order is: say the word with the sound you know first; ask if it is a real word that fits the sentence; if it does not fit, try the other sound the letters can make; read the sentence again to check the word."
+          },
+          {
+            ref: "SK-FP4a-P7"
+          }
+        ]
+      }
+    ]
+  },
+  similar: [
+    {
+      id: "SK-FP4a-S01",
+      type: "hottext",
+      points: 1,
+      dok: 1,
+      std: [
+        "3.F.P.4.a"
+      ],
+      passages: [],
+      like: [
+        "SK-FP4a-C01"
+      ],
+      prompt: "Tap the word whose ea is said like the a in day.",
+      stem: [
+        "It was a great day to grill meat by the lake."
+      ],
+      options: [
+        "great",
+        "meat",
+        "lake",
+        "day"
+      ],
+      answer: [
+        0
+      ],
+      pick: 1,
+      clue: "Say each word out loud and listen to the vowels.",
+      hints: [
+        "Say each word out loud and listen to the vowels.",
+        "Find the words that have ea in them. Then say each one slowly.",
+        "Say meat again. Listen for whether its vowel is the sound in day."
+      ],
+      how: [
+        "Long a is the sound in day.",
+        "Great has ea with the long a sound.",
+        "Meat has long e, and lake and day do not have ea."
+      ],
+      misconception: "A common mix-up is thinking ea always says long e. In a few words, ea says long a.",
+      why: "The answer is \"great.\" The ea in great says long a, like the a in day. Meat has long e, and lake and day do not have ea."
+    },
+    {
+      id: "SK-FP4a-S02",
+      type: "match",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.F.P.4.a"
+      ],
+      passages: [],
+      like: [
+        "SK-FP4a-C02"
+      ],
+      prompt: "Match each word to the vowel sound in its middle.",
+      cols: [
+        "seat",
+        "dead"
+      ],
+      rows: [
+        {
+          text: "cheap",
+          answer: 0
+        },
+        {
+          text: "treasure",
+          answer: 1
+        },
+        {
+          text: "leader",
+          answer: 0
+        },
+        {
+          text: "deaf",
+          answer: 1
+        }
+      ],
+      clue: "Say each word out loud and listen to the vowel made by ea.",
+      hints: [
+        "Say each word out loud and listen to the vowel made by ea.",
+        "Try long e first. Ask whether that makes a word you have heard.",
+        "Start with treasure. Say it each way and decide which is a real word."
+      ],
+      how: [
+        "Say each word slowly.",
+        "Cheap and leader have the sound in seat.",
+        "Treasure and deaf have the sound in dead."
+      ],
+      misconception: "A common mix-up is thinking ea always says long e. Some words use the short e.",
+      why: "Cheap and leader have the vowel sound of seat. Treasure and deaf have the vowel sound of dead."
+    },
+    {
+      id: "SK-FP4a-S03",
+      type: "dropdown",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.F.P.4.a"
+      ],
+      passages: [],
+      like: [
+        "SK-FP4a-C03"
+      ],
+      prompt: "Use rhymes to decide how ow is said in each word.",
+      stem: [
+        "A crowd saw a snowman by the brown window."
+      ],
+      text: "Crowd rhymes with {0}. The end of window rhymes with {1}.",
+      slots: [
+        {
+          options: [
+            "loud",
+            "slow",
+            "food"
+          ],
+          answer: 0
+        },
+        {
+          options: [
+            "flow",
+            "loud",
+            "boot"
+          ],
+          answer: 0
+        }
+      ],
+      clue: "Say each word aloud. Think of a word that rhymes with it.",
+      hints: [
+        "Say each word aloud. Think of a word that rhymes with it.",
+        "Say each word one slow sound at a time and listen to the ow.",
+        "Start with the end of window. Ask whether it sounds like ouch or like go."
+      ],
+      how: [
+        "Say crowd. It rhymes with loud, so the ow sounds like the ow in cow.",
+        "Say the end of window. It rhymes with flow, so ow says long o.",
+        "Food and boot have the oo sound, which does not fit."
+      ],
+      misconception: "A common mix-up is giving ow the same sound in every word. Rhymes help you hear it.",
+      why: "Crowd rhymes with loud. The end of window rhymes with flow. Slow rhymes with the long o and food and boot have the oo sound, so they do not fit the ow words."
+    },
+    {
+      id: "SK-FP4a-S04",
+      type: "mc",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.F.P.4.a"
+      ],
+      passages: [],
+      like: [
+        "SK-FP4a-C04"
+      ],
+      prompt: "Choose the sentence word with the same vowel as now.",
+      stem: [
+        "My mom grows a flower by the narrow path."
+      ],
+      choices: [
+        {
+          text: "grows",
+          correct: true
+        },
+        {
+          text: "flower"
+        },
+        {
+          text: "narrow"
+        },
+        {
+          text: "path"
+        }
+      ],
+      clue: "Say now out loud, then say each word.",
+      hints: [
+        "Say now out loud, then say each word.",
+        "Look at the letters in each word. Ask which words have ow in them.",
+        "Say grows and narrow slowly. Ask whether the ow sounds like ouch or like the o in go."
+      ],
+      how: [
+        "Say now. The ow makes the sound in ouch.",
+        "Flower has that sound. Grows and narrow have ow with the long o sound.",
+        "Path has no ow."
+      ],
+      misconception: "A common mix-up is choosing any word with ow. Say each word to hear its sound.",
+      why: "The answer is \"flower.\" The ow in flower sounds like the ow in now. In grows and narrow, ow says long o, and path has no ow."
+    },
+    {
+      id: "SK-FP4a-S05",
+      type: "ms",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.F.P.4.a"
+      ],
+      passages: [],
+      like: [
+        "SK-FP4a-P5"
+      ],
+      prompt: "Pick the pair of words with the vowel sound you hear in seat.",
+      pick: 2,
+      choices: [
+        {
+          text: "speak",
+          correct: true
+        },
+        {
+          text: "mean",
+          correct: true
+        },
+        {
+          text: "ready"
+        },
+        {
+          text: "deaf"
+        },
+        {
+          text: "break"
+        },
+        {
+          text: "weather"
+        }
+      ],
+      clue: "Say seat. Then say each choice and listen to its vowel.",
+      hints: [
+        "Say seat. Then say each choice and listen to its vowel.",
+        "Say each word slowly. Ask whether the vowel is the same as in seat.",
+        "Some choices have the vowel in bed and one has the vowel in day. Say each word to check."
+      ],
+      how: [
+        "Say seat. The vowel is long e.",
+        "Speak and mean have the long e sound.",
+        "Ready, deaf and weather have short e, and break has long a."
+      ],
+      misconception: "A common mix-up is choosing any word with ea. The sound has to match the model word.",
+      why: "The answers are \"speak\" and \"mean.\" Both have the long e sound, like seat. Ready, deaf and weather have short e, and break has long a."
+    },
+    {
+      id: "SK-FP4a-S06",
+      type: "mc",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.F.P.4.a"
+      ],
+      passages: [],
+      like: [
+        "SK-FP4a-C05"
+      ],
+      prompt: "Only one of these words has a c that says k and another c that says s. Find it.",
+      choices: [
+        {
+          text: "accept",
+          correct: true
+        },
+        {
+          text: "cocoa"
+        },
+        {
+          text: "carrot"
+        },
+        {
+          text: "ice"
+        }
+      ],
+      clue: "Find every c in each word. Then look at the letter after each c.",
+      hints: [
+        "Find every c in each word. Then look at the letter after each c.",
+        "Count the c's in each choice. Then listen to each c when you say the word.",
+        "For each word with two c's, ask whether both say k, both say s, or one of each."
+      ],
+      how: [
+        "Count the c's and say each word.",
+        "Accept has two c's. The first says k and the second says s.",
+        "Cocoa and carrot have c's that all say k, and ice has only one c."
+      ],
+      misconception: "A common mix-up is choosing a word because it has two c's. They have to sound different.",
+      why: "The answer is \"accept.\" The first c says k and the second c says s, because it comes before e. Cocoa and carrot have c's that all say k, and ice has only one c."
+    },
+    {
+      id: "SK-FP4a-S07",
+      type: "hottext",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.F.P.4.a"
+      ],
+      passages: [],
+      like: [
+        "SK-FP4a-C06"
+      ],
+      prompt: "Tap the word that starts with a g you say like j.",
+      stem: [
+        "A giant took gold to a goat in a hole."
+      ],
+      options: [
+        "giant",
+        "gold",
+        "goat",
+        "hole"
+      ],
+      answer: [
+        0
+      ],
+      pick: 1,
+      clue: "Look at the first letter of each word. Then look at the letter right after it.",
+      hints: [
+        "Look at the first letter of each word. Then look at the letter right after it.",
+        "Only some of these words begin with g. Find them first.",
+        "Say gold and goat out loud. Ask whether the g sounds like the g in go or like j."
+      ],
+      how: [
+        "Find the words that begin with g.",
+        "In gold and goat, g comes before o, so it is hard.",
+        "In giant, g comes before i and says j."
+      ],
+      misconception: "A common mix-up is choosing the first word that has a g. Check the letter after the g.",
+      why: "The answer is \"giant.\" The g comes before i and says j. In gold and goat, g comes before o, so it is hard, and hole does not begin with g."
+    },
+    {
+      id: "SK-FP4a-S08",
+      type: "ms",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.F.P.4.a"
+      ],
+      passages: [],
+      like: [
+        "SK-FP4a-C07"
+      ],
+      prompt: "Pick the pair that holds a c you say like s.",
+      pick: 2,
+      choices: [
+        {
+          text: "peace",
+          correct: true
+        },
+        {
+          text: "camp",
+          correct: true
+        },
+        {
+          text: "bucket"
+        },
+        {
+          text: "coin"
+        },
+        {
+          text: "mice"
+        },
+        {
+          text: "crab"
+        }
+      ],
+      clue: "Find the c in each word. Then look at the next letter.",
+      hints: [
+        "Find the c in each word. Then look at the next letter.",
+        "Check the letter after each c. Say each word to hear the sound.",
+        "Check camp. Is the c followed by e, i or y, or by another letter?"
+      ],
+      how: [
+        "Find each c and say its sound.",
+        "In peace, c comes before e. In mice, c also comes before e. Both say s.",
+        "Camp, bucket, coin and crab have a hard c."
+      ],
+      misconception: "A common mix-up is choosing words that only have a c. Look at the letter after the c.",
+      why: "The answers are \"peace\" and \"mice.\" The c comes before e in both and says s. Camp, bucket, coin and crab have a hard c, like k."
+    },
+    {
+      id: "SK-FP4a-S09",
+      type: "match",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.F.P.4.a"
+      ],
+      passages: [],
+      like: [
+        "SK-FP4a-C08"
+      ],
+      prompt: "Each word has a g. Match it to goat or gym.",
+      cols: [
+        "goat",
+        "gym"
+      ],
+      rows: [
+        {
+          text: "village",
+          answer: 1
+        },
+        {
+          text: "gather",
+          answer: 0
+        },
+        {
+          text: "dragon",
+          answer: 0
+        },
+        {
+          text: "energy",
+          answer: 1
+        }
+      ],
+      clue: "Find the g in each word and look at the letter after it.",
+      hints: [
+        "Find the g in each word and look at the letter after it.",
+        "Say each word out loud. Listen for whether its g is the one in goat or in gym.",
+        "Start with dragon. Look at the letter after the g."
+      ],
+      how: [
+        "Find each g and the letter after it.",
+        "In village and energy, g comes before e or y, so it is soft.",
+        "In gather and dragon, g comes before a or o, so it says the g in go."
+      ],
+      misconception: "A common mix-up is thinking g is soft in every word. Check the letter after it.",
+      why: "Village and energy have a soft g that says j. Gather and dragon have a hard g, like the g in go."
+    },
+    {
+      id: "SK-FP4a-S10",
+      type: "mc",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.F.P.4.a"
+      ],
+      passages: [],
+      like: [
+        "SK-FP4a-C09"
+      ],
+      prompt: "Pick the word where oo sounds like the oo in moon.",
+      choices: [
+        {
+          text: "stool",
+          correct: true
+        },
+        {
+          text: "foot"
+        },
+        {
+          text: "hook"
+        },
+        {
+          text: "good"
+        }
+      ],
+      clue: "Say moon out loud and listen to its oo. Then say each choice.",
+      hints: [
+        "Say moon out loud and listen to its oo. Then say each choice.",
+        "Say each choice slowly. Ask whether the oo is long, like moon, or short, like book.",
+        "Say each word again and compare its vowel with the one in moon."
+      ],
+      how: [
+        "Say moon. The oo is long.",
+        "Say each choice. Stool has the long oo sound.",
+        "Foot, hook and good have the short oo sound, like in book."
+      ],
+      misconception: "A common mix-up is thinking all oo words sound the same. Say each word to hear it.",
+      why: "The answer is \"stool.\" Its oo is long, like the oo in moon. Foot, hook and good have the short oo sound."
+    },
+    {
+      id: "SK-FP4a-S11",
+      type: "match",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.F.P.4.a"
+      ],
+      passages: [],
+      like: [
+        "SK-FP4a-C10"
+      ],
+      prompt: "Match each word to the way its ou is said.",
+      cols: [
+        "loud",
+        "you"
+      ],
+      rows: [
+        {
+          text: "cloud",
+          answer: 0
+        },
+        {
+          text: "cougar",
+          answer: 1
+        },
+        {
+          text: "shout",
+          answer: 0
+        },
+        {
+          text: "routine",
+          answer: 1
+        }
+      ],
+      clue: "Say each word out loud and listen to the ou.",
+      hints: [
+        "Say each word out loud and listen to the ou.",
+        "Say each word slowly. Ask whether the ou sounds like ow in cow or like the oo in moon.",
+        "Start with cougar. Say it, then decide which sound you hear."
+      ],
+      how: [
+        "Say each word.",
+        "Cloud and shout have the sound in loud.",
+        "Cougar and routine have the sound in you."
+      ],
+      misconception: "A common mix-up is giving ou one sound in every word. Listen to each word.",
+      why: "Cloud and shout have the ou sound in loud. Cougar and routine have the sound in you."
+    },
+    {
+      id: "SK-FP4a-S12",
+      type: "mc",
+      points: 1,
+      dok: 3,
+      std: [
+        "3.F.P.4.a"
+      ],
+      passages: [],
+      like: [
+        "SK-FP4a-C11"
+      ],
+      prompt: "Lila reads cough and dough as a rhyming pair. What is her best next move?",
+      choices: [
+        {
+          text: "Check each one by itself, then read it.",
+          correct: true
+        },
+        {
+          text: "Let them rhyme, since their last letters match."
+        },
+        {
+          text: "Use the sound of cow, for the ou stands for it."
+        },
+        {
+          text: "Use a short u, as each ends in gh."
+        }
+      ],
+      clue: "Think about how a group of letters can be used in different words.",
+      hints: [
+        "Think about how a group of letters can be used in different words.",
+        "Say cough and dough out loud. Listen to the end of each one.",
+        "Compare each choice with what you hear when you say both words."
+      ],
+      how: [
+        "Say cough and dough out loud.",
+        "The endings do not sound the same.",
+        "So Lila should check each one by itself, then read it."
+      ],
+      misconception: "A common mix-up is trusting the letters to give the sound. Ough changes from word to word.",
+      why: "The answer is \"Check each one by itself, then read it.\" Cough and dough end with different sounds. The other choices pick one sound for both."
+    },
+    {
+      id: "SK-FP4a-S13",
+      type: "order",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.F.P.4.a"
+      ],
+      passages: [],
+      like: [
+        "SK-FP4a-C12"
+      ],
+      prompt: "Order what you do to work out a c in a new word.",
+      steps: [
+        "Find the letter after the c.",
+        "Is that letter e, i or y?",
+        "Say s for a yes and k for a no.",
+        "Go over the whole word once more."
+      ],
+      clue: "Think about what you look at before you say anything.",
+      hints: [
+        "Think about what you look at before you say anything.",
+        "Think about what you must find out before you choose a sound.",
+        "The last step is a way to make sure the word is right."
+      ],
+      how: [
+        "First, find the letter after the c.",
+        "Second, ask whether that letter is e, i or y.",
+        "Third, say s for a yes and k for a no.",
+        "Fourth, go over the whole word once more."
+      ],
+      misconception: "A common mix-up is choosing a sound before looking at the next letter. Look first.",
+      why: "The order is: find the letter after the c; ask whether that letter is e, i or y; say s for a yes and k for a no; go over the whole word once more."
+    },
+    {
+      id: "SK-FP4a-S14",
+      type: "hottext",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.F.P.4.a"
+      ],
+      passages: [],
+      like: [
+        "SK-FP4a-P6"
+      ],
+      prompt: "Tap the word with a c that says s.",
+      stem: [
+        "We ate buns and rice in the cold hall."
+      ],
+      options: [
+        "buns",
+        "rice",
+        "cold",
+        "ate"
+      ],
+      answer: [
+        1
+      ],
+      pick: 1,
+      clue: "Find each c. Then look at the letter right after it.",
+      hints: [
+        "Find each c. Then look at the letter right after it.",
+        "Only some of these words have a c. Find them first.",
+        "Say rice and cold out loud. Ask whether each c says k or s."
+      ],
+      how: [
+        "Find the words with a c: rice and cold.",
+        "In cold, c comes before o, so it is hard.",
+        "In rice, c comes before e, so it is soft."
+      ],
+      misconception: "A common mix-up is choosing the first word with a c. Check the letter after the c.",
+      why: "The answer is \"rice.\" The c comes before e, so it says s. In cold, c is hard, and buns and ate have no c."
+    },
+    {
+      id: "SK-FP4a-S15",
+      type: "dropdown",
+      points: 1,
+      dok: 1,
+      std: [
+        "3.F.P.4.a"
+      ],
+      passages: [],
+      like: [
+        "SK-FP4a-P7"
+      ],
+      prompt: "Which spelling goes in the blank?",
+      text: "Mom put a clean {0} on the table.",
+      slots: [
+        {
+          options: [
+            "plait",
+            "plate",
+            "playt"
+          ],
+          answer: 1
+        }
+      ],
+      clue: "Say the word that fits the sentence. Then picture how it looks.",
+      hints: [
+        "Say the word that fits the sentence. Then picture how it looks.",
+        "Some of these are real words that mean something else. Read each one in the sentence.",
+        "Think about what goes on a table and what letters make the long a sound."
+      ],
+      how: [
+        "Read the sentence and think of a dish you eat from.",
+        "That word is spelled p-l-a-t-e.",
+        "Plait is a real word, but it means a braid. Playt is not a word."
+      ],
+      misconception: "A common mix-up is picking a spelling that sounds right but is a different word.",
+      why: "The answer is plate. A plate goes on a table, and the long a sound is spelled a-t-e. Plait means a braid, and playt is not a word."
+    }
+  ],
+  addons: {
+    "SK-FP4a-P1": {
+      hints: [
+        "Say bread out loud and listen to its ea. Then say each choice.",
+        "Say each choice slowly. Ask whether its ea sounds like the e in bed or like the ee in tree.",
+        "Say beach and team again. Compare their ea with the ea in bread."
+      ],
+      how: [
+        "Say bread. The ea sounds like the e in bed.",
+        "Say each choice. Head has the same short e sound.",
+        "Beach, leaf and team have the long e sound."
+      ],
+      misconception: "A common mix-up is thinking ea always says long e. Say the word to hear it."
+    },
+    "SK-FP4a-P2": {
+      hints: [
+        "Say each word out loud and listen to the ow.",
+        "Compare each ow with snow and cow. Ask which sound it matches.",
+        "Start with owl. Say it and decide whether the ow sounds like ouch or like go."
+      ],
+      how: [
+        "Say each word slowly.",
+        "Grow and blow have the long o sound, like snow.",
+        "Town, crown and owl have the sound in cow."
+      ],
+      misconception: "A common mix-up is giving ow one sound in every word. Say each word to hear it."
+    },
+    "SK-FP4a-P3": {
+      hints: [
+        "Look at the letter right after the c in each word.",
+        "Say each word out loud. Ask whether the c says k or s.",
+        "Check cloud. Is the c followed by e, i or y, or by another letter?"
+      ],
+      how: [
+        "Find the c in each word and look at the next letter.",
+        "In city, c comes before i, so it says s.",
+        "In cup, cloud and cave, c comes before u, l and a, so it says k."
+      ],
+      misconception: "A common mix-up is choosing a word because it has a c. Check the letter after the c."
+    },
+    "SK-FP4a-P4": {
+      hints: [
+        "Look at the letter right after each g.",
+        "Say each word out loud. Ask whether its g is hard or soft.",
+        "Start with grapes. Look at the letter after the g."
+      ],
+      how: [
+        "Find each g and the letter after it.",
+        "In giant, g comes before i, so it says j.",
+        "In grapes, g comes before r, so it says the g in go."
+      ],
+      misconception: "A common mix-up is thinking g always sounds the same. Check the letter after it."
+    },
+    "SK-FP4a-P5": {
+      hints: [
+        "Say bead out loud and listen to its ea. Then say each choice.",
+        "Say each word slowly. Ask whether the ea says its name, e.",
+        "Say bread and great again. Compare their vowels with the vowel in bead."
+      ],
+      how: [
+        "Say bead. The ea says long e.",
+        "Dream and peach have the long e sound.",
+        "Bread, head and feather have short e, and great has long a."
+      ],
+      misconception: "A common mix-up is choosing any ea word. The sound has to match bead."
+    },
+    "SK-FP4a-P6": {
+      hints: [
+        "Find each c in the sentence. Then look at the letter right after it.",
+        "Only some of the words have a c. Find them first.",
+        "Say Carla and cut out loud. Ask whether each c says k or s."
+      ],
+      how: [
+        "Find the words with a c.",
+        "In Carla, cut and cake, c comes before a or u, so it is hard.",
+        "In slices, c comes before e, so it says s."
+      ],
+      misconception: "A common mix-up is choosing the first word with a c. Check the letter after the c."
+    },
+    "SK-FP4a-P7": {
+      hints: [
+        "Say the word that fits the sentence. Then picture the word on a bag at the store.",
+        "Some of these are real words that mean something else. Read each one in the sentence.",
+        "Think about the vowel sound and which letters can spell it."
+      ],
+      how: [
+        "Read the sentence. A baker sells a loaf of this food.",
+        "That word is spelled b-r-e-a-d, with ea for the short e sound.",
+        "Bred and breed are real words, but they mean something else."
+      ],
+      misconception: "A common mix-up is picking a spelling that sounds right but means something else."
+    }
+  },
+  /* B9:core:end */
   test: [
     { id: "SK-FP4a-T1", type: "mc", points: 1, dok: 1, passages: [],
       prompt: "Which word has the same ow sound as cow?",
