@@ -1000,7 +1000,7 @@ PP.addLesson({
       hints: [
         "To compare two lines, break each into halves. Ask which halves could be a sentence by themselves.",
         "Find the joining word in each line. Then read the half that comes after it.",
-        "Both halves of line 3 have a who and a does-what. Check the other choices against that."
+        "Line 7 starts with Before. Ask whether the words before the comma could be a sentence alone."
       ],
       how: [
         "Line 3: \"Uncle Ray measured every track\" and \"I held the screws\" are two whole thoughts joined by a comma and and.",
@@ -1354,7 +1354,7 @@ PP.addLesson({
   teach: {
     big: "Good writers mix short and long sentences, and they keep their verbs in the same time, past or present, unless the time really changes.",
     points: [
-      "Too many short sentences in a row sound choppy. Join two short sentences that go together with a comma and one of these words: and, but, or, so.",
+      "Too many short sentences in a row sound choppy. Join two short sentences that go together with a comma and a joining word. And adds on, but goes against what you expect, so shows a result, and or gives a choice: We can read a book, or we can play a game.",
       "You can also join them with a word like because, when, after or if. Pick the joining word that shows how the two ideas go together.",
       "Verb tense tells when something happens. Past tense tells what already happened: jumped, ran. Present tense tells what happens now or always: jumps, runs, I jump, they run.",
       "Once you start telling about something in the past, keep your verbs in the past. Do not slip into the present by accident.",
@@ -1689,7 +1689,7 @@ PP.addLesson({
               prompt: "Which detail from the draft best supports the answer to Part A?",
               choices: [
                 {
-                  text: "Last weekend in sentence 1 tells you the whole story is in the past.",
+                  text: "Last weekend in sentence 1 tells you the story's events happened in the past.",
                   correct: true
                 },
                 {
@@ -1709,12 +1709,12 @@ PP.addLesson({
             ],
             how: [
               "Find the time clue. Sentence 1 says Last weekend, so the story tells about the past.",
-              "Check the verbs in the part about the egg carton and the cups: gave, helped, put. They are past tense.",
+              "Check the verbs in sentences 6 to 8, around the odd one: gave, helped, put. They are past tense.",
               "Part A: \"(9) Grandpa shows me how to write the labels.\" has shows, which is present tense. It should say showed.",
-              "Part B: \"Last weekend in sentence 1 tells you the whole story is in the past.\""
+              "Part B: \"Last weekend in sentence 1 tells you the story's events happened in the past.\" Sentence 9 tells one of those events, so it should be past too. Sentence 10 starts with Now, so the writing moves to the present there on purpose."
             ],
             misconception: "A common mix-up is choosing a sentence that has a present-tense verb because of a time word that makes it correct.",
-            why: "Part A: \"(9) Grandpa shows me how to write the labels.\" Part B: \"Last weekend in sentence 1 tells you the whole story is in the past.\" The sentences before and after the egg carton use gave, helped and put, so shows does not fit; it should be showed. The other Part B choices use time words but misread what they mean."
+            why: "Part A: \"(9) Grandpa shows me how to write the labels.\" Part B: \"Last weekend in sentence 1 tells you the story's events happened in the past.\" Sentences 6 to 8 use gave, helped and put, so shows does not fit; it should be showed. Sentence 10 begins with Now, so the writing moves to the present there on purpose. The other Part B choices use time words but misread what they mean."
           },
           {
             id: "SK-GC2b-C07",
@@ -2185,7 +2185,7 @@ PP.addLesson({
       clue: "Ask how the two ideas go together: adding, a choice, a result or a surprise?",
       hints: [
         "Ask how the two ideas go together: adding, a choice, a result or a surprise?",
-        "Say what each sentence tells. Is Kia doing both jobs, or picking one of them?",
+        "Say what each sentence tells. Then ask how the second idea goes with the first.",
         "The first job does not cause the second one. Think about the other three."
       ],
       how: [
@@ -2217,7 +2217,7 @@ PP.addLesson({
       partB: {
         prompt: "What clue shows the right tense for the story?",
         choices: [
-          { text: "Last Saturday, near the start, puts the story in the past.", correct: true },
+          { text: "Last Saturday, near the start, puts the events in the past.", correct: true },
           { text: "Every weekend, near the end, shows the whole story repeats." },
           { text: "The word shines, near the end, puts every line in the present." },
           { text: "A bucket of soapy water puts the story in the present." }
@@ -2233,10 +2233,10 @@ PP.addLesson({
         "Find the time clue. The first line says Last Saturday, so the story tells about the past.",
         "Check the verbs near the bubbles: floated, rinsed, dried. They are past tense, but chases is present.",
         "Part A: \"My little brother chased them across the driveway.\" uses the past tense, like the lines around it.",
-        "Part B: \"Last Saturday, near the start, puts the story in the past.\""
+        "Part B: \"Last Saturday, near the start, puts the events in the past.\""
       ],
       misconception: "A common mix-up is choosing a verb form that is not a plain past tense verb.",
-      why: "Part A: \"My little brother chased them across the driveway.\" Part B: \"Last Saturday, near the start, puts the story in the past.\" The lines around line 6 use floated, rinsed and dried, so the verb should be past tense. Chasing is not a complete verb here, will chase is future, and chase is present."
+      why: "Part A: \"My little brother chased them across the driveway.\" Part B: \"Last Saturday, near the start, puts the events in the past.\" The lines around line 6 use floated, rinsed and dried, so the verb should be past tense. Chasing is not a complete verb here, will chase is future, and chase is present."
     },
     {
       id: "SK-GC2b-S07",
@@ -3247,7 +3247,7 @@ PP.addLesson({
             hints: [
               "Ask one or more than one for each subject. Has goes with one. Have goes with more than one.",
               "For a subject with extra words after it, find the main word first. Two names joined by and count as more than one.",
-              "The cake is one thing, even though sprinkles is more than one. Decide the other four rows."
+              "The cake is one thing, even though sprinkles names more than one thing. Decide the other four rows."
             ],
             how: [
               "\"The twins\" is more than one, so it goes with have.",
@@ -3743,7 +3743,7 @@ PP.addLesson({
       hints: [
         "Ask one or more than one for each subject. Was goes with one. Were goes with more than one.",
         "For a subject with extra words after it, find the main word first. Two names joined by and count as more than one.",
-        "The box is one thing, even though crayons is more than one. Decide the other four rows."
+        "The box is one thing, even though crayons names more than one thing. Decide the other four rows."
       ],
       how: [
         "\"The pillows\" is more than one, so it goes with were.",

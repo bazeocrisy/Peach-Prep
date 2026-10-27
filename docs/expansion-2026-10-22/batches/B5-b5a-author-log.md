@@ -85,3 +85,14 @@ Not taken: 2.d S02 LATE (kept, adverb per Merriam-Webster), 2.d C12 weak distrac
 2.c: C06 (how text), C11, C14 (Part B and H2), S07, S09, S11.
 2.d: p2 (repaired), p3 (sentence 5), C06, C14, S14.
 Most worth a skeptical re-solve: 2.a C12/S12 (new ms, two keys: join vs add its own who), 2.a C09/S09 (dropdowns), 2.a C06/S06 (hot text keys), 2.b S13 (all four rows), 2.b S05, 2.c C11 and S11 (new reason wording), 2.d C07 with the repaired p2.
+
+## Third-review fixes (2026-10-27)
+Only one 3.L.GC.2 item key changed text: 2.b C06 Part B, because the old key was false for the draft (sentences 10 to 12 are present tense, and C08 calls that shift correct). No key of 2.a, 2.c or 2.d was changed; the edits in those lessons are hint text only (see below).
+- 2.b C06 (MUST): Part B key is now "Last weekend in sentence 1 tells you the story's events happened in the past." how step 2 now cites sentences 6 to 8; how step 4 and why say sentence 9 tells one of those events and that sentence 10 moves to the present on purpose after "Now", consistent with C08. The false "sentences before and after... use gave, helped and put" is gone. For the same reason S06 Part B key now says "puts the events in the past" (its draft also moves to the present at "Now").
+- 2.b S05 H2 made neutral ("Then ask how the second idea goes with the first").
+- 2.b Learn It: teach point 1 now glosses all four joining words, including "or gives a choice" with the example "We can read a book, or we can play a game." (not an item answer; no hit elsewhere in js/data).
+- 2.a S10 H3 (accepted lesson, hint text only): now "Line 7 starts with Before. Ask whether the words before the comma could be a sentence alone." Key unchanged.
+- 2.c C09 and S09 H3 (accepted lesson, hint text only): "sprinkles / crayons names more than one thing". Keys unchanged.
+Gates: check-writing 0 failures, check-instructional-copy 28 passed; similarity unchanged (worst 0.209 / 0.197 / 0.194 / 0.200, digits counted). check-content shows no GC2 failure or warning; its one FAIL in this run is in 3.L.V.1.a (S10 Part B quote), a lesson I did not touch.
+Changed items (2.b light check only needed): 2.b C06, S06, S05 (hint), teach point 1. Text-only in accepted lessons: 2.a S10, 2.c C09, 2.c S09.
+Not taken: 2.a C06/S06 vs form A T6 "same frame" SHOULD (would change an accepted lesson's item).

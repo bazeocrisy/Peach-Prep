@@ -374,3 +374,156 @@ Cold re-solve of the named items:
 | 3.L.GC.2.d | **CHANGES REQUIRED** | 2.d-1 (p2 numbering and duplicate sentence) | 4 SHOULD, 6 NOTE. Blind solve 38 of 38. |
 
 The first-review MUSTs are fixed, apart from the S13 residue, and the batch is close. Each remaining MUST is a small edit. After the five MUST edits, a re-check should cover: 2.a core and similar format counts; 2.b S05 and S13; 2.c S09; 2.d p2 numbering and C07/C08.
+
+---
+
+# Third review (2026-10-27): 3.L.GC.2.a, 2.b, 2.c, 2.d
+
+**Role:** third independent reviewer (blind solver). I did not write these lessons and took part in neither earlier review. I read the reviewer brief and the shared content brief first. I did not open this file's earlier sections, the author log or any lesson source for items until my blind answers for all four lessons were saved (`ans-a.txt` to `ans-d.txt`).
+**Read-only:** I edited no lesson or code file and ran no git. This appended section is the only file I wrote. All scratch work and a frozen copy of the site are in `scratchpad/b5r6/` (`site/` is the frozen copy; the test server `node verification/serve.js . 8761`, pid 25241, was killed by pid afterwards).
+
+## T1. Blind solve (new seed)
+
+- **Method.** `load.js` runs `js/data/lessons/L-GC2.js` in a Node `vm` sandbox with a mock `PP.addLesson`. `blind.js` prints each passage once and every item with a seeded shuffle (new seed: a per-lesson string hash plus 60601; the earlier reviews used other seeds). It strips `correct`, `answer`, `why`, `clue`, `hints`, `how`, `misconception`, `like`, `std`, `addons` and the `core.rev` field. The lessons have no figures, so there is no alt text. I printed no raw item source. My one schema probe printed field names only (no values). I saved my answers before `cmp.js` read any key.
+- **Items solved: 160.** Core (15 per lesson, `{ref}` resolved), Together (practice not referenced by core), S01 to S15, form A, and 2.b form B (TB1 to TB5). 2.a 40, 2.b 43, 2.c 39, 2.d 38.
+- **Agreement.** The script reported 157 of 160. Two of the three are not content disagreements: 2.a T2 is a formatting mismatch in my answer file (I typed "C,D" for the two-part ebsr instead of "C;D"; the parts match), and 2.c S10 is my own slip (I picked "barks, lets" and wrote "the children lets"; the key "barks, let" is right). That makes **158 of 160 (98.8%) strict, 159 of 160 (99.4%) if my own slip is not counted against the content.**
+- **One real disagreement: 2.b P2** (Together, `like` none). "The tunnel was dark. It felt a little scary." I chose `but`; the key is `so`. `so` is the better answer (the dark causes the fear; `but` implies a contrast that is not there), but `but` read fine to me at first pass. NOTE only; the item is pre-existing and both earlier blind solvers matched it.
+- **Fully blind: yes.** I saw no key, `why`, hint, `how`, `misconception` or author text before saving. I did not open the earlier review sections or the author log until after `cmp.js` ran.
+- **Items that read as one defensible answer but had a second look:** 2.a C09/S09 (easy, see T4), 2.a C14 (the compound-complex distractor is now reworded, fine), 2.b S13 and S05 (fixed, see T2), 2.d S02 `LATE` (adverb per the earlier sources, still borderline for a child).
+
+## T2. Second-review MUSTs: are they fixed?
+
+| Second-review MUST | Status | Evidence |
+|---|---|---|
+| 2.a-1 core `mc` count | **Fixed** | Core now has **six** mc (P8, C05, C07, C08, C10, C14), and the similar bank mirrors it with six (S03, S05, S07, S08, S10, S14). Core formats: hot text 2, ms 4, mc 6, dropdown 2, match 1 (five formats, nine technology-enhanced items; plan §4.4 asks for at least four and three). Set by set: set 1 hot text/ms 2/mc 2, set 2 hot text/mc 3/dropdown, set 3 match/ms 2/mc/dropdown. |
+| 2.a C06, C09, C12 converted items still unambiguous | **Yes** | C06 hot text on Amari's draft: sentence 5 "When my box was almost full." is the only fragment among targets 4, 5, 7, 8, 9 (sentence 8 is a run-on, the others are whole). C09 dropdown: only `he` gives sentence 7 a who (`quickly`, `over` do not). C12 ms: B and D fix "With a stove made of clay."; A ("and with"), C ("because with") and E (the fragment unchanged) do not. S06, S09 and S12 mirror them and are equally clear. I solved all six cold: all match. |
+| 2.b-1 S05 `misconception` | **Fixed** | New stem (porch and garden), key `or`; misconception: "So would mean sweeping the porch causes watering the garden, but Kia could do either job." Matches the item. |
+| 2.b-2 S13 row 4 | **Fixed** | Prompt now ends "Use each word one time". Rows: `and` (also), `before` (always rings ... class starts), `if` (will melt ... in the sun), `but` ("small ... still the fastest"). I tested each row against all four columns: row 1 could take `but` only by ignoring `also`; row 2 `if` makes nonsense; row 3 `before` makes nonsense (and `before` is used by row 2). With each word used once, the key is the only consistent assignment. Cold solve matches. |
+| 2.c-1 S09 `misconception` | **Fixed** | "such as couch or crayons". |
+| 2.d-1 p2 numbering and C07/C08 | **Fixed** | Paragraph 2 now runs (3) "It was a nice bike, and I had never ridden one without help, so my knees shook." (4) I rode down the street. (5) The wind blew against my face. (6) A dog barked... **Numbering check passes on all 25 passages** (script: leading `(n)` runs 1..n in order; counts 10 to 14). C07 has one key, `shakily` (sentence 3 says "my knees shook"; `proudly`, `lazily`, `fearlessly` are unsupported). C08 revisions A and B replace "nice" in sentence 3 and C to E keep plain words; unique. Both solved cold: match. |
+
+## T3. Mechanical checks
+
+- **Passage FK** (`verification/readability.py`, run on `L-GC2.js`): 0.7 to 3.8, all 25 passages (limit 4.5). Words 100 to 123.
+- **Passage numbering** (script): 25 of 25 pass, no duplicate or missing sentence numbers (2.d p2 repaired).
+- **Similarity** (`jac.js`: word-set and multiset Jaccard over prompt, stem, text, choices, slot options, free options, match `cols` and `rows`, both ebsr parts, and the hot-text target sentences read from the passage):
+  - Every similar item against its own `like`: **0.20 or less** (2.a 0.19, 2.b 0.20, 2.c 0.18, 2.d 0.19).
+  - Similar against any core item (non-`like`): worst 0.27 / 0.17 (2.d S12 vs C07), 0.26 / 0.23 (2.c S02 vs C04), 0.24 / 0.21 (2.c S07 vs C11). None reaches 0.30.
+  - Within the core, Together and tests: worst new content 0.39 / 0.34 (2.a C08 vs C10), 0.39 / 0.37 (2.c C09 vs P3), 0.38 / 0.20 (2.b P2 vs T2), 0.37 / 0.10 (2.b P5 vs C05). Pre-existing 2.a P7 vs P9 0.54 / 0.50 and T6 vs T8 0.49 / 0.50, which share passage text in the hot-text targets. No new pair reaches 0.40.
+  - Within the similar bank: worst 0.32 / 0.35 (2.a S01 vs S02, hot text vs ms on the same unicycle draft).
+- **Longest-key cue** (`cue.js`, 76 single-key mc and ebsr-part sets): key uniquely longest in 16 of 76 (21%, chance about 25%). At ratio 1.2 or more: 2.d T3 Part A (1.23, natural for "elaborate", NOTE) and three single-word sets (2.c S04, 2.d S06, S07, ignore).
+- **Key text in hints** (`leak.js`): no hint contains a key's full text. Two partial echoes only: 2.c C14 H2 ("two ... people"), 2.c S07 H2 ("flag sentence", which is in the prompt). Clean.
+- **Key-beside-explanation** (`keywhy.js` plus a read of the converted items and the MUST items): every mc/ms/ebsr/hot-text key appears in its `why`, and no distractor is presented as the answer (the script's distractor hits are the sentences explaining why each wrong choice fails). **One `why` is wrong: 2.b C06 (see 2.b-1 below).** The 2.a P9 "key not in why" hit is a script artifact (the `why` cites the sentences by number).
+- **Points and DOK:** all single-key and pick-two points are right. 2.a C15 and S15 are now **2 points**. DOK has no DOK 1; DOK 3 count per fifteen is 5 / 5 / 4 / 3.
+- **Format rule:** `mc` per fifteen: 2.a six, 2.b six, 2.c five, 2.d four. All four lessons use at least five formats.
+- **`like` mapping:** every `like` points to a real core item of the same skill. Types match everywhere except 2.c S06 (mc, like the hot-text C06) and 2.d S06 (mc, like the dropdown C06); the skill is the same, so NOTE.
+- **Concept duplicates over all `js/data`** (grep of passage topics and key nouns): dollhouse, ant farm, unicycle, model train, time capsule, snow globe, terrarium, rock collection, bird bath, go-kart, hammock, snow cone, book sale, pet wash, obstacle course, tug-of-war, trail guide and pool deck appear in no other file. Incidental single mentions only for lighthouse (a rhyme stanza and a topic-sentence item in T-T2), frosting (a rhyme stanza in T-T34), aquarium (T-T1 narrative line, T-RA source notes), farmers market (T-T1, T-SS, F-FH: other passages), bakery and bake sale (single sentences). None is a copied item or the same key fact.
+- **Standard wording** (`js/data/standards.js` `official`): 2.a "Distinguish between correctly structured simple, compound, and complex sentences."; 2.b "Use a variety of simple, compound, and complex sentences ... establishing consistent verb tense within and between sentences."; 2.c "Use correct subject-verb agreement in a variety of sentences."; 2.d "Elaborate on ideas and information, using adjectives and adverbs ... to convey precise meaning." The items match each (2.a: see NOTE 2.a-5 on fragment weight).
+
+## T4. Web-verified facts
+
+- **A complex sentence has one independent clause plus a dependent clause, and a dependent clause alone is a fragment** (2.a P9 distractor E, S02 distractor "While the wheel wobbled.", T8 distractor "(5) When we reached the top."): https://www.grammarbook.com/blog/?p=5496 ("has one independent clause and at least one dependent clause"; a dependent clause "cannot stand alone as a sentence"). The same point appears in the search hits for https://www.ou.edu/content/dam/writingcenter/docs/writing-guides/sentence-fragments-handout.pdf (listed, not opened). The keys are right: a lone "When ..." line is a fragment, not a complex sentence.
+- Earlier reviewers verified compound predicates (`and zipped her backpack` is not a compound sentence), adverbs of time and place (`late`, `soon`, `here`, `outside`) and the subject-verb rules (Purdue OWL, Conestoga): I re-checked every 2.c key by reasoning, all agree, and I did not re-fetch those pages.
+- I could not open the Georgia standards PDF through the fetch allowlist; the `official` strings in `standards.js` are used as is.
+
+## T5. Browser run (390x844, touch, real controls)
+
+- Frozen copy served on 8761. Playwright Chromium, `has_touch`, `is_mobile`, fonts blocked. For each lesson I opened `PP_SKILLS.open(code,'try')`, started each of the 15 core items with `PP_PLAYER.start("SK:<code>:y|y2|y3",'try',{pos})`, answered with real clicks (`.choice`, `select.dd-select`, `.match-btn`, passage `data-ref` targets, `.hot-option`, ebsr `.part .choice`), then clicked Check.
+- **Result: 60 of 60 core items accepted the correct answer. No hit target under 36 px, no horizontal scroll, no page error.**
+- Hints, Show me how, and Try a similar question for all 15 core items per lesson (`ui5.py`): no horizontal scroll at load, after three hints, after Show me how or in the similar item; all 60 similar items opened. The old script cannot set a two-part ebsr answer, so the four ebsr pairs it reports as failing (2.b C06/S06, 2.b C15/S15, 2.c C14/S14, 2.d C14/S14) were re-run with real clicks in `eb2.py`: all eight answers accepted, no horizontal scroll. The only console error is the blocked Google Fonts request.
+
+## T6. Hint ladder and live choices (read every H1 to H3 for the 45 core/similar items per lesson that carry hints)
+
+Live-choice hand count after hints 1 to 3 (keys marked on each item): every item keeps at least two live. The rows that leave **exactly two** live:
+
+| Item | Live after H3 | Verdict |
+|---|---|---|
+| 2.a P7 (ref), S01 | sentences 5 and 7 | acceptable (carried NOTE) |
+| 2.a **S10** | the key and "Lines 3 and 7: both halves can stand alone" | **SHOULD** (2.a-2): H3 states the first half of the key |
+| 2.a C14 | Zuri, and "Neither" (effectively; Kofi's choice survives only on its stated reason) | NOTE (2.a-4) |
+| 2.b P6 (ref) | gathers / gather | acceptable |
+| 2.c C06 | sentences 3 and 5 | acceptable (carried NOTE) |
+| 2.c C10, S10 | the key and one wrong verb in the second blank | NOTE |
+| 2.c S02 | key and "Her shoes is by the door" | NOTE |
+| 2.d P1 (ref) | muddy / fluffy | acceptable |
+| 2.d C06 | sunny / wintry | acceptable now that H2 asks "what do the swirling flakes look like?" |
+| 2.d C13 slot 1 | runny / dusty | acceptable |
+
+No hint states or quotes a key. Hint 1 is strategy in every item I read. The new or edited ladders I looked at hardest: 2.a C06/S06 (H3 rules out the run-on line only), C09/S09 (H3 rules out `quickly` only), C12/S12 (H3 rules out one choice), 2.b C11 (H3 is now neutral: "Check each reason against the time clue"), 2.b C05/C15/S15 (H1/H2 now neutral), 2.c C11/S11 (neutral), 2.d C06, C14, S14 (H1 now strategy only). All good, with the exceptions in the tables below.
+
+## T7. Findings by lesson
+
+Legend: MUST = fix before acceptance. SHOULD = fix unless the author gives a reason. NOTE = information only.
+
+### 3.L.GC.2.a: simple, compound, complex
+
+| # | Sev | Item | Evidence | Fix |
+|---|---|---|---|---|
+| 2.a-1 | SHOULD | C06 (and S06) vs form A T6 | C06: "One sentence in Amari's draft is a fragment. Select that sentence." Key: "(5) When my box was almost full." T6 (form A): "One sentence in Jordan's draft is a fragment. Select that sentence." Key: "(5) When we reached the top." Same frame, same format, same kind of key (a "When ..." clause); only the draft and the context differ. S06 then uses "When the tracks were done." as a third copy. Core, similar and test therefore rehearse one exact item. Jaccard is low (the passages differ) so the script does not flag it, but it fails the "differ in at least two of four" test only barely (text and domain). | Make C06 a different fragment type, e.g. a verbless fragment ("Under the porch, near the box."), or ask "Which sentence leaves the reader waiting?" and change its start word. Keep S06 distinct from both. |
+| 2.a-2 | SHOULD | S10 H3 | "Both halves of line 3 have a who and a does-what. Check the other choices against that." Line 3 is "Uncle Ray measured every track, and I held the screws." This tells the solver that line 3's two halves both stand alone, which is the first half of the key text, and it removes the choices that say otherwise. Two choices are live: the key and "Lines 3 and 7: both halves can stand alone". | Replace with a neutral scaffold, e.g. "Line 7 starts with Before. Ask whether the words before the comma could be a sentence alone." That leaves three live. |
+| 2.a-3 | NOTE | C09, S09 | The prompt says "has no who" and one option (`he`, `she`) is a pronoun. A child can answer by spotting the pronoun without reading the draft. DOK 2 is a little generous. | Optional: add a distractor that looks like a who but cannot work. |
+| 2.a-4 | NOTE | C14 H3 | "Telling two things does not make a sentence compound" removes the "Both are right" choice and contradicts Kofi's stated reason, so Zuri and "Neither" are what is left in effect. Still two live in the strict count. | None; or say "Check each reason against the number of whole thoughts." |
+| 2.a-5 | NOTE | Fragment weight | About eight of the fifteen (P7, P8, C05, C06, C07, C09, C12, C13) are fragment or run-on tasks; seven (P9, C04, C08, C10, C11, C14, C15) distinguish simple, compound and complex. The official wording is "Distinguish between correctly structured simple, compound, and complex sentences", so the balance leans to repair. Defensible under "correctly structured", but the next author of a 2.a revision should rebalance. | None now. |
+| 2.a-6 | NOTE | Set 2 giveaway | C07 (stem says sentence 8 is a run-on) removes sentence 8 as a candidate for C06 on the same draft. | None. |
+| 2.a-7 | NOTE | P7 vs P9 | 0.54 / 0.50, shared passage targets only (carried). | None. |
+| 2.a-8 | NOTE | Watch Me | Still no worked example that joins a fragment to the sentence beside it beyond example 1's fix line (C12, P8 and S12 ask for it). | Optional one-line addition. |
+
+Cold re-solve of the focus items: **C12/S12** unique (join or give it its own who and does-what; both fix; "and with", "because with", "then beside" and the unchanged fragment do not). **C09/S09** unique. **C06/S06** unique. The converted hot-text and dropdown items are clean and the format cap is met. **Verdict 2.a: ACCEPT** (2 SHOULD, 6 NOTE).
+
+### 3.L.GC.2.b: variety and tense
+
+| # | Sev | Item | Evidence | Fix |
+|---|---|---|---|---|
+| 2.b-1 | **MUST** | C06 Part B key, `how`, `why` | The key reads "Last weekend in sentence 1 tells you the whole story is in the past." That is false for this draft: sentences 10 to 12 ("Now I have twelve rocks ...", "I keep them ...", "My little sister likes ...") are in the present, and the next item, C08, says the move to the present at sentence 10 is **correct** and marks "Last weekend ... tells you every verb must be in the past" as **wrong**. A child who picks the Part B key here and then reads C08 meets a direct contradiction. The `why` adds "The sentences before and after the egg carton use gave, helped and put", which is also untrue (the sentences after are present). The shortened wording from the last round introduced "whole story". | Key: "Last weekend in sentence 1 tells you the story starts in the past." (Part B distractor A already says "every sentence before it", fine.) `how` step 4 and `why` the same; `why`: "The sentences before and after sentence 9 in the egg carton part use gave, helped and put" becomes "The sentences around sentence 9 in the egg carton part use gave, helped and put, so shows does not fit." Check S06 Part B ("puts the story in the past") for the same drift: it does not say "whole", so it is fine. |
+| 2.b-2 | SHOULD | S05 H2 | "Say what each sentence tells. Is Kia doing both jobs, or picking one of them?" That names the key relation (a choice). A reader with H1 and H2 but no choices can write "or". H1 for the same item is neutral. C05's H2 (the same relation) was already made neutral last round. | "Say what each sentence tells. Then ask how the second idea goes with the first." |
+| 2.b-3 | SHOULD | Learn It / Watch Me | `or` is the key or a column word in C05, C13 row 2, S05, S12 and C12's distractor, but neither the teach points nor the three Watch Me examples model a choice relation. Watch Me example 2 offers "and, but or so" and the steps list "add on, get in the way, or happen because of". The author declined this in the second review. With four of the thirty items resting on `or` as the answer, the plan's rule that Learn It models what the fifteen require is not met. | Add to example 2's steps or the teach text: "Or joins two choices: We can walk, or we can ride." |
+| 2.b-4 | NOTE | P2 | I chose `but` for "The tunnel was dark. It felt a little scary."; key `so`. Pre-existing; `so` is better. | None; if edited, use a pair with a clearer cause (a dark tunnel and "so I held Dad's hand"). |
+| 2.b-5 | NOTE | C09 / P1 / T1 / TB1 / S09 | One task (find the single odd-tense sentence) in four forms, carried from the second review. | None. |
+| 2.b-6 | NOTE | C13 H3 | "Leah wanted to swim, and then the pool turned out to be closed" settles row 1 by narrating it. Three rows remain; acceptable under the "settled row at most one" rule. | None. |
+| 2.b-7 | NOTE | S13 | Fixed. Unique with "use each word one time". `like` C13 shares only `but` (honest enough). | None. |
+| 2.b-8 | NOTE | C06 Part B A | Distractor A ("Now in sentence 10 tells you that every sentence before it is in the present") is explained by C08, as the earlier reviewers noted. | None. |
+
+Cold re-solve: **S13** unique across all four rows once the prompt says each word is used once; **S05** unique (`or`; `so`, `but`, `because` each change the meaning); **TB5** unique (rises / come). **Verdict 2.b: CHANGES REQUIRED** (2.b-1 only; it is a small text edit).
+
+### 3.L.GC.2.c: subject-verb agreement
+
+| # | Sev | Item | Evidence | Fix |
+|---|---|---|---|---|
+| 2.c-1 | SHOULD | C09 H3, S09 H3 | "The cake is one thing, even though sprinkles is more than one." and "even though crayons is more than one." This is the style the last round removed from C11, C14, C06 and S11: a plural word shown with `is` in a lesson that teaches `is` vs `are`. | "even though sprinkles names more than one thing." |
+| 2.c-2 | NOTE | C10 H3, S10 H3 | "Maya is one person. Look at the first verb in each choice..." leaves two live (the key and the wrong second verb). | None. |
+| 2.c-3 | NOTE | S02 H3 | "The lamp sentences both have a problem." leaves two live. | None. |
+| 2.c-4 | NOTE | S06, `like` C06 | `like` type differs (mc vs hot text); same skill. | None. |
+| 2.c-5 | NOTE | C09 vs P3 | 0.39 / 0.37, same frame (has/have vs runs/run), different words (carried). | None. |
+
+Cold re-solve of **C11/S11** (new reason wording): unique (the tickets / the keys are what the sentence is about; the nearest word and "table names many things" fail). The old S09 misconception is fixed. Key and word-match cues are clean. **Verdict 2.c: ACCEPT** (1 SHOULD, 4 NOTE).
+
+### 3.L.GC.2.d: adjectives and adverbs
+
+| # | Sev | Item | Evidence | Fix |
+|---|---|---|---|---|
+| 2.d-1 | SHOULD | C14 Part A and Part B | The key "pale and smooth, with a soft swirl" is the only Part A choice that reuses a passage word (sentence 3: "very pale"), and the Part B key is the only one that names the passage ("the very pale yellow that Keisha mixed"). A solver can match words instead of reading. Part B now has a plausible rival ("more describing words ... more is always better"). The author declined to add a Part A rival that reuses passage words. | Add one Part A rival that reuses a passage word but is wrong, e.g. "The frosting looked bright yellow and bumpy, with a gray swirl." ("very pale" contradicts "bright"). |
+| 2.d-2 | NOTE | S02 `LATE` | Adverb per Merriam-Webster; a child may hesitate (also an adjective in "the late train"). Kept by the author. | None. |
+| 2.d-3 | NOTE | C07 | Unique after the p2 repair. Key echoes the passage word "shook". | None. |
+| 2.d-4 | NOTE | C12 | One answer; the three distractors are obvious. Easy at DOK 2. | None. |
+| 2.d-5 | NOTE | C10, S10 | Test adverbs of time and place, which the teach text covers, but Watch Me models adverbs of manner only. | Optional. |
+| 2.d-6 | NOTE | P5 (Together) vs C08 | Same "replace a plain word with an exact one" logic; low Jaccard, different text and format. | None. |
+
+Cold re-solve of **C07** with the repaired p2: unique (`shakily`). C08, C12, C13 and the cake-decorating C14 are clean. Cake vocabulary no longer uses "piped". **Verdict 2.d: ACCEPT** (1 SHOULD, 5 NOTE).
+
+## T8. Cross-lesson notes
+
+- **Regression check.** The only regression I found from the last round is the new 2.b C06 Part B wording (2.b-1). Every other changed item (2.a C06/C09/C12/S06/S09/S12/C14/S14/C15/S15, 2.b C05/C11/C15/S05/S13/S15, 2.c C06/C11/C14/S07/S09/S11, 2.d p2/p3/C06/C14/S14) read correctly in the blind solve and in the hint audit.
+- **`why` and `how` claims about the passage.** The 2.b C06 slip was a claim about a whole passage ("whole story", "before and after") that the key sentence over-reached. When fixing it, grep the other `why`/`how` texts of tense items for "whole", "every" and "always" and check them against the passage's later sentences.
+- **Hint 3 that states half of a two-part key** (2.a S10) is the same family as the B0 fault, at lower severity (two choices are live). Worth a one-line check in the next batch's ladder audit.
+- **Format cap and mirrored bank.** Met. The similar bank mirrors the core formats exactly in 2.a and 2.b; 2.c and 2.d differ by one type in one pair (NOTE).
+
+## T9. Verdicts
+
+| Lesson | Verdict | MUSTs | SHOULDs | NOTEs | Blind solve |
+|---|---|---|---|---|---|
+| 3.L.GC.2.a | **ACCEPT** | 0 | 2 (2.a-1 C06/T6 frame, 2.a-2 S10 H3) | 6 | 40 of 40 (T2 format slip aside) |
+| 3.L.GC.2.b | **CHANGES REQUIRED** | 1 (2.b-1 C06 Part B key and `why` contradict C08 and the draft) | 2 (S05 H2, `or` in Learn It) | 5 | 42 of 43 (P2) |
+| 3.L.GC.2.c | **ACCEPT** | 0 | 1 (C09/S09 H3 wording) | 4 | 38 of 39 (S10 was my own slip) |
+| 3.L.GC.2.d | **ACCEPT** | 0 | 1 (C14 key word-match) | 5 | 38 of 38 |
+
+All second-review MUSTs are fixed (2.a mc cap, 2.b S05 and S13, 2.c S09, 2.d p2 numbering and C07). The format conversions in 2.a are clean and unambiguous. One new MUST turned up in 2.b: the C06 Part B key says the "whole story" is in the past, which the draft and C08 contradict. It is a two-line text edit (key, `how` step 4 and `why`). After that edit, 2.b needs only a re-check of C06 Part B, `how` and `why`, and S06 for drift.

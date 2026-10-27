@@ -24,7 +24,7 @@
 | B5 b5a | 3.L.GC.2.a | NOT ACCEPTED: awaiting independent review | AUTHORED (B5 b5a), NEEDS INDEPENDENT REVIEW; B5-b5a-author-log.md; js/data/lessons/L-GC2.js |
 | B5 b5a | 3.L.GC.2.b | NOT ACCEPTED: awaiting independent review | AUTHORED (B5 b5a), NEEDS INDEPENDENT REVIEW; B5-b5a-author-log.md; js/data/lessons/L-GC2.js |
 | B5 b5a | 3.L.GC.2.c | NOT ACCEPTED: awaiting independent review | AUTHORED (B5 b5a), NEEDS INDEPENDENT REVIEW; B5-b5a-author-log.md; js/data/lessons/L-GC2.js |
-| B5 b5a | 3.L.GC.2.d | NOT ACCEPTED: awaiting independent review | AUTHORED (B5 b5a), NEEDS INDEPENDENT REVIEW; B5-b5a-author-log.md; js/data/lessons/L-GC2.js |
+| B5 b5a | 3.L.GC.2.d | ACCEPTED | B5-b5a-review.md (third review); open SHOULD: C14 key reuses passage word |
 | B5 b5b | 3.L.V.1.a | NOT ACCEPTED: awaiting independent review | AUTHORED (B5 b5b), NEEDS INDEPENDENT REVIEW; B5-b5b-author-log.md; js/data/lessons/L-V12.js |
 | B5 b5b | 3.L.V.1.b | NOT ACCEPTED: awaiting independent review | AUTHORED (B5 b5b), NEEDS INDEPENDENT REVIEW; B5-b5b-author-log.md; js/data/lessons/L-V12.js |
 | B5 b5b | 3.L.V.2.a | NOT ACCEPTED: awaiting independent review | AUTHORED (B5 b5b), NEEDS INDEPENDENT REVIEW; B5-b5b-author-log.md; js/data/lessons/L-V12.js |
