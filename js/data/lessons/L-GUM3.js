@@ -4892,7 +4892,7 @@ PP.addLesson({
       hints: [
         "Ask how the two parts connect. Are they a difference, a result, or two things that go together?",
         "Read the sentence and picture what the coach does. Then try each joining word in the blank.",
-        "Yet shows something different, and the coach's two jobs do not clash. Decide between the other two."
+        "Nor goes with a no, and nothing in this sentence says no. Decide between the other two."
       ],
       how: [
         "Read both parts: the coach shows a new trick, and the coach helps the club practice old tricks.",
@@ -9408,14 +9408,14 @@ PP.addLesson({
   },
   learn: [
     {
-      show: ["Andre opened the win-", "dow to let in the breeze."],
-      ask: "Is the word window split correctly?",
+      show: ["I lost my red mi-", "tten on the bus."],
+      ask: "Is the word mitten split correctly?",
       steps: [
-        "Clap window: two beats, so it can be split.",
-        "Look at the middle letters: n and d are two different consonants between the vowels i and o.",
-        "The rule says split between them: win-dow. The hyphen is at the end of the first line, so the split is correct."
+        "Clap mitten: two beats, so it can be split.",
+        "Look at the middle letters: the same consonant, t, comes twice.",
+        "The rule says split between the two t's: mit-ten. This split comes too early."
       ],
-      answer: "Yes. Window is split correctly, between the consonants n and d."
+      answer: "No. Mitten should be split between the two t's: mit- on the first line and ten on the next."
     },
     {
       show: ["Ana cleaned the fis-", "hbowl on the shelf."],
@@ -9917,10 +9917,10 @@ PP.addLesson({
                 answer: 2
               }
             ],
-            clue: "Say each word whole. Ask whether it has a double letter, or whether it is made of two smaller words.",
+            clue: "Say each word whole and look at the letters in the middle. Ask which rule fits.",
             hints: [
-              "Say each word whole. Ask whether it has a double letter, or whether it is made of two smaller words.",
-              "Look at the middle of each word. Then check where each choice puts the break.",
+              "Say each word whole and look at the letters in the middle. Ask which rule fits.",
+              "Look at the middle of each word. Then check where each choice puts the break and what is left on each line.",
               "Cu- | pcake cuts the first small word in half. Decide the rest."
             ],
             how: [
@@ -10037,7 +10037,7 @@ PP.addLesson({
             prompt: "Match each word to the rule that tells where to split it. Use each rule one time.",
             cols: ["Two different consonants", "Double letter", "Two smaller words", "Letters that stay together"],
             rows: [
-              { text: "pocket", answer: 3 },
+              { text: "brother", answer: 3 },
               { text: "candle", answer: 0 },
               { text: "football", answer: 2 },
               { text: "hammer", answer: 1 }
@@ -10051,10 +10051,10 @@ PP.addLesson({
             how: [
               "Look at the middle letters of each word.",
               "Candle has the different consonants n and d. Hammer has the double letter m.",
-              "Football is made of foot and ball. Pocket has ck, which makes one sound and stays together."
+              "Football is made of foot and ball. Brother has th, which makes one sound and stays together."
             ],
             misconception: "A common mix-up is matching by how the word starts. Look at the middle letters.",
-            why: "Candle has two different consonants, n and d. Hammer has a double m. Football is made of two smaller words. Pocket has the letters ck, which stay together."
+            why: "Candle has two different consonants, n and d. Hammer has a double m. Football is made of two smaller words. Brother has the letters th, which stay together."
           },
           {
             id: "SK-GUM3-8-C15",
@@ -10413,10 +10413,10 @@ PP.addLesson({
           answer: 0
         }
       ],
-      clue: "Say each word whole. Ask whether it has a double letter, or whether it is made of two smaller words.",
+      clue: "Say each word whole and look at the letters in the middle. Ask which rule fits.",
       hints: [
-        "Say each word whole. Ask whether it has a double letter, or whether it is made of two smaller words.",
-        "Look at the middle of each word. Then check where each choice puts the break.",
+        "Say each word whole and look at the letters in the middle. Ask which rule fits.",
+        "Look at the middle of each word. Then check where each choice puts the break and what is left on each line.",
         "Doo- | rbell cuts the first small word in half. Decide the rest."
       ],
       how: [
@@ -10465,7 +10465,7 @@ PP.addLesson({
         "3.L.GC.1:M:use-hyphens-to-divide-words-at-line-breaks"
       ],
       passages: [],
-      prompt: "Which break of feathers keeps th together and also falls between the two beats? Use the bar (|) as the line end.",
+      prompt: "Which break of feathers is the best one? Use the bar (|) as the line end.",
       choices: [
         { text: "feath- | ers", correct: true },
         { text: "feat- | hers" },
@@ -10646,7 +10646,7 @@ PP.addLesson({
     "SK-GUM3-8-P5": {
       hints: [
         "Clap the word. Then use the split rules from the lesson.",
-        "Say birthday whole and ask whether it is made of two smaller words. Check where each choice puts the break.",
+        "Say birthday whole and look at the letters on each side of every break. Check what is left on each line.",
         "Birthd- | ay cuts the second small word in half. Decide between the other two."
       ],
       how: [
@@ -10661,7 +10661,7 @@ PP.addLesson({
   test: [
     { id: "SK-GUM3-8-T1", type: "mc", points: 1, dok: 2, passages: [],
       prompt: "Four words are split at the ends of lines. Which word is split correctly?",
-      stem: ["On Saturday we had a pic-", "nic by the lake. Dad cooked a big din-", "ner and hung the silv-", "er lights. Each plate had a napk-", "in on it."],
+      stem: ["On Saturday we had a pic-", "nic by the lake. Dad cooked a big di-", "nner and hung the silv-", "er lights. Each plate had a napk-", "in on it."],
       choices: [
         { text: "picnic", correct: true },
         { text: "dinner" },
@@ -10693,8 +10693,8 @@ PP.addLesson({
       clue: "Clap each word. Which ones have only one beat?",
       why: "The answers are night and clown. Each has only one syllable, so it can never be split. Supper (sup-per), candy (can-dy) and marble (mar-ble) each have two syllables." },
     { id: "SK-GUM3-8-T4", type: "match", points: 2, dok: 2, passages: [],
-      prompt: "Each word was split at the end of a line. The | mark shows where the first line ends. Is each split correct?",
-      cols: ["Correct", "Not correct"],
+      prompt: "Each word below is broken for the end of a line. A bar (|) shows the break. Mark the right breaks and the wrong ones.",
+      cols: ["Right break", "Wrong break"],
       rows: [
         { text: "hel- | met", answer: 0 },
         { text: "kit- | ten", answer: 0 },
