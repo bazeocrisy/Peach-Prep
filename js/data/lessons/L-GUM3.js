@@ -68,19 +68,19 @@ PP.addLesson({
       draft: true,
       paragraphs: [
         [
-          "(1) Every Thursday, our class helps Mr. Alvarez set up the gym.",
-          "(2) This week, we are hanging banners for the big pep rally.",
+          "(1) Every Thursday afternoon, our class helps Mr. Alvarez set up the gym for the week.",
+          "(2) This week, we are hanging colorful banners on the walls for the big pep rally.",
           "(3) We wont have time to paint one more sign."
         ],
         [
-          "(4) Our school has just one mascot, a tiger named Rumble.",
+          "(4) Our school has just one mascot, a friendly orange tiger named Rumble.",
           "(5) The mascots costume was too big, so Simone pinned the sleeves.",
           "(6) The costume lost its tail, but it's still fun to wear."
         ],
         [
           "(7) By lunch, four banners were hanging from the ceiling.",
           "(8) Mr. Alvarez said he'll check the ropes before the rally.",
-          "(9) On Friday, we hope the whole school will cheer!"
+          "(9) On Friday morning, we hope the whole school will cheer loudly!"
         ]
       ]
     },
@@ -92,7 +92,7 @@ PP.addLesson({
       draft: true,
       paragraphs: [
         [
-          "(1) Last Saturday night, my sister and I watched the sky from our back steps.",
+          "(1) Last Saturday night, my sister and I watched the dark sky from our back steps for an hour.",
           "(2) The moon's light was so bright that we did not need a lamp.",
           "(3) Dad said that Jupiter isn't a star at all."
         ],
@@ -104,7 +104,7 @@ PP.addLesson({
         [
           "(7) Then clouds rolled in, so we couldnt see anything else.",
           "(8) She's going to draw the sky tomorrow.",
-          "(9) I hope the next clear night comes soon."
+          "(9) I hope the next clear night comes very soon."
         ]
       ]
     },
@@ -116,9 +116,9 @@ PP.addLesson({
       draft: true,
       paragraphs: [
         [
-          "(1) Join us at the big Saturday flea market on Maple Street!",
-          "(2) Families will sell toys, books, plants and old tools.",
-          "(3) You can buy a used bike for five dollars."
+          "(1) Join us at the big Saturday flea market on Maple Street this weekend!",
+          "(2) Families will sell toys, books, plants and old tools from tables along the sidewalk.",
+          "(3) You can buy a used bike for only five dollars."
         ],
         [
           "(4) Dont leave trash on the ground.",
@@ -131,9 +131,9 @@ PP.addLesson({
           "(9) We hope you'll come."
         ],
         [
-          "(10) Parking is free behind the church.",
-          "(11) Come early to get the best deals!",
-          "(12) We hope to see you there."
+          "(10) Parking is free in the big lot behind the church.",
+          "(11) Come early to get the very best deals!",
+          "(12) We hope to see you all there."
         ]
       ]
     },
@@ -145,7 +145,7 @@ PP.addLesson({
       draft: true,
       paragraphs: [
         [
-          "(1) In December, our class ran a toy drive for the hospital downtown.",
+          "(1) In December, our class ran a toy drive for the big hospital downtown.",
           "(2) Every morning, we checked the big cardboard box by the door.",
           "(3) Malik says the box wasnt even half full on Monday."
         ],
@@ -156,11 +156,11 @@ PP.addLesson({
         ],
         [
           "(7) By Friday, we had counted nine puzzles and six games.",
-          "(8) We felt proud of ourselves.",
-          "(9) Thanks to everyone who gave a toy!"
+          "(8) We felt very proud of ourselves.",
+          "(9) Thanks to everyone who gave a toy this month!"
         ],
         [
-          "(10) Next year, we want to collect even more."
+          "(10) Next year, we want to collect even more toys."
         ]
       ]
     },
@@ -172,7 +172,7 @@ PP.addLesson({
       draft: true,
       paragraphs: [
         [
-          "(1) On Sunday, my cousins and I went to a cookout at the lake.",
+          "(1) On Sunday afternoon, my cousins and I went to a big cookout at the lake near our town.",
           "(2) Uncle Ray's grill was already hot when we got there.",
           "(3) We couldn't wait to eat."
         ],
@@ -187,7 +187,7 @@ PP.addLesson({
           "(9) After lunch, the duck flapped its wings and flew away."
         ],
         [
-          "(10) We packed up our chairs and drove home before dark."
+          "(10) We packed up our chairs and drove home just before the sky grew dark."
         ]
       ]
     },
@@ -199,9 +199,9 @@ PP.addLesson({
       draft: true,
       paragraphs: [
         [
-          "(1) Bring your dog to our dog wash on Saturday morning!",
-          "(2) We're raising money for the animal shelter.",
-          "(3) Each wash costs four dollars."
+          "(1) Bring your dog to our dog wash on Saturday morning at the school parking lot!",
+          "(2) We're raising money for the local animal shelter in town.",
+          "(3) Each wash costs only four dollars per dog."
         ],
         [
           "(4) Please keep your dog on it's leash.",
@@ -214,9 +214,9 @@ PP.addLesson({
           "(9) We can't wait to meet your dog!"
         ],
         [
-          "(10) Every dollar helps a dog find a new home.",
+          "(10) Every single dollar helps a dog find a new home.",
           "(11) Bring a friend, and bring a smile!",
-          "(12) Thank you for helping us."
+          "(12) Thank you so much for helping us."
         ]
       ]
     }
@@ -1028,13 +1028,15 @@ PP.addLesson({
       passages: ["p5"],
       prompt: "Sentences 3 and 5 each hold one apostrophe word. Which statement about them is accurate?",
       choices: [
-        { text: "Couldn't is mistaken, since nobody owns anything in sentence 3, yet watermelon's is fine." },
-        { text: "Each is fine, as any word finishing in t or s takes an apostrophe." },
+        {
+          text: "Couldn't is mistaken, since nobody owns anything in sentence 3, yet watermelon's is fine as it stands in sentence 5."
+        },
+        { text: "Each is fine, as any word finishing in the letter t or the letter s takes an apostrophe at the end." },
         {
           text: "Couldn't is a squeezed form of could not, while watermelon's merely counts melons and ought to read watermelons.",
           correct: true
         },
-        { text: "Watermelon's is fine, since an apostrophe signals more than one melon." }
+        { text: "Watermelon's is fine, since an apostrophe signals more than one melon, and couldn't also needs a change." }
       ],
       clue: "An apostrophe needs a job: missing letters, or belonging to one owner. Ask what job each word is doing.",
       hints: [
@@ -1405,7 +1407,7 @@ PP.addLesson({
       draft: true,
       paragraphs: [
         [
-          "(1) On Tuesday, our class rode a bus to the state park.",
+          "(1) On Tuesday, our class rode a yellow bus to the state park.",
           "(2) A ranger named Ms. Bell met our class at the gate.",
           "(3) First, we walked past a pond where six geese were floating."
         ],
@@ -1417,10 +1419,10 @@ PP.addLesson({
         [
           "(7) She taught us about the lifes of the animals there.",
           "(8) We wrote notes about everything we saw.",
-          "(9) The bus got us back to school before dark."
+          "(9) The bus got us back to school safely before dark."
         ],
         [
-          "(10) I want to go back to the park next spring."
+          "(10) I want to go back to the park again next spring."
         ]
       ]
     },
@@ -1432,19 +1434,19 @@ PP.addLesson({
       draft: true,
       paragraphs: [
         [
-          "(1) Last winter, my family rented a cabin in the mountains.",
+          "(1) Last winter, my family rented a small cabin in the snowy mountains.",
           "(2) The snow was so deep that it covered our boots.",
           "(3) On the first morning, we saw four wolfs near the stream."
         ],
         [
-          "(4) We watched them from the porch.",
-          "(5) At dawn, a large flock flew over the roof.",
+          "(4) We watched them quietly from the wooden porch.",
+          "(5) At dawn, a large flock of birds flew over the roof.",
           "(6) My cousins and I counted them twice."
         ],
         [
           "(7) Mom put the dishes on two shelfs by the stove.",
           "(8) Dad told stories until the fire burned low.",
-          "(9) We hoped to come back to the cabin next winter.",
+          "(9) We hoped to come back to the cozy cabin next winter.",
           "(10) On the last night, we all sat by the window and watched the snow."
         ]
       ]
@@ -1457,13 +1459,13 @@ PP.addLesson({
       draft: true,
       paragraphs: [
         [
-          "(1) Welcome to Willow Farm!",
+          "(1) Welcome to Willow Farm in the green valley!",
           "(2) Our visitors love to meet the baby goats.",
           "(3) This spring, four calfs were born in the red barn."
         ],
         [
           "(4) The sheeps graze in the north field.",
-          "(5) Please do not feed the ponies.",
+          "(5) Please do not feed the ponies or touch their manes.",
           "(6) Two wagons take visitors around the farm on Saturdays."
         ],
         [
@@ -1514,9 +1516,9 @@ PP.addLesson({
       draft: true,
       paragraphs: [
         [
-          "(1) Last February, a big blizzard hit our town.",
+          "(1) Last February, a big blizzard hit our small town overnight.",
           "(2) School was closed, so my brother and I stayed home.",
-          "(3) We looked out the window and saw two men shoveling snow."
+          "(3) We looked out the window and saw two men shoveling snow from their driveways."
         ],
         [
           "(4) Dad made hot cocoa for everyone.",
@@ -1528,7 +1530,10 @@ PP.addLesson({
           "(8) We played board games by the window.",
           "(9) The next day, the sun came out and the snow began to melt."
         ],
-        ["(10) It was the best snow day ever.", "(11) I hope it snows again next year."]
+        [
+          "(10) It was the best snow day ever for me.",
+          "(11) I hope it snows again next year."
+        ]
       ]
     },
     {
@@ -1539,19 +1544,19 @@ PP.addLesson({
       draft: true,
       paragraphs: [
         [
-          "(1) Join our costume contest at the town hall on Friday night!",
+          "(1) Join our fun costume contest at the town hall on Friday night!",
           "(2) Everyone is invited, from tiny babies to grandparents.",
           "(3) Last year, we saw three elfs and a very tall robot."
         ],
         [
-          "(4) This year, there will be prizes for the funniest costume.",
+          "(4) This year, there will be prizes for the funniest costume of the night.",
           "(5) Two judges will walk around the room.",
           "(6) Wear shoes that are comfortable, because your feets can get tired from dancing."
         ],
         [
-          "(7) Dancing starts at seven o'clock.",
+          "(7) Dancing starts at seven o'clock sharp.",
           "(8) We will serve hot chocolate and warm pretzels.",
-          "(9) We hope to see you there!"
+          "(9) We hope to see you all there!"
         ],
         [
           "(10) Bring a friend, and bring a smile.",
@@ -2194,13 +2199,13 @@ PP.addLesson({
       partB: {
         prompt: "What explains the pick you made first?",
         choices: [
-          { text: "Wolf is one of the nouns that never change, so one and many look alike." },
-          { text: "Wolf swaps vowels inside, so the plural shows a new vowel." },
+          { text: "Wolf is one of the nouns that never change, so the word for one and the word for many look exactly alike." },
+          { text: "Wolf swaps a vowel inside the word, so the plural shows a brand new vowel sound in the middle." },
           {
             text: "Wolf ends in f, and an f like this turns into v before the plural ending, as in elf and elves.",
             correct: true
           },
-          { text: "Wolf takes -en at the end, so the plural is spelled with those letters." }
+          { text: "Wolf takes -en at the end, so the plural is spelled with those letters, as in ox and oxen." }
         ]
       },
       clue: "Say the noun for one, then decide how it changes when it means more than one.",
@@ -2837,7 +2842,7 @@ PP.addLesson({
       paragraphs: [
         [
           "(1) Welcome to Room 12 News!",
-          "(2) Here is what happened in our class this week."
+          "(2) Here is what happened in our busy class this week."
         ],
         [
           "(3) On Monday, we meeted a real beekeeper named Mr. Cho.",
@@ -2848,10 +2853,10 @@ PP.addLesson({
         [
           "(7) On Wednesday, we sold painted rocks at the school gate.",
           "(8) We spended the money on new books for the library.",
-          "(9) Everyone was proud of the work."
+          "(9) Everyone was proud of the hard work we did."
         ],
         [
-          "(10) On Friday, the weather turned cold, so we stayed inside.",
+          "(10) On Friday, the weather turned cold, so we stayed inside the warm room.",
           "(11) Thank you for reading, and see you next week!"
         ]
       ]
@@ -2864,7 +2869,7 @@ PP.addLesson({
       draft: true,
       paragraphs: [
         [
-          "(1) Last Sunday, my family hiked to a waterfall in the mountains.",
+          "(1) Last Sunday, my family hiked to a tall waterfall in the quiet mountains.",
           "(2) Dad carried the water bottles in his backpack.",
           "(3) After an hour, we comed to a bridge over a stream."
         ],
@@ -2878,7 +2883,10 @@ PP.addLesson({
           "(8) Soon we heard a loud roar.",
           "(9) The water splashed over the rocks and sprayed our faces."
         ],
-        ["(10) We ate sandwiches on a flat rock.", "(11) It was a perfect day."]
+        [
+          "(10) We ate our sandwiches on a big flat rock.",
+          "(11) It was a perfect day for a hike."
+        ]
       ]
     },
     {
@@ -2889,8 +2897,8 @@ PP.addLesson({
       draft: true,
       paragraphs: [
         [
-          "(1) Last year, I begged my parents for a pet.",
-          "(2) Finally, Dad took me to the pet store on Elm Street.",
+          "(1) Last year, I begged my parents for a pet every single day.",
+          "(2) Finally, Dad took me to the big pet store on Elm Street.",
           "(3) He payed for a small hamster and a wheel."
         ],
         [
@@ -2901,9 +2909,11 @@ PP.addLesson({
         [
           "(7) My mom agreed he could sleep in my room.",
           "(8) At midnight, Biscuit creeped out of his cage, and I finded him before he reached the door.",
-          "(9) I was too tired to be upset."
+          "(9) I was too tired to be upset with him."
         ],
-        ["(10) Now Biscuit has a lid on his cage."]
+        [
+          "(10) Now Biscuit has a heavy lid on his cage at night."
+        ]
       ]
     },
     {
@@ -2914,8 +2924,8 @@ PP.addLesson({
       draft: true,
       paragraphs: [
         [
-          "(1) Welcome to Camp Lakeside News!",
-          "(2) Here is what the campers did this week."
+          "(1) Welcome to the Camp Lakeside News this week!",
+          "(2) Here is what the happy campers did this week."
         ],
         [
           "(3) On Tuesday, the older kids builded a raft from wood and rope.",
@@ -2926,10 +2936,10 @@ PP.addLesson({
         [
           "(7) On Thursday, a camper named Priya forgived her brother for losing her sock.",
           "(8) I knowed it was hard to do.",
-          "(9) We ended the night with songs by the fire."
+          "(9) We ended the night with silly songs by the warm fire."
         ],
         [
-          "(10) On Saturday, we packed our bags and rode home.",
+          "(10) On Saturday morning, we packed our bags and rode home on the bus.",
           "(11) See you next summer!"
         ]
       ]
@@ -4192,20 +4202,20 @@ PP.addLesson({
       draft: true,
       paragraphs: [
         [
-          "(1) Last Friday, our class drew chalk art on the sidewalk by the gym.",
+          "(1) Last Friday, our class drew colorful chalk art on the sidewalk by the gym.",
           "(2) Ms. Rao gave each of us a bucket of colorful chalk.",
           "(3) My whale was going to be huge, and the sidewalk square was too small, or I drew a small one."
         ],
         [
-          "(4) My friend Omar drew a bright sun with a big smile.",
-          "(5) Then the sky grew gray.",
+          "(4) My friend Omar drew a bright yellow sun with a big happy smile.",
+          "(5) Then the whole sky grew gray.",
           "(6) The rain clouds looked dark.",
           "(7) We kept drawing."
         ],
         [
-          "(8) Soon the first drops fell, and we ran inside.",
-          "(9) Our art washed away, but we had fun.",
-          "(10) Next time, we will check the weather first."
+          "(8) Soon the first big drops fell, and we ran inside the gym.",
+          "(9) Our art washed away, but we had a lot of fun.",
+          "(10) Next time, we will check the weather report first."
         ]
       ]
     },
@@ -4217,7 +4227,7 @@ PP.addLesson({
       draft: true,
       paragraphs: [
         [
-          "(1) On Saturday, I had my first swim lesson at the town pool.",
+          "(1) On Saturday, I had my first swim lesson at the big town pool by my house.",
           "(2) I was nervous, but my coach smiled and waved."
         ],
         [
@@ -4228,9 +4238,11 @@ PP.addLesson({
         ],
         [
           "(7) I kicked hard, for I wanted to reach the wall.",
-          "(8) My coach clapped when I touched it."
+          "(8) My coach clapped loudly when I touched it."
         ],
-        ["(9) I cannot wait for next Saturday."]
+        [
+          "(9) I cannot wait for next Saturday to come."
+        ]
       ]
     },
     {
@@ -4266,20 +4278,20 @@ PP.addLesson({
       draft: true,
       paragraphs: [
         [
-          "(1) Last October, our town held a scarecrow contest in the park.",
-          "(2) Each family got a pile of old clothes and a bag of straw.",
+          "(1) Last October, our town held a big scarecrow contest in the park.",
+          "(2) Each family got a big pile of old clothes and a big bag of fresh straw.",
           "(3) My dad wanted to make a pirate, and we did not have a hat, or we used a paper bag."
         ],
         [
-          "(4) My sister gave our scarecrow a big red nose.",
-          "(5) Then the wind began to blow.",
+          "(4) My sister gave our scarecrow a big round red nose.",
+          "(5) Then the cold wind began to blow.",
           "(6) The scarecrows shook on their poles.",
           "(7) Nobody left the park.",
-          "(8) Soon the judges walked past our scarecrow."
+          "(8) Soon the judges walked slowly past our scarecrow."
         ],
         [
-          "(9) Our scarecrow did not win, but we got a ribbon for trying.",
-          "(10) Next year, we will make two."
+          "(9) Our scarecrow did not win, but we got a shiny ribbon for trying.",
+          "(10) Next year, we will make two scarecrows."
         ]
       ]
     },
@@ -4301,10 +4313,10 @@ PP.addLesson({
           "(6) I spilled syrup on my shirt, but I did not mind."
         ],
         [
-          "(7) By four o'clock, the ice was gone.",
+          "(7) By four o'clock, all of the ice was gone.",
           "(8) We counted the money and cleaned the stand.",
-          "(9) Our class raised enough to buy two new soccer balls.",
-          "(10) Everyone agreed that it was our best day of the year."
+          "(9) Our class raised enough money to buy two new soccer balls.",
+          "(10) Everyone agreed that it was our very best day of the whole year."
         ]
       ]
     }
@@ -5198,9 +5210,9 @@ PP.addLesson({
       prompt: "Only one choice links two complete sentences with a joining word. Which choice is it?",
       choices: [
         { text: "Pedro hurt his knee, so he sat on the bench.", correct: true },
-        { text: "Mom added salt and pepper." },
-        { text: "The box was small but heavy." },
-        { text: "Is the soup hot or cold?" }
+        { text: "Mom added salt and pepper to the hot soup." },
+        { text: "The box was small but very heavy to carry." },
+        { text: "Is the soup hot or cold on a snowy day?" }
       ],
       clue: "A joining word can connect words, groups of words, or whole sentences. Look at what is on each side.",
       hints: [
@@ -5504,9 +5516,9 @@ PP.addLesson({
       draft: true,
       paragraphs: [
         [
-          "(1) Every June, our town holds Fleet Day at the harbor.",
+          "(1) Every June, our town holds Fleet Day at the busy harbor.",
           "(2) A fleet of fishing boats sails past the dock in a long line.",
-          "(3) The whole crowd gathers on the pier to watch."
+          "(3) The whole crowd gathers on the old pier to watch."
         ],
         [
           "(4) Together, the crowd cheer for the lead boat.",
@@ -5516,7 +5528,7 @@ PP.addLesson({
         [
           "(7) After the parade, a band played songs by the water.",
           "(8) My little brother showed courage when he climbed the rope net.",
-          "(9) We stayed until the sun went down."
+          "(9) We stayed until the sun went down behind the hills."
         ],
         [
           "(10) I cannot wait for Fleet Day next year."
@@ -5532,19 +5544,19 @@ PP.addLesson({
       paragraphs: [
         [
           "(1) On Tuesday, our school orchestra practiced for the spring concert.",
-          "(2) A small audience of teachers sat in the back of the hall.",
+          "(2) A small audience of teachers sat quietly in the back of the big hall.",
           "(3) The whole orchestra were ready to play, and the audience were quiet."
         ],
         [
-          "(4) At first, the violins played too fast.",
+          "(4) At first, the violins played much too fast and loud.",
           "(5) Mr. Bell showed patience and asked us to start again.",
           "(6) Soon the group sounded smooth and clear."
         ],
         [
           "(7) After rehearsal, the class felt excitement about the concert.",
           "(8) The staff in the front office clapped from the hall.",
-          "(9) I hope my family comes to hear us.",
-          "(10) The concert is on Friday at seven o'clock."
+          "(9) I hope my family comes to hear us play on Friday.",
+          "(10) The concert is on Friday evening at seven o'clock."
         ]
       ]
     },
@@ -5556,14 +5568,14 @@ PP.addLesson({
       draft: true,
       paragraphs: [
         [
-          "(1) Last week, our class set up an ant farm.",
+          "(1) Last week, our class set up a new ant farm.",
           "(2) A colony of ants moved into the clear plastic box.",
-          "(3) Ms. Ruiz told us to be gentle with them."
+          "(3) Ms. Ruiz told us to be very gentle with them."
         ],
         [
-          "(4) Each day, we watch the ants dig tunnels.",
+          "(4) Each day, we watch the ants dig long tunnels in the sand.",
           "(5) The colony work together to find food.",
-          "(6) Their teamwork amazes everyone."
+          "(6) Their teamwork amazes everyone in our class."
         ],
         [
           "(7) Every student feels curiosity about the tiny tunnels.",
@@ -5571,8 +5583,8 @@ PP.addLesson({
           "(9) We hope the colony stay healthy."
         ],
         [
-          "(10) Next week, we will make a chart of our findings.",
-          "(11) Ms. Ruiz says we can watch the farm for two more weeks."
+          "(10) Next week, we will make a big chart of our findings.",
+          "(11) Ms. Ruiz says we can watch the farm closely for two more weeks."
         ]
       ]
     },
@@ -5584,9 +5596,9 @@ PP.addLesson({
       draft: true,
       paragraphs: [
         [
-          "(1) Every Saturday, a ferry carries visitors to the island.",
+          "(1) Every Saturday, a ferry carries visitors to the small island.",
           "(2) A pod of dolphins often swims beside the boat.",
-          "(3) The whole crowd rushes to the rail to look."
+          "(3) The whole crowd rushes to the rail to look at them."
         ],
         [
           "(4) Together, the crowd gasp when a dolphin jumps.",
@@ -5611,12 +5623,12 @@ PP.addLesson({
       draft: true,
       paragraphs: [
         [
-          "(1) On Saturday, our town held a pet show at the park.",
+          "(1) On Saturday, our town held a pet show at the big park.",
           "(2) The judge, Ms. Ortega, held up a gold ribbon.",
           "(3) The panel have chosen a winner, and the group have cheered."
         ],
         [
-          "(4) At first, the puppies ran in circles.",
+          "(4) At first, the puppies ran in happy circles.",
           "(5) My neighbor's old dog showed loyalty, because it stayed by her side.",
           "(6) A litter of kittens slept in a basket near the gate.",
           "(7) Soon the judges chose a winner."
@@ -5624,7 +5636,7 @@ PP.addLesson({
         [
           "(8) After the show, my sister felt relief because her dog behaved.",
           "(9) Everyone agreed that it was a fun day.",
-          "(10) We took home a blue ribbon and a bag of treats."
+          "(10) We took home a blue ribbon and a bag of treats for the dog."
         ]
       ]
     },
@@ -5636,14 +5648,14 @@ PP.addLesson({
       draft: true,
       paragraphs: [
         [
-          "(1) Last month, our class started a bird watching club.",
+          "(1) Last month, our class started a bird watching club at school.",
           "(2) A flock of geese landed on the field behind the school.",
-          "(3) Mr. Haas told us to stay quiet and still."
+          "(3) Mr. Haas told us to stay quiet and very still."
         ],
         [
-          "(4) Each morning, we count the birds that visit the field.",
+          "(4) Each morning, we count the birds that visit the wide green field.",
           "(5) The flock stay close together when they eat.",
-          "(6) Their beauty is amazing."
+          "(6) Their beauty is amazing to watch."
         ],
         [
           "(7) Each member smiles when we spot a rare bird.",
@@ -5651,8 +5663,8 @@ PP.addLesson({
           "(9) Everyone hopes the flock return tomorrow."
         ],
         [
-          "(10) Next month, we will draw pictures of our favorite birds.",
-          "(11) I hope to see a hawk someday."
+          "(10) Next month, we will draw colorful pictures of our favorite birds at home.",
+          "(11) I hope to see a hawk someday soon."
         ]
       ]
     }
@@ -6834,15 +6846,15 @@ PP.addLesson({
         [
           "(4) We measured every board with a long tape.",
           "(5) Luis hurt hisself on a splinter, so we found a bandage.",
-          "(6) The next day, the treehouse looked finished."
+          "(6) The next day, the treehouse looked finished and strong."
         ],
         [
           "(7) We were proud of ourself.",
-          "(8) Mom made us a snack to celebrate.",
+          "(8) Mom made us a tasty snack to celebrate.",
           "(9) She told us that we could add a rope ladder next summer."
         ],
         [
-          "(10) Now the treehouse has a small flag on top.",
+          "(10) Now the treehouse has a small red flag on top.",
           "(11) We plan to sleep inside it on the first cool night."
         ]
       ]
@@ -6867,8 +6879,8 @@ PP.addLesson({
         [
           "(7) The old fox puppet fell and bumped themselves on the floor.",
           "(8) The first graders asked for a second show.",
-          "(9) We promised to practice more at home.",
-          "(10) It was a loud and happy afternoon."
+          "(9) We promised to practice more at home every day.",
+          "(10) It was a loud and happy afternoon for everyone."
         ]
       ]
     },
@@ -6895,7 +6907,7 @@ PP.addLesson({
           "(9) She brushed himself off and tried one more time."
         ],
         [
-          "(10) Now I can do a cartwheel by myself.",
+          "(10) Now I can do a cartwheel by myself on the grass.",
           "(11) Next, I want to learn how to do a handstand."
         ]
       ]
@@ -6908,22 +6920,22 @@ PP.addLesson({
       draft: true,
       paragraphs: [
         [
-          "(1) Last Saturday, my cousin Theo and I built a huge sandcastle.",
+          "(1) Last Saturday, my cousin Theo and I built a huge sandcastle on the beach.",
           "(2) Theo and myself dug a deep moat around it.",
-          "(3) Grandpa showed us how to pack the wet sand."
+          "(3) Grandpa showed us how to pack the wet sand tightly."
         ],
         [
-          "(4) We carried water in a bucket from the waves.",
+          "(4) We carried water in a blue bucket from the waves.",
           "(5) Theo splashed hisself with cold water, so we laughed.",
-          "(6) By noon, the castle had four tall towers."
+          "(6) By noon, the castle had four tall towers and a bridge."
         ],
         [
           "(7) The older kids next to us built a castle by theirselves.",
-          "(8) Aunt Jo took a photo to celebrate.",
-          "(9) She said we could enter the contest next summer."
+          "(8) Aunt Jo took a photo of our castle to celebrate.",
+          "(9) She said we could enter the contest at the beach next summer."
         ],
         [
-          "(10) That night, the waves washed our castle away."
+          "(10) That night, the high waves washed our castle away."
         ]
       ]
     },
@@ -6935,8 +6947,8 @@ PP.addLesson({
       draft: true,
       paragraphs: [
         [
-          "(1) On Tuesday, our class held a sewing club after school.",
-          "(2) My partner Gus made a pillow, and I made a bookmark.",
+          "(1) On Tuesday, our class held a sewing club after school in the art room.",
+          "(2) My partner Gus made a soft blue pillow, and I made a bookmark.",
           "(3) Gus sewed a blue star onto the pillow all by himself."
         ],
         [
@@ -6946,9 +6958,9 @@ PP.addLesson({
         ],
         [
           "(7) The loose thread caught on a nail and pulled themselves tight.",
-          "(8) The teacher asked for a second club next week.",
-          "(9) Everyone promised to practice more at home.",
-          "(10) The room was quiet and full of busy hands."
+          "(8) The teacher asked for a second club meeting next week.",
+          "(9) Everyone promised to practice more at home this week.",
+          "(10) The room was quiet and full of busy little hands."
         ]
       ]
     },
@@ -6960,9 +6972,9 @@ PP.addLesson({
       draft: true,
       paragraphs: [
         [
-          "(1) Last month, I joined a pottery class at the art center.",
-          "(2) My teacher, Mr. Singh, showed us how to shape a bowl.",
-          "(3) He told us to keep the clay wet."
+          "(1) Last month, I joined a pottery class at the art center downtown.",
+          "(2) My teacher, Mr. Singh, showed us how to shape a clay bowl.",
+          "(3) He told us to keep the clay wet and soft."
         ],
         [
           "(4) At first, I dropped my bowl and surprised myself.",
@@ -6974,7 +6986,9 @@ PP.addLesson({
           "(8) Mr. Singh told me to be kind to myself.",
           "(9) My friend Tessa admired himself in the shiny glaze."
         ],
-        ["(10) Now I can shape a bowl by myself."]
+        [
+          "(10) Now I can shape a round bowl by myself."
+        ]
       ]
     }
     /* B6:passages:end */
@@ -8034,7 +8048,7 @@ PP.addLesson({
       "When you join two complete sentences with a joining word (and, but, or, so), put a comma right before it: The bell rang, and we lined up.",
       "Test it: cover the joining word. Can each side stand alone as a sentence, with a naming part and a doing part? If yes, add the comma.",
       "If one side cannot stand alone, do not add a comma: We sang and danced. (Danced is not a sentence by itself.)",
-      "The comma goes before the joining word, never after it.",
+      "The comma goes before the joining word, never after it. Some writers skip the comma when both sentences are very short, like I ran and he hid. On this test, use the comma whenever both sides are complete sentences.",
       "A comma alone cannot join two sentences. You need the joining word too."
     ],
     words: [
@@ -8091,8 +8105,8 @@ PP.addLesson({
       draft: true,
       paragraphs: [
         [
-          "(1) Last Sunday, Dad took me to play mini golf.",
-          "(2) The course had a windmill and a tiny castle.",
+          "(1) Last Sunday afternoon, Dad took me to play mini golf.",
+          "(2) The course had a spinning windmill and a tiny castle.",
           "(3) I wanted to hit a hole in one, but my ball rolled into the water."
         ],
         [
@@ -8105,7 +8119,7 @@ PP.addLesson({
           "(8) We shook hands and, we went for ice cream."
         ],
         [
-          "(9) It was the best Sunday of the summer.",
+          "(9) It was the best Sunday of the whole summer.",
           "(10) I hope we can go back again soon."
         ]
       ]
@@ -8118,8 +8132,8 @@ PP.addLesson({
       draft: true,
       paragraphs: [
         [
-          "(1) My friends and I built a clubhouse behind the garage.",
-          "(2) We used old boards and a blue tarp.",
+          "(1) My friends and I built a small clubhouse behind the old red garage.",
+          "(2) We used old boards and a big blue tarp.",
           "(3) Mia hammered the nails, and Jo held the boards."
         ],
         [
@@ -8133,7 +8147,7 @@ PP.addLesson({
           "(9) Mia grabbed the broom and Jo grabbed the dustpan so we cleaned up quickly."
         ],
         [
-          "(10) Now we have a place to hide on rainy days."
+          "(10) Now we have a dry place to hide on cold rainy days."
         ]
       ]
     },
@@ -8145,7 +8159,7 @@ PP.addLesson({
       draft: true,
       paragraphs: [
         [
-          "(1) Our school gym has a new climbing wall.",
+          "(1) Our school gym has a new tall climbing wall.",
           "(2) The wall is tall, but it has soft mats at the bottom.",
           "(3) Mr. Cole checks every harness, and he makes sure the ropes are tight."
         ],
@@ -8155,10 +8169,10 @@ PP.addLesson({
           "(6) My hands shook but, I held on tight."
         ],
         [
-          "(7) Now everyone wants a turn.",
+          "(7) Now everyone in our class wants a long turn on the wall.",
           "(8) The line is long, but nobody minds waiting.",
-          "(9) Mr. Cole says we can all try next week.",
-          "(10) I cannot wait to reach the top."
+          "(9) Mr. Cole says we can all try the wall next week after school.",
+          "(10) I cannot wait to reach the very top."
         ]
       ]
     },
@@ -8170,8 +8184,8 @@ PP.addLesson({
       draft: true,
       paragraphs: [
         [
-          "(1) Last Friday, our camp had zipline day.",
-          "(2) The zipline ran over a pond and through tall pine trees.",
+          "(1) Last Friday, our camp had a special zipline day.",
+          "(2) The zipline ran over a calm pond and through tall green pine trees.",
           "(3) I felt nervous, but my counselor showed me the safety rules."
         ],
         [
@@ -8183,7 +8197,10 @@ PP.addLesson({
           "(7) Next time, I can ride in the morning, or I can ride after lunch.",
           "(8) I waved goodbye and, I ran to tell my friends."
         ],
-        ["(9) It was the best day of camp.", "(10) I want to go again next summer."]
+        [
+          "(9) It was the best day of camp this year.",
+          "(10) I want to go again next summer with my cabin mates."
+        ]
       ]
     },
     {
@@ -8196,12 +8213,12 @@ PP.addLesson({
         [
           "(1) On Saturday, our town held a hayride night at the Miller farm.",
           "(2) We rode in a wagon pulled by two horses.",
-          "(3) Dad held the blanket, and I held the cocoa."
+          "(3) The driver tipped his hat, and the horses started to walk."
         ],
         [
-          "(4) The wagon bumped over the hill so we held on tight.",
-          "(5) Mia wanted to sing, but the horses were too loud.",
-          "(6) We passed a barn and waved to the farmer."
+          "(4) The wagon bumped over the hill so we gripped the rail.",
+          "(5) The singers were happy, but the horses snorted at them.",
+          "(6) We rolled past a barn and counted twelve cows."
         ],
         [
           "(7) We could stop at the pond, or we could ride to the barn.",
@@ -8219,20 +8236,20 @@ PP.addLesson({
       draft: true,
       paragraphs: [
         [
-          "(1) Our class visited a corn maze on a cool October morning.",
-          "(2) The corn was tall, but the paths were wide.",
-          "(3) The guide hands out maps, and he tells us where the exits are."
+          "(1) Our class visited a big corn maze on a cool sunny October morning.",
+          "(2) The corn stood high, but the paths were wide.",
+          "(3) The guide gives out maps, and one sign points to the exits."
         ],
         [
           "(4) Kofi grabbed a map, and led our group.",
-          "(5) I wanted to turn left, so I pointed at the sign.",
+          "(5) The left path looked shorter, so our group turned that way.",
           "(6) We walked in circles but, we finally found the exit."
         ],
         [
-          "(7) Everyone cheered when we got out.",
+          "(7) Everyone cheered loudly when we finally got out.",
           "(8) We were tired, but we were proud.",
-          "(9) The guide said we can all come back next year.",
-          "(10) I hope the corn will be shorter by then."
+          "(9) The guide said we can all come back next year with our families.",
+          "(10) I hope the corn will be a little shorter by then."
         ]
       ]
     }
@@ -8252,10 +8269,10 @@ PP.addLesson({
     { id: "SK-GUM3-7-P2", type: "hottext", points: 1, dok: 2, passages: [],
       prompt: "Select the sentence that needs a comma.",
       options: [
-        "Grandpa grilled corn and baked a pie.",
+        "Grandpa grilled fresh corn and baked a pie for dessert.",
         "The bus was late this morning so we missed the first bell.",
-        "Rosa likes cats and dogs.",
-        "We picked apples, and Dad made applesauce."
+        "Rosa likes cats and dogs more than any other pets.",
+        "We picked apples all morning, and Dad made applesauce."
       ],
       answer: [1], pick: 1,
       clue: "Cover the joining word in each sentence. Look for one where both sides are complete sentences but there is no comma yet.",
@@ -8684,10 +8701,10 @@ PP.addLesson({
             ],
             passages: [],
             prompt: "The sentence joins two complete sentences with only a comma. Choose the words that fix it.",
-            text: "The baby fell asleep{0} we tiptoed out of the room.",
+            text: "The pond looked freezing{0} we jumped in anyway.",
             slots: [
               {
-                options: [", so", ",", " so,"],
+                options: [", yet", ",", " yet,"],
                 answer: 0
               }
             ],
@@ -8700,10 +8717,10 @@ PP.addLesson({
             how: [
               "Both parts are complete sentences, and a comma alone cannot join them.",
               "The sentence needs a joining word, with the comma right before it.",
-              "The answer is a comma, then so. A comma after so is in the wrong place."
+              "The answer is a comma, then yet. A comma after yet is in the wrong place."
             ],
             misconception: "A common mix-up is thinking a comma alone can join sentences. It needs a joining word with it.",
-            why: "The answer is a comma and then so. The baby fell asleep, so we tiptoed out. A comma alone cannot join two sentences, and a comma after so is in the wrong place."
+            why: "The answer is a comma and then yet. The pond looked freezing, yet we jumped in anyway. A comma alone cannot join two sentences, and a comma after yet is in the wrong place."
           },
           {
             id: "SK-GUM3-7-C15",
@@ -8749,12 +8766,12 @@ PP.addLesson({
         "3.L.GC.1:M:use-commas-with-coordinating-conjunctions-to-joi"
       ],
       passages: [],
-      prompt: "Select the sentence that needs a comma.",
+      prompt: "Which line is missing a comma?",
       options: [
-        "Mara baked bread and made soup.",
-        "It started to snow hard so we built a tall snowman in the yard.",
-        "Salt and pepper sat on the shelf.",
-        "We played tag, and Dad watched."
+        "Nina folded the clean towels and put them in the hall closet.",
+        "The storm knocked out the power so we ate dinner by candlelight.",
+        "Frogs and turtles live in the shallow creek behind our school.",
+        "Leo kicked the ball across the wide field, and Ava caught it near the fence."
       ],
       answer: [1],
       pick: 1,
@@ -8762,15 +8779,15 @@ PP.addLesson({
       hints: [
         "Cover the joining word in each sentence. Check what each side could be by itself.",
         "Check the sentences one at a time. Ask whether the part after the joining word has its own naming part.",
-        "The tag sentence already has its comma in the right place. Check the other three sentences."
+        "Frogs and turtles joins two things, not two sentences. Check the other three sentences."
       ],
       how: [
         "Cover the joining word in each sentence and check both sides.",
-        "Mara baked bread and made soup joins two actions, and Salt and pepper joins two things, so neither needs a comma. The tag sentence already has its comma.",
-        "\"It started to snow hard\" and \"we built a tall snowman in the yard\" are both complete sentences, so the sentence needs a comma before so."
+        "Nina folded the clean towels and put them in the hall closet joins two actions, and Frogs and turtles joins two things, so neither needs a comma. The sentence about Leo already has its comma.",
+        "\"The storm knocked out the power\" and \"we ate dinner by candlelight\" are both complete sentences, so the sentence needs a comma before so."
       ],
       misconception: "A common mix-up is adding a comma before every joining word. Only add it when both sides could stand alone.",
-      why: "The answer is \"It started to snow hard so we built a tall snowman in the yard.\" Both sides are complete sentences, so it needs a comma before so. The other sentences join words or actions, or already have the comma.",
+      why: "The answer is \"The storm knocked out the power so we ate dinner by candlelight.\" Both sides are complete sentences, so it needs a comma before so. The other sentences join words or actions, or already have the comma.",
       like: ["SK-GUM3-7-P2"]
     },
     {
@@ -8782,28 +8799,28 @@ PP.addLesson({
         "3.L.GC.1:M:use-commas-with-coordinating-conjunctions-to-joi"
       ],
       passages: [],
-      prompt: "Which TWO sentences are punctuated correctly?",
+      prompt: "Pick the two lines with correct commas.",
       pick: 2,
       choices: [
-        { text: "Pablo can swim and dive.", correct: true },
-        { text: "I like tea but, my sister likes juice." },
-        { text: "The movie ended, and everyone clapped.", correct: true },
-        { text: "Our team lost the game so we went for pizza." },
-        { text: "Lena ran home, and told her mom." }
+        { text: "Ruth can paint and sketch.", correct: true },
+        { text: "We ate lunch early but, the park was still crowded." },
+        { text: "The bell rang, and the students lined up outside.", correct: true },
+        { text: "Our class cleaned the room so we left on time." },
+        { text: "Tomas walked to school, and waved at his friend." }
       ],
       clue: "For each sentence, cover the joining word and check both sides. Then check where the comma is, or whether one is missing.",
       hints: [
         "For each sentence, cover the joining word and check both sides. Then check where the comma is, or whether one is missing.",
         "Look at the part after the joining word in each sentence. Ask whether it could stand alone as a sentence.",
-        "Lena ran home, and told her mom has a comma before something that cannot stand alone. Decide about the other four."
+        "Tomas walked to school, and waved at his friend has a comma before something that cannot stand alone. Decide about the other four."
       ],
       how: [
         "Cover the joining word in each sentence and check both sides.",
-        "\"The movie ended, and everyone clapped\" has two complete sentences and a comma before and. \"Pablo can swim and dive\" joins two actions, so it needs no comma.",
-        "The others are wrong: Lena's comma should come out, the tea sentence has the comma after but, and the team sentence needs a comma before so."
+        "\"The bell rang, and the students lined up outside\" has two complete sentences and a comma before and. \"Ruth can paint and sketch\" joins two actions, so it needs no comma.",
+        "The others are wrong: the comma in the Tomas sentence should come out, the lunch sentence has the comma after but, and the class sentence needs a comma before so."
       ],
       misconception: "A common mix-up is adding a comma before every joining word. Some sentences need no comma, and some need it somewhere else.",
-      why: "The answers are \"The movie ended, and everyone clapped.\" and \"Pablo can swim and dive.\" The first joins two complete sentences with a comma before and, and the second joins two actions, so it needs no comma. The others have a comma where none belongs, after the joining word, or missing.",
+      why: "The answers are \"The bell rang, and the students lined up outside.\" and \"Ruth can paint and sketch.\" The first joins two complete sentences with a comma before and, and the second joins two actions, so it needs no comma. The others have a comma where none belongs, after the joining word, or missing.",
       like: ["SK-GUM3-7-P4"]
     },
     {
@@ -8814,9 +8831,9 @@ PP.addLesson({
       std: [
         "3.L.GC.1:M:use-commas-with-coordinating-conjunctions-to-joi"
       ],
-      passages: ["p4"],
-      prompt: "Sentence 6 of the draft is missing a comma. Which words belong in the blank?",
-      text: "The ride was fast{0} I laughed the whole way down.",
+      passages: [],
+      prompt: "Which choice completes the sentence correctly?",
+      text: "The pool was crowded{0} we left early.",
       slots: [
         {
           options: [" so,", ", so", " so"],
@@ -8826,12 +8843,12 @@ PP.addLesson({
       clue: "Find the joining word. Then decide whether both sides could stand alone as sentences.",
       hints: [
         "Find the joining word. Then decide whether both sides could stand alone as sentences.",
-        "Read sentence 6 and cover the joining word. Say each side by itself.",
+        "Say each side by itself. Then try each choice in the blank.",
         "A comma right after the joining word is never correct here. Decide between the other two."
       ],
       how: [
         "The joining word is so. Cover it.",
-        "\"The ride was fast\" and \"I laughed the whole way down\" are both complete sentences.",
+        "\"The pool was crowded\" and \"we left early\" are both complete sentences.",
         "Two complete sentences joined by so need a comma right before so. The answer is a comma, then so."
       ],
       misconception: "A common mix-up is putting the comma after the joining word. The comma goes before it.",
@@ -8847,7 +8864,7 @@ PP.addLesson({
         "3.L.GC.1:M:use-commas-with-coordinating-conjunctions-to-joi"
       ],
       passages: ["p4"],
-      prompt: "Which revision fixes the comma problem in the fifth sentence of the draft?",
+      prompt: "What is the best way to correct line 5?",
       choices: [
         { text: "I took a deep breath and, I stepped off the platform." },
         { text: "I took a deep breath, I stepped off the platform." },
@@ -8878,9 +8895,9 @@ PP.addLesson({
         "3.L.GC.1:M:use-commas-with-coordinating-conjunctions-to-joi"
       ],
       passages: ["p4"],
-      prompt: "This question has two parts. Answer Part A, then Part B.",
+      prompt: "Complete both items below.",
       partA: {
-        prompt: "Look at the last sentence of the third paragraph in the draft. Which revision puts the comma in the right place?",
+        prompt: "Which version of the last line in paragraph 3 is punctuated correctly?",
         choices: [
           { text: "I waved goodbye and, I ran to tell my friends." },
           { text: "I waved goodbye, and I ran to tell my friends.", correct: true },
@@ -8889,12 +8906,12 @@ PP.addLesson({
         ]
       },
       partB: {
-        prompt: "What is the reason for the comma in the answer to Part A?",
+        prompt: "Why does the comma go there?",
         choices: [
-          { text: "Every and needs a comma right after it, no matter what else the sentence says." },
-          { text: "Only the second side is a complete sentence, so the comma goes after and." },
-          { text: "Both sides have their own naming part and doing part, so the comma goes before and.", correct: true },
-          { text: "The sentence is fairly long, so a comma is needed somewhere in the middle of it." }
+          { text: "A comma follows every and, whatever else the sentence says." },
+          { text: "The first half is missing its naming part, so the comma moves behind and." },
+          { text: "Each half is a full sentence on its own, so a comma sits just ahead of and.", correct: true },
+          { text: "Long lines need one comma near the center." }
         ]
       },
       clue: "Find the joining word. Then check both sides of it.",
@@ -8907,10 +8924,10 @@ PP.addLesson({
         "Part A: the joining word is and. Cover it.",
         "\"I waved goodbye\" and \"I ran to tell my friends\" are both complete sentences.",
         "Part A answer: \"I waved goodbye, and I ran to tell my friends.\" The comma goes right before and.",
-        "Part B answer: \"Both sides have their own naming part and doing part, so the comma goes before and.\""
+        "Part B answer: \"Each half is a full sentence on its own, so a comma sits just ahead of and.\""
       ],
       misconception: "A common mix-up is putting the comma after the joining word. The comma goes before it.",
-      why: "Part A: \"I waved goodbye, and I ran to tell my friends.\" Part B: \"Both sides have their own naming part and doing part, so the comma goes before and.\" A comma after and is in the wrong place, and no comma leaves the break unmarked. The length of a sentence does not decide where the comma goes, and both sides are complete.",
+      why: "Part A: \"I waved goodbye, and I ran to tell my friends.\" Part B: \"Each half is a full sentence on its own, so a comma sits just ahead of and.\" A comma after and is in the wrong place, and no comma leaves the break unmarked. The length of a sentence does not decide where the comma goes, and both sides are complete.",
       like: ["SK-GUM3-7-C05"]
     },
     {
@@ -8922,7 +8939,7 @@ PP.addLesson({
         "3.L.GC.1:M:use-commas-with-coordinating-conjunctions-to-joi"
       ],
       passages: ["p5"],
-      prompt: "Look at sentences 3 through 8 of the draft. Select the TWO that have a comma problem.",
+      prompt: "Find two comma mistakes among lines 3 to 8.",
       targets: ["p5:1:3", "p5:2:1", "p5:2:2", "p5:2:3", "p5:3:2"],
       answer: ["p5:2:1", "p5:3:2"],
       pick: 2,
@@ -8938,7 +8955,7 @@ PP.addLesson({
         "Sentence 4 joins two complete sentences with so but has no comma. Sentence 8 joins two complete sentences with only a comma."
       ],
       misconception: "A common mix-up is thinking a comma alone is enough. A comma needs a joining word with it, and some sentences need no comma at all.",
-      why: "The problems are in \"The wagon bumped over the hill so we held on tight.\" and \"Dad paid the driver, we hopped off the wagon.\" The first needs a comma before so, and the second needs a joining word after the comma. Sentences 3, 5 and 6 are punctuated correctly.",
+      why: "The problems are in \"The wagon bumped over the hill so we gripped the rail.\" and \"Dad paid the driver, we hopped off the wagon.\" The first needs a comma before so, and the second needs a joining word after the comma. Sentences 3, 5 and 6 are punctuated correctly.",
       like: ["SK-GUM3-7-C06"]
     },
     {
@@ -8981,27 +8998,32 @@ PP.addLesson({
         "3.L.GC.1:M:use-commas-with-coordinating-conjunctions-to-joi"
       ],
       passages: [],
-      prompt: "What should be done to fix each sentence?",
-      cols: ["Put in a comma", "Delete the comma", "Move the comma", "Add a joining word"],
+      prompt: "Which problem does each sentence have?",
+      cols: [
+        "One comma is missing",
+        "The comma is extra",
+        "The comma is misplaced",
+        "A joining word is missing"
+      ],
       rows: [
-        { text: "It rained all day, we stayed inside.", answer: 3 },
+        { text: "The movie was long, everyone stayed until the end.", answer: 3 },
         { text: "Kai likes playing soccer after school and Jun likes playing tennis.", answer: 0 },
         { text: "Dara swept the floor, and mopped it.", answer: 1 },
-        { text: "I wanted pizza but, we had pasta.", answer: 2 }
+        { text: "Pam wanted soup or, Ben wanted salad.", answer: 2 }
       ],
       clue: "Read each sentence and check where the comma is, whether there is a joining word, and whether both sides are complete sentences.",
       hints: [
         "Read each sentence and check where the comma is, whether there is a joining word, and whether both sides are complete sentences.",
         "Start with the sentence you are surest about. Decide the rest one at a time.",
-        "The rain sentence has a comma but no joining word. Decide the other rows."
+        "The movie sentence has a comma but no joining word. Decide the other rows."
       ],
       how: [
         "Check each sentence for a comma, a joining word, and two complete sentences.",
-        "\"Kai likes playing soccer after school and Jun likes playing tennis\" has two complete sentences and no comma, so put one in before and. \"I wanted pizza but, we had pasta\" has the comma after but, so move it.",
-        "\"Dara swept the floor, and mopped it\" has a comma before an action that cannot stand alone, so delete it. \"It rained all day, we stayed inside\" needs a joining word."
+        "\"Kai likes playing soccer after school and Jun likes playing tennis\" has two complete sentences and no comma, so one comma is missing. \"Pam wanted soup or, Ben wanted salad\" has the comma after or, so it is misplaced.",
+        "\"Dara swept the floor, and mopped it\" has a comma before an action that cannot stand alone, so the comma is extra. \"The movie was long, everyone stayed until the end\" needs a joining word."
       ],
-      misconception: "A common mix-up is adding a comma to every sentence. Some sentences need the comma deleted.",
-      why: "The rain sentence needs a joining word after the comma. Dara swept the floor, and mopped it needs the extra comma deleted. Kai likes playing soccer after school and Jun likes playing tennis needs a comma put in before and. The pizza sentence needs the comma moved before but.",
+      misconception: "A common mix-up is adding a comma to every sentence. Some sentences have a comma that does not belong.",
+      why: "The movie sentence is missing a joining word after the comma. Dara swept the floor, and mopped it has an extra comma. Kai likes playing soccer after school and Jun likes playing tennis is missing a comma before and. The soup sentence has the comma in the wrong place, after or.",
       like: ["SK-GUM3-7-C08"]
     },
     {
@@ -9013,17 +9035,17 @@ PP.addLesson({
         "3.L.GC.1:M:use-commas-with-coordinating-conjunctions-to-joi"
       ],
       passages: [],
-      prompt: "Which statement about the two fixes is true?",
+      prompt: "Read both fixes. What is true about them?",
       stem: [
         "The kettle whistled, the water was hot.",
-        "Eli changed it to: The kettle whistled, so the water was hot.",
-        "Una changed it to: The kettle whistled so the water, was hot."
+        "Eli wrote: The kettle whistled, so the water was hot.",
+        "Una wrote: The kettle whistled so the water, was hot."
       ],
       choices: [
-        { text: "Eli's fix is the only correct one.", correct: true },
-        { text: "Una's fix is the only correct one." },
-        { text: "Both fixes are correct." },
-        { text: "Neither fix is correct." }
+        { text: "Only Eli punctuated it correctly.", correct: true },
+        { text: "Only Una punctuated it correctly." },
+        { text: "Both of them punctuated it correctly." },
+        { text: "Neither of them punctuated it correctly." }
       ],
       clue: "Check each fix on its own. Look at the joining word and where the comma sits.",
       hints: [
@@ -9034,10 +9056,10 @@ PP.addLesson({
       how: [
         "The original sentence joins two complete sentences with only a comma, so it needs a joining word.",
         "Eli added so and put the comma right before it, which is correct. Una's comma sits in the middle of the second part, which is not correct.",
-        "The answer is \"Eli's fix is the only correct one.\""
+        "The answer is \"Only Eli punctuated it correctly.\""
       ],
       misconception: "A common mix-up is thinking any fix that adds a joining word is right. The comma must be before the joining word.",
-      why: "The answer is \"Eli's fix is the only correct one.\" Eli added so with the comma right before it. Una put the comma in the middle of the second part, so her sentence is still wrong.",
+      why: "The answer is \"Only Eli punctuated it correctly.\" Eli added so with the comma right before it. Una put the comma in the middle of the second part, so her sentence is still wrong.",
       like: ["SK-GUM3-7-C09"]
     },
     {
@@ -9048,32 +9070,32 @@ PP.addLesson({
       std: [
         "3.L.GC.1:M:use-commas-with-coordinating-conjunctions-to-joi"
       ],
-      passages: ["p5"],
-      prompt: "Sentence 9 of the draft is missing two commas. Which words fix it?",
-      text: "Dad hummed a song{0} I sang along{1} the ride felt short.",
+      passages: [],
+      prompt: "Two commas are missing from this sentence. Which words fix it?",
+      text: "Ana wanted to win the race{0} her shoe came untied{1} she kept running.",
       slots: [
         {
-          options: [", and", " and,", " and"],
-          answer: 0
+          options: [" but,", ", but", " but"],
+          answer: 1
         },
         {
-          options: ["so,", ", so", " so"],
-          answer: 1
+          options: [", yet", " yet,", " yet"],
+          answer: 0
         }
       ],
       clue: "Find the two joining words. Then check whether each one has two complete sentences on its sides.",
       hints: [
         "Find the two joining words. Then check whether each one has two complete sentences on its sides.",
-        "Read sentence 9 in three parts. Say each part by itself and decide which parts could stand alone.",
+        "Read the sentence in three parts. Say each part by itself and decide which parts could stand alone.",
         "A comma right after a joining word is never correct here. Decide the rest."
       ],
       how: [
-        "The joining words are and and so. There are three parts, and each part has its own naming part and doing part.",
+        "The joining words are but and yet. There are three parts, and each part has its own naming part and doing part.",
         "Each joining word connects two complete sentences, so each needs a comma right before it.",
-        "The answers are a comma then and, and a comma then so."
+        "The answers are a comma then but, and a comma then yet."
       ],
       misconception: "A common mix-up is fixing only one of the two joining words. Check each one.",
-      why: "The answers are a comma then and, and a comma then so. Dad hummed a song, I sang along, and the ride felt short are all complete sentences, so each joining word needs a comma right before it.",
+      why: "The answers are a comma then but, and a comma then yet. Ana wanted to win the race, her shoe came untied, and she kept running are all complete sentences, so each joining word needs a comma right before it.",
       like: ["SK-GUM3-7-C10"]
     },
     {
@@ -9085,7 +9107,7 @@ PP.addLesson({
         "3.L.GC.1:M:use-commas-with-coordinating-conjunctions-to-joi"
       ],
       passages: ["p6"],
-      prompt: "Select the TWO sentences in which a comma is not where it belongs.",
+      prompt: "Two of these lines have a comma that is misplaced or not needed. Pick them.",
       targets: ["p6:1:2", "p6:1:3", "p6:2:1", "p6:2:2", "p6:2:3"],
       answer: ["p6:2:1", "p6:2:3"],
       pick: 2,
@@ -9113,13 +9135,13 @@ PP.addLesson({
         "3.L.GC.1:M:use-commas-with-coordinating-conjunctions-to-joi"
       ],
       passages: [],
-      prompt: "Where should the comma go in this sentence?",
+      prompt: "Pick the version with the comma in the right spot.",
       stem: "The coach blew the whistle and the players ran onto the field.",
       choices: [
-        { text: "after the word coach" },
-        { text: "after the word and" },
-        { text: "after the word players" },
-        { text: "after the word whistle", correct: true }
+        { text: "The coach blew the whistle and, the players ran onto the field." },
+        { text: "The coach, blew the whistle and the players ran onto the field." },
+        { text: "The coach blew the whistle and the players, ran onto the field." },
+        { text: "The coach blew the whistle, and the players ran onto the field.", correct: true }
       ],
       clue: "Find the joining word. A comma goes right before it when both sides can stand alone.",
       hints: [
@@ -9130,10 +9152,10 @@ PP.addLesson({
       how: [
         "The joining word is and. Cover it.",
         "\"The coach blew the whistle\" and \"the players ran onto the field\" are both complete sentences.",
-        "The comma goes right before and, which is after the word whistle."
+        "The comma goes right before and. The other choices put the comma after and or in the middle of a part."
       ],
       misconception: "A common mix-up is putting the comma after the joining word. The comma goes before it.",
-      why: "The answer is after the word whistle. Both sides are complete sentences, so the comma goes right before and, after the word whistle. A comma after and is in the wrong place, and the other spots split words that belong together.",
+      why: "The answer is \"The coach blew the whistle, and the players ran onto the field.\" Both sides are complete sentences, so the comma goes right before and. A comma after and is in the wrong place, and the other spots split words that belong together.",
       like: ["SK-GUM3-7-C12"]
     },
     {
@@ -9145,28 +9167,28 @@ PP.addLesson({
         "3.L.GC.1:M:use-commas-with-coordinating-conjunctions-to-joi"
       ],
       passages: [],
-      prompt: "Leo says, \"Always put a comma before the word but.\" Which TWO sentences show that Leo is wrong?",
+      prompt: "Leo believes every but needs a comma ahead of it. Pick the two lines that prove he is mistaken.",
       pick: 2,
       choices: [
-        { text: "I wanted a puppy, but we have a cat." },
-        { text: "It was late, but we kept playing." },
-        { text: "Mina wanted tea but not milk.", correct: true },
-        { text: "She tried hard, but she lost." },
-        { text: "The pie looked small but tasty.", correct: true }
+        { text: "I begged for a puppy, but our landlord said no." },
+        { text: "The sky was dark, but we kept playing outside." },
+        { text: "Mina asked for hot tea but no milk at breakfast.", correct: true },
+        { text: "She trained for months, but she lost the race." },
+        { text: "The pie looked small but very tasty.", correct: true }
       ],
       clue: "To test a rule, look for examples that break it. Find sentences with but that are correct without a comma.",
       hints: [
         "To test a rule, look for examples that break it. Find sentences with but that are correct without a comma.",
         "Read each sentence and cover the word but. Ask whether both sides could stand alone as sentences.",
-        "In She tried hard, but she lost, both sides are complete sentences. Decide about the other four."
+        "In She trained for months, but she lost the race, both sides are complete sentences. Decide about the other four."
       ],
       how: [
         "Cover but in each sentence and check both sides.",
         "In the three sentences with a comma, both sides are complete sentences, so the comma belongs.",
-        "In \"Mina wanted tea but not milk\" and \"The pie looked small but tasty,\" but joins words or groups of words, so no comma belongs. They show the rule is wrong."
+        "In \"Mina asked for hot tea but no milk at breakfast\" and \"The pie looked small but very tasty,\" but joins words or groups of words, so no comma belongs. They show the rule is wrong."
       ],
       misconception: "A common mix-up is thinking but always needs a comma. Use the comma only when but joins two complete sentences.",
-      why: "The answers are \"Mina wanted tea but not milk.\" and \"The pie looked small but tasty.\" In each, but joins words or groups of words, not two complete sentences, so no comma is needed. The other three join complete sentences, so the commas belong.",
+      why: "The answers are \"Mina asked for hot tea but no milk at breakfast.\" and \"The pie looked small but very tasty.\" In each, but joins words or groups of words, not two complete sentences, so no comma is needed. The other three join complete sentences, so the commas belong.",
       like: ["SK-GUM3-7-C13"]
     },
     {
@@ -9178,11 +9200,11 @@ PP.addLesson({
         "3.L.GC.1:M:use-commas-with-coordinating-conjunctions-to-joi"
       ],
       passages: [],
-      prompt: "Two complete sentences are joined with only a comma. Which words fix it?",
-      text: "The lights flickered{0} we grabbed a flashlight.",
+      prompt: "Pick the right ending for the blank.",
+      text: "The exam seemed hard{0} Mia finished early.",
       slots: [
         {
-          options: [", so", " so,", ","],
+          options: [", yet", " yet,", ","],
           answer: 0
         }
       ],
@@ -9195,10 +9217,10 @@ PP.addLesson({
       how: [
         "Both parts are complete sentences, and a comma alone cannot join them.",
         "The sentence needs a joining word, with the comma right before it.",
-        "The answer is a comma, then so. A comma after so is in the wrong place."
+        "The answer is a comma, then yet. A comma after yet is in the wrong place."
       ],
       misconception: "A common mix-up is thinking a comma alone can join sentences. It needs a joining word with it.",
-      why: "The answer is a comma and then so. The lights flickered, so we grabbed a flashlight. A comma alone cannot join two sentences, and a comma after so is in the wrong place.",
+      why: "The answer is a comma and then yet. The exam seemed hard, yet Mia finished early. A comma alone cannot join two sentences, and a comma after yet is in the wrong place.",
       like: ["SK-GUM3-7-C14"]
     },
     {
@@ -9251,11 +9273,11 @@ PP.addLesson({
       hints: [
         "Cover the joining word in each sentence. Check what each side could be by itself.",
         "Check the sentences one at a time. Ask whether the part after the joining word has its own naming part.",
-        "The tag sentence already has its comma in the right place. Check the other three sentences."
+        "Rosa likes cats and dogs more than any other pets joins two things, not two sentences. Check the other three sentences."
       ],
       how: [
         "Cover the joining word in each sentence and check both sides.",
-        "Grandpa grilled corn and baked a pie joins two actions, and Rosa likes cats and dogs joins two things, so neither needs a comma.",
+        "Grandpa grilled fresh corn and baked a pie for dessert joins two actions, and Rosa likes cats and dogs more than any other pets joins two things, so neither needs a comma.",
         "\"The bus was late this morning\" and \"we missed the first bell\" are both complete sentences, so the sentence needs a comma before so."
       ],
       misconception: "A common mix-up is adding a comma before every joining word. Only add it when both sides could stand alone."
@@ -9367,7 +9389,7 @@ PP.addLesson({
     big: "When a long word does not fit at the end of a line, you can split it between two syllables and put a hyphen (-) at the end of the line.",
     points: [
       "A hyphen is a short line (-). It goes at the end of the first line, never at the start of the next line, and it shows that the word keeps going.",
-      "Clap the word to count its syllables. A word with only one syllable, like school or bright, is never split. Move the whole word to the next line instead. Also, never leave a single letter alone at the end or the start of a line. Break after a syllable, not after the first or last letter.",
+      "Clap the word to count its syllables. Always split a word between syllables. A word with only one syllable, like school or bright, is never split. Move the whole word to the next line instead. Also, never leave a single letter alone at the end or the start of a line. Break after a syllable, not after the first or last letter.",
       "When two different consonants sit between two vowels, split between the consonants: gar-den, sis-ter, pen-cil. But letters that make one sound together, like th, sh, ch and ck, stay together: fish-er, lock-er.",
       "When the same consonant comes twice in the middle, split between the two letters: hap-py, bub-ble.",
       "When a word is made of two smaller words, split between the two words: sun-set, rail-road."
@@ -9428,8 +9450,8 @@ PP.addLesson({
       paragraphs: [
         [
           "(1) Tomorrow we fly to see Grandma, so I need to pack my suit- | case.",
-          "(2) First, I put in my blan- | ket and my teddy bear.",
-          "(3) Mom told me to take a warm jack- | et."
+          "(2) First, I put in my soft blan- | ket and my old teddy bear.",
+          "(3) Mom told me to take a warm jack- | et in case it rains."
         ],
         [
           "(4) Next, I packed a yellow rib- | bon for the party.",
@@ -9438,11 +9460,11 @@ PP.addLesson({
         ],
         [
           "(7) At the airport, we waited in a long li- | ne.",
-          "(8) The pilot said the flight would be smooth.",
+          "(8) The pilot said the flight would be smooth and quiet today.",
           "(9) I held my ticket tight and looked out the win- | dow."
         ],
         [
-          "(10) I can't wait to hug Grandma at the gate."
+          "(10) I can't wait to hug Grandma at the gate when we land."
         ]
       ]
     },
@@ -9454,9 +9476,9 @@ PP.addLesson({
       draft: true,
       paragraphs: [
         [
-          "(1) On Saturday, our whole family cleaned the basement.",
+          "(1) On Saturday morning, our whole family cleaned the messy basement.",
           "(2) Dad found a dusty flash- | light behind the shelf.",
-          "(3) My sister swept the cement floor with a stiff broom."
+          "(3) My sister swept the cement floor with a stiff old broom."
         ],
         [
           "(4) I stacked the old card- | board boxes by the door.",
@@ -9464,12 +9486,12 @@ PP.addLesson({
           "(6) Under it, we found a rubb- | er ball and a tin cup."
         ],
         [
-          "(7) Dad hung a heavy picture of our dog on the wall.",
-          "(8) My brother carried the pail to the sink.",
+          "(7) Dad hung a heavy picture of our dog on the back wall of the room.",
+          "(8) My brother carried the heavy pail to the sink in the laundry room.",
           "(9) We rested and ate our lun- | ch on the stairs."
         ],
         [
-          "(10) By dark, the basement looked clean and bright."
+          "(10) By dark, the basement looked clean and bright again."
         ]
       ]
     },
@@ -9481,21 +9503,21 @@ PP.addLesson({
       draft: true,
       paragraphs: [
         [
-          "(1) Our class took a bus to the train museum last Friday.",
-          "(2) The guide showed us an old engine with a shiny bell.",
+          "(1) Our class took a yellow bus to the big train museum last Friday.",
+          "(2) The guide showed us an old black engine with a shiny brass bell and a tall whistle.",
           "(3) She told us how the cond- | uctor used to call out each stop."
         ],
         [
           "(4) Next, we climbed into a bright red box- | car.",
           "(5) The seats had thin cush- | ions.",
-          "(6) The guide handed each of us a tick- | et for the ride."
+          "(6) The guide handed each of us a tick- | et for the ride around the yard."
         ],
         [
           "(7) After lunch, we saw a model village with a bridge and a wind- | mill.",
           "(8) My friend Leo bought a postc- | ard for his grandma."
         ],
         [
-          "(9) The bus took us back to school before the last bell."
+          "(9) The bus took us back to school safely before the last bell."
         ]
       ]
     },
@@ -9507,9 +9529,9 @@ PP.addLesson({
       draft: true,
       paragraphs: [
         [
-          "(1) Our family spent the weekend at a campsite by the lake.",
-          "(2) First, Dad put up the tent while I unpacked my back- | pack.",
-          "(3) Mom filled the ket- | tle with cold water."
+          "(1) Our family spent the whole weekend at a pretty campsite by the quiet lake.",
+          "(2) First, Dad put up the big green tent while I unpacked my back- | pack.",
+          "(3) Mom filled the ket- | tle with cold water from the lake."
         ],
         [
           "(4) We toasted some marshmallows over the bonf- | ire.",
@@ -9517,10 +9539,12 @@ PP.addLesson({
           "(6) Later, we sat by the stre- | am and listened to the frogs."
         ],
         [
-          "(7) After dark, I curled up in my ham- | mock and watched the stars.",
-          "(8) On Sunday, we packed up and drove home."
+          "(7) After dark, I curled up in my ham- | mock and watched the bright stars above us.",
+          "(8) On Sunday morning, we packed up our gear and drove home in the car."
         ],
-        ["(9) I can't wait for our next trip."]
+        [
+          "(9) I can't wait for our next trip to the lake this fall."
+        ]
       ]
     },
     {
@@ -9531,20 +9555,22 @@ PP.addLesson({
       draft: true,
       paragraphs: [
         [
-          "(1) Every Saturday, I help my aunt at her small grocery store.",
+          "(1) Every Saturday morning, I help my aunt at her small grocery store on Main Street.",
           "(2) First, I stack the cans and wash the cab- | bage.",
           "(3) Next, I sort the fresh carr- | ots by size."
         ],
         [
           "(4) Customers often ask me where the pep- | per is.",
-          "(5) I point to the right aisle and say, \"It's on the shelf over the bread.\"",
+          "(5) I point to the right aisle and say, \"It's on the top shelf over the bread.\"",
           "(6) One customer thanked me and bought a pump- | kin."
         ],
         [
           "(7) Then I take out the trash and sweep the flo- | or.",
-          "(8) My aunt gives me a candy bar when the work is done."
+          "(8) My aunt gives me a sweet candy bar when all the work is done at the end of the day."
         ],
-        ["(9) I love helping at the store."]
+        [
+          "(9) I love helping at the store every single week."
+        ]
       ]
     },
     {
@@ -9555,8 +9581,8 @@ PP.addLesson({
       draft: true,
       paragraphs: [
         [
-          "(1) Our class went to the pond near school to clean up.",
-          "(2) Mr. Ortiz gave each of us a plastic bag and a pair of gloves.",
+          "(1) Our class went to the pond near our school to clean up the trash.",
+          "(2) Mr. Ortiz gave each of us a clean plastic bag and a pair of thick gloves.",
           "(3) We learned that trash can hurt the tur- | tles and fish."
         ],
         [
@@ -9566,8 +9592,8 @@ PP.addLesson({
         ],
         [
           "(7) The sun was bright, and the sunl- | ight sparkled on the pond.",
-          "(8) A duck shook the water from its feat- | hers.",
-          "(9) We waved goodbye to the pond and walked back to school."
+          "(8) A duck shook the cold water from its feath- | ers.",
+          "(9) We waved goodbye to the pond and walked back to school together after lunch."
         ]
       ]
     }
@@ -9602,10 +9628,10 @@ PP.addLesson({
         { text: "muf- | fin", answer: 0 },
         { text: "wi- | nter", answer: 1 },
         { text: "sum- | mer", answer: 0 },
-        { text: "brig- | ht", answer: 1 }
+        { text: "pla- | nt", answer: 1 }
       ],
       clue: "Clap each word first. Then look for two consonants or a double letter in the middle.",
-      why: "Muf- | fin and sum- | mer are split between double letters, so they are correct. Winter has the consonants n and t in the middle, so it should be win- | ter. Bright has only one syllable, so it should not be split at all." },
+      why: "Muf- | fin and sum- | mer are split between double letters, so they are correct. Winter has the consonants n and t in the middle, so it should be win- | ter. Plant has only one syllable, so it should not be split at all." },
     { id: "SK-GUM3-8-P4", type: "ms", points: 2, dok: 2, passages: [], pick: 2,
       prompt: "The | mark shows where the first line ends. Choose the TWO words that are split correctly.",
       choices: [
@@ -9729,7 +9755,7 @@ PP.addLesson({
             clue: "Clap the word that is split in sentence 7. Count the beats.",
             hints: [
               "Clap the word that is split in sentence 7. Count the beats.",
-              "For Part A, say the word out loud and clap it. For Part B, think about which rule tells you when a word cannot be split.",
+              "For Part A, say the word out loud and clap it. For Part B, think about what your count in Part A shows and which fact matches it.",
               "In Part A, moving the hyphen would still leave the word split. Check the other choices."
             ],
             how: [
@@ -10225,7 +10251,7 @@ PP.addLesson({
       clue: "Clap the word that is split in sentence 6. Count the beats.",
       hints: [
         "Clap the word that is split in sentence 6. Count the beats.",
-        "For Part A, say the word and clap it. For Part B, think about which fact tells you when a word cannot be split.",
+        "For Part A, say the word and clap it. For Part B, think about what your beat count shows and which fact matches it.",
         "In Part A, moving the hyphen would still leave the word split. Check the other choices."
       ],
       how: [
@@ -10470,28 +10496,28 @@ PP.addLesson({
         "3.L.GC.1:M:use-hyphens-to-divide-words-at-line-breaks"
       ],
       passages: [],
-      prompt: "Name the TWO best reasons den- | tist is a fine break.",
+      prompt: "Name the TWO best reasons bas- | ket is a fine break.",
       pick: 2,
       choices: [
         { text: "Its middle holds a matching pair." },
-        { text: "N and t blend into a single sound that cannot be pulled apart." },
-        { text: "N and t are unlike letters standing among vowels, which is where the word breaks.", correct: true },
-        { text: "It is built from small words, den and tist." },
+        { text: "S and k blend into a single sound that cannot be pulled apart." },
+        { text: "S and k are unlike letters standing among vowels, which is where the word breaks.", correct: true },
+        { text: "It is built from small words, bas and ket." },
         { text: "More than one beat means a break is allowed.", correct: true }
       ],
-      clue: "Look at the middle of dentist. Check each reason against the word.",
+      clue: "Look at the middle of basket. Check each reason against the word.",
       hints: [
-        "Look at the middle of dentist. Check each reason against the word.",
+        "Look at the middle of basket. Check each reason against the word.",
         "Say the word and clap it. Then check each reason against the word.",
-        "Dentist does not have any double letters. Decide about the other four."
+        "Basket does not have any double letters. Decide about the other four."
       ],
       how: [
-        "Clap dentist: two beats, so it can be split. Look at the middle letters: n and t are two different consonants between two vowels.",
+        "Clap basket: two beats, so it can be split. Look at the middle letters: s and k are two different consonants between two vowels.",
         "The rule says to split between them, so the reasons that fit are the two beats and the two different consonants.",
-        "The other reasons do not fit: there is no double letter, tist is not a word, and nt does not make one sound."
+        "The other reasons do not fit: there is no double letter, bas and ket are not words, and sk does not make one sound."
       ],
       misconception: "A common mix-up is picking a rule because it sounds familiar. Check that the rule matches the letters in the word.",
-      why: "The answers are \"N and t are unlike letters standing among vowels, which is where the word breaks.\" and \"More than one beat means a break is allowed.\" Dentist has no double letter, tist is not a word, and n and t do not make one sound together.",
+      why: "The answers are \"S and k are unlike letters standing among vowels, which is where the word breaks.\" and \"More than one beat means a break is allowed.\" Basket has no double letter, bas and ket are not words, and s and k do not make one sound together.",
       like: ["SK-GUM3-8-C13"]
     },
     {
@@ -10595,12 +10621,12 @@ PP.addLesson({
       hints: [
         "Clap each word first. Then look for two consonants or a double letter in the middle.",
         "Check each row one at a time. Ask whether the break follows a rule, and whether the word has more than one beat.",
-        "Bright has only one beat, so it is not split. Decide the other rows."
+        "Plant has only one beat, so it is not split. Decide the other rows."
       ],
       how: [
         "Clap each word and look at the middle letters.",
         "Muffin and summer have double letters, and the splits fall between them.",
-        "Winter should be win- | ter, and bright has one beat, so it should not be split."
+        "Winter should be win- | ter, and plant has one beat, so it should not be split."
       ],
       misconception: "A common mix-up is thinking any break is fine if the hyphen is there. The break has to follow a rule."
     },
