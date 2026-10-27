@@ -4574,11 +4574,11 @@ PP.addLesson({
             ],
             how: [
               "Nor is used after a part that says something did not happen.",
-              "Kofi did not pack a coat, and the cat would not eat. Both start with a no, so nor can follow.",
-              "Mina likes apples, we can have soup, and I wanted to swim all say yes, so nor does not fit."
+              "Kofi did not pack a coat, and the cat would not eat. Both start with a no, so the joining word nor can follow.",
+              "Mina likes apples, we can have soup, and I wanted to swim all say yes, so the joining word nor does not fit."
             ],
             misconception: "A common mix-up is using nor like or in a sentence that has no no. Nor needs a no in the first part.",
-            why: "The answers are \"Kofi did not pack a coat, nor did he pack gloves.\" and \"The cat would not eat, nor would it drink.\" Each first part says something did not happen, so nor can follow. In the other sentences, the first part says yes, so nor does not fit."
+            why: "The answers are \"Kofi did not pack a coat, nor did he pack gloves.\" and \"The cat would not eat, nor would it drink.\" Each first part says something did not happen, so the joining word nor can follow. In the other sentences, the first part says yes, so the joining word nor does not fit."
           },
           {
             id: "SK-GUM3-4-C08",
@@ -5064,11 +5064,11 @@ PP.addLesson({
       ],
       how: [
         "Nor is used after a part that says something did not happen.",
-        "Ruth never cleaned her room, and the milk was not cold. Both start with a no, so nor can follow.",
-        "Gus hums loudly, our team won, and you could go home all say yes, so nor does not fit."
+        "Ruth never cleaned her room, and the milk was not cold. Both start with a no, so the joining word nor can follow.",
+        "Gus hums loudly, our team won, and you could go home all say yes, so the joining word nor does not fit."
       ],
       misconception: "A common mix-up is using nor like or in a sentence that has no no. Nor needs a no in the first part.",
-      why: "The answers are \"Ruth never cleaned her room, nor did she make her bed.\" and \"The milk was not cold, nor was it fresh.\" Each first part says something did not happen, so nor can follow. In the other sentences, the first part says yes, so nor does not fit.",
+      why: "The answers are \"Ruth never cleaned her room, nor did she make her bed.\" and \"The milk was not cold, nor was it fresh.\" Each first part says something did not happen, so the joining word nor can follow. In the other sentences, the first part says yes, so the joining word nor does not fit.",
       like: ["SK-GUM3-4-C07"]
     },
     {
@@ -5097,7 +5097,7 @@ PP.addLesson({
       how: [
         "Ask how the second part connects to the first in each sentence.",
         "The shop was not open, nor was the bank. Nor goes with a no.",
-        "Rain is the reason the creek rose, so the joining word is so. Reading now or later is a choice. The joining word or fits. Mia and Leo each packed something, so and adds one more thing."
+        "Rain is the reason the creek rose, so the joining word is so. Reading now or later is a choice. The joining word or fits. Mia and Leo each packed something, so the joining word and adds one more thing."
       ],
       misconception: "A common mix-up is mixing up and and so. And adds one more thing, and so tells a result.",
       why: "And goes with the apples sentence, because it adds what Leo packed. Or goes with the reading sentence, because it gives a choice. Nor goes with the shop sentence. So goes with the rain sentence, because the rain is why the creek rose.",
@@ -5822,7 +5822,7 @@ PP.addLesson({
                 { text: "It names a group of sailors who work together on a boat." },
                 { text: "It names a place on the pier where children like to play." },
                 { text: "It tells what the little brother did on the rope net." },
-                { text: "You can see him climb, but you cannot touch courage itself.", correct: true }
+                { text: "It names a quality a person has, like the nerve to climb.", correct: true }
               ]
             },
             clue: "An abstract noun names an idea, a feeling or a quality. Think about what kind of word each choice is.",
@@ -5835,10 +5835,10 @@ PP.addLesson({
               "Part A: find the nouns in sentence 8: brother, courage, rope and net.",
               "You can see a brother, a rope and a net. Courage is a quality that you cannot touch.",
               "Part A answer: courage.",
-              "Part B answer: \"You can see him climb, but you cannot touch courage itself.\""
+              "Part B answer: \"It names a quality a person has, like the nerve to climb.\""
             ],
             misconception: "A common mix-up is thinking an abstract noun names an action. Courage names a quality, not an action.",
-            why: "Part A: courage. Part B: \"You can see him climb, but you cannot touch courage itself.\" Courage names a quality, so it is abstract. A group noun names a group, a place noun names a place, and a verb tells what someone did."
+            why: "Part A: courage. Part B: \"It names a quality a person has, like the nerve to climb.\" Courage names a quality, so it is abstract. A group noun names a group, a place noun names a place, and a verb tells what someone did."
           }
         ]
       },
@@ -5894,7 +5894,7 @@ PP.addLesson({
             hints: [
               "Find the group noun in each sentence. A group that acts as one takes the verb for one.",
               "Read each sentence aloud and listen for whether its verb sounds right with one group.",
-              "Eat does not end in -s, so it is the verb for many. Decide about the other four."
+              "Eat is the verb for many people, not for one group. Decide about the other four."
             ],
             how: [
               "Find the group noun in each sentence: club, herd, crew, family and class.",
@@ -6014,7 +6014,7 @@ PP.addLesson({
               "3.L.GC.1:M:use-collective-and-abstract-nouns"
             ],
             passages: ["p3"],
-            prompt: "Select the TWO sentences where the verb does not match the collective noun.",
+            prompt: "Each group acts as one. Select the TWO sentences where the verb does not match the collective noun.",
             targets: ["p3:1:2", "p3:2:2", "p3:3:1", "p3:3:2", "p3:3:3"],
             answer: ["p3:2:2", "p3:3:3"],
             pick: 2,
@@ -6370,7 +6370,7 @@ PP.addLesson({
         "3.L.GC.1:M:use-collective-and-abstract-nouns"
       ],
       passages: [],
-      prompt: "In which TWO of these do the group and its verb agree?",
+      prompt: "Take each group as a single whole. In which TWO of these do the group and its verb agree?",
       pick: 2,
       choices: [
         { text: "The staff clean the room after lunch." },
@@ -6383,7 +6383,7 @@ PP.addLesson({
       hints: [
         "Find the group noun in each sentence. A group that acts as one takes the verb for one.",
         "Read each sentence aloud and listen for whether its verb sounds right with one group.",
-        "Sing does not end in -s, so it is the verb for many. Decide about the other four."
+        "Sing is the verb for many people, not for one group. Decide about the other four."
       ],
       how: [
         "Find the group noun in each sentence: band, team, choir, staff and cast.",
@@ -6502,7 +6502,7 @@ PP.addLesson({
         "3.L.GC.1:M:use-collective-and-abstract-nouns"
       ],
       passages: ["p6"],
-      prompt: "Which TWO sentences have a verb that clashes with the group word?",
+      prompt: "Each group acts as one. Which TWO sentences have a verb that clashes with the group word?",
       targets: ["p6:1:2", "p6:2:2", "p6:3:1", "p6:3:2", "p6:3:3"],
       answer: ["p6:2:2", "p6:3:3"],
       pick: 2,
@@ -9825,11 +9825,11 @@ PP.addLesson({
             ],
             how: [
               "Say each word whole and check the break.",
-              "Pencil has n and c between vowels, so it should be pen- | cil. Washer has the letters sh, which stay together, so it should be wash- | er.",
+              "Pencil has n and c between vowels, so it should be pen- | cil. Washer has two beats, wash and er, so it should be wash- | er.",
               "Trum- | pet, pitch- | er and pup- | pet follow the rules."
             ],
             misconception: "A common mix-up is splitting after the first vowel. Look at the consonants and split by the rules.",
-            why: "The answers are pe- | ncil and wa- | sher. Pencil should be pen- | cil, between the consonants n and c. Washer should be wash- | er, because the letters sh stay together. Trum- | pet, pitch- | er and pup- | pet follow the rules."
+            why: "The answers are pe- | ncil and wa- | sher. Pencil should be pen- | cil, between the consonants n and c. Washer should be wash- | er, because its first beat is wash. Trum- | pet, pitch- | er and pup- | pet follow the rules."
           },
           {
             id: "SK-GUM3-8-C08",
@@ -9886,7 +9886,7 @@ PP.addLesson({
             hints: [
               "Check each split against the rules. Remember that some letters stay together.",
               "Look at the letters on each side of the break in both splits. Ask whether any letters that make one sound were pulled apart.",
-              "In Sam's split, the c and the k are on different lines. Check what that means."
+              "Look at the line that holds the k in each split. Check which letters ride along with it."
             ],
             how: [
               "Bucket has two beats, so it can be split.",
@@ -10034,7 +10034,7 @@ PP.addLesson({
               "3.L.GC.1:M:use-hyphens-to-divide-words-at-line-breaks"
             ],
             passages: [],
-            prompt: "Match each word to the rule that tells where to split it.",
+            prompt: "Match each word to the rule that tells where to split it. Treat ck as one sound.",
             cols: ["Two different consonants", "Double letter", "Two smaller words", "Letters that stay together"],
             rows: [
               { text: "pocket", answer: 3 },
@@ -10118,10 +10118,10 @@ PP.addLesson({
       how: [
         "Clap each word and look at the middle letters.",
         "Turkey has the consonants r and k, so tur- | key is correct. Tennis has a double n, so ten- | nis is correct.",
-        "Rocket should be rock- | et, because ck stays together. Clock has one beat, so it is never split."
+        "Rocket has two beats, rock and et, so it should be rock- | et. Clock has one beat, so it is never split."
       ],
       misconception: "A common mix-up is splitting after the first vowel. Check the letters in the middle against the rules.",
-      why: "Tur- | key and ten- | nis are correct. Rocket should be rock- | et, because the letters ck stay together. Clock has only one syllable, so it should not be split at all.",
+      why: "Tur- | key and ten- | nis are correct. Rocket has two beats, rock and et, so it should be rock- | et. Clock has only one syllable, so it should not be split at all.",
       like: ["SK-GUM3-8-P3"]
     },
     {
@@ -10281,7 +10281,7 @@ PP.addLesson({
       hints: [
         "Say each split word whole. Then check the break against the rules.",
         "Clap each split word. Ask whether the break follows a rule, and whether the word has more than one beat.",
-        "Pump- | kin splits between the consonants m and p, which is correct. Check the other four sentences."
+        "Pump- | kin has a first beat you can say alone, pump, so it is correct. Check the other four sentences."
       ],
       how: [
         "Say each split word whole, clap it, and check the break.",
@@ -10381,7 +10381,7 @@ PP.addLesson({
       hints: [
         "Check each split against the rules.",
         "Look at the letters on each side of the break in both splits. Ask which split pulled a pair of letters apart.",
-        "In Lia's split, the t and the h are on different lines. Check what that means."
+        "Look at the line that holds the h in each split. Check which letters ride along with it."
       ],
       how: [
         "Mother has two beats, so it can be split.",
@@ -10437,7 +10437,7 @@ PP.addLesson({
         "3.L.GC.1:M:use-hyphens-to-divide-words-at-line-breaks"
       ],
       passages: ["p6"],
-      prompt: "Select the TWO sentences that have a word split in the wrong way. The | mark shows where the line ends.",
+      prompt: "Choose the TWO sentences in which a word has been broken at a bad place. A | mark shows where the line ends.",
       targets: ["p6:1:3", "p6:2:1", "p6:2:2", "p6:2:3", "p6:3:1"],
       answer: ["p6:2:2", "p6:3:1"],
       pick: 2,
@@ -10529,7 +10529,7 @@ PP.addLesson({
         "3.L.GC.1:M:use-hyphens-to-divide-words-at-line-breaks"
       ],
       passages: [],
-      prompt: "Sort each word by the rule that decides its break.",
+      prompt: "Sort each word by the rule that decides its break. The pair c and k makes a single sound here.",
       cols: [
         "Unlike consonants in the middle",
         "Matching pair in the middle",

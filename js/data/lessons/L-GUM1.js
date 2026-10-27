@@ -11967,7 +11967,181 @@ PP.addLesson({
     }
   ],
   parent: "Play \"name it\": you say a common noun (a store, a street, a friend, a holiday) and your child answers with a proper noun for it, then tells you which letters need capitals.",
-  passages: [],
+  passages: [
+    /* B7a:passages:start */
+    {
+      id: "p1",
+      title: "Spirit Week at Pine Ridge",
+      byline: "A third grader's draft",
+      genre: "Student draft (narrative)",
+      draft: true,
+      paragraphs: [
+        [
+          "(1) Our school is called Pine Ridge Elementary.",
+          "(2) Last week was spirit week.",
+          "(3) On Monday, Mrs. Greene wore a silly hat to class.",
+          "(4) Mateo wore a jersey from his favorite team."
+        ],
+        [
+          "(5) My best friend Nora dressed like a pirate.",
+          "(6) The principal, Mr. Diaz, wore a long red cape.",
+          "(7) On Friday, the whole school met in the gym.",
+          "(8) We sang songs and played games for an hour."
+        ],
+        [
+          "(9) Our class won a prize for the loudest cheer.",
+          "(10) Ms. Lopez gave us a shiny trophy.",
+          "(11) We put it on a shelf in the hallway.",
+          "(12) Everyone smiled when they walked past it.",
+          "(13) Next year, I will help plan spirit week."
+        ]
+      ]
+    },
+    {
+      id: "p2",
+      title: "Saturday at the Library",
+      byline: "A third grader's draft",
+      genre: "Student draft (narrative)",
+      draft: true,
+      paragraphs: [
+        [
+          "(1) Last Saturday, my uncle took me to Maple Street Library.",
+          "(2) The library is a big brick building.",
+          "(3) A librarian named Mr. Kim waved at us.",
+          "(4) He showed us a shelf of books about Ohio."
+        ],
+        [
+          "(5) I found a book about the Ohio River.",
+          "(6) My uncle read about a city called Columbus.",
+          "(7) We sat at a long table near the window.",
+          "(8) Outside, a bus stopped at the corner of Maple Street and Oak Avenue."
+        ],
+        [
+          "(9) Children walked in with their parents.",
+          "(10) A story hour began at noon.",
+          "(11) I borrowed three books and a map.",
+          "(12) Then we walked home together and made lunch.",
+          "(13) I wanted to stay all day."
+        ]
+      ]
+    },
+    {
+      id: "p3",
+      title: "Camping in the Mountains",
+      byline: "A third grader's draft",
+      genre: "Student draft (narrative)",
+      draft: true,
+      paragraphs: [
+        [
+          "(1) In August, my family went camping in the Great Smoky Mountains.",
+          "(2) We set up our tent beside a creek.",
+          "(3) My sister Hannah found a salamander under a rock.",
+          "(4) A ranger named Ms. Torres gave us a map."
+        ],
+        [
+          "(5) She said the trail leads to a waterfall.",
+          "(6) We hiked for two hours through tall trees.",
+          "(7) At the top, we saw a deer and a fox.",
+          "(8) The creek sparkled far below us."
+        ],
+        [
+          "(9) We ate sandwiches on a flat rock.",
+          "(10) That night, we told stories by the fire.",
+          "(11) I heard an owl hoot in the dark.",
+          "(12) The next morning, we packed up and drove home.",
+          "(13) I hope to visit the mountains again someday."
+        ]
+      ]
+    },
+    {
+      id: "p4",
+      title: "The Soccer Final",
+      byline: "A third grader's draft",
+      genre: "Student draft (narrative)",
+      draft: true,
+      paragraphs: [
+        [
+          "(1) On Saturday, the Hawks played the Bears at Cole Park.",
+          "(2) Our coach, Ms. Ramirez, gave a short speech.",
+          "(3) The crowd cheered from the bleachers.",
+          "(4) Felix kicked the ball past the goalie."
+        ],
+        [
+          "(5) The goalie, Omar, dove but missed it.",
+          "(6) We scored again before halftime.",
+          "(7) In the second half, the Bears fought back.",
+          "(8) Gianna blocked a shot near our net."
+        ],
+        [
+          "(9) The referee blew his whistle.",
+          "(10) We won the game by one point.",
+          "(11) After the game, we ate oranges and drank juice.",
+          "(12) Everyone shook hands at the end.",
+          "(13) My dad drove me home in his truck.",
+          "(14) Next month, we play in a tournament in Denver."
+        ]
+      ]
+    },
+    {
+      id: "p5",
+      title: "Visiting Florida",
+      byline: "A third grader's draft",
+      genre: "Student draft (narrative)",
+      draft: true,
+      paragraphs: [
+        [
+          "(1) In December, my family flew to Florida to visit my grandfather.",
+          "(2) He lives in a small house near the beach.",
+          "(3) My cousin Zara met us at the airport.",
+          "(4) We ate dinner at Sunny Side Diner."
+        ],
+        [
+          "(5) My grandfather told funny stories about his old town.",
+          "(6) He grew up in a village in Italy.",
+          "(7) On Christmas Eve, we sang songs by the water.",
+          "(8) A pelican landed on the dock."
+        ],
+        [
+          "(9) Zara took a picture of it.",
+          "(10) We built a sandcastle with a tall tower.",
+          "(11) A wave washed it away, and Zara laughed.",
+          "(12) On Sunday, we flew back to Boston.",
+          "(13) I miss the warm sand already."
+        ]
+      ]
+    },
+    {
+      id: "p6",
+      title: "Our Planet Report",
+      byline: "A third grader's draft",
+      genre: "Student draft (informational)",
+      draft: true,
+      paragraphs: [
+        [
+          "(1) Our class studied space in science.",
+          "(2) Ms. Whitaker showed us a picture of Mars.",
+          "(3) Mars is a red planet.",
+          "(4) It has a tall volcano called Olympus Mons."
+        ],
+        [
+          "(5) Jupiter is the biggest planet.",
+          "(6) It has a giant storm with swirling clouds.",
+          "(7) A scientist named Dr. Okoro explained how telescopes work.",
+          "(8) She visited our school in March."
+        ],
+        [
+          "(9) We drew pictures of the planets.",
+          "(10) My partner Wen colored Jupiter orange.",
+          "(11) Our teacher hung the posters in the hall.",
+          "(12) Visitors came to the science fair on Thursday.",
+          "(13) They asked many questions about space.",
+          "(14) I want to be an astronaut someday.",
+          "(15) Ms. Whitaker said that is a great goal."
+        ]
+      ]
+    }
+    /* B7a:passages:end */
+  ],
   practice: [
     { id: "SK-GUM1-9-P1", type: "mc", points: 1, dok: 1, passages: [],
       stem: "My cousin Andre lives in Savannah.",
@@ -12018,6 +12192,1168 @@ PP.addLesson({
       clue: "First find the special names in the sentence. Then ask which one names a place.",
       why: "The answer is Elm Street. It is the name of one special street, so it is a proper noun that names a place. Max is a proper noun too, but it names a pet. Dog and cat are common nouns." }
   ],
+  /* B7a:core:start */
+  /* ---------- Expansion 2026-10-22, batch B7a (GUM Reinforce, first half) ----------
+     core: fifteen items in three sets of five. { ref } reuses a practice item; the other practice items stay in Practice Together.
+     Passages are used only by core and the similar bank; none is used by test.
+     Author log: docs/expansion-2026-10-22/batches/B7a-author-log.md. NOT ACCEPTED: needs independent review. */
+  core: {
+    rev: "1",
+    sets: [
+      {
+        title: "Set 1",
+        items: [
+          {
+            ref: "SK-GUM1-9-P2"
+          },
+          {
+            ref: "SK-GUM1-9-P4"
+          },
+          {
+            id: "SK-GUM1-9-C03",
+            type: "mc",
+            points: 1,
+            dok: 2,
+            std: [
+              "3.L.GC.1:R:use-common-and-proper-nouns"
+            ],
+            passages: ["p1"],
+            prompt: "Which word in sentence 5 is a proper noun?",
+            choices: [
+              {
+                text: "Nora",
+                correct: true
+              },
+              {
+                text: "friend"
+              },
+              {
+                text: "pirate"
+              },
+              {
+                text: "dressed"
+              }
+            ],
+            clue: "A proper noun is a special name. Find the nouns in sentence 5 first.",
+            hints: [
+              "A proper noun is a special name. Find the nouns in sentence 5 first.",
+              "Say each noun and ask: is it the name of one special person, or a general word?",
+              "Dressed is an action, so it is not a noun."
+            ],
+            how: [
+              "Find the nouns in sentence 5: friend, Nora and pirate.",
+              "Ask which one is the special name of one person. Friend and pirate could be about many people.",
+              "The answer is Nora. It names one special person."
+            ],
+            misconception: "A common mix-up is choosing a general word for a person. A proper noun is a special name.",
+            why: "The answer is \"Nora\" Nora is the special name of one person. Friend and pirate are general words, and dressed is a verb."
+          },
+          {
+            id: "SK-GUM1-9-C04",
+            type: "dropdown",
+            points: 1,
+            dok: 2,
+            std: [
+              "3.L.GC.1:R:use-common-and-proper-nouns"
+            ],
+            passages: ["p1"],
+            prompt: "Choose the proper noun that names the principal.",
+            text: "The principal, {0}, wore a long red cape.",
+            slots: [
+              {
+                options: ["Mr. Diaz","the teacher","our school"],
+                answer: 0
+              }
+            ],
+            clue: "You need the special name of one person. Check each choice.",
+            hints: [
+              "You need the special name of one person. Check each choice.",
+              "Ask which choice is a name and also names a person.",
+              "Our school names a place, so it cannot name the principal."
+            ],
+            how: [
+              "The blank needs a proper noun that names a person.",
+              "The teacher is a general phrase, and our school is a place.",
+              "The answer is Mr. Diaz. It is the special name of one person."
+            ],
+            misconception: "A common mix-up is choosing a general word. The blank needs a special name.",
+            why: "The answer is Mr. Diaz. Mr. Diaz is the special name of one person. The teacher is a general phrase, and our school names a place."
+          },
+          {
+            id: "SK-GUM1-9-C05",
+            type: "mc",
+            points: 1,
+            dok: 3,
+            std: [
+              "3.L.GC.1:R:use-common-and-proper-nouns"
+            ],
+            passages: ["p1"],
+            prompt: "In sentence 5, Nora is a proper noun and friend is a common noun. Why?",
+            choices: [
+              {
+                text: "Nora is the special name of one person, while friend could mean anyone.",
+                correct: true
+              },
+              {
+                text: "Nora is longer than friend, and longer nouns are always proper nouns in writing."
+              },
+              {
+                text: "Nora comes last in the sentence, and the last noun is always proper."
+              },
+              {
+                text: "Nora names a person, while friend names a thing, so friend is common."
+              }
+            ],
+            clue: "Compare the two words. Ask which one could be used for many different people.",
+            hints: [
+              "Compare the two words. Ask which one could be used for many different people.",
+              "Think about whether another person could also be called a friend.",
+              "A friend is a person, not a thing, so one reason can be ruled out."
+            ],
+            how: [
+              "Ask whether each word is a special name. Nora is the name of one person.",
+              "Friend could be about any friend, so it is a general word.",
+              "The answer is \"Nora is the special name of one person, while friend could mean anyone.\""
+            ],
+            misconception: "A common mix-up is deciding by length or position. A proper noun is a special name.",
+            why: "The answer is \"Nora is the special name of one person, while friend could mean anyone.\" Nora is the special name of one person, while friend could mean anyone. Length and position do not decide a proper noun."
+          }
+        ]
+      },
+      {
+        title: "Set 2",
+        items: [
+          {
+            id: "SK-GUM1-9-C06",
+            type: "hottext",
+            points: 2,
+            dok: 2,
+            std: [
+              "3.L.GC.1:R:use-common-and-proper-nouns"
+            ],
+            passages: ["p1"],
+            prompt: "Select the TWO shown sentences that name a special day.",
+            targets: ["p1:1:2","p1:1:3","p1:1:4","p1:2:3","p1:3:5"],
+            answer: ["p1:1:3","p1:2:3"],
+            pick: 2,
+            clue: "A special day has its own name that starts with a capital letter. Look for it.",
+            hints: [
+              "A special day has its own name that starts with a capital letter. Look for it.",
+              "Check each shown sentence for the name of a day.",
+              "Sentence 13 has the time word year, which is a general word, so it can be ruled out."
+            ],
+            how: [
+              "Look for the name of one special day.",
+              "Monday in sentence 3 and Friday in sentence 7 are names of days.",
+              "Week in sentence 2 and year in sentence 13 are general time words. Sentence 4 has no day."
+            ],
+            misconception: "A common mix-up is choosing any time word. A special day has its own name.",
+            why: "The answers are sentences 3 and 7: \"On Monday, Mrs. Greene wore a silly hat to class.\" and \"On Friday, the whole school met in the gym.\". Monday and Friday are names of special days. Week and year are general words, and sentence 4 has no day."
+          },
+          {
+            id: "SK-GUM1-9-C07",
+            type: "ebsr",
+            points: 2,
+            dok: 3,
+            std: [
+              "3.L.GC.1:R:use-common-and-proper-nouns"
+            ],
+            passages: ["p1"],
+            prompt: "This question has two parts. Answer Part A, then Part B.",
+            partA: {
+              prompt: "Which word in sentence 7 is a proper noun?",
+              choices: [
+                {
+                  text: "Friday",
+                  correct: true
+                },
+                {
+                  text: "school"
+                },
+                {
+                  text: "gym"
+                },
+                {
+                  text: "whole"
+                }
+              ]
+            },
+            partB: {
+              prompt: "What makes it a proper noun?",
+              choices: [
+                {
+                  text: "It is the special name of one day.",
+                  correct: true
+                },
+                {
+                  text: "It is a general word for any day."
+                },
+                {
+                  text: "It names a place where people play."
+                },
+                {
+                  text: "It tells an action that someone does."
+                }
+              ]
+            },
+            clue: "In Part A, look for the name of one special day. In Part B, say what kind of word it is.",
+            hints: [
+              "In Part A, look for the name of one special day. In Part B, say what kind of word it is.",
+              "Ask which word could be about any day and which one is a particular day.",
+              "Gym names a place, so it cannot be the name of a day."
+            ],
+            how: [
+              "Part A: ask which word is the special name of a day. Friday is.",
+              "Part B: Friday names one day, so it is a proper noun.",
+              "The answers are Friday and \"It is the special name of one day.\" School and gym are common nouns."
+            ],
+            misconception: "A common mix-up is choosing a general place word. A proper noun is a special name.",
+            why: "Part A: \"Friday\" Part B: \"It is the special name of one day.\" Friday is the special name of one day, so it is a proper noun. School and gym are general words."
+          },
+          {
+            id: "SK-GUM1-9-C08",
+            type: "ms",
+            points: 2,
+            dok: 2,
+            std: [
+              "3.L.GC.1:R:use-common-and-proper-nouns"
+            ],
+            passages: [],
+            stem: "Tavon packed his suitcase and boarded the plane for Canada.",
+            prompt: "Choose the TWO proper nouns in the sentence.",
+            pick: 2,
+            choices: [
+              {
+                text: "Tavon",
+                correct: true
+              },
+              {
+                text: "suitcase"
+              },
+              {
+                text: "packed"
+              },
+              {
+                text: "plane"
+              },
+              {
+                text: "Canada",
+                correct: true
+              },
+              {
+                text: "boarded"
+              }
+            ],
+            clue: "Proper nouns are special names. Find the nouns first.",
+            hints: [
+              "Proper nouns are special names. Find the nouns first.",
+              "Ask which nouns are the special name of one person or one country.",
+              "Packed is an action, so it is not a noun."
+            ],
+            how: [
+              "Find the nouns: Tavon, suitcase, plane and Canada.",
+              "Ask which are special names. Suitcase and plane are general words.",
+              "The answers are Tavon and Canada. Tavon names one person, and Canada names one country."
+            ],
+            misconception: "A common mix-up is choosing a verb because it sits near a name. A proper noun must be a noun.",
+            why: "The answers are \"Tavon\" and \"Canada\". Tavon names one person and Canada names one country. Suitcase and plane are common nouns, and packed and boarded are verbs."
+          },
+          {
+            id: "SK-GUM1-9-C09",
+            type: "mc",
+            points: 1,
+            dok: 1,
+            std: [
+              "3.L.GC.1:R:use-common-and-proper-nouns"
+            ],
+            passages: [],
+            stem: "The tourists took a photo of Niagara Falls.",
+            prompt: "Which choice is a proper noun?",
+            choices: [
+              {
+                text: "Niagara Falls",
+                correct: true
+              },
+              {
+                text: "the tourists"
+              },
+              {
+                text: "a photo of it"
+              },
+              {
+                text: "took"
+              }
+            ],
+            clue: "A proper noun is a special name. Look for the name of one special place.",
+            hints: [
+              "A proper noun is a special name. Look for the name of one special place.",
+              "Ask which choice names one special place.",
+              "Took is an action, so it is not a noun."
+            ],
+            how: [
+              "Look for a special name.",
+              "The tourists and a photo are general words.",
+              "The answer is Niagara Falls. It names one special place."
+            ],
+            misconception: "A common mix-up is choosing a general word. A proper noun is a special name.",
+            why: "The answer is \"Niagara Falls\" Niagara Falls names one special place. The tourists and a photo are general words, and took is a verb."
+          },
+          {
+            id: "SK-GUM1-9-C10",
+            type: "mc",
+            points: 1,
+            dok: 3,
+            std: [
+              "3.L.GC.1:R:use-common-and-proper-nouns"
+            ],
+            passages: ["p2"],
+            prompt: "Sentence 1 names Maple Street Library, and sentence 2 names the library. Which statement is true?",
+            choices: [
+              {
+                text: "Maple Street Library names one special place, and library could be any library.",
+                correct: true
+              },
+              {
+                text: "Both names mean one special place, so both of them need capital letters."
+              },
+              {
+                text: "Library names one special place, and Maple Street Library could be any library."
+              },
+              {
+                text: "Both names are common nouns, since each one is a name for a building."
+              }
+            ],
+            clue: "Ask which phrase is a special name and which word could be about many buildings.",
+            hints: [
+              "Ask which phrase is a special name and which word could be about many buildings.",
+              "Compare: could library mean many different libraries? Could Maple Street Library?",
+              "Maple Street Library is a special name, so both cannot be common nouns."
+            ],
+            how: [
+              "Library could be about any library, so it is a common noun.",
+              "Maple Street Library is the special name of one library, so it is a proper noun.",
+              "The answer is \"Maple Street Library names one special place, and library could be any library.\""
+            ],
+            misconception: "A common mix-up is thinking two names for the same kind of place are the same kind of noun. One is general and one is special.",
+            why: "The answer is \"Maple Street Library names one special place, and library could be any library.\" Maple Street Library is a proper noun for one special place, and library is a common noun that could be any library."
+          }
+        ]
+      },
+      {
+        title: "Set 3",
+        items: [
+          {
+            id: "SK-GUM1-9-C11",
+            type: "hottext",
+            points: 2,
+            dok: 2,
+            std: [
+              "3.L.GC.1:R:use-common-and-proper-nouns"
+            ],
+            passages: ["p2"],
+            prompt: "Select the TWO shown sentences with a proper noun that names a place.",
+            targets: ["p2:1:1","p2:1:2","p2:1:3","p2:2:2","p2:2:3"],
+            answer: ["p2:1:1","p2:2:2"],
+            pick: 2,
+            clue: "A proper noun for a place is the special name of one place. Look for names with capital letters.",
+            hints: [
+              "A proper noun for a place is the special name of one place. Look for names with capital letters.",
+              "Check each shown sentence for a special place name, not a general word for a place.",
+              "Sentence 3 has the special name of a person, not a place, so it can be ruled out."
+            ],
+            how: [
+              "Look for the special name of a place.",
+              "Maple Street Library in sentence 1 and Columbus in sentence 6 are special place names.",
+              "Library in sentence 2 is a general word, Mr. Kim in sentence 3 is a person, and sentence 7 has only general words."
+            ],
+            misconception: "A common mix-up is choosing any place word. A proper noun names one special place.",
+            why: "The answers are sentences 1 and 6: \"Last Saturday, my uncle took me to Maple Street Library.\" and \"My uncle read about a city called Columbus.\". Maple Street Library and Columbus are special place names. Library is general, Mr. Kim is a person, and sentence 7 has only general words."
+          },
+          {
+            id: "SK-GUM1-9-C12",
+            type: "dropdown",
+            points: 1,
+            dok: 2,
+            std: [
+              "3.L.GC.1:R:use-common-and-proper-nouns"
+            ],
+            passages: ["p2"],
+            prompt: "Choose the proper noun that completes sentence 5.",
+            text: "I found a book about the {0}.",
+            slots: [
+              {
+                options: ["Ohio River","river","ohio river"],
+                answer: 0
+              }
+            ],
+            clue: "You need the special name of one river. Check each choice.",
+            hints: [
+              "You need the special name of one river. Check each choice.",
+              "A special name starts with capital letters. Check the first letters.",
+              "One choice is a general word for any river, so it cannot be a special name."
+            ],
+            how: [
+              "The blank needs a proper noun that names one river.",
+              "River is a general word, and ohio river is missing its capital letters.",
+              "The answer is Ohio River. It is the special name of one river."
+            ],
+            misconception: "A common mix-up is leaving off the capital letters. A special name starts with capitals.",
+            why: "The answer is Ohio River. Ohio River is the special name of one river. River is a general word, and ohio river is missing its capital letters."
+          },
+          {
+            id: "SK-GUM1-9-C13",
+            type: "dropdown",
+            points: 2,
+            dok: 2,
+            std: [
+              "3.L.GC.1:R:use-common-and-proper-nouns"
+            ],
+            passages: [],
+            prompt: "Choose the special name that fits each blank.",
+            text: "On {0}, my friend {1} took me to the museum.",
+            slots: [
+              {
+                options: ["Sunday","sunday","weekend"],
+                answer: 0
+              },
+              {
+                options: ["Lucia","lucia","girl"],
+                answer: 0
+              }
+            ],
+            clue: "Each blank needs the special name of one day or one person. Check the first letters too.",
+            hints: [
+              "Each blank needs the special name of one day or one person. Check the first letters too.",
+              "A special name starts with a capital letter, even in the middle of a sentence.",
+              "Weekend is a general word, so it is not the name of one day."
+            ],
+            how: [
+              "The first blank needs the name of a day, and the second needs the name of a person.",
+              "Sunday and Lucia are special names, so they start with capital letters.",
+              "The answers are Sunday and Lucia. Weekend and girl are general words."
+            ],
+            misconception: "A common mix-up is writing a special name with a small letter. A proper noun always starts with a capital.",
+            why: "The answers are Sunday and Lucia. Sunday is the name of one day and Lucia is the name of one person, so both start with capitals."
+          },
+          {
+            id: "SK-GUM1-9-C14",
+            type: "hottext",
+            points: 1,
+            dok: 2,
+            std: [
+              "3.L.GC.1:R:use-common-and-proper-nouns"
+            ],
+            passages: [],
+            stem: "A student wrote four sentences about a trip.",
+            prompt: "Select the sentence with a proper noun that needs a capital letter.",
+            options: [
+              "Our bus left for Phoenix on friday.",
+              "My brother packed a suitcase for the trip.",
+              "We stayed in a hotel near Lake Erie.",
+              "Aunt Rosa waved from the station."
+            ],
+            answer: [0],
+            pick: 1,
+            clue: "Find each special name in each sentence. Check that each one starts with a capital letter.",
+            hints: [
+              "Find each special name in each sentence. Check that each one starts with a capital letter.",
+              "Look at the names of days, places and people one at a time.",
+              "One sentence has no special names at all, so it can be ruled out."
+            ],
+            how: [
+              "Find the special names and check the first letter of each.",
+              "Phoenix, Lake Erie and Aunt Rosa already start with capitals.",
+              "The answer is \"Our bus left for Phoenix on friday.\" Friday names one day, so it needs a capital F."
+            ],
+            misconception: "A common mix-up is checking only the first word and the place names. Days of the week are proper nouns too.",
+            why: "The answer is \"Our bus left for Phoenix on friday.\". Friday is the name of one day, so it needs a capital F. The other sentences already use capitals correctly."
+          },
+          {
+            id: "SK-GUM1-9-C15",
+            type: "mc",
+            points: 1,
+            dok: 3,
+            std: [
+              "3.L.GC.1:R:use-common-and-proper-nouns"
+            ],
+            passages: [],
+            prompt: "Kofi says, \"Every noun that starts with a capital letter is a proper noun.\" Which sentence shows that Kofi is wrong?",
+            choices: [
+              {
+                text: "Children played on the swings.",
+                correct: true
+              },
+              {
+                text: "Nora played on the swings."
+              },
+              {
+                text: "We saw Mount Hood from the bus."
+              },
+              {
+                text: "Jupiter shines in the night sky."
+              }
+            ],
+            clue: "To show a claim is wrong, find an example that breaks it. Look for a capital letter on a general word.",
+            hints: [
+              "To show a claim is wrong, find an example that breaks it. Look for a capital letter on a general word.",
+              "Check the first word of each sentence and each capital letter inside it.",
+              "Nora is the special name of one person, so that sentence agrees with Kofi's claim."
+            ],
+            how: [
+              "Kofi says every capitalized noun is proper. Look for a capitalized common noun.",
+              "Nora, Mount Hood and Jupiter are special names.",
+              "The answer is \"Children played on the swings.\" Children begins the sentence, but it is a general word."
+            ],
+            misconception: "A common mix-up is thinking every capital letter marks a proper noun. A common noun gets a capital when it starts a sentence.",
+            why: "The answer is \"Children played on the swings.\" Children has a capital letter only because it starts the sentence. It is a general word, so it is a common noun."
+          }
+        ]
+      }
+    ]
+  },
+  similar: [
+    {
+      id: "SK-GUM1-9-S01",
+      type: "match",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.L.GC.1:R:use-common-and-proper-nouns"
+      ],
+      passages: [],
+      prompt: "Put each noun in the group that fits it.",
+      cols: ["A general name","A special name"],
+      rows: [
+        {
+          text: "bridge",
+          answer: 0
+        },
+        {
+          text: "Brooklyn Bridge",
+          answer: 1
+        },
+        {
+          text: "month",
+          answer: 0
+        },
+        {
+          text: "October",
+          answer: 1
+        },
+        {
+          text: "doctor",
+          answer: 0
+        },
+        {
+          text: "Dr. Singh",
+          answer: 1
+        }
+      ],
+      clue: "Ask for each noun whether it could be about many things or names just one.",
+      hints: [
+        "Ask for each noun whether it could be about many things or names just one.",
+        "Sort the nouns you feel surest about first. Then handle the rest.",
+        "One noun names a month. Place it first."
+      ],
+      how: [
+        "Bridge, month and doctor could be about many things, so they are general names.",
+        "Brooklyn Bridge, October and Dr. Singh each name one special thing, so they are special names."
+      ],
+      misconception: "A common mix-up is sorting by how long the noun is. Sort by whether it is a special name.",
+      why: "Bridge, month and doctor are general names. Brooklyn Bridge, October and Dr. Singh are special names.",
+      like: ["SK-GUM1-9-P2"]
+    },
+    {
+      id: "SK-GUM1-9-S02",
+      type: "hottext",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.L.GC.1:R:use-common-and-proper-nouns"
+      ],
+      passages: [],
+      stem: "On Wednesday, Hana fed the ducks at the pond.",
+      prompt: "Tap both special names in the sentence.",
+      options: ["Wednesday","Hana","ducks","pond"],
+      answer: [0,1],
+      pick: 2,
+      clue: "Special names are proper nouns. Look for the name of a day and the name of a person.",
+      hints: [
+        "Special names are proper nouns. Look for the name of a day and the name of a person.",
+        "Ask for each noun: could it be about many things, or does it name just one?",
+        "Pond is a general word, so it cannot be a special name."
+      ],
+      how: [
+        "Find the special names in the sentence.",
+        "Wednesday names one day, and Hana names one person.",
+        "Ducks and pond are general words, so they are common nouns."
+      ],
+      misconception: "A common mix-up is choosing only one special name. Look for both the day and the person.",
+      why: "The answers are \"Wednesday\" and \"Hana\". Wednesday and Hana are special names. Ducks and pond are common nouns.",
+      like: ["SK-GUM1-9-P4"]
+    },
+    {
+      id: "SK-GUM1-9-S03",
+      type: "mc",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.L.GC.1:R:use-common-and-proper-nouns"
+      ],
+      passages: ["p4"],
+      prompt: "Pick the special name in sentence 4.",
+      choices: [
+        {
+          text: "Felix",
+          correct: true
+        },
+        {
+          text: "ball"
+        },
+        {
+          text: "goalie"
+        },
+        {
+          text: "kicked"
+        }
+      ],
+      clue: "A special name is a proper noun. Find the nouns in sentence 4 first.",
+      hints: [
+        "A special name is a proper noun. Find the nouns in sentence 4 first.",
+        "Say each noun and ask: is it the name of one person, or a general word?",
+        "Kicked is an action, so it is not a noun."
+      ],
+      how: [
+        "Find the nouns in sentence 4: Felix, ball and goalie.",
+        "Ask which one names one special person. Ball and goalie are general words.",
+        "The answer is Felix. It names one special person."
+      ],
+      misconception: "A common mix-up is choosing a general word for a person. A proper noun is a special name.",
+      why: "The answer is \"Felix\" Felix is the special name of one person. Ball and goalie are general words, and kicked is a verb.",
+      like: ["SK-GUM1-9-C03"]
+    },
+    {
+      id: "SK-GUM1-9-S04",
+      type: "dropdown",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.L.GC.1:R:use-common-and-proper-nouns"
+      ],
+      passages: ["p4"],
+      prompt: "Pick the special name that fits for the goalie.",
+      text: "The goalie, {0}, dove but missed it.",
+      slots: [
+        {
+          options: ["Omar","the player","our team"],
+          answer: 0
+        }
+      ],
+      clue: "The blank needs the name of one person. Check each choice.",
+      hints: [
+        "The blank needs the name of one person. Check each choice.",
+        "Ask which choice is a name and also names a person.",
+        "Our team names a group, so it cannot be the goalie's name."
+      ],
+      how: [
+        "The blank needs a proper noun for a person.",
+        "The player is a general phrase, and our team is a group.",
+        "The answer is Omar. It is the special name of one person."
+      ],
+      misconception: "A common mix-up is choosing a general phrase. The blank needs a special name.",
+      why: "The answer is Omar. Omar is the special name of one person. The player is a general phrase, and our team is a group.",
+      like: ["SK-GUM1-9-C04"]
+    },
+    {
+      id: "SK-GUM1-9-S05",
+      type: "mc",
+      points: 1,
+      dok: 3,
+      std: [
+        "3.L.GC.1:R:use-common-and-proper-nouns"
+      ],
+      passages: ["p4"],
+      prompt: "Look at Hawks, Bears and Cole Park in sentence 1. Why do they start with capitals?",
+      choices: [
+        {
+          text: "They are special names for one particular team or park.",
+          correct: true
+        },
+        {
+          text: "They are long words, and long words need capitals."
+        },
+        {
+          text: "They begin the sentence, and first words need capitals."
+        },
+        {
+          text: "They are general words for any team or any park."
+        }
+      ],
+      clue: "Ask whether each name could be about any team or place, or just one.",
+      hints: [
+        "Ask whether each name could be about any team or place, or just one.",
+        "Think about why a name gets a capital letter even in the middle of a sentence.",
+        "The names do not begin the sentence, so one reason can be ruled out."
+      ],
+      how: [
+        "Ask what kind of nouns Hawks, Bears and Cole Park are.",
+        "Each one is the special name of one team or one park, so each is a proper noun.",
+        "The answer is \"They are special names for one particular team or park.\""
+      ],
+      misconception: "A common mix-up is thinking capital letters are only for the first word. Proper nouns get capitals anywhere.",
+      why: "The answer is \"They are special names for one particular team or park.\" They are special names for one particular team or park. Proper nouns start with capitals even in the middle of a sentence.",
+      like: ["SK-GUM1-9-C05"]
+    },
+    {
+      id: "SK-GUM1-9-S06",
+      type: "hottext",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.L.GC.1:R:use-common-and-proper-nouns"
+      ],
+      passages: ["p4"],
+      prompt: "Select the TWO shown sentences that name a special person.",
+      targets: ["p4:1:2","p4:1:3","p4:2:1","p4:3:1","p4:3:5"],
+      answer: ["p4:1:2","p4:2:1"],
+      pick: 2,
+      clue: "A special person has a name that starts with a capital letter. Look for it.",
+      hints: [
+        "A special person has a name that starts with a capital letter. Look for it.",
+        "Check each shown sentence for the name of one person, not a general word for people.",
+        "Sentence 13 has the general word dad, so it can be ruled out."
+      ],
+      how: [
+        "Look for the name of one special person.",
+        "Ms. Ramirez in sentence 2 and Omar in sentence 5 are names of people.",
+        "Crowd, referee and dad are general words, so they are common nouns."
+      ],
+      misconception: "A common mix-up is choosing any word for a person. A special person has a name.",
+      why: "The answers are sentences 2 and 5: \"Our coach, Ms. Ramirez, gave a short speech.\" and \"The goalie, Omar, dove but missed it.\". Ms. Ramirez and Omar are names of special people. Crowd, referee and dad are general words.",
+      like: ["SK-GUM1-9-C06"]
+    },
+    {
+      id: "SK-GUM1-9-S07",
+      type: "ebsr",
+      points: 2,
+      dok: 3,
+      std: [
+        "3.L.GC.1:R:use-common-and-proper-nouns"
+      ],
+      passages: ["p4"],
+      prompt: "Complete both halves.",
+      partA: {
+        prompt: "Which choice in sentence 14 names a single city?",
+        choices: [
+          {
+            text: "Denver",
+            correct: true
+          },
+          {
+            text: "month"
+          },
+          {
+            text: "tournament"
+          },
+          {
+            text: "play"
+          }
+        ]
+      },
+      partB: {
+        prompt: "Which reason fits?",
+        choices: [
+          {
+            text: "Only one city goes by this name.",
+            correct: true
+          },
+          {
+            text: "Cities everywhere go by this name."
+          },
+          {
+            text: "It sits last, so it is the proper one."
+          },
+          {
+            text: "Its job is showing what players do."
+          }
+        ]
+      },
+      clue: "In the first half, look for the name of one special place. In the second half, say why it is special.",
+      hints: [
+        "In the first half, look for the name of one special place. In the second half, say why it is special.",
+        "Ask which word could be about many places and which one names a single place.",
+        "Play tells what people do, so it cannot be a proper noun."
+      ],
+      how: [
+        "First half: ask which word is the special name of a place. Denver is.",
+        "Second half: Denver names one city, so it is a proper noun.",
+        "The answers are Denver and \"Only one city goes by this name.\" Month and tournament are common nouns."
+      ],
+      misconception: "A common mix-up is choosing the last noun in the sentence. A proper noun is a special name.",
+      why: "Part A: \"Denver\" Part B: \"Only one city goes by this name.\" Only one city goes by the name Denver, so it is a proper noun. Month and tournament are general words.",
+      like: ["SK-GUM1-9-C07"]
+    },
+    {
+      id: "SK-GUM1-9-S08",
+      type: "ms",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.L.GC.1:R:use-common-and-proper-nouns"
+      ],
+      passages: [],
+      stem: "Lucia mailed a postcard to her cousin in Peru.",
+      prompt: "Choose both words that are special names.",
+      pick: 2,
+      choices: [
+        {
+          text: "Lucia",
+          correct: true
+        },
+        {
+          text: "postcard"
+        },
+        {
+          text: "mailed"
+        },
+        {
+          text: "cousin"
+        },
+        {
+          text: "Peru",
+          correct: true
+        }
+      ],
+      clue: "Proper nouns are special names. Find the nouns first.",
+      hints: [
+        "Proper nouns are special names. Find the nouns first.",
+        "Ask which nouns are the special name of one person or one country.",
+        "Mailed is an action, so it is not a noun."
+      ],
+      how: [
+        "Find the nouns: Lucia, postcard, cousin and Peru.",
+        "Ask which are special names. Postcard and cousin are general words.",
+        "The answers are Lucia and Peru. Lucia names one person, and Peru names one country."
+      ],
+      misconception: "A common mix-up is choosing a family word like cousin. A proper noun is a special name.",
+      why: "The answers are \"Lucia\" and \"Peru\". Lucia names one person and Peru names one country. Postcard and cousin are common nouns, and mailed is a verb.",
+      like: ["SK-GUM1-9-C08"]
+    },
+    {
+      id: "SK-GUM1-9-S09",
+      type: "mc",
+      points: 1,
+      dok: 1,
+      std: [
+        "3.L.GC.1:R:use-common-and-proper-nouns"
+      ],
+      passages: [],
+      stem: "The class visited Yellowstone last year.",
+      prompt: "Pick the choice that names one special place.",
+      choices: [
+        {
+          text: "Yellowstone",
+          correct: true
+        },
+        {
+          text: "the class"
+        },
+        {
+          text: "visited there"
+        },
+        {
+          text: "last year"
+        }
+      ],
+      clue: "A proper noun is a special name. Look for the name of one special place.",
+      hints: [
+        "A proper noun is a special name. Look for the name of one special place.",
+        "Ask which choice is a place, not a group of people or a time.",
+        "Last year is a time, so it is not a place."
+      ],
+      how: [
+        "Look for a special place name.",
+        "The class is a group of people, and last year is a time.",
+        "The answer is Yellowstone. It names one special place."
+      ],
+      misconception: "A common mix-up is choosing a general word. A proper noun is a special name.",
+      why: "The answer is \"Yellowstone\" Yellowstone names one special place. The class is a group, visited it is an action, and last year is a time.",
+      like: ["SK-GUM1-9-C09"]
+    },
+    {
+      id: "SK-GUM1-9-S10",
+      type: "mc",
+      points: 1,
+      dok: 3,
+      std: [
+        "3.L.GC.1:R:use-common-and-proper-nouns"
+      ],
+      passages: ["p5"],
+      prompt: "Why does Sunny Side Diner get capitals in sentence 4 while beach in sentence 2 does not?",
+      choices: [
+        {
+          text: "Only one diner has that title, but many shores are beaches.",
+          correct: true
+        },
+        {
+          text: "Longer titles always need more capitals than short words do."
+        },
+        {
+          text: "Sentences later in a draft always need more capital letters."
+        },
+        {
+          text: "Beach names an action, but Sunny Side Diner names a thing."
+        }
+      ],
+      clue: "Ask which of the two belongs to just one place and which is a general word.",
+      hints: [
+        "Ask which of the two belongs to just one place and which is a general word.",
+        "Think about whether other places could also be called a beach.",
+        "Beach is a thing, not an action, so one choice can be ruled out."
+      ],
+      how: [
+        "Beach could be about any beach, so it is a common noun.",
+        "Sunny Side Diner is the special name of one diner, so it is a proper noun.",
+        "The answer is \"Only one diner has that title, but many shores are beaches.\""
+      ],
+      misconception: "A common mix-up is thinking two place words are the same kind of noun. One is general and one is special.",
+      why: "The answer is \"Only one diner has that title, but many shores are beaches.\" Sunny Side Diner is a proper noun for one place, and beach is a common noun that could be any beach.",
+      like: ["SK-GUM1-9-C10"]
+    },
+    {
+      id: "SK-GUM1-9-S11",
+      type: "hottext",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.L.GC.1:R:use-common-and-proper-nouns"
+      ],
+      passages: ["p5"],
+      prompt: "Tap both shown sentences that have a special place name.",
+      targets: ["p5:1:1","p5:1:2","p5:1:3","p5:2:4","p5:3:4"],
+      answer: ["p5:1:1","p5:3:4"],
+      pick: 2,
+      clue: "A special place name starts with a capital letter. Look for the name of one place.",
+      hints: [
+        "A special place name starts with a capital letter. Look for the name of one place.",
+        "Check each shown sentence for a special place name, not a general word for a place.",
+        "Sentence 3 has the name of a person, not a place, so it can be ruled out."
+      ],
+      how: [
+        "Look for the special name of a place.",
+        "Florida in sentence 1 and Boston in sentence 12 are special place names.",
+        "Beach and dock are general words, and Zara in sentence 3 is a person."
+      ],
+      misconception: "A common mix-up is choosing any place word. A proper noun names one special place.",
+      why: "The answers are sentences 1 and 12: \"In December, my family flew to Florida to visit my grandfather.\" and \"On Sunday, we flew back to Boston.\". Florida and Boston are special place names. Beach and dock are general words, and Zara is a person.",
+      like: ["SK-GUM1-9-C11"]
+    },
+    {
+      id: "SK-GUM1-9-S12",
+      type: "dropdown",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.L.GC.1:R:use-common-and-proper-nouns"
+      ],
+      passages: ["p5"],
+      prompt: "Which choice completes sentence 12?",
+      text: "On Sunday, we flew back to {0}.",
+      slots: [
+        {
+          options: ["Boston","airport","boston"],
+          answer: 0
+        }
+      ],
+      clue: "You need the special name of one city. Check each choice.",
+      hints: [
+        "You need the special name of one city. Check each choice.",
+        "A special name starts with a capital letter. Check the first letters.",
+        "One choice is a general word for a place, so it cannot be a special name."
+      ],
+      how: [
+        "The blank needs a proper noun that names one city.",
+        "Airport is a general word, and boston is missing its capital letter.",
+        "The answer is Boston. It is the special name of one city."
+      ],
+      misconception: "A common mix-up is leaving off the capital letter. A special name starts with a capital.",
+      why: "The answer is Boston. Boston is the special name of one city. Airport is a general word, and boston is missing its capital letter.",
+      like: ["SK-GUM1-9-C12"]
+    },
+    {
+      id: "SK-GUM1-9-S13",
+      type: "dropdown",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.L.GC.1:R:use-common-and-proper-nouns"
+      ],
+      passages: [],
+      prompt: "Fill each blank with the correct special name.",
+      text: "During {0}, our neighbor {1} planted a garden.",
+      slots: [
+        {
+          options: ["October","october","spring"],
+          answer: 0
+        },
+        {
+          options: ["Mr. Chen","mr. chen","boy"],
+          answer: 0
+        }
+      ],
+      clue: "Each blank needs the special name of one month or one person. Check the first letters too.",
+      hints: [
+        "Each blank needs the special name of one month or one person. Check the first letters too.",
+        "A special name starts with a capital letter, even in the middle of a sentence.",
+        "Boy is a general word, so it is not the name of one person."
+      ],
+      how: [
+        "The first blank needs the name of a month, and the second needs the name of a person.",
+        "October and Mr. Chen are special names, so they start with capital letters.",
+        "The answers are October and Mr. Chen. Spring and boy are general words."
+      ],
+      misconception: "A common mix-up is writing a special name with small letters. A proper noun always starts with a capital.",
+      why: "The answers are October and Mr. Chen. October is the name of one month and Mr. Chen is the name of one person, so both start with capitals.",
+      like: ["SK-GUM1-9-C13"]
+    },
+    {
+      id: "SK-GUM1-9-S14",
+      type: "hottext",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.L.GC.1:R:use-common-and-proper-nouns"
+      ],
+      passages: [],
+      stem: "A class is proofreading lines about camping.",
+      prompt: "Find the line that is missing a capital letter on a special name.",
+      options: [
+        "We camped beside the Colorado river in June.",
+        "Ms. Ito read a story about Alaska.",
+        "The bakery on Pine Street sells fresh bread.",
+        "My grandmother watered her tomato plants."
+      ],
+      answer: [0],
+      pick: 1,
+      clue: "Find each special name in each sentence. Check that each one starts with a capital letter.",
+      hints: [
+        "Find each special name in each sentence. Check that each one starts with a capital letter.",
+        "Look at the names of places and months one at a time.",
+        "One sentence has no special names at all, so it can be ruled out."
+      ],
+      how: [
+        "Find the special names and check the first letter of each.",
+        "June, Alaska and Pine Street already start with capitals.",
+        "The answer is \"We camped beside the Colorado river in June.\" Colorado River is one special name, so river needs a capital R."
+      ],
+      misconception: "A common mix-up is checking only the main word of a name. Every important word in a name needs a capital.",
+      why: "The answer is \"We camped beside the Colorado river in June.\". Colorado River is one special name, so river needs a capital R. The other sentences already use capitals correctly.",
+      like: ["SK-GUM1-9-C14"]
+    },
+    {
+      id: "SK-GUM1-9-S15",
+      type: "mc",
+      points: 1,
+      dok: 3,
+      std: [
+        "3.L.GC.1:R:use-common-and-proper-nouns"
+      ],
+      passages: [],
+      prompt: "Nia thinks every special name is just one word. Which sentence shows she is mistaken?",
+      choices: [
+        {
+          text: "We camped at the Grand Canyon.",
+          correct: true
+        },
+        {
+          text: "We camped in Utah last summer."
+        },
+        {
+          text: "We camped with Rosa near the lake."
+        },
+        {
+          text: "We camped in August by a river."
+        }
+      ],
+      clue: "To show a claim is wrong, find an example that breaks it. Look for a special name with more than one word.",
+      hints: [
+        "To show a claim is wrong, find an example that breaks it. Look for a special name with more than one word.",
+        "Find the special name in each sentence and count its words.",
+        "Rosa is a one-word name, so that sentence agrees with Nia's claim."
+      ],
+      how: [
+        "Nia says a proper noun is always one word. Look for a special name with two or more words.",
+        "Utah, Rosa and August are each one word.",
+        "The answer is \"We camped at the Grand Canyon.\" Grand Canyon is one special place with two words."
+      ],
+      misconception: "A common mix-up is thinking a special name is a single word. Many names have two or more words.",
+      why: "The answer is \"We camped at the Grand Canyon.\" Grand Canyon is a proper noun with more than one word. Utah, Rosa and August are one-word names.",
+      like: ["SK-GUM1-9-C15"]
+    }
+  ],
+  addons: {
+    "SK-GUM1-9-P1": {
+      hints: [
+        "A common noun is a general word. Find the nouns first, then ask which one could be about many people.",
+        "Say each noun and ask: could it be about any person or place?",
+        "Lives is an action, so it is not a noun."
+      ],
+      how: [
+        "Find the nouns: cousin, Andre and Savannah.",
+        "Ask which one is a general word. Cousin could be about many people. The answer is cousin."
+      ],
+      misconception: "A common mix-up is choosing a special name. A common noun is a general word."
+    },
+    "SK-GUM1-9-P2": {
+      hints: [
+        "Ask for each noun: is it the special name of one person, place or thing, or a general word?",
+        "Sort the nouns you feel surest about first. Then handle the rest.",
+        "One noun names a day. Place it first."
+      ],
+      how: [
+        "River, school and teacher are general words, so they are common nouns.",
+        "Chattahoochee River, Monday and Ms. Patel are special names, so they are proper nouns."
+      ],
+      misconception: "A common mix-up is calling a long noun proper. Sort by whether it is a special name."
+    },
+    "SK-GUM1-9-P3": {
+      hints: [
+        "You need the special name of one mountain. Check each choice.",
+        "Ask which choice is a special name and also names a mountain.",
+        "A mountain is a general word, so it is not a special name."
+      ],
+      how: [
+        "The blank needs a proper noun that names a mountain.",
+        "Savannah names a city, and a mountain is a general word. The answer is Stone Mountain."
+      ],
+      misconception: "A common mix-up is choosing any proper noun. The name must also fit the kind of place."
+    },
+    "SK-GUM1-9-P4": {
+      hints: [
+        "Proper nouns are special names. Look for the name of a day and the name of a person.",
+        "Check each noun: could it be about many days or people?",
+        "Park is a general word, so it cannot be a special name."
+      ],
+      how: [
+        "Find the special names in the sentence.",
+        "Saturday names one day, and Keisha names one person. The answers are Saturday and Keisha."
+      ],
+      misconception: "A common mix-up is choosing only one special name. Look for both the day and the person."
+    },
+    "SK-GUM1-9-P5": {
+      hints: [
+        "First find the special names. Then ask which name is for a place.",
+        "Check each choice: does it name a place?",
+        "Max names a pet, so it does not name a place."
+      ],
+      how: [
+        "Find the proper nouns: Max and Elm Street.",
+        "Max names a pet, and Elm Street names a street. The answer is Elm Street."
+      ],
+      misconception: "A common mix-up is choosing the first proper noun you find. Check what kind of thing it names."
+    }
+  },
+  /* B7a:core:end */
   test: [
     { id: "SK-GUM1-9-T1", type: "mc", points: 1, dok: 1, passages: [],
       stem: "Mr. Okafor read a story to our class.",
