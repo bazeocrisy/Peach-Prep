@@ -1567,7 +1567,7 @@ PP.addLesson({
       draft: true,
       paragraphs: [
         [
-          "(1) Our class planted a garden behind the school in April.",
+          "(1) Our class planted a garden near the gym in April.",
           "(2) The sunflowers grew tallest than the beans, so we put them in the back row.",
           "(3) Of all our plants, the pumpkin vine spread the most quickly."
         ],
@@ -1604,7 +1604,7 @@ PP.addLesson({
         [
           "(7) My team pulled harder than the other team, so we won the first round.",
           "(8) At the end, everyone got a ribbon and a cold drink of water.",
-          "(9) I think Field Day is the best day of the school year."
+          "(9) I hope Field Day comes back again next spring."
         ]
       ]
     },
@@ -1616,7 +1616,7 @@ PP.addLesson({
       draft: true,
       paragraphs: [
         [
-          "(1) Last Saturday, my family visited the animal shelter in town.",
+          "(1) My family went to the animal shelter on a rainy morning.",
           "(2) The kittens were smaller than I expected, and they were very soft.",
           "(3) The brown puppy ran more faster than the gray kitten in the play yard.",
           "(4) Of all the animals, the old dog was the calmest, so Dad petted him."
@@ -1904,7 +1904,7 @@ PP.addLesson({
               "3.L.GC.1:C:form-and-use-comparative-and-superlative-adjecti"
             ],
             passages: ["p2"],
-            prompt: "Sentence 6 of the draft has a mistake. Choose the words that fix it.",
+            prompt: "Sentence 5 of the draft has a mistake. Choose the word that fixes it.",
             text: "She promised that tomorrow's practice would be {0} than today's, so we cheered.",
             slots: [
               {
@@ -2014,7 +2014,7 @@ PP.addLesson({
               "3.L.GC.1:C:form-and-use-comparative-and-superlative-adjecti"
             ],
             passages: ["p2"],
-            prompt: "A classmate says that most hardest in sentence 5 is correct because the race was very hard. What is the best response?",
+            prompt: "A classmate says that most hardest in sentence 4 is correct because the race was very hard. What is the best response?",
             choices: [
               {
                 text: "Hardest already shows the most, so most should be taken out.",
@@ -2030,14 +2030,14 @@ PP.addLesson({
                 text: "Hardest should be spelled hardiest because it ends in a consonant."
               }
             ],
-            clue: "Look at the two comparing parts in the phrase. Ask what each part is already doing.",
+            clue: "Look at the two comparing parts in the phrase. Ask what each part does on its own.",
             hints: [
-              "Look at the two comparing parts in the phrase. Ask what each part is already doing.",
+              "Look at the two comparing parts in the phrase. Ask what each part does on its own.",
               "Read the phrase most hardest and decide whether hardest needs any help to show the top one.",
               "The race is compared with every race of the year, so a response about two races does not fit."
             ],
             how: [
-              "Find the phrase in sentence 5: the most hardest race of the year.",
+              "Find the phrase in sentence 4: the most hardest race of the year.",
               "Hardest has -est on it, so it already means the most. Adding most says it twice.",
               "The answer is \"Hardest already shows the most, so most should be taken out.\""
             ],
@@ -2053,9 +2053,9 @@ PP.addLesson({
               "3.L.GC.1:C:form-and-use-comparative-and-superlative-adjecti"
             ],
             passages: ["p2"],
-            prompt: "Among sentences 1, 2, 3, 7 and 8, select the TWO shown sentences that compare exactly two things.",
-            targets: ["p2:1:1","p2:1:2","p2:1:3","p2:3:1","p2:3:2"],
-            answer: ["p2:1:3","p2:3:2"],
+            prompt: "Among sentences 1, 2, 3, 6 and 7, select the TWO shown sentences that compare exactly two things.",
+            targets: ["p2:1:1","p2:1:2","p2:1:3","p2:2:3","p2:3:1"],
+            answer: ["p2:1:3","p2:3:1"],
             pick: 2,
             clue: "A comparison has to name what is being compared. Check what each shown sentence compares.",
             hints: [
@@ -2065,11 +2065,11 @@ PP.addLesson({
             ],
             how: [
               "Check each shown sentence for a comparing word and count what it compares.",
-              "Sentence 3 compares Zane with Leo, two people. Sentence 8 compares one team with the other team, two teams.",
-              "Sentence 1 compares nothing, and sentences 2 and 7 compare with all the third graders and with every game."
+              "Sentence 3 compares Zane with Leo, two people. Sentence 7 compares one team with the other team, two teams.",
+              "Sentence 1 compares nothing, and sentences 2 and 6 compare with all the third graders and with every game."
             ],
             misconception: "A common mix-up is picking any sentence that has a comparing word. Count the things that are compared.",
-            why: "The answers are sentences 3 and 8: \"Zane ran more quickly than his friend Leo in the relay.\" and \"At the end, everyone got a ribbon and a cold drink of water.\" Zane and Leo are two people, and my team and the other team are two teams. Sentences 2 and 7 compare more than two things, and sentence 1 has no comparing word."
+            why: "The answers are sentences 3 and 7: \"Zane ran more quickly than his friend Leo in the relay.\" and \"My team pulled harder than the other team, so we won the first round.\" Zane and Leo are two people, and my team and the other team are two teams. Sentences 2 and 6 compare more than two things, and sentence 1 has no comparing word."
           }
         ]
       },
@@ -2186,7 +2186,7 @@ PP.addLesson({
             how: [
               "Find the comparison: the puppy is compared with the kitten, which is two animals.",
               "Fast is a short word, so it adds -er: faster. Quickly ends in -ly, so it uses more: more quickly.",
-              "The answers are \"The brown puppy ran faster than the gray kitten in the play yard.\" and \"The brown puppy ran more quickly than the gray kitten in the play yard.\" The others use more or most with -est, or use most with than."
+              "The answers are \"The brown puppy ran faster than the gray kitten in the play yard.\" and \"The brown puppy ran more quickly than the gray kitten in the play yard.\" The others stack more with -est, or use -est or most with than."
             ],
             misconception: "A common mix-up is picking only one kind of fix. A short word can add -er, and a word that ends in -ly can use more.",
             why: "The answers are \"The brown puppy ran faster than the gray kitten in the play yard.\" and \"The brown puppy ran more quickly than the gray kitten in the play yard.\" Faster and more quickly both compare the puppy with the kitten. The other choices use more with -est, or use -est or most with than, which compares only two."
@@ -2257,9 +2257,9 @@ PP.addLesson({
                 text: "Gracefully tells what Lila is, so it cannot be used with the word most."
               }
             ],
-            clue: "Look at the word gracefully and think about how long it is and how it ends.",
+            clue: "Look at the word gracefully and think about its size and its last two letters.",
             hints: [
-              "Look at the word gracefully and think about how long it is and how it ends.",
+              "Look at the word gracefully and think about its size and its last two letters.",
               "Count the dancers that Lila is compared with. Then think about the size and the ending of the word that tells how.",
               "Gracefully tells how Lila moved, not what she is."
             ],
@@ -2384,8 +2384,8 @@ PP.addLesson({
       clue: "Think about how many poles are in the sentence before you choose.",
       hints: [
         "Think about how many poles are in the sentence before you choose.",
-        "Find the two poles the writer mentions, then try every choice in the blank.",
-        "Shortest is the form for the one at the bottom of a long line."
+        "Find each pole the writer mentions, then try every choice in the blank.",
+        "Shortest picks out one pole from a whole row of poles."
       ],
       how: [
         "The writer sets one pole beside one other pole, so two things are compared.",
@@ -2470,11 +2470,11 @@ PP.addLesson({
           }
         ]
       },
-      clue: "Work out whether the writer compares two things or a group. Then pick the new version that suits it and a statement that backs it up.",
+      clue: "Work out whether the writer compares two things or a group. Then match a new version and a statement.",
       hints: [
-        "Work out whether the writer compares two things or a group. Then pick the new version that suits it and a statement that backs it up.",
+        "Work out whether the writer compares two things or a group. Then match a new version and a statement.",
         "For Part A, say each new version out loud next to the draft. For Part B, look for the statement about the words good and well.",
-        "Better never needs a helper word, so one statement about better cannot be true."
+        "Better never needs a helper word in front of it, so one statement about better cannot be true."
       ],
       how: [
         "Part A: bait is set beside bait, which is a pair, so the draft needs the comparing form. The answer is \"He says his bait is better than mine, but I caught the first fish.\"",
@@ -2590,8 +2590,8 @@ PP.addLesson({
         "Look at the first blank only. Patientlier is not a word."
       ],
       how: [
-        "The first half sets Nadia beside the other patients, which is a group of one against the rest. The second half sets Uncle Lee beside everyone in the room.",
-        "A word that ends in -ly takes more for a pair and most for a group.",
+        "The first half uses than to set Nadia beside the other patients. The second half sets Uncle Lee beside everyone in the room.",
+        "A word that ends in -ly takes more with than, and most when a whole group is named.",
         "The answers are more patiently and most patiently. Patientlier and patientlest are not words, and patient describes a person, not how someone waits."
       ],
       misconception: "A common mix-up is picking the word that describes a person. Waiting tells how, so it needs patiently.",
@@ -2696,7 +2696,7 @@ PP.addLesson({
       hints: [
         "Think about which base word each comparing word is built from and what each one sets side by side.",
         "Reread the two lines and notice what each storm is set beside.",
-        "Yesterday's storm did damage, so a statement that traces the words to good cannot be right."
+        "A storm called worse is a bad storm, so a statement that traces the words to good cannot be right."
       ],
       how: [
         "The first line sets yesterday's storm beside one other storm, so worse is the word for a pair.",
@@ -2778,7 +2778,7 @@ PP.addLesson({
       how: [
         "The girl is set beside the other kids in the line, so the sentence compares her with the rest.",
         "Slow adds -er: slower. Slowly ends in -ly, so it takes more: more slowly.",
-        "The answers are \"A girl on a red bike rode slower than the other kids in the long line.\" and \"A girl on a red bike rode more slowly than the other kids in the long line.\" The others stack comparing parts or use most with than."
+        "The answers are \"A girl on a red bike rode slower than the other kids in the long line.\" and \"A girl on a red bike rode more slowly than the other kids in the long line.\" The others stack comparing parts or use -est or most with than."
       ],
       misconception: "A common mix-up is thinking only one repair works. Slow can add -er, and slowly can take more.",
       why: "The answers are \"A girl on a red bike rode slower than the other kids in the long line.\" and \"A girl on a red bike rode more slowly than the other kids in the long line.\" Slower and more slowly both set the girl beside the other kids. The other versions stack comparing parts or use -est or most with than.",
@@ -2851,9 +2851,9 @@ PP.addLesson({
           text: "Clearly describes a singer instead of an action, so no helper word may sit in front of it at all, ever."
         }
       ],
-      clue: "Check how many syllables clearly has and how it ends.",
+      clue: "Check how many syllables clearly has and what letters finish it.",
       hints: [
-        "Check how many syllables clearly has and how it ends.",
+        "Check how many syllables clearly has and what letters finish it.",
         "Count the singers that Dana is compared with, then think about what job the word clearly does.",
         "Clearly tells how Dana sang, not what she is."
       ],
@@ -2872,7 +2872,7 @@ PP.addLesson({
       hints: [
         "Look at the little word after the blank, and count the animals being compared.",
         "Check each choice for the size word and the letters that come before its ending.",
-        "More bigger uses two comparing parts at once."
+        "More bigger uses two comparing parts at once, which is never correct in school writing."
       ],
       how: [
         "Count the animals: a whale and a dolphin make two.",
@@ -2927,7 +2927,7 @@ PP.addLesson({
         "Gooder is not a word in school writing, so cross it out."
       ],
       how: [
-        "Sami and his brother are two people, and the sisters make three with them.",
+        "Sami and his brother are two people, and their sister joins them to make three.",
         "Well and good change completely: well, better, best.",
         "Better fits the first blank, and best fits the second."
       ],

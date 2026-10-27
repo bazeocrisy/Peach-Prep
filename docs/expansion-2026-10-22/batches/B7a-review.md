@@ -774,3 +774,85 @@ False or overstated:
 1. Fix L4 C10 and S10 (MUST), and the four SHOULDs; re-run `check-content.js --all`, the twin overlap, and the browser run for L4 only.
 2. L2 is ready. L4 should be re-reviewed only for the C10/S10 text, C09/S09 hint 2, S13 slot 2 and the Teach sentence.
 3. Coordinator: re-record the version record (`--all --record-versions`) once the content settles, so the L7 T4 rev "2" is on the record.
+
+
+## Fifth review (L4)
+
+Reviewer: independent, fresh eyes (did not author, did not do reviews 1 to 4). Frozen copy at /home/claude/pp-content. Scope: lesson 4 (`3.L.GC.1:R:capitalize-the-first-word-of-a-sentence-and-the-`, `SK-GUM1-4-*`) in `L-GUM1.js` after the phase 5 fixes. No lesson file was edited and no git command was run. The one server I started (port 8721) was killed by pid.
+
+### Verdict
+
+| Lesson | Verdict | Reason |
+|---|---|---|
+| L4 capital letters | **ACCEPT** (no MUST) | All fourth-review MUSTs and SHOULDs are fixed in the file. Blind solve 40/40 on keys (one slip of mine, below, is a correct key). Three SHOULDs and some NOTEs are new, from the items rewritten in phase 5 (S05, S10, C08/S08). |
+
+### Method and blindness
+
+- Blind solve: my own Node script (`b7a5/blind.js`, a vm sandbox) printed all 40 unique items (5 Together, 15 core, 15 similar, 5 test) with seeded shuffled choices (seed 5559, not the earlier reviewer's), passages in full, stems and prompts, and NO key, why, hints, how, clue, `like` or misconception. The `stem` field is student-facing text, so I printed it, and read each stem for leaked key content (none; the longest is S10's, which states Ned's belief, not the answer). Answers were written to `ans5.txt` before any key was extracted. I read the author log and review 4 only after the answers were saved. The brief and the task named the changed items (C08, C09, C10, S08, S09, S10), so I knew which items had changed, not what their keys were. Fully blind to keys; not blind to which items changed.
+- Agreement: **39/40 by letter, 40/40 against the keys.** The one miss is my own slip, the same trap review 1 to 4 each fell into: C13 slot 2. I picked `My brother and I` and ignored that the blank follows `so` (`..., so {1} walked`); the key `my brother and I` is right. Every sub-answer (dropdown slots, ebsr parts, match rows, hot-text targets, choose-two) was compared.
+- Browser: Playwright Chromium, one browser process, 390x844 touch viewport, real taps. Sets y, y2, y3, all fifteen core items and all fifteen "try a similar question" twins: the Passage tab was checked against `item.passages`, all three hints were tapped on every item, then the correct answer was entered and Check tapped. **30/30 OK**, no horizontal scroll, no control under 40px, no page error, no passage mismatch. Live choices after hint 1, 2 and 3 (script, recorded per step with the visible option texts): **unchanged on all 30 items** (for example mc 4/4/4/4, ebsr 8/8/8/8); hints never remove a choice in the engine, so the live ladder is the text ladder below.
+- Mechanical (`mech.js`): points equal the type rule on every item; `pick` equals the key count; every `mc` has one key; all 15 `like` targets resolve to distinct core items of the same type, points and DOK; core mix 5 mc, 4 hot-text, 3 dropdown, 1 each match, ebsr, ms; DOK 2/3 = 11/4; 22 points.
+- Twin overlap (`jac2.js`, tokens over stem, prompt, text, choices, options, rows, columns, ebsr parts and targeted sentences): every twin against all 15 core items, **max 0.192 set and 0.205 multiset**; against Together and Test, max 0.196 / 0.185; twin against twin, none over 0.21. Matches the author log. Items over 0.21 are only core x core (C03xC07 0.23, C04xC08 0.25/0.22, C05xC10 0.25/0.28, C07xC15, C11xC14) and Together x Test pairs such as P4 x T4 0.455/0.333 (the form A and test items are parallel by design); all differ in key logic.
+- Longest key (`longest.js`): the key is the uniquely longest option in 0 of 20 single-key slots (the log says the same). Key positions in the file are first in 18 of 20, but the engine shuffles on screen (seen in the DOM).
+- Duplicates over all of `js/data` (`dups2.js`): no cross-file duplicate. The only repeats are four item options that equal an unfixed passage sentence (S03, S07, C03, C07, as the original error text); expected for a draft-editing item.
+- Passages: six, 102 to 106 words (my counter, numbers removed), FK 0.92 to 2.28 (the log says 0.75 to 2.28; a different syllable counter, NOTE), all under 4.5. All six are used.
+- Gates, in a scratch copy of the repo (`b7a5/scratch/`): `check-content.js --all` PASS, 0 failures, 94 warnings, none on `SK-GUM1-1` to `SK-GUM1-8` (only lesson 9 hint-length warnings, as the log says); `check-writing.js` 0 failures and 0 warnings; `check-instructional-copy.js` 28 assertions passed.
+- Hint ladder, read item by item (not only the script): hint 3 removes or names at most one wrong option on every item. Items left with exactly two plausible options after hint 3: C12, S04, S12, C13 slot 2, S13 slot 2 (the allowed pattern). No hint 1 to 3 quotes a key option. Every sentence number named in a prompt, hint, how or why points at the right sentence (C03 to C07, C11, C12, S03 to S07, S11, S12 all checked by hand, and the hot-text target lists match the whys).
+
+### Facts checked (URLs)
+
+- First word of a sentence and the pronoun I are capitalized; the Purdue example for the first rule is "When he tells a joke, he sometimes forgets the punch line." which itself shows a small word after an introductory comma: https://owl.purdue.edu/owl/general_writing/mechanics/help_with_capitals.html . The page does not state a comma rule in words (it says nothing on commas), so the claim "the word after a comma stays small unless it is I or a name" rests on that example plus the two-or-three-rule lists, not on a quoted sentence. I found no source that says a comma opens a capital. Proper nouns (names of specific people, places) are capitalized on the same page, so "or a name" in the C10/S10 keys is correct and matches Teach point 4 (person names) and, more widely, places and days.
+- Pronoun I capitalized "anywhere in a sentence" (Grammarly): https://www.grammarly.com/blog/capitalization-rules . First word and I (Towson): https://webapps.towson.edu/ows/capitalization_rules.aspx . I in contractions: "When used as a first-person personal pronoun, 'I' must always be capitalized"; I'm, I'll, I'd keep the capital I: https://languagetool.org/insights/post/grammar-uppercase-i/ . This backs C07, C15, S15, S11 (`i'll`) and Teach point 3.
+- `mailman` (S10): ordinary common noun, lowercase; no style source capitalizes it. The fourth-review `Moon` problem is gone.
+- The Merriam-Webster and Chicago pages I tried were refused (allowlist, login redirect). Official wording read from `js/data/standards.js` (page 15, Reinforce): "Capitalize the first word of a sentence and the pronoun I."
+
+### Confirmation of fourth-review MUST and SHOULD in the file
+
+| Fourth-review finding | Status | Evidence |
+|---|---|---|
+| MUST C10 key false rule | FIXED | Key: "No. The word after a comma stays small unless it is I or a name, so We should be we." Distractor B, HOW2, HOW3, WHY and misconception all say "I or a name". Teach point 4 added: "Other words in the middle of a sentence stay small, even after a comma, unless the word is I or the name of a person." |
+| MUST S10 key, `Moon` | FIXED | Sentence is "The puppy barked at the mailman."; key, distractor C, HOW, WHY, misconception all include names. |
+| SHOULD C09/S09 hint 2 states the count | FIXED | Both now "Read the note/text one sentence at a time and check how each one begins." No count. |
+| SHOULD S13 slot 2 changes the skill (`Ben and I`) | FIXED by the offered alternative | Teach point 4 now teaches the person-name rule; the item is unchanged. See NOTE on S13 below. |
+| SHOULD P2 H3, S11 H3 untrue | FIXED | P2 H3 "One sentence has no word I at all"; S11 H3 "Sentence 14 has no small i in it". Both true (P2 A "The baby smiled at me."; S11 sentence 14 "all my friends want to help."). |
+| SHOULD (carried) C02 vs C08 same format | FIXED, with a new finding | C08 is now a pick-two-words item on one line; item overlap C02 x C08 is under 0.21. But see SHOULD 1 (C08/S08 now mirror the Watch Me). |
+| NOTE S03/S05/S06 "aloud" stems; S07 Part A odd options; why wording | Still open (NOTE) | Unchanged; harmless. |
+
+### Re-solve of the rewritten items (one defensible answer, no settling)
+
+- C08 (`after class, my friend and i read a book.`, keys after, i): one answer; the other four words are plain words. Teach and Watch Me support it.
+- S08 (`then our cousins and i built a fort.`, keys then, i): one answer.
+- C09 (3: my, we, then) and S09 (4: our, we, then, it): count only sentence openers; `Saturday` already has its capital. One answer each; neither mentions a comma or an I.
+- C10 (comma claim) and S10 (last word claim): each has one defensible answer under Teach point 4 (B and D of C10 are the close pair: B wrongly makes After small, D is right; A/C wrongly say yes). The key is a near-verbatim restatement of Teach point 4 (recall, not reasoning); acceptable for a DOK 3 item whose subject is the rule, NOTE.
+- Across sets: C10's key states the rule C12 (`Wow, the`) and C13 test, and C05's key ("I keeps a capital in every spot") is the premise C15 refutes. They are rule statements already in Teach and are in other sets; NOTE, as in review 4. Within set 2 no item settles another (C06 p1 keys 2 and 8; C07 `i'm`; C08 one line; C09 count; C10 comma).
+
+### Findings: L4
+
+| Sev | Item | Evidence | Fix |
+|---|---|---|---|
+| SHOULD | 4-S05 (options B, C, D; prompt) | The prompt never says "capital": "What explains the way it is written?" Options B "A comma tells the reader a new sentence has begun", C "Every word behind a comma gets **one** too", D "Words that name a person all get **them**" use pronouns whose antecedent ("a capital") appears only in key A, and the choices are shuffled on screen. In my blind run D read as "get them" with nothing before it. Also D collides with the lesson's own wording: C05's key says "I names the writer", and Teach point 4 says "the name of a person". A child can read "words that name a person all get them" as true for I. It is refutable only from the passage (`cousin`, `worker` are lowercase), which makes D weaker than a distractor should be. The key is still the single best answer; my blind answer was A. | Prompt: "Why is the I in number 10 written as a capital letter?" Options: "A. The word I is always a capital, wherever it sits in a sentence. B. A comma tells the reader a new sentence has begun, so a capital follows it. C. Every word behind a comma gets a capital letter. D. Every word for a person, such as cousin or worker, gets a capital letter." (D then names the misconception outright; B, C name "capital".) Keep the 3 hints. |
+| SHOULD | 4-C08 and S08 (H1, H2) vs the Watch Me and Teach example | (a) H1 "Check the first word of the line, then look for the word I." names exactly the two keyed positions; with H2 ("Cross out each word that is fine in a small letter. Keep the two that are not.") a child who sees the stem and no choices can write down the keys. Plan 4.5 ladder audit: a reader with hints 1 and 2 but not the choices must not be able to write the key. The same H1 wording is on other items, but there the child still has to choose between revisions or sentences; here the choices are the words of the line. (b) C08 `after class, my friend and i read a book.` is a structural clone of Watch Me 1 `after school, Leo and i played catch.` and of the Teach example `yesterday my dad and i made pancakes.` (opening word, comma or not, relative, `and i`, verb) and has the same two keyed words, `after` and `i`, as the Watch Me answer. S08 `then our cousins and i built a fort.` repeats the frame and is close to C03's sentence `My cousin and i built a sand castle.` (also `cousin(s) and i built a ...`). Plan 4.3 rule 4 and 6.7: a Watch Me example must not be paraphrased in an item. | C08/S08 H1: "Think about the two capital-letter rules." H2: "Read the line one word at a time and ask whether each word follows a rule." For C08 use a different shape from the Watch Me (for example a line that starts with a capital and has two small i, or a first word that is not a time word: `our dog and i ...`), and change S08's noun phrase away from `cousins ... built a ...`. Keep keys at two. |
+| SHOULD | 4-S10 diction (and S08 prompt) | Key A: "Not correct. Just the opener, the pronoun I and names begin big, so mailman belongs in small letters." Stem: "deserves a big starting letter". Distractors use "term", "closing term", "emphasis". The lesson says "capital" everywhere else (Teach, C-set, Learn It); "begin big", "opener", "big letter" and "term" are not words the lesson taught and read awkwardly for a grade 3 reader at DOK 3, where the reading load is the difficulty, not the skill. S08's prompt "Select both items that ought to begin with a big letter" has the same drift. Not a wrong answer, but the child must translate "begin big" to "capital". | Use "capital letter" and "first word", mirror the C10 phrasing: key "Not correct. Only the first word, the word I and names need a capital letter, so mailman stays small."; B "Correct. The last word of a sentence always needs a capital letter."; C "Not correct. The word The should be small, because only I and names need a capital letter."; D "Correct. A capital on the last word shows where the thought ends." S08 prompt: "Choose the TWO words that need a capital letter." |
+| NOTE | 4-S13 slot 2 | The twin of C13 tests a name capital (`ben and I` vs `Ben and I`), where C13 slot 2 tests a lowercase phrase after `so`. Teach point 4 now teaches the person-name rule, so a child can answer from Teach. S13 H2 "check the name and the word I" is fine. Honest `like` mapping is slightly looser than for other twins. | none |
+| NOTE | 4-C10 key vs Teach point 4 | Key restates Teach point 4 almost word for word (recall item). | optional reword |
+| NOTE | 4-S07 | Twin of C07 but tests a plain `i`; the short form (`i'm`) that C07 and Teach point 3 stress is not mirrored (C07 Part A). S11 T4 `i'll` is a short form the core twin C11 does not have. Fair, inexact. | none |
+| NOTE | 4-C04 vs S04 `like` | C04 has two mistakes and four options, S04 one mistake and three options. S04 is easier; same points, DOK. | none |
+| NOTE | Teach point 4 "name of a person" vs passages | Drafts show capitalized `Friday`, `Saturday`, `January`, `Lake Lanier`, `Ms. Hall`. Teach says other mid-sentence words stay small unless I or a person's name. No item asks about those words (they are all already capitalized), so nothing is decided by them; names of places and days belong to the proper-noun lesson. | none |
+| NOTE | Learn It / Watch Me | Watch Me 1 (comma, name, I) and 2 (no change) model the first word, I, a comma and a name; they do not model a short form (Teach point 3 covers it), a count item (C09/S09) or a "prove the rule wrong" item (C15/S15, each rests on Teach). | optional third Watch Me on `I'm` |
+| NOTE | Legacy P3/P5/T3 | `the bus came late today.`, `the river felt cold.` are easy; not in the fifteen. Unchanged. | none |
+| NOTE | Frame saturation | `X and i/I` is the frame of C01, C02, C03, C08, C11, C13, S01, S03, S08, S13, S14, P1, P3, P4, T3, T4. It is the natural context for a mid-sentence I, and keys, contexts and passages differ, so it passes plan 6.1, but SHOULD 1(b) is the closest pair. | none |
+
+### Author-log accuracy (phase 5)
+
+True (reproduced): C10 and S10 text, Teach point 4; C09 and S09 hint 2 without the count; P2 H3 and S11 H3; C08 and S08 rewritten as pick-two-words with the stated lines and keys; twin overlap 0.192 / 0.205; passages 102 to 106 words; `check-content.js --all` 0 failures and only lesson 9 hint-length warnings; recount flags are mention matches (my `hintaud.js` flags the same ones: `fishing`, `book`, `fort`, `i`); "C08 no longer has the longest option as one of two keys" (confirmed: 0 of 20 slots).
+
+Overstated or inexact:
+1. "C02 vs C08 differentiated": true for format and item text (overlap under 0.21), but the new C08 is a clone of Watch Me 1 (SHOULD above), so the original concern (a thin plan rule 6 difference) moved rather than closed.
+2. "FK 0.75 to 2.28": my counter gives 0.92 to 2.28; the maximum matches. Counter difference only, NOTE.
+3. "This also teaches the name rule that S13 slot 2 relies on": true; it is a person-name rule only, while the S10 and C10 keys say "a name" (wider). NOTE.
+4. No log claim is false in a way that changes a verdict.
+
+### What to do next
+
+1. Optional, in this order: S05 (prompt and options say "capital", name D's misconception), S10/S08 wording ("capital", "first word"), C08/S08 H1/H2 and frame. Re-run `check-content.js --all`, twin overlap and the L4 browser run for the three items only.
+2. No coordinator action for L4 beyond the open ledger/version-record steps listed in review 4.

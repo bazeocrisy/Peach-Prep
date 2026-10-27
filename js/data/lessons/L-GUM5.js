@@ -144,20 +144,20 @@ PP.addLesson({
       draft: true,
       paragraphs: [
         [
-          "(1) Our class built a vegetable garden next to the gym on fri., Apr. 9.",
+          "(1) The third grade built a vegetable garden next to the gym on fri., Apr. 9.",
           "(2) First, nurse Alba showed us how to wash our hands after digging.",
-          "(3) Mr. Lang brought bags of soil and small tools in his truck."
+          "(3) Mr. Lang hauled sacks of soil and light tools in his truck."
         ],
         [
-          "(4) We watered every row and gave each plant a small sign.",
+          "(4) We watered each row and gave each plant a tiny sign.",
           "(5) Our teacher, Mrs. Diaz, helped us measure the rows with a string.",
           "(6) Kai planted seeds for a haitian pepper that grows very hot."
         ],
         [
           "(7) We mailed a thank-you card to the garden shop on Cole St.",
-          "(8) The principal said the garden will feed our whole lunch room.",
+          "(8) The principal said the garden will feed the whole lunch room.",
           "(9) Every day, two helpers will check the plants for bugs.",
-          "(10) I hope we pick our first tomatoes before summer break."
+          "(10) I wish we could pick red tomatoes soon."
         ]
       ]
     },
@@ -169,10 +169,10 @@ PP.addLesson({
       draft: true,
       paragraphs: [
         [
-          "(1) Our town library held a reading night on Wed., Dec. 2, for every family.",
+          "(1) Our town library hosted a story night on Wed., Dec. 2, for all ages.",
           "(2) After dinner, Chief Dunn of the fire station told us a funny tale about a brave dog.",
-          "(3) Then sheriff Moss helped us find the best picture books on the top shelf.",
-          "(4) Ms. Reyes handed out free bookmarks at the front desk."
+          "(3) Then sheriff Moss helped us find the funniest picture stories on the top shelf.",
+          "(4) Ms. Reyes handed out free stickers at the front desk."
         ],
         [
           "(5) The line of cars stretched all the way down Linden rd.",
@@ -1336,9 +1336,10 @@ PP.addLesson({
   teach: {
     big: "When you talk to someone by name, or start an answer with yes or no, a comma separates those words from the rest of the sentence.",
     points: [
-      "When you speak to a person and use the person's name, put a comma between the name and the rest of the sentence: Ava, please close the door. Thank you, Ben. If the name is in the middle, put a comma on each side.",
+      "When you speak to a person and use the person's name, set the name off with a comma. If the name comes first, the comma follows it: Ava, please close the door. If the name comes last, the comma comes before it: Please close the door, Ava. If the name is in the middle, put a comma on each side.",
       "Use the comma only when you are talking TO the person. In \"Ava closed the door,\" you are talking about Ava, so there is no comma after her name.",
-      "When yes or no starts an answer, put a comma right after it: Yes, I finished my snack. No, thank you."
+      "When yes or no starts an answer, put a comma right after it: Yes, I finished my snack. No, thank you.",
+      "Yes and no get a comma only when they start an answer. When the word just tells what someone said, there is no comma: Dad said no to more cake."
     ],
     words: [
       { term: "direct address", means: "talking right to someone and using the person's name" }
@@ -1373,6 +1374,16 @@ PP.addLesson({
         "When yes or no starts an answer, a comma comes right after it."
       ],
       answer: "A comma goes after No: \"No, I have not seen your red mitten.\""
+    },
+    {
+      show: ["Please wait here Dan until I come back."],
+      ask: "Where do the commas belong?",
+      steps: [
+        "Ask: Is the speaker talking to someone by name? Yes, the speaker is talking to Dan.",
+        "Find where the name sits. Dan is in the middle of the sentence, between two parts.",
+        "A name in the middle gets a comma before it and a comma after it."
+      ],
+      answer: "Commas go on both sides of Dan: \"Please wait here, Dan, until I come back.\""
     }
   ],
   parent: "Ask your child yes-or-no questions and have them write one answer on a sticky note with the comma, like \"Yes, I want more beans.\" Then help them write a short note to a family member that starts with that person's name and a comma.",
@@ -1380,155 +1391,155 @@ PP.addLesson({
     /* B8:passages:start */
     {
       id: "p1",
-      title: "Building a Cardboard Fort",
+      title: "Jigsaw Puzzle Table",
       byline: "A third grader's draft",
       genre: "Student draft (play script)",
       draft: true,
       paragraphs: [
         [
-          "(1) Three friends build a fort from big boxes in Mia's garage on a cloudy afternoon.",
-          "(2) Mia: Ben please hold this box while I tape it.",
+          "(1) Three friends build a jigsaw puzzle at a long table in Mia's den on a cloudy afternoon.",
+          "(2) Mia: Ben please hold this corner piece while I find its match.",
           "(3) Ben: Yes I can hold it with both hands."
         ],
         [
-          "(4) Tess: Mia, where should we put the door?",
-          "(5) Mia: Put it on the long side, Tess.",
-          "(6) Ben: No, the tape will not stick to that rough part of the box.",
-          "(7) Tess: Ben can you find the other roll of tape?"
+          "(4) Tess: Mia, where should we put the blue sky pieces?",
+          "(5) Mia: Put them along the top edge, Tess.",
+          "(6) Ben: No, those pieces have too many bumps to fit in that spot.",
+          "(7) Tess: Ben can you find the piece with the red barn on it?"
         ],
         [
-          "(8) Ben: Here it is, Mia. I found it under the old blanket.",
-          "(9) Mia: Thank you, Ben. Now we can add a roof.",
-          "(10) Tess: This fort is the biggest and best one on our whole street!"
+          "(8) Ben: Here it is, Mia. I found it under the old lamp.",
+          "(9) Mia: Thank you, Ben. Now the barn is whole.",
+          "(10) Tess: This puzzle is the biggest and hardest one we have ever built!"
         ]
       ]
     },
     {
       id: "p2",
-      title: "The Class Hamster",
+      title: "The Pet Rock Show",
       byline: "A third grader's draft",
       genre: "Student draft (play script)",
       draft: true,
       paragraphs: [
         [
-          "(1) Two students search the room after the class hamster escapes from his cage.",
-          "(2) Dev: Nina, have you seen him under the shelf?",
-          "(3) Nina: No I looked there already and he was not there.",
-          "(4) Dev: Then we should check the reading corner, Nina."
+          "(1) Two students set up a pet rock show on a long table in the school yard.",
+          "(2) Dev: Nina, where did you put the rock with the googly eyes?",
+          "(3) Nina: No I looked under the table already and it was not there.",
+          "(4) Dev: Then we should check the paint box, Nina."
         ],
         [
-          "(5) Nina: Dev he is hiding behind the big pillow!",
-          "(6) Dev: Yes, that is him, and he looks very sleepy.",
-          "(7) Nina: I will get a small box from the shelf by the window."
+          "(5) Nina: Dev it is sitting inside the lid of the paint box!",
+          "(6) Dev: Yes, that is the one, and it looks very silly.",
+          "(7) Nina: I will get a small ribbon from the supply shelf by the window."
         ],
         [
-          "(8) Dev: Please hold the box low, Nina, while he walks in.",
-          "(9) Nina: He is in! Now we can shut the lid.",
-          "(10) Dev: Thank you Nina. I think he is happy to be home."
+          "(8) Dev: Please set the rock down, Nina, while I tie the ribbon.",
+          "(9) Nina: It looks great! Now we can show it to the judges.",
+          "(10) Dev: Thank you Nina. I think it will win a prize today."
         ]
       ]
     },
     {
       id: "p3",
-      title: "A Rainy Day Picnic",
+      title: "Making a Terrarium",
       byline: "A third grader's draft",
       genre: "Student draft (play script)",
       draft: true,
       paragraphs: [
         [
-          "(1) The family picnic moves inside the gym because heavy rain starts to fall.",
-          "(2) Mom: Grandpa, please sit by the window.",
-          "(3) Grandpa: Yes, I can see the whole room from here.",
-          "(4) Lee: Rosa, can you bring me a napkin?"
+          "(1) The family builds a terrarium in a big glass jar because the weather outside is too cold for gardening.",
+          "(2) Mom: Grandpa, please pour the small rocks into the bottom of the jar.",
+          "(3) Grandpa: Yes, I can reach the whole jar from here.",
+          "(4) Lee: Rosa, can you bring me a spoon?"
         ],
         [
-          "(5) Rosa: Yes, I have a big stack of them.",
-          "(6) Rosa, handed the napkins to Lee and Mom.",
+          "(5) Rosa: Yes, I have a big spoon right here.",
+          "(6) Rosa, handed the spoon to Lee and Mom.",
           "(7) Lee: Thank you, Rosa. You always know what we need.",
-          "(8) Mom: Grandpa, would you like some warm soup?",
-          "(9) Grandpa: No, I am full already."
+          "(8) Mom: Grandpa, would you like some more soil?",
+          "(9) Grandpa: No, I have plenty already."
         ],
         [
-          "(10) Mom: Please hang your wet coat on the hook Lee.",
+          "(10) Mom: Please set the small fern in the middle Lee.",
           "(11) Lee: Yes, Mom, I will do it right now.",
-          "(12) Rosa: I will hang mine there too and then I will set out the cups."
+          "(12) Rosa: I will water the moss too and then I will close the lid."
         ]
       ]
     },
     {
       id: "p4",
-      title: "Puppet Show Rehearsal",
+      title: "Obstacle Course",
       byline: "A third grader's draft",
       genre: "Student draft (play script)",
       draft: true,
       paragraphs: [
         [
-          "(1) Three classmates practice a puppet show behind a tall cloth screen in the music room.",
-          "(2) Omar: Jade lift the dragon a little higher so the crowd can see his wings.",
-          "(3) Jade: Yes we see him now and he looks fierce."
+          "(1) Three classmates set up an obstacle course with cones and ropes on the field behind the gym.",
+          "(2) Omar: Jade raise the rope a bit higher so the runners can duck under it.",
+          "(3) Jade: Yes we see it now and it looks tricky."
         ],
         [
-          "(4) Pablo: Omar, our curtain is stuck again and our show starts soon.",
-          "(5) Omar: Slide it over to the left, Pablo.",
-          "(6) Jade: The dragon needs extra space near our wall.",
-          "(7) Pablo: Jade would you hold this curtain open?"
+          "(4) Pablo: Omar, our cones are scattered again and our race starts soon.",
+          "(5) Omar: Slide them over to the left, Pablo.",
+          "(6) Jade: The hoops need extra space near our fence.",
+          "(7) Pablo: Jade would you hold this rope tight?"
         ],
         [
-          "(8) Jade: I have it, Omar. Now the dragon can fly across the stage.",
-          "(9) Pablo: Nice work, Jade. Our puppets look great together.",
-          "(10) Omar: Let us bow when the crowd claps loudly."
+          "(8) Jade: I have it, Omar. Now the runners can start the race.",
+          "(9) Pablo: Nice work, Jade. Our course looks great.",
+          "(10) Omar: Let us cheer when the first runner finishes."
         ]
       ]
     },
     {
       id: "p5",
-      title: "Washing the Car",
+      title: "Hopscotch Squares",
       byline: "A third grader's draft",
       genre: "Student draft (play script)",
       draft: true,
       paragraphs: [
         [
-          "(1) Two cousins wash the family car on a sunny Saturday morning in the driveway.",
-          "(2) Raj: Ana hand me the big sponge before the soap dries.",
-          "(3) Ana: Yes, we have one right here in the red bucket by the hose.",
-          "(4) Raj: Then rinse the roof and the hood, Ana."
+          "(1) Two cousins draw a hopscotch game with bright chalk on the driveway on a sunny Saturday morning.",
+          "(2) Raj: Ana hand me the blue chalk before the sun dries the pavement.",
+          "(3) Ana: Yes, we have one right here in the red bucket by the steps.",
+          "(4) Raj: Then draw the last square and the numbers, Ana."
         ],
         [
-          "(5) Ana: The hose is leaking again, Raj!",
-          "(6) Raj: Yes we see the puddle by the front tire.",
-          "(7) Ana: I will turn off the water at the faucet."
+          "(5) Ana: The chalk is breaking again, Raj!",
+          "(6) Raj: Yes we see the pieces on the ground by the front step.",
+          "(7) Ana: I will get the other box from the garage."
         ],
         [
-          "(8) Raj: We can rest, Ana, after we dry the wheels.",
-          "(9) Ana: It shines like a brand new coin in the sun!",
-          "(10) Raj: Ana this car looks better than it did last summer."
+          "(8) Raj: We can rest, Ana, after we number the squares.",
+          "(9) Ana: It looks like a brand new game in the sun!",
+          "(10) Raj: Ana this game looks better than it did last summer."
         ]
       ]
     },
     {
       id: "p6",
-      title: "Moving Day",
+      title: "Origami Cranes",
       byline: "A third grader's draft",
       genre: "Student draft (play script)",
       draft: true,
       paragraphs: [
         [
-          "(1) A family carries boxes into a new apartment on the first sunny day of spring.",
-          "(2) Dad: Zoe, please carry the lamp into the front room.",
-          "(3) Zoe: Yes, I have it and it is not heavy.",
-          "(4) Luis: Zoe can you open the door for me?"
+          "(1) Three relatives fold paper cranes at the kitchen table on the first rainy evening of spring.",
+          "(2) Dad: Zoe, bend the corners toward the center of the square.",
+          "(3) Zoe: Yes, I have it and it is not hard.",
+          "(4) Luis: Zoe could you steady the paper?"
         ],
         [
-          "(5) Zoe: Yes, the key is in my pocket.",
-          "(6) Zoe, pushed the heavy door open with her foot.",
-          "(7) Luis: Many thanks, Zoe. That door is very stiff.",
-          "(8) Dad: Luis, do you need help with that box?",
-          "(9) Luis: No, it is not heavy at all."
+          "(5) Zoe: Yes, the paper lies flat on my knee.",
+          "(6) Zoe, pressed the crease flat with her thumb.",
+          "(7) Luis: Many thanks, Zoe. Folding wings takes patience.",
+          "(8) Dad: Luis, does this wing need help?",
+          "(9) Luis: No, my wing is going fine."
         ],
         [
-          "(10) Dad: Set the plants by the window Luis.",
-          "(11) Luis: Yes, Dad, I will do it right away.",
-          "(12) Zoe: I will water them after dinner and again in the morning."
+          "(10) Dad: Set the cranes by the window Luis.",
+          "(11) Luis: Yes, Dad, I will put them there soon.",
+          "(12) Zoe: Later I plan to fold another one before bed."
         ]
       ]
     }
@@ -1612,7 +1623,7 @@ PP.addLesson({
             ],
             passages: ["p1"],
             prompt: "Sentence 2 of the draft is missing a comma. Choose the words that fix it.",
-            text: "Mia: {0} hold this box while I tape it.",
+            text: "Mia: {0} hold this corner piece while I find its match.",
             slots: [
               {
                 options: ["Ben please", "Ben, please", "Ben please,"],
@@ -1644,10 +1655,10 @@ PP.addLesson({
             passages: ["p1"],
             prompt: "Which choice shows sentence 3 of the draft written correctly?",
             choices: [
-              { text: "Yes I can hold it." },
-              { text: "Yes I, can hold it." },
-              { text: "Yes, I can hold it.", correct: true },
-              { text: "Yes, I can, hold it." }
+              { text: "Yes I can hold it with both hands." },
+              { text: "Yes I, can hold it with both hands." },
+              { text: "Yes, I can hold it with both hands.", correct: true },
+              { text: "Yes, I can, hold it with both hands." }
             ],
             clue: "Look at the first word of the line. Ask what kind of word it is and what it does at the start of a reply.",
             hints: [
@@ -1658,10 +1669,10 @@ PP.addLesson({
             how: [
               "Look at the first word. Yes begins Ben's answer.",
               "When yes starts an answer, a comma comes right after it.",
-              "The answer is \"Yes, I can hold it.\""
+              "The answer is \"Yes, I can hold it with both hands.\""
             ],
             misconception: "A common mix-up is putting the comma later in the line. The comma goes right after yes.",
-            why: "The answer is \"Yes, I can hold it.\" Yes begins Ben's answer, so a comma comes right after it. The other choices leave out the comma or put commas where they do not belong."
+            why: "The answer is \"Yes, I can hold it with both hands.\" Yes begins Ben's answer, so a comma comes right after it. The other choices leave out the comma or put commas where they do not belong."
           },
           {
             id: "SK-GUM5-2-C05",
@@ -1676,10 +1687,10 @@ PP.addLesson({
             partA: {
               prompt: "Which sentence in paragraph 2 of the draft is missing a comma?",
               choices: [
-                { text: "Put it on the long side, Tess." },
-                { text: "No, the tape will not stick to that rough part." },
-                { text: "Ben can you find the other roll of tape?", correct: true },
-                { text: "Mia, where should we put the door?" }
+                { text: "Put them along the top edge, Tess." },
+                { text: "No, those pieces have too many bumps to fit in that spot." },
+                { text: "Ben can you find the piece with the red barn on it?", correct: true },
+                { text: "Mia, where should we put the blue sky pieces?" }
               ]
             },
             partB: {
@@ -1687,7 +1698,7 @@ PP.addLesson({
               choices: [
                 { text: "A comma goes after the first word of every question." },
                 { text: "A comma goes before the word can when a sentence asks for help." },
-                { text: "A comma goes after any name, even in a sentence that only tells about a person." },
+                { text: "A comma goes after any name, even when the sentence just talks about someone." },
                 { text: "A comma sets off the name of a person who is spoken to.", correct: true }
               ]
             },
@@ -1695,16 +1706,16 @@ PP.addLesson({
             hints: [
               "Ask who is being spoken to in each sentence. Then ask which rule fits the sentence that is missing a mark.",
               "Check each sentence in paragraph 2 and look for a name. For Part B, think about what the commas in the other sentences are doing.",
-              "The sentence about the tape not sticking starts with an answer word and already has its comma. Check the other three."
+              "The sentence about the bumps starts with an answer word and already has its comma. Check the other three."
             ],
             how: [
               "Part A: read each sentence in paragraph 2 and ask who is being spoken to.",
-              "In \"Ben can you find the other roll of tape?\" Tess is talking to Ben, but nothing sets his name off.",
-              "Part A answer: Ben can you find the other roll of tape?",
+              "In \"Ben can you find the piece with the red barn on it?\" Tess is talking to Ben, but nothing sets his name off.",
+              "Part A answer: Ben can you find the piece with the red barn on it?",
               "Part B answer: \"A comma sets off the name of a person who is spoken to.\""
             ],
             misconception: "A common mix-up is thinking a question needs a comma after its first word. The comma is there to set off the name of the person who is spoken to.",
-            why: "Part A: Ben can you find the other roll of tape? Part B: \"A comma sets off the name of a person who is spoken to.\" Tess is talking to Ben, so a comma must separate his name from the rest of the question: Ben, can you find the other roll of tape? The other three sentences already have the commas they need."
+            why: "Part A: Ben can you find the piece with the red barn on it? Part B: \"A comma sets off the name of a person who is spoken to.\" Tess is talking to Ben, so a comma must separate his name from the rest of the question: Ben, can you find the piece with the red barn on it? The other three sentences already have the commas they need."
           }
         ]
       },
@@ -1724,16 +1735,16 @@ PP.addLesson({
             targets: ["p2:1:2", "p2:1:3", "p2:1:4", "p2:2:1", "p2:2:2"],
             answer: ["p2:1:3", "p2:2:1"],
             pick: 2,
-            clue: "Ask who is being spoken to, and whether a line starts with an answer word. Then check each line for the comma that should be there.",
+            clue: "Check each line for a spoken-to name or an answer word at the start. Is its comma there?",
             hints: [
-              "Ask who is being spoken to, and whether a line starts with an answer word. Then check each line for the comma that should be there.",
+              "Check each line for a spoken-to name or an answer word at the start. Is its comma there?",
               "Read the five sentences one at a time. Pick TWO.",
               "In sentence 6, the answer word already has its comma. Check the other four."
             ],
             how: [
               "Check each sentence for a name that is spoken to and for yes or no at the start.",
-              "Sentence 3 starts with an answer word and has no comma after it: \"No, I looked there already.\"",
-              "Sentence 5 speaks to Dev, but his name has no comma after it: \"Dev, he is hiding behind the big pillow!\"",
+              "Sentence 3 starts with an answer word and has no comma after it: \"No, I looked under the table already and it was not there.\"",
+              "Sentence 5 speaks to Dev, but his name has no comma after it: \"Dev, it is sitting inside the lid of the paint box!\"",
               "Sentences 2, 4 and 6 already have the commas they need."
             ],
             misconception: "A common mix-up is picking every sentence that has a name in it. Pick only the sentences where a needed comma is missing.",
@@ -1748,7 +1759,7 @@ PP.addLesson({
               "3.L.GC.1:I:use-commas-for-direct-address-and-to-set-off-yes"
             ],
             passages: [],
-            prompt: "Choose the TWO sentences that use commas correctly.",
+            prompt: "Which TWO of these sentences have every comma where it belongs?",
             pick: 2,
             choices: [
               { text: "Mom made, dinner for all of us." },
@@ -1812,7 +1823,7 @@ PP.addLesson({
               "3.L.GC.1:I:use-commas-for-direct-address-and-to-set-off-yes"
             ],
             passages: ["p2"],
-            prompt: "In sentence 8 of the draft, Nina has a comma on each side: \"Please hold the box low, Nina, while he walks in.\" Why does her name need two commas?",
+            prompt: "In sentence 8 of the draft, Nina has a comma on each side: \"Please set the rock down, Nina, while I tie the ribbon.\" Why does her name need two commas?",
             choices: [
               { text: "Dev is only telling about Nina, and a name that is told about needs a comma on each side." },
               { text: "Dev is talking to Nina, and her name is in the middle, so a comma goes on each side.", correct: true },
@@ -1843,7 +1854,7 @@ PP.addLesson({
             ],
             passages: ["p2"],
             prompt: "Sentence 10 of the draft is missing a comma. Choose the words that fix it.",
-            text: "Dev: {0} I think he is happy to be home.",
+            text: "Dev: {0} I think it will win a prize today.",
             slots: [
               {
                 options: ["Thank you, Nina.", "Thank you Nina.", "Thank, you Nina."],
@@ -1894,7 +1905,7 @@ PP.addLesson({
               "In sentence 6, nobody is talking to Rosa. The sentence only tells what Rosa did, so the comma does not belong."
             ],
             misconception: "A common mix-up is thinking a name always needs a comma next to it. A comma belongs only when the sentence speaks to that person.",
-            why: "The answer is sentence 6, \"Rosa, handed the napkins to Lee and Mom.\" Nobody is talking to Rosa. The sentence only tells what she did, so the comma should be taken out. In the other four sentences, each comma sets off a spoken-to name or an answer word."
+            why: "The answer is sentence 6, \"Rosa, handed the spoon to Lee and Mom.\" Nobody is talking to Rosa. The sentence only tells what she did, so the comma should be taken out. In the other four sentences, each comma sets off a spoken-to name or an answer word."
           },
           {
             id: "SK-GUM5-2-C12",
@@ -1906,10 +1917,10 @@ PP.addLesson({
             ],
             passages: ["p3"],
             prompt: "Sentence 10 of the draft is missing a comma. Choose the words that fix it.",
-            text: "Mom: Please hang your wet coat on the {0}",
+            text: "Mom: Please set the small fern in the {0}",
             slots: [
               {
-                options: ["hook, Lee.", "hook Lee.", "hook; Lee."],
+                options: ["middle, Lee.", "middle Lee.", "middle; Lee."],
                 answer: 0
               }
             ],
@@ -1922,10 +1933,10 @@ PP.addLesson({
             how: [
               "Read sentence 10. Mom is talking to Lee, and his name comes last.",
               "A name at the end of a sentence gets a comma before it.",
-              "The answer is hook, Lee."
+              "The answer is middle, Lee."
             ],
             misconception: "A common mix-up is putting the comma after the name instead of before it. A name at the end needs its comma on the left.",
-            why: "The answer is hook, Lee. Mom is talking to Lee, and his name comes last, so the comma goes before it. Hook Lee. leaves the comma out, and hook; Lee. uses a semicolon instead of a comma."
+            why: "The answer is middle, Lee. Mom is talking to Lee, and his name comes last, so the comma goes before it. Middle Lee. leaves the comma out, and middle; Lee. uses a semicolon instead of a comma."
           },
           {
             id: "SK-GUM5-2-C13",
@@ -2003,17 +2014,17 @@ PP.addLesson({
               "3.L.GC.1:I:use-commas-for-direct-address-and-to-set-off-yes"
             ],
             passages: [],
-            prompt: "Sam wrote, \"Mom said yes to the sleepover.\" He thinks it needs a comma after yes, because yes always needs one. Is Sam right?",
+            prompt: "Sam wrote, \"Mom said yes to a kitten.\" He thinks it needs a comma after yes, because yes always needs one. Is Sam right?",
             choices: [
               { text: "No. Yes needs a comma only when it starts an answer, and here it tells what Mom said.", correct: true },
               { text: "Yes. The word yes needs a comma every single time that it is used in any sentence at all." },
               { text: "Yes. A comma is needed after any word that tells what a person has said to another person." },
               { text: "No. Yes needs a comma only when it is the very last word in the whole sentence, never first." }
             ],
-            clue: "Ask what the word yes is doing in the sentence. Is it the start of an answer, or is it telling what Mom said?",
+            clue: "Ask what the word yes is doing in the sentence. Is it being said to a person, or is it telling what Mom said?",
             hints: [
-              "Ask what the word yes is doing in the sentence. Is it the start of an answer, or is it telling what Mom said?",
-              "Think about a reply that starts with yes. Ask where its comma goes, and why.",
+              "Ask what the word yes is doing in the sentence. Is it being said to a person, or is it telling what Mom said?",
+              "Think about someone who says yes to a question. Ask where the comma goes, and why.",
               "The end of a sentence is not the reason a word needs a comma. Check the other three."
             ],
             how: [
@@ -2104,11 +2115,11 @@ PP.addLesson({
         "3.L.GC.1:I:use-commas-for-direct-address-and-to-set-off-yes"
       ],
       passages: ["p4"],
-      prompt: "Paragraph 1 of the script has a line that is missing a mark. Pick the version that is right.",
-      text: "Omar: {0} the dragon a little higher so the crowd can see his wings.",
+      prompt: "Line 2 of the script is missing a mark. Pick the version that is right.",
+      text: "Omar: {0} the rope a bit higher so the runners can duck under it.",
       slots: [
         {
-          options: ["Jade lift", "Jade, lift", "Jade lift,"],
+          options: ["Jade raise", "Jade, raise", "Jade raise,"],
           answer: 1
         }
       ],
@@ -2121,10 +2132,10 @@ PP.addLesson({
       how: [
         "Read line 2. Omar is talking to Jade and tells her what to do.",
         "A name used to speak to someone is separated from the rest of the sentence by a comma.",
-        "The answer is Jade, lift."
+        "The answer is Jade, raise."
       ],
       misconception: "A common mix-up is skipping the comma because the line is short. A short line still needs a comma after the name.",
-      why: "The answer is Jade, lift. Omar is talking to Jade, so a comma comes right after her name. Jade lift leaves the comma out, and Jade lift, puts it after the wrong word.",
+      why: "The answer is Jade, raise. Omar is talking to Jade, so a comma comes right after her name. Jade raise leaves the comma out, and Jade raise, puts it after the wrong word.",
       like: ["SK-GUM5-2-C03"]
     },
     {
@@ -2138,10 +2149,10 @@ PP.addLesson({
       passages: ["p4"],
       prompt: "Pick the reply in line 3 that Jade wrote with the right punctuation.",
       choices: [
-        { text: "Yes, we see him now and he looks fierce.", correct: true },
-        { text: "Yes we see him now and he looks fierce." },
-        { text: "Yes we, see him now and he looks fierce." },
-        { text: "Yes, we see, him now and he looks fierce." }
+        { text: "Yes, we see it now and it looks tricky.", correct: true },
+        { text: "Yes we see it now and it looks tricky." },
+        { text: "Yes we, see it now and it looks tricky." },
+        { text: "Yes, we see, it now and it looks tricky." }
       ],
       clue: "Look at the first word of the reply and ask what it does at the start of an answer.",
       hints: [
@@ -2152,10 +2163,10 @@ PP.addLesson({
       how: [
         "The reply starts with yes, and yes begins Jade's answer.",
         "When yes starts an answer, a comma comes right after it.",
-        "The answer is \"Yes, we see him now and he looks fierce.\""
+        "The answer is \"Yes, we see it now and it looks tricky.\""
       ],
       misconception: "A common mix-up is putting the comma after the first few words. The comma goes right after yes.",
-      why: "The answer is \"Yes, we see him now and he looks fierce.\" Yes begins Jade's answer, so a comma comes right after it. The other choices leave out the comma or put commas in places where they do not belong.",
+      why: "The answer is \"Yes, we see it now and it looks tricky.\" Yes begins Jade's answer, so a comma comes right after it. The other choices leave out the comma or put commas in places where they do not belong.",
       like: ["SK-GUM5-2-C04"]
     },
     {
@@ -2171,10 +2182,10 @@ PP.addLesson({
       partA: {
         prompt: "Look at lines 4 through 7 of the script. Pick the one that needs another comma.",
         choices: [
-          { text: "Slide it over to the left, Pablo." },
-          { text: "Jade would you hold this curtain open?", correct: true },
-          { text: "The dragon needs extra space near our wall." },
-          { text: "Omar, our curtain is stuck again and our show starts soon." }
+          { text: "Slide them over to the left, Pablo." },
+          { text: "Jade would you hold this rope tight?", correct: true },
+          { text: "The hoops need extra space near our fence." },
+          { text: "Omar, our cones are scattered again and our race starts soon." }
         ]
       },
       partB: {
@@ -2190,16 +2201,16 @@ PP.addLesson({
       hints: [
         "Think about who is talking to whom in each line. Then ask which reason fits the line that is missing a mark.",
         "Look at the four lines in paragraph 2 and find the names. For Part B, think about what the commas in the other lines are doing.",
-        "The line about the dragon needing space has no name and no answer word. Check the other three."
+        "The line about the hoops needing space has no name and no answer word. Check the other three."
       ],
       how: [
         "Part A: read each line in paragraph 2 and find the person who is talked to.",
-        "In \"Jade would you hold this curtain open?\" Pablo is talking to Jade, but nothing sets her name off.",
-        "Part A answer: Jade would you hold this curtain open?",
+        "In \"Jade would you hold this rope tight?\" Pablo is talking to Jade, but nothing sets her name off.",
+        "Part A answer: Jade would you hold this rope tight?",
         "Part B answer: \"Listeners must have their names set off from all other words.\""
       ],
       misconception: "A common mix-up is thinking every name needs a comma after it. The comma is for the name of the person who is talked to.",
-      why: "Part A: Jade would you hold this curtain open? Part B: \"Listeners must have their names set off from all other words.\" Pablo is talking to Jade, so her name needs a comma after it: Jade, would you hold this curtain open? The other three lines already have the commas they need, or need none.",
+      why: "Part A: Jade would you hold this rope tight? Part B: \"Listeners must have their names set off from all other words.\" Pablo is talking to Jade, so her name needs a comma after it: Jade, would you hold this rope tight? The other three lines already have the commas they need, or need none.",
       like: ["SK-GUM5-2-C05"]
     },
     {
@@ -2223,8 +2234,8 @@ PP.addLesson({
       ],
       how: [
         "Check each line for a spoken-to name and for yes or no at the start.",
-        "Line 2 speaks to Ana, but her name has no comma after it: \"Ana, hand me the big sponge before the soap dries.\"",
-        "Line 6 starts with an answer word and has no comma after it: \"Yes, we see the puddle by the front tire.\"",
+        "Line 2 speaks to Ana, but her name has no comma after it: \"Ana, hand me the blue chalk before the sun dries the pavement.\"",
+        "Line 6 starts with an answer word and has no comma after it: \"Yes, we see the pieces on the ground by the front step.\"",
         "Lines 3, 4 and 5 already have the commas they need."
       ],
       misconception: "A common mix-up is picking a line just because it has a comma in it. Pick only the lines where a needed comma is missing.",
@@ -2313,10 +2324,10 @@ PP.addLesson({
         { text: "Raj talks straight to Ana, so the pair of commas frames the name.", correct: true },
         { text: "Whatever lands mid-line gets a comma on both sides." }
       ],
-      clue: "Ask who Raj is talking to and what the commas do for that name.",
+      clue: "Ask who Raj is talking to and what the commas do for that person.",
       hints: [
-        "Ask who Raj is talking to and what the commas do for that name.",
-        "Read the line once with the name and once without it. Think about what the commas are doing.",
+        "Ask who Raj is talking to and what the commas do for that person.",
+        "Read the line once with Ana in it and once without her. Think about what the commas are doing.",
         "The commas have nothing to do with how important a word is. Check the other three."
       ],
       how: [
@@ -2338,7 +2349,7 @@ PP.addLesson({
       ],
       passages: ["p5"],
       prompt: "Pick the correct way to begin Raj's last line.",
-      text: "Raj: {0} car looks better than it did last summer.",
+      text: "Raj: {0} game looks better than it did last summer.",
       slots: [
         {
           options: ["Ana, this", "Ana this", "Ana this,"],
@@ -2385,7 +2396,7 @@ PP.addLesson({
         "In line 6, nobody is talking to Zoe. The line only tells what she did, so the comma does not belong."
       ],
       misconception: "A common mix-up is leaving every comma that sits beside a name. A comma stays only when the line speaks to that person.",
-      why: "The answer is line 6, \"Zoe, pushed the heavy door open with her foot.\" Nobody is talking to Zoe, because the line only tells what she did. The comma should come out. In the other four lines, each comma follows an answer word or sets off a name that is spoken to.",
+      why: "The answer is line 6, \"Zoe, pressed the crease flat with her thumb.\" Nobody is talking to Zoe, because the line only tells what she did. The comma should come out. In the other four lines, each comma follows an answer word or sets off a name that is spoken to.",
       like: ["SK-GUM5-2-C11"]
     },
     {
@@ -2398,7 +2409,7 @@ PP.addLesson({
       ],
       passages: ["p6"],
       prompt: "Near the end of the script, one line lacks the mark that should sit beside its name. Pick the right ending.",
-      text: "Dad: Set the plants by the {0}",
+      text: "Dad: Set the cranes by the {0}",
       slots: [
         {
           options: ["window, Luis.", "window Luis.", "window; Luis."],
@@ -2498,26 +2509,31 @@ PP.addLesson({
         "3.L.GC.1:I:use-commas-for-direct-address-and-to-set-off-yes"
       ],
       passages: [],
-      prompt: "Tia reads \"Our teacher said no to extra recess.\" She claims that a comma has to follow each no. Which choice judges her claim?",
+      prompt: "Tia reads \"Our teacher gave a firm no to extra recess.\" She claims a comma must come after each no she sees. Which choice judges her claim?",
       choices: [
-        { text: "Her claim holds. Nothing may follow a no unless a comma separates the two words from each other." },
-        { text: "Her claim holds. The word said sits right before the word no, and that always calls for a comma." },
-        { text: "Her claim fails here. Commas belong with the word yes alone, and never with the word no." },
-        { text: "Her claim fails here. A comma follows a no that opens a reply, but this no names the answer.", correct: true }
+        { text: "She is right. Wherever a no shows up on a page, a comma has to come right after it, without exception." },
+        {
+          text: "She is wrong. Commas are saved for the reply yes, and the reply no gets none at all, even when spoken aloud."
+        },
+        { text: "She is right. A teacher is the one speaking here, so whatever the teacher says gets a comma." },
+        {
+          text: "She is wrong. A comma follows a no that begins a reply, but this no is something the teacher gave.",
+          correct: true
+        }
       ],
-      clue: "Think about what the word no is doing in the sentence. Does it open a reply, or does it only name an answer?",
+      clue: "Is no being said back to a person here, or is it just something the teacher gave?",
       hints: [
-        "Think about what the word no is doing in the sentence. Does it open a reply, or does it only name an answer?",
-        "Picture someone replying with no. Ask where a comma would go in that reply, and why.",
-        "The word said does not decide where a comma goes. Check the other three."
+        "Is no being said back to a person here, or is it just something the teacher gave?",
+        "Picture someone saying no back to a question. Ask where a comma would go, and why.",
+        "Who is speaking does not decide where a comma goes. Check the other three."
       ],
       how: [
         "Ask what no is doing. Nobody is replying to the teacher in this sentence.",
-        "No just names the answer the teacher gave, so no comma follows it.",
-        "The answer is \"Her claim fails here. A comma follows a no that opens a reply, but this no names the answer.\""
+        "No is only something the teacher gave, so no comma follows it.",
+        "The answer is \"She is wrong. A comma follows a no that begins a reply, but this no is something the teacher gave.\""
       ],
-      misconception: "A common mix-up is thinking the word no always needs a comma. The comma is for a no that opens a reply.",
-      why: "The answer is \"Her claim fails here. A comma follows a no that opens a reply, but this no names the answer.\" The sentence is correct as it is, so it shows Tia is wrong. A reply like \"No, thank you\" has a comma after no, but this sentence only reports what the teacher said.",
+      misconception: "A common mix-up is thinking every no needs a comma. The comma is for a no that begins a reply.",
+      why: "The answer is \"She is wrong. A comma follows a no that begins a reply, but this no is something the teacher gave.\" The sentence is correct as it is, so it shows Tia is wrong. A reply like \"No, thank you\" has a comma after no, but this sentence only reports what the teacher did.",
       like: ["SK-GUM5-2-C15"]
     }
   ],

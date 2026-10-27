@@ -3775,11 +3775,11 @@ PP.addLesson({
               "prompt": "What mistake does sentence 8 have with capital letters?",
               "choices": [
                 {
-                  "text": "Brookside School names one special school, so both words must start with capitals.",
+                  "text": "Brookside School names one special school, so both words need capitals.",
                   "correct": true
                 },
                 {
-                  "text": "School is an everyday noun, so only Brookside should start big in this sentence."
+                  "text": "School is an everyday noun, so only Brookside needs a capital in this sentence."
                 },
                 {
                   "text": "Three o'clock names a special time, so it needs a capital T in this sentence."
@@ -3816,10 +3816,10 @@ PP.addLesson({
             "how": [
               "Part A: Brookside School is the name of one special school, so every word in the name starts with a capital.",
               "Part B: the rewrite must capitalize both words in the name and leave the other words as they are.",
-              "The answers are \"Brookside School names one special school, so both words must start with capitals.\" and \"We got back to Brookside School just before three o'clock.\""
+              "The answers are \"Brookside School names one special school, so both words need capitals.\" and \"We got back to Brookside School just before three o'clock.\""
             ],
             "misconception": "A common mix-up is capitalizing only the first word of a name. Every important word in the name of a school needs a capital.",
-            "why": "Part A: \"Brookside School names one special school, so both words must start with capitals.\" Part B: \"We got back to Brookside School just before three o'clock.\" Back and before are everyday words, so they stay small.",
+            "why": "Part A: \"Brookside School names one special school, so both words need capitals.\" Part B: \"We got back to Brookside School just before three o'clock.\" Back and before are everyday words, so they stay small.",
             "like": [
               "SK-GUM2-3-S07"
             ]
@@ -4617,20 +4617,20 @@ PP.addLesson({
       "passages": [
         "p5"
       ],
-      "prompt": "In sentence 1, Ana wrote School with a big S because a bake sale is exciting. What should you tell her?",
+      "prompt": "Ana thinks school in sentence 1 should start big since bake sales are fun. What is the best reply?",
       "choices": [
         {
-          "text": "Nothing in the sentence gives this school a special name, so it stays small.",
+          "text": "Only a school's real name begins big, and none is given here.",
           "correct": true
         },
         {
-          "text": "Exciting events call for big letters at the start, so the S is a fine choice here."
+          "text": "Fun events earn big letters at the start of a word, so the S is a good choice."
         },
         {
-          "text": "Every building word should begin with a big letter, so Ana is right about the S."
+          "text": "Buildings of every sort begin with big letters, so Ana has this one right."
         },
         {
-          "text": "Only the names of people begin with big letters, so Ana should write her own name small."
+          "text": "People's names alone begin with big letters, so Ana should write her own name as ana."
         }
       ],
       "clue": "Think about why a word gets a capital. Is it because the word is important, or because of something else?",
@@ -4640,12 +4640,12 @@ PP.addLesson({
         "Some people in the draft do get capitals, such as Ana. Think about the other choices."
       ],
       "how": [
-        "Ana's idea is that exciting things get capitals.",
+        "Ana's idea is that fun things get capitals.",
         "Capitals go on the names of people, places and things. A school with no name given is just any school.",
-        "The answer is \"Nothing in the sentence gives this school a special name, so it stays small.\""
+        "The answer is \"Only a school's real name begins big, and none is given here.\""
       ],
       "misconception": "A common mix-up is capitalizing a word because it seems important. Capitals mark names, not importance.",
-      "why": "The answer is \"Nothing in the sentence gives this school a special name, so it stays small.\" Ana is a name, so it gets a capital. The school in sentence 1 has no name given.",
+      "why": "The answer is \"Only a school's real name begins big, and none is given here.\" Ana is a name, so it gets a capital. The school in sentence 1 has no name given.",
       "like": [
         "SK-GUM2-3-C10"
       ]
@@ -5355,35 +5355,35 @@ PP.addLesson({
             "passages": [
               "p1"
             ],
-            "prompt": "Sentence 6 uses the word asked, yet it should end with a period, not a question mark. Why?",
+            "prompt": "Sentences 2 and 10 end with different marks, yet both are correct. Why?",
             "choices": [
               {
-                "text": "It reports what the sister asked, and the writer is not asking the reader anything.",
+                "text": "Sentence 2 asks the reader something, while sentence 10 shows strong surprise.",
                 "correct": true
               },
               {
-                "text": "It is the sixth sentence, and sentences late in a draft end with periods."
+                "text": "Sentence 10 is the last one, and the last sentence in a draft always takes an exclamation point."
               },
               {
-                "text": "The word asked shows strong feeling, so it needs an exclamation point instead."
+                "text": "Sentence 2 is much shorter, and short sentences always take a question mark."
               },
               {
-                "text": "A question told in a story always ends with a period, even when the writer asks it."
+                "text": "The two marks mean the same thing, so a writer may use either one in either sentence."
               }
             ],
-            "clue": "Compare sentence 2 with sentence 6. Think about who is speaking in each one.",
+            "clue": "Compare sentence 2 with sentence 10. Think about what each one is doing.",
             "hints": [
-              "Compare sentence 2 with sentence 6. Think about who is speaking in each one.",
-              "Say each sentence aloud. In which one does the writer want you to give an answer?",
+              "Compare sentence 2 with sentence 10. Think about what each one is doing.",
+              "Say each sentence aloud the way a person would say it. Listen to how each one sounds.",
               "Where a sentence sits in a draft does not decide its end mark. Think about the other choices."
             ],
             "how": [
-              "Sentence 2 asks the reader a question. Sentence 6 says that someone else asked a question.",
-              "A sentence that reports a question is a telling sentence, so it ends with a period.",
-              "The answer is \"It reports what the sister asked, and the writer is not asking the reader anything.\""
+              "Sentence 2 says Where did she come from. Sentence 10 says By morning, a girl named Tia came running down the sidewalk.",
+              "Sentence 2 wants an answer, so it takes a question mark. Sentence 10 shows surprise, so it takes an exclamation point.",
+              "The answer is \"Sentence 2 asks the reader something, while sentence 10 shows strong surprise.\""
             ],
-            "misconception": "A common mix-up is thinking every sentence with the word asked is a question. Only a sentence that asks the reader is.",
-            "why": "The answer is \"It reports what the sister asked, and the writer is not asking the reader anything.\" Sentence 2 asks directly, so it takes a question mark. Sentence 6 only reports a question, so it takes a period.",
+            "misconception": "A common mix-up is thinking the place of a sentence in a draft decides its mark. What the sentence does decides it.",
+            "why": "The answer is \"Sentence 2 asks the reader something, while sentence 10 shows strong surprise.\" Sentence 2 asks directly, so it takes a question mark. Sentence 10 shows surprise, so it takes an exclamation point.",
             "like": [
               "SK-GUM2-4-S05"
             ]
@@ -5447,14 +5447,14 @@ PP.addLesson({
             ],
             "prompt": "This question has two parts. Answer Part A, then Part B.",
             "partA": {
-              "prompt": "What kind of sentence is sentence 5?",
+              "prompt": "What kind of sentence is sentence 2?",
               "choices": [
                 {
                   "text": "An asking sentence, which calls for a question mark.",
                   "correct": true
                 },
                 {
-                  "text": "A telling sentence, so the period is already correct."
+                  "text": "A telling sentence, so a period should close it instead."
                 },
                 {
                   "text": "A feeling sentence, so it needs an exclamation point."
@@ -5465,36 +5465,36 @@ PP.addLesson({
               ]
             },
             "partB": {
-              "prompt": "Which words in sentence 5 are the best clue?",
+              "prompt": "Which words in sentence 2 are the best clue?",
               "choices": [
                 {
-                  "text": "Can you swim",
+                  "text": "How deep is",
                   "correct": true
                 },
                 {
-                  "text": "across the whole pool"
+                  "text": "at the shallow end"
                 },
                 {
-                  "text": "the whole pool"
+                  "text": "the water at"
                 },
                 {
-                  "text": "swim across"
+                  "text": "the shallow end"
                 }
               ]
             },
-            "clue": "Read sentence 5 aloud. Decide whether the writer wants an answer from the reader.",
+            "clue": "Read sentence 2 aloud. Decide whether the writer wants an answer from the reader.",
             "hints": [
-              "Read sentence 5 aloud. Decide whether the writer wants an answer from the reader.",
-              "In Part B, look at how the sentence begins. A group of words at the start can show the kind of sentence.",
-              "The words the whole pool tell where, but they do not show the kind of sentence."
+              "Read sentence 2 aloud. Decide whether the writer wants an answer from the reader.",
+              "In Part B, ask which words tell you what kind of sentence this is.",
+              "The words at the shallow end tell where, but they do not show the kind of sentence."
             ],
             "how": [
-              "Part A: the sentence wants the reader to say whether he or she can swim across the pool.",
+              "Part A: the sentence wants the reader to say how deep the water is.",
               "Part B: the first three words begin the sentence the way an asking sentence often begins.",
-              "The answers are \"An asking sentence, which calls for a question mark.\" and \"Can you swim\"."
+              "The answers are \"An asking sentence, which calls for a question mark.\" and \"How deep is\"."
             ],
             "misconception": "A common mix-up is picking words from the end of the sentence. The first words are the clue.",
-            "why": "Part A: \"An asking sentence, which calls for a question mark.\" Part B: \"Can you swim\". The sentence begins with words that ask, and it wants an answer, so it takes a question mark.",
+            "why": "Part A: \"An asking sentence, which calls for a question mark.\" Part B: \"How deep is\". The sentence begins with words that ask, and it wants an answer, so it takes a question mark.",
             "like": [
               "SK-GUM2-4-S07"
             ]
@@ -5533,7 +5533,7 @@ PP.addLesson({
             "hints": [
               "Decide whether each sentence asks, tells or shows strong feeling. Then look at its end mark.",
               "Check all five sentences, including the ones that look right at first glance.",
-              "One choice has the word asked in it. Think about whether it asks the reader something."
+              "A question word does not decide the mark by itself. Check each sentence."
             ],
             "how": [
               "Say each sentence aloud and decide what kind it is.",
@@ -5558,17 +5558,17 @@ PP.addLesson({
             "prompt": "Which end mark belongs at the end of this sentence? Where did the ball roll",
             "choices": [
               {
-                "text": "a question mark",
+                "text": "?",
                 "correct": true
               },
               {
-                "text": "a period"
+                "text": "."
               },
               {
-                "text": "an exclamation point"
+                "text": "!"
               },
               {
-                "text": "a comma"
+                "text": ","
               }
             ],
             "clue": "Say the sentence aloud. Decide whether it tells, asks or shows strong feeling.",
@@ -5580,10 +5580,10 @@ PP.addLesson({
             "how": [
               "The sentence begins with Where, and the speaker wants an answer.",
               "A sentence that asks for an answer ends with a question mark.",
-              "The answer is a question mark."
+              "The answer is (?)."
             ],
             "misconception": "A common mix-up is choosing a period for every sentence. Check whether the speaker wants an answer.",
-            "why": "The answer is a question mark. The sentence begins with where and asks for an answer. It does not tell a fact or show strong feeling.",
+            "why": "The answer is (?). The sentence begins with where and asks for an answer. It does not tell a fact or show strong feeling.",
             "like": [
               "SK-GUM2-4-S09"
             ]
@@ -5599,35 +5599,35 @@ PP.addLesson({
             "passages": [
               "p2"
             ],
-            "prompt": "Zoe says sentence 8 needs a question mark because Dan asked something. Which reply explains the mistake in her idea?",
+            "prompt": "Zoe thinks sentence 9 needs a (?) because the writer wondered about something. Which reply fixes her thinking?",
             "choices": [
               {
-                "text": "The sentence only reports Dan's question to the reader, so it takes a period.",
+                "text": "The writer only tells what was wondered, and nobody is being asked anything.",
                 "correct": true
               },
               {
-                "text": "A sentence about asking shows strong feeling, so it takes an exclamation point."
+                "text": "A sentence about wondering should shout, so the mark for surprise is best."
               },
               {
-                "text": "Any sentence with the word what in it takes a question mark, so Zoe is right."
+                "text": "Any sentence with the word if in it always asks the reader, so Zoe is right about it."
               },
               {
-                "text": "A sentence in the middle of a story never takes a question mark, so the period is right."
+                "text": "Sentences near the end of a story never ask anything, so the period stays."
               }
             ],
-            "clue": "Think about who is asking in sentence 8. Is it the writer or someone in the story?",
+            "clue": "Think about who is wondering in sentence 9. Is the writer asking the reader something?",
             "hints": [
-              "Think about who is asking in sentence 8. Is it the writer or someone in the story?",
-              "Read sentence 8 aloud. Does it want you to give an answer?",
+              "Think about who is wondering in sentence 9. Is the writer asking the reader something?",
+              "Read sentence 9 aloud. Does it want you to give an answer?",
               "Strong feeling sentences usually have a word like hooray or wow. Think about the other choices."
             ],
             "how": [
-              "Sentence 8 says that Dan asked something. The writer is not asking the reader.",
-              "A sentence that reports a question tells what happened, so it ends with a period.",
-              "The answer is \"The sentence only reports Dan's question to the reader, so it takes a period.\""
+              "Sentence 9 says that the writer wondered about staying. The writer is not asking the reader.",
+              "A sentence that reports a wondering tells what happened, so it ends with a period.",
+              "The answer is \"The writer only tells what was wondered, and nobody is being asked anything.\""
             ],
-            "misconception": "A common mix-up is seeing a question word and adding a question mark. The sentence has to ask the reader something.",
-            "why": "The answer is \"The sentence only reports Dan's question to the reader, so it takes a period.\" Sentence 8 reports a question, so it is a telling sentence. Zoe's idea would work only if the writer were asking.",
+            "misconception": "A common mix-up is seeing a word like wondered and adding a question mark. The sentence has to ask the reader something.",
+            "why": "The answer is \"The writer only tells what was wondered, and nobody is being asked anything.\" Sentence 9 reports a wondering, so it is a telling sentence. Zoe's idea would work only if the writer were asking.",
             "like": [
               "SK-GUM2-4-S10"
             ]
@@ -5689,7 +5689,7 @@ PP.addLesson({
             "passages": [
               "p3"
             ],
-            "prompt": "Sentence 4 has the wrong end mark. Choose the mark that fixes it.",
+            "prompt": "Which end mark finishes line 4 of the draft?",
             "text": "Do you know who won the big relay race{0}",
             "slots": [
               {
@@ -5701,11 +5701,11 @@ PP.addLesson({
                 "answer": 1
               }
             ],
-            "clue": "Decide whether the sentence tells, asks or shows strong feeling. Read it as a speaker would say it.",
+            "clue": "Say the line aloud as a person would. Listen for whether it wants a reply.",
             "hints": [
-              "Decide whether the sentence tells, asks or shows strong feeling. Read it as a speaker would say it.",
-              "Ask whether the speaker wants an answer from the person listening.",
-              "A strong feeling sentence often starts with a word such as wow or oops. Look at how this sentence starts."
+              "Say the line aloud as a person would. Listen for whether it wants a reply.",
+              "Look at the first words of the line and ask what they invite the listener to do.",
+              "A period ends a plain fact. Think about the other two choices."
             ],
             "how": [
               "The speaker wants the listener to say whether he or she knows who won.",
@@ -5751,7 +5751,7 @@ PP.addLesson({
             "hints": [
               "The two sentences are about the same idea, but they do different jobs. Decide what each one does.",
               "For each blank, ask whether the sentence tells about a question or asks the question itself.",
-              "A strong feeling sentence often starts with a word such as wow or oops. Look at how these sentences start."
+              "Neither sentence shouts, so one of the three marks is not needed. Look at how these sentences start."
             ],
             "how": [
               "The first sentence tells what Maya wonders. The second sentence asks the question out loud.",
@@ -5788,7 +5788,7 @@ PP.addLesson({
             "clue": "Think about how the speaker feels in each one. Which one is said with a strong feeling?",
             "hints": [
               "Think about how the speaker feels in each one. Which one is said with a strong feeling?",
-              "Look at the first word of each sentence. Some words are shouted when people are surprised.",
+              "Say each one with feeling and decide which sounds like shouting.",
               "A sentence that begins with Does asks a question. Think about the rest."
             ],
             "how": [
@@ -5932,7 +5932,7 @@ PP.addLesson({
       "hints": [
         "For each line, ask whether it tells, asks or shows strong feeling. A line that only tells about a question is a telling line.",
         "Say each line aloud. Think about whether the speaker wants an answer or is feeling something strongly.",
-        "Lines that begin with Whoa or Oh my show feeling. Use that to sort some of the lines first."
+        "A line that begins with a word of strong feeling gets an exclamation point. Use that to sort some of the lines first."
       ],
       "how": [
         "Decide what each line does.",
@@ -5969,7 +5969,7 @@ PP.addLesson({
           "text": "(,), because the line should pause after the word show"
         },
         {
-          "text": "(..), because the line is long and needs extra dots"
+          "text": "(.), because the line tells where the rabbit went"
         }
       ],
       "clue": "Read sentence 8 aloud. Decide whether it tells, asks or shows strong feeling.",
@@ -6000,7 +6000,7 @@ PP.addLesson({
       "passages": [
         "p4"
       ],
-      "prompt": "Which mark should finish sentence 6?",
+      "prompt": "What ending mark closes the line about Omar and the rabbit?",
       "text": "Omar asked if the rabbit was real{0}",
       "slots": [
         {
@@ -6040,35 +6040,35 @@ PP.addLesson({
       "passages": [
         "p4"
       ],
-      "prompt": "Your friend defends the (?) in sentence 6 by saying Omar was curious. How would you answer?",
+      "prompt": "Pia thinks the closing mark on line 9 must match line 5, which has (?). How would you answer?",
       "choices": [
         {
-          "text": "Omar's wondering is just described for the audience, so (.) is the better stop.",
+          "text": "Each mark follows the job of its own sentence, and sentence 9 just tells.",
           "correct": true
         },
         {
-          "text": "Curious people always get (?) in their lines, so the mark stays as it is now."
+          "text": "Sentences close together share one ending mark, so Pia has a good point."
         },
         {
-          "text": "Curious people always get (!) in their lines, so the mark should change to it."
+          "text": "Sentence 9 is about clapping, so a (?) would show how loud the clapping was."
         },
         {
-          "text": "Punctuation in a draft is a matter of taste, so whatever mark you like will do here."
+          "text": "Neighbors in a draft take turns, so a (?) fits sentence 9 next."
         }
       ],
-      "clue": "Think about who is speaking in sentence 6 and who is being spoken to.",
+      "clue": "Look at the two sentences side by side. Ask what each one is doing.",
       "hints": [
-        "Think about who is speaking in sentence 6 and who is being spoken to.",
-        "Say sentence 6 aloud and listen for whether it wants a reply from you.",
-        "Strong feeling lines usually start with a word like hooray or whew. Think about the other choices."
+        "Look at the two sentences side by side. Ask what each one is doing.",
+        "Say each sentence aloud and listen to how each one sounds.",
+        "Where a sentence sits in a draft does not decide its end mark. Think about the other choices."
       ],
       "how": [
-        "Sentence 5 puts a question to the reader. Sentence 6 says that Omar asked one.",
-        "A sentence that reports a question tells what happened, so it stops with a period.",
-        "The answer is \"Omar's wondering is just described for the audience, so (.) is the better stop.\""
+        "Sentence 5 says What was hiding inside the tall black hat. Sentence 9 says I clapped until my hands turned red and sore.",
+        "Sentence 5 wants an answer, so it takes a question mark. Sentence 9 tells what the writer did, so it takes a period.",
+        "The answer is \"Each mark follows the job of its own sentence, and sentence 9 just tells.\""
       ],
-      "misconception": "A common mix-up is thinking a curious person makes a line a question. The writer must be putting the question to the reader.",
-      "why": "The answer is \"Omar's wondering is just described for the audience, so (.) is the better stop.\" Sentence 5 asks directly, but sentence 6 only reports what Omar asked.",
+      "misconception": "A common mix-up is thinking nearby sentences must share a mark. What each sentence does decides its mark.",
+      "why": "The answer is \"Each mark follows the job of its own sentence, and sentence 9 just tells.\" Sentence 5 asks directly, so it takes a question mark. Sentence 9 tells, so it takes a period.",
       "like": [
         "SK-GUM2-4-C05"
       ]
@@ -6127,14 +6127,14 @@ PP.addLesson({
       ],
       "prompt": "Use the first half to help you with the second half.",
       "partA": {
-        "prompt": "Which statement explains how sentence 3 should end?",
+        "prompt": "Which statement explains how sentence 2 should end?",
         "choices": [
           {
-            "text": "It reports what Mr. Lee did, and (.) closes it.",
+            "text": "It wants a reply from you, so (?) closes it.",
             "correct": true
           },
           {
-            "text": "It wants a reply from you, so it ends with (?)"
+            "text": "It reports what Mr. Lee did, so (.) should close it"
           },
           {
             "text": "It shows great surprise, so it ends with (!)"
@@ -6145,36 +6145,36 @@ PP.addLesson({
         ]
       },
       "partB": {
-        "prompt": "Pick the words from sentence 3 that back up your choice.",
+        "prompt": "Pick the words from sentence 2 that back up your choice.",
         "choices": [
           {
-            "text": "Mr. Lee showed us",
+            "text": "What kind of",
             "correct": true
           },
           {
-            "text": "how deep each hole"
+            "text": "Mr. Lee bring"
           },
           {
-            "text": "each hole should be"
+            "text": "seeds did Mr. Lee"
           },
           {
-            "text": "deep each hole should"
+            "text": "did Mr. Lee"
           }
         ]
       },
-      "clue": "Read sentence 3 aloud. Decide whether the writer is putting a question to you or reporting what happened.",
+      "clue": "Read sentence 2 aloud. Decide whether the writer is putting a question to you or reporting what happened.",
       "hints": [
-        "Read sentence 3 aloud. Decide whether the writer is putting a question to you or reporting what happened.",
-        "In the second half, look for the words that say who did what. A line that names someone doing something tells.",
-        "The words how deep may look like an asking phrase, but think about whether they begin the line."
+        "Read sentence 2 aloud. Decide whether the writer is putting a question to you or reporting what happened.",
+        "In the second half, decide which group of words is the best clue to the kind of sentence.",
+        "The word bring is an action, but it does not show the kind of sentence."
       ],
       "how": [
-        "Part A: the line says what Mr. Lee did, and it does not want a reply.",
-        "Part B: the first words name the person and the action, which is how a telling line often begins.",
-        "The answers are \"It reports what Mr. Lee did, and (.) closes it.\" and \"Mr. Lee showed us\"."
+        "Part A: the sentence wants a reply, and it does not report anything.",
+        "Part B: the first words ask about the seeds, which is how an asking sentence often begins.",
+        "The answers are \"It wants a reply from you, so (?) closes it.\" and \"What kind of\"."
       ],
-      "misconception": "A common mix-up is picking how deep because it looks like a question word. The clue is who did what.",
-      "why": "Part A: \"It reports what Mr. Lee did, and (.) closes it.\" Part B: \"Mr. Lee showed us\". The line says what Mr. Lee did and does not put anything to the reader.",
+      "misconception": "A common mix-up is picking the words that name a person. The clue is how the sentence begins.",
+      "why": "Part A: \"It wants a reply from you, so (?) closes it.\" Part B: \"What kind of\". The sentence begins with words that ask, and it wants an answer.",
       "like": [
         "SK-GUM2-4-C07"
       ]
@@ -6213,7 +6213,7 @@ PP.addLesson({
       "hints": [
         "Say each sentence aloud. Decide whether it asks, tells or shows strong feeling, and then look at its mark.",
         "Check every sentence, including the ones that look right at first glance.",
-        "One sentence has the word wonders in it. Think about whether it asks the reader something."
+        "A question word does not decide the mark by itself. Check each sentence."
       ],
       "how": [
         "Decide what each sentence does.",
@@ -6235,7 +6235,7 @@ PP.addLesson({
         "3.L.GC.1:R:use-end-punctuation-period-exclamation-point-que"
       ],
       "passages": [],
-      "prompt": "Which mark finishes this sentence? Our dog loves to chase the mail truck",
+      "prompt": "Pick the closing mark for the line below. Our dog loves to chase the mail truck",
       "choices": [
         {
           "text": ".",
@@ -6364,7 +6364,7 @@ PP.addLesson({
       "passages": [
         "p6"
       ],
-      "prompt": "Which mark should finish sentence 4?",
+      "prompt": "Pick the ending mark that the sentence about the soccer ball needs.",
       "text": "Who kicked the ball straight into the net{0}",
       "slots": [
         {
@@ -6376,11 +6376,11 @@ PP.addLesson({
           "answer": 1
         }
       ],
-      "clue": "Read the sentence aloud. Decide whether the speaker wants an answer.",
+      "clue": "Read the line aloud. Decide whether the speaker wants an answer.",
       "hints": [
-        "Read the sentence aloud. Decide whether the speaker wants an answer.",
+        "Read the line aloud. Decide whether the speaker wants an answer.",
         "Look at the first word. Think about what kind of sentence begins that way.",
-        "A strong feeling sentence often starts with a word such as wow or oops. Look at how this sentence begins."
+        "Nothing in this line sounds surprised or shouted. Think about the other two choices."
       ],
       "how": [
         "The speaker wants someone to say who kicked the ball.",
@@ -6426,7 +6426,7 @@ PP.addLesson({
       "hints": [
         "The two sentences share one idea but do different jobs. Decide what each one does.",
         "For each blank, ask whether the sentence reports a question or puts the question itself.",
-        "A strong feeling sentence often starts with a word such as wow or oops. Look at how these sentences start."
+        "Neither sentence sounds surprised, so one of the three marks is not needed. Look at how these sentences start."
       ],
       "how": [
         "The first sentence reports what Tess wants to know. The second asks the question out loud.",
@@ -6463,7 +6463,7 @@ PP.addLesson({
       "clue": "Think about how the speaker feels in each line. Which one is said with a strong feeling?",
       "hints": [
         "Think about how the speaker feels in each line. Which one is said with a strong feeling?",
-        "Look at the first word of each line. Some words are called out when people are worried or surprised.",
+        "Say each one with feeling and decide which sounds like calling out.",
         "A line that begins with Is asks a question. Think about the rest."
       ],
       "how": [
@@ -6564,7 +6564,7 @@ PP.addLesson({
       "hints": [
         "For each sentence, ask whether it tells, asks or shows strong feeling. A sentence that only tells about a question is a telling sentence.",
         "Say each sentence aloud. Think about whether the speaker wants an answer or is feeling something strongly.",
-        "Sentences that begin with Hooray or Oh no show feeling. Use that to sort some of the sentences first."
+        "A sentence that begins with a word of strong feeling gets an exclamation point. Use that to sort some of the sentences first."
       ],
       "how": [
         "Decide what each sentence does.",
@@ -6741,8 +6741,8 @@ PP.addLesson({
         [
           "(7) After the lesson, we give each pony a handful of carrots.",
           "(8) Then we line up our saddles on the wall.",
-          "(9) Last week, two flies buzzed around the hay.",
-          "(10) We left the barn tired, dusty and very happy after the long day."
+          "(9) Last week, two flys buzzed around the hay.",
+          "(10) We left the barn tired, dusty and very happy after two long days."
         ]
       ]
     },
@@ -6814,9 +6814,9 @@ PP.addLesson({
           "(6) We hung the finished mural in the hallway outside the gym."
         ],
         [
-          "(7) Lena added two sailboats and a bright white lighthouse.",
+          "(7) Lena filled two trays with paint and added a bright white lighthouse.",
           "(8) Visitors admired the colorful pastries painted in the corner.",
-          "(9) Our teacher took a picture of every group beside the wall.",
+          "(9) Our teacher took pictures of the happy familys beside the wall.",
           "(10) I hope we get to paint another mural before summer."
         ]
       ]
@@ -7009,20 +7009,20 @@ PP.addLesson({
             "passages": [
               "p1"
             ],
-            "prompt": "Sentence 4 spells ponies with -ies, but sentence 6 should spell boys with -ys. Why do the two words follow different rules?",
+            "prompt": "Mia writes ponies with -ies, but Lee writes turkeys with -ys. Why do the two words follow different rules?",
             "choices": [
               {
-                "text": "A consonant stands next to the y in pony, but a vowel does in boy.",
+                "text": "A consonant stands next to the y in pony, but a vowel does in turkey.",
                 "correct": true
               },
               {
-                "text": "Pony names an animal and boy names a person, and words for people only add -s."
+                "text": "Pony names a small animal and turkey names a big one, and words for big animals only add -s."
               },
               {
-                "text": "Pony is a longer word than boy, and longer words change the y to i."
+                "text": "Pony is a shorter word than turkey, and shorter words change the y to i."
               },
               {
-                "text": "Pony comes first in the draft, and the first word of each pair changes."
+                "text": "Pony is written first in the pair, so the first word of each pair changes."
               }
             ],
             "clue": "Think of the word for one in each plural. Then look closely at the letter right in front of the y in each word.",
@@ -7032,12 +7032,12 @@ PP.addLesson({
               "The kind of thing a word names does not decide how its plural is spelled. Think about the other choices."
             ],
             "how": [
-              "Ponies comes from pony, and boys comes from boy.",
-              "In pony, the letter before the y is n, a consonant. In boy, the letter before the y is o, a vowel.",
-              "The answer is \"A consonant stands next to the y in pony, but a vowel does in boy.\""
+              "Ponies comes from pony, and turkeys comes from turkey.",
+              "In pony, the letter before the y is n, a consonant. In turkey, the letter before the y is e, a vowel.",
+              "The answer is \"A consonant stands next to the y in pony, but a vowel does in turkey.\""
             ],
             "misconception": "A common mix-up is thinking the meaning of a word decides its plural. Only the letter before the y matters.",
-            "why": "The answer is \"A consonant stands next to the y in pony, but a vowel does in boy.\" A consonant before the y means the y changes to i and -es is added. A vowel before the y means just -s is added.",
+            "why": "The answer is \"A consonant stands next to the y in pony, but a vowel does in turkey.\" A consonant before the y means the y changes to i and -es is added. A vowel before the y means just -s is added.",
             "like": [
               "SK-GUM2-5-S05"
             ]
@@ -7101,25 +7101,25 @@ PP.addLesson({
             ],
             "prompt": "This question has two parts. Answer Part A, then Part B.",
             "partA": {
-              "prompt": "What is the mistake in sentence 2?",
+              "prompt": "What is the mistake in sentence 9?",
               "choices": [
                 {
-                  "text": "A consonant stands next to the y in pony, so the plural should be ponies.",
+                  "text": "A consonant stands next to the y in fly, so the plural should be flies.",
                   "correct": true
                 },
                 {
-                  "text": "A vowel stands next to the y in pony, so the plural should be poneys."
+                  "text": "The y in fly follows a vowel, so the plural should be fleys."
                 },
                 {
-                  "text": "Pony is a name, so its plural needs a capital P."
+                  "text": "Fly is a name, so its plural needs a capital F."
                 },
                 {
-                  "text": "A consonant stands next to the y in pony, so the plural should be ponyes."
+                  "text": "A consonant stands next to the y in fly, so the plural should be flyes."
                 }
               ]
             },
             "partB": {
-              "prompt": "Which phrase in the draft has a plural formed the same way as ponies?",
+              "prompt": "Which phrase in the draft has a plural formed the same way as flies?",
               "choices": [
                 {
                   "text": "two shiny trophies",
@@ -7129,26 +7129,26 @@ PP.addLesson({
                   "text": "keys on a hook"
                 },
                 {
-                  "text": "helmets and boots"
+                  "text": "two long days"
                 },
                 {
                   "text": "handful of carrots"
                 }
               ]
             },
-            "clue": "Think of the word for one: pony. Look at the letter just before the y.",
+            "clue": "Think of the word for one: fly. Look at the letter just before the y.",
             "hints": [
-              "Think of the word for one: pony. Look at the letter just before the y.",
+              "Think of the word for one: fly. Look at the letter just before the y.",
               "In Part B, find plurals in the draft that also come from words ending in y. Check the letter before the y in each one.",
-              "Keys comes from key, which has a vowel before the y. Think about whether that matches pony."
+              "A vowel before the y keeps the y. Use that to check each word."
             ],
             "how": [
-              "Part A: the letter before the y in pony is n, a consonant, so the y changes to i.",
+              "Part A: the letter before the y in fly is l, a consonant, so the y changes to i.",
               "Part B: look for another plural from a word with a consonant before the y.",
-              "The answers are \"A consonant stands next to the y in pony, so the plural should be ponies.\" and \"two shiny trophies\"."
+              "The answers are \"A consonant stands next to the y in fly, so the plural should be flies.\" and \"two shiny trophies\"."
             ],
             "misconception": "A common mix-up is thinking any plural that ends in y plus s follows the same rule. Check the letter before the y.",
-            "why": "Part A: \"A consonant stands next to the y in pony, so the plural should be ponies.\" Part B: \"two shiny trophies\". Trophy has a consonant before the y, just like pony. Keys has a vowel before the y.",
+            "why": "Part A: \"A consonant stands next to the y in fly, so the plural should be flies.\" Part B: \"two shiny trophies\". Trophy has a consonant before the y, just like fly. Keys and days have vowels before the y.",
             "like": [
               "SK-GUM2-5-S07"
             ]
@@ -7187,7 +7187,7 @@ PP.addLesson({
             "hints": [
               "Think of the word for one for each choice. Then look at the letter just before the y.",
               "Check every choice, including the ones that look right at first glance. A vowel before the y and a consonant before the y follow different rules.",
-              "One choice keeps the y and one changes it. Think about whether each one matches its rule."
+              "A vowel before the y keeps it, and a consonant before the y changes it. Check each choice against its own word."
             ],
             "how": [
               "Find the letter before the y in lily, driveway, fairy, trolley and enemy.",
@@ -7273,7 +7273,7 @@ PP.addLesson({
             "hints": [
               "Think of the word for one in sentence 5. Look at the letter right in front of the y.",
               "Ask what kind of letter it is, and then think about what Ben's rule does to it.",
-              "Ben is right about some words, such as trophies in sentence 4. Think about the other choices."
+              "Ben's rule fits some words but not all. Think about the other choices."
             ],
             "how": [
               "Sentence 5 has keys, which comes from key. The letter before the y in key is e.",
@@ -7343,7 +7343,7 @@ PP.addLesson({
             "passages": [
               "p3"
             ],
-            "prompt": "Sentence 6 has a misspelled plural. Pick the correct spelling.",
+            "prompt": "Which spelling completes the line about the birds?",
             "text": "Birds fed their {0} in a nest above us.",
             "slots": [
               {
@@ -7355,11 +7355,11 @@ PP.addLesson({
                 "answer": 0
               }
             ],
-            "clue": "Think of the word for one. Then look at the letter just before the y.",
+            "clue": "Picture just one of them. What is the word for one?",
             "hints": [
-              "Think of the word for one. Then look at the letter just before the y.",
-              "Ask whether that letter is a vowel (a, e, i, o or u) or a consonant.",
-              "Adding only -s after a consonant and a y is not how this kind of word works. Think about the other choices."
+              "Picture just one of them. What is the word for one?",
+              "Is the letter in front of the y a vowel or a consonant?",
+              "The y stays only after a vowel. Think about the other choices."
             ],
             "how": [
               "The word for one is baby. The letter just before the y is b.",
@@ -7523,7 +7523,7 @@ PP.addLesson({
           "answer": 0
         },
         {
-          "text": "trolley",
+          "text": "monkey",
           "answer": 1
         },
         {
@@ -7551,11 +7551,11 @@ PP.addLesson({
       ],
       "how": [
         "Find the letter before the y in each word.",
-        "Fairy, copy and supply have consonants before the y. Trolley, essay and jockey have vowels before the y.",
+        "Fairy, copy and supply have consonants before the y. Monkey, essay and jockey have vowels before the y.",
         "Place each word in the column that matches its rule."
       ],
       "misconception": "A common mix-up is putting a word like jockey with the -ies words because it looks long. Check the letter before the y.",
-      "why": "Fairy, copy and supply have consonants before the y, so they become fairies, copies and supplies. Trolley, essay and jockey have vowels before the y, so they become trolleys, essays and jockeys.",
+      "why": "Fairy, copy and supply have consonants before the y, so they become fairies, copies and supplies. Monkey, essay and jockey have vowels before the y, so they become monkeys, essays and jockeys.",
       "like": [
         "SK-GUM2-5-P4"
       ]
@@ -7653,7 +7653,7 @@ PP.addLesson({
       "passages": [
         "p4"
       ],
-      "prompt": "Pick the form of the plural that belongs in sentence 6.",
+      "prompt": "Which spelling goes in the blank to finish the sentence about the shoppers?",
       "text": "Many shoppers rode the {0} to get to the park.",
       "slots": [
         {
@@ -7693,35 +7693,35 @@ PP.addLesson({
       "passages": [
         "p4"
       ],
-      "prompt": "Why does fairies lose its y in sentence 4 while subways keeps its y in sentence 6?",
+      "prompt": "Why does fairies lose its y while valleys keeps its y?",
       "choices": [
         {
-          "text": "In fairy the y follows an r, but in subway the y follows an a.",
+          "text": "In fairy the y follows an r, but in valley the y follows an e.",
           "correct": true
         },
         {
           "text": "Fairy is a magical creature, and magical creatures always swap the y for i."
         },
         {
-          "text": "Subway ends in more letters, and extra letters make a y stay put."
+          "text": "Valley ends in more letters, and extra letters make a y stay put."
         },
         {
-          "text": "Sentence 4 sits near the top of the page, so its ending gets an i."
+          "text": "Fairies comes earlier in the alphabet, so its ending gets an i."
         }
       ],
       "clue": "Write the word for one of each plural. Then study the letter that sits next to each y.",
       "hints": [
         "Write the word for one of each plural. Then study the letter that sits next to each y.",
         "Name the kind of letter next to each y.",
-        "What a word names, and where it sits in the draft, does not choose its ending. Think about the other choices."
+        "What a word names, and where it sits in the alphabet, does not choose its ending. Think about the other choices."
       ],
       "how": [
-        "Fairies comes from fairy, and subways comes from subway.",
-        "In fairy, the letter next to the y is r, a consonant. In subway, the letter next to the y is a, a vowel.",
-        "The answer is \"In fairy the y follows an r, but in subway the y follows an a.\""
+        "Fairies comes from fairy, and valleys comes from valley.",
+        "In fairy, the letter next to the y is r, a consonant. In valley, the letter next to the y is e, a vowel.",
+        "The answer is \"In fairy the y follows an r, but in valley the y follows an e.\""
       ],
       "misconception": "A common mix-up is thinking meaning or length decides the ending. Only the letter before the y matters.",
-      "why": "The answer is \"In fairy the y follows an r, but in subway the y follows an a.\" A consonant means the y changes to i. A vowel means the y stays.",
+      "why": "The answer is \"In fairy the y follows an r, but in valley the y follows an e.\" A consonant means the y changes to i. A vowel means the y stays.",
       "like": [
         "SK-GUM2-5-C05"
       ]
@@ -7780,25 +7780,25 @@ PP.addLesson({
       ],
       "prompt": "Do the first half first. Its answer will guide the second half.",
       "partA": {
-        "prompt": "What goes wrong with the plural in sentence 4?",
+        "prompt": "What goes wrong with the plural in sentence 9?",
         "choices": [
           {
-            "text": "A p sits right beside the y, so i replaces it and es follows.",
+            "text": "An l sits right beside the y, so i replaces it and es follows.",
             "correct": true
           },
           {
             "text": "Nothing is wrong, since y can stay put when s joins on."
           },
           {
-            "text": "A capital C is needed, since the word opens a line."
+            "text": "A capital F is needed, since the word names a special group."
           },
           {
-            "text": "A p sits right beside the y, so i and an extra e both join it."
+            "text": "An l sits right beside the y, so i and an extra e both join it."
           }
         ]
       },
       "partB": {
-        "prompt": "Pick the plural from the draft built just like copies.",
+        "prompt": "Pick the plural from the draft built just like families.",
         "choices": [
           {
             "text": "pastries",
@@ -7808,26 +7808,26 @@ PP.addLesson({
             "text": "delays"
           },
           {
-            "text": "sailboats"
+            "text": "two trays"
           },
           {
             "text": "whales"
           }
         ]
       },
-      "clue": "Think of the word for one: copy. Look at the letter beside the y.",
+      "clue": "Think of the word for one: family. Look at the letter beside the y.",
       "hints": [
-        "Think of the word for one: copy. Look at the letter beside the y.",
+        "Think of the word for one: family. Look at the letter beside the y.",
         "In the second half, hunt for other plurals in the draft that come from words ending in y. Check the letter beside the y in each.",
-        "Delays comes from delay, which has a vowel beside the y. Think about whether that matches copy."
+        "A vowel beside the y keeps the y. Use that to check each word."
       ],
       "how": [
-        "Part A: the letter beside the y in copy is p, a consonant, so the y changes to i.",
+        "Part A: the letter beside the y in family is l, a consonant, so the y changes to i.",
         "Part B: look for another plural made from a word with a consonant beside the y.",
-        "The answers are \"A p sits right beside the y, so i replaces it and es follows.\" and \"pastries\"."
+        "The answers are \"An l sits right beside the y, so i replaces it and es follows.\" and \"pastries\"."
       ],
       "misconception": "A common mix-up is picking a plural just because it ends in -s. Check the letter beside the y.",
-      "why": "Part A: \"A p sits right beside the y, so i replaces it and es follows.\" Part B: \"pastries\". Pastry has a consonant before the y, just like copy. Delays has a vowel before the y.",
+      "why": "Part A: \"An l sits right beside the y, so i replaces it and es follows.\" Part B: \"pastries\". Pastry has a consonant before the y, just like family. Delays and trays have vowels before the y.",
       "like": [
         "SK-GUM2-5-C07"
       ]
@@ -7866,7 +7866,7 @@ PP.addLesson({
       "hints": [
         "Think of the word for one for each choice. Look at the letter next to its y.",
         "Check all five choices, including the ones that look right. A vowel and a consonant next to the y lead to different endings.",
-        "Look for the two choices whose endings match the letter next to the y."
+        "A vowel next to the y keeps it, and a consonant next to the y changes it. Check each choice against its own word."
       ],
       "how": [
         "Find the letter next to the y in melody, runway, bully, display and cavity.",
@@ -7952,7 +7952,7 @@ PP.addLesson({
       "hints": [
         "Think of the word for one in sentence 5. Look at the letter beside the y.",
         "Decide what kind of letter it is, and then think about what Pia's idea does to it.",
-        "Pia is right about some words, such as pastries in sentence 8. Think about the other choices."
+        "Pia's idea fits some words but not all. Think about the other choices."
       ],
       "how": [
         "Sentence 5 has delays, which comes from delay. The letter next to the y in delay is a.",

@@ -65,7 +65,7 @@
 | B7a | 3.L.GC.1:R:use-nouns-and-verbs-to-form-complete-thoughts-in | ACCEPTED | Second independent review ACCEPT; open SHOULDs in B7a-review.md |
 | B7a | 3.L.GC.1:R:form-and-use-singular-and-plural-nouns-in-speech | ACCEPTED | Fourth independent review ACCEPT; NOTEs in B7a-review.md |
 | B7a | 3.L.GC.1:R:use-interrogatives-to-ask-questions-in-speech | ACCEPTED | Second independent review ACCEPT; open SHOULDs in B7a-review.md |
-| B7a | 3.L.GC.1:R:capitalize-the-first-word-of-a-sentence-and-the- | NOT ACCEPTED: awaiting independent review | B7a-author-log.md; authored, not reviewed |
+| B7a | 3.L.GC.1:R:capitalize-the-first-word-of-a-sentence-and-the- | ACCEPTED | Fifth independent review ACCEPT; open SHOULDs (S05 antecedent, C08/S08 hint 1 and Watch Me clone, S10/S08 wording) in B7a-review.md |
 | B7a | 3.L.GC.1:R:form-regular-plural-nouns-with-s-or-es | ACCEPTED | Second independent review ACCEPT; open SHOULDs in B7a-review.md |
 | B7a | 3.L.GC.1:R:form-and-use-verbs-with-ing-ed-or-s | ACCEPTED | Second independent review ACCEPT; open SHOULDs in B7a-review.md |
 | B7a | 3.L.GC.1:R:use-action-verbs | ACCEPTED | Second independent review ACCEPT; open SHOULDs in B7a-review.md |
@@ -81,6 +81,7 @@
 | B7b | 3.L.GC.1:R:use-commas-in-a-series-and-in-dates-addresses-sa | NOT ACCEPTED: awaiting independent review | B7b-author-log.md; authored, not reviewed |
 | B7b | 3.L.GC.1:R:form-and-use-verbs-by-adding-d-or-es | NOT ACCEPTED: awaiting independent review | B7b-author-log.md; authored, not reviewed |
 | B8a | 3.L.GC.1:C:form-and-use-prepositional-phrases | NOT ACCEPTED: awaiting independent review | B8a-author-log.md; authored, not reviewed |
+| B8a | 3.L.GC.1:C:form-and-use-comparative-and-superlative-adjecti | NOT ACCEPTED: awaiting independent review | B8a-author-log.md; authored, not reviewed |
 
 "Accepted" means an independent reviewer blind-solved the items, found every key defensible, and found no hint ladder that leaves only the key (see AUTHOR-BRIEF rules). It does not mean the lesson has been tried by a child.
 
