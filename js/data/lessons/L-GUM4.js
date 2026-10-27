@@ -1510,7 +1510,8 @@ PP.addLesson({
     points: [
       "Use -er or more to compare two things. Use -est or most to compare three or more things.",
       "Short words add -er and -est: fast, faster, fastest. Some short words double the last letter first: big, bigger, biggest. Words that end in a consonant and y change the y to i: funny, funnier, funniest.",
-      "Many longer words use more and most: more careful, most careful. Never use both, like more faster. A few words change completely: good, better, best; bad, worse, worst; and well, better, best."
+      "Many longer words use more and most: more careful, most careful. Never use both, like more faster. A few words change completely: good, better, best; bad, worse, worst; and well, better, best.",
+      "Words that tell how can compare too. Most of them end in -ly and use more and most: more carefully, most carefully. A few short ones add -er and -est: fast, faster, fastest. Never use two comparing parts on one word."
     ],
     words: [
       { term: "comparative", means: "the form that compares two, like taller or more careful" },
@@ -1543,6 +1544,16 @@ PP.addLesson({
         "Badder is not correct in school writing, so cross it out."
       ],
       answer: "Worse, because it compares two days."
+    },
+    {
+      show: ["Mia answers the phone ___ than her brother does."],
+      ask: "Which fits the blank: more politely, most politely or more polite?",
+      steps: [
+        "Count what is compared. Mia and her brother are two people.",
+        "The blank tells how Mia answers, so use a word that ends in -ly. Two people means more, not most.",
+        "More polite describes a noun, and this blank tells how, so cross it out."
+      ],
+      answer: "More politely, because it tells how and it compares two people."
     }
   ],
   parent: "At the store or in the kitchen, compare things in twos and threes: \"Which apple is bigger? Which one is the biggest?\" Let your child choose the -er or -est word.",
@@ -1635,8 +1646,8 @@ PP.addLesson({
           "(3) The morning sun rose slowly over the water, and the air felt cool."
         ],
         [
-          "(4) Grandpa says the cabin is the more peaceful place in the whole county.",
-          "(5) He thinks his bait works more better than mine, but I caught the first fish.",
+          "(4) The cabin is the more peaceful spot for miles, my grandpa says.",
+          "(5) He says his bait is more better than mine, but I caught the first fish.",
           "(6) We stayed quiet because loud noise scares fish away from the hook."
         ],
         [
@@ -1687,7 +1698,7 @@ PP.addLesson({
         [
           "(4) A girl on a bike rode more slower than the other kids in the line.",
           "(5) Mr. Lopez had the worse job of all, because he cleaned the street after the parade.",
-          "(6) The fireworks were the better show of the whole summer, so everyone stayed late."
+          "(6) Fireworks over the river were the better show of that summer, so everyone stayed late."
         ],
         [
           "(7) My brother clapped louder than anyone near us.",
@@ -1945,11 +1956,11 @@ PP.addLesson({
                 text: "thiner"
               }
             ],
-            clue: "Say each base word, then picture it with the comparing ending added. Check the spelling letter by letter.",
+            clue: "Say each base word, then picture it with the ending added. Check every letter.",
             hints: [
-              "Say each base word, then picture it with the comparing ending added. Check the spelling letter by letter.",
+              "Say each base word, then picture it with the ending added. Check every letter.",
               "Look at the last letters of each base word. Then see whether the new spelling keeps them or changes them.",
-              "Wetest leaves out a letter that the base word needs."
+              "Wetest leaves out a letter that the base word needs to keep its short vowel sound."
             ],
             how: [
               "Write each base word and add the ending: sleepy, thin, wet.",
@@ -2126,7 +2137,7 @@ PP.addLesson({
             hints: [
               "Read the sentence and count how many days are being compared. Then say each choice in the blank.",
               "Look at the last words of the phrase that tell what the rabbit's day is compared with.",
-              "Most worse puts the helper word for three or more in front of a word that already compares."
+              "Putting the helper word for three or more in front of a word that already compares makes a double comparison."
             ],
             how: [
               "The sentence compares the rabbit's day with every day in the whole week, which is more than two.",
@@ -2249,7 +2260,7 @@ PP.addLesson({
             clue: "Look at the word gracefully and think about how long it is and how it ends.",
             hints: [
               "Look at the word gracefully and think about how long it is and how it ends.",
-              "Count the dancers that Lila is compared with. Then decide whether gracefully is a short word or a long word.",
+              "Count the dancers that Lila is compared with. Then think about the size and the ending of the word that tells how.",
               "Gracefully tells how Lila moved, not what she is."
             ],
             how: [
@@ -2326,15 +2337,15 @@ PP.addLesson({
         "3.L.GC.1:C:form-and-use-comparative-and-superlative-adjecti"
       ],
       passages: [],
-      prompt: "Pick the words that complete the sentence correctly.",
-      text: "Our team played {0} on Monday than on Friday, but Saturday was the {1} game of the season.",
+      prompt: "Fill both blanks so the report about our soccer club reads correctly.",
+      text: "Our soccer team played {0} on rainy Monday than on sunny Friday, but cloudy Saturday was the {1} game of the entire season.",
       slots: [
         {
-          options: ["worse","more badly","most bad","worst"],
+          options: ["worse","more worse","most bad","worst"],
           answer: 0
         },
         {
-          options: ["worst","worse","most bad","more badly"],
+          options: ["worst","worse","most worst","more bad"],
           answer: 0
         }
       ],
@@ -2407,10 +2418,10 @@ PP.addLesson({
       how: [
         "Look for a comparing word in each of the five sentences.",
         "Sentences 7, 8 and 10 use words that suit what they compare, and sentence 6 has no comparing word.",
-        "Sentence 4 sets the cabin beside every place in the county, so it needs most peaceful, not more peaceful."
+        "Sentence 4 sets the cabin beside every spot for miles around, so it needs most peaceful, not more peaceful."
       ],
       misconception: "A common mix-up is trusting a sentence that sounds smooth. Count what each comparing word sets side by side.",
-      why: "The answer is sentence 4: \"Grandpa says the cabin is the more peaceful place in the whole county.\" The cabin is set beside every place in the county, so the sentence needs most peaceful. Sentence 6 has no comparing word, and sentences 7, 8 and 10 use farther than, biggest and warmest correctly.",
+      why: "The answer is sentence 4: \"The cabin is the more peaceful spot for miles, my grandpa says.\" The cabin is set beside every spot for miles around, so the sentence needs most peaceful. Sentence 6 has no comparing word, and sentences 7, 8 and 10 use farther than, biggest and warmest correctly.",
       like: ["SK-GUM4-2-C04"]
     },
     {
@@ -2424,20 +2435,20 @@ PP.addLesson({
       passages: ["p4"],
       prompt: "Answer Part A first, and then answer Part B.",
       partA: {
-        prompt: "Which new version of sentence 5 corrects the draft?",
+        prompt: "Which new version of line 5 corrects the draft?",
         choices: [
           {
-            text: "He thinks his bait works better than mine, but I caught the first fish.",
+            text: "He says his bait is better than mine, but I caught the first fish.",
             correct: true
           },
           {
-            text: "He thinks his bait works more better than mine, but I caught the first fish."
+            text: "He says his bait is more better than mine, but I caught the first fish."
           },
           {
-            text: "He thinks his bait works gooder than mine, but I caught the first fish."
+            text: "He says his bait is most well than mine, but I caught the first fish."
           },
           {
-            text: "He thinks his bait works most good than mine, but I caught the first fish."
+            text: "He says his bait is best than mine, but I caught the first fish."
           }
         ]
       },
@@ -2445,33 +2456,33 @@ PP.addLesson({
         prompt: "Which statement supports the corrected version?",
         choices: [
           {
-            text: "Well and good become better when the writer sets one thing beside one other.",
+            text: "Well and good turn into better when a writer sets a pair side by side.",
             correct: true
           },
           {
-            text: "Words that tell how always add -est when the writer sets one thing beside one other."
+            text: "Words that tell how always take -est when a writer sets a pair side by side."
           },
           {
-            text: "Better needs a helper word in front of it when the writer sets one thing beside one other."
+            text: "Better needs a helper word in front when a writer sets a pair side by side."
           },
           {
-            text: "Than tells the reader to use best when the writer sets one thing beside one other."
+            text: "The little word than tells a writer to pick best for a pair of items."
           }
         ]
       },
-      clue: "Work out whether the writer sets two things or a group side by side. Then pick the new version that suits it and a statement that backs it up.",
+      clue: "Work out whether the writer compares two things or a group. Then pick the new version that suits it and a statement that backs it up.",
       hints: [
-        "Work out whether the writer sets two things or a group side by side. Then pick the new version that suits it and a statement that backs it up.",
+        "Work out whether the writer compares two things or a group. Then pick the new version that suits it and a statement that backs it up.",
         "For Part A, say each new version out loud next to the draft. For Part B, look for the statement about the words good and well.",
         "Better never needs a helper word, so one statement about better cannot be true."
       ],
       how: [
-        "Part A: bait is set beside bait, which is a pair, so the draft needs the comparing form. The answer is \"He thinks his bait works better than mine, but I caught the first fish.\"",
-        "The other versions add a helper word to better or use gooder or most good, which are not built correctly.",
-        "Part B: the statement is \"Well and good become better when the writer sets one thing beside one other.\""
+        "Part A: bait is set beside bait, which is a pair, so the draft needs the comparing form. The answer is \"He says his bait is better than mine, but I caught the first fish.\"",
+        "The other versions add a helper word to better, use most well, or use best, which is for a group.",
+        "Part B: the statement is \"Well and good turn into better when a writer sets a pair side by side.\""
       ],
       misconception: "A common mix-up is choosing the version that looks the most careful. Check how the comparing word is built.",
-      why: "Part A: \"He thinks his bait works better than mine, but I caught the first fish.\" Part B: \"Well and good become better when the writer sets one thing beside one other.\" Well and good become better when two things are compared. The other versions add a helper word to better, or use gooder or most good, and the other statements are not true.",
+      why: "Part A: \"He says his bait is better than mine, but I caught the first fish.\" Part B: \"Well and good turn into better when a writer sets a pair side by side.\" Well and good turn into better when two things are compared. The other versions add a helper word to better, use most well, or use best, and the other statements are not true.",
       like: ["SK-GUM4-2-C05"]
     },
     {
@@ -2536,9 +2547,9 @@ PP.addLesson({
           text: "reder"
         }
       ],
-      clue: "Write each base word on paper, then add the ending and check every letter.",
+      clue: "Write each base word on paper, then add the ending and check each letter.",
       hints: [
-        "Write each base word on paper, then add the ending and check every letter.",
+        "Write each base word on paper, then add the ending and check each letter.",
         "Study the last letters of each base word, then see if the new word keeps them or changes them.",
         "Hotest drops a letter that its base word needs."
       ],
@@ -2560,8 +2571,8 @@ PP.addLesson({
         "3.L.GC.1:C:form-and-use-comparative-and-superlative-adjecti"
       ],
       passages: [],
-      prompt: "Select the words that finish the sentence correctly.",
-      text: "Nadia waits {0} than her cousin does, and Uncle Lee waits the {1} of the whole family.",
+      prompt: "Select the words that finish this clinic story correctly.",
+      text: "At the clinic, Nadia waits {0} than the other patients do, and Uncle Lee waits the {1} among everyone in the crowded room.",
       slots: [
         {
           options: ["more patiently","patientlier","more patient","most patiently"],
@@ -2572,19 +2583,19 @@ PP.addLesson({
           answer: 0
         }
       ],
-      clue: "Say the sentence with a choice in each blank, and listen for the one that makes a full comparison.",
+      clue: "Say the story with a choice in each blank, and listen for a full comparison.",
       hints: [
-        "Say the sentence with a choice in each blank, and listen for the one that makes a full comparison.",
-        "Count who is set side by side in each half of the sentence, then test one blank at a time.",
+        "Say the story with a choice in each blank, and listen for a full comparison.",
+        "Count who is set side by side in each half, then test one blank at a time.",
         "Look at the first blank only. Patientlier is not a word."
       ],
       how: [
-        "The first half sets Nadia beside her cousin, which is a pair. The second half sets Uncle Lee beside the whole family.",
+        "The first half sets Nadia beside the other patients, which is a group of one against the rest. The second half sets Uncle Lee beside everyone in the room.",
         "A word that ends in -ly takes more for a pair and most for a group.",
         "The answers are more patiently and most patiently. Patientlier and patientlest are not words, and patient describes a person, not how someone waits."
       ],
       misconception: "A common mix-up is picking the word that describes a person. Waiting tells how, so it needs patiently.",
-      why: "The answers are more patiently and most patiently. Nadia and her cousin are a pair, so more patiently fits the first blank. Uncle Lee is set beside the whole family, so most patiently fits the second. Patient describes a person, not how someone waits.",
+      why: "The answers are more patiently and most patiently. Nadia is compared with the other patients, so more patiently fits the first blank. Uncle Lee is set beside everyone in the room, so most patiently fits the second. Patient describes a person, not how someone waits.",
       like: ["SK-GUM4-2-C08"]
     },
     {
@@ -2596,35 +2607,35 @@ PP.addLesson({
         "3.L.GC.1:C:form-and-use-comparative-and-superlative-adjecti"
       ],
       passages: ["p5"],
-      prompt: "Mara thinks most longest in sentence 5 is fine because the flight was very long. How should you answer her?",
+      prompt: "Mara reads most longest in sentence 5 and sees no problem. Which reply is the strongest?",
       choices: [
         {
-          text: "Longest already means the most, so the word most is not needed.",
+          text: "Longest ends in -est and names the top one by itself, so the extra word most can go.",
           correct: true
         },
         {
-          text: "Longest should change to longer because only two flights were measured on that day."
+          text: "Longest should turn into longer, since only a pair of flights was timed on that day."
         },
         {
-          text: "Most should change to more because the plane flew a long way down the hall."
+          text: "Most should turn into more, since the plane glided so far down the hall."
         },
         {
-          text: "Longest should be spelled longgest because a short vowel comes before the g."
+          text: "Longest needs a second g, since a lone vowel sits in front of the n."
         }
       ],
       clue: "Examine the two parts of the phrase. Ask whether either part repeats the work of the other.",
       hints: [
         "Examine the two parts of the phrase. Ask whether either part repeats the work of the other.",
         "Say the phrase without the first part and decide whether the meaning is still complete.",
-        "The sentence names the longest flight of the whole day, so an answer about only two flights does not suit it."
+        "The sentence names the longest flight of the whole day, so a reply about only two flights does not suit it."
       ],
       how: [
         "Find the phrase in sentence 5: the most longest flight of the day.",
         "Longest ends in -est, so it already means the most. Most in front says it again.",
-        "The answer is \"Longest already means the most, so the word most is not needed.\""
+        "The answer is \"Longest ends in -est and names the top one by itself, so the extra word most can go.\""
       ],
       misconception: "A common mix-up is thinking an extra word makes a comparison stronger. A word that ends in -est stands alone.",
-      why: "The answer is \"Longest already means the most, so the word most is not needed.\" Longest ends in -est, so it already means the most. The sentence should say the longest flight of the day.",
+      why: "The answer is \"Longest ends in -est and names the top one by itself, so the extra word most can go.\" Longest ends in -est and names the top one by itself, so the extra word most can go. The sentence should say the longest flight of the day.",
       like: ["SK-GUM4-2-C09"]
     },
     {
@@ -2664,36 +2675,36 @@ PP.addLesson({
         "3.L.GC.1:C:form-and-use-comparative-and-superlative-adjecti"
       ],
       passages: [],
-      stem: "Sentence A: Yesterday's storm was worse than last week's storm. Sentence B: It was the worst storm of the whole year.",
-      prompt: "What do worse and worst share, and how do they differ?",
+      stem: "Yesterday's storm was worse than last week's storm. It was also the worst storm of the whole year.",
+      prompt: "Which statement explains the link between worse and worst?",
       choices: [
         {
-          text: "Both come from bad, but worse sets one storm beside one other and worst sets one beside the whole year.",
+          text: "Each is a form of bad: worse points to a pair of storms, and worst points to a whole year of storms.",
           correct: true
         },
         {
-          text: "Both come from bad, but worse sets one storm beside the whole year and worst sets one beside one other."
+          text: "Each is a form of bad: worse points to a whole year of storms, and worst points to a pair of storms."
         },
         {
-          text: "Both come from good, but worse sets one storm beside one other and worst sets one beside the whole year."
+          text: "Each is a form of good: worse points to a pair of storms, and worst points to a whole year of storms."
         },
         {
-          text: "They share nothing, because worse is built from -er and worst is built from most."
+          text: "Neither one is linked to the other, because worse adds -er and worst adds most to the same base word."
         }
       ],
       clue: "Think about which base word each comparing word is built from and what each one sets side by side.",
       hints: [
         "Think about which base word each comparing word is built from and what each one sets side by side.",
-        "Reread both sentences and notice what each storm is set beside.",
-        "Yesterday's storm was harmful, so a choice that traces the words to good cannot be right."
+        "Reread the two lines and notice what each storm is set beside.",
+        "Yesterday's storm did damage, so a statement that traces the words to good cannot be right."
       ],
       how: [
-        "Sentence A sets yesterday's storm beside one other storm, so worse is the word for a pair.",
-        "Sentence B sets one storm beside the whole year, so worst is the word for a group.",
-        "Both words come from bad: bad, worse, worst. The answer is \"Both come from bad, but worse sets one storm beside one other and worst sets one beside the whole year.\""
+        "The first line sets yesterday's storm beside one other storm, so worse is the word for a pair.",
+        "The second line sets one storm beside the whole year, so worst is the word for a group.",
+        "Both words come from bad: bad, worse, worst. The answer is \"Each is a form of bad: worse points to a pair of storms, and worst points to a whole year of storms.\""
       ],
       misconception: "A common mix-up is hunting for -er and -est on every word. Worse and worst come from bad, so they look different.",
-      why: "The answer is \"Both come from bad, but worse sets one storm beside one other and worst sets one beside the whole year.\" Worse sets yesterday's storm beside one other storm, and worst sets it beside the whole year. Both words come from bad.",
+      why: "The answer is \"Each is a form of bad: worse points to a pair of storms, and worst points to a whole year of storms.\" Worse sets yesterday's storm beside one other storm, and worst sets it beside the whole year. Both words come from bad.",
       like: ["SK-GUM4-2-C11"]
     },
     {
@@ -2705,11 +2716,11 @@ PP.addLesson({
         "3.L.GC.1:C:form-and-use-comparative-and-superlative-adjecti"
       ],
       passages: ["p6"],
-      prompt: "Sentence 6 has an error. Pick the word that corrects it.",
-      text: "The fireworks were the {0} show of the whole summer, so everyone stayed late.",
+      prompt: "Line 6 in this account is wrong. Pick the choice that repairs it.",
+      text: "Fireworks over the river were the {0} show of that summer, and everyone stayed late.",
       slots: [
         {
-          options: ["best","better","most good","goodest"],
+          options: ["best","better","most best","more good"],
           answer: 0
         }
       ],
@@ -2717,15 +2728,15 @@ PP.addLesson({
       hints: [
         "Say each choice in the blank and think about how many shows the writer has in mind.",
         "Notice the words after the blank that name how long a time the writer is talking about.",
-        "Goodest is not a word that school writing accepts."
+        "More good is not built the way school writing builds a comparing word."
       ],
       how: [
         "The writer sets the fireworks beside every show of the summer, which is more than two.",
         "Good changes completely: good, better, best. The form for a group is best.",
-        "The answer is best. Better is for a pair, and most good and goodest are not correct."
+        "The answer is best. Better is for a pair, and most best and more good are not correct."
       ],
       misconception: "A common mix-up is keeping better because it sounds nice. Match the form to the number of shows.",
-      why: "The answer is best. The fireworks are set beside every show of the whole summer, so the sentence needs the form for a group. Good changes completely: good, better, best.",
+      why: "The answer is best. The fireworks are set beside every show of that summer, so the line needs the form for a group. Good changes completely: good, better, best.",
       like: ["SK-GUM4-2-C12"]
     },
     {
@@ -2737,40 +2748,40 @@ PP.addLesson({
         "3.L.GC.1:C:form-and-use-comparative-and-superlative-adjecti"
       ],
       passages: ["p6"],
-      prompt: "Sentence 4 contains an error. Pick the TWO new versions that repair it.",
+      prompt: "Line 4 is wrong. Which pair of new versions repairs it?",
       pick: 2,
       choices: [
         {
-          text: "A girl on a bike rode slower than the other kids in the line.",
+          text: "A girl on a red bike rode slower than the other kids in the long line.",
           correct: true
         },
         {
-          text: "A girl on a bike rode more slowly than the other kids in the line.",
+          text: "A girl on a red bike rode more slowly than the other kids in the long line.",
           correct: true
         },
         {
-          text: "A girl on a bike rode slowest than the other kids in the line."
+          text: "A girl on a red bike rode slowest than the other kids in the long line."
         },
         {
-          text: "A girl on a bike rode more slowlier than the other kids in the line."
+          text: "A girl on a red bike rode more slowlier than the other kids in the long line."
         },
         {
-          text: "A girl on a bike rode most slowly than the other kids in the line."
+          text: "A girl on a red bike rode most slowly than the other kids in the long line."
         }
       ],
       clue: "Both repairs must keep the meaning. Look at the comparing word in each version and check how it is built.",
       hints: [
         "Both repairs must keep the meaning. Look at the comparing word in each version and check how it is built.",
-        "Find the comparing word in every version. Ask whether it is built correctly and whether it suits a girl and the other kids.",
+        "Find the comparing word in every version. Ask whether it is built correctly and whether it suits the girl and the rest of the line.",
         "Slowest than puts the form for a group beside than, which sets only two things side by side."
       ],
       how: [
         "The girl is set beside the other kids in the line, so the sentence compares her with the rest.",
         "Slow adds -er: slower. Slowly ends in -ly, so it takes more: more slowly.",
-        "The answers are \"A girl on a bike rode slower than the other kids in the line.\" and \"A girl on a bike rode more slowly than the other kids in the line.\" The others stack comparing parts or use most with than."
+        "The answers are \"A girl on a red bike rode slower than the other kids in the long line.\" and \"A girl on a red bike rode more slowly than the other kids in the long line.\" The others stack comparing parts or use most with than."
       ],
       misconception: "A common mix-up is thinking only one repair works. Slow can add -er, and slowly can take more.",
-      why: "The answers are \"A girl on a bike rode slower than the other kids in the line.\" and \"A girl on a bike rode more slowly than the other kids in the line.\" Slower and more slowly both set the girl beside the other kids. The other versions stack comparing parts or use -est or most with than.",
+      why: "The answers are \"A girl on a red bike rode slower than the other kids in the long line.\" and \"A girl on a red bike rode more slowly than the other kids in the long line.\" Slower and more slowly both set the girl beside the other kids. The other versions stack comparing parts or use -est or most with than.",
       like: ["SK-GUM4-2-C13"]
     },
     {
@@ -2782,36 +2793,36 @@ PP.addLesson({
         "3.L.GC.1:C:form-and-use-comparative-and-superlative-adjecti"
       ],
       passages: [],
-      stem: "Three kittens nap in a basket: Pip, Dot and Sox.",
-      prompt: "Which sentence compares all three kittens correctly?",
+      stem: "A basket holds a trio of kittens: Pip, Dot and Sox.",
+      prompt: "Pick the line with no comparing error.",
       choices: [
         {
-          text: "Dot is the noisiest of the three kittens.",
+          text: "In that basket, Dot is the noisiest kitten.",
           correct: true
         },
         {
-          text: "Dot is the noisyest of the three kittens."
+          text: "In that basket, Dot is the noisyest kitten."
         },
         {
-          text: "Dot is the most noisier of the three kittens."
+          text: "In that basket, Dot is the most noisier kitten."
         },
         {
-          text: "Dot is the more noisy of the three kittens."
+          text: "In that basket, Dot is the more noisy kitten."
         }
       ],
-      clue: "Count the kittens, then look at how each choice builds its comparing word from noisy.",
+      clue: "Count the kittens, then look at how each line builds its comparing word from noisy.",
       hints: [
-        "Count the kittens, then look at how each choice builds its comparing word from noisy.",
-        "Study the endings of the choices and the letters that come right before them.",
-        "The more noisy names the louder one of a pair, and the sentence names three kittens."
+        "Count the kittens, then look at how each line builds its comparing word from noisy.",
+        "Study the endings of the lines and the letters that come right before them.",
+        "The more noisy names the louder one of a pair, and the basket holds a trio."
       ],
       how: [
         "Count the kittens: Pip, Dot and Sox make three.",
         "Noisy ends with a consonant and y, so the y becomes i before -est: noisiest.",
-        "The answer is \"Dot is the noisiest of the three kittens.\" Noisyest keeps the y, most noisier stacks two comparing parts, and the more noisy is for a pair."
+        "The answer is \"In that basket, Dot is the noisiest kitten.\" Noisyest keeps the y, most noisier stacks two comparing parts, and the more noisy is for a pair."
       ],
       misconception: "A common mix-up is putting -est straight after the y. Change the y to i first.",
-      why: "The answer is \"Dot is the noisiest of the three kittens.\" Three kittens are compared, so the sentence needs the -est form, and noisy changes its y to i. The other choices keep the y, stack two comparing parts, or use the form for a pair.",
+      why: "The answer is \"In that basket, Dot is the noisiest kitten.\" Three kittens are compared, so the line needs the -est form, and noisy changes its y to i. The other lines keep the y, stack two comparing parts, or use the form for a pair.",
       like: ["SK-GUM4-2-C14"]
     },
     {
@@ -2823,36 +2834,36 @@ PP.addLesson({
         "3.L.GC.1:C:form-and-use-comparative-and-superlative-adjecti"
       ],
       passages: [],
-      stem: "Of all the painters at the fair, Ben worked the most carefully.",
-      prompt: "A friend says that most carefully is a mistake and the word should be carefullest. What is the best answer to give?",
+      stem: "Dana sang more clearly than Pablo did at the talent show.",
+      prompt: "Kim would like clearlier in place of more clearly. Which reply shows why Dana's wording works?",
       choices: [
         {
-          text: "Carefully is a long word that ends in -ly, so it takes most in place of -est.",
+          text: "Clearly ends in -ly, so a helper word such as more takes the place of -er when Dana is set beside one singer.",
           correct: true
         },
         {
-          text: "Carefully is a short word, so the ending -est should be added to it."
+          text: "Clearly has only one syllable, so the ending -er has to be added right onto its last letter by the writer, always."
         },
         {
-          text: "Carefully should take more, because Ben is set beside all the other painters at the fair."
+          text: "Clearly belongs to a group comparison at the show, so the wording needs most clearly in this spot, not more."
         },
         {
-          text: "Carefully names what Ben is, so it can never come after the word most."
+          text: "Clearly describes a singer instead of an action, so no helper word may sit in front of it at all, ever."
         }
       ],
-      clue: "Check the length of carefully and the way it ends.",
+      clue: "Check how many syllables clearly has and how it ends.",
       hints: [
-        "Check the length of carefully and the way it ends.",
-        "Count the painters that Ben is set beside, then decide whether carefully is short or long.",
-        "Carefully tells how Ben worked, not what he is."
+        "Check how many syllables clearly has and how it ends.",
+        "Count the singers that Dana is compared with, then think about what job the word clearly does.",
+        "Clearly tells how Dana sang, not what she is."
       ],
       how: [
-        "Carefully is a long word, and it ends in -ly because it tells how Ben worked.",
-        "Long words and words that end in -ly take more or most in place of -er or -est.",
-        "Ben is set beside all the painters, so the answer is \"Carefully is a long word that ends in -ly, so it takes most in place of -est.\""
+        "Clearly tells how Dana sang, and it ends in -ly.",
+        "A word that ends in -ly takes more for two things and most for three or more, in place of -er and -est.",
+        "Dana is set beside only Pablo, so the answer is \"Clearly ends in -ly, so a helper word such as more takes the place of -er when Dana is set beside one singer.\""
       ],
-      misconception: "A common mix-up is adding -est to every word that tells how. Long words take most in place of it.",
-      why: "The answer is \"Carefully is a long word that ends in -ly, so it takes most in place of -est.\" Carefully is a long word that ends in -ly, so it takes most in place of -est. Ben is set beside all the painters, so most is the right helper word.",
+      misconception: "A common mix-up is adding -er to every word that tells how. A word that ends in -ly takes more instead.",
+      why: "The answer is \"Clearly ends in -ly, so a helper word such as more takes the place of -er when Dana is set beside one singer.\" Clearly ends in -ly, so a helper word such as more takes the place of -er when Dana is set beside one singer. Dana is set beside only Pablo, so more clearly is right.",
       like: ["SK-GUM4-2-C15"]
     }
   ],

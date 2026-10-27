@@ -1662,9 +1662,9 @@ PP.addLesson({
   teach: {
     big: "A determiner is a small word that comes before a noun, like a, an, the, this, those or my.",
     points: [
-      "A, an and the are called articles. Use a before a word that starts with a consonant sound (a dog). Use an before a word that starts with a vowel sound (an egg).",
+      "A, an and the are called articles. Use a before a word that starts with a consonant sound (a dog). Use an before a word that starts with a vowel sound (an egg). Listen to the sound, not the letter: an X-ray, a unit.",
       "This, that, these and those point to things. This and that go with one thing. These and those go with more than one. This and these are close by. That and those are far away.",
-      "My, your, his, her, its, our and their tell who owns something: our dog, their house. Its has no apostrophe when it shows owning."
+      "My, your, his, her, its, our and their tell who owns something: our dog, their house. Its has no apostrophe when it shows owning. Mine, yours, hers, ours and theirs stand alone: The red bike is mine."
     ],
     words: [
       { term: "determiner", means: "a small word that comes before a noun, like a, the, this or my" },
@@ -1749,7 +1749,7 @@ PP.addLesson({
         [
           "(1) On Saturday, our class visited the tide pools on the Georgia coast.",
           "(2) Ms. Pruitt gave each of us a bucket and a small net.",
-          "(3) Close to my feet, these crab scurried under a flat rock.",
+          "(3) Close to my feet, these pebble rested under a flat rock.",
           "(4) Kayla found a oyster shell stuck in the wet sand.",
           "(5) Out by the waves, those two sea stars clung to a wet rock.",
           "(6) Sam looked at his net and laughed at the empty bottom."
@@ -1957,7 +1957,7 @@ PP.addLesson({
             "hints": [
               "Small words before a noun, like a and an, are chosen by the sound that comes next. Check what sentence 3 puts there.",
               "Find the small word in sentence 3 and say it together with the noun that follows. Listen to how that noun begins.",
-              "The word the can go before almost any noun, but a replacement still has to match the sound. Think about the other choices."
+              "Does each small word match the sound that follows it? Think about the other choices."
             ],
             "how": [
               "Sentence 3 says a engine. The small word comes right before engine.",
@@ -2091,11 +2091,11 @@ PP.addLesson({
             ],
             "how": [
               "Check each sentence from 2 through 6 for small words that do not match their nouns.",
-              "Sentence 3 says these crab. Crab is one thing, so these does not fit. Sentence 4 says a oyster, but oyster begins with a vowel sound.",
+              "Sentence 3 says these pebble. Pebble is one thing, so these does not fit. Sentence 4 says a oyster, but oyster begins with a vowel sound.",
               "Sentences 2, 5 and 6 are fine: a bucket and a small net, those two sea stars, and his net."
             ],
             "misconception": "A common mix-up is picking a sentence just because it has a pointing word. Check whether the word fits.",
-            "why": "The answers are \"Close to my feet, these crab scurried under a flat rock.\" and \"Kayla found a oyster shell stuck in the wet sand.\" These does not go with one crab, and oyster needs an. Sentences 2, 5 and 6 are correct.",
+            "why": "The answers are \"Close to my feet, these pebble rested under a flat rock.\" and \"Kayla found a oyster shell stuck in the wet sand.\" These does not go with one pebble, and oyster needs an. Sentences 2, 5 and 6 are correct.",
             "like": [
               "SK-GUM2-2-S06"
             ]
@@ -2192,22 +2192,22 @@ PP.addLesson({
                 "text": "Please hand me an pencil from the top of the desk."
               },
               {
-                "text": "He waited for a hour at the busy bus stop."
+                "text": "Dad packed a egg salad for the long trip."
               }
             ],
             "clue": "Say each noun aloud and listen to its first sound. Then check whether a or an matches that sound.",
             "hints": [
               "Say each noun aloud and listen to its first sound. Then check whether a or an matches that sound.",
               "Check every a and an in the choices, including the ones inside the correct sentences. Do not decide by the first letter alone.",
-              "One word in the choices begins with a silent letter. Think about which sentence uses it."
+              "Umbrella begins with a vowel sound. Think about the other choices."
             ],
             "how": [
               "Say each noun after a or an and listen for a vowel or consonant sound.",
               "Oval begins with a vowel sound, so an is right. Unicycle begins with a y sound, which is a consonant sound, so a is right.",
-              "Umbrella needs an, pencil needs a, and hour needs an, so those three sentences have mistakes."
+              "Umbrella needs an, pencil needs a, and egg needs an, so those three sentences have mistakes."
             ],
             "misconception": "A common mix-up is going by the first letter. Unicycle starts with a vowel letter but a consonant sound.",
-            "why": "The answers are \"We spread an oval rug across the wooden floor.\" and \"A clown rode a unicycle across the parking lot.\" Oval begins with a vowel sound, and unicycle begins with a y sound. Umbrella needs an, pencil needs a, and hour needs an.",
+            "why": "The answers are \"We spread an oval rug across the wooden floor.\" and \"A clown rode a unicycle across the parking lot.\" Oval begins with a vowel sound, and unicycle begins with a y sound. Umbrella needs an, pencil needs a, and egg needs an.",
             "like": [
               "SK-GUM2-2-S08"
             ]
@@ -2599,7 +2599,7 @@ PP.addLesson({
       "hints": [
         "Ask whether the word only marks a noun, tells how far away it is, or tells who has it.",
         "Say the word before a noun, such as ___ dog. Decide which job it does.",
-        "There are only three articles, and only one of them is in this list. Think about which word it is."
+        "An article marks a noun without pointing or owning. Think about which word only marks."
       ],
       "how": [
         "Think of a noun to go with each word.",
@@ -2880,7 +2880,7 @@ PP.addLesson({
       "hints": [
         "Say the word after each a or an and listen to how it begins. Compare the sound with the small word.",
         "Check all five phrases, including the ones that look right. Go by the sound that follows, not the first letter.",
-        "Two of the five begin with a vowel letter but not a vowel sound, or the reverse. Think about which ones."
+        "Little begins with a consonant sound. Think about the other choices."
       ],
       "how": [
         "Listen to the first sound of the word after the small word.",
@@ -2946,20 +2946,20 @@ PP.addLesson({
       "passages": [
         "p5"
       ],
-      "prompt": "Which two clues in sentence 5 lead to the word these?",
+      "prompt": "Which pair of clues in sentence 5 leads to the word these?",
       "choices": [
         {
-          "text": "The place is near me, and brushes names many.",
+          "text": "Next to me points nearby, and brushes names a group.",
           "correct": true
         },
         {
-          "text": "The place is near me, and brushes names just one."
+          "text": "Next to me points nearby, but brushes names a single brush."
         },
         {
-          "text": "The place is across the yard, and brushes names many."
+          "text": "Across the yard points away, and brushes names a group."
         },
         {
-          "text": "The verb dripped is in the past, and brushes names many."
+          "text": "Dripped shows past time, and brushes names a group."
         }
       ],
       "clue": "A pointing word reacts to two clues. Find one clue about the place and one about the number.",
@@ -2971,10 +2971,10 @@ PP.addLesson({
       "how": [
         "The words at the start of sentence 5 tell where the brushes are: next to the speaker.",
         "Brushes ends in -es, so it names more than one thing. These is the pointing word for more than one close thing.",
-        "The answer is \"The place is near me, and brushes names many.\""
+        "The answer is \"Next to me points nearby, and brushes names a group.\""
       ],
       "misconception": "A common mix-up is thinking a plural pointing word always means far. These means close.",
-      "why": "The answer is \"The place is near me, and brushes names many.\" Next to me is near and brushes is more than one, so these fits. A far place would call for those, and one thing would call for this or that.",
+      "why": "The answer is \"Next to me points nearby, and brushes names a group.\" Next to me is near and brushes is more than one, so these fits. A far place would call for those, and one thing would call for this or that.",
       "like": [
         "SK-GUM2-2-C10"
       ]
@@ -3069,14 +3069,14 @@ PP.addLesson({
         "3.L.GC.1:R:use-determiners-articles-possessive-and-demonstr"
       ],
       "passages": [],
-      "prompt": "Fill each gap with the best small word.",
+      "prompt": "Complete the sentence by filling both gaps.",
       "text": "Dana asked for {0} extra minute, and Pablo handed over {1} stopwatch.",
       "slots": [
         {
           "options": [
             "a",
             "an",
-            "that"
+            "these"
           ],
           "answer": 1
         },
@@ -3098,10 +3098,10 @@ PP.addLesson({
       "how": [
         "The first gap comes before extra. Extra begins with a vowel sound, so it takes an.",
         "The second gap comes before stopwatch and tells whose it is. His is the owning word that goes before a noun.",
-        "The answers are an and his."
+        "The answers are an and his. These goes with more than one thing, and he and him do not go before a noun."
       ],
       "misconception": "A common mix-up is choosing him because Pablo is a person. Before a noun, the owning word is his.",
-      "why": "The answers are an and his. Extra begins with a vowel sound, so it takes an. His is the owning word that goes before stopwatch. That cannot go with one extra minute, and he and him do not go before a noun.",
+      "why": "The answers are an and his. Extra begins with a vowel sound, so it takes an. His is the owning word that goes before stopwatch. These cannot go with one extra minute, and he and him do not go before a noun.",
       "like": [
         "SK-GUM2-2-C13"
       ]
@@ -3393,7 +3393,7 @@ PP.addLesson({
       "draft": true,
       "paragraphs": [
         [
-          "(1) On Tuesday, we all went by yellow bus to the science museum in Atlanta.",
+          "(1) On Tuesday, we all went by yellow bus to a museum in Atlanta.",
           "(2) Our teacher, Mr. Brooks, counted us twice at the door.",
           "(3) A guide named Ms. Lopez led us into a room full of old maps."
         ],
@@ -3404,7 +3404,7 @@ PP.addLesson({
         ],
         [
           "(7) On the ride home, we sang songs about the sea.",
-          "(8) We got back to school just before three o'clock.",
+          "(8) We got back to brookside school just before three o'clock.",
           "(9) That night, I told my family about every map I saw.",
           "(10) Now I want to see the real ocean someday."
         ]
@@ -3480,7 +3480,7 @@ PP.addLesson({
         [
           "(7) By noon, every pie and every loaf of bread was gone.",
           "(8) We counted all the money in the office with the secretary.",
-          "(9) We plan to buy more books for our library with it.",
+          "(9) We plan to buy more books for the pine hill library with it.",
           "(10) Everyone agreed it was a sweet and happy morning."
         ]
       ]
@@ -3772,54 +3772,54 @@ PP.addLesson({
             ],
             "prompt": "This question has two parts. Answer Part A, then Part B.",
             "partA": {
-              "prompt": "What mistake does sentence 4 have with capital letters?",
+              "prompt": "What mistake does sentence 8 have with capital letters?",
               "choices": [
                 {
-                  "text": "Atlantic Ocean names one special ocean, so both words must start with capitals.",
+                  "text": "Brookside School names one special school, so both words must start with capitals.",
                   "correct": true
                 },
                 {
-                  "text": "Ocean is an everyday noun, so only Atlantic should start big in this sentence."
+                  "text": "School is an everyday noun, so only Brookside should start big in this sentence."
                 },
                 {
-                  "text": "Ship names one famous vessel, so it needs to begin with a capital S in this sentence."
+                  "text": "Three o'clock names a special time, so it needs a capital T in this sentence."
                 },
                 {
-                  "text": "Favorite begins a new idea, so it should start with an F in this sentence."
+                  "text": "Back begins a new idea, so it should start with a capital B in this sentence."
                 }
               ]
             },
             "partB": {
-              "prompt": "Which version of sentence 4 fixes the problem?",
+              "prompt": "Which version of sentence 8 fixes the problem?",
               "choices": [
                 {
-                  "text": "Her favorite map showed the Atlantic Ocean and a tiny ship.",
+                  "text": "We got back to Brookside School just before three o'clock.",
                   "correct": true
                 },
                 {
-                  "text": "Her favorite map showed the Atlantic ocean and a tiny ship."
+                  "text": "We got back to Brookside school just before three o'clock."
                 },
                 {
-                  "text": "Her favorite Map showed the Atlantic Ocean and a tiny ship."
+                  "text": "We got back to brookside School just before three o'clock."
                 },
                 {
-                  "text": "Her favorite map showed the atlantic Ocean and a tiny Ship."
+                  "text": "We got back to Brookside School just before Three o'clock."
                 }
               ]
             },
-            "clue": "Look at the name of the water in sentence 4. Decide how many words belong to that name.",
+            "clue": "Look at the name of the school in sentence 8. Decide how many words belong to that name.",
             "hints": [
-              "Look at the name of the water in sentence 4. Decide how many words belong to that name.",
-              "In Part B, compare how each rewrite writes the name of the water. Then check the other nouns too.",
-              "Map and ship are everyday nouns, not names. Think about the other choices."
+              "Look at the name of the school in sentence 8. Decide how many words belong to that name.",
+              "In Part B, compare how each rewrite writes the name of the school. Then check the other words too.",
+              "Three o'clock is a time, not a name. Think about the other choices."
             ],
             "how": [
-              "Part A: Atlantic Ocean is the name of one special ocean, so every word in the name starts with a capital.",
-              "Part B: the rewrite must capitalize both words in the name and leave the everyday nouns small.",
-              "The answers are \"Atlantic Ocean names one special ocean, so both words must start with capitals.\" and \"Her favorite map showed the Atlantic Ocean and a tiny ship.\""
+              "Part A: Brookside School is the name of one special school, so every word in the name starts with a capital.",
+              "Part B: the rewrite must capitalize both words in the name and leave the other words as they are.",
+              "The answers are \"Brookside School names one special school, so both words must start with capitals.\" and \"We got back to Brookside School just before three o'clock.\""
             ],
-            "misconception": "A common mix-up is capitalizing only the first word of a name. Every important word in the name of an ocean needs a capital.",
-            "why": "Part A: \"Atlantic Ocean names one special ocean, so both words must start with capitals.\" Part B: \"Her favorite map showed the Atlantic Ocean and a tiny ship.\" Map and ship are everyday nouns, so they stay small.",
+            "misconception": "A common mix-up is capitalizing only the first word of a name. Every important word in the name of a school needs a capital.",
+            "why": "Part A: \"Brookside School names one special school, so both words must start with capitals.\" Part B: \"We got back to Brookside School just before three o'clock.\" Back and before are everyday words, so they stay small.",
             "like": [
               "SK-GUM2-3-S07"
             ]
@@ -3924,35 +3924,35 @@ PP.addLesson({
             "passages": [
               "p2"
             ],
-            "prompt": "Ravi says Park in sentence 5 is correct because every place needs a capital letter. Which reply shows the problem with his idea?",
+            "prompt": "Ravi says museum in sentence 1 needs a capital letter because it names a place. Which reply shows the problem with his idea?",
             "choices": [
               {
-                "text": "A capital goes only on a place's own name, and this park has none.",
+                "text": "Museum names any building of that kind, but Atlanta is one special city.",
                 "correct": true
               },
               {
-                "text": "A capital letter belongs on any word that names a place, so Ravi is right about Park."
+                "text": "A capital letter belongs on any word that names a place, so Ravi is right about museum."
               },
               {
-                "text": "A capital letter belongs on any word that comes late in a sentence, so Ravi is right."
+                "text": "A capital letter belongs on any noun in a sentence, so museum and bus both need one."
               },
               {
                 "text": "A capital letter belongs only on people's names, so no place ever gets one."
               }
             ],
-            "clue": "Think about the difference between one particular place and any place of that kind.",
+            "clue": "Think about the difference between one particular place and places in general.",
             "hints": [
-              "Think about the difference between one particular place and any place of that kind.",
-              "Read sentence 5 again. Does the sentence say which park it is?",
-              "Some places do get capital letters, such as Atlanta in sentence 1. Think about the other choices."
+              "Think about the difference between one particular place and places in general.",
+              "Read sentence 1 again. Does it say which museum it is?",
+              "Some places do get capital letters. Think about the other choices."
             ],
             "how": [
               "Ravi's idea is that every place word gets a capital.",
-              "Atlanta is the name of one special city, so it gets a capital. A park across the street with no name is just any park.",
-              "The answer is \"A capital goes only on a place's own name, and this park has none.\""
+              "Atlanta is the name of one special city, so it gets a capital. A museum with no name given is just any museum.",
+              "The answer is \"Museum names any building of that kind, but Atlanta is one special city.\""
             ],
             "misconception": "A common mix-up is capitalizing a word because it names a place. Only the name of one special place gets a capital.",
-            "why": "The answer is \"A capital goes only on a place's own name, and this park has none.\" Atlanta is a special place with a name. The park in sentence 5 is just any park, so it should be written park.",
+            "why": "The answer is \"Museum names any building of that kind, but Atlanta is one special city.\" Atlanta is a special place with a name. The museum in sentence 1 has no name given, so it stays museum.",
             "like": [
               "SK-GUM2-3-S10"
             ]
@@ -4270,7 +4270,7 @@ PP.addLesson({
       "hints": [
         "Ask whether the word is the name of one special thing or a word for a whole group of things.",
         "Make a sentence for each word, such as We visit ___ in the summer. See if the word names one special thing.",
-        "Names of weekdays, countries and holidays begin with capitals, while words for a whole group of things do not."
+        "Think of one real day, one real country and one real holiday."
       ],
       "how": [
         "Think about whether each word names one special day, place or holiday.",
@@ -4398,7 +4398,7 @@ PP.addLesson({
       "hints": [
         "Compare the two places. Notice what sits beside the word each time.",
         "Say each phrase out loud: my grandpa and Grandpa Leo. Notice what the word does in each one.",
-        "One and the same relative word can start with a big letter in one place and a little letter in another. Think about the other choices."
+        "Look at what comes right after the word each time. Think about the other choices."
       ],
       "how": [
         "Sentence 3 uses my grandpa. Sentence 4 uses Grandpa Leo.",
@@ -4465,54 +4465,54 @@ PP.addLesson({
       ],
       "prompt": "Answer the first half, then use your answer for the second half.",
       "partA": {
-        "prompt": "Which statement describes the mistake in sentence 4?",
+        "prompt": "Pick the best description of what is wrong in sentence 9.",
         "choices": [
           {
-            "text": "Tampa is a certain city, and writing its name with a small t is the error.",
+            "text": "Pine Hill Library has its own name, so small letters are the error there.",
             "correct": true
           },
           {
-            "text": "Shop is one particular store in town, and writing it with a small s is the error."
+            "text": "Books are objects on the shelves of this town, so writing them with a small b is the error."
           },
           {
-            "text": "Cookies is a snack brand, and writing it with a small c is the error."
+            "text": "Plan starts a thought right here, so writing it with a small p is the error at the front."
           },
           {
-            "text": "Some opens the sentence, so a comma should come right after it."
+            "text": "It stands for a person that we all know, so writing it with a small i is the error."
           }
         ]
       },
       "partB": {
-        "prompt": "Which version of sentence 4 is correct?",
+        "prompt": "Pick the rewrite of sentence 9 that has no errors.",
         "choices": [
           {
-            "text": "Some cookies came from a shop in Tampa.",
+            "text": "We plan to buy more books for the Pine Hill Library with it.",
             "correct": true
           },
           {
-            "text": "Some cookies came from a Shop in Tampa."
+            "text": "We plan to buy more books for the Pine hill library with it."
           },
           {
-            "text": "Some Cookies came from a shop in Tampa."
+            "text": "We plan to buy more books for the Pine Hill library with it."
           },
           {
-            "text": "Some cookies came from a shop in tampa."
+            "text": "We plan to buy more books for the pine hill Library with it."
           }
         ]
       },
-      "clue": "Find the nouns in sentence 4. Ask which ones point to one special thing.",
+      "clue": "Find the nouns in sentence 9. Ask which ones point to one special thing.",
       "hints": [
-        "Find the nouns in sentence 4. Ask which ones point to one special thing.",
-        "In the second half, compare how each version writes the place and the other nouns.",
-        "Cookies is an everyday food word, not a brand name."
+        "Find the nouns in sentence 9. Ask which ones point to one special thing.",
+        "In the second half, compare how each version writes the library and the other nouns.",
+        "Books is an everyday word for things on a shelf. Think about the other choices."
       ],
       "how": [
-        "Part A: the city in sentence 4 has its own name.",
-        "Part B: the correct version gives the city a capital and leaves the everyday nouns small.",
-        "The answers are \"Tampa is a certain city, and writing its name with a small t is the error.\" and \"Some cookies came from a shop in Tampa.\""
+        "Part A: the library in sentence 9 has its own name.",
+        "Part B: the correct version gives every word in the library's name a capital and leaves the everyday nouns small.",
+        "The answers are \"Pine Hill Library has its own name, so small letters are the error there.\" and \"We plan to buy more books for the Pine Hill Library with it.\""
       ],
-      "misconception": "A common mix-up is capitalizing the kind of place and not the name. The name of the city is what needs the capital.",
-      "why": "Part A: \"Tampa is a certain city, and writing its name with a small t is the error.\" Part B: \"Some cookies came from a shop in Tampa.\" Shop and cookies are everyday nouns, so they stay small.",
+      "misconception": "A common mix-up is capitalizing the kind of place and not the name. Every word in the name of the library needs a capital.",
+      "why": "Part A: \"Pine Hill Library has its own name, so small letters are the error there.\" Part B: \"We plan to buy more books for the Pine Hill Library with it.\" Books and plan are everyday words, so they stay small.",
       "like": [
         "SK-GUM2-3-C07"
       ]
@@ -4556,7 +4556,7 @@ PP.addLesson({
       "how": [
         "Check the first letter of each name and each everyday noun.",
         "Uncle Ben, August, checkers and Saturdays are all written correctly.",
-        "The other three sentences give a capital to brother, give a small letter to a holiday, or give a small letter to a coach's title name."
+        "The other three sentences give a capital to brother, give a small letter to a holiday, or write the coach's title and name Mr. rios with a small r."
       ],
       "misconception": "A common mix-up is thinking a day or month written in the plural is not a name. Saturdays still starts with a capital.",
       "why": "The answers are \"Uncle Ben took the twins to the fair in August.\" and \"Her favorite game is checkers, and she plays on Saturdays.\" Uncle Ben is a title and name, and August and Saturdays are names. The other choices have a name or title with a small letter, or an everyday noun with a capital.",
@@ -4617,35 +4617,35 @@ PP.addLesson({
       "passages": [
         "p5"
       ],
-      "prompt": "In sentence 5, Ana capitalized Table because a sale needs tables. How would you answer her?",
+      "prompt": "In sentence 1, Ana wrote School with a big S because a bake sale is exciting. What should you tell her?",
       "choices": [
         {
-          "text": "The table has no special title of its own, so it should not be capitalized.",
+          "text": "Nothing in the sentence gives this school a special name, so it stays small.",
           "correct": true
         },
         {
-          "text": "Anything useful at an event should be capitalized, so Table is fine."
+          "text": "Exciting events call for big letters at the start, so the S is a fine choice here."
         },
         {
-          "text": "Words near the end of a sentence should be capitalized, so Table is fine."
+          "text": "Every building word should begin with a big letter, so Ana is right about the S."
         },
         {
-          "text": "Only people's names should be capitalized, so even Ana should be written ana."
+          "text": "Only the names of people begin with big letters, so Ana should write her own name small."
         }
       ],
       "clue": "Think about why a word gets a capital. Is it because the word is important, or because of something else?",
       "hints": [
         "Think about why a word gets a capital. Is it because the word is important, or because of something else?",
-        "Read sentence 5 again. Does it give the table a name of its own?",
-        "Some people and places in the draft do get capitals, such as Tampa and Ana. Think about the other choices."
+        "Read sentence 1 again. Does it give the school a name of its own?",
+        "Some people in the draft do get capitals, such as Ana. Think about the other choices."
       ],
       "how": [
-        "Ana's idea is that important things get capitals.",
-        "Capitals go on the names of people, places and things. A table by the door has no name of its own.",
-        "The answer is \"The table has no special title of its own, so it should not be capitalized.\""
+        "Ana's idea is that exciting things get capitals.",
+        "Capitals go on the names of people, places and things. A school with no name given is just any school.",
+        "The answer is \"Nothing in the sentence gives this school a special name, so it stays small.\""
       ],
       "misconception": "A common mix-up is capitalizing a word because it seems important. Capitals mark names, not importance.",
-      "why": "The answer is \"The table has no special title of its own, so it should not be capitalized.\" Ana and Tampa are names, so they get capitals. The table has no special name.",
+      "why": "The answer is \"Nothing in the sentence gives this school a special name, so it stays small.\" Ana is a name, so it gets a capital. The school in sentence 1 has no name given.",
       "like": [
         "SK-GUM2-3-C10"
       ]
@@ -4678,7 +4678,7 @@ PP.addLesson({
       "hints": [
         "Check each sentence for names and titles and for everyday nouns that have been given capitals.",
         "Go through lines 3 to 7 in order. Mark each word that starts with a capital and ask whether it is a name.",
-        "In the line about the boxes, nothing needs a capital except the first word. Think about the rest."
+        "The line about the stairs gives a capital to an everyday word. Think about the rest."
       ],
       "how": [
         "Look at the title, the name, the furniture word and the day in each line.",
@@ -4915,7 +4915,7 @@ PP.addLesson({
       "hints": [
         "Ask whether the word names one special day, place or holiday, or whether it is an everyday word for a whole group.",
         "Make a sentence for each word, such as We visit ___ in the summer. Decide whether it names one special thing.",
-        "Names of weekdays, countries and holidays begin with capitals, while words for a whole group of things do not."
+        "Think of a real day, a real country and a real holiday."
       ],
       "how": [
         "Decide whether each word is a name or an everyday word.",
