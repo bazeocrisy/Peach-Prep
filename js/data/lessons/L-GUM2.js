@@ -4076,7 +4076,7 @@ PP.addLesson({
             "hints": [
               "One blank holds the name of a lake and the other holds the name of a holiday. Check how each choice starts its words.",
               "Names of holidays and names of lakes follow the same rule. Look at every word in each choice.",
-              "Both words in the name of a holiday are important words. Look at the choices for the second blank."
+              "Names of holidays are special names. Check how each choice for the second blank starts its words."
             ],
             "how": [
               "The first blank is the name of one lake, and the second blank is the name of one holiday.",
@@ -4156,7 +4156,7 @@ PP.addLesson({
             "hints": [
               "To show an idea is wrong, find a sentence where the idea does not work. Look at how each sentence writes the word that names a person.",
               "In each choice, find the word or words that name a person and check whether they begin with a capital letter.",
-              "Three choices put a title right before a name. Think about whether those can show that Ben is wrong."
+              "Ben's idea is about every word for a person. Think about the other choices."
             ],
             "how": [
               "Ben's idea says every word for a person gets a capital. Look for a person word that does not.",
@@ -4764,7 +4764,7 @@ PP.addLesson({
       "hints": [
         "One blank holds the name of a creek and the other holds the name of a holiday. Look at how each choice starts its words.",
         "Names of creeks and names of holidays follow the same rule. Check every word in each choice.",
-        "The second blank names a holiday, and the day word is an important word in that name."
+        "Names of holidays are special names. Check how each choice for the second gap starts its words."
       ],
       "how": [
         "The first blank is the name of one creek, and the second blank is the name of one holiday.",
@@ -4844,7 +4844,7 @@ PP.addLesson({
       "hints": [
         "To show an idea is mistaken, find a sentence where the idea fails. Look at how each sentence writes the words for places.",
         "In each choice, find the place words and check how they begin.",
-        "Three choices give special names to the park and the school. Think about whether those can prove Mia mistaken."
+        "Mia's idea is about words for places. Think about the other choices."
       ],
       "how": [
         "Mia's idea says every place word gets a capital. Look for a place word that does not.",
