@@ -2747,17 +2747,17 @@ PP.addLesson({
       ],
       passages: [],
       stem: "Mia: One magnets pulled every nails.  Noah: One magnet pulled several nails.",
-      prompt: "Who matched each clue word to a fitting noun, and what proves it?",
+      prompt: "Who paired each clue word with a fitting noun, and what proves it?",
       choices: [
         {
           text: "Noah, since one fits magnet and several fits nails.",
           correct: true
         },
         {
-          text: "Mia, since one and every work with nouns that finish in -s."
+          text: "Mia, since one and every work with words that finish in -s."
         },
         {
-          text: "Noah, since sentences always use a single noun first and a plural noun second."
+          text: "Noah, since writers always list the smaller group before the bigger group."
         },
         {
           text: "Neither, since the verb pulled would have to change too."
@@ -2767,7 +2767,7 @@ PP.addLesson({
       hints: [
         "Take each writer's sentence alone. Match every clue word with the noun that follows.",
         "Write down which clue words mean one thing and which mean more than one. Then check each noun.",
-        "Sentences do not follow an order of one thing and then more than one. Check the reasons that say they do."
+        "Writers do not have to list a smaller group before a bigger group. Check the reasons that say they do."
       ],
       how: [
         "Mia's sentence puts one with magnets and every with nails. Both clue words mean one thing, so both nouns are wrong.",
