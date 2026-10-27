@@ -58,8 +58,13 @@ def lesson(a=None, b_=None):
 
 
 def reset_records():
-    shutil.copy(ROOT / "verification/assessment-versions.json", tmp / "verification/assessment-versions.json")
+    """Records for the copy are made from the copy's own content, so these tests do not depend on how far the repository's
+    committed records are from the content the authors are editing right now."""
+    (tmp / "verification/assessment-versions.json").unlink(missing_ok=True)
+    r = subprocess.run(["node", "verification/check-content.js", "--all", "--record-versions"], cwd=tmp, capture_output=True, text=True)
+    assert r.returncode == 0, r.stdout + r.stderr
     shutil.copy(ROOT / "docs/expansion-2026-10-22/review-ledger.json", tmp / "docs/expansion-2026-10-22/review-ledger.json")
+    (tmp / "docs/expansion-2026-10-22/review-ledger.json").write_text('{"v": 1, "lessons": {}}\n')
 
 
 WORD = ("Which word best describes Theo at the beginning of the story?", "Which word best describes Theo at the start of the story?")
@@ -68,6 +73,7 @@ POINTS = ('{ id: "SK-TT1c-T1", type: "mc", points: 1, dok: 2,', '{ id: "SK-TT1c-
 REVA = ('\n  code: "3.T.T.1.c",', '\n  code: "3.T.T.1.c",\n  testRev: { A: "2" },')
 
 reset_records(); lesson()
+BASE_V = json.loads((tmp / "verification/assessment-versions.json").read_text())
 rc, out = cc()
 check("N.1 default mode: the committed records are current, so check-content passes with no version or ledger-mismatch warning (a missing ledger record is a warning)",
       rc == 0 and "versions:" not in out and "changed since the independent review" not in out and "no independent-review record" in out, out[-500:])
@@ -96,9 +102,9 @@ rc2, out2 = cc("--release")
 check("N.8 with testRev raised, --record-versions records the new version and the version rule is clean again, even in --release",
       rc == 0 and "recorded" in out and not [l for l in out2.splitlines() if l.startswith("  FAIL  versions") or l.startswith("  warn  versions")], (out, out2[-300:]))
 vj = json.loads((tmp / "verification/assessment-versions.json").read_text())
-check("N.9 the record holds rev, hash and a material hash per form; the changed form has rev 2 and the others are untouched",
+check("N.9 the record holds rev, hash and a material hash per form; the changed form has rev 2 and every other form's record is unchanged",
       vj["forms"][KEY + ":A"]["rev"] == "2" and set(vj["forms"][KEY + ":A"]) == {"rev", "hash", "mat"}
-      and all(v["rev"] == "1" for k, v in vj["forms"].items() if k != KEY + ":A") and vj["inputs"]["rev"] in ("1", "2"), vj["forms"][KEY + ":A"])
+      and all(v == BASE_V["forms"][k] for k, v in vj["forms"].items() if k != KEY + ":A") and vj["inputs"]["rev"] in ("1", "2"), vj["forms"][KEY + ":A"])
 for bad, why in (('testRev: { A: "" }', "empty A"), ('testRev: { C: "1" }', "unknown form"), ('testRev: { B: "" }', "empty B"), ('testRev: "2"', "not an object")):
     reset_records(); lesson(); (tmp / LESSON).write_text(ORIG.replace(REVA[0], '\n  code: "3.T.T.1.c",\n  ' + bad + ",", 1))
     rc, out = cc()
@@ -146,6 +152,14 @@ check("N.19 a ledger entry that names no existing review file is invalid (fails 
 reset_records()
 rc, out = subprocess.run(["node", "verification/check-content.js", "--record-versions"], cwd=tmp, capture_output=True, text=True).returncode, ""
 check("N.20 the record commands need --all (they must read every lesson)", rc == 1, rc)
+rc, out = cc("--release")
+led_line = " ".join(l for l in out.splitlines() if l.startswith("  FAIL  ledger"))
+legacy = subprocess.run(["node", "-e", "const fs=require('fs'),vm=require('vm');const ls=[];const c={window:{},PP:{addLesson:l=>ls.push(l),addSet(){},addTask(){}}};vm.createContext(c);"
+                         "for(const f of fs.readdirSync('js/data/lessons'))vm.runInContext(fs.readFileSync('js/data/lessons/'+f,'utf8'),c);"
+                         "console.log(JSON.stringify(ls.filter(l=>!l.core&&(l.test||[]).length).map(l=>l.key||l.code).slice(0,3)))"], cwd=tmp, capture_output=True, text=True).stdout
+legacy = json.loads(legacy or "[]")
+check("N.22 lead decision: legacy lessons (no core) are not in the ledger demand in --release (their checks are grandfathered; the version record still covers them), but lessons with core are",
+      legacy and all(k + " test:A" not in led_line for k in legacy) and "core" in led_line and "similar" in led_line, (legacy, led_line[:200]))
 rc, out = cc()
 check("N.21 default mode is unchanged: the migration warning keeps its wording and the run passes", rc == 0 and "a failure only after migration" in out and "FAIL" not in out, out[-300:])
 shutil.rmtree(tmp, ignore_errors=True)

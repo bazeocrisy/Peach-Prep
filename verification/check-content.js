@@ -832,8 +832,11 @@ if (ARGV.includes("--record-review")) {
   }
   /* ledger */
   if (!LG || typeof LG.lessons !== "object") { lev(R, "docs/expansion-2026-10-22/review-ledger.json is missing or unreadable"); return; }
-  const need = currentParts(), missing = [], differ = [], invalid = [], orphan = [];
+  /* Lead decision (2026-10-23): the existing legacy-lesson checks are grandfathered for release; the ledger is required for every
+     lesson with core practice (its core, its similar items and its check forms). A legacy lesson can still be recorded. */
+  const need = currentParts(), hasCore = new Set(lessons.filter(L => L.core).map(lessonKeyOf)), missing = [], differ = [], invalid = [], orphan = [];
   Object.keys(need).sort().forEach(k => partNames(need[k]).forEach(pn => {
+    if (!hasCore.has(k) && !slot(LG.lessons[k], pn)) return;
     const e = slot(LG.lessons[k], pn), tag = k + " " + pn;
     if (!e) { missing.push(tag); return; }
     const probs = [];
