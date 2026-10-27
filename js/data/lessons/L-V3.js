@@ -210,7 +210,7 @@ PP.addLesson({
       prompt: "Read paragraph 4. Choose the meaning of devoured.",
       text: "In paragraph 4, devoured means {0}.",
       slots: [
-        { options: ["ate quickly and hungrily", "looked at carefully", "sold for a low price"], answer: 0 }
+        { options: ["ate quickly and hungrily", "looked at every crumb with care", "sold for a low price"], answer: 0 }
       ],
       clue: "Find another word or phrase in the same sentence that means almost the same thing. That is a synonym clue.",
       why: "The answer is \"ate quickly and hungrily.\" The same sentence says the students were gobbling up every last crumb in ten minutes. Gobbling up is a synonym clue for devoured." },
@@ -248,7 +248,7 @@ PP.addLesson({
       prompt: "Read paragraph 2. Choose the meaning of the phrase set everything out.",
       text: "In paragraph 2, set everything out means {0}.",
       slots: [
-        { options: ["left on a long trip", "put it where people could see it", "threw it all away"], answer: 1 }
+        { options: ["packed it up for a long, slow trip", "put it where people could see it", "threw it all away"], answer: 1 }
       ],
       clue: "Read the whole sentence. Where did the treats go, and why would a bake sale need them there?",
       why: "The answer is \"put it where people could see it.\" The class put the treats on two long tables in the front hall so buyers could see them and pick some. Read together, the words set everything out mean to lay things out for people to see." }
@@ -478,7 +478,7 @@ PP.addLesson({
                 correct: true
               },
               {
-                text: "full of tall trees"
+                text: "full of tall trees and bushes"
               },
               {
                 text: "covered with deep water"
@@ -671,32 +671,32 @@ PP.addLesson({
             ],
             figure: {
               src: "assets/figures/v3a-c-fox-table.svg",
-              alt: "Table titled Animals the Arctic Fox Hunts. The columns are animal and days hunted. Lemming, most days. Bird, some days. Hare, few days."
+              alt: "Table titled Arctic Fox Meals. The columns are animal and how often. Lemming, most days. Bird, some days. Hare, few days."
             },
             text: "In this sentence, prey means {0}.",
             slots: [
               {
                 options: [
+                  "dens where young foxes sleep and hide",
                   "animals that are hunted for food",
-                  "places where foxes sleep",
                   "thick fur that keeps foxes warm"
                 ],
-                answer: 0
+                answer: 1
               }
             ],
             clue: "Read the title of the table and the words in the rows. Think about what the table lists.",
             hints: [
               "Read the title of the table and the words in the rows. Think about what the table lists.",
               "Look at the two columns. Think about what the fox does with each animal in the first column.",
-              "Check each choice against the title of the table. The meaning must fit what the table lists."
+              "Put each meaning in the sentence and check it against the table."
             ],
             how: [
-              "The title says the table lists animals the Arctic fox hunts.",
-              "Lemming, bird and hare are animals, and the fox hunts them most days, some days or few days.",
+              "The title is Arctic Fox Meals, so the table lists what the fox eats.",
+              "Lemming, bird and hare are animals, and the fox eats them most days, some days or few days.",
               "So prey means animals that are hunted for food."
             ],
-            misconception: "A common mix-up is choosing a meaning about foxes in general. The table is about animals the fox hunts.",
-            why: "The answer is \"animals that are hunted for food.\" The title says the table lists animals the Arctic fox hunts, and lemmings are the animal it hunts most days. Places where foxes sleep and thick fur are not on the table."
+            misconception: "A common mix-up is choosing a meaning about foxes in general. The table is about what the fox eats.",
+            why: "The answer is \"animals that are hunted for food.\" The title says the table is about Arctic fox meals, and lemmings are the animal it eats most days. Dens and thick fur are not on the table."
           }
         ]
       },
@@ -727,7 +727,7 @@ PP.addLesson({
                 text: "a pile of snow beside a road"
               },
               {
-                text: "a row of lights on a wall"
+                text: "a long, straight row of lights on a wall"
               }
             ],
             clue: "Say more than one meaning of bank before you choose.",
@@ -877,10 +877,10 @@ PP.addLesson({
           correct: true
         },
         {
-          text: "a brush for thin lines"
+          text: "a brush that makes very thin lines"
         },
         {
-          text: "a jar for rinsing paint"
+          text: "a jar of water for rinsing paint"
         },
         {
           text: "a cloth for wiping hands"
@@ -1021,7 +1021,7 @@ PP.addLesson({
       ],
       prompt: "Which TWO choices tell you that a meaning or examples are about to follow?",
       stem: [
-        "Ava's note: \"My map has a legend, which means a list that explains the symbols. I also like landmarks, like the old mill and the tall bridge.\""
+        "Ava's note: \"My map has a legend, which means a list that explains the symbols. I also enjoy landmarks, like the old mill and the tall bridge.\""
       ],
       pick: 2,
       choices: [
@@ -1030,17 +1030,17 @@ PP.addLesson({
           correct: true
         },
         {
-          text: "like the old mill",
+          text: "like",
           correct: true
+        },
+        {
+          text: "the tall bridge"
         },
         {
           text: "a map"
         },
         {
           text: "I also"
-        },
-        {
-          text: "like"
         }
       ],
       clue: "Signal words are small word groups that tell you a clue is coming. Think about the ones you learned.",
@@ -1052,7 +1052,7 @@ PP.addLesson({
       how: [
         "In the first sentence, which means comes right before the meaning of legend.",
         "In the second sentence, the word like comes right before a list of examples.",
-        "A map, I also and like the old mill are parts of the sentences, and nothing explains a word after them."
+        "The tall bridge, a map and I also are parts of the sentences, and nothing explains a word after them."
       ],
       misconception: "A common mix-up is choosing any short group of words. A signal word group is followed by a meaning or examples.",
       why: "The answers are \"which means\" and \"like.\" Which means leads to the meaning of legend, and like leads to examples of landmarks. The other choices are not followed by a meaning or examples."
@@ -1285,7 +1285,7 @@ PP.addLesson({
           correct: true
         },
         {
-          text: "a fish that lives in a lake"
+          text: "a fish that lives in lakes and rivers"
         },
         {
           text: "a long pole for pushing a boat"
@@ -1326,32 +1326,32 @@ PP.addLesson({
       ],
       figure: {
         src: "assets/figures/v3a-s-squirrel-table.svg",
-        alt: "Table titled Where the Squirrel Looks for Food. The columns are season and where. Fall, on the ground. Winter, under the snow. Spring, in tree holes."
+        alt: "Table titled Squirrel Search Spots. The columns are season and where. Fall, on the ground. Winter, under the snow. Spring, in tree holes."
       },
       text: "To forage means {0}.",
       slots: [
         {
           options: [
+            "to sleep in a warm, cozy nest",
             "to look around for something to eat",
-            "to sleep in a nest",
             "to bury a nut"
           ],
-          answer: 0
+          answer: 1
         }
       ],
       clue: "Read the title of the table and the words in the rows. Think about what the table lists.",
       hints: [
         "Read the title of the table and the words in the rows. Think about what the table lists.",
         "Look at the two columns. Think about what the squirrel does in each place.",
-        "Check each choice against the title of the table. The meaning must fit what the table lists."
+        "Put each meaning in the sentence and check it against the table."
       ],
       how: [
-        "The title says the table lists places where the squirrel looks for food.",
+        "The title is Squirrel Search Spots, so the table lists places where the squirrel goes searching.",
         "Fall, winter and spring each have a place where the squirrel looks.",
         "So forage means to look around for something to eat."
       ],
       misconception: "A common mix-up is choosing something a squirrel does that is not on the table. Use the title.",
-      why: "The answer is \"to look around for something to eat.\" The title says the table lists where the squirrel looks for food, and the sentence says it likes to forage in the fall. Sleeping in a nest and burying a nut are not on the table."
+      why: "The answer is \"to look around for something to eat.\" The title says the table lists squirrel search spots, and the sentence says it likes to forage in the fall. Sleeping in a nest and burying a nut are not on the table."
     },
     {
       id: "SK-V3a-S11",
@@ -1375,7 +1375,7 @@ PP.addLesson({
           correct: true
         },
         {
-          text: "to paddle a boat with oars"
+          text: "to paddle a small boat across a quiet pond"
         },
         {
           text: "a loud fight between two people"
@@ -1531,13 +1531,13 @@ PP.addLesson({
           correct: true
         },
         {
-          text: "the inside of a hand"
+          text: "the flat inside part of a hand"
         },
         {
           text: "a computer that fits in a hand"
         },
         {
-          text: "a kind of sail for a ship"
+          text: "a large square sail on an old sailing ship"
         }
       ],
       clue: "Say more than one meaning of palm before you choose. Then look at the picture and its labels.",
@@ -1920,7 +1920,7 @@ PP.addLesson({
     /* B5-b5b:passages:start */
     {
       id: "p3",
-      title: "A Letter from Camp",
+      title: "Tessa Writes Home",
       genre: "Student draft (letter)",
       paragraphs: [
         [
@@ -1930,7 +1930,7 @@ PP.addLesson({
         [
           "Our cabin is near the lake, and we sail a small boat every day.",
           "The camp store had a sail on hats, so I bought a blue one.",
-          "At night, we sit by the fire and sing songs."
+          "After dinner, we toast apples and tell stories."
         ],
         [
           "I hope you can hear my news from here.",
@@ -2100,8 +2100,8 @@ PP.addLesson({
             clue: "Homophones sound alike but are spelled differently. Think about what each blank needs to mean.",
             hints: [
               "Homophones sound alike but are spelled differently. Think about what each blank needs to mean.",
-              "Read the words around each blank. Ask whether it needs a thing you can carry or a word that tells about a color.",
-              "Start with the first blank. Decide whether it names a thing or tells about a thing."
+              "Read the words around each blank. What does each blank need to mean?",
+              "Start with the first blank. Say each spelling and think about what it means."
             ],
             how: [
               "Blank one: Mina filled it with water, so it is a container. A pail is a bucket.",
@@ -2713,8 +2713,8 @@ PP.addLesson({
       clue: "Sound-alike words are spelled differently. Think about what each blank needs to mean.",
       hints: [
         "Sound-alike words are spelled differently. Think about what each blank needs to mean.",
-        "Read the words around each blank. Ask whether it needs something you do or something a scale tells.",
-        "Start with the second blank. Decide whether it names how heavy something is."
+        "Read the words around each blank. What does each blank need to mean?",
+        "Start with the second blank. Say each spelling and think about what it means."
       ],
       how: [
         "Blank one: it is something a person does, to stay until something happens. Wait.",

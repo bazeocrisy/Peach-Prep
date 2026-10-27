@@ -6793,10 +6793,181 @@ PP.addLesson({
         "The reflexive pronoun for we is ourselves."
       ],
       answer: "We built ourselves a fort out of blankets."
+    },
+    {
+      show: ["Tia and (myself / I) planted the seeds by (myself / ourselves)."],
+      ask: "Which words are correct?",
+      steps: [
+        "Look at the subject. Tia and the writer did the planting, so the first blank is part of the subject.",
+        "Say the sentence without Tia and: ___ planted the seeds. You would say I, not myself.",
+        "For the second blank, who did it alone? Tia and the writer, which is more than one, so use ourselves."
+      ],
+      answer: "Tia and I planted the seeds by ourselves."
     }
   ],
   parent: "When your child does something alone, like pouring cereal or tying shoes, ask \"Who did that?\" and have them answer with a -self word: \"I did it myself.\" Then try it for others: \"Dad did it himself.\"",
-  passages: [],
+  passages: [
+    /* B6:passages:start */
+    {
+      id: "p1",
+      title: "Building Our Treehouse",
+      byline: "A third grader's draft",
+      genre: "Student draft (narrative)",
+      draft: true,
+      paragraphs: [
+        [
+          "(1) Last summer, my cousin Luis and I built a treehouse.",
+          "(2) Luis and myself carried the boards to the backyard.",
+          "(3) Dad showed us how to use the saw safely."
+        ],
+        [
+          "(4) We measured every board with a long tape.",
+          "(5) Luis hurt hisself on a splinter, so we found a bandage.",
+          "(6) The next day, the treehouse looked finished."
+        ],
+        [
+          "(7) We were proud of ourself.",
+          "(8) Mom made us a snack to celebrate.",
+          "(9) She told us that we could add a rope ladder next summer."
+        ],
+        [
+          "(10) Now the treehouse has a small flag on top.",
+          "(11) We plan to sleep inside it on the first cool night."
+        ]
+      ]
+    },
+    {
+      id: "p2",
+      title: "The Puppet Show",
+      byline: "A third grader's draft",
+      genre: "Student draft (narrative)",
+      draft: true,
+      paragraphs: [
+        [
+          "(1) On Friday, our class put on a puppet show for the first graders.",
+          "(2) My partner Ellie made a fox puppet, and I made a rabbit.",
+          "(3) Ellie painted a bright smile on the fox by herself."
+        ],
+        [
+          "(4) The rabbit looked at itself in a toy mirror.",
+          "(5) The twins in the front row gave theirselves a loud cheer.",
+          "(6) I forgot my lines, so I told myself to stay calm."
+        ],
+        [
+          "(7) The old fox puppet fell and bumped themselves on the floor.",
+          "(8) The first graders asked for a second show.",
+          "(9) We promised to practice more at home.",
+          "(10) It was a loud and happy afternoon."
+        ]
+      ]
+    },
+    {
+      id: "p3",
+      title: "Learning Cartwheels",
+      byline: "A third grader's draft",
+      genre: "Student draft (narrative)",
+      draft: true,
+      paragraphs: [
+        [
+          "(1) Last month, I decided to learn how to do a cartwheel.",
+          "(2) My big sister Nora offered to teach me.",
+          "(3) She told me to keep my arms straight."
+        ],
+        [
+          "(4) At first, I kept falling and hurting myself.",
+          "(5) Nora laughed at herself when she fell too.",
+          "(6) After a week, my friends and I taught ourselves a new trick."
+        ],
+        [
+          "(7) Dad and myself practiced on the grass every night.",
+          "(8) Nora said I should be proud of myself.",
+          "(9) She brushed himself off and tried one more time."
+        ],
+        [
+          "(10) Now I can do a cartwheel by myself.",
+          "(11) Next, I want to learn how to do a handstand."
+        ]
+      ]
+    },
+    {
+      id: "p4",
+      title: "Sandcastle Day",
+      byline: "A third grader's draft",
+      genre: "Student draft (narrative)",
+      draft: true,
+      paragraphs: [
+        [
+          "(1) Last Saturday, my cousin Theo and I built a huge sandcastle.",
+          "(2) Theo and myself dug a deep moat around it.",
+          "(3) Grandpa showed us how to pack the wet sand."
+        ],
+        [
+          "(4) We carried water in a bucket from the waves.",
+          "(5) Theo splashed hisself with cold water, so we laughed.",
+          "(6) By noon, the castle had four tall towers."
+        ],
+        [
+          "(7) The older kids next to us built a castle by theirselves.",
+          "(8) Aunt Jo took a photo to celebrate.",
+          "(9) She said we could enter the contest next summer."
+        ],
+        [
+          "(10) That night, the waves washed our castle away."
+        ]
+      ]
+    },
+    {
+      id: "p5",
+      title: "Sewing Club",
+      byline: "A third grader's draft",
+      genre: "Student draft (narrative)",
+      draft: true,
+      paragraphs: [
+        [
+          "(1) On Tuesday, our class held a sewing club after school.",
+          "(2) My partner Gus made a pillow, and I made a bookmark.",
+          "(3) Gus stitched a blue star on the pillow by himself."
+        ],
+        [
+          "(4) The needle slipped, and I pricked myself.",
+          "(5) The members of the club gave theirselves a loud cheer.",
+          "(6) I told myself to stay calm and keep going."
+        ],
+        [
+          "(7) The big quilt caught on a chair and ripped themselves.",
+          "(8) The teacher asked for a second club next week.",
+          "(9) Everyone promised to practice more at home.",
+          "(10) The room was quiet and full of busy hands."
+        ]
+      ]
+    },
+    {
+      id: "p6",
+      title: "Pottery Class",
+      byline: "A third grader's draft",
+      genre: "Student draft (narrative)",
+      draft: true,
+      paragraphs: [
+        [
+          "(1) Last month, I joined a pottery class at the art center.",
+          "(2) My teacher, Mr. Singh, showed us how to shape a bowl.",
+          "(3) He told us to keep the clay wet."
+        ],
+        [
+          "(4) At first, I dropped my bowl and surprised myself.",
+          "(5) Mr. Singh laughed at himself when his own bowl cracked.",
+          "(6) After a week, my friends and I taught ourselves a new glaze."
+        ],
+        [
+          "(7) Grandma and myself picked up my first bowl on Friday.",
+          "(8) Mr. Singh said I should be proud of myself.",
+          "(9) My friend Tessa admired himself in the shiny glaze."
+        ],
+        ["(10) Now I can shape a bowl by myself."]
+      ]
+    }
+    /* B6:passages:end */
+  ],
   practice: [
     { id: "SK-GUM3-6-P1", type: "dropdown", points: 1, dok: 1, passages: [],
       prompt: "Choose the word that correctly completes the sentence.",
@@ -6846,6 +7017,947 @@ PP.addLesson({
       clue: "The first blank points back to Nia. The second blank points back to her parents. Count how many people each one is.",
       why: "The answers are herself and themselves. Nia is one girl, so herself. Her parents are two people, so themselves. Theirselves is not a correct word." }
   ],
+  /* B6:core:start */
+  /* ---------- Expansion 2026-10-22, batch B6 (GUM Master) ----------
+     core: fifteen items in three sets of five. { ref } reuses a practice item; the other practice items stay in Practice Together.
+     Passages are used only by core and the similar bank; none is used by test or testB.
+     Author log: docs/expansion-2026-10-22/batches/B6-author-log.md. NEEDS INDEPENDENT REVIEW. */
+  core: {
+    rev: "1",
+    sets: [
+      {
+        title: "Set 1",
+        items: [
+          { ref: "SK-GUM3-6-P4" },
+          { ref: "SK-GUM3-6-P5" },
+          {
+            id: "SK-GUM3-6-C03",
+            type: "dropdown",
+            points: 1,
+            dok: 2,
+            std: ["3.L.GC.1:M:use-reflexive-pronouns"],
+            passages: ["p1"],
+            prompt: "Sentence 2 of the draft uses the wrong pronoun. Choose the word that fixes it.",
+            text: "Luis and {0} carried the boards to the backyard.",
+            slots: [
+              {
+                options: ["myself", "I", "me", "mine"],
+                answer: 1
+              }
+            ],
+            clue: "Look at who did the carrying. A -self word points back to someone, so ask whether it is needed here.",
+            hints: [
+              "Look at who did the carrying. A -self word points back to someone, so ask whether it is needed here.",
+              "Read sentence 2 and leave out the words Luis and. Then say the sentence with each choice.",
+              "Mine shows that something belongs to me, and nothing here is owned. Decide among the other three."
+            ],
+            how: [
+              "Luis and the writer did the carrying together, so the blank is part of the subject.",
+              "Leave out Luis and: \"___ carried the boards.\" You would say I, not me and not myself.",
+              "The answer is I. Myself needs an I earlier in the sentence to point back to, and mine shows belonging."
+            ],
+            misconception: "A common mix-up is thinking myself sounds more polite than I. Use myself only when I already did the action to myself.",
+            why: "The answer is I. The writer and Luis did the carrying, so the subject needs I. Myself points back to an I that is already in the sentence, me is not used as the one who acts, and mine shows belonging."
+          },
+          {
+            id: "SK-GUM3-6-C04",
+            type: "mc",
+            points: 1,
+            dok: 2,
+            std: ["3.L.GC.1:M:use-reflexive-pronouns"],
+            passages: ["p1"],
+            prompt: "Sentence 5 of the draft has a word that is not correct. Which revision fixes it?",
+            choices: [
+              { text: "Luis hurt himself on a splinter, so we found a bandage.", correct: true },
+              { text: "Luis hurt hisself on a splinter, so we found a bandage." },
+              { text: "Luis hurt itself on a splinter, so we found a bandage." },
+              { text: "Luis hurt themselves on a splinter, so we found a bandage." }
+            ],
+            clue: "Find who got hurt. Then find the -self word that points back to that person.",
+            hints: [
+              "Find who got hurt. Then find the -self word that points back to that person.",
+              "Read sentence 5 and check each -self word. Ask whether it is a real word and whether it matches Luis.",
+              "Themselves is for more than one, and Luis is only one person. Check the other three."
+            ],
+            how: [
+              "Luis is one boy, so the word must be the -self word for one boy.",
+              "The word hisself is not a correct word. The correct word for one boy is himself.",
+              "The answer is \"Luis hurt himself on a splinter, so we found a bandage.\" Itself is for a thing, and themselves is for more than one."
+            ],
+            misconception: "A common mix-up is saying hisself, because it sounds like his. The correct word is himself.",
+            why: "The answer is \"Luis hurt himself on a splinter, so we found a bandage.\" Luis is one boy, so the pronoun is himself. Hisself is not a correct word, itself is for a thing, and themselves is for more than one."
+          },
+          {
+            id: "SK-GUM3-6-C05",
+            type: "ebsr",
+            points: 2,
+            dok: 3,
+            std: ["3.L.GC.1:M:use-reflexive-pronouns"],
+            passages: ["p1"],
+            prompt: "This question has two parts. Answer Part A, then Part B.",
+            partA: {
+              prompt: "Sentence 7 of the draft has a pronoun that does not match. Which revision fixes it?",
+              choices: [
+                { text: "We were proud of ourself." },
+                { text: "We were proud of myself." },
+                { text: "We were proud of themselves." },
+                { text: "We were proud of ourselves.", correct: true }
+              ]
+            },
+            partB: {
+              prompt: "Why is the revision in Part A correct?",
+              choices: [
+                { text: "We is only one person, so the word has to end in the letters -self." },
+                { text: "We is more than one person, so the word has to end in -selves.", correct: true },
+                { text: "The words proud of must always be followed by the word myself." },
+                { text: "The sentence is about Mom, so the word has to be herself." }
+              ]
+            },
+            clue: "Find who the pronoun points back to. Then decide whether that is one person or more than one.",
+            hints: [
+              "Find who the pronoun points back to. Then decide whether that is one person or more than one.",
+              "For Part A, read sentence 7 and check who was proud. For Part B, think about what the word we tells you.",
+              "In Part A, myself would point back to only one person. Check the other choices."
+            ],
+            how: [
+              "Part A: sentence 7 begins with we, so the pronoun must point back to we.",
+              "We means more than one person, so the word must end in -selves.",
+              "Part A answer: \"We were proud of ourselves.\" Ourself has the wrong ending, myself is for one person, and themselves points back to someone else.",
+              "Part B answer: \"We is more than one person, so the word has to end in -selves.\""
+            ],
+            misconception: "A common mix-up is using ourself because it sounds like myself. We means more than one, so the word ends in -selves.",
+            why: "Part A: \"We were proud of ourselves.\" Part B: \"We is more than one person, so the word has to end in -selves.\" Ourself has the wrong ending, myself is for one person, and themselves points back to someone else. The sentence is about the writer and Luis, not Mom."
+          }
+        ]
+      },
+      {
+        title: "Set 2",
+        items: [
+          {
+            id: "SK-GUM3-6-C06",
+            type: "hottext",
+            points: 2,
+            dok: 2,
+            std: ["3.L.GC.1:M:use-reflexive-pronouns"],
+            passages: ["p2"],
+            prompt: "Select the TWO sentences that have an error with a -self or -selves word.",
+            targets: ["p2:2:1", "p2:2:2", "p2:2:3", "p2:3:1", "p2:3:2"],
+            answer: ["p2:2:2", "p2:3:1"],
+            pick: 2,
+            clue: "Look at each -self or -selves word. Ask whether it is a real word and whether it matches who it points back to.",
+            hints: [
+              "Look at each -self or -selves word. Ask whether it is a real word and whether it matches who it points back to.",
+              "Read the five sentences. For each one, find who the -self word points back to, and count how many that is.",
+              "In sentence 6, myself points back to I, and it is correct. Check the other four sentences."
+            ],
+            how: [
+              "Find each -self or -selves word and who it points back to.",
+              "Sentence 4: itself points back to the rabbit, one thing, so it is correct. Sentence 6: myself points back to I, so it is correct.",
+              "Sentence 5: theirselves is not a correct word. Sentence 7: the puppet is one thing, so it should be itself."
+            ],
+            misconception: "A common mix-up is thinking every -selves word is wrong when it follows a puppet or object. Check whether the word matches one thing or more than one.",
+            why: "The errors are in \"The twins in the front row gave theirselves a loud cheer.\" and \"The old fox puppet fell and bumped themselves on the floor.\" Theirselves is not a correct word, and the puppet is one thing, so it needs itself. Itself and myself are used correctly in the other sentences."
+          },
+          {
+            id: "SK-GUM3-6-C07",
+            type: "ms",
+            points: 2,
+            dok: 2,
+            std: ["3.L.GC.1:M:use-reflexive-pronouns"],
+            passages: [],
+            prompt: "Choose the TWO sentences that use -self or -selves words correctly.",
+            pick: 2,
+            choices: [
+              { text: "My uncle bought herself a new hat." },
+              { text: "Priya gave herself extra time to finish.", correct: true },
+              { text: "We made ourself a big salad." },
+              { text: "Pablo built the shelf by himself.", correct: true },
+              { text: "The kids taught theirselves to swim." }
+            ],
+            clue: "Find the -self or -selves word in each sentence. Ask whether it is a real word and whether it matches who it points back to.",
+            hints: [
+              "Find the -self or -selves word in each sentence. Ask whether it is a real word and whether it matches who it points back to.",
+              "Say who each word points back to, and count how many that is. Then check the ending of the word.",
+              "Theirselves is not a correct word. Decide about the other four."
+            ],
+            how: [
+              "Find the -self or -selves word in each sentence and who it points back to.",
+              "Priya is one girl, so herself is right. Pablo is one boy, so himself is right.",
+              "The others are wrong: it should be themselves, himself and ourselves."
+            ],
+            misconception: "A common mix-up is picking a word that sounds right but is spelled wrong, like theirselves or ourself.",
+            why: "The answers are \"Priya gave herself extra time to finish.\" and \"Pablo built the shelf by himself.\" Priya is one girl and Pablo is one boy, so herself and himself fit. The others should say themselves, himself and ourselves."
+          },
+          {
+            id: "SK-GUM3-6-C08",
+            type: "match",
+            points: 2,
+            dok: 2,
+            std: ["3.L.GC.1:M:use-reflexive-pronouns"],
+            passages: [],
+            prompt: "Match each sentence to the word that completes it.",
+            cols: ["myself", "yourself", "itself", "ourselves"],
+            rows: [
+              { text: "The robot turned ___ off.", answer: 2 },
+              { text: "I looked at ___ in the window.", answer: 0 },
+              { text: "Ben, please be careful. Do not cut ___.", answer: 1 },
+              { text: "My brother and I gave ___ a high five.", answer: 3 }
+            ],
+            clue: "Find who did the action in each sentence. Then pick the word that points back to that same person or thing.",
+            hints: [
+              "Find who did the action in each sentence. Then pick the word that points back to that same person or thing.",
+              "Start with the sentence you are surest about. Think about who is talking and who is being talked to.",
+              "A robot is one thing, so its sentence goes with itself. Decide the other rows."
+            ],
+            how: [
+              "Find who did the action in each sentence and who the pronoun points back to.",
+              "I looked at ___ points back to I, so it is myself. Ben, please be careful is talking to Ben, so it is yourself.",
+              "My brother and I is more than one, so it is ourselves. The robot is one thing, so it is itself."
+            ],
+            misconception: "A common mix-up is using yourself when the talker is the one who acted. Use myself when I did the action to I.",
+            why: "The robot is one thing, so itself. I looked at ___ points back to I, so myself. Please be careful, Ben is talking to Ben, so yourself. My brother and I is more than one, so ourselves."
+          },
+          {
+            id: "SK-GUM3-6-C09",
+            type: "mc",
+            points: 1,
+            dok: 3,
+            std: ["3.L.GC.1:M:use-reflexive-pronouns"],
+            passages: [],
+            prompt: "Which sentence means that Maya looked at her own reflection?",
+            choices: [
+              { text: "Maya looked at her in the mirror." },
+              { text: "Maya looked at herself in the mirror.", correct: true },
+              { text: "Maya looked at her friend in the mirror." },
+              { text: "Maya looked at she in the mirror." }
+            ],
+            clue: "Think about who the pronoun must point to. It has to be the same girl who did the looking.",
+            hints: [
+              "Think about who the pronoun must point to. It has to be the same girl who did the looking.",
+              "Say each sentence and ask who the last pronoun means. Only one of them must mean Maya.",
+              "She cannot follow the word at in a sentence like this one. Check the other three."
+            ],
+            how: [
+              "The sentence must tell that Maya looked at Maya, so the pronoun must point back to her.",
+              "Her would mean some other girl. Her friend is another person, and she is the wrong form for this spot.",
+              "The answer is \"Maya looked at herself in the mirror.\" Herself points back to Maya."
+            ],
+            misconception: "A common mix-up is thinking her can point back to the subject. Her means a different girl, so use herself.",
+            why: "The answer is \"Maya looked at herself in the mirror.\" Herself points back to Maya, so Maya looked at her own reflection. Her would mean some other girl, her friend is another person, and she is not used after at."
+          },
+          {
+            id: "SK-GUM3-6-C10",
+            type: "dropdown",
+            points: 2,
+            dok: 2,
+            std: ["3.L.GC.1:M:use-reflexive-pronouns"],
+            passages: [],
+            prompt: "Choose the words that correctly complete the sentence.",
+            text: "The twins taught {0} to juggle, and their little brother taught {1} to whistle.",
+            slots: [
+              {
+                options: ["themselves", "theirselves", "himself"],
+                answer: 0
+              },
+              {
+                options: ["himself", "hisself", "itself"],
+                answer: 0
+              }
+            ],
+            clue: "Find who did the teaching in each part. Then pick the word that points back to that same person or group.",
+            hints: [
+              "Find who did the teaching in each part. Then pick the word that points back to that same person or group.",
+              "Count how many people are in each part. Then check that each word you pick is a real word.",
+              "Theirselves is not a correct word. Decide the rest."
+            ],
+            how: [
+              "The first blank points back to the twins, who are more than one person.",
+              "The second blank points back to the little brother, who is one boy.",
+              "The answers are themselves and himself. Theirselves and hisself are not correct words, and itself is for a thing."
+            ],
+            misconception: "A common mix-up is using theirselves or hisself. Both sound right, but neither one is a correct word.",
+            why: "The answers are themselves and himself. The twins are more than one person, so themselves fits. The little brother is one boy, so himself fits. Theirselves and hisself are not correct words."
+          }
+        ]
+      },
+      {
+        title: "Set 3",
+        items: [
+          {
+            id: "SK-GUM3-6-C11",
+            type: "hottext",
+            points: 2,
+            dok: 2,
+            std: ["3.L.GC.1:M:use-reflexive-pronouns"],
+            passages: ["p3"],
+            prompt: "Select the TWO sentences that use myself or himself in the wrong way.",
+            targets: ["p3:2:1", "p3:2:2", "p3:2:3", "p3:3:1", "p3:3:3"],
+            answer: ["p3:3:1", "p3:3:3"],
+            pick: 2,
+            clue: "Check each -self word. Does it point back to the person who did the action, and is it the right word for that person?",
+            hints: [
+              "Check each -self word. Does it point back to the person who did the action, and is it the right word for that person?",
+              "Read each sentence and find who did the action. Then look at the -self word and ask whether it matches.",
+              "In sentence 5, herself points back to Nora, and it is correct. Check the other four sentences."
+            ],
+            how: [
+              "Find who did the action in each sentence and what the -self word points back to.",
+              "Sentences 4, 5 and 6 use myself, herself and ourselves. Each one points back to the right person.",
+              "Sentence 7 uses myself in a place where I belongs. Sentence 9 uses himself for Nora, but she is a girl, so it should be herself."
+            ],
+            misconception: "A common mix-up is using myself when I am doing the action with someone else. Say the sentence without the other person to check.",
+            why: "The errors are in \"Dad and myself practiced on the grass every night.\" and \"She brushed himself off and tried one more time.\" The first should say Dad and I, and the second should say herself because Nora is a girl. The -self words in sentences 4, 5 and 6 are correct."
+          },
+          {
+            id: "SK-GUM3-6-C12",
+            type: "mc",
+            points: 1,
+            dok: 2,
+            std: ["3.L.GC.1:M:use-reflexive-pronouns"],
+            passages: [],
+            prompt: "Which sentence tells that Rosa finished the project alone?",
+            choices: [
+              { text: "Rosa finished the project with her friends." },
+              { text: "Rosa finished the project with help from her teacher." },
+              { text: "Rosa finished the project by herself.", correct: true },
+              { text: "Rosa and her cousin finished the project." }
+            ],
+            clue: "Alone means with no one else helping. Look for the choice that shows that.",
+            hints: [
+              "Alone means with no one else helping. Look for the choice that shows that.",
+              "Read each choice and ask who did the work. Only one choice has just Rosa doing it.",
+              "Rosa and her cousin means two people worked. Check the other three."
+            ],
+            how: [
+              "Alone means nobody else helped.",
+              "By herself tells that Rosa did the whole project by only herself.",
+              "The answer is \"Rosa finished the project by herself.\" The other choices name friends, a teacher or a cousin who helped."
+            ],
+            misconception: "A common mix-up is thinking by herself means near herself. By herself means alone.",
+            why: "The answer is \"Rosa finished the project by herself.\" By herself means alone, with no help. The other choices tell about help from her friends, her teacher, or her cousin."
+          },
+          {
+            id: "SK-GUM3-6-C13",
+            type: "ms",
+            points: 2,
+            dok: 3,
+            std: ["3.L.GC.1:M:use-reflexive-pronouns"],
+            passages: [],
+            prompt: "Lee says, \"You can use the word myself in place of I or me.\" Which TWO sentences show that Lee is wrong?",
+            pick: 2,
+            choices: [
+              { text: "I looked at myself in the mirror." },
+              { text: "Dad gave Tia and myself some juice.", correct: true },
+              { text: "I fixed the bike by myself." },
+              { text: "Mia and myself raced to the gate.", correct: true },
+              { text: "I gave myself a haircut." }
+            ],
+            clue: "To test a rule, look for examples that break it. Find sentences where myself is used in the wrong place.",
+            hints: [
+              "To test a rule, look for examples that break it. Find sentences where myself is used in the wrong place.",
+              "Read each sentence. Ask whether myself points back to an I that is already in the sentence.",
+              "In I gave myself a haircut, myself points back to I. Decide about the other four."
+            ],
+            how: [
+              "Look at where myself appears in each sentence.",
+              "In the three sentences that start with I, myself points back to I, so it is correct.",
+              "In the other two sentences, there is no I for myself to point back to. They should say Mia and I, and Tia and me."
+            ],
+            misconception: "A common mix-up is thinking myself is the fancy word for I. It only points back to an I that is already in the sentence.",
+            why: "The answers are \"Mia and myself raced to the gate.\" and \"Dad gave Tia and myself some juice.\" Neither sentence has an I for myself to point back to. They should say Mia and I, and Tia and me. In the other three sentences, myself points back to I."
+          },
+          {
+            id: "SK-GUM3-6-C14",
+            type: "dropdown",
+            points: 1,
+            dok: 2,
+            std: ["3.L.GC.1:M:use-reflexive-pronouns"],
+            passages: [],
+            prompt: "Which word belongs in the blank?",
+            text: "Please be careful, kids. You could hurt {0} on the wet floor.",
+            slots: [
+              {
+                options: ["yourself", "yourselves", "themselves"],
+                answer: 1
+              }
+            ],
+            clue: "Find who is being talked to. Count how many people that is.",
+            hints: [
+              "Find who is being talked to. Count how many people that is.",
+              "Read the sentence and look at the word kids. Then pick the word that points back to that same group.",
+              "Themselves is for people who are being talked about, not talked to. Decide between the other two."
+            ],
+            how: [
+              "The speaker is talking to kids, which is more than one person.",
+              "The word that points back to you for more than one person is yourselves.",
+              "The answer is yourselves. Yourself is for one person, and themselves is for people being talked about."
+            ],
+            misconception: "A common mix-up is choosing yourself when talking to a group. For more than one person, use yourselves.",
+            why: "The answer is yourselves. The speaker is talking to kids, which is more than one person, so the word ends in -selves. Yourself is for one person, and themselves is for people being talked about."
+          },
+          {
+            id: "SK-GUM3-6-C15",
+            type: "mc",
+            points: 1,
+            dok: 2,
+            std: ["3.L.GC.1:M:use-reflexive-pronouns"],
+            passages: [],
+            prompt: "Which sentence uses the -self word correctly?",
+            choices: [
+              { text: "My brother and I surprised ourselves with a win.", correct: true },
+              { text: "My brother and I surprised ourself with a win." },
+              { text: "My brother and I surprised myself with a win." },
+              { text: "My brother and I surprised yourselves with a win." }
+            ],
+            clue: "Find who did the action. Then find the -self word that points back to all of them.",
+            hints: [
+              "Find who did the action. Then find the -self word that points back to all of them.",
+              "My brother and I is more than one person. Check the ending of each -self word.",
+              "Yourselves points back to you, and nobody is being talked to. Check the other three."
+            ],
+            how: [
+              "My brother and I did the surprising, so the pronoun must point back to both of them.",
+              "That is more than one person, including the writer, so the word is ourselves.",
+              "The answer is \"My brother and I surprised ourselves with a win.\" Ourself has the wrong ending, myself is for one person, and yourselves points back to you."
+            ],
+            misconception: "A common mix-up is picking myself because I is in the sentence. When someone else is with me, use ourselves.",
+            why: "The answer is \"My brother and I surprised ourselves with a win.\" The brother and I are more than one person, so ourselves fits. Ourself has the wrong ending, myself is for one person, and yourselves points back to you."
+          }
+        ]
+      }
+    ]
+  },
+  similar: [
+    {
+      id: "SK-GUM3-6-S01",
+      type: "hottext",
+      points: 1,
+      dok: 2,
+      std: ["3.L.GC.1:M:use-reflexive-pronouns"],
+      passages: [],
+      prompt: "Select the sentence that has an error.",
+      options: [
+        "Kenji taught himself to juggle.",
+        "The kitten washed itself in the sun.",
+        "We gave ourself a short rest.",
+        "The twins gave themselves a high five."
+      ],
+      answer: [2],
+      pick: 1,
+      clue: "Look at each -self or -selves word. Is it a real word, and does it match who it points back to?",
+      hints: [
+        "Look at each -self or -selves word. Is it a real word, and does it match who it points back to?",
+        "Find who each -self word points back to. Then count how many that is and check the ending.",
+        "Himself is the right word for Kenji. Check the other three sentences."
+      ],
+      how: [
+        "Find each -self or -selves word and who it points back to.",
+        "Himself points back to Kenji, itself points back to the kitten, and themselves points back to the twins.",
+        "We means more than one, so ourself has the wrong ending. It should be ourselves."
+      ],
+      misconception: "A common mix-up is using ourself because it sounds like myself. We means more than one, so the word ends in -selves.",
+      why: "The error is in \"We gave ourself a short rest.\" We is more than one person, so the word should be ourselves. The other sentences use himself, itself and themselves correctly.",
+      like: ["SK-GUM3-6-P4"]
+    },
+    {
+      id: "SK-GUM3-6-S02",
+      type: "dropdown",
+      points: 2,
+      dok: 2,
+      std: ["3.L.GC.1:M:use-reflexive-pronouns"],
+      passages: [],
+      prompt: "Which words make the sentence correct?",
+      text: "Kara bought {0} a new notebook, and her parents treated {1} to lunch.",
+      slots: [
+        {
+          options: ["herself", "yourself", "itself"],
+          answer: 0
+        },
+        {
+          options: ["themselves", "theirself", "ourselves"],
+          answer: 0
+        }
+      ],
+      clue: "The first blank points back to Kara. The second blank points back to her parents. Count how many people each one is.",
+      hints: [
+        "The first blank points back to Kara. The second blank points back to her parents. Count how many people each one is.",
+        "Find who did the action in each part. Then pick the word that points back to that same person or group.",
+        "Theirself has the wrong ending. Decide the rest."
+      ],
+      how: [
+        "Kara is one girl, so the first blank needs the word for one girl.",
+        "Her parents are more than one person, so the second blank needs a word that ends in -selves.",
+        "The answers are herself and themselves. Yourself points back to you, itself is for a thing, theirself has the wrong ending, and ourselves points back to we."
+      ],
+      misconception: "A common mix-up is picking theirself because it sounds like herself. More than one person needs the ending -selves.",
+      why: "The answers are herself and themselves. Kara is one girl, so herself fits. Her parents are more than one person, so themselves fits. Theirself has the wrong ending.",
+      like: ["SK-GUM3-6-P5"]
+    },
+    {
+      id: "SK-GUM3-6-S03",
+      type: "dropdown",
+      points: 1,
+      dok: 2,
+      std: ["3.L.GC.1:M:use-reflexive-pronouns"],
+      passages: ["p4"],
+      prompt: "The second sentence of the draft uses the wrong pronoun. Which word belongs in the blank?",
+      text: "Theo and {0} dug a deep moat around it.",
+      slots: [
+        {
+          options: ["myself", "I", "me"],
+          answer: 1
+        }
+      ],
+      clue: "Look at who did the digging. A -self word points back to someone, so ask whether it is needed here.",
+      hints: [
+        "Look at who did the digging. A -self word points back to someone, so ask whether it is needed here.",
+        "Read the sentence and leave out the words Theo and. Then say the sentence with each choice.",
+        "Me is used for the person something happens to, not for the person who acts. Decide between the other two."
+      ],
+      how: [
+        "Theo and the writer did the digging together, so the blank is part of the subject.",
+        "Leave out Theo and: \"___ dug a deep moat.\" You would say I, not me and not myself.",
+        "The answer is I. Myself needs an I earlier in the sentence to point back to, and me does not name who acts."
+      ],
+      misconception: "A common mix-up is thinking myself sounds more polite than I. Use myself only when I already did the action to myself.",
+      why: "The answer is I. The writer and Theo did the digging, so the subject needs I. Myself points back to an I that is already in the sentence, and me is not used as the one who acts.",
+      like: ["SK-GUM3-6-C03"]
+    },
+    {
+      id: "SK-GUM3-6-S04",
+      type: "mc",
+      points: 1,
+      dok: 2,
+      std: ["3.L.GC.1:M:use-reflexive-pronouns"],
+      passages: ["p4"],
+      prompt: "Which revision fixes the incorrect word in the fifth sentence of the draft?",
+      choices: [
+        { text: "Theo splashed hisself with cold water, so we laughed." },
+        { text: "Theo splashed herself with cold water, so we laughed." },
+        { text: "Theo splashed itself with cold water, so we laughed." },
+        { text: "Theo splashed himself with cold water, so we laughed.", correct: true }
+      ],
+      clue: "Find who got splashed. Then find the -self word that points back to that person.",
+      hints: [
+        "Find who got splashed. Then find the -self word that points back to that person.",
+        "Check each -self word. Ask whether it is a real word and whether it matches Theo.",
+        "Itself is for a thing, and Theo is a boy. Check the other three."
+      ],
+      how: [
+        "Theo is one boy, so the word must be the -self word for one boy.",
+        "The word hisself is not a correct word. The correct word for one boy is himself.",
+        "The answer is \"Theo splashed himself with cold water, so we laughed.\" Herself is for a girl, and itself is for a thing."
+      ],
+      misconception: "A common mix-up is saying hisself, because it sounds like his. The correct word is himself.",
+      why: "The answer is \"Theo splashed himself with cold water, so we laughed.\" Theo is one boy, so the pronoun is himself. Hisself is not a correct word, herself is for a girl, and itself is for a thing.",
+      like: ["SK-GUM3-6-C04"]
+    },
+    {
+      id: "SK-GUM3-6-S05",
+      type: "ebsr",
+      points: 2,
+      dok: 3,
+      std: ["3.L.GC.1:M:use-reflexive-pronouns"],
+      passages: ["p4"],
+      prompt: "This question has two parts. Answer Part A, then Part B.",
+      partA: {
+        prompt: "Look at the seventh sentence of the draft. Which choice writes its -self word correctly?",
+        choices: [
+          { text: "The older kids next to us built a castle by themselves.", correct: true },
+          { text: "The older kids next to us built a castle by theirselves." },
+          { text: "The older kids next to us built a castle by themself." },
+          { text: "The older kids next to us built a castle by himself." }
+        ]
+      },
+      partB: {
+        prompt: "Which reason explains the answer to Part A?",
+        choices: [
+          { text: "Only one kid built the castle, so the word has to be himself." },
+          { text: "Every sentence with the word by needs the word myself after it." },
+          { text: "Theirselves is not a real word, so a group of kids needs themselves.", correct: true },
+          { text: "The sentence tells about Theo, so the word has to be himself." }
+        ]
+      },
+      clue: "Find who the pronoun points back to. Then decide whether that is one person or more than one.",
+      hints: [
+        "Find who the pronoun points back to. Then decide whether that is one person or more than one.",
+        "For Part A, read sentence 7 and check who built the castle. For Part B, think about what the word kids tells you.",
+        "In Part A, himself would point back to only one boy. Check the other choices."
+      ],
+      how: [
+        "Part A: sentence 7 is about the older kids, so the pronoun must point back to them.",
+        "Kids is more than one, so the word must end in -selves. The word theirselves is not a correct word.",
+        "Part A answer: \"The older kids next to us built a castle by themselves.\" Themself has the wrong ending, and himself is for one boy.",
+        "Part B answer: \"Theirselves is not a real word, so a group of kids needs themselves.\""
+      ],
+      misconception: "A common mix-up is using theirselves because it sounds like their. The correct word is themselves.",
+      why: "Part A: \"The older kids next to us built a castle by themselves.\" Part B: \"Theirselves is not a real word, so a group of kids needs themselves.\" Themself has the wrong ending, and himself is for one boy. The sentence is about the older kids, not Theo.",
+      like: ["SK-GUM3-6-C05"]
+    },
+    {
+      id: "SK-GUM3-6-S06",
+      type: "hottext",
+      points: 2,
+      dok: 2,
+      std: ["3.L.GC.1:M:use-reflexive-pronouns"],
+      passages: ["p5"],
+      prompt: "Two sentences in the draft have a mistake with a -self or -selves word. Select them.",
+      targets: ["p5:1:3", "p5:2:1", "p5:2:2", "p5:2:3", "p5:3:1"],
+      answer: ["p5:2:2", "p5:3:1"],
+      pick: 2,
+      clue: "Look at each -self or -selves word. Ask whether it is a real word and whether it matches who it points back to.",
+      hints: [
+        "Look at each -self or -selves word. Ask whether it is a real word and whether it matches who it points back to.",
+        "Read the five sentences. For each one, find who the -self word points back to, and count how many that is.",
+        "In sentence 3, himself points back to Gus, and it is correct. Check the other four sentences."
+      ],
+      how: [
+        "Find each -self or -selves word and who it points back to.",
+        "Sentence 3: himself points back to Gus, so it is correct. Sentences 4 and 6: myself points back to I, so both are correct.",
+        "Sentence 5: theirselves is not a correct word. Sentence 7: the quilt is one thing, so it should be itself."
+      ],
+      misconception: "A common mix-up is thinking every -selves word is wrong when it follows an object. Check whether the word matches one thing or more than one.",
+      why: "The errors are in \"The members of the club gave theirselves a loud cheer.\" and \"The big quilt caught on a chair and ripped themselves.\" Theirselves is not a correct word, and the quilt is one thing, so it needs itself. Himself and myself are used correctly in the other sentences.",
+      like: ["SK-GUM3-6-C06"]
+    },
+    {
+      id: "SK-GUM3-6-S07",
+      type: "ms",
+      points: 2,
+      dok: 2,
+      std: ["3.L.GC.1:M:use-reflexive-pronouns"],
+      passages: [],
+      prompt: "Which TWO sentences use -self or -selves words correctly?",
+      pick: 2,
+      choices: [
+        { text: "My aunt fixed the car by himself." },
+        { text: "Jon bought hisself a new hat." },
+        { text: "Tess surprised herself with a high score.", correct: true },
+        { text: "The puppies shook itself dry." },
+        { text: "The twins did the dishes by themselves.", correct: true }
+      ],
+      clue: "Find the -self or -selves word in each sentence. Ask whether it is a real word and whether it matches who it points back to.",
+      hints: [
+        "Find the -self or -selves word in each sentence. Ask whether it is a real word and whether it matches who it points back to.",
+        "Say who each word points back to, and count how many that is. Then check the ending of the word.",
+        "Hisself is not a correct word. Decide about the other four."
+      ],
+      how: [
+        "Find the -self or -selves word in each sentence and who it points back to.",
+        "Tess is one girl, so herself is right. The twins are more than one, so themselves is right.",
+        "The others are wrong: it should be herself, themselves and himself."
+      ],
+      misconception: "A common mix-up is picking a word that sounds right but does not match, like himself for an aunt.",
+      why: "The answers are \"Tess surprised herself with a high score.\" and \"The twins did the dishes by themselves.\" Tess is one girl and the twins are more than one, so herself and themselves fit. The others should say herself, themselves and himself.",
+      like: ["SK-GUM3-6-C07"]
+    },
+    {
+      id: "SK-GUM3-6-S08",
+      type: "match",
+      points: 2,
+      dok: 2,
+      std: ["3.L.GC.1:M:use-reflexive-pronouns"],
+      passages: [],
+      prompt: "Which word completes each sentence?",
+      cols: ["myself", "yourself", "itself", "themselves"],
+      rows: [
+        { text: "The players stretched ___ before the game.", answer: 3 },
+        { text: "Dana, please give ___ more time.", answer: 1 },
+        { text: "I told ___ to be brave.", answer: 0 },
+        { text: "The calculator turned ___ off.", answer: 2 }
+      ],
+      clue: "Find who did the action in each sentence. Then pick the word that points back to that same person or thing.",
+      hints: [
+        "Find who did the action in each sentence. Then pick the word that points back to that same person or thing.",
+        "Start with the sentence you are surest about. Think about who is talking and who is being talked to.",
+        "A calculator is one thing, so its sentence goes with itself. Decide the other rows."
+      ],
+      how: [
+        "Find who did the action in each sentence and who the pronoun points back to.",
+        "I told ___ points back to I, so it is myself. Dana, please give ___ points to Dana, who is being talked to, so it is yourself.",
+        "The players are more than one, so it is themselves. The calculator is one thing, so it is itself."
+      ],
+      misconception: "A common mix-up is using yourself when the talker is the one who acted. Use myself when I did the action to I.",
+      why: "The calculator is one thing, so itself. I told ___ points back to I, so myself. Please give ___ more time, Dana is talking to Dana, so yourself. The players are more than one, so themselves.",
+      like: ["SK-GUM3-6-C08"]
+    },
+    {
+      id: "SK-GUM3-6-S09",
+      type: "mc",
+      points: 1,
+      dok: 3,
+      std: ["3.L.GC.1:M:use-reflexive-pronouns"],
+      passages: [],
+      prompt: "Which sentence means that Omar saw his own face in the pond?",
+      choices: [
+        { text: "Omar saw him in the pond." },
+        { text: "Omar saw his friend in the pond." },
+        { text: "Omar saw himself in the pond.", correct: true },
+        { text: "Omar saw he in the pond." }
+      ],
+      clue: "Think about who the pronoun must point to. It has to be the same boy who did the seeing.",
+      hints: [
+        "Think about who the pronoun must point to. It has to be the same boy who did the seeing.",
+        "Say each sentence and ask who the last pronoun means. Only one of them must mean Omar.",
+        "He cannot follow the word saw in a sentence like this one. Check the other three."
+      ],
+      how: [
+        "The sentence must tell that Omar saw Omar, so the pronoun must point back to him.",
+        "Him would mean some other boy. His friend is another person, and he is the wrong form for this spot.",
+        "The answer is \"Omar saw himself in the pond.\" Himself points back to Omar."
+      ],
+      misconception: "A common mix-up is thinking him can point back to the subject. Him means a different boy, so use himself.",
+      why: "The answer is \"Omar saw himself in the pond.\" Himself points back to Omar, so Omar saw his own face. Him would mean some other boy, his friend is another person, and he is not used after saw.",
+      like: ["SK-GUM3-6-C09"]
+    },
+    {
+      id: "SK-GUM3-6-S10",
+      type: "dropdown",
+      points: 2,
+      dok: 2,
+      std: ["3.L.GC.1:M:use-reflexive-pronouns"],
+      passages: [],
+      prompt: "Which words make the sentence correct?",
+      text: "The skaters cheered {0} on, and the puppy rolled {1} in the grass.",
+      slots: [
+        {
+          options: ["themselves", "theirselves", "herself"],
+          answer: 0
+        },
+        {
+          options: ["itself", "hisself", "themselves"],
+          answer: 0
+        }
+      ],
+      clue: "Find who did the action in each part. Then pick the word that points back to the same person or group.",
+      hints: [
+        "Find who did the action in each part. Then pick the word that points back to the same person or group.",
+        "Count how many are in each part. Then check that each word you pick is a real word.",
+        "Theirselves is not a correct word. Decide the rest."
+      ],
+      how: [
+        "The first blank points back to the skaters, who are more than one person.",
+        "The second blank points back to the puppy, which is one animal.",
+        "The answers are themselves and itself. Theirselves and hisself are not correct words, and herself is for one girl."
+      ],
+      misconception: "A common mix-up is using theirselves or hisself. Both sound right, but neither one is a correct word.",
+      why: "The answers are themselves and itself. The skaters are more than one, so themselves fits. The puppy is one animal, so itself fits. Theirselves and hisself are not correct words.",
+      like: ["SK-GUM3-6-C10"]
+    },
+    {
+      id: "SK-GUM3-6-S11",
+      type: "hottext",
+      points: 2,
+      dok: 2,
+      std: ["3.L.GC.1:M:use-reflexive-pronouns"],
+      passages: ["p6"],
+      prompt: "Select the TWO sentences in which myself or himself does not fit.",
+      targets: ["p6:2:2", "p6:2:3", "p6:3:1", "p6:3:2", "p6:3:3"],
+      answer: ["p6:3:1", "p6:3:3"],
+      pick: 2,
+      clue: "Check each -self word. Does it point back to the person who did the action, and is it the right word for that person?",
+      hints: [
+        "Check each -self word. Does it point back to the person who did the action, and is it the right word for that person?",
+        "Read each sentence and find who did the action. Then look at the -self word and ask whether it matches.",
+        "In sentence 5, himself points back to Mr. Singh, and it is correct. Check the other four sentences."
+      ],
+      how: [
+        "Find who did the action in each sentence and what the -self word points back to.",
+        "Sentences 5, 6 and 8 use himself, ourselves and myself. Each one points back to the right person.",
+        "Sentence 7 uses myself in a place where I belongs. Sentence 9 uses himself for Tessa, but she is a girl, so it should be herself."
+      ],
+      misconception: "A common mix-up is using myself when I am doing the action with someone else. Say the sentence without the other person to check.",
+      why: "The errors are in \"Grandma and myself picked up my first bowl on Friday.\" and \"My friend Tessa admired himself in the shiny glaze.\" The first should say Grandma and I, and the second should say herself because Tessa is a girl. The -self words in sentences 5, 6 and 8 are correct.",
+      like: ["SK-GUM3-6-C11"]
+    },
+    {
+      id: "SK-GUM3-6-S12",
+      type: "mc",
+      points: 1,
+      dok: 2,
+      std: ["3.L.GC.1:M:use-reflexive-pronouns"],
+      passages: [],
+      prompt: "Which sentence shows that Lila made dinner without any help?",
+      choices: [
+        { text: "Lila made dinner for the family with her aunt." },
+        { text: "Lila made dinner for the family by herself.", correct: true },
+        { text: "Lila made dinner for the family with help from her dad." },
+        { text: "Lila and her cousin made dinner for the family." }
+      ],
+      clue: "Alone means with no one else helping. Look for the choice that shows that.",
+      hints: [
+        "Alone means with no one else helping. Look for the choice that shows that.",
+        "Read each choice and ask who did the work. Only one choice has just Lila doing it.",
+        "Lila and her cousin means two people worked. Check the other three."
+      ],
+      how: [
+        "Alone means nobody else helped.",
+        "By herself tells that Lila did the whole job by only herself.",
+        "The answer is \"Lila made dinner for the family by herself.\" The other choices name an aunt, a dad or a cousin."
+      ],
+      misconception: "A common mix-up is thinking by herself means near herself. By herself means alone.",
+      why: "The answer is \"Lila made dinner for the family by herself.\" By herself means alone, with no help. The other choices tell about her aunt, her dad, or her cousin.",
+      like: ["SK-GUM3-6-C12"]
+    },
+    {
+      id: "SK-GUM3-6-S13",
+      type: "ms",
+      points: 2,
+      dok: 3,
+      std: ["3.L.GC.1:M:use-reflexive-pronouns"],
+      passages: [],
+      prompt: "Kim says, \"The word myself is just a fancy way to say me.\" Which TWO sentences show that Kim is wrong?",
+      pick: 2,
+      choices: [
+        { text: "The coach told Ana and myself to line up.", correct: true },
+        { text: "I surprised myself at the race." },
+        { text: "Aunt Rosa gave Tom and myself a ride.", correct: true },
+        { text: "I did all of it by myself." },
+        { text: "I made myself some toast." }
+      ],
+      clue: "To test a rule, look for examples that break it. Find sentences where myself is used in the wrong place.",
+      hints: [
+        "To test a rule, look for examples that break it. Find sentences where myself is used in the wrong place.",
+        "Read each sentence. Ask whether myself points back to an I that is already in the sentence.",
+        "In I made myself some toast, myself points back to I. Decide about the other four."
+      ],
+      how: [
+        "Look at where myself appears in each sentence.",
+        "In the three sentences that start with I, myself points back to I, so it is correct.",
+        "In the other two sentences, there is no I for myself to point back to. They should say Tom and me, and Ana and me."
+      ],
+      misconception: "A common mix-up is thinking myself is the fancy word for me. It only points back to an I that is already in the sentence.",
+      why: "The answers are \"Aunt Rosa gave Tom and myself a ride.\" and \"The coach told Ana and myself to line up.\" Neither sentence has an I for myself to point back to. They should say Tom and me, and Ana and me. In the other three sentences, myself points back to I.",
+      like: ["SK-GUM3-6-C13"]
+    },
+    {
+      id: "SK-GUM3-6-S14",
+      type: "dropdown",
+      points: 1,
+      dok: 2,
+      std: ["3.L.GC.1:M:use-reflexive-pronouns"],
+      passages: [],
+      prompt: "Which word completes the sentence?",
+      text: "Slow down, you two. You might trip {0} on the loose rug.",
+      slots: [
+        {
+          options: ["yourself", "yourselves", "ourselves"],
+          answer: 1
+        }
+      ],
+      clue: "Find who is being talked to. Count how many people that is.",
+      hints: [
+        "Find who is being talked to. Count how many people that is.",
+        "Read the sentence and look at the words you two. Then pick the word that points back to that same pair.",
+        "Ourselves includes the speaker, and the speaker is not on the rug. Decide between the other two."
+      ],
+      how: [
+        "The speaker is talking to you two, which is more than one person.",
+        "The word that points back to you for more than one person is yourselves.",
+        "The answer is yourselves. Yourself is for one person, and ourselves includes the speaker."
+      ],
+      misconception: "A common mix-up is choosing yourself when talking to two people. For more than one person, use yourselves.",
+      why: "The answer is yourselves. The speaker is talking to you two, which is more than one person, so the word ends in -selves. Yourself is for one person, and ourselves includes the speaker.",
+      like: ["SK-GUM3-6-C14"]
+    },
+    {
+      id: "SK-GUM3-6-S15",
+      type: "mc",
+      points: 1,
+      dok: 2,
+      std: ["3.L.GC.1:M:use-reflexive-pronouns"],
+      passages: [],
+      prompt: "Choose the sentence that has the right -self word.",
+      choices: [
+        { text: "Ben and I made ourself a snack." },
+        { text: "Ben and I made myself a snack." },
+        { text: "Ben and I made themselves a snack." },
+        { text: "Ben and I made ourselves a snack.", correct: true }
+      ],
+      clue: "Find who did the action. Then find the -self word that points back to all of them.",
+      hints: [
+        "Find who did the action. Then find the -self word that points back to all of them.",
+        "Ben and I is more than one person. Check the ending of each -self word.",
+        "Themselves points back to other people, and the sentence is not about other people. Check the other three."
+      ],
+      how: [
+        "Ben and I did the making, so the pronoun must point back to both of them.",
+        "That is more than one person, including the writer, so the word is ourselves.",
+        "The answer is \"Ben and I made ourselves a snack.\" Ourself has the wrong ending, myself is for one person, and themselves points back to other people."
+      ],
+      misconception: "A common mix-up is picking myself because I is in the sentence. When someone else is with me, use ourselves.",
+      why: "The answer is \"Ben and I made ourselves a snack.\" Ben and I are more than one person, so ourselves fits. Ourself has the wrong ending, myself is for one person, and themselves points back to other people.",
+      like: ["SK-GUM3-6-C15"]
+    }
+  ],
+  addons: {
+    "SK-GUM3-6-P1": {
+      hints: [
+        "The pronoun points back to the gate. Is a gate a person or a thing, and is it one or more than one?",
+        "Say each choice in the blank. Ask which one matches a single thing.",
+        "Themselves is for more than one. Decide between the other two."
+      ],
+      how: [
+        "The pronoun points back to the gate.",
+        "A gate is one thing, not a person.",
+        "The answer is itself. Herself is for a girl, and themselves is for more than one."
+      ],
+      misconception: "A common mix-up is using herself or himself for a thing. Use itself for one thing."
+    },
+    "SK-GUM3-6-P2": {
+      hints: [
+        "Find who each pronoun points back to. Is it one person or more than one? Is the word a real -self or -selves word?",
+        "Check each -self or -selves word in the four sentences, one at a time.",
+        "Hisself is not a correct word. Check the other three sentences."
+      ],
+      how: [
+        "Find who each pronoun points back to and count how many.",
+        "The girls are more than one, so \"The girls painted themselves a sign.\" is correct.",
+        "The others should say himself, ourselves and herself."
+      ],
+      misconception: "A common mix-up is picking a word that sounds right, like hisself. Check that the word is real and matches."
+    },
+    "SK-GUM3-6-P3": {
+      hints: [
+        "Ask: One person or more? If it is more than one, does it include me?",
+        "Start with the subject you are surest about. Then decide the rest one at a time.",
+        "My uncle is one man. Decide the other rows."
+      ],
+      how: [
+        "Count how many people each subject names.",
+        "My uncle is one man, and Grandma is one woman.",
+        "The players are more than one, and my friends and I includes me."
+      ],
+      misconception: "A common mix-up is picking themselves when I am part of the group. If I am included, use ourselves."
+    },
+    "SK-GUM3-6-P4": {
+      hints: [
+        "Look at each -self or -selves word. Is it a real word, and does it match who it points back to?",
+        "Check each sentence one at a time. Find who the -self word points back to.",
+        "In I taught myself, myself points back to I and is correct. Check the other three."
+      ],
+      how: [
+        "Check each -self word and who it points back to.",
+        "Myself, itself and yourself all match the words they point back to.",
+        "Theirselves is not a correct word. It should be themselves."
+      ],
+      misconception: "A common mix-up is using theirselves. It sounds right, but the correct word is themselves."
+    },
+    "SK-GUM3-6-P5": {
+      hints: [
+        "The first blank points back to Nia. The second blank points back to her parents. Count how many people each one is.",
+        "Find who did the action in each part. Then pick the word that points back to that same person or group.",
+        "Himself is for a boy, and Nia is a girl. Decide the rest."
+      ],
+      how: [
+        "Nia is one girl, so the first blank needs the word for one girl.",
+        "Her parents are more than one person, so the second blank needs a word that ends in -selves.",
+        "The answers are herself and themselves. Theirselves is not a correct word."
+      ],
+      misconception: "A common mix-up is picking theirselves because it sounds right. The correct word is themselves."
+    }
+  },
+  /* B6:core:end */
   test: [
     { id: "SK-GUM3-6-T1", type: "mc", points: 1, dok: 1, passages: [],
       prompt: "Which word correctly completes the sentence?",

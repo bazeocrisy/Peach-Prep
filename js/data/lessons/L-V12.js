@@ -3882,7 +3882,7 @@ PP.addLesson({
                 correct: true
               },
               {
-                text: "butterfly"
+                text: "story"
               },
               {
                 text: "assembly"
@@ -3900,10 +3900,10 @@ PP.addLesson({
             how: [
               "Cover -ful in tearful. Tear is left, so tearful means full of tears.",
               "Cover -less in sleepless. Sleep is left, so sleepless means without sleep.",
-              "In butterfly, assembly and family, covering the ending leaves letters that are not words."
+              "In story, assembly and family, covering the ending leaves letters that are not words."
             ],
             misconception: "A common mix-up is choosing words because the ending looks like a suffix. A real suffix leaves a real word.",
-            why: "The answers are \"tearful\" and \"sleepless.\" Cover -ful and tear is left. Cover -less and sleep is left. Butterfly, assembly and family end in letters that look like suffixes, but nothing real is left over when you cover them."
+            why: "The answers are \"tearful\" and \"sleepless.\" Cover -ful and tear is left. Cover -less and sleep is left. Story, assembly and family end in letters that look like suffixes, but nothing real is left over when you cover them."
           },
           {
             id: "SK-V2a-C10",
@@ -4477,7 +4477,7 @@ PP.addLesson({
           correct: true
         },
         {
-          text: "unicorn"
+          text: "under"
         },
         {
           text: "restaurant"
@@ -4495,10 +4495,10 @@ PP.addLesson({
       how: [
         "Cover un- in unlucky. Lucky is left, so unlucky means not lucky.",
         "Cover re- in refold. Fold is left, so refold means fold again.",
-        "In unicorn, restaurant and mister, the letters left over are not words that fit."
+        "In under, restaurant and mister, the letters left over are not words that fit."
       ],
       misconception: "A common mix-up is choosing words because the start looks like a prefix. A real prefix leaves a real word.",
-      why: "The answers are \"unlucky\" and \"refold.\" Cover un- and lucky is left. Cover re- and fold is left. Unicorn, restaurant and mister start with letters that look like prefixes, but the letters left over are not words that fit."
+      why: "The answers are \"unlucky\" and \"refold.\" Cover un- and lucky is left. Cover re- and fold is left. Under, restaurant and mister start with letters that look like prefixes, but the letters left over are not words that fit."
     },
     {
       id: "SK-V2a-S08",
@@ -4570,10 +4570,10 @@ PP.addLesson({
           text: "pony"
         },
         {
-          text: "monopoly"
+          text: "history"
         },
         {
-          text: "strawberry"
+          text: "plenty"
         }
       ],
       clue: "Cover the ending of each word. If a whole word is left, the ending may be a suffix.",
@@ -4585,10 +4585,10 @@ PP.addLesson({
       how: [
         "Cover -ful in painful. Pain is left, so painful means full of pain.",
         "Cover -less in hopeless. Hope is left, so hopeless means without hope.",
-        "In pony, monopoly and strawberry, covering the ending leaves letters that are not words."
+        "In pony, history and plenty, covering the ending leaves letters that are not words."
       ],
       misconception: "A common mix-up is choosing words because the ending looks like a suffix. A real suffix leaves a real word.",
-      why: "The answers are \"painful\" and \"hopeless.\" Cover -ful and pain is left. Cover -less and hope is left. Pony, monopoly and strawberry end in letters that look like suffixes, but no real word is left."
+      why: "The answers are \"painful\" and \"hopeless.\" Cover -ful and pain is left. Cover -less and hope is left. Pony, history and plenty end in letters that look like suffixes, but no real word is left."
     },
     {
       id: "SK-V2a-S10",
@@ -6764,7 +6764,7 @@ PP.addLesson({
       },
       {
         label: "Example: one root",
-        lines: ["Port means carry.", "port + able = portable (can be carried)", "re + port = report (to carry news back)", "ex + port = export (to carry things out to sell in another country)", "Look-alike: airport. Here port means a harbor for planes, not carry."],
+        lines: ["Port means carry.", "im + port = import (to carry goods in from another country)", "re + port = report (to carry news back)", "ex + port = export (to carry things out to sell in another country)", "Look-alike: airport. Here port means a harbor for planes, not carry."],
         note: "Every word built on the root port has something to do with carrying. If carry does not fit the meaning, the letters port are a look-alike."
       }
     ],
@@ -6829,7 +6829,7 @@ PP.addLesson({
           "Then we restacked them by the door, with the heavy ones on the bottom."
         ],
         [
-          "Dad counted the paint cans, but he miscounted, so he began again.",
+          "Dad counted the paint cans, but he got the number wrong, so he began again.",
           "We worked busily until the sun was high."
         ],
         [
