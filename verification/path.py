@@ -40,6 +40,9 @@ try:
     # the numbers come from the data (lessons registered in the catalog, tasks in the manifest, practice codes in the matrix), so they do not rot as lessons are added
     exp=q.evaluate("(()=>({lessons:Object.keys(PP.lessons).length,tasks:(PP.tasks||[]).length,entries:PP_PATH.entries().length}))()")
     n_hab=len({r['code'] for r in matrix if r['domain']=='Practices'})
+    mkeys={k.strip() for r in matrix if r['domain']!='Practices' for k in r['lesson_keys'].split(';') if k.strip()}
+    check(f'{w}: floors, so a lesson file that failed to load cannot shrink the expected counts: at least {len(mkeys)} lessons (every matrix lesson key), 2 tasks, and as many entries as lessons plus tasks',
+          exp['lessons']>=len(mkeys) and exp['tasks']>=2 and exp['entries']>=exp['lessons']+exp['tasks'] and n_hab>=1, (exp,len(mkeys)))
     check(f"{w}: every activity (one for each lesson and task) appears once on the path ({exp['lessons']} lessons + {exp['tasks']} tasks)",q.evaluate("(()=>{const ks=PP_PATH.entries();return ks.length===PP.activityCount && new Set(ks).size===ks.length;})()".replace('PP.activityCount',str(exp['lessons']+exp['tasks']))),exp)
     check(f'{w}: catalog and routine counts',q.evaluate("(()=>{const ks=PP_PATH.entries();return ks.filter(k=>!k.startsWith('task:')).length===%d && document.querySelectorAll('#path-phase-habits input[type=checkbox]').length===%d;})()"%(exp['lessons'],n_hab)),exp)
     mapping=q.evaluate("({entries:PP_PATH.entries(),habits:[...document.querySelectorAll('#path-phase-habits input')].map(i=>i.dataset.pathCode)})")

@@ -1798,16 +1798,16 @@ PP.addLesson({
           "(1) The chess club needs new players for the spring season.",
           "(2) Ms. Vega keeps the sign-up sheet by the library door.",
           "(3) Last week, Devin put a name on the list and drew a smiling knight.",
-          "(4) Next to him, a eighth grader wrote an email address."
+          "(4) Next to him, a eighth grader wrote a long email address."
         ],
         [
-          "(5) Over by the window, those chessboard waits for the first game.",
+          "(5) Way up on the shelf, those chessboard waits for the first game.",
           "(6) Right here beside me, these pieces are made of smooth wood.",
           "(7) The club holds its meetings after school on Wednesdays."
         ],
         [
           "(8) Every player carries his or her own pencil and notebook.",
-          "(9) A friendly game can last an hour or more.",
+          "(9) Winning an honor is nice, but fun matters more.",
           "(10) Come join our club and learn some clever moves."
         ]
       ]
@@ -1845,8 +1845,8 @@ PP.addLesson({
         [
           "(1) Our class went to a fossil dig on the edge of town.",
           "(2) A guide gave every student a brush and a small shovel.",
-          "(3) Near my knee, those tiny shell was buried in the gray dirt.",
-          "(4) Beside the fence, these tall pile of rocks hid a surprise."
+          "(3) By my left boot, those tiny shell lay in the gray dirt.",
+          "(4) Under the oak, this heavy rocks hid a surprise."
         ],
         [
           "(5) Mia held an ancient tooth in her palm and gasped.",
@@ -2120,13 +2120,13 @@ PP.addLesson({
                   "correct": true
                 },
                 {
-                  "text": "It is a pointing word, so it should be this."
+                  "text": "It is a pointing word, so it should be this one."
                 },
                 {
-                  "text": "It is an article, so it should be a."
+                  "text": "It is an article, so it should be a or an."
                 },
                 {
-                  "text": "It is a name, so it should be Crab."
+                  "text": "It is a name, so it should be the crab."
                 }
               ]
             },
@@ -2231,7 +2231,7 @@ PP.addLesson({
                 "text": "a elephant"
               },
               {
-                "text": "an turtle"
+                "text": "an butterfly"
               },
               {
                 "text": "a insect"
@@ -2245,11 +2245,11 @@ PP.addLesson({
             ],
             "how": [
               "Say the second word of each phrase and listen to its first sound.",
-              "Elephant begins with a vowel sound, so it takes an. Turtle begins with a consonant sound, so it takes a.",
+              "Elephant begins with a vowel sound, so it takes an. Butterfly begins with a consonant sound, so it takes a.",
               "The answer is an elephant. Insect begins with a vowel sound, so it needs an."
             ],
             "misconception": "A common mix-up is guessing from how the phrase looks. Say it aloud and listen for the first sound.",
-            "why": "The answer is an elephant. Elephant begins with a vowel sound, so it takes an. Turtle begins with a consonant sound, so an turtle is wrong, and insect begins with a vowel sound, so a insect is wrong.",
+            "why": "The answer is an elephant. Elephant begins with a vowel sound, so it takes an. Butterfly begins with a consonant sound, so an butterfly is wrong, and insect begins with a vowel sound, so a insect is wrong.",
             "like": [
               "SK-GUM2-2-S09"
             ]
@@ -2268,17 +2268,17 @@ PP.addLesson({
             "prompt": "A student asks why sentence 5 says those two sea stars instead of these two sea stars. Which explanation is correct?",
             "choices": [
               {
-                "text": "The sea stars are far away, and those is the pointing word for more than one far thing.",
+                "text": "The sea stars are far away, and those is for more than one far thing.",
                 "correct": true
               },
               {
-                "text": "The sea stars are far away, and those is the pointing word for one far thing."
+                "text": "The sea stars are far away, and those is for just one far thing."
               },
               {
-                "text": "The sea stars are far away, and these is the pointing word for far things."
+                "text": "The sea stars are far away, and these is the word for things that are far."
               },
               {
-                "text": "The sea stars are close, and those is the pointing word for close things."
+                "text": "The sea stars are close by, and those is the word for things that are close."
               }
             ],
             "clue": "A pointing word shows two things: how many there are and how far away they are. Check both in sentence 5.",
@@ -2290,10 +2290,10 @@ PP.addLesson({
             "how": [
               "Out by the waves is far from the speaker, so the pointing word must be for far away things.",
               "Two sea stars is more than one, so the pointing word must be a plural one.",
-              "The answer is \"The sea stars are far away, and those is the pointing word for more than one far thing.\" These is for close things."
+              "The answer is \"The sea stars are far away, and those is for more than one far thing.\" These is for close things."
             ],
             "misconception": "A common mix-up is thinking those and these both mean far. These is for close things and those is for far things.",
-            "why": "The answer is \"The sea stars are far away, and those is the pointing word for more than one far thing.\" Out by the waves is far away and two sea stars is more than one, so those fits. These points to close things.",
+            "why": "The answer is \"The sea stars are far away, and those is for more than one far thing.\" Out by the waves is far away and two sea stars is more than one, so those fits. These points to close things.",
             "like": [
               "SK-GUM2-2-S10"
             ]
@@ -2563,11 +2563,11 @@ PP.addLesson({
         "3.L.GC.1:R:use-determiners-articles-possessive-and-demonstr"
       ],
       "passages": [],
-      "prompt": "Read each small word. What job does it do before a noun? Sort each one.",
+      "prompt": "Decide how each word helps a noun, then place it in a column.",
       "cols": [
-        "Article",
-        "Pointing word",
-        "Owning word"
+        "Plain article",
+        "Shows near or far",
+        "Shows the owner"
       ],
       "rows": [
         {
@@ -2591,23 +2591,23 @@ PP.addLesson({
           "answer": 2
         },
         {
-          "text": "an",
-          "answer": 0
+          "text": "your",
+          "answer": 2
         }
       ],
-      "clue": "Ask whether the word tells which one, tells whose it is, or only marks a noun.",
+      "clue": "Ask whether the word only marks a noun, tells how far away it is, or tells who has it.",
       "hints": [
-        "Ask whether the word tells which one, tells whose it is, or only marks a noun.",
-        "Say the word before a noun, such as ___ dog. Decide whether it points, shows owning, or is a plain article.",
-        "There are only three articles. Think about which of the words belong to them."
+        "Ask whether the word only marks a noun, tells how far away it is, or tells who has it.",
+        "Say the word before a noun, such as ___ dog. Decide which job it does.",
+        "There are only three articles, and only one of them is in this list. Think about which word it is."
       ],
       "how": [
         "Think of a noun to go with each word.",
-        "A and an are articles. That and these point to things. Her and its tell who owns something.",
-        "Sort each word into the job it does."
+        "A is the article. That and these show near or far. Her, its and your show the owner.",
+        "Place each word in the column for its job."
       ],
-      "misconception": "A common mix-up is thinking its is the same as it's. Its shows owning and is an owning word.",
-      "why": "A and an are articles. That and these are pointing words. Her and its are owning words.",
+      "misconception": "A common mix-up is thinking its is the same as it's. Its shows an owner and has no apostrophe.",
+      "why": "A is an article. That and these show near or far. Her, its and your show the owner.",
       "like": [
         "SK-GUM2-2-P5"
       ]
@@ -2623,35 +2623,35 @@ PP.addLesson({
       "passages": [
         "p4"
       ],
-      "prompt": "Sentence 4 has a mistake in the small word before eighth grader. Which explanation is correct?",
+      "prompt": "Pick the rewrite of sentence 4 that has no mistake with a or an.",
       "choices": [
         {
-          "text": "Eighth begins with a vowel sound, so the small word should be an.",
+          "text": "Next to him, an eighth grader wrote a long email address.",
           "correct": true
         },
         {
-          "text": "Grader begins with a consonant sound, so the small word should be the."
+          "text": "Next to him, a eighth grader wrote a long email address."
         },
         {
-          "text": "Eighth grader names two students, so the small word should be those."
+          "text": "Next to him, an eighth grader wrote an long email address."
         },
         {
-          "text": "Next to him is a place, so the small word should be his."
+          "text": "Next to him, a eighth grader wrote an long email address."
         }
       ],
-      "clue": "The small word a or an depends on the sound that comes right after it. Find that sound in sentence 4.",
+      "clue": "Say the word that follows each a or an and listen to its first sound. Sentence 4 has two places to check.",
       "hints": [
-        "The small word a or an depends on the sound that comes right after it. Find that sound in sentence 4.",
-        "Read the words just after the small word in sentence 4. Say them aloud and listen to how the first one begins.",
-        "Think about which word comes right after the small word. Think about the other choices."
+        "Say the word that follows each a or an and listen to its first sound. Sentence 4 has two places to check.",
+        "Check the small word before eighth, and then the small word before long.",
+        "Long begins with a consonant sound. Think about the other choices."
       ],
       "how": [
-        "Sentence 4 says a eighth grader.",
-        "Say eighth aloud. It begins with a long a sound, which is a vowel sound, so it takes an.",
-        "The answer is \"Eighth begins with a vowel sound, so the small word should be an.\" The others look at the wrong word or change the meaning."
+        "Sentence 4 has two small words, one before eighth and one before long.",
+        "Eighth begins with a vowel sound, so it needs an. Long begins with a consonant sound, so it keeps a.",
+        "The answer is \"Next to him, an eighth grader wrote a long email address.\" The other choices keep a before eighth or use an before long."
       ],
-      "misconception": "A common mix-up is checking the second word, grader, instead of the word right after the small word.",
-      "why": "The answer is \"Eighth begins with a vowel sound, so the small word should be an.\" Use an before a vowel sound. Eighth grader is one student, so those does not fit.",
+      "misconception": "A common mix-up is fixing one small word and then changing the one that was already right. Check every a and an.",
+      "why": "The answer is \"Next to him, an eighth grader wrote a long email address.\" Eighth begins with a vowel sound, so it needs an, and long begins with a consonant sound, so it keeps a. Each other choice leaves one small word wrong.",
       "like": [
         "SK-GUM2-2-C03"
       ]
@@ -2667,31 +2667,31 @@ PP.addLesson({
       "passages": [
         "p4"
       ],
-      "prompt": "Sentence 5 uses the wrong pointing word. Pick the one that repairs it.",
-      "text": "Over by the window, {0} chessboard waits for the first game.",
+      "prompt": "Which word belongs in the blank so the sentence points correctly?",
+      "text": "Way up on the shelf, {0} chessboard waits for the first game.",
       "slots": [
         {
           "options": [
             "these",
-            "that",
-            "those"
+            "this",
+            "that"
           ],
-          "answer": 1
+          "answer": 2
         }
       ],
       "clue": "A pointing word has to match how many things there are and how far away they are.",
       "hints": [
         "A pointing word has to match how many things there are and how far away they are.",
-        "Count the chessboards. Then look at the place named at the start of the sentence.",
-        "These is a pointing word for close things. Think about the other two choices."
+        "Count the chessboards. Then look at the place named at the start of the sentence and decide whether it is close or far.",
+        "These is a pointing word for more than one thing. Think about the other two choices."
       ],
       "how": [
         "Chessboard is one thing, so the pointing word must be for one.",
-        "Over by the window is not close to the speaker, so the word must be for a far thing.",
-        "The answer is that. These and those both go with more than one."
+        "Way up on the shelf is not close to the speaker, so the word must be for a far thing.",
+        "The answer is that. These goes with more than one, and this is for a close thing."
       ],
       "misconception": "A common mix-up is picking a plural pointing word because the board sits among other things. The noun is one board.",
-      "why": "The answer is that. The chessboard is one thing that is far away, so that fits. These and those go with more than one thing.",
+      "why": "The answer is that. The chessboard is one thing that is far away, so that fits. These goes with more than one thing, and this points to something close.",
       "like": [
         "SK-GUM2-2-C04"
       ]
@@ -2707,35 +2707,35 @@ PP.addLesson({
       "passages": [
         "p4"
       ],
-      "prompt": "Sentence 9 uses an before hour. Why does hour take an and not a?",
+      "prompt": "Why does sentence 9 say an honor?",
       "choices": [
         {
-          "text": "Hour begins with a vowel sound because its first letter is silent.",
+          "text": "Honor is said without its first letter, so it starts like the word on.",
           "correct": true
         },
         {
-          "text": "Hour takes an because games that last long need a long word."
+          "text": "Names of prizes always want an in front of them, whatever comes next."
         },
         {
-          "text": "Hour takes an because it names an amount of time."
+          "text": "Nouns with many letters want an in front of them, even when others do not."
         },
         {
-          "text": "Hour takes a, so the sentence is wrong and should say a hour."
+          "text": "Winning ends with the letter g, and that calls for an in front of honor."
         }
       ],
-      "clue": "Listen to the word, do not only read it. A or an depends on the sound that begins the next word.",
+      "clue": "Say the noun out loud and pay attention to how it starts. A or an depends on what you hear.",
       "hints": [
-        "Listen to the word, do not only read it. A or an depends on the sound that begins the next word.",
-        "Say hour out loud. Notice what your mouth does at the very beginning.",
-        "Many words that name time begin with a consonant sound, like day and week. Think about the other choices."
+        "Say the noun out loud and pay attention to how it starts. A or an depends on what you hear.",
+        "Say honor slowly. Notice whether you hear a breathy h at the very beginning.",
+        "Words like help and home start with the same letter but take a. Think about the other choices."
       ],
       "how": [
-        "Say hour. It sounds like OW-er, with no h sound.",
-        "A word that begins with a vowel sound takes an.",
-        "The answer is \"Hour begins with a vowel sound because its first letter is silent.\" The sound decides, not the idea of time."
+        "Say honor. You hear ON-er, with no h at the start.",
+        "A word that starts with a vowel sound takes an.",
+        "The answer is \"Honor is said without its first letter, so it starts like the word on.\" Words like home sound the h, so they take a."
       ],
-      "misconception": "A common mix-up is thinking an goes with certain meanings. It goes with vowel sounds.",
-      "why": "The answer is \"Hour begins with a vowel sound because its first letter is silent.\" The choice between a and an depends on sound. Hour sounds like it begins with a vowel, so it takes an.",
+      "misconception": "A common mix-up is thinking an goes with certain meanings or lengths. It goes with a vowel sound.",
+      "why": "The answer is \"Honor is said without its first letter, so it starts like the word on.\" The choice depends on sound, not spelling or meaning. A word with a sounded h, like home, takes a.",
       "like": [
         "SK-GUM2-2-C05"
       ]
@@ -2751,7 +2751,7 @@ PP.addLesson({
       "passages": [
         "p5"
       ],
-      "prompt": "Look at sentences 2 through 6. Mark the TWO sentences in which a small word does not suit its noun.",
+      "prompt": "Two of sentences 2 to 6 contain a small word that does not suit its noun. Tap them.",
       "targets": [
         "p5:1:2",
         "p5:1:3",
@@ -2772,11 +2772,11 @@ PP.addLesson({
       ],
       "how": [
         "Test each small word with its noun, one sentence at a time.",
-        "Sentence 3 says a umbrella, but umbrella begins with a vowel sound. Sentence 4 says that tools, but tools is more than one.",
+        "Sentence 3 says a old hat, but old begins with a vowel sound. Sentence 4 says that tools, but tools is more than one.",
         "Sentences 2, 5 and 6 are fine."
       ],
       "misconception": "A common mix-up is stopping after the first mistake you find. Check every sentence in the range.",
-      "why": "The answers are \"My brother brought a ladder and a umbrella to block the sun.\" and \"Down by the garden, that tools lay in a heap on the grass.\" Umbrella needs an, and that goes with one thing, not tools. Sentences 2, 5 and 6 are correct.",
+      "why": "The answers are \"My brother brought a ladder and a old hat to block the sun.\" and \"Down by the garden, that tools lay in a heap on the grass.\" Old needs an, and that goes with one thing, not tools. Sentences 2, 5 and 6 are correct.",
       "like": [
         "SK-GUM2-2-C06"
       ]
@@ -2792,27 +2792,27 @@ PP.addLesson({
       "passages": [
         "p5"
       ],
-      "prompt": "Answer the first question, then the second.",
+      "prompt": "Work out the first half, then use it for the second half.",
       "partA": {
-        "prompt": "What is wrong with the word before paw in sentence 8?",
+        "prompt": "What kind of word does sentence 8 need before paw?",
         "choices": [
           {
-            "text": "It is not an owning word, so it should be its.",
+            "text": "A word showing who has the paw, because the paw is the cat's.",
             "correct": true
           },
           {
-            "text": "It is a pointing word, so it should be that."
+            "text": "A word showing how far away the paw is, because the cat is across the room."
           },
           {
-            "text": "It is an article, so it should be an."
+            "text": "A word that follows a sound rule, because paw begins with a consonant sound."
           },
           {
-            "text": "It is a verb, so it should be licks."
+            "text": "A word telling the kind of animal, because cat is not specific enough."
           }
         ]
       },
       "partB": {
-        "prompt": "Which version of sentence 8 is correct?",
+        "prompt": "Which version of sentence 8 is written correctly?",
         "choices": [
           {
             "text": "The cat licked its paw and walked through the wet paint.",
@@ -2825,23 +2825,23 @@ PP.addLesson({
             "text": "The cat licked itself paw and walked through the wet paint."
           },
           {
-            "text": "The cat licked them paw and walked through the wet paint."
+            "text": "The cat licked it paw and walked through the wet paint."
           }
         ]
       },
-      "clue": "Find the word before paw in sentence 8. Ask what job it should do.",
+      "clue": "Find the word before paw in sentence 8. Ask what job that spot needs done.",
       "hints": [
-        "Find the word before paw in sentence 8. Ask what job it should do.",
-        "In the first question, decide what the word before paw should tell. In the second, check each version for an owning word that is spelled right.",
-        "In the second question, one version puts an apostrophe in the owning word. Think about whether it belongs."
+        "Find the word before paw in sentence 8. Ask what job that spot needs done.",
+        "In the first half, decide what the spot before paw should tell. In the second, check each version for an owning word that is spelled right.",
+        "In the second half, one version puts an apostrophe in the owning word. Think about whether it belongs."
       ],
       "how": [
-        "Part A: the paw belongs to the cat, so the word before paw must show owning.",
+        "Part A: the paw belongs to the cat, so the spot needs a word that shows who has it.",
         "Part B: its is the owning word for one animal, and it has no apostrophe.",
-        "The answers are \"It is not an owning word, so it should be its.\" and \"The cat licked its paw and walked through the wet paint.\""
+        "The answers are \"A word showing who has the paw, because the paw is the cat's.\" and \"The cat licked its paw and walked through the wet paint.\""
       ],
       "misconception": "A common mix-up is adding an apostrophe to its. The apostrophe form it's means it is.",
-      "why": "Part A: \"It is not an owning word, so it should be its.\" Part B: \"The cat licked its paw and walked through the wet paint.\" Its shows the paw belongs to the cat and takes no apostrophe.",
+      "why": "Part A: \"A word showing who has the paw, because the paw is the cat's.\" Part B: \"The cat licked its paw and walked through the wet paint.\" Its shows the paw belongs to the cat and takes no apostrophe.",
       "like": [
         "SK-GUM2-2-C07"
       ]
@@ -2855,7 +2855,7 @@ PP.addLesson({
         "3.L.GC.1:R:use-determiners-articles-possessive-and-demonstr"
       ],
       "passages": [],
-      "prompt": "Pick the TWO phrases in which a or an is used correctly.",
+      "prompt": "Tap both phrases where the small word suits the sound of the next word.",
       "pick": 2,
       "choices": [
         {
@@ -2876,9 +2876,9 @@ PP.addLesson({
           "text": "a ant on the leaf"
         }
       ],
-      "clue": "Say the word after a or an and listen to how it begins. Compare the sound with the small word.",
+      "clue": "Say the word after each a or an and listen to how it begins. Compare the sound with the small word.",
       "hints": [
-        "Say the word after a or an and listen to how it begins. Compare the sound with the small word.",
+        "Say the word after each a or an and listen to how it begins. Compare the sound with the small word.",
         "Check all five phrases, including the ones that look right. Go by the sound that follows, not the first letter.",
         "Two of the five begin with a vowel letter but not a vowel sound, or the reverse. Think about which ones."
       ],
@@ -2902,7 +2902,7 @@ PP.addLesson({
         "3.L.GC.1:R:use-determiners-articles-possessive-and-demonstr"
       ],
       "passages": [],
-      "prompt": "Pick the phrase that is spelled and written correctly.",
+      "prompt": "Karen is writing a label for each box in the attic. Which label has the small word and the noun matched correctly?",
       "choices": [
         {
           "text": "an ocean",
@@ -2918,18 +2918,18 @@ PP.addLesson({
           "text": "a island"
         }
       ],
-      "clue": "Say each phrase out loud and listen to how the second word begins.",
+      "clue": "Say each label out loud and listen to how the second word begins.",
       "hints": [
-        "Say each phrase out loud and listen to how the second word begins.",
+        "Say each label out loud and listen to how the second word begins.",
         "Listen to the first sound of the second word each time. Then decide which small word fits that sound.",
         "A word that begins with a consonant sound takes a. Think about the other choices."
       ],
       "how": [
-        "Say the second word of each phrase and listen to its first sound.",
+        "Say the second word of each label and listen to its first sound.",
         "Ocean begins with a vowel sound, so it takes an. River begins with a consonant sound, so it takes a.",
         "The answer is an ocean. Island begins with a vowel sound, so it needs an."
       ],
-      "misconception": "A common mix-up is guessing from how the phrase looks. Say it and listen.",
+      "misconception": "A common mix-up is guessing from how the label looks. Say it and listen.",
       "why": "The answer is an ocean. Ocean begins with a vowel sound, so it takes an. River begins with a consonant sound, so an river is wrong, and island begins with a vowel sound, so a island is wrong.",
       "like": [
         "SK-GUM2-2-C09"
@@ -2946,35 +2946,35 @@ PP.addLesson({
       "passages": [
         "p5"
       ],
-      "prompt": "Why does sentence 5 say these brushes and not those brushes?",
+      "prompt": "Which two clues in sentence 5 lead to the word these?",
       "choices": [
         {
-          "text": "The brushes are next to the speaker, and these is the pointing word for more than one close thing.",
+          "text": "The place is near me, and brushes names many.",
           "correct": true
         },
         {
-          "text": "The brushes are next to the speaker, and these is the pointing word for one close thing."
+          "text": "The place is near me, and brushes names just one."
         },
         {
-          "text": "The brushes are next to the speaker, and those is the pointing word for close things."
+          "text": "The place is across the yard, and brushes names many."
         },
         {
-          "text": "The brushes are down the hill, and these is the pointing word for far things."
+          "text": "The verb dripped is in the past, and brushes names many."
         }
       ],
-      "clue": "A pointing word shows how many there are and how near they are. Find clues to both in sentence 5.",
+      "clue": "A pointing word reacts to two clues. Find one clue about the place and one about the number.",
       "hints": [
-        "A pointing word shows how many there are and how near they are. Find clues to both in sentence 5.",
-        "Look at the words at the start of sentence 5 that tell where the brushes are. Then think about whether brushes means one or more.",
-        "These can never go with just one thing. Think about the other choices."
+        "A pointing word reacts to two clues. Find one clue about the place and one about the number.",
+        "Look at the words at the start of sentence 5 and at the noun that follows the blank. Decide what each one tells you.",
+        "Dripped is a verb, and a pointing word does not depend on the verb. Think about the other choices."
       ],
       "how": [
-        "Next to me is close, so the pointing word must be for close things.",
-        "Brushes is more than one, so the pointing word must be a plural one.",
-        "The answer is \"The brushes are next to the speaker, and these is the pointing word for more than one close thing.\" Those is for far things."
+        "The words at the start of sentence 5 tell where the brushes are: next to the speaker.",
+        "Brushes ends in -es, so it names more than one thing. These is the pointing word for more than one close thing.",
+        "The answer is \"The place is near me, and brushes names many.\""
       ],
-      "misconception": "A common mix-up is thinking those and these both mean close. Those is for far things.",
-      "why": "The answer is \"The brushes are next to the speaker, and these is the pointing word for more than one close thing.\" Brushes is more than one and they are next to the speaker, so these fits. Those points to far things.",
+      "misconception": "A common mix-up is thinking a plural pointing word always means far. These means close.",
+      "why": "The answer is \"The place is near me, and brushes names many.\" Next to me is near and brushes is more than one, so these fits. A far place would call for those, and one thing would call for this or that.",
       "like": [
         "SK-GUM2-2-C10"
       ]
@@ -2990,7 +2990,7 @@ PP.addLesson({
       "passages": [
         "p6"
       ],
-      "prompt": "Which TWO listed sentences use a pointing word that matches how many and how far?",
+      "prompt": "Which two listed lines choose their pointing word correctly?",
       "targets": [
         "p6:1:3",
         "p6:1:4",
@@ -3012,7 +3012,7 @@ PP.addLesson({
       "how": [
         "Check the noun's number and the thing's distance in each listed sentence.",
         "Out past the trees is far, and crew is one group, so that fits. Close to us is near, and boxes is more than one, so these fits.",
-        "Those tiny shell, these tall pile and that fossils each have a number that does not fit the noun."
+        "Those tiny shell, this heavy rocks and that fossils each have a number that does not fit the noun."
       ],
       "misconception": "A common mix-up is checking only the number or only the distance. A pointing word has to fit both.",
       "why": "The answers are \"Out past the trees, that digging crew worked on a huge bone.\" and \"Close to us, these boxes held a dozen more fossils.\" Each pointing word fits the number and the distance. The other three have a pointing word that does not fit the noun.",
@@ -3031,7 +3031,7 @@ PP.addLesson({
       "passages": [
         "p5"
       ],
-      "prompt": "Sentence 9 uses the wrong kind of word before brushes. Pick the owning word that repairs it.",
+      "prompt": "In sentence 9, the word before brushes cannot show owning. Which choice can?",
       "text": "Gran washed {0} brushes at the sink with an old rag.",
       "slots": [
         {
@@ -3069,8 +3069,8 @@ PP.addLesson({
         "3.L.GC.1:R:use-determiners-articles-possessive-and-demonstr"
       ],
       "passages": [],
-      "prompt": "Choose the right word for each gap.",
-      "text": "I need {0} extra minute to finish, so please keep {1} seat for me.",
+      "prompt": "Fill each gap with the best small word.",
+      "text": "Dana asked for {0} extra minute, and Pablo handed over {1} stopwatch.",
       "slots": [
         {
           "options": [
@@ -3082,26 +3082,26 @@ PP.addLesson({
         },
         {
           "options": [
-            "my",
-            "me",
-            "mine"
+            "him",
+            "his",
+            "he"
           ],
-          "answer": 0
+          "answer": 1
         }
       ],
       "clue": "Each gap needs a different kind of small word. One is chosen by a sound, and the other tells who owns something.",
       "hints": [
         "Each gap needs a different kind of small word. One is chosen by a sound, and the other tells who owns something.",
-        "For the first gap, say the word after it aloud and listen. For the second gap, ask whose seat it is.",
-        "Me and mine do not go before a noun like seat. Use that to check the second gap."
+        "For the first gap, say the word after it aloud and listen. For the second gap, ask whose stopwatch it is.",
+        "He and him do not go before a noun like stopwatch. Use that to check the second gap."
       ],
       "how": [
         "The first gap comes before extra. Extra begins with a vowel sound, so it takes an.",
-        "The second gap comes before seat and tells whose seat it is. My is the owning word that goes before a noun.",
-        "The answers are an and my."
+        "The second gap comes before stopwatch and tells whose it is. His is the owning word that goes before a noun.",
+        "The answers are an and his."
       ],
-      "misconception": "A common mix-up is choosing me because it names the speaker. Before a noun, the owning word is my.",
-      "why": "The answers are an and my. Extra begins with a vowel sound, so it takes an. My is the owning word that goes before seat. That cannot go with one extra minute, and me and mine do not go before a noun.",
+      "misconception": "A common mix-up is choosing him because Pablo is a person. Before a noun, the owning word is his.",
+      "why": "The answers are an and his. Extra begins with a vowel sound, so it takes an. His is the owning word that goes before stopwatch. That cannot go with one extra minute, and he and him do not go before a noun.",
       "like": [
         "SK-GUM2-2-C13"
       ]
@@ -3115,7 +3115,7 @@ PP.addLesson({
         "3.L.GC.1:R:use-determiners-articles-possessive-and-demonstr"
       ],
       "passages": [],
-      "prompt": "Which sentence has a mistake with an owning word?",
+      "prompt": "Tap the line where the word before the noun cannot show owning.",
       "options": [
         "The cow swished its tail at the flies.",
         "Rosa tied him shoes before the race.",
@@ -3130,7 +3130,7 @@ PP.addLesson({
       "clue": "An owning word goes before a noun and tells whose it is. Check each one.",
       "hints": [
         "An owning word goes before a noun and tells whose it is. Check each one.",
-        "Find the word before each noun that tells who owns it. Ask whether it fits the person or thing that owns it.",
+        "Find the word before each noun that tells who owns it. Ask whether it can do that job.",
         "The sentence about the cow uses an owning word for an animal, and it is fine. Think about the rest."
       ],
       "how": [
@@ -3153,30 +3153,30 @@ PP.addLesson({
         "3.L.GC.1:R:use-determiners-articles-possessive-and-demonstr"
       ],
       "passages": [],
-      "prompt": "Ty says, \"The word a never goes before a word that begins with a vowel letter.\" Which phrase shows that Ty is wrong?",
+      "prompt": "Ty thinks a can never be followed by a word that starts with a, e, i, o or u. Which phrase proves him wrong?",
       "choices": [
         {
           "text": "a one-day trip to the lake",
           "correct": true
         },
         {
-          "text": "a big yellow bus"
+          "text": "a big yellow bus for the team"
         },
         {
-          "text": "a cold glass of milk"
+          "text": "a cold glass of milk at lunch"
         },
         {
-          "text": "a noisy crowd of fans"
+          "text": "a noisy crowd of fans on the hill"
         }
       ],
-      "clue": "To show a rule is wrong, find an example that breaks it. Think about the sounds that begin the words after a.",
+      "clue": "To show an idea is wrong, find an example that breaks it. Think about the sounds that begin the words after a.",
       "hints": [
-        "To show a rule is wrong, find an example that breaks it. Think about the sounds that begin the words after a.",
+        "To show an idea is wrong, find an example that breaks it. Think about the sounds that begin the words after a.",
         "Look at the first letter of each word after a. Then say the words aloud and listen to how they really begin.",
         "The other phrases begin with consonant letters and consonant sounds. Think about whether they could prove Ty wrong."
       ],
       "how": [
-        "Ty's rule looks at letters only. Look for a word after a that begins with a vowel letter.",
+        "Ty's idea looks at letters only. Look for a word after a that begins with a vowel letter.",
         "Big, cold and noisy begin with consonant letters. One starts with the letter o but sounds like w.",
         "The answer is \"a one-day trip to the lake.\" The word one begins with a w sound, so it takes a."
       ],

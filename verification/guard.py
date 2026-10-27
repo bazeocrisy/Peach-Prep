@@ -903,7 +903,9 @@ with sync_playwright() as p:
     q = page12(1366, 900, False)
     goto12(q)
     K14 = q.evaluate("""(k=>{const eq=x=>!!PP.byId['SK:'+x+':tB']&&PP_SKILLS.hasFormB(x)&&PP.byId['SK:'+x+':t'].items.reduce((a,i)=>a+i.points,0)===PP.byId['SK:'+x+':tB'].items.reduce((a,i)=>a+i.points,0);
-        return eq(k)?k:Object.keys(PP.lessons).find(eq)})(%s)""" % json.dumps(K14))
+        const both=x=>eq(x)&&!!PP.lessons[x].core;
+        return both(k)?k:(Object.keys(PP.lessons).find(both)||(eq(k)?k:Object.keys(PP.lessons).find(eq)))})(%s)""" % json.dumps(K14))
+    print("  (section 14 fixture lesson: %s)" % K14)
     tA, tB = "SK:%s:t" % K14, "SK:%s:tB" % K14
     jk = json.dumps(K14)
     PTS14 = q.evaluate("(k=>PP.byId['SK:'+k+':t'].items.reduce((a,i)=>a+i.points,0))(%s)" % jk)
@@ -911,6 +913,8 @@ with sync_playwright() as p:
     ok("14.0 the fixture lesson has a form B check set (SK:<k>:tB) outside the Practice -> Try -> Test chain; form A and B are worth the same points",
        q.evaluate("(k=>!!PP.byId['SK:'+k+':tB']&&PP_SKILLS.hasFormB(k)&&PP.byId['SK:'+k+':t'].next===null&&PP.byId['SK:'+k+':tB'].next===null&&PP.byId[(PP.lessons[k].core?'SK:'+k+':y3':'SK:'+k+':y')].next.id==='SK:'+k+':t'"
                   "&&PP.byId['SK:'+k+':t'].items.reduce((a,i)=>a+i.points,0)===PP.byId['SK:'+k+':tB'].items.reduce((a,i)=>a+i.points,0))(%s)" % jk))
+    ok("14.0b the fixture lesson has BOTH a form B and a core set, so the form-selection and recovery assertions below run against a lesson with core (try = the third core set), not only a no-core one",
+       q.evaluate("(k=>!!PP.lessons[k].core&&!!PP.byId['SK:'+k+':y3']&&!!PP.byId['SK:'+k+':tB'])(%s)" % jk))
     # 14.1 form selection: first ever -> A; after any attempt -> the other form; a review after a pass -> the form not used for the pass
     seed14(q, None)
     q.evaluate("PP_SKILLS.open(%s,'test')" % jk); card0 = q.text_content("#sk-panel .go-card")
