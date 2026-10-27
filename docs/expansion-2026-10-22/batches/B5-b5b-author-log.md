@@ -61,7 +61,7 @@ None of 3.L.V.1.a to 3.L.V.3.e had a `core` or an accepted/built full lesson, so
 - biography = bios (life) + graphein (write): https://etymologist.ai/word/biography (and the search hit for dictionary.com xylo-)
 - dictate: Latin dicere, to say; first sense "say aloud for someone to write down": https://www.etymonline.com/word/dictate
 - auditorium from audire, to hear: https://www.etymonline.com/word/auditorium
-- aqua (water) and therm (heat) are standard roots; I could not fetch a page for them in this session (etymonline pages for thermos/aquatic were not on the fetch allowlist). A reviewer should confirm with any school dictionary.
+- aqua (water): Latin aquaticus from aqua, water: https://www.etymonline.com/word/aquatic . therm (heat): Greek thermē, heat: https://www.etymonline.com/word/therm . (Confirmed in the second pass; the earlier note asking a reviewer to confirm is closed.) Original wording follows: A reviewer should confirm with any school dictionary.
 - Other word meanings used (decomposers, erosion, perimeter, diameter, friction, residents, participate, etc.) are standard grade-level definitions; not individually fetched.
 
 ## Continuation ledger (not done)
@@ -76,3 +76,22 @@ None of 3.L.V.1.a to 3.L.V.3.e had a `core` or an accepted/built full lesson, so
 
 - docs/expansion-2026-10-22/02-coverage-matrix.csv: last column of 3.L.V.1.a, 1.b, 2.a, 2.b now "AUTHORED (B5 b5b), NEEDS INDEPENDENT REVIEW; B5-b5b-author-log.md; js/data/lessons/L-V12.js. ...". The older "required changes" cells were not edited.
 - batches/STATUS.md: four rows "B5 b5b | <code> | NOT ACCEPTED: awaiting independent review".
+
+## Second pass (after first review, CHANGES REQUIRED)
+
+Gates after the second pass: check-content --all PASS (0 failures); check-writing 0 failures; check-instructional-copy 28 passed; readability all passages FK <= 4.5 (highest 4.0). Passage numbering re-checked on every passage of the four lessons (1.b numbered passages run 1..n with no gaps; the rest are unnumbered). Twin similarity (word-set and multiset, including match columns, ebsr parts and hottext targets): worst twin 1.a 0.205, 1.b 0.207, 2.a 0.198, 2.b 0.200. Longest-key (reviewer metric, lk2.js, single-key mc and ebsr parts across core, practice, similar, test): 1.a 17-18%, 1.b 29%, 2.a 21%, 2.b 24% (chance is about 29%).
+
+### Changed items for the second blind review
+
+- 1.a C10 (Part B key now "Traders gave cloth, pots and even guns for them."; passage p3 paragraph 4 changed to match; the false one-skin-one-blanket claim is gone), 1.a S09 (hints 1-2), 1.a S10 (rebuilt around "Few people ever found one."; Part B distractor is a verbatim passage sentence), 1.a S08 hint 2, 1.a P4 (addon hints 1-2), 1.a distractor lengths in C06, C09, C11, S03A, S04, S11.
+- 1.b C05 (dropdown rebuilt: describe is cued by "shape and color", explain by "why bees help"; third options differ per blank; Teach now defines describe and explain), 1.b C15 and S15 (now 2 points; passage p4 rewritten and renumbered 1-10 with a talk-only line in the middle; hint 2 asks whether a report reader would need each sentence and no longer names the keys), 1.b C09 and S09 (fourth column added; hint 2 states the question to ask instead of listing the three answers), 1.b p5 sentence 4 ("the water near the coast").
+- 2.a C09 and S09 (ms rebuilt; distractors family, ugly, city and puppy, angry, candy leave no real word), 2.a C10 and S10 (hint 3 now "One of the words has two endings and no prefix"; C10 unevenly changed to unfairly), 2.a C13, S06, S11, S13, P6 (hint 2 points to the sentence, no answer-bearing question), 2.a C13 distractors lengthened, 2.a T4 and TB4 (match frames changed to a one-answer mc; no longer P4 re-skins).
+- 2.b C11 (river replaces number), 2.b C14 and S14 (visitor, actor added to passage p4 and to the choices so neighbor is not the only -or choice; S14 adds painter), 2.b C08 and S08 (three suffixed nouns in each blank; blanks asked by base word kind and, for C08, paragraph; S08 stem and text rewritten), 2.b C13 (prompt and columns reworded so it no longer repeats P4), 2.b T2 (now picks the sentence that has an -ly word; no longer P2 re-skinned).
+
+### Not done from the SHOULD tables (open for the reviewer to weigh)
+
+2.a: S03 Part B distractor, P1/Teach pre-answer, C12/S12 stronger distractors, TB1/TB3 overlap with L-VOC-02 items, longest-key margins on C03A, S03B, S11, S14B, TB3B, TB5, P7. 2.b: C03, C04, C09 Part B wording, Teach pre-answers (visitor, excitement), P3 firefighter, S09/S15 wording, hot-text option padding, DOK for C09 and C15. 1.b: optional register Watch Me, longest-key pads P1, S06, S13 (figures now at chance). Version record: check-content warns that 2.a (T4, TB4 keys changed) and 2.b (wording) forms differ from the recorded hash; these lessons are not accepted, so --record-versions was not run.
+
+### Still to build
+
+3.L.V.2.c, 3.L.V.3.a, 3.L.V.3.b (see the continuation ledger above; unchanged).
