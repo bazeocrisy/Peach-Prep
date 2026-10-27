@@ -1062,3 +1062,85 @@ Other checks on 4.b: hint 3 on C03, S03, C05, S05, C08, S08 leaves three of four
 - When a reviewer proposes a replacement word or sentence, scan it against all of js/data before the author uses it: both fourth-review suggestions (the C08 sign and the pillow word) collided with an existing item.
 - A "split into real syllables" criterion fails for any split whose parts are words (pill / ow); use unsayable wrong parts or state the rule.
 - WebFetch reached merriam-webster.com pages directly this session; the allowed_domains workaround was not needed.
+
+---
+
+# Sixth review (post-acceptance edits)
+
+Independent reviewer (did not write or earlier-review). Scope: the edits made after "Accept 3.F.H.3.a (B9 fifth review)" (commit 1e002f4) up to HEAD (f83b611), read from `git diff 1e002f4 HEAD -- js` (read-only). Changed items: 4.b S04; H.3.a T1, C08, C12, S13, S08, C06, S10, and Teach point 3. I did not read the author log before the solve was saved. Working files: scratchpad `b9rev6/`.
+
+## W1. Method and blind solve
+
+- Solve: 8 changed items (T1, C08, C12, S13, S08, C06, S10, 4.b S04) printed from Node with keys, why, hints, how, clue and `correct` stripped and the choices shuffled (seed 777); answers saved to `myans.json` before the keys were extracted. **Agreement 8 of 8.** It was blind to keys and rationales only: the cursive text is stored as plain text in the stem, so a cursive item is a transcription match, not a test of cursive reading. That is why I also ran the hide-the-cursive render below.
+- Changed ids, points, types and keys: T1, C08, C12, S13, S08, C06, S10, S04 all keep the same id, points and key position (diff shows only text changes). `check-content --all` PASS (0 failures, 104 warnings; the only warnings on these two lessons are 4.b C08 and S08 "hint 1 much longer than hint 3"), `check-writing` 0 failures, `check-instructional-copy` 28 passed. I ran them without `--record-versions`; no files were written.
+- Hub (unique medoid by characters and by words), longest key, twin Jaccard (set and multiset, hyphen and slash split) and hint/option word overlap were run by script (`hub.js`, `jac.js`, `hl.js`, `live.js`).
+- Render: 390x844, Chromium, "Try it yourself" and the Skill check, with `.cursive{visibility:hidden}` (`shots/SK-FH3a-C08-hid.png`, `C06-hid`, `S10-hid`, `T1-hid`). No horizontal overflow, the cursive box is the only thing hidden, and no console errors.
+
+## W2. 4.b S04 (puppet)
+
+- Blind: pup / pet and ba / con (correct).
+- Dictionary: https://www.merriam-webster.com/dictionary/puppet gives pup·pet (fetched this session; the Kids entry shows pup-pet-style stress only). Both wrong puppet splits contain an unsayable part: pu / ppet (ppet) and puppe / t (t). The key parts (pup, pet) are both words, so the criterion "parts you can say" separates key from distractors; the pillow problem (a wrong split made of words) is gone.
+- Reuse: scanned js/data for puppet, pup / pet, pu / ppet and puppe: the only syllable use is S04. "puppet" appears in L-GUM3 (a story) and T-RA (a passage) as plain reading text, not as a split. No Teach, learn or Together example in 4.b uses puppet. No other option set repeats.
+- Live choices after hints 1, 2, 3: slot 0 = 3, 3, 3; slot 1 = 3, 3, 3. No hint names a split, pup, pet, or a key-only word (script: none). Hint 3 is the same sentence as C04 hint 3, which is fine.
+- Key vs how/why: how[0] "two consonants, p and p ... pup / pet" is correct; why agrees; how[2] "The other splits leave parts that cannot be said" is true for the puppet slot.
+- Hub: slot 0 key is the unique character-medoid (the middle split; ties at word level). Same shape as the old pillow slot and as C04's ribbon slot; NOTE only.
+- Twin Jaccard S04~C04: all fields 0.154 set / 0.190 multiset (limit 0.21: pass). With the prompt left out it is 0.185 / 0.241, because both items use "x / y" splits; the standard measure passes.
+- Longest key: slot 0 all 9 characters (tie), slot 1 all 8 (tie).
+- Unchanged bacon slot (SHOULD S6-1, below).
+- **Verdict S04: ACCEPT.** The open MUST M5-B1 is closed.
+
+Findings:
+- **SHOULD S6-1 (4.b S04 slot 1, and C04 slot 1, carried).** "bac / on" and "bas / in" are not unsayable: bac is sayable and on, in are words, so the how line "The other splits leave parts that cannot be said" is false for them and the prompt "real syllables" is arguable. The key is still fixed by the long a (ba-con) and by "a word you know", so I do not call it a MUST (two earlier reviews accepted it). Fix when next touched: replace the distractor with an unsayable one, e.g. "b / acon" (S04) and "b / asin" (C04), or change how[2] to "The other splits leave parts that cannot be said, or make the vowel sound wrong." Wording and distractor change only, no testRev.
+- NOTE S6-2. The "hint 1 much longer than hint 3" warning on C08 and S08 stays. Hint 1 is the definition (and the clue), hint 3 is the short, specific scaffold that spends one distractor (tiny, baby). Live choices 4, 4, 3. The ladder is correct; the warning is a length artefact. Optionally shorten hint 1 to "A closed syllable ends with a consonant." (the second sentence is repeated in hint 2).
+
+## W3. 3.F.H.3.a changed items
+
+**T1 (check).** Same id, points 1, DOK 1, type and key (diff). Choices unchanged. Clue now "second word and the word after it". Positions: swing (B, C) = word 2, at (D) = word 3, lane = word 5 (with swing). So the clue sends the reader to the two positions that separate all three distractors, and the old gap (the "at" choice, which the old clue "second and last" did not cover) is closed. why now says swing, at and lane each change one word: true. It does not name key letters. Hub: key ties with the swing-in-the-lake choice (word sumC 7/7), not a unique hub; longest: no. Hide-the-cursive render: four plain sentences, "We swim in the lake" is the most natural, "We swing in the lane" the oddest; the item is a transcription match by design. **ACCEPT.**
+
+**C08 (sign).** "Please hang your coat on the hook." Blind C (correct). Choices: hat/hook, put/coat/hook, hat/shelf. Hidden-cursive render: four sensible signs; only the cursive discriminates (shelf is slightly odd, NOTE). Live choices after hints 1, 2, 3 = 4, 4, 4 (no hint names an option word; h2 and h3 only name the positions). Longest key: tie with the hat-on-the-hook choice (34 vs 34, not unique); word hub: key ties with hat/hook (4 and 4), not unique. Hints, how and why agree (hang, coat, hook). Reuse scan of all js/data: the sentence is not reused in any item; one NOTE below. **ACCEPT with NOTE.**
+- NOTE S6-3. 3.T.T.4.b S01 (js/data/lessons/T-T34.js:3493) has the stanza line "I hang my coat up on the hook," (rhyme with book). Hang, coat and hook are the key's three words, so a child who has done that lesson could answer without reading the cursive. Low risk (different strand, a poem), but it is exactly the earlier reuse fault; "Please hang your scarf on the hook" or another place noun would avoid it.
+- NOTE S6-4. "hang your hat on the shelf" is the one slightly odd sign (you do not hang on a shelf), so why's "All four would make sense" is a small overstatement. "...hat on the door" would be fully sensible.
+
+**C12.** Blind A (correct). Distractors: last-letter-only guess (the longest, 65 characters, so the key is not longest), say-every-letter-then-stop, print it. Live choices 4, 4, 3 (hint 3 rules out print). Key is not a hub (word sumW 32 vs 29-30 for others). Hint 2 now asks "Which of the words around the hard word can Leo already read?": strategy, no option word or key wording. why order (one letter, stop after saying, print) matches the choices. Twin S13~C12: 0.181 set / 0.178 multiset (pass). Teach point 3 now models the key (letters you are sure of, then what makes sense) and skip-ahead. **ACCEPT with NOTE.**
+- NOTE S6-5. "Say every letter of the word out loud, then stop" is the weak distractor (the premise says Leo knows only two letters). It does not give a second answer. Replace if the lesson is reopened.
+
+**S13.** Blind D (correct). Live choices 4, 4, 3 after hints. Keys, how and why agree. **ACCEPT with SHOULD.**
+- **SHOULD S6-6 (S13).** Two of the three distractors are the same wrong idea (copy the scribble over and over; trace over it), so hint 3 ("Tracing over the scribble does not read it") rules out both by the same logic and the child is left with the key and "Choose any word ... whatever its letters". Also "Trace over the scribble in pen and then move on" contains "move on", which Teach point 3 now teaches (skip ahead) and which S08 keys, so the option has a half-right clause. Fix: keep one redraw option and replace the other with a different wrong plan (for example "Pick a word with the same number of letters as the scribble"), and drop "and then move on" from the trace option. Same id, points, key; no testRev.
+
+**S08 (order).** Blind [2, 3, 4, 1] (correct). Steps now: start at the capital letter; read one word at a time; skip ahead if you get stuck; come back with clues from nearby words. Hints 1-3, how and why match the new step 2. Step 2 now matches Teach point 3 word for word, and the added Teach sentence models steps 3 and 4. "Start at the capital letter" is still not stated in Teach (NOTE, trivially first). Twin S08~C07: 0.170 set / 0.132 multiset (pass). **ACCEPT.**
+
+**C06 (slots rabbit/robin/raccoon; tall/long/high).** Blind rabbit, tall (correct). Hidden-cursive render: "A brown ___ hid in the ___ grass" with three sensible words each; slot 0 is answerable by meaning (rabbit is the most natural, unchanged from before and accepted), slot 1 needs the cursive. Slot 1 options are all four letters (tall, long, high): hub none, longest tie. Live choices 3 and 3 through h3 (no hint names an option).
+- **SHOULD S6-7 (C06 how[2]).** "The word before grass has four letters: tall." was a discriminating clue for tall/thick/wet and is now true but does not discriminate (long and high also have four letters). Hint 3 correctly says "look at the middle letters", so how contradicts the method. Fix: "The word before grass has four letters and a double l in the middle: tall." (no testRev).
+- **ACCEPT with SHOULD.**
+
+**S10 (wash/scrub/rinse; cups/bowls/plates).** Blind wash, cups (correct). Hidden-cursive render: all three words of each slot sensible, so only the cursive decides. First letters all differ (w, s, r; c, b, p), so hint 3 ("first letter and the last letter of each answer word") works; no hint names an option. Key not a hub, not longest. why lists the four distractors correctly. **ACCEPT.**
+
+**Teach point 3 (added sentence).** "If you are still stuck, skip ahead, read on, and come back to the word with clues from the words around it." Accurate, grade-appropriate, matches S08 steps 3 and 4 and C12/S13, closing the earlier teach gap (V-H4). It is a long point (about 45 words); `check-writing` passes. **ACCEPT.**
+
+## W4. 4.b C08 and S08 hint 3 (as asked)
+
+Hint 3 names one distractor each (tiny, baby) and states the method, not the key: it does not narrow to one choice (live 4, 4, 3). The only automated warning is length (S6-2, NOTE). The how, why and key are consistent (pocket, winter). **ACCEPT.**
+
+## W5. Per-item verdicts (changed items only)
+
+| Item | Verdict | Finding |
+|---|---|---|
+| 4.b S04 | ACCEPT | M5-B1 closed; SHOULD S6-1 on the bacon slot (carried from C04) |
+| 4.b C08, S08 | ACCEPT | NOTE S6-2 |
+| H.3.a T1 | ACCEPT | none; clue and why now discriminate |
+| H.3.a C08 | ACCEPT | NOTE S6-3 (poem reuse), NOTE S6-4 |
+| H.3.a C12 | ACCEPT | NOTE S6-5 |
+| H.3.a S13 | ACCEPT with SHOULD | S6-6 |
+| H.3.a S08 | ACCEPT | none |
+| H.3.a C06 | ACCEPT with SHOULD | S6-7 |
+| H.3.a S10 | ACCEPT | none |
+| H.3.a Teach point 3 | ACCEPT | none |
+
+No MUST. CHANGES REQUIRED: none. Lesson 3.F.H.3.a stays **ACCEPTED**; lesson 3.F.P.4.b moves from CHANGES REQUIRED to **ACCEPTED** (the S04 MUST is fixed). Recommended before VERIFIED: S6-7 (one how line), S6-6 (one distractor pair), S6-1 (two distractors). All are wording or distractor changes with the same ids, points, types and keys, so no testRev; re-run `check-content.js --all --record-versions` once after them and record the ledger for both lessons.
+
+## W6. Notes for memory
+
+- When a how line states a counting fact ("four letters"), re-check it every time distractors change: a fix to one finding (V-H5) made it non-discriminating.
+- A replacement sentence that passes the js/data item scan can still collide with a poem stanza in another strand (T-T34 S01); scan phrases, not only exact strings.
+- Unsayable-parts criterion: check every slot of the item, not only the slot that changed (bac / on, bas / in).
+- The server started for the render was node verification/serve.js on port 8779 (pid 4831), killed by pid.

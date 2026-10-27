@@ -2710,7 +2710,7 @@ PP.addLesson({
       "prompt": "Why does sentence 9 say an honor?",
       "choices": [
         {
-          "text": "Honor is said without its first letter, so it starts like the word on.",
+          "text": "Honor is spoken without its first letter, much like the word on.",
           "correct": true
         },
         {
@@ -2723,19 +2723,19 @@ PP.addLesson({
           "text": "Winning ends with the letter g, and that calls for an in front of honor."
         }
       ],
-      "clue": "Say the noun out loud and pay attention to how it starts. A or an depends on what you hear.",
+      "clue": "Say the noun out loud. A or an depends on what you hear.",
       "hints": [
-        "Say the noun out loud and pay attention to how it starts. A or an depends on what you hear.",
+        "Say the noun out loud. A or an depends on what you hear.",
         "Say honor slowly. Notice whether you hear a breathy h at the very beginning.",
         "Words like help and home start with the same letter but take a. Think about the other choices."
       ],
       "how": [
         "Say honor. You hear ON-er, with no h at the start.",
-        "A word that starts with a vowel sound takes an.",
-        "The answer is \"Honor is said without its first letter, so it starts like the word on.\" Words like home sound the h, so they take a."
+        "A word that opens with a vowel sound takes an.",
+        "The answer is \"Honor is spoken without its first letter, much like the word on.\" Words like home sound the h, so they take a."
       ],
       "misconception": "A common mix-up is thinking an goes with certain meanings or lengths. It goes with a vowel sound.",
-      "why": "The answer is \"Honor is said without its first letter, so it starts like the word on.\" The choice depends on sound, not spelling or meaning. A word with a sounded h, like home, takes a.",
+      "why": "The answer is \"Honor is spoken without its first letter, much like the word on.\" The choice depends on sound, not spelling or meaning. A word with a sounded h, like home, takes a.",
       "like": [
         "SK-GUM2-2-C05"
       ]
