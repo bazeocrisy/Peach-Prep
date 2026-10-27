@@ -113,8 +113,8 @@ MATCHCOLS = ('cols: ["Before the bridge breaks", "After the bridge breaks"],', '
 REVA = ('\n  code: "3.T.T.1.c",', '\n  code: "3.T.T.1.c",\n  testRev: { A: "2" },')
 
 
-def passage_edit():
-    base = ORIG.index('code: "3.T.T.1.c"'); j = ORIG.index('id: "p2"', base)
+def passage_edit(pid="p2"):
+    base = ORIG.index('code: "3.T.T.1.c"'); j = ORIG.index('id: "%s"' % pid, base)
     k = ORIG.index('"', ORIG.index("paragraphs", j) + 20)
     return ORIG[:k + 1] + "A changed story fact. " + ORIG[k + 1:]
 
@@ -217,8 +217,8 @@ rc2, out2 = cc("--record-versions")
 check("N.26 a rev used before (2, 3, then 2 again) is refused, and history keeps every rev", rc2 == 1 and "used before" in out2 and json.loads(VER.read_text())["forms"][KEY + ":A"]["history"] == ["1", "2", "3"], (out, out2))
 # a removed form keeps a tombstone and cannot come back with a rev it used
 reset_records()
-setl(ORIG.replace("  testB: [", "  testBgone: [", 1))
-assert "testBgone" in (tmp / LESSON).read_text()
+_k = ORIG.index('code: "3.T.T.1.c"'); _b = ORIG.index("  testB: [", _k)
+setl(ORIG[:_b] + "  testBgone: [" + ORIG[_b + len("  testB: ["):])
 rc, out = cc("--record-versions")
 tomb = json.loads(VER.read_text())["forms"].get(KEY + ":B", {})
 setl(ORIG)
@@ -307,8 +307,12 @@ for name, mut in (("N.16 changing the reviewed check", PROMPT), ("N.16b changing
           "changed since the independent review" in out and rc == 0 and any("changed since the independent review" in l and KEY + " test:A" in l for l in fails(out2, "ledger")), (out[-300:], out2[-300:]))
 setl(passage_edit())
 rc2, out2 = cc("--release")
-check("N.16c editing a passage of a reviewed lesson (items untouched) is caught by the ledger in --release, for the checks, the core and the similar items",
-      any("changed since the independent review" in l and KEY + " test:A" in l for l in fails(out2, "ledger")) and any(KEY + " core" in l and "changed since" in l for l in fails(out2, "ledger")), out2[-400:])
+f_ = fails(out2, "ledger")
+setl(passage_edit("p5"))
+rc3, out3 = cc("--release")
+f3 = fails(out3, "ledger")
+check("N.16c editing a passage (items untouched) is caught by the ledger in --release: p2 (used by the checks) raises test:A; p5 (used by core set 3) raises the core part",
+      any("changed since the independent review" in l and KEY + " test:A" in l for l in f_) and any("changed since the independent review" in l and KEY + " core" in l for l in f3), (f_[:1], f3[:1]))
 lesson()
 s_ = (tmp / LESSON).read_text()
 anchor = "Which sentence shows something Malik does, not something he says or thinks"

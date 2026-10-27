@@ -1699,10 +1699,167 @@ PP.addLesson({
         "Banana starts with a consonant sound, so it gets a."
       ],
       answer: "Mom packed an apple and a banana in my lunch."
+    },
+    {
+      show: ["Maya and Noah put ___ coats on the hooks. (they, them, their)"],
+      ask: "Which word fits the sentence?",
+      steps: [
+        "Look at the noun after the blank: coats. The blank needs a word that comes before a noun.",
+        "Ask who owns the coats. Maya and Noah are two people.",
+        "Their is the owning word for more than one owner. They is a subject word and them is an object word, so neither goes before a noun."
+      ],
+      answer: "Their. Maya and Noah put their coats on the hooks."
     }
   ],
   parent: "While you put away groceries, point and ask: Is it this box or that box? These cans or those cans? Let your child also say a or an for each item (an onion, a lemon).",
-  passages: [],
+  passages: [
+    /* B7b:passages:start */
+    {
+      "id": "p1",
+      "title": "The Science Fair Table",
+      "byline": "A third grader's draft",
+      "genre": "Student draft (narrative)",
+      "draft": true,
+      "paragraphs": [
+        [
+          "(1) On Friday, our class held a science fair in the gym.",
+          "(2) Every group brought its project and a tall poster.",
+          "(3) Lena carried a engine model made of paper and wire.",
+          "(4) Her partner, Omar, held an hourglass up to the light."
+        ],
+        [
+          "(5) Across the gym, those big volcano bubbled over with red foam.",
+          "(6) Close to me, these magnets lifted a pile of paper clips.",
+          "(7) Mr. Cho smiled at our display and shook his head in wonder."
+        ],
+        [
+          "(8) The judges gave every team an award ribbon for hard work.",
+          "(9) My group won first place for our bean plant chart.",
+          "(10) We pinned the ribbon on the wall beside our poster."
+        ]
+      ]
+    },
+    {
+      "id": "p2",
+      "title": "Tide Pool Day",
+      "byline": "A third grader's draft",
+      "genre": "Student draft (narrative)",
+      "draft": true,
+      "paragraphs": [
+        [
+          "(1) On Saturday, our class visited the tide pools on the Georgia coast.",
+          "(2) Ms. Pruitt gave each of us a bucket and a small net.",
+          "(3) Close to my feet, these crab scurried under a flat rock.",
+          "(4) Kayla found a oyster shell stuck in the wet sand.",
+          "(5) Out by the waves, those two sea stars clung to a wet rock.",
+          "(6) Sam looked at his net and laughed at the empty bottom."
+        ],
+        [
+          "(7) A hermit crab pulled it legs inside the shell.",
+          "(8) We watched an empty shell roll back and forth in the foam.",
+          "(9) The children put their buckets in a line beside the bus.",
+          "(10) Ms. Pruitt counted our buckets and smiled at us.",
+          "(11) On the ride home, we shared what we found."
+        ]
+      ]
+    },
+    {
+      "id": "p3",
+      "title": "Bike Rodeo Day",
+      "byline": "A third grader's draft",
+      "genre": "Student draft (narrative)",
+      "draft": true,
+      "paragraphs": [
+        [
+          "(1) Our town held a bike rodeo in the parking lot on Saturday.",
+          "(2) An officer showed us how to check our brakes.",
+          "(3) Beside me, these cones marked the start of the slow lane.",
+          "(4) Far down the lot, this ramp was too tall for the little riders.",
+          "(5) Right in front of us, that bike helmets sat in a neat row.",
+          "(6) Across the lot, those flags waved over the finish line."
+        ],
+        [
+          "(7) Near my hands, that whistle hung from a long string.",
+          "(8) Mr. Dean, the judge, held a clipboard and a stopwatch.",
+          "(9) The riders buckled them helmets and rolled to the line.",
+          "(10) Everyone cheered when the last rider rolled across.",
+          "(11) The town gave every rider an award sticker."
+        ]
+      ]
+    },
+    {
+      "id": "p4",
+      "title": "Chess Club Sign-Up",
+      "byline": "A third grader's draft",
+      "genre": "Student draft (narrative)",
+      "draft": true,
+      "paragraphs": [
+        [
+          "(1) The chess club needs new players for the spring season.",
+          "(2) Ms. Vega keeps the sign-up sheet by the library door.",
+          "(3) Last week, Devin put a name on the list and drew a smiling knight.",
+          "(4) Next to him, a eighth grader wrote an email address."
+        ],
+        [
+          "(5) Over by the window, those chessboard waits for the first game.",
+          "(6) Right here beside me, these pieces are made of smooth wood.",
+          "(7) The club holds its meetings after school on Wednesdays."
+        ],
+        [
+          "(8) Every player carries his or her own pencil and notebook.",
+          "(9) A friendly game can last an hour or more.",
+          "(10) Come join our club and learn some clever moves."
+        ]
+      ]
+    },
+    {
+      "id": "p5",
+      "title": "Painting the Porch Swing",
+      "byline": "A third grader's draft",
+      "genre": "Student draft (narrative)",
+      "draft": true,
+      "paragraphs": [
+        [
+          "(1) Last weekend, my family painted the old swing on our porch.",
+          "(2) Dad sanded the wood while Mom opened a can of yellow paint.",
+          "(3) My brother brought a ladder and a old hat to block the sun.",
+          "(4) Down by the garden, that tools lay in a heap on the grass.",
+          "(5) Next to me, these brushes dripped paint onto the old sheet.",
+          "(6) Gran sat on the steps and watched us with her cup of tea."
+        ],
+        [
+          "(7) My sister painted the chains and left me her smallest brush.",
+          "(8) The cat licked it paw and walked through the wet paint.",
+          "(9) Gran washed she brushes at the sink with an old rag.",
+          "(10) By supper, the swing was bright, and our hands were yellow."
+        ]
+      ]
+    },
+    {
+      "id": "p6",
+      "title": "The Fossil Dig",
+      "byline": "A third grader's draft",
+      "genre": "Student draft (narrative)",
+      "draft": true,
+      "paragraphs": [
+        [
+          "(1) Our class went to a fossil dig on the edge of town.",
+          "(2) A guide gave every student a brush and a small shovel.",
+          "(3) Near my knee, those tiny shell was buried in the gray dirt.",
+          "(4) Beside the fence, these tall pile of rocks hid a surprise."
+        ],
+        [
+          "(5) Mia held an ancient tooth in her palm and gasped.",
+          "(6) Out past the trees, that digging crew worked on a huge bone.",
+          "(7) My partner and I wrote our names on the label bag.",
+          "(8) The guide checked each find and gave us an answer card.",
+          "(9) Close to us, these boxes held a dozen more fossils.",
+          "(10) Next to the gate, that fossils sat in a crate for the museum."
+        ]
+      ]
+    }
+    /* B7b:passages:end */
+  ],
   practice: [
     { id: "SK-GUM2-2-P1", type: "dropdown", points: 1, dok: 1, passages: [],
       prompt: "Choose the word that correctly completes the sentence.",
@@ -1752,6 +1909,1352 @@ PP.addLesson({
       clue: "There are only three articles. Pointing words tell near or far. Owning words tell whose.",
       why: "An and the are articles. Those and this point to which one. Their and my tell who owns something." }
   ],
+  /* B7b:core:start */
+  /* ---------- Expansion 2026-10-22, batch B7b (GUM Reinforce, second half) ----------
+     core: fifteen items in three sets of five. { ref } reuses a practice item; the other practice items stay in Practice Together.
+     Passages are used only by core and the similar bank; none is used by test.
+     Author log: docs/expansion-2026-10-22/batches/B7b-author-log.md. NOT ACCEPTED: needs independent review. */
+  core: {
+    "rev": "1",
+    "sets": [
+      {
+        "title": "Set 1",
+        "items": [
+          {
+            "ref": "SK-GUM2-2-P4"
+          },
+          {
+            "ref": "SK-GUM2-2-P5"
+          },
+          {
+            "id": "SK-GUM2-2-C03",
+            "type": "mc",
+            "points": 1,
+            "dok": 2,
+            "std": [
+              "3.L.GC.1:R:use-determiners-articles-possessive-and-demonstr"
+            ],
+            "passages": [
+              "p1"
+            ],
+            "prompt": "Sentence 3 has a mistake with a small word before a noun. What is the mistake?",
+            "choices": [
+              {
+                "text": "Engine starts with a vowel sound, so the small word should be an.",
+                "correct": true
+              },
+              {
+                "text": "Model starts with a consonant sound, so the small word should be the."
+              },
+              {
+                "text": "Engine names more than one thing, so the small word should be these."
+              },
+              {
+                "text": "Lena is a name, so the small word should be her."
+              }
+            ],
+            "clue": "Small words before a noun, like a and an, are chosen by the sound that comes next. Check what sentence 3 puts there.",
+            "hints": [
+              "Small words before a noun, like a and an, are chosen by the sound that comes next. Check what sentence 3 puts there.",
+              "Find the small word in sentence 3 and say it together with the noun that follows. Listen to how that noun begins.",
+              "The word the can go before almost any noun, but a replacement still has to match the sound. Think about the other choices."
+            ],
+            "how": [
+              "Sentence 3 says a engine. The small word comes right before engine.",
+              "Say engine aloud. It begins with a short e, which is a vowel sound, so it needs an.",
+              "The answer is \"Engine starts with a vowel sound, so the small word should be an.\" Engine is one thing, and Lena is a name that does not take her here."
+            ],
+            "misconception": "A common mix-up is choosing a because the word model sounds like a consonant. The word right after the small word decides.",
+            "why": "The answer is \"Engine starts with a vowel sound, so the small word should be an.\" Use an before a vowel sound. Engine is one thing, so these does not fit, and her would change the meaning.",
+            "like": [
+              "SK-GUM2-2-S03"
+            ]
+          },
+          {
+            "id": "SK-GUM2-2-C04",
+            "type": "dropdown",
+            "points": 1,
+            "dok": 2,
+            "std": [
+              "3.L.GC.1:R:use-determiners-articles-possessive-and-demonstr"
+            ],
+            "passages": [
+              "p1"
+            ],
+            "prompt": "Sentence 5 has the wrong pointing word. Choose the word that fixes it.",
+            "text": "Across the gym, {0} big volcano bubbled over with red foam.",
+            "slots": [
+              {
+                "options": [
+                  "those",
+                  "this",
+                  "that"
+                ],
+                "answer": 2
+              }
+            ],
+            "clue": "A pointing word has to match the noun in number and match how near or far the thing is.",
+            "hints": [
+              "A pointing word has to match the noun in number and match how near or far the thing is.",
+              "Count how many volcanoes there are. Then notice the place named at the start of the sentence and decide if it is close or far.",
+              "Those goes with more than one thing. Think about the other two choices."
+            ],
+            "how": [
+              "The noun volcano is one thing, so the pointing word must go with one.",
+              "Across the gym is far away, so a pointing word for far away things is needed.",
+              "The answer is that. This is for a close thing, and those is for more than one thing."
+            ],
+            "misconception": "A common mix-up is choosing a pointing word that fits the number but not the distance, or the distance but not the number. Check both.",
+            "why": "The answer is that. The volcano is one thing and it is far away across the gym, so that fits. This points to something close, and those goes with more than one thing.",
+            "like": [
+              "SK-GUM2-2-S04"
+            ]
+          },
+          {
+            "id": "SK-GUM2-2-C05",
+            "type": "mc",
+            "points": 1,
+            "dok": 3,
+            "std": [
+              "3.L.GC.1:R:use-determiners-articles-possessive-and-demonstr"
+            ],
+            "passages": [
+              "p1"
+            ],
+            "prompt": "Sentence 4 uses an before hourglass, even though hourglass begins with the letter h. Why is an correct?",
+            "choices": [
+              {
+                "text": "Hourglass begins with a vowel sound because the h is silent.",
+                "correct": true
+              },
+              {
+                "text": "Hourglass names a single thing, so it always takes an."
+              },
+              {
+                "text": "Any word that begins with the letter h takes an before it."
+              },
+              {
+                "text": "An is used because the sentence names Omar, who is a partner."
+              }
+            ],
+            "clue": "Look at the word, but listen to it too. The choice between a and an depends on the sound that comes next.",
+            "hints": [
+              "Look at the word, but listen to it too. The choice between a and an depends on the sound that comes next.",
+              "Say hourglass out loud, slowly. Notice whether your mouth makes a puff of air at the start.",
+              "Words like hat and hill begin with the same letter but take a. Think about the other choices."
+            ],
+            "how": [
+              "Say hourglass. You hear OW-er-glass, with no h sound at the start.",
+              "A word that starts with a vowel sound takes an, even when the first letter is a consonant.",
+              "The answer is \"Hourglass begins with a vowel sound because the h is silent.\" Words like hat sound the h, so they take a."
+            ],
+            "misconception": "A common mix-up is looking only at the first letter. A silent h means the word begins with a vowel sound.",
+            "why": "The answer is \"Hourglass begins with a vowel sound because the h is silent.\" The choice depends on sound, not spelling. A word that begins with a sounded h, like hat, takes a.",
+            "like": [
+              "SK-GUM2-2-S05"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Set 2",
+        "items": [
+          {
+            "id": "SK-GUM2-2-C06",
+            "type": "hottext",
+            "points": 2,
+            "dok": 2,
+            "std": [
+              "3.L.GC.1:R:use-determiners-articles-possessive-and-demonstr"
+            ],
+            "passages": [
+              "p2"
+            ],
+            "prompt": "Look at sentences 2 through 6. Select the TWO sentences with a mistake in a small word before a noun.",
+            "targets": [
+              "p2:1:2",
+              "p2:1:3",
+              "p2:1:4",
+              "p2:1:5",
+              "p2:1:6"
+            ],
+            "answer": [
+              "p2:1:3",
+              "p2:1:4"
+            ],
+            "pick": 2,
+            "clue": "For each sentence, check the small word before each noun. Does it match the number and the sound of the noun?",
+            "hints": [
+              "For each sentence, check the small word before each noun. Does it match the number and the sound of the noun?",
+              "Take sentences 2 through 6 one at a time. Look at every small word that comes before a noun and say the pair aloud.",
+              "Sentence 5 has a pointing word that fits both the number and the distance. Think about the rest."
+            ],
+            "how": [
+              "Check each sentence from 2 through 6 for small words that do not match their nouns.",
+              "Sentence 3 says these crab. Crab is one thing, so these does not fit. Sentence 4 says a oyster, but oyster begins with a vowel sound.",
+              "Sentences 2, 5 and 6 are fine: a bucket and a small net, those two sea stars, and his net."
+            ],
+            "misconception": "A common mix-up is picking a sentence just because it has a pointing word. Check whether the word fits.",
+            "why": "The answers are \"Close to my feet, these crab scurried under a flat rock.\" and \"Kayla found a oyster shell stuck in the wet sand.\" These does not go with one crab, and oyster needs an. Sentences 2, 5 and 6 are correct.",
+            "like": [
+              "SK-GUM2-2-S06"
+            ]
+          },
+          {
+            "id": "SK-GUM2-2-C07",
+            "type": "ebsr",
+            "points": 2,
+            "dok": 3,
+            "std": [
+              "3.L.GC.1:R:use-determiners-articles-possessive-and-demonstr"
+            ],
+            "passages": [
+              "p2"
+            ],
+            "prompt": "This question has two parts. Answer Part A, then Part B.",
+            "partA": {
+              "prompt": "Sentence 7 has a mistake with an owning word. What is the mistake?",
+              "choices": [
+                {
+                  "text": "It is not an owning word, so it should be its.",
+                  "correct": true
+                },
+                {
+                  "text": "It is a pointing word, so it should be this."
+                },
+                {
+                  "text": "It is an article, so it should be a."
+                },
+                {
+                  "text": "It is a name, so it should be Crab."
+                }
+              ]
+            },
+            "partB": {
+              "prompt": "Which rewrite of sentence 7 is correct?",
+              "choices": [
+                {
+                  "text": "A hermit crab pulled its legs inside the shell.",
+                  "correct": true
+                },
+                {
+                  "text": "A hermit crab pulled it's legs inside the shell."
+                },
+                {
+                  "text": "A hermit crab pulled itself legs inside the shell."
+                },
+                {
+                  "text": "A hermit crab pulled them legs inside the shell."
+                }
+              ]
+            },
+            "clue": "Find the small word before legs in sentence 7. Ask what job it should do: point, name or show who owns.",
+            "hints": [
+              "Find the small word before legs in sentence 7. Ask what job it should do: point, name or show who owns.",
+              "In Part A, decide what the word before legs should tell. In Part B, check each rewrite for a word that shows owning and is spelled right.",
+              "In Part B, one rewrite puts an apostrophe in the owning word. Think about whether an apostrophe belongs there."
+            ],
+            "how": [
+              "Part A: the legs belong to the crab, so the word before legs must show owning. It is not an owning word.",
+              "Part B: its is the owning word for one animal or thing. It has no apostrophe.",
+              "The answers are \"It is not an owning word, so it should be its.\" and \"A hermit crab pulled its legs inside the shell.\" The other rewrites use an apostrophe, a made-up word, or a pronoun."
+            ],
+            "misconception": "A common mix-up is adding an apostrophe to its. The word it's means it is, so the owning word has none.",
+            "why": "Part A: \"It is not an owning word, so it should be its.\" Part B: \"A hermit crab pulled its legs inside the shell.\" Its shows that the legs belong to the crab and has no apostrophe. It's means it is, and them and itself do not fit before legs.",
+            "like": [
+              "SK-GUM2-2-S07"
+            ]
+          },
+          {
+            "id": "SK-GUM2-2-C08",
+            "type": "ms",
+            "points": 2,
+            "dok": 2,
+            "std": [
+              "3.L.GC.1:R:use-determiners-articles-possessive-and-demonstr"
+            ],
+            "passages": [],
+            "prompt": "Choose the TWO sentences in which a or an is used correctly.",
+            "pick": 2,
+            "choices": [
+              {
+                "text": "We spread an oval rug across the wooden floor.",
+                "correct": true
+              },
+              {
+                "text": "A clown rode a unicycle across the parking lot.",
+                "correct": true
+              },
+              {
+                "text": "Mia needs a umbrella for the long rainy walk."
+              },
+              {
+                "text": "Please hand me an pencil from the top of the desk."
+              },
+              {
+                "text": "He waited for a hour at the busy bus stop."
+              }
+            ],
+            "clue": "Say each noun aloud and listen to its first sound. Then check whether a or an matches that sound.",
+            "hints": [
+              "Say each noun aloud and listen to its first sound. Then check whether a or an matches that sound.",
+              "Check every a and an in the choices, including the ones inside the correct sentences. Do not decide by the first letter alone.",
+              "One word in the choices begins with a silent letter. Think about which sentence uses it."
+            ],
+            "how": [
+              "Say each noun after a or an and listen for a vowel or consonant sound.",
+              "Oval begins with a vowel sound, so an is right. Unicycle begins with a y sound, which is a consonant sound, so a is right.",
+              "Umbrella needs an, pencil needs a, and hour needs an, so those three sentences have mistakes."
+            ],
+            "misconception": "A common mix-up is going by the first letter. Unicycle starts with a vowel letter but a consonant sound.",
+            "why": "The answers are \"We spread an oval rug across the wooden floor.\" and \"A clown rode a unicycle across the parking lot.\" Oval begins with a vowel sound, and unicycle begins with a y sound. Umbrella needs an, pencil needs a, and hour needs an.",
+            "like": [
+              "SK-GUM2-2-S08"
+            ]
+          },
+          {
+            "id": "SK-GUM2-2-C09",
+            "type": "mc",
+            "points": 1,
+            "dok": 1,
+            "std": [
+              "3.L.GC.1:R:use-determiners-articles-possessive-and-demonstr"
+            ],
+            "passages": [],
+            "prompt": "Which phrase is written correctly?",
+            "choices": [
+              {
+                "text": "an elephant",
+                "correct": true
+              },
+              {
+                "text": "a elephant"
+              },
+              {
+                "text": "an turtle"
+              },
+              {
+                "text": "a insect"
+              }
+            ],
+            "clue": "Say each phrase out loud and listen to how the second word begins.",
+            "hints": [
+              "Say each phrase out loud and listen to how the second word begins.",
+              "Listen to the first sound of the second word in each phrase. Then think about which small word goes with that sound.",
+              "A word that begins with a consonant sound takes a. Think about the other choices."
+            ],
+            "how": [
+              "Say the second word of each phrase and listen to its first sound.",
+              "Elephant begins with a vowel sound, so it takes an. Turtle begins with a consonant sound, so it takes a.",
+              "The answer is an elephant. Insect begins with a vowel sound, so it needs an."
+            ],
+            "misconception": "A common mix-up is guessing from how the phrase looks. Say it aloud and listen for the first sound.",
+            "why": "The answer is an elephant. Elephant begins with a vowel sound, so it takes an. Turtle begins with a consonant sound, so an turtle is wrong, and insect begins with a vowel sound, so a insect is wrong.",
+            "like": [
+              "SK-GUM2-2-S09"
+            ]
+          },
+          {
+            "id": "SK-GUM2-2-C10",
+            "type": "mc",
+            "points": 1,
+            "dok": 3,
+            "std": [
+              "3.L.GC.1:R:use-determiners-articles-possessive-and-demonstr"
+            ],
+            "passages": [
+              "p2"
+            ],
+            "prompt": "A student asks why sentence 5 says those two sea stars instead of these two sea stars. Which explanation is correct?",
+            "choices": [
+              {
+                "text": "The sea stars are far away, and those is the pointing word for more than one far thing.",
+                "correct": true
+              },
+              {
+                "text": "The sea stars are far away, and those is the pointing word for one far thing."
+              },
+              {
+                "text": "The sea stars are far away, and these is the pointing word for far things."
+              },
+              {
+                "text": "The sea stars are close, and those is the pointing word for close things."
+              }
+            ],
+            "clue": "A pointing word shows two things: how many there are and how far away they are. Check both in sentence 5.",
+            "hints": [
+              "A pointing word shows two things: how many there are and how far away they are. Check both in sentence 5.",
+              "Find the words at the start of sentence 5 that tell where the sea stars are. Then notice the number two before sea stars.",
+              "Those can never go with just one thing. Think about the other choices."
+            ],
+            "how": [
+              "Out by the waves is far from the speaker, so the pointing word must be for far away things.",
+              "Two sea stars is more than one, so the pointing word must be a plural one.",
+              "The answer is \"The sea stars are far away, and those is the pointing word for more than one far thing.\" These is for close things."
+            ],
+            "misconception": "A common mix-up is thinking those and these both mean far. These is for close things and those is for far things.",
+            "why": "The answer is \"The sea stars are far away, and those is the pointing word for more than one far thing.\" Out by the waves is far away and two sea stars is more than one, so those fits. These points to close things.",
+            "like": [
+              "SK-GUM2-2-S10"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Set 3",
+        "items": [
+          {
+            "id": "SK-GUM2-2-C11",
+            "type": "hottext",
+            "points": 2,
+            "dok": 2,
+            "std": [
+              "3.L.GC.1:R:use-determiners-articles-possessive-and-demonstr"
+            ],
+            "passages": [
+              "p3"
+            ],
+            "prompt": "Select the TWO sentences in which the pointing word fits both the number and the distance.",
+            "targets": [
+              "p3:1:3",
+              "p3:1:4",
+              "p3:1:5",
+              "p3:1:6",
+              "p3:2:1"
+            ],
+            "answer": [
+              "p3:1:3",
+              "p3:1:6"
+            ],
+            "pick": 2,
+            "clue": "A pointing word must match two things: how many there are and how near or far they are. Check both.",
+            "hints": [
+              "A pointing word must match two things: how many there are and how near or far they are. Check both.",
+              "For each sentence, find the words that tell where the thing is. Then see whether the pointing word is for one or for more than one.",
+              "In the sentence about the ramp, the thing is far away. Think about the rest."
+            ],
+            "how": [
+              "Check the number first, then the distance, in each sentence.",
+              "Beside me is close and cones is more than one, so these fits. Across the lot is far and flags is more than one, so those fits.",
+              "Far down the lot is far, but this is for close things. That does not go with helmets, and that does not fit a whistle near my hands."
+            ],
+            "misconception": "A common mix-up is checking only the number or only the distance. A pointing word has to fit both.",
+            "why": "The answers are \"Beside me, these cones marked the start of the slow lane.\" and \"Across the lot, those flags waved over the finish line.\" Both match the number and the distance. The other three do not fit.",
+            "like": [
+              "SK-GUM2-2-S11"
+            ]
+          },
+          {
+            "id": "SK-GUM2-2-C12",
+            "type": "dropdown",
+            "points": 1,
+            "dok": 2,
+            "std": [
+              "3.L.GC.1:R:use-determiners-articles-possessive-and-demonstr"
+            ],
+            "passages": [
+              "p3"
+            ],
+            "prompt": "Sentence 9 uses the wrong kind of word before helmets. Choose the owning word that fixes it.",
+            "text": "The riders buckled {0} helmets and rolled to the line.",
+            "slots": [
+              {
+                "options": [
+                  "they",
+                  "them",
+                  "theirs",
+                  "their"
+                ],
+                "answer": 3
+              }
+            ],
+            "clue": "An owning word goes before a noun and tells whose it is. Decide which choices can do that job.",
+            "hints": [
+              "An owning word goes before a noun and tells whose it is. Decide which choices can do that job.",
+              "Say each choice right before the word helmets. Listen for the one that sounds right and tells who owns them.",
+              "Theirs stands alone and does not go before a noun. Think about the other three choices."
+            ],
+            "how": [
+              "The helmets belong to the riders, and there is more than one rider.",
+              "The owning word that goes before a noun for more than one owner is their.",
+              "The answer is their. They is a subject word, them is an object word, and theirs stands alone."
+            ],
+            "misconception": "A common mix-up is using them or they before a noun. Those words never come before a noun like helmets.",
+            "why": "The answer is their. The riders own the helmets, and their is the owning word for more than one owner. They and them do not show owning, and theirs does not go before a noun.",
+            "like": [
+              "SK-GUM2-2-S12"
+            ]
+          },
+          {
+            "id": "SK-GUM2-2-C13",
+            "type": "dropdown",
+            "points": 2,
+            "dok": 2,
+            "std": [
+              "3.L.GC.1:R:use-determiners-articles-possessive-and-demonstr"
+            ],
+            "passages": [],
+            "prompt": "Choose the correct word for each blank.",
+            "text": "There is {0} hour left before the picnic, so please pack {1} lunch.",
+            "slots": [
+              {
+                "options": [
+                  "a",
+                  "an",
+                  "those"
+                ],
+                "answer": 1
+              },
+              {
+                "options": [
+                  "you",
+                  "your",
+                  "yours"
+                ],
+                "answer": 1
+              }
+            ],
+            "clue": "Each blank needs a different kind of small word. One is chosen by a sound, and the other tells who owns something.",
+            "hints": [
+              "Each blank needs a different kind of small word. One is chosen by a sound, and the other tells who owns something.",
+              "For the first blank, say the word hour aloud and listen. For the second blank, ask whose lunch it is.",
+              "You and yours do not go before a noun like lunch. Use that to check the second blank."
+            ],
+            "how": [
+              "The first blank comes before hour. Hour begins with a vowel sound because the h is silent, so it takes an.",
+              "The second blank comes before lunch and tells whose lunch it is. Your is the owning word that goes before a noun.",
+              "The answers are an and your. A would need a consonant sound, and you and yours do not go before a noun."
+            ],
+            "misconception": "A common mix-up is choosing a because hour starts with the letter h. The silent h makes the sound a vowel sound.",
+            "why": "The answers are an and your. Hour begins with a vowel sound, so it takes an. Your is the owning word that goes before lunch. Those cannot go with one hour, and you and yours do not go before a noun.",
+            "like": [
+              "SK-GUM2-2-S13"
+            ]
+          },
+          {
+            "id": "SK-GUM2-2-C14",
+            "type": "hottext",
+            "points": 1,
+            "dok": 2,
+            "std": [
+              "3.L.GC.1:R:use-determiners-articles-possessive-and-demonstr"
+            ],
+            "passages": [],
+            "prompt": "Select the sentence that has a mistake with an owning word.",
+            "options": [
+              "My cousin lost his bike key at the lake.",
+              "The kitten licked its paw after dinner.",
+              "Ben and I cleaned we room on Sunday.",
+              "Is this your jacket on the bench?",
+              "The twins packed their lunches in a cooler."
+            ],
+            "answer": [
+              2
+            ],
+            "pick": 1,
+            "clue": "An owning word goes before a noun and tells whose it is. Check each one.",
+            "hints": [
+              "An owning word goes before a noun and tells whose it is. Check each one.",
+              "Find the word before each noun that tells who owns it. Then ask whether it is the right kind of word to go before a noun.",
+              "The sentence about the kitten uses an owning word for an animal, and it is fine. Think about the rest."
+            ],
+            "how": [
+              "Look at each word that tells who owns something.",
+              "In the sentence about the room, we is a word for people doing something. It does not go before room.",
+              "The answer is \"Ben and I cleaned we room on Sunday.\" It should be our room. The other sentences use his, its, your and their correctly."
+            ],
+            "misconception": "A common mix-up is thinking we and our are the same. We names the people doing something, and our shows they own it.",
+            "why": "The answer is \"Ben and I cleaned we room on Sunday.\" It should say our room. His, its, your and their are all owning words used correctly in the other sentences.",
+            "like": [
+              "SK-GUM2-2-S14"
+            ]
+          },
+          {
+            "id": "SK-GUM2-2-C15",
+            "type": "mc",
+            "points": 1,
+            "dok": 3,
+            "std": [
+              "3.L.GC.1:R:use-determiners-articles-possessive-and-demonstr"
+            ],
+            "passages": [],
+            "prompt": "Jo says, \"Use an before every word that begins with a vowel letter.\" Which phrase shows that Jo is wrong?",
+            "choices": [
+              {
+                "text": "a uniform for the band",
+                "correct": true
+              },
+              {
+                "text": "an old coat for the winter"
+              },
+              {
+                "text": "an ice cube for the drink"
+              },
+              {
+                "text": "an elbow pad for the game"
+              }
+            ],
+            "clue": "To show a rule is wrong, find an example that breaks it. Check the first sound, not just the first letter, of the word after a or an.",
+            "hints": [
+              "To show a rule is wrong, find an example that breaks it. Check the first sound, not just the first letter, of the word after a or an.",
+              "All four phrases begin with a vowel letter. Say the second word of each phrase and listen to its first sound.",
+              "The other phrases follow Jo's rule and the rule works for them. Think about which one does not follow it."
+            ],
+            "how": [
+              "Jo's rule only looks at letters. A better rule listens to sounds.",
+              "Old, ice and elbow begin with vowel sounds, so an works. Uniform begins with a y sound, which is a consonant sound, so it takes a.",
+              "The answer is \"a uniform for the band.\" It starts with a vowel letter but uses a."
+            ],
+            "misconception": "A common mix-up is thinking vowel letters always make vowel sounds. Uniform begins with a y sound.",
+            "why": "The answer is \"a uniform for the band.\" Uniform begins with the letter u but starts with a y sound, so it takes a. That proves Jo wrong. Old, ice and elbow begin with vowel sounds and take an.",
+            "like": [
+              "SK-GUM2-2-S15"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  similar: [
+    {
+      "id": "SK-GUM2-2-S01",
+      "type": "hottext",
+      "points": 1,
+      "dok": 2,
+      "std": [
+        "3.L.GC.1:R:use-determiners-articles-possessive-and-demonstr"
+      ],
+      "passages": [],
+      "prompt": "Tap the line that mixes up a pointing word with its noun.",
+      "options": [
+        "Our band meets in the music room on Tuesdays.",
+        "Where did you buy that shoes?",
+        "The bear scratched its back on a tree.",
+        "Those cookies on the counter are for the party.",
+        "Did you bring your reading book?"
+      ],
+      "answer": [
+        1
+      ],
+      "pick": 1,
+      "clue": "Pointing words have to agree with their nouns in number. Check each noun.",
+      "hints": [
+        "Pointing words have to agree with their nouns in number. Check each noun.",
+        "Find each pointing word and its noun. Say whether the noun is one thing or more than one.",
+        "The line about the cookies uses a pointing word and a plural noun that agree. Think about the rest."
+      ],
+      "how": [
+        "Look at each pointing word and the noun after it.",
+        "That goes with one thing, but shoes is more than one.",
+        "The answer is \"Where did you buy that shoes?\" It should be those shoes or that shoe."
+      ],
+      "misconception": "A common mix-up is trusting a pointing word because it sounds natural. Check the noun after it.",
+      "why": "The answer is \"Where did you buy that shoes?\" That goes with one thing, but shoes means more than one, so it should be those shoes.",
+      "like": [
+        "SK-GUM2-2-P4"
+      ]
+    },
+    {
+      "id": "SK-GUM2-2-S02",
+      "type": "match",
+      "points": 2,
+      "dok": 2,
+      "std": [
+        "3.L.GC.1:R:use-determiners-articles-possessive-and-demonstr"
+      ],
+      "passages": [],
+      "prompt": "Read each small word. What job does it do before a noun? Sort each one.",
+      "cols": [
+        "Article",
+        "Pointing word",
+        "Owning word"
+      ],
+      "rows": [
+        {
+          "text": "a",
+          "answer": 0
+        },
+        {
+          "text": "that",
+          "answer": 1
+        },
+        {
+          "text": "her",
+          "answer": 2
+        },
+        {
+          "text": "these",
+          "answer": 1
+        },
+        {
+          "text": "its",
+          "answer": 2
+        },
+        {
+          "text": "an",
+          "answer": 0
+        }
+      ],
+      "clue": "Ask whether the word tells which one, tells whose it is, or only marks a noun.",
+      "hints": [
+        "Ask whether the word tells which one, tells whose it is, or only marks a noun.",
+        "Say the word before a noun, such as ___ dog. Decide whether it points, shows owning, or is a plain article.",
+        "There are only three articles. Think about which of the words belong to them."
+      ],
+      "how": [
+        "Think of a noun to go with each word.",
+        "A and an are articles. That and these point to things. Her and its tell who owns something.",
+        "Sort each word into the job it does."
+      ],
+      "misconception": "A common mix-up is thinking its is the same as it's. Its shows owning and is an owning word.",
+      "why": "A and an are articles. That and these are pointing words. Her and its are owning words.",
+      "like": [
+        "SK-GUM2-2-P5"
+      ]
+    },
+    {
+      "id": "SK-GUM2-2-S03",
+      "type": "mc",
+      "points": 1,
+      "dok": 2,
+      "std": [
+        "3.L.GC.1:R:use-determiners-articles-possessive-and-demonstr"
+      ],
+      "passages": [
+        "p4"
+      ],
+      "prompt": "Sentence 4 has a mistake in the small word before eighth grader. Which explanation is correct?",
+      "choices": [
+        {
+          "text": "Eighth begins with a vowel sound, so the small word should be an.",
+          "correct": true
+        },
+        {
+          "text": "Grader begins with a consonant sound, so the small word should be the."
+        },
+        {
+          "text": "Eighth grader names two students, so the small word should be those."
+        },
+        {
+          "text": "Next to him is a place, so the small word should be his."
+        }
+      ],
+      "clue": "The small word a or an depends on the sound that comes right after it. Find that sound in sentence 4.",
+      "hints": [
+        "The small word a or an depends on the sound that comes right after it. Find that sound in sentence 4.",
+        "Read the words just after the small word in sentence 4. Say them aloud and listen to how the first one begins.",
+        "Think about which word comes right after the small word. Think about the other choices."
+      ],
+      "how": [
+        "Sentence 4 says a eighth grader.",
+        "Say eighth aloud. It begins with a long a sound, which is a vowel sound, so it takes an.",
+        "The answer is \"Eighth begins with a vowel sound, so the small word should be an.\" The others look at the wrong word or change the meaning."
+      ],
+      "misconception": "A common mix-up is checking the second word, grader, instead of the word right after the small word.",
+      "why": "The answer is \"Eighth begins with a vowel sound, so the small word should be an.\" Use an before a vowel sound. Eighth grader is one student, so those does not fit.",
+      "like": [
+        "SK-GUM2-2-C03"
+      ]
+    },
+    {
+      "id": "SK-GUM2-2-S04",
+      "type": "dropdown",
+      "points": 1,
+      "dok": 2,
+      "std": [
+        "3.L.GC.1:R:use-determiners-articles-possessive-and-demonstr"
+      ],
+      "passages": [
+        "p4"
+      ],
+      "prompt": "Sentence 5 uses the wrong pointing word. Pick the one that repairs it.",
+      "text": "Over by the window, {0} chessboard waits for the first game.",
+      "slots": [
+        {
+          "options": [
+            "these",
+            "that",
+            "those"
+          ],
+          "answer": 1
+        }
+      ],
+      "clue": "A pointing word has to match how many things there are and how far away they are.",
+      "hints": [
+        "A pointing word has to match how many things there are and how far away they are.",
+        "Count the chessboards. Then look at the place named at the start of the sentence.",
+        "These is a pointing word for close things. Think about the other two choices."
+      ],
+      "how": [
+        "Chessboard is one thing, so the pointing word must be for one.",
+        "Over by the window is not close to the speaker, so the word must be for a far thing.",
+        "The answer is that. These and those both go with more than one."
+      ],
+      "misconception": "A common mix-up is picking a plural pointing word because the board sits among other things. The noun is one board.",
+      "why": "The answer is that. The chessboard is one thing that is far away, so that fits. These and those go with more than one thing.",
+      "like": [
+        "SK-GUM2-2-C04"
+      ]
+    },
+    {
+      "id": "SK-GUM2-2-S05",
+      "type": "mc",
+      "points": 1,
+      "dok": 3,
+      "std": [
+        "3.L.GC.1:R:use-determiners-articles-possessive-and-demonstr"
+      ],
+      "passages": [
+        "p4"
+      ],
+      "prompt": "Sentence 9 uses an before hour. Why does hour take an and not a?",
+      "choices": [
+        {
+          "text": "Hour begins with a vowel sound because its first letter is silent.",
+          "correct": true
+        },
+        {
+          "text": "Hour takes an because games that last long need a long word."
+        },
+        {
+          "text": "Hour takes an because it names an amount of time."
+        },
+        {
+          "text": "Hour takes a, so the sentence is wrong and should say a hour."
+        }
+      ],
+      "clue": "Listen to the word, do not only read it. A or an depends on the sound that begins the next word.",
+      "hints": [
+        "Listen to the word, do not only read it. A or an depends on the sound that begins the next word.",
+        "Say hour out loud. Notice what your mouth does at the very beginning.",
+        "Many words that name time begin with a consonant sound, like day and week. Think about the other choices."
+      ],
+      "how": [
+        "Say hour. It sounds like OW-er, with no h sound.",
+        "A word that begins with a vowel sound takes an.",
+        "The answer is \"Hour begins with a vowel sound because its first letter is silent.\" The sound decides, not the idea of time."
+      ],
+      "misconception": "A common mix-up is thinking an goes with certain meanings. It goes with vowel sounds.",
+      "why": "The answer is \"Hour begins with a vowel sound because its first letter is silent.\" The choice between a and an depends on sound. Hour sounds like it begins with a vowel, so it takes an.",
+      "like": [
+        "SK-GUM2-2-C05"
+      ]
+    },
+    {
+      "id": "SK-GUM2-2-S06",
+      "type": "hottext",
+      "points": 2,
+      "dok": 2,
+      "std": [
+        "3.L.GC.1:R:use-determiners-articles-possessive-and-demonstr"
+      ],
+      "passages": [
+        "p5"
+      ],
+      "prompt": "Look at sentences 2 through 6. Mark the TWO sentences in which a small word does not suit its noun.",
+      "targets": [
+        "p5:1:2",
+        "p5:1:3",
+        "p5:1:4",
+        "p5:1:5",
+        "p5:1:6"
+      ],
+      "answer": [
+        "p5:1:3",
+        "p5:1:4"
+      ],
+      "pick": 2,
+      "clue": "Check every small word before a noun. It must suit the noun's sound and number.",
+      "hints": [
+        "Check every small word before a noun. It must suit the noun's sound and number.",
+        "Go through sentences 2 to 6 in order. Pair each small word with its noun and say them aloud.",
+        "Sentence 2 uses a and an with nouns that begin with the sounds they need. Think about the rest."
+      ],
+      "how": [
+        "Test each small word with its noun, one sentence at a time.",
+        "Sentence 3 says a umbrella, but umbrella begins with a vowel sound. Sentence 4 says that tools, but tools is more than one.",
+        "Sentences 2, 5 and 6 are fine."
+      ],
+      "misconception": "A common mix-up is stopping after the first mistake you find. Check every sentence in the range.",
+      "why": "The answers are \"My brother brought a ladder and a umbrella to block the sun.\" and \"Down by the garden, that tools lay in a heap on the grass.\" Umbrella needs an, and that goes with one thing, not tools. Sentences 2, 5 and 6 are correct.",
+      "like": [
+        "SK-GUM2-2-C06"
+      ]
+    },
+    {
+      "id": "SK-GUM2-2-S07",
+      "type": "ebsr",
+      "points": 2,
+      "dok": 3,
+      "std": [
+        "3.L.GC.1:R:use-determiners-articles-possessive-and-demonstr"
+      ],
+      "passages": [
+        "p5"
+      ],
+      "prompt": "Answer the first question, then the second.",
+      "partA": {
+        "prompt": "What is wrong with the word before paw in sentence 8?",
+        "choices": [
+          {
+            "text": "It is not an owning word, so it should be its.",
+            "correct": true
+          },
+          {
+            "text": "It is a pointing word, so it should be that."
+          },
+          {
+            "text": "It is an article, so it should be an."
+          },
+          {
+            "text": "It is a verb, so it should be licks."
+          }
+        ]
+      },
+      "partB": {
+        "prompt": "Which version of sentence 8 is correct?",
+        "choices": [
+          {
+            "text": "The cat licked its paw and walked through the wet paint.",
+            "correct": true
+          },
+          {
+            "text": "The cat licked it's paw and walked through the wet paint."
+          },
+          {
+            "text": "The cat licked itself paw and walked through the wet paint."
+          },
+          {
+            "text": "The cat licked them paw and walked through the wet paint."
+          }
+        ]
+      },
+      "clue": "Find the word before paw in sentence 8. Ask what job it should do.",
+      "hints": [
+        "Find the word before paw in sentence 8. Ask what job it should do.",
+        "In the first question, decide what the word before paw should tell. In the second, check each version for an owning word that is spelled right.",
+        "In the second question, one version puts an apostrophe in the owning word. Think about whether it belongs."
+      ],
+      "how": [
+        "Part A: the paw belongs to the cat, so the word before paw must show owning.",
+        "Part B: its is the owning word for one animal, and it has no apostrophe.",
+        "The answers are \"It is not an owning word, so it should be its.\" and \"The cat licked its paw and walked through the wet paint.\""
+      ],
+      "misconception": "A common mix-up is adding an apostrophe to its. The apostrophe form it's means it is.",
+      "why": "Part A: \"It is not an owning word, so it should be its.\" Part B: \"The cat licked its paw and walked through the wet paint.\" Its shows the paw belongs to the cat and takes no apostrophe.",
+      "like": [
+        "SK-GUM2-2-C07"
+      ]
+    },
+    {
+      "id": "SK-GUM2-2-S08",
+      "type": "ms",
+      "points": 2,
+      "dok": 2,
+      "std": [
+        "3.L.GC.1:R:use-determiners-articles-possessive-and-demonstr"
+      ],
+      "passages": [],
+      "prompt": "Pick the TWO phrases in which a or an is used correctly.",
+      "pick": 2,
+      "choices": [
+        {
+          "text": "an honest answer on the quiz",
+          "correct": true
+        },
+        {
+          "text": "a useful tool for the job",
+          "correct": true
+        },
+        {
+          "text": "a open window in the attic"
+        },
+        {
+          "text": "an little brown bird"
+        },
+        {
+          "text": "a ant on the leaf"
+        }
+      ],
+      "clue": "Say the word after a or an and listen to how it begins. Compare the sound with the small word.",
+      "hints": [
+        "Say the word after a or an and listen to how it begins. Compare the sound with the small word.",
+        "Check all five phrases, including the ones that look right. Go by the sound that follows, not the first letter.",
+        "Two of the five begin with a vowel letter but not a vowel sound, or the reverse. Think about which ones."
+      ],
+      "how": [
+        "Listen to the first sound of the word after the small word.",
+        "Honest begins with a vowel sound because the h is silent, so an is right. Useful begins with a y sound, so a is right.",
+        "Open and ant need an, and little needs a."
+      ],
+      "misconception": "A common mix-up is going by the first letter. Honest starts with h but sounds like it starts with a vowel.",
+      "why": "The answers are \"an honest answer on the quiz\" and \"a useful tool for the job.\" Honest begins with a vowel sound, and useful begins with a y sound. Open and ant need an, and little needs a.",
+      "like": [
+        "SK-GUM2-2-C08"
+      ]
+    },
+    {
+      "id": "SK-GUM2-2-S09",
+      "type": "mc",
+      "points": 1,
+      "dok": 1,
+      "std": [
+        "3.L.GC.1:R:use-determiners-articles-possessive-and-demonstr"
+      ],
+      "passages": [],
+      "prompt": "Pick the phrase that is spelled and written correctly.",
+      "choices": [
+        {
+          "text": "an ocean",
+          "correct": true
+        },
+        {
+          "text": "a ocean"
+        },
+        {
+          "text": "an river"
+        },
+        {
+          "text": "a island"
+        }
+      ],
+      "clue": "Say each phrase out loud and listen to how the second word begins.",
+      "hints": [
+        "Say each phrase out loud and listen to how the second word begins.",
+        "Listen to the first sound of the second word each time. Then decide which small word fits that sound.",
+        "A word that begins with a consonant sound takes a. Think about the other choices."
+      ],
+      "how": [
+        "Say the second word of each phrase and listen to its first sound.",
+        "Ocean begins with a vowel sound, so it takes an. River begins with a consonant sound, so it takes a.",
+        "The answer is an ocean. Island begins with a vowel sound, so it needs an."
+      ],
+      "misconception": "A common mix-up is guessing from how the phrase looks. Say it and listen.",
+      "why": "The answer is an ocean. Ocean begins with a vowel sound, so it takes an. River begins with a consonant sound, so an river is wrong, and island begins with a vowel sound, so a island is wrong.",
+      "like": [
+        "SK-GUM2-2-C09"
+      ]
+    },
+    {
+      "id": "SK-GUM2-2-S10",
+      "type": "mc",
+      "points": 1,
+      "dok": 3,
+      "std": [
+        "3.L.GC.1:R:use-determiners-articles-possessive-and-demonstr"
+      ],
+      "passages": [
+        "p5"
+      ],
+      "prompt": "Why does sentence 5 say these brushes and not those brushes?",
+      "choices": [
+        {
+          "text": "The brushes are next to the speaker, and these is the pointing word for more than one close thing.",
+          "correct": true
+        },
+        {
+          "text": "The brushes are next to the speaker, and these is the pointing word for one close thing."
+        },
+        {
+          "text": "The brushes are next to the speaker, and those is the pointing word for close things."
+        },
+        {
+          "text": "The brushes are down the hill, and these is the pointing word for far things."
+        }
+      ],
+      "clue": "A pointing word shows how many there are and how near they are. Find clues to both in sentence 5.",
+      "hints": [
+        "A pointing word shows how many there are and how near they are. Find clues to both in sentence 5.",
+        "Look at the words at the start of sentence 5 that tell where the brushes are. Then think about whether brushes means one or more.",
+        "These can never go with just one thing. Think about the other choices."
+      ],
+      "how": [
+        "Next to me is close, so the pointing word must be for close things.",
+        "Brushes is more than one, so the pointing word must be a plural one.",
+        "The answer is \"The brushes are next to the speaker, and these is the pointing word for more than one close thing.\" Those is for far things."
+      ],
+      "misconception": "A common mix-up is thinking those and these both mean close. Those is for far things.",
+      "why": "The answer is \"The brushes are next to the speaker, and these is the pointing word for more than one close thing.\" Brushes is more than one and they are next to the speaker, so these fits. Those points to far things.",
+      "like": [
+        "SK-GUM2-2-C10"
+      ]
+    },
+    {
+      "id": "SK-GUM2-2-S11",
+      "type": "hottext",
+      "points": 2,
+      "dok": 2,
+      "std": [
+        "3.L.GC.1:R:use-determiners-articles-possessive-and-demonstr"
+      ],
+      "passages": [
+        "p6"
+      ],
+      "prompt": "Which TWO listed sentences use a pointing word that matches how many and how far?",
+      "targets": [
+        "p6:1:3",
+        "p6:1:4",
+        "p6:2:2",
+        "p6:2:5",
+        "p6:2:6"
+      ],
+      "answer": [
+        "p6:2:2",
+        "p6:2:5"
+      ],
+      "pick": 2,
+      "clue": "A pointing word should fit two things: the number and the distance. Check both in each sentence.",
+      "hints": [
+        "A pointing word should fit two things: the number and the distance. Check both in each sentence.",
+        "Find the words that say where the thing is. Then see whether the noun is one or more than one.",
+        "In the sentence about the shell, the noun is only one thing. Think about the rest."
+      ],
+      "how": [
+        "Check the noun's number and the thing's distance in each listed sentence.",
+        "Out past the trees is far, and crew is one group, so that fits. Close to us is near, and boxes is more than one, so these fits.",
+        "Those tiny shell, these tall pile and that fossils each have a number that does not fit the noun."
+      ],
+      "misconception": "A common mix-up is checking only the number or only the distance. A pointing word has to fit both.",
+      "why": "The answers are \"Out past the trees, that digging crew worked on a huge bone.\" and \"Close to us, these boxes held a dozen more fossils.\" Each pointing word fits the number and the distance. The other three have a pointing word that does not fit the noun.",
+      "like": [
+        "SK-GUM2-2-C11"
+      ]
+    },
+    {
+      "id": "SK-GUM2-2-S12",
+      "type": "dropdown",
+      "points": 1,
+      "dok": 2,
+      "std": [
+        "3.L.GC.1:R:use-determiners-articles-possessive-and-demonstr"
+      ],
+      "passages": [
+        "p5"
+      ],
+      "prompt": "Sentence 9 uses the wrong kind of word before brushes. Pick the owning word that repairs it.",
+      "text": "Gran washed {0} brushes at the sink with an old rag.",
+      "slots": [
+        {
+          "options": [
+            "she",
+            "hers",
+            "her"
+          ],
+          "answer": 2
+        }
+      ],
+      "clue": "An owning word goes before a noun and tells whose it is. Decide which choices can do that job.",
+      "hints": [
+        "An owning word goes before a noun and tells whose it is. Decide which choices can do that job.",
+        "Say each choice right before the word brushes. Listen for the one that sounds right and tells who owns them.",
+        "Hers stands alone and does not go before a noun. Think about the other two choices."
+      ],
+      "how": [
+        "The brushes belong to Gran, who is one woman.",
+        "The owning word that goes before a noun for one woman is her.",
+        "The answer is her. She is a subject word, and hers stands alone."
+      ],
+      "misconception": "A common mix-up is using she before a noun. She names who does something and never comes before a noun like brushes.",
+      "why": "The answer is her. Gran is one woman, and her is the owning word that goes before a noun. She does not show owning, and hers does not go before a noun.",
+      "like": [
+        "SK-GUM2-2-C12"
+      ]
+    },
+    {
+      "id": "SK-GUM2-2-S13",
+      "type": "dropdown",
+      "points": 2,
+      "dok": 2,
+      "std": [
+        "3.L.GC.1:R:use-determiners-articles-possessive-and-demonstr"
+      ],
+      "passages": [],
+      "prompt": "Choose the right word for each gap.",
+      "text": "I need {0} extra minute to finish, so please keep {1} seat for me.",
+      "slots": [
+        {
+          "options": [
+            "a",
+            "an",
+            "that"
+          ],
+          "answer": 1
+        },
+        {
+          "options": [
+            "my",
+            "me",
+            "mine"
+          ],
+          "answer": 0
+        }
+      ],
+      "clue": "Each gap needs a different kind of small word. One is chosen by a sound, and the other tells who owns something.",
+      "hints": [
+        "Each gap needs a different kind of small word. One is chosen by a sound, and the other tells who owns something.",
+        "For the first gap, say the word after it aloud and listen. For the second gap, ask whose seat it is.",
+        "Me and mine do not go before a noun like seat. Use that to check the second gap."
+      ],
+      "how": [
+        "The first gap comes before extra. Extra begins with a vowel sound, so it takes an.",
+        "The second gap comes before seat and tells whose seat it is. My is the owning word that goes before a noun.",
+        "The answers are an and my."
+      ],
+      "misconception": "A common mix-up is choosing me because it names the speaker. Before a noun, the owning word is my.",
+      "why": "The answers are an and my. Extra begins with a vowel sound, so it takes an. My is the owning word that goes before seat. That cannot go with one extra minute, and me and mine do not go before a noun.",
+      "like": [
+        "SK-GUM2-2-C13"
+      ]
+    },
+    {
+      "id": "SK-GUM2-2-S14",
+      "type": "hottext",
+      "points": 1,
+      "dok": 2,
+      "std": [
+        "3.L.GC.1:R:use-determiners-articles-possessive-and-demonstr"
+      ],
+      "passages": [],
+      "prompt": "Which sentence has a mistake with an owning word?",
+      "options": [
+        "The cow swished its tail at the flies.",
+        "Rosa tied him shoes before the race.",
+        "We left our boots by the back door.",
+        "Are those your keys on the table?",
+        "Mr. Fox forgot his lunch at home."
+      ],
+      "answer": [
+        1
+      ],
+      "pick": 1,
+      "clue": "An owning word goes before a noun and tells whose it is. Check each one.",
+      "hints": [
+        "An owning word goes before a noun and tells whose it is. Check each one.",
+        "Find the word before each noun that tells who owns it. Ask whether it fits the person or thing that owns it.",
+        "The sentence about the cow uses an owning word for an animal, and it is fine. Think about the rest."
+      ],
+      "how": [
+        "Look at each word that tells who owns something.",
+        "Rosa is a girl, and him is not an owning word. The word before shoes should show that the shoes belong to her.",
+        "The answer is \"Rosa tied him shoes before the race.\" It should be her shoes. The other sentences use its, our, your and his correctly."
+      ],
+      "misconception": "A common mix-up is using him where an owning word is needed. Him is for the person who gets an action.",
+      "why": "The answer is \"Rosa tied him shoes before the race.\" It should say her shoes. Its, our, your and his are all owning words used correctly in the other sentences.",
+      "like": [
+        "SK-GUM2-2-C14"
+      ]
+    },
+    {
+      "id": "SK-GUM2-2-S15",
+      "type": "mc",
+      "points": 1,
+      "dok": 3,
+      "std": [
+        "3.L.GC.1:R:use-determiners-articles-possessive-and-demonstr"
+      ],
+      "passages": [],
+      "prompt": "Ty says, \"The word a never goes before a word that begins with a vowel letter.\" Which phrase shows that Ty is wrong?",
+      "choices": [
+        {
+          "text": "a one-day trip to the lake",
+          "correct": true
+        },
+        {
+          "text": "a big yellow bus"
+        },
+        {
+          "text": "a cold glass of milk"
+        },
+        {
+          "text": "a noisy crowd of fans"
+        }
+      ],
+      "clue": "To show a rule is wrong, find an example that breaks it. Think about the sounds that begin the words after a.",
+      "hints": [
+        "To show a rule is wrong, find an example that breaks it. Think about the sounds that begin the words after a.",
+        "Look at the first letter of each word after a. Then say the words aloud and listen to how they really begin.",
+        "The other phrases begin with consonant letters and consonant sounds. Think about whether they could prove Ty wrong."
+      ],
+      "how": [
+        "Ty's rule looks at letters only. Look for a word after a that begins with a vowel letter.",
+        "Big, cold and noisy begin with consonant letters. One starts with the letter o but sounds like w.",
+        "The answer is \"a one-day trip to the lake.\" The word one begins with a w sound, so it takes a."
+      ],
+      "misconception": "A common mix-up is thinking vowel letters always make vowel sounds. One begins with a w sound.",
+      "why": "The answer is \"a one-day trip to the lake.\" One begins with the letter o but starts with a w sound, so it takes a. That proves Ty wrong. The other phrases begin with consonant letters.",
+      "like": [
+        "SK-GUM2-2-C15"
+      ]
+    }
+  ],
+  addons: {
+    "SK-GUM2-2-P1": {
+      "hints": [
+        "Say the word that comes right after the blank. Listen to how it starts.",
+        "Think about whether the word after the blank begins with a vowel sound or a consonant sound.",
+        "These goes with more than one thing. Think about the other two choices."
+      ],
+      "how": [
+        "Say the word after the blank: old. It begins with a vowel sound.",
+        "A word that begins with a vowel sound takes an.",
+        "The answer is an. A would go with a consonant sound, and these goes with more than one thing."
+      ],
+      "misconception": "A common mix-up is choosing a because it is the shorter word. Listen to the sound that follows."
+    },
+    "SK-GUM2-2-P2": {
+      "hints": [
+        "Check whether the noun is one thing or more than one, and whether the thing is close or far.",
+        "Look at the noun after the blank and at where the boots are.",
+        "Them is not a word that goes before a noun like boots. Think about the other choices."
+      ],
+      "how": [
+        "Boots is more than one thing.",
+        "The boots are on my feet, which is close. A pointing word for more than one close thing is these.",
+        "This and that go with only one thing, and them does not go before a noun."
+      ],
+      "misconception": "A common mix-up is choosing this because the boots are close. The boots are more than one."
+    },
+    "SK-GUM2-2-P3": {
+      "hints": [
+        "Check each small word before a noun. Does it match the sound or the number of the noun?",
+        "Look at the word before eagle and the word before branch in each choice. Say each pair aloud.",
+        "A sentence with a before eagle is a candidate for the mistake. Think about the other choices."
+      ],
+      "how": [
+        "Check a or an before eagle and the pointing word before branch.",
+        "Eagle begins with a vowel sound, so it takes an. Branch is one thing far away, so it takes that.",
+        "The answer is \"We saw an eagle on that branch over there.\" Those and them do not go with one branch."
+      ],
+      "misconception": "A common mix-up is choosing a because eagle looks like a short word. Listen to its first sound."
+    },
+    "SK-GUM2-2-P4": {
+      "hints": [
+        "Check each sentence for a small word that does not agree with its noun.",
+        "Look at each pointing word and the noun after it. Ask if the noun is one thing or more than one.",
+        "The sentence about the sunflowers has an owning word that fits. Think about the rest."
+      ],
+      "how": [
+        "Check each pointing word with its noun.",
+        "This goes with one thing, but grapes means more than one.",
+        "The answer is \"Can I try one of this grapes?\" It should be these grapes."
+      ],
+      "misconception": "A common mix-up is trusting this because it sounds natural in a spoken question."
+    },
+    "SK-GUM2-2-P5": {
+      "hints": [
+        "Ask what job each word does before a noun: mark it, point to it, or show who owns it.",
+        "Say each word before a noun, like ___ cat. Decide which job fits.",
+        "There are only three articles. Use that to sort some of the words first."
+      ],
+      "how": [
+        "Think of a noun to go with each word.",
+        "An and the are articles. Those and this point. Their and my tell who owns something.",
+        "Sort each word into the job it does."
+      ],
+      "misconception": "A common mix-up is putting their with the pointing words because they look alike. Their shows owning."
+    }
+  },
+  /* B7b:core:end */
   test: [
     { id: "SK-GUM2-2-T1", type: "dropdown", points: 1, dok: 1, passages: [],
       prompt: "Choose the word that correctly completes the sentence.",
