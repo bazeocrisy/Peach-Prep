@@ -1434,11 +1434,11 @@ PP.addLesson({
         [
           "(1) Last winter, my family rented a cabin in the mountains.",
           "(2) The snow was so deep that it covered our boots.",
-          "(3) On the first morning, we saw four deers drinking from the stream."
+          "(3) On the first morning, we saw four wolfs near the stream."
         ],
         [
           "(4) We watched them from the porch.",
-          "(5) At dawn, six gooses flew over the roof.",
+          "(5) At dawn, a large flock flew over the roof.",
           "(6) My cousins and I counted them twice."
         ],
         [
@@ -1467,7 +1467,7 @@ PP.addLesson({
           "(6) Two wagons take visitors around the farm on Saturdays."
         ],
         [
-          "(7) Visitors can watch the farmers care for the oxes.",
+          "(7) Visitors can watch the farmers care for the horses.",
           "(8) Wear sturdy shoes, because the paths can get muddy.",
           "(9) We hope you enjoy your visit."
         ],
@@ -1491,7 +1491,7 @@ PP.addLesson({
           "(3) Next to them, a keeper was cutting apples into halfs for the monkeys."
         ],
         [
-          "(4) At the plains exhibit, we counted five bisons near the fence.",
+          "(4) At the plains exhibit, we counted five sheeps near the fence.",
           "(5) A guide told us that the zoo has more than two hundred animals.",
           "(6) We ate our lunch under the shady trees."
         ],
@@ -1516,7 +1516,7 @@ PP.addLesson({
         [
           "(1) Last February, a big blizzard hit our town.",
           "(2) School was closed, so my brother and I stayed home.",
-          "(3) We looked out the window and saw two mans shoveling snow."
+          "(3) We looked out the window and saw two men shoveling snow."
         ],
         [
           "(4) Dad made hot cocoa for everyone.",
@@ -1604,11 +1604,11 @@ PP.addLesson({
       prompt: "Choose the words that correctly complete the sentence.",
       text: "The {0} on the field trip laughed when two {1} marched across the yard.",
       slots: [
-        { options: ["childs", "children", "childrens"], answer: 1 },
-        { options: ["gooses", "geese", "geeses"], answer: 1 }
+        { options: ["womans", "women", "womens"], answer: 1 },
+        { options: ["calfs", "calves", "calfes"], answer: 1 }
       ],
-      clue: "Both blanks need a word for more than one. Child and goose are special nouns. Say \"one ___, two ___\" for each.",
-      why: "The answers are children and geese. One child, many children. One goose, two geese. Childrens and geeses add an extra -s that does not belong." }
+      clue: "Both blanks need a word for more than one. Woman and calf are special nouns. Say \"one ___, two ___\" for each.",
+      why: "The answers are women and calves. One woman, many women. One calf, two calves. Womens adds an extra -s, and calfs and calfes do not change the f to v." }
   ],
   /* B6:core:start */
   /* ---------- Expansion 2026-10-22, batch B6 (GUM Master) ----------
@@ -1737,8 +1737,9 @@ PP.addLesson({
             std: [
               "3.L.GC.1:M:form-and-use-irregular-plural-nouns"
             ],
-            passages: ["p2"],
-            prompt: "Sentence 5 of the draft has a plural noun that is spelled the wrong way. Which revision fixes it?",
+            passages: [],
+            prompt: "This sentence has a plural noun spelled the wrong way. Which revision fixes it?",
+            stem: "At dawn, six gooses flew over the roof.",
             choices: [
               { text: "At dawn, six geeses flew over the roof." },
               { text: "At dawn, six goose flew over the roof." },
@@ -1748,7 +1749,7 @@ PP.addLesson({
             clue: "Some nouns change their spelling when they mean more than one. Say the noun for one, then for six.",
             hints: [
               "Some nouns change their spelling when they mean more than one. Say the noun for one, then for six.",
-              "Read the number word in sentence 5, then think about how the noun changes for more than one.",
+              "Read the number word in the sentence, then think about how the noun changes for more than one.",
               "A noun that changes its spelling does not also add -es. Check which choices do both."
             ],
             how: [
@@ -1781,11 +1782,11 @@ PP.addLesson({
             how: [
               "Find the plural noun in each sentence and say the noun for one.",
               "Boots, cousins and stories follow the usual rules, so those sentences are fine.",
-              "Sentence 3: deer is a noun that stays the same, so deers is wrong. It should be four deer.",
+              "Sentence 3: wolf changes its f to v for more than one, so wolfs is wrong. It should be four wolves.",
               "Sentence 7: shelf changes its f to v for more than one, so shelfs is wrong. It should be shelves."
             ],
-            misconception: "A common mix-up is thinking every plural noun just adds -s. Deer stays the same, and shelf changes its f to v.",
-            why: "The answers are \"On the first morning, we saw four deers drinking from the stream.\" and \"Mom put the dishes on two shelfs by the stove.\" Deer stays the same for one or many, and shelf changes to shelves. Boots, cousins and stories are spelled correctly."
+            misconception: "A common mix-up is thinking every plural noun just adds -s. Wolf and shelf both change their f to v.",
+            why: "The answers are \"On the first morning, we saw four wolfs near the stream.\" and \"Mom put the dishes on two shelfs by the stove.\" Wolf and shelf both change the f to v for more than one. Boots, cousins and stories are spelled correctly."
           },
           {
             id: "SK-GUM3-2-C08",
@@ -1984,8 +1985,9 @@ PP.addLesson({
             std: [
               "3.L.GC.1:M:form-and-use-irregular-plural-nouns"
             ],
-            passages: ["p3"],
-            prompt: "Sentence 7 of the poster has a plural noun spelled the wrong way. Which revision fixes it?",
+            passages: [],
+            prompt: "This sentence from a poster has a plural noun spelled the wrong way. Which revision fixes it?",
+            stem: "Visitors can watch the farmers care for the oxes.",
             choices: [
               { text: "Visitors can watch the farmers care for the oxes." },
               { text: "Visitors can watch the farmers care for the oxen.", correct: true },
@@ -1995,7 +1997,7 @@ PP.addLesson({
             clue: "Say the noun for one, then say it for more than one, the way you would say it aloud.",
             hints: [
               "Say the noun for one, then say it for more than one, the way you would say it aloud.",
-              "Read sentence 7. The farmers care for more than one animal. Think about how the noun for just one changes.",
+              "Read the sentence. The farmers care for more than one animal. Think about how the noun for just one changes.",
               "The ox is for only one animal. Decide among the other three."
             ],
             how: [
@@ -2050,9 +2052,9 @@ PP.addLesson({
         "3.L.GC.1:M:form-and-use-irregular-plural-nouns"
       ],
       passages: [],
-      prompt: "Select the sentence that has an error.",
+      prompt: "Which one line contains a mistake?",
       options: [
-        "Five geese landed on the lake.",
+        "Six fish swam near the dock.",
         "My little sister lost two front tooths.",
         "Grandma packed two sharp knives.",
         "The farmer counted nine sheep."
@@ -2067,11 +2069,11 @@ PP.addLesson({
       ],
       how: [
         "Find each noun that means more than one.",
-        "Geese changes the letters inside goose, knives changes its f to v, and sheep stays the same.",
+        "Fish stays the same, knives changes its f to v, and sheep stays the same.",
         "Tooths adds -s to a noun that changes its spelling. Tooth becomes teeth."
       ],
       misconception: "A common mix-up is adding -s to a noun that changes its spelling.",
-      why: "The error is in \"My little sister lost two front tooths.\" Tooth is a special noun: one tooth, two teeth. Geese, knives and sheep are all spelled correctly.",
+      why: "The error is in \"My little sister lost two front tooths.\" Tooth is a special noun: one tooth, two teeth. Fish, knives and sheep are all spelled correctly.",
       like: ["SK-GUM3-2-P4"]
     },
     {
@@ -2083,31 +2085,31 @@ PP.addLesson({
         "3.L.GC.1:M:form-and-use-irregular-plural-nouns"
       ],
       passages: [],
-      prompt: "Choose the words that correctly complete the sentence.",
-      text: "The {0} on the hike watched five {1} fly over the lake.",
+      prompt: "Fill in both blanks.",
+      text: "The {0} on the hike stopped to pet five {1} in a barn.",
       slots: [
         {
           options: ["mans", "men", "mens"],
           answer: 1
         },
         {
-          options: ["gooses", "geese", "geeses"],
+          options: ["oxes", "oxen", "oxs"],
           answer: 1
         }
       ],
       clue: "Both blanks need a word for more than one. Say the noun for one, then change it.",
       hints: [
         "Both blanks need a word for more than one. Say the noun for one, then change it.",
-        "Look at each blank. Think about how a noun that ends in man changes, and how goose changes.",
-        "Mens and geeses add -s or -es to a word that has already changed. Decide about the other options."
+        "Look at each blank. Think about how a noun that ends in man changes, and how ox changes.",
+        "Mens adds an -s to a word that has already changed. Decide about the other options."
       ],
       how: [
         "Both blanks need nouns that mean more than one. Five tells you the second one is plural, and the hikers are more than one person.",
-        "Man changes to men. Goose changes to geese. Neither one adds -s or -es.",
-        "Mans and gooses add the usual ending to a word that should change. Mens and geeses add a second ending."
+        "Man changes to men. Ox changes to oxen. Neither one adds the usual -s or -es.",
+        "Mans, oxes and oxs add the usual ending to a word that should change. Mens adds a second ending."
       ],
       misconception: "A common mix-up is changing the word and also adding -s or -es.",
-      why: "The answers are men and geese. One man, many men. One goose, many geese. Mans, mens, gooses and geeses add endings that do not belong.",
+      why: "The answers are men and oxen. One man, many men. One ox, many oxen. Mans, mens, oxes and oxs add endings that do not belong.",
       like: ["SK-GUM3-2-P5"]
     },
     {
@@ -2119,7 +2121,7 @@ PP.addLesson({
         "3.L.GC.1:M:form-and-use-irregular-plural-nouns"
       ],
       passages: ["p4"],
-      prompt: "The third sentence of the draft has a plural noun that is spelled the wrong way. Which word belongs in the blank?",
+      prompt: "Sentence 3 of the draft misspells a plural. Which word belongs in the gap?",
       text: "A keeper sliced each apple into {0} and tossed them to the monkeys.",
       slots: [
         {
@@ -2151,7 +2153,7 @@ PP.addLesson({
         "3.L.GC.1:M:form-and-use-irregular-plural-nouns"
       ],
       passages: ["p4"],
-      prompt: "Select the sentence that has a plural noun that should stay the same as the singular noun.",
+      prompt: "Which one line has a plural that must look just like its singular?",
       targets: ["p4:1:2", "p4:1:3", "p4:2:1", "p4:2:2", "p4:3:1"],
       answer: ["p4:2:1"],
       pick: 1,
@@ -2179,9 +2181,9 @@ PP.addLesson({
         "3.L.GC.1:M:form-and-use-irregular-plural-nouns"
       ],
       passages: ["p4"],
-      prompt: "This question has two parts. Answer Part A, then Part B.",
+      prompt: "Work in two steps, A and then B.",
       partA: {
-        prompt: "Look at the last sentence in the forest exhibit part of the draft. Which choice writes its plural noun correctly?",
+        prompt: "In the forest-exhibit part of the draft, which choice spells the plural noun correctly?",
         choices: [
           { text: "In the forest exhibit, two wolfs slept in the shade." },
           { text: "In the forest exhibit, two wolfes slept in the shade." },
@@ -2190,31 +2192,31 @@ PP.addLesson({
         ]
       },
       partB: {
-        prompt: "Why is the answer to Part A correct?",
+        prompt: "What explains the pick you made first?",
         choices: [
-          { text: "Wolf is a noun that never changes, so the plural looks just like the singular." },
-          { text: "Wolf swaps the vowels inside the word, so the plural is spelled with a new vowel." },
+          { text: "Wolf is one of the nouns that never change, so one and many look alike." },
+          { text: "Wolf swaps vowels inside, so the plural shows a new vowel." },
           {
-            text: "Wolf ends in f, and an f like this changes to v before the plural ending, as in elf and elves.",
+            text: "Wolf ends in f, and an f like this turns into v before the plural ending, as in elf and elves.",
             correct: true
           },
-          { text: "Wolf adds the letters -en at the end, so the plural is spelled with those letters." }
+          { text: "Wolf takes -en at the end, so the plural is spelled with those letters." }
         ]
       },
       clue: "Say the noun for one, then decide how it changes when it means more than one.",
       hints: [
         "Say the noun for one, then decide how it changes when it means more than one.",
-        "For Part A, read sentence 7 and picture the forest exhibit. For Part B, think about which other nouns end in f and what happens to them.",
+        "For Part A, read sentence 7 and picture the forest exhibit. For Part B, think about the pattern the plural of wolf follows, and which of the four patterns it matches.",
         "In Part A, wolve leaves off the ending. Check the other choices."
       ],
       how: [
         "Part A: two tells you the noun must mean more than one. The noun for one is wolf.",
         "Wolf ends in f. The f changes to v and the ending is added: wolf, wolves.",
         "Part A answer: \"In the forest exhibit, two wolves slept in the shade.\" Wolfs only adds -s, and wolfes and wolve are not spelled that way.",
-        "Part B answer: \"Wolf ends in f, and an f like this changes to v before the plural ending, as in elf and elves.\""
+        "Part B answer: \"Wolf ends in f, and an f like this turns into v before the plural ending, as in elf and elves.\""
       ],
       misconception: "A common mix-up is adding only -s to a noun that ends in f. For many of these nouns, the f changes to v.",
-      why: "Part A: \"In the forest exhibit, two wolves slept in the shade.\" Part B: \"Wolf ends in f, and an f like this changes to v before the plural ending, as in elf and elves.\" Wolfs only adds -s, and wolfes and wolve are not words. Wolf does not stay the same, swap vowels, or add -en.",
+      why: "Part A: \"In the forest exhibit, two wolves slept in the shade.\" Part B: \"Wolf ends in f, and an f like this turns into v before the plural ending, as in elf and elves.\" Wolfs only adds -s, and wolfes and wolve are not words. Wolf does not stay the same, swap vowels, or add -en.",
       like: ["SK-GUM3-2-C05"]
     },
     {
@@ -2225,8 +2227,9 @@ PP.addLesson({
       std: [
         "3.L.GC.1:M:form-and-use-irregular-plural-nouns"
       ],
-      passages: ["p5"],
-      prompt: "Which choice fixes the plural noun that is spelled the wrong way in the third sentence of the draft?",
+      passages: [],
+      prompt: "Pick the repair for the sentence above.",
+      stem: "Late at night, we heard mices scratching inside the walls.",
       choices: [
         { text: "Late at night, we heard mices scratching inside the walls." },
         { text: "Late at night, we heard mouse scratching inside the walls." },
@@ -2257,7 +2260,7 @@ PP.addLesson({
         "3.L.GC.1:M:form-and-use-irregular-plural-nouns"
       ],
       passages: ["p5"],
-      prompt: "Select the TWO sentences that have a plural noun spelled the wrong way.",
+      prompt: "Two lines in the draft misspell a plural. Select both.",
       targets: ["p5:1:2", "p5:2:1", "p5:2:3", "p5:3:1", "p5:3:2"],
       answer: ["p5:2:3", "p5:3:1"],
       pick: 2,
@@ -2286,7 +2289,7 @@ PP.addLesson({
         "3.L.GC.1:M:form-and-use-irregular-plural-nouns"
       ],
       passages: [],
-      prompt: "Look at how goose becomes geese. Which noun follows the same pattern?",
+      prompt: "Goose turns into geese. Which pair changes its letters inside the word in a similar way?",
       choices: [
         { text: "knife (knives)" },
         { text: "foot (feet)", correct: true },
@@ -2317,7 +2320,7 @@ PP.addLesson({
         "3.L.GC.1:M:form-and-use-irregular-plural-nouns"
       ],
       passages: [],
-      prompt: "Choose the TWO sentences that use plural nouns correctly.",
+      prompt: "Pick the TWO lines whose plural nouns are spelled right.",
       pick: 2,
       choices: [
         { text: "The elfs hid behind the big oak tree." },
@@ -2350,7 +2353,7 @@ PP.addLesson({
         "3.L.GC.1:M:form-and-use-irregular-plural-nouns"
       ],
       passages: [],
-      prompt: "Match each plural noun to the noun that means only one.",
+      prompt: "Pair every plural with the single form it came from.",
       cols: ["elf", "man", "mouse", "ox"],
       rows: [
         { text: "mice", answer: 2 },
@@ -2382,7 +2385,7 @@ PP.addLesson({
         "3.L.GC.1:M:form-and-use-irregular-plural-nouns"
       ],
       passages: ["p6"],
-      prompt: "Select the TWO sentences in the flyer that have a plural noun spelled the wrong way.",
+      prompt: "Two lines of the flyer misspell a plural. Mark them both.",
       targets: ["p6:1:2", "p6:1:3", "p6:2:2", "p6:2:3", "p6:3:2"],
       answer: ["p6:1:3", "p6:2:3"],
       pick: 2,
@@ -2411,7 +2414,7 @@ PP.addLesson({
         "3.L.GC.1:M:form-and-use-irregular-plural-nouns"
       ],
       passages: [],
-      prompt: "Choose the word that correctly completes the sentence.",
+      prompt: "Which word fits the gap?",
       text: "On the stage stood three {0} holding bright flags.",
       slots: [
         {
@@ -2443,14 +2446,14 @@ PP.addLesson({
         "3.L.GC.1:M:form-and-use-irregular-plural-nouns"
       ],
       passages: [],
-      prompt: "Max says, \"To make a noun mean more than one, just add -s.\" Which TWO examples show that he is wrong?",
+      prompt: "Max claims: \"Adding -s is all it takes to name many.\" Pick the TWO pairs that prove him wrong.",
       pick: 2,
       choices: [
-        { text: "one moose, two moose", correct: true },
-        { text: "one hat, two hats" },
-        { text: "one goose, two geese", correct: true },
-        { text: "one desk, two desks" },
-        { text: "one kite, two kites" }
+        { text: "moose to moose", correct: true },
+        { text: "hat to hats" },
+        { text: "goose to geese", correct: true },
+        { text: "desk to desks" },
+        { text: "kite to kites" }
       ],
       clue: "To test a rule, look for examples that break it. Ask whether the plural is made by adding -s.",
       hints: [
@@ -2464,7 +2467,7 @@ PP.addLesson({
         "Geese changes the letters inside goose, and moose stays the same. Neither one is made by adding -s."
       ],
       misconception: "A common mix-up is thinking every plural noun follows the same rule. Some nouns change, and some stay the same.",
-      why: "The answers are \"one goose, two geese\" and \"one moose, two moose.\" Geese changes the letters inside the word, and moose stays the same, so neither one just adds -s. Kites, hats and desks follow Max's rule.",
+      why: "The answers are \"goose to geese\" and \"moose to moose.\" Geese changes the letters inside the word, and moose stays the same, so neither one just adds -s. Kites, hats and desks follow Max's rule.",
       like: ["SK-GUM3-2-C13"]
     },
     {
@@ -2588,14 +2591,14 @@ PP.addLesson({
       hints: [
         "Both blanks need a word for more than one. Say one ___, two ___ for each blank.",
         "Look at each blank and its clue words. In the first, ask how many went on the trip. In the second, two tells you.",
-        "Childrens and geeses add -s to words that already changed. Decide about the other options."
+        "Womens and calfes add extra letters to words that should change. Decide about the other options."
       ],
       how: [
         "Both blanks need a word for more than one.",
-        "One child, many children. One goose, two geese. Both change their spelling.",
-        "Childs and gooses add the usual -s to nouns that should change. Childrens and geeses add an extra -s."
+        "One woman, many women. One calf, two calves. The first changes its vowel, and the second changes its f to v.",
+        "Womans, calfs and calfes add the usual ending to nouns that should change. Womens adds an extra -s."
       ],
-      misconception: "A common mix-up is changing the word and then adding -s as well."
+      misconception: "A common mix-up is adding -s to a noun that changes its spelling."
     }
   },
   /* B6:core:end */
@@ -2630,15 +2633,15 @@ PP.addLesson({
       why: "The answer is feet. One foot, two feet." },
     { id: "SK-GUM3-2-T4", type: "match", points: 2, dok: 1, passages: [],
       prompt: "Match each noun to its plural.",
-      cols: ["women", "shelves", "calves", "teeth"],
+      cols: ["wives", "shelves", "scarves", "feet"],
       rows: [
-        { text: "woman", answer: 0 },
+        { text: "wife", answer: 0 },
         { text: "shelf", answer: 1 },
-        { text: "calf", answer: 2 },
-        { text: "tooth", answer: 3 }
+        { text: "scarf", answer: 2 },
+        { text: "foot", answer: 3 }
       ],
       clue: "Say \"one ___, two ___\" for each word. Listen for the plural that sounds right.",
-      why: "One woman, two women. One shelf, two shelves. One calf, two calves. One tooth, two teeth." },
+      why: "One wife, two wives. One shelf, two shelves. One scarf, two scarves. One foot, two feet." },
     { id: "SK-GUM3-2-T5", type: "hottext", points: 1, dok: 2, passages: [],
       prompt: "Select the sentence that has an error.",
       options: [
@@ -2756,14 +2759,14 @@ PP.addLesson({
       answer: "Yesterday, Mateo brought his kite to the beach on Tybee Island."
     },
     {
-      show: ["Last week, the coach (cutted / cut) the long rope in two."],
+      show: ["Last week, the coach (setted / set) the long rope on a hook."],
       ask: "Which verb is correct?",
       steps: [
         "Find the time clue: last week. The verb must tell about the past.",
-        "Cut is an irregular verb, but it does not change at all. Cut is also the past tense.",
-        "Cutted is not a word, so cross it out."
+        "Set is an irregular verb, but it does not change at all. Set is also the past tense.",
+        "Setted is not a word, so cross it out."
       ],
-      answer: "Last week, the coach cut the long rope in two."
+      answer: "Last week, the coach set the long rope on a hook."
     }
   ],
   parent: "At dinner, ask \"What did you do today?\" and listen for special past-tense verbs. If your child says \"I eated,\" just repeat it back the right way: \"Oh, you ate pizza!\"",
@@ -3087,7 +3090,7 @@ PP.addLesson({
             clue: "Say the verb, then decide whether it is a real past-tense word.",
             hints: [
               "Say the verb, then decide whether it is a real past-tense word.",
-              "For Part A, read sentence 7 and say each choice in it. For Part B, think about whether thinked follows the pattern most verbs follow, and what the correct word looks like.",
+              "For Part A, read sentence 7 and say each choice in it. For Part B, think about the fix you made in Part A and the reason for it.",
               "In Part A, thinks tells about now. Check the other choices."
             ],
             how: [
@@ -3113,7 +3116,7 @@ PP.addLesson({
               "3.L.GC.1:M:form-and-use-the-past-tense-of-irregular-verbs"
             ],
             passages: ["p2"],
-            prompt: "Select the TWO sentences that have a verb mistake.",
+            prompt: "Look at sentences 3 through 7 of the draft. Select the TWO that have a verb mistake.",
             targets: ["p2:1:3", "p2:2:1", "p2:2:2", "p2:2:3", "p2:3:1"],
             answer: ["p2:1:3", "p2:2:2"],
             pick: 2,
@@ -3274,7 +3277,7 @@ PP.addLesson({
               "3.L.GC.1:M:form-and-use-the-past-tense-of-irregular-verbs"
             ],
             passages: ["p3"],
-            prompt: "In the newsletter, two verbs added -ed when they should have changed into a new word. Select the TWO sentences that have them.",
+            prompt: "Look at sentences 3 through 7 of the newsletter. Two verbs there added -ed when they should have changed into a new word. Select the TWO sentences that have them.",
             targets: ["p3:2:1", "p3:2:2", "p3:2:3", "p3:2:4", "p3:3:1"],
             answer: ["p3:2:1", "p3:2:3"],
             pick: 2,
@@ -3463,7 +3466,7 @@ PP.addLesson({
         "3.L.GC.1:M:form-and-use-the-past-tense-of-irregular-verbs"
       ],
       passages: [],
-      prompt: "Choose the words that correctly complete the sentence.",
+      prompt: "Fill in both blanks with real past-tense words.",
       text: "Last night, Kai {0} a strange noise and {1} to the window.",
       slots: [
         {
@@ -3499,7 +3502,7 @@ PP.addLesson({
         "3.L.GC.1:M:form-and-use-the-past-tense-of-irregular-verbs"
       ],
       passages: ["p4"],
-      prompt: "The third sentence of the draft has a verb mistake. Which word belongs in the blank?",
+      prompt: "Line 3 needs a stronger action word in the gap. Pick the one that fits.",
       text: "An hour later, we {0} to a bridge over a stream.",
       slots: [
         {
@@ -3531,7 +3534,7 @@ PP.addLesson({
         "3.L.GC.1:M:form-and-use-the-past-tense-of-irregular-verbs"
       ],
       passages: ["p4"],
-      prompt: "Which revision fixes the verb mistake in the fifth sentence of the draft?",
+      prompt: "In the draft, the fifth sentence has a verb that is not right. Pick the fix.",
       choices: [
         { text: "Then we left the bridge and climbed a rocky hill.", correct: true },
         { text: "Then we leave the bridge and climbed a rocky hill." },
@@ -3562,9 +3565,9 @@ PP.addLesson({
         "3.L.GC.1:M:form-and-use-the-past-tense-of-irregular-verbs"
       ],
       passages: ["p4"],
-      prompt: "This question has two parts. Answer Part A, then Part B.",
+      prompt: "Take this in two steps.",
       partA: {
-        prompt: "Look at the seventh sentence of the draft. Which choice writes its verb correctly?",
+        prompt: "Sentence 7 has an action word that is off. Choose the repaired line.",
         choices: [
           { text: "Mom says that the falls were close." },
           { text: "Mom sayed that the falls were close." },
@@ -3573,28 +3576,28 @@ PP.addLesson({
         ]
       },
       partB: {
-        prompt: "What makes the answer to Part A correct?",
+        prompt: "What reason supports your pick?",
         choices: [
-          { text: "The verb say becomes a different word in the past, so -ed is left off.", correct: true },
-          { text: "The verb say is already in the past, so the sentence stays as it is." },
-          { text: "The verb say must follow a helper word like had to show the past." },
-          { text: "The verb say takes an -s in the past because Mom is one person." }
+          { text: "Say turns into another word for earlier times, so no -ed is added.", correct: true },
+          { text: "Say stays right as is since it already shows earlier times." },
+          { text: "Say can show earlier times only after a word such as had." },
+          { text: "Say gains an s as Mom is a single person." }
         ]
       },
       clue: "Say the verb, then decide whether it is a real past-tense word.",
       hints: [
         "Say the verb, then decide whether it is a real past-tense word.",
-        "For Part A, read the sentence and say each choice in it. For Part B, think about what the verb say does in the past.",
+        "For Part A, read the sentence and say each choice in it. For Part B, think about the fix you made in Part A and the reason for it.",
         "In Part A, says tells about now. Check the other choices."
       ],
       how: [
         "Part A: find the verb in sentence 7. The hike already happened.",
         "Say is irregular. Its past tense is said, and it does not add -ed.",
         "Part A answer: \"Mom said that the falls were close.\" Says tells about now, and sayed and saided add -ed to a verb that changes.",
-        "Part B answer: \"The verb say becomes a different word in the past, so -ed is left off.\""
+        "Part B answer: \"Say turns into another word for earlier times, so no -ed is added.\""
       ],
       misconception: "A common mix-up is adding -ed to every verb in the past. Special verbs change into a new word.",
-      why: "Part A: \"Mom said that the falls were close.\" Part B: \"The verb say becomes a different word in the past, so -ed is left off.\" Says tells about now, and sayed and saided are not words. Say does not need had here, and it does not add -s to tell about the past.",
+      why: "Part A: \"Mom said that the falls were close.\" Part B: \"Say turns into another word for earlier times, so no -ed is added.\" Says tells about now, and sayed and saided are not words. Say does not need had here, and it does not add -s to tell about the past.",
       like: ["SK-GUM3-3-C05"]
     },
     {
@@ -3606,7 +3609,7 @@ PP.addLesson({
         "3.L.GC.1:M:form-and-use-the-past-tense-of-irregular-verbs"
       ],
       passages: ["p5"],
-      prompt: "Select the TWO sentences that have a verb mistake.",
+      prompt: "Sentences 3 through 7 hold two faulty verbs. Mark the lines that have them.",
       targets: ["p5:1:3", "p5:2:1", "p5:2:2", "p5:2:3", "p5:3:1"],
       answer: ["p5:1:3", "p5:2:2"],
       pick: 2,
@@ -3635,7 +3638,7 @@ PP.addLesson({
         "3.L.GC.1:M:form-and-use-the-past-tense-of-irregular-verbs"
       ],
       passages: [],
-      prompt: "Choose the TWO sentences that use past-tense verbs correctly.",
+      prompt: "Pick the TWO lines whose verbs tell about the past the right way.",
       pick: 2,
       choices: [
         { text: "The scratch bleeded a little." },
@@ -3668,7 +3671,7 @@ PP.addLesson({
         "3.L.GC.1:M:form-and-use-the-past-tense-of-irregular-verbs"
       ],
       passages: [],
-      prompt: "Match each past-tense word to the verb it comes from.",
+      prompt: "Pair each past form with its present-tense verb.",
       cols: ["weep", "steal", "bleed", "mean"],
       rows: [
         { text: "wept", answer: 0 },
@@ -3731,7 +3734,7 @@ PP.addLesson({
         "3.L.GC.1:M:form-and-use-the-past-tense-of-irregular-verbs"
       ],
       passages: ["p5"],
-      prompt: "Sentence 8 of the draft has two verb mistakes. Choose the words that fix them.",
+      prompt: "Two verbs in sentence 8 are wrong. Pick the words that repair the line.",
       text: "At midnight, Biscuit {0} out of his cage, and I {1} him before he reached the door.",
       slots: [
         {
@@ -3767,8 +3770,8 @@ PP.addLesson({
         "3.L.GC.1:M:form-and-use-the-past-tense-of-irregular-verbs"
       ],
       passages: ["p6"],
-      prompt: "Select the TWO sentences that have a verb mistake.",
-      targets: ["p6:2:1", "p6:2:2", "p6:2:3", "p6:3:1", "p6:3:3"],
+      prompt: "Look at sentences 3 through 7 of the draft. Select the TWO that have a verb mistake.",
+      targets: ["p6:2:1", "p6:2:2", "p6:2:3", "p6:2:4", "p6:3:1"],
       answer: ["p6:2:1", "p6:3:1"],
       pick: 2,
       clue: "Check every verb. Two of them added -ed when they should have changed into a new word.",
@@ -3796,7 +3799,7 @@ PP.addLesson({
         "3.L.GC.1:M:form-and-use-the-past-tense-of-irregular-verbs"
       ],
       passages: ["p6"],
-      prompt: "Which revision fixes the verb mistake in sentence 8 of the draft?",
+      prompt: "Pick the repair for the faulty verb in line 8 of the draft.",
       choices: [
         { text: "I knowed it was hard to do." },
         { text: "I know it was hard to do." },
@@ -3827,14 +3830,14 @@ PP.addLesson({
         "3.L.GC.1:M:form-and-use-the-past-tense-of-irregular-verbs"
       ],
       passages: [],
-      prompt: "Ravi says, \"To tell about the past, just add -ed to the verb.\" Which TWO examples show that he is wrong?",
+      prompt: "Ravi insists: \"A verb tells about the past by getting -ed.\" Pick the TWO pairs that prove him wrong.",
       pick: 2,
       choices: [
-        { text: "Today I clap along. Yesterday I clapped along." },
-        { text: "Today I say hello. Yesterday I said hello.", correct: true },
-        { text: "Today I wash the cup. Yesterday I washed the cup." },
-        { text: "Today I begin to read. Yesterday I began to read.", correct: true },
-        { text: "Today I kick the ball. Yesterday I kicked the ball." }
+        { text: "Now I clap along. Then I clapped along." },
+        { text: "Now I say hello. Then I said hello.", correct: true },
+        { text: "Now I wash the cup. Then I washed the cup." },
+        { text: "Now I begin to read. Then I began to read.", correct: true },
+        { text: "Now I kick the ball. Then I kicked the ball." }
       ],
       clue: "To test a rule, look for examples that break it. Ask whether the past is made by adding -ed.",
       hints: [
@@ -3848,7 +3851,7 @@ PP.addLesson({
         "Began and said are new words, not the verb with -ed on the end. Those two examples show that the rule is wrong."
       ],
       misconception: "A common mix-up is thinking every verb follows the same rule. Some verbs become new words.",
-      why: "The answers are \"Today I begin to read. Yesterday I began to read.\" and \"Today I say hello. Yesterday I said hello.\" Began and said are new words, not the verb with -ed added. Kicked, clapped and washed follow Ravi's rule.",
+      why: "The answers are \"Now I begin to read. Then I began to read.\" and \"Now I say hello. Then I said hello.\" Began and said are new words, not the verb with -ed added. Kicked, clapped and washed follow Ravi's rule.",
       like: ["SK-GUM3-3-C13"]
     },
     {
@@ -3860,8 +3863,8 @@ PP.addLesson({
         "3.L.GC.1:M:form-and-use-the-past-tense-of-irregular-verbs"
       ],
       passages: [],
-      prompt: "Which verb belongs in the blank?",
-      text: "Dad {0} the garage door before bed last night.",
+      prompt: "Pick the verb that fits the gap.",
+      text: "Dad {0} the garage door before bed yesterday.",
       slots: [
         {
           options: ["shutted", "shut", "shuts", "shutting"],
@@ -3892,7 +3895,7 @@ PP.addLesson({
         "3.L.GC.1:M:form-and-use-the-past-tense-of-irregular-verbs"
       ],
       passages: [],
-      prompt: "Which sentence keeps both verbs in the past tense?",
+      prompt: "Pick the line where every verb tells about earlier times.",
       choices: [
         { text: "Last Friday, Lena hears a noise and hid under her blanket." },
         { text: "Last Friday, Lena heard a noise and hides under her blanket." },
