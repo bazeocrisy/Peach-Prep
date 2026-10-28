@@ -143,3 +143,10 @@ Final-file figures (twin-vs-core max counts (n) markers and digits, set / multis
 Passages are 103-131 words in all six lessons. No DOK 1 items. verify.js (other tokenizer) shows twin max 0.208-0.214 on L5 set only against legacy P3/C13 pairs it counts differently; all at or below the 0.21 target on the markers-aware count.
 Lesson 5: C04 slot set changed away from the twins (who/what/whose/how); C09/C11/C12/C13/C14/C15 reworded; twins S01, S04, S07, S09, S11, S12, S13, S14, S15 rebuilt; second keys removed from C13/S13 (that/which only); S14 key no longer uniquely longest.
 Lesson 7: S04 and S08 hot-text twins now show different sentence numbers and key positions with a different prompt frame (S08 key text corrected to match the passage, "seems sticky"); S05, S03, S07 prompts reframed; C15 gained "before dinner, so she was free to play" so modals are ruled out; C12 hint 3 now an agreement hint.
+
+## Revision round 2: Lesson 4 only (second review MUSTs and SHOULDs)
+- C05 prompt now lists sentences 2, 4, 6, 7 and 10, matching targets, key (7), hints, how and why. All four hot-text items (C05, C08, S05, S08) checked: prompt numbers, targets, hints and how numbers agree.
+- C04 hint 3 now: "Tess comes first, and a question mark already ends her words, so no comma follows it."
+- C09 hints 1 and 2 softened so they no longer state the comma rule; S09 hints reworded the same way; S09 distractors rewritten without "ever" or "again and again" (plain parallel statements); S09 prompt reworded.
+- S08 prompt simplified to grade 3 wording. P3 "Which two sentences" left as is (legacy item shared with T3 and the whole app).
+- Final-file figures: twin max 0.202 set / 0.206 multiset (markers counted); core-vs-core under 0.30; no key uniquely longest; at least 2 live choices on every item; check-content --all PASS, 0 failures; check-writing and check-instructional-copy clean. Lessons 1-3, 5-8 not touched in this round.
