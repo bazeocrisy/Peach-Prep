@@ -611,3 +611,116 @@ Blind 35 of 35 agree. Rule verified; `jockeys` verified (M-W).
 
 - Whether the player lets a child go back within a set (relevant to the cross-set vocabulary leaks), and keyboard or screen-reader use. Twins were read but not tapped; only the 60 core items were tapped.
 - The M-W pages for `unicycle` and `Earth Day` (not fetchable here); `eighth` rests on the sound rule.
+
+
+## Third review (B7b lessons 4-5)
+
+Reviewer: independent (did not author, did not write the first or second review). Lessons: 4 end marks (`use-end-punctuation-period-exclamation-point-que`, `L-GUM2.js` index 3) and 5 plurals y to ies (`form-plural-nouns-by-changing-y-to-ies`, index 4). Files read as they are on disk in `/home/claude/pp-content` (uncommitted fixes included). Read-only: no lesson edits, no git, nothing marked ACCEPTED. Local server (port 8961) stopped by pid. Scripts and outputs: `scratchpad/b7brev4/`.
+
+### Verdicts
+
+| Lesson | Verdict | MUST | SHOULD | NOTE |
+|---|---|---|---|---|
+| 4 End marks | REVISE | 1 | 3 | 7 |
+| 5 Plurals y to ies | ACCEPT (with SHOULDs) | 0 | 2 | 6 |
+
+Every second-review MUST is fixed on disk (table below; each re-measured). L4 has one new MUST, created by the fix to the earlier C07 Part B SHOULD: replacing `the water at` with `how deep` leaves two defensible keys. L5 has no MUST. The author-log claims I re-tested: "no hint 3 names more than one wrong choice" and ">=2 live choices after hints 1-3" are true for L5 and for L4 except L4 S05 hint 3 (SHOULD, two wrong choices ruled out by one idea, two live left).
+
+### Method and blindness
+
+- **Blind solve** (`blind.js`, `answers.saved.txt`, `grade.js`). `L-GUM2.js` loaded in a Node `vm` sandbox with a mock `PP.addLesson`. Printed the drafts the items use, all 15 core items per lesson (refs resolved, P3/P4 and P4/P5 included) and S01-S15, with choices, dropdown options, hot-text options, ebsr parts and match rows shuffled by a seeded LCG (`7000 + 53 * lessonIndex`). No key, `correct`/`answer` flag, why, hint, how, clue, misconception, like or addon was printed. Hot-text targets printed as sentence text with their `(n)` markers; figures: none in these lessons. Answers saved to `answers.saved.txt` before any key was extracted. Test items were not printed (out of scope for the solve); they were read afterwards for leaks.
+- **Honest blindness statement: fully blind for all 60 answer units.** I opened no raw lesson source for these items before solving: the only source I saw before saving was the first 1,500 characters of `L-GUM2.js` (lesson 1, verb tenses). A first grading script, run after the answers were saved, printed the raw record of L4 C03 only. I read the second-review section, the author log and all hints only after grading.
+- **Agreement: 56 of 60 answer units (93%).** L5: 30 of 30. L4: 26 of 30. The four L4 differences:
+  - **C04** and **S04** (my slip on the reported-question trap): I read `My sister asked if we could keep her?` and `Omar asked if the rabbit was real` as asking lines; both are telling lines, key `(.)`. Keys are right.
+  - **S03** (my slip, the same one the second reviewer made): I read `Where did the rabbit go after the show.` as telling; key `(?)` is right.
+  - **C07 Part B** (a real disagreement): I chose `how deep`; the key is `How deep is`. See MUST.
+  - Four match items (L4 P4, S02; L5 P4, S01) all agree.
+- **Scripted measurements on the files on disk:** `jac.js` (alphanumeric tokens, `(n)` sentence markers counted, because the sentence text carries them), `jac4.js` (markers stripped, other digits kept), `jac2.js` (letters only), `longest.js`, `endmark.js`, `hintkey.js`, `keyhow.js`, `like.js`, `stale.js` (every sentence number in prompts, hints and how re-checked against the passage text), `pass.js` and `verification/readability.py`, `dup.js` / `dup2.js` (6-grams against the other 43 data files and the other lessons of the file), `leak5.js` (y-word keys printed in earlier items), and `run390.py` (Playwright, real taps, 390 x 844).
+- **Hint ladders:** all 60 items' h1-h3 read by hand, live choices counted cumulatively. L4 live after h3 (two live, allowed): C04, C07 B (see MUST), C12, C13 slots, S04, S05, S12, S13 slots. L5 two live: C04, C07 A, C12, S04, S12. No ladder leaves one live in either lesson.
+
+### Measurements
+
+| Check | L4 | L5 |
+|---|---|---|
+| Twin vs core max, markers counted (alnum), set / multiset (all 225 pairs) | 0.202 / 0.193 (C10/S10; C07/S07 0.198 / 0.187) | 0.209 / 0.202 (C10/S10) |
+| Twin vs core max, markers stripped, set / multiset | 0.202 / 0.193 | 0.209 / 0.202 |
+| Twin vs core max, letters only, set / multiset | 0.207 / 0.197 (C10/S10) | **0.211** / 0.203 (C10/S10) |
+| Core vs core max (markers counted / letters only), set / multiset | 0.268 / 0.278 ; 0.280 / 0.283 (C11/C12, C03/C10) | 0.225 / 0.245 ; 0.230 / 0.248 (C07/C10) |
+| Twin vs twin max, set / multiset | 0.217 / 0.212 (S06/S07, S04/S12) | 0.175 / 0.193 |
+| Any twin/core pair at 0.30 or above | none | none |
+| Core formats (mc / dd / hottext / ms / ebsr / match), DOK 1 / 2 / 3, points | 5 3 4 1 1 1; 1 / 10 / 4; 21 | same |
+| `like` maps (type, points, DOK mirror, one twin per core item), pick counts, stale sentence numbers | pass | pass |
+| Key unique longest (core + twins) | none | none |
+| Key the only choice with a different end mark (`endmark.js`) | none (both earlier flags cleared) | n/a |
+| Passages, words without `(n)` / FK (readability.py) | 100-105 / 1.9-3.1 | 101-111 / 2.3-4.1 |
+| Browser, 15 core items by real taps (3 hints, answer, Check, Show me how), overflow, errors | 15 of 15, none | 15 of 15, none |
+| Cross-file 6-gram scan | only frames: C06 "Look at sentences 2 through 6", C07 "This question has two parts", legacy P3 vs `PT-1.js` | only frames: P4 (legacy) "How does each word change to mean more than one", P5 "Select the sentence that has a" |
+
+- **Twin vs core with markers.** Counting the `(n)` tokens does not change the maximum for either lesson (the frame pairs C06/S06, C11/S11 reach 0.208-0.216 on the multiset, below the cap). The one pair above 0.21 is L5 C10/S10 on a letters-only tokenizer, 0.211 (0.209 alphanumeric). NOTE: the Ben/Pia explain-the-rule frame is shared; a one-word change in S10 would clear every tokenizer.
+- Test items against the banks: L4 T4/C04 0.258, L5 T4/P4 0.387 (`boy` row). Twin-vs-core is the gate; NOTE only.
+- Keys shortest by 1-3 characters in L4 C07 A, C15, S07 A and L5 C05, C10, S05 (no unique longest anywhere). NOTE.
+
+### Web sources (checked 2026-10-27)
+
+- Indirect questions are not given question marks; the example `Cecil asked where the reports were.` ends in a period: https://courses.lumenlearning.com/englishcomp1/chapter/text-end-punctuation/ (the page states the rule as "Indirect questions do not have question marks at their ends"; it does not state "period" in words).
+- Consonant + y changes to -ies, vowel + y adds -s: https://quickanddirtytips.com/articles/how-to-make-words-that-end-in-y-plural and https://howtospell.co.uk/y-to-ies-or-s-plural-rule ; plural of `key` https://www.grammar-monster.com/plurals/plural_of_key.htm and of `journey` https://www.grammar-monster.com/plurals/plural_of_journey.htm (search results only; the pages were not opened). `jockeys` was verified at Merriam-Webster in the second review.
+- Not verified on the web: `pulleys`, `alleys`, `chimneys`, `holidays` (all follow the vowel + y rule above; none is a key in a way that depends on an unusual form).
+
+### Second-review MUST / SHOULD: re-checked on disk
+
+| Second-review finding | Status | Evidence |
+|---|---|---|
+| L4 MUST S07 Part A: key the only option punctuated differently | Fixed | S07 A options now `...so (?) closes it` / `...(.) should close it` / `...ends with (!)` / `...ends with (,)`; none ends in a period; `endmark.js` empty |
+| L4 SHOULD C15/S15: key the only choice ending in a period | Fixed (see SHOULD on C15 A) | C15 A `Please ask where the extra glue sticks went.` and S15 A `Please tell me which man told the story about the clock tower.` end in periods; `endmark.js` empty. C15 h2 now "Find the sentences that have the word asked in them" and the two `asked` choices are B and C |
+| L4 SHOULD C07 Part B: second start-of-sentence distractor | Fixed in form, **creates a new MUST** | `the water at` replaced by `how deep` |
+| L4 NOTE P4/S02 hint 1 states the trap row | Fixed | "only" dropped: "A line that tells about a question is a telling line" |
+| L4 NOTE C11/C12 prints a distractor | Still open | C12 prints C11's sentence 4; S12 prints S11's sentence 4. NOTE (it pre-eliminates one of five) |
+| L5 MUST C12 hint 3 leaves one live | Fixed | h3 is now "Babys keeps the y. Think about the other choices." Rules out one; `babies` and `babyes` stay live |
+| L5 SHOULD cross-set vocabulary leaks (C13, S11, S13, S14 and others) | Fixed for every word named | C13 slot 1 is `journeys`; S11 `lullabies` / `hallways`; S13 `galleries` / `bays`; S14 `pulleies`; C05 prints `guppies` / `turkeys`; no earlier-prints-later hit for the old words. New and remaining leaks are in the SHOULD below |
+| L5 SHOULD C07 B / S07 B hint 3 | Fixed | h3 "Check the letter before the y in each word that is left." A procedure, names no choice |
+| L5 SHOULD S05 hint 3 rules out two | Fixed | "What a word names does not choose its ending." Rules out only the magical-creature choice |
+| L5 NOTE C10 distractor calls y a consonant | Fixed | Now `Key ends in y, so the plural needs -es with the y untouched.` |
+
+### Lesson 4: End marks (REVISE)
+
+All 30 keys are sound except where listed. Official wording (`Use periods, exclamation marks, and question marks at the end of sentences.`, p. 15) is covered; the indirect-question items (C04, C08, C10, C11 distractor, S04, S10) stay within the skill and are taught in Teach and Watch Me (I wonder why).
+
+| Sev | Item | Evidence | Fix |
+|---|---|---|---|
+| MUST | C07 Part B (and its like, S07 Part B, for contrast) | Choices `How deep is` (key), `how deep`, `at the shallow end`, `the shallow end`. `how deep` is the question word and is as defensible a "best clue" as `How deep is`; the only difference is the inverted verb `is`, which the how/why do not teach (how says "the first three words begin the sentence the way an asking sentence often begins"). My blind solve chose `how deep`. Hint 3 names only `at the shallow end`, so after it two choices stand that a careful child cannot separate. The capital H against a lowercase `how deep` is also a surface tell. | Make the contrast something the lesson teaches. For example: key `How deep is`, distractors `the water at`, `the shallow end`, `at the shallow end` (the earlier set, which had one start-of-sentence option), or key `How deep` with `is the water` (verb-first fragment) as the nearest distractor. Do not offer both `how deep` and `How deep is`. S07 B (`What kind of` against `seeds did Mr. Lee`, `did Mr. Lee`, `Mr. Lee bring`) is acceptable: `What kind of` is the opener; `did Mr. Lee` shows the swapped order and is a weaker, NOTE-level rival. |
+| SHOULD | C15, choice A | Lee's rule is about the word `asked`. A is `Please ask where the extra glue sticks went.` (period) and D is `What did Ms. Cole ask us to bring to the picnic?`. A third grader who reads `asked` loosely as `ask` gets a second counterexample (A). The key is unique only on the literal reading, which hint 2 and the why rely on. S15 is clean: A has no `who`. | Change A to avoid `ask`: `Please tell me where the extra glue sticks went.` (still period-ending, matching S15's A). |
+| SHOULD | S05 hint 3 | "Where a sentence sits in a draft does not decide its end mark." Rules out two distractors by idea: choice 2 (`Lines that sit near each other share one ending`) and choice 4 (`Neighbors in a draft take turns`). Live after h3: the key and choice 3 (`Line 9 has to do with clapping`). The brief allows one wrong choice per hint 3. C05's h3 says the same sentence but only choice 2 (last sentence) is about position, so C05 is fine. | "Neighbors do not have to match." names one idea, or drop the position sentence and use "Look at what sentence 9 itself does." |
+| SHOULD | C06, sentence 4 as a distractor | `Dan jumped in first and made a giant splash that got everyone wet!` is keyed as correct. It has no feeling word (every other `!` in the lesson uses Hooray, Wow, Whew, Oh no or Whoa) and a child applying the lesson's own cue can call it a telling sentence that should end with a period, which makes three arguable wrong marks in a pick-two item. Its twin pattern is clean (S06 has no `!`). | Add a feeling word: `Wow, Dan jumped in first and made a giant splash that got everyone wet!`, or change the sentence to end with a period and use another exclamation. |
+| NOTE | C05, sentence 10 | `By morning, a girl named Tia came running down the sidewalk!` is keyed as "strong surprise". No feeling word; a period would be as good. The item is safe because the other three choices are false. | Add a feeling word (`Wow, by morning a girl named Tia came running down the sidewalk!`). |
+| NOTE | C11/C12 and S11/S12 | C12 prints C11's sentence 4 (a distractor) word for word; S12 prints S11's sentence 4. Core overlap C11/C12 0.268 (0.280 letters only), under 0.30. | Use a different sentence in C12 and S12. |
+| NOTE | S10 | Key `Leave the (.) alone...` is the only one that does not begin `Change it to`. | Optional: make one more distractor begin `Leave`. |
+| NOTE | C04, C12, C13, S04, S12, S13 hint 3 | The same wow / oops / "Neither sentence shouts" idea in six places, each removes only `!`. | Vary the wording. |
+| NOTE | Learn It / Watch Me | Teach and Watch Me model Where, I wonder why and Could you; they do not model a reported question with `asked` (C04, C08, C10, C15, S04, S10, S15) or the counterexample (Lee / Ana). The hints carry both. | Add `My brother asked if I wanted pancakes.` to Watch Me, or one Teach line: "A word like asked or wonder can sit inside a telling sentence." |
+| NOTE | C07 Part A | Two of four options end `instead`; the key does not. | Optional. |
+| NOTE | P4 / P3 (legacy) | Legacy items keep addon hints; h3 of P3 names the spider sentence (a correct distractor) and P4 h3 states the rule only. Browser: both take the key. | None. |
+
+Giveaways checked and clean: C03 (sentence 8) and C04 (sentence 6) are different wrong lines of p1; C05 (sentences 2 and 10) prints neither; C06 range 2-6 contains C07's sentence 2 (a correct line, so only a distractor is exposed); C10 (sentence 9) and S10 (sentence 7) are outside the hot-text ranges; C08/S08 keys do not recur in later items; Test items (T1-T5) share no key sentence with the fifteen or the twins.
+
+### Lesson 5: Plurals that change y to ies (ACCEPT with SHOULDs)
+
+All 30 keys agree with the blind solve. Official wording (`Form plural nouns by changing -y to -ies.`, p. 15) is covered; vowel + y items (`boys`, `keys`, `driveways`, `journeys`, `toys`, `jockeys`) are a necessary contrast, not extra content. The rule stated in Teach (consonant: change to -ies; vowel: add -s) matches the sources above.
+
+| Sev | Item | Evidence | Fix |
+|---|---|---|---|
+| SHOULD | Earlier item prints a later key word (`leak5.js`) | **Core:** P5 (set 1) prints `flies` spelled correctly in a distractor and C07 (set 2) keys `flies` (Part A: "so the plural should be flies"); P5 also prints `toys` correctly and C11's key sentence 5 is `...two old toys...`. **Twins:** S02 (set 1) prints `subways` spelled right in a distractor and S04 (set 1, item 4) keys `subways`. S01 sorts `supply` and `copy` into the -ies column and `jockey` into the -ys column; S06 (set 2) keys the misspelled `supplys` and `copys`, and S15 (set 3) keys `one jockey, two jockeys`. | Change C07 sentence 9 to a y-word that appears nowhere else in the lesson, Teach, Watch Me or Test (many obvious ones are taken: puppy, bakery, penny, cherry, ferry; re-run `leak5.js`), so P5's `flies` no longer prints C07's key. Change S02's `subways` line to a vowel + y word that no later twin keys, and S01's `jockey` row to a word that no later twin keys (for example `donkey` is in Watch Me, so use another). Leave P5 as the retained legacy item unless the lead allows editing it. |
+| SHOULD | C13 and S13 hint 3 | "One word changes its y and the other keeps it." Reveals the pattern across two blanks (one -ies, one -ys), which with the vowel/consonant hint 2 reduces each blank to two live forms. Not a narrowing to the key; borderline. | "Look at the choices for each blank and check the letter before its y." |
+| NOTE | S10 distractor 3 | `Delay is longer than pastry...` is false as a comparison (delay has five letters, pastry six). A child can discard it for the wrong reason. | `Delay is a short word, so its y is never able to change.` |
+| NOTE | S06, S07, S10 | S06 and S07 print `delays` as a correct plural before S10 asks about it. Same passage, same set; only a distractor is exposed. | None. |
+| NOTE | C15, S15 | Key is the only plural ending in -ys (C15 `birthdays`, S15 `jockeys`). Inherent to a counterexample item, all distractors obey the claim. | Optional. |
+| NOTE | Grade-3 vocabulary | `essay`, `jockey`, `deputies`, `pulleys`, `cavityes`, `dictionary` and `galleries` are above typical grade 3 reading; spelling-rule items with decodable stems, so NOTE only. p5 `Art Class` FK 4.1 (readability.py), the top of the range. | Optional: `holiday` or `donkey` for `jockey`; `story` for `essay`. |
+| NOTE | Learn It / Watch Me | Watch Me models fill-in with three words (bakery, donkey, lobby). The fifteen also ask for finding an error in a draft, ebsr "formed the same way", explain-the-rule and a counterexample; the hints carry them. | Add one Watch Me line on checking each plural in a sentence. |
+| NOTE | C13 slot 1 / T4 | `journeys` is no longer used elsewhere. T4 vs P4 0.387 (`boy`). | Optional. |
+
+Giveaways checked and clean: C12 `babies` appears nowhere earlier (C14 prints it later, as a correct distractor); C10 prints `keies` / `keys` after C06 printed `keys` (same passage, same set; a distractor only); C05 `guppies` / `turkeys` and S05 `fairies` / `valleys` are used as the rule's two words and as no other item's key; Test items T1-T5 (`ferries`, `jerseys`, `parties`, `bunny` / `spy`, `daisys` / `fireflys`) share no key with the fifteen or the twins.
+
+### Cross-lesson notes
+
+- **Counterexample items C15 / S15.** L4 now passes (two period-ending sentences, the key among them); L5 remains the odd-one-out pattern, inherent.
+- **Passages.** All 12 drafts are 100 words or more with `(n)` markers excluded (L4 p5 is exactly 100); FK at most 4.1 by `readability.py`. Every planted error is either a key or a distractor in some item; no stray error changes a key.
+- **Constructed responses and figures.** None in these lessons.
+- **Not verified:** whether the player lets a child go back inside a set (relevant to the earlier-prints-later leaks); twins were read and measured but only the 30 core items were tapped; keyboard and screen-reader use.

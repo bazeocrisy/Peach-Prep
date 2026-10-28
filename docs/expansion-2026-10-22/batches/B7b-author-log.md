@@ -3,27 +3,29 @@
 Status: lesson 1 is recorded ACCEPTED by the coordinator (wording-only edits this round). Lessons 2 to 9 are AUTHORED (B7b), NOT ACCEPTED: awaiting independent review. All figures below were measured on the final L-GUM2.js after the second-review fixes.
 
 ## Final-file gate results
-- `node verification/check-content.js --all`: 0 failures (warnings are existing ledger and migration notices, none about L-GUM2)
+- `node verification/check-content.js --all`: no failure in any L-GUM2 lesson; the three failures it reports are in L-GUM4 (use-interjections, SK-GUM4-6-C12/S04/S12 shares its stem with C04), outside this batch
 - `node verification/check-writing.js`: 0 failures, 0 warnings
 - `node verification/check-instructional-copy.js`: 28 assertions passed
 - `python3 verification/readability.py js/data/lessons/L-GUM2.js`: every passage 110 words or more by that tool, FK 4.5 or lower (max 4.5 in lesson 1 passage 3)
 
 ## Per lesson (final file)
-Jaccard uses lowercase tokens over the whole item text: stem, prompt, text, choices, slot options, rows, columns, both ebsr parts and hot-text target sentences. "Twin vs core" is measured on all 15 x 15 pairs (limit 0.21); "core vs core / twin vs twin" is the largest within-bank pair (limit 0.30). Values are set / multiset. Words and FK in the last column are the author counter that excludes the "(n)" markers (min words, max FK); readability.py figures above are higher because that tool counts differently.
+Jaccard uses lowercase tokens (letters and digits) over the whole item text: stem, prompt, text, choices, slot options, rows, columns, both ebsr parts and hot-text target sentences, with the "(n)" sentence-number markers of those target sentences counted as tokens. "Twin vs core" covers all 15 x 15 pairs (limit 0.21); "within a bank" is the largest core-vs-core or twin-vs-twin pair (limit 0.30). Values are set / multiset. Passage figures are the author counter that excludes the "(n)" markers (min words, max FK).
 
-| # | Lesson code | Twin vs core, all pairs | Within a bank | Passage min words, max FK | Core formats (mc, dropdown, hottext, ms, ebsr, match) | DOK 1 / 2 / 3 |
+| # | Lesson code | Twin vs core, all pairs, markers counted | Within a bank | Passage min words, max FK | Core formats (mc, dropdown, hottext, ms, ebsr, match) | DOK 1 / 2 / 3 |
 |---|---|---|---|---|---|---|
-| 1 | form-and-use-simple-verb-tenses | 0.205 / 0.205 | 0.279 / 0.237 | 100, 4.48 | 5, 3, 4, 1, 1, 1 | 1 / 10 / 4 |
-| 2 | use-determiners-articles-possessive-and-demonstr | 0.186 / 0.208 | 0.246 / 0.275 | 105, 3.56 | 5, 3, 4, 1, 1, 1 | 1 / 10 / 4 |
-| 3 | capitalize-proper-nouns | 0.207 / 0.195 | 0.253 / 0.234 | 104, 4.13 | 5, 3, 3, 2, 1, 1 | 1 / 10 / 4 |
-| 4 | use-end-punctuation-period-exclamation-point-que | 0.202 / 0.197 | 0.259 / 0.278 | 100, 3.08 | 5, 3, 4, 1, 1, 1 | 1 / 10 / 4 |
-| 5 | form-plural-nouns-by-changing-y-to-ies | 0.207 / 0.203 | 0.236 / 0.259 | 101, 4.35 | 5, 3, 4, 1, 1, 1 | 1 / 10 / 4 |
-| 6 | use-personal-pronouns-subject-object-possessive | 0.203 / 0.208 | 0.288 / 0.258 | 101, 3.89 | 5, 3, 4, 1, 1, 1 | 1 / 10 / 4 |
-| 7 | use-frequently-occurring-prepositions | 0.186 / 0.207 | 0.263 / 0.238 | 108, 4.47 | 5, 3, 4, 1, 1, 1 | 1 / 10 / 4 |
-| 8 | use-commas-in-a-series-and-in-dates-addresses-sa | 0.203 / 0.205 | 0.246 / 0.260 | 100, 3.41 | 5, 3, 4, 1, 1, 1 | 1 / 10 / 4 |
-| 9 | form-and-use-verbs-by-adding-d-or-es | 0.198 / 0.198 | 0.236 / 0.235 | 104, 4.08 | 5, 3, 4, 1, 1, 1 | 1 / 10 / 4 |
+| 1 | form-and-use-simple-verb-tenses | 0.205 / 0.221 | 0.279 / 0.237 | 100, 4.48 | 5, 3, 4, 1, 1, 1 | 1 / 10 / 4 |
+| 2 | use-determiners-articles-possessive-and-demonstr | 0.204 / 0.237 | 0.246 / 0.275 | 105, 3.56 | 5, 3, 4, 1, 1, 1 | 1 / 10 / 4 |
+| 3 | capitalize-proper-nouns | 0.207 / 0.229 | 0.253 / 0.234 | 104, 4.13 | 5, 3, 3, 2, 1, 1 | 1 / 10 / 4 |
+| 4 | use-end-punctuation-period-exclamation-point-que | 0.202 / 0.193 | 0.268 / 0.278 | 100, 3.08 | 5, 3, 4, 1, 1, 1 | 1 / 10 / 4 |
+| 5 | form-plural-nouns-by-changing-y-to-ies | 0.209 / 0.202 | 0.225 / 0.245 | 101, 4.46 | 5, 3, 4, 1, 1, 1 | 1 / 10 / 4 |
+| 6 | use-personal-pronouns-subject-object-possessive | 0.228 / 0.241 | 0.288 / 0.258 | 101, 3.89 | 5, 3, 4, 1, 1, 1 | 1 / 10 / 4 |
+| 7 | use-frequently-occurring-prepositions | 0.186 / 0.220 | 0.270 / 0.238 | 108, 4.47 | 5, 3, 4, 1, 1, 1 | 1 / 10 / 4 |
+| 8 | use-commas-in-a-series-and-in-dates-addresses-sa | 0.203 / 0.205 | 0.254 / 0.235 | 100, 3.41 | 5, 3, 4, 1, 1, 1 | 1 / 10 / 4 |
+| 9 | form-and-use-verbs-by-adding-d-or-es | 0.198 / 0.195 | 0.236 / 0.222 | 104, 4.08 | 5, 3, 4, 1, 1, 1 | 1 / 10 / 4 |
 
-Each lesson: 15 core items (2 refs plus 13 new), 15 twins, hints h1-h3, how and misconception on every item, addons P1-P5, no passage shared between core (p1-p3) and twins (p4-p6). Per lesson the scripts also report: no key uniquely longest (single and choose-two), key text present in how and why, no key exposed by a later item in the same set (sentence-number and text-run scan), and no hint ladder left with fewer than two live choices.
+Lessons 1, 2, 3, 6 and 7 were not edited in this round (accepted or under another review), so their marker-counted figures stand as measured: the multiset values for lessons 1, 2, 3, 6 and 7 and the set value for lesson 6 are above 0.21, all below 0.30. Lessons 4, 5, 8 and 9 were edited and are at or below 0.21 on set and multiset except lesson 5 (0.209 set, 0.202 multiset, within limit).
+
+Each lesson: 15 core items (2 refs plus 13 new), 15 twins, hints h1-h3, how and misconception on every item, addons P1-P5, no passage shared between core (p1-p3) and twins (p4-p6). Per lesson the scripts also report: no key uniquely longest (single and choose-two), key text present in how and why, and no key exposed by a later item in the same set (sentence-number and text-run scan). Hint ladders were recounted by hand after each edit; every ladder in lessons 4, 5, 8 and 9 keeps at least two live choices after hints 1-3, and hint 3 names at most one wrong choice.
 
 Duplicate scan (6-gram and exact, against all js/data plus own-lesson teach, learn and test): lessons 6 to 9 no findings; lessons 1 to 5 only generic prompt boilerplate shared with other GUM lessons (for example "choose the two sentences in which") and teach or learn phrases that restate the rule.
 

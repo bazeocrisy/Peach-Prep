@@ -6059,7 +6059,9 @@ PP.addLesson({
     points: [
       "Use who to tell more about a person: I have a friend who plays the drums.",
       "Use that or which to tell more about a thing or an animal: We crossed the bridge that goes over the river.",
-      "Use where for a place or when for a time only if the words after it make a whole sentence when you add there or then: This is the park where we fly kites. (We fly kites there.) If they do not, use that or which, just as for a thing: The park that has a slide is near us. (\"Has a slide there\" is not a whole sentence, because it does not say who or what has a slide.)"
+      "Use where for a place or when for a time only if the words after it make a whole sentence when you add there or then: This is the park where we fly kites. (We fly kites there.) If they do not, use that or which, just as for a thing: The park that has a slide is near us. (\"Has a slide there\" is not a whole sentence, because it does not say who or what has a slide.)",
+      "Who is only for people. A bus, a park or a day is not a person, so write the bus that stops here, not the bus who stops here.",
+      "Where and when never go with a person. Say the coach who cheers for us, not the coach where cheers for us."
     ],
     words: [
       { term: "relative pronoun", means: "who, which or that, used to tell more about a noun" },
@@ -6092,6 +6094,16 @@ PP.addLesson({
         "Use that or which for a thing. Of the three choices, only that fits."
       ],
       answer: "That: I read a book that has a talking fox in it."
+    },
+    {
+      show: ["Mr. Diaz is the driver ___ takes us home."],
+      ask: "Which word fits: who, where or when?",
+      steps: [
+        "Look at the noun right before the blank: driver. A driver is a person.",
+        "Where is for places and when is for times, and a driver is neither.",
+        "Use the word for a person."
+      ],
+      answer: "Who: Mr. Diaz is the driver who takes us home."
     }
   ],
   parent: "Play a riddle game: \"I am thinking of a person who ...\", \"I am thinking of a thing that ...\" or \"I am thinking of a place where ...\" Take turns finishing the clue and guessing.",
@@ -6105,7 +6117,7 @@ PP.addLesson({
       draft: true,
       paragraphs: [
         [
-          "(1) Last Friday, our class took a bus to the science museum.",
+          "(1) Our class rode a yellow bus to the science museum last Friday.",
           "(2) Our guide was a woman which knew everything about space.",
           "(3) She showed us a model of a rocket that is taller than a bus.",
           "(4) Next, we walked into the room who has the moon rocks."
@@ -6130,7 +6142,7 @@ PP.addLesson({
       draft: true,
       paragraphs: [
         [
-          "(1) Every summer, my cousins and I visit the farm where our grandpa grew up.",
+          "(1) In July, my cousins and I stay at the farm where our grandpa grew up.",
           "(2) Grandpa has a tractor who stopped working last week.",
           "(3) My cousin Rosa is a girl where helps with the cows.",
           "(4) The barn that holds the hay is bright red."
@@ -6181,17 +6193,17 @@ PP.addLesson({
       paragraphs: [
         [
           "(1) On Tuesday, our scout troop toured the bakery on Pine Street.",
-          "(2) The baker was a man which wore a tall white hat.",
+          "(2) At the bakery on Pine Street, the baker was a man which wore a tall white hat and a flour-dusted apron.",
           "(3) He showed us an oven that is as big as a closet.",
           "(4) Then we sat at a table who was covered in flour."
         ],
         [
-          "(5) Tom, a boy where likes bread, asked many questions.",
-          "(6) We watched the room where the dough is rolled and cut.",
-          "(7) Early morning is the time when the bakers start their work."
+          "(5) Tom, a boy where likes bread, asked questions all day.",
+          "(6) We watched the room where dough is rolled and cut by hand.",
+          "(7) Early morning is the time when sleepy bakers start kneading dough."
         ],
         [
-          "(8) I smelled the shelf when the warm rolls were stacked.",
+          "(8) I smelled the shelf when warm rolls were stacked in rows.",
           "(9) My sister who came along ate two cinnamon buns before noon.",
           "(10) It was a visit that made us all hungry, and we bought a loaf to share."
         ]
@@ -6206,14 +6218,14 @@ PP.addLesson({
       paragraphs: [
         [
           "(1) Last July, my uncle drove us to a rocky camp beside the river where he fished as a boy.",
-          "(2) He packed a tent who fits six people.",
+          "(2) My uncle packed a green canvas tent who fits six sleeping bags and a lantern.",
           "(3) Nell is a quiet camper where knows every bird song in the forest.",
-          "(4) The trail that leads to the water is lined with tall pines."
+          "(4) A trail that leads to cold water is lined with tall pines."
         ],
         [
-          "(5) Night is the time when thousands of stars fill the whole dark sky.",
+          "(5) Night is the time when thousands of stars fill our dark sky.",
           "(6) We spotted a deer when was drinking from the shallow edge.",
-          "(7) Uncle Ben is the chef who stirs the best campfire stew."
+          "(7) Uncle Ben is a chef who stirs spicy campfire stew."
         ],
         [
           "(8) His cooking pot is the one that holds enough stew for ten.",
@@ -6230,14 +6242,14 @@ PP.addLesson({
       draft: true,
       paragraphs: [
         [
-          "(1) Last month, my family moved to the house where my aunt used to live.",
+          "(1) In March, my family moved into the house where my aunt used to live.",
           "(2) We hired a mover which carried our heavy couch up the stairs.",
           "(3) He drove a truck that was long enough to hold our whole living room.",
-          "(4) My little brother is a boy where cried when we packed his shiny red bike."
+          "(4) My little brother is a boy where cried when we packed his shiny red bike into the long truck."
         ],
         [
           "(5) Evening is the hour when the new street grows quiet.",
-          "(6) We found a tiny, shivering puppy when was sleeping on our front porch.",
+          "(6) We found a tiny, shivering puppy when was sleeping on my front porch.",
           "(7) Our neighbor is a woman who gave us warm muffins."
         ],
         [
@@ -6325,7 +6337,7 @@ PP.addLesson({
                 correct: true
               },
               {
-                text: "Where fits, because a room is a place, and where is the right word after every place that you can name in a sentence."
+                text: "Where fits, because a room is a place, and where is the right word after every place that you can name in a sentence or story."
               },
               {
                 text: "Who fits, because the room is full of moon rocks, and who tells more about anything that holds many things at once."
@@ -6334,10 +6346,10 @@ PP.addLesson({
                 text: "When fits, because the class walked into the room at a certain time, and when is used for any moment in a day."
               }
             ],
-            clue: "Try the there test on the words after the blank, and think about what kind of noun comes before it.",
+            clue: "Try the there test on what follows the blank, and think about what kind of noun comes before it.",
             hints: [
-              "Try the there test on the words after the blank, and think about what kind of noun comes before it.",
-              "Read the words after the blank by themselves and ask what is missing from them.",
+              "Try the there test on what follows the blank, and think about what kind of noun comes before it.",
+              "Read what follows the blank by itself and ask what is missing from it.",
               "Rooms are not people, so a choice about people cannot be right."
             ],
             how: [
@@ -6541,11 +6553,11 @@ PP.addLesson({
             prompt: "A classmate says sentence 6 is correct, because the kitten was found at a certain time. Which response is best?",
             choices: [
               {
-                text: "A kitten is a thing and not a time, and the words after the blank need a subject, so the word should be that.",
+                text: "A kitten is an animal and not a time, and the words after the blank need a subject, so the word should be that.",
                 correct: true
               },
               {
-                text: "Time words like when can follow any noun, as long as the sentence tells about something that happened to us."
+                text: "Time words like when can follow any noun, as long as the sentence tells about something that happened to us that day."
               },
               {
                 text: "Where is needed instead, because the kitten was in one place, and where is used after any animal at all."
@@ -6554,19 +6566,19 @@ PP.addLesson({
                 text: "No change is needed, because when and that mean the same thing in a sentence about an animal or a pet."
               }
             ],
-            clue: "Decide what kind of noun comes right before the blank word.",
+            clue: "Decide what kind of noun comes right before the wrong word.",
             hints: [
-              "Decide what kind of noun comes right before the blank word.",
-              "Read the words after the blank by themselves and ask what is missing from them.",
+              "Decide what kind of noun comes right before the wrong word.",
+              "Read what follows that word by itself and ask what is missing from it.",
               "A kitten was found, not a place, so a choice about places cannot be right."
             ],
             how: [
               "Read sentence 6: We found a kitten when was hiding behind a bucket.",
-              "A kitten is a thing, not a time. The words after the blank are was hiding behind a bucket, and they have no subject of their own.",
-              "The answer is \"A kitten is a thing and not a time, and the words after the blank need a subject, so the word should be that.\""
+              "A kitten is an animal, not a time. The words after the blank are was hiding behind a bucket, and they have no subject of their own.",
+              "The answer is \"A kitten is an animal and not a time, and the words after the blank need a subject, so the word should be that.\""
             ],
             misconception: "A common mix-up is trusting when because the sentence tells about something that happened. Check the noun right before it.",
-            why: "The answer is \"A kitten is a thing and not a time, and the words after the blank need a subject, so the word should be that.\" A kitten is a thing, not a time, and was hiding behind a bucket has no subject, so the sentence needs that. Where would only fit if the words after it made a whole sentence."
+            why: "The answer is \"A kitten is an animal and not a time, and the words after the blank need a subject, so the word should be that.\" A kitten is an animal, not a time, and was hiding behind a bucket has no subject, so the sentence needs that. Where would only fit if the words after it made a whole sentence."
           },
           {
             id: "SK-GUM4-5-C10",
@@ -6643,10 +6655,10 @@ PP.addLesson({
                 text: "Both tell more about a thing, but where and that mean the same thing in every sentence that you read."
               }
             ],
-            clue: "Find the noun that each tell-more word describes. Then try the there test on the words after each word.",
+            clue: "Find the noun that each tell-more word describes. Then try the there test on what follows each word.",
             hints: [
-              "Find the noun that each tell-more word describes. Then try the there test on the words after each word.",
-              "Add there to the words after where in Sentence A and to the words after that in Sentence B, and see which makes a whole sentence.",
+              "Find the noun that each tell-more word describes. Then try the there test on what follows each word.",
+              "Add there to what follows where in Sentence A and to what follows that in Sentence B, and see which one can stand alone as a sentence.",
               "The beach is not a person, so a choice about people cannot be right."
             ],
             how: [
@@ -6718,9 +6730,9 @@ PP.addLesson({
                 text: "The bench where holds our bags is near the fence."
               }
             ],
-            clue: "A fix can change the tell-more word, or it can change the words after it. Check each revision for a word that suits the noun.",
+            clue: "A fix can change the tell-more word or the words after it.",
             hints: [
-              "A fix can change the tell-more word, or it can change the words after it. Check each revision for a word that suits the noun.",
+              "A fix can change the tell-more word or the words after it.",
               "Keep the revisions in which the tell-more word and the words after it work together.",
               "Who is for people, and a bench is not a person."
             ],
@@ -6792,9 +6804,9 @@ PP.addLesson({
                 answer: 0
               }
             ],
-            clue: "Find the noun before each blank. Then decide whether it is a person, a thing, a place or a time.",
+            clue: "Find the noun before each blank and decide what kind it is.",
             hints: [
-              "Find the noun before each blank. Then decide whether it is a person, a thing, a place or a time.",
+              "Find the noun before each blank and decide what kind it is.",
               "For the first blank, add then to the words after it. For the second blank, check whether the words after it make a whole sentence with there.",
               "Who is for people, and neither noun is a person."
             ],
@@ -6856,23 +6868,23 @@ PP.addLesson({
       cols: ["that","when"],
       rows: [
         {
-          text: "the bell ___ rings at noon",
+          text: "the bell ___ rings at noon from the old tower",
           answer: 0
         },
         {
-          text: "the hour ___ we eat lunch",
+          text: "the hour ___ we eat lunch in the cafeteria",
           answer: 1
         },
         {
-          text: "the atlas ___ has old maps",
+          text: "the atlas ___ has faded maps of oceans",
           answer: 0
         },
         {
-          text: "the evening ___ we light the fire",
+          text: "the evening ___ we light the fire by the lake",
           answer: 1
         },
         {
-          text: "the coat ___ keeps me warm",
+          text: "the coat ___ keeps me warm in winter snow",
           answer: 0
         }
       ],
@@ -6948,9 +6960,9 @@ PP.addLesson({
           answer: 1
         }
       ],
-      clue: "Look at the noun right before the blank and ask what kind of noun it is.",
+      clue: "Look at the noun before the blank and ask what kind it is.",
       hints: [
-        "Look at the noun right before the blank and ask what kind of noun it is.",
+        "Look at the noun before the blank and ask what kind it is.",
         "Read the line with each word in the blank, and listen for the one that suits the noun.",
         "When is for times, and a man is not a time."
       ],
@@ -6972,7 +6984,7 @@ PP.addLesson({
         "3.L.GC.1:I:use-relative-pronouns-and-relative-adverbs"
       ],
       passages: ["p4"],
-      prompt: "Only one of lines 3, 6, 7, 8 and 9 pairs its joining word with the wrong partner. Which line is it?",
+      prompt: "Just a single line among 3, 6, 7, 8 and 9 pairs its connector with an unsuitable partner. Which is it?",
       targets: ["p4:1:3","p4:2:2","p4:2:3","p4:3:1","p4:3:2"],
       answer: ["p4:3:1"],
       pick: 1,
@@ -6988,7 +7000,7 @@ PP.addLesson({
         "In sentence 8, when goes with the shelf, but a shelf is a place, so the sentence needs where."
       ],
       misconception: "A common mix-up is picking the sentence that has the most words after the tell-more word. Check the noun before the word.",
-      why: "The answer is sentence 8: \"I smelled the shelf when the warm rolls were stacked.\" A shelf is a place, and the warm rolls were stacked there is a whole sentence, so the sentence needs where. In the other shown sentences each word matches its noun.",
+      why: "The answer is sentence 8: \"I smelled the shelf when warm rolls were stacked in rows.\" A shelf is a place, and the warm rolls were stacked there is a whole sentence, so the sentence needs where. In the other shown sentences each word matches its noun.",
       like: ["SK-GUM4-5-C05"]
     },
     {
@@ -7005,17 +7017,17 @@ PP.addLesson({
         prompt: "Line 5 has a flaw. Which version cures it?",
         choices: [
           {
-            text: "Tom, a boy who likes bread, asked many questions.",
+            text: "Tom, a boy who likes bread, asked questions all day.",
             correct: true
           },
           {
-            text: "Tom, a boy which likes bread, asked many questions."
+            text: "Tom, a boy which likes bread, asked questions all day."
           },
           {
-            text: "Tom, a boy when likes bread, asked many questions."
+            text: "Tom, a boy when likes bread, asked questions all day."
           },
           {
-            text: "Tom, a boy where he likes bread, asked many questions."
+            text: "Tom, a boy where he likes bread, asked questions all day."
           }
         ]
       },
@@ -7023,17 +7035,17 @@ PP.addLesson({
         prompt: "Which reason supports the cured version?",
         choices: [
           {
-            text: "Boy names somebody human, and the right partner for humans is who.",
+            text: "Boy stands for somebody human; the best partner for humans is who.",
             correct: true
           },
           {
-            text: "Bread names food, and the right partner for food is who."
+            text: "Bread stands for food; the best partner for food is who."
           },
           {
-            text: "Boy names a location, and the right partner for locations is where."
+            text: "Boy stands for a location; the best partner for locations is where."
           },
           {
-            text: "Questions happen at noon, and the right partner for noon is when."
+            text: "Questions happen at noon; the best partner for noon is when."
           }
         ]
       },
@@ -7044,12 +7056,12 @@ PP.addLesson({
         "The draft already has where after the noun, so a version that keeps where with a new ending is not the cure."
       ],
       how: [
-        "Part A: find the noun before the wrong word: boy. A boy is a person, so the answer is \"Tom, a boy who likes bread, asked many questions.\"",
+        "Part A: find the noun before the wrong word: boy. A boy is a person, so the answer is \"Tom, a boy who likes bread, asked questions all day.\"",
         "The other versions use which for a person, when for a time, or keep where.",
-        "Part B: the reason is \"Boy names somebody human, and the right partner for humans is who.\""
+        "Part B: the reason is \"Boy stands for somebody human; the best partner for humans is who.\""
       ],
       misconception: "A common mix-up is changing only the words after the blank. Check the noun before it: Tom is a boy, which is a person.",
-      why: "Part A: \"Tom, a boy who likes bread, asked many questions.\" Part B: \"Boy names somebody human, and the right partner for humans is who.\" Part A: a boy is a person, so the sentence needs who. Part B: who tells more about a person.",
+      why: "Part A: \"Tom, a boy who likes bread, asked questions all day.\" Part B: \"Boy stands for somebody human; the best partner for humans is who.\" Part A: a boy is a person, so the sentence needs who. Part B: who tells more about a person.",
       like: ["SK-GUM4-5-C06"]
     },
     {
@@ -7121,7 +7133,7 @@ PP.addLesson({
         "3.L.GC.1:I:use-relative-pronouns-and-relative-adverbs"
       ],
       passages: ["p5"],
-      prompt: "A camper insists line 6 is fine because the deer showed up at a certain hour. Which answer is strongest?",
+      prompt: "A camper claims line 6 works as written, since a deer came at some hour. What reply explains the repair best?",
       choices: [
         {
           text: "Deer names an animal and the rest has no subject; that fits.",
@@ -7206,8 +7218,8 @@ PP.addLesson({
         "3.L.GC.1:I:use-relative-pronouns-and-relative-adverbs"
       ],
       passages: [],
-      stem: "Line 1: The garden where we planted beans is green. Line 2: The garden that has a scarecrow is tall.",
-      prompt: "What do the joining words in the two lines share, and how do they differ?",
+      stem: "Line 1: Beans grow in the garden where we plant them. Line 2: A scarecrow stands in a garden that has tall corn.",
+      prompt: "What links and what separates the joining words in these two lines?",
       choices: [
         {
           text: "Each names a place; where works only if the rest could stand alone.",
@@ -7230,8 +7242,8 @@ PP.addLesson({
         "A garden is not a person, so a choice about people cannot be right."
       ],
       how: [
-        "Both lines describe the garden, which is a place.",
-        "In Line 1, we planted beans there is a whole sentence, so where fits. In Line 2, has a scarecrow there is not a whole sentence, so that is used.",
+        "Both lines describe a garden, which is a place.",
+        "In Line 1, we plant them there is a whole sentence, so where fits. In Line 2, has tall corn there is not a whole sentence, so that is used.",
         "The answer is \"Each names a place; where works only if the rest could stand alone.\""
       ],
       misconception: "A common mix-up is thinking a place noun always takes where. The words after the word decide.",
@@ -7248,7 +7260,7 @@ PP.addLesson({
       ],
       passages: ["p6"],
       prompt: "Select the missing term in line 4 of the moving story.",
-      text: "On moving day, my little brother is a boy {0} cried when we packed his shiny red bike into the long truck.",
+      text: "My little brother is a boy {0} cried when we packed his shiny red bike into the long truck.",
       slots: [
         {
           options: ["when","who","which","where"],
@@ -7283,36 +7295,36 @@ PP.addLesson({
       pick: 2,
       choices: [
         {
-          text: "We found a tiny, shivering puppy that was sleeping on our front porch.",
+          text: "We found a tiny, shivering puppy that was sleeping on my front porch.",
           correct: true
         },
         {
-          text: "We found a tiny, shivering puppy where it was sleeping on our front porch.",
+          text: "We found a tiny, shivering puppy where it was sleeping on my front porch.",
           correct: true
         },
         {
-          text: "We found a tiny, shivering puppy when was sleeping on our front porch."
+          text: "We found a tiny, shivering puppy when was sleeping on my front porch."
         },
         {
-          text: "We found a tiny, shivering puppy where was sleeping on our front porch."
+          text: "We found a tiny, shivering puppy where was sleeping on my front porch."
         },
         {
-          text: "We found a tiny, shivering puppy that it was sleeping on our front porch."
+          text: "We found a tiny, shivering puppy that it was sleeping on my front porch."
         }
       ],
-      clue: "A repair can change the tell-more word, or it can change the words after it. Check each version for a word that suits the noun.",
+      clue: "A repair can change the tell-more word or the words after it.",
       hints: [
-        "A repair can change the tell-more word, or it can change the words after it. Check each version for a word that suits the noun.",
+        "A repair can change the tell-more word or the words after it.",
         "Keep the versions in which the tell-more word and the words after it work together.",
         "A puppy is not a time, so a word for times cannot go with it."
       ],
       how: [
-        "The draft pairs the puppy with when, but a puppy is not a time, and was sleeping on our front porch has no subject.",
+        "The draft pairs the puppy with when, but a puppy is not a time, and was sleeping on my front porch has no subject.",
         "One repair uses that, which goes with a thing. The other repair gives the words after where a subject, so it was sleeping there is a whole sentence.",
-        "The answers are \"We found a tiny, shivering puppy that was sleeping on our front porch.\" and \"We found a tiny, shivering puppy where it was sleeping on our front porch.\" The others keep the draft, leave where without a subject, or add a second subject after that."
+        "The answers are \"We found a tiny, shivering puppy that was sleeping on my front porch.\" and \"We found a tiny, shivering puppy where it was sleeping on my front porch.\" The others keep the draft, leave where without a subject, or add a second subject after that."
       ],
       misconception: "A common mix-up is thinking only the tell-more word can change. The words after it can change, too.",
-      why: "The answers are \"We found a tiny, shivering puppy that was sleeping on our front porch.\" and \"We found a tiny, shivering puppy where it was sleeping on our front porch.\" That goes with a puppy, which is a thing, and it was sleeping there is a whole sentence, so where fits the second version. The others keep the draft, leave where without a subject, or add a second subject after that.",
+      why: "The answers are \"We found a tiny, shivering puppy that was sleeping on my front porch.\" and \"We found a tiny, shivering puppy where it was sleeping on my front porch.\" That goes with a puppy, which is a thing, and it was sleeping there is a whole sentence, so where fits the second version. The others keep the draft, leave where without a subject, or add a second subject after that.",
       like: ["SK-GUM4-5-C13"]
     },
     {
@@ -7327,17 +7339,17 @@ PP.addLesson({
       prompt: "Select the line whose connector matches its partner.",
       choices: [
         {
-          text: "The deep green lake where we paddled our blue canoe last summer is very cold.",
+          text: "The deep green lake where we paddled our blue canoe past the dusty dock last summer is very cold.",
           correct: true
         },
         {
-          text: "The deep green lake when we paddled our blue canoe last summer is very cold."
+          text: "The deep green lake when we paddled our blue canoe past the dusty dock last summer is very cold today."
         },
         {
-          text: "The deep green lake who we paddled our blue canoe last summer is very cold."
+          text: "The deep green lake who we paddled our blue canoe past the dusty dock last summer is very cold today."
         },
         {
-          text: "The deep green lake that we paddled our blue canoe last summer is very cold."
+          text: "The deep green lake that we paddled our blue canoe past the dusty dock last summer is very cold today."
         }
       ],
       clue: "Find the noun right before the tell-more word. Ask whether it is a person, a thing, a place or a time.",
@@ -7348,11 +7360,11 @@ PP.addLesson({
       ],
       how: [
         "Find the noun right before the tell-more word: lake. A lake is a place.",
-        "We paddled our blue canoe there is a whole sentence, so where fits.",
-        "The answer is \"The deep green lake where we paddled our blue canoe last summer is very cold.\" The others use when for a place, who for a thing, or that where the words after it are already whole."
+        "We paddled our blue canoe past the dusty dock there is a whole sentence, so where fits.",
+        "The answer is \"The deep green lake where we paddled our blue canoe past the dusty dock last summer is very cold.\" The others use when for a place, who for a thing, or that where the words after it are already whole."
       ],
       misconception: "A common mix-up is choosing that because a lake is a thing. The words after the word are already a whole sentence, so use where.",
-      why: "The answer is \"The deep green lake where we paddled our blue canoe last summer is very cold.\" A lake is a place, and we paddled our canoe there is a whole sentence, so where fits. The others use when for a place, who for a thing, or that with words that are already whole.",
+      why: "The answer is \"The deep green lake where we paddled our blue canoe past the dusty dock last summer is very cold.\" A lake is a place, and we paddled our canoe there is a whole sentence, so where fits. The others use when for a place, who for a thing, or that with words that are already whole.",
       like: ["SK-GUM4-5-C14"]
     },
     {
@@ -7408,7 +7420,7 @@ PP.addLesson({
     },
     "SK-GUM4-5-P2": {
       hints: [
-        "Find the noun right before the blank and decide whether it is a person, a thing, a place or a time.",
+        "Find the noun before the blank and decide what kind it is.",
         "For a time, add then to the words after the blank and check for a whole sentence.",
         "Who is for people, and a season is not a person."
       ],
@@ -7421,7 +7433,7 @@ PP.addLesson({
     },
     "SK-GUM4-5-P3": {
       hints: [
-        "Look at the noun before the blank. Then add there or then to the words after the blank.",
+        "Look at the noun before the blank, then test what follows.",
         "Check whether the words after the blank make a whole sentence with there.",
         "Who is for people, and a place is not a person."
       ],
@@ -7512,7 +7524,9 @@ PP.addLesson({
     points: [
       "Interjections show feelings such as surprise, joy, pain or worry. Some interjections are wow, hooray, ouch, oh no, oops and yikes.",
       "When the feeling is strong, put an exclamation point after the interjection. Start the next word with a capital letter: Hooray! We won!",
-      "When the feeling is mild, put a comma after the interjection and keep going: Oh, I forgot my pencil."
+      "When the feeling is mild, put a comma after the interjection and keep going: Oh, I forgot my pencil.",
+      "An interjection always needs a mark after it. Either mark can work, but the opening letter of the following word must suit the mark you chose: a capital for a new sentence, or a small letter when the same sentence goes on, unless the word is I or a name.",
+      "Pick the interjection that matches what happened. Use ouch for a hurt, yum for tasty food and oops for a slip. A joyful word like hooray does not fit a spill."
     ],
     words: [
       { term: "interjection", means: "a word or short phrase that shows a feeling, like wow or ouch" }
@@ -7544,10 +7558,185 @@ PP.addLesson({
         "Choose the word that shows fear or alarm."
       ],
       answer: "Yikes! There is a spider on my shoe!"
+    },
+    {
+      show: ["Whew we made it to the bus on time."],
+      ask: "What is wrong, and how can you fix it?",
+      steps: [
+        "Whew is the interjection, and it shows relief.",
+        "Nothing separates Whew from the words after it, so it needs a mark.",
+        "Add an exclamation point and begin the next word with a capital letter."
+      ],
+      answer: "Whew! We made it to the bus on time."
     }
   ],
   parent: "When something surprising happens at home, ask your child which interjection fits: Wow? Oops? Yikes? Then write it down together with the right mark after it.",
-  passages: [],
+  passages: [
+    /* B8a:passages:start */
+    {
+      id: "p1",
+      title: "The Class Picnic",
+      byline: "A third grader's draft",
+      genre: "Student draft (narrative)",
+      draft: true,
+      paragraphs: [
+        [
+          "(1) On Thursday, our class went to Pine Park for a picnic lunch.",
+          "(2) Oops, I dropped my sandwich in the grass.",
+          "(3) Yuck! it was covered in tiny ants.",
+          "(4) Hooray, We found a table in the shade."
+        ],
+        [
+          "(5) Yum! My cheese crackers tasted so good with the cold grapes.",
+          "(6) Ouch I bumped my knee on the wooden bench.",
+          "(7) Oh, I forgot to pack a cup for my juice."
+        ],
+        [
+          "(8) Phew! Our teacher had an extra one in her bag.",
+          "(9) Wow! The ducks swam right up to our blanket.",
+          "(10) Yay! we get to come back to the park next month.",
+          "(11) We tossed our paper plates in the bin and rode the bus back to class.",
+          "(12) It was the best picnic of the whole year."
+        ]
+      ]
+    },
+    {
+      id: "p2",
+      title: "A Day at the County Fair",
+      byline: "A third grader's draft",
+      genre: "Student draft (narrative)",
+      draft: true,
+      paragraphs: [
+        [
+          "(1) On Saturday, our family went to the county fair.",
+          "(2) Wow! The Ferris wheel is taller than our school.",
+          "(3) Hooray! I spilled lemonade all over my new shoes.",
+          "(4) Yikes the roller coaster dropped so fast."
+        ],
+        [
+          "(5) Oh, I forgot my tickets at the front gate.",
+          "(6) Yum! The fresh popcorn smells salty and warm.",
+          "(7) Ouch! My ice cream tasted so sweet."
+        ],
+        [
+          "(8) Phew, The line was shorter than I thought.",
+          "(9) Yay! We won a goldfish at the ring toss.",
+          "(10) Bravo! my sister made a balloon animal that looks just like a dog.",
+          "(11) We rode the bus home with sticky hands and sleepy eyes.",
+          "(12) I hope our family goes back to the fair next summer."
+        ]
+      ]
+    },
+    {
+      id: "p3",
+      title: "A Night in the Mountains",
+      byline: "A third grader's draft",
+      genre: "Student draft (narrative)",
+      draft: true,
+      paragraphs: [
+        [
+          "(1) Last summer, my cousins and I camped in the mountains for two nights.",
+          "(2) Brr! The lake water was freezing cold.",
+          "(3) Eek! A spider crawled across my sleeping bag.",
+          "(4) Hooray, we found a perfect spot for the tent."
+        ],
+        [
+          "(5) Yuck The soup burned at the bottom of the pot.",
+          "(6) Aha! I found my flashlight under the blanket.",
+          "(7) Oops! the marshmallow slid right off my stick."
+        ],
+        [
+          "(8) Yum! The campfire smoke smelled terrible.",
+          "(9) Oh no, The tent leaked during the thunderstorm.",
+          "(10) Phew! The rain finally stopped before the sun came up.",
+          "(11) We dried our blankets on a rope between two pine trees.",
+          "(12) I will remember that trip for a long time."
+        ]
+      ]
+    },
+    {
+      id: "p4",
+      title: "A Trip to the Zoo",
+      byline: "A third grader's draft",
+      genre: "Student draft (narrative)",
+      draft: true,
+      paragraphs: [
+        [
+          "(1) On Monday, our scout troop visited the city zoo with two parents.",
+          "(2) Whoa! The giraffe was taller than the bus.",
+          "(3) Hooray! My balloon popped, and the string flew away.",
+          "(4) Eek the monkey grabbed my hat."
+        ],
+        [
+          "(5) Oh, I should have held it tighter.",
+          "(6) Yum! The pretzel was warm and soft.",
+          "(7) Ouch! The baby penguins looked soft and fluffy."
+        ],
+        [
+          "(8) Phew, The bear stayed behind a strong fence.",
+          "(9) Yay! We saw the baby elephant take a bath.",
+          "(10) Bravo! the keeper made the seals clap their flippers.",
+          "(11) We ate our lunch on a bench beside the penguin pool.",
+          "(12) The ride home on the troop bus was quiet and happy."
+        ]
+      ]
+    },
+    {
+      id: "p5",
+      title: "Grandma's Garden",
+      byline: "A third grader's draft",
+      genre: "Student draft (narrative)",
+      draft: true,
+      paragraphs: [
+        [
+          "(1) After school, my sister and I helped Grandma plant seeds in her garden.",
+          "(2) Wow! The tomatoes were bigger than my fist.",
+          "(3) Hooray! A bee stung my hand when I touched a flower.",
+          "(4) Oops the green watering can tipped over onto the carrot seeds again."
+        ],
+        [
+          "(5) Oh, I put the carrot seeds in the wrong row.",
+          "(6) Yum! The strawberries tasted sweet and juicy.",
+          "(7) Ew! The garden smelled like fresh mint."
+        ],
+        [
+          "(8) Whew, The weeds were pulled before dinner.",
+          "(9) Yay! Grandma baked us a blueberry pie.",
+          "(10) Bravo! my sister dug the longest row in the garden.",
+          "(11) We washed our muddy boots with the hose on the porch.",
+          "(12) I love helping Grandma in her garden every spring."
+        ]
+      ]
+    },
+    {
+      id: "p6",
+      title: "Game Day",
+      byline: "A third grader's draft",
+      genre: "Student draft (narrative)",
+      draft: true,
+      paragraphs: [
+        [
+          "(1) On Sunday morning, our soccer team played its opening match against the Tigers.",
+          "(2) Whoa! The other team ran faster than a speeding car.",
+          "(3) Hooray! I tripped over my own shoelace near the corner flag.",
+          "(4) Yikes the ball flew right at my face."
+        ],
+        [
+          "(5) Oh, I did not see it coming.",
+          "(6) Yum! The orange slices at halftime tasted fresh and cold.",
+          "(7) Ow! My team scored a goal in the last minute."
+        ],
+        [
+          "(8) Phew, The final whistle blew before they could tie it.",
+          "(9) Yay! We beat the Tigers by a single point.",
+          "(10) Bravo! our goalie stopped every shot in the second half.",
+          "(11) We shook hands with the other team near the goal.",
+          "(12) Then we drank water and sat in the shade of the bleachers."
+        ]
+      ]
+    }
+    /* B8a:passages:end */
+  ],
   practice: [
     { id: "SK-GUM4-6-P1", type: "mc", points: 1, dok: 1, passages: [],
       prompt: "Which word in this sentence is the interjection?",
@@ -7600,6 +7789,1207 @@ PP.addLesson({
       clue: "After an exclamation point, the next word starts with a capital letter. After a comma, it does not, unless it is a name or I.",
       why: "The answer is \"Hooray! We won the game.\" Hooray starts with a capital letter, and after the exclamation point, We starts with a capital letter too. After a comma, we would stay lowercase." }
   ],
+  /* B8a:core:start */
+  /* ---------- Expansion 2026-10-22, batch B8a (GUM Reinforce, first half) ----------
+     core: fifteen items in three sets of five. { ref } reuses a practice item; the other practice items stay in Practice Together.
+     Passages are used only by core and the similar bank; none is used by test.
+     Author log: docs/expansion-2026-10-22/batches/B8a-author-log.md. NOT ACCEPTED: needs independent review. */
+  core: {
+    rev: "1",
+    sets: [
+      {
+        title: "Set 1",
+        items: [
+          {
+            ref: "SK-GUM4-6-P3"
+          },
+          {
+            ref: "SK-GUM4-6-P4"
+          },
+          {
+            id: "SK-GUM4-6-C03",
+            type: "mc",
+            points: 1,
+            dok: 3,
+            std: [
+              "3.L.GC.1:I:use-interjections"
+            ],
+            passages: ["p1"],
+            prompt: "A classmate thinks sentence 6 needs no mark after Ouch. What is the best response?",
+            choices: [
+              {
+                text: "Ouch shows a feeling, so a mark must follow it, either an exclamation point or a comma, to set it apart.",
+                correct: true
+              },
+              {
+                text: "Ouch is already a whole sentence by itself, so a mark after it would only get in the way of the next words."
+              },
+              {
+                text: "A question mark is needed after Ouch, because the writer is asking the reader how the knee is feeling today."
+              },
+              {
+                text: "Quotation marks are needed around Ouch, because every interjection must be inside quotation marks in a story."
+              }
+            ],
+            clue: "Think about how an interjection is kept separate from the words that come after it.",
+            hints: [
+              "Think about how an interjection is kept separate from the words that come after it.",
+              "Look at sentence 6 and at sentences 5 and 7, and compare what stands right after the first word in each.",
+              "The writer is not asking anything, so a choice about asking cannot be right."
+            ],
+            how: [
+              "Read sentence 6: Ouch I bumped my knee on the wooden bench.",
+              "Ouch shows a feeling of pain. The next words run right into it, with no mark between them.",
+              "An interjection is set apart by an exclamation point or a comma. The answer is \"Ouch shows a feeling, so a mark must follow it, either an exclamation point or a comma, to set it apart.\""
+            ],
+            misconception: "A common mix-up is thinking an interjection can run into the next words. A mark must come after it.",
+            why: "The answer is \"Ouch shows a feeling, so a mark must follow it, either an exclamation point or a comma, to set it apart.\" Ouch shows a feeling of pain, and a mark after it sets it apart from the rest of the sentence. An exclamation point or a comma would both work."
+          },
+          {
+            id: "SK-GUM4-6-C04",
+            type: "dropdown",
+            points: 1,
+            dok: 2,
+            std: [
+              "3.L.GC.1:I:use-interjections"
+            ],
+            passages: ["p1"],
+            prompt: "Choose the way to write sentence 3 that fixes the mistake.",
+            text: "Picnic draft: {0}",
+            slots: [
+              {
+                options: [
+                  "Yuck! It was covered in tiny ants.",
+                  "Yuck! it was covered in tiny ants.",
+                  "Yuck, It was covered in tiny ants.",
+                  "Yuck It was covered in tiny ants."
+                ],
+                answer: 0
+              }
+            ],
+            clue: "Compare how each choice sets apart the interjection and how the next word begins.",
+            hints: [
+              "Compare how each choice sets apart the interjection and how the next word begins.",
+              "Look at the mark after Yuck, then look at the first letter of the next word.",
+              "No mark follows Yuck in one choice, and an interjection needs one."
+            ],
+            how: [
+              "Yuck is the interjection, and it shows disgust.",
+              "After an exclamation point, a new sentence begins, so the next word starts with a capital letter.",
+              "The answer is \"Yuck! It was covered in tiny ants.\" The other choices use a small letter after the exclamation point, a capital letter after a comma, or no mark."
+            ],
+            misconception: "A common mix-up is fixing only the mark. Check the first letter of the word after it, too.",
+            why: "The answer is Yuck! It was covered in tiny ants.. A new sentence follows the exclamation point, so It needs a capital I. The other choices use a small i, a capital after a comma, or no mark."
+          },
+          {
+            id: "SK-GUM4-6-C05",
+            type: "hottext",
+            points: 1,
+            dok: 2,
+            std: [
+              "3.L.GC.1:I:use-interjections"
+            ],
+            passages: ["p1"],
+            prompt: "From sentences 2, 5, 7, 9 and 10, select the ONE that has a punctuation mistake.",
+            targets: ["p1:1:2","p1:2:1","p1:2:3","p1:3:2","p1:3:3"],
+            answer: ["p1:3:3"],
+            pick: 1,
+            clue: "Find the interjection in each shown sentence, then check what stands after it.",
+            hints: [
+              "Find the interjection in each shown sentence, then check what stands after it.",
+              "Check the mark after each interjection and the first letter of the next word.",
+              "Sentence 9 has an exclamation point and a capital letter after it, so it is already correct."
+            ],
+            how: [
+              "Locate the interjection in each shown sentence and see what follows it.",
+              "Sentences 2 and 7 use a comma followed by the word I, and sentences 5 and 9 use an exclamation point with a capital letter.",
+              "In sentence 10, a small w follows the exclamation point, so it is the answer."
+            ],
+            misconception: "A common mix-up is picking the sentence with a comma instead of an exclamation point. Both marks can follow an interjection.",
+            why: "The answer is sentence 10: \"Yay! we get to come back to the park next month.\" Sentence 10 needs a capital W after the exclamation point. In the other shown sentences each interjection has a mark and the right letter after it."
+          }
+        ]
+      },
+      {
+        title: "Set 2",
+        items: [
+          {
+            id: "SK-GUM4-6-C06",
+            type: "ebsr",
+            points: 2,
+            dok: 3,
+            std: [
+              "3.L.GC.1:I:use-interjections"
+            ],
+            passages: ["p1"],
+            prompt: "This item has two parts. Begin with Part A and then go on to Part B.",
+            partA: {
+              prompt: "Sentence 4 has a mistake. Which revision fixes it?",
+              choices: [
+                {
+                  text: "Hooray! We found a table in the shade.",
+                  correct: true
+                },
+                {
+                  text: "Hooray! we found a table in the shade."
+                },
+                {
+                  text: "Hooray We found a table in the shade."
+                },
+                {
+                  text: "hooray! We found a table in the shade."
+                }
+              ]
+            },
+            partB: {
+              prompt: "Which fact explains why the correct revision is right?",
+              choices: [
+                {
+                  text: "A word after an exclamation point starts a new sentence, so it begins with a capital letter.",
+                  correct: true
+                },
+                {
+                  text: "A word after an exclamation point stays in the same sentence, so it begins with a small letter."
+                },
+                {
+                  text: "An interjection never takes a mark, so the sentence needs no mark after the first word."
+                },
+                {
+                  text: "An exclamation point is only used when someone is hurt, so the revision shows a hurt."
+                }
+              ]
+            },
+            clue: "For Part A, compare the first word, the mark after it and the next word in each choice. Then, for Part B, find the fact that goes with the change.",
+            hints: [
+              "For Part A, compare the first word, the mark after it and the next word in each choice. Then, for Part B, find the fact that goes with the change.",
+              "In Part B, ask what the first mark does to the word that comes next.",
+              "The draft already has a capital H, so a choice that lowers the first letter cannot be the fix."
+            ],
+            how: [
+              "Part A: the draft has a comma and then a capital W. The answer is \"Hooray! We found a table in the shade.\"",
+              "The other choices use a small letter after the exclamation point, leave out the mark, or start with a small h.",
+              "Part B: the fact is \"A word after an exclamation point starts a new sentence, so it begins with a capital letter.\""
+            ],
+            misconception: "A common mix-up is changing only the mark. A new sentence after an exclamation point also needs its capital letter.",
+            why: "Part A: \"Hooray! We found a table in the shade.\" Part B: \"A word after an exclamation point starts a new sentence, so it begins with a capital letter.\" Part A: Hooray! We found a table in the shade. uses an exclamation point and a capital W. Part B: a word after an exclamation point starts a new sentence."
+          },
+          {
+            id: "SK-GUM4-6-C07",
+            type: "dropdown",
+            points: 1,
+            dok: 2,
+            std: [
+              "3.L.GC.1:I:use-interjections"
+            ],
+            passages: ["p2"],
+            prompt: "Pick the interjection that fits the feeling in sentence 3.",
+            text: "{0} I spilled lemonade all over my new shoes.",
+            slots: [
+              {
+                options: ["Hooray!","Oops!","Yum!","Brr!"],
+                answer: 1
+              }
+            ],
+            clue: "Check what the sentence goes on to say, and decide how the writer feels.",
+            hints: [
+              "Check what the sentence goes on to say, and decide how the writer feels.",
+              "Think about how you would feel if this happened to you, and match that feeling to a word.",
+              "Yum goes with tasty food, and this sentence says nothing about taste."
+            ],
+            how: [
+              "Check the words after the blank: lemonade was spilled on new shoes.",
+              "That is an accident, and it is upsetting.",
+              "The answer is Oops! Hooray shows joy, Yum is for good-tasting food, and Brr shows that someone is cold."
+            ],
+            misconception: "A common mix-up is choosing Hooray because the writer is at a fair. Match the word to what happened in the sentence.",
+            why: "The answer is Oops!. Spilling lemonade is an accident, so Oops fits. Hooray shows joy, Yum is for good-tasting food, and Brr shows that someone is cold."
+          },
+          {
+            id: "SK-GUM4-6-C08",
+            type: "hottext",
+            points: 1,
+            dok: 2,
+            std: [
+              "3.L.GC.1:I:use-interjections"
+            ],
+            passages: ["p2"],
+            prompt: "Find the interjection in each of sentences 2, 5, 6, 7 and 9. Select the ONE whose interjection does not fit the feeling.",
+            targets: ["p2:1:2","p2:2:1","p2:2:2","p2:2:3","p2:3:2"],
+            answer: ["p2:2:3"],
+            pick: 1,
+            clue: "Read each shown sentence and decide what feeling the writer has.",
+            hints: [
+              "Read each shown sentence and decide what feeling the writer has.",
+              "Then say whether the interjection at the start shows that same feeling.",
+              "Sentence 6 is about popcorn that smells good, and Yum is about food that smells or tastes good, so it fits."
+            ],
+            how: [
+              "Find the interjection in each shown sentence and decide what feeling the rest of the sentence shows.",
+              "Wow fits a tall Ferris wheel, Oh fits a forgotten ticket, Yum fits warm popcorn, and Yay fits a won goldfish.",
+              "In sentence 7, Ouch shows pain, but sweet ice cream does not hurt, so it is the answer."
+            ],
+            misconception: "A common mix-up is picking the sentence with the strongest word. Check whether the word fits what the sentence says.",
+            why: "The answer is sentence 7: \"Ouch! My ice cream tasted so sweet.\" Ouch shows pain, but ice cream that tastes sweet does not hurt, so the interjection does not fit. In the other shown sentences each interjection matches the feeling."
+          },
+          {
+            id: "SK-GUM4-6-C09",
+            type: "mc",
+            points: 1,
+            dok: 3,
+            std: [
+              "3.L.GC.1:I:use-interjections"
+            ],
+            passages: ["p2"],
+            prompt: "A classmate says Hooray fits sentence 3, because the writer is excited about the fair. Which response is best?",
+            choices: [
+              {
+                text: "Hooray shows joy, but spilling lemonade on new shoes is upsetting, so a word like Oh no fits the feeling better.",
+                correct: true
+              },
+              {
+                text: "Hooray fits, because an interjection can show any strong feeling, whatever else the line goes on to say."
+              },
+              {
+                text: "Hooray fits, because the exclamation point shows the writer is excited, and the exclamation point decides the feeling."
+              },
+              {
+                text: "No interjection fits, because spilling lemonade is too small a thing to show any feeling at all to a reader."
+              }
+            ],
+            clue: "Ask what happened in sentence 3 and how someone would feel about it.",
+            hints: [
+              "Ask what happened in sentence 3 and how someone would feel about it.",
+              "Compare the feeling that the word Hooray shows with the feeling in what follows it.",
+              "People do feel something when lemonade spills on their shoes, so a choice that denies any feeling cannot be right."
+            ],
+            how: [
+              "Read sentence 3: Hooray! I spilled lemonade all over my new shoes.",
+              "Hooray shows joy, but a spill on new shoes is upsetting.",
+              "The answer is \"Hooray shows joy, but spilling lemonade on new shoes is upsetting, so a word like Oh no fits the feeling better.\""
+            ],
+            misconception: "A common mix-up is thinking the exclamation point picks the feeling. The interjection itself must match what happened.",
+            why: "The answer is \"Hooray shows joy, but spilling lemonade on new shoes is upsetting, so a word like Oh no fits the feeling better.\" Hooray shows joy, but spilling lemonade on new shoes is upsetting, so the feeling does not match. A word like Oh no or Oops fits better."
+          },
+          {
+            id: "SK-GUM4-6-C10",
+            type: "ms",
+            points: 2,
+            dok: 2,
+            std: [
+              "3.L.GC.1:I:use-interjections"
+            ],
+            passages: [],
+            prompt: "Which TWO lines have the right mark and the right capital letter?",
+            pick: 2,
+            choices: [
+              {
+                text: "Hey! Pass the ball to me.",
+                correct: true
+              },
+              {
+                text: "Oh, I think the game starts at noon.",
+                correct: true
+              },
+              {
+                text: "Bravo! you scored two goals."
+              },
+              {
+                text: "Wow The crowd is so loud."
+              },
+              {
+                text: "Ow, My foot hurts after that kick."
+              }
+            ],
+            clue: "Check each sentence for the mark after the interjection and the letter that comes next.",
+            hints: [
+              "Check each sentence for the mark after the interjection and the letter that comes next.",
+              "Keep the sentences in which the mark and the next letter go together.",
+              "One sentence has no mark at all after its first word, and an interjection needs one."
+            ],
+            how: [
+              "Look at the mark after the interjection and the letter after it in each sentence.",
+              "In \"Hey! Pass the ball to me.\" a capital letter follows the exclamation point. In \"Oh, I think the game starts at noon.\" the word I is always capitalized.",
+              "The other sentences use a small letter after an exclamation point, leave out the mark, or use a capital letter after a comma."
+            ],
+            misconception: "A common mix-up is choosing a sentence only because it has an exclamation point. Check the letter after the mark.",
+            why: "The answers are \"Hey! Pass the ball to me.\" and \"Oh, I think the game starts at noon.\" Hey is followed by an exclamation point and a capital P, and Oh is followed by a comma and the word I. In the other sentences a small letter follows an exclamation point, a mark is missing, or a capital letter follows a comma."
+          }
+        ]
+      },
+      {
+        title: "Set 3",
+        items: [
+          {
+            id: "SK-GUM4-6-C11",
+            type: "mc",
+            points: 1,
+            dok: 3,
+            std: [
+              "3.L.GC.1:I:use-interjections"
+            ],
+            passages: [],
+            stem: "Sentence A: Yikes! The dog got loose. Sentence B: Oh, the dog got loose.",
+            prompt: "How are the interjections in the two sentences alike and different?",
+            choices: [
+              {
+                text: "Both show a feeling about the dog, but Yikes shows stronger alarm than Oh, which shows mild surprise.",
+                correct: true
+              },
+              {
+                text: "Both show a feeling about the dog, but Oh shows stronger alarm than Yikes, which shows mild surprise."
+              },
+              {
+                text: "Both tell what the dog did, but Yikes names the action and Oh names the dog that got loose."
+              },
+              {
+                text: "Both are complete sentences, but only Sentence B starts with a capital letter at the very beginning."
+              }
+            ],
+            clue: "Find the interjection in each sentence and decide what feeling it shows.",
+            hints: [
+              "Find the interjection in each sentence and decide what feeling it shows.",
+              "Compare how strong each feeling is, and see how each sentence sets the interjection apart.",
+              "Both sentences begin with a capital letter, so a choice about only one of them cannot be right."
+            ],
+            how: [
+              "The interjections are Yikes in Sentence A and Oh in Sentence B.",
+              "Yikes shows alarm, and an exclamation point follows it. Oh shows mild surprise, and a comma follows it.",
+              "The answer is \"Both show a feeling about the dog, but Yikes shows stronger alarm than Oh, which shows mild surprise.\""
+            ],
+            misconception: "A common mix-up is thinking an interjection names something in the sentence. It shows a feeling.",
+            why: "The answer is \"Both show a feeling about the dog, but Yikes shows stronger alarm than Oh, which shows mild surprise.\" Both interjections show a feeling about the dog getting loose. Yikes shows strong alarm, so an exclamation point follows it, and Oh shows mild surprise, so a comma follows it."
+          },
+          {
+            id: "SK-GUM4-6-C12",
+            type: "dropdown",
+            points: 1,
+            dok: 2,
+            std: [
+              "3.L.GC.1:I:use-interjections"
+            ],
+            passages: ["p3"],
+            prompt: "Pick the version of sentence 5 that is written correctly.",
+            text: "Camp draft: {0}",
+            slots: [
+              {
+                options: [
+                  "Yuck The soup burned at the bottom of the pot.",
+                  "Yuck! The soup burned at the bottom of the pot.",
+                  "Yuck! the soup burned at the bottom of the pot.",
+                  "Yuck, The soup burned at the bottom of the pot."
+                ],
+                answer: 1
+              }
+            ],
+            clue: "Compare what stands right after Yuck in each choice, and how the next word begins.",
+            hints: [
+              "Compare what stands right after Yuck in each choice, and how the next word begins.",
+              "Look for the choice in which the mark and the next letter go together.",
+              "The choice that matches the draft has no mark after Yuck, and an interjection needs one."
+            ],
+            how: [
+              "Yuck is the interjection, and it shows disgust.",
+              "An exclamation point sets it apart, and the next sentence begins with a capital letter.",
+              "The answer is \"Yuck! The soup burned at the bottom of the pot.\" The other choices skip the mark, start the next word with a small letter after an exclamation point, or begin it with a capital after a comma."
+            ],
+            misconception: "A common mix-up is leaving the draft alone because the words after Yuck read fine. An interjection still needs a mark.",
+            why: "The answer is Yuck! The soup burned at the bottom of the pot.. Yuck needs a mark, and a sentence that follows an exclamation point opens with a capital. The other choices skip the mark, start the next word with a small letter after an exclamation point, or begin it with a capital after a comma."
+          },
+          {
+            id: "SK-GUM4-6-C13",
+            type: "ms",
+            points: 2,
+            dok: 3,
+            std: [
+              "3.L.GC.1:I:use-interjections"
+            ],
+            passages: ["p3"],
+            prompt: "The ninth line of the camping draft is wrong. Pick the TWO revisions that repair it.",
+            pick: 2,
+            choices: [
+              {
+                text: "Oh no! The tent leaked during the thunderstorm.",
+                correct: true
+              },
+              {
+                text: "Oh no, the tent leaked during the thunderstorm.",
+                correct: true
+              },
+              {
+                text: "Oh no The tent leaked during the thunderstorm."
+              },
+              {
+                text: "Oh no! the tent leaked during the thunderstorm."
+              },
+              {
+                text: "Oh no, The tent leaked during the thunderstorm."
+              }
+            ],
+            clue: "A fix can use a different mark, as long as the next letter goes with it. Check each revision.",
+            hints: [
+              "A fix can use a different mark, as long as the next letter goes with it. Check each revision.",
+              "Keep the revisions in which the mark after Oh no and the next letter go together.",
+              "One revision leaves out the mark after Oh no, and an interjection needs one."
+            ],
+            how: [
+              "The draft has a comma and then a capital T, and those do not go together.",
+              "One fix changes the comma to an exclamation point, so the capital T is right. The other fix keeps the comma and uses a small t.",
+              "The answers are \"Oh no! The tent leaked during the thunderstorm.\" and \"Oh no, the tent leaked during the thunderstorm.\" The others leave out the mark, use a small letter after an exclamation point, or keep the draft."
+            ],
+            misconception: "A common mix-up is thinking only the mark can change. The letter after the mark can change, too.",
+            why: "The answers are \"Oh no! The tent leaked during the thunderstorm.\" and \"Oh no, the tent leaked during the thunderstorm.\" An exclamation point goes with a capital T, and a comma goes with a small t. The other revisions leave out the mark, use a small letter after an exclamation point, or keep the draft."
+          },
+          {
+            id: "SK-GUM4-6-C14",
+            type: "mc",
+            points: 1,
+            dok: 2,
+            std: [
+              "3.L.GC.1:I:use-interjections"
+            ],
+            passages: [],
+            prompt: "Which sentence uses an interjection that fits the feeling?",
+            choices: [
+              {
+                text: "Eek! A snake is in the garden.",
+                correct: true
+              },
+              {
+                text: "Yum! A snake is in the garden."
+              },
+              {
+                text: "Hooray! My finger got pinched in the door."
+              },
+              {
+                text: "Bravo! The milk smells sour."
+              }
+            ],
+            clue: "Read the rest of each sentence and decide how a person would feel about it.",
+            hints: [
+              "Read the rest of each sentence and decide how a person would feel about it.",
+              "Match each interjection to the feeling it shows, then compare that feeling with the sentence.",
+              "Pinched fingers hurt, and Hooray shows joy, so one choice has a word that clashes."
+            ],
+            how: [
+              "Read the rest of each sentence and decide how a person would feel.",
+              "A snake in the garden is scary, and Eek shows fear.",
+              "The answer is \"Eek! A snake is in the garden.\" Yum is for good-tasting food, Hooray shows joy, and Bravo shows praise."
+            ],
+            misconception: "A common mix-up is choosing a word because it is exciting. The word must match what happened.",
+            why: "The answer is \"Eek! A snake is in the garden.\" A snake in the garden is scary, so Eek fits. Yum is for food that tastes good, Hooray shows joy, and Bravo shows praise, and none of them fit their sentences."
+          },
+          {
+            id: "SK-GUM4-6-C15",
+            type: "dropdown",
+            points: 2,
+            dok: 2,
+            std: [
+              "3.L.GC.1:I:use-interjections"
+            ],
+            passages: [],
+            prompt: "Choose the words and the mark that complete the sentence.",
+            text: "{0}{1} The soup is too hot to eat.",
+            slots: [
+              {
+                options: ["Ouch","Hooray","Yum","Bravo"],
+                answer: 0
+              },
+              {
+                options: ["!",",",":",";"],
+                answer: 0
+              }
+            ],
+            clue: "For the first blank, think how a person feels when soup is too hot. For the second, look at the letter after the blank.",
+            hints: [
+              "For the first blank, think how a person feels when soup is too hot. For the second, look at the letter after the blank.",
+              "A capital letter after the blank means a new sentence begins there.",
+              "Yum is for good-tasting food, and soup that is too hot to eat does not taste good yet."
+            ],
+            how: [
+              "Hot soup can burn a mouth, and Ouch shows pain.",
+              "The next word, The, is capitalized, so a fresh sentence begins after the first one ends with an exclamation point.",
+              "The answers are Ouch and ! because Hooray shows joy, Yum is for good-tasting food, and Bravo shows praise. A comma, a colon or a semicolon would not go before a new sentence."
+            ],
+            misconception: "A common mix-up is using a comma before a capital letter. A comma goes with a small letter, and an exclamation point goes with a capital letter.",
+            why: "The answers are Ouch and !. Ouch shows pain from hot soup, and an exclamation point ends the interjection before the new sentence that starts with a capital letter. The other words show joy, taste or praise, and the other marks cannot end a feeling word."
+          }
+        ]
+      }
+    ]
+  },
+  similar: [
+    {
+      id: "SK-GUM4-6-S01",
+      type: "match",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.L.GC.1:I:use-interjections"
+      ],
+      passages: [],
+      prompt: "Which feeling does each word show?",
+      cols: ["Fright","Disgust","Praise"],
+      rows: [
+        {
+          text: "Eek!",
+          answer: 0
+        },
+        {
+          text: "Yuck!",
+          answer: 1
+        },
+        {
+          text: "Bravo!",
+          answer: 2
+        },
+        {
+          text: "Yikes!",
+          answer: 0
+        },
+        {
+          text: "Ew!",
+          answer: 1
+        }
+      ],
+      clue: "Picture a moment when someone would call out each word.",
+      hints: [
+        "Picture a moment when someone would call out each word.",
+        "Sort the words you know first, then use the same picture for the rest.",
+        "Bravo is said to a player who did well, and nobody cheers a snake."
+      ],
+      how: [
+        "Picture a moment when each word would be said.",
+        "Eek and Yikes show fear, Yuck and Ew show disgust, and Bravo shows praise.",
+        "Put every row into one of the three columns."
+      ],
+      misconception: "A common mix-up is sorting by how loud a word sounds. Think about the feeling it shows.",
+      why: "Eek and Yikes show fright, Yuck and Ew show disgust, and Bravo shows praise.",
+      like: ["SK-GUM4-6-P3"]
+    },
+    {
+      id: "SK-GUM4-6-S02",
+      type: "ms",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.L.GC.1:I:use-interjections"
+      ],
+      passages: [],
+      prompt: "Select the two lines that hold an interjection.",
+      pick: 2,
+      choices: [
+        {
+          text: "Aha! I found the missing sock.",
+          correct: true
+        },
+        {
+          text: "Hmm, the box feels very light.",
+          correct: true
+        },
+        {
+          text: "The kitten slept on the warm blanket."
+        },
+        {
+          text: "Our team practices every Tuesday after school."
+        },
+        {
+          text: "We painted the fence last weekend."
+        }
+      ],
+      clue: "Check the opening word of every line for a word that is only a feeling.",
+      hints: [
+        "Check the opening word of every line for a word that is only a feeling.",
+        "A word like that can stand alone, and a mark keeps it apart from what comes next.",
+        "A kitten sleeping tells what happened, and that line has no feeling word."
+      ],
+      how: [
+        "Look at the start of each line for a feeling word that is followed by a mark.",
+        "The answers are \"Aha! I found the missing sock.\" and \"Hmm, the box feels very light.\" Aha shows that the writer just figured something out, and Hmm shows a thinking pause.",
+        "The other lines tell about a cat, a team and a fence, but none has a feeling word."
+      ],
+      misconception: "A common mix-up is picking a line because it sounds lively. An interjection is a feeling word.",
+      why: "The answers are \"Aha! I found the missing sock.\" and \"Hmm, the box feels very light.\" Aha shows sudden discovery, and Hmm shows a thinking pause, and a mark follows each. The other lines only tell what happened.",
+      like: ["SK-GUM4-6-P4"]
+    },
+    {
+      id: "SK-GUM4-6-S03",
+      type: "mc",
+      points: 1,
+      dok: 3,
+      std: [
+        "3.L.GC.1:I:use-interjections"
+      ],
+      passages: ["p4"],
+      prompt: "Why does the monkey line in the zoo draft need a change before it goes up on the classroom wall?",
+      choices: [
+        {
+          text: "Eek expresses fright, yet nothing splits it from the monkey words, so a ! or a , belongs there.",
+          correct: true
+        },
+        {
+          text: "Eek is complete on its own, so a ! or a , would only slow the reader down before the monkey words."
+        },
+        {
+          text: "Eek asks the reader something about the monkey, so a ? belongs right there and nothing else."
+        },
+        {
+          text: "Eek repeats what a person said aloud, so it must be placed inside quotation marks for every reader."
+        }
+      ],
+      clue: "Think about how a word that is only a feeling gets split off from the rest.",
+      hints: [
+        "Think about how a word that is only a feeling gets split off from the rest.",
+        "Read lines 3 and 5 of the draft, and see what stands right after the first word in each.",
+        "The writer reports what happened and asks nothing, so a symbol for asking cannot be right."
+      ],
+      how: [
+        "Read sentence 4: Eek the monkey grabbed my hat.",
+        "Eek expresses fear, but the next words run right into it.",
+        "A ! or a , splits it off. The answer is \"Eek expresses fright, yet nothing splits it from the monkey words, so a ! or a , belongs there.\""
+      ],
+      misconception: "A common mix-up is thinking a feeling word needs nothing after it. It must be set off from the rest.",
+      why: "The answer is \"Eek expresses fright, yet nothing splits it from the monkey words, so a ! or a , belongs there.\" Eek expresses fright, and a mark after it splits it from the rest of the sentence. An exclamation point or a comma would both work.",
+      like: ["SK-GUM4-6-C03"]
+    },
+    {
+      id: "SK-GUM4-6-S04",
+      type: "dropdown",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.L.GC.1:I:use-interjections"
+      ],
+      passages: ["p4"],
+      prompt: "Pick the line that corrects the draft's tenth sentence.",
+      text: "Zoo trip: {0}",
+      slots: [
+        {
+          options: [
+            "Bravo! the keeper made the seals clap their flippers.",
+            "Bravo! The keeper made the seals clap their flippers.",
+            "Bravo, The keeper made the seals clap their flippers.",
+            "Bravo The keeper made the seals clap their flippers."
+          ],
+          answer: 1
+        }
+      ],
+      clue: "Study how each line splits the first word from the next one.",
+      hints: [
+        "Study how each line splits the first word from the next one.",
+        "Look at the letter that opens the word after the mark in each line.",
+        "One line has no mark at all after the first word, and a feeling word needs one."
+      ],
+      how: [
+        "Bravo is the interjection, and it shows praise.",
+        "An exclamation point ends it, so the keeper sentence starts with a capital letter.",
+        "The answer is \"Bravo! The keeper made the seals clap their flippers.\" The others use a small letter after the exclamation point, a capital after a comma, or no mark."
+      ],
+      misconception: "A common mix-up is trusting the mark and skipping the next letter. Check both.",
+      why: "The answer is Bravo! The keeper made the seals clap their flippers.. A new sentence follows the exclamation point, so The needs a capital T. The other lines use a small t, a capital after a comma, or no mark.",
+      like: ["SK-GUM4-6-C04"]
+    },
+    {
+      id: "SK-GUM4-6-S05",
+      type: "hottext",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.L.GC.1:I:use-interjections"
+      ],
+      passages: ["p5"],
+      prompt: "Tap the numbered line in the garden draft that breaks a rule for marks.",
+      targets: ["p5:1:2","p5:2:1","p5:2:2","p5:3:1","p5:3:2"],
+      answer: ["p5:3:1"],
+      pick: 1,
+      clue: "Spot the feeling word in every shown sentence, then check what follows it.",
+      hints: [
+        "Spot the feeling word in every shown sentence, then check what follows it.",
+        "For each one, check the mark, then how the next word begins.",
+        "Sentence 6 has an exclamation point and a capital letter after it, so it is written correctly."
+      ],
+      how: [
+        "Spot the feeling word in every shown sentence and check what follows it.",
+        "Sentences 2, 6 and 9 use an exclamation point and a capital letter. Sentence 5 uses a comma and the word I.",
+        "In sentence 8, a capital T follows a comma, so it is the answer."
+      ],
+      misconception: "A common mix-up is picking the sentence with a comma. A comma is fine when a small letter follows.",
+      why: "The answer is sentence 8: \"Whew, The weeds were pulled before dinner.\" Sentence 8 has a capital T after a comma, and that does not go together. The other shown sentences have a mark and a matching letter.",
+      like: ["SK-GUM4-6-C05"]
+    },
+    {
+      id: "SK-GUM4-6-S06",
+      type: "ebsr",
+      points: 2,
+      dok: 3,
+      std: [
+        "3.L.GC.1:I:use-interjections"
+      ],
+      passages: ["p5"],
+      prompt: "Work through A, then through B.",
+      partA: {
+        prompt: "Pick the right fix for line 4 of the garden draft.",
+        choices: [
+          {
+            text: "Oops! The green watering can tipped over onto the carrot seeds again.",
+            correct: true
+          },
+          {
+            text: "Oops! the green watering can tipped over onto the carrot seeds again."
+          },
+          {
+            text: "Oops The green watering can tipped over onto the carrot seeds again."
+          },
+          {
+            text: "oops! The green watering can tipped over onto the carrot seeds again."
+          }
+        ]
+      },
+      partB: {
+        prompt: "Pick the rule that backs that fix.",
+        choices: [
+          {
+            text: "What follows a ! is a fresh sentence, and a fresh sentence opens with a capital.",
+            correct: true
+          },
+          {
+            text: "What follows a ! continues the old sentence, and its next word keeps a small letter."
+          },
+          {
+            text: "A word that expresses a feeling is never followed by any symbol at all."
+          },
+          {
+            text: "A ! is reserved for anger, so the version shows that the gardener is mad."
+          }
+        ]
+      },
+      clue: "For Part A, compare the opening word, the mark and the next word in each version. For Part B, find the rule that matches the fix.",
+      hints: [
+        "For Part A, compare the opening word, the mark and the next word in each version. For Part B, find the rule that matches the fix.",
+        "In Part B, ask what a ! does to whatever comes next.",
+        "The first word in the draft already has a capital O, so a version with a small first letter is not the fix."
+      ],
+      how: [
+        "Part A: the draft has no mark and a small t. The answer is \"Oops! The green watering can tipped over onto the carrot seeds again.\"",
+        "The other versions leave out the capital T, leave out the mark, or start with a small o.",
+        "Part B: the rule is \"What follows a ! is a fresh sentence, and a fresh sentence opens with a capital.\""
+      ],
+      misconception: "A common mix-up is adding only the mark. The next sentence also needs a capital letter.",
+      why: "Part A: \"Oops! The green watering can tipped over onto the carrot seeds again.\" Part B: \"What follows a ! is a fresh sentence, and a fresh sentence opens with a capital.\" Part A: Oops! The green watering can tipped over onto the carrot seeds again. has a mark and a capital T. Part B: a new sentence follows an exclamation point, so it opens with a capital letter.",
+      like: ["SK-GUM4-6-C06"]
+    },
+    {
+      id: "SK-GUM4-6-S07",
+      type: "dropdown",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.L.GC.1:I:use-interjections"
+      ],
+      passages: ["p6"],
+      prompt: "Which word opens the third line of the game story best?",
+      text: "{0} I tripped over my own shoelace near the corner flag.",
+      slots: [
+        {
+          options: ["Yay!","Oh no!","Aha!","Bravo!"],
+          answer: 1
+        }
+      ],
+      clue: "Check the words after the blank and decide how the speaker feels.",
+      hints: [
+        "Check the words after the blank and decide how the speaker feels.",
+        "Think how you would feel after such a fall, and match that to a word.",
+        "Aha is said when something is suddenly figured out, and nothing is figured out here."
+      ],
+      how: [
+        "Look at what follows the blank: the player tripped over a shoelace.",
+        "That is an embarrassing accident.",
+        "The answer is Oh no! Yay shows joy, Aha shows a sudden discovery, and Bravo shows praise."
+      ],
+      misconception: "A common mix-up is choosing Yay because it is game day. Match the word to what happened.",
+      why: "The answer is Oh no!. A trip over a shoelace is an accident, so Oh no fits. Yay shows joy, Aha shows a sudden discovery, and Bravo shows praise.",
+      like: ["SK-GUM4-6-C07"]
+    },
+    {
+      id: "SK-GUM4-6-S08",
+      type: "hottext",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.L.GC.1:I:use-interjections"
+      ],
+      passages: ["p6"],
+      prompt: "Which numbered line in this game draft opens with a word that clashes with what truly happens on grass during soccer play?",
+      targets: ["p6:1:2","p6:2:1","p6:2:2","p6:2:3","p6:3:2"],
+      answer: ["p6:2:3"],
+      pick: 1,
+      clue: "Work out what each shown sentence reports, then ask how the speaker feels.",
+      hints: [
+        "Work out what each shown sentence reports, then ask how the speaker feels.",
+        "See whether the opening word of each sentence carries that same feeling.",
+        "Sentence 6 is about cold orange slices that taste fresh, and Yum is for good-tasting food."
+      ],
+      how: [
+        "Decide what each shown sentence says and how the speaker feels.",
+        "Whoa fits a fast team, Oh fits a surprise, Yum fits fresh fruit, and Yay fits a win.",
+        "In sentence 7, Ow shows pain, but scoring a goal does not hurt, so it is the answer."
+      ],
+      misconception: "A common mix-up is picking a sentence because it sounds exciting. Check whether the word fits the event.",
+      why: "The answer is sentence 7: \"Ow! My team scored a goal in the last minute.\" Ow shows pain, but a goal in the last minute is not painful, so the word does not fit. The other shown sentences have words that match what happens.",
+      like: ["SK-GUM4-6-C08"]
+    },
+    {
+      id: "SK-GUM4-6-S09",
+      type: "mc",
+      points: 1,
+      dok: 3,
+      std: [
+        "3.L.GC.1:I:use-interjections"
+      ],
+      passages: ["p4"],
+      prompt: "The zoo draft opens line 3 with Hooray. Judge that word choice.",
+      choices: [
+        {
+          text: "It misses: a cheer clashes with a balloon floating off; an Aw would suit better.",
+          correct: true
+        },
+        {
+          text: "It works: a lively opener always suits a line, whatever follows it on the printed page."
+        },
+        {
+          text: "It works: the ! after it shows delight, so the ! alone settles the mood."
+        },
+        {
+          text: "It fails: a balloon is too small an event for an author to react to in a story."
+        }
+      ],
+      clue: "Ask what happened to the balloon and how a child would feel about it.",
+      hints: [
+        "Ask what happened to the balloon and how a child would feel about it.",
+        "Compare the feeling that Hooray shows with the feeling in what follows it.",
+        "Kids do react to a lost balloon, so a choice that says nobody reacts cannot be right."
+      ],
+      how: [
+        "Read sentence 3: Hooray! My balloon popped, and the string flew away.",
+        "Hooray shows joy, but losing a balloon is sad.",
+        "The answer is \"It misses: a cheer clashes with a balloon floating off; an Aw would suit better.\""
+      ],
+      misconception: "A common mix-up is letting the mark choose the feeling. The word itself has to match the event.",
+      why: "The answer is \"It misses: a cheer clashes with a balloon floating off; an Aw would suit better.\" Hooray shows joy, but a balloon that popped and flew off is a loss, so the feeling does not match. A word such as Aw or Oh no suits it better.",
+      like: ["SK-GUM4-6-C09"]
+    },
+    {
+      id: "SK-GUM4-6-S10",
+      type: "ms",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.L.GC.1:I:use-interjections"
+      ],
+      passages: [],
+      prompt: "Select the TWO lines that are punctuated and capitalized correctly.",
+      pick: 2,
+      choices: [
+        {
+          text: "Whoa! That cat jumped really high.",
+          correct: true
+        },
+        {
+          text: "Hmm, I wonder where my keys went.",
+          correct: true
+        },
+        {
+          text: "Aha! the answer is in the book."
+        },
+        {
+          text: "Ugh The bus is late again."
+        },
+        {
+          text: "Yippee, We get a day off at the end of this week."
+        }
+      ],
+      clue: "For every line, look at the mark after the first word and the letter that follows it.",
+      hints: [
+        "For every line, look at the mark after the first word and the letter that follows it.",
+        "Keep the lines where the mark and the next letter belong together.",
+        "One line has no mark after its first word, and a feeling word needs one."
+      ],
+      how: [
+        "Check the mark after the first word and the letter that follows it in every line.",
+        "In \"Whoa! That cat jumped really high.\" a capital letter follows the exclamation point. In \"Hmm, I wonder where my keys went.\" the word I is always a capital.",
+        "The other lines use a small letter after an exclamation point, skip the mark, or use a capital after a comma."
+      ],
+      misconception: "A common mix-up is trusting any line with a mark. Check the letter after it.",
+      why: "The answers are \"Whoa! That cat jumped really high.\" and \"Hmm, I wonder where my keys went.\" Whoa is followed by an exclamation point and a capital T, and Hmm is followed by a comma and the word I. The other lines have a small letter after an exclamation point, no mark, or a capital after a comma.",
+      like: ["SK-GUM4-6-C10"]
+    },
+    {
+      id: "SK-GUM4-6-S11",
+      type: "mc",
+      points: 1,
+      dok: 3,
+      std: [
+        "3.L.GC.1:I:use-interjections"
+      ],
+      passages: [],
+      stem: "Line A: Whoa! All the lights in the gym went dark. Line B: Hmm, all the lights in the gym went dark.",
+      prompt: "Compare the opening words of the two lines. What is true?",
+      choices: [
+        {
+          text: "Each one reacts to the blackout; Whoa is a loud jolt, while Hmm is a soft ponder.",
+          correct: true
+        },
+        {
+          text: "Each one reacts to the blackout; Hmm is a loud jolt, while Whoa is a soft ponder."
+        },
+        {
+          text: "Each one reports an action; Whoa names the lights, while Hmm names the blackout."
+        },
+        {
+          text: "Each one is a whole sentence; only Line A begins with a capital first letter."
+        }
+      ],
+      clue: "Find the opening word in each line and decide what it shows.",
+      hints: [
+        "Find the opening word in each line and decide what it shows.",
+        "Compare how big each feeling is, and see how each line sets the opening word apart.",
+        "Both lines start with a capital letter, so a choice about only one of them cannot be right."
+      ],
+      how: [
+        "The opening words are Whoa in Line A and Hmm in Line B.",
+        "Whoa shows big surprise, and an exclamation point follows it. Hmm shows quiet wondering, and a comma follows it.",
+        "The answer is \"Each one reacts to the blackout; Whoa is a loud jolt, while Hmm is a soft ponder.\""
+      ],
+      misconception: "A common mix-up is thinking a feeling word names a thing in the line. It shows a feeling.",
+      why: "The answer is \"Each one reacts to the blackout; Whoa is a loud jolt, while Hmm is a soft ponder.\" Both words react to the lights going out. Whoa shows big surprise, so an exclamation point follows it, and Hmm shows quiet wondering, so a comma follows it.",
+      like: ["SK-GUM4-6-C11"]
+    },
+    {
+      id: "SK-GUM4-6-S12",
+      type: "dropdown",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.L.GC.1:I:use-interjections"
+      ],
+      passages: ["p6"],
+      prompt: "Select the way to write the fourth sentence of the game draft correctly.",
+      text: "Soccer story: {0}",
+      slots: [
+        {
+          options: [
+            "Yikes the ball flew right at my face.",
+            "Yikes! the ball flew right at my face.",
+            "Yikes! The ball flew right at my face.",
+            "Yikes, The ball flew right at my face."
+          ],
+          answer: 2
+        }
+      ],
+      clue: "Compare what comes right after Yikes in each line, and how the next word opens.",
+      hints: [
+        "Compare what comes right after Yikes in each line, and how the next word opens.",
+        "Find the line where the mark and the next letter belong together.",
+        "The line copied from the draft has no mark after Yikes, and a feeling word needs one."
+      ],
+      how: [
+        "Yikes is the interjection, and it shows alarm.",
+        "An exclamation point sets it off, so the next sentence opens with a capital letter.",
+        "The answer is \"Yikes! The ball flew right at my face.\" The others skip the mark, use a small letter after an exclamation point, or use a capital after a comma."
+      ],
+      misconception: "A common mix-up is leaving the draft alone because it reads smoothly. A feeling word still needs a mark.",
+      why: "The answer is Yikes! The ball flew right at my face.. Yikes needs a mark, and a new sentence after an exclamation point opens with a capital letter. The other lines skip the mark, use a small letter after an exclamation point, or use a capital after a comma.",
+      like: ["SK-GUM4-6-C12"]
+    },
+    {
+      id: "SK-GUM4-6-S13",
+      type: "ms",
+      points: 2,
+      dok: 3,
+      std: [
+        "3.L.GC.1:I:use-interjections"
+      ],
+      passages: ["p6"],
+      prompt: "Something is off in line eight of the soccer story. Select the TWO versions that put it right.",
+      pick: 2,
+      choices: [
+        {
+          text: "Phew! The final whistle blew before they could tie it.",
+          correct: true
+        },
+        {
+          text: "Phew, the final whistle blew before they could tie it.",
+          correct: true
+        },
+        {
+          text: "Phew The final whistle blew before they could tie it."
+        },
+        {
+          text: "Phew! the final whistle blew before they could tie it."
+        },
+        {
+          text: "Phew, The final whistle blew before they could tie it."
+        }
+      ],
+      clue: "A repair may swap the mark, as long as the next letter goes with it. Check each version.",
+      hints: [
+        "A repair may swap the mark, as long as the next letter goes with it. Check each version.",
+        "Keep the versions where the mark after Phew and the next letter belong together.",
+        "One version leaves out the mark after Phew, and a feeling word needs one."
+      ],
+      how: [
+        "The draft has a comma and a capital T, and those do not go together.",
+        "One repair swaps the comma for an exclamation point, so the capital T is right. The other keeps the comma and uses a small t.",
+        "The answers are \"Phew! The final whistle blew before they could tie it.\" and \"Phew, the final whistle blew before they could tie it.\" The others skip the mark, use a small letter after an exclamation point, or copy the draft."
+      ],
+      misconception: "A common mix-up is thinking only the mark may change. The next letter may change, too.",
+      why: "The answers are \"Phew! The final whistle blew before they could tie it.\" and \"Phew, the final whistle blew before they could tie it.\" An exclamation point goes with a capital T, and a comma goes with a small t. The other versions skip the mark, use a small letter after an exclamation point, or copy the draft.",
+      like: ["SK-GUM4-6-C13"]
+    },
+    {
+      id: "SK-GUM4-6-S14",
+      type: "mc",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.L.GC.1:I:use-interjections"
+      ],
+      passages: [],
+      prompt: "Which line pairs its opening word with a matching feeling?",
+      choices: [
+        {
+          text: "Ew! A slug crawled across my sandwich.",
+          correct: true
+        },
+        {
+          text: "Yay! A slug crawled across my sandwich."
+        },
+        {
+          text: "Yippee! My tooth aches terribly today."
+        },
+        {
+          text: "Whee! The rotten eggs reek badly."
+        }
+      ],
+      clue: "Read what happens in each line and decide how a person would feel.",
+      hints: [
+        "Read what happens in each line and decide how a person would feel.",
+        "Match each feeling word to the feeling it shows, then compare it with the event.",
+        "A sore tooth hurts, and Yippee shows joy, so one line has a word that does not fit."
+      ],
+      how: [
+        "Read what happens in each line and decide how a person would feel.",
+        "A slug on a sandwich is gross, and Ew shows disgust.",
+        "The answer is \"Ew! A slug crawled across my sandwich.\" Yay and Yippee show joy, and Whee shows delight."
+      ],
+      misconception: "A common mix-up is picking the most cheerful word. The word must match the event.",
+      why: "The answer is \"Ew! A slug crawled across my sandwich.\" A slug on a sandwich is gross, so Ew fits. Yay, Yippee and Whee show joy or delight, and none of them fit their lines.",
+      like: ["SK-GUM4-6-C14"]
+    },
+    {
+      id: "SK-GUM4-6-S15",
+      type: "dropdown",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.L.GC.1:I:use-interjections"
+      ],
+      passages: [],
+      prompt: "Pick a reaction word and its ending mark for the line below.",
+      text: "{0}{1} That lemon tart tastes far too sour for me.",
+      slots: [
+        {
+          options: ["Yuck","Hurray","Aha","Yay"],
+          answer: 0
+        },
+        {
+          options: ["!","?",":",";"],
+          answer: 0
+        }
+      ],
+      clue: "For the first blank, think how a person feels about a tart that is far too sour. For the second, see which letter follows the blank.",
+      hints: [
+        "For the first blank, think how a person feels about a tart that is far too sour. For the second, see which letter follows the blank.",
+        "A capital letter after the blank means a new sentence starts there.",
+        "Aha is said when something is suddenly figured out, and nothing is figured out in a sour tart."
+      ],
+      how: [
+        "A tart that is far too sour is gross, and Yuck shows disgust.",
+        "The next word, That, is capitalized, so a fresh sentence starts after the first one ends with an exclamation point.",
+        "The answers are Yuck and ! because Hurray and Yay show joy, and Aha shows a discovery. A question mark, a colon or a semicolon would not end a feeling word before a new sentence."
+      ],
+      misconception: "A common mix-up is ending a feeling word with a colon. A colon does not end a feeling word.",
+      why: "The answers are Yuck and !. Yuck shows disgust at a sour tart, and an exclamation point ends the feeling word before the new sentence. The other words show joy or discovery, and the other marks do not end a feeling word.",
+      like: ["SK-GUM4-6-C15"]
+    }
+  ],
+  addons: {
+    "SK-GUM4-6-P1": {
+      hints: [
+        "Look for a feeling word that can stand by itself.",
+        "Look at the first word, and ask whether that word shows how someone feels.",
+        "Roller is a word for a ride, and it does not show a feeling."
+      ],
+      how: [
+        "An interjection shows a feeling and can stand by itself.",
+        "Wow shows surprise, and an exclamation point follows it.",
+        "The answer is Wow. Roller, tall and That do not show a feeling by themselves."
+      ],
+      misconception: "A common mix-up is choosing the word that describes the ride. An interjection shows a feeling."
+    },
+    "SK-GUM4-6-P2": {
+      hints: [
+        "Check what the sentence goes on to say and think about how you would feel.",
+        "Match each word to a feeling, and compare those feelings with what happened.",
+        "Yum is for good-tasting food, and the ice cream fell on the ground."
+      ],
+      how: [
+        "The ice cream cone fell on the ground, which is sad.",
+        "Match the feeling to a word.",
+        "The answer is Oh no! Hooray and Bravo show joy or praise, and Yum is for good-tasting food."
+      ],
+      misconception: "A common mix-up is choosing Yum because ice cream is food. Match the word to what happened."
+    },
+    "SK-GUM4-6-P3": {
+      hints: [
+        "For each row, think about when you would say the word out loud.",
+        "Sort the words you know first. Then use the same question for the rest.",
+        "Ouch shows pain, and a small mistake is not the same as being hurt."
+      ],
+      how: [
+        "Think about when each word is said.",
+        "Ouch and Ow are for pain, Hooray and Yay are for joy, and Oops is for a small mistake.",
+        "Sort every row into one of the three columns."
+      ],
+      misconception: "A common mix-up is matching by how a word sounds. Think about the feeling."
+    },
+    "SK-GUM4-6-P4": {
+      hints: [
+        "Find a feeling word near the start of each sentence.",
+        "Check what stands right after that word in each sentence.",
+        "A puppy barking is only an action, and that sentence has no feeling word."
+      ],
+      how: [
+        "Look for a feeling word that is followed by a mark.",
+        "Yikes shows alarm, and Oh shows mild surprise. The answers are \"Yikes! The pot boiled over.\" and \"Oh, I left my book at school.\"",
+        "The other sentences only report events, and none of them has a feeling word."
+      ],
+      misconception: "A common mix-up is picking a sentence with an exciting action. An interjection is a feeling word."
+    },
+    "SK-GUM4-6-P5": {
+      hints: [
+        "Check the capital letter, the mark and the letter after the mark in each choice.",
+        "After an exclamation point, a new sentence begins. After a comma, the sentence goes on.",
+        "A comma followed by a capital W does not go together, because the sentence would go on."
+      ],
+      how: [
+        "Look at the first letter, the mark and the next letter.",
+        "Hooray starts with a capital letter, and We starts with a capital letter after the exclamation point.",
+        "The answer is \"Hooray! We won the game.\" The others use a small letter after an exclamation point, a small first letter, or a capital after a comma."
+      ],
+      misconception: "A common mix-up is changing only the mark. Check the letter after it, too."
+    }
+  },
+  /* B8a:core:end */
   test: [
     { id: "SK-GUM4-6-T1", type: "mc", points: 1, dok: 1, passages: [],
       prompt: "Which word in this sentence is the interjection?",
@@ -7695,7 +9085,172 @@ PP.addLesson({
     }
   ],
   parent: "At dinner, take turns saying one sentence with will or can and one sentence with is or seems. Then name the helping verb and the linking verb in each other's sentences.",
-  passages: [],
+  passages: [
+    /* B8a:passages:start */
+    {
+      id: "p1",
+      title: "Our Garden Club",
+      byline: "A third grader's draft",
+      genre: "Student draft (informational)",
+      draft: true,
+      paragraphs: [
+        [
+          "(1) Our school garden club meets after lunch on Tuesdays in the back yard.",
+          "(2) We will plant carrots and beans in the new rows this week.",
+          "(3) The soil is soft after the heavy rain.",
+          "(4) Ms. Reyes says we can bring a small shovel from home."
+        ],
+        [
+          "(5) The beans is green and tall in the front row.",
+          "(6) We should wear gloves while we dig in the dirt.",
+          "(7) My friends are happy about the bright new seeds."
+        ],
+        [
+          "(8) Tomorrow, we will watered the plants before the bell rings.",
+          "(9) The carrots seem tiny, but they will grow quickly.",
+          "(10) By now, our club has plant ten rows of corn along the fence.",
+          "(11) We water the garden each morning and pull the weeds every afternoon.",
+          "(12) The cooks will use our tomatoes in a tasty salad for the whole school."
+        ]
+      ]
+    },
+    {
+      id: "p2",
+      title: "The Town Book Fair",
+      byline: "A third grader's draft",
+      genre: "Student draft (informational)",
+      draft: true,
+      paragraphs: [
+        [
+          "(1) Today is the town book fair at the public library on Main Street.",
+          "(2) The long tables are full of old picture books and new chapter books.",
+          "(3) My mom says I can pick three books to take home.",
+          "(4) The line for the face painting seem long right now."
+        ],
+        [
+          "(5) I should saved some money for the bake sale near the front door.",
+          "(6) The lemon cookies are fresh and sweet.",
+          "(7) A librarian will read a funny story at noon."
+        ],
+        [
+          "(8) We can sit on the soft rug by the big window.",
+          "(9) The story becomes silly when the pirate loses his hat in the sea.",
+          "(10) The kids laugh and clap after every page.",
+          "(11) I buy two books and a lemon cookie before we leave.",
+          "(12) We walk home with full bags and happy faces."
+        ]
+      ]
+    },
+    {
+      id: "p3",
+      title: "A Hike by the Lake",
+      byline: "A third grader's draft",
+      genre: "Student draft (informational)",
+      draft: true,
+      paragraphs: [
+        [
+          "(1) Today, my uncle takes us hiking on the trail by the blue lake.",
+          "(2) The water is clear and cold under the morning sun.",
+          "(3) We can see tiny fish near the flat rocks.",
+          "(4) My cousins is ready to swim before lunch."
+        ],
+        [
+          "(5) My uncle says we should stay near the shore.",
+          "(6) The sand becomes warm by noon.",
+          "(7) We can build a castle with this wet sand."
+        ],
+        [
+          "(8) My cousins has built a huge castle by the lake.",
+          "(9) A big wave will crash over it soon.",
+          "(10) Now the sky is orange and pink above the pine trees.",
+          "(11) We pack our towels and walk back to the car.",
+          "(12) My sister falls asleep on the long ride home."
+        ]
+      ]
+    },
+    {
+      id: "p4",
+      title: "Science Fair Day",
+      byline: "A third grader's draft",
+      genre: "Student draft (informational)",
+      draft: true,
+      paragraphs: [
+        [
+          "(1) Our class holds a science fair in the big gym on Friday afternoon.",
+          "(2) We will show our volcano model to the judges at the front table.",
+          "(3) The gym is loud and crowded with families.",
+          "(4) Mr. Cole says we can ask the judges one question."
+        ],
+        [
+          "(5) The posters is bright and colorful along the wall.",
+          "(6) We should speak slowly and clearly into the microphone.",
+          "(7) The judges are kind about our paper model."
+        ],
+        [
+          "(8) Soon, our volcano will exploded for the whole crowd.",
+          "(9) The volcano seems small, but it will erupt with red foam.",
+          "(10) By now, our team has earn a blue ribbon from the judges.",
+          "(11) We cheer and hug each other near the exit.",
+          "(12) The judges give every team a shiny sticker to wear home."
+        ]
+      ]
+    },
+    {
+      id: "p5",
+      title: "Pancake Sunday",
+      byline: "A third grader's draft",
+      genre: "Student draft (informational)",
+      draft: true,
+      paragraphs: [
+        [
+          "(1) This Sunday, my dad cooks pancakes in the sunny kitchen for the whole family.",
+          "(2) The table is full of fruit and warm syrup.",
+          "(3) Mom says I can crack three eggs into the big bowl.",
+          "(4) The stack of pancakes seem tall and warm right now."
+        ],
+        [
+          "(5) I should stirred the batter slowly with the wooden spoon.",
+          "(6) The blueberry pancakes are soft and sweet.",
+          "(7) My sister will pour the juice at the table."
+        ],
+        [
+          "(8) We can sit near the window and talk about the week.",
+          "(9) The syrup becomes sticky when it touches the plate.",
+          "(10) My brothers laugh and tap their forks on the glass.",
+          "(11) We eat until our plates are empty.",
+          "(12) Dad washes the dishes and wipes the counter before he sits down."
+        ]
+      ]
+    },
+    {
+      id: "p6",
+      title: "Soccer Practice",
+      byline: "A third grader's draft",
+      genre: "Student draft (informational)",
+      draft: true,
+      paragraphs: [
+        [
+          "(1) Today, our coach takes us to the big field behind the school.",
+          "(2) The grass is green and wet after the morning rain.",
+          "(3) We can see tiny puddles near the goal.",
+          "(4) My teammates is ready to run after the warm-up."
+        ],
+        [
+          "(5) Our coach says we should stay near the orange cones.",
+          "(6) The ball becomes muddy by noon.",
+          "(7) We can pass it along the sideline."
+        ],
+        [
+          "(8) My teammates has kicked a long shot toward the net.",
+          "(9) A tall goalie will block it soon.",
+          "(10) Now the sky is gray and cloudy over the bleachers.",
+          "(11) We pack our cones and walk back to the bus.",
+          "(12) My friend falls asleep on the long ride home."
+        ]
+      ]
+    }
+    /* B8a:passages:end */
+  ],
   practice: [
     { id: "SK-GUM4-7-P1", type: "mc", points: 1, dok: 1, passages: [],
       prompt: "What is the helping verb in this sentence?",
@@ -7749,6 +9304,1200 @@ PP.addLesson({
       clue: "A linking verb has no action. Look for a sentence where the verb connects the subject to a word that names or describes it.",
       why: "The answers are \"The peaches are ripe.\" and \"Ms. Hall is our music teacher.\" Are links peaches to ripe, and is links Ms. Hall to music teacher. Has, could and will are helping verbs." }
   ],
+  /* B8a:core:start */
+  /* ---------- Expansion 2026-10-22, batch B8a (GUM Reinforce, first half) ----------
+     core: fifteen items in three sets of five. { ref } reuses a practice item; the other practice items stay in Practice Together.
+     Passages are used only by core and the similar bank; none is used by test.
+     Author log: docs/expansion-2026-10-22/batches/B8a-author-log.md. NOT ACCEPTED: needs independent review. */
+  core: {
+    rev: "1",
+    sets: [
+      {
+        title: "Set 1",
+        items: [
+          {
+            ref: "SK-GUM4-7-P3"
+          },
+          {
+            ref: "SK-GUM4-7-P5"
+          },
+          {
+            id: "SK-GUM4-7-C03",
+            type: "dropdown",
+            points: 1,
+            dok: 2,
+            std: [
+              "3.L.GC.1:I:use-helping-and-linking-verbs"
+            ],
+            passages: ["p1"],
+            prompt: "Choose the way to write sentence 8 that fixes the verb mistake.",
+            text: "Garden draft: {0}",
+            slots: [
+              {
+                options: [
+                  "Tomorrow, we will watered the plants before the bell rings.",
+                  "Tomorrow, we will water the plants before the bell rings.",
+                  "Tomorrow, we will waters the plants before the bell rings.",
+                  "Tomorrow, we will watering the plants before the bell rings."
+                ],
+                answer: 1
+              }
+            ],
+            clue: "Look at the helping verb will, and think about the form a main verb takes right after it.",
+            hints: [
+              "Look at the helping verb will, and think about the form a main verb takes right after it.",
+              "Compare the word that follows will in each choice, and check which form fits after a helping verb.",
+              "The choice that ends in -ing does not fit after will, because it would need a different helper."
+            ],
+            how: [
+              "Find the helping verb: will. The main verb is the action word after it.",
+              "After will, the main verb stays in its plain form, with no -ed, -s or -ing ending.",
+              "The answer is \"Tomorrow, we will water the plants before the bell rings.\" The other choices add -ed, -s or -ing after will."
+            ],
+            misconception: "A common mix-up is adding -ed to a verb that follows will. Will already shows the time.",
+            why: "The answer is Tomorrow, we will water the plants before the bell rings.. After the helping verb will, the main verb stays in its plain form, so water is right. The other choices add -ed, -s or -ing after will."
+          },
+          {
+            id: "SK-GUM4-7-C04",
+            type: "hottext",
+            points: 1,
+            dok: 2,
+            std: [
+              "3.L.GC.1:I:use-helping-and-linking-verbs"
+            ],
+            passages: ["p1"],
+            prompt: "Select the ONE of sentences 2, 3, 4, 6 and 12 that has a linking verb.",
+            targets: ["p1:1:2","p1:1:3","p1:1:4","p1:2:2","p1:3:5"],
+            answer: ["p1:1:3"],
+            pick: 1,
+            clue: "Find the verb in each shown sentence, then ask whether it helps another verb or links the subject to a describing word.",
+            hints: [
+              "Find the verb in each shown sentence, then ask whether it helps another verb or links the subject to a describing word.",
+              "A helping verb comes right before another verb. A linking verb connects the subject to a word that describes it.",
+              "Sentence 6 has should right before wear, so its verb helps another verb."
+            ],
+            how: [
+              "Find the verb in each shown sentence and check the word that follows it.",
+              "Will plant, can bring, should wear and will use each have a helping verb before a main verb.",
+              "In sentence 3, is links the soil to soft, a word that describes it, so it is the answer."
+            ],
+            misconception: "A common mix-up is picking a sentence because its verb is short. Check what follows the verb.",
+            why: "The answer is sentence 3: \"The soil is soft after the heavy rain.\" Is links the soil to soft, a word that describes it. The other shown sentences have a helping verb before a main verb: will plant, can bring, should wear and will use."
+          },
+          {
+            id: "SK-GUM4-7-C05",
+            type: "mc",
+            points: 1,
+            dok: 3,
+            std: [
+              "3.L.GC.1:I:use-helping-and-linking-verbs"
+            ],
+            passages: ["p1"],
+            prompt: "A classmate says seem in sentence 9 shows an action. What is the best response?",
+            choices: [
+              {
+                text: "Seem shows no action; it links the carrots to tiny, a word that describes them, so it is a linking verb.",
+                correct: true
+              },
+              {
+                text: "Seem shows an action, because it tells what the carrots do while they sit in the soil."
+              },
+              {
+                text: "Seem is a helping verb, because it helps the word tiny tell more about the carrots."
+              },
+              {
+                text: "Seem is not a verb, because only words that show motion can be verbs in a sentence."
+              }
+            ],
+            clue: "Ask whether the carrots actually do anything in the first part of sentence 9.",
+            hints: [
+              "Ask whether the carrots actually do anything in the first part of sentence 9.",
+              "Look at the word tiny, and think about what job it has for the carrots.",
+              "A helping verb comes before another verb, and tiny is not a verb."
+            ],
+            how: [
+              "Read sentence 9: The carrots seem tiny, but they will grow quickly.",
+              "Nothing happens in the first part. Tiny describes the carrots, and seem connects the two.",
+              "The answer is \"Seem shows no action; it links the carrots to tiny, a word that describes them, so it is a linking verb.\""
+            ],
+            misconception: "A common mix-up is thinking every verb shows an action. A linking verb only connects words.",
+            why: "The answer is \"Seem shows no action; it links the carrots to tiny, a word that describes them, so it is a linking verb.\" Seem shows no action. It links the carrots to tiny, a word that describes them, so it is a linking verb."
+          }
+        ]
+      },
+      {
+        title: "Set 2",
+        items: [
+          {
+            id: "SK-GUM4-7-C06",
+            type: "ebsr",
+            points: 2,
+            dok: 3,
+            std: [
+              "3.L.GC.1:I:use-helping-and-linking-verbs"
+            ],
+            passages: ["p1"],
+            prompt: "This item has two parts. Begin with Part A and then go on to Part B.",
+            partA: {
+              prompt: "Sentence 10 has a verb mistake. Which revision fixes it?",
+              choices: [
+                {
+                  text: "By now, our club has planted ten rows of corn along the fence.",
+                  correct: true
+                },
+                {
+                  text: "By now, our club has plants ten rows of corn along the fence."
+                },
+                {
+                  text: "By now, our club have plant ten rows of corn along the fence."
+                },
+                {
+                  text: "By now, our club will planted ten rows of corn along the fence."
+                }
+              ]
+            },
+            partB: {
+              prompt: "Which fact explains why the correct revision is right?",
+              choices: [
+                {
+                  text: "Has is a helping verb, so the main verb after it needs its past form, planted.",
+                  correct: true
+                },
+                {
+                  text: "Has is a linking verb, so the word after it must describe the club."
+                },
+                {
+                  text: "Has is a helping verb, so the main verb after it stays in its plain form."
+                },
+                {
+                  text: "Has is the main verb, so the word after it can end in -s like a noun."
+                }
+              ]
+            },
+            clue: "For Part A, find the helping verb and the word that follows it. For Part B, find the fact that matches the change.",
+            hints: [
+              "For Part A, find the helping verb and the word that follows it. For Part B, find the fact that matches the change.",
+              "Think about the form a main verb takes after has, have or had.",
+              "Will points to the future, but sentence 10 starts with By now, so a choice with will does not fit."
+            ],
+            how: [
+              "Part A: the draft has the helping verb has before the plain verb plant. The answer is \"By now, our club has planted ten rows of corn along the fence.\"",
+              "The other choices add -s to the main verb, change has to have, or use will with the past form.",
+              "Part B: the fact is \"Has is a helping verb, so the main verb after it needs its past form, planted.\""
+            ],
+            misconception: "A common mix-up is leaving the plain verb after has. Has, have and had go with the past form.",
+            why: "Part A: \"By now, our club has planted ten rows of corn along the fence.\" Part B: \"Has is a helping verb, so the main verb after it needs its past form, planted.\" Part A: By now, our club has planted ten rows of corn along the fence. uses has with the past form planted. Part B: has is a helping verb, so the main verb after it needs its past form."
+          },
+          {
+            id: "SK-GUM4-7-C07",
+            type: "dropdown",
+            points: 1,
+            dok: 2,
+            std: [
+              "3.L.GC.1:I:use-helping-and-linking-verbs"
+            ],
+            passages: ["p2"],
+            prompt: "Choose the linking verb that completes sentence 4.",
+            text: "The line for the face painting {0} long right now.",
+            slots: [
+              {
+                options: ["seems","seem","seemed","seeming"],
+                answer: 0
+              }
+            ],
+            clue: "Find the subject of the sentence and decide whether it names one thing or more than one.",
+            hints: [
+              "Find the subject of the sentence and decide whether it names one thing or more than one.",
+              "The words right now show when this is true, so check the time as well as the subject.",
+              "Seeming ends in -ing, and it cannot stand alone as the verb in this sentence."
+            ],
+            how: [
+              "The subject is line, which names one thing, and right now shows the present.",
+              "A present-tense verb for one thing ends in -s.",
+              "The answer is seems. Seem goes with more than one thing, seemed is for the past, and seeming cannot stand alone as the verb."
+            ],
+            misconception: "A common mix-up is picking the verb that sounds right after face painting. The subject is line, not painting.",
+            why: "The answer is seems. The subject, line, names one thing, and right now shows the present, so seems fits. Seem goes with more than one thing, seemed is for the past, and seeming cannot stand alone as the verb."
+          },
+          {
+            id: "SK-GUM4-7-C08",
+            type: "hottext",
+            points: 1,
+            dok: 2,
+            std: [
+              "3.L.GC.1:I:use-helping-and-linking-verbs"
+            ],
+            passages: ["p2"],
+            prompt: "Select the ONE of sentences 2, 6, 7, 9 and 10 that has a helping verb.",
+            targets: ["p2:1:2","p2:2:2","p2:2:3","p2:3:2","p2:3:3"],
+            answer: ["p2:2:3"],
+            pick: 1,
+            clue: "Find the verb in each shown sentence and look at the word that comes after it.",
+            hints: [
+              "Find the verb in each shown sentence and look at the word that comes after it.",
+              "A helping verb comes before another verb. A linking verb connects the subject to a describing word.",
+              "Sentence 9 tells that the story becomes silly, and silly is not a verb."
+            ],
+            how: [
+              "Find the verb in each shown sentence and check the word after it.",
+              "Are full, are fresh and becomes silly each connect a subject to a describing word. Laugh and clap are actions.",
+              "In sentence 7, will comes right before the main verb read, so it is the answer."
+            ],
+            misconception: "A common mix-up is picking a sentence with an action verb. A helping verb comes before another verb.",
+            why: "The answer is sentence 7: \"A librarian will read a funny story at noon.\" In sentence 7, will comes before the main verb read, so it is a helping verb. The other shown sentences have linking verbs or action verbs alone."
+          },
+          {
+            id: "SK-GUM4-7-C09",
+            type: "mc",
+            points: 1,
+            dok: 3,
+            std: [
+              "3.L.GC.1:I:use-helping-and-linking-verbs"
+            ],
+            passages: ["p2"],
+            prompt: "A classmate says sentence 5 is right, because saved shows the money is already put away. Which response is best?",
+            choices: [
+              {
+                text: "Should is a helping verb, so the main verb after it keeps its plain form, save.",
+                correct: true
+              },
+              {
+                text: "Should is a linking verb, so a describing word, saved, must come after it."
+              },
+              {
+                text: "The sentence is right, because every main verb in a story needs -ed on the end."
+              },
+              {
+                text: "Should is the main verb, so saved is only a word that tells how much money."
+              }
+            ],
+            clue: "Find the helping verb in sentence 5 and think about what form a main verb takes after it.",
+            hints: [
+              "Find the helping verb in sentence 5 and think about what form a main verb takes after it.",
+              "Compare saved with the plain verb that would follow a helper such as will or can.",
+              "Saved is not a describing word in this sentence, because it tells the action."
+            ],
+            how: [
+              "Read sentence 5: I should saved some money for the bake sale near the front door.",
+              "Should is the helping verb, and the action word after it must keep its plain form.",
+              "The answer is \"Should is a helping verb, so the main verb after it keeps its plain form, save.\""
+            ],
+            misconception: "A common mix-up is putting -ed on a verb to show the past. A verb after should stays plain.",
+            why: "The answer is \"Should is a helping verb, so the main verb after it keeps its plain form, save.\" Should is a helping verb, so the main verb after it keeps its plain form: I should save some money. Adding -ed does not fit after should."
+          },
+          {
+            id: "SK-GUM4-7-C10",
+            type: "ms",
+            points: 2,
+            dok: 2,
+            std: [
+              "3.L.GC.1:I:use-helping-and-linking-verbs"
+            ],
+            passages: [],
+            prompt: "Choose the TWO sentences that have a helping verb.",
+            pick: 2,
+            choices: [
+              {
+                text: "Our team will practice after school.",
+                correct: true
+              },
+              {
+                text: "The goalie can catch fast shots.",
+                correct: true
+              },
+              {
+                text: "The field is wide and flat."
+              },
+              {
+                text: "The bench seems wet this morning."
+              },
+              {
+                text: "The coach was a strong swimmer last year."
+              }
+            ],
+            clue: "Find the verb in each sentence and check the word right after it.",
+            hints: [
+              "Find the verb in each sentence and check the word right after it.",
+              "A helping verb stands before another verb. A linking verb connects the subject to a word that names or describes it.",
+              "In the sentence about the field, the word after the verb is not a verb."
+            ],
+            how: [
+              "Find the verb in each sentence and look at the word after it.",
+              "In \"Our team will practice after school.\" will comes before practice. In \"The goalie can catch fast shots.\" can comes before catch.",
+              "In the other sentences, the verb connects the subject to a word that describes it or names it."
+            ],
+            misconception: "A common mix-up is choosing every sentence with a short verb. Check whether another verb follows.",
+            why: "The answers are \"Our team will practice after school.\" and \"The goalie can catch fast shots.\" Will helps the main verb practice, and can helps the main verb catch. In the other sentences, is, seems and was link the subject to a word that describes it or names it."
+          }
+        ]
+      },
+      {
+        title: "Set 3",
+        items: [
+          {
+            id: "SK-GUM4-7-C11",
+            type: "mc",
+            points: 1,
+            dok: 3,
+            std: [
+              "3.L.GC.1:I:use-helping-and-linking-verbs"
+            ],
+            passages: [],
+            stem: "Sentence A: Dad will cook. Sentence B: Dad is a cook.",
+            prompt: "How are the verbs in the two sentences different?",
+            choices: [
+              {
+                text: "In A, will helps the main verb cook; in B, is links Dad to a word that names him.",
+                correct: true
+              },
+              {
+                text: "In A, will links Dad to a word that names him; in B, is helps the main verb cook."
+              },
+              {
+                text: "In both, the verb is a helping verb, because each comes before a word about Dad."
+              },
+              {
+                text: "In both, the verb shows action, because each tells what Dad does in the kitchen."
+              }
+            ],
+            clue: "Find the verb in each sentence and look at the word that follows it.",
+            hints: [
+              "Find the verb in each sentence and look at the word that follows it.",
+              "Ask whether the word after each verb is another verb or a word that names Dad.",
+              "Neither sentence tells an action that is done by is, so a choice about action for both cannot be right."
+            ],
+            how: [
+              "The verbs are will in Sentence A and is in Sentence B.",
+              "In A, cook is the action, and will comes before it. In B, a cook names Dad, and is connects the two.",
+              "The answer is \"In A, will helps the main verb cook; in B, is links Dad to a word that names him.\""
+            ],
+            misconception: "A common mix-up is treating the same word, cook, as a verb in both. In B it names Dad.",
+            why: "The answer is \"In A, will helps the main verb cook; in B, is links Dad to a word that names him.\" In A, will helps the main verb cook. In B, is links Dad to a cook, a word that names him."
+          },
+          {
+            id: "SK-GUM4-7-C12",
+            type: "dropdown",
+            points: 1,
+            dok: 2,
+            std: [
+              "3.L.GC.1:I:use-helping-and-linking-verbs"
+            ],
+            passages: ["p3"],
+            prompt: "Pick the helping verb that fixes sentence 8.",
+            text: "My cousins {0} built a huge castle by the lake.",
+            slots: [
+              {
+                options: ["have","has","will","is"],
+                answer: 0
+              }
+            ],
+            clue: "Look at the subject, and decide whether it names one person or more than one.",
+            hints: [
+              "Look at the subject, and decide whether it names one person or more than one.",
+              "Check the verb built after the blank, and think about which helpers go with that form.",
+              "Is built would tell what happens to something, and the cousins are the ones who built it."
+            ],
+            how: [
+              "The subject, cousins, names more than one person.",
+              "Built is the past form of the main verb, so a helper such as has or have goes before it.",
+              "The answer is have. Has goes with one person, will needs a plain verb after it, and is does not show who built the castle."
+            ],
+            misconception: "A common mix-up is choosing has because the castle is one thing. The helper goes with the cousins.",
+            why: "The answer is have. The subject, cousins, names more than one person, so the helping verb have goes with it. Has goes with one person, will needs a plain verb after it, and is does not fit before built."
+          },
+          {
+            id: "SK-GUM4-7-C13",
+            type: "ms",
+            points: 2,
+            dok: 3,
+            std: [
+              "3.L.GC.1:I:use-helping-and-linking-verbs"
+            ],
+            passages: ["p3"],
+            prompt: "Sentence 4 of the draft has a mistake. Choose the TWO revisions that fix it and keep the present tense.",
+            pick: 2,
+            choices: [
+              {
+                text: "My cousins are ready to swim before lunch.",
+                correct: true
+              },
+              {
+                text: "My cousin is ready to swim before lunch.",
+                correct: true
+              },
+              {
+                text: "My cousins is ready to swim before lunch."
+              },
+              {
+                text: "My cousins was ready to swim before lunch."
+              },
+              {
+                text: "My cousin are ready to swim before lunch."
+              }
+            ],
+            clue: "A fix can change the verb or the subject, as long as the two match and the time stays the same.",
+            hints: [
+              "A fix can change the verb or the subject, as long as the two match and the time stays the same.",
+              "Keep the revisions in which the subject and the linking verb go together in the present.",
+              "One revision uses was, and was points to the past."
+            ],
+            how: [
+              "The draft pairs a plural subject, cousins, with the singular verb is.",
+              "One fix changes the verb to are. The other fix changes the subject to the singular cousin.",
+              "The answers are \"My cousins are ready to swim before lunch.\" and \"My cousin is ready to swim before lunch.\" The others keep the draft, use the past, or mismatch the subject."
+            ],
+            misconception: "A common mix-up is thinking only the verb can change. The subject can change, too.",
+            why: "The answers are \"My cousins are ready to swim before lunch.\" and \"My cousin is ready to swim before lunch.\" Cousins goes with are, and cousin goes with is. The other revisions keep the draft, use the past with was, or pair a singular subject with are."
+          },
+          {
+            id: "SK-GUM4-7-C14",
+            type: "mc",
+            points: 1,
+            dok: 2,
+            std: [
+              "3.L.GC.1:I:use-helping-and-linking-verbs"
+            ],
+            passages: [],
+            prompt: "Which sentence has a linking verb?",
+            choices: [
+              {
+                text: "The soup seems too salty for Grandpa.",
+                correct: true
+              },
+              {
+                text: "Dad will stir the soup again."
+              },
+              {
+                text: "We can eat in ten minutes."
+              },
+              {
+                text: "Mom has cooked the rice already."
+              }
+            ],
+            clue: "Find the verb in each sentence, and check the word that follows it.",
+            hints: [
+              "Find the verb in each sentence, and check the word that follows it.",
+              "A linking verb connects the subject to a word that describes it, and it does not come before another verb.",
+              "Stir is a verb, so the sentence with will before it has a helper, not a link."
+            ],
+            how: [
+              "Find the verb in each sentence and check the word after it.",
+              "In the first sentence, seems connects the soup to salty, a word that describes it.",
+              "The answer is \"The soup seems too salty for Grandpa.\" Will, can and has each come before another verb."
+            ],
+            misconception: "A common mix-up is picking the sentence with the most familiar verb. Check what follows the verb.",
+            why: "The answer is \"The soup seems too salty for Grandpa.\" Seems links the soup to salty, a word that describes it. Will stir, can eat and has cooked each have a helping verb before a main verb."
+          },
+          {
+            id: "SK-GUM4-7-C15",
+            type: "dropdown",
+            points: 2,
+            dok: 2,
+            std: [
+              "3.L.GC.1:I:use-helping-and-linking-verbs"
+            ],
+            passages: [],
+            prompt: "Choose the two words that complete the sentence.",
+            text: "Last night, Mia {0} {1} her homework.",
+            slots: [
+              {
+                options: ["had","will","can","should"],
+                answer: 0
+              },
+              {
+                options: ["finished","finish","finishes","finishing"],
+                answer: 0
+              }
+            ],
+            clue: "For the first blank, look at the time clue, Last night. For the second blank, think about the form that goes with the helper you pick.",
+            hints: [
+              "For the first blank, look at the time clue, Last night. For the second blank, think about the form that goes with the helper you pick.",
+              "A helper that points to the past needs a main verb in its past form.",
+              "Can tells what is possible now, not what happened last night."
+            ],
+            how: [
+              "The time clue, Last night, tells you the action is in the past.",
+              "The helper had goes with the past form of the main verb, finished.",
+              "The answers are had and finished. Will and should point ahead, can tells what is possible now, and finish, finishes and finishing do not fit after had."
+            ],
+            misconception: "A common mix-up is picking a helper and leaving the main verb plain. Had needs the past form.",
+            why: "The answers are had and finished. Last night is in the past, so had goes with the past form finished. Will, can and should do not fit a past time, and the other verb forms do not fit after had."
+          }
+        ]
+      }
+    ]
+  },
+  similar: [
+    {
+      id: "SK-GUM4-7-S01",
+      type: "match",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.L.GC.1:I:use-helping-and-linking-verbs"
+      ],
+      passages: [],
+      prompt: "Sort each line by the job its verb does.",
+      cols: [
+        "Helps a main verb",
+        "Joins to a describing word"
+      ],
+      rows: [
+        {
+          text: "The dog can jump the fence.",
+          answer: 0
+        },
+        {
+          text: "The lake seems calm today.",
+          answer: 1
+        },
+        {
+          text: "Nia will bake a lemon cake.",
+          answer: 0
+        },
+        {
+          text: "The tent was dry.",
+          answer: 1
+        },
+        {
+          text: "My cousin should call us.",
+          answer: 0
+        }
+      ],
+      clue: "Look at the word that follows each verb and decide what kind of word it is.",
+      hints: [
+        "Look at the word that follows each verb and decide what kind of word it is.",
+        "Sort the lines you know first, then use the same check for the rest.",
+        "In The tent was dry, dry is not a verb."
+      ],
+      how: [
+        "Check the word that follows each verb.",
+        "Can jump, will bake and should call each have a helper before a main verb.",
+        "Seems calm and was dry join the subject to a describing word."
+      ],
+      misconception: "A common mix-up is sorting by how long the verb is. Check what follows it.",
+      why: "Can, will and should help the main verbs jump, bake and call. Seems and was join the lake and the tent to the describing words calm and dry.",
+      like: ["SK-GUM4-7-P3"]
+    },
+    {
+      id: "SK-GUM4-7-S02",
+      type: "ms",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.L.GC.1:I:use-helping-and-linking-verbs"
+      ],
+      passages: [],
+      prompt: "Which TWO lines contain a linking verb?",
+      pick: 2,
+      choices: [
+        {
+          text: "The lunch bags were heavy.",
+          correct: true
+        },
+        {
+          text: "Grandpa is a carpenter.",
+          correct: true
+        },
+        {
+          text: "Rita has mailed her letter."
+        },
+        {
+          text: "We should wait outside."
+        },
+        {
+          text: "The class will visit a farm."
+        }
+      ],
+      clue: "Scan each line for a verb that connects the subject to a word about it.",
+      hints: [
+        "Scan each line for a verb that connects the subject to a word about it.",
+        "A line with a linking verb tells what something is or is like, not what it does.",
+        "Rita mailing a letter tells what she did, so that line is about an action."
+      ],
+      how: [
+        "Find the verb in each line and check what follows it.",
+        "The answers are \"The lunch bags were heavy.\" and \"Grandpa is a carpenter.\" Were links the bags to heavy, and is links Grandpa to carpenter.",
+        "Has mailed, should wait and will visit each have a helper before a main verb."
+      ],
+      misconception: "A common mix-up is picking a line with a person doing something. A linking verb tells what something is.",
+      why: "The answers are \"The lunch bags were heavy.\" and \"Grandpa is a carpenter.\" Were links the lunch bags to heavy, and is links Grandpa to a carpenter. Has mailed, should wait and will visit each have a helping verb.",
+      like: ["SK-GUM4-7-P5"]
+    },
+    {
+      id: "SK-GUM4-7-S03",
+      type: "dropdown",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.L.GC.1:I:use-helping-and-linking-verbs"
+      ],
+      passages: ["p4"],
+      prompt: "Pick the line that repairs the verb in sentence 8.",
+      text: "Science draft: {0}",
+      slots: [
+        {
+          options: [
+            "Soon, our volcano will exploded for the whole crowd.",
+            "Soon, our volcano will explode for the whole crowd.",
+            "Soon, our volcano will explodes for the whole crowd.",
+            "Soon, our volcano will exploding for the whole crowd."
+          ],
+          answer: 1
+        }
+      ],
+      clue: "Study the helper will, and ask what shape the action word takes after it.",
+      hints: [
+        "Study the helper will, and ask what shape the action word takes after it.",
+        "Compare the word after will in each line, and see which shape matches a helper.",
+        "The line that ends the verb in -ing would need a different helper."
+      ],
+      how: [
+        "The helper is will, and the action word comes next.",
+        "After will, the action word stays plain, with no -ed, -s or -ing.",
+        "The answer is \"Soon, our volcano will explode for the whole crowd.\" The others put -ed, -s or -ing on the verb."
+      ],
+      misconception: "A common mix-up is adding -ed because the story is about a school event. Will already shows the time.",
+      why: "The answer is Soon, our volcano will explode for the whole crowd.. After the helper will, the action word stays plain, so explode is right. The other lines add -ed, -s or -ing after will.",
+      like: ["SK-GUM4-7-C03"]
+    },
+    {
+      id: "SK-GUM4-7-S04",
+      type: "hottext",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.L.GC.1:I:use-helping-and-linking-verbs"
+      ],
+      passages: ["p4"],
+      prompt: "Tap the ONE line among numbers 2, 3, 4, 6 and 10 whose verb joins the subject to a describing word.",
+      targets: ["p4:1:2","p4:1:3","p4:1:4","p4:2:2","p4:3:3"],
+      answer: ["p4:1:3"],
+      pick: 1,
+      clue: "Pick out the verb in each shown line and decide what comes right after it.",
+      hints: [
+        "Pick out the verb in each shown line and decide what comes right after it.",
+        "A helper stands before another verb. A joining verb connects the subject to a word that describes it.",
+        "Line 4 has can before ask, so its verb helps another verb."
+      ],
+      how: [
+        "Pick out the verb in each shown line and check the word after it.",
+        "Will show, can ask, should speak and has earn each have a helper before a main verb.",
+        "In sentence 3, is links the gym to loud, a word that describes it, so it is the answer."
+      ],
+      misconception: "A common mix-up is choosing a line because it is short. Check what comes after the verb.",
+      why: "The answer is sentence 3: \"The gym is loud and crowded with families.\" Is links the gym to loud, a word that describes it. The other shown lines have a helper before a main verb: will show, can ask, should speak and has earn.",
+      like: ["SK-GUM4-7-C04"]
+    },
+    {
+      id: "SK-GUM4-7-S05",
+      type: "mc",
+      points: 1,
+      dok: 3,
+      std: [
+        "3.L.GC.1:I:use-helping-and-linking-verbs"
+      ],
+      passages: ["p4"],
+      prompt: "A friend says seems in sentence 9 names something the volcano does. Which reply is best?",
+      choices: [
+        {
+          text: "Seems names no deed; it joins the volcano to small, a word that describes it, so it is a linking verb.",
+          correct: true
+        },
+        {
+          text: "Seems names a deed, because it tells what the volcano does while it sits on the table."
+        },
+        {
+          text: "Seems is a helper, because it helps the word small tell more about the volcano."
+        },
+        {
+          text: "Seems is no verb, because only words that show motion count as verbs in writing."
+        }
+      ],
+      clue: "Ask whether the volcano does anything in the first half of sentence 9.",
+      hints: [
+        "Ask whether the volcano does anything in the first half of sentence 9.",
+        "Look at the word small, and think about what job it has for the volcano.",
+        "A helper comes before another verb, and small is not a verb."
+      ],
+      how: [
+        "Read sentence 9: The volcano seems small, but it will erupt with red foam.",
+        "Nothing happens in the first half. Small describes the volcano, and seems connects the two.",
+        "The answer is \"Seems names no deed; it joins the volcano to small, a word that describes it, so it is a linking verb.\""
+      ],
+      misconception: "A common mix-up is thinking every verb shows an action. A linking verb only connects words.",
+      why: "The answer is \"Seems names no deed; it joins the volcano to small, a word that describes it, so it is a linking verb.\" Seems names no action. It joins the volcano to small, a word that describes it, so it is a linking verb.",
+      like: ["SK-GUM4-7-C05"]
+    },
+    {
+      id: "SK-GUM4-7-S06",
+      type: "ebsr",
+      points: 2,
+      dok: 3,
+      std: [
+        "3.L.GC.1:I:use-helping-and-linking-verbs"
+      ],
+      passages: ["p4"],
+      prompt: "Do Part A, then Part B.",
+      partA: {
+        prompt: "Sentence 10 contains a verb error. Which version corrects it?",
+        choices: [
+          {
+            text: "By now, our team has earned a blue ribbon from the judges.",
+            correct: true
+          },
+          {
+            text: "By now, our team has earns a blue ribbon from the judges."
+          },
+          {
+            text: "By now, our team have earn a blue ribbon from the judges."
+          },
+          {
+            text: "By now, our team will earned a blue ribbon from the judges."
+          }
+        ]
+      },
+      partB: {
+        prompt: "Which statement tells why that version is correct?",
+        choices: [
+          {
+            text: "Has helps the main verb, so that verb takes its past form, earned.",
+            correct: true
+          },
+          {
+            text: "Has joins the team to a describing word, so earn must stay as it is."
+          },
+          {
+            text: "Has helps the main verb, so that verb stays plain, like the verb after will."
+          },
+          {
+            text: "Has is the main verb, so the next word only names the ribbon."
+          }
+        ]
+      },
+      clue: "For Part A, find the helper and the word after it. For Part B, find the statement that fits the correction.",
+      hints: [
+        "For Part A, find the helper and the word after it. For Part B, find the statement that fits the correction.",
+        "Think about the shape an action word takes after has, have or had.",
+        "Will looks ahead, but sentence 10 begins with By now, so a version with will does not fit."
+      ],
+      how: [
+        "Part A: the draft has the helper has before the plain verb earn. The answer is \"By now, our team has earned a blue ribbon from the judges.\"",
+        "The other versions add -s to the action word, change has to have, or use will with the past form.",
+        "Part B: the statement is \"Has helps the main verb, so that verb takes its past form, earned.\""
+      ],
+      misconception: "A common mix-up is leaving the action word plain after has. Has, have and had go with the past form.",
+      why: "Part A: \"By now, our team has earned a blue ribbon from the judges.\" Part B: \"Has helps the main verb, so that verb takes its past form, earned.\" Part A: By now, our team has earned a blue ribbon from the judges. uses has with the past form earned. Part B: has helps the main verb, so that verb takes its past form.",
+      like: ["SK-GUM4-7-C06"]
+    },
+    {
+      id: "SK-GUM4-7-S07",
+      type: "dropdown",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.L.GC.1:I:use-helping-and-linking-verbs"
+      ],
+      passages: ["p5"],
+      prompt: "Select the linking verb that finishes sentence 4.",
+      text: "The stack of pancakes {0} tall and warm right now.",
+      slots: [
+        {
+          options: ["seems","seem","seemed","seeming"],
+          answer: 0
+        }
+      ],
+      clue: "Find what the sentence is about and decide whether that is one thing or several.",
+      hints: [
+        "Find what the sentence is about and decide whether that is one thing or several.",
+        "The words right now show when this is true, so check the time as well as the subject.",
+        "Seeming ends in -ing, and it cannot stand alone as the verb in this sentence."
+      ],
+      how: [
+        "The subject is stack, which names one thing, and right now shows the present.",
+        "A present-tense verb for one thing ends in -s.",
+        "The answer is seems. Seem goes with more than one thing, seemed is for the past, and seeming cannot stand alone as the verb."
+      ],
+      misconception: "A common mix-up is picking the verb that sounds right after pancakes. The subject is stack.",
+      why: "The answer is seems. The subject, stack, names one thing, and right now shows the present, so seems fits. Seem goes with more than one thing, seemed is for the past, and seeming cannot stand alone as the verb.",
+      like: ["SK-GUM4-7-C07"]
+    },
+    {
+      id: "SK-GUM4-7-S08",
+      type: "hottext",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.L.GC.1:I:use-helping-and-linking-verbs"
+      ],
+      passages: ["p5"],
+      prompt: "Tap the ONE line among numbers 2, 6, 7, 9 and 10 whose verb helps another verb.",
+      targets: ["p5:1:2","p5:2:2","p5:2:3","p5:3:2","p5:3:3"],
+      answer: ["p5:2:3"],
+      pick: 1,
+      clue: "Pick out the verb in each shown line and look at the word that follows it.",
+      hints: [
+        "Pick out the verb in each shown line and look at the word that follows it.",
+        "A helper stands before another verb. A joining verb connects the subject to a describing word.",
+        "Line 9 says the syrup becomes sticky, and sticky is not a verb."
+      ],
+      how: [
+        "Pick out the verb in each shown line and check the word after it.",
+        "Is full, are soft and becomes sticky each connect a subject to a describing word. Laugh and tap are actions.",
+        "In sentence 7, will comes right before the main verb pour, so it is the answer."
+      ],
+      misconception: "A common mix-up is picking a line with an action verb. A helper comes before another verb.",
+      why: "The answer is sentence 7: \"My sister will pour the juice at the table.\" In sentence 7, will comes before the main verb pour, so it is a helping verb. The other shown lines have linking verbs or action verbs alone.",
+      like: ["SK-GUM4-7-C08"]
+    },
+    {
+      id: "SK-GUM4-7-S09",
+      type: "mc",
+      points: 1,
+      dok: 3,
+      std: [
+        "3.L.GC.1:I:use-helping-and-linking-verbs"
+      ],
+      passages: ["p5"],
+      prompt: "A friend says sentence 5 is fine, because stirred shows the batter is already mixed. Which reply is best?",
+      choices: [
+        {
+          text: "Should is a helper, so the action word after it stays plain, stir.",
+          correct: true
+        },
+        {
+          text: "Should is a linking verb, so a describing word, stirred, has to follow it."
+        },
+        {
+          text: "The line is fine, because each action word in a story must end in -ed."
+        },
+        {
+          text: "Should is the main verb, so stirred is only a word that tells how fast."
+        }
+      ],
+      clue: "Find the helper in sentence 5 and think about what shape the action word takes after it.",
+      hints: [
+        "Find the helper in sentence 5 and think about what shape the action word takes after it.",
+        "Compare stirred with the plain verb that would follow a helper such as will or can.",
+        "Stirred is not a describing word in this line, because it tells the action."
+      ],
+      how: [
+        "Read sentence 5: I should stirred the batter slowly with the wooden spoon.",
+        "Should is the helper, and the action word after it must stay plain.",
+        "The answer is \"Should is a helper, so the action word after it stays plain, stir.\""
+      ],
+      misconception: "A common mix-up is putting -ed on a verb to show the past. A verb after should stays plain.",
+      why: "The answer is \"Should is a helper, so the action word after it stays plain, stir.\" Should is a helping verb, so the action word after it stays plain: I should stir the batter. Adding -ed does not fit after should.",
+      like: ["SK-GUM4-7-C09"]
+    },
+    {
+      id: "SK-GUM4-7-S10",
+      type: "ms",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.L.GC.1:I:use-helping-and-linking-verbs"
+      ],
+      passages: [],
+      prompt: "Pick the TWO lines that hold a verb that helps another verb.",
+      pick: 2,
+      choices: [
+        {
+          text: "Our class will paint a mural.",
+          correct: true
+        },
+        {
+          text: "The twins can ride their bikes.",
+          correct: true
+        },
+        {
+          text: "The road is long and flat."
+        },
+        {
+          text: "The cake seems stale today."
+        },
+        {
+          text: "Grandpa was a baker many years ago."
+        }
+      ],
+      clue: "Pick out the verb in each line and check the word right after it.",
+      hints: [
+        "Pick out the verb in each line and check the word right after it.",
+        "A helper stands before another verb. A joining verb connects the subject to a word that names or describes it.",
+        "In the line about the road, the word after the verb is not a verb."
+      ],
+      how: [
+        "Pick out the verb in each line and look at the word after it.",
+        "In \"Our class will paint a mural.\" will comes before paint. In \"The twins can ride their bikes.\" can comes before ride.",
+        "In the other lines, the verb connects the subject to a word that describes it or names it."
+      ],
+      misconception: "A common mix-up is choosing lines with a short verb. Check whether another verb follows.",
+      why: "The answers are \"Our class will paint a mural.\" and \"The twins can ride their bikes.\" Will helps the main verb paint, and can helps the main verb ride. In the other lines, is, seems and was join the subject to a word that describes it or names it.",
+      like: ["SK-GUM4-7-C10"]
+    },
+    {
+      id: "SK-GUM4-7-S11",
+      type: "mc",
+      points: 1,
+      dok: 3,
+      std: [
+        "3.L.GC.1:I:use-helping-and-linking-verbs"
+      ],
+      passages: [],
+      stem: "Line A: The pup should rest. Line B: The pup seems tired.",
+      prompt: "Compare the verbs in the two lines. What is true?",
+      choices: [
+        {
+          text: "In A, should helps the main verb rest; in B, seems links the pup to tired, a word that describes it.",
+          correct: true
+        },
+        {
+          text: "In A, should links the pup to a word that describes it; in B, seems helps the main verb tired."
+        },
+        {
+          text: "In both, the verb helps a main verb, because each stands near a word about the pup."
+        },
+        {
+          text: "In both, the verb shows motion, because each tells how the pup moves around."
+        }
+      ],
+      clue: "Pick out the verb in each line and look at the word after it.",
+      hints: [
+        "Pick out the verb in each line and look at the word after it.",
+        "Ask whether the word after each verb is another verb or a word that describes the pup.",
+        "Resting is not motion, so a choice about movement in both lines cannot be right."
+      ],
+      how: [
+        "The verbs are should in Line A and seems in Line B.",
+        "In A, rest is the action, and should comes before it. In B, tired describes the pup, and seems connects the two.",
+        "The answer is \"In A, should helps the main verb rest; in B, seems links the pup to tired, a word that describes it.\""
+      ],
+      misconception: "A common mix-up is treating tired as a verb. It describes the pup.",
+      why: "The answer is \"In A, should helps the main verb rest; in B, seems links the pup to tired, a word that describes it.\" In A, should helps the main verb rest. In B, seems links the pup to tired, a word that describes it.",
+      like: ["SK-GUM4-7-C11"]
+    },
+    {
+      id: "SK-GUM4-7-S12",
+      type: "dropdown",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.L.GC.1:I:use-helping-and-linking-verbs"
+      ],
+      passages: ["p6"],
+      prompt: "Select the helper that repairs sentence 8.",
+      text: "My teammates {0} kicked a long shot toward the net.",
+      slots: [
+        {
+          options: ["have","has","will","is"],
+          answer: 0
+        }
+      ],
+      clue: "Look at who is doing the kicking, and decide whether that is one player or several.",
+      hints: [
+        "Look at who is doing the kicking, and decide whether that is one player or several.",
+        "Check the verb kicked after the blank, and think about which helpers go with that shape.",
+        "Is kicked would tell what happens to a ball, and the teammates are the ones kicking."
+      ],
+      how: [
+        "The subject, teammates, names more than one player.",
+        "Kicked is the past form of the main verb, so a helper such as has or have goes before it.",
+        "The answer is have. Has goes with one player, will needs a plain verb after it, and is does not show who kicked."
+      ],
+      misconception: "A common mix-up is choosing has because the shot is one thing. The helper goes with the teammates.",
+      why: "The answer is have. The subject, teammates, names more than one player, so the helping verb have goes with it. Has goes with one player, will needs a plain verb after it, and is does not fit before kicked.",
+      like: ["SK-GUM4-7-C12"]
+    },
+    {
+      id: "SK-GUM4-7-S13",
+      type: "ms",
+      points: 2,
+      dok: 3,
+      std: [
+        "3.L.GC.1:I:use-helping-and-linking-verbs"
+      ],
+      passages: ["p6"],
+      prompt: "Line 4 of the draft is wrong. Select the TWO versions that mend it and stay in the present.",
+      pick: 2,
+      choices: [
+        {
+          text: "My teammates are ready to run after the warm-up.",
+          correct: true
+        },
+        {
+          text: "My teammate is ready to run after the warm-up.",
+          correct: true
+        },
+        {
+          text: "My teammates is ready to run after the warm-up."
+        },
+        {
+          text: "My teammates was ready to run after the warm-up."
+        },
+        {
+          text: "My teammate are ready to run after the warm-up."
+        }
+      ],
+      clue: "A repair can change the verb or the subject, as long as the two agree and the time stays the same.",
+      hints: [
+        "A repair can change the verb or the subject, as long as the two agree and the time stays the same.",
+        "Keep the versions in which the subject and the linking verb match in the present.",
+        "One version uses was, and was points to the past."
+      ],
+      how: [
+        "The draft pairs a plural subject, teammates, with the singular verb is.",
+        "One repair changes the verb to are. The other changes the subject to the singular teammate.",
+        "The answers are \"My teammates are ready to run after the warm-up.\" and \"My teammate is ready to run after the warm-up.\" The others keep the draft, use the past, or mismatch the subject."
+      ],
+      misconception: "A common mix-up is thinking only the verb can change. The subject can change, too.",
+      why: "The answers are \"My teammates are ready to run after the warm-up.\" and \"My teammate is ready to run after the warm-up.\" Teammates goes with are, and teammate goes with is. The other versions keep the draft, use the past with was, or pair a singular subject with are.",
+      like: ["SK-GUM4-7-C13"]
+    },
+    {
+      id: "SK-GUM4-7-S14",
+      type: "mc",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.L.GC.1:I:use-helping-and-linking-verbs"
+      ],
+      passages: [],
+      prompt: "Which line has a verb that links?",
+      choices: [
+        {
+          text: "The tea seems too hot for Grandma.",
+          correct: true
+        },
+        {
+          text: "Mom will pour the tea."
+        },
+        {
+          text: "We can drink it later."
+        },
+        {
+          text: "Dad has boiled the water."
+        }
+      ],
+      clue: "Pick out the verb in each line, and check the word that follows it.",
+      hints: [
+        "Pick out the verb in each line, and check the word that follows it.",
+        "A linking verb connects the subject to a word that describes it, and it does not stand before another verb.",
+        "Pour is a verb, so the line with will before it has a helper, not a link."
+      ],
+      how: [
+        "Pick out the verb in each line and check the word after it.",
+        "In the first line, seems connects the tea to hot, a word that describes it.",
+        "The answer is \"The tea seems too hot for Grandma.\" Will, can and has each stand before another verb."
+      ],
+      misconception: "A common mix-up is picking the line with the most familiar verb. Check what follows the verb.",
+      why: "The answer is \"The tea seems too hot for Grandma.\" Seems links the tea to hot, a word that describes it. Will pour, can drink and has boiled each have a helping verb before a main verb.",
+      like: ["SK-GUM4-7-C14"]
+    },
+    {
+      id: "SK-GUM4-7-S15",
+      type: "dropdown",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.L.GC.1:I:use-helping-and-linking-verbs"
+      ],
+      passages: [],
+      prompt: "Pick the two words that finish the line.",
+      text: "Yesterday, Omar {0} {1} his model.",
+      slots: [
+        {
+          options: ["had","will","can","should"],
+          answer: 0
+        },
+        {
+          options: ["painted","paint","paints","painting"],
+          answer: 0
+        }
+      ],
+      clue: "For the first blank, look at the time clue, Yesterday. For the second blank, think about the shape that goes with the helper you pick.",
+      hints: [
+        "For the first blank, look at the time clue, Yesterday. For the second blank, think about the shape that goes with the helper you pick.",
+        "A helper that points to the past needs an action word in its past shape.",
+        "Will looks ahead to a time that has not come yet."
+      ],
+      how: [
+        "The time clue, Yesterday, tells you the action is in the past.",
+        "The helper had goes with the past shape of the action word, painted.",
+        "The answers are had and painted. Will, can and should do not fit a past time, and paint, paints and painting do not fit after had."
+      ],
+      misconception: "A common mix-up is choosing a helper and leaving the action word plain. Had needs the past shape.",
+      why: "The answers are had and painted. Yesterday is in the past, so had goes with the past shape painted. Will, can and should do not fit a past time, and the other verb forms do not fit after had.",
+      like: ["SK-GUM4-7-C15"]
+    }
+  ],
+  addons: {
+    "SK-GUM4-7-P1": {
+      hints: [
+        "Look for the action word, and decide whether another verb comes before it.",
+        "Check each word and ask which one is a verb that does not show the action by itself.",
+        "Book names a thing, so it is not a verb."
+      ],
+      how: [
+        "Find the main verb, the action: finished.",
+        "Look at the word right before it: has. Has helps the main verb.",
+        "The answer is has. Finished is the main verb, and his and book are not verbs that help."
+      ],
+      misconception: "A common mix-up is choosing the action word. The helping verb comes before it."
+    },
+    "SK-GUM4-7-P2": {
+      hints: [
+        "Check whether anyone does something in this sentence.",
+        "Look for the verb that connects the kittens to a word about them.",
+        "Sleepy tells about the kittens, but it is not a verb."
+      ],
+      how: [
+        "Nobody does anything in this sentence, so there is no action.",
+        "The verb were connects the kittens to sleepy.",
+        "The answer is were. Sleepy describes the kittens, so it is not a linking verb."
+      ],
+      misconception: "A common mix-up is choosing the describing word. The linking verb connects it to the subject."
+    },
+    "SK-GUM4-7-P3": {
+      hints: [
+        "Look at the word after each verb. Is it another verb, or a word that names or describes the subject?",
+        "A helping verb comes before another verb. A linking verb connects the subject to a describing word.",
+        "In The pie is warm, warm is not a verb."
+      ],
+      how: [
+        "Check the word after each verb.",
+        "Can see and should wear have a helping verb before a main verb.",
+        "Is warm, was a firefighter and seems hungry connect the subject to a word that describes or names it."
+      ],
+      misconception: "A common mix-up is sorting by the verb's length. Check what follows it."
+    },
+    "SK-GUM4-7-P4": {
+      hints: [
+        "Look at the word tomorrow and at the word visit.",
+        "Try each choice before visit and listen for the one that sounds right.",
+        "Was points to the past, and tomorrow has not happened yet."
+      ],
+      how: [
+        "Tomorrow tells when the visit happens.",
+        "The helping verb must show a time that has not come yet.",
+        "The answer is will. Is, has and was do not fit before visit."
+      ],
+      misconception: "A common mix-up is choosing was because it is a common verb. Tomorrow points ahead."
+    },
+    "SK-GUM4-7-P5": {
+      hints: [
+        "Check each sentence for a verb that connects the subject to a word that names or describes it.",
+        "A sentence with a linking verb has no action and no verb after the helper.",
+        "Ben has cleaned his room tells about an action that was done."
+      ],
+      how: [
+        "Find the verb in each sentence and check what follows it.",
+        "The answers are \"The peaches are ripe.\" and \"Ms. Hall is our music teacher.\" Are links peaches to ripe, and is links Ms. Hall to teacher.",
+        "Has cleaned, could hear and will draw each have a helping verb before a main verb."
+      ],
+      misconception: "A common mix-up is choosing a sentence because it has an action. A linking verb has none."
+    }
+  },
+  /* B8a:core:end */
   test: [
     { id: "SK-GUM4-7-T1", type: "mc", points: 1, dok: 1, passages: [],
       prompt: "What is the helping verb in this sentence?",
