@@ -16,7 +16,7 @@ Twin x core overlap is the maximum over all 225 twin/core pairs (15 x 15, includ
 |---|---|---|---|---|---|---|
 | L1 capitalization in abbreviations | 0.190 / 0.206 | 0.181 / 0.205 | 117 | 3.6 | hottext 3, match 2, dropdown 4, mc 3, ebsr 1, ms 2 | 2/10/3 |
 | L2 commas, direct address and yes/no | 0.197 / 0.204 | 0.197 / 0.204 | 118 | 2.9 | match 2, ms 3, dropdown 4, mc 3, ebsr 1, hottext 2 | 2/10/3 |
-| L3 plural possessive apostrophes | 0.207 / 0.204 | 0.180 / 0.202 | 111 | 4.5 | match 2, hottext 3, dropdown 4, mc 3, ebsr 1, ms 2 | 2/10/3 |
+| L3 plural possessive apostrophes | 0.183 / 0.202 | 0.173 / 0.202 | 111 | 4.5 | match 2, hottext 3, dropdown 3, mc 4, ebsr 1, ms 2 | 2/10/3 |
 | L4 indefinite pronouns, agreement | 0.200 / 0.214 | 0.207 / 0.204 | 111 | 3.9 | hottext 3, ms 3, dropdown 4, mc 3, ebsr 1, match 1 | 2/10/3 |
 | L5 subordinating conjunctions | 0.191 / 0.212 | 0.177 / 0.196 | 111 | 3.4 | hottext 3, match 2, dropdown 4, mc 3, ebsr 1, ms 2 | 2/10/3 |
 | L6 commas after opening parts | 0.208 / 0.206 | 0.208 / 0.206 | 116 | 3.3 | hottext 3, ms 2, dropdown 4, mc 3, ebsr 1, match 2 | 2/10/3 |
@@ -30,7 +30,7 @@ Live choices (`live.js`, scripted recount after hints 1, 2 and 3): no item names
 
 Key text appears in why or how on every item. No core key appears in Teach or Watch Me (`qa.js`: no KEY-IN-TEACH), and no Teach or Watch Me example equals a core key.
 
-Core-vs-core item-text overlap (digits and (n) markers counted; limit 0.30), maximum per lesson: L1 0.215, L2 0.250, L3 0.275, L4 0.295, L5 0.270, L6 0.279, L7 0.282. With passage text added, the same-passage dropdown and hot-text pairs reach 0.8 to 0.9 because they share a draft; that figure is informational. Passage words and FK come from `verification/readability.py` (script word counts; FK maximum 4.5 on L3, 4.4 on L7).
+Core-vs-core item-text overlap (digits and (n) markers counted; limit 0.30), maximum per lesson: L1 0.215, L2 0.250, L3 0.232, L4 0.295, L5 0.270, L6 0.279, L7 0.282. With passage text added, the same-passage dropdown and hot-text pairs reach 0.8 to 0.9 because they share a draft; that figure is informational. Passage words and FK come from `verification/readability.py` (script word counts; FK maximum 4.5 on L3, 4.4 on L7).
 
 ## First-review revision (all seven lessons)
 
@@ -49,6 +49,16 @@ Fixes follow B8b-review.md ("First review"). Each fix was made in the lesson spe
 - The only check-content failure seen during the work ("3.L.GC.1:C:form-and-use-prepositional-phrases: learn needs 2-3 worked examples") belonged to another batch and is gone in the final run (PASS, 0 failures).
 - Legacy-item six-gram overlaps remain (see the topic scan).
 - Two read-only `git status` calls were run by mistake earlier; nothing was changed with git.
+
+## Second-review revision (lesson 3 only)
+
+Final-file figures for L3: twin x core 0.183 set / 0.202 multiset (item text, digits and (n) markers counted), 0.173 / 0.202 with passages; core-vs-core 0.232; no key uniquely longest; `live.js` leaves 2 or more choices after hint 3; check-content PASS.
+
+- S3-A: C12 is now a 4-choice mc (fix plus reason, key "The people's, because people does not end in s and so takes 's.") instead of a second children-style dropdown; its twin S12 is the same task with women. C10 keeps the dropdown but its choices are now phrases ("The children's / The childrens' / The childrens") with a new hint 3. All hint 3s in the lesson differ.
+- S3-B: S13 now has a wrong no-apostrophe sentence ("The squirrels nest was high in the old oak.") and hint 1 is "Lena says always. Find the sentences that prove her wrong."
+- S3-C: C07's second key is now "The coaches' whistles hung by the gym door." so mice's is not printed before C14; legacy P4 row 3 is "the teachers' songs", so children's is not printed before C10.
+- S3-D: S12 uses women (twin bank only; tests T1/T2 also use women, so a reviewer may want a different noun).
+- S3-E: C09/S09 reworded (stem and three distractors; key "Students' owns the scores, while archers just labels a group."); item overlap 0.212 to 0.164 multiset and under 0.21 set.
 
 ## Design notes that affect review
 

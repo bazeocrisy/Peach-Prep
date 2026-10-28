@@ -2859,7 +2859,7 @@ PP.addLesson({
           "(9) Neighbors' extra packets went into a box for our class garden."
         ],
         [
-          "(10) The childrens table ran out of marigold seeds before lunch.",
+          "(10) The womens table ran out of marigold seeds before lunch.",
           "(11) By dinner, the hall smelled like soil.",
           "(12) I took home a packet of purple flowers."
         ]
@@ -2903,11 +2903,11 @@ PP.addLesson({
       rows: [
         { text: "the girl's bike", answer: 0 },
         { text: "the girls' bikes", answer: 1 },
-        { text: "the children's songs", answer: 1 },
+        { text: "the teachers' songs", answer: 1 },
         { text: "my brother's room", answer: 0 }
       ],
       clue: "Cover the apostrophe and the s after it. Is the word left over one thing or more than one?",
-      why: "The girl's bike and my brother's room each have one owner. The girls' bikes has more than one owner because girls is plural. The children's songs has more than one owner because children is plural." },
+      why: "The girl's bike and my brother's room each have one owner. The girls' bikes has more than one owner because girls is plural. The teachers' songs has more than one owner because teachers is plural." },
     { id: "SK-GUM5-3-P5", type: "hottext", points: 1, dok: 2, passages: [],
       prompt: "Select the sentence that has an error.",
       options: [
@@ -3087,7 +3087,7 @@ PP.addLesson({
               { text: "The nurses' office was closed on Monday.", correct: true },
               { text: "The geeses' pond froze overnight." },
               { text: "Two apple's fell from the tree." },
-              { text: "The mice's nest was hidden under the shed.", correct: true }
+              { text: "The coaches' whistles hung by the gym door.", correct: true }
             ],
             clue: "Check each sentence for a word that names who owns something. Ask whether it is plural and how it ends.",
             hints: [
@@ -3098,11 +3098,11 @@ PP.addLesson({
             how: [
               "Check each sentence for an owner word and for the way it ends.",
               "Nurses ends in s, so \"The nurses' office was closed on Monday.\" needs only an apostrophe.",
-              "Mice does not end in s, so \"The mice's nest was hidden under the shed.\" needs 's.",
+              "Coaches ends in s, so \"The coaches' whistles hung by the gym door.\" needs only an apostrophe.",
               "The other three are wrong: apple's owns nothing, boys's adds an extra s, and geeses' puts the apostrophe where geese needs 's."
             ],
             misconception: "A common mix-up is thinking more marks make a word more correct. A plural that ends in s needs only an apostrophe, and a plural that does not end in s needs 's.",
-            why: "The answers are \"The nurses' office was closed on Monday.\" and \"The mice's nest was hidden under the shed.\" Nurses ends in s, and mice does not. The others should say \"Two apples fell from the tree.\", \"Both boys' jackets were left on the gym floor.\" and \"The geese's pond froze overnight.\""
+            why: "The answers are \"The nurses' office was closed on Monday.\" and \"The coaches' whistles hung by the gym door.\" Nurses and coaches both end in s, so each needs only an apostrophe. The others should say \"Two apples fell from the tree.\", \"Both boys' jackets were left on the gym floor.\" and \"The geese's pond froze overnight.\""
           },
           {
             id: "SK-GUM5-3-C08",
@@ -3180,10 +3180,10 @@ PP.addLesson({
             ],
             passages: ["p2"],
             prompt: "Some kids share a closet in sentence 10. Which choice shows who owns it?",
-            text: "The {0} closet was empty by the end of the day.",
+            text: "{0} closet was empty by the end of the day.",
             slots: [
               {
-                options: ["children's", "childrens'", "childrens"],
+                options: ["The children's", "The childrens'", "The childrens"],
                 answer: 0
               }
             ],
@@ -3191,15 +3191,15 @@ PP.addLesson({
             hints: [
               "Count the owners of the closet, then ask whether that plural ends in s.",
               "Say each choice in the blank. Look at what comes before the apostrophe.",
-              "One choice has no apostrophe at all. Decide between the other two."
+              "The choice with no apostrophe cannot show who owns the closet. Decide between the other two."
             ],
             how: [
               "Read sentence 10. The closet belongs to several children.",
               "Children is plural, but it does not end in s, so it needs an apostrophe and s.",
-              "The answer is children's."
+              "The answer is The children's."
             ],
             misconception: "A common mix-up is treating children like a plural that ends in s. Children does not end in s, so it needs 's.",
-            why: "The answer is children's. Several children share the closet. Children is already plural and does not end in s, so it gets an apostrophe and s. The childrens' has the apostrophe in the wrong place, and childrens has none."
+            why: "The answer is The children's. Several children share the closet. Children is already plural and does not end in s, so it gets an apostrophe and s. The childrens' has the apostrophe in the wrong place, and childrens has none."
           }
         ]
       },
@@ -3235,34 +3235,33 @@ PP.addLesson({
           },
           {
             id: "SK-GUM5-3-C12",
-            type: "dropdown",
+            type: "mc",
             points: 1,
             dok: 2,
             std: [
               "3.L.GC.1:I:use-apostrophes-to-form-plural-possessive-nouns"
             ],
             passages: ["p3"],
-            prompt: "In sentence 10, the faces belong to several people. Choose the words that finish it.",
-            text: "{0} faces were red from the cold wind.",
-            slots: [
-              {
-                options: ["The people's", "The peoples'", "The peoples"],
-                answer: 0
-              }
+            prompt: "Sentence 10 of the draft says the faces belong to several people, but its first two words are not right. Which choice fixes them and gives the reason?",
+            choices: [
+              { text: "The peoples', because peoples ends in s and so takes just a mark." },
+              { text: "The people's, because people does not end in s and so takes 's.", correct: true },
+              { text: "The peoples, because a plural word like people just adds an s." },
+              { text: "The person's, because the faces belong to one person and need 's." }
             ],
-            clue: "Ask whether the word for several people ends in s. Then think about what an owner word needs.",
+            clue: "Ask who owns the faces, then ask whether that plural word ends in s.",
             hints: [
-              "Ask whether the word for several people ends in s. Then think about what an owner word needs.",
-              "Say each choice at the start of the sentence. Look at where the apostrophe sits and what comes before it.",
-              "One choice has no apostrophe at all. Decide between the other two."
+              "Ask who owns the faces, then ask whether that plural word ends in s.",
+              "Check both parts of each choice: the word and the reason that follows it.",
+              "The choice about one person does not match the faces in the story. Compare the other three."
             ],
             how: [
               "Read sentence 10. The faces belong to several people.",
               "People is plural, but it does not end in s, so it needs an apostrophe and s.",
-              "The answer is The people's."
+              "The answer is \"The people's, because people does not end in s and so takes 's.\""
             ],
             misconception: "A common mix-up is treating people like a plural that ends in s. Because people does not end in s, it needs 's.",
-            why: "The answer is The people's. The faces belong to several people. People is already plural and does not end in s, so it gets an apostrophe and s. The peoples' has the apostrophe in the wrong place, and The peoples has none."
+            why: "The answer is \"The people's, because people does not end in s and so takes 's.\" The faces belong to several people, and people is already plural without an s. The peoples' puts the apostrophe where a word ending in s would take it, and The peoples shows no owner. The person's names only one owner."
           },
           {
             id: "SK-GUM5-3-C13",
@@ -3649,26 +3648,26 @@ PP.addLesson({
         "3.L.GC.1:I:use-apostrophes-to-form-plural-possessive-nouns"
       ],
       passages: ["p5"],
-      prompt: "Archers in line 7 has no mark, yet students' in line 8 has one. Why is that?",
+      prompt: "Line 7 prints archers with no mark, but line 8 prints students' with one. What explains the difference?",
       choices: [
-        { text: "Scores belong to the students, so they get a mark; archers only names a group.", correct: true },
-        { text: "Archers lost its mark by accident, as group names for people always end with one." },
-        { text: "Students' got its mark simply because line 8 names a coach, who is a grown-up." },
-        { text: "Line 8 is the faulty one, since that mark suits a lone person and no crowd." }
+        { text: "Students' owns the scores, while archers just labels a group.", correct: true },
+        { text: "Archers is missing a mark that the writer forgot to add in line 7." },
+        { text: "Line 8 names a coach, so any word near a coach gets a mark." },
+        { text: "Line 8 is the mistake, since marks fit a lone person alone." }
       ],
-      clue: "Ask whether each word shows that something belongs to someone, or whether it only names a group.",
+      clue: "Decide which word owns something and which one only names a group.",
       hints: [
-        "Ask whether each word shows that something belongs to someone, or whether it only names a group.",
-        "Look at what follows each word in its own line. Think about who has what.",
+        "Decide which word owns something and which one only names a group.",
+        "In each line, find the thing that comes next and ask who has it.",
         "Line 8 is not a mistake, so it cannot be the one that is wrong. Check the other choices."
       ],
       how: [
         "Read line 8: the best scores belong to the students, so students' shows who has them.",
         "Read line 7: the archers hit a ring, but nothing belongs to the archers, so the word only names a group.",
-        "The answer is \"Scores belong to the students, so they get a mark; archers only names a group.\""
+        "The answer is \"Students' owns the scores, while archers just labels a group.\""
       ],
       misconception: "A common mix-up is thinking a group name needs the mark every time. It needs the mark only when the group has something.",
-      why: "The answer is \"Scores belong to the students, so they get a mark; archers only names a group.\" In line 8, the scores belong to the students. In line 7, nothing belongs to the archers, so the word only names a group. Both lines are correct.",
+      why: "The answer is \"Students' owns the scores, while archers just labels a group.\" In line 8, the scores belong to the students. In line 7, nothing belongs to the archers, so the word only names a group. Both lines are correct.",
       like: ["SK-GUM5-3-C09"]
     },
     {
@@ -3733,34 +3732,33 @@ PP.addLesson({
     },
     {
       id: "SK-GUM5-3-S12",
-      type: "dropdown",
+      type: "mc",
       points: 1,
       dok: 2,
       std: [
         "3.L.GC.1:I:use-apostrophes-to-form-plural-possessive-nouns"
       ],
       passages: ["p6"],
-      prompt: "Line 10 describes a seed table that several children ran. Pick words that fix its ending.",
-      text: "{0} table ran out of marigold seeds before lunch.",
-      slots: [
-        {
-          options: ["The childrens'", "The children's", "The childrens"],
-          answer: 1
-        }
+      prompt: "Line 10 tells who ran the seed table. Pick the best repair with its why.",
+      choices: [
+        { text: "Womens: women takes a plain s." },
+        { text: "Womens': this word ends in s, so a mark alone follows." },
+        { text: "Women's: women has no s on its end, so add 's.", correct: true },
+        { text: "Woman's: only one woman ran it." }
       ],
-      clue: "Does children end in s? Then decide which ending fits.",
+      clue: "Count who ran it, then check how that group word ends.",
       hints: [
-        "Does children end in s? Then decide which ending fits.",
-        "Try each choice at line start. Notice where its mark sits.",
-        "One choice has no mark at all. Decide between the other two."
+        "Count who ran it, then check how that group word ends.",
+        "Read both halves of each choice. Word and reason must both be right.",
+        "Picking one woman does not fit a group. Weigh the other three."
       ],
       how: [
-        "Line 10 tells of a table that several children ran.",
-        "Children means more than one, but it does not end in s, so it needs 's.",
-        "The answer is The children's."
+        "Read line 10. Several women ran the table.",
+        "Women means several, but the word has no s on its end, so it needs 's.",
+        "The answer is \"Women's: women has no s on its end, so add 's.\""
       ],
-      misconception: "A common mix-up is adding an s to children first. Because children already means more than one, the ending is 's.",
-      why: "The answer is The children's. The table belongs to several children. Children already means more than one and does not end in s, so it gets an apostrophe and s. The childrens' has the mark in the wrong place, and The childrens has none.",
+      misconception: "A common mix-up is adding an s to women first. Because women already means more than one, the ending is 's.",
+      why: "The answer is \"Women's: women has no s on its end, so add 's.\" Several women ran the table. The womens' puts the mark where a word ending in s would take it, and The womens shows no owner. The woman's names only one owner.",
       like: ["SK-GUM5-3-C12"]
     },
     {
@@ -3778,22 +3776,22 @@ PP.addLesson({
         { text: "The neighbors' fence was freshly painted yesterday." },
         { text: "Our neighbors planted tulips along the sunny fence.", correct: true },
         { text: "The sparrows' nest was tucked under the old roof." },
-        { text: "The children's yard was full of orange leaves." },
+        { text: "The squirrels nest was high in the old oak." },
         { text: "Two sparrows sat on the wire near the barn.", correct: true }
       ],
-      clue: "Lena says a plural noun that ends in s needs an apostrophe each time. Look for sentences that have such a noun with no apostrophe and are still right.",
+      clue: "Lena says always. Find the sentences that prove her wrong.",
       hints: [
-        "Lena says a plural noun that ends in s needs an apostrophe each time. Look for sentences that have such a noun with no apostrophe and are still right.",
+        "Lena says always. Find the sentences that prove her wrong.",
         "Pick TWO. Check whether a plural noun in each sentence owns something.",
-        "In the sentence about the nest, the plural noun owns something and has its apostrophe. Decide about the other four."
+        "The sentence about the fence has a plural noun with its apostrophe, so it fits Lena's rule. Decide about the other four."
       ],
       how: [
         "Look for a sentence with a plural noun that ends in s and has no apostrophe, but is still correct.",
         "In \"Our neighbors planted tulips along the sunny fence.\" and \"Two sparrows sat on the wire near the barn.\" the plural nouns own nothing, so they need no apostrophe.",
-        "In the other three, a plural noun owns something, so each has an apostrophe."
+        "In the other three, a plural noun owns something, so it needs an apostrophe. The squirrels sentence lacks one, so it is not a correct sentence."
       ],
       misconception: "A common mix-up is choosing the sentences with apostrophes, because those follow Lena's rule. She is wrong when a plural noun owns nothing.",
-      why: "The answers are \"Our neighbors planted tulips along the sunny fence.\" and \"Two sparrows sat on the wire near the barn.\" Their plural nouns own nothing, so they need no apostrophe. In the other three, the sparrows, the neighbors and the children own something, so each plural noun has an apostrophe.",
+      why: "The answers are \"Our neighbors planted tulips along the sunny fence.\" and \"Two sparrows sat on the wire near the barn.\" Their plural nouns own nothing, so they need no apostrophe. In the other three, the sparrows, the neighbors and the squirrels own something, so each needs an apostrophe, and the squirrels sentence is missing it.",
       like: ["SK-GUM5-3-C13"]
     },
     {
@@ -3916,7 +3914,7 @@ PP.addLesson({
       how: [
         "Cover the apostrophe and any s after it, and look at the word that is left.",
         "Girl and brother name one person each, so those rows have one owner.",
-        "Girls and children name more than one person, so those rows have more than one owner."
+        "Girls and teachers name more than one person, so those rows have more than one owner."
       ],
       misconception: "A common mix-up is thinking every apostrophe before an s shows many owners. Count the owners in the word before the apostrophe."
     },
