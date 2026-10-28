@@ -87,6 +87,7 @@
 | B8a | 3.L.GC.1:I:use-relative-pronouns-and-relative-adverbs | NOT ACCEPTED: awaiting independent review | B8a-author-log.md; authored, not reviewed |
 | B8a | 3.L.GC.1:I:use-interjections | NOT ACCEPTED: awaiting independent review | B8a-author-log.md; authored, not reviewed |
 | B8a | 3.L.GC.1:I:use-helping-and-linking-verbs | NOT ACCEPTED: awaiting independent review | B8a-author-log.md; authored, not reviewed |
+| B8a | 3.L.GC.1:I:correctly-use-frequently-confused-words-e-g-to-t | NOT ACCEPTED: awaiting independent review | B8a-author-log.md; authored, not reviewed |
 | B8b | 3.L.GC.1:I:use-conventional-capitalization-in-abbreviations | NOT ACCEPTED: awaiting independent review | B8b-author-log.md; authored, not reviewed |
 | B8b | 3.L.GC.1:I:use-commas-for-direct-address-and-to-set-off-yes | NOT ACCEPTED: awaiting independent review | B8b-author-log.md; authored, not reviewed |
 | B8b | 3.L.GC.1:I:use-apostrophes-to-form-plural-possessive-nouns | NOT ACCEPTED: awaiting independent review | B8b-author-log.md; authored, not reviewed |

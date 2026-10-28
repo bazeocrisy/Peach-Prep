@@ -10572,7 +10572,8 @@ PP.addLesson({
     points: [
       "To shows where something goes or comes before an action word: go to school, time to eat. Too means also or more than enough. Two is the number 2.",
       "There tells where. Their means it belongs to them. They're is short for they are.",
-      "Your means it belongs to you, and you're is short for you are. Its means it belongs to it, and it's is short for it is (or it has)."
+      "Your means it belongs to you, and you're is short for you are. Its means it belongs to it, and it's is short for it is (or it has).",
+      "Advice is a noun, the help that someone gives, and it ends like ice. Advise is a verb, the act of giving help, and it ends with a z sound."
     ],
     words: [
       { term: "contraction", means: "two words joined into one with an apostrophe, like they're for they are" }
@@ -10604,6 +10605,16 @@ PP.addLesson({
         "Your means something belongs to you, which does not fit here."
       ],
       answer: "You're: You're a great artist!"
+    },
+    {
+      show: ["Our coach will ___ us to stretch."],
+      ask: "Which word fits: advice or advise?",
+      steps: [
+        "Check which word sits just ahead of the blank. Will is followed by an action word.",
+        "Advise is the action word, and its last sound is z.",
+        "Advice names the help itself, so it would not follow will."
+      ],
+      answer: "Advise: Our coach will advise us to stretch."
     }
   ],
   parent: "Write a short note with one sound-alike word used the wrong way, like \"I have to dogs.\" Ask your child to find the mistake and fix it.",
@@ -10852,7 +10863,7 @@ PP.addLesson({
             hints: [
               "Ask what job the word has: a place, a meaning of also, or a count.",
               "Look at the word buses right after the blank, and think about what the blank tells about them.",
-              "Too means also or more than enough, and neither idea fits in this sentence."
+              "Neither also nor more than enough fits in this sentence, so too is wrong."
             ],
             how: [
               "The blank comes right before buses and tells about them.",
@@ -10979,10 +10990,10 @@ PP.addLesson({
                 }
               ]
             },
-            clue: "For Part A, compare the word before group in each choice. For Part B, find the fact that matches the change.",
+            clue: "For A, compare the word before group. For B, find the fact matching the change.",
             hints: [
-              "For Part A, compare the word before group in each choice. For Part B, find the fact that matches the change.",
-              "Try saying you are in place of the word before group, and see whether the sentence makes sense.",
+              "For A, compare the word before group. For B, find the fact matching the change.",
+              "Put you are where the word before group sits, and see whether the sentence makes sense.",
               "You'r is not a word at all, so that choice cannot be the fix."
             ],
             how: [
@@ -11010,14 +11021,14 @@ PP.addLesson({
                 answer: 0
               }
             ],
-            clue: "Try each choice in place of the blank, and see which one still makes a whole sentence.",
+            clue: "Try each choice in the blank and see which makes a whole sentence.",
             hints: [
-              "Try each choice in place of the blank, and see which one still makes a whole sentence.",
+              "Try each choice in the blank and see which makes a whole sentence.",
               "Say they are in the blank. Does the sentence still make sense?",
-              "There tells where, and no place is named in this sentence."
+              "There tells where, and no place is named anywhere in this sentence."
             ],
             how: [
-              "Say each choice in the blank and listen for a whole sentence.",
+              "Read the sentence once with each choice and listen for one that sounds complete.",
               "They are going to give every helper a bright orange vest makes sense, so the contraction fits.",
               "The answer is They're. Their shows belonging, and there tells where."
             ],
@@ -11076,11 +11087,11 @@ PP.addLesson({
                 text: "Advise is wrong, because it is only used for a person who works as a doctor or a nurse."
               }
             ],
-            clue: "Look at the word right before advice and decide what kind of word the sentence needs after it.",
+            clue: "Look at the word before advice and ask what kind of word comes next.",
             hints: [
-              "Look at the word right before advice and decide what kind of word the sentence needs after it.",
-              "A noun names a thing, and a verb tells what someone does. Decide which one follows will.",
-              "A spelling ending does not make a word a verb."
+              "Look at the word before advice and ask what kind of word comes next.",
+              "Some words are things and others are actions, so decide which kind follows will.",
+              "A spelling ending does not make a word a verb or a noun."
             ],
             how: [
               "Read sentence 6: Our leader will advice us where to start.",
@@ -11168,8 +11179,8 @@ PP.addLesson({
             clue: "Say they are in place of the first word of each sentence.",
             hints: [
               "Say they are in place of the first word of each sentence.",
-              "Ask which sentence still makes sense with they are, and what the other word shows.",
-              "Both words do not mean the same thing, so a choice that says they match cannot be right."
+              "Ask which sentence still makes sense with they are, and what job the other word does.",
+              "The two words do not both mean they are, so a choice that says they do cannot be right."
             ],
             how: [
               "Try they are in each sentence: They are on the bus works, but They are bus is yellow does not.",
@@ -11196,9 +11207,9 @@ PP.addLesson({
                 answer: 0
               }
             ],
-            clue: "Ask what the word should mean here: a place, also, more than enough, or a count.",
+            clue: "Ask which meaning the word needs here: a place, also, more than enough, or a count.",
             hints: [
-              "Ask what the word should mean here: a place, also, more than enough, or a count.",
+              "Ask which meaning the word needs here: a place, also, more than enough, or a count.",
               "Try the words more than enough in the blank, and see whether the sentence still makes sense.",
               "Two is a number, and nothing in the sentence counts anything."
             ],
@@ -11314,11 +11325,11 @@ PP.addLesson({
                 answer: 0
               }
             ],
-            clue: "For the first blank, try saying it is. For the second blank, think about who the hands belong to.",
+            clue: "For blank one, try saying it is. For blank two, ask who owns the hands.",
             hints: [
-              "For the first blank, try saying it is. For the second blank, think about who the hands belong to.",
+              "For blank one, try saying it is. For blank two, ask who owns the hands.",
               "The first word must stand for two words, and the second word must show belonging.",
-              "Its' is never a correct word."
+              "Its' with a mark after the s is never a correct word."
             ],
             how: [
               "It is time to wash is a whole thought, so the first word stands for it is.",
@@ -11462,7 +11473,7 @@ PP.addLesson({
         "3.L.GC.1:I:correctly-use-frequently-confused-words-e-g-to-t"
       ],
       passages: ["p4"],
-      prompt: "One shown line among 4, 5, 8, 9 and 11 breaks a spelling rule for look-alike meanings. Which is it?",
+      prompt: "Somewhere among these five shown lines, a writer broke a spelling rule for look-alike meanings; tap whichever sentence deserves correction.",
       targets: ["p4:1:4","p4:2:1","p4:3:1","p4:3:2","p4:3:4"],
       answer: ["p4:2:1"],
       pick: 1,
@@ -11497,10 +11508,10 @@ PP.addLesson({
           correct: true
         },
         {
-          text: "Turtles are animals, so every animal part must be written with extra letters at the very end."
+          text: "Turtles are animals, so every animal part must be written with extra letters added at the very end of it."
         },
         {
-          text: "Shell starts the clause, so a contraction must always come first in lines of this kind here."
+          text: "Shell starts the clause, so a contraction must always come first in lines of this kind here, no matter what."
         },
         {
           text: "The mark floats too high; moving it after the final letter would repair the whole spelling."
@@ -11509,7 +11520,7 @@ PP.addLesson({
       clue: "Swap in it is for It's in sentence 6 and listen.",
       hints: [
         "Swap in it is for It's in sentence 6 and listen.",
-        "Think about what the word must tell about the shell.",
+        "Ask what job the word must do for the shell.",
         "A letter that has been left out is different from an owner."
       ],
       how: [
@@ -11530,7 +11541,7 @@ PP.addLesson({
         "3.L.GC.1:I:correctly-use-frequently-confused-words-e-g-to-t"
       ],
       passages: ["p4"],
-      prompt: "Work through A, then through B.",
+      prompt: "Work through Part A first, then continue onward with Part B, giving careful attention throughout.",
       partA: {
         prompt: "Pick the best fix for sentence 3.",
         choices: [
@@ -11567,9 +11578,9 @@ PP.addLesson({
           }
         ]
       },
-      clue: "For Part A, compare the word before favorite in each version. For Part B, find the statement that fits the fix.",
+      clue: "For A, compare the word before favorite. For B, find the statement matching the fix.",
       hints: [
-        "For Part A, compare the word before favorite in each version. For Part B, find the statement that fits the fix.",
+        "For A, compare the word before favorite. For B, find the statement matching the fix.",
         "Say it is before favorite and judge whether the line still works.",
         "Its' is never a correct word, so that version cannot be the fix."
       ],
@@ -11623,7 +11634,7 @@ PP.addLesson({
         "3.L.GC.1:I:correctly-use-frequently-confused-words-e-g-to-t"
       ],
       passages: ["p5"],
-      prompt: "One shown line among 3, 5, 7, 9 and 10 has the wrong choice of to, too or two. Tap it.",
+      prompt: "Somewhere among these five shown lines, a writer picked a mismatched spelling; tap whichever sentence deserves correction.",
       targets: ["p5:1:3","p5:2:1","p5:2:3","p5:3:2","p5:3:3"],
       answer: ["p5:2:1"],
       pick: 1,
@@ -11667,11 +11678,11 @@ PP.addLesson({
           text: "No, since advise cannot be found in school writing, so the line needs a fresh invention."
         }
       ],
-      clue: "Look at the words right before advise and think about what sort of word they call for.",
+      clue: "Look at the word before advise and ask what sort of word comes next.",
       hints: [
-        "Look at the words right before advise and think about what sort of word they call for.",
-        "Nouns name things and verbs tell what someone does. Decide which sort follows helpful.",
-        "How a word ends does not decide whether it is a verb."
+        "Look at the word before advise and ask what sort of word comes next.",
+        "Some words are things and others are actions, so decide which kind follows helpful.",
+        "How a word ends does not decide whether it is a verb or a noun."
       ],
       how: [
         "Read line 6: The ranger gave us helpful advise about picking up sharp glass.",
@@ -11737,7 +11748,7 @@ PP.addLesson({
       ],
       passages: [],
       stem: "Line A: It's cold today. Line B: The cat licked its paw.",
-      prompt: "What does each of the two words do in its line?",
+      prompt: "Study this pair of sound-alikes carefully, then pick whichever statement describes their separate duties most accurately overall.",
       choices: [
         {
           text: "It's in Line A stands for it is, but its in Line B tells that the paw has an owner.",
@@ -11785,11 +11796,11 @@ PP.addLesson({
           answer: 0
         }
       ],
-      clue: "Decide what the gap should mean in this line: a place, also, too much, or a count.",
+      clue: "Decide what the gap means here: where, also, beyond what is wanted, or how many.",
       hints: [
-        "Decide what the gap should mean in this line: a place, also, too much, or a count.",
-        "Try the words more than enough in the gap, and see whether the line still works.",
-        "Two is a number, and the line does not count anything."
+        "Decide what the gap means here: where, also, beyond what is wanted, or how many.",
+        "Try each meaning in the gap, and see which one the rain and the boots support.",
+        "Two is a number, and nothing in this line is being counted at all."
       ],
       how: [
         "The line says the trail felt slippery for smooth boots, so the word must mean more than enough.",
@@ -11809,7 +11820,7 @@ PP.addLesson({
         "3.L.GC.1:I:correctly-use-frequently-confused-words-e-g-to-t"
       ],
       passages: ["p6"],
-      prompt: "Line 8 has a pair of errors. Mark the TWO fixes that repair it.",
+      prompt: "This particular passage line carries a pair of slipups, so mark both fixes that mend everything.",
       pick: 2,
       choices: [
         {
@@ -11821,19 +11832,19 @@ PP.addLesson({
           correct: true
         },
         {
-          text: "Change your to yours, which stands alone."
+          text: "Change your to yours, which stands alone without any noun after it."
         },
         {
-          text: "Change the first to to too, which means also."
+          text: "Change the first to to too, which can mean also, as in me too."
         },
         {
-          text: "Change going to gone, which fits the past."
+          text: "Change going to gone, which fits an event finished long ago."
         }
       ],
       clue: "Say the long form of each word that could be a contraction, and check what each word should show.",
       hints: [
         "Say the long form of each word that could be a contraction, and check what each word should show.",
-        "A fix must keep the meaning: Grandpa tells what someone is about to need, and he names how many pairs.",
+        "A fix must keep the meaning: Grandpa tells what someone is about to need, and he gives a count of pairs.",
         "Yours stands alone and cannot sit before going, so that fix cannot be one of the two."
       ],
       how: [
@@ -11906,11 +11917,11 @@ PP.addLesson({
           answer: 0
         }
       ],
-      clue: "For the first blank, try saying they are. For the second blank, think about who the bus belongs to.",
+      clue: "For blank one, try saying they are. For blank two, ask who owns the bus.",
       hints: [
-        "For the first blank, try saying they are. For the second blank, think about who the bus belongs to.",
+        "For blank one, try saying they are. For blank two, ask who owns the bus.",
         "The first word must stand for two words, and the second word must show belonging.",
-        "There points to a place, and no place is named in the line."
+        "There points to a place, and no place is named anywhere in the line."
       ],
       how: [
         "They are sure is a whole thought, so the first word stands for they are.",
@@ -11951,9 +11962,9 @@ PP.addLesson({
     },
     "SK-GUM4-8-P3": {
       hints: [
-        "Say it is in the blank and see whether the sentence still makes sense.",
+        "Say it is in the blank and see if it works.",
         "Think about who the wings belong to.",
-        "Its' is never a correct word."
+        "Its' is never a correct word, so it cannot fit any sentence."
       ],
       how: [
         "Try it is: The bird flapped it is wings does not make sense.",
@@ -11966,7 +11977,7 @@ PP.addLesson({
       hints: [
         "Look at each sound-alike word and say what it should mean.",
         "Try saying they are in place of the first word, and check the word before go.",
-        "Too means also or more than enough, so it does not belong before go."
+        "Neither also nor more than enough fits before go, so too does not belong there."
       ],
       how: [
         "Say they are in place of the first word: They are ready to go home now.",
@@ -11977,7 +11988,7 @@ PP.addLesson({
     },
     "SK-GUM4-8-P5": {
       hints: [
-        "Try saying you are in each blank.",
+        "Put you are into each blank.",
         "If the sentence still makes sense, the word with the apostrophe fits.",
         "In ___ shoe is untied, you are shoe is not a phrase that makes sense."
       ],
