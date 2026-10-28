@@ -314,3 +314,137 @@ Keys are sound: a blind solve agrees on 120 of 120 items and all 120 take the ke
 - The same-frame dropdown triplet (C03 / C10 / C12 and S03 / S10 / S12) is in all four lessons and exceeds 0.30 in all four; it needs one decision for the whole file (one structural fix applied lesson by lesson).
 - The author log's "tc max 0.194 to 0.205" is reproducible only without target sentences; the log's "no item names its key" is true for hints, stems and Teach in lessons 1 to 4.
 - None of the sections is marked ACCEPTED. Re-review after revision.
+
+## Second review (B8b lessons 1-4)
+
+**Reviewer:** independent content reviewer (did not author). Scope: `js/data/lessons/L-GUM5.js`, lessons 1 to 4, files as on disk (branch `content/standards-practice`, commit 49e4e0f). I wrote only this section. Scripts and outputs: `scratchpad/b8b2r/` (`blind.js`, `myans.json`, `cmp2.js`, `jac.js`, `trip.js`, `early.js`, `fill.js`, `run390.py`, `run390.txt`). No lesson was edited and no git command was run.
+
+### Verdicts
+
+| Lesson | Verdict | MUST | SHOULD |
+|---|---|---|---|
+| 1. Capital letters in Mr., Dr., St. and words like American | **ACCEPT** (with SHOULDs) | 0 | 1 |
+| 2. Commas with names and with yes and no | **ACCEPT** | 0 | 0 |
+| 3. Apostrophes for more than one owner | **REVISE** | 0 | 5 |
+| 4. Matching verbs to everyone, each, both and many | **ACCEPT** (with SHOULDs) | 0 | 2 |
+
+All seven first-review MUSTs for these lessons (Av./Str., the C03/C10/C12 triplets in four lessons, L1 C09/C15) are fixed on disk and re-measured. L3 is REVISE only because two first-review SHOULDs are still open (S13 hint 1, identical hint 3 on C10/C12) and the C10/C14 rewrites introduced earlier-key prints. Nothing here is a wrong key. Per the brief I have not marked anything ACCEPTED in the status table; "ACCEPT" is my recommendation to the lead.
+
+### 1. Blind solve
+
+- **Method.** New `blind.js` (fresh seed 7711 + 131 x lesson) loads `L-GUM5.js` in Node, resolves core `{ref}`s, and prints the 24 passages (no figures exist), all 60 core and all 60 twin items with choices, options, rows, columns, dropdown slots shuffled. It strips `correct`, `answer`, `why`, `clue`, `hints`, `how`, `misconception`, `like`. Hot-text targets print as ids (`p2:1:3` = paragraph 1, sentence 3). I wrote my answers to `myans.json` and only then ran `cmp2.js`, which prints the keys.
+- **Result: 120 of 120 agree (100%).** Core 60/60, twins 60/60. The comparison script first reported 112/120; the eight "misses" were my answer format only (a line number instead of the line text on S1 hot-text options and two of my ms answers abbreviated); each matches the key.
+- **Fully blind: yes.** I did not open the lesson source, the first-review answer file, or the author log before saving answers. I had read the first-review text (which contains no answer keys) before solving. A key listing was printed by an earlier helper script only after `myans.json` was saved.
+- **Close calls:** L1 C09 versus its option C ("Mayor always needs a capital..."): key is the only one that conditions on the name. L2 C15, options A and D both say "only when ..."; the key is the one that is true (yes needs a comma when it starts a reply, with or without a name). L4 C13 and S13: A/D and C/D are the only counterexamples because the keyed verb fits the pronoun but not the nearest noun.
+
+### 2. Verification of the first-review MUST/SHOULD items (re-measured on disk)
+
+| Item | Result |
+|---|---|
+| Same-frame dropdown triplets C03/C10/C12, core vs core (item text, set / multiset) | **Fixed.** L1 C03/C10 0.118/0.140, C03/C12 0.086/0.063, C10/C12 0.118/0.091. L2 0.083/0.063, 0.172/0.128, 0.167/0.114. L3 0.160/0.167, 0.217/0.246, 0.150/0.163. L4 0.132/0.159, 0.116/0.146, 0.147/0.211. All under 0.30 (before: 0.31 to 0.47). |
+| Same triplets, twins S03/S10/S12 | **Fixed.** Maximum 0.179 set (L3 S03/S10), 0.197 multiset (L3 S03/S10). L1 0.111, L2 0.125, L4 0.125. |
+| Hint 3 of the triplets differs | Fixed in L1, L2, L4. **L3: C10 and C12 hint 3 are word for word the same** ("One choice has no apostrophe at all. Decide between the other two."), and S12 repeats it with "mark". See S3-A. |
+| L1 `Av.` and `Str.` removed as distractors | **Fixed.** C14 now `dr./Doc./Dr.` and `rd./rD./Rd.`; S14 `Ms./ms./mS.` and `st./sT./St.`. `Mz.` is gone. One residual: `Doc.` (S1-A). |
+| L1 Teach lists `Ave.` | **Fixed** (Teach point 2: "Pine Ave. for Pine Avenue"). |
+| L2 C13/S13 hint 1 | **Fixed.** C13 h1 "Kai says a name needs a comma every time. Find sentences that prove him wrong."; S13 likewise. Both now carry a wrong no-comma distractor (`Tim carry the box...`, `Dan look at this seashell.`), so scanning for "name with no comma" no longer finds the keys. |
+| L3 C13 hint 1 | **Fixed** (also has the wrong distractor `The kittens food...`). |
+| **L3 S13 hint 1** | **NOT fixed.** h1 is still "Look for sentences that have such a noun with no apostrophe and are still right." The only two sentences with no apostrophe are the two keys, and S13 has no wrong no-apostrophe distractor. See S3-B. |
+| L3 irregular plurals vs tests T1/T2 | **Fixed.** `women`, `woman`, `men's`, `mens`, `puppies` occur in no core item, twin, passage, Teach or Learn It. Core and twins now use children, people, mice, geese. (Side effects: S3-C, S3-D.) |
+| L4 distractors | **Fixed.** All eight dropdowns replaced the -ing form with a wrong-agreement helper form (`have brought`, `do clap`, `is shaking`, `have kept`, `is watching`, `have forgotten`, `are cheering`, `is waving`, `is pecking`, `are picking`). Hint 3 names one wrong option each time. |
+| L4 S13 | **Fixed.** Claim is now "A verb copies whichever noun sits closest to it". Distractors `Many of those pies cool...` and `Both of those dancers wear...` contain both/many with a correct verb, so the words no longer find the keys. |
+| L4 S15, S09, p6 s6 | Fixed (D now "both is plural and the verb should be was cooling"; passage reads "Somebody make the sign for the word friend with two hands."). |
+| Twin vs core, first-review pairs over 0.21 | **Mostly fixed.** Item-only maxima now: L1 0.190 set / 0.206 multiset (C11/S11), L2 0.197 / 0.204, L3 0.212 / 0.204, L4 0.202 / 0.214. Two pairs remain just over 0.21, see S3-E and S4-A. |
+
+### 3. Measurements
+
+- **Browser, 390 x 844, touch** (`run390.py`, Playwright, browse-mode fixture on port 8831, real taps for choices, hot-text, match buttons; `select_option` for `<select>`). For lessons 1 to 4 I opened sets y, y2, y3; per core item I pressed Give me a hint three times, answered with the key, pressed Check my answer, then took Try a similar question and did the same. **120 of 120 show "That's right"** (60 core + 60 twin; the 61st "twin" count in the grep is the word "twins"). The hint button read "No more hints" and was disabled after three presses on every item. `scrollWidth` 390 everywhere. No choice, hot-text option, match button or select under 40 px or past 391 px. Zero page errors, 0 problems logged.
+- **Dropdowns as buttons (options over 28 characters).** None of the 32 dropdowns (16 core, 16 twin) has a slot with an option over 28 characters, so all use `<select>`. The longest are L2 C14 slot 0 (`Leo can, you carry this box?`) at exactly 28, and L2 S14 at 22. L2 C14 sits on the boundary; adding one character would switch it to a button list (which works, as the first review showed for the earlier S14). No manual run was needed.
+- **Passages.** 24 passages, 111 to 140 words with `(n)` markers and **100 to 128 without** (minimum L4 p5 and L3 p4 at 100 and 101). FK by `verification/readability.py`: L1 2.4 to 3.6, L2 1.6 to 2.9, L3 2.6 to 4.5 (p4 4.5 and p6 4.4; the script does not flag it, so 4.5 or below), L4 2.5 to 3.9. `(n)` numbering continuous. No web URLs anywhere in `L-GUM5.js`.
+- **Jaccard, whole item text** (prompt, stem, text, choices, slot options, rows, columns, both ebsr parts, and the sentences a hot-text item targets; `(n)` markers counted as tokens).
+  - **Twin x core, all 225 pairs per lesson, maxima set / multiset:** L1 0.190 (C05/S09) / 0.206 (C11/S11); L2 0.197 (C07/S07) / 0.204 (C15/S15); L3 **0.212 (C09/S09)** / 0.204 (C10/S12); L4 0.202 (C11/S11) / **0.214 (C06/S06)**. Over 0.21 by either measure: **L3 C09/S09 0.212 set (0.163 multiset)** and **L4 C06/S06 0.214 multiset (0.200 set)**; nothing else. The author reports 0.207 for L3 (set); I measure 0.212, a 0.005 difference from token handling. With the passage text on screen added to both sides the maxima are L1 0.214/0.221, L2 0.250/0.228, L3 0.237/0.220, L4 0.258/0.253, all under 0.30 and not the bar.
+  - **Core x core (item text), maximum per lesson, set / multiset:** L1 0.215 (C09/C15) / 0.205; L2 0.239 (C06/C11) / 0.213; L3 0.278 (C12/C14) / 0.275; L4 0.256 (C09/C15) / **0.295 (C06/C11)**. All under 0.30. The author's figures (0.215, 0.250, 0.275, 0.295) are reproduced within 0.011.
+- **Hint ladders** (read all 120 items, h1 to h3 and how). Hint 3 names at most one wrong choice on every item and every slot. After hints 1 to 3 at least two choices stay live on every item (the fewest is two: three-option dropdowns). No hint 1 or 2 quotes a key. Two weak spots: L2 C12/S12 (NOTE N2-A) and L3 S13 h1 (S3-B).
+- **Longest-key** (mc, ms, ebsr parts A and B, every dropdown slot, hot-text options): no key is uniquely longest; no choose-two item has both keys longer than every distractor. Ties only (`longest.js` plus my second script).
+- **Giveaways.**
+  - **Dropdown or mc whose filled sentence appears correct in the passage: none** (`fill.js`, case-sensitive: for every dropdown the keyed sentence is not in the passage; the passage holds the wrong version, and for 20 of the 32 dropdowns that wrong version equals one of the wrong options, which is the planted error). The only key-word hits are L4 `shake` (inside the passage's `shakes`) and `wave` (L4 p6 s8 "Both of us wave when class begins", a correct sentence that is not the filled sentence). No giveaway.
+  - **Key printed earlier in the core order (`early.js`: each key against the visible text of every earlier core item, word-bounded):** only two hits, both L3 (S3-C). L1, L2, L4 clean.
+  - Key against Teach / Learn It: only the taught short forms and pronouns (`Dr.`, `Rd.`, `Ms.`, `St.`, `Yes,`), which is the lesson content; unchanged from the first review.
+  - L1 C13 still prints `Principal Hale waved from the stage.`, which is C03's key, as a later distractor (NOTE, unchanged, later item only).
+- **Duplicates across all `js/data`** (`dup2.js` plus the first-review 6-gram scan, unchanged files): no passage sentence, key sentence or distractor repeats elsewhere; repeats are only the ebsr choices that quote passage sentences, and the four-way mc option sets (S09 L1, C04 L2, S04 L2) that differ by one mark by design.
+- **Facts.** Reused the first-review sources, all still accurate for the final text: our-languages.canada.ca (direct address commas), dummies.com plural possessives (irregular plurals take 's; mice's, children's, people's correct), continuingstudies.uvic.ca indefinite pronouns (everyone/nobody/somebody singular, both/many plural), grammarbook.com blog 611 (titles capitalized before a name, lower case alone), dictionary.com/browse/Av and pe.usps.com Pub. 28 (Av., Str. are listed variants, which is why the earlier distractors were removed). New check: `Doc.` is a clipping listed by dictionary.com under "doc" as informal; I did not find a source calling `Doc.` a standard abbreviation of the title (search was inconclusive), so it is a defensible distractor, but see S1-A.
+- **Standards, points, DOK.** Official wording unchanged and each core fifteen stays inside it (L1 abbreviations, proper adjectives, formal titles; L2 direct address, yes and no; L3 plural possessive apostrophes; L4 indefinite pronoun agreement; all GUM Introduce). Points: ms, ebsr, match, two-slot dropdowns and two-answer hot-text = 2, others 1; all 120 correct. DOK per lesson 2 / 10 / 3 (DOK 1 / 2 / 3). Core point totals per set 7, 8, 7 (L2 8, 8, 7).
+
+### 4. Lesson 1: "Capital letters in Mr., Dr., St. and words like American"
+
+**Verdict: ACCEPT.** Blind 30/30. 30/30 take the key on a phone. M1-1, M1-2, M1-3, S1-1, S1-2, S1-3 all fixed.
+
+**SHOULD**
+
+| ID | Evidence | Fix |
+|---|---|---|
+| **S1-A** C14 slot 0 `Doc.` | The item says "Choose the words that give each blank the right capital letters". `Doc.` has a capital and a period, so on the stem's own terms it is not wrong; it is wrong only as a spelling of the title (hint 3 says "Doc. is a nickname"). This is the same kind of flaw as the removed `Av.`, much weaker (a clipping is not a formal short form), but a child who knows "Doc" can defend it. | Replace with a capitalization error: `DR.` or `dR.` (as S14 now does with `mS.`/`sT.`), and reword hint 3 to "One choice has a capital letter in the wrong place." |
+
+**NOTE**
+
+- N1-A Hint 1 of C03 states the rule in the key's terms ("A title that comes right before a person's name starts with a capital letter"). It does not narrow the three options (two are wrong in different ways), so I keep it as a NOTE.
+- N1-B C08 and S08 hint 3 gives one row away ("Wed. and Dec. ... already have capitals"); allowed (completes one slot), unchanged.
+- N1-C C13 distractor A repeats C03's key; later item only.
+- N1-D Names, settings, topics are grade 3 and varied; no real child's data. C04 and C10 are DOK 1 but need the lesson's rule.
+- N1-E Teach, Learn It and Watch Me model all three skills (title before a name and standing alone, short forms of days/months/streets including Ave., proper adjectives) that the fifteen require.
+
+### 5. Lesson 2: "Commas with names and with yes and no"
+
+**Verdict: ACCEPT.** Blind 30/30. 30/30 take the key on a phone. M2-1, S2-1, S2-2, S2-3 fixed (C12 is now a name-in-the-middle two-comma item, C15 D is "Yes needs a comma only when a name follows it", C13/S13 have wrong no-comma distractors, twin maxima 0.197/0.204).
+
+**NOTE**
+
+- N2-A C12 and S12: the distractor `fern; Lee;` / `cranes; Luis;` (semicolons) is not an error a grade 3 child makes. After hint 3 removes `fern, Lee` the two live options are the key and the semicolon version, so the item is effectively decided by hint 3. The rule of at least two live choices is met on paper. Consider `fern Lee,` as the third option.
+- N2-B L2 C14 slot 0 option `Leo can, you carry this box?` is exactly 28 characters, the last length drawn as a `<select>`. A later edit that lengthens it silently changes the layout to a button list (which works).
+- N2-C C05 Part B option B ("A comma goes before the word can when a sentence asks for help") is an invented rule; acceptable as a distractor.
+- N2-D Passage p6 s4 ("Luis: Zoe could you steady the paper?") and p4 s7 are planted errors used only if an item targets them; harmless.
+- N2-E Teach, Learn It and Watch Me model name first, last, middle; yes/no starting an answer; telling ABOUT a person means no comma.
+
+### 6. Lesson 3: "Apostrophes for more than one owner"
+
+**Verdict: REVISE (no MUST).** Blind 30/30. 30/30 take the key on a phone. Fixed: M3-1 triplet (0.150 to 0.246), S3-2 tests T1/T2, S3-3 S01 wording, S3-4 S09 key, C13 hint 1. Open or new:
+
+**SHOULD**
+
+| ID | Evidence | Fix |
+|---|---|---|
+| **S3-A** C10 and C12 hint 3 identical; C10 and C12 are one task | C10 h3 and C12 h3 are the same string, "One choice has no apostrophe at all. Decide between the other two." (S12 repeats it with "mark".) The first review (M3-1) asked to vary hint 3. Moreover C10 (`children's / childrens' / childrens`) and C12 (`The people's / The peoples' / The peoples`) now have the same task (irregular plural, add 's), the same distractor shape and the same h1/h2 ("ask whether ... ends in s ... where the apostrophe sits"); they differ only by the noun. Overlap is low (0.150/0.163) but the items are one skill in the same frame. | Rewrite C12's hint 3 (and S12's), and make C12 a different task, for example a two-slot dropdown on `The people's faces ... the children's table`, or move the irregular plural into the sentence-fix frame used for C03. |
+| **S3-B** S13 hint 1 | h1 is "Lena says a plural noun that ends in s needs an apostrophe each time. Look for sentences that have such a noun with no apostrophe and are still right." The only two sentences with no apostrophe (`Our neighbors planted...`, `Two sparrows sat...`) are the keys, so h1 alone finds both. C13 was fixed (it has `The kittens food...` as a wrong no-apostrophe sentence), S13 was not; the author log says the review fixes were applied. | Add a wrong no-apostrophe sentence to S13 (for example `The sparrows nest was under the roof.` in place of `The children's yard...`) and use h1 "Lena says always. Find sentences that prove her wrong." |
+| **S3-C** keys printed earlier in the core order | `early.js`: **C10 key `children's`** appears in set 1 item P4 (row `the children's songs`) before C10 in set 2; **C14 slot 1 key `mice's`** appears in set 2 C07 (key sentence `The mice's nest...`) and C08 (row `mice, when several mice share the nest`) before C14 in set 3. C10 also repeats the exact option triple and key of Together P2 slot 1 (`childrens' / children's / childrens`). The other options (`childrens`, `mices`) are non-words, so recall of the printed form decides these two items. | Either change the noun in P4 row 3 and in C07/C08 (not women/men, which T1/T2 use), or change C10's and C14's nouns so the key form is not printed earlier. At minimum change P4 row 3 and C07's key sentence. |
+| **S3-D** S12 repeats C10's noun | S12 (`The childrens' / The children's / The childrens`, like C12) uses `children's`, the key of core C10. The twin of the people item is thus the children item, and a child who does C10, then C12, then its twin sees the same word and triple twice more. | Give S12 a different irregular plural from C10/C12 (not women/men/children/people/mice/geese, or accept geese since Teach uses it). |
+| **S3-E** C09/S09 over the 0.21 bar | Item-only 0.212 set (0.163 multiset); author reports 0.207. Both items ask "why does one word have an apostrophe and the other not" with a mirrored option set (key; "every plural needs one"; "later in the draft"; "wrong ... singular only"). | Vary S09's option wording and stem. A SHOULD at this size. |
+
+**NOTE**
+
+- N3-A Teach says "A few plurals do not end in s, like geese", but six of the fifteen core items (P5, C07, C08, C10, C12, C14) use children, mice or people. The rule transfers, and Learn It models geese, but one extra example (children's, people's, mice's) in Teach would match what the core asks. Teach prints `geese's pond`, the same noun phrase as the C08 row `geese, when many geese own the pond`.
+- N3-B p4 FK is 4.5 (author 4.47) and p6 4.4; any edit must re-run `verification/readability.py`.
+- N3-C S10 adds a story detail (white van) not in the passage; harmless. S14 `mice's` and `people's` are reachable via Teach/Learn It's geese rule.
+- N3-D C14 and S14 pair a regular and an irregular plural in one sentence; the hint 3 leaves two live options in each blank.
+
+### 7. Lesson 4: "Matching verbs to everyone, each, both and many"
+
+**Verdict: ACCEPT.** Blind 30/30. 30/30 take the key on a phone. M4-1, S4-1, S4-2, S4-3, S4-4 fixed. The triplet's hint 3s differ (`The choice with have goes with plural words`; `Do goes with more than one, so skip that choice`; `One choice has is, which goes with one`) and the third option is now a believable wrong-agreement form.
+
+**SHOULD**
+
+| ID | Evidence | Fix |
+|---|---|---|
+| **S4-A** C06/S06 twin overlap 0.214 multiset | Item-only 0.200 set / 0.214 multiset (unchanged from the first review, whose S4-5 asked to vary S06). Both stems are "pair a pronoun with the wrong verb" over a five-sentence range with the same two error types (a `Both ... wears` and a `Nobody ... want`). With passages on screen: 0.239 / 0.253. | Vary the S06 stem and make one of its two errors a different pronoun (`Somebody`, `Everyone`). |
+| **S4-B** C06/C11 core x core 0.295 multiset | Under the 0.30 bar by 0.005. C06 and C11 differ only in "TWO sentences / sentence" and their range; same frame, similar hints. Close enough that any edit to either item may push it over. | Reword C11's stem and hint 1 ("one of these five sentences uses the wrong verb for its first word"). |
+
+**NOTE**
+
+- N4-A C13 and S13 are sound: A/D (C13) and C/D (S13) are the only items where the verb fits the pronoun but not the nearest noun; `Everyone in the room sings` and `Everybody in our van sings` agree with both and rightly do not count.
+- N4-B C12 `shake` and S12 `wave`: the passage prints `shakes` (error) and, in p6 s8, `Both of us wave` (a correct sentence); not the filled sentence, so no giveaway.
+- N4-C Legacy Together P2 keeps "Each of the boys have a library card" as a distractor; the lesson never marks "each of + plural + plural verb" as wrong in a new item (author's note).
+- N4-D Teach, Learn It and Watch Me model singular everyone/everybody/nobody/somebody/each, plural both/many, and covering "of the ..." phrases.
+
+### 8. Summary for the lead
+
+- Keys are right (120/120 blind) and playable (120/120 on a phone). No MUST remains in lessons 1 to 4.
+- Recommended to lead: L1, L2, L4 ACCEPT; L3 REVISE for S3-A to S3-E (five small SHOULDs, mostly the same two irregular-plural dropdowns and S13). If the lead wants them closed in one pass: L1 S1-A, L3 S3-A to S3-E, L4 S4-A and S4-B.
+- Items for the status table: do not mark any lesson ACCEPTED until the lead decides on the SHOULDs.
