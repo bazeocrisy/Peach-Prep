@@ -1037,3 +1037,64 @@ Strengths: keys are right and sourced; the vowel-plus-y contrast (C12, S12), the
 - **Lesson 8: ACCEPT (recommended).** 30 of 30 blind agree; 0 MUST, 0 SHOULD; every third-review MUST and SHOULD verified fixed (S05 ladder and options, drafts no longer print the city-and-state keys, S15 option C, `cabin mates`, p6 roles, S06 stem). Twin overlap max 0.203 / 0.200; core-vs-core max 0.254; browser 15 of 15.
 - **Lesson 9: REVISE.** 30 of 30 blind agree; both third-review MUSTs fixed, but **C09's stem prints its own key** (one field to delete). Two SHOULDs (P4 feedback prints S04 and S13 keys; Learn It lacks `-ed` and `does`). Twin overlap max 0.198 / 0.205; core-vs-core max 0.216; browser 15 of 15 (the stem defect is visible there).
 - After MUST 9-A (and ideally SHOULD 9-B) a fifth look can be limited to C09, P4, S04, S13 and a re-run of `leak3.js`.
+
+## Fifth review (B7b lesson 9)
+
+Reviewer: independent fifth reviewer (did not author). Lesson: 9 verbs with -d or -es (`form-and-use-verbs-by-adding-d-or-es`, `L-GUM2.js` index 8), as on disk in `/home/claude/pp-content`. Read-only: no lesson edits, no git, not marked ACCEPTED. My test server (port 8991) was started by me and killed by pid. Scripts and outputs: `scratchpad/r5-9/` (`keyed-9.txt`, `jac.js`, `leak3.js`, `longest.js`, `meta.js`, `echo.js`, `ident.js`, `dup.js`, `run5.py`, `run5.out`) plus `scratchpad/blind9.js`, `blind-L9.txt`, `answers-L9.json`, `cmp9.js`, `leakscan2.js`.
+
+### Verdict
+
+**ACCEPT (recommended; lead marks it). 0 MUST, 0 SHOULD, 7 NOTE.** Every fourth-review finding for L9 is fixed on disk and re-measured.
+
+### Method and blindness
+
+- **Blind solve: 30 of 30 (100%).** `blind9.js` loads the lesson in a Node `vm` sandbox, strips `correct`, `answer`, `why`, `clue`, `hints`, `how`, `misconception`, `like`, `std`, and prints all 15 core items (refs resolved) and all 15 twins with seeded-shuffled choices, slots, rows, columns and options (seed 5090917), plus the six drafts. Answers were saved to `answers-L9.json` before I opened any keyed view (`keyed-9.txt`) or the fourth review. **Fully blind: yes.** I read only the reviewer brief and earlier scratch tooling (not outputs); I did not read the author log. In the blind print C09 had no stem, so the defect fixed this round could not leak to me. Match rows and hot-text answers were graded by script against the on-disk keys.
+- **Not re-fetched:** I did not repeat web lookups this round; the rule claims (-es after s, sh, ch, x, z; consonant plus y becomes -ies; vowel plus y adds -s; silent-e verbs take -d; go/does, do/does) rest on the URLs already recorded in the fourth review (human.libretexts.org San Jacinto "Spelling: Adding -s or -es" and the Irvine Valley "Spelling Rules for Nouns and Verbs" page). Nothing new this round depends on a new fact. Official wording `js/data/standards.js`: "Form and use verbs by adding -d or -es." Items test exactly that.
+
+### Fourth-review L9 findings, verified on disk
+
+| Finding | Status | Evidence |
+|---|---|---|
+| MUST 9-A C09 `stem` prints key | FIXED | C09 has no `stem`; the prompt carries the blank sentence only. Browser: `.q-stem` innerText is empty on C09 (and on all 30 items). Key `joked` is visible only in C09's own choices and post-answer text (`leak3.js`). |
+| SHOULD 9-B P4 feedback prints S04 and S13 keys | FIXED | P4 `why` now reads "...Hurry and carry end in a consonant and y, so each one changes its y to i and adds -es." `hurries` and `carries` are visible only in S04 and S13 (and their own post-answer text). Addon how line matches. |
+| SHOULD 9-C Learn It lacks `-ed` after a non-e verb and `does` | FIXED | Learn step 1 ends "The short verb do also adds -es: does."; step 2 adds "A verb that does not end in e adds the full -ed, like walk becomes walked." Both cover C10/S10 and C11/S11 needs. |
+| SHOULD 9-D C09 ladder | RE-READ, OK | H1 past plus plain verb; H2 "A final e means the past needs only a short ending"; H3 "Jokes tells about the present." H3 names one wrong choice; after H1-H3 `joked`, `jokd` and (not explicitly refuted) `jokeed` stay live: at least two. No hint quotes the key or a letter or count. |
+| NOTE 9-N4 identical twin lines | FIXED | `ident.js` L9 now shows only P5 how1 = C14 how1 and P4 how1 = C05 H2 (one generic sentence each); all twin misconception lines and S14 H1/H2 are reworded. |
+| NOTE 9-N5 P4 hint 3 versus misconception | unchanged, harmless | still true on both. |
+
+### Measurements (final files)
+
+- **Twin vs core, 15 x 15, `(n)` markers counted:** max **0.198 set / 0.205 multiset** (S01/C14 0.14/0.21, S02/P4 0.20/0.19, S06/C06 0.17/0.20). Markers stripped: 0.198 / 0.205. Nothing above 0.21 on either; none near 0.30. **Core vs core:** 0.216 / 0.218 (limit 0.30). Twin vs twin 0.184 / 0.189.
+- **Key exposure, both directions, over all core and twins** (stems, prompts, options, slot options, hot-text targets, hints, how, why, misconception, drafts, Teach, Learn It, Practice Together P1-P3): `leakscan2.js` reports no LATER-KEY, DRAFT-KEY or CORE-STR lines; its distinctive-token hits are rule words only (`before`, `just`, `after`, `already`, `final`, `night`, `spring`) and bowed/cleaned, which the item's own prompt prints. `leak3.js` run for 40 key words: each core key is visible only in its own item; the only cross-item visibility is draft sentences shown as the set's shared stimulus (below, NOTE 9-N1) and `tries` in S11 (NOTE 9-N3). Teach, Learn It and Together (`cries`, `voted`, `fixes`) print no core or twin key.
+- **Hint 3 / live choices** (read by hand for every core and twin item, every slot): hint 3 names at most one wrong choice everywhere (C05 refutes D; C07 refutes the -ing option; C10 refutes C; C12 `sprayes`; C13 `finishs`; S05 option C; S10 option B; S09 `teases`). At least two live after hints 1-3 everywhere. Two live (allowed): C04, C09, C12, S04, S09, C13 slot 1, S13 slot 1. No hint 3 states a key; none cites a letter or a count. `echo.js`: only `cleaned` (C10 H1, already in the prompt), `last` (C08 H3) and nothing else shared only with a key.
+- **Longest key:** 0 uniquely longest in 34 single and choose-two lists (core, twins, Test); ties only in dropdown slots, S05 and S15 (shuffled at run time).
+- **Points, picks, DOK:** ms and pick-two hot-text 2 points with two keys; two-slot dropdowns, ebsr, match 2; mc 1. Core mix mc 5, dropdown 3, hottext 4, ebsr 1, match 1, ms 1; DOK `222232321322223`; 21 points. `like` maps resolve both ways, with type, points and DOK matching.
+- **Grade 3:** vocabulary and syntax fit (`mechanic`, `tightens`, `hardworking` are the hardest words); nothing kindergarten-like.
+- **Duplicates:** `dup.js` over `js/data`: only expected repeats (draft sentence also offered as hot-text target of the same lesson; the two ebsr distractor strings reported as `dist` are the same strings as the draft errors C07/S07 repair). No web URL in the lesson.
+- **Gates:** check-content `PASS (0 failures, 86 warnings)`, no warning names lesson 9; check-writing 0 failures, 0 warnings; check-instructional-copy 28 passed.
+
+### Browser, 390 x 844, touch (`run5.py`, Playwright, browse-mode fixture)
+
+All three core sets driven with real controls: three presses of "Give me a hint" on every item, choice and hot-text taps, `select_option` on dropdowns, match buttons, both ebsr parts, then Check my answer, then Show me how. After each correct core answer I tapped "Try a similar question" and drove the twin the same way. **30 of 30 core items and 15 of 15 twins show "That's right!"**; the hint button reads "No more hints" and is disabled on all 30; `scrollWidth` 390 everywhere; no choice, hot-text option, match button or select under 40 px or past the right edge; `.q-stem` empty on every item including C09; no page errors (`js errors: []`). PROBLEMS list empty.
+
+### Findings
+
+**MUST: none.**
+
+**SHOULD: none.**
+
+**NOTE**
+
+| ID | Item | Finding | Fix |
+|---|---|---|---|
+| 9-N1 | C06/C07/C10, C11/C12 | The set's shared draft necessarily shows the sentences that another item of the same draft keys (C06 keys `inviteed`, `dancd` are errors the child sees in the draft for C07 and C10; C11 keys `patches`, `dries` are on screen for C12). No key choice text is printed; this is the stimulus, by design. | none |
+| 9-N2 | P4, S04, S05, S13 | S04 (`hurry`), S05 (`hurry`, `mix`) and S13 slot 0 (`carry`) reuse P4's plain verbs, and P4's `why` still states the rule for those two verbs. No spelled key is printed, so it is application, not a giveaway; C13 also opens "Every day, Ben" like P4's last row. | Optional: swap one of the pair (for example `worry` in S04, `marry` in S13). |
+| 9-N3 | S11 | Twin S11's key sentence `Pop tries ...` repeats C04's key word `tries` (earlier core, other set). Draft line only. | none |
+| 9-N4 | S02 row 4 | `Yesterday, we ___ up the hill. (hike)` echoes C08's key `hiked`. Jaccard 0.20. | Optional: `bake` or `tape`. |
+| 9-N5 | C09 H2 | "a short ending" arguably refutes `jokeed` as well as H3 refuting `jokes`; `joked` and `jokd` remain live (two), so within the rule. | none |
+| 9-N6 | C10, S10 | Two DOK 3 items spend `-ed` after a non-e verb; defensible as the contrast to `-d`, and Learn It now models it. S10 option C (`bowes ... plural-style ending`) is the weakest distractor but still has one defensible reading. | none |
+| 9-N7 | Twin how lines | A few generic how and hint lines repeat inside the lesson (P5 how1 = C14 how1; P4 how1 = C05 H2). | Optional. |
+
+### Report
+
+**Lesson 9: ACCEPT (recommended).** 30 of 30 blind agree; fully blind; all four fourth-review items fixed (C09 stem gone and confirmed in the browser, P4 `why` no longer prints `hurries` or `carries`, Learn It now models `walked` and `does`, twin copy reworded); 0 MUST, 0 SHOULD, 7 NOTE. Twin overlap max 0.198 / 0.205, core-vs-core 0.216 / 0.218; hint 3 and live-choice checks clean; no uniquely longest key; gates pass; browser 30 of 30 core and 15 of 15 twins right at 390 x 844 with no overflow.

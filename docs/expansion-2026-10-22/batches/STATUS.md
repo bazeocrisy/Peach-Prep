@@ -79,7 +79,7 @@
 | B7b | 3.L.GC.1:R:use-personal-pronouns-subject-object-possessive | ACCEPTED | Second independent review ACCEPT (L6); open SHOULDs in B7b-review.md |
 | B7b | 3.L.GC.1:R:use-frequently-occurring-prepositions | ACCEPTED | Second independent review ACCEPT (L7); open SHOULDs in B7b-review.md |
 | B7b | 3.L.GC.1:R:use-commas-in-a-series-and-in-dates-addresses-sa | ACCEPTED | Fourth independent review ACCEPT (L8); open NOTEs in B7b-review.md |
-| B7b | 3.L.GC.1:R:form-and-use-verbs-by-adding-d-or-es | NOT ACCEPTED: awaiting independent review | B7b-author-log.md; authored, not reviewed |
+| B7b | 3.L.GC.1:R:form-and-use-verbs-by-adding-d-or-es | ACCEPTED | Fifth independent review ACCEPT (L9); NOTEs in B7b-review.md |
 | B8a | 3.L.GC.1:C:form-and-use-prepositional-phrases | NOT ACCEPTED: awaiting independent review | B8a-author-log.md; authored, not reviewed |
 | B8a | 3.L.GC.1:C:form-and-use-comparative-and-superlative-adjecti | NOT ACCEPTED: awaiting independent review | B8a-author-log.md; authored, not reviewed |
 | B8a | 3.L.GC.1:C:ensure-pronoun-antecedent-agreement | NOT ACCEPTED: awaiting independent review | B8a-author-log.md; authored, not reviewed |
