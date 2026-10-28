@@ -832,3 +832,107 @@ Strengths: keys are right and sourced; the vowel-plus-y contrast (C12 `sprays`, 
 - The recurring defect (a key printed by a sibling item) is checkable mechanically; `r3-89/leak.js` and `leak2.js` take the lesson index and a word list and run in a second. I recommend the author run `leak2.js` over every key form of lessons 8 and 9 after the fixes (all `*es`, `*ed` and city and state strings) rather than editing by hand.
 - The Together and Test items (P1-P5, T1-T5) were not re-solved. L9 P5 is the only legacy item with a MUST.
 - Not marked ACCEPTED. After the two MUSTs (9-1, 9-2, and 8-1) a fourth look can be limited to P5, C12, S05 (both lessons), C04/S04/S06 drafts and the leak scan.
+
+## Fourth review (B7b lesson 4) and L5 delta check
+
+Reviewer: independent (did not author; did not write the first, second or third review). Files read as on disk in `/home/claude/pp-content` (uncommitted edits included). Read-only: no lesson edits, no git, nothing marked ACCEPTED. Local server (port 8971) stopped by pid. Scripts and outputs: `scratchpad/b7brev5/` (`blind.js`, `answers.saved.txt`, `grade.js`, `jac*.js`, `endmark.js`, `longest.js`, `stale.js`, `like.js`, `keyhow.js`, `hintkey.js`, `leak5.js`, `dup*.js`, `run390.py`, dumps `d4.txt`, `d5.txt`).
+
+### Verdicts
+
+| Lesson | Verdict | MUST | SHOULD | NOTE |
+|---|---|---|---|---|
+| 4 End marks | **ACCEPT** (all third-review MUST and SHOULD items verified fixed on disk) | 0 | 0 | 6 |
+| 5 Plurals y to ies, delta check | **REGRESSION-FREE: yes** | 0 | 0 | 4 |
+
+### Method and blindness
+
+- **Blind solve.** `L-GUM2.js` loaded in a Node `vm` sandbox (mock `PP.addLesson`). Printed the drafts (with `(n)` markers), all 15 core items per lesson (refs resolved) and S01-S15, with choices, dropdown options, hot-text targets, ebsr parts and match rows shuffled by a new seeded LCG (`9100 + 173 * lesson`). No key, `correct`/`answer`, why, hint, how, clue, misconception, like or addon printed. No figures in these lessons. Answers saved to `answers.saved.txt` before any key was extracted. Third-review section read only after grading.
+- **Honest blindness statement: not perfectly blind.** Before solving I ran `head -40` on the *previous reviewer's* `b7brev4/answers.txt` while looking for reusable scripts. That file holds the earlier solver's answers in the old seed's letter positions (no keys, no item text), and it carries one remark, "C07 B vs C ambiguous" for L4. I solved from the freshly shuffled text and did not use it, but I cannot rule out that it primed me about L4 C07. I opened no lesson source for these items before solving, apart from the first 3,000 characters of `L-GUM2.js` (lesson 1) and the Teach/Watch Me text of lesson 4, which I read after grading. The reviewer scripts in `b7brev4` were reused (loader, blind printer).
+- **Agreement: 59 of 60 answer units as written (98%); 60 of 60 by intent.** The one difference is my transcription slip on L5 S13 slot 2: I solved it as `bays` (key) but wrote the letter `B` where `bays` showed as `A`. L4: 30 of 30, including C07 Part B (`How deep is`, now the only start-of-sentence option), C04, S03, S04 (the reported-question and where-question traps that caught earlier solvers; I read them correctly this time). L5: 30 of 30 (counting S13 by intent).
+- **Scripted measurements** (on the files as on disk): `jac.js` (alphanumeric, `(n)` markers counted), `jac4.js` (markers stripped), `longest.js`, `endmark.js` (key the only option with a different end mark: empty), `hintkey.js` (h3 echoing a key: empty), `keyhow.js`, `like.js`, `stale.js` (every sentence number in prompt/hint/how re-checked against passage text), `leak5.js`, `dup.js` / `dup2.js` (6-grams against the other 43 data files and the other lessons), `verification/readability.py`, and `run390.py` (Playwright, 390 x 844, touch, real taps: three hints, answer, Check, Show me how, 15 core items per lesson).
+
+### Measurements
+
+| Check | L4 | L5 |
+|---|---|---|
+| Twin vs core max, `(n)` markers counted, set / multiset | **0.202 / 0.193** (C10/S10) | **0.209 / 0.202** (C10/S10) |
+| Markers stripped, set / multiset | 0.202 / 0.193 | 0.209 / 0.202 |
+| Changed L5 pairs (C07/S07, C11/S11, S01/P4, S02/P5, C13/S13) | n/a | all below the C10/S10 maximum (<0.21) |
+| Core vs core max / twin vs twin max | 0.268 (C11/C12) / 0.217 | 0.225 / 0.175 |
+| Any twin/core pair at 0.30 or above | none | none |
+| Core formats mc / dd / hottext / ms / ebsr / match; DOK 1/2/3; points | 5 3 4 1 1 1; 1/10/4; 21 | same |
+| `like` maps (type, points, DOK mirror, one twin per core), pick counts, stale sentence numbers | pass | pass |
+| `endmark.js` (key the only choice with a different end mark) | none | n/a |
+| Key unique longest | none (C07 A, C07 B, C15, S07 A are shortest by 1-7 characters) | none |
+| Passages: words without `(n)` / FK (`readability.py`, which counts markers: 110-115 words, FK 1.9-2.9) | 100-105 / 1.9-3.1 | 101-111 / 2.3-4.5 (p5 Art Class 4.46 by my script, 4.1 by `readability.py`) |
+| Browser, 15 core items by real taps, overflow, small targets, errors | 15 of 15 right, 0 problems, 0 errors | 15 of 15 right, 0 problems, 0 errors |
+| Cross-file 6-gram scan | frames only (C06 "Look at sentences 2 through 6", C07 "This question has two parts", legacy P3) | frames only (legacy P4, P5) plus C05/C07 share "A consonant stands next to the y in" (NOTE 4) |
+
+### Web sources (checked 2026-10-27)
+
+- `kitty` plural `kitties`: Merriam-Webster entry https://www.merriam-webster.com/dictionary/kitty (fetched: plural listed as kitties for both the cat and the pooled-money sense); `kittys` is not a listed form. Also https://www.brainbound.blog/kitty-plural-spelling (search result only).
+- `jay` plural `jays`: Britannica Dictionary https://www.britannica.com/dictionary/jay (fetched: plural jays; `blue jay` is its own entry); also https://www.dictionary.com/browse/blue-jay (search result only).
+- Carried from earlier reviews: indirect questions take no question mark (https://courses.lumenlearning.com/englishcomp1/chapter/text-end-punctuation/); consonant + y becomes -ies, vowel + y adds -s (https://howtospell.co.uk/y-to-ies-or-s-plural-rule).
+
+### Task A: Lesson 4 (ACCEPT)
+
+**Third-review findings, re-checked on disk**
+
+| Third-review finding | Status | Evidence on disk |
+|---|---|---|
+| MUST C07 Part B (`how deep` vs `How deep is`) | **Fixed** | Part B options are now `How deep is` (key), `at the shallow end`, `the water at`, `the shallow end`. Only one begins the sentence; `how deep` is gone. `the water at` and `the shallow end` are not clues to sentence type. I chose `How deep is` blind. h3 names `at the shallow end` only (one wrong choice); by the same idea `the shallow end` also falls, leaving key + `the water at` live: two, allowed. how/why say "the first three words begin the sentence the way an asking sentence often begins": consistent with the key. S07 Part B (`What kind of` vs `seeds did Mr. Lee`, `did Mr. Lee`, `Mr. Lee bring`) unchanged and acceptable. |
+| SHOULD C15 choice A (`ask`) | **Fixed** | A is `Please tell me where the extra glue sticks went.` (period, no `ask`). The only sentences with the literal word `asked` are the key (period) and `Who asked for the red marker...?` (question mark). `What did Ms. Cole ask...?` has `ask`, ends `?`. Single defensible key. `endmark.js` empty. |
+| SHOULD S05 hint 3 | **Fixed** | h3 "Judge sentence 9 by its own words. Think about the other choices." Names and removes no choice; four live. |
+| SHOULD C06 sentence 4 | **Fixed** | p2 sentence 4 is now `Wow, Dan jumped in first and made a giant splash that got everyone wet!` It carries the lesson's feeling cue, so the pick-two has exactly two wrong marks: (3) `?` on a telling line and (5) `.` on an asking line. Sentences 2, 4, 6 are right. h3 names the splash sentence (a right line): one wrong choice named. how and why list the same two keys. |
+| NOTE C05 sentence 10 | **Fixed** | `Wow, by morning, a girl named Tia came running down the sidewalk!` Key (strong surprise vs asking) is unique: the other three choices are false rules (last sentence always `!`, short sentences always `?`, marks interchangeable). how quotes the new sentence. |
+
+**New wording, single defensible key.** C06 (3 and 5 only), C05 (D in my solve), C07 B and C15 each have one key a careful third grader can defend. After hints 1-3 live choices are at least two in every L4 item (two live: C04, C07 B, C12, C13 slots, S04, S12, S13 slots; none has one live). No h3 names more than one wrong choice. No key is the only choice with a different end mark. No new giveaway: C06 prints C07's sentence 2 as a right line (same passage, a distractor only); C05 prints sentences 2 and 10 only through its prompt; C10 (sentence 9) and S10 (sentence 7) lie outside the hot-text ranges; C08/S08 keys do not recur.
+
+**Remaining NOTEs (none blocking)**
+
+| Sev | Item | Evidence | Fix |
+|---|---|---|---|
+| NOTE | C07 Part B h3 | Names `at the shallow end`; the same idea also removes `the shallow end`, so effectively two options fall, leaving two live. Passes the rule (at least two live, one named). | Optional: "The words at the shallow end tell where, not what kind." |
+| NOTE | C11/C12, S11/S12 | C12 prints C11's distractor sentence 4 word for word, S12 likewise. Core overlap 0.268, under 0.30. | Optional: a different sentence in C12 and S12. |
+| NOTE | S10 | Key is the only choice that does not begin `Change it to`. | Optional: make one distractor begin `Leave`. |
+| NOTE | h3 wording | The "wow or oops / nothing shouts" idea repeats in C04, S04, C10, C13, S13, S12 (each removes only `!`). | Vary the sentence. |
+| NOTE | Teach / Watch Me | Teach point 4 and the I-wonder-why Watch Me cover reported questions, but `asked` (C04, C08, C15, S01, S04, S10, S15) is not modeled directly. Hints carry it. | One Watch Me line: `My brother asked if I wanted pancakes.` |
+| NOTE | S07 Part B | `did Mr. Lee` (swapped word order) is a weaker rival to `What kind of`. | None. |
+
+### Task B: Lesson 5 delta check (REGRESSION-FREE: yes)
+
+Items re-solved blind and re-measured: P5, C07, C11, C13, S01, S02, S13, plus items that share the changed passages (C06, C08, C10, C12, C14, S04, S05, S06, S07, S10, S11, S12, S14, S15). All 30 keys agree (S13 by intent, see above).
+
+| Changed item | Check | Result |
+|---|---|---|
+| **P5 / C07** (key word kitty/kitties; p2 sentence 9 `two kittys napped in the hay`) | One key | Part A key `...the plural should be kitties.` (consonant `t`); `kitteys` (wrong vowel rule), `kittyes`, the capital-K name option are all false. Part B key `two shiny trophies`: the only phrase in the draft with a consonant + y plural that is spelled right (`keys`, `doorways` have vowels, `handful of carrots` has no y word). Single defensible key. |
+| | Hint ladder | h1 "Think of the word for one: kitty. Look at the letter just before the y." h2 asks for plurals in the draft that come from y words; h3 "Check the letter before the y in each word that is left." h3 names no choice; four live after h3 for both parts. |
+| | Giveaway | `kitty` / `kitties` appears nowhere earlier in the lesson, Teach, Watch Me or Test (grep). P5 prints `kittens` and `flies` only; the old P5 `flies` leak is gone (`leak5.js` no longer reports it for C07). Part B key `trophies` is printed correctly in C06 sentence 4 (same set, same passage, a distractor only; C06 h3 describes it as a consonant + y plural, see NOTE 1). |
+| | key/why/how | Consistent: kitty has `t` before the y; Part B `trophy` likewise. Passage p2 still carries three planted errors (`ponys`, `hobbys`, `kittys`), each a key somewhere (C06 two, C07 one). |
+| | Web | `kitties` is the plural of kitty (Merriam-Webster above); `kittys` is not listed. |
+| **C11** (sentence 5 `Jo saw two blue jays hop in the dirt behind the shed.`) | One key | Right lines are (3) `days` and (5) `jays`; (4) `dragonflys`, (6) `babys`, (7) `poppys` are wrong. `ladybugs` has no y. Two keys, no third arguable. |
+| | Hint ladder | h3 names the pond sentence (a wrong-marked distractor): one named, four live. |
+| | Web | `jays`: Britannica (above); jay has a vowel before the y. Not a giveaway: the earlier C06 and S01 contain no `jay`. |
+| | key/why/how | Correct: how says jays, why says "Day and jay have vowels". |
+| **S01** (rows fairy / monkey / belly / essay / country / play) | One key | -ies: fairy, belly, country. -ys: monkey, essay, play. No row is ambiguous. |
+| | Giveaway | S01 prints no later twin's key spelling. S05 asks about `fairies` / `valleys` and S01 sorts `fairy` into -ies, but S01 never prints the -ies form and S05's key is the rule (vowel/consonant), so only the class of word is shared. |
+| | Twin vs P4 | Under 0.21 (only C10/S10 reaches 0.209). Rows are distinct from P4 (lady, boy, penny, holiday, butterfly, chimney). |
+| **S02** (line `Warm rays came through the window at dawn.` replaces the subways line) | One key | `Our teacher gave us two diarys...` is the only wrong plural; `jellies`, `rays`, `factories` right; `cowhands` has no y word. |
+| | Giveaway | No later twin keys `rays`; `subways` now appears only in S04 (the key there) and nowhere earlier: the old S02 -> S04 leak is gone. |
+| **C13 / S13** (new hint 3) | h3 | "Look at the choices for each blank. Check the letter before the y in each word." Names no choice, no one-vs-other pattern; all three options live per blank after h3 (two plus the key). The old borderline pattern clue is gone. |
+| | Keys | C13 `jellies` + `journeys`; S13 `galleries` + `bays`: unchanged, one defensible each. |
+
+**Other L5 re-checks.** `leak5.js` reports P5 -> C11 `toys` and C06 -> C07/C10 `trophies` / `keys`; the first is a stale entry (C11's keys are `days` and `jays`; `toys` is no longer a key anywhere), the others are correct-line prints inside one passage (NOTE 1). The remaining twin-set print, S06/S07 `delays` -> S10, is unchanged (NOTE). No later item's key spelling is printed earlier in a way that a child could copy it.
+
+| Sev | Item | Evidence | Fix |
+|---|---|---|---|
+| NOTE | C06 h3 -> C07 Part B | C06 h3 says the shelf sentence has "a plural from a word that ends in a consonant and y, spelled with -ies", which is the property C07 Part B keys (`trophies`). Same passage, one set, pre-existing. | Optional: "Look at the sentence about the shelf. Think about the rest." |
+| NOTE | C11 / S11 how | how names the right forms (`babies`, `poppies`, `dragonflies`; `buddies`, `memories`, `candies`) that C12 and S12 then key (`babies`, `memories`). Shown only after the answer, in an earlier item. Pre-existing and accepted in the third review. | Optional: "needs -ies" without printing the form. |
+| NOTE | C05 / C07 frame | Both use "A consonant stands next to the y in ..." (6-gram repeat). It does not separate key from distractor in C07 A (key and `kittyes` share it). | None. |
+| NOTE | Grade-3 vocabulary | `essay`, `jockey`, `deputies`, `pulleys`, `galleries` above typical grade 3 reading (spelling-rule items, decodable stems). p5 FK 4.1 by `readability.py`. | Optional: `story` for `essay` in S01. |
+
+### Report
+
+- **Lesson 4: ACCEPT.** The third-review MUST (C07 Part B) and SHOULDs (C15, S05 h3, C06 sentence 4) are fixed on disk and verified; C05 sentence 10 (`Wow, by morning...`) and C06 sentence 4 (`Wow, Dan jumped...`) each leave one defensible key. Twin vs core 0.202 with markers counted; 30 of 30 keys agree; 15 of 15 browser taps pass at 390 x 844.
+- **Lesson 5: regression-free = yes, no MUSTs.** The kitty/kitties, blue jays, subways, S01 rows and C13/S13 hint 3 edits each keep one defensible key, at least two live choices after hints 1-3, at most one wrong choice named in h3, and no new giveaway. Twin vs core 0.209 (counting markers). Web: `kitties` (Merriam-Webster), `jays` (Britannica).
+- Not verified: keyboard and screen-reader use; whether the player lets a child return within a set (relevant to the NOTE-level earlier-prints-later hints); twins were solved and measured but only the 30 core items were tapped.

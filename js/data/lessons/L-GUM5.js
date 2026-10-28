@@ -8093,13 +8093,13 @@ PP.addLesson({
     /* B8:passages:start */
     {
       id: "p1",
-      title: "Story Swap Day",
+      title: "Story Exchange Day",
       byline: "A third grader's draft",
       genre: "Student draft (informational)",
       draft: true,
       paragraphs: [
         [
-          "(1) Our class held a story swap day on Friday afternoon.",
+          "(1) Our class held a story exchange day on Friday afternoon.",
           "(2) Each reader shared a short story with a friend.",
           "(3) Ana read \"The Weasel and the Teapot\" to her partner.",
           "(4) Her partner told a story called \"A Hedgehog on the Caboose.\""
@@ -8114,7 +8114,7 @@ PP.addLesson({
           "(9) Max chose \"The Zeppelin and The Dandelion\" for his turn.",
           "(10) The winner was the story The Brave Buttercup.",
           "(11) Mia smiled at \"A Ferret on the roof\" most of all.",
-          "(12) We want to hold another swap soon."
+          "(12) We want to hold another exchange soon."
         ]
       ]
     },

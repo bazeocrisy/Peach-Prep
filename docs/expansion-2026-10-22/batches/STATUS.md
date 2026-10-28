@@ -74,7 +74,7 @@
 | B7b | 3.L.GC.1:R:form-and-use-simple-verb-tenses | ACCEPTED | First independent review ACCEPT; open SHOULDs in B7b-review.md |
 | B7b | 3.L.GC.1:R:use-determiners-articles-possessive-and-demonstr | ACCEPTED | Second independent review ACCEPT (L2); open SHOULDs in B7b-review.md |
 | B7b | 3.L.GC.1:R:capitalize-proper-nouns | ACCEPTED | Second independent review ACCEPT (L3); open SHOULDs in B7b-review.md |
-| B7b | 3.L.GC.1:R:use-end-punctuation-period-exclamation-point-que | NOT ACCEPTED: awaiting independent review | B7b-author-log.md; authored, not reviewed |
+| B7b | 3.L.GC.1:R:use-end-punctuation-period-exclamation-point-que | ACCEPTED | Fourth independent review ACCEPT (L4); L5 delta check regression-free; open SHOULDs/NOTEs in B7b-review.md |
 | B7b | 3.L.GC.1:R:form-plural-nouns-by-changing-y-to-ies | ACCEPTED | Third independent review ACCEPT (L5); open SHOULDs in B7b-review.md |
 | B7b | 3.L.GC.1:R:use-personal-pronouns-subject-object-possessive | ACCEPTED | Second independent review ACCEPT (L6); open SHOULDs in B7b-review.md |
 | B7b | 3.L.GC.1:R:use-frequently-occurring-prepositions | ACCEPTED | Second independent review ACCEPT (L7); open SHOULDs in B7b-review.md |
