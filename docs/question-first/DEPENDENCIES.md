@@ -29,8 +29,9 @@ Merged `origin/content/standards-practice` (05520cf) into `feature/question-firs
 | versioning.py | 72 passed, 0 failed (baseline N.1 fixed by the content branch) |
 | path-headers, first-visit, practice-own, review | 48/48, 124/124, 74/74, 29/29 |
 | qf.py | 62 passed, 0 failed (with the regenerated allowlist) |
-| path-a11y, skills-recovery, writing-recovery | clean (see the ledger for the guard line) |
-GUARD_LINE
+| path-a11y | 12 runs, 0 problems |
+| skills-recovery, writing-recovery | exit 0 |
+| guard.py | 121 passed, 0 failed |
 
 ## What else depends on what
 - Question-first needs from content: nothing beyond the existing lesson shape (`core`, `similar`, `addons`, `hints`, `how`, `why`).
