@@ -86,7 +86,7 @@
 | B8a | 3.L.GC.1:C:use-conventional-capitalization-quotation-marks- | NOT ACCEPTED: awaiting independent review | B8a-author-log.md; authored, not reviewed |
 | B8a | 3.L.GC.1:I:use-relative-pronouns-and-relative-adverbs | NOT ACCEPTED: awaiting independent review | B8a-author-log.md; authored, not reviewed |
 | B8a | 3.L.GC.1:I:use-interjections | ACCEPTED | First independent review ACCEPT (L6) with browser verification; open SHOULDs in B8a-review.md |
-| B8a | 3.L.GC.1:I:use-helping-and-linking-verbs | NOT ACCEPTED: awaiting independent review | B8a-author-log.md; authored, not reviewed |
+| B8a | 3.L.GC.1:I:use-helping-and-linking-verbs | ACCEPTED | Second independent review ACCEPT (L7) with browser verification; open SHOULDs in B8a-review.md |
 | B8a | 3.L.GC.1:I:correctly-use-frequently-confused-words-e-g-to-t | ACCEPTED | First independent review ACCEPT (L8) with browser verification; open SHOULDs in B8a-review.md |
 | B8b | 3.L.GC.1:I:use-conventional-capitalization-in-abbreviations | ACCEPTED | Second independent review ACCEPT (L1) with browser verification; open SHOULDs in B8b-review.md |
 | B8b | 3.L.GC.1:I:use-commas-for-direct-address-and-to-set-off-yes | ACCEPTED | Second independent review ACCEPT (L2) with browser verification; open SHOULDs in B8b-review.md |

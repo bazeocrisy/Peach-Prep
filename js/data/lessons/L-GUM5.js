@@ -2669,7 +2669,7 @@ PP.addLesson({
     points: [
       "You already know that one owner gets 's: one student's desk. Now there is more than one owner, so start with the plural word.",
       "Most plurals end in s. To show they own something, put the apostrophe after the s: the students' desks, the two dogs' bowls.",
-      "A few plurals do not end in s, like geese. Add 's to this kind of word: the geese's pond.",
+      "A few plurals do not end in s, like geese, children, people and mice. Add 's to these words: the geese's pond.",
       "A plural that owns nothing needs no apostrophe at all: two cats sat on the step."
     ],
     words: [
@@ -2859,7 +2859,7 @@ PP.addLesson({
           "(9) Neighbors' extra packets went into a box for our class garden."
         ],
         [
-          "(10) The womens table ran out of marigold seeds before lunch.",
+          "(10) The oxens cart hauled marigold seeds to the hall before lunch.",
           "(11) By dinner, the hall smelled like soil.",
           "(12) I took home a packet of purple flowers."
         ]
@@ -3589,7 +3589,7 @@ PP.addLesson({
         { text: "The skaters' helmets hung by the door.", correct: true },
         { text: "The nurses's masks were on the shelf by the sink." },
         { text: "The children's table was set for lunch.", correct: true },
-        { text: "The peoples' choir sang at noon in the big hall." }
+        { text: "The mices' nest was behind the barn." }
       ],
       clue: "Look at each name for people or animals that have something. Check how it ends and where its mark sits.",
       hints: [
@@ -3601,10 +3601,10 @@ PP.addLesson({
         "Check each name for a group that has something and how it ends.",
         "Skaters ends in s, so \"The skaters' helmets hung by the door.\" needs only the mark.",
         "Children does not end in s, so \"The children's table was set for lunch.\" needs 's.",
-        "The other three are wrong: goat's has nothing, nurses's adds an extra s, and peoples' puts the mark where people needs 's."
+        "The other three are wrong: goat's has nothing, nurses's adds an extra s, and mices' puts the mark where mice needs 's."
       ],
       misconception: "A common mix-up is picking the lines with the most marks. A group name that ends in s needs only the mark, and one that does not end in s needs 's.",
-      why: "The answers are \"The skaters' helmets hung by the door.\" and \"The children's table was set for lunch.\" Skaters ends in s, and children does not. The others should say \"Six goats ate the fresh hay.\", \"The nurses' masks were on the shelf.\" and \"The people's choir sang at noon.\"",
+      why: "The answers are \"The skaters' helmets hung by the door.\" and \"The children's table was set for lunch.\" Skaters ends in s, and children does not. The others should say \"Six goats ate the fresh hay.\", \"The nurses' masks were on the shelf.\" and \"The mice's nest was behind the barn.\"",
       like: ["SK-GUM5-3-C07"]
     },
     {
@@ -3655,9 +3655,9 @@ PP.addLesson({
         { text: "Line 8 names a coach, so any word near a coach gets a mark." },
         { text: "Line 8 is the mistake, since marks fit a lone person alone." }
       ],
-      clue: "Decide which word owns something and which one only names a group.",
+      clue: "Decide which word has something belonging to it and which one just says who was there.",
       hints: [
-        "Decide which word owns something and which one only names a group.",
+        "Decide which word has something belonging to it and which one just says who was there.",
         "In each line, find the thing that comes next and ask who has it.",
         "Line 8 is not a mistake, so it cannot be the one that is wrong. Check the other choices."
       ],
@@ -3739,26 +3739,26 @@ PP.addLesson({
         "3.L.GC.1:I:use-apostrophes-to-form-plural-possessive-nouns"
       ],
       passages: ["p6"],
-      prompt: "Line 10 tells who ran the seed table. Pick the best repair with its why.",
+      prompt: "Line 10 names several oxen that pulled the seed cart. Choose the repair and its reason.",
       choices: [
-        { text: "Womens: women takes a plain s." },
-        { text: "Womens': this word ends in s, so a mark alone follows." },
-        { text: "Women's: women has no s on its end, so add 's.", correct: true },
-        { text: "Woman's: only one woman ran it." }
+        { text: "Oxens: oxen takes a plain s." },
+        { text: "Oxens': oxens finishes in s, so only a mark follows." },
+        { text: "Oxen's: oxen has no s on its end, so add 's.", correct: true },
+        { text: "Ox's: only one ox pulled it." }
       ],
-      clue: "Count who ran it, then check how that group word ends.",
+      clue: "Count what pulled the cart, then check how that group word ends.",
       hints: [
-        "Count who ran it, then check how that group word ends.",
+        "Count what pulled the cart, then check how that group word ends.",
         "Read both halves of each choice. Word and reason must both be right.",
-        "Picking one woman does not fit a group. Weigh the other three."
+        "Picking one ox does not fit a group. Weigh the other three."
       ],
       how: [
-        "Read line 10. Several women ran the table.",
-        "Women means several, but the word has no s on its end, so it needs 's.",
-        "The answer is \"Women's: women has no s on its end, so add 's.\""
+        "Read line 10. Several oxen pulled the cart.",
+        "Oxen means several, but the word has no s on its end, so it needs 's.",
+        "The answer is \"Oxen's: oxen has no s on its end, so add 's.\""
       ],
-      misconception: "A common mix-up is adding an s to women first. Because women already means more than one, the ending is 's.",
-      why: "The answer is \"Women's: women has no s on its end, so add 's.\" Several women ran the table. The womens' puts the mark where a word ending in s would take it, and The womens shows no owner. The woman's names only one owner.",
+      misconception: "A common mix-up is adding an s to oxen first. Because oxen already means more than one, the ending is 's.",
+      why: "The answer is \"Oxen's: oxen has no s on its end, so add 's.\" Several oxen pulled the cart. The oxens' puts the mark where a word ending in s would take it, and The oxens shows no owner. The ox's names only one owner.",
       like: ["SK-GUM5-3-C12"]
     },
     {

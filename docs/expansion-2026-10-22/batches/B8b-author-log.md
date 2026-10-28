@@ -16,7 +16,7 @@ Twin x core overlap is the maximum over all 225 twin/core pairs (15 x 15, includ
 |---|---|---|---|---|---|---|
 | L1 capitalization in abbreviations | 0.190 / 0.206 | 0.181 / 0.205 | 117 | 3.6 | hottext 3, match 2, dropdown 4, mc 3, ebsr 1, ms 2 | 2/10/3 |
 | L2 commas, direct address and yes/no | 0.197 / 0.204 | 0.197 / 0.204 | 118 | 2.9 | match 2, ms 3, dropdown 4, mc 3, ebsr 1, hottext 2 | 2/10/3 |
-| L3 plural possessive apostrophes | 0.183 / 0.202 | 0.173 / 0.202 | 111 | 4.5 | match 2, hottext 3, dropdown 3, mc 4, ebsr 1, ms 2 | 2/10/3 |
+| L3 plural possessive apostrophes | 0.205 / 0.194 | 0.172 / 0.189 | 111 | 4.5 | match 2, hottext 3, dropdown 3, mc 4, ebsr 1, ms 2 | 2/10/3 |
 | L4 indefinite pronouns, agreement | 0.200 / 0.214 | 0.207 / 0.204 | 111 | 3.9 | hottext 3, ms 3, dropdown 4, mc 3, ebsr 1, match 1 | 2/10/3 |
 | L5 subordinating conjunctions | 0.209 / 0.204 | 0.195 / 0.191 | 111 | 3.4 | hottext 3, match 2, dropdown 4, mc 3, ebsr 1, ms 2 | 2/10/3 |
 | L6 commas after opening parts | 0.208 / 0.206 | 0.208 / 0.206 | 116 | 3.3 | hottext 3, ms 2, dropdown 4, mc 3, ebsr 1, match 2 | 2/10/3 |
@@ -57,7 +57,7 @@ Final-file figures for L3: twin x core 0.183 set / 0.202 multiset (item text, di
 - S3-A: C12 is now a 4-choice mc (fix plus reason, key "The people's, because people does not end in s and so takes 's.") instead of a second children-style dropdown; its twin S12 is the same task with women. C10 keeps the dropdown but its choices are now phrases ("The children's / The childrens' / The childrens") with a new hint 3. All hint 3s in the lesson differ.
 - S3-B: S13 now has a wrong no-apostrophe sentence ("The squirrels nest was high in the old oak.") and hint 1 is "Lena says always. Find the sentences that prove her wrong."
 - S3-C: C07's second key is now "The coaches' whistles hung by the gym door." so mice's is not printed before C14; legacy P4 row 3 is "the teachers' songs", so children's is not printed before C10.
-- S3-D: S12 uses women (twin bank only; tests T1/T2 also use women, so a reviewer may want a different noun).
+- S3-D: (superseded by the third-review fix below.)
 - S3-E: C09/S09 reworded (stem and three distractors; key "Students' owns the scores, while archers just labels a group."); item overlap 0.212 to 0.164 multiset and under 0.21 set.
 
 ## Second-review revision (lessons 5 to 7)
@@ -69,6 +69,16 @@ Final-file figures: L5 twin x core 0.209 set / 0.204 multiset (item text, digits
 - L5 C14 and S14 redesigned to reason (first blank) plus how long (second blank), with new characters and nouns (Mara and the bus; Omar and Dad), so they no longer mirror form A test T4.
 - L5 hints and wording: C10 h1 and S10 h1 are neutral ("Ask how the ... and the ... are connected"); C12 hint 3 and the C14 hint 3 differ from C03; "while" in the S09 and S15 keys became "and" and "but"; C11/S11 and C12/S12 stems were reworded and are now under 0.21 both ways.
 - L6 S15 hint 2 ("Say the opening part by itself.") and L7 C09 hint 1 ("... or something you read in a minute.") were reworded to clear the key-word warnings; no key, option or point changed. L7 S10 stem "Beth sang {0} after supper." removed the C12 overlap; wording only.
+
+## Third-review revision (lesson 3)
+
+Final-file figures for L3: twin x core 0.205 set / 0.194 multiset (item text, digits and (n) markers counted), 0.172 / 0.189 with passages; core-vs-core 0.232; passage FK maximum 4.5 (p4), p6 4.3; no key uniquely longest; check-content PASS with no warning on any lesson 3, 5, 6 or 7 item.
+
+- M3-1: S12 no longer uses women. It is now the oxen item (key "Oxen's: oxen has no s on its end, so add 's."); p6 sentence 10 reads "The oxens cart hauled marigold seeds to the hall before lunch." Oxen appears in no test item and is a taught plural in L-GUM3 (checked with a scan of js/data). No practice item prints T1/T2's noun, forms or key.
+- S3-1: S07 option E is now "The mices' nest was behind the barn." (a non-word error); how and why updated.
+- S3-2: S12's stem now says "several oxen".
+- Teach point 3 names "geese, children, people and mice" and gives only the geese's pond example, so no core key is printed. The S09 hint 1 was reworded to clear a key-word warning.
+- Not changed (reviewer NOTEs): C10 still shares its option set with legacy Together P2, and C08 row 4 (mice) still precedes C14.
 
 ## Design notes that affect review
 
