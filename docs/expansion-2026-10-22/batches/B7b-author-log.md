@@ -17,7 +17,7 @@ Jaccard uses lowercase tokens (letters and digits) over the whole item text: ste
 | 2 | use-determiners-articles-possessive-and-demonstr | 0.204 / 0.237 | 0.246 / 0.275 | 105, 3.56 | 5, 3, 4, 1, 1, 1 | 1 / 10 / 4 |
 | 3 | capitalize-proper-nouns | 0.207 / 0.229 | 0.253 / 0.234 | 104, 4.13 | 5, 3, 3, 2, 1, 1 | 1 / 10 / 4 |
 | 4 | use-end-punctuation-period-exclamation-point-que | 0.202 / 0.193 | 0.268 / 0.278 | 100, 3.08 | 5, 3, 4, 1, 1, 1 | 1 / 10 / 4 |
-| 5 | form-plural-nouns-by-changing-y-to-ies | 0.209 / 0.202 | 0.225 / 0.245 | 101, 4.46 | 5, 3, 4, 1, 1, 1 | 1 / 10 / 4 |
+| 5 | form-plural-nouns-by-changing-y-to-ies | 0.209 / 0.202 | 0.225 / 0.245 | 102, 4.46 | 5, 3, 4, 1, 1, 1 | 1 / 10 / 4 |
 | 6 | use-personal-pronouns-subject-object-possessive | 0.228 / 0.241 | 0.288 / 0.258 | 101, 3.89 | 5, 3, 4, 1, 1, 1 | 1 / 10 / 4 |
 | 7 | use-frequently-occurring-prepositions | 0.186 / 0.220 | 0.270 / 0.238 | 108, 4.47 | 5, 3, 4, 1, 1, 1 | 1 / 10 / 4 |
 | 8 | use-commas-in-a-series-and-in-dates-addresses-sa | 0.203 / 0.205 | 0.254 / 0.235 | 100, 3.41 | 5, 3, 4, 1, 1, 1 | 1 / 10 / 4 |
@@ -46,3 +46,4 @@ Grammar, spelling and dictionary claims, by lesson:
   - L7 toward and along are prepositions (added to Teach): https://www.merriam-webster.com/dictionary/toward ; https://www.merriam-webster.com/dictionary/along
   - L9 vowel + y adds -s (spray, enjoy, stay), consonant + y changes to -ies: https://www.k12reader.com/spelling/plurals_nouns_and_verbs_ending_in_y.pdf
   - L9 cleaned (clean): https://www.merriam-webster.com/dictionary/clean ; bowed (bow): https://www.merriam-webster.com/dictionary/Bows
+- Round-3 additions (checked 2026-10-27, L4/L5 wording fixes): kitty, plural kitties (M-W): https://www.merriam-webster.com/dictionary/kitty ; jay, plural jays (M-W thesaurus entry): https://merriam-webster.com/thesaurus/jays ; vowel + y adds -s (bays, rays, plays, toys, alleys) and consonant + y becomes -ies (ladies, pennies, flies): https://www.k12reader.com/spelling-rules/spelling_rule_exceptions_for_plural_nouns_words_that_end_in_y.pdf ; belly, plural bellies: https://www.grammar-monster.com/plurals/plural_of_belly.htm ; country, plural countries (rule page, search result only): https://howtospell.co.uk/y-to-ies-or-s-plural-rule

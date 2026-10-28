@@ -9048,7 +9048,9 @@ PP.addLesson({
     points: [
       "A helping verb comes before the main verb. Some helping verbs are has, have, had, will, can, could and should: We have finished. Kai will swim.",
       "A linking verb does not show action. It links the subject to a word that names it or describes it: The soup is hot. My dad was a pilot.",
-      "Am, is, are, was and were are often linking verbs. They can be helping verbs too, but in this lesson you will see them as linking verbs. Seem and become can be linking verbs as well: The puppy seems tired."
+      "Am, is, are, was and were are often linking verbs. They can be helping verbs too, but in this lesson you will see them as linking verbs. Seem and become can be linking verbs as well: The puppy seems tired.",
+      "Right after will, can, could or should, the main verb stays plain, with no ending: We will paint. With has, have or had, the main verb usually ends in -ed: We have painted.",
+      "A linking verb must agree with its subject. Use is for one thing and are for more than one: The path is wet. The paths are wet."
     ],
     words: [
       { term: "main verb", means: "the most important verb in a sentence" },
@@ -9082,6 +9084,16 @@ PP.addLesson({
         "A verb that connects the subject to a describing word is a linking verb."
       ],
       answer: "Was is a linking verb. It links the lake to calm."
+    },
+    {
+      show: ["Mia has paint her bedroom wall."],
+      ask: "What is wrong, and how can you fix it?",
+      steps: [
+        "Has is the helping verb, and paint is the main verb.",
+        "After has, the main verb needs the form that ends in -ed.",
+        "Change paint to painted so the helper and the main verb go together."
+      ],
+      answer: "Mia has painted her bedroom wall."
     }
   ],
   parent: "At dinner, take turns saying one sentence with will or can and one sentence with is or seems. Then name the helping verb and the linking verb in each other's sentences.",
@@ -9177,19 +9189,19 @@ PP.addLesson({
       paragraphs: [
         [
           "(1) Our class holds a science fair in the big gym on Friday afternoon.",
-          "(2) We will show our volcano model to the judges at the front table.",
+          "(2) Our team will show a volcano model to the judges at the front table.",
           "(3) The gym is loud and crowded with families.",
-          "(4) Mr. Cole says we can ask the judges one question."
+          "(4) Mr. Cole says each team can ask the judges one question."
         ],
         [
           "(5) The posters is bright and colorful along the wall.",
-          "(6) We should speak slowly and clearly into the microphone.",
+          "(6) Every speaker should talk slowly and clearly into the microphone.",
           "(7) The judges are kind about our paper model."
         ],
         [
           "(8) Soon, our volcano will exploded for the whole crowd.",
           "(9) The volcano seems small, but it will erupt with red foam.",
-          "(10) By now, our team has earn a blue ribbon from the judges.",
+          "(10) Today, the red team has earn a gold star from the judges.",
           "(11) We cheer and hug each other near the exit.",
           "(12) The judges give every team a shiny sticker to wear home."
         ]
@@ -9206,17 +9218,17 @@ PP.addLesson({
           "(1) This Sunday, my dad cooks pancakes in the sunny kitchen for the whole family.",
           "(2) The table is full of fruit and warm syrup.",
           "(3) Mom says I can crack three eggs into the big bowl.",
-          "(4) The stack of pancakes seem tall and warm right now."
+          "(4) At this moment, the stack of pancakes become taller and taller."
         ],
         [
-          "(5) I should stirred the batter slowly with the wooden spoon.",
-          "(6) The blueberry pancakes are soft and sweet.",
+          "(5) My brother could stirred the batter slowly with the wooden spoon.",
+          "(6) The blueberry pancakes are fluffy and light.",
           "(7) My sister will pour the juice at the table."
         ],
         [
           "(8) We can sit near the window and talk about the week.",
-          "(9) The syrup becomes sticky when it touches the plate.",
-          "(10) My brothers laugh and tap their forks on the glass.",
+          "(9) The syrup seems sticky when it touches the plate.",
+          "(10) My brothers giggle and tap their forks on the glass.",
           "(11) We eat until our plates are empty.",
           "(12) Dad washes the dishes and wipes the counter before he sits down."
         ]
@@ -9233,16 +9245,16 @@ PP.addLesson({
           "(1) Today, our coach takes us to the big field behind the school.",
           "(2) The grass is green and wet after the morning rain.",
           "(3) We can see tiny puddles near the goal.",
-          "(4) My teammates is ready to run after the warm-up."
+          "(4) The new cones is bright orange and easy to see from far away."
         ],
         [
-          "(5) Our coach says we should stay near the orange cones.",
+          "(5) Our coach says we should stay near the sideline.",
           "(6) The ball becomes muddy by noon.",
-          "(7) We can pass it along the sideline."
+          "(7) We can pass it along the white chalk line."
         ],
         [
-          "(8) My teammates has kicked a long shot toward the net.",
-          "(9) A tall goalie will block it soon.",
+          "(8) The tall goalie have blocked a long shot toward the far net.",
+          "(9) The next kick will fly high over the bar.",
           "(10) Now the sky is gray and cloudy over the bleachers.",
           "(11) We pack our cones and walk back to the bus.",
           "(12) My friend falls asleep on the long ride home."
@@ -9370,11 +9382,11 @@ PP.addLesson({
             targets: ["p1:1:2","p1:1:3","p1:1:4","p1:2:2","p1:3:5"],
             answer: ["p1:1:3"],
             pick: 1,
-            clue: "Find the verb in each shown sentence, then ask whether it helps another verb or links the subject to a describing word.",
+            clue: "Find the verb in each shown sentence, then ask whether it helps a verb or links the subject.",
             hints: [
-              "Find the verb in each shown sentence, then ask whether it helps another verb or links the subject to a describing word.",
-              "A helping verb comes right before another verb. A linking verb connects the subject to a word that describes it.",
-              "Sentence 6 has should right before wear, so its verb helps another verb."
+              "Find the verb in each shown sentence, then ask whether it helps a verb or links the subject.",
+              "A helping verb comes right before another verb. A linking verb ties the subject to a word that describes it.",
+              "Sentence 6 has should right before wear, so its verb helps another verb, not a describing word."
             ],
             how: [
               "Find the verb in each shown sentence and check the word that follows it.",
@@ -9396,14 +9408,14 @@ PP.addLesson({
             prompt: "A classmate says seem in sentence 9 shows an action. What is the best response?",
             choices: [
               {
-                text: "Seem shows no action; it links the carrots to tiny, a word that describes them, so it is a linking verb.",
+                text: "Seem shows no action; it links the carrots to tiny, so it is a linking verb.",
                 correct: true
               },
               {
-                text: "Seem shows an action, because it tells what the carrots do while they sit in the soil."
+                text: "Seem shows an action, because it tells what the carrots do while they sit quietly in the dark soil."
               },
               {
-                text: "Seem is a helping verb, because it helps the word tiny tell more about the carrots."
+                text: "Seem is a helping verb, because it helps the word tiny tell more about the carrots in the row."
               },
               {
                 text: "Seem is not a verb, because only words that show motion can be verbs in a sentence."
@@ -9412,16 +9424,16 @@ PP.addLesson({
             clue: "Ask whether the carrots actually do anything in the first part of sentence 9.",
             hints: [
               "Ask whether the carrots actually do anything in the first part of sentence 9.",
-              "Look at the word tiny, and think about what job it has for the carrots.",
-              "A helping verb comes before another verb, and tiny is not a verb."
+              "Look at the last word before the comma, and think about what job it has for the carrots.",
+              "A helper comes before another verb, and tiny is not a verb."
             ],
             how: [
               "Read sentence 9: The carrots seem tiny, but they will grow quickly.",
               "Nothing happens in the first part. Tiny describes the carrots, and seem connects the two.",
-              "The answer is \"Seem shows no action; it links the carrots to tiny, a word that describes them, so it is a linking verb.\""
+              "The answer is \"Seem shows no action; it links the carrots to tiny, so it is a linking verb.\""
             ],
             misconception: "A common mix-up is thinking every verb shows an action. A linking verb only connects words.",
-            why: "The answer is \"Seem shows no action; it links the carrots to tiny, a word that describes them, so it is a linking verb.\" Seem shows no action. It links the carrots to tiny, a word that describes them, so it is a linking verb."
+            why: "The answer is \"Seem shows no action; it links the carrots to tiny, so it is a linking verb.\" Seem shows no action. It links the carrots to tiny, a word that describes them, so it is a linking verb. Tiny is not a verb."
           }
         ]
       },
@@ -9467,7 +9479,7 @@ PP.addLesson({
                   text: "Has is a linking verb, so the word after it must describe the club."
                 },
                 {
-                  text: "Has is a helping verb, so the main verb after it stays in its plain form."
+                  text: "Has is a helping verb, so the main verb after it stays in its plain form, plant."
                 },
                 {
                   text: "Has is the main verb, so the word after it can end in -s like a noun."
@@ -9535,7 +9547,7 @@ PP.addLesson({
             clue: "Find the verb in each shown sentence and look at the word that comes after it.",
             hints: [
               "Find the verb in each shown sentence and look at the word that comes after it.",
-              "A helping verb comes before another verb. A linking verb connects the subject to a describing word.",
+              "A helping verb comes before another verb. A linking verb ties the subject to a describing word.",
               "Sentence 9 tells that the story becomes silly, and silly is not a verb."
             ],
             how: [
@@ -9571,10 +9583,10 @@ PP.addLesson({
                 text: "Should is the main verb, so saved is only a word that tells how much money."
               }
             ],
-            clue: "Find the helping verb in sentence 5 and think about what form a main verb takes after it.",
+            clue: "Find the helper in sentence 5 and think about what shape the next verb takes after it.",
             hints: [
-              "Find the helping verb in sentence 5 and think about what form a main verb takes after it.",
-              "Compare saved with the plain verb that would follow a helper such as will or can.",
+              "Find the helper in sentence 5 and think about what shape the next verb takes after it.",
+              "Compare saved with the verb that would follow a helper such as will or can.",
               "Saved is not a describing word in this sentence, because it tells the action."
             ],
             how: [
@@ -9615,16 +9627,16 @@ PP.addLesson({
                 text: "The coach was a strong swimmer last year."
               }
             ],
-            clue: "Find the verb in each sentence and check the word right after it.",
+            clue: "Find the verb in each sentence and check the word that comes next.",
             hints: [
-              "Find the verb in each sentence and check the word right after it.",
-              "A helping verb stands before another verb. A linking verb connects the subject to a word that names or describes it.",
+              "Find the verb in each sentence and check the word that comes next.",
+              "A helping verb stands before another verb. A linking verb ties the subject to a word that names or describes it.",
               "In the sentence about the field, the word after the verb is not a verb."
             ],
             how: [
-              "Find the verb in each sentence and look at the word after it.",
+              "Find the verb in each sentence and check what comes after it.",
               "In \"Our team will practice after school.\" will comes before practice. In \"The goalie can catch fast shots.\" can comes before catch.",
-              "In the other sentences, the verb connects the subject to a word that describes it or names it."
+              "In the other sentences, the verb ties the subject to a word that describes it or names it."
             ],
             misconception: "A common mix-up is choosing every sentence with a short verb. Check whether another verb follows.",
             why: "The answers are \"Our team will practice after school.\" and \"The goalie can catch fast shots.\" Will helps the main verb practice, and can helps the main verb catch. In the other sentences, is, seems and was link the subject to a word that describes it or names it."
@@ -9663,7 +9675,7 @@ PP.addLesson({
             clue: "Find the verb in each sentence and look at the word that follows it.",
             hints: [
               "Find the verb in each sentence and look at the word that follows it.",
-              "Ask whether the word after each verb is another verb or a word that names Dad.",
+              "Ask whether the next word is another verb or a name for Dad.",
               "Neither sentence tells an action that is done by is, so a choice about action for both cannot be right."
             ],
             how: [
@@ -9739,7 +9751,7 @@ PP.addLesson({
             hints: [
               "A fix can change the verb or the subject, as long as the two match and the time stays the same.",
               "Keep the revisions in which the subject and the linking verb go together in the present.",
-              "One revision uses was, and was points to the past."
+              "One revision uses was, and was points to the past, so it breaks the present tense."
             ],
             how: [
               "The draft pairs a plural subject, cousins, with the singular verb is.",
@@ -9765,19 +9777,19 @@ PP.addLesson({
                 correct: true
               },
               {
-                text: "Dad will stir the soup again."
+                text: "Dad will stir the soup again after lunch."
               },
               {
-                text: "We can eat in ten minutes."
+                text: "We can eat in about ten minutes."
               },
               {
-                text: "Mom has cooked the rice already."
+                text: "Mom has cooked the rice already today."
               }
             ],
             clue: "Find the verb in each sentence, and check the word that follows it.",
             hints: [
               "Find the verb in each sentence, and check the word that follows it.",
-              "A linking verb connects the subject to a word that describes it, and it does not come before another verb.",
+              "A linking verb ties the subject to a word that describes it, and it does not come before another verb.",
               "Stir is a verb, so the sentence with will before it has a helper, not a link."
             ],
             how: [
@@ -9809,11 +9821,11 @@ PP.addLesson({
                 answer: 0
               }
             ],
-            clue: "For the first blank, look at the time clue, Last night. For the second blank, think about the form that goes with the helper you pick.",
+            clue: "For the first blank, use the time clue, Last night. For the second, match the helper you pick.",
             hints: [
-              "For the first blank, look at the time clue, Last night. For the second blank, think about the form that goes with the helper you pick.",
+              "For the first blank, use the time clue, Last night. For the second, match the helper you pick.",
               "A helper that points to the past needs a main verb in its past form.",
-              "Can tells what is possible now, not what happened last night."
+              "Can tells what is possible now, not what happened last night, so it does not fit here."
             ],
             how: [
               "The time clue, Last night, tells you the action is in the past.",
@@ -9844,23 +9856,23 @@ PP.addLesson({
       ],
       rows: [
         {
-          text: "The dog can jump the fence.",
-          answer: 0
-        },
-        {
-          text: "The lake seems calm today.",
-          answer: 1
-        },
-        {
           text: "Nia will bake a lemon cake.",
           answer: 0
         },
         {
-          text: "The tent was dry.",
+          text: "Our lake became calm today.",
           answer: 1
         },
         {
-          text: "My cousin should call us.",
+          text: "Both dogs could jump that fence.",
+          answer: 0
+        },
+        {
+          text: "Those boots are muddy.",
+          answer: 1
+        },
+        {
+          text: "Omar has finished his drawing.",
           answer: 0
         }
       ],
@@ -9868,15 +9880,15 @@ PP.addLesson({
       hints: [
         "Look at the word that follows each verb and decide what kind of word it is.",
         "Sort the lines you know first, then use the same check for the rest.",
-        "In The tent was dry, dry is not a verb."
+        "In Those boots are muddy, muddy tells about the boots and is not a verb."
       ],
       how: [
         "Check the word that follows each verb.",
-        "Can jump, will bake and should call each have a helper before a main verb.",
-        "Seems calm and was dry join the subject to a describing word."
+        "Will bake, could jump and has finished each have a helper before a main verb.",
+        "Became calm and are muddy join the subject to a describing word."
       ],
       misconception: "A common mix-up is sorting by how long the verb is. Check what follows it.",
-      why: "Can, will and should help the main verbs jump, bake and call. Seems and was join the lake and the tent to the describing words calm and dry.",
+      why: "Will, could and has help the main verbs bake, jump and finished. Became and are join the lake and the boots to the describing words calm and muddy.",
       like: ["SK-GUM4-7-P3"]
     },
     {
@@ -9888,7 +9900,7 @@ PP.addLesson({
         "3.L.GC.1:I:use-helping-and-linking-verbs"
       ],
       passages: [],
-      prompt: "Which TWO lines contain a linking verb?",
+      prompt: "Find the TWO lines in which the verb ties the subject to a word about it.",
       pick: 2,
       choices: [
         {
@@ -9903,15 +9915,15 @@ PP.addLesson({
           text: "Rita has mailed her letter."
         },
         {
-          text: "We should wait outside."
+          text: "Both guests should wait outside."
         },
         {
           text: "The class will visit a farm."
         }
       ],
-      clue: "Scan each line for a verb that connects the subject to a word about it.",
+      clue: "Scan each line for a verb that ties the subject to a word about it.",
       hints: [
-        "Scan each line for a verb that connects the subject to a word about it.",
+        "Scan each line for a verb that ties the subject to a word about it.",
         "A line with a linking verb tells what something is or is like, not what it does.",
         "Rita mailing a letter tells what she did, so that line is about an action."
       ],
@@ -9977,7 +9989,7 @@ PP.addLesson({
       clue: "Pick out the verb in each shown line and decide what comes right after it.",
       hints: [
         "Pick out the verb in each shown line and decide what comes right after it.",
-        "A helper stands before another verb. A joining verb connects the subject to a word that describes it.",
+        "A helper stands before another verb. A joining verb ties the subject to a word that describes it.",
         "Line 4 has can before ask, so its verb helps another verb."
       ],
       how: [
@@ -9998,35 +10010,35 @@ PP.addLesson({
         "3.L.GC.1:I:use-helping-and-linking-verbs"
       ],
       passages: ["p4"],
-      prompt: "A friend says seems in sentence 9 names something the volcano does. Which reply is best?",
+      prompt: "A friend argues that seems in line 9 is something the volcano does. How should you answer?",
       choices: [
         {
-          text: "Seems names no deed; it joins the volcano to small, a word that describes it, so it is a linking verb.",
+          text: "No deed occurs; seems ties the volcano to small, which says what that model is like, so it is a linking verb.",
           correct: true
         },
         {
-          text: "Seems names a deed, because it tells what the volcano does while it sits on the table."
+          text: "A deed occurs, since the volcano must be busy doing something while it sits upon the long table near the judges."
         },
         {
-          text: "Seems is a helper, because it helps the word small tell more about the volcano."
+          text: "Seems works as a helper, since it stands beside the word small and lends that word extra meaning for readers."
         },
         {
-          text: "Seems is no verb, because only words that show motion count as verbs in writing."
+          text: "Seems cannot be a verb, since a verb must show movement across a room, a yard, or a field of green grass."
         }
       ],
-      clue: "Ask whether the volcano does anything in the first half of sentence 9.",
+      clue: "Ask whether the volcano actually does anything in the first half of sentence 9.",
       hints: [
-        "Ask whether the volcano does anything in the first half of sentence 9.",
+        "Ask whether the volcano actually does anything in the first half of sentence 9.",
         "Look at the word small, and think about what job it has for the volcano.",
         "A helper comes before another verb, and small is not a verb."
       ],
       how: [
         "Read sentence 9: The volcano seems small, but it will erupt with red foam.",
-        "Nothing happens in the first half. Small describes the volcano, and seems connects the two.",
-        "The answer is \"Seems names no deed; it joins the volcano to small, a word that describes it, so it is a linking verb.\""
+        "Nothing happens in the first half. Small tells what the volcano is like, and seems connects the two.",
+        "The answer is \"No deed occurs; seems ties the volcano to small, which says what that model is like, so it is a linking verb.\""
       ],
       misconception: "A common mix-up is thinking every verb shows an action. A linking verb only connects words.",
-      why: "The answer is \"Seems names no deed; it joins the volcano to small, a word that describes it, so it is a linking verb.\" Seems names no action. It joins the volcano to small, a word that describes it, so it is a linking verb.",
+      why: "The answer is \"No deed occurs; seems ties the volcano to small, which says what that model is like, so it is a linking verb.\" Seems does nothing here. It ties the volcano to small, which says what the model is like, so it is a linking verb.",
       like: ["SK-GUM4-7-C05"]
     },
     {
@@ -10038,40 +10050,40 @@ PP.addLesson({
         "3.L.GC.1:I:use-helping-and-linking-verbs"
       ],
       passages: ["p4"],
-      prompt: "Do Part A, then Part B.",
+      prompt: "Work on both questions in order.",
       partA: {
-        prompt: "Sentence 10 contains a verb error. Which version corrects it?",
+        prompt: "What is the best repair for line 10?",
         choices: [
           {
-            text: "By now, our team has earned a blue ribbon from the judges.",
+            text: "Today, the red team has earned a gold star from the judges.",
             correct: true
           },
           {
-            text: "By now, our team has earns a blue ribbon from the judges."
+            text: "Today, the red team has earns a gold star from the judges."
           },
           {
-            text: "By now, our team have earn a blue ribbon from the judges."
+            text: "Today, the red team have earn a gold star from the judges."
           },
           {
-            text: "By now, our team will earned a blue ribbon from the judges."
+            text: "Today, the red team will earned a gold star from the judges."
           }
         ]
       },
       partB: {
-        prompt: "Which statement tells why that version is correct?",
+        prompt: "Pick the statement that gives the reason for that repair.",
         choices: [
           {
-            text: "Has helps the main verb, so that verb takes its past form, earned.",
+            text: "A helper such as has calls for the past shape of the next action word, earned.",
             correct: true
           },
           {
-            text: "Has joins the team to a describing word, so earn must stay as it is."
+            text: "The word after has must keep its base shape, earn, just as it does after will."
           },
           {
-            text: "Has helps the main verb, so that verb stays plain, like the verb after will."
+            text: "Has joins the team to a describing word, so the next word stays as written."
           },
           {
-            text: "Has is the main verb, so the next word only names the ribbon."
+            text: "Has is the only verb in the line, so the next word just names the shiny gold star."
           }
         ]
       },
@@ -10079,15 +10091,15 @@ PP.addLesson({
       hints: [
         "For Part A, find the helper and the word after it. For Part B, find the statement that fits the correction.",
         "Think about the shape an action word takes after has, have or had.",
-        "Will looks ahead, but sentence 10 begins with By now, so a version with will does not fit."
+        "Will looks ahead, but line 10 begins with Today, so a version with will does not fit."
       ],
       how: [
-        "Part A: the draft has the helper has before the plain verb earn. The answer is \"By now, our team has earned a blue ribbon from the judges.\"",
+        "Part A: the draft has the helper has before the plain verb earn. The answer is \"Today, the red team has earned a gold star from the judges.\"",
         "The other versions add -s to the action word, change has to have, or use will with the past form.",
-        "Part B: the statement is \"Has helps the main verb, so that verb takes its past form, earned.\""
+        "Part B: the statement is \"A helper such as has calls for the past shape of the next action word, earned.\""
       ],
       misconception: "A common mix-up is leaving the action word plain after has. Has, have and had go with the past form.",
-      why: "Part A: \"By now, our team has earned a blue ribbon from the judges.\" Part B: \"Has helps the main verb, so that verb takes its past form, earned.\" Part A: By now, our team has earned a blue ribbon from the judges. uses has with the past form earned. Part B: has helps the main verb, so that verb takes its past form.",
+      why: "Part A: \"Today, the red team has earned a gold star from the judges.\" Part B: \"A helper such as has calls for the past shape of the next action word, earned.\" Part A: Today, the red team has earned a gold star from the judges. uses has with the past form earned. Part B: the past shape of the next action word is what a helper such as has calls for.",
       like: ["SK-GUM4-7-C06"]
     },
     {
@@ -10100,26 +10112,26 @@ PP.addLesson({
       ],
       passages: ["p5"],
       prompt: "Select the linking verb that finishes sentence 4.",
-      text: "The stack of pancakes {0} tall and warm right now.",
+      text: "At this moment, the stack of pancakes {0} taller and taller.",
       slots: [
         {
-          options: ["seems","seem","seemed","seeming"],
+          options: ["becomes","become","became","becoming"],
           answer: 0
         }
       ],
       clue: "Find what the sentence is about and decide whether that is one thing or several.",
       hints: [
         "Find what the sentence is about and decide whether that is one thing or several.",
-        "The words right now show when this is true, so check the time as well as the subject.",
-        "Seeming ends in -ing, and it cannot stand alone as the verb in this sentence."
+        "The words at this moment show when this is true, so check the time as well as the subject.",
+        "Becoming ends in -ing, and it cannot stand alone as the verb in this sentence."
       ],
       how: [
-        "The subject is stack, which names one thing, and right now shows the present.",
+        "The subject is stack, which names one thing, and at this moment shows the present.",
         "A present-tense verb for one thing ends in -s.",
-        "The answer is seems. Seem goes with more than one thing, seemed is for the past, and seeming cannot stand alone as the verb."
+        "The answer is becomes. Become goes with more than one thing, became is for the past, and becoming cannot stand alone as the verb."
       ],
       misconception: "A common mix-up is picking the verb that sounds right after pancakes. The subject is stack.",
-      why: "The answer is seems. The subject, stack, names one thing, and right now shows the present, so seems fits. Seem goes with more than one thing, seemed is for the past, and seeming cannot stand alone as the verb.",
+      why: "The answer is becomes. The subject, stack, names one thing, and at this moment shows the present, so becomes fits. Become goes with more than one thing, became is for the past, and becoming cannot stand alone as the verb.",
       like: ["SK-GUM4-7-C07"]
     },
     {
@@ -10138,7 +10150,7 @@ PP.addLesson({
       clue: "Pick out the verb in each shown line and look at the word that follows it.",
       hints: [
         "Pick out the verb in each shown line and look at the word that follows it.",
-        "A helper stands before another verb. A joining verb connects the subject to a describing word.",
+        "A helper stands before another verb. A joining verb ties the subject to a describing word.",
         "Line 9 says the syrup becomes sticky, and sticky is not a verb."
       ],
       how: [
@@ -10159,35 +10171,35 @@ PP.addLesson({
         "3.L.GC.1:I:use-helping-and-linking-verbs"
       ],
       passages: ["p5"],
-      prompt: "A friend says sentence 5 is fine, because stirred shows the batter is already mixed. Which reply is best?",
+      prompt: "Your partner argues that line 5 needs no repair, since stirred places the action in the past. How should you answer?",
       choices: [
         {
-          text: "Should is a helper, so the action word after it stays plain, stir.",
+          text: "Could comes first, so the action word must stay basic; write stir, not stirred.",
           correct: true
         },
         {
-          text: "Should is a linking verb, so a describing word, stirred, has to follow it."
+          text: "Could ties my brother to a trait, so stirred tells what kind of cook he is."
         },
         {
-          text: "The line is fine, because each action word in a story must end in -ed."
+          text: "Stirred is correct, since an event that already finished calls for the ending -ed."
         },
         {
-          text: "Should is the main verb, so stirred is only a word that tells how fast."
+          text: "Could acts as the lone verb, which leaves stirred as a noun for the batter in the bowl."
         }
       ],
-      clue: "Find the helper in sentence 5 and think about what shape the action word takes after it.",
+      clue: "Find the helper in line 5 and think about what shape the next verb takes after it.",
       hints: [
-        "Find the helper in sentence 5 and think about what shape the action word takes after it.",
-        "Compare stirred with the plain verb that would follow a helper such as will or can.",
+        "Find the helper in line 5 and think about what shape the next verb takes after it.",
+        "Compare stirred with the verb that would follow a helper such as will or can.",
         "Stirred is not a describing word in this line, because it tells the action."
       ],
       how: [
-        "Read sentence 5: I should stirred the batter slowly with the wooden spoon.",
-        "Should is the helper, and the action word after it must stay plain.",
-        "The answer is \"Should is a helper, so the action word after it stays plain, stir.\""
+        "Read line 5: My brother could stirred the batter slowly with the wooden spoon.",
+        "Could is the helper, and the action word after it must keep its basic form.",
+        "The answer is \"Could comes first, so the action word must stay basic; write stir, not stirred.\""
       ],
-      misconception: "A common mix-up is putting -ed on a verb to show the past. A verb after should stays plain.",
-      why: "The answer is \"Should is a helper, so the action word after it stays plain, stir.\" Should is a helping verb, so the action word after it stays plain: I should stir the batter. Adding -ed does not fit after should.",
+      misconception: "A common mix-up is putting -ed on a verb to show the past. A verb after could stays basic.",
+      why: "The answer is \"Could comes first, so the action word must stay basic; write stir, not stirred.\" Could is a helping verb, so the action word after it keeps its basic form: My brother could stir the batter. Adding -ed does not fit after could.",
       like: ["SK-GUM4-7-C09"]
     },
     {
@@ -10211,28 +10223,28 @@ PP.addLesson({
           correct: true
         },
         {
-          text: "The road is long and flat."
+          text: "The road became long and bumpy."
         },
         {
-          text: "The cake seems stale today."
+          text: "Fresh cookies are cheaper today."
         },
         {
-          text: "Grandpa was a baker many years ago."
+          text: "My aunt was a nurse in Boston."
         }
       ],
       clue: "Pick out the verb in each line and check the word right after it.",
       hints: [
         "Pick out the verb in each line and check the word right after it.",
-        "A helper stands before another verb. A joining verb connects the subject to a word that names or describes it.",
+        "A helper stands before another verb. A joining verb ties the subject to a word that names or describes it.",
         "In the line about the road, the word after the verb is not a verb."
       ],
       how: [
-        "Pick out the verb in each line and look at the word after it.",
+        "Pick out the verb in each line and check what comes after it.",
         "In \"Our class will paint a mural.\" will comes before paint. In \"The twins can ride their bikes.\" can comes before ride.",
-        "In the other lines, the verb connects the subject to a word that describes it or names it."
+        "In the other lines, the verb ties the subject to a word that describes it or names it."
       ],
       misconception: "A common mix-up is choosing lines with a short verb. Check whether another verb follows.",
-      why: "The answers are \"Our class will paint a mural.\" and \"The twins can ride their bikes.\" Will helps the main verb paint, and can helps the main verb ride. In the other lines, is, seems and was join the subject to a word that describes it or names it.",
+      why: "The answers are \"Our class will paint a mural.\" and \"The twins can ride their bikes.\" Will helps the main verb paint, and can helps the main verb ride. In the other lines, became, are and was join the subject to a word that describes it or names it.",
       like: ["SK-GUM4-7-C10"]
     },
     {
@@ -10245,35 +10257,35 @@ PP.addLesson({
       ],
       passages: [],
       stem: "Line A: The pup should rest. Line B: The pup seems tired.",
-      prompt: "Compare the verbs in the two lines. What is true?",
+      prompt: "Judge the role of should and seems in these lines.",
       choices: [
         {
-          text: "In A, should helps the main verb rest; in B, seems links the pup to tired, a word that describes it.",
+          text: "Should leads into rest, but seems ties the pup to tired.",
           correct: true
         },
         {
-          text: "In A, should links the pup to a word that describes it; in B, seems helps the main verb tired."
+          text: "Seems leads into tired, but should ties the pup to rest."
         },
         {
-          text: "In both, the verb helps a main verb, because each stands near a word about the pup."
+          text: "Neither ties anything; both prop up a second action after them."
         },
         {
-          text: "In both, the verb shows motion, because each tells how the pup moves around."
+          text: "Neither tells about the pup; each describes a trip across the yard."
         }
       ],
-      clue: "Pick out the verb in each line and look at the word after it.",
+      clue: "Pick out the verb in each line and check what comes after it.",
       hints: [
-        "Pick out the verb in each line and look at the word after it.",
-        "Ask whether the word after each verb is another verb or a word that describes the pup.",
+        "Pick out the verb in each line and check what comes after it.",
+        "Ask whether the word after each verb is another verb or a word that tells about the pup.",
         "Resting is not motion, so a choice about movement in both lines cannot be right."
       ],
       how: [
         "The verbs are should in Line A and seems in Line B.",
-        "In A, rest is the action, and should comes before it. In B, tired describes the pup, and seems connects the two.",
-        "The answer is \"In A, should helps the main verb rest; in B, seems links the pup to tired, a word that describes it.\""
+        "In A, rest is the action, and should comes before it. In B, tired tells about the pup, and seems connects the two.",
+        "The answer is \"Should leads into rest, but seems ties the pup to tired.\""
       ],
-      misconception: "A common mix-up is treating tired as a verb. It describes the pup.",
-      why: "The answer is \"In A, should helps the main verb rest; in B, seems links the pup to tired, a word that describes it.\" In A, should helps the main verb rest. In B, seems links the pup to tired, a word that describes it.",
+      misconception: "A common mix-up is treating tired as a verb. It tells about the pup.",
+      why: "The answer is \"Should leads into rest, but seems ties the pup to tired.\" In A, should helps the main verb rest. In B, seems links the pup to tired, a word that tells about it.",
       like: ["SK-GUM4-7-C11"]
     },
     {
@@ -10285,27 +10297,27 @@ PP.addLesson({
         "3.L.GC.1:I:use-helping-and-linking-verbs"
       ],
       passages: ["p6"],
-      prompt: "Select the helper that repairs sentence 8.",
-      text: "My teammates {0} kicked a long shot toward the net.",
+      prompt: "Which helper makes line 8 correct?",
+      text: "The tall goalie {0} blocked a long shot toward the far net.",
       slots: [
         {
-          options: ["have","has","will","is"],
+          options: ["has","will","am","are"],
           answer: 0
         }
       ],
-      clue: "Look at who is doing the kicking, and decide whether that is one player or several.",
+      clue: "Look at who is doing the blocking, and decide whether that is one player or several.",
       hints: [
-        "Look at who is doing the kicking, and decide whether that is one player or several.",
-        "Check the verb kicked after the blank, and think about which helpers go with that shape.",
-        "Is kicked would tell what happens to a ball, and the teammates are the ones kicking."
+        "Look at who is doing the blocking, and decide whether that is one player or several.",
+        "Check the verb blocked after the blank, and think about which helpers go with that shape.",
+        "Am goes only with the word I, and the subject here is not I."
       ],
       how: [
-        "The subject, teammates, names more than one player.",
-        "Kicked is the past form of the main verb, so a helper such as has or have goes before it.",
-        "The answer is have. Has goes with one player, will needs a plain verb after it, and is does not show who kicked."
+        "The subject, goalie, names one player.",
+        "Blocked is the past form of the main verb, so a helper such as has goes before it.",
+        "The answer is has. Will needs a plain verb after it, and am and are do not fit before blocked."
       ],
-      misconception: "A common mix-up is choosing has because the shot is one thing. The helper goes with the teammates.",
-      why: "The answer is have. The subject, teammates, names more than one player, so the helping verb have goes with it. Has goes with one player, will needs a plain verb after it, and is does not fit before kicked.",
+      misconception: "A common mix-up is choosing are because a shot has many parts. The helper goes with the goalie.",
+      why: "The answer is has. The subject, goalie, names one player, so the helping verb has goes with it. Will needs a plain verb after it, and am and are do not fit before blocked.",
       like: ["SK-GUM4-7-C12"]
     },
     {
@@ -10317,40 +10329,40 @@ PP.addLesson({
         "3.L.GC.1:I:use-helping-and-linking-verbs"
       ],
       passages: ["p6"],
-      prompt: "Line 4 of the draft is wrong. Select the TWO versions that mend it and stay in the present.",
+      prompt: "Something is off in line 4. Mark the TWO rewrites that mend it without changing the time of the story.",
       pick: 2,
       choices: [
         {
-          text: "My teammates are ready to run after the warm-up.",
+          text: "The new cones are bright orange and easy to see from far away.",
           correct: true
         },
         {
-          text: "My teammate is ready to run after the warm-up.",
+          text: "The new cone is bright orange and easy to see from far away.",
           correct: true
         },
         {
-          text: "My teammates is ready to run after the warm-up."
+          text: "The new cones is bright orange and easy to see from far away."
         },
         {
-          text: "My teammates was ready to run after the warm-up."
+          text: "The new cones was bright orange and easy to see from far away."
         },
         {
-          text: "My teammate are ready to run after the warm-up."
+          text: "The new cone are bright orange and easy to see from far away."
         }
       ],
-      clue: "A repair can change the verb or the subject, as long as the two agree and the time stays the same.",
+      clue: "A rewrite can change the verb or the subject, as long as the two agree and the time stays the same.",
       hints: [
-        "A repair can change the verb or the subject, as long as the two agree and the time stays the same.",
-        "Keep the versions in which the subject and the linking verb match in the present.",
-        "One version uses was, and was points to the past."
+        "A rewrite can change the verb or the subject, as long as the two agree and the time stays the same.",
+        "Keep the rewrites in which the subject and the linking verb match in the present.",
+        "One rewrite uses was, and was points to the past, so it changes the time of the story."
       ],
       how: [
-        "The draft pairs a plural subject, teammates, with the singular verb is.",
-        "One repair changes the verb to are. The other changes the subject to the singular teammate.",
-        "The answers are \"My teammates are ready to run after the warm-up.\" and \"My teammate is ready to run after the warm-up.\" The others keep the draft, use the past, or mismatch the subject."
+        "The draft pairs a plural subject, cones, with the singular verb is.",
+        "One rewrite changes the verb to are. The other changes the subject to the singular cone.",
+        "The answers are \"The new cones are bright orange and easy to see from far away.\" and \"The new cone is bright orange and easy to see from far away.\" The others keep the draft, use the past, or mismatch the subject."
       ],
       misconception: "A common mix-up is thinking only the verb can change. The subject can change, too.",
-      why: "The answers are \"My teammates are ready to run after the warm-up.\" and \"My teammate is ready to run after the warm-up.\" Teammates goes with are, and teammate goes with is. The other versions keep the draft, use the past with was, or pair a singular subject with are.",
+      why: "The answers are \"The new cones are bright orange and easy to see from far away.\" and \"The new cone is bright orange and easy to see from far away.\" Cones goes with are, and cone goes with is. The other rewrites keep the draft, use the past with was, or pair a singular subject with are.",
       like: ["SK-GUM4-7-C13"]
     },
     {
@@ -10362,35 +10374,35 @@ PP.addLesson({
         "3.L.GC.1:I:use-helping-and-linking-verbs"
       ],
       passages: [],
-      prompt: "Which line has a verb that links?",
+      prompt: "In which line does the verb connect the subject to a describing word?",
       choices: [
         {
-          text: "The tea seems too hot for Grandma.",
+          text: "Our new puppy became shy around strangers.",
           correct: true
         },
         {
-          text: "Mom will pour the tea."
+          text: "Aunt Rosa should knit a scarf for winter."
         },
         {
-          text: "We can drink it later."
+          text: "We could carry the cake inside today."
         },
         {
-          text: "Dad has boiled the water."
+          text: "Grandma had baked a pie for supper last night."
         }
       ],
       clue: "Pick out the verb in each line, and check the word that follows it.",
       hints: [
         "Pick out the verb in each line, and check the word that follows it.",
-        "A linking verb connects the subject to a word that describes it, and it does not stand before another verb.",
-        "Pour is a verb, so the line with will before it has a helper, not a link."
+        "A linking verb does not stand before another verb, and it ties the subject to a word that tells about it.",
+        "Knit is a verb, so the line with should before it has a helper, not a link."
       ],
       how: [
         "Pick out the verb in each line and check the word after it.",
-        "In the first line, seems connects the tea to hot, a word that describes it.",
-        "The answer is \"The tea seems too hot for Grandma.\" Will, can and has each stand before another verb."
+        "In the first line, became connects the puppy to shy, a word that describes it.",
+        "The answer is \"Our new puppy became shy around strangers.\" Should, could and had each stand before another verb."
       ],
       misconception: "A common mix-up is picking the line with the most familiar verb. Check what follows the verb.",
-      why: "The answer is \"The tea seems too hot for Grandma.\" Seems links the tea to hot, a word that describes it. Will pour, can drink and has boiled each have a helping verb before a main verb.",
+      why: "The answer is \"Our new puppy became shy around strangers.\" Became links the puppy to shy, a word that describes it. Should knit, could carry and had baked each have a helping verb before a main verb.",
       like: ["SK-GUM4-7-C14"]
     },
     {
@@ -10402,11 +10414,11 @@ PP.addLesson({
         "3.L.GC.1:I:use-helping-and-linking-verbs"
       ],
       passages: [],
-      prompt: "Pick the two words that finish the line.",
-      text: "Yesterday, Omar {0} {1} his model.",
+      prompt: "Fill both gaps so the line is correct.",
+      text: "Yesterday, the twins {0} {1} a model.",
       slots: [
         {
-          options: ["had","will","can","should"],
+          options: ["had","has","is","are"],
           answer: 0
         },
         {
@@ -10414,19 +10426,19 @@ PP.addLesson({
           answer: 0
         }
       ],
-      clue: "For the first blank, look at the time clue, Yesterday. For the second blank, think about the shape that goes with the helper you pick.",
+      clue: "For the first blank, use the time clue and the subject. For the second, match the helper.",
       hints: [
-        "For the first blank, look at the time clue, Yesterday. For the second blank, think about the shape that goes with the helper you pick.",
+        "For the first blank, use the time clue and the subject. For the second, match the helper.",
         "A helper that points to the past needs an action word in its past shape.",
-        "Will looks ahead to a time that has not come yet."
+        "Has goes with one person, and the twins number two or more."
       ],
       how: [
-        "The time clue, Yesterday, tells you the action is in the past.",
+        "The time clue, Yesterday, tells you the action is in the past, and twins names more than one person.",
         "The helper had goes with the past shape of the action word, painted.",
-        "The answers are had and painted. Will, can and should do not fit a past time, and paint, paints and painting do not fit after had."
+        "The answers are had and painted. Has goes with one person, is and are point to the present, and paint, paints and painting do not fit after had."
       ],
       misconception: "A common mix-up is choosing a helper and leaving the action word plain. Had needs the past shape.",
-      why: "The answers are had and painted. Yesterday is in the past, so had goes with the past shape painted. Will, can and should do not fit a past time, and the other verb forms do not fit after had.",
+      why: "The answers are had and painted. Yesterday is in the past, so had goes with the past shape painted. Has goes with one person, is and are point to the present, and the other verb forms do not fit after had.",
       like: ["SK-GUM4-7-C15"]
     }
   ],
@@ -10435,7 +10447,7 @@ PP.addLesson({
       hints: [
         "Look for the action word, and decide whether another verb comes before it.",
         "Check each word and ask which one is a verb that does not show the action by itself.",
-        "Book names a thing, so it is not a verb."
+        "Book names a thing, so it is not a verb that could help another verb."
       ],
       how: [
         "Find the main verb, the action: finished.",
@@ -10459,9 +10471,9 @@ PP.addLesson({
     },
     "SK-GUM4-7-P3": {
       hints: [
-        "Look at the word after each verb. Is it another verb, or a word that names or describes the subject?",
-        "A helping verb comes before another verb. A linking verb connects the subject to a describing word.",
-        "In The pie is warm, warm is not a verb."
+        "Look at the word after each verb. Is it another verb, or a word about the subject?",
+        "A helping verb comes before another verb. A linking verb ties the subject to a describing word.",
+        "In The pie is warm, warm describes the pie and is not a verb."
       ],
       how: [
         "Check the word after each verb.",
@@ -10485,7 +10497,7 @@ PP.addLesson({
     },
     "SK-GUM4-7-P5": {
       hints: [
-        "Check each sentence for a verb that connects the subject to a word that names or describes it.",
+        "Check each sentence for a verb that ties the subject to a word about it.",
         "A sentence with a linking verb has no action and no verb after the helper.",
         "Ben has cleaned his room tells about an action that was done."
       ],

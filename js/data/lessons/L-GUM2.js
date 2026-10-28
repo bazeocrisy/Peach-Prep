@@ -5063,7 +5063,7 @@ PP.addLesson({
           "(7) Dad said we should call the animal shelter first thing in the morning.",
           "(8) Do you think her owner is looking for her.",
           "(9) We put up a paper sign at the end of our street.",
-          "(10) By morning, a girl named Tia came running down the sidewalk!"
+          "(10) Wow, by morning, a girl named Tia came running down the sidewalk!"
         ]
       ]
     },
@@ -5080,7 +5080,7 @@ PP.addLesson({
           "(3) The lifeguard told us to walk, not run?"
         ],
         [
-          "(4) Dan jumped in first and made a giant splash that got everyone wet!",
+          "(4) Wow, Dan jumped in first and made a giant splash that got everyone wet!",
           "(5) Can you swim across the whole pool.",
           "(6) I held my breath and kicked as hard as I could until I reached the wall."
         ],
@@ -5378,7 +5378,7 @@ PP.addLesson({
               "Where a sentence sits in a draft does not decide its end mark. Think about the other choices."
             ],
             "how": [
-              "Sentence 2 says Where did she come from. Sentence 10 says By morning, a girl named Tia came running down the sidewalk.",
+              "Sentence 2 says Where did she come from. Sentence 10 says Wow, by morning, a girl named Tia came running down the sidewalk.",
               "Sentence 2 wants an answer, so it takes a question mark. Sentence 10 shows surprise, so it takes an exclamation point.",
               "The answer is \"Sentence 2 asks the reader something, while sentence 10 shows strong surprise.\""
             ],
@@ -5475,7 +5475,7 @@ PP.addLesson({
                   "text": "at the shallow end"
                 },
                 {
-                  "text": "how deep"
+                  "text": "the water at"
                 },
                 {
                   "text": "the shallow end"
@@ -5821,7 +5821,7 @@ PP.addLesson({
                 "text": "Who asked for the red marker from the supply closet?"
               },
               {
-                "text": "Please ask where the extra glue sticks went."
+                "text": "Please tell me where the extra glue sticks went."
               },
               {
                 "text": "What did Ms. Cole ask us to bring to the picnic?"
@@ -6060,7 +6060,7 @@ PP.addLesson({
       "hints": [
         "Look at the two sentences side by side. Ask what each one is doing.",
         "Say each sentence aloud and listen to how each one sounds.",
-        "Where a sentence sits in a draft does not decide its end mark. Think about the other choices."
+        "Judge sentence 9 by its own words. Think about the other choices."
       ],
       "how": [
         "Sentence 5 says What was hiding inside the tall black hat. Sentence 9 says I clapped until my hands turned red and sore.",
@@ -6741,7 +6741,7 @@ PP.addLesson({
         [
           "(7) After the lesson, we give each pony a handful of carrots.",
           "(8) Then we line up our saddles by the two doorways.",
-          "(9) Last week, two flys buzzed around the hay.",
+          "(9) Last week, two kittys napped in the hay.",
           "(10) We left the barn tired, dusty and very happy after two long days."
         ]
       ]
@@ -6760,7 +6760,7 @@ PP.addLesson({
         ],
         [
           "(4) We spotted ladybugs and two dragonflys near the pond.",
-          "(5) Jo found two old toys in the dirt behind the shed.",
+          "(5) Jo saw two blue jays hop in the dirt behind the shed.",
           "(6) Birds fed their babys in a nest above us.",
           "(7) We sold bunches of poppys at the spring fair."
         ],
@@ -7104,22 +7104,22 @@ PP.addLesson({
               "prompt": "What is the mistake in sentence 9?",
               "choices": [
                 {
-                  "text": "A consonant stands next to the y in fly, so the plural should be flies.",
+                  "text": "A consonant stands next to the y in kitty, so the plural should be kitties.",
                   "correct": true
                 },
                 {
-                  "text": "The y in fly follows a vowel, so the plural should be fleys."
+                  "text": "The y in kitty follows a vowel, so the plural should be kitteys."
                 },
                 {
-                  "text": "Fly is a name, so its plural needs a capital F."
+                  "text": "Kitty is a name, so its plural needs a capital K."
                 },
                 {
-                  "text": "A consonant stands next to the y in fly, so the plural should be flyes."
+                  "text": "A consonant stands next to the y in kitty, so the plural should be kittyes."
                 }
               ]
             },
             "partB": {
-              "prompt": "Which phrase in the draft has a plural formed the same way as flies?",
+              "prompt": "Which phrase in the draft has a plural formed the same way as kitties?",
               "choices": [
                 {
                   "text": "two shiny trophies",
@@ -7136,19 +7136,19 @@ PP.addLesson({
                 }
               ]
             },
-            "clue": "Think of the word for one: fly. Look at the letter just before the y.",
+            "clue": "Think of the word for one: kitty. Look at the letter just before the y.",
             "hints": [
-              "Think of the word for one: fly. Look at the letter just before the y.",
+              "Think of the word for one: kitty. Look at the letter just before the y.",
               "In Part B, find plurals in the draft that also come from words ending in y. Check the letter before the y in each one.",
               "Check the letter before the y in each word that is left."
             ],
             "how": [
-              "Part A: the letter before the y in fly is l, a consonant, so the y changes to i.",
+              "Part A: the letter before the y in kitty is t, a consonant, so the y changes to i.",
               "Part B: look for another plural from a word with a consonant before the y.",
-              "The answers are \"A consonant stands next to the y in fly, so the plural should be flies.\" and \"two shiny trophies\"."
+              "The answers are \"A consonant stands next to the y in kitty, so the plural should be kitties.\" and \"two shiny trophies\"."
             ],
             "misconception": "A common mix-up is thinking any plural that ends in y plus s follows the same rule. Check the letter before the y.",
-            "why": "Part A: \"A consonant stands next to the y in fly, so the plural should be flies.\" Part B: \"two shiny trophies\". Trophy has a consonant before the y, just like fly. Keys and doorways have vowels before the y.",
+            "why": "Part A: \"A consonant stands next to the y in kitty, so the plural should be kitties.\" Part B: \"two shiny trophies\". Trophy has a consonant before the y, just like kitty. Keys and doorways have vowels before the y.",
             "like": [
               "SK-GUM2-5-S07"
             ]
@@ -7323,11 +7323,11 @@ PP.addLesson({
             ],
             "how": [
               "Go through the sentences one at a time.",
-              "Sentence 3 has days, and day has a vowel before the y. Sentence 5 has toys, and toy has a vowel before the y.",
+              "Sentence 3 has days, and day has a vowel before the y. Sentence 5 has jays, and jay has a vowel before the y.",
               "Sentence 4 needs dragonflies, sentence 6 needs babies, and sentence 7 needs poppies."
             ],
             "misconception": "A common mix-up is picking a sentence because it has an -ies word. Check that the word needs -ies.",
-            "why": "The answers are \"The soil felt soft after two days of rain.\" and \"Jo found two old toys in the dirt behind the shed.\" Day and toy have vowels before the y, so they just add -s. Dragonflys, babys and poppys need -ies.",
+            "why": "The answers are \"The soil felt soft after two days of rain.\" and \"Jo saw two blue jays hop in the dirt behind the shed.\" Day and jay have vowels before the y, so they just add -s. Dragonflys, babys and poppys need -ies.",
             "like": [
               "SK-GUM2-5-S11"
             ]
@@ -7405,7 +7405,7 @@ PP.addLesson({
             "hints": [
               "The two blanks need different spelling rules. Think of the word for one for each blank.",
               "For each blank, look at the letter just before the y and decide whether it is a vowel or a consonant.",
-              "One word changes its y and the other keeps it. Look at the choices for each blank."
+              "Look at the choices for each blank. Check the letter before the y in each word."
             ],
             "how": [
               "The first blank comes from jelly, and the letter before the y is l. The second blank comes from journey, and the letter before the y is e.",
@@ -7527,7 +7527,7 @@ PP.addLesson({
           "answer": 1
         },
         {
-          "text": "copy",
+          "text": "belly",
           "answer": 0
         },
         {
@@ -7535,11 +7535,11 @@ PP.addLesson({
           "answer": 1
         },
         {
-          "text": "supply",
+          "text": "country",
           "answer": 0
         },
         {
-          "text": "jockey",
+          "text": "play",
           "answer": 1
         }
       ],
@@ -7551,11 +7551,11 @@ PP.addLesson({
       ],
       "how": [
         "Find the letter before the y in each word.",
-        "Fairy, copy and supply have consonants before the y. Monkey, essay and jockey have vowels before the y.",
+        "Fairy, belly and country have consonants before the y. Monkey, essay and play have vowels before the y.",
         "Place each word in the column that matches its rule."
       ],
-      "misconception": "A common mix-up is putting a word like jockey with the -ies words because it looks long. Check the letter before the y.",
-      "why": "Fairy, copy and supply have consonants before the y, so they become fairies, copies and supplies. Monkey, essay and jockey have vowels before the y, so they become monkeys, essays and jockeys.",
+      "misconception": "A common mix-up is putting a word like essay with the -ies words because it looks long. Check the letter before the y.",
+      "why": "Fairy, belly and country have consonants before the y, so they become fairies, bellies and countries. Monkey, essay and play have vowels before the y, so they become monkeys, essays and plays.",
       "like": [
         "SK-GUM2-5-P4"
       ]
@@ -7574,7 +7574,7 @@ PP.addLesson({
         "Mom packed jellies and crackers for the trip.",
         "The cowhands rode into the valley at dawn.",
         "Our teacher gave us two diarys to write in.",
-        "We rode the subways across the big town.",
+        "Warm rays came through the window at dawn.",
         "The factories closed at five o'clock."
       ],
       "answer": [
@@ -7589,7 +7589,7 @@ PP.addLesson({
       ],
       "how": [
         "Find the plural words and think of the word for one for each.",
-        "Jellies, subways and factories are spelled correctly. Diary has an r, a consonant, before the y.",
+        "Jellies, rays and factories are spelled correctly. Diary has an r, a consonant, before the y.",
         "The answer is \"Our teacher gave us two diarys to write in.\" It should be diaries."
       ],
       "misconception": "A common mix-up is trusting a word because it looks neat. Check the letter before the y.",
@@ -8079,7 +8079,7 @@ PP.addLesson({
       "hints": [
         "The two gaps follow different spelling rules. Think of the word for one for each gap.",
         "For each gap, look at the letter next to the y and decide whether it is a vowel or a consonant.",
-        "One word changes its y and the other keeps it. Look at the choices for each gap."
+        "Look at the choices for each gap. Check the letter next to the y in each word."
       ],
       "how": [
         "The first gap comes from gallery, and the letter next to the y is l. The second gap comes from bay, and the letter next to the y is a.",

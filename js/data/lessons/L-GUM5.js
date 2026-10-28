@@ -8079,7 +8079,170 @@ PP.addLesson({
     }
   ],
   parent: "Have your child write the title of a favorite book by hand and underline it, then write the name of a favorite song in quotation marks. Check together that the first word and the important words have capitals.",
-  passages: [],
+  passages: [
+    /* B8:passages:start */
+    {
+      id: "p1",
+      title: "Story Swap Day",
+      byline: "A third grader's draft",
+      genre: "Student draft (informational)",
+      draft: true,
+      paragraphs: [
+        [
+          "(1) Our class held a story swap day on Friday afternoon.",
+          "(2) Each reader shared a short story with a friend.",
+          "(3) Ana read \"The Weasel and the Teapot\" to her partner.",
+          "(4) Her partner told a story called \"A Hedgehog on the Caboose.\""
+        ],
+        [
+          "(5) Leo read \"marmalade for the Meerkat\" aloud.",
+          "(6) The listeners laughed at the silly ending.",
+          "(7) Rosa shared \"The Tuba in the Attic\" with the group.",
+          "(8) Everyone voted for a favorite story."
+        ],
+        [
+          "(9) Max chose \"The Zeppelin and The Dandelion\" for his turn.",
+          "(10) The winner was the story The Brave Buttercup.",
+          "(11) Mia smiled at \"A Ferret on the roof\" most of all.",
+          "(12) We want to hold another swap soon."
+        ]
+      ]
+    },
+    {
+      id: "p2",
+      title: "Sing and Share Hour",
+      byline: "A third grader's draft",
+      genre: "Student draft (informational)",
+      draft: true,
+      paragraphs: [
+        [
+          "(1) Our music club met in the gym for sing and share hour on Tuesday.",
+          "(2) Kai led the group in \"The Banjo and the Bagpipe.\"",
+          "(3) Next we hummed \"Tambourine Parade\" while we clapped.",
+          "(4) Dana sang \"a Kazoo for the King\" with a big grin."
+        ],
+        [
+          "(5) Everyone clapped along to Marimba in the Snow.",
+          "(6) Several of us tapped a steady beat on our desks.",
+          "(7) Mrs. Cho taught us a new song called \"The Clover Waltz.\"",
+          "(8) Our last song was \"Turnips for the Tuba\" and it was silly."
+        ],
+        [
+          "(9) At the end, we sang \"Cobwebs and Candlelight\" as a group.",
+          "(10) Then we all took a deep bow.",
+          "(11) Everyone left the gym humming and smiling."
+        ]
+      ]
+    },
+    {
+      id: "p3",
+      title: "Poem Parade",
+      byline: "A third grader's draft",
+      genre: "Student draft (informational)",
+      draft: true,
+      paragraphs: [
+        [
+          "(1) Our class made a poem parade for the hallway wall.",
+          "(2) Every student chose a favorite poem to copy.",
+          "(3) Zoe copied \"The Snowdrift and the Igloo\" in her best handwriting.",
+          "(4) Some poems were funny and others were quiet."
+        ],
+        [
+          "(5) Nora copied \"Moon on the Marmalade Sea\" neatly.",
+          "(6) Theo wrote \"The Walrus and the Accordion\" in green marker.",
+          "(7) Lily chose \"a Meerkat at the Window\" for her page.",
+          "(8) Omar picked \"Ice Cream for the Ostrich\" with a smile.",
+          "(9) Pia drew a bright border around her poem."
+        ],
+        [
+          "(10) Our teacher added her own poem, \"Clover in the Orchard.\"",
+          "(11) Other classes stopped to read the poems every morning.",
+          "(12) We felt proud of our long wall."
+        ]
+      ]
+    },
+    {
+      id: "p4",
+      title: "Author Visit",
+      byline: "A third grader's draft",
+      genre: "Student draft (informational)",
+      draft: true,
+      paragraphs: [
+        [
+          "(1) A kind author came to visit our school on Monday morning.",
+          "(2) She told us about the stories she wrote as a child.",
+          "(3) Her first story was \"Harmonica Hill.\"",
+          "(4) She also wrote a poem called \"A Submarine in the Pond.\""
+        ],
+        [
+          "(5) Gus read aloud \"Windmills For the Mule\" before lunch.",
+          "(6) Everybody asked her many questions.",
+          "(7) Ivy shared \"The Mermaid in the Bucket\" with the author.",
+          "(8) The author smiled at every answer."
+        ],
+        [
+          "(9) Cal liked \"The Robot and the ladder\" best.",
+          "(10) The final poem was Mittens for the Pirate.",
+          "(11) Fay picked \"a Castle in the Pocket\" at the end.",
+          "(12) We asked her to visit us again."
+        ]
+      ]
+    },
+    {
+      id: "p5",
+      title: "Open Mic Friday",
+      byline: "A third grader's draft",
+      genre: "Student draft (informational)",
+      draft: true,
+      paragraphs: [
+        [
+          "(1) Our class held an open mic show in the library on Friday.",
+          "(2) Quinn strummed \"Ukulele Rain\" with a big smile.",
+          "(3) Wes recited \"The Tadpole and the Treehouse\" without a mistake.",
+          "(4) Ruth sang \"the Mushroom Dance\" in a tiny voice."
+        ],
+        [
+          "(5) The crowd cheered for Xylophone Sunrise.",
+          "(6) Some of us waited our turn on the carpet.",
+          "(7) Mr. Dean read the poem \"Ladders to the Sky.\"",
+          "(8) We ended the show with \"Pirates and Mermaids.\""
+        ],
+        [
+          "(9) At the end, we applauded \"Wizards of the Wind\" for one full minute.",
+          "(10) Then everyone took a long bow.",
+          "(11) We left the library smiling and tired."
+        ]
+      ]
+    },
+    {
+      id: "p6",
+      title: "Storytelling Circle",
+      byline: "A third grader's draft",
+      genre: "Student draft (informational)",
+      draft: true,
+      paragraphs: [
+        [
+          "(1) Our class sat in a circle to tell tall tales.",
+          "(2) Each student told a short story from memory.",
+          "(3) Hana told \"The Castle on the Hill\" in a spooky voice.",
+          "(4) Some stories were scary, and others were silly."
+        ],
+        [
+          "(5) Ivan told \"The Giant Mitten\" with loud sound effects.",
+          "(6) Jada told \"A Bucket for the Wizard\" and made us laugh.",
+          "(7) Kofi shared \"The Bucket Of Stars\" with a grin.",
+          "(8) Lena told \"Rivers for the Robot\" in a quiet voice.",
+          "(9) Milo waved his arms while he told his tale."
+        ],
+        [
+          "(10) Our teacher closed with a story, \"A Candle on the Bridge.\"",
+          "(11) We clapped until our hands were sore.",
+          "(12) It was the best circle of the year."
+        ]
+      ]
+    }
+    /* B8:passages:end */
+  ],
   practice: [
     { id: "SK-GUM5-7-P1", type: "mc", points: 1, dok: 2, passages: [],
       prompt: "Which sentence writes the poem title correctly?",
@@ -8134,6 +8297,1001 @@ PP.addLesson({
       clue: "The first word and the important words get capitals. Small words in the middle stay lowercase.",
       why: "The answer is A Picnic at the Lake. A is the first word, Picnic and Lake are important words, and at and the are small words in the middle." }
   ],
+  /* B8:core:start */
+  /* ---------- Expansion 2026-10-22, batch B8 (GUM Introduce/Continue) ----------
+     core: fifteen items in three sets of five. { ref } reuses a practice item; the other practice items stay in Practice Together.
+     Passages are used only by core and the similar bank; none is used by test or testB.
+     Author log: docs/expansion-2026-10-22/batches/B8b-author-log.md. NEEDS INDEPENDENT REVIEW. */
+  core: {
+    rev: "1",
+    sets: [
+      {
+        title: "Set 1",
+        items: [
+          { ref: "SK-GUM5-7-P3" },
+          { ref: "SK-GUM5-7-P4" },
+          {
+            id: "SK-GUM5-7-C03",
+            type: "mc",
+            points: 1,
+            dok: 2,
+            std: [
+              "3.L.GC.1:I:use-capitalization-and-underlining-quotation-mar"
+            ],
+            passages: ["p1"],
+            prompt: "Which sentence from the draft writes its title correctly?",
+            choices: [
+              { text: "Ana read \"The Weasel and the Teapot\" to her partner.", correct: true },
+              { text: "Max chose \"The Zeppelin and The Dandelion\" for his turn." },
+              { text: "The winner was the story The Brave Buttercup." },
+              { text: "Mia smiled at \"A Ferret on the roof\" most of all." }
+            ],
+            clue: "Look at the marks around each title, then at its capital letters.",
+            hints: [
+              "Look at the marks around each title, then at its capital letters.",
+              "Check the first word, then the important words, then the small words in the middle.",
+              "The sentence about the winner has no quotation marks around its title. Check the other choices."
+            ],
+            how: [
+              "Check the marks and the capital letters in each title.",
+              "In \"Ana read \"The Weasel and the Teapot\" to her partner.\" the title has quotation marks, capitals on The, Weasel and Teapot, and lowercase and and the.",
+              "The answer is \"Ana read \"The Weasel and the Teapot\" to her partner.\""
+            ],
+            misconception: "A common mix-up is picking the sentence with the most capital letters. Small words in the middle of a title stay lowercase.",
+            why: "The answer is \"Ana read \"The Weasel and the Teapot\" to her partner.\" The title has quotation marks, and every capital letter is in the right place. One title capitalizes a small word, one has no quotation marks, and one has a lowercase last word."
+          },
+          {
+            id: "SK-GUM5-7-C04",
+            type: "ebsr",
+            points: 2,
+            dok: 2,
+            std: [
+              "3.L.GC.1:I:use-capitalization-and-underlining-quotation-mar"
+            ],
+            passages: ["p1"],
+            prompt: "This question has two parts. Answer Part A, then Part B.",
+            partA: {
+              prompt: "Which sentence in paragraph 2 of the draft has a mistake in its title?",
+              choices: [
+                { text: "The listeners laughed at the silly ending." },
+                { text: "Leo read \"marmalade for the Meerkat\" aloud.", correct: true },
+                { text: "Rosa shared \"The Tuba in the Attic\" with the group." },
+                { text: "Everyone voted for a favorite story." }
+              ]
+            },
+            partB: {
+              prompt: "Which statement explains the mistake in the sentence from Part A?",
+              choices: [
+                { text: "The first word of a title always gets a capital letter, so marmalade should begin with M.", correct: true },
+                { text: "Meerkat is a small word in the middle, so it should be written with a lowercase m." },
+                { text: "A story title belongs in italics, so the quotation marks around it should be erased from the sentence." },
+                { text: "The word for is an important word, so it needs a capital letter in this title." }
+              ]
+            },
+            clue: "Read each sentence in paragraph 2. Check any title for its marks and capital letters.",
+            hints: [
+              "Read each sentence in paragraph 2. Check any title for its marks and capital letters.",
+              "Check the first word of each title, then the important words, then the small words.",
+              "The sentence about Rosa has a title with every capital letter in the right place. Check the other three."
+            ],
+            how: [
+              "Part A: read each sentence in paragraph 2 and check any title.",
+              "In \"Leo read \"marmalade for the Meerkat\" aloud.\" the first word of the title starts with a lowercase letter.",
+              "Part A answer: Leo read \"marmalade for the Meerkat\" aloud.",
+              "Part B answer: \"The first word of a title always gets a capital letter, so marmalade should begin with M.\""
+            ],
+            misconception: "A common mix-up is thinking a lowercase first word is fine because it is a small word. The first word of a title always gets a capital letter.",
+            why: "Part A: Leo read \"marmalade for the Meerkat\" aloud. Part B: \"The first word of a title always gets a capital letter, so marmalade should begin with M.\" The title should be \"Marmalade for the Meerkat.\" The other sentences are written correctly."
+          },
+          {
+            id: "SK-GUM5-7-C05",
+            type: "ms",
+            points: 2,
+            dok: 2,
+            std: [
+              "3.L.GC.1:I:use-capitalization-and-underlining-quotation-mar"
+            ],
+            passages: [],
+            prompt: "Choose the TWO sentences that write the title correctly.",
+            pick: 2,
+            choices: [
+              { text: "Sam acted out \"The Ferret and The Pelican\" at recess." },
+              { text: "Grandpa sang \"The Bugle in the Barn\" to the cows.", correct: true },
+              { text: "Ellie hummed \"the Caboose Song\" all day." },
+              { text: "Tia loves the song Buttercup Boogie." },
+              { text: "We read the poem \"A Turnip for the Walrus\" in class.", correct: true }
+            ],
+            clue: "Check the marks around each title. Then check the capital letters.",
+            hints: [
+              "Check the marks around each title. Then check the capital letters.",
+              "Pick TWO. Look at the first word, the important words and the small words in the middle.",
+              "The sentence about Tia has no quotation marks around its title. Decide about the other four."
+            ],
+            how: [
+              "Check each title for quotation marks and for correct capital letters.",
+              "\"Grandpa sang \"The Bugle in the Barn\" to the cows.\" and \"We read the poem \"A Turnip for the Walrus\" in class.\" each have quotation marks, a capital on the first word, and lowercase small words in the middle.",
+              "The other three have a lowercase first word, a capital on a small word, or no quotation marks."
+            ],
+            misconception: "A common mix-up is picking the title that has the most capital letters. Small words in the middle of a title stay lowercase.",
+            why: "The answers are \"Grandpa sang \"The Bugle in the Barn\" to the cows.\" and \"We read the poem \"A Turnip for the Walrus\" in class.\" Each title is a short work with quotation marks and correct capitals. The other three have a lowercase first word, a capital on a small word, or no quotation marks."
+          }
+        ]
+      },
+      {
+        title: "Set 2",
+        items: [
+          {
+            id: "SK-GUM5-7-C06",
+            type: "hottext",
+            points: 2,
+            dok: 2,
+            std: [
+              "3.L.GC.1:I:use-capitalization-and-underlining-quotation-mar"
+            ],
+            passages: ["p2"],
+            prompt: "Look at sentences 2 through 6 of the draft. Select the TWO sentences with a mistake in a title.",
+            targets: ["p2:1:2", "p2:1:3", "p2:1:4", "p2:2:1", "p2:2:2"],
+            answer: ["p2:1:4", "p2:2:1"],
+            pick: 2,
+            clue: "Check each sentence for a title. Ask whether its marks and capital letters are right.",
+            hints: [
+              "Check each sentence for a title. Ask whether its marks and capital letters are right.",
+              "Read the five sentences one at a time. Pick TWO.",
+              "In sentence 6, there is no title to check, so it has no mistake. Check the other four."
+            ],
+            how: [
+              "Check each title for quotation marks and capital letters.",
+              "In sentence 4, the title starts with a lowercase letter, so a should be A.",
+              "In sentence 5, the title has no quotation marks around it.",
+              "Sentences 2 and 3 are written correctly, and sentence 6 has no title."
+            ],
+            misconception: "A common mix-up is thinking every mistake is a capital letter. One mistake here is missing quotation marks.",
+            why: "The answers are sentence 4 and sentence 5. In sentence 4, the title should start with a capital A. In sentence 5, the song title needs quotation marks. Sentences 2 and 3 are written correctly, and sentence 6 has no title."
+          },
+          {
+            id: "SK-GUM5-7-C07",
+            type: "match",
+            points: 2,
+            dok: 2,
+            std: [
+              "3.L.GC.1:I:use-capitalization-and-underlining-quotation-mar"
+            ],
+            passages: [],
+            prompt: "Should each title go in quotation marks or in italics (or underlined by hand)?",
+            cols: ["Quotation marks", "Italics or underline"],
+            rows: [
+              { text: "the song Pickle Parade", answer: 0 },
+              { text: "the picture book Otter Island", answer: 1 },
+              { text: "the short story The Tin Whistle", answer: 0 },
+              { text: "the chapter book Penguin Express", answer: 1 }
+            ],
+            clue: "Ask whether each title names a whole book or a short work.",
+            hints: [
+              "Ask whether each title names a whole book or a short work.",
+              "Do one row at a time. Ask what kind of work it is before you decide.",
+              "In the row about the short story, the title belongs to a short work. Decide about the other rows."
+            ],
+            how: [
+              "Look at what kind of work each title names.",
+              "Songs and short stories are short works, so their titles go in quotation marks.",
+              "Picture books and chapter books are whole books, so their titles go in italics when typed or are underlined by hand."
+            ],
+            misconception: "A common mix-up is putting every title in quotation marks. Whole books use italics or underlining.",
+            why: "The song and the short story are short works, so their titles go in quotation marks. The picture book and the chapter book are whole books, so their titles go in italics when typed or are underlined by hand."
+          },
+          {
+            id: "SK-GUM5-7-C08",
+            type: "dropdown",
+            points: 1,
+            dok: 2,
+            std: [
+              "3.L.GC.1:I:use-capitalization-and-underlining-quotation-mar"
+            ],
+            passages: ["p2"],
+            prompt: "Choose the title that finishes sentence 8 of the draft.",
+            text: "Our last song was {0} and it was silly.",
+            slots: [
+              {
+                options: ["\"Turnips for the Tuba\"", "\"Turnips For the Tuba\"", "\"Turnips for the tuba\""],
+                answer: 0
+              }
+            ],
+            clue: "Ask which words in the title are important and which are small.",
+            hints: [
+              "Ask which words in the title are important and which are small.",
+              "Say each choice and check its capital letters.",
+              "One choice makes the last word lowercase, but the last word of a title is always capitalized. Decide between the other two."
+            ],
+            how: [
+              "Read sentence 8. The title is a song, so it goes in quotation marks.",
+              "Turnips and Tuba are important words, and for is a small word in the middle, so it stays lowercase.",
+              "The answer is \"Turnips for the Tuba\" with quotation marks."
+            ],
+            misconception: "A common mix-up is capitalizing a small word because it looks important. Small words in the middle of a title stay lowercase.",
+            why: "The answer is \"Turnips for the Tuba.\" Turnips and Tuba are important words, and for and the are small words in the middle. One choice capitalizes For, and one lowercases the last word."
+          },
+          {
+            id: "SK-GUM5-7-C09",
+            type: "mc",
+            points: 1,
+            dok: 3,
+            std: [
+              "3.L.GC.1:I:use-capitalization-and-underlining-quotation-mar"
+            ],
+            passages: ["p2"],
+            prompt: "In sentence 9, the word and has a lowercase a, but Cobwebs and Candlelight have capitals. Why?",
+            choices: [
+              {
+                text: "And should have a capital letter too, because every word in the whole title of a song needs one, even a small word like this."
+              },
+              { text: "The first word is the only word that needs a capital, so Candlelight should be written in lowercase." },
+              {
+                text: "And is a small joining word in the middle of the title, so it stays lowercase, but the important words get capitals.",
+                correct: true
+              },
+              { text: "The word and is the last word, so it is the one word in a title that must be written in lowercase." }
+            ],
+            clue: "Think about which words in a title are important and which are small.",
+            hints: [
+              "Think about which words in a title are important and which are small.",
+              "Ask what job the word and does, then compare it with the words around it.",
+              "The title is already written correctly, so the answer cannot say that and is missing a capital. Check the other choices."
+            ],
+            how: [
+              "Read sentence 9. The title is \"Cobwebs and Candlelight.\"",
+              "Cobwebs and Candlelight are important words, so they get capitals. And is a small joining word in the middle, so it stays lowercase.",
+              "The answer is \"And is a small joining word in the middle of the title, so it stays lowercase, but the important words get capitals.\""
+            ],
+            misconception: "A common mix-up is thinking every word in a title needs a capital. Small words in the middle stay lowercase.",
+            why: "The answer is \"And is a small joining word in the middle of the title, so it stays lowercase, but the important words get capitals.\" The title is written correctly. Cobwebs and Candlelight are important words."
+          },
+          {
+            id: "SK-GUM5-7-C10",
+            type: "dropdown",
+            points: 1,
+            dok: 1,
+            std: [
+              "3.L.GC.1:I:use-capitalization-and-underlining-quotation-mar"
+            ],
+            passages: ["p2"],
+            prompt: "Choose the title that finishes sentence 7 of the draft.",
+            text: "Mrs. Cho taught us a new song called {0}",
+            slots: [
+              {
+                options: ["\"The Clover Waltz.\"", "\"The clover Waltz.\"", "The Clover Waltz."],
+                answer: 0
+              }
+            ],
+            clue: "Ask what kind of work the title names and which words need capitals.",
+            hints: [
+              "Ask what kind of work the title names and which words need capitals.",
+              "Say each choice and check the marks around it.",
+              "One choice has no quotation marks at all. Decide between the other two."
+            ],
+            how: [
+              "Read sentence 7. A song is a short work, so its title goes in quotation marks.",
+              "The first word and the important words get capitals: The, Clover and Waltz.",
+              "The answer is \"The Clover Waltz.\" with quotation marks."
+            ],
+            misconception: "A common mix-up is leaving off quotation marks. The title of a song goes inside them.",
+            why: "The answer is \"The Clover Waltz.\" A song title goes in quotation marks, and The, Clover and Waltz all get capitals. One choice has a lowercase clover, and one has no quotation marks."
+          }
+        ]
+      },
+      {
+        title: "Set 3",
+        items: [
+          {
+            id: "SK-GUM5-7-C11",
+            type: "hottext",
+            points: 1,
+            dok: 2,
+            std: [
+              "3.L.GC.1:I:use-capitalization-and-underlining-quotation-mar"
+            ],
+            passages: ["p3"],
+            prompt: "Look at sentences 5 through 9 of the draft. Select the sentence with a mistake in a title.",
+            targets: ["p3:2:1", "p3:2:2", "p3:2:3", "p3:2:4", "p3:2:5"],
+            answer: ["p3:2:3"],
+            pick: 1,
+            clue: "Check each sentence for a title. Ask whether its marks and capital letters are right.",
+            hints: [
+              "Check each sentence for a title. Ask whether its marks and capital letters are right.",
+              "Read the five sentences one at a time. Pick ONE.",
+              "The sentence about Omar has a title with every capital letter in the right place. Check the other four."
+            ],
+            how: [
+              "Check each title for quotation marks and capital letters.",
+              "Sentences 5, 6 and 8 have titles written correctly, and sentence 9 has no title.",
+              "In sentence 7, the title starts with a lowercase letter, so a should be A."
+            ],
+            misconception: "A common mix-up is picking the sentence with the most small words. Small words in the middle of a title are meant to be lowercase.",
+            why: "The answer is sentence 7, \"Lily chose \"a Meerkat at the Window\" for her page.\" The first word of a title always gets a capital letter, so it should be \"A Meerkat at the Window.\" Sentences 5, 6 and 8 are written correctly, and sentence 9 has no title."
+          },
+          {
+            id: "SK-GUM5-7-C12",
+            type: "dropdown",
+            points: 1,
+            dok: 2,
+            std: [
+              "3.L.GC.1:I:use-capitalization-and-underlining-quotation-mar"
+            ],
+            passages: ["p3"],
+            prompt: "Choose the title that finishes sentence 10 of the draft.",
+            text: "Our teacher added her own poem, {0}",
+            slots: [
+              {
+                options: ["\"Clover in the Orchard.\"", "\"Clover In the Orchard.\"", "\"Clover in the orchard.\""],
+                answer: 0
+              }
+            ],
+            clue: "Ask which words in the title are important and which are small.",
+            hints: [
+              "Ask which words in the title are important and which are small.",
+              "Say each choice and check its capital letters.",
+              "One choice capitalizes a small word in the middle. Decide between the other two."
+            ],
+            how: [
+              "Read sentence 10. A poem is a short work, so its title goes in quotation marks.",
+              "Clover and Orchard are important words, and in and the are small words, so they stay lowercase.",
+              "The answer is \"Clover in the Orchard.\" with quotation marks."
+            ],
+            misconception: "A common mix-up is lowercasing the last word of a title. The last word always gets a capital letter.",
+            why: "The answer is \"Clover in the Orchard.\" Clover and Orchard are important words, and in and the are small words in the middle. One choice capitalizes In, and one lowercases the last word."
+          },
+          {
+            id: "SK-GUM5-7-C13",
+            type: "ms",
+            points: 2,
+            dok: 3,
+            std: [
+              "3.L.GC.1:I:use-capitalization-and-underlining-quotation-mar"
+            ],
+            passages: [],
+            prompt: "Pat says, \"Every word in a title needs a capital letter.\" Choose the TWO titles that show Pat is wrong.",
+            pick: 2,
+            choices: [
+              { text: "Giant Purple Mushroom" },
+              { text: "The Pelican and the Bagpipe", correct: true },
+              { text: "Silver Spoon Soup" },
+              { text: "Honey for the Bear", correct: true },
+              { text: "Rainy Day Parade" }
+            ],
+            clue: "Pat says every word needs a capital letter. Look for titles where some small words stay lowercase.",
+            hints: [
+              "Pat says every word needs a capital letter. Look for titles where some small words stay lowercase.",
+              "Pick TWO. Check each title for words like a, an, the, and, of, in, on, at, to and for.",
+              "The title about the mushroom has a capital on every word and no small words. Decide about the other four."
+            ],
+            how: [
+              "Look for titles with small words in the middle.",
+              "\"The Pelican and the Bagpipe\" and \"Honey for the Bear\" are written correctly, and each has lowercase small words in the middle.",
+              "The other three have only important words, so they do not show Pat is wrong."
+            ],
+            misconception: "A common mix-up is choosing titles with the most capitals. Pat is wrong about titles that have small words in the middle.",
+            why: "The answers are \"The Pelican and the Bagpipe\" and \"Honey for the Bear.\" In each, small words in the middle stay lowercase, so not every word has a capital. The other three have only important words."
+          },
+          {
+            id: "SK-GUM5-7-C14",
+            type: "match",
+            points: 2,
+            dok: 2,
+            std: [
+              "3.L.GC.1:I:use-capitalization-and-underlining-quotation-mar"
+            ],
+            passages: [],
+            prompt: "Is each title written correctly, or does it have a mistake?",
+            cols: ["Written correctly", "Has a mistake"],
+            rows: [
+              { text: "Fish for the Heron", answer: 0 },
+              { text: "A Bagpipe on The Hill", answer: 1 },
+              { text: "the Last Snowflake", answer: 1 },
+              { text: "Soup in the Pitcher", answer: 0 }
+            ],
+            clue: "Check the first word, then the important words, then the small words in each title.",
+            hints: [
+              "Check the first word, then the important words, then the small words in each title.",
+              "Do one row at a time. Say the title and look at each capital letter.",
+              "In the row about the heron, the small words are lowercase, which is right. Decide about the other rows."
+            ],
+            how: [
+              "Look at the capital letters in each row.",
+              "\"Fish for the Heron\" and \"Soup in the Pitcher\" have capitals on the first and important words and lowercase small words.",
+              "\"A Bagpipe on The Hill\" capitalizes a small word, and \"the Last Snowflake\" has a lowercase first word."
+            ],
+            misconception: "A common mix-up is thinking a capital on every word makes a title correct. Small words in the middle stay lowercase.",
+            why: "\"Fish for the Heron\" and \"Soup in the Pitcher\" are written correctly. \"A Bagpipe on The Hill\" has a capital on the small word The, and \"the Last Snowflake\" has a lowercase first word."
+          },
+          {
+            id: "SK-GUM5-7-C15",
+            type: "mc",
+            points: 1,
+            dok: 3,
+            std: [
+              "3.L.GC.1:I:use-capitalization-and-underlining-quotation-mar"
+            ],
+            passages: [],
+            prompt: "Jin typed \"The Goat And The Pie\" as a story title. He says every word in a title gets a capital. Is Jin right?",
+            choices: [
+              { text: "Yes. Every word in a title always gets a capital letter, so Jin wrote it correctly." },
+              { text: "No. And and the are small words in the middle of a title, so they stay lowercase.", correct: true },
+              { text: "Yes. And is an important word because it joins two things, so it needs a capital letter." },
+              { text: "No. Only the last word of a title gets a capital letter, so all the other words should be lowercase." }
+            ],
+            clue: "Ask which words in the title are important and which are small.",
+            hints: [
+              "Ask which words in the title are important and which are small.",
+              "Think about what and and the do in the middle of a title.",
+              "The first and last words of a title are always capitalized, so the answer cannot say that only the last word gets a capital. Check the other choices."
+            ],
+            how: [
+              "Look at the middle of the title: And and The are small words.",
+              "Small words in the middle of a title stay lowercase, so the title should be \"The Goat and the Pie.\"",
+              "The answer is \"No. And and the are small words in the middle of a title, so they stay lowercase.\""
+            ],
+            misconception: "A common mix-up is thinking every word in a title needs a capital. Small words in the middle stay lowercase.",
+            why: "The answer is \"No. And and the are small words in the middle of a title, so they stay lowercase.\" The title should be \"The Goat and the Pie.\" Jin is not right."
+          }
+        ]
+      }
+    ]
+  },
+  similar: [
+    {
+      id: "SK-GUM5-7-S01",
+      type: "hottext",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.L.GC.1:I:use-capitalization-and-underlining-quotation-mar"
+      ],
+      passages: [],
+      prompt: "Which line has a title written the wrong way?",
+      options: [
+        "Nan hums \"Pretzel Parade\" while she paints.",
+        "Aunt Kay told us \"The Mouse and the Magnet\" at rest time.",
+        "Bo hummed \"the Lemon Train\" on the way home.",
+        "Dad read \"Pillow Mountain\" aloud last night.",
+        "Eli penned \"Stars for the Fisherman\" in poem club."
+      ],
+      answer: [2],
+      pick: 1,
+      clue: "Look at the first word of every title. Then look at each important word.",
+      hints: [
+        "Look at the first word of every title. Then look at each important word.",
+        "Read the five sentences one at a time. Pick ONE.",
+        "The sentence about Eli has a title with every capital letter in the right place. Check the other four."
+      ],
+      how: [
+        "Check each title for quotation marks and capital letters.",
+        "Four of the titles start with a capital letter, and the small words in the middle are lowercase.",
+        "In \"Bo hummed \"the Lemon Train\" on the way home.\" the first word of the title starts with a lowercase letter."
+      ],
+      misconception: "A common mix-up is picking a title that has small words in the middle. Those small words are meant to be lowercase.",
+      why: "The answer is \"Bo hummed \"the Lemon Train\" on the way home.\" The first word of a title always gets a capital letter, so it should be \"The Lemon Train.\" The other sentences write their titles correctly.",
+      like: ["SK-GUM5-7-P3"]
+    },
+    {
+      id: "SK-GUM5-7-S02",
+      type: "dropdown",
+      points: 1,
+      dok: 1,
+      std: [
+        "3.L.GC.1:I:use-capitalization-and-underlining-quotation-mar"
+      ],
+      passages: [],
+      prompt: "Which way of writing the song's name is right?",
+      text: "Pat hummed the song {0} on the bus.",
+      slots: [
+        {
+          options: ["\"The Lemon Wagon\"", "\"The lemon Wagon\"", "The Lemon Wagon"],
+          answer: 0
+        }
+      ],
+      clue: "A song is a short work. Check the marks around the name.",
+      hints: [
+        "A song is a short work. Check the marks around the name.",
+        "Then check the capital on each important word.",
+        "One choice has no quotation marks at all. Decide between the other two."
+      ],
+      how: [
+        "A song is a short work, so its title goes in quotation marks.",
+        "The, Lemon and Wagon are the first word and an important word each, so they get capitals.",
+        "The answer is \"The Lemon Wagon\" with quotation marks."
+      ],
+      misconception: "A common mix-up is leaving off the quotation marks. The title of a song goes inside them.",
+      why: "The answer is \"The Lemon Wagon\" in quotation marks. A song title goes in quotation marks, and the first word and the important words get capitals. One choice has a lowercase lemon, and one has no quotation marks.",
+      like: ["SK-GUM5-7-P4"]
+    },
+    {
+      id: "SK-GUM5-7-S03",
+      type: "mc",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.L.GC.1:I:use-capitalization-and-underlining-quotation-mar"
+      ],
+      passages: ["p4"],
+      prompt: "Pick the line where the title is done right.",
+      choices: [
+        { text: "Cal liked \"The Robot and the ladder\" best." },
+        { text: "The final poem was Mittens for the Pirate." },
+        { text: "Fay picked \"a Castle in the Pocket\" at the end." },
+        { text: "Her first story was \"Harmonica Hill.\"", correct: true }
+      ],
+      clue: "Check the marks around each title and then its capital letters.",
+      hints: [
+        "Check the marks around each title and then its capital letters.",
+        "Look at the first word, the important words, and the small words in the middle.",
+        "The line about the final poem has no quotation marks around its title. Check the other choices."
+      ],
+      how: [
+        "Check the marks and the capital letters in each title.",
+        "In \"Her first story was \"Harmonica Hill.\"\" the title has quotation marks and a capital on each important word.",
+        "The answer is \"Her first story was \"Harmonica Hill.\"\""
+      ],
+      misconception: "A common mix-up is trusting a line because it looks neat. Check each mark and each capital letter.",
+      why: "The answer is \"Her first story was \"Harmonica Hill.\"\" Its title has quotation marks and correct capitals. One title has a lowercase last word, one has no quotation marks, and one has a lowercase first word.",
+      like: ["SK-GUM5-7-C03"]
+    },
+    {
+      id: "SK-GUM5-7-S04",
+      type: "ebsr",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.L.GC.1:I:use-capitalization-and-underlining-quotation-mar"
+      ],
+      passages: ["p4"],
+      prompt: "Work through both parts.",
+      partA: {
+        prompt: "Find the line in the second paragraph with a title mistake.",
+        choices: [
+          { text: "Everybody asked her many questions." },
+          { text: "Ivy shared \"The Mermaid in the Bucket\" with the author." },
+          { text: "Gus read aloud \"Windmills For the Mule\" before lunch.", correct: true },
+          { text: "The author smiled at every answer." }
+        ]
+      },
+      partB: {
+        prompt: "Pick the best fix for that line.",
+        choices: [
+          { text: "Write For as for, since a small word in the middle of a title stays small.", correct: true },
+          { text: "Write Windmills as windmills, since only the opening word of a title may have a capital." },
+          { text: "Erase the quotation marks, since a story title is supposed to be underlined by hand." },
+          { text: "Write Mule as mule, since a title never ends on a word that has a capital letter." }
+        ]
+      },
+      clue: "Read each line in the second paragraph. Check any title for its marks and capital letters.",
+      hints: [
+        "Read each line in the second paragraph. Check any title for its marks and capital letters.",
+        "Look at the first word of each title, then the important words, then the small words.",
+        "The line about Ivy has a title with every capital letter in the right place. Check the other three."
+      ],
+      how: [
+        "Part A: read each line in the second paragraph and check any title.",
+        "In \"Gus read aloud \"Windmills For the Mule\" before lunch.\" the small word For has a capital letter.",
+        "Part A answer: Gus read aloud \"Windmills For the Mule\" before lunch.",
+        "Part B answer: \"Write For as for, since a small word in the middle of a title stays small.\""
+      ],
+      misconception: "A common mix-up is changing an important word. The small word in the middle is the one that needs fixing.",
+      why: "Part A: Gus read aloud \"Windmills For the Mule\" before lunch. Part B: \"Write For as for, since a small word in the middle of a title stays small.\" The title should be \"Windmills for the Mule.\" The other lines are written correctly.",
+      like: ["SK-GUM5-7-C04"]
+    },
+    {
+      id: "SK-GUM5-7-S05",
+      type: "ms",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.L.GC.1:I:use-capitalization-and-underlining-quotation-mar"
+      ],
+      passages: [],
+      prompt: "Select TWO lines with the song or poem name done right.",
+      pick: 2,
+      choices: [
+        { text: "Our class sang \"A Ladder to the Stars\" at the show.", correct: true },
+        { text: "Ty hummed \"Lanterns For The Harbor\" quietly all through the walk." },
+        { text: "Nina recited the poem \"Pebbles for the Giant\" to us.", correct: true },
+        { text: "We love the story Sparks and Sundaes." },
+        { text: "Jo whispered \"the Tiny Dragon\" to her cat." }
+      ],
+      clue: "Look at the marks around each title, then check how the words are capitalized.",
+      hints: [
+        "Look at the marks around each title, then check how the words are capitalized.",
+        "Pick TWO. Check lines where a mark or a capital is missing, or where one is not needed.",
+        "The line about the story has no quotation marks around the title. Decide about the other four."
+      ],
+      how: [
+        "Check each line for quotation marks and for correct capital letters.",
+        "\"Nina recited the poem \"Pebbles for the Giant\" to us.\" and \"Our class sang \"A Ladder to the Stars\" at the show.\" each have quotation marks and correct capitals.",
+        "The other three have a lowercase first word, no quotation marks, or capitals on small words."
+      ],
+      misconception: "A common mix-up is picking a line because it has many capitals. The small words in the middle of a title stay lowercase.",
+      why: "The answers are \"Nina recited the poem \"Pebbles for the Giant\" to us.\" and \"Our class sang \"A Ladder to the Stars\" at the show.\" Each title has quotation marks and correct capitals. One line has a lowercase first word, one has no quotation marks, and one capitalizes small words.",
+      like: ["SK-GUM5-7-C05"]
+    },
+    {
+      id: "SK-GUM5-7-S06",
+      type: "hottext",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.L.GC.1:I:use-capitalization-and-underlining-quotation-mar"
+      ],
+      passages: ["p5"],
+      prompt: "Mark both lines from 2 to 6 where a song or poem name is written wrongly.",
+      targets: ["p5:1:2", "p5:1:3", "p5:1:4", "p5:2:1", "p5:2:2"],
+      answer: ["p5:1:4", "p5:2:1"],
+      pick: 2,
+      clue: "Look at each line for a title. Check its marks and its capital letters.",
+      hints: [
+        "Look at each line for a title. Check its marks and its capital letters.",
+        "Go through the five lines one by one. Pick TWO.",
+        "In line 6, there is no title, so it has no title mistake. Check the other four."
+      ],
+      how: [
+        "Check each title for quotation marks and capital letters.",
+        "In line 4, the title starts with a lowercase letter, so the t should be T.",
+        "In line 5, the title has no quotation marks around it.",
+        "Lines 2 and 3 are written correctly, and line 6 has no title."
+      ],
+      misconception: "A common mix-up is thinking every mistake is about capitals. One mistake here is missing quotation marks.",
+      why: "The answers are line 4 and line 5. In line 4, the title should begin with a capital T. In line 5, the song title needs quotation marks. Lines 2 and 3 are written correctly, and line 6 has no title.",
+      like: ["SK-GUM5-7-C06"]
+    },
+    {
+      id: "SK-GUM5-7-S07",
+      type: "match",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.L.GC.1:I:use-capitalization-and-underlining-quotation-mar"
+      ],
+      passages: [],
+      prompt: "How would each name look in a handwritten report?",
+      cols: ["Underlined", "In quotation marks"],
+      rows: [
+        { text: "a poem named Honeybee Hour", answer: 1 },
+        { text: "a joke book named Giggle Garage", answer: 0 },
+        { text: "a song named Rocket Rhumba", answer: 1 },
+        { text: "a whole book of riddles named Cricket Corner", answer: 0 }
+      ],
+      clue: "Ask whether each name belongs to a whole book or to a short piece.",
+      hints: [
+        "Ask whether each name belongs to a whole book or to a short piece.",
+        "Take one row at a time. Name the kind of work before you decide.",
+        "In the row about the poem, the name belongs to a short piece. Decide about the other rows."
+      ],
+      how: [
+        "Look at what kind of work each name belongs to.",
+        "Poems and songs are short works, so their titles go in quotation marks.",
+        "A joke book and a book of riddles are whole books, so their titles are underlined when written by hand."
+      ],
+      misconception: "A common mix-up is using quotation marks for every title. Whole books are underlined by hand.",
+      why: "The poem and the song are short works, so their titles go in quotation marks. The joke book and the book of riddles are whole books, so their titles are underlined when written by hand.",
+      like: ["SK-GUM5-7-C07"]
+    },
+    {
+      id: "SK-GUM5-7-S08",
+      type: "dropdown",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.L.GC.1:I:use-capitalization-and-underlining-quotation-mar"
+      ],
+      passages: ["p5"],
+      prompt: "Pick the title that completes line 8.",
+      text: "We ended the show with {0}",
+      slots: [
+        {
+          options: ["\"Pirates and Mermaids.\"", "\"Pirates And Mermaids.\"", "\"Pirates and mermaids.\""],
+          answer: 0
+        }
+      ],
+      clue: "Think about which words in the title are important and which one is small.",
+      hints: [
+        "Think about which words in the title are important and which one is small.",
+        "Say each choice and look at its capital letters.",
+        "One choice has a lowercase last word, but a last word is always capitalized. Decide between the other two."
+      ],
+      how: [
+        "Read line 8. The title is a short work, so it goes in quotation marks.",
+        "Pirates and Mermaids are important words, and the middle word and is small, so it stays lowercase.",
+        "The answer is \"Pirates and Mermaids.\" with quotation marks."
+      ],
+      misconception: "A common mix-up is capitalizing a joining word. A small word in the middle of a title stays lowercase.",
+      why: "The answer is \"Pirates and Mermaids.\" Pirates and Mermaids are important words, and the word between them is small. One choice capitalizes And, and one lowercases the last word.",
+      like: ["SK-GUM5-7-C08"]
+    },
+    {
+      id: "SK-GUM5-7-S09",
+      type: "mc",
+      points: 1,
+      dok: 3,
+      std: [
+        "3.L.GC.1:I:use-capitalization-and-underlining-quotation-mar"
+      ],
+      passages: ["p5"],
+      prompt: "Lines 8 and 9 each name a work with a small word inside it. What is true of both titles?",
+      choices: [
+        { text: "Both are mistakes, since a small word has to be capitalized when it sits between two big ones." },
+        { text: "Both begin and end with important words, and the small words sit between them in lowercase.", correct: true },
+        { text: "Only line 9 is correct, since a title may hold a lowercase word only when it has two of them." },
+        { text: "Neither needs quotation marks, since a title near the end of a draft is written without them." }
+      ],
+      clue: "Look at the first word and the last word of each title.",
+      hints: [
+        "Look at the first word and the last word of each title.",
+        "Sort the words in each title into important words and small words.",
+        "Both titles are short works, so they do need quotation marks. Check the other choices."
+      ],
+      how: [
+        "Read the two titles: \"Pirates and Mermaids\" and \"Wizards of the Wind.\"",
+        "Each starts and ends with an important word, and the small words and, of and the sit in the middle in lowercase.",
+        "The answer is \"Both begin and end with important words, and the small words sit between them in lowercase.\""
+      ],
+      misconception: "A common mix-up is thinking small words in a title need capitals. In the middle of a title they stay lowercase.",
+      why: "The answer is \"Both begin and end with important words, and the small words sit between them in lowercase.\" Both titles are written correctly and need quotation marks. Only the important words have capitals.",
+      like: ["SK-GUM5-7-C09"]
+    },
+    {
+      id: "SK-GUM5-7-S10",
+      type: "dropdown",
+      points: 1,
+      dok: 1,
+      std: [
+        "3.L.GC.1:I:use-capitalization-and-underlining-quotation-mar"
+      ],
+      passages: ["p5"],
+      prompt: "Which title best completes line 7?",
+      text: "Mr. Dean read the poem {0}",
+      slots: [
+        {
+          options: ["\"Ladders to the Sky.\"", "\"Ladders to the sky.\"", "Ladders to the Sky."],
+          answer: 0
+        }
+      ],
+      clue: "Ask what kind of work the title names and which words need capitals.",
+      hints: [
+        "Ask what kind of work the title names and which words need capitals.",
+        "Say each choice and check the marks around it.",
+        "One choice has no quotation marks at all. Decide between the other two."
+      ],
+      how: [
+        "Read line 7. A poem is a short work, so its title goes in quotation marks.",
+        "Ladders and Sky are important words, and to and the are small words in the middle.",
+        "The answer is \"Ladders to the Sky.\" with quotation marks."
+      ],
+      misconception: "A common mix-up is leaving off quotation marks. The title of a poem goes inside them.",
+      why: "The answer is \"Ladders to the Sky.\" A poem title goes in quotation marks, and Ladders and Sky get capitals. One choice has a lowercase sky, and one has no quotation marks.",
+      like: ["SK-GUM5-7-C10"]
+    },
+    {
+      id: "SK-GUM5-7-S11",
+      type: "hottext",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.L.GC.1:I:use-capitalization-and-underlining-quotation-mar"
+      ],
+      passages: ["p6"],
+      prompt: "Read lines 5 to 9. Which line has a title mistake?",
+      targets: ["p6:2:1", "p6:2:2", "p6:2:3", "p6:2:4", "p6:2:5"],
+      answer: ["p6:2:3"],
+      pick: 1,
+      clue: "Look at each line for a title. Check its marks and its capital letters.",
+      hints: [
+        "Look at each line for a title. Check its marks and its capital letters.",
+        "Go through the five lines one by one. Pick ONE.",
+        "The line about Lena has a title with every capital letter in the right place. Check the other four."
+      ],
+      how: [
+        "Check each title for quotation marks and capital letters.",
+        "Lines 5, 6 and 8 have titles written correctly, and line 9 has no title.",
+        "In line 7, the title capitalizes the small word Of in the middle."
+      ],
+      misconception: "A common mix-up is picking the line whose title is longest. Check each small word in the middle.",
+      why: "The answer is line 7, \"Kofi shared \"The Bucket Of Stars\" with a grin.\" The small word of stays lowercase in the middle of a title, so it should be \"The Bucket of Stars.\" Lines 5, 6 and 8 are written correctly, and line 9 has no title.",
+      like: ["SK-GUM5-7-C11"]
+    },
+    {
+      id: "SK-GUM5-7-S12",
+      type: "dropdown",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.L.GC.1:I:use-capitalization-and-underlining-quotation-mar"
+      ],
+      passages: ["p6"],
+      prompt: "Which choice fits at the end of line 10?",
+      text: "Our teacher closed with a story, {0}",
+      slots: [
+        {
+          options: ["\"A Candle on the Bridge.\"", "\"A Candle On the Bridge.\"", "\"A candle on the Bridge.\""],
+          answer: 0
+        }
+      ],
+      clue: "Think about which words in the title are important and which are small.",
+      hints: [
+        "Think about which words in the title are important and which are small.",
+        "Say each choice and look at its capital letters.",
+        "One choice makes the first word lowercase, but a first word always gets a capital. Decide between the other two."
+      ],
+      how: [
+        "Read line 10. A story is a short work, so its title goes in quotation marks.",
+        "Candle and Bridge are important words, A is the first word, and on and the are small words in the middle.",
+        "The answer is \"A Candle on the Bridge.\" with quotation marks."
+      ],
+      misconception: "A common mix-up is capitalizing a small word in the middle. Words like on and the stay lowercase there.",
+      why: "The answer is \"A Candle on the Bridge.\" A is first, Candle and Bridge are important, and on and the are small words in the middle. One choice capitalizes On, and one lowercases the first word.",
+      like: ["SK-GUM5-7-C12"]
+    },
+    {
+      id: "SK-GUM5-7-S13",
+      type: "ms",
+      points: 2,
+      dok: 3,
+      std: [
+        "3.L.GC.1:I:use-capitalization-and-underlining-quotation-mar"
+      ],
+      passages: [],
+      prompt: "Rae says, \"A title may keep a small word in lowercase only when it comes last.\" Which TWO titles show she is wrong?",
+      pick: 2,
+      choices: [
+        { text: "Mittens for the Penguin", correct: true },
+        { text: "Wobbly Yellow Boat" },
+        { text: "Cheerful Brown Pony" },
+        { text: "Tiny Orange Pumpkin" },
+        { text: "The Cat in the Rain", correct: true }
+      ],
+      clue: "Rae makes a claim about small words. Look for titles that keep small words in lowercase somewhere else.",
+      hints: [
+        "Rae makes a claim about small words. Look for titles that keep small words in lowercase somewhere else.",
+        "Pick TWO. Check each title for words like a, an, the, and, of, in, on, at, to and for.",
+        "The title about the pony has no small words at all. Decide about the other four."
+      ],
+      how: [
+        "Look for titles with small words in the middle.",
+        "\"Mittens for the Penguin\" and \"The Cat in the Rain\" each keep small words lowercase in the middle, so they show Rae is wrong.",
+        "The other three have only important words, so they say nothing about small words."
+      ],
+      misconception: "A common mix-up is picking titles with many capitals. Rae is wrong about titles that have small words in the middle.",
+      why: "The answers are \"Mittens for the Penguin\" and \"The Cat in the Rain.\" Each has small words that stay lowercase in the middle, and a small word does not have to come last. The other three have only important words.",
+      like: ["SK-GUM5-7-C13"]
+    },
+    {
+      id: "SK-GUM5-7-S14",
+      type: "match",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.L.GC.1:I:use-capitalization-and-underlining-quotation-mar"
+      ],
+      passages: [],
+      prompt: "Sort the titles: right or wrong?",
+      cols: ["Right", "Wrong"],
+      rows: [
+        { text: "Plums for the Giraffe", answer: 0 },
+        { text: "The Mouse In the Boat", answer: 1 },
+        { text: "an Elephant at the Door", answer: 1 },
+        { text: "Snow on the Chimney", answer: 0 }
+      ],
+      clue: "Look at the first word, then the important words, then the small words in each title.",
+      hints: [
+        "Look at the first word, then the important words, then the small words in each title.",
+        "Take one row at a time. Say the title and check each capital letter.",
+        "In the row about the chimney, the small words are lowercase, which is correct. Decide about the other rows."
+      ],
+      how: [
+        "Look at the capital letters in each row.",
+        "\"Plums for the Giraffe\" and \"Snow on the Chimney\" have capitals on the first and important words and lowercase small words.",
+        "\"The Mouse In the Boat\" capitalizes a small word, and \"an Elephant at the Door\" has a lowercase first word."
+      ],
+      misconception: "A common mix-up is thinking every capital is a good sign. A small word in the middle should not have one.",
+      why: "\"Plums for the Giraffe\" and \"Snow on the Chimney\" are right. \"The Mouse In the Boat\" has a capital on the small word In, and \"an Elephant at the Door\" has a lowercase first word.",
+      like: ["SK-GUM5-7-C14"]
+    },
+    {
+      id: "SK-GUM5-7-S15",
+      type: "mc",
+      points: 1,
+      dok: 3,
+      std: [
+        "3.L.GC.1:I:use-capitalization-and-underlining-quotation-mar"
+      ],
+      passages: [],
+      prompt: "Cora typed the story title \"the Frog And the Lamp\" and wants to fix it. Which change list makes it right?",
+      choices: [
+        { text: "Capital T on the first the, and capital letters on every word that is left." },
+        { text: "Lowercase f in Frog, since only the opening word of a title gets a capital." },
+        { text: "Capital T on the first the, and a lowercase a in And.", correct: true },
+        { text: "Capital T on the second the, and nothing else, since the rest is already fine." }
+      ],
+      clue: "Check the first word of the title. Then sort the other words into important words and small words.",
+      hints: [
+        "Check the first word of the title. Then sort the other words into important words and small words.",
+        "Look at what and does in the middle of a title.",
+        "The last word of a title always keeps its capital, so the answer cannot say that Lamp should change. Check the other choices."
+      ],
+      how: [
+        "Look at each word: the first word needs a capital, and And is a small word in the middle.",
+        "Frog and Lamp are important words, so they keep their capitals.",
+        "The answer is \"Capital T on the first the, and a lowercase a in And.\""
+      ],
+      misconception: "A common mix-up is fixing only one thing. This title has a first-word mistake and a small-word mistake.",
+      why: "The answer is \"Capital T on the first the, and a lowercase a in And.\" The title should be \"The Frog and the Lamp.\" Frog and Lamp are important words and keep their capitals.",
+      like: ["SK-GUM5-7-C15"]
+    }
+  ],
+  addons: {
+    "SK-GUM5-7-P1": {
+      hints: [
+        "Check two things in each title: the marks around it and the capital letters.",
+        "Look at the first word, then the important words, then the small words in the middle.",
+        "One choice has no quotation marks around the title. Check the other choices."
+      ],
+      how: [
+        "Check the marks and the capital letters in each title.",
+        "A poem title goes in quotation marks, and The, Moon and Fox get capitals while and and the stay lowercase.",
+        "The answer is 'My sister read the poem \"The Moon and the Fox\" to me.'"
+      ],
+      misconception: "A common mix-up is thinking a lowercase first word is fine. The first word of a title always gets a capital letter."
+    },
+    "SK-GUM5-7-P2": {
+      hints: [
+        "Ask whether each title names a whole book or a short work.",
+        "Do one row at a time. Name the kind of work before you decide.",
+        "The title of a poem belongs to a short work. Decide about the other rows."
+      ],
+      how: [
+        "Look at what kind of work each row names.",
+        "Chapter books and picture books are whole books, so their titles go in italics when typed or are underlined by hand.",
+        "Poems, songs and short stories are short works, so their titles go in quotation marks."
+      ],
+      misconception: "A common mix-up is putting every title in quotation marks. Whole books use italics or underlining."
+    },
+    "SK-GUM5-7-P3": {
+      hints: [
+        "Look at the first word of every title. Then look at each important word.",
+        "Read the five sentences one at a time. Pick ONE.",
+        "The sentence about Lucy has a title with every capital letter in the right place. Check the other four."
+      ],
+      how: [
+        "Check each title for quotation marks and capital letters.",
+        "Four of the titles start with a capital letter and keep small words lowercase in the middle.",
+        "In 'We sang \"the Bells of Winter\" at the concert.' the title starts with a lowercase letter."
+      ],
+      misconception: "A common mix-up is picking the title with the most small words. Small words in the middle are meant to be lowercase."
+    },
+    "SK-GUM5-7-P4": {
+      hints: [
+        "A story is a short work. Check the marks around the title.",
+        "Then check the capital on each important word.",
+        "One choice has no quotation marks at all. Decide between the other two."
+      ],
+      how: [
+        "A story is a short work, so its title goes in quotation marks.",
+        "The, Owl and Fence are the first word and important words, so they get capitals.",
+        "The answer is \"The Owl on the Fence\" in quotation marks."
+      ],
+      misconception: "A common mix-up is leaving off quotation marks. The title of a story goes inside them."
+    },
+    "SK-GUM5-7-P5": {
+      hints: [
+        "Look at the first word, then the important words, then the small words in the middle.",
+        "Say each title and check every capital letter.",
+        "One choice has a lowercase first word. Check the other choices."
+      ],
+      how: [
+        "Check the capital letters in each title.",
+        "A is the first word, Picnic and Lake are important words, and at and the are small words in the middle.",
+        "The answer is A Picnic at the Lake."
+      ],
+      misconception: "A common mix-up is capitalizing a small word in the middle. Words like at and the stay lowercase there."
+    }
+  },
+  /* B8:core:end */
   test: [
     { id: "SK-GUM5-7-T1", type: "mc", points: 1, dok: 2, passages: [],
       prompt: "Which sentence writes the song title correctly?",
