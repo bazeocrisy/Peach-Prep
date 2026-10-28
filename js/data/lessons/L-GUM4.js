@@ -6769,7 +6769,7 @@ PP.addLesson({
               "3.L.GC.1:I:use-relative-pronouns-and-relative-adverbs"
             ],
             passages: ["p3"],
-            prompt: "Which revision of sentence 4 fixes the mistake?",
+            prompt: "Which rewrite of sentence 4 corrects the tell-more word?",
             choices: [
               {
                 text: "Marco is the player who scored the first goal.",
@@ -7358,7 +7358,7 @@ PP.addLesson({
         "3.L.GC.1:I:use-relative-pronouns-and-relative-adverbs"
       ],
       passages: ["p6"],
-      prompt: "Which rewrite of the moving story's fourth sentence reads well?",
+      prompt: "Select the version of the moving story's fourth line that reads well.",
       choices: [
         {
           text: "My little brother is a boy who cried loudly when we packed his shiny red bike into the long truck at dawn.",

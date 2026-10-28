@@ -129,3 +129,17 @@ Status: NOT ACCEPTED: awaiting independent review. All 8 lessons of L-GUM4.js ar
 - Duplicate scan: raw 8-gram scan of all js/data files for the L8 region. Whole-hint and whole-prompt matches with other lessons were reworded. Remaining hits are the catalog title, the pre-existing Teach and practice text (including the generic prompt "Choose the word that correctly completes the sentence") and the pre-existing "it's is short for it is" sentence in L-GUM3.
 - Known overlap for reviewers: to, too, two, there, their, they're and its/it's necessarily recur across the refs, Together, test and core, and the twins reuse those option words.
 - Web verification: to is a preposition or infinitive marker, too means also or excessively, two is 2 https://grammarbook.com/homonyms/to-too-two.asp ; there is a place, their shows possession, they're is they are https://www.grammar-monster.com/easily_confused/there_their_theyre.htm ; its is possessive with no apostrophe and it's is it is or it has https://www.dictionary.com/e/its-vs-its/ ; your is possessive and you're is you are https://www.dictionary.com/e/your-vs-youre/ ; advice is a noun with an s sound and advise is a verb with a z sound https://writingexplained.org/advice-vs-advise-difference ; their's is incorrect https://www.lawlessenglish.com/english-mistakes/theirs/ ; its' is never correct https://www.grammarbook.com/blog/?p=737 .
+
+## Revision round 1 (after first review; lessons 1, 2, 3, 4, 5, 7). Lessons 6 and 8 not touched.
+Final-file figures (twin-vs-core max counts (n) markers and digits, set / multiset; core-vs-core max <= 0.30 in every lesson; check-content --all PASS, 0 failures; check-writing and check-instructional-copy clean):
+| Lesson | Twin max (set/multi) | Core formats | Core DOK 2/3 | Core draft items | Domains | Passages FK (max) |
+|---|---|---|---|---|---|---|
+| 1 | 0.200 / 0.204 | match 1, hot 3, mc 5, dd 2, ebsr 1, ms 3 | 10/5 | 8 | 7, max 4 | 3.93 |
+| 2 | 0.204 / 0.194 | match 1, dd 3, mc 5, hot 2, ebsr 1, ms 3 | 11/4 | 8 | 7, max 3 | 4.30 |
+| 3 | 0.208 / 0.203 | match 1, mc 6, dd 3, hot 2, ebsr 1, ms 2 | 10/5 | 9 | 7, max 4 | 3.68 |
+| 4 | 0.200 / 0.206 | ms 3, match 1, mc 4, dd 4, hot 2, ebsr 1 | 10/5 | 9 | 7, max 4 | 3.17 |
+| 5 | 0.206 / 0.209 | dd 4, match 1, mc 5, hot 2, ebsr 1, ms 2 | 10/5 | 9 | 7, max 4 | 4.06 |
+| 7 | 0.200 / 0.192 | match 1, ms 3, dd 4, hot 2, mc 4, ebsr 1 | 10/5 | 9 | 7, max 4 | 3.74 |
+Passages are 103-131 words in all six lessons. No DOK 1 items. verify.js (other tokenizer) shows twin max 0.208-0.214 on L5 set only against legacy P3/C13 pairs it counts differently; all at or below the 0.21 target on the markers-aware count.
+Lesson 5: C04 slot set changed away from the twins (who/what/whose/how); C09/C11/C12/C13/C14/C15 reworded; twins S01, S04, S07, S09, S11, S12, S13, S14, S15 rebuilt; second keys removed from C13/S13 (that/which only); S14 key no longer uniquely longest.
+Lesson 7: S04 and S08 hot-text twins now show different sentence numbers and key positions with a different prompt frame (S08 key text corrected to match the passage, "seems sticky"); S05, S03, S07 prompts reframed; C15 gained "before dinner, so she was free to play" so modals are ruled out; C12 hint 3 now an agreement hint.
