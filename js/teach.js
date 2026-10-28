@@ -69,6 +69,26 @@
     return best;
   }
 
+  /* Does a piece of Teach Me text name the key (the correct choice or blank word)? Used to be honest about it:
+     the player counts a child as having been shown the answer as soon as such a text is on screen, and
+     verification/teach-leaks.js lists every item whose early steps do it so authors can rewrite them.
+     Conservative: a short key that is also an ordinary word can be a false positive. Only mc, ms, ebsr and
+     dropdown keys are checked (order, match, hottext and written items have no single key text). The strategy card
+     is lesson-wide teaching text (it can contain a word that is also a key, such as "honest"), so it is not checked. */
+  const normT = t => String(t || "").toLowerCase().replace(/[\u201c\u201d]/g, '"').replace(/[\u2018\u2019]/g, "'").replace(/\*\*/g, "").replace(/\s+/g, " ").trim();
+  function keyTexts(item) {
+    const t = c => (c || []).filter(x => x.correct).map(x => x.text);
+    if (item.type === "mc" || item.type === "ms") return t(item.choices);
+    if (item.type === "ebsr") return t(item.partA && item.partA.choices).concat(t(item.partB && item.partB.choices));
+    if (item.type === "dropdown") return (item.slots || []).map(s => (s.options || [])[s.answer]).filter(Boolean);
+    return [];
+  }
+  const esc = k => k.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  function leaksKey(item, text) {
+    const t = normT(text);
+    return keyTexts(item).map(normT).filter(k => k.length >= 4).some(k => new RegExp("(^|[^a-z0-9])" + esc(k) + "($|[^a-z0-9])").test(t));
+  }
+
   function card(id, title, cls) {
     const c = make("section", "tm-card" + (cls ? " " + cls : ""));
     c.dataset.unit = id; c.tabIndex = -1;
@@ -82,7 +102,7 @@
     const H = (Array.isArray(item.hints) && item.hints.length ? item.hints : [item.clue]).filter(Boolean);
     const how = (Array.isArray(item.how) && item.how.length ? item.how : [item.why]).filter(Boolean);
     const units = [];
-    units.push({ id: "asks", build() {
+    units.push({ id: "asks", leak: leaksKey(item, item.prompt), build() {
       const c = card("asks", "What the question asks");
       c.appendChild(make("p", "tm-quote", item.prompt));
       const f = formatLine(item); if (f) c.appendChild(make("p", "tm-note", f));
@@ -100,7 +120,7 @@
     const evidence = H[1] || "";
     const refs = evidenceRefs(item, evidence);
     const hasText = (item.passages || []).length > 0 || !!item.stem;
-    if (evidence) units.push({ id: "evidence", build() {
+    if (evidence) units.push({ id: "evidence", leak: leaksKey(item, evidence), build() {
       const c = card("evidence", hasText ? "Look in the text" : "A useful step");
       c.appendChild(make("p", "", evidence));
       if (refs.length && opts.onShow) {
@@ -110,7 +130,7 @@
       }
       return c;
     } });
-    how.slice(0, -1).forEach((t, i) => units.push({ id: "step", n: i + 1, build() {
+    how.slice(0, -1).forEach((t, i) => units.push({ id: "step", n: i + 1, leak: leaksKey(item, t), build() {
       const c = card("step", "Step " + (i + 1));
       c.appendChild(make("p", "", t));
       return c;
@@ -179,5 +199,5 @@
   }
   function clearHighlight() { document.querySelectorAll("#passage-pane-body .is-teach-focus").forEach(n => n.classList.remove("is-teach-focus")); }
 
-  window.PP_TEACH = { compose, more, highlight, clearHighlight, evidenceRefs, formatLine, bestPoint };
+  window.PP_TEACH = { compose, more, highlight, clearHighlight, evidenceRefs, formatLine, bestPoint, keyTexts, leaksKey };
 })();

@@ -46,3 +46,7 @@ No change. (versioning.py has one failure on the unmodified baseline too.)
 
 ## New
 - `verification/qf.py`: question-first states (see its docstring). `verification/teach-coverage.js`: roll-out work list.
+
+## Answer-leak change (2026-10-27)
+- practice-own.py B.5: P4's early step names the key, so the "marked answer shown" warning is read on the button before that press (any press), not only before the last. B.6: consecutive `how` log events (the early leaking step and the final answer) count as one. Assertions about x, w, h, tm and the outline are unchanged.
+- qf.py: Q2c (new) checks every own-set item's drawn cards against `verification/teach-leaks.json`, and the two behaviours (no leak: nothing marked before the answer press; leak: warned, then marked shown).

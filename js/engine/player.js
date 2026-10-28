@@ -668,6 +668,8 @@
     }
     run.teach.shown = (done || st.shown) ? comp.units.length : Math.min(2, comp.units.length);
     if (!restore && !done && !st.shown) st.tp = Math.max(st.tp || 0, run.teach.shown);
+    /* honesty: a card on screen that names the key counts as the answer shown (see DESIGN.md section 6, "answer leaks") */
+    if (!restore && !done && !st.shown && comp.units.slice(0, run.teach.shown).some(u => u.leak)) { st.shown = true; st.sinceHint = Math.min(st.sinceHint || 0, 1); }
     if (!restore) persist({ t: "teach" });
     syncControls();   /* the question screen is hidden, but its Check state is already right for the return */
     renderTeach(true);
@@ -702,10 +704,12 @@
     const nb = el("teach-next");
     nb.hidden = left <= 0;
     const lastNext = left === 1;
-    nb.textContent = lastNext ? "Show the answer" : "Show the next step";
+    const nu = t.comp.units[t.shown], gives = !!nu && nu.id !== "answer" && !!nu.leak;
+    nb.textContent = lastNext ? "Show the answer" : gives ? "Show the next step (it names the answer)" : "Show the next step";
     const ex = el("teach-explain");
     ex.textContent = left <= 0 ? ""
       : lastNext ? (done || st.shown ? "You can look at the answer again. Nothing changes." : "Showing the answer is fine. This question will be marked answer shown, and you can try a fresh question like it.")
+      : gives && !(done || st.shown) ? "The next step names the answer. If you open it, this question will be marked answer shown, and you can try a fresh question like it."
       : "Take one step at a time, or go back to your question whenever you like.";
     ex.hidden = !ex.textContent;
     const end = el("teach-end");
@@ -718,9 +722,9 @@
     const u = t.comp.units[t.shown]; t.shown++;
     const node = u.build(); el("teach-cards").appendChild(node);
     st.tp = Math.max(st.tp || 0, t.shown);
-    const isAnswer = u.id === "answer";
-    if (isAnswer) { if (st.solved || (item.type === "cr" && st.crDone)) st.howAfter = true; else st.shown = true; st.sinceHint = Math.min(st.sinceHint || 0, 1); }
-    persist({ t: isAnswer ? "how" : "teach-step", n: t.shown, after: !!st.howAfter });
+    const isAnswer = u.id === "answer", gives = isAnswer || !!u.leak;
+    if (gives) { if (st.solved || (item.type === "cr" && st.crDone)) st.howAfter = true; else st.shown = true; st.sinceHint = Math.min(st.sinceHint || 0, 1); }
+    persist({ t: gives ? "how" : "teach-step", n: t.shown, after: !!st.howAfter });
     const hadFocus = document.activeElement === el("teach-next");
     syncTeachButtons();
     if (isAnswer) { node.focus({ preventScroll: true }); reveal(node, el("teach-end")); }

@@ -1,0 +1,2918 @@
+{
+ "about": "Core items whose Teach Me cards before 'The answer' contain the key text. The allowlist for verification/qf.py; it may only shrink. Regenerate with: node verification/teach-leaks.js --write",
+ "rule": "js/teach.js leaksKey: mc, ms, ebsr and dropdown keys of at least four characters, whole-word match, in asks, strategy, evidence or a how step before the last",
+ "itemsChecked": 660,
+ "count": 404,
+ "items": [
+  {
+   "lesson": "3.L.GC.2.a",
+   "id": "SK-GC2a-C07",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.L.GC.2.a",
+   "id": "SK-GC2a-C13",
+   "where": [
+    "step 2",
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.L.GC.2.a",
+   "id": "SK-GC2a-C15",
+   "where": [
+    "step 2"
+   ]
+  },
+  {
+   "lesson": "3.L.GC.2.a",
+   "id": "SK-GC2a-P8",
+   "where": [
+    "step 2"
+   ]
+  },
+  {
+   "lesson": "3.L.GC.2.a",
+   "id": "SK-GC2a-P9",
+   "where": [
+    "step 2",
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.L.GC.2.b",
+   "id": "SK-GC2b-C04",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.L.GC.2.b",
+   "id": "SK-GC2b-C06",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.L.GC.2.b",
+   "id": "SK-GC2b-C10",
+   "where": [
+    "step 2"
+   ]
+  },
+  {
+   "lesson": "3.L.GC.2.b",
+   "id": "SK-GC2b-C12",
+   "where": [
+    "step 2",
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.L.GC.2.b",
+   "id": "SK-GC2b-C15",
+   "where": [
+    "step 2"
+   ]
+  },
+  {
+   "lesson": "3.L.GC.2.b",
+   "id": "SK-GC2b-P4",
+   "where": [
+    "step 2",
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.L.GC.2.b",
+   "id": "SK-GC2b-P5",
+   "where": [
+    "step 2"
+   ]
+  },
+  {
+   "lesson": "3.L.GC.2.c",
+   "id": "SK-GC2c-C04",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.L.GC.2.c",
+   "id": "SK-GC2c-C05",
+   "where": [
+    "step 2",
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.L.GC.2.c",
+   "id": "SK-GC2c-C08",
+   "where": [
+    "step 2",
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.L.GC.2.c",
+   "id": "SK-GC2c-C12",
+   "where": [
+    "step 1",
+    "step 2"
+   ]
+  },
+  {
+   "lesson": "3.L.GC.2.c",
+   "id": "SK-GC2c-C13",
+   "where": [
+    "step 1",
+    "step 2"
+   ]
+  },
+  {
+   "lesson": "3.L.GC.2.c",
+   "id": "SK-GC2c-C14",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.L.GC.2.c",
+   "id": "SK-GC2c-P5",
+   "where": [
+    "step 1"
+   ]
+  },
+  {
+   "lesson": "3.L.GC.2.c",
+   "id": "SK-GC2c-P6",
+   "where": [
+    "step 2"
+   ]
+  },
+  {
+   "lesson": "3.L.GC.2.c",
+   "id": "SK-GC2c-P7",
+   "where": [
+    "step 2"
+   ]
+  },
+  {
+   "lesson": "3.L.GC.2.d",
+   "id": "SK-GC2d-C04",
+   "where": [
+    "step 2"
+   ]
+  },
+  {
+   "lesson": "3.L.GC.2.d",
+   "id": "SK-GC2d-C05",
+   "where": [
+    "step 2",
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.L.GC.2.d",
+   "id": "SK-GC2d-C06",
+   "where": [
+    "step 2"
+   ]
+  },
+  {
+   "lesson": "3.L.GC.2.d",
+   "id": "SK-GC2d-C07",
+   "where": [
+    "step 2"
+   ]
+  },
+  {
+   "lesson": "3.L.GC.2.d",
+   "id": "SK-GC2d-C08",
+   "where": [
+    "step 2",
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.L.GC.2.d",
+   "id": "SK-GC2d-C11",
+   "where": [
+    "step 2"
+   ]
+  },
+  {
+   "lesson": "3.L.GC.2.d",
+   "id": "SK-GC2d-C12",
+   "where": [
+    "step 2"
+   ]
+  },
+  {
+   "lesson": "3.L.GC.2.d",
+   "id": "SK-GC2d-C13",
+   "where": [
+    "step 1",
+    "step 2"
+   ]
+  },
+  {
+   "lesson": "3.L.GC.2.d",
+   "id": "SK-GC2d-C14",
+   "where": [
+    "step 2",
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.L.GC.2.d",
+   "id": "SK-GC2d-C15",
+   "where": [
+    "step 2",
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.L.GC.2.d",
+   "id": "SK-GC2d-P1",
+   "where": [
+    "step 2"
+   ]
+  },
+  {
+   "lesson": "3.T.RA.1.a",
+   "id": "SK-RA1a-C02",
+   "where": [
+    "step 2"
+   ]
+  },
+  {
+   "lesson": "3.T.RA.1.a",
+   "id": "SK-RA1a-C04",
+   "where": [
+    "step 2"
+   ]
+  },
+  {
+   "lesson": "3.T.RA.1.a",
+   "id": "SK-RA1a-C06",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.RA.1.a",
+   "id": "SK-RA1a-C07",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.RA.1.a",
+   "id": "SK-RA1a-C08",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.RA.1.a",
+   "id": "SK-RA1a-C09",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.RA.1.a",
+   "id": "SK-RA1a-C10",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.RA.1.a",
+   "id": "SK-RA1a-C12",
+   "where": [
+    "step 2",
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.RA.1.a",
+   "id": "SK-RA1a-C15",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.RA.1.a",
+   "id": "SK-RA1a-P4",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.RA.1.a",
+   "id": "SK-RA1a-P5",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.RA.1.b",
+   "id": "SK-RA1b-C04",
+   "where": [
+    "step 2"
+   ]
+  },
+  {
+   "lesson": "3.T.RA.1.b",
+   "id": "SK-RA1b-C08",
+   "where": [
+    "step 2",
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.RA.1.b",
+   "id": "SK-RA1b-C09",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.RA.1.b",
+   "id": "SK-RA1b-P7",
+   "where": [
+    "step 2"
+   ]
+  },
+  {
+   "lesson": "3.T.RA.1.c",
+   "id": "SK-RA1c-C01",
+   "where": [
+    "step 2"
+   ]
+  },
+  {
+   "lesson": "3.T.RA.1.c",
+   "id": "SK-RA1c-C02",
+   "where": [
+    "step 2"
+   ]
+  },
+  {
+   "lesson": "3.T.RA.1.c",
+   "id": "SK-RA1c-C03",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.RA.1.c",
+   "id": "SK-RA1c-C04",
+   "where": [
+    "step 2"
+   ]
+  },
+  {
+   "lesson": "3.T.RA.1.c",
+   "id": "SK-RA1c-C06",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.RA.1.c",
+   "id": "SK-RA1c-C07",
+   "where": [
+    "step 2"
+   ]
+  },
+  {
+   "lesson": "3.T.RA.1.c",
+   "id": "SK-RA1c-C11",
+   "where": [
+    "step 2"
+   ]
+  },
+  {
+   "lesson": "3.T.RA.1.c",
+   "id": "SK-RA1c-C13",
+   "where": [
+    "step 2"
+   ]
+  },
+  {
+   "lesson": "3.T.RA.1.c",
+   "id": "SK-RA1c-C14",
+   "where": [
+    "step 2",
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.RA.2.a",
+   "id": "SK-RA2a-C03",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.RA.2.a",
+   "id": "SK-RA2a-C04",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.RA.2.a",
+   "id": "SK-RA2a-C08",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.RA.2.a",
+   "id": "SK-RA2a-C11",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.RA.2.b",
+   "id": "SK-RA2b-C05",
+   "where": [
+    "step 1",
+    "step 2"
+   ]
+  },
+  {
+   "lesson": "3.T.RA.2.b",
+   "id": "SK-RA2b-C11",
+   "where": [
+    "step 1",
+    "step 2"
+   ]
+  },
+  {
+   "lesson": "3.T.SS.1.a",
+   "id": "SK-SS1a-C04",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.SS.1.a",
+   "id": "SK-SS1a-C05",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.SS.1.a",
+   "id": "SK-SS1a-C07",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.SS.1.a",
+   "id": "SK-SS1a-C08",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.SS.1.a",
+   "id": "SK-SS1a-C09",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.SS.1.a",
+   "id": "SK-SS1a-C10",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.SS.1.a",
+   "id": "SK-SS1a-C11",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.SS.1.a",
+   "id": "SK-SS1a-C12",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.SS.1.a",
+   "id": "SK-SS1a-C14",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.SS.1.a",
+   "id": "SK-SS1a-P5",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.SS.1.a",
+   "id": "SK-SS1a-P6",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.SS.1.a",
+   "id": "SK-SS1a-P7",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.SS.1.b",
+   "id": "SK-SS1b-C02",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.SS.1.b",
+   "id": "SK-SS1b-C06",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.SS.1.b",
+   "id": "SK-SS1b-C07",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.SS.1.b",
+   "id": "SK-SS1b-C09",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.SS.1.b",
+   "id": "SK-SS1b-C10",
+   "where": [
+    "step 1",
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.SS.1.b",
+   "id": "SK-SS1b-C12",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.SS.1.b",
+   "id": "SK-SS1b-C14",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.SS.1.b",
+   "id": "SK-SS1b-C15",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.SS.1.c",
+   "id": "SK-SS1c-C03",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.SS.1.c",
+   "id": "SK-SS1c-C04",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.SS.1.c",
+   "id": "SK-SS1c-C05",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.SS.1.c",
+   "id": "SK-SS1c-C06",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.SS.1.c",
+   "id": "SK-SS1c-C07",
+   "where": [
+    "step 2",
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.SS.1.c",
+   "id": "SK-SS1c-C08",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.SS.1.c",
+   "id": "SK-SS1c-C10",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.SS.1.c",
+   "id": "SK-SS1c-C11",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.SS.1.c",
+   "id": "SK-SS1c-C13",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.SS.1.c",
+   "id": "SK-SS1c-C14",
+   "where": [
+    "step 1",
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.SS.1.c",
+   "id": "SK-SS1c-C15",
+   "where": [
+    "step 1",
+    "step 2",
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.SS.1.c",
+   "id": "SK-SS1c-P4",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.SS.1.c",
+   "id": "SK-SS1c-P6",
+   "where": [
+    "step 2"
+   ]
+  },
+  {
+   "lesson": "3.T.SS.1.d",
+   "id": "SK-SS1d-C01",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.SS.1.d",
+   "id": "SK-SS1d-C03",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.SS.1.d",
+   "id": "SK-SS1d-C07",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.SS.1.d",
+   "id": "SK-SS1d-C08",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.SS.1.d",
+   "id": "SK-SS1d-C09",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.SS.1.d",
+   "id": "SK-SS1d-C12",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.SS.1.d",
+   "id": "SK-SS1d-C14",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.SS.2.a",
+   "id": "SK-SS2a-C02",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.SS.2.a",
+   "id": "SK-SS2a-C03",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.SS.2.a",
+   "id": "SK-SS2a-C05",
+   "where": [
+    "step 2"
+   ]
+  },
+  {
+   "lesson": "3.T.SS.2.a",
+   "id": "SK-SS2a-C06",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.SS.2.a",
+   "id": "SK-SS2a-C07",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.SS.2.a",
+   "id": "SK-SS2a-C08",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.SS.2.a",
+   "id": "SK-SS2a-C09",
+   "where": [
+    "step 1"
+   ]
+  },
+  {
+   "lesson": "3.T.SS.2.a",
+   "id": "SK-SS2a-C11",
+   "where": [
+    "step 1"
+   ]
+  },
+  {
+   "lesson": "3.T.SS.2.a",
+   "id": "SK-SS2a-C12",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.SS.2.a",
+   "id": "SK-SS2a-C13",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.SS.2.a",
+   "id": "SK-SS2a-C14",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.SS.2.a",
+   "id": "SK-SS2a-P5",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.SS.2.b",
+   "id": "SK-SS2b-C02",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.SS.2.b",
+   "id": "SK-SS2b-C03",
+   "where": [
+    "step 2"
+   ]
+  },
+  {
+   "lesson": "3.T.SS.2.b",
+   "id": "SK-SS2b-C05",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.SS.2.b",
+   "id": "SK-SS2b-C07",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.SS.2.b",
+   "id": "SK-SS2b-C08",
+   "where": [
+    "step 2",
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.SS.2.b",
+   "id": "SK-SS2b-C11",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.SS.2.b",
+   "id": "SK-SS2b-C12",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.SS.2.b",
+   "id": "SK-SS2b-C13",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.SS.2.b",
+   "id": "SK-SS2b-C14",
+   "where": [
+    "step 2",
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.SS.2.b",
+   "id": "SK-SS2b-P5",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.C.1.a",
+   "id": "SK-TC1a-C03",
+   "where": [
+    "step 2"
+   ]
+  },
+  {
+   "lesson": "3.T.C.1.a",
+   "id": "SK-TC1a-C04",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.C.1.a",
+   "id": "SK-TC1a-C05",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.C.1.a",
+   "id": "SK-TC1a-C06",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.C.1.a",
+   "id": "SK-TC1a-C07",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.C.1.a",
+   "id": "SK-TC1a-C08",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.C.1.a",
+   "id": "SK-TC1a-C11",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.C.1.a",
+   "id": "SK-TC1a-C12",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.C.1.a",
+   "id": "SK-TC1a-C13",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.C.1.a",
+   "id": "SK-TC1a-C15",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.C.1.a",
+   "id": "SK-TC1a-P4",
+   "where": [
+    "step 2",
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.C.1.b",
+   "id": "SK-TC1b-C04",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.C.1.b",
+   "id": "SK-TC1b-C05",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.C.1.b",
+   "id": "SK-TC1b-C06",
+   "where": [
+    "step 2",
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.C.1.b",
+   "id": "SK-TC1b-C07",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.C.1.b",
+   "id": "SK-TC1b-C10",
+   "where": [
+    "step 2"
+   ]
+  },
+  {
+   "lesson": "3.T.C.1.b",
+   "id": "SK-TC1b-C12",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.C.1.b",
+   "id": "SK-TC1b-C15",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.C.1.b",
+   "id": "SK-TC1b-P4",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.C.1.c",
+   "id": "SK-TC1c-C01",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.C.1.c",
+   "id": "SK-TC1c-C02",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.C.1.c",
+   "id": "SK-TC1c-C03",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.C.1.c",
+   "id": "SK-TC1c-C05",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.C.1.c",
+   "id": "SK-TC1c-C06",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.C.1.c",
+   "id": "SK-TC1c-C07",
+   "where": [
+    "step 2",
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.C.1.c",
+   "id": "SK-TC1c-C08",
+   "where": [
+    "step 2"
+   ]
+  },
+  {
+   "lesson": "3.T.C.1.c",
+   "id": "SK-TC1c-C11",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.C.1.c",
+   "id": "SK-TC1c-C12",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.C.1.c",
+   "id": "SK-TC1c-C13",
+   "where": [
+    "step 2"
+   ]
+  },
+  {
+   "lesson": "3.T.C.1.c",
+   "id": "SK-TC1c-C15",
+   "where": [
+    "step 2",
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.C.2.a",
+   "id": "SK-TC2a-C01",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.C.2.a",
+   "id": "SK-TC2a-C04",
+   "where": [
+    "step 1",
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.C.2.a",
+   "id": "SK-TC2a-C05",
+   "where": [
+    "step 2",
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.C.2.a",
+   "id": "SK-TC2a-C06",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.C.2.a",
+   "id": "SK-TC2a-C08",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.C.2.a",
+   "id": "SK-TC2a-C10",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.C.2.a",
+   "id": "SK-TC2a-C11",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.C.2.a",
+   "id": "SK-TC2a-C14",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.C.2.a",
+   "id": "SK-TC2a-C15",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.C.2.a",
+   "id": "SK-TC2a-P5",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.C.2.c",
+   "id": "SK-TC2c-C04",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.C.2.c",
+   "id": "SK-TC2c-C06",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.C.2.c",
+   "id": "SK-TC2c-C07",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.C.2.c",
+   "id": "SK-TC2c-C08",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.C.2.c",
+   "id": "SK-TC2c-C09",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.C.2.c",
+   "id": "SK-TC2c-C11",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.C.2.c",
+   "id": "SK-TC2c-C12",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.C.2.c",
+   "id": "SK-TC2c-C14",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.C.2.c",
+   "id": "SK-TC2c-C15",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.C.2.c",
+   "id": "SK-TC2c-P4",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.C.2.c",
+   "id": "SK-TC2c-P8",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.C.2.c",
+   "id": "SK-TC2c-P9",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "TF-DIG",
+   "id": "SK-TFD-C02",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "TF-DIG",
+   "id": "SK-TFD-C03",
+   "where": [
+    "step 2"
+   ]
+  },
+  {
+   "lesson": "TF-DIG",
+   "id": "SK-TFD-C05",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "TF-DIG",
+   "id": "SK-TFD-C08",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "TF-DIG",
+   "id": "SK-TFD-C09",
+   "where": [
+    "step 1",
+    "step 2",
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "TF-DIG",
+   "id": "SK-TFD-C10",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "TF-DIG",
+   "id": "SK-TFD-C12",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "TF-DIG",
+   "id": "SK-TFD-C13",
+   "where": [
+    "step 2",
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "TF-DIG",
+   "id": "SK-TFD-C14",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "TF-DIG",
+   "id": "SK-TFD-C15",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "TF-FEAT",
+   "id": "SK-TFF-C01",
+   "where": [
+    "asks",
+    "step 1",
+    "step 2"
+   ]
+  },
+  {
+   "lesson": "TF-FEAT",
+   "id": "SK-TFF-C02",
+   "where": [
+    "step 2"
+   ]
+  },
+  {
+   "lesson": "TF-FEAT",
+   "id": "SK-TFF-C03",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "TF-FEAT",
+   "id": "SK-TFF-C04",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "TF-FEAT",
+   "id": "SK-TFF-C06",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "TF-FEAT",
+   "id": "SK-TFF-C07",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "TF-FEAT",
+   "id": "SK-TFF-C08",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "TF-FEAT",
+   "id": "SK-TFF-C10",
+   "where": [
+    "step 2",
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "TF-FEAT",
+   "id": "SK-TFF-C11",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "TF-FEAT",
+   "id": "SK-TFF-C13",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "TS-CC",
+   "id": "SK-TSCC-C04",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "TS-CC",
+   "id": "SK-TSCC-C06",
+   "where": [
+    "evidence",
+    "step 1",
+    "step 2"
+   ]
+  },
+  {
+   "lesson": "TS-CC",
+   "id": "SK-TSCC-C07",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "TS-CC",
+   "id": "SK-TSCC-C08",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "TS-CC",
+   "id": "SK-TSCC-C09",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "TS-CC",
+   "id": "SK-TSCC-C10",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "TS-CC",
+   "id": "SK-TSCC-C11",
+   "where": [
+    "step 2",
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "TS-CC",
+   "id": "SK-TSCC-C12",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "TS-CC",
+   "id": "SK-TSCC-C13",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "TS-CC",
+   "id": "SK-TSCC-C14",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "TS-CC",
+   "id": "SK-TSCC-P6",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "TS-CE",
+   "id": "SK-TSCE-C03",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "TS-CE",
+   "id": "SK-TSCE-C04",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "TS-CE",
+   "id": "SK-TSCE-C06",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "TS-CE",
+   "id": "SK-TSCE-C07",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "TS-CE",
+   "id": "SK-TSCE-C08",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "TS-CE",
+   "id": "SK-TSCE-C09",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "TS-CE",
+   "id": "SK-TSCE-C12",
+   "where": [
+    "step 2",
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "TS-CE",
+   "id": "SK-TSCE-C14",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "TS-CE",
+   "id": "SK-TSCE-C15",
+   "where": [
+    "step 2",
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "TS-CE",
+   "id": "SK-TSCE-P4",
+   "where": [
+    "step 1",
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "TS-CE",
+   "id": "SK-TSCE-P5",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "TS-DESC",
+   "id": "SK-TSDESC-C02",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "TS-DESC",
+   "id": "SK-TSDESC-C04",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "TS-DESC",
+   "id": "SK-TSDESC-C05",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "TS-DESC",
+   "id": "SK-TSDESC-C06",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "TS-DESC",
+   "id": "SK-TSDESC-C09",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "TS-DESC",
+   "id": "SK-TSDESC-C10",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "TS-DESC",
+   "id": "SK-TSDESC-C12",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "TS-DESC",
+   "id": "SK-TSDESC-C13",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "TS-DESC",
+   "id": "SK-TSDESC-C14",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "TS-DESC",
+   "id": "SK-TSDESC-C15",
+   "where": [
+    "step 2",
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "TS-DESC",
+   "id": "SK-TSDESC-P5",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "TS-DESC",
+   "id": "SK-TSDESC-P6",
+   "where": [
+    "step 2",
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "TS-PS",
+   "id": "SK-TSPS-C03",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "TS-PS",
+   "id": "SK-TSPS-C05",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "TS-PS",
+   "id": "SK-TSPS-C06",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "TS-PS",
+   "id": "SK-TSPS-C08",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "TS-PS",
+   "id": "SK-TSPS-C09",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "TS-PS",
+   "id": "SK-TSPS-C10",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "TS-PS",
+   "id": "SK-TSPS-C11",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "TS-PS",
+   "id": "SK-TSPS-C14",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "TS-PS",
+   "id": "SK-TSPS-C15",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "TS-PS",
+   "id": "SK-TSPS-P5",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "TS-SEQ",
+   "id": "SK-TSSEQ-C02",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "TS-SEQ",
+   "id": "SK-TSSEQ-C04",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "TS-SEQ",
+   "id": "SK-TSSEQ-C05",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "TS-SEQ",
+   "id": "SK-TSSEQ-C07",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "TS-SEQ",
+   "id": "SK-TSSEQ-C09",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "TS-SEQ",
+   "id": "SK-TSSEQ-C10",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "TS-SEQ",
+   "id": "SK-TSSEQ-C12",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "TS-SEQ",
+   "id": "SK-TSSEQ-C14",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "TS-SEQ",
+   "id": "SK-TSSEQ-C15",
+   "where": [
+    "evidence",
+    "step 2",
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "TS-SEQ",
+   "id": "SK-TSSEQ-P5",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.T.1.a",
+   "id": "SK-TT1a-C03",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.T.1.a",
+   "id": "SK-TT1a-C04",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.T.1.a",
+   "id": "SK-TT1a-C05",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.T.1.a",
+   "id": "SK-TT1a-C07",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.T.1.a",
+   "id": "SK-TT1a-C08",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.T.1.a",
+   "id": "SK-TT1a-C11",
+   "where": [
+    "step 2"
+   ]
+  },
+  {
+   "lesson": "3.T.T.1.a",
+   "id": "SK-TT1a-C12",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.T.1.a",
+   "id": "SK-TT1a-C14",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.T.1.a",
+   "id": "SK-TT1a-C15",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.T.1.b",
+   "id": "SK-TT1b-C03",
+   "where": [
+    "step 1",
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.T.1.b",
+   "id": "SK-TT1b-C04",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.T.1.b",
+   "id": "SK-TT1b-C05",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.T.1.b",
+   "id": "SK-TT1b-C06",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.T.1.b",
+   "id": "SK-TT1b-C07",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.T.1.b",
+   "id": "SK-TT1b-C09",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.T.1.b",
+   "id": "SK-TT1b-C11",
+   "where": [
+    "step 2",
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.T.1.b",
+   "id": "SK-TT1b-C12",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.T.1.b",
+   "id": "SK-TT1b-C14",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.T.1.b",
+   "id": "SK-TT1b-C15",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.T.1.c",
+   "id": "SK-TT1c-C04",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.T.1.c",
+   "id": "SK-TT1c-C06",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.T.1.c",
+   "id": "SK-TT1c-C07",
+   "where": [
+    "step 2",
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.T.1.c",
+   "id": "SK-TT1c-C10",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.T.1.c",
+   "id": "SK-TT1c-C11",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.T.1.c",
+   "id": "SK-TT1c-C12",
+   "where": [
+    "step 2",
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.T.1.c",
+   "id": "SK-TT1c-C13",
+   "where": [
+    "step 2"
+   ]
+  },
+  {
+   "lesson": "3.T.T.1.c",
+   "id": "SK-TT1c-C14",
+   "where": [
+    "step 1",
+    "step 2"
+   ]
+  },
+  {
+   "lesson": "3.T.T.1.c",
+   "id": "SK-TT1c-C15",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.T.1.c",
+   "id": "SK-TT1c-P4",
+   "where": [
+    "step 1",
+    "step 2"
+   ]
+  },
+  {
+   "lesson": "3.T.T.1.c",
+   "id": "SK-TT1c-P6",
+   "where": [
+    "step 2",
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.T.1.d",
+   "id": "SK-TT1d-C03",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.T.1.d",
+   "id": "SK-TT1d-C04",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.T.1.d",
+   "id": "SK-TT1d-C05",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.T.1.d",
+   "id": "SK-TT1d-C06",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.T.1.d",
+   "id": "SK-TT1d-C07",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.T.1.d",
+   "id": "SK-TT1d-C09",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.T.1.d",
+   "id": "SK-TT1d-C10",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.T.1.d",
+   "id": "SK-TT1d-C11",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.T.1.d",
+   "id": "SK-TT1d-C15",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.T.1.d",
+   "id": "SK-TT1d-P4",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.T.1.d",
+   "id": "SK-TT1d-P5",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.T.1.e",
+   "id": "SK-TT1e-C03",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.T.1.e",
+   "id": "SK-TT1e-C04",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.T.1.e",
+   "id": "SK-TT1e-C06",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.T.1.e",
+   "id": "SK-TT1e-C08",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.T.1.e",
+   "id": "SK-TT1e-C10",
+   "where": [
+    "step 1",
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.T.1.e",
+   "id": "SK-TT1e-C11",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.T.1.e",
+   "id": "SK-TT1e-C14",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.T.1.e",
+   "id": "SK-TT1e-C15",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.T.1.e",
+   "id": "SK-TT1e-P5",
+   "where": [
+    "step 2",
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.T.1.e",
+   "id": "SK-TT1e-P6",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.T.2.a",
+   "id": "SK-TT2a-C08",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.T.2.a",
+   "id": "SK-TT2a-C12",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.T.2.a",
+   "id": "SK-TT2a-C13",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.T.2.a",
+   "id": "SK-TT2a-P3",
+   "where": [
+    "step 2",
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.T.2.a",
+   "id": "SK-TT2a-P5",
+   "where": [
+    "step 2",
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.T.2.a",
+   "id": "SK-TT2a-P7",
+   "where": [
+    "step 1"
+   ]
+  },
+  {
+   "lesson": "3.T.T.2.b",
+   "id": "SK-TT2b-C03",
+   "where": [
+    "step 2",
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.T.2.b",
+   "id": "SK-TT2b-C04",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.T.2.b",
+   "id": "SK-TT2b-C05",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.T.2.b",
+   "id": "SK-TT2b-C07",
+   "where": [
+    "step 2",
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.T.2.b",
+   "id": "SK-TT2b-C09",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.T.2.b",
+   "id": "SK-TT2b-C12",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.T.2.b",
+   "id": "SK-TT2b-C13",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.T.2.b",
+   "id": "SK-TT2b-C14",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.T.2.b",
+   "id": "SK-TT2b-C15",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.T.2.b",
+   "id": "SK-TT2b-P4",
+   "where": [
+    "evidence",
+    "step 2"
+   ]
+  },
+  {
+   "lesson": "3.T.T.2.c",
+   "id": "SK-TT2c-C04",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.T.2.c",
+   "id": "SK-TT2c-C05",
+   "where": [
+    "step 1"
+   ]
+  },
+  {
+   "lesson": "3.T.T.2.c",
+   "id": "SK-TT2c-C06",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.T.2.c",
+   "id": "SK-TT2c-C08",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.T.2.c",
+   "id": "SK-TT2c-C10",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.T.2.c",
+   "id": "SK-TT2c-C11",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.T.2.c",
+   "id": "SK-TT2c-C12",
+   "where": [
+    "step 1",
+    "step 2"
+   ]
+  },
+  {
+   "lesson": "3.T.T.2.c",
+   "id": "SK-TT2c-C13",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.T.2.c",
+   "id": "SK-TT2c-C14",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.T.2.c",
+   "id": "SK-TT2c-C15",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.T.2.d",
+   "id": "SK-TT2d-C02",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.T.2.d",
+   "id": "SK-TT2d-C04",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.T.2.d",
+   "id": "SK-TT2d-C06",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.T.2.d",
+   "id": "SK-TT2d-C07",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.T.2.d",
+   "id": "SK-TT2d-C09",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.T.2.d",
+   "id": "SK-TT2d-C10",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.T.2.d",
+   "id": "SK-TT2d-C14",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.T.2.d",
+   "id": "SK-TT2d-P4",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.T.3.a",
+   "id": "SK-TT3a-C03",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.T.3.a",
+   "id": "SK-TT3a-C05",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.T.3.a",
+   "id": "SK-TT3a-C07",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.T.3.a",
+   "id": "SK-TT3a-C08",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.T.3.a",
+   "id": "SK-TT3a-C09",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.T.3.a",
+   "id": "SK-TT3a-C10",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.T.3.a",
+   "id": "SK-TT3a-C11",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.T.3.a",
+   "id": "SK-TT3a-C13",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.T.3.a",
+   "id": "SK-TT3a-C15",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.T.3.a",
+   "id": "SK-TT3a-P4",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.T.3.a",
+   "id": "SK-TT3a-P5",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.T.3.a",
+   "id": "SK-TT3a-P6",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.T.3.c",
+   "id": "SK-TT3c-C01",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.T.3.c",
+   "id": "SK-TT3c-C02",
+   "where": [
+    "step 2",
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.T.3.c",
+   "id": "SK-TT3c-C06",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.T.3.c",
+   "id": "SK-TT3c-C07",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.T.3.c",
+   "id": "SK-TT3c-C08",
+   "where": [
+    "step 2",
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.T.3.c",
+   "id": "SK-TT3c-C10",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.T.3.c",
+   "id": "SK-TT3c-C12",
+   "where": [
+    "step 2",
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.T.3.c",
+   "id": "SK-TT3c-C13",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.T.3.c",
+   "id": "SK-TT3c-C14",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.T.3.c",
+   "id": "SK-TT3c-C15",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.T.3.c",
+   "id": "SK-TT3c-P4",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.T.3.c",
+   "id": "SK-TT3c-P6",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.T.4.a",
+   "id": "SK-TT4a-C01",
+   "where": [
+    "step 1",
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.T.4.a",
+   "id": "SK-TT4a-C02",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.T.4.a",
+   "id": "SK-TT4a-C03",
+   "where": [
+    "step 1",
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.T.4.a",
+   "id": "SK-TT4a-C06",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.T.4.a",
+   "id": "SK-TT4a-C08",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.T.4.a",
+   "id": "SK-TT4a-C09",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.T.4.a",
+   "id": "SK-TT4a-C10",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.T.4.a",
+   "id": "SK-TT4a-C11",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.T.4.a",
+   "id": "SK-TT4a-C12",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.T.4.a",
+   "id": "SK-TT4a-C15",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.T.4.b",
+   "id": "SK-TT4b-C02",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.T.4.b",
+   "id": "SK-TT4b-C11",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.T.4.b",
+   "id": "SK-TT4b-C12",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.T.4.b",
+   "id": "SK-TT4b-C13",
+   "where": [
+    "step 2",
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.T.4.b",
+   "id": "SK-TT4b-C14",
+   "where": [
+    "step 2",
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.T.T.4.b",
+   "id": "SK-TT4b-P6",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.L.V.1.a",
+   "id": "SK-V1a-C03",
+   "where": [
+    "step 2",
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.L.V.1.a",
+   "id": "SK-V1a-C04",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.L.V.1.a",
+   "id": "SK-V1a-C06",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.L.V.1.a",
+   "id": "SK-V1a-C08",
+   "where": [
+    "step 2"
+   ]
+  },
+  {
+   "lesson": "3.L.V.1.a",
+   "id": "SK-V1a-C10",
+   "where": [
+    "step 2",
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.L.V.1.a",
+   "id": "SK-V1a-C12",
+   "where": [
+    "step 2"
+   ]
+  },
+  {
+   "lesson": "3.L.V.1.a",
+   "id": "SK-V1a-P4",
+   "where": [
+    "step 3"
+   ]
+  },
+  {
+   "lesson": "3.L.V.1.b",
+   "id": "SK-V1b-C05",
+   "where": [
+    "step 1",
+    "step 2"
+   ]
+  },
+  {
+   "lesson": "3.L.V.1.b",
+   "id": "SK-V1b-C06",
+   "where": [
+    "step 2"
+   ]
+  },
+  {
+   "lesson": "3.L.V.1.b",
+   "id": "SK-V1b-C07",
+   "where": [
+    "step 1",
+    "step 2"
+   ]
+  },
+  {
+   "lesson": "3.L.V.1.b",
+   "id": "SK-V1b-C11",
+   "where": [
+    "step 2"
+   ]
+  },
+  {
+   "lesson": "3.L.V.1.b",
+   "id": "SK-V1b-C12",
+   "where": [
+    "step 1"
+   ]
+  },
+  {
+   "lesson": "3.L.V.1.b",
+   "id": "SK-V1b-C13",
+   "where": [
+    "step 2"
+   ]
+  },
+  {
+   "lesson": "3.L.V.1.b",
+   "id": "SK-V1b-P4",
+   "where": [
+    "step 1",
+    "step 2"
+   ]
+  },
+  {
+   "lesson": "3.L.V.1.b",
+   "id": "SK-V1b-P5",
+   "where": [
+    "step 2"
+   ]
+  },
+  {
+   "lesson": "3.L.V.2.a",
+   "id": "SK-V2a-C04",
+   "where": [
+    "step 1",
+    "step 2"
+   ]
+  },
+  {
+   "lesson": "3.L.V.2.a",
+   "id": "SK-V2a-C06",
+   "where": [
+    "step 2"
+   ]
+  },
+  {
+   "lesson": "3.L.V.2.a",
+   "id": "SK-V2a-C09",
+   "where": [
+    "step 1",
+    "step 2"
+   ]
+  },
+  {
+   "lesson": "3.L.V.2.a",
+   "id": "SK-V2a-C10",
+   "where": [
+    "step 1",
+    "step 2"
+   ]
+  },
+  {
+   "lesson": "3.L.V.2.a",
+   "id": "SK-V2a-C12",
+   "where": [
+    "step 1",
+    "step 2"
+   ]
+  },
+  {
+   "lesson": "3.L.V.2.a",
+   "id": "SK-V2a-C14",
+   "where": [
+    "step 1"
+   ]
+  },
+  {
+   "lesson": "3.L.V.2.a",
+   "id": "SK-V2a-C15",
+   "where": [
+    "step 1",
+    "step 2"
+   ]
+  },
+  {
+   "lesson": "3.L.V.2.a",
+   "id": "SK-V2a-P5",
+   "where": [
+    "step 1",
+    "step 2"
+   ]
+  },
+  {
+   "lesson": "3.L.V.2.b",
+   "id": "SK-V2b-C02",
+   "where": [
+    "step 1"
+   ]
+  },
+  {
+   "lesson": "3.L.V.2.b",
+   "id": "SK-V2b-C04",
+   "where": [
+    "step 1",
+    "step 2"
+   ]
+  },
+  {
+   "lesson": "3.L.V.2.b",
+   "id": "SK-V2b-C06",
+   "where": [
+    "step 1"
+   ]
+  },
+  {
+   "lesson": "3.L.V.2.b",
+   "id": "SK-V2b-C08",
+   "where": [
+    "step 1",
+    "step 2"
+   ]
+  },
+  {
+   "lesson": "3.L.V.2.b",
+   "id": "SK-V2b-C14",
+   "where": [
+    "step 2"
+   ]
+  },
+  {
+   "lesson": "3.L.V.2.b",
+   "id": "SK-V2b-C15",
+   "where": [
+    "step 1"
+   ]
+  }
+ ]
+}

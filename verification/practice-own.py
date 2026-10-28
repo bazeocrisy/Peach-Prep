@@ -243,7 +243,8 @@ with sync_playwright() as p:
     explain = ""
     n = 0
     while vis(q, "#teach-next") and n < 20:
-        explain = text(q, "#teach-explain")
+        # question-first (answer leaks): P4's early step names the key, so the warning comes before that press
+        if "marked answer shown" in text(q, "#teach-explain"): explain = text(q, "#teach-explain")
         q.click("#teach-next"); q.wait_for_timeout(30); n += 1
     hw = q.evaluate("""(()=>{const it=PP_PLAYER.ctx().item,box=document.getElementById('teach-cards'),a=box.querySelector('[data-unit=answer]');
         return {units:box.querySelectorAll('.tm-card').length, ans:a?a.innerText:'', focus:document.activeElement.dataset.unit||document.activeElement.id, why:it.why, mix:it.misconception||'',
@@ -259,7 +260,9 @@ with sync_playwright() as p:
     q.evaluate(CORRECT); q.click("#q-check"); q.wait_for_timeout(40)
     after = q.evaluate("({fb:document.getElementById('q-feedback').textContent, status:document.getElementById('q-status').textContent})")
     rec = q.evaluate(PRACTICE)["l"][K]["i"]["SK-TT1c-P4"]
-    types = [e["t"] for e in rec["log"] if e["t"] != "teach-step"]
+    types = []
+    for e in rec["log"]:
+        if e["t"] != "teach-step" and not (e["t"] == "how" and types and types[-1] == "how"): types.append(e["t"])
     check("B.6 a right answer after the answer was shown is accepted but stays Answer shown; w, h, x and tm are never lowered; the full history is kept",
           "counts as answer shown" in after["fb"] and "Answer shown" in after["status"] and rec["ok"] is True and rec["x"] is True and rec["w"] == 2 and rec["h"] == 3 and rec["tm"] == 1
           and types == ["check", "check", "teach", "hint", "hint", "hint", "how", "check"] and rec["f1"] == {"ok": False, "pre": False}, (after, rec))

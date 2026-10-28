@@ -275,6 +275,57 @@ with sync_playwright() as pw:
               hl["n"] >= 1 and hl["vis"] and (w >= 980 or hl["pane"] == "passage") and gone == 0, (ev, hl, gone))
         close_page(q)
 
+    # ---------------- Q2c. answer leaks (DESIGN.md section 6): early cards never show the key unless the item is on the shrinking allowlist ----------------
+    q = page(pw, errors=errors); ready(q, "#browse"); q.evaluate("localStorage.clear()")
+    lk = q.evaluate("""(async()=>{const al=await (await fetch('verification/teach-leaks.json')).json();const allow=new Set(al.items.map(i=>i.id));
+        const out={items:0,unlisted:[],flagMismatch:[],allow:allow.size,leakNow:0};
+        for(const sid of Object.keys(PP.byId).filter(id=>PP.byId[id].own)){const set=PP.byId[sid];const L=PP.lessons[set.code];
+          for(const it of set.items){out.items++;const comp=PP_TEACH.compose(it,L,{answerText:'x'});
+            const early=comp.units.filter(u=>u.id!=='answer'&&u.id!=='strategy');const flagged=early.some(u=>u.leak);if(flagged)out.leakNow++;
+            // what is actually drawn in the cards, not only the flags
+            const drawn=early.some(u=>PP_TEACH.leaksKey(it,[...u.build().children].map(e=>e.textContent).join(' ')));
+            if(drawn!==flagged)out.flagMismatch.push(it.id);
+            if(drawn&&!allow.has(it.id))out.unlisted.push(it.id);}}
+        return out;})()""")
+    seen_ids = len(set(lk["unlisted"]))
+    check("Q2c.1 across every own set (%d items): the cards Teach Me draws before 'The answer' show the key only for items on verification/teach-leaks.json (%d now leak, %d on the list; the list may only shrink); the player's leak flags equal what is drawn" % (lk["items"], lk["leakNow"], lk["allow"]),
+          not lk["unlisted"] and not lk["flagMismatch"], (lk["unlisted"][:5], lk["flagMismatch"][:5]))
+    pick = q.evaluate("""(async()=>{const al=await (await fetch('verification/teach-leaks.json')).json();const allow=new Map(al.items.map(i=>[i.id,i.where]));
+        let bad=null,good=null;for(const sid of Object.keys(PP.byId).filter(id=>PP.byId[id].own)){const set=PP.byId[sid];set.items.forEach((it,pos)=>{
+          if(!bad&&allow.has(it.id)&&it.type==='mc'&&allow.get(it.id).every(w=>/^step/.test(w))&&allow.get(it.id)[0]!=='step 1')bad={sid,pos,id:it.id,code:set.code,where:allow.get(it.id)};
+          if(!good&&!allow.has(it.id)&&it.type==='mc')good={sid,pos,id:it.id,code:set.code};});}
+        return {bad,good};})()""")
+    for kind in ("good", "bad"):
+        it = pick[kind]
+        q.evaluate("localStorage.clear()"); q.reload(); q.wait_for_timeout(700)
+        q.evaluate("PP_PLAYER.start(%s,'try',{pos:%d})" % (json.dumps(it["sid"]), it["pos"])); q.wait_for_timeout(150)
+        teach(q)
+        warned = False; shown_before = None
+        n = 0
+        while vis(q, "#teach-next") and n < 25:
+            btn = text(q, "#teach-next"); ex = text(q, "#teach-explain")
+            left = q.evaluate("PP_PLAYER.state().teachLeft") if False else None
+            r = rec(q, it["code"], it["id"])
+            if "names the answer" in btn or "marked answer shown" in ex:
+                if not (r and r.get("x")): shown_before = False if shown_before is None else shown_before
+                warned = True
+                break
+            q.click("#teach-next"); q.wait_for_timeout(25); n += 1
+        r_before = rec(q, it["code"], it["id"])
+        if kind == "good":
+            # no early card names the key: the button only warns on the very last press, and nothing is marked before it
+            check("Q2c.2 an item with no leak (%s): every press before 'Show the answer' leaves the question un-shown; the warning appears only on the answer press" % it["id"],
+                  warned and text(q, "#teach-next") == "Show the answer" and not r_before.get("x"), (it, btn, ex, r_before))
+        else:
+            btn_txt = btn
+            q.click("#teach-next"); q.wait_for_timeout(40)
+            r_after = rec(q, it["code"], it["id"])
+            back_q(q)
+            st = text(q, "#q-status")
+            check("Q2c.3 an item whose early step names the key (%s, %s): the button says so and warns before the press; the press marks it answer shown, never independent; the key is outlined back at the question" % (it["id"], it["where"][0]),
+                  "names the answer" in btn_txt and not r_before.get("x") and r_after["x"] is True and q.evaluate("document.querySelectorAll('#q-body .is-hint').length") >= 1, (it, btn_txt, ex, r_before, r_after))
+    close_page(q)
+
     # ---------------- Q3. Back / Forward / reload / direct links / Escape ----------------
     q = page(pw, errors=errors); ready(q, "#browse"); q.evaluate("localStorage.clear()")
     q.evaluate("PP_SKILLS.begin(%s)" % json.dumps(K)); q.wait_for_timeout(200)
