@@ -11671,12 +11671,12 @@ PP.addLesson({
         ],
         [
           "(3) I am having a wonderful time at a big summer camp in Dayton Ohio.",
-          "(4) Every morning we eat pancakes, eggs, and toast with our cabin.",
+          "(4) Every morning we eat pancakes, eggs, and toast with our cabin mates.",
           "(5) My cabin has two beds three shelves, and four hooks for towels.",
           "(6) We swim, paddle, and hike around the lake each day."
         ],
         [
-          "(7) Please write back to me at 25 Birch Road, Dayton, Ohio.",
+          "(7) Please write back to me at 25 Birch Road, Provo, Utah.",
           "(8) The bus brings us home on August 2, 2026.",
           "(9) I miss you and Grandpa very much every day.",
           "(10) The food here is really great and there is always plenty.",
@@ -11768,7 +11768,7 @@ PP.addLesson({
           "(6) My friend Omar fed a goat near the gate."
         ],
         [
-          "(7) Please send your next letter to 77 Cedar Court, Fresno, California.",
+          "(7) Please send your next letter to 77 Cedar Court, Salina, Kansas.",
           "(8) Our teacher says we may visit again soon.",
           "(9) I hope you can come with us next time too.",
           "(10) The giraffes were my favorite animals.",
@@ -11793,7 +11793,7 @@ PP.addLesson({
           "(2) Dear Captain Lopez,"
         ],
         [
-          "(3) The kids loved climbing into the big red fire truck in Billings Montana.",
+          "(3) The kids loved climbing into the big red fire truck in Missoula Montana.",
           "(4) We tried on helmets, boots, and gloves in the parking lot.",
           "(5) He taught us how to stay safe at home, in the car, and outside.",
           "(6) The kids made a poster with stickers crayons, and markers."
@@ -11823,20 +11823,20 @@ PP.addLesson({
           "(2) Dear Mayor Kim,"
         ],
         [
-          "(3) Riders need bike racks, benches, and bins.",
-          "(4) Our school stands at 90 Pond Road Albany, New York.",
+          "(3) Riders need bike racks benches, and bins.",
+          "(4) Our school stands at 90 Pond Road, Albany, New York.",
           "(5) Our benches will be ready for use by May 1 2027.",
-          "(6) Our museum trip was in Syracuse, New York.",
-          "(7) Kids can sit, rest and, talk on them for hours."
+          "(6) Our museum trip was in Syracuse New York.",
+          "(7) Kids can sit, rest, and talk on them for hours."
         ],
         [
           "(8) Right now, riders lock their bikes to the school fence and the old pole.",
           "(9) Many families walk past the park each morning without a place to sit and rest.",
-          "(10) Thank you for reading our letter and thinking about our idea.",
+          "(10) We are very grateful that you took time to read this letter.",
           "(11) Please tell us what you decide about the park."
         ],
         [
-          "(12) Sincerely,",
+          "(12) Respectfully,",
           "(13) The students in Room 6"
         ]
       ]
@@ -12311,9 +12311,9 @@ PP.addLesson({
               "p3:2:4"
             ],
             "pick": 2,
-            "clue": "Check each of lines 3 to 7 for a list, a date, or an address.",
+            "clue": "Check each of lines 3 to 7 for a list, a date, a place or an address.",
             "hints": [
-              "Check each of lines 3 to 7 for a list, a date, or an address.",
+              "Check each of lines 3 to 7 for a list, a date, a place or an address.",
               "In a full address, commas separate the parts of the address.",
               "Check each line for a missing comma and for a comma that does not belong."
             ],
@@ -12524,7 +12524,7 @@ PP.addLesson({
       "hints": [
         "Check the greeting, the list, the date and the closing.",
         "Say what each comma in the lines is separating.",
-        "The list is written correctly. Think about the rest."
+        "The closing at the bottom is written correctly. Think about the rest."
       ],
       "how": [
         "Look at each line and ask which rule it follows.",
@@ -12582,11 +12582,11 @@ PP.addLesson({
       "clue": "Look at what the comma sits between in each example.",
       "hints": [
         "Look at what the comma sits between in each example.",
-        "Some examples have a month and a number. Some have two place names. Some start or end a letter.",
-        "A list has three or more things. Use that to sort one example first."
+        "Look for a month with numbers, two place names, or the start or end of a letter.",
+        "Three or more things in a row make a list. Sort that one first."
       ],
       "how": [
-        "Look at the words on each side of the comma.",
+        "Read the words just before and just after each comma.",
         "Hats, gloves and boots are things in a list. May 6, 2027 and January 14, 2025 are dates. Laramie, Wyoming is a city and state.",
         "Dear Mr. Chen, and Best wishes, are parts of a letter."
       ],
@@ -12631,7 +12631,7 @@ PP.addLesson({
       ],
       "how": [
         "Line 1 has the month April, the day 18 and the year 2026.",
-        "A date needs one comma, and it keeps the day and the year apart.",
+        "Only one comma is needed, and it falls between the day and the year.",
         "The answer is \"Insert a comma beside the 18 to get April 18, 2026.\""
       ],
       "misconception": "A common mix-up is thinking a date needs a mark at its end. The comma goes inside the date.",
@@ -12667,11 +12667,11 @@ PP.addLesson({
       "hints": [
         "Find the city and the state in line 3.",
         "Decide what mark, if any, belongs between the two names.",
-        "A period ends a sentence. Think about the other choices."
+        "The names of places are not joined by a period. Think about the other choices."
       ],
       "how": [
         "Fresno is the city, and California is the state.",
-        "A comma goes between the name of a city and the name of its state.",
+        "Between a city and its state, a comma is the mark that goes.",
         "The answer is Fresno, California."
       ],
       "misconception": "A common mix-up is leaving the comma out because the two names are said together. The comma keeps them apart.",
@@ -12698,24 +12698,24 @@ PP.addLesson({
           "correct": true
         },
         {
-          "text": "The shop line is about a gift shop, so its things must be written without any marks."
+          "text": "The shop line works as written, since and already separates its things."
         },
         {
-          "text": "Animals form a list but objects form a sentence, so objects need no commas."
+          "text": "Zoo creatures get commas, yet store goods get none, since goods are lifeless."
         },
         {
-          "text": "A line about a store always needs fewer marks than a line about the zoo."
+          "text": "Line 5 is the lengthier line, so one missing comma there hardly counts."
         }
       ],
-      "clue": "Count the items held in each of lines 4 and 5.",
+      "clue": "Name the things listed in each of the two zoo lines.",
       "hints": [
-        "Count the items held in each of lines 4 and 5.",
-        "Look at what comes between the items in each of the two lines.",
-        "What the items are does not decide the commas. Think about the other choices."
+        "Name the things listed in each of the two zoo lines.",
+        "Look at what comes between the things in each of the two lines.",
+        "A lengthier line does not earn an exception. Think about the other choices."
       ],
       "how": [
         "Line 4: monkeys, parrots, and snakes. Line 5: a map a hat, and a water bottle.",
-        "A list needs a comma after each item before and. Line 5 is missing the first one.",
+        "A list needs a comma after each thing before and. Line 5 is missing the first one.",
         "The answer is \"The animal line separates its items, but map and hat stick together.\""
       ],
       "misconception": "A common mix-up is thinking commas depend on what is listed. A list needs the same commas for animals or for objects.",
@@ -12735,7 +12735,7 @@ PP.addLesson({
       "passages": [
         "p5"
       ],
-      "prompt": "Tap the pair of lines in the body of this note that need comma repairs.",
+      "prompt": "Choose the two lines from 2 to 6 of this note that need comma repairs.",
       "targets": [
         "p5:1:2",
         "p5:2:1",
@@ -12755,12 +12755,12 @@ PP.addLesson({
         "The greeting at the top of this letter is written correctly. Think about the rest."
       ],
       "how": [
-        "Check each line one at a time.",
+        "Take lines 2 to 6 in order and check the commas.",
         "Line 2 has its comma, and lines 4 and 5 have commas between their listed things.",
-        "Line 3 has no comma between Billings and Montana, and line 6 has no comma between stickers and crayons."
+        "Line 3 has no comma between Missoula and Montana, and line 6 has no comma between stickers and crayons."
       ],
       "misconception": "A common mix-up is trusting a line because it is long. Check every comma and every place that needs one.",
-      "why": "The answers are \"The kids loved climbing into the big red fire truck in Billings Montana.\" and \"The kids made a poster with stickers crayons, and markers.\" A city and a state need a comma between them, and a list needs a comma after each thing before and. Lines 2, 4 and 5 are correct.",
+      "why": "The answers are \"The kids loved climbing into the big red fire truck in Missoula Montana.\" and \"The kids made a poster with stickers crayons, and markers.\" A city and a state need a comma between them, and a list needs a comma after each thing before and. Lines 2, 4 and 5 are correct.",
       "like": [
         "SK-GUM2-8-C06"
       ]
@@ -12860,9 +12860,9 @@ PP.addLesson({
           "text": "Her birthday is on August 5 2026 at noon."
         }
       ],
-      "clue": "Look at what each comma separates. Ask whether it belongs there.",
+      "clue": "Ask what each comma separates and whether it belongs there.",
       "hints": [
-        "Look at what each comma separates. Ask whether it belongs there.",
+        "Ask what each comma separates and whether it belongs there.",
         "Check every sentence, including the ones that look right. A missing comma is a mistake too.",
         "Check what each comma separates, and look for sentences that have none."
       ],
@@ -12951,7 +12951,7 @@ PP.addLesson({
       "hints": [
         "Read line 7 and think about the parts an address has.",
         "Name the parts that sit on each side of that comma.",
-        "The size of a place does not decide where commas go. Think about the other choices."
+        "Think about whether a street and a city are the same thing. Think about the other choices."
       ],
       "how": [
         "Line 7 says 6 Hill Road, Billings, Montana.",
@@ -12984,23 +12984,23 @@ PP.addLesson({
         "p6:2:5"
       ],
       "answer": [
-        "p6:2:1",
-        "p6:2:4"
+        "p6:2:2",
+        "p6:2:5"
       ],
       "pick": 2,
       "clue": "Look at each of the five lines for a list, a date, or an address.",
       "hints": [
         "Look at each of the five lines for a list, a date, or an address.",
         "Say what each comma in a line is doing, and look for any spot where one is missing.",
-        "One line has a comma right after and, where none belongs. Think about the rest."
+        "The line about the museum trip has no comma where one belongs. Think about the rest."
       ],
       "how": [
         "Test one line at a time.",
-        "The list of three things and the city and state each have their commas where they belong.",
-        "The street line, the date line and the last line each have a missing or an extra comma."
+        "The address and the list of three actions each have their commas where they belong.",
+        "The bike line, the date line and the museum line each have a missing comma."
       ],
       "misconception": "A common mix-up is choosing a line because it has a lot of commas. They all have to be in the right places.",
-      "why": "The answers are \"Riders need bike racks, benches, and bins.\" and \"Our museum trip was in Syracuse, New York.\" The list and the city and state have their commas in the right places. Line 4 is missing a comma after the street, line 5 is missing the date comma, and line 7 has a comma after and.",
+      "why": "The answers are \"Our school stands at 90 Pond Road, Albany, New York.\" and \"Kids can sit, rest, and talk on them for hours.\" The address and the list have their commas in the right places. Line 3 is missing a comma after racks, line 5 is missing the date comma, and line 6 is missing a comma between Syracuse and New York.",
       "like": [
         "SK-GUM2-8-C11"
       ]
@@ -13148,7 +13148,7 @@ PP.addLesson({
           "text": "Our school year finally ends on June 8, 2027."
         },
         {
-          "text": "The fair opens in the park on July 4, 2026."
+          "text": "The swim meet begins on August 12, 2026."
         },
         {
           "text": "Her party is planned for March 7, 2026."
@@ -13158,7 +13158,7 @@ PP.addLesson({
       "hints": [
         "To test a thought, look for an example that breaks it. Look at what each comma separates.",
         "In each sentence, ask whether the comma is part of a date or something else.",
-        "The claim is about what commas do. Think about the other choices."
+        "Dee's claim is about dates only. Think about the other choices."
       ],
       "how": [
         "Dee says commas are only for dates. Look for a comma that does something else.",
@@ -13307,7 +13307,8 @@ PP.addLesson({
     ],
     words: [
       { term: "verb", means: "a word that shows an action, like bake or wash" },
-      { term: "ending", means: "letters added to the end of a word, like -d or -es" }
+      { term: "ending", means: "letters added to the end of a word, like -d or -es" },
+      { term: "plain verb", means: "the verb with no ending added, like wash or bake" }
     ],
     example: {
       label: "Example",
@@ -13543,10 +13544,10 @@ PP.addLesson({
     { id: "SK-GUM2-9-P5", type: "hottext", points: 1, dok: 2, passages: [],
       prompt: "Select the sentence that has a spelling error.",
       options: [
-        "My brother brushes the horse every evening.",
+        "My brother rides the old horse every evening.",
         "The goat nibbled the fence post.",
         "Our teacher teachs us a new word each day.",
-        "Grandma tries a new recipe every week.",
+        "Grandma writes a new recipe every week.",
         "Sam closed the gate behind the goats."
       ],
       answer: [2], pick: 1,
@@ -13668,7 +13669,7 @@ PP.addLesson({
             "prompt": "Sentences 5 and 6 each have a verb that needs fixing. How do the two fixes differ?",
             "choices": [
               {
-                "text": "In sentence 5 the y turns into i before -es, but in sentence 6 -es is simply added to pass.",
+                "text": "Sentence 5 depends on the letter before its y, while sentence 6 just adds -es after the s.",
                 "correct": true
               },
               {
@@ -13690,10 +13691,10 @@ PP.addLesson({
             "how": [
               "Try ends in a consonant and y. Pass ends in ss.",
               "A consonant and y means the y changes to i. Ending in ss means -es is just added.",
-              "The answer is \"In sentence 5 the y turns into i before -es, but in sentence 6 -es is simply added to pass.\""
+              "The answer is \"Sentence 5 depends on the letter before its y, while sentence 6 just adds -es after the s.\""
             ],
             "misconception": "A common mix-up is thinking every fix is the same. The last letters of the plain verb decide the change.",
-            "why": "The answer is \"In sentence 5 the y turns into i before -es, but in sentence 6 -es is simply added to pass.\" Try changes its y to i. Pass already ends in s, so it just adds -es.",
+            "why": "The answer is \"Sentence 5 depends on the letter before its y, while sentence 6 just adds -es after the s.\" Try changes its y to i. Pass already ends in s, so it just adds -es.",
             "like": [
               "SK-GUM2-9-S05"
             ]
@@ -13865,35 +13866,36 @@ PP.addLesson({
               "3.L.GC.1:R:form-and-use-verbs-by-adding-d-or-es"
             ],
             "passages": [],
-            "prompt": "Pick the correct spelling to finish the sentence. Last night, Dad ___ goodbye to us.",
+            "prompt": "Pick the correct spelling to finish the sentence. Last night, Dad ___ with us at dinner.",
+            "stem": "Last night, Dad joked with us at dinner.",
             "choices": [
               {
-                "text": "waved",
+                "text": "joked",
                 "correct": true
               },
               {
-                "text": "waveed"
+                "text": "jokeed"
               },
               {
-                "text": "wavd"
+                "text": "jokd"
               },
               {
-                "text": "waves"
+                "text": "jokes"
               }
             ],
-            "clue": "Last night already happened. Look at how the plain verb wave ends.",
+            "clue": "Last night already happened. Look at how the plain verb joke ends.",
             "hints": [
-              "Last night already happened. Look at how the plain verb wave ends.",
-              "A verb that ends in e needs a short ending for the past.",
-              "Waves tells about the present. Think about the other choices."
+              "Last night already happened. Look at how the plain verb joke ends.",
+              "A final e means the past needs only a short ending.",
+              "Jokes tells about the present. Think about the other choices."
             ],
             "how": [
-              "The sentence tells about the past, and wave ends in e.",
+              "The sentence tells about the past, and joke ends in e.",
               "Only -d is added when a verb ends in e.",
-              "The answer is waved."
+              "The answer is joked."
             ],
             "misconception": "A common mix-up is adding a whole -ed to a verb that ends in e. Only -d is added.",
-            "why": "The answer is waved. Wave already ends in e, so only -d is added for the past. Waveed has an extra e, wavd drops the e, and waves does not tell about the past.",
+            "why": "The answer is joked. Joke already ends in e, so only -d is added for the past. Jokeed has an extra e, jokd drops the e, and jokes does not tell about the past.",
             "like": [
               "SK-GUM2-9-S09"
             ]
@@ -13922,13 +13924,13 @@ PP.addLesson({
                 "text": "Ben is right, since shorter endings are always the correct ones."
               },
               {
-                "text": "Clean ends in n, so it needs -es, which gives the spelling cleanes."
+                "text": "Clean ends in n, so the n should double, which gives the spelling cleanned."
               }
             ],
-            "clue": "Think about what Ben is trusting. Is it the plain verb, or a guess about letters?",
+            "clue": "Find the word cleaned in sentence 9 and think about the plain form of that word.",
             "hints": [
-              "Think about what Ben is trusting. Is it the plain verb, or a guess about letters?",
-              "Look at how clean ends, and whether it ends in e.",
+              "Find the word cleaned in sentence 9 and think about the plain form of that word.",
+              "Look at the last letter of clean. Is it an e?",
               "Shorter endings are not always the correct ones. Think about the other choices."
             ],
             "how": [
@@ -13937,7 +13939,7 @@ PP.addLesson({
               "The answer is \"Clean has no final e, so it keeps the full -ed, and cleaned is already right.\""
             ],
             "misconception": "A common mix-up is using just -d for every verb. Only verbs that end in e take just -d.",
-            "why": "The answer is \"Clean has no final e, so it keeps the full -ed, and cleaned is already right.\" Cleand is not a word, and cleanes uses an ending for the present.",
+            "why": "The answer is \"Clean has no final e, so it keeps the full -ed, and cleaned is already right.\" Cleand is not a word, and cleanned doubles a letter it does not need.",
             "like": [
               "SK-GUM2-9-S10"
             ]
@@ -13999,7 +14001,7 @@ PP.addLesson({
             "passages": [
               "p3"
             ],
-            "prompt": "Which spelling of the verb finishes the line about the garden hose?",
+            "prompt": "Which spelling of the verb completes the line about the garden hose?",
             "text": "My brother {0} the garden with the hose each night.",
             "slots": [
               {
@@ -14086,9 +14088,9 @@ PP.addLesson({
             "prompt": "Which sentence has a verb spelled wrong?",
             "options": [
               "The little boy sneezes whenever the dust rises.",
-              "Grandma hurries to the door when the bell rings.",
+              "Grandma tidies her desk when the bell rings.",
               "Our cat relaxs in the sun every afternoon.",
-              "Last night, we hiked along the river.",
+              "Yesterday, my cousins strolled along the river.",
               "The mechanic tightens the bolt for free."
             ],
             "answer": [
@@ -14099,11 +14101,11 @@ PP.addLesson({
             "hints": [
               "Look for the one verb whose ending does not suit its plain form.",
               "Name the last letter of each plain verb and decide what ending it needs.",
-              "The sentence about Grandma and the door has a verb that is spelled right. Think about the rest."
+              "The sentence about Grandma and her desk has a verb that is spelled right. Think about the rest."
             ],
             "how": [
               "Look at each verb and how its plain form ends.",
-              "Sneezes, hurries, hiked and tightens all have endings that match their plain verbs.",
+              "Sneezes, tidies, strolled and tightens all have endings that match their plain verbs.",
               "The answer is \"Our cat relaxs in the sun every afternoon.\" Relax ends in x, so it needs -es."
             ],
             "misconception": "A common mix-up is adding only -s after x. Verbs that end in x need -es.",
@@ -14180,14 +14182,14 @@ PP.addLesson({
         2
       ],
       "pick": 1,
-      "clue": "Find the verb in each sentence. Think of its plain form.",
+      "clue": "Pick out the verb in every sentence and think of the plain verb.",
       "hints": [
-        "Find the verb in each sentence. Think of its plain form.",
-        "Look at the last letters of each plain verb. Check that the ending matches.",
+        "Pick out the verb in every sentence and think of the plain verb.",
+        "Compare the last letters of each plain verb with the ending that was added.",
         "The sentence about the lawn has a verb that is spelled right. Think about the rest."
       ],
       "how": [
-        "Look at each verb and how its plain form ends.",
+        "Check each verb against the last letters of its plain verb.",
         "Mows, sprinkles, skated and giggles all have endings that match their plain verbs.",
         "The answer is \"My brother pitchs the tent each summer.\" Pitch ends in ch, so it needs -es."
       ],
@@ -14238,16 +14240,16 @@ PP.addLesson({
           "answer": 2
         }
       ],
-      "clue": "Think of each plain verb in ( ) and how it ends.",
+      "clue": "For each verb in ( ), think of how the plain verb ends.",
       "hints": [
-        "Think of each plain verb in ( ) and how it ends.",
+        "For each verb in ( ), think of how the plain verb ends.",
         "An e at the end, an s, sh, ch, x or z at the end, and a consonant plus y at the end each get a different ending.",
         "Use words like Long ago to see which verbs tell about the past."
       ],
       "how": [
-        "Look at the last letters of each plain verb.",
+        "Check the last letters of every plain verb in ( ).",
         "Share and hike end in e. Kiss and wish end in ss and sh. Empty and reply end in a consonant and y.",
-        "Place each sentence in the group that matches its verb."
+        "Put each sentence in the group that fits its verb."
       ],
       "misconception": "A common mix-up is sorting by the time word. The last letters of the verb decide the group.",
       "why": "Share and hike end in e, so they become shared and hiked. Kiss and wish end in ss and sh, so they become kisses and wishes. Empty and reply end in a consonant and y, so they become empties and replies.",
@@ -14282,9 +14284,9 @@ PP.addLesson({
           "text": "latchs, since every verb for one person takes just -s"
         }
       ],
-      "clue": "Find the verb in sentence 2 that has an ending added.",
+      "clue": "Pick out the verb in sentence 2 that has an ending.",
       "hints": [
-        "Find the verb in sentence 2 that has an ending added.",
+        "Pick out the verb in sentence 2 that has an ending.",
         "Look at how the plain verb latch ends.",
         "Look at the last two letters of latch. Think about the other choices."
       ],
@@ -14366,11 +14368,11 @@ PP.addLesson({
           "text": "Each word loses a letter, but mix loses a bigger one than hurry does."
         }
       ],
-      "clue": "Write the plain form of each verb in sentences 5 and 6.",
+      "clue": "Name the plain verb in each of sentences 5 and 6.",
       "hints": [
-        "Write the plain form of each verb in sentences 5 and 6.",
+        "Name the plain verb in each of sentences 5 and 6.",
         "Look at how each plain verb finishes.",
-        "The farm story is told in the present. Think about the other choices."
+        "A word's place in the story does not change how its ending works. Think about the other choices."
       ],
       "how": [
         "Hurry finishes with r and y. Mix finishes with x.",
@@ -14410,11 +14412,11 @@ PP.addLesson({
       "clue": "Find the verb in each of sentences 2 to 6. Ask what its plain form ends in.",
       "hints": [
         "Find the verb in each of sentences 2 to 6. Ask what its plain form ends in.",
-        "These sentences tell about the past. Check how each verb was changed.",
+        "These sentences are about last spring. Check how each verb was changed.",
         "The sentence about Priya uses a verb that is spelled right. Think about the rest."
       ],
       "how": [
-        "Check each verb one sentence at a time.",
+        "Take the verbs one sentence at a time and check each ending.",
         "Practiced, bowed, thanked and praised all have endings that match their plain verbs.",
         "In sentences 2 and 5, the verbs have the wrong ending."
       ],
@@ -14472,9 +14474,9 @@ PP.addLesson({
           }
         ]
       },
-      "clue": "Think of the plain verb in sentence 7. Look at how it ends.",
+      "clue": "Name the plain verb in sentence 7. Look at how it ends.",
       "hints": [
-        "Think of the plain verb in sentence 7. Look at how it ends.",
+        "Name the plain verb in sentence 7. Look at how it ends.",
         "In the second half, read each rewrite and think about whether the story is in the past.",
         "Dropping the e and adding -ing changes the time the verb tells about. Think about the other choices."
       ],
@@ -14523,7 +14525,7 @@ PP.addLesson({
       "hints": [
         "Find the verb in each sentence. Think of its plain form and how it ends.",
         "Check every sentence, including the ones that look right. Each plain verb needs the ending that fits the way it ends.",
-        "Compare each ending with the last letters of its plain verb, one sentence at a time."
+        "Match each ending to the last letters of its plain verb, sentence by sentence."
       ],
       "how": [
         "Look at each plain verb: munch, race, push, glue and try.",
@@ -14545,35 +14547,35 @@ PP.addLesson({
         "3.L.GC.1:R:form-and-use-verbs-by-adding-d-or-es"
       ],
       "passages": [],
-      "prompt": "Which spelling completes the sentence? Yesterday, Kai ___ me to the corner.",
+      "prompt": "Pick the spelling that fits this sentence. Yesterday, Kai ___ me about my hat.",
       "choices": [
         {
-          "text": "raced",
+          "text": "teased",
           "correct": true
         },
         {
-          "text": "raceed"
+          "text": "teaseed"
         },
         {
-          "text": "racd"
+          "text": "teasd"
         },
         {
-          "text": "races"
+          "text": "teases"
         }
       ],
-      "clue": "Yesterday already happened. Look at how the plain verb race ends.",
+      "clue": "Yesterday already happened. Look at how the plain verb tease ends.",
       "hints": [
-        "Yesterday already happened. Look at how the plain verb race ends.",
-        "A verb that ends in e needs a short ending for the past.",
-        "Races tells about the present. Think about the other choices."
+        "Yesterday already happened. Look at how the plain verb tease ends.",
+        "A verb with a final e needs only a short ending in the past.",
+        "Teases tells about the present. Think about the other choices."
       ],
       "how": [
-        "The sentence tells about the past, and race ends in e.",
-        "Only -d is added when a verb ends in e.",
-        "The answer is raced."
+        "The sentence tells about the past, and tease ends in e.",
+        "A final e means only -d is added.",
+        "The answer is teased."
       ],
       "misconception": "A common mix-up is adding a whole -ed to a verb that ends in e. Only -d is added.",
-      "why": "The answer is raced. Race already ends in e, so only -d is added for the past. Raceed has an extra e, racd drops the e, and races does not tell about the past.",
+      "why": "The answer is teased. Tease already ends in e, so only -d is added for the past. Teaseed has an extra e, teasd drops the e, and teases does not tell about the past.",
       "like": [
         "SK-GUM2-9-C09"
       ]
@@ -14596,10 +14598,10 @@ PP.addLesson({
           "correct": true
         },
         {
-          "text": "Bowd is better: a short ending saves space whenever a verb finishes with a consonant."
+          "text": "Bowd is better: a short ending saves space whenever a verb ends with a consonant."
         },
         {
-          "text": "Bowes is better: bow finishes with w, a letter that demands a plural-style ending."
+          "text": "Bowes is better: bow ends with w, a letter that demands a plural-style ending."
         },
         {
           "text": "Neither works: the ending after bow should be a lone letter, never a pair."
@@ -14761,7 +14763,7 @@ PP.addLesson({
       "prompt": "One of these sentences misspells its verb. Tap it.",
       "options": [
         "The girl buzzes the doorbell twice.",
-        "My neighbor carries groceries up the stairs.",
+        "My neighbor fries onions on every single Sunday.",
         "The kids dashs across the field at recess.",
         "In June, we baked bread for the fair.",
         "A turtle crosses the road very slowly."
@@ -14774,11 +14776,11 @@ PP.addLesson({
       "hints": [
         "Find the verb in each sentence. Think of its plain form.",
         "Look at the last letters of each plain verb. Check that the ending matches.",
-        "The sentence about the groceries has a verb that is spelled right. Think about the rest."
+        "The sentence about the onions has a verb that is spelled right. Think about the rest."
       ],
       "how": [
-        "Look at each verb and how its plain form ends.",
-        "Buzzes, carries, baked and crosses all have endings that match their plain verbs.",
+        "Look at each verb and the last letters of its plain form.",
+        "Buzzes, fries, baked and crosses all have endings that match their plain verbs.",
         "The answer is \"The kids dashs across the field at recess.\" Dash ends in sh, so it needs -es."
       ],
       "misconception": "A common mix-up is adding only -s after sh. Verbs that end in sh need -es.",
@@ -14815,7 +14817,7 @@ PP.addLesson({
       "clue": "To test a claim, look for an example that breaks it. Look at how each verb ends.",
       "hints": [
         "To test a claim, look for an example that breaks it. Look at how each verb ends.",
-        "In each sentence, think of the plain verb and what it ends in.",
+        "Think of the plain verb in every sentence and how it ends.",
         "Rob's claim is about the ending added to a verb. Think about the other choices."
       ],
       "how": [
@@ -14891,7 +14893,7 @@ PP.addLesson({
       ],
       "how": [
         "Look at each verb and how its plain form ends.",
-        "Brushes, nibbled, tries and closed all have endings that match their plain verbs.",
+        "Rides, nibbled, writes and closed all have endings that match their plain verbs.",
         "The answer is \"Our teacher teachs us a new word each day.\" Teach ends in ch, so it needs -es."
       ],
       "misconception": "A common mix-up is adding only -s after ch. Verbs that end in ch need -es."

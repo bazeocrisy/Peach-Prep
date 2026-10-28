@@ -10700,19 +10700,19 @@ PP.addLesson({
         [
           "(1) Last Thursday, our class took a field trip to the city aquarium.",
           "(2) Then we sat on to wide wooden benches to watch the playful seals splash around.",
-          "(3) Ms. Chen said to walk with you're buddy through the glass tunnel.",
-          "(4) There was a giant tank full of colorful fish."
+          "(3) The otter loves to play, and it's favorite toy is a ball.",
+          "(4) Over there, a glowing jellyfish tank filled the dark corner."
         ],
         [
-          "(5) The guide gave us useful advise about the sea turtles.",
+          "(5) Our host gave everyone useful advise about feeding the sea turtles.",
           "(6) It's huge shell was as wide as a kitchen table.",
           "(7) The children drew pictures in there sketchbooks."
         ],
         [
-          "(8) Some of the fish were too fast to count.",
-          "(9) Our guide will advise us to stay behind the rope near the glass.",
+          "(8) A few of the eels were too slippery to hold.",
+          "(9) A ranger will advise visitors to walk slowly near the wet floor.",
           "(10) I want to touch a starfish next time, too.",
-          "(11) The other children loved their souvenir pencils.",
+          "(11) Our group enjoyed their tasty snacks from the cafe.",
           "(12) We rested on the bus and felt sleepy on the long ride back to school."
         ]
       ]
@@ -10726,19 +10726,19 @@ PP.addLesson({
       paragraphs: [
         [
           "(1) On Sunday morning, our neighbors met at the beach to clean up the shore.",
-          "(2) Their going to hand every helper a pair of blue gloves for the long job.",
-          "(3) There were two large buckets for each team.",
-          "(4) My uncle said it's important to wear sunscreen."
+          "(2) Their ready to pass out blue gloves and sticky name tags to all the tired helpers.",
+          "(3) Every helper got two thick garbage bags.",
+          "(4) My uncle says it's smart to wear a hat in the sun."
         ],
         [
           "(5) Mom asked me to carry to jugs of water down the sandy path.",
-          "(6) A volunteer will advice us which shells to leave behind.",
-          "(7) We picked up cans and wrappers too."
+          "(6) The ranger gave us helpful advise about picking up sharp glass.",
+          "(7) A few helpers sang along with the radio too."
         ],
         [
           "(8) Some kids found a kite in the dune grass and returned it to its owner.",
-          "(9) It took two hours to finish the whole shore.",
-          "(10) The sand looked too clean to believe.",
+          "(9) The job lasted two hours, from nine until eleven.",
+          "(10) The water looked too blue to be real.",
           "(11) We dumped the full bags into a big truck near the road.",
           "(12) Everyone clapped when the shore sparkled again."
         ]
@@ -10753,15 +10753,15 @@ PP.addLesson({
       paragraphs: [
         [
           "(1) On Saturday, my cousins and I hiked along a path by the river.",
-          "(2) The trail was to slippery for our new boots after the heavy rain.",
+          "(2) After three days of heavy rain, the trail by the river felt to slippery for hikers in smooth rubber boots.",
           "(3) We saw a nest in a tall oak tree.",
-          "(4) Grandpa said there were four eggs inside."
+          "(4) Dad said there were four eggs inside."
         ],
         [
           "(5) My brother pointed to a heron standing on a flat rock.",
           "(6) He asked if we could stay quiet for two minutes.",
           "(7) The heron stood still and watched us.",
-          "(8) It's wings were wide, and they're tips were black."
+          "(8) Grandpa said your going to need to extra pairs of socks."
         ],
         [
           "(9) The heron flew off, and its nest stayed safe in the branches.",
@@ -10840,7 +10840,7 @@ PP.addLesson({
               "3.L.GC.1:I:correctly-use-frequently-confused-words-e-g-to-t"
             ],
             passages: ["p1"],
-            prompt: "Choose the word that correctly completes sentence 2.",
+            prompt: "Select the word that makes sentence 2 correct.",
             text: "We rode {0} buses to get there.",
             slots: [
               {
@@ -10857,10 +10857,10 @@ PP.addLesson({
             how: [
               "The blank comes right before buses and tells about them.",
               "A number tells how many, so look for the word that names a number.",
-              "The answer is two. To shows where or comes before an action word, and too means also or more than enough."
+              "The answer is two. To shows where or comes before an action word, and too fits sentences about also or too much."
             ],
             misconception: "A common mix-up is choosing to because it is the shortest of the three. Check what the word tells about the buses.",
-            why: "The answer is two. Two names how many buses the class rode. To shows where or comes before an action word, and too means also or more than enough."
+            why: "The answer is two. Two names how many buses the class rode. To shows where or comes before an action word, and too fits sentences about also or too much."
           },
           {
             id: "SK-GUM4-8-C04",
@@ -10917,7 +10917,7 @@ PP.addLesson({
             clue: "Try saying it is in place of It's in sentence 6.",
             hints: [
               "Try saying it is in place of It's in sentence 6.",
-              "Think about what the word is supposed to show about the tail.",
+              "Ask what job the word is supposed to do for the tail.",
               "An apostrophe can show that a letter is missing, which is not the same as showing who owns something."
             ],
             how: [
@@ -10972,7 +10972,7 @@ PP.addLesson({
                   text: "You're shows that the group belongs to you, but your means you are."
                 },
                 {
-                  text: "Your is short for you are, so the apostrophe is left out to save space."
+                  text: "Your is a shortened way to say you are, so the apostrophe is left out to save space."
                 },
                 {
                   text: "Group is a plural noun, so the word before it must end with an apostrophe."
@@ -11002,11 +11002,11 @@ PP.addLesson({
               "3.L.GC.1:I:correctly-use-frequently-confused-words-e-g-to-t"
             ],
             passages: ["p2"],
-            prompt: "Choose the word that correctly completes sentence 2.",
+            prompt: "Select the spelling that makes sentence 2 correct.",
             text: "{0} going to give every helper a bright orange vest.",
             slots: [
               {
-                options: ["They're","Their","There"],
+                options: ["They're","Their","There","Their's"],
                 answer: 0
               }
             ],
@@ -11188,7 +11188,7 @@ PP.addLesson({
               "3.L.GC.1:I:correctly-use-frequently-confused-words-e-g-to-t"
             ],
             passages: ["p3"],
-            prompt: "Choose the word that correctly completes sentence 2.",
+            prompt: "Which word correctly finishes sentence 2?",
             text: "The path was {0} muddy for our new shoes.",
             slots: [
               {
@@ -11196,9 +11196,9 @@ PP.addLesson({
                 answer: 0
               }
             ],
-            clue: "Think about what the word should mean here: a place, also, more than enough, or a count.",
+            clue: "Ask what the word should mean here: a place, also, more than enough, or a count.",
             hints: [
-              "Think about what the word should mean here: a place, also, more than enough, or a count.",
+              "Ask what the word should mean here: a place, also, more than enough, or a count.",
               "Try the words more than enough in the blank, and see whether the sentence still makes sense.",
               "Two is a number, and nothing in the sentence counts anything."
             ],
@@ -11342,20 +11342,20 @@ PP.addLesson({
         "3.L.GC.1:I:correctly-use-frequently-confused-words-e-g-to-t"
       ],
       passages: [],
-      prompt: "Which line has no mistakes?",
+      prompt: "Pick the line where every look-alike spelling is right.",
       choices: [
         {
-          text: "Our cousins say they're coming over too.",
+          text: "Our cousins from Ohio, weary after a long highway trip, say they're driving over for supper too.",
           correct: true
         },
         {
-          text: "Our cousins say their coming over too."
+          text: "Our cousins from Ohio, weary after a long highway trip, say their driving over for supper too."
         },
         {
-          text: "Our cousins say there coming over too."
+          text: "Our cousins from Ohio, weary after a long highway trip, say there driving over for supper too."
         },
         {
-          text: "Our cousins say they're coming over to."
+          text: "Our cousins from Ohio, weary after a long highway trip, say they're driving over for supper, to."
         }
       ],
       clue: "Read the sound-alike words in each line and decide what each should mean.",
@@ -11367,10 +11367,10 @@ PP.addLesson({
       how: [
         "Say the long form for the word after say: they are.",
         "The last word means also, so it has two o's.",
-        "The answer is \"Our cousins say they're coming over too.\" The others use their or there for they are, or to for also."
+        "The answer is \"Our cousins from Ohio, weary after a long highway trip, say they're driving over for supper too.\" The others use their or there for they are, or to for also."
       ],
       misconception: "A common mix-up is fixing only one word. Check every sound-alike word in the line.",
-      why: "The answer is \"Our cousins say they're coming over too.\" They're means they are, and too means also. The other lines use their or there for they are, or to for also.",
+      why: "The answer is \"Our cousins from Ohio, weary after a long highway trip, say they're driving over for supper too.\" They're means they are, and too means also. The other lines use their or there for they are, or to for also.",
       like: ["SK-GUM4-8-P4"]
     },
     {
@@ -11430,7 +11430,7 @@ PP.addLesson({
         "3.L.GC.1:I:correctly-use-frequently-confused-words-e-g-to-t"
       ],
       passages: ["p4"],
-      prompt: "Pick the word that fits the blank in sentence 2.",
+      prompt: "Which spelling goes in the gap?",
       text: "Then we sat on {0} wide wooden benches to watch the playful seals splash around.",
       slots: [
         {
@@ -11438,19 +11438,19 @@ PP.addLesson({
           answer: 0
         }
       ],
-      clue: "Decide what the blank tells about the benches.",
+      clue: "Decide what the gap tells about the benches.",
       hints: [
-        "Decide what the blank tells about the benches.",
+        "Decide what the gap tells about the benches.",
         "Say how many benches there were, then see which word names that amount.",
         "Too means also, and the sentence is not adding anything."
       ],
       how: [
-        "The blank comes right before wide wooden benches and tells about them.",
+        "The gap comes right before wide wooden benches and tells about them.",
         "A number tells how many, so choose the word that is a number.",
-        "The answer is two. To shows where or comes before a verb, and too means also or more than enough."
+        "The answer is two. To shows where or comes before a verb, and too fits sentences about also or too much."
       ],
-      misconception: "A common mix-up is choosing to because it appears later in the same sentence. Check the job of the blank.",
-      why: "The answer is two. Two names how many benches the class sat on. To shows where or comes before a verb, and too means also or more than enough.",
+      misconception: "A common mix-up is choosing to because it appears later in the same sentence. Check the job of the gap.",
+      why: "The answer is two. Two names how many benches the class sat on. To shows where or comes before a verb, and too fits sentences about also or too much.",
       like: ["SK-GUM4-8-C03"]
     },
     {
@@ -11462,7 +11462,7 @@ PP.addLesson({
         "3.L.GC.1:I:correctly-use-frequently-confused-words-e-g-to-t"
       ],
       passages: ["p4"],
-      prompt: "Tap the ONE line among numbers 4, 5, 8, 9 and 11 that misuses a sound-alike word.",
+      prompt: "One shown line among 4, 5, 8, 9 and 11 breaks a spelling rule for look-alike meanings. Which is it?",
       targets: ["p4:1:4","p4:2:1","p4:3:1","p4:3:2","p4:3:4"],
       answer: ["p4:2:1"],
       pick: 1,
@@ -11470,7 +11470,7 @@ PP.addLesson({
       hints: [
         "Spot the sound-alike word in every shown line, then ask what it means there.",
         "Check that each word does its own job: telling where, showing an owner, naming help, or naming an action.",
-        "Line 8 uses too to mean more than enough, which suits fast."
+        "Line 8 uses too to mean more than enough, which suits slippery."
       ],
       how: [
         "Spot the sound-alike word in every shown line and decide what it means.",
@@ -11478,7 +11478,7 @@ PP.addLesson({
         "In sentence 5, useful advise needs the word for help, advice, so it is the answer."
       ],
       misconception: "A common mix-up is thinking advise and advice can trade places. One names an action and the other names help.",
-      why: "The answer is sentence 5: \"The guide gave us useful advise about the sea turtles.\" Advice is the noun for help, so useful advice is correct. The other shown lines use there, too, advise and their correctly.",
+      why: "The answer is sentence 5: \"Our host gave everyone useful advise about feeding the sea turtles.\" Advice is the noun for help, so useful advice is correct. The other shown lines use there, too, advise and their correctly.",
       like: ["SK-GUM4-8-C04"]
     },
     {
@@ -11490,35 +11490,35 @@ PP.addLesson({
         "3.L.GC.1:I:correctly-use-frequently-confused-words-e-g-to-t"
       ],
       passages: ["p4"],
-      prompt: "A friend says It's in line 6 is fine, since the shell belongs to the turtle. How should you answer?",
+      prompt: "What is wrong with the first word of line 6?",
       choices: [
         {
-          text: "It's stands for it is, so owning needs its; write Its huge shell.",
+          text: "Two words squeezed into one cannot say whose shell this is; the owner spelling carries no mark.",
           correct: true
         },
         {
-          text: "It's is fine, since every owner word wants an apostrophe in front of the s."
+          text: "Turtles are animals, so every animal part must be written with extra letters at the very end."
         },
         {
-          text: "It's is wrong, since a turtle is an animal that cannot own anything at all."
+          text: "Shell starts the clause, so a contraction must always come first in lines of this kind here."
         },
         {
-          text: "It's is wrong, since the line needs their to match the children in the glass tunnel."
+          text: "The mark floats too high; moving it after the final letter would repair the whole spelling."
         }
       ],
-      clue: "Swap in it is for It's in line 6 and listen.",
+      clue: "Swap in it is for It's in sentence 6 and listen.",
       hints: [
-        "Swap in it is for It's in line 6 and listen.",
+        "Swap in it is for It's in sentence 6 and listen.",
         "Think about what the word must tell about the shell.",
         "A letter that has been left out is different from an owner."
       ],
       how: [
-        "Read line 6 with it is: It is huge shell was as wide as a kitchen table.",
+        "Read sentence 6 with it is: It is huge shell was as wide as a kitchen table.",
         "That does not make sense, because the shell belongs to the turtle.",
-        "The answer is \"It's stands for it is, so owning needs its; write Its huge shell.\""
+        "The answer is \"Two words squeezed into one cannot say whose shell this is; the owner spelling carries no mark.\""
       ],
       misconception: "A common mix-up is thinking an apostrophe shows ownership in every word. In it's, it stands for a missing letter.",
-      why: "The answer is \"It's stands for it is, so owning needs its; write Its huge shell.\" It's stands for it is, so it cannot show that the shell belongs to the turtle. Its, with no apostrophe, shows belonging.",
+      why: "The answer is \"Two words squeezed into one cannot say whose shell this is; the owner spelling carries no mark.\" It's is just it is squeezed together, so it cannot show that the shell belongs to the turtle. Its, with no apostrophe, shows belonging.",
       like: ["SK-GUM4-8-C05"]
     },
     {
@@ -11535,17 +11535,17 @@ PP.addLesson({
         prompt: "Pick the best fix for sentence 3.",
         choices: [
           {
-            text: "Ms. Chen said to walk with your buddy through the glass tunnel.",
+            text: "The otter loves to play, and its favorite toy is a ball.",
             correct: true
           },
           {
-            text: "Ms. Chen said to walk with you buddy through the glass tunnel."
+            text: "The otter loves to play, and its' favorite toy is a ball."
           },
           {
-            text: "Ms. Chen said to walk with youre buddy through the glass tunnel."
+            text: "The otter loves to play, and it is favorite toy is a ball."
           },
           {
-            text: "Ms. Chen said to walk with yours buddy through the glass tunnel."
+            text: "The otter loves to play, and its favorite toy are a ball."
           }
         ]
       },
@@ -11553,33 +11553,33 @@ PP.addLesson({
         prompt: "Pick the statement that gives the reason for that fix.",
         choices: [
           {
-            text: "Your goes before a noun to show it belongs to you, while you're always stands for you are.",
+            text: "A word for what the otter owns takes no apostrophe, and it's only stands for it is.",
             correct: true
           },
           {
-            text: "You're goes before a noun to show it belongs to you, while your always stands for you are."
+            text: "A word for what the otter owns takes an apostrophe, and its only stands for it is."
           },
           {
-            text: "You're can stand before any noun, so the apostrophe never changes the meaning of a line."
+            text: "It's is the right spelling, since the otter and the toy are two different things."
           },
           {
-            text: "Buddy is a verb, so the word placed before it must be a contraction of two words."
+            text: "Favorite is a verb, so the word placed before it must be a contraction of two words."
           }
         ]
       },
-      clue: "For Part A, compare the word before buddy in each version. For Part B, find the statement that fits the fix.",
+      clue: "For Part A, compare the word before favorite in each version. For Part B, find the statement that fits the fix.",
       hints: [
-        "For Part A, compare the word before buddy in each version. For Part B, find the statement that fits the fix.",
-        "Say you are before buddy and judge whether the line still works.",
-        "Youre has no apostrophe, so it is not a correct word, and it cannot be the fix."
+        "For Part A, compare the word before favorite in each version. For Part B, find the statement that fits the fix.",
+        "Say it is before favorite and judge whether the line still works.",
+        "Its' is never a correct word, so that version cannot be the fix."
       ],
       how: [
-        "Part A: you are buddy does not work, so the word before buddy must show belonging. The answer is \"Ms. Chen said to walk with your buddy through the glass tunnel.\"",
-        "The other versions use you, youre or yours, and none of them show that the buddy goes with you.",
-        "Part B: the statement is \"Your goes before a noun to show it belongs to you, while you're always stands for you are.\""
+        "Part A: it is favorite toy does not work, so the word before favorite must show belonging. The answer is \"The otter loves to play, and its favorite toy is a ball.\"",
+        "The other versions use its', it is or a mismatched verb, and none of them fix the word before favorite.",
+        "Part B: the statement is \"A word for what the otter owns takes no apostrophe, and it's only stands for it is.\""
       ],
-      misconception: "A common mix-up is choosing you're because it looks fancier. You're only stands for you are.",
-      why: "Part A: \"Ms. Chen said to walk with your buddy through the glass tunnel.\" Part B: \"Your goes before a noun to show it belongs to you, while you're always stands for you are.\" Part A: Ms. Chen said to walk with your buddy through the glass tunnel. uses your to show the buddy goes with you. Part B: your goes before a noun to show belonging, while you're stands for you are.",
+      misconception: "A common mix-up is adding an apostrophe to show ownership. Its needs none.",
+      why: "Part A: \"The otter loves to play, and its favorite toy is a ball.\" Part B: \"A word for what the otter owns takes no apostrophe, and it's only stands for it is.\" Part A: The otter loves to play, and its favorite toy is a ball. uses its to show the toy belongs to the otter. Part B: a word for what the otter owns takes no apostrophe, and it's only stands for it is.",
       like: ["SK-GUM4-8-C06"]
     },
     {
@@ -11591,27 +11591,27 @@ PP.addLesson({
         "3.L.GC.1:I:correctly-use-frequently-confused-words-e-g-to-t"
       ],
       passages: ["p5"],
-      prompt: "Pick the word that fits the blank in sentence 2.",
-      text: "{0} going to hand every helper a pair of blue gloves for the long job.",
+      prompt: "Choose the spelling that completes the second line of the beach story, so the whole thing reads smoothly.",
+      text: "{0} ready to pass out blue gloves and sticky name tags to all the tired helpers.",
       slots: [
         {
-          options: ["They're","Their","There"],
+          options: ["They're","Their","There","Their's"],
           answer: 0
         }
       ],
-      clue: "Put each choice in the blank and see which one gives a whole, sensible sentence.",
+      clue: "Put each choice in the gap and see which one gives a whole, sensible sentence.",
       hints: [
-        "Put each choice in the blank and see which one gives a whole, sensible sentence.",
-        "Say they are in the blank and listen.",
+        "Put each choice in the gap and see which one gives a whole, sensible sentence.",
+        "Say they are in the gap and listen.",
         "There points to a place, and no place is named in this line."
       ],
       how: [
-        "Say each choice in the blank and listen for a whole sentence.",
-        "They are going to hand every helper a pair of blue gloves makes sense, so the contraction fits.",
-        "The answer is They're. Their shows belonging, and there points to a place."
+        "Say each choice in the gap and listen for a whole sentence.",
+        "They are ready to pass out blue gloves makes sense, so the contraction fits.",
+        "The answer is They're. Their shows belonging, there points to a place, and their's is never correct."
       ],
       misconception: "A common mix-up is choosing Their because it is the spelling seen first. Test it with they are.",
-      why: "The answer is They're. They're means they are, and They are going to hand every helper gloves makes sense. Their shows belonging, and there points to a place.",
+      why: "The answer is They're. They're means they are, and They are ready to pass out gloves makes sense. Their shows belonging, there points to a place, and their's is never correct.",
       like: ["SK-GUM4-8-C07"]
     },
     {
@@ -11623,7 +11623,7 @@ PP.addLesson({
         "3.L.GC.1:I:correctly-use-frequently-confused-words-e-g-to-t"
       ],
       passages: ["p5"],
-      prompt: "Tap the ONE line among numbers 3, 5, 7, 9 and 10 that misuses to, too or two.",
+      prompt: "One shown line among 3, 5, 7, 9 and 10 has the wrong choice of to, too or two. Tap it.",
       targets: ["p5:1:3","p5:2:1","p5:2:3","p5:3:2","p5:3:3"],
       answer: ["p5:2:1"],
       pick: 1,
@@ -11631,7 +11631,7 @@ PP.addLesson({
       hints: [
         "Spot the to, too or two in every shown line and decide what it means there.",
         "Check whether each word shows a place or comes before a verb, means also or too much, or names a number.",
-        "Line 10 uses too to mean more than enough, which suits clean."
+        "Line 10 uses too to mean more than enough, which suits blue."
       ],
       how: [
         "Spot the to, too or two in every shown line and decide what it means.",
@@ -11651,35 +11651,35 @@ PP.addLesson({
         "3.L.GC.1:I:correctly-use-frequently-confused-words-e-g-to-t"
       ],
       passages: ["p5"],
-      prompt: "Your partner says advice is correct in line 6, since the volunteer gives help. How should you answer?",
+      prompt: "Line 6 has advise right after helpful. Should that spelling stay? Choose the strongest explanation.",
       choices: [
         {
-          text: "After will comes a verb, and that verb is advise; advice names the help given.",
+          text: "No, the spot after helpful wants a thing someone receives, and that thing is spelled with a c.",
           correct: true
         },
         {
-          text: "Advice is correct, since a word ending in -ice always names whatever a person does."
+          text: "Yes, any spelling finishing with -ise belongs to action words, so the line can stay as printed."
         },
         {
-          text: "Advice is correct, since will works like a noun, and a noun needs one more noun beside it."
+          text: "Yes, because the ranger performs an action, and action spellings fit whenever somebody acts."
         },
         {
-          text: "Advise is wrong, since it is a word used only by someone who works in a hospital."
+          text: "No, since advise cannot be found in school writing, so the line needs a fresh invention."
         }
       ],
-      clue: "Look at the word right before advice and think about what sort of word must follow it.",
+      clue: "Look at the words right before advise and think about what sort of word they call for.",
       hints: [
-        "Look at the word right before advice and think about what sort of word must follow it.",
-        "Nouns name things and verbs tell what someone does. Decide which sort follows will.",
+        "Look at the words right before advise and think about what sort of word they call for.",
+        "Nouns name things and verbs tell what someone does. Decide which sort follows helpful.",
         "How a word ends does not decide whether it is a verb."
       ],
       how: [
-        "Read line 6: A volunteer will advice us which shells to leave behind.",
-        "Will is a helping verb, so a main verb must come next. The volunteer gives advice, but will advise tells what the volunteer does.",
-        "The answer is \"After will comes a verb, and that verb is advise; advice names the help given.\""
+        "Read line 6: The ranger gave us helpful advise about picking up sharp glass.",
+        "Helpful describes a thing, so a noun must come next. The ranger gave help, and the noun for that help is advice.",
+        "The answer is \"No, the spot after helpful wants a thing someone receives, and that thing is spelled with a c.\""
       ],
-      misconception: "A common mix-up is choosing the word that names the help. After will, the line needs the word that tells what someone does.",
-      why: "The answer is \"After will comes a verb, and that verb is advise; advice names the help given.\" After will comes a verb, and advise is the verb. Advice names the help itself.",
+      misconception: "A common mix-up is choosing the action word because the ranger is doing something. The line needs the word for the help.",
+      why: "The answer is \"No, the spot after helpful wants a thing someone receives, and that thing is spelled with a c.\" The line needs the noun advice, which names the help. Advise is the action word.",
       like: ["SK-GUM4-8-C09"]
     },
     {
@@ -11737,20 +11737,20 @@ PP.addLesson({
       ],
       passages: [],
       stem: "Line A: It's cold today. Line B: The cat licked its paw.",
-      prompt: "Compare it's and its in the two lines. What is true?",
+      prompt: "What does each of the two words do in its line?",
       choices: [
         {
-          text: "In A, it's means it is; in B, its shows that the paw belongs to the cat.",
+          text: "It's in Line A stands for it is, but its in Line B tells that the paw has an owner.",
           correct: true
         },
         {
-          text: "In A, it's shows that the weather belongs to it; in B, its means it is."
+          text: "It's in Line A tells that the weather has an owner, but its in Line B stands for it is."
         },
         {
-          text: "In both, the word stands for it is, since each one comes ahead of another word."
+          text: "Each one stands for it is, since both appear right before another word in the line."
         },
         {
-          text: "In both, the word shows who owns something, since each one comes after a capital letter."
+          text: "Each one tells who owns something, since both follow a capital letter at the start."
         }
       ],
       clue: "Say it is for the word in each line.",
@@ -11762,10 +11762,10 @@ PP.addLesson({
       how: [
         "Try it is in each line: It is cold today works, but The cat licked it is paw does not.",
         "In B, its shows whose paw it is.",
-        "The answer is \"In A, it's means it is; in B, its shows that the paw belongs to the cat.\""
+        "The answer is \"It's in Line A stands for it is, but its in Line B tells that the paw has an owner.\""
       ],
       misconception: "A common mix-up is thinking the two words are spelled differently only for show. It's means it is, and its shows belonging.",
-      why: "The answer is \"In A, it's means it is; in B, its shows that the paw belongs to the cat.\" In A, it's means it is. In B, its shows that the paw belongs to the cat.",
+      why: "The answer is \"It's in Line A stands for it is, but its in Line B tells that the paw has an owner.\" In A, it's means it is. In B, its shows that the paw belongs to the cat.",
       like: ["SK-GUM4-8-C11"]
     },
     {
@@ -11777,22 +11777,22 @@ PP.addLesson({
         "3.L.GC.1:I:correctly-use-frequently-confused-words-e-g-to-t"
       ],
       passages: ["p6"],
-      prompt: "Pick the word that fits the blank in sentence 2.",
-      text: "The trail was {0} slippery for our new boots after the heavy rain.",
+      prompt: "Which spelling goes in the gap?",
+      text: "After three days of heavy rain, the trail by the river felt {0} slippery for hikers in smooth rubber boots.",
       slots: [
         {
           options: ["too","to","two"],
           answer: 0
         }
       ],
-      clue: "Decide what the blank should mean in this line: a place, also, too much, or a count.",
+      clue: "Decide what the gap should mean in this line: a place, also, too much, or a count.",
       hints: [
-        "Decide what the blank should mean in this line: a place, also, too much, or a count.",
-        "Try the words more than enough in the blank, and see whether the line still works.",
+        "Decide what the gap should mean in this line: a place, also, too much, or a count.",
+        "Try the words more than enough in the gap, and see whether the line still works.",
         "Two is a number, and the line does not count anything."
       ],
       how: [
-        "The line says the trail was slippery for new boots, so the word must mean more than enough.",
+        "The line says the trail felt slippery for smooth boots, so the word must mean more than enough.",
         "Too can mean more than enough.",
         "The answer is too. To shows where or comes before a verb, and two is a number."
       ],
@@ -11813,36 +11813,36 @@ PP.addLesson({
       pick: 2,
       choices: [
         {
-          text: "Replace It's with Its, because the wings belong to the heron.",
+          text: "Change your to you're, which stands for you are.",
           correct: true
         },
         {
-          text: "Replace they're with their, because the tips belong to the wings.",
+          text: "Change the second to to two, which names a number.",
           correct: true
         },
         {
-          text: "Replace they're with there, because the tips are in that place."
+          text: "Change your to yours, which stands alone."
         },
         {
-          text: "Replace It's with Its', because an apostrophe shows the wings are owned."
+          text: "Change the first to to too, which means also."
         },
         {
-          text: "Replace were with we're, because the line is about the writer."
+          text: "Change going to gone, which fits the past."
         }
       ],
-      clue: "Say the long form of each word with an apostrophe: it is, they are.",
+      clue: "Say the long form of each word that could be a contraction, and check what each word should show.",
       hints: [
-        "Say the long form of each word with an apostrophe: it is, they are.",
-        "A fix must keep the meaning: the wings belong to the heron, and the tips belong to the wings.",
-        "Its' is never a correct word, so that fix cannot be one of the two."
+        "Say the long form of each word that could be a contraction, and check what each word should show.",
+        "A fix must keep the meaning: Grandpa tells what someone is about to need, and he names how many pairs.",
+        "Yours stands alone and cannot sit before going, so that fix cannot be one of the two."
       ],
       how: [
-        "It is wings and they are tips do not make sense, so both words need to show belonging.",
-        "Its shows the wings belong to the heron, and their shows the tips belong to the wings.",
-        "The answers are \"Replace It's with Its, because the wings belong to the heron.\" and \"Replace they're with their, because the tips belong to the wings.\" The others use there, its' or we're."
+        "Your going and to extra do not make sense, so both words need new spellings.",
+        "You're stands for you are, and two names how many pairs of socks.",
+        "The answers are \"Change your to you're, which stands for you are.\" and \"Change the second to to two, which names a number.\" The others use yours, too or gone."
       ],
-      misconception: "A common mix-up is fixing only one word. Both It's and they're stand for two words that do not fit.",
-      why: "The answers are \"Replace It's with Its, because the wings belong to the heron.\" and \"Replace they're with their, because the tips belong to the wings.\" Its and their show belonging, so It's must change to Its and they're must change to their. The other fixes use there, its' or we're.",
+      misconception: "A common mix-up is fixing only one word. Both your and the second to are the wrong words here.",
+      why: "The answers are \"Change your to you're, which stands for you are.\" and \"Change the second to to two, which names a number.\" You're means you are, and two names how many pairs. The other fixes use yours, too or gone.",
       like: ["SK-GUM4-8-C13"]
     },
     {
@@ -11857,32 +11857,32 @@ PP.addLesson({
       prompt: "Which line has advice or advise in the right place?",
       choices: [
         {
-          text: "Our principal will advise parents about the bus schedule.",
+          text: "A trainer will advise each swimmer on safe breathing.",
           correct: true
         },
         {
-          text: "The nurse gave us helpful advise about getting enough sleep."
+          text: "Kindly offer your helpful advise on safe breathing."
         },
         {
-          text: "Please share your advise about the best way to study."
+          text: "A nurse shared useful advise on healthy sleep habits."
         },
         {
-          text: "Mr. Cole will advice the team before the big match."
+          text: "A teacher will advice the whole team early next week."
         }
       ],
       clue: "Decide whether each line needs a word that names help or a word that tells an action.",
       hints: [
         "Decide whether each line needs a word that names help or a word that tells an action.",
-        "The word after will, or after helpful or your, shows which one is needed.",
+        "The word after will, or after helpful or useful, shows which one is needed.",
         "The line with will advice puts a noun where a verb belongs."
       ],
       how: [
         "Decide whether each line needs the help itself or the act of giving help.",
-        "After will, a verb is needed, and advise is the verb. After helpful or your, the noun advice is needed.",
-        "The answer is \"Our principal will advise parents about the bus schedule.\" The others use advise or advice in the wrong job."
+        "After will, a verb is needed, and advise is the verb. After helpful or useful, the noun advice is needed.",
+        "The answer is \"A trainer will advise each swimmer on safe breathing.\" The others use advise or advice in the wrong job."
       ],
       misconception: "A common mix-up is picking the spelling seen more often. Check whether the line needs a noun or a verb.",
-      why: "The answer is \"Our principal will advise parents about the bus schedule.\" After will, a verb is needed, so advise fits. The other lines use the verb advise where the noun advice is needed, or the noun advice where the verb advise is needed.",
+      why: "The answer is \"A trainer will advise each swimmer on safe breathing.\" After will, a verb is needed, so advise fits. The other lines use the verb advise where the noun advice is needed, or the noun advice where the verb advise is needed.",
       like: ["SK-GUM4-8-C14"]
     },
     {
@@ -11898,7 +11898,7 @@ PP.addLesson({
       text: "{0} sure {1} bus will come soon.",
       slots: [
         {
-          options: ["They're","Their","There","Theyre"],
+          options: ["They're","Their","There","Their's"],
           answer: 0
         },
         {

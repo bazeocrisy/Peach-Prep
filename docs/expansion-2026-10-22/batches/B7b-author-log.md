@@ -3,7 +3,7 @@
 Status: lesson 1 is recorded ACCEPTED by the coordinator (wording-only edits this round). Lessons 2 to 9 are AUTHORED (B7b), NOT ACCEPTED: awaiting independent review. All figures below were measured on the final L-GUM2.js after the second-review fixes.
 
 ## Final-file gate results
-- `node verification/check-content.js --all`: no failure in any L-GUM2 lesson; the three failures it reports are in L-GUM4 (use-interjections, SK-GUM4-6-C12/S04/S12 shares its stem with C04), outside this batch
+- `node verification/check-content.js --all`: PASS, 0 failures (last run 2026-10-27, after the L8/L9 third-review fixes)
 - `node verification/check-writing.js`: 0 failures, 0 warnings
 - `node verification/check-instructional-copy.js`: 28 assertions passed
 - `python3 verification/readability.py js/data/lessons/L-GUM2.js`: every passage 110 words or more by that tool, FK 4.5 or lower (max 4.5 in lesson 1 passage 3)
@@ -20,8 +20,8 @@ Jaccard uses lowercase tokens (letters and digits) over the whole item text: ste
 | 5 | form-plural-nouns-by-changing-y-to-ies | 0.209 / 0.202 | 0.225 / 0.245 | 102, 4.46 | 5, 3, 4, 1, 1, 1 | 1 / 10 / 4 |
 | 6 | use-personal-pronouns-subject-object-possessive | 0.228 / 0.241 | 0.288 / 0.258 | 101, 3.89 | 5, 3, 4, 1, 1, 1 | 1 / 10 / 4 |
 | 7 | use-frequently-occurring-prepositions | 0.186 / 0.220 | 0.270 / 0.238 | 108, 4.47 | 5, 3, 4, 1, 1, 1 | 1 / 10 / 4 |
-| 8 | use-commas-in-a-series-and-in-dates-addresses-sa | 0.203 / 0.205 | 0.254 / 0.235 | 100, 3.41 | 5, 3, 4, 1, 1, 1 | 1 / 10 / 4 |
-| 9 | form-and-use-verbs-by-adding-d-or-es | 0.198 / 0.195 | 0.236 / 0.222 | 104, 4.08 | 5, 3, 4, 1, 1, 1 | 1 / 10 / 4 |
+| 8 | use-commas-in-a-series-and-in-dates-addresses-sa | 0.203 / 0.200 | 0.254 / 0.235 | 100, 3.41 | 5, 3, 4, 1, 1, 1 | 1 / 10 / 4 |
+| 9 | form-and-use-verbs-by-adding-d-or-es | 0.198 / 0.205 | 0.216 / 0.218 | 104, 4.08 | 5, 3, 4, 1, 1, 1 | 1 / 10 / 4 |
 
 Lessons 1, 2, 3, 6 and 7 were not edited in this round (accepted or under another review), so their marker-counted figures stand as measured: the multiset values for lessons 1, 2, 3, 6 and 7 and the set value for lesson 6 are above 0.21, all below 0.30. Lessons 4, 5, 8 and 9 were edited and are at or below 0.21 on set and multiset except lesson 5 (0.209 set, 0.202 multiset, within limit).
 
@@ -47,3 +47,4 @@ Grammar, spelling and dictionary claims, by lesson:
   - L9 vowel + y adds -s (spray, enjoy, stay), consonant + y changes to -ies: https://www.k12reader.com/spelling/plurals_nouns_and_verbs_ending_in_y.pdf
   - L9 cleaned (clean): https://www.merriam-webster.com/dictionary/clean ; bowed (bow): https://www.merriam-webster.com/dictionary/Bows
 - Round-3 additions (checked 2026-10-27, L4/L5 wording fixes): kitty, plural kitties (M-W): https://www.merriam-webster.com/dictionary/kitty ; jay, plural jays (M-W thesaurus entry): https://merriam-webster.com/thesaurus/jays ; vowel + y adds -s (bays, rays, plays, toys, alleys) and consonant + y becomes -ies (ladies, pennies, flies): https://www.k12reader.com/spelling-rules/spelling_rule_exceptions_for_plural_nouns_words_that_end_in_y.pdf ; belly, plural bellies: https://www.grammar-monster.com/plurals/plural_of_belly.htm ; country, plural countries (rule page, search result only): https://howtospell.co.uk/y-to-ies-or-s-plural-rule
+- Round-3 additions for L8/L9 (checked 2026-10-27): tease, teased: https://www.merriam-webster.com/dictionary/tease ; joke, joked: https://www.merriam-webster.com/dictionary/joke ; tidy, tidies: https://www.gymglish.com/en/conjugation/english/verb/tidy . The verbs rides and writes follow the already logged -s rule; they were not looked up individually.
