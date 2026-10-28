@@ -6186,7 +6186,7 @@ PP.addLesson({
           "(4) Then we sat at a table who was covered in flour."
         ],
         [
-          "(5) Tom is a boy where likes bread, so he asked many questions.",
+          "(5) Tom, a boy where likes bread, asked many questions.",
           "(6) We watched the room where the dough is rolled and cut.",
           "(7) Early morning is the time when the bakers start their work."
         ],
@@ -6205,13 +6205,13 @@ PP.addLesson({
       draft: true,
       paragraphs: [
         [
-          "(1) Last July, my uncle took us camping at the river where he fished as a boy.",
+          "(1) Last July, my uncle drove us to a rocky camp beside the river where he fished as a boy.",
           "(2) He packed a tent who fits six people.",
-          "(3) Nell is a camper where knows every bird song.",
+          "(3) Nell is a quiet camper where knows every bird song in the forest.",
           "(4) The trail that leads to the water is lined with tall pines."
         ],
         [
-          "(5) Night is the time when the stars fill the whole sky.",
+          "(5) Night is the time when thousands of stars fill the whole dark sky.",
           "(6) We spotted a deer when was drinking from the shallow edge.",
           "(7) Uncle Ben is the chef who stirs the best campfire stew."
         ],
@@ -6233,11 +6233,11 @@ PP.addLesson({
           "(1) Last month, my family moved to the house where my aunt used to live.",
           "(2) We hired a mover which carried our heavy couch up the stairs.",
           "(3) He drove a truck that was long enough to hold our whole living room.",
-          "(4) My little brother is a boy where cried when we packed his bike."
+          "(4) My little brother is a boy where cried when we packed his shiny red bike."
         ],
         [
           "(5) Evening is the hour when the new street grows quiet.",
-          "(6) We found a puppy when was sleeping on our porch.",
+          "(6) We found a tiny, shivering puppy when was sleeping on our front porch.",
           "(7) Our neighbor is a woman who gave us warm muffins."
         ],
         [
@@ -6903,17 +6903,17 @@ PP.addLesson({
       prompt: "A scout believes where is right in line 4 since friends gather at a table. What is the strongest reply?",
       choices: [
         {
-          text: "What follows cannot stand alone with there added, so use that.",
+          text: "Added there, what follows cannot stand alone; that is correct.",
           correct: true
         },
         {
-          text: "A table is a spot where friends gather, so where fits any spot."
+          text: "Tables are spots where friends gather; where suits any spot."
         },
         {
-          text: "A table is shared by the whole troop, so who fits a shared thing."
+          text: "Tables are shared among everybody present; who suits shared objects."
         },
         {
-          text: "The troop sat down at one moment, so when fits what happens once."
+          text: "Everyone sat once, briefly; when suits single events."
         }
       ],
       clue: "Try the there test on the words after the blank, and think about the noun before it.",
@@ -6925,10 +6925,10 @@ PP.addLesson({
       how: [
         "Read sentence 4: Then we sat at a table who was covered in flour.",
         "Add there to what follows the blank: was covered in flour there. That is not a whole sentence, because it does not say what was covered.",
-        "A table is a thing, so the joiner should be that. The answer is \"What follows cannot stand alone with there added, so use that.\""
+        "A table is a thing, so the joiner should be that. The answer is \"Added there, what follows cannot stand alone; that is correct.\""
       ],
       misconception: "A common mix-up is using where after anything people sit at. Where needs words after it that make a whole sentence.",
-      why: "The answer is \"What follows cannot stand alone with there added, so use that.\" Was covered in flour there is not a whole sentence, so where does not fit, and a table is not a person or a time. The sentence needs that.",
+      why: "The answer is \"Added there, what follows cannot stand alone; that is correct.\" Was covered in flour there is not a whole sentence, so where does not fit, and a table is not a person or a time. The sentence needs that.",
       like: ["SK-GUM4-5-C03"]
     },
     {
@@ -7005,17 +7005,17 @@ PP.addLesson({
         prompt: "Line 5 has a flaw. Which version cures it?",
         choices: [
           {
-            text: "Tom is a boy who likes bread, so he asked many questions.",
+            text: "Tom, a boy who likes bread, asked many questions.",
             correct: true
           },
           {
-            text: "Tom is a boy which likes bread, so he asked many questions."
+            text: "Tom, a boy which likes bread, asked many questions."
           },
           {
-            text: "Tom is a boy when likes bread, so he asked many questions."
+            text: "Tom, a boy when likes bread, asked many questions."
           },
           {
-            text: "Tom is a boy where he likes bread, so he asked many questions."
+            text: "Tom, a boy where he likes bread, asked many questions."
           }
         ]
       },
@@ -7023,17 +7023,17 @@ PP.addLesson({
         prompt: "Which reason supports the cured version?",
         choices: [
           {
-            text: "A boy is a person, and who goes with a person.",
+            text: "Boy names somebody human, and the right partner for humans is who.",
             correct: true
           },
           {
-            text: "Bread is a thing, and who goes with a thing."
+            text: "Bread names food, and the right partner for food is who."
           },
           {
-            text: "A boy is a spot, and where goes with a spot."
+            text: "Boy names a location, and the right partner for locations is where."
           },
           {
-            text: "Tom asked at a moment, and when goes with a moment."
+            text: "Questions happen at noon, and the right partner for noon is when."
           }
         ]
       },
@@ -7044,12 +7044,12 @@ PP.addLesson({
         "The draft already has where after the noun, so a version that keeps where with a new ending is not the cure."
       ],
       how: [
-        "Part A: find the noun before the wrong word: boy. A boy is a person, so the answer is \"Tom is a boy who likes bread, so he asked many questions.\"",
+        "Part A: find the noun before the wrong word: boy. A boy is a person, so the answer is \"Tom, a boy who likes bread, asked many questions.\"",
         "The other versions use which for a person, when for a time, or keep where.",
-        "Part B: the reason is \"A boy is a person, and who goes with a person.\""
+        "Part B: the reason is \"Boy names somebody human, and the right partner for humans is who.\""
       ],
       misconception: "A common mix-up is changing only the words after the blank. Check the noun before it: Tom is a boy, which is a person.",
-      why: "Part A: \"Tom is a boy who likes bread, so he asked many questions.\" Part B: \"A boy is a person, and who goes with a person.\" Part A: a boy is a person, so the sentence needs who. Part B: who tells more about a person.",
+      why: "Part A: \"Tom, a boy who likes bread, asked many questions.\" Part B: \"Boy names somebody human, and the right partner for humans is who.\" Part A: a boy is a person, so the sentence needs who. Part B: who tells more about a person.",
       like: ["SK-GUM4-5-C06"]
     },
     {
@@ -7109,7 +7109,7 @@ PP.addLesson({
         "In sentence 3, where goes with a camper, but a camper is a person, so the sentence needs who."
       ],
       misconception: "A common mix-up is thinking where works after any noun. Where is for places, and Nell is a camper.",
-      why: "The answer is sentence 3: \"Nell is a camper where knows every bird song.\" Nell is a camper, which is a person, so the sentence needs who. In the other shown sentences each word matches its noun.",
+      why: "The answer is sentence 3: \"Nell is a quiet camper where knows every bird song in the forest.\" Nell is a camper, which is a person, so the sentence needs who. In the other shown sentences each word matches its noun.",
       like: ["SK-GUM4-5-C08"]
     },
     {
@@ -7124,17 +7124,17 @@ PP.addLesson({
       prompt: "A camper insists line 6 is fine because the deer showed up at a certain hour. Which answer is strongest?",
       choices: [
         {
-          text: "Deer is an animal, and what follows has no subject, so use that.",
+          text: "Deer names an animal and the rest has no subject; that fits.",
           correct: true
         },
         {
-          text: "A deer showed up at an hour, so when fits any event on a trip."
+          text: "Deer appeared at an hour; when fits any trip event or story."
         },
         {
-          text: "A deer stood in one spot, so where fits any wild animal you see."
+          text: "Deer stood in one spot; where fits any wild animal here."
         },
         {
-          text: "Both words mean the same here, so the line needs no repair at all."
+          text: "Both words carry one meaning here; leave this line completely alone."
         }
       ],
       clue: "Decide what kind of noun comes right before the blank word.",
@@ -7146,10 +7146,10 @@ PP.addLesson({
       how: [
         "Read sentence 6: We spotted a deer when was drinking from the shallow edge.",
         "A deer is an animal, not a time. What follows the blank is was drinking from the shallow edge, and it has no subject of its own.",
-        "The answer is \"Deer is an animal, and what follows has no subject, so use that.\""
+        "The answer is \"Deer names an animal and the rest has no subject; that fits.\""
       ],
       misconception: "A common mix-up is trusting when because the sentence describes an event. Check the noun right before it.",
-      why: "The answer is \"Deer is an animal, and what follows has no subject, so use that.\" A deer is an animal, not a time, and was drinking from the shallow edge has no subject, so the sentence needs that. Where would only fit if the words after it made a whole sentence.",
+      why: "The answer is \"Deer names an animal and the rest has no subject; that fits.\" A deer is an animal, not a time, and was drinking from the shallow edge has no subject, so the sentence needs that. Where would only fit if the words after it made a whole sentence.",
       like: ["SK-GUM4-5-C09"]
     },
     {
@@ -7165,21 +7165,21 @@ PP.addLesson({
       pick: 2,
       choices: [
         {
-          text: "Ms. Park is the nurse who checks our eyes each year.",
+          text: "Ms. Park, the school nurse, helps students who feel dizzy during gym class.",
           correct: true
         },
         {
-          text: "Recess is the break when we play on the field.",
+          text: "Lunch is a long break when we trade snacks at crowded tables.",
           correct: true
         },
         {
-          text: "The library who has a reading nook is on Oak Street."
+          text: "A cozy library who displays new comic books sits beside the gym."
         },
         {
-          text: "My cousin where lives in Ohio sends me postcards."
+          text: "A pen pal where lives in Ohio sends colorful postcards every month."
         },
         {
-          text: "The gym when we hold class parties is down the hall."
+          text: "The auditorium when we rehearse the school play is down the hall."
         }
       ],
       clue: "Study each sentence for the noun right before the tell-more word, and decide what kind of noun it is.",
@@ -7190,11 +7190,11 @@ PP.addLesson({
       ],
       how: [
         "Find the noun before the tell-more word in each sentence.",
-        "In \"Ms. Park is the nurse who checks our eyes each year.\" who goes with a person. In \"Recess is the break when we play on the field.\" when goes with a time.",
-        "In the other sentences, who goes with a library, where goes with a person, and when goes with a gym."
+        "In \"Ms. Park, the school nurse, helps students who feel dizzy during gym class.\" who goes with people. In \"Lunch is a long break when we trade snacks at crowded tables.\" when goes with a time.",
+        "In the other sentences, who goes with a library, where goes with a person, and when goes with an auditorium."
       ],
       misconception: "A common mix-up is choosing a sentence because the tell-more word sounds right. Check the noun before it.",
-      why: "The answers are \"Ms. Park is the nurse who checks our eyes each year.\" and \"Recess is the break when we play on the field.\" Who goes with the nurse, who is a person, and when goes with the break, which is a time. In the other sentences who is used for a library, where for a person, and when for a gym.",
+      why: "The answers are \"Ms. Park, the school nurse, helps students who feel dizzy during gym class.\" and \"Lunch is a long break when we trade snacks at crowded tables.\" Who goes with the students, who are people, and when goes with the break, which is a time. In the other sentences who is used for a library, where for a person, and when for an auditorium.",
       like: ["SK-GUM4-5-C10"]
     },
     {
@@ -7210,17 +7210,17 @@ PP.addLesson({
       prompt: "What do the joining words in the two lines share, and how do they differ?",
       choices: [
         {
-          text: "Both describe a place, but where needs a part that could stand alone.",
+          text: "Each names a place; where works only if the rest could stand alone.",
           correct: true
         },
         {
-          text: "Both describe a person, but where needs a part naming somebody nearby."
+          text: "Each names a person; where works only if the rest names somebody nearby."
         },
         {
-          text: "Both describe a moment, but that needs a part naming a stretch of the day."
+          text: "Each names a moment; that works only if the rest names part of a day."
         },
         {
-          text: "Both describe an object, but where and that carry one shared meaning."
+          text: "Each names an object; where and that carry one shared meaning always."
         }
       ],
       clue: "Find the noun that each tell-more word describes. Then try the there test on the words after each word.",
@@ -7232,10 +7232,10 @@ PP.addLesson({
       how: [
         "Both lines describe the garden, which is a place.",
         "In Line 1, we planted beans there is a whole sentence, so where fits. In Line 2, has a scarecrow there is not a whole sentence, so that is used.",
-        "The answer is \"Both describe a place, but where needs a part that could stand alone.\""
+        "The answer is \"Each names a place; where works only if the rest could stand alone.\""
       ],
       misconception: "A common mix-up is thinking a place noun always takes where. The words after the word decide.",
-      why: "The answer is \"Both describe a place, but where needs a part that could stand alone.\" Both words describe the garden. We planted beans there is a whole sentence, so Line 1 uses where. Has a scarecrow there is not a whole sentence, so Line 2 uses that.",
+      why: "The answer is \"Each names a place; where works only if the rest could stand alone.\" Both words describe the garden. We planted beans there is a whole sentence, so Line 1 uses where. Has a scarecrow there is not a whole sentence, so Line 2 uses that.",
       like: ["SK-GUM4-5-C11"]
     },
     {
@@ -7247,8 +7247,8 @@ PP.addLesson({
         "3.L.GC.1:I:use-relative-pronouns-and-relative-adverbs"
       ],
       passages: ["p6"],
-      prompt: "Select the term that corrects sentence 4 of the moving story.",
-      text: "On moving day, my little brother is a boy {0} cried when we packed his shiny red bike into the truck.",
+      prompt: "Select the missing term in line 4 of the moving story.",
+      text: "On moving day, my little brother is a boy {0} cried when we packed his shiny red bike into the long truck.",
       slots: [
         {
           options: ["when","who","which","where"],
@@ -7279,25 +7279,25 @@ PP.addLesson({
         "3.L.GC.1:I:use-relative-pronouns-and-relative-adverbs"
       ],
       passages: ["p6"],
-      prompt: "Line 6 of the moving story has a problem. Pick the TWO versions that repair it.",
+      prompt: "Two of these versions repair line 6 of the moving story. Which two?",
       pick: 2,
       choices: [
         {
-          text: "We found a puppy that was sleeping on our porch.",
+          text: "We found a tiny, shivering puppy that was sleeping on our front porch.",
           correct: true
         },
         {
-          text: "We found a puppy where it was sleeping on our porch.",
+          text: "We found a tiny, shivering puppy where it was sleeping on our front porch.",
           correct: true
         },
         {
-          text: "We found a puppy when was sleeping on our porch."
+          text: "We found a tiny, shivering puppy when was sleeping on our front porch."
         },
         {
-          text: "We found a puppy where was sleeping on our porch."
+          text: "We found a tiny, shivering puppy where was sleeping on our front porch."
         },
         {
-          text: "We found a puppy that it was sleeping on our porch."
+          text: "We found a tiny, shivering puppy that it was sleeping on our front porch."
         }
       ],
       clue: "A repair can change the tell-more word, or it can change the words after it. Check each version for a word that suits the noun.",
@@ -7307,12 +7307,12 @@ PP.addLesson({
         "A puppy is not a time, so a word for times cannot go with it."
       ],
       how: [
-        "The draft pairs the puppy with when, but a puppy is not a time, and was sleeping on our porch has no subject.",
+        "The draft pairs the puppy with when, but a puppy is not a time, and was sleeping on our front porch has no subject.",
         "One repair uses that, which goes with a thing. The other repair gives the words after where a subject, so it was sleeping there is a whole sentence.",
-        "The answers are \"We found a puppy that was sleeping on our porch.\" and \"We found a puppy where it was sleeping on our porch.\" The others keep the draft, leave where without a subject, or add a second subject after that."
+        "The answers are \"We found a tiny, shivering puppy that was sleeping on our front porch.\" and \"We found a tiny, shivering puppy where it was sleeping on our front porch.\" The others keep the draft, leave where without a subject, or add a second subject after that."
       ],
       misconception: "A common mix-up is thinking only the tell-more word can change. The words after it can change, too.",
-      why: "The answers are \"We found a puppy that was sleeping on our porch.\" and \"We found a puppy where it was sleeping on our porch.\" That goes with a puppy, which is a thing, and it was sleeping there is a whole sentence, so where fits the second version. The others keep the draft, leave where without a subject, or add a second subject after that.",
+      why: "The answers are \"We found a tiny, shivering puppy that was sleeping on our front porch.\" and \"We found a tiny, shivering puppy where it was sleeping on our front porch.\" That goes with a puppy, which is a thing, and it was sleeping there is a whole sentence, so where fits the second version. The others keep the draft, leave where without a subject, or add a second subject after that.",
       like: ["SK-GUM4-5-C13"]
     },
     {
@@ -7324,7 +7324,7 @@ PP.addLesson({
         "3.L.GC.1:I:use-relative-pronouns-and-relative-adverbs"
       ],
       passages: [],
-      prompt: "Pick the line in which the joining word suits its partner.",
+      prompt: "Select the line whose connector matches its partner.",
       choices: [
         {
           text: "The deep green lake where we paddled our blue canoe last summer is very cold.",
@@ -7364,8 +7364,8 @@ PP.addLesson({
         "3.L.GC.1:I:use-relative-pronouns-and-relative-adverbs"
       ],
       passages: [],
-      prompt: "Pick the terms that finish the line about the town fair.",
-      text: "Spring is a season {0} flowers bloom by the pond near our school, and a wooden bridge {1} crosses the stream is painted green.",
+      prompt: "Fill both gaps in this line about the town fair.",
+      text: "Spring is a season {0} flowers bloom beside our pond, and a wooden bridge {1} crosses a stream is painted green.",
       slots: [
         {
           options: ["when","whose","which","how"],
