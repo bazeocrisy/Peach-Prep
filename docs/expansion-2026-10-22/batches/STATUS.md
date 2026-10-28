@@ -87,6 +87,13 @@
 | B8a | 3.L.GC.1:I:use-relative-pronouns-and-relative-adverbs | NOT ACCEPTED: awaiting independent review | B8a-author-log.md; authored, not reviewed |
 | B8a | 3.L.GC.1:I:use-interjections | NOT ACCEPTED: awaiting independent review | B8a-author-log.md; authored, not reviewed |
 | B8a | 3.L.GC.1:I:use-helping-and-linking-verbs | NOT ACCEPTED: awaiting independent review | B8a-author-log.md; authored, not reviewed |
+| B8b | 3.L.GC.1:I:use-conventional-capitalization-in-abbreviations | NOT ACCEPTED: awaiting independent review | B8b-author-log.md; authored, not reviewed |
+| B8b | 3.L.GC.1:I:use-commas-for-direct-address-and-to-set-off-yes | NOT ACCEPTED: awaiting independent review | B8b-author-log.md; authored, not reviewed |
+| B8b | 3.L.GC.1:I:use-apostrophes-to-form-plural-possessive-nouns | NOT ACCEPTED: awaiting independent review | B8b-author-log.md; authored, not reviewed |
+| B8b | 3.L.GC.1:I:use-indefinite-pronouns-with-correct-agreement | NOT ACCEPTED: awaiting independent review | B8b-author-log.md; authored, not reviewed |
+| B8b | 3.L.GC.1:I:use-subordinating-conjunctions-to-join-clauses | NOT ACCEPTED: awaiting independent review | B8b-author-log.md; authored, not reviewed |
+| B8b | 3.L.GC.1:I:use-commas-after-introductory-phrases-or-clauses | NOT ACCEPTED: awaiting independent review | B8b-author-log.md; authored, not reviewed |
+| B8b | 3.L.GC.1:I:use-capitalization-and-underlining-quotation-mar | NOT ACCEPTED: awaiting independent review | B8b-author-log.md; authored, not reviewed |
 
 "Accepted" means an independent reviewer blind-solved the items, found every key defensible, and found no hint ladder that leaves only the key (see AUTHOR-BRIEF rules). It does not mean the lesson has been tried by a child.
 
