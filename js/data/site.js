@@ -102,9 +102,9 @@ window.PP_SITE = {
   ],
 
   plan: [
-    { step: "Start with the skill list", text: "The home page lists the skills in learning order. Use the On the test filter to see the skills the Milestones checks." },
+    { step: "Choose how to start", text: "Follow the Learning Path for a suggested order, or choose a lesson from the list. Use the On the test filter to see the skills the Milestones checks." },
     { step: "Pick a category, then one skill at a time", text: "Start from a category card (Reading, Writing, Vocabulary, Grammar or Foundations). Skills are listed in a building order, each with its id and Georgia code. Open one and go through its steps. Most skills have five: Learn It, Watch Me, Practice Together (Help me is on), Try It Yourself (Help me turns on after one wrong try) and Test Your Knowledge. Score at least 80% of the points on the skill check to pass it. On a 6- or 7-point check that means missing no more than 1 point. A few hands-on skills (reading aloud, cursive) have Learn It, Watch Me, Practice and a grown-up Check instead of a scored skill check." },
-    { step: "Write every week", text: "Do the writing skills, then one opinion essay from sources each week (Practice tests and mixed practice, then Writing), checked with the Writer's Checklist and scored with the parent guide." },
+    { step: "Write every week", text: "Do the writing skills, then one opinion essay from sources each week (Mixed practice and practice tests, then Writing), checked with the Writer's Checklist and scored with the parent guide." },
     { step: "Put it together", text: "Once several skill checks are passed, try the mixed reading sets and the practice test. The real test mixes skills in one passage." },
     { step: "Rehearse on the real screens", text: "Use GaDOE's free Experience Online practice (Test Practice, Guides and Samplers → Online Tools Training → Study Guide → Grade 3 ELA). It uses the real testing tools: highlighter, cross-off, line guide and more." },
     { step: "Check progress", text: "Progress (lessons started, practice finished, skill checks passed and grown-up checks, with dates) is saved on this device only. If your child uses two devices, pick one for Peach Prep." }
