@@ -4951,7 +4951,7 @@ PP.addLesson({
             hints: [
               "Compare how each choice begins and how each choice ends. Ask which one follows the rules for spoken words.",
               "Read the first word inside the opening quotation marks. Then look at where the question mark sits.",
-              "A comma after the question mark is only needed when the speaker comes last, and Tess comes first."
+              "Tess comes first, and a question mark already ends her words, so no comma follows it."
             ],
             how: [
               "Tess comes first, so a comma follows asked and her words come next in quotation marks.",
@@ -4970,7 +4970,7 @@ PP.addLesson({
               "3.L.GC.1:C:use-conventional-capitalization-quotation-marks-"
             ],
             passages: ["p1"],
-            prompt: "From sentences 2, 4, 6, 7 and 8, select the ONE that is punctuated incorrectly.",
+            prompt: "From sentences 2, 4, 6, 7 and 10, select the ONE that is punctuated incorrectly.",
             targets: ["p1:1:2","p1:1:4","p1:2:2","p1:2:3","p1:3:3"],
             answer: ["p1:2:3"],
             pick: 1,
@@ -5141,10 +5141,10 @@ PP.addLesson({
                 text: "A comma is needed outside the closing quotation marks, because the comma is not part of the words that Mr. Singh said out loud."
               }
             ],
-            clue: "Think about what must divide the words someone says from the name of the person saying them when that name is last.",
+            clue: "Read the end of the spoken words and the name of the speaker that follows them.",
             hints: [
-              "Think about what must divide the words someone says from the name of the person saying them when that name is last.",
-              "Look at the end of what is said. Is there a question mark or an exclamation point there?",
+              "Read the end of the spoken words and the name of the speaker that follows them.",
+              "Compare how the choices treat the end of what the speaker says.",
               "Naming the speaker does show who is talking, but it does not take the place of a mark that finishes what is said."
             ],
             how: [
@@ -5713,7 +5713,7 @@ PP.addLesson({
         "3.L.GC.1:C:use-conventional-capitalization-quotation-marks-"
       ],
       passages: ["p5"],
-      prompt: "Tap the ONE line, out of the five shown from the pond story, whose punctuation lands beyond the last quote when it belongs ahead of it.",
+      prompt: "Tap the ONE line, out of the five shown from the pond story, whose mark is placed outside the quotes when it belongs inside.",
       targets: ["p5:1:2","p5:1:4","p5:2:2","p5:2:3","p5:3:2"],
       answer: ["p5:2:3"],
       pick: 1,
@@ -5741,26 +5741,26 @@ PP.addLesson({
         "3.L.GC.1:C:use-conventional-capitalization-quotation-marks-"
       ],
       passages: ["p5"],
-      prompt: "Someone feels line 9 needs nothing following crackers. Pick the strongest reply.",
+      prompt: "A friend feels nothing should follow crackers in line 9. Pick the strongest reply.",
       choices: [
         {
           text: "Put a comma right after crackers, within the quotes, since Mom follows and nothing else closes her speech.",
           correct: true
         },
         {
-          text: "Leave it alone; the name Mom shows who speaks, so extra marks would only repeat that same idea again and again."
+          text: "Leave it alone, since the name Mom shows who speaks, so extra marks would only repeat that."
         },
         {
           text: "Put a period right after crackers, within the quotes, since her speech is a full thought and a period closes one."
         },
         {
-          text: "Put a comma after the second quote mark, since a comma is never part of anything a person says aloud, ever."
+          text: "Place a comma after the second quote mark, since the comma would sit outside what Mom says aloud."
         }
       ],
-      clue: "Ask what has to divide the spoken words from the speaker's name when the name comes last.",
+      clue: "Read the end of the spoken words and the name that follows them.",
       hints: [
-        "Ask what has to divide the spoken words from the speaker's name when the name comes last.",
-        "Look at the way the spoken words end. Is a question mark or an exclamation point there?",
+        "Read the end of the spoken words and the name that follows them.",
+        "Compare how the choices treat the end of the speaker's words.",
         "Mom said shows who speaks, but naming a speaker does not take the place of a mark at the end of the words."
       ],
       how: [

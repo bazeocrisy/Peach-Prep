@@ -448,3 +448,165 @@ All seven first-review MUSTs for these lessons (Av./Str., the C03/C10/C12 triple
 - Keys are right (120/120 blind) and playable (120/120 on a phone). No MUST remains in lessons 1 to 4.
 - Recommended to lead: L1, L2, L4 ACCEPT; L3 REVISE for S3-A to S3-E (five small SHOULDs, mostly the same two irregular-plural dropdowns and S13). If the lead wants them closed in one pass: L1 S1-A, L3 S3-A to S3-E, L4 S4-A and S4-B.
 - Items for the status table: do not mark any lesson ACCEPTED until the lead decides on the SHOULDs.
+
+
+---
+
+## Second review (B8b lessons 5-7)
+
+**Reviewer:** independent content reviewer (did not author). Scope: `js/data/lessons/L-GUM5.js`, lessons 5 (subordinating conjunctions), 6 (commas after an opening part), 7 (titles of works), files as on disk at commit 49e4e0f. Read-only: no lesson or code file changed, no git, nothing marked ACCEPTED. L-GUM4.js was being edited by someone else and is ignored. Scripts and outputs are in `scratchpad/b8b3/` (reusing `b8b2/lib.js` and the first-review measurement scripts, re-run on the current file).
+
+### Verdicts
+
+| Lesson | Verdict | MUST | SHOULD | Summary |
+|---|---|---|---|---|
+| 5. Joining ideas with because, when, after and if | **REVISE (CHANGES REQUIRED)** | 2 | 5 | All first-review MUSTs and SHOULDs are fixed except as listed. Two key-defensibility problems are new or newly visible: the "although" distractor in C03/S03 is a coherent reading, and C06 sentence 3 is a coherent sentence keyed as an error. |
+| 6. Commas after an opening part | **ACCEPT** (with SHOULDs) | 0 | 3 | All first-review MUSTs and SHOULDs fixed. One check-content hint-echo warning on S15 that the author log says is absent. |
+| 7. Writing titles of books, stories, poems and songs | **ACCEPT** (with SHOULDs) | 0 | 3 | All first-review MUSTs and SHOULDs fixed. One hint-echo warning on C09, one twin pair 0.004 over the 0.21 bar. |
+
+### 1. Blind solve
+
+- **Method.** `b8b3/blind.js` (a fresh copy of the first-review loader with new seeds, `77031 + 313 x lesson`) loads `L-GUM5.js` in Node with a stub `PP.addLesson`, resolves every core `{ref}`, and prints all 18 passages (no figures exist), 45 core and 45 similar items with choices, dropdown options, hot-text options, ebsr parts and match columns shuffled by the seeded LCG. It strips `correct`, `answer`, `why`, `clue`, `hints`, `how`, `misconception`, `like`, `std`. Match rows and hot-text target sentences are printed in passage order. My answers were written to `b8b3/answers.json` (made read-only) before any key was extracted; `cmp.js` then compared them with the keys through the stored permutation (`map.json`).
+- **Result: 88 of 90 agree (97.8%).** Both disagreements are my slips, not item defects, and I report them unedited: **L5 C05** Part A, I reasoned correctly that the "until we ate lunch" sentence is the key but wrote the letter of a different option (key text: "We washed our hands until we ate lunch."); **L7 S15**, I chose "Start with T, and capitalize each remaining word" instead of "Start with T, and make And lowercase" (a tempting distractor, so S15's distractor is doing its job). Counting the intended answer, C05 is 1 for 1; S15 stays a miss.
+- **How blind.** Fully blind for all 90 items. Before the solve I had read REVIEWER-BRIEF and CONTENT-BRIEF, the STATUS tail, and the code (not the outputs) of the first-review scripts. I did not open the first-review answer files or the author log until `answers.json` was saved. The first review (B8b-review.md, lines 1-148) and the author log were read after.
+- **Items I hesitated on while solving** (keys still matched, see findings): L5 C03 (until vs although), L5 S03 (until vs although), L5 C06 sentence 3.
+
+### 2. Measurements (all on the file as on disk)
+
+- **Browser, 390 x 844, touch, browse-mode fixture, real taps (`b8b3/run390.py`, server `node verification/serve.js . 8995`).** For every one of the 45 core items (sets y, y2, y3) I answered with the real controls, got "That's right", then tapped **Try a similar question** and answered the matching twin the same way, and got "That's right" again: **45 of 45 core and 45 of 45 twins pass, 0 problems.** scrollWidth 390 on every screen, no tap target under 40 px or outside the viewport, no page error. Dropdowns whose longest option is over 28 characters rendered as a button list and I answered them with the buttons (L5 C10, C14 slot 0; L5 S14 slot 0; L6 C10); the rest were native selects. All 30 passage items (core and twin) show the right passage on the Passage tab (matched by title, `r390-5/6/7.txt`). Every twin shown was the one whose `like` names the core item just answered.
+- **Passages.** 18 passages, 100 to 120 words without the `(n)` markers, 111 to 135 with them (repo script). FK from `verification/readability.py`: L5 1.7-3.4, L6 1.1-3.3, L7 2.9-4.4 (p1 4.4, p3 4.1, p6 4.1). All under 4.5. L5 p5 is exactly 100 words by my tokenizer (NOTE).
+- **Twin vs core, whole-text Jaccard, `(n)` markers and digits counted, stems, prompts, text, choices, slots, rows, columns, both ebsr parts and the hot-text target sentences, all 225 pairs per lesson (`jac.js`), set / multiset:**
+
+| Lesson | Max set | Max multiset | Pairs over 0.21 (set or multiset) |
+|---|---|---|---|
+| L5 | 0.191 (C14/S14) | 0.212 (C11/S11) | **C11/S11 0.172 / 0.212; C12/S12 0.188 / 0.211** (SHOULD, over by 0.002 and 0.001) |
+| L6 | 0.208 (C13/S13) | 0.206 (C13/S13) | none (C13/S13 0.208 / 0.206 is under) |
+| L7 | 0.193 (C04/S04) | 0.214 (C12/S10) | **C12/S10 0.143 / 0.214** (SHOULD, over by 0.004; not a `like` pair) |
+
+  The author's figures (L5 0.191 / 0.212, L6 0.208 / 0.206, L7 0.193 / 0.214) reproduce exactly. No pair is near 0.30. Paired (`like`) overlap is 0.06 to 0.21. Twin vs twin: L6 S03/S12 0.286 / 0.400 (same frame, NOTE; no twin-twin limit is stated), L5 S04/S05 0.242 / 0.209 (shared passage).
+- **Core vs core (limit 0.30), set / multiset.** The first review's failing pairs are now: L5 C03/C10 0.185 / 0.209, C03/C12 0.188 / 0.189, C10/C12 0.125 / 0.167, C10/C14 0.184 / 0.206, C12/C14 0.186 / 0.160 (was 0.39 to 0.42); L5 maximum **C03/C14 0.270 / 0.226**. L6 C03/C10 0.233 / 0.190, C03/C12 0.148 / **0.279**, C10/C12 0.097 / 0.119 (was 0.37 / 0.378). L7 C08/C10 0.200 / 0.236, C08/C12 0.103 / 0.119, C10/C12 0.179 / 0.174, C09/C15 0.173 / 0.187 (was 0.319 / 0.356), C04/C15 0.232 / **0.282**, C04/C09 0.110 / 0.124. Nothing reaches 0.30. Highest are 0.282 (L7 C04/C15), 0.279 (L6 C03/C12), 0.270 (L5 C03/C14): NOTE, close to the bar.
+- **Core and twin vs form A tests (`tj.js`).** L5 **C14 vs T4 0.55 / 0.45** (see SHOULD S5b-3), L7 C05/T2 0.31 / 0.36 (same stem, different sentences, NOTE), L6 P4/T4 0.25 / 0.31 (legacy P4, NOTE). Other pairs below 0.28.
+- **Key printed earlier or elsewhere (`leak2.js`).** Strings of three or more words, checked in every core, twin, Together, Test A item (stems, options, hints, clue), plus Teach and Learn It: two hits. L5 C03's key "until the rain stopped" is a substring of C07's fragment "Until the rain stopped on Friday." (C07 is in the later set; it cannot help C03; NOTE). L6 T3's key "In the morning," matches Teach point 1, which names "In the morning" as an opening part without a comma (a legacy test item; NOTE). No key appears in a hint (`hintkey.js`: nothing).
+- **Dropdown-reads-the-passage check (`copy.js`).** The 16 dropdown items that earlier printed their key in the passage (L5 and L6 C03/C10/C12/S03/S10/S12, L7 C10/C12/S10/S12) now carry no passage and put the context in the stem. L7 C08 and S08 still use passages p2 and p5, but the passage prints the planted **wrong** form ("Turnips For The Tuba", "Pirates And Mermaids"); a case-sensitive comparison shows the keyed title is not in the passage. Not a leak.
+- **Stale numbering.** I matched every "sentence N / line N / paragraph N" reference in stems, parts and hints to the passage text: all correct (L5 C05 paragraph 3, C06 range 2-6, C09 sentences 8 and 10, C11 5-9, S05 lines 9-12, S09 lines 10-11; L6 C05 paragraph 2, C09 sentences 7 and 8, S09 lines 7 and 8; L7 C04, C08, S04, S08 and all ranges).
+- **Longest key (`longest.js`).** No new core or twin key is uniquely longest and no choose-two pair has both keys longest. L6 C04 has the key as the only choice not starting with "We" (see NOTE N6b-2). No end-mark tell remains (`endmark.js`: nothing; L7 S03 fixed).
+- **Key / why / how.** Every key appears in its `how` and `why`; hot-text items cite the sentence number, and I checked all 18 against the passage (the L5 S11 why now quotes "Tia felt proud although she learned the whole cheer.", which is passage line 7).
+- **`like` mapping (`like.js`).** Every twin maps to one core item with the same type, points and DOK; no core item lacks a twin; pick counts equal key counts; choose-two, ebsr, match and two-slot dropdown are 2 points. Core formats per lesson hottext 3, dropdown 4, mc 3, ebsr 1, ms 2, match 2 (points 22 / 22 / 21), DOK 2 / 10 / 3.
+- **Duplicates over all `js/data` (`dup.js`, `dup3.js`).** 529 distinct strings of 25+ characters from the three lessons searched in every data file: the only outside hits are generic stems ("This question has two parts. Answer Part A, then Part B.", "Select the sentence that has an error.", "Choose the TWO sentences that use commas correctly.", "Select the group of words that is NOT a complete sentence."). No content duplicate. Inside the lessons the same sentence is a distractor in C04 and C05 of L5, and in S04 and S05 of L5 (harmless NOTE).
+- **`check-content.js --all`: PASS, 0 failures, 94 warnings;** three are on these lessons: **L6 S15 hint 2 shares "first" only with the key; L7 C09 clue and hint 1 share "short" only with the key.** The author log says "no warnings remain on any SK-GUM5-1 to SK-GUM5-7 item"; that is not true of the file on disk.
+- **Official wording** (`js/data/standards.js`, p. 17, Introduce, not assessed): L5 "Use subordinating conjunctions to join clauses."; L6 "Use commas after introductory phrases or clauses."; L7 "Use conventional capitalization and underlining, quotation marks, or italics to indicate titles of works." The items test each named element. Points and DOK are right throughout.
+
+### 3. Web checks
+
+- Commas after introductory elements: https://owl.purdue.edu/owl/general_writing/punctuation/commas/commas_after_introductions.html (fetched: a comma is needed "After an introductory clause"; a brief prepositional phrase "usually doesn't need a comma", test: fewer than five words). This supports the lesson's rule (clause needs the comma, short phrase optional) and the L6 keys that treat missing commas after 4 to 7-word clauses as errors.
+- Title capitalization: https://titlecapitalize.com/mla-title-case-rules/ (fetched: MLA capitalizes the first and last words and every major word; lowercases articles, prepositions of any length and coordinating conjunctions in the middle). Every mid-title small word in the lessons is a, an, the, and, of, in, on, at, to or for, so MLA, Chicago and AP agree.
+- Italics vs quotation marks: https://stlcc.edu/student-support/academic-success-and-tutoring/writing-center/writing-resources/italics-vs-quotations-marks-in-titles.aspx (fetched: shorter works in quotation marks, longer works such as full-length books in italics; short stories and songs in quotation marks).
+- Carried over from the first review (still relied on): https://writingexplained.org/grammar-dictionary/subordinating-conjunctions , https://www.merriam-webster.com/dictionary/until , https://www.merriam-webster.com/dictionary/although , https://www.grammarly.com/blog/punctuation-capitalization/commas-after-introductory-clauses/ (short introductory clause comma is a style choice). The purdue.edu `commas/index.html` page was not on this session's allowlist, so I used the `commas_after_introductions.html` page above.
+
+### 4. Verification of the first-review findings (re-measured on disk)
+
+| First-review finding | Status | Evidence |
+|---|---|---|
+| M5-1 / M6-2 / M7-1 dropdowns print the key in the passage (18 items) | **FIXED** for 16; L7 C08/S08 keep a passage but print only the wrong form | `copy.js`; item JSON has no `passages` on L5 and L6 C03/C10/C12/S03/S10/S12 and L7 C10/C12/S10/S12; contexts are in stems; browser run confirms no Passage tab on them |
+| M5-3 / M6-3 / M7-2 same-frame triplets over 0.30 | **FIXED** | table in section 2; highest 0.282 |
+| M7-3 L7 C09/C15 (and C04/C09) | **FIXED** | C09 now asks Sam (quotation marks) vs Ava (line under the title) about a poem; C09/C15 0.173 / 0.187; C09 no longer prints the small-word rule |
+| M5-2 L5 C14 slot 0 (until vs although) | **FIXED** | options now although / because the whole day was warm / if the day was warm; "Kim wore a coat until the day was warm" is gone; no other option reads naturally. (S14 slot 0 uses although / because / if and slot 1 before / although / until; "until he ate lunch, he toweled dry" does not parse.) |
+| M6-1 L6 S13 four defensible answers | **FIXED** | claim is now "A sentence with while, because or although always needs a comma"; only A "We stayed inside while it stormed." and D "Tom smiled because the test was easy." have no comma; B has no listed word, C and E have the comma. |
+| S5-1 C11 sentence 7 | FIXED | "We cheered although our team scored a point." |
+| S5-2 S11 why misquote | FIXED | quotes line 7 as printed |
+| S5-3 twin overlap C10/S10, C06/S06 | FIXED, but two other pairs are 0.001 to 0.002 over (S5b-5) | section 2 |
+| S5-4 / S7-5 twin vocabulary drift | **MOSTLY FIXED** | "In spite of", "condition" (L5), "linking word" gone; residual in S5b-4, S7b-2 and N6b-3 |
+| S6-1 L6 C04/C05, S04/S05 giveaway | FIXED | C04 now uses p1 s12, s10, s9, s4 and S04 uses p4 s4, s9, s1, s10; the C05/S05 keys (p1 s5, p4 s5) are not printed in the earlier item |
+| S6-2 S15 | FIXED | now a claim to judge (Dana), key "the comma tells where the first part stops and the plan starts" |
+| S6-3 short clauses | **MOSTLY FIXED** | P3 now "While Dad cooked dinner in the kitchen ...", C07 and S07 rows use 7 to 9-word clauses. Four-word clauses remain as keys in four dropdowns (NOTE N6b-4) |
+| S7-1 C06/S06 line 5 | FIXED | "the song Marimba in the Snow", "the song Xylophone Sunrise" |
+| S7-2 C13/S13 hint 2 | FIXED | no longer lists the small words |
+| S7-3 S03 only key ends in a quotation mark | FIXED | title now mid-sentence: `We all loved "Harmonica Hill" most of all.` |
+| S7-4 S13 contrived claim | FIXED | Rae: "small words must always start with a capital" |
+| N7-1 "chapter book" | FIXED | "the book Penguin Express" |
+| Author claim "no warnings remain on SK-GUM5-1..7" | **NOT TRUE** | three warnings on L6 S15 and L7 C09 |
+
+### 5. Lesson 5: "Joining ideas with because, when, after and if" (3.L.GC.1:I:use-subordinating-conjunctions-to-join-clauses)
+
+**Verdict: REVISE.** Blind solve 30 of 30 on the keys (one lettering slip on C05 Part A). 15 of 15 core and 15 of 15 twins take the key on a phone.
+
+**MUST**
+
+| ID | Evidence | Fix |
+|---|---|---|
+| **M5b-1** C03 and S03 | The two stand-alone "until" items give no context, and the distractor "although" makes a coherent sentence. C03: "Jo's team rested on the bench although the rain stopped." means they kept resting even though the rain stopped; S03: "Tess jogged around the track although dark fell." means she jogged despite the dark. "Until" is the more natural reading but not the only defensible one, the same class of fault as first-review M5-2. C03's hint 3 claims "nothing here is surprising", which a student holding the "although" reading can fairly dispute. (S03's `if dark fell` is the only distractor that really fails.) | Give the stem a context that excludes the surprise reading (for example "The game could not start while the rain fell." before C03's sentence), or replace the "although" distractor with one that cannot make sense: C03 "before the rain stopped" is also arguable, so prefer "because the rain stopped" only if the stem says the rain was a good thing; simplest is to make the stem a two-sentence time story as in C12 ("The rain began at noon and stopped at one. Jo's team sat on the bench from noon to one.") and key "until the rain stopped" with because / if distractors. For S03 swap "although dark fell" for "because dark fell". Update the hint 3 sentences. |
+| **M5b-2** C06 sentence 3 | Keyed as an error: "We could not start although Dad found the red ball." This is a coherent concession (finding the ball would normally let them start, yet they could not). The how says "finding the ball is not a surprise ... should say until", which is one reading, not the only one. A careful reader marks sentence 3 as correct and then has no second candidate (sentences 2, 4 and 6 are clearly right), so the item penalises the better reader. (The twin S06's "Dana stopped jumping although she was tired" is a clear clash; tiredness predicts stopping.) | Replace sentence 3 with an unambiguous clash that mirrors S06 and C11, for example "Grandpa hammered the wickets into the grass although the ground was soft." (soft ground makes hammering easy) and move the current sentence 2 idea elsewhere, or "We could not start although Dad had not found the red ball." Re-check C06's how, why, h3 and the twin overlap with S06 after the edit. |
+
+**SHOULD**
+
+| ID | Evidence | Fix |
+|---|---|---|
+| **S5b-3** C14 vs form A T4 | New core C14 is a template clone of the existing Test A item L5 T4: both are two-slot dropdowns with the same name and frame, "Kim wore a coat {0}, and {1}, she took it off" (although / after) against "Kim wore shorts {0} the day was chilly, and she put on a jacket {1} she got to the park" (although / after). Jaccard 0.55 / 0.45. The keys are single words, so no key sentence is printed, but practice rehearses the exact answer pattern (surprise first blank, time second blank) and the form A item. | Change C14 and S14 to a different pair of relations or characters (for example reason in the first blank and how-long in the second), keep Kim out of it. |
+| **S5b-4** hints | (a) S10 h1 "Ask **when** Gus pulled mittens on." repeats the key word (`when frost formed`) and C10 h1 "Ask **why** the kitten crept away." names the relation of the key (because). Both narrow the key in the first hint. (b) C03 and C12 hint 3 open with the same sentence "One choice shows a surprise, but nothing here is surprising." (C14 slot 1 hint 3 and S03/S10/S12 hint 3 repeat the idea); the first review asked for these to be varied. | (a) Use the neutral h1 of C03: "Ask how the ... and the ... are connected." (b) Vary the first clause of C12 and C14 hint 3. |
+| **S5b-5** twin overlap slightly over 0.21 | C11/S11 0.172 / **0.212** and C12/S12 0.188 / **0.211** (multiset). | Change one distinctive word in each pair of stems (for example "sentences 5 through 9" vs "lines 5 to 9" is already different; change the shared "Select the sentence ... clash" frame and the "Nia/Mia ... times" stem). |
+| **S5b-6** "while" in two keys | S09's key "After sets a time, **while** if sets a case that may happen." and S15's key "... until stretches the waiting up to the bell, **while** when names a single moment." use *while* as a contrast word, but Teach lists *while* as a time word (when, while, after, before). A grade 3 reader meets the taught joining word with a new job inside the key sentence. | Replace the contrast "while" with "and" or "but". |
+
+**NOTE**
+
+- N5b-1 C08 columns "A case that may happen" vs Teach "names something that may or may not occur"; S02 columns "Time | A surprise" vs core "Tells when" (P4). Fine, but one label set would be cleaner.
+- N5b-2 S11 line 9 "Feet hurt although everyone smiled the whole time." reads backwards (smiling despite hurting would be "Everyone smiled although feet hurt"). It is keyed as a correct line, and the key (line 7) is clearer, so one answer remains.
+- N5b-3 S14 slot 0 `if the pool felt cold` ("swam laps if the pool felt cold") is a weak but possible conditional; the key (although) is clearly best.
+- N5b-4 C05 and S05 give hints for Part A only; Part B has none.
+- N5b-5 Hint 3 on the four match items (P4 excepted) reveals one row's answer ("In the row about the cold, the singing is a surprise"). Three rows stay live; consistent with accepted lessons.
+- N5b-6 C07 and C09 distractors are easy to dismiss ("after may be used only at the start"); DOK 3 on C09 is generous.
+- N5b-7 L5 p5 is exactly 100 words by my tokenizer; any cut drops it below 100.
+- N5b-8 Learn It models before and although and fragments; it does not model if or until. Teach does, and the core items on those words are ordinary.
+- N5b-9 The author log's S01 why uses "As soon as the lights came back on", a joining phrase not taught in L5; it is in the why only.
+
+### 6. Lesson 6: "Commas after an opening part" (3.L.GC.1:I:use-commas-after-introductory-phrases-or-clauses)
+
+**Verdict: ACCEPT** (blind 30 of 30, 15 of 15 core and 15 of 15 twins on a phone). No MUST.
+
+**SHOULD**
+
+| ID | Evidence | Fix |
+|---|---|---|
+| **S6b-1** S15 hint 2 | `check-content.js` warns: hint 2 "Say the **first** part by itself. Ask whether it feels finished." shares "first" only with the key ("... where the **first** part stops ..."). | Reword: "Say the part before the comma by itself." |
+| **S6b-2** C04 / S04 distractor design | The three distractors have no opening part at all (C04: "We will walk ... if the weather stays dry.", "We sang a song, when ...", "We walked in pairs because ..."; S04: "Nell held her arms wide since ...", "We clapped loudly, after ...", "Our gym club held ..."). The key is the only choice that begins with an opening part, and the only choice not starting with "We" in C04, so the item can be solved by spotting the opener, not by judging the comma. It is DOK 1, so the fault is mild. | Replace one distractor with a sentence that opens with an opening part and has the comma in the wrong place, taken from a draft sentence that no later item uses, or add a p1 sentence with a misplaced comma. |
+| **S6b-3** C09 / S09 wording | C09 calls it "the after part", S09 "the before words" ("Line 7 starts with before words that need a comma after them"). Teach uses "opening part". Neither term is taught, and S09's key is hard to parse. | "The opening part" and "the ending part", as in Teach. |
+
+**NOTE**
+
+- N6b-1 C03/C12 core multiset 0.279, C10/C03 0.233 set: below 0.30. Twin S03/S12 0.286 / 0.400 (same frame; no limit).
+- N6b-2 `longest.js`: C04 key is the only choice that does not start with "We" (covered by S6b-2).
+- N6b-3 Untaught opening words in twins and passages: "Once", "Whenever", "Since", "As soon as" (S01, S02, S04, S05, S06, S11, passages p4 to p6), and "condition" in S15's how. Teach says only "an opening part that tells when, where, why or what if", so the concept holds; the comma decision does not depend on the word. Optional: keep to the L5 word list.
+- N6b-4 Four-word and five-word clauses are keyed with a comma where a no-comma option exists: C03 "When the lunch bell rang," C14 slot 0 "Before the curtain opened," S14 slot 0 "While the kids slept," and dropdowns S03/S10. Purdue (commas_after_introductions.html) requires the comma after an introductory clause, Teach says the same, and no competing option exists, so the keys hold. Grammarly treats a very short clause as optional, as in the first review.
+- N6b-5 C13 and S13 hint 2 are the mechanical test "check where the part sits"; acceptable because position is the lesson's rule.
+- N6b-6 C12/S12 and C14/S14 slot 1 options that start with a comma (", after the recess bell rang") render as the first line of the select; no layout problem at 390 px (checked on C12).
+- N6b-7 C05 Part B and S05 Part B distractors are absurd ("every sentence needs a comma at its very end"); correct but easy.
+- N6b-8 The legacy `T3` key ("In the morning,") is matched by Teach point 1's phrase "In the morning" without the comma; not a printed key.
+
+### 7. Lesson 7: "Writing titles of books, stories, poems and songs" (3.L.GC.1:I:use-capitalization-and-underlining-quotation-mar)
+
+**Verdict: ACCEPT** (blind 30 of 30 on keys, one lettering slip on S15 that I count as a miss; 15 of 15 core and 15 of 15 twins on a phone). No MUST.
+
+**SHOULD**
+
+| ID | Evidence | Fix |
+|---|---|---|
+| **S7b-1** C09 hint 1 and clue | `check-content.js` warns: C09 clue and hint 1 ("Ask whether a poem is a whole book or a **short** work.") share "short" only with the key ("a poem is **short** and its title takes quotation marks"). The other options say "long enough to count as a whole book", so "short" singles out the key. | Hint 1: "Ask what kind of work a poem is." or "Ask whether a poem is a whole book." (and the same for the clue). |
+| **S7b-2** "name" vs "title" in twins | Teach and the core say "title"; S02 ("the song's name"), S05 ("song or poem name"), S06 ("a song or poem name is written wrongly"), S07 ("How would each name look", "a poem named ..."), S08 ("a song name written wrongly") say "name". Teach glosses *title* as "the name of a book ...", so it is not wrong, but the twin has to be read with a different noun. | Use "title" in the twins' prompts. |
+| **S7b-3** twin overlap C12/S10 | Multiset 0.214 (set 0.143), over 0.21 by 0.004. It is not a `like` pair; the cause is the shared tokens "in the" plus the same frame "X in the Y" ("Pigs in the Rain", "Pickles in the Pool") and the "Which title ..." option shapes. | Change the S10 title to one without "in the" (for example "Pickles on the Porch") and re-measure. |
+
+**NOTE**
+
+- N7b-1 C04/C15 core 0.232 / 0.282, C08/C10 0.200 / 0.236: below 0.30. L7 C05/T2 0.31 / 0.36 shares a stem with a legacy test item (sentences differ).
+- N7b-2 S09 distractors "Neither: typed titles stay plain." and "Lena: italics are only for stories." are weak; hint 3 removes the "plain" one. S07 columns are ordered Underlined / In quotation marks, C07 Quotation marks / Italics (underline by hand): the reversal is harmless but inconsistent.
+- N7b-3 S03 (passage p4): the key title "Harmonica Hill" appears in the passage's correct form (line 3); the other three titles are copies of passage errors. A student can match the choices to the passage, though that does not prove correctness. Optional: use a title that does not appear in the draft.
+- N7b-4 p1 FK 4.44 and p3 4.08; any edit to those drafts needs a re-run of `readability.py`. The drafts are labeled "informational" but read as short narratives.
+- N7b-5 All titles use only a, an, the, and, of, in, on, at, to, for as mid-title small words, so MLA, Chicago and AP agree. Every italics or underline item (C07, S07, S09, T4) describes the work, so nothing depends on rendering.
+- N7b-6 Teach, Learn It and Watch Me model what the fifteen need (capitals, short vs whole work, underline by hand, quotation marks for a song).
+
+### 8. Summary for the lead
+
+- Blind solve: **88 of 90 (97.8%)**; both misses are my own slips (L5 C05 Part A lettered wrong, L7 S15 chose the "capitalize each remaining word" distractor). Fully blind for all 90 items. Browser: 90 of 90 items (45 core, 45 twins via Try a similar question) pass with real taps at 390 x 844, no overflow or small targets.
+- Every first-review MUST is fixed (dropdowns no longer read the passage, triplet overlaps 0.19 to 0.28, L7 C09/C15, L6 S13, L5 C14 slot 0), and every first-review SHOULD is fixed or reduced to a NOTE. The author's measurements reproduce (twin vs core 0.191 / 0.212, 0.208 / 0.206, 0.193 / 0.214); their statement that no check-content warning remains does not (three).
+- **L5 REVISE**: two key-defensibility MUSTs (C03/S03 "although" is a coherent reading; C06 sentence 3 is a coherent concession keyed as an error), plus C14 as a template clone of form A T4 (0.55 / 0.45), hint wording, two twin pairs 0.001 to 0.002 over the bar, and the contrast "while" in two keys.
+- **L6 ACCEPT** and **L7 ACCEPT**, each with three SHOULDs (hint echoes from check-content on L6 S15 and L7 C09; wording drift; L7 C12/S10 0.214).
+- Over the 0.21 twin bar, precisely: L5 C11/S11 0.212 (multiset), L5 C12/S12 0.211 (multiset), L7 C12/S10 0.214 (multiset). Nothing at 0.30.
+- Do not mark anything ACCEPTED here; the lead decides after the L5 fixes and the SHOULDs.
