@@ -9814,12 +9814,12 @@ PP.addLesson({
             hints: [
               "Look at the subject, and decide whether it names one person or more than one.",
               "Check the verb built after the blank, and think about which helpers go with that form.",
-              "Is built would tell what happens to something, and the cousins are the ones who built it."
+              "Is goes with one person or thing, and the cousins are more than one."
             ],
             how: [
               "The subject, cousins, names more than one person.",
               "Built is the past form of the main verb, so a helper such as has or have goes before it.",
-              "The answer is have. Has goes with one person, will needs a plain verb after it, and is does not show who built the castle."
+              "The answer is have. Has goes with one person, will needs a plain verb after it, and is goes with one person, not the cousins."
             ],
             misconception: "A common mix-up is choosing has because the castle is one thing. The helper goes with the cousins.",
             why: "The answer is have. The subject, cousins, names more than one person, so the helping verb have goes with it. Has goes with one person, will needs a plain verb after it, and is does not fit before built."
@@ -9917,7 +9917,7 @@ PP.addLesson({
             ],
             passages: [],
             prompt: "Choose the two words that complete the sentence.",
-            text: "Last night, Mia {0} {1} her homework.",
+            text: "Last night, Mia {0} {1} her homework before dinner, so she was free to play.",
             slots: [
               {
                 options: ["had","will","can","should"],
@@ -9928,19 +9928,19 @@ PP.addLesson({
                 answer: 0
               }
             ],
-            clue: "For the first blank, use the time clue, Last night. For the second, match the helper you pick.",
+            clue: "For the first blank, use the time clues, Last night and was free. For the second, match the helper you pick.",
             hints: [
-              "For the first blank, use the time clue, Last night. For the second, match the helper you pick.",
+              "For the first blank, use the time clues, Last night and was free. For the second, match the helper you pick.",
               "A helper that points to the past needs a main verb in its past form.",
               "Can tells what is possible now, not what happened last night, so it does not fit here."
             ],
             how: [
-              "Last night is the time clue, and it places the action in the past.",
+              "Last night and was free are time clues, and they place the action in the past.",
               "The helper had goes with the past form of the main verb, finished.",
               "The answers are had and finished. Will and should point ahead, can tells what is possible now, and finish, finishes and finishing do not fit after had."
             ],
             misconception: "A common mix-up is picking a helper and leaving the main verb plain. Had needs the past form.",
-            why: "The answers are had and finished. Last night places the action in the past, so had goes with finished, the past form. Will, can and should point ahead or to now, and the other verb forms do not fit after had."
+            why: "The answers are had and finished. Last night and was free place the action in the past, so had goes with finished, the past form. Will, can and should point ahead or to now, and the other verb forms do not fit after had."
           }
         ]
       }
@@ -10052,7 +10052,7 @@ PP.addLesson({
         "3.L.GC.1:I:use-helping-and-linking-verbs"
       ],
       passages: ["p4"],
-      prompt: "Pick the line that repairs the verb in sentence 8.",
+      prompt: "Which line mends the verb in the volcano sentence of the science draft?",
       text: "Science draft: {0}",
       slots: [
         {
@@ -10120,7 +10120,7 @@ PP.addLesson({
       prompt: "A friend argues that seems in line 9 is something the volcano does. How should you answer?",
       choices: [
         {
-          text: "No deed occurs; seems ties the volcano to small, which says what that model is like, so it is a linking verb.",
+          text: "No deed occurs; seems ties the volcano to small, which says what that model is like, making it a joining word.",
           correct: true
         },
         {
@@ -10142,10 +10142,10 @@ PP.addLesson({
       how: [
         "Read sentence 9: The volcano seems small, but it will erupt with red foam.",
         "Nothing happens in the first half. Small tells what the volcano is like, and seems connects the two.",
-        "The answer is \"No deed occurs; seems ties the volcano to small, which says what that model is like, so it is a linking verb.\""
+        "The answer is \"No deed occurs; seems ties the volcano to small, which says what that model is like, making it a joining word.\""
       ],
       misconception: "A common mix-up is thinking every verb shows an action. A linking verb only connects words.",
-      why: "The answer is \"No deed occurs; seems ties the volcano to small, which says what that model is like, so it is a linking verb.\" Seems does nothing here. It ties the volcano to small, which says what the model is like, so it is a linking verb.",
+      why: "The answer is \"No deed occurs; seems ties the volcano to small, which says what that model is like, making it a joining word.\" Seems does nothing here. It ties the volcano to small, which says what the model is like, so it is a linking verb.",
       like: ["SK-GUM4-7-C05"]
     },
     {
@@ -10218,7 +10218,7 @@ PP.addLesson({
         "3.L.GC.1:I:use-helping-and-linking-verbs"
       ],
       passages: ["p5"],
-      prompt: "Select the linking verb that finishes sentence 4.",
+      prompt: "Which form of the verb belongs in the pancake line?",
       text: "At this moment, the stack of pancakes {0} taller and taller.",
       slots: [
         {
