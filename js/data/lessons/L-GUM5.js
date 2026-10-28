@@ -8053,7 +8053,7 @@ PP.addLesson({
       ],
       note: "Important words like Tia, Talking, Pumpkin, Song and Rain have capitals. Small words like and, the and for stay lowercase in the middle. The poem and the song are short works, so they go in quotation marks."
     },
-    tip: "This site cannot show underlining, so these questions check quotation marks and capital letters. Look at every word in the title and ask: Is it a small word or an important word?"
+    tip: "This site cannot show underlining, so most questions check quotation marks and capital letters, and a few ask which titles are italicized or underlined. Look at every word in the title and ask: Is it a small word or an important word?"
   },
   learn: [
     {
@@ -8076,6 +8076,16 @@ PP.addLesson({
         "The Frog Song is a song, a short work, so it goes in quotation marks."
       ],
       answer: "The book title goes in italics, and the song title goes in quotation marks: \"The Frog Song.\""
+    },
+    {
+      show: ["Pip is writing a report by hand about a picture book called Moose and the Marching Band."],
+      ask: "How should Pip show the book title?",
+      steps: [
+        "Ask: Is it a whole book or a short work? A picture book is a whole book.",
+        "A whole book is shown in italics when typed.",
+        "Pip is writing by hand and cannot make italics, so Pip draws a line under the title."
+      ],
+      answer: "Pip underlines the title: Moose and the Marching Band."
     }
   ],
   parent: "Have your child write the title of a favorite book by hand and underline it, then write the name of a favorite song in quotation marks. Check together that the first word and the important words have capitals.",
@@ -8169,22 +8179,26 @@ PP.addLesson({
       draft: true,
       paragraphs: [
         [
-          "(1) A kind author came to visit our school on Monday morning.",
-          "(2) She told us about the stories she wrote as a child.",
+          "(1) A kind author came to visit our school on Monday.",
+          "(2) She told us about stories she wrote as a child.",
           "(3) Her first story was \"Harmonica Hill.\"",
-          "(4) She also wrote a poem called \"A Submarine in the Pond.\""
+          "(4) She also wrote a poem called \"A Submarine at Sunrise.\""
         ],
         [
-          "(5) Gus read aloud \"Windmills For the Mule\" before lunch.",
+          "(5) Gus read aloud \"Windmills For Mules\" before lunch.",
           "(6) Everybody asked her many questions.",
-          "(7) Ivy shared \"The Mermaid in the Bucket\" with the author.",
+          "(7) Ivy shared \"A Mermaid in a Bucket\" with our guest.",
           "(8) The author smiled at every answer."
         ],
         [
-          "(9) Cal liked \"The Robot and the ladder\" best.",
-          "(10) The final poem was Mittens for the Pirate.",
-          "(11) Fay picked \"a Castle in the Pocket\" at the end.",
-          "(12) We asked her to visit us again."
+          "(9) Cal liked \"Robots at the ladder\" best.",
+          "(10) Her last poem was Mittens for Pirates.",
+          "(11) Fay picked \"a Castle in a Pocket\" for her favorite.",
+          "(12) We asked her to visit us again.",
+          "(13) She waved goodbye at the door.",
+          "(14) We waved back until she left.",
+          "(15) It was a fun morning.",
+          "(16) We wrote thank-you notes after lunch."
         ]
       ]
     },
@@ -8196,21 +8210,25 @@ PP.addLesson({
       draft: true,
       paragraphs: [
         [
-          "(1) Our class held an open mic show in the library on Friday.",
-          "(2) Quinn strummed \"Ukulele Rain\" with a big smile.",
-          "(3) Wes recited \"The Tadpole and the Treehouse\" without a mistake.",
+          "(1) An open mic show filled the library on Friday.",
+          "(2) Quinn strummed \"Ukulele Rain\" very softly.",
+          "(3) Wes recited \"Tadpoles at Midnight\" without a pause.",
           "(4) Ruth sang \"the Mushroom Dance\" in a tiny voice."
         ],
         [
           "(5) The crowd cheered for Xylophone Sunrise.",
-          "(6) Some of us waited our turn on the carpet.",
+          "(6) Several kids waited quietly on a rug.",
           "(7) Mr. Dean read the poem \"Ladders to the Sky.\"",
           "(8) We ended the show with \"Pirates and Mermaids.\""
         ],
         [
-          "(9) At the end, we applauded \"Wizards of the Wind\" for one full minute.",
-          "(10) Then everyone took a long bow.",
-          "(11) We left the library smiling and tired."
+          "(9) Everyone applauded \"Wizards of the Wind\" for one full minute.",
+          "(10) Families clapped for a long time.",
+          "(11) Parents hugged each performer.",
+          "(12) Then the lights came on.",
+          "(13) We all went home happy.",
+          "(14) It was a great night.",
+          "(15) Our teacher smiled at everyone."
         ]
       ]
     },
@@ -8222,22 +8240,22 @@ PP.addLesson({
       draft: true,
       paragraphs: [
         [
-          "(1) Our class sat in a circle to tell tall tales.",
-          "(2) Each student told a short story from memory.",
-          "(3) Hana told \"The Castle on the Hill\" in a spooky voice.",
-          "(4) Some stories were scary, and others were silly."
+          "(1) Kids sat cross-legged to trade tall tales on Thursday.",
+          "(2) Every teller used only memory and a loud voice.",
+          "(3) Hana whispered \"A Castle on a Hill\" with spooky eyes.",
+          "(4) A few tales were scary and a few were silly."
         ],
         [
-          "(5) Ivan told \"The Giant Mitten\" with loud sound effects.",
-          "(6) Jada told \"A Bucket for the Wizard\" and made us laugh.",
-          "(7) Kofi shared \"The Bucket Of Stars\" with a grin.",
-          "(8) Lena told \"Rivers for the Robot\" in a quiet voice.",
-          "(9) Milo waved his arms while he told his tale."
+          "(5) Ivan boomed \"The Giant Mitten\" with noisy sound effects.",
+          "(6) Jada acted out \"Buckets for Wizards\" and made us giggle.",
+          "(7) Kofi shared \"A Jar Of Stars\" with a grin.",
+          "(8) Lena murmured \"Rivers for Robots\" without a hurry.",
+          "(9) Milo flapped both arms and stomped his feet."
         ],
         [
           "(10) Our teacher closed with a story, \"A Candle on the Bridge.\"",
-          "(11) We clapped until our hands were sore.",
-          "(12) It was the best circle of the year."
+          "(11) Applause lasted until our palms stung.",
+          "(12) Nobody wanted to go to lunch."
         ]
       ]
     }
@@ -8365,7 +8383,7 @@ PP.addLesson({
                 { text: "The first word of a title always gets a capital letter, so marmalade should begin with M.", correct: true },
                 { text: "Meerkat is a small word in the middle, so it should be written with a lowercase m." },
                 { text: "A story title belongs in italics, so the quotation marks around it should be erased from the sentence." },
-                { text: "The word for is an important word, so it needs a capital letter in this title." }
+                { text: "The word for counts as an important word, so this title needs a capital there." }
               ]
             },
             clue: "Read each sentence in paragraph 2. Check any title for its marks and capital letters.",
@@ -8457,8 +8475,8 @@ PP.addLesson({
               "3.L.GC.1:I:use-capitalization-and-underlining-quotation-mar"
             ],
             passages: [],
-            prompt: "Should each title go in quotation marks or in italics (or underlined by hand)?",
-            cols: ["Quotation marks", "Italics or underline"],
+            prompt: "Which marks does each title take?",
+            cols: ["Quotation marks", "Italics (underline by hand)"],
             rows: [
               { text: "the song Pickle Parade", answer: 0 },
               { text: "the picture book Otter Island", answer: 1 },
@@ -8508,7 +8526,7 @@ PP.addLesson({
               "The answer is \"Turnips for the Tuba\" with quotation marks."
             ],
             misconception: "A common mix-up is capitalizing a small word because it looks important. Small words in the middle of a title stay lowercase.",
-            why: "The answer is \"Turnips for the Tuba.\" Turnips and Tuba are important words, and for and the are small words in the middle. One choice capitalizes For, and one lowercases the last word."
+            why: "The answer is \"Turnips for the Tuba\" with quotation marks. Turnips and Tuba are important words, and for and the are small words in the middle. One choice capitalizes For, and one lowercases the last word."
           },
           {
             id: "SK-GUM5-7-C09",
@@ -8531,9 +8549,9 @@ PP.addLesson({
               },
               { text: "The word and is the last word, so it is the one word in a title that must be written in lowercase." }
             ],
-            clue: "Think about which words in a title are important and which are small.",
+            clue: "Think about which words in a title get capitals and which words do not.",
             hints: [
-              "Think about which words in a title are important and which are small.",
+              "Think about which words in a title get capitals and which words do not.",
               "Ask what job the word and does, then compare it with the words around it.",
               "The title is already written correctly, so the answer cannot say that and is missing a capital. Check the other choices."
             ],
@@ -8715,13 +8733,13 @@ PP.addLesson({
             choices: [
               { text: "Yes. Every word in a title always gets a capital letter, so Jin wrote it correctly." },
               { text: "No. And and the are small words in the middle of a title, so they stay lowercase.", correct: true },
-              { text: "Yes. And is an important word because it joins two things, so it needs a capital letter." },
+              { text: "Yes. And is an important word because it joins two things, so it earns a capital letter." },
               { text: "No. Only the last word of a title gets a capital letter, so all the other words should be lowercase." }
             ],
-            clue: "Ask which words in the title are important and which are small.",
+            clue: "Sort the words in the title into two groups.",
             hints: [
-              "Ask which words in the title are important and which are small.",
-              "Think about what and and the do in the middle of a title.",
+              "Sort the words in the title into two groups.",
+              "Think about what and and the do inside a title.",
               "The first and last words of a title are always capitalized, so the answer cannot say that only the last word gets a capital. Check the other choices."
             ],
             how: [
@@ -8748,10 +8766,10 @@ PP.addLesson({
       passages: [],
       prompt: "Which line has a title written the wrong way?",
       options: [
-        "Nan hums \"Pretzel Parade\" while she paints.",
-        "Aunt Kay told us \"The Mouse and the Magnet\" at rest time.",
+        "Gran whistles \"Pretzel Boogie\" when she paints.",
+        "Aunt Kay recited \"The Mouse and the Magnet\" at rest time.",
         "Bo hummed \"the Lemon Train\" on the way home.",
-        "Dad read \"Pillow Mountain\" aloud last night.",
+        "Uncle Raj read \"Pillow Mountain\" aloud last night.",
         "Eli penned \"Stars for the Fisherman\" in poem club."
       ],
       answer: [2],
@@ -8814,16 +8832,16 @@ PP.addLesson({
       passages: ["p4"],
       prompt: "Pick the line where the title is done right.",
       choices: [
-        { text: "Cal liked \"The Robot and the ladder\" best." },
-        { text: "The final poem was Mittens for the Pirate." },
-        { text: "Fay picked \"a Castle in the Pocket\" at the end." },
+        { text: "Cal liked \"Robots at the ladder\" best." },
+        { text: "Her last poem was Mittens for Pirates." },
+        { text: "Fay picked \"a Castle in a Pocket\" for her favorite." },
         { text: "Her first story was \"Harmonica Hill.\"", correct: true }
       ],
       clue: "Check the marks around each title and then its capital letters.",
       hints: [
         "Check the marks around each title and then its capital letters.",
-        "Look at the first word, the important words, and the small words in the middle.",
-        "The line about the final poem has no quotation marks around its title. Check the other choices."
+        "Look at the opening word, the important words, and the small words in the middle.",
+        "The line about her last poem has no quotation marks around its title. Check the other choices."
       ],
       how: [
         "Check the marks and the capital letters in each title.",
@@ -8843,23 +8861,23 @@ PP.addLesson({
         "3.L.GC.1:I:use-capitalization-and-underlining-quotation-mar"
       ],
       passages: ["p4"],
-      prompt: "Work through both parts.",
+      prompt: "Two steps follow.",
       partA: {
-        prompt: "Find the line in the second paragraph with a title mistake.",
+        prompt: "Which line in the second paragraph has a name that looks wrong?",
         choices: [
           { text: "Everybody asked her many questions." },
-          { text: "Ivy shared \"The Mermaid in the Bucket\" with the author." },
-          { text: "Gus read aloud \"Windmills For the Mule\" before lunch.", correct: true },
+          { text: "Ivy shared \"A Mermaid in a Bucket\" with our guest." },
+          { text: "Gus read aloud \"Windmills For Mules\" before lunch.", correct: true },
           { text: "The author smiled at every answer." }
         ]
       },
       partB: {
         prompt: "Pick the best fix for that line.",
         choices: [
-          { text: "Write For as for, since a small word in the middle of a title stays small.", correct: true },
-          { text: "Write Windmills as windmills, since only the opening word of a title may have a capital." },
-          { text: "Erase the quotation marks, since a story title is supposed to be underlined by hand." },
-          { text: "Write Mule as mule, since a title never ends on a word that has a capital letter." }
+          { text: "Lowercase For, since little linking words inside a name stay plain.", correct: true },
+          { text: "Lowercase Windmills, since a name allows a capital only on its opening word." },
+          { text: "Erase the quotation marks, since a story name is meant to be underlined." },
+          { text: "Lowercase Mules, since a name may not finish on a capitalized word." }
         ]
       },
       clue: "Read each line in the second paragraph. Check any title for its marks and capital letters.",
@@ -8870,12 +8888,12 @@ PP.addLesson({
       ],
       how: [
         "Part A: read each line in the second paragraph and check any title.",
-        "In \"Gus read aloud \"Windmills For the Mule\" before lunch.\" the small word For has a capital letter.",
-        "Part A answer: Gus read aloud \"Windmills For the Mule\" before lunch.",
-        "Part B answer: \"Write For as for, since a small word in the middle of a title stays small.\""
+        "In \"Gus read aloud \"Windmills For Mules\" before lunch.\" the small word For has a capital letter.",
+        "Part A answer: Gus read aloud \"Windmills For Mules\" before lunch.",
+        "Part B answer: \"Lowercase For, since little linking words inside a name stay plain.\""
       ],
       misconception: "A common mix-up is changing an important word. The small word in the middle is the one that needs fixing.",
-      why: "Part A: Gus read aloud \"Windmills For the Mule\" before lunch. Part B: \"Write For as for, since a small word in the middle of a title stays small.\" The title should be \"Windmills for the Mule.\" The other lines are written correctly.",
+      why: "Part A: Gus read aloud \"Windmills For Mules\" before lunch. Part B: \"Lowercase For, since little linking words inside a name stay plain.\" The title should be \"Windmills for Mules.\" The other lines are written correctly.",
       like: ["SK-GUM5-7-C04"]
     },
     {
@@ -8887,13 +8905,13 @@ PP.addLesson({
         "3.L.GC.1:I:use-capitalization-and-underlining-quotation-mar"
       ],
       passages: [],
-      prompt: "Select TWO lines with the song or poem name done right.",
+      prompt: "Find TWO lines that show the song or poem name done right.",
       pick: 2,
       choices: [
-        { text: "Our class sang \"A Ladder to the Stars\" at the show.", correct: true },
-        { text: "Ty hummed \"Lanterns For The Harbor\" quietly all through the walk." },
-        { text: "Nina recited the poem \"Pebbles for the Giant\" to us.", correct: true },
-        { text: "We love the story Sparks and Sundaes." },
+        { text: "Roy whistled the song \"Ladders to Stars\" at breakfast.", correct: true },
+        { text: "Ty hummed \"Lanterns For Harbors\" quietly all morning." },
+        { text: "Beth chanted the poem \"Pebbles for Giants\" on stage.", correct: true },
+        { text: "Mia adores the story Sparks and Sundaes." },
         { text: "Jo whispered \"the Tiny Dragon\" to her cat." }
       ],
       clue: "Look at the marks around each title, then check how the words are capitalized.",
@@ -8904,11 +8922,11 @@ PP.addLesson({
       ],
       how: [
         "Check each line for quotation marks and for correct capital letters.",
-        "\"Nina recited the poem \"Pebbles for the Giant\" to us.\" and \"Our class sang \"A Ladder to the Stars\" at the show.\" each have quotation marks and correct capitals.",
-        "The other three have a lowercase first word, no quotation marks, or capitals on small words."
+        "\"Beth chanted the poem \"Pebbles for Giants\" on stage.\" and \"Roy whistled the song \"Ladders to Stars\" at breakfast.\" each have quotation marks and correct capitals.",
+        "The other three have a lowercase first word, no quotation marks, or a capital on a small word."
       ],
       misconception: "A common mix-up is picking a line because it has many capitals. The small words in the middle of a title stay lowercase.",
-      why: "The answers are \"Nina recited the poem \"Pebbles for the Giant\" to us.\" and \"Our class sang \"A Ladder to the Stars\" at the show.\" Each title has quotation marks and correct capitals. One line has a lowercase first word, one has no quotation marks, and one capitalizes small words.",
+      why: "The answers are \"Beth chanted the poem \"Pebbles for Giants\" on stage.\" and \"Roy whistled the song \"Ladders to Stars\" at breakfast.\" Each title has quotation marks and correct capitals. One line has a lowercase first word, one has no quotation marks, and one capitalizes a small word.",
       like: ["SK-GUM5-7-C05"]
     },
     {
@@ -9013,26 +9031,26 @@ PP.addLesson({
         "3.L.GC.1:I:use-capitalization-and-underlining-quotation-mar"
       ],
       passages: ["p5"],
-      prompt: "Lines 8 and 9 each name a work with a small word inside it. What is true of both titles?",
+      prompt: "Lines 8 and 9 each name a work with a little linking word inside. What is true of both names?",
       choices: [
-        { text: "Both are mistakes, since a small word has to be capitalized when it sits between two big ones." },
-        { text: "Both begin and end with important words, and the small words sit between them in lowercase.", correct: true },
-        { text: "Only line 9 is correct, since a title may hold a lowercase word only when it has two of them." },
-        { text: "Neither needs quotation marks, since a title near the end of a draft is written without them." }
+        { text: "Each is wrong, because a linking word ought to be capitalized when it sits between two nouns." },
+        { text: "Each begins and ends with a main word, and the little words between them have no capitals.", correct: true },
+        { text: "Only line 9 is right, because a name may include an uncapitalized word only if it includes two of them." },
+        { text: "Neither takes quotation marks, because names near the close of a draft stay plain." }
       ],
-      clue: "Look at the first word and the last word of each title.",
+      clue: "Look at the first word and the last word of each name.",
       hints: [
-        "Look at the first word and the last word of each title.",
-        "Sort the words in each title into important words and small words.",
-        "Both titles are short works, so they do need quotation marks. Check the other choices."
+        "Look at the first word and the last word of each name.",
+        "Sort the words in each name into two groups: big ones and little ones.",
+        "Both names are short works, so they do need quotation marks. Check the other choices."
       ],
       how: [
-        "Read the two titles: \"Pirates and Mermaids\" and \"Wizards of the Wind.\"",
-        "Each starts and ends with an important word, and the small words and, of and the sit in the middle in lowercase.",
-        "The answer is \"Both begin and end with important words, and the small words sit between them in lowercase.\""
+        "Read the two names: \"Pirates and Mermaids\" and \"Wizards of the Wind.\"",
+        "Each starts and ends with a main word, and the little words and, of and the sit between them without capitals.",
+        "The answer is \"Each begins and ends with a main word, and the little words between them have no capitals.\""
       ],
-      misconception: "A common mix-up is thinking small words in a title need capitals. In the middle of a title they stay lowercase.",
-      why: "The answer is \"Both begin and end with important words, and the small words sit between them in lowercase.\" Both titles are written correctly and need quotation marks. Only the important words have capitals.",
+      misconception: "A common mix-up is thinking little words need capitals. Between the main words they stay as they are.",
+      why: "The answer is \"Each begins and ends with a main word, and the little words between them have no capitals.\" Both names are written correctly and need quotation marks. Only the main words have capitals.",
       like: ["SK-GUM5-7-C09"]
     },
     {
@@ -9092,7 +9110,7 @@ PP.addLesson({
         "In line 7, the title capitalizes the small word Of in the middle."
       ],
       misconception: "A common mix-up is picking the line whose title is longest. Check each small word in the middle.",
-      why: "The answer is line 7, \"Kofi shared \"The Bucket Of Stars\" with a grin.\" The small word of stays lowercase in the middle of a title, so it should be \"The Bucket of Stars.\" Lines 5, 6 and 8 are written correctly, and line 9 has no title.",
+      why: "The answer is line 7, \"Kofi shared \"A Jar Of Stars\" with a grin.\" The small word of stays lowercase in the middle of a title, so it should be \"A Jar of Stars.\" Lines 5, 6 and 8 are written correctly, and line 9 has no title.",
       like: ["SK-GUM5-7-C11"]
     },
     {
@@ -9136,7 +9154,7 @@ PP.addLesson({
         "3.L.GC.1:I:use-capitalization-and-underlining-quotation-mar"
       ],
       passages: [],
-      prompt: "Rae says, \"A title may keep a small word in lowercase only when it comes last.\" Which TWO titles show she is wrong?",
+      prompt: "Rae claims a name can have a lowercase word only at its very end. Which TWO names prove her wrong?",
       pick: 2,
       choices: [
         { text: "Mittens for the Penguin", correct: true },
@@ -9145,19 +9163,19 @@ PP.addLesson({
         { text: "Tiny Orange Pumpkin" },
         { text: "The Cat in the Rain", correct: true }
       ],
-      clue: "Rae makes a claim about small words. Look for titles that keep small words in lowercase somewhere else.",
+      clue: "Rae makes a claim about little words. Look for names that keep little words lowercase somewhere else.",
       hints: [
-        "Rae makes a claim about small words. Look for titles that keep small words in lowercase somewhere else.",
-        "Pick TWO. Check each title for words like a, an, the, and, of, in, on, at, to and for.",
-        "The title about the pony has no small words at all. Decide about the other four."
+        "Rae makes a claim about little words. Look for names that keep little words lowercase somewhere else.",
+        "Pick TWO. Check each name for words like a, an, the, and, of, in, on, at, to and for.",
+        "The name about the pony has no little words at all. Decide about the other four."
       ],
       how: [
-        "Look for titles with small words in the middle.",
-        "\"Mittens for the Penguin\" and \"The Cat in the Rain\" each keep small words lowercase in the middle, so they show Rae is wrong.",
-        "The other three have only important words, so they say nothing about small words."
+        "Look for names with little words in the middle.",
+        "\"Mittens for the Penguin\" and \"The Cat in the Rain\" each keep little words lowercase in the middle, so they prove Rae wrong.",
+        "The other three have only main words, so they say nothing about little words."
       ],
-      misconception: "A common mix-up is picking titles with many capitals. Rae is wrong about titles that have small words in the middle.",
-      why: "The answers are \"Mittens for the Penguin\" and \"The Cat in the Rain.\" Each has small words that stay lowercase in the middle, and a small word does not have to come last. The other three have only important words.",
+      misconception: "A common mix-up is picking names with many capitals. Rae is wrong about names that have little words in the middle.",
+      why: "The answers are \"Mittens for the Penguin\" and \"The Cat in the Rain.\" Each has little words that stay lowercase in the middle, and a little word does not have to come last. The other three have only main words.",
       like: ["SK-GUM5-7-C13"]
     },
     {
@@ -9201,26 +9219,26 @@ PP.addLesson({
         "3.L.GC.1:I:use-capitalization-and-underlining-quotation-mar"
       ],
       passages: [],
-      prompt: "Cora typed the story title \"the Frog And the Lamp\" and wants to fix it. Which change list makes it right?",
+      prompt: "Cora named her story \"the Frog And the Lamp.\" Which edits make the name right?",
       choices: [
-        { text: "Capital T on the first the, and capital letters on every word that is left." },
-        { text: "Lowercase f in Frog, since only the opening word of a title gets a capital." },
-        { text: "Capital T on the first the, and a lowercase a in And.", correct: true },
-        { text: "Capital T on the second the, and nothing else, since the rest is already fine." }
+        { text: "Begin with a T, and give each other word a big first letter." },
+        { text: "Turn Frog into frog, since only an opening word may start with a big letter." },
+        { text: "Begin with a T, and turn And into and.", correct: true },
+        { text: "Fix only the second the, since everything else is already fine." }
       ],
-      clue: "Check the first word of the title. Then sort the other words into important words and small words.",
+      clue: "Check the first word of the name. Then sort the other words into main words and little words.",
       hints: [
-        "Check the first word of the title. Then sort the other words into important words and small words.",
-        "Look at what and does in the middle of a title.",
-        "The last word of a title always keeps its capital, so the answer cannot say that Lamp should change. Check the other choices."
+        "Check the first word of the name. Then sort the other words into main words and little words.",
+        "Look at what and does in the middle of a name.",
+        "Frog is a main word, so it keeps its capital letter. Check the other choices."
       ],
       how: [
-        "Look at each word: the first word needs a capital, and And is a small word in the middle.",
-        "Frog and Lamp are important words, so they keep their capitals.",
-        "The answer is \"Capital T on the first the, and a lowercase a in And.\""
+        "Look at each word: the first word needs a capital, and And is a little word in the middle.",
+        "Frog and Lamp are main words, so they keep their capitals.",
+        "The answer is \"Begin with a T, and turn And into and.\""
       ],
-      misconception: "A common mix-up is fixing only one thing. This title has a first-word mistake and a small-word mistake.",
-      why: "The answer is \"Capital T on the first the, and a lowercase a in And.\" The title should be \"The Frog and the Lamp.\" Frog and Lamp are important words and keep their capitals.",
+      misconception: "A common mix-up is fixing only one thing. This name has a first-word mistake and a little-word mistake.",
+      why: "The answer is \"Begin with a T, and turn And into and.\" The name should be \"The Frog and the Lamp.\" Frog and Lamp are main words and keep their capitals.",
       like: ["SK-GUM5-7-C15"]
     }
   ],

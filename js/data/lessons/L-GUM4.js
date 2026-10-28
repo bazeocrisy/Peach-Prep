@@ -9389,7 +9389,7 @@ PP.addLesson({
               "Sentence 6 has should right before wear, so its verb helps another verb, not a describing word."
             ],
             how: [
-              "Find the verb in each shown sentence and check the word that follows it.",
+              "Spot the verb in every shown sentence and check what follows it.",
               "Will plant, can bring, should wear and will use each have a helping verb before a main verb.",
               "In sentence 3, is links the soil to soft, a word that describes it, so it is the answer."
             ],
@@ -9451,7 +9451,7 @@ PP.addLesson({
             passages: ["p1"],
             prompt: "This item has two parts. Begin with Part A and then go on to Part B.",
             partA: {
-              prompt: "Sentence 10 has a verb mistake. Which revision fixes it?",
+              prompt: "Line 10 of the garden draft has a verb error. Which rewrite repairs it?",
               choices: [
                 {
                   text: "By now, our club has planted ten rows of corn along the fence.",
@@ -9517,9 +9517,9 @@ PP.addLesson({
                 answer: 0
               }
             ],
-            clue: "Find the subject of the sentence and decide whether it names one thing or more than one.",
+            clue: "Decide what the sentence is about, and ask whether that is one thing or several.",
             hints: [
-              "Find the subject of the sentence and decide whether it names one thing or more than one.",
+              "Decide what the sentence is about, and ask whether that is one thing or several.",
               "The words right now show when this is true, so check the time as well as the subject.",
               "Seeming ends in -ing, and it cannot stand alone as the verb in this sentence."
             ],
@@ -9544,9 +9544,9 @@ PP.addLesson({
             targets: ["p2:1:2","p2:2:2","p2:2:3","p2:3:2","p2:3:3"],
             answer: ["p2:2:3"],
             pick: 1,
-            clue: "Find the verb in each shown sentence and look at the word that comes after it.",
+            clue: "Spot the verb in every shown sentence and see which word follows.",
             hints: [
-              "Find the verb in each shown sentence and look at the word that comes after it.",
+              "Spot the verb in every shown sentence and see which word follows.",
               "A helping verb comes before another verb. A linking verb ties the subject to a describing word.",
               "Sentence 9 tells that the story becomes silly, and silly is not a verb."
             ],
@@ -9627,9 +9627,9 @@ PP.addLesson({
                 text: "The coach was a strong swimmer last year."
               }
             ],
-            clue: "Find the verb in each sentence and check the word that comes next.",
+            clue: "Spot each verb and see what word follows it.",
             hints: [
-              "Find the verb in each sentence and check the word that comes next.",
+              "Spot each verb and see what word follows it.",
               "A helping verb stands before another verb. A linking verb ties the subject to a word that names or describes it.",
               "In the sentence about the field, the word after the verb is not a verb."
             ],
@@ -9672,9 +9672,9 @@ PP.addLesson({
                 text: "In both, the verb shows action, because each tells what Dad does in the kitchen."
               }
             ],
-            clue: "Find the verb in each sentence and look at the word that follows it.",
+            clue: "Spot the verb in every line and see what word follows it.",
             hints: [
-              "Find the verb in each sentence and look at the word that follows it.",
+              "Spot the verb in every line and see what word follows it.",
               "Ask whether the next word is another verb or a name for Dad.",
               "Neither sentence tells an action that is done by is, so a choice about action for both cannot be right."
             ],
@@ -9726,7 +9726,7 @@ PP.addLesson({
               "3.L.GC.1:I:use-helping-and-linking-verbs"
             ],
             passages: ["p3"],
-            prompt: "Sentence 4 of the draft has a mistake. Choose the TWO revisions that fix it and keep the present tense.",
+            prompt: "The fourth line of the lake draft is wrong. Pick the TWO revisions that repair it and stay in the present.",
             pick: 2,
             choices: [
               {
@@ -9828,12 +9828,12 @@ PP.addLesson({
               "Can tells what is possible now, not what happened last night, so it does not fit here."
             ],
             how: [
-              "The time clue, Last night, tells you the action is in the past.",
+              "Last night is the time clue, and it places the action in the past.",
               "The helper had goes with the past form of the main verb, finished.",
               "The answers are had and finished. Will and should point ahead, can tells what is possible now, and finish, finishes and finishing do not fit after had."
             ],
             misconception: "A common mix-up is picking a helper and leaving the main verb plain. Had needs the past form.",
-            why: "The answers are had and finished. Last night is in the past, so had goes with the past form finished. Will, can and should do not fit a past time, and the other verb forms do not fit after had."
+            why: "The answers are had and finished. Last night places the action in the past, so had goes with finished, the past form. Will, can and should point ahead or to now, and the other verb forms do not fit after had."
           }
         ]
       }
@@ -10329,7 +10329,7 @@ PP.addLesson({
         "3.L.GC.1:I:use-helping-and-linking-verbs"
       ],
       passages: ["p6"],
-      prompt: "Something is off in line 4. Mark the TWO rewrites that mend it without changing the time of the story.",
+      prompt: "Line 4 has an error. Mark both rewrites that correct the error without moving the story to another time.",
       pick: 2,
       choices: [
         {
@@ -10433,7 +10433,7 @@ PP.addLesson({
         "Has goes with one person, and the twins number two or more."
       ],
       how: [
-        "The time clue, Yesterday, tells you the action is in the past, and twins names more than one person.",
+        "Yesterday is the time clue, and it places the action in the past; twins names more than one person.",
         "The helper had goes with the past shape of the action word, painted.",
         "The answers are had and painted. Has goes with one person, is and are point to the present, and paint, paints and painting do not fit after had."
       ],
@@ -10485,7 +10485,7 @@ PP.addLesson({
     "SK-GUM4-7-P4": {
       hints: [
         "Look at the word tomorrow and at the word visit.",
-        "Try each choice before visit and listen for the one that sounds right.",
+        "Say the sentence with each choice and pick the one that sounds natural.",
         "Was points to the past, and tomorrow has not happened yet."
       ],
       how: [
@@ -10497,7 +10497,7 @@ PP.addLesson({
     },
     "SK-GUM4-7-P5": {
       hints: [
-        "Check each sentence for a verb that ties the subject to a word about it.",
+        "Look in each sentence for a verb that joins the subject to a word about it.",
         "A sentence with a linking verb has no action and no verb after the helper.",
         "Ben has cleaned his room tells about an action that was done."
       ],

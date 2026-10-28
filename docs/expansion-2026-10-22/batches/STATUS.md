@@ -86,6 +86,7 @@
 | B8a | 3.L.GC.1:C:use-conventional-capitalization-quotation-marks- | NOT ACCEPTED: awaiting independent review | B8a-author-log.md; authored, not reviewed |
 | B8a | 3.L.GC.1:I:use-relative-pronouns-and-relative-adverbs | NOT ACCEPTED: awaiting independent review | B8a-author-log.md; authored, not reviewed |
 | B8a | 3.L.GC.1:I:use-interjections | NOT ACCEPTED: awaiting independent review | B8a-author-log.md; authored, not reviewed |
+| B8a | 3.L.GC.1:I:use-helping-and-linking-verbs | NOT ACCEPTED: awaiting independent review | B8a-author-log.md; authored, not reviewed |
 
 "Accepted" means an independent reviewer blind-solved the items, found every key defensible, and found no hint ladder that leaves only the key (see AUTHOR-BRIEF rules). It does not mean the lesson has been tried by a child.
 
