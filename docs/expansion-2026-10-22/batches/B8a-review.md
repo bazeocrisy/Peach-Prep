@@ -177,3 +177,109 @@ Blind agreement 120/120; browser 120/120 with taps; no passage, FK, leak or dupl
 - **Harness note, not a lesson fault:** a dropdown whose longest option is over 28 characters renders as a button list under the sentence, not a select (`items.js`, by design). L6 C04, C12, S04, S12 and L7 C03, S03 are of this kind; my first run only handled selects and reported them as "Check disabled". After teaching the harness to tap the buttons, all six pass.
 - **Limits:** taps were Playwright clicks in a touch-emulated context (not `touchscreen.tap`); keys were applied from the data, so this confirms that the key is accepted and the layout holds, not wrong-answer feedback or the full hint wording. Wrong-choice feedback was not exercised.
 - **Verdicts after the browser run:** lesson 6 ACCEPT holds; lesson 8 ACCEPT holds (no browser finding changes either; the SHOULD items above stand). Lesson 5 and lesson 7 remain REVISE on the data findings (the browser run found nothing new for them).
+
+## Second review (B8a lessons 1-4)
+
+Reviewer: independent second reviewer (did not author, not the first reviewer). Commit 3ce5e3d, `js/data/lessons/L-GUM4.js` as on disk. Read-only; only this section was written. Verdicts are recommendations; nothing is marked ACCEPTED here.
+
+### Method and blind solve
+- `scratchpad/b8arev2/blind.js` loads the file in Node, resolves refs, prints numbered passages, `stem` and every core and twin item (120 items: 4 x 15 core incl. refs, 4 x 15 twins) with seeded-shuffled choices (seed 20261035) and the shuffle recorded; it strips key, answer, why, clue, hints, how, misconception, like. I saved my answers (`myans.SAVED.js`) before opening the keys, hints, `how` or the first review. Only item field names were printed earlier, plus the first two core refs. The solve was fully blind.
+- **Agreement: 118 of 120 (98.3%).** Both misses were my own reading slips, not content faults: L2 C15 (I chose "should use more", which contradicts the stem that already says "most gracefully"; the key is the -ly/long-word option) and L3 C07 (I picked `them`, the draft's wrong word, instead of the repair `it`). I judged both after seeing the keys and agree the keys are the only defensible answer. Comparison used the key text, so hot-text refs matched exactly (16 apparent mismatches were only my script printing the sentence after the ref).
+- Close calls on solve: L1 S12 (`before` and `during the last relay` are both sensible, and the key is exactly those two), L4 C12/S12 (`."` vs `".` differ only in order; the dropdown shows the whole ending).
+
+### Scripted measurements (final file)
+- **Twin x core, item text with "(n)" markers and targeted sentences (set / multiset), item only:** L1 0.200 / 0.200, L2 0.204 / 0.189, L3 0.208 / 0.203, L4 0.200 / 0.206. **No pair is above 0.21 on either measure.** With the whole passage text appended (inflated by the shared draft): L1 0.202 / 0.230, L2 0.225 / 0.244, L3 0.252 / 0.295 (C07 x S06 multiset), L4 0.229 / 0.252. None reaches 0.30. (`jac.js`)
+- **Core x core, item only (set / multiset):** L1 0.277 (C04xC12) / 0.255, L2 0.290 (C09xC15) / 0.258, L3 0.286 (C04xC13) / 0.232, L4 0.247 (C03xC09) / 0.267. All at or under 0.30; L2 C09xC15 is the closest to the ceiling. (With shared passage text core pairs read 0.6-0.9; that is the draft, not item overlap.)
+- **Passages (markers removed):** 103-123 words in L1-L4 (min 103: L1 p2, L3 p3), FK 0.9-4.30 (L2 p3 4.30 is the max). All pass. `readability.py` agrees (113-134 words with markers, max 4.3). L3 p4/p5 (1.1/1.2) and L4 p2 (0.9) read very low but the content is grade 3.
+- **Longest key:** no single key is strictly the longest in any mc, ebsr part or dropdown slot; ms items have at most one key above the longest distractor (L1 C12, S09, S13; L2 S13; L3 C13, S12; L4 S10), by 1-4 characters. L4 P3 (reported last time) no longer shows it. Ties only on short options.
+- **Points and DOK:** every item's points equal its keyed count (choose-two = 2, ebsr = 2, match = 2, dropdown = slots); no missing DOK. Sets of five are 6-9 points.
+- **Leak scan (key sentence or option printed in any other item, hint, how, why, Teach, Learn, passage):** none inside L1-L4. **Dropdown whose filled key sentence already reads correct in the passage:** none (`dd.js`; the wrong draft word is offered as an option in L1 C04, L2 C06, S06, L3 C07, L4 C04, C07, C12, S04, S07, S12, and the filled key never equals a passage sentence). Hot-text prompts that list sentence numbers match their five targets in every item **except L4 C05** (see MUST).
+- **Duplicate scan over all js/data** (`dupall.js`, `xdup.js`): only boilerplate prompts ("This question has two parts...", "Choose the words that correctly complete the sentence.", "Which revision of sentence 2 fixes the mistake?") repeat elsewhere. Item-level nearest neighbour in other lessons/sets/tasks (3,913 items): highest Jaccard 0.500, L1 C06 vs SK-GUM1-3-C06 (same hot-text lead "Among sentences ... select the TWO shown sentences", a different standard, passage and key). No content duplicate.
+- **Grade 3 and standards:** official wordings (`standards.js` lines 860-930) cover adverbs in the comparative standard and "capitalization, quotation marks, and commas" in the dialogue standard, so the adverb items (L2 C08, C13, C15, S08, S13, S15) and the capital-letter/comma items are in scope. Vocabulary is grade 3 except "trio" (L2 S14 stem) and twin phrasing noted below.
+- **Facts / URLs:** quotation punctuation (commas and periods inside the closing marks; ? and ! inside when part of the quote, no comma after them; indirect speech takes no marks): https://courses.lumenlearning.com/suny-newpaltz-engcomp1/chapter/quotation-marks-with-other-marks-of-punctuation/ and https://www.authorlearningcenter.com/writing/fiction/w/character-development/6491/8-essential-rules-for-punctuating-dialogue. Adverb comparison (-ly adverbs take more/most; short adverbs like fast, hard, late take -er/-est): https://www.ef.com/wwen/english-resources/english-grammar/comparative-and-superlative-adverbs/ and https://nos-langues.canada.ca/writing-tips-plus/adverb-comparison. Prepositions since/until/by/toward/inside/near: first review cited Merriam-Webster; I did not re-fetch.
+- **Browser, 390x844, touch-emulated, browse mode, real `tap`** (`run390.py`, `run_s07e.py`, server on 8841, then stopped): three core sets per lesson via `#play/SK:<code>:y|y2|y3/try`, each item with all three hints pressed then answered with the key, plus each twin through "Try a similar question". **120 of 120 accepted ("That's right")**, document scrollWidth 390 on every item, no choice, hot-text, match button or select under 40 px or past the right edge, no `pageerror` in any lesson, hint button reads "No more hints" and is disabled after three presses on every item. The one dropdown with an option over 28 characters, **L4 S07** (longest option 39), renders as tap-buttons under the sentence (`aria-label="Blank 1"`); a tap selects it, Check enables, key accepted. My first pass reported S07 "Check disabled" because the harness copy had lost the button fallback; fixed and re-run, not a lesson fault. Limits: the answer path used the data key (wrong-answer feedback was not exercised) and a real child's finger was not used.
+
+### Verification of the first review's MUST and SHOULD items
+| Item | First review | On disk now (re-measured) | Status |
+|---|---|---|---|
+| L1 C04 / C12 duplicate frame | MUST, 0.486 | C12 is now a choose-two ("Choose the TWO replacements", stem with sentence 6, place words that fit a rock); C04 stays a one-blank time fix. Core-core 0.277 / 0.255. Different format and a different live answer set | Fixed |
+| L2 C03 / C06 / C12 triplet | MUST, 0.429 / 0.381 / 0.349 | C03 mc revisions (tall to taller), C06 one-blank y-to-i spelling, C12 choose-two with a stem (worse/worst, "most terrible"). Core-core max in the lesson 0.290 (C09xC15, not the triplet) | Fixed |
+| L2 S09 hint 2 | MUST | H1 "think about what its ending already does", H2 "ask whether that word still needs any help". The reviewer's own suggested wording; still leans toward the key (see SHOULD) | Fixed, close |
+| L3 C07 / C12 | MUST, 0.390 / 0.435 | C12 is now an mc of whole-sentence revisions (Grandma to she). Core-core C07xC12 no longer above 0.30 (lesson max 0.286). Still a one-pronoun repair like C04 and C07 (see SHOULD) | Fixed by the numbers, thin on variety |
+| L3 S14 hint 3 | MUST | Now "Hers is for one woman, and this blank stands for the fence, which is a thing." Correct for the item | Fixed |
+| L4 C06 / S06 hint 2 | MUST | H1 now "compare the choices letter by letter and mark by mark"; H2 "think about what the fix in Part A adds, and look for the fact about it". No longer says "what divides the name from the words". Acceptable | Fixed |
+| L1 Watch Me: preposition to noun | SHOULD | Watch Me 3 ("The shop stays open ___ nine o'clock", until/under/beside) models it, and S05/S07 distractors and Part B were rewritten | Fixed |
+| L2 Watch Me: y-to-i / doubling | SHOULD | Watch Me 3 (happier) models y to i; doubling is only stated in step 3 ("like big and bigger"), not modeled. Frame no longer shares C08/S08. | Mostly fixed (NOTE) |
+| L3 theirs/hers untaught; noun swap unmodeled | SHOULD | Teach now has the stand-alone ownership words (mine, hers, ours, theirs) and "you can change either one"; Watch Me 1 models the noun/pronoun swap | Fixed |
+| L4 twin wording; S11 Teach quote | SHOULD | S06 Part B, S09, S11, S12 simplified; S11 now uses "We found the cave!" (Teach keeps "Wait for me!") | Fixed, two leftovers (SHOULD) |
+| L2 S13 "slower" | SHOULD | S13 keys are now `faster` and `more quickly` (taught flat adverb plus an -ly adverb) | Fixed |
+| L1 S08 slot 0 spatial distractor | SHOULD | Still `near / since / until` | Not fixed (SHOULD) |
+| L4 P3 both keys longest; "two" lowercase | SHOULD | Longest fixed; prompt still says "Which two sentences" | Half fixed (NOTE) |
+| L4 C03 vs C05 sentence 8 | SHOULD | C05 now shows sentence 10 instead of 8, but the prompt was not updated (see MUST) | Regression |
+
+### Lesson 1: Prepositional phrases
+Verdict: **ACCEPT** (no MUST). 
+- MUST: none.
+- SHOULD
+  - S08 slot 0 offers `near` against `since` and `until` before "the basket". Both distractors are time words that are ungrammatical at a glance; add a place word such as `toward` (slot 1 already does this) so the blank is not solved by "is it a time word".
+  - C12 H3 and S12 H3 each name one wrong choice (fine) but S12 H2 ("whether a relay is a spot or something that happens") plus its answer set leave the child choosing between two time words and three place words; it is fine, but H2 is nearly the key's reason. Consider "name the last word of each swap".
+- NOTE
+  - S03 H2 ("the small word that shows direction") and C03 H2 ("links the book to more information") point at the preposition; acceptable for hint 2.
+  - C11/S11 `why` repeat the whole sentence as its own subject ("The creek sparkled, and I felt happy and a little sleepy has no preposition followed by a noun"); readable but clumsy.
+  - Hot-text lead "Among sentences ... select the TWO shown sentences" matches SK-GUM1-3-C06 (different standard, passage and key); not a duplicate.
+  - All 30 blind answers matched the keys; hint 3 names at most one wrong choice everywhere and at least two live choices remain after hints 1-3 (C04: After and Beside; S04: Before and Inside; C08 slot 0: under and during).
+
+### Lesson 2: Comparing words
+Verdict: **ACCEPT** (no MUST).
+- MUST: none.
+- SHOULD
+  - C15 H1 and H2 hand over the key: "think about its size and its last two letters", "the size and the ending of the word that tells how" = "a long word that ends in -ly". Soften to a location ("look at the word right after the"), as S15 H1 ("how many syllables... what letters finish it") has the same shape.
+  - S09 H1 plus H2 still lead a reader to the key without the options ("what its ending already does", "still needs any help"). It meets the first review's suggested wording, but a stricter ladder would give H1 as strategy only ("find the comparing word and look at how it ends") and H2 as the location ("the phrase right before flight").
+  - C09 x C15 (0.290, closest pair to the ceiling) share the "A classmate says ... What is the best response?" frame and a "which word is wrong, and why" key logic. Vary one stem (for example a statement-evaluation or a "who is right" frame).
+  - Watch Me: doubling (big/bigger, thin/thinner, wet/wettest) is stated but not modeled, and it is tested in C07, S06, S07. Replace the step-3 sentence with a worked mini-example, or add a fourth Watch Me.
+- NOTE
+  - C15 `why` repeats its first sentence verbatim ("Gracefully is a long word that ends in -ly, so it uses most instead of -est").
+  - C09 H2 ("look at the ending on its last word") is close to the key but still a location.
+  - S14 stem uses "trio"; replace with "three kittens" for grade 3.
+  - C13 keys (faster, more quickly) and S13 keys are both valid; `more fast` and `fastly` are correctly wrong.
+  - All 30 blind answers matched except my own C15 slip; hint 3 names at most one wrong choice everywhere; Teach point four now states -ly adverbs take more/most.
+
+### Lesson 3: Pronouns that match their nouns
+Verdict: **ACCEPT** (no MUST).
+- MUST: none.
+- SHOULD
+  - C04 (dropdown, plural `their`), C07 (dropdown, `it`) and C12 (mc, `she`) are still the same task: find the noun the blank/pronoun stands for, choose the matching pronoun for a single repair. The numbers pass (max 0.286) and the formats differ, but a child meets three one-pronoun repairs plus C06 in the same 15. Swap one for a different move, for example "which noun does the pronoun in sentence 6 stand for" in the hot-text list or an explain item.
+  - S11 distractor B alone carries an extra word ("he **quickly** filled it..."); the other three are word-for-word the key frame. Remove "quickly" so the distractors are parallel.
+  - S08 options are padded ("our, because the writer was standing nearby, watching them load chairs", "hers, because both workers might turn out to be women"); S04's prompt is a 30-word sentence ("Five lines from a classmate's painting class account are shown, and one of them holds a replacement word that clashes with whatever it stands for"). Simplify both to the core item voice.
+- NOTE
+  - S05 Part B distractor "Great describes the replacement, and a replacement for a person is needed" is odd; a more tempting misreading is "Families comes last, so it takes her".
+  - Drafts still carry untested errors (p1 sentence 2 "his glasses", p3 sentence 5 "their light", p4 sentence 6 "she picked them up"); the hot-text lists exclude them, so no giveaway.
+  - C07 H3 names `her` (one wrong choice); `him`, `them` and `it` stay live after hints 1-3. C15 slot 0 keeps three live (their, theirs, its).
+  - `its` and `their` both required in C15/S14, and S14 hint 3 is now correct.
+  - All 30 blind answers matched except my own C07 slip.
+
+### Lesson 4: Punctuating what people say
+Verdict: **REVISE** (two MUSTs, both small).
+- MUST
+  - **C05 prompt names the wrong sentence.** The prompt reads "From sentences 2, 4, 6, 7 and 8, select the ONE that is punctuated incorrectly," but the fifth shown option is sentence **10** ("(10) We all clapped when Biscuit finally ran on the squeaky wheel", `p1:3:3`); `H3` and `how` already say sentence 10. The browser render shows "(2) ... (4) ... (6) ... (7) ... (10) ...". Evidence: `numchk.js` compares every listed number with its targets and flags only this item. Fix: change "8" to "10" in the prompt. (The edit was meant to take sentence 8, the retelling line settled by C03 in the same set, out of the list; it is the right change, the prompt just was not updated.)
+  - **C04 hint 3 states a false rule and contradicts Teach.** "A comma after the question mark is only needed when the speaker comes last, and Tess comes first." A comma is never used after a question mark or exclamation point inside the quote (Teach points 3 and 5: "with no comma"; C10, C13, S10, S13 hint 3s say the same correctly). A child who trusts the hint would conclude that C14 `"Is that a hawk?," asked Dad.` is right. Fix: "Tess comes first, and a question mark already ends her words, so no comma follows it."
+- SHOULD
+  - C09 H1 ("what must divide the words someone says from the name of the person saying them when that name is last") plus H2 ("is there a question mark or an exclamation point there?") give the key's rule (a comma, because nothing else ends the words) to a reader without the options. This is the same pattern the first review marked MUST for C06 H2; softer wording is needed. S09 H1/H2 repeat it. Suggest H1: "Read the end of the spoken words and the name that follows them"; H2: "Look at the last mark before the closing quotation marks."
+  - S09 wrong options carry absolutes and padding ("never part of anything a person says aloud, ever", "again and again"), a test-wise cue next to a key without them. Rewrite as plain, parallel statements.
+  - S08 prompt ("whose punctuation lands beyond the last quote when it belongs ahead of it") is above grade 3; S14 is the plain model ("placed properly").
+  - P3 prompt says "Which two sentences" (other items use TWO); reused item, one-word fix.
+- NOTE
+  - C12/S12 options are bare marks (`."`, `".`); legible at 390 px and the sentence stem shows the words, but small for a child.
+  - C06 H2 and S06 H2 still point to "what the fix adds" (a mark); acceptable as a location pointer.
+  - Watch Me models comma-first, comma-inside when the speaker comes last, and ! inside; retelling (C03, S03, DOK 3) and `?` with a last-position speaker are in Teach only.
+  - Hot-text drafts keep untested errors (p4 sentence 10 `"Thank you, Mr. Hale".`); excluded from lists.
+  - All 30 blind answers matched; hint 3 names at most one wrong choice everywhere checked; at least two live after hints 1-3 (C12: `",` and `"` and `.` stay live).
+
+### Summary
+| Lesson | Verdict | MUST | SHOULD |
+|---|---|---|---|
+| 1 prepositional phrases | ACCEPT | 0 | 2 |
+| 2 comparing words | ACCEPT | 0 | 4 |
+| 3 pronoun agreement | ACCEPT | 0 | 3 |
+| 4 quotation marks | REVISE | 2 (C05 prompt "8" should be "10"; C04 hint 3 false rule) | 4 |
+Blind agreement 118/120 (two solver slips, not content faults). Browser 120/120 with taps at 390x844 once the harness fallback for the button-style dropdown (L4 S07) was in place. All first-review MUSTs are fixed on disk; L4 gained one regression (C05 prompt) and one older hint fault (C04 H3). Ready for a final check after the two L4 fixes; lessons 1-3 need no further change to be accepted.
