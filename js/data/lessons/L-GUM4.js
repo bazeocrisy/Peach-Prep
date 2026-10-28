@@ -4512,7 +4512,9 @@ PP.addLesson({
     points: [
       "Quotation marks go around the exact words someone says. The first word inside them starts with a capital letter.",
       "If the speaker comes first, put a comma after said and before the quotation marks: Mia said, \"Let's go.\" The period goes inside the closing quotation marks.",
-      "If the speaker comes last, put a comma inside the closing quotation marks: \"Let's go,\" Mia said. A question mark or exclamation point also goes inside, with no comma: \"Can I come?\" asked Leo."
+      "If the speaker comes last, put a comma inside the closing quotation marks: \"Let's go,\" Mia said. A question mark or exclamation point also goes inside, with no comma: \"Can I come?\" asked Leo.",
+      "If you only retell what someone said, leave out the quotation marks. Ms. Reyes said that we should line up at the door. These are not her exact words.",
+      "A question mark or exclamation point that ends the spoken words stays inside the closing quotation marks, and it takes the place of the comma: \"Watch out!\" Dad yelled."
     ],
     words: [
       { term: "quotation marks", means: "the marks \" \" that go around a speaker's exact words" },
@@ -4545,10 +4547,185 @@ PP.addLesson({
         "The comma goes inside the closing quotation marks."
       ],
       answer: "A comma is missing: \"This soup is too hot,\" said Grandpa."
+    },
+    {
+      show: ["Ruth shouted Watch out for the puddle"],
+      ask: "How should this sentence be punctuated?",
+      steps: [
+        "Find the exact words Ruth shouts: Watch out for the puddle.",
+        "The speaker comes first, so put a comma after shouted.",
+        "Put quotation marks around her words and start with a capital letter. She is shouting, so end with an exclamation point inside the closing quotation marks."
+      ],
+      answer: "Ruth shouted, \"Watch out for the puddle!\""
     }
   ],
   parent: "Write down something your child said today with no punctuation. Let your child add the quotation marks, the comma and the capital letter.",
-  passages: [],
+  passages: [
+    /* B8a:passages:start */
+    {
+      id: "p1",
+      title: "Our Class Hamster",
+      byline: "A third grader's draft",
+      genre: "Student draft (narrative)",
+      draft: true,
+      paragraphs: [
+        [
+          "(1) Last week, our class got a small brown hamster named Biscuit.",
+          "(2) Ms. Ortiz said, \"Biscuit needs a quiet place to sleep during the day.\"",
+          "(3) Tess asked, \"can we give him a wheel?\"",
+          "(4) \"Yes, he will love it,\" Ms. Ortiz answered."
+        ],
+        [
+          "(5) Omar said \"I will fill his water bottle.\"",
+          "(6) Then Priya whispered, \"Look, he is hiding in his little house!\"",
+          "(7) \"He is shy\" said Noah."
+        ],
+        [
+          "(8) Ms. Ortiz told us that Biscuit would be brave soon.",
+          "(9) Tess said, \"We should be gentle with him\".",
+          "(10) We all clapped when Biscuit finally ran on the squeaky wheel.",
+          "(11) I think Biscuit is the best pet in our whole school.",
+          "(12) Next week, we will choose a new toy for his cage."
+        ]
+      ]
+    },
+    {
+      id: "p2",
+      title: "The Picnic at the Park",
+      byline: "A third grader's draft",
+      genre: "Student draft (narrative)",
+      draft: true,
+      paragraphs: [
+        [
+          "(1) On Saturday morning, our neighbors had a picnic at Maple Park by the big blue lake.",
+          "(2) Mr. Singh brought a big bowl of fresh fruit and a basket of warm rolls.",
+          "(3) \"Who wants some grapes?\" he asked.",
+          "(4) Lina shouted, \"I do!\""
+        ],
+        [
+          "(5) Mrs. Cole asked \"Where should we put the blanket?\"",
+          "(6) \"Put it under the tall oak tree,\" said Mr. Singh.",
+          "(7) Then Jack called, \"Come see the ducks\"!"
+        ],
+        [
+          "(8) \"That duck is so loud!,\" laughed Lina.",
+          "(9) \"It wants some bread\" Mr. Singh said.",
+          "(10) We shared sandwiches and played games in the sunny grass all afternoon long.",
+          "(11) We stayed by the lake until the sky turned orange and pink.",
+          "(12) It was the best picnic our street ever had."
+        ]
+      ]
+    },
+    {
+      id: "p3",
+      title: "A Rainy Day at Home",
+      byline: "A third grader's draft",
+      genre: "Student draft (narrative)",
+      draft: true,
+      paragraphs: [
+        [
+          "(1) On Sunday, heavy rain fell for hours, so my brother and I stayed inside with Grandpa.",
+          "(2) Ravi sighed, \"I wish we could play outside.\"",
+          "(3) \"Let's build a fort,\" I said.",
+          "(4) Ravi asked \"Can we use the big blue blanket?\""
+        ],
+        [
+          "(5) Grandpa smiled and said, \"Yes, but please fold it later.\"",
+          "(6) \"Look at our tall fort!\" Ravi cheered.",
+          "(7) Then Grandpa asked, \"who wants hot cocoa?\""
+        ],
+        [
+          "(8) \"We do,\" we shouted.",
+          "(9) Ravi said, \"This is the best rainy day ever\".",
+          "(10) By dinner, the sun was out, but we stayed in our cozy fort.",
+          "(11) Grandpa said it was the coziest fort he had ever seen, and we agreed.",
+          "(12) Rain makes a day at home feel like a grand adventure."
+        ]
+      ]
+    },
+    {
+      id: "p4",
+      title: "A Lost Mitten",
+      byline: "A third grader's draft",
+      genre: "Student draft (narrative)",
+      draft: true,
+      paragraphs: [
+        [
+          "(1) On Monday, Ellie lost her red mitten on the way to school.",
+          "(2) \"Have you seen my mitten?\" she asked the bus driver.",
+          "(3) The bus driver said \"Look under your seat.\"",
+          "(4) Ellie searched under every seat but found only a gum wrapper."
+        ],
+        [
+          "(5) At lunch, Mr. Hale asked, \"What does your mitten look like?\"",
+          "(6) Ellie answered, \"it has a white stripe.\"",
+          "(7) \"I saw one like that near the gym\" said Mr. Hale."
+        ],
+        [
+          "(8) Mr. Hale told her that he would check the lost box.",
+          "(9) After school, Ellie shouted, \"I found it!\"",
+          "(10) She said, \"Thank you, Mr. Hale\".",
+          "(11) Now Ellie keeps her mittens clipped to her coat.",
+          "(12) She also checks her pockets twice before she leaves each day."
+        ]
+      ]
+    },
+    {
+      id: "p5",
+      title: "A Day at the Pond",
+      byline: "A third grader's draft",
+      genre: "Student draft (narrative)",
+      draft: true,
+      paragraphs: [
+        [
+          "(1) Last spring, our family hiked to a quiet pond near our town, and the path was muddy.",
+          "(2) Dad pointed and said, \"Look at the green frog!\"",
+          "(3) \"Where did it go?\" Nina asked.",
+          "(4) Mom said \"It jumped onto that big flat rock.\""
+        ],
+        [
+          "(5) Then a duck splashed in the cool water, and tiny waves rolled to the shore.",
+          "(6) \"Be very quiet,\" whispered Dad.",
+          "(7) Nina giggled, \"That duck looks silly\"!"
+        ],
+        [
+          "(8) \"May we toss the ducks some crackers?,\" I asked.",
+          "(9) \"Ducks should eat seeds, not crackers\" Mom said.",
+          "(10) We took a lot of pictures before we went home.",
+          "(11) The ride back was long, and everyone fell asleep in the car.",
+          "(12) I hope we visit the pond again when the flowers bloom."
+        ]
+      ]
+    },
+    {
+      id: "p6",
+      title: "Baking Day",
+      byline: "A third grader's draft",
+      genre: "Student draft (narrative)",
+      draft: true,
+      paragraphs: [
+        [
+          "(1) On Saturday, Grandma and I baked cookies in her small, sunny kitchen with the radio on.",
+          "(2) \"Measure the flour first,\" she said.",
+          "(3) I asked \"How many cups of brown sugar go into the batter?\"",
+          "(4) Grandma smiled and said, \"Two cups, please.\""
+        ],
+        [
+          "(5) Then I dropped an egg on the floor.",
+          "(6) Grandma laughed, \"no problem, we have more eggs.\"",
+          "(7) \"I will clean it up,\" I said."
+        ],
+        [
+          "(8) We baked the cookies for twelve minutes while we cleaned the counter and washed the bowls.",
+          "(9) Grandma said, \"These smell wonderful\".",
+          "(10) The cookies tasted sweet, and we shared them with everyone we knew.",
+          "(11) Next weekend, we plan to bake a pie with fresh peaches from her tree.",
+          "(12) Baking beside Grandma is the sweetest part of any slow weekend."
+        ]
+      ]
+    }
+    /* B8a:passages:end */
+  ],
   practice: [
     { id: "SK-GUM4-4-P1", type: "mc", points: 1, dok: 1, passages: [],
       prompt: "Which sentence is punctuated correctly?",
@@ -4601,6 +4778,1227 @@ PP.addLesson({
       clue: "Check each sentence for three things: a comma after said or asked, a capital letter at the start of the spoken words, and quotation marks around them.",
       why: "Ben's and Mom's sentences need a comma after said. Ava's and Dev's sentences need a capital letter at the start of the spoken words: We and Where. Grandma's sentence needs quotation marks around Supper is ready." }
   ],
+  /* B8a:core:start */
+  /* ---------- Expansion 2026-10-22, batch B8a (GUM Reinforce, first half) ----------
+     core: fifteen items in three sets of five. { ref } reuses a practice item; the other practice items stay in Practice Together.
+     Passages are used only by core and the similar bank; none is used by test.
+     Author log: docs/expansion-2026-10-22/batches/B8a-author-log.md. NOT ACCEPTED: needs independent review. */
+  core: {
+    rev: "1",
+    sets: [
+      {
+        title: "Set 1",
+        items: [
+          {
+            ref: "SK-GUM4-4-P3"
+          },
+          {
+            ref: "SK-GUM4-4-P5"
+          },
+          {
+            id: "SK-GUM4-4-C03",
+            type: "mc",
+            points: 1,
+            dok: 3,
+            std: [
+              "3.L.GC.1:C:use-conventional-capitalization-quotation-marks-"
+            ],
+            passages: ["p1"],
+            prompt: "A classmate says sentence 8 needs quotation marks because Ms. Ortiz is the one talking. What is the best response?",
+            choices: [
+              {
+                text: "Sentence 8 retells her idea in the writer's own words, and only exact words go inside quotation marks.",
+                correct: true
+              },
+              {
+                text: "Sentence 8 names a speaker, and every sentence that names a speaker needs quotation marks around its words."
+              },
+              {
+                text: "Sentence 8 uses the word told, and that word always shows that quotation marks are needed right after it."
+              },
+              {
+                text: "Sentence 8 is a plain statement, and quotation marks are only used with questions and exclamations."
+              }
+            ],
+            clue: "Decide what sentence 8 does with the speaker's words, and what job quotation marks do.",
+            hints: [
+              "Decide what sentence 8 does with the speaker's words, and what job quotation marks do.",
+              "Read sentence 8 aloud, then read sentence 2 aloud, and notice what each one does with what Ms. Ortiz said.",
+              "Marks around speech work in statements, questions and exclamations alike, so one response gives a false rule."
+            ],
+            how: [
+              "Read sentence 8: Ms. Ortiz told us that Biscuit would be brave soon.",
+              "The writer retells her idea in the writer's own words. These are not the words she said out loud.",
+              "The answer is \"Sentence 8 retells her idea in the writer's own words, and only exact words go inside quotation marks.\""
+            ],
+            misconception: "A common mix-up is putting quotation marks around any sentence that names a speaker. Only the exact words someone says go inside them.",
+            why: "The answer is \"Sentence 8 retells her idea in the writer's own words, and only exact words go inside quotation marks.\" Sentence 8 tells her idea but not her exact words, so it needs no quotation marks. In sentence 2, the exact words she said are inside quotation marks."
+          },
+          {
+            id: "SK-GUM4-4-C04",
+            type: "dropdown",
+            points: 1,
+            dok: 2,
+            std: [
+              "3.L.GC.1:C:use-conventional-capitalization-quotation-marks-"
+            ],
+            passages: ["p1"],
+            prompt: "Pick the version of Tess's question in sentence 3 that is punctuated correctly.",
+            text: "Tess asked, {0}",
+            slots: [
+              {
+                options: [
+                  "\"Can we give him a wheel?\"",
+                  "\"can we give him a wheel?\"",
+                  "\"Can we give him a wheel\"?",
+                  "\"Can we give him a wheel?,\""
+                ],
+                answer: 0
+              }
+            ],
+            clue: "Compare how each choice begins and how each choice ends. Ask which one follows the rules for spoken words.",
+            hints: [
+              "Compare how each choice begins and how each choice ends. Ask which one follows the rules for spoken words.",
+              "Read the first word inside the opening quotation marks. Then look at where the question mark sits.",
+              "A comma after the question mark is only needed when the speaker comes last, and Tess comes first."
+            ],
+            how: [
+              "Tess comes first, so a comma follows asked and her words come next in quotation marks.",
+              "The first word inside the quotation marks starts with a capital letter, and the question mark stays inside them.",
+              "The answer is \"Can we give him a wheel?\" The other choices use a small c, put the question mark outside, or add a comma after the question mark."
+            ],
+            misconception: "A common mix-up is fixing only the end mark. Check the first letter inside the quotation marks, too.",
+            why: "The answer is \"Can we give him a wheel?\". The first word inside the quotation marks needs a capital C, and the question mark stays inside them with no comma after it. Each other choice breaks one of these rules."
+          },
+          {
+            id: "SK-GUM4-4-C05",
+            type: "hottext",
+            points: 1,
+            dok: 2,
+            std: [
+              "3.L.GC.1:C:use-conventional-capitalization-quotation-marks-"
+            ],
+            passages: ["p1"],
+            prompt: "From sentences 2, 4, 6, 7 and 8, select the ONE that is punctuated incorrectly.",
+            targets: ["p1:1:2","p1:1:4","p1:2:2","p1:2:3","p1:3:1"],
+            answer: ["p1:2:3"],
+            pick: 1,
+            clue: "Take the shown sentences in turn. Look for spoken words and test the marks around them.",
+            hints: [
+              "Take the shown sentences in turn. Look for spoken words and test the marks around them.",
+              "In each shown sentence, check the capital letters, the commas and the marks that end the spoken words.",
+              "Sentence 8 retells an idea with no quotation marks, and retelling needs none, so it is already correct."
+            ],
+            how: [
+              "Examine every shown sentence for spoken words and for the marks around them.",
+              "Sentences 2, 4 and 6 have correct capital letters, commas and end marks, and sentence 8 retells an idea with no quotation marks.",
+              "Sentence 7 has no comma after shy, so it is the answer."
+            ],
+            misconception: "A common mix-up is choosing sentence 8 because it has no quotation marks. It only retells an idea, so it needs none.",
+            why: "The answer is sentence 7: \"\"He is shy\" said Noah.\" Sentence 7 needs a comma after shy, inside the closing quotation marks. The other shown sentences are punctuated correctly."
+          }
+        ]
+      },
+      {
+        title: "Set 2",
+        items: [
+          {
+            id: "SK-GUM4-4-C06",
+            type: "ebsr",
+            points: 2,
+            dok: 3,
+            std: [
+              "3.L.GC.1:C:use-conventional-capitalization-quotation-marks-"
+            ],
+            passages: ["p1"],
+            prompt: "This item has two parts. Begin with Part A and then go on to Part B.",
+            partA: {
+              prompt: "Sentence 5 has a mistake. Which revision fixes it?",
+              choices: [
+                {
+                  text: "Omar said, \"I will fill his water bottle.\"",
+                  correct: true
+                },
+                {
+                  text: "Omar said, \"i will fill his water bottle.\""
+                },
+                {
+                  text: "Omar said, \"I will fill his water bottle\"."
+                },
+                {
+                  text: "Omar said \"I will fill his water bottle.\""
+                }
+              ]
+            },
+            partB: {
+              prompt: "Which fact explains why the correct revision is right?",
+              choices: [
+                {
+                  text: "A comma sets off the speaker from the spoken words when the speaker comes first.",
+                  correct: true
+                },
+                {
+                  text: "A comma belongs after the closing quotation marks, because it is not part of the words Omar spoke."
+                },
+                {
+                  text: "A comma is needed only after a question, and Omar's spoken words ask something."
+                },
+                {
+                  text: "A comma belongs before every quotation mark, because a quotation is always a new idea."
+                }
+              ]
+            },
+            clue: "For Part A, compare what each choice puts after said and at the end of the quote. For Part B, look for the fact that matches the change.",
+            hints: [
+              "For Part A, compare what each choice puts after said and at the end of the quote. For Part B, look for the fact that matches the change.",
+              "For Part B, think about what divides the name of the person talking from what that person says.",
+              "The draft already has a capital I, so a choice that changes it to a small letter cannot be the fix."
+            ],
+            how: [
+              "Part A: the speaker comes first, so a comma is needed right after said. The answer is \"Omar said, \"I will fill his water bottle.\"\"",
+              "The other choices change the capital letter, move the period outside, or leave the comma out.",
+              "Part B: the fact is \"A comma sets off the speaker from the spoken words when the speaker comes first.\""
+            ],
+            misconception: "A common mix-up is changing the capital letter or the end mark when the comma is what is missing. Look at what comes right after said.",
+            why: "Part A: \"Omar said, \"I will fill his water bottle.\"\" Part B: \"A comma sets off the speaker from the spoken words when the speaker comes first.\" Part A needs a comma after said, because the speaker comes first. Part B: a comma sets off the speaker from the spoken words."
+          },
+          {
+            id: "SK-GUM4-4-C07",
+            type: "dropdown",
+            points: 1,
+            dok: 2,
+            std: [
+              "3.L.GC.1:C:use-conventional-capitalization-quotation-marks-"
+            ],
+            passages: ["p2"],
+            prompt: "Choose the way to write Lina's words in sentence 8 that fixes the mistake.",
+            text: "{0} laughed Lina.",
+            slots: [
+              {
+                options: [
+                  "\"That duck is so loud!\"",
+                  "\"That duck is so loud!,\"",
+                  "\"That duck is so loud\",",
+                  "\"That duck is so loud\"!"
+                ],
+                answer: 0
+              }
+            ],
+            clue: "Look at the mark that ends Lina's words. Ask what, if anything, may come after it.",
+            hints: [
+              "Look at the mark that ends Lina's words. Ask what, if anything, may come after it.",
+              "Think about what an exclamation point already does at the end of spoken words.",
+              "The exclamation is part of what Lina shouts, so it cannot sit outside the closing quotation marks."
+            ],
+            how: [
+              "Lina's words end with an exclamation point, and the speaker comes last.",
+              "An exclamation point already ends the spoken words, so no comma is added after it.",
+              "The answer is \"That duck is so loud!\" The other choices keep the extra comma, move the mark outside, or lose the exclamation."
+            ],
+            misconception: "A common mix-up is thinking a comma must follow every set of spoken words when the speaker comes last. A question mark or exclamation point takes its place.",
+            why: "The answer is \"That duck is so loud!\". The exclamation point stays inside the closing quotation marks, and no comma follows it. The other choices keep an extra comma or move a mark outside."
+          },
+          {
+            id: "SK-GUM4-4-C08",
+            type: "hottext",
+            points: 1,
+            dok: 2,
+            std: [
+              "3.L.GC.1:C:use-conventional-capitalization-quotation-marks-"
+            ],
+            passages: ["p2"],
+            prompt: "From sentences 3, 5, 6, 7 and 9, select the ONE where a mark sits outside the closing quotation marks that should sit inside them.",
+            targets: ["p2:1:3","p2:2:1","p2:2:2","p2:2:3","p2:3:2"],
+            answer: ["p2:2:3"],
+            pick: 1,
+            clue: "Find the spoken words in each shown sentence. Then find the quotation marks that close them.",
+            hints: [
+              "Find the spoken words in each shown sentence. Then find the quotation marks that close them.",
+              "In each shown sentence, look at what is written right before and right after the closing quotation marks.",
+              "Sentence 6 has its comma inside the closing quotation marks, so it is already correct."
+            ],
+            how: [
+              "Find the closing quotation marks in each shown sentence and see which marks sit beside them.",
+              "Sentences 3 and 6 have the question mark and the comma inside, and sentences 5 and 9 have no mark outside.",
+              "In sentence 7, the exclamation point comes after the closing quotation marks, so it is the answer."
+            ],
+            misconception: "A common mix-up is choosing a sentence that is only missing a comma. Here, look for a mark placed outside the closing quotation marks.",
+            why: "The answer is sentence 7: \"Then Jack called, \"Come see the ducks\"!\" The exclamation point in sentence 7 is outside the closing quotation marks, but it belongs inside them. In the other shown sentences no mark sits outside them."
+          },
+          {
+            id: "SK-GUM4-4-C09",
+            type: "mc",
+            points: 1,
+            dok: 3,
+            std: [
+              "3.L.GC.1:C:use-conventional-capitalization-quotation-marks-"
+            ],
+            passages: ["p2"],
+            prompt: "A classmate thinks sentence 9 needs no mark after the word bread. Which response is best?",
+            choices: [
+              {
+                text: "A comma is needed inside the closing quotation marks, because the speaker comes after the words and the words end with no other mark.",
+                correct: true
+              },
+              {
+                text: "No mark is needed after bread, because the words Mr. Singh said already show who is talking, and that is enough."
+              },
+              {
+                text: "A period is needed inside the closing quotation marks, because the spoken words are a complete statement, and a statement ends with one."
+              },
+              {
+                text: "A comma is needed outside the closing quotation marks, because the comma is not part of the words that Mr. Singh said out loud."
+              }
+            ],
+            clue: "Think about what must divide the words someone says from the name of the person saying them when that name is last.",
+            hints: [
+              "Think about what must divide the words someone says from the name of the person saying them when that name is last.",
+              "Look at the end of what is said. Is there a question mark or an exclamation point there?",
+              "Naming the speaker does show who is talking, but it does not take the place of a mark that finishes what is said."
+            ],
+            how: [
+              "Find the spoken words in sentence 9: It wants some bread.",
+              "The speaker comes last, and the words do not end with a question mark or an exclamation point.",
+              "The answer is \"A comma is needed inside the closing quotation marks, because the speaker comes after the words and the words end with no other mark.\""
+            ],
+            misconception: "A common mix-up is thinking the speaker's name is enough to end the spoken words. A mark must still follow the words.",
+            why: "The answer is \"A comma is needed inside the closing quotation marks, because the speaker comes after the words and the words end with no other mark.\" The spoken words end with no question mark or exclamation point, so a comma goes right after bread, inside the closing quotation marks. A period would end the whole sentence too early, and a comma outside the quotation marks sits in the wrong place."
+          },
+          {
+            id: "SK-GUM4-4-C10",
+            type: "ms",
+            points: 2,
+            dok: 2,
+            std: [
+              "3.L.GC.1:C:use-conventional-capitalization-quotation-marks-"
+            ],
+            passages: [],
+            prompt: "Which TWO sentences are punctuated correctly?",
+            pick: 2,
+            choices: [
+              {
+                text: "\"Pass the ball!\" yelled Coach Reed.",
+                correct: true
+              },
+              {
+                text: "Dani asked, \"Who is on my team?\"",
+                correct: true
+              },
+              {
+                text: "Sam shouted \"Run to first base!\""
+              },
+              {
+                text: "\"Did we win?,\" asked Luis."
+              },
+              {
+                text: "\"Our team played well\", said Mr. Cho."
+              }
+            ],
+            clue: "Go through each sentence in turn and study the marks around the spoken words.",
+            hints: [
+              "Go through each sentence in turn and study the marks around the spoken words.",
+              "Keep the sentences in which the quotation marks, the commas and the end marks all follow the rules.",
+              "A comma does not follow a question mark that sits inside the quotation marks, so one sentence is not right."
+            ],
+            how: [
+              "Check the marks around the spoken words in each sentence.",
+              "In \"Pass the ball!\" yelled Coach Reed., the exclamation point stays inside and no comma follows it. In Dani asked, \"Who is on my team?\" the comma follows asked and the question mark stays inside.",
+              "The other sentences leave out a comma, add a comma after a question mark, or put a comma outside the quotation marks."
+            ],
+            misconception: "A common mix-up is picking a sentence because it has quotation marks. Check the comma and the end mark, too.",
+            why: "The answers are \"\"Pass the ball!\" yelled Coach Reed.\" and \"Dani asked, \"Who is on my team?\"\". The first correct sentence keeps its exclamation point inside the quotation marks with no comma after it, and the second has a comma after asked with the question mark inside. Each other sentence has a misplaced or missing mark."
+          }
+        ]
+      },
+      {
+        title: "Set 3",
+        items: [
+          {
+            id: "SK-GUM4-4-C11",
+            type: "mc",
+            points: 1,
+            dok: 3,
+            std: [
+              "3.L.GC.1:C:use-conventional-capitalization-quotation-marks-"
+            ],
+            passages: [],
+            stem: "Sentence A: Ben asked, \"Where is my hat?\" Sentence B: \"Where is my hat?\" asked Ben.",
+            prompt: "How are the marks in the two sentences alike and different?",
+            choices: [
+              {
+                text: "Both keep the question mark inside the closing quotation marks, but only Sentence A uses a comma.",
+                correct: true
+              },
+              {
+                text: "Both use a comma after the speaker's name, but only Sentence B keeps the question mark inside the quotation marks."
+              },
+              {
+                text: "Both end with a period after the speaker, but only Sentence A puts quotation marks around the question."
+              },
+              {
+                text: "Neither needs a comma, because both sentences ask a question, so the two are punctuated in the same way."
+              }
+            ],
+            clue: "Look at where Ben stands in each sentence. Then compare the marks that sit next to the spoken question.",
+            hints: [
+              "Look at where Ben stands in each sentence. Then compare the marks that sit next to the spoken question.",
+              "Find the comma in each sentence, if there is one, and find the mark that ends each question.",
+              "Sentence A ends with a mark that belongs to the question, so a choice that says both end with a period cannot be right."
+            ],
+            how: [
+              "In Sentence A, the speaker comes first, so a comma follows asked.",
+              "In Sentence B, the speaker comes last, so no comma follows the question mark.",
+              "The answer is \"Both keep the question mark inside the closing quotation marks, but only Sentence A uses a comma.\""
+            ],
+            misconception: "A common mix-up is thinking both sentences need the same marks. The place of the speaker changes the comma.",
+            why: "The answer is \"Both keep the question mark inside the closing quotation marks, but only Sentence A uses a comma.\" In both sentences the question mark stays inside the closing quotation marks. Sentence A has a comma after asked because the speaker comes first, and Sentence B needs none because the question mark already ends the words."
+          },
+          {
+            id: "SK-GUM4-4-C12",
+            type: "dropdown",
+            points: 1,
+            dok: 2,
+            std: [
+              "3.L.GC.1:C:use-conventional-capitalization-quotation-marks-"
+            ],
+            passages: ["p3"],
+            prompt: "Choose the marks that correct the end of sentence 9.",
+            text: "Ravi said, \"This is the best rainy day ever{0}",
+            slots: [
+              {
+                options: [".\"","\".","\",","\""],
+                answer: 0
+              }
+            ],
+            clue: "Look at how the spoken words end and where the closing quotation marks sit.",
+            hints: [
+              "Look at how the spoken words end and where the closing quotation marks sit.",
+              "Ravi comes first in the sentence, and the words he says are a statement.",
+              "A comma would only be right if the speaker came after the spoken words."
+            ],
+            how: [
+              "Ravi comes first, and his words make a statement.",
+              "A statement that ends the whole sentence takes a period, and the period stays inside the closing quotation marks.",
+              "The answer is .\" The other choices put the period outside, use a comma, or leave off the end mark."
+            ],
+            misconception: "A common mix-up is putting the period after the closing quotation marks because it also ends the sentence. It belongs inside them.",
+            why: "The answer is .\". The period ends Ravi's spoken words, so it stays inside the closing quotation marks. A comma would only be used if Ravi came after his words."
+          },
+          {
+            id: "SK-GUM4-4-C13",
+            type: "ms",
+            points: 2,
+            dok: 3,
+            std: [
+              "3.L.GC.1:C:use-conventional-capitalization-quotation-marks-"
+            ],
+            passages: ["p3"],
+            prompt: "Sentence 4 of the draft has a mistake. Choose the TWO revisions that fix it.",
+            pick: 2,
+            choices: [
+              {
+                text: "Ravi asked, \"Can we use the big blue blanket?\"",
+                correct: true
+              },
+              {
+                text: "\"Can we use the big blue blanket?\" Ravi asked.",
+                correct: true
+              },
+              {
+                text: "Ravi asked \"Can we use the big blue blanket\"?"
+              },
+              {
+                text: "\"Can we use the big blue blanket?,\" Ravi asked."
+              },
+              {
+                text: "Ravi asked, \"can we use the big blue blanket?\""
+              }
+            ],
+            clue: "The speaker can come first or last. Check each revision for the marks that match where the speaker sits.",
+            hints: [
+              "The speaker can come first or last. Check each revision for the marks that match where the speaker sits.",
+              "Keep the revisions in which the capital letters, the commas and the question marks all follow the rules.",
+              "A question mark and a comma do not sit side by side inside the quotation marks, so one revision is not a fix."
+            ],
+            how: [
+              "The draft leaves out the comma that belongs after asked.",
+              "A fix can add the comma, or it can move Ravi to the end, where the question mark does the work of the comma.",
+              "The answers are \"Ravi asked, \"Can we use the big blue blanket?\"\" and \"\"Can we use the big blue blanket?\" Ravi asked.\" The others put the mark outside, add a comma after the question mark, or use a small c."
+            ],
+            misconception: "A common mix-up is thinking the speaker must stay first. Moving the speaker to the end is a fix, too.",
+            why: "The answers are \"Ravi asked, \"Can we use the big blue blanket?\"\" and \"\"Can we use the big blue blanket?\" Ravi asked.\" Ravi asked, \"Can we use the big blue blanket?\" adds the missing comma, and \"Can we use the big blue blanket?\" Ravi asked. moves the speaker last with the question mark inside. The other revisions misplace a mark or use a small letter."
+          },
+          {
+            id: "SK-GUM4-4-C14",
+            type: "mc",
+            points: 1,
+            dok: 2,
+            std: [
+              "3.L.GC.1:C:use-conventional-capitalization-quotation-marks-"
+            ],
+            passages: [],
+            prompt: "Which sentence from a story about a hike is punctuated correctly?",
+            choices: [
+              {
+                text: "\"Is that a hawk?\" asked Dad.",
+                correct: true
+              },
+              {
+                text: "\"Is that a hawk,\" asked Dad?"
+              },
+              {
+                text: "\"Is that a hawk?,\" asked Dad."
+              },
+              {
+                text: "\"Is that a hawk\"? asked Dad."
+              }
+            ],
+            clue: "Find the spoken words, the question mark and the speaker in each choice. Ask where each mark belongs.",
+            hints: [
+              "Find the spoken words, the question mark and the speaker in each choice. Ask where each mark belongs.",
+              "The question belongs to the words Dad speaks, so look at which side of the closing quotation marks it sits on.",
+              "A question mark that belongs to the spoken words cannot sit outside the closing quotation marks."
+            ],
+            how: [
+              "Dad asks the question, so the question mark is part of his spoken words.",
+              "A question mark that ends spoken words stays inside the closing quotation marks, and no comma follows it.",
+              "The answer is \"Is that a hawk?\" asked Dad. The others move the mark outside, use a comma where a question mark belongs, or add a comma after the question mark."
+            ],
+            misconception: "A common mix-up is putting the question mark at the end of the whole sentence. It belongs to Dad's words, so it goes inside.",
+            why: "The answer is \"\"Is that a hawk?\" asked Dad.\" The question mark belongs to Dad's spoken words, so it stays inside the closing quotation marks with no comma after it. Each other choice misplaces a mark."
+          },
+          {
+            id: "SK-GUM4-4-C15",
+            type: "dropdown",
+            points: 2,
+            dok: 2,
+            std: [
+              "3.L.GC.1:C:use-conventional-capitalization-quotation-marks-"
+            ],
+            passages: [],
+            prompt: "Choose the words that finish both sentences correctly.",
+            text: "Aunt Beth called, {0} Uncle Raj answered, {1}",
+            slots: [
+              {
+                options: [
+                  "\"Dinner is ready!\"",
+                  "\"dinner is ready!\"",
+                  "\"Dinner is ready\"!",
+                  "\"Dinner is ready!\","
+                ],
+                answer: 0
+              },
+              {
+                options: [
+                  "\"I will wash my hands.\"",
+                  "\"i will wash my hands.\"",
+                  "\"I will wash my hands\".",
+                  "\"I will wash my hands,\""
+                ],
+                answer: 0
+              }
+            ],
+            clue: "Read each blank as the words a person says out loud. Then check the capital letter and the end mark in each choice.",
+            hints: [
+              "Read each blank as the words a person says out loud. Then check the capital letter and the end mark in each choice.",
+              "For the first blank, think about how Aunt Beth calls to the family. For the second blank, think about how Uncle Raj answers her.",
+              "A comma after the closing quotation marks does not belong here, since Aunt Beth is the speaker and she comes first."
+            ],
+            how: [
+              "Each speaker comes first, so a comma follows called and answered.",
+              "Each blank holds the exact words a person says, so each needs a capital letter and an end mark inside the quotation marks.",
+              "The answers are \"Dinner is ready!\" and \"I will wash my hands.\" The others use a small letter, put a mark outside, or add a comma after the end mark."
+            ],
+            misconception: "A common mix-up is fixing only one of the two quotations. Check the capital letter and the end mark in both.",
+            why: "The answers are \"Dinner is ready!\" and \"I will wash my hands.\". Each quotation starts with a capital letter and keeps its end mark inside the closing quotation marks. The others use a small letter or misplace a mark."
+          }
+        ]
+      }
+    ]
+  },
+  similar: [
+    {
+      id: "SK-GUM4-4-S01",
+      type: "ms",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.L.GC.1:C:use-conventional-capitalization-quotation-marks-"
+      ],
+      passages: [],
+      prompt: "From a camping story, pick the TWO lines whose spoken words are written correctly.",
+      pick: 2,
+      choices: [
+        {
+          text: "\"Roast the marshmallows slowly,\" warned Uncle Tomas.",
+          correct: true
+        },
+        {
+          text: "Hana laughed, \"My hot dog fell in the dirt!\"",
+          correct: true
+        },
+        {
+          text: "Dev yelled \"Help me hold this heavy canvas tent!\""
+        },
+        {
+          text: "\"Who has the big bright flashlight tonight?,\" called Mom."
+        },
+        {
+          text: "\"We saw a big brown bear by the river\" whispered Grandma."
+        }
+      ],
+      clue: "Read each line and find the words a camper says out loud. Then check the marks around those words.",
+      hints: [
+        "Read each line and find the words a camper says out loud. Then check the marks around those words.",
+        "Keep the lines where the marks near the closing quotation marks fit the place of the speaker.",
+        "Mom asks a question, and a comma after that question mark is not needed, so that line is not one of the two."
+      ],
+      how: [
+        "Find the spoken words in each line and check the marks around them.",
+        "The correct lines are \"Roast the marshmallows slowly,\" warned Uncle Tomas. and Hana laughed, \"My hot dog fell in the dirt!\" Uncle Tomas comes last, so a comma ends his words inside the quotation marks. Hana comes first, so a comma follows laughed and the exclamation point stays inside.",
+        "The other lines leave out a comma twice or add a comma after a question mark."
+      ],
+      misconception: "A common mix-up is trusting a line because it has quotation marks. Check the comma and the end mark, too.",
+      why: "The answers are \"\"Roast the marshmallows slowly,\" warned Uncle Tomas.\" and \"Hana laughed, \"My hot dog fell in the dirt!\"\". Uncle Tomas's line has the comma inside the closing quotation marks, and Hana's line has a comma after laughed with the exclamation point inside. The other lines leave out a comma or add a comma after a question mark.",
+      like: ["SK-GUM4-4-P3"]
+    },
+    {
+      id: "SK-GUM4-4-S02",
+      type: "match",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.L.GC.1:C:use-conventional-capitalization-quotation-marks-"
+      ],
+      passages: [],
+      prompt: "Every line below needs one repair. Match each line with its repair.",
+      cols: ["Add a comma","Capitalize a letter","Add quotation marks"],
+      rows: [
+        {
+          text: "Tina said \"Please close the window.\"",
+          answer: 0
+        },
+        {
+          text: "The coach shouted, \"run to the fence!\"",
+          answer: 1
+        },
+        {
+          text: "Dad called, Dinner is ready!",
+          answer: 2
+        },
+        {
+          text: "Aisha asked, \"when does the show start?\"",
+          answer: 1
+        },
+        {
+          text: "Mr. Lopez said, Walk, please.",
+          answer: 2
+        }
+      ],
+      clue: "Study each line for the spoken words and look at what surrounds them.",
+      hints: [
+        "Study each line for the spoken words and look at what surrounds them.",
+        "Decide first which lines already have quotation marks. Then look at the first letter of the spoken words.",
+        "Tina's line has quotation marks and a capital letter, so ask what is missing between her name and her words."
+      ],
+      how: [
+        "Check each line for a comma after the speaker, a capital letter and quotation marks.",
+        "Tina's line needs a comma. The coach's line and Aisha's line need a capital letter.",
+        "Dad's line and Mr. Lopez's line need quotation marks."
+      ],
+      misconception: "A common mix-up is fixing the first problem you notice. Check the comma, the capital letter and the quotation marks in each line.",
+      why: "Tina's line needs a comma after said. The coach's line needs a capital R and Aisha's line needs a capital W. Dad's line and Mr. Lopez's line need quotation marks around the spoken words.",
+      like: ["SK-GUM4-4-P5"]
+    },
+    {
+      id: "SK-GUM4-4-S03",
+      type: "mc",
+      points: 1,
+      dok: 3,
+      std: [
+        "3.L.GC.1:C:use-conventional-capitalization-quotation-marks-"
+      ],
+      passages: ["p4"],
+      prompt: "A friend argues that line 8 must be wrapped in quote marks since Mr. Hale appears in it. Which reply is strongest?",
+      choices: [
+        {
+          text: "It reports his plan in the author's wording, so quote marks do not belong, since they mark only word-for-word speech.",
+          correct: true
+        },
+        {
+          text: "It names a person who speaks, so quote marks must wrap whatever follows his name, whatever the wording is."
+        },
+        {
+          text: "It contains the verb told, and that verb is a signal that quote marks must appear somewhere in the same line of text."
+        },
+        {
+          text: "It is a short statement, so quote marks can never be used in it unless the line turns into a question."
+        }
+      ],
+      clue: "Decide whether line 8 gives a person's own words or only sums up what that person said, and think about what quote marks are for.",
+      hints: [
+        "Decide whether line 8 gives a person's own words or only sums up what that person said, and think about what quote marks are for.",
+        "Compare sentence 8 with sentence 5 and notice which of the two repeats the speaker's actual words.",
+        "Speech marks can surround statements as well as questions, so one reply makes a false claim about statements."
+      ],
+      how: [
+        "Read sentence 8: Mr. Hale told her that he would check the lost box.",
+        "The writer sums up his plan without his actual words, so nothing here is marked as speech.",
+        "The answer is \"It reports his plan in the author's wording, so quote marks do not belong, since they mark only word-for-word speech.\""
+      ],
+      misconception: "A common mix-up is marking every line that names a speaker. Only word-for-word speech goes between quotation marks.",
+      why: "The answer is \"It reports his plan in the author's wording, so quote marks do not belong, since they mark only word-for-word speech.\" Sentence 8 sums up what Mr. Hale said in the writer's words. In sentence 5, his actual words sit between quotation marks.",
+      like: ["SK-GUM4-4-C03"]
+    },
+    {
+      id: "SK-GUM4-4-S04",
+      type: "dropdown",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.L.GC.1:C:use-conventional-capitalization-quotation-marks-"
+      ],
+      passages: ["p4"],
+      prompt: "Which way of writing Ellie's reply in sentence 6 is correct?",
+      text: "Ellie answered, {0}",
+      slots: [
+        {
+          options: [
+            "\"It has a white stripe.\"",
+            "\"it has a white stripe.\"",
+            "\"It has a white stripe\".",
+            "\"It has a white stripe,\""
+          ],
+          answer: 0
+        }
+      ],
+      clue: "Look at the beginning and the ending of each choice. Ask which one follows the rules for a reply.",
+      hints: [
+        "Look at the beginning and the ending of each choice. Ask which one follows the rules for a reply.",
+        "Read the first letter after the opening quotation mark, then check where the period sits.",
+        "A comma at the end of her reply would only suit a line where Ellie is named after her words."
+      ],
+      how: [
+        "Ellie comes first, so a comma follows answered, and her reply goes in quotation marks.",
+        "The first word of her reply starts with a capital letter, and the period stays inside the closing quotation marks.",
+        "The answer is \"It has a white stripe.\" The other choices use a small i, put the period outside, or end with a comma."
+      ],
+      misconception: "A common mix-up is fixing only the end of the reply. Check the first letter after the opening quotation mark, too.",
+      why: "The answer is \"It has a white stripe.\". The first word of Ellie's reply needs a capital I, and the period stays inside the closing quotation marks. The other choices use a small letter, move the period, or end with a comma.",
+      like: ["SK-GUM4-4-C04"]
+    },
+    {
+      id: "SK-GUM4-4-S05",
+      type: "hottext",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.L.GC.1:C:use-conventional-capitalization-quotation-marks-"
+      ],
+      passages: ["p4"],
+      prompt: "Study sentences 2, 5, 7, 8 and 9. Which ONE has a punctuation error?",
+      targets: ["p4:1:2","p4:2:1","p4:2:3","p4:3:1","p4:3:2"],
+      answer: ["p4:2:3"],
+      pick: 1,
+      clue: "Take the shown sentences in order. Find the spoken words in each and test what surrounds them.",
+      hints: [
+        "Take the shown sentences in order. Find the spoken words in each and test what surrounds them.",
+        "Check the capital letters, the commas and the marks that close each set of spoken words.",
+        "Sentence 9 keeps its exclamation point inside the quotation marks, so it is already correct."
+      ],
+      how: [
+        "Check each shown sentence for the spoken words and the marks around them.",
+        "Sentences 2, 5 and 9 have the right capital letters, commas and end marks, and sentence 8 only retells what Mr. Hale said.",
+        "Sentence 7 has no comma after gym, so it is the answer."
+      ],
+      misconception: "A common mix-up is picking sentence 8 because nothing there is in quotation marks. It only retells, so it needs none.",
+      why: "The answer is sentence 7: \"\"I saw one like that near the gym\" said Mr. Hale.\" Sentence 7 needs a comma after gym, inside the closing quotation marks. The other shown sentences are punctuated correctly.",
+      like: ["SK-GUM4-4-C05"]
+    },
+    {
+      id: "SK-GUM4-4-S06",
+      type: "ebsr",
+      points: 2,
+      dok: 3,
+      std: [
+        "3.L.GC.1:C:use-conventional-capitalization-quotation-marks-"
+      ],
+      passages: ["p4"],
+      prompt: "Start with Part A, and finish with Part B.",
+      partA: {
+        prompt: "Line 3 of the school story lacks a mark. Which version puts it right?",
+        choices: [
+          {
+            text: "The bus driver said, \"Look under your seat.\"",
+            correct: true
+          },
+          {
+            text: "The bus driver said, \"look under your seat.\""
+          },
+          {
+            text: "The bus driver said, \"Look under your seat\"."
+          },
+          {
+            text: "The bus driver said, Look under your seat."
+          }
+        ]
+      },
+      partB: {
+        prompt: "Which reason supports the repaired version?",
+        choices: [
+          {
+            text: "Someone is named first and talking follows, so a comma goes between name and talking.",
+            correct: true
+          },
+          {
+            text: "Nothing separates them, since quote marks alone do that job for any reader who looks at this page today."
+          },
+          {
+            text: "A period must stand between them, since the speaker's name is a whole sentence by itself right here today."
+          },
+          {
+            text: "A dash must stand between them, since a dash shows that someone is speaking to another person nearby."
+          }
+        ]
+      },
+      clue: "For Part A, compare what each revision places after said and around the spoken words. For Part B, pick the reason that fits that change.",
+      hints: [
+        "For Part A, compare what each revision places after said and around the spoken words. For Part B, pick the reason that fits that change.",
+        "For Part B, think about what divides the speaker's name from the words that the speaker says.",
+        "One revision removes the quotation marks, and spoken words need them, so that revision cannot be the repair."
+      ],
+      how: [
+        "Part A: the speaker comes first, so a comma is needed right after said. The answer is \"The bus driver said, \"Look under your seat.\"\"",
+        "The other revisions use a small letter, move the period outside, or drop the quotation marks.",
+        "Part B: the reason is \"Someone is named first and talking follows, so a comma goes between name and talking.\""
+      ],
+      misconception: "A common mix-up is changing a capital letter or an end mark when a comma is missing. Look at what comes right after said.",
+      why: "Part A: \"The bus driver said, \"Look under your seat.\"\" Part B: \"Someone is named first and talking follows, so a comma goes between name and talking.\" Part A needs a comma after said, because the speaker comes first. Part B: the comma separates the speaker's name from the spoken words.",
+      like: ["SK-GUM4-4-C06"]
+    },
+    {
+      id: "SK-GUM4-4-S07",
+      type: "dropdown",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.L.GC.1:C:use-conventional-capitalization-quotation-marks-"
+      ],
+      passages: ["p5"],
+      prompt: "Which rewrite of my question in line 8 repairs the writer's slip?",
+      text: "{0} I asked.",
+      slots: [
+        {
+          options: [
+            "\"May we toss the ducks some crackers?\"",
+            "\"May we toss the ducks some crackers?,\"",
+            "\"May we toss the ducks some crackers\",",
+            "\"May we toss the ducks some crackers\"?"
+          ],
+          answer: 0
+        }
+      ],
+      clue: "Look at how the question ends. Ask what may follow that ending before the words I asked.",
+      hints: [
+        "Look at how the question ends. Ask what may follow that ending before the words I asked.",
+        "Think about the job a question mark already does when it closes a spoken question.",
+        "The question mark belongs to the words that are asked, so it cannot sit outside the closing quotation marks."
+      ],
+      how: [
+        "The spoken words are a question, and the speaker comes last.",
+        "A question mark already ends the spoken words, so no comma is added after it.",
+        "The answer is \"May we toss the ducks some crackers?\" The other choices keep the extra comma, move the mark outside, or lose the question mark."
+      ],
+      misconception: "A common mix-up is adding a comma after every set of spoken words that comes before the speaker. A question mark takes its place.",
+      why: "The answer is \"May we toss the ducks some crackers?\". The question mark stays inside the closing quotation marks, and no comma follows it. The other choices keep an extra comma, move the mark, or lose it.",
+      like: ["SK-GUM4-4-C07"]
+    },
+    {
+      id: "SK-GUM4-4-S08",
+      type: "hottext",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.L.GC.1:C:use-conventional-capitalization-quotation-marks-"
+      ],
+      passages: ["p5"],
+      prompt: "Which ONE of sentences 2, 4, 6, 7 and 9 puts a punctuation mark beyond the final quote mark when it should come before it?",
+      targets: ["p5:1:2","p5:1:4","p5:2:2","p5:2:3","p5:3:2"],
+      answer: ["p5:2:3"],
+      pick: 1,
+      clue: "Locate the spoken words in each shown sentence. Then locate the quotation marks that end them.",
+      hints: [
+        "Locate the spoken words in each shown sentence. Then locate the quotation marks that end them.",
+        "In each shown sentence, notice what stands right before and right after the closing quotation marks.",
+        "Sentence 6 has its comma inside the closing quotation marks, so it is already fine."
+      ],
+      how: [
+        "Find the closing quotation marks in each shown sentence and see which marks sit next to them.",
+        "Sentences 2 and 6 have the exclamation point and the comma inside, and sentences 4 and 9 have no mark outside.",
+        "In sentence 7, the exclamation point comes after the closing quotation marks, so it is the answer."
+      ],
+      misconception: "A common mix-up is picking a sentence that only lacks a comma. Here, look for a mark placed outside the closing quotation marks.",
+      why: "The answer is sentence 7: \"Nina giggled, \"That duck looks silly\"!\" The exclamation point in sentence 7 is outside the closing quotation marks, but it belongs inside them. In the other shown sentences no mark sits outside them.",
+      like: ["SK-GUM4-4-C08"]
+    },
+    {
+      id: "SK-GUM4-4-S09",
+      type: "mc",
+      points: 1,
+      dok: 3,
+      std: [
+        "3.L.GC.1:C:use-conventional-capitalization-quotation-marks-"
+      ],
+      passages: ["p5"],
+      prompt: "One reader says that line 9 reads fine with nothing following crackers. What reply is strongest?",
+      choices: [
+        {
+          text: "Her remark finishes plainly and Mom is named afterward, so a comma belongs just behind crackers, before the last quote mark.",
+          correct: true
+        },
+        {
+          text: "Nothing more is called for, since naming Mom tells readers whom to hear, and extra punctuation would only repeat it all over again."
+        },
+        {
+          text: "A period belongs right behind crackers, since this remark is a complete thought, and complete thoughts finish with one."
+        },
+        {
+          text: "A comma belongs beyond the last quote mark, since commas are never part of whatever someone says aloud."
+        }
+      ],
+      clue: "Ask what has to divide the spoken words from the speaker's name when the name comes last.",
+      hints: [
+        "Ask what has to divide the spoken words from the speaker's name when the name comes last.",
+        "Look at the way the spoken words end. Is a question mark or an exclamation point there?",
+        "Mom said shows the speaker, but naming a speaker does not take the place of a mark at the end of the words."
+      ],
+      how: [
+        "Find the spoken words in sentence 9: Ducks should eat seeds, not crackers.",
+        "The speaker comes last, and the words do not end with a question mark or an exclamation point.",
+        "The answer is \"Her remark finishes plainly and Mom is named afterward, so a comma belongs just behind crackers, before the last quote mark.\""
+      ],
+      misconception: "A common mix-up is believing the speaker's name is enough to end the spoken words. A mark must still come after the words.",
+      why: "The answer is \"Her remark finishes plainly and Mom is named afterward, so a comma belongs just behind crackers, before the last quote mark.\" The spoken words end with no question mark or exclamation point, so a comma goes right after crackers, inside the closing quotation marks, before Mom. A period would end the sentence too early, and a comma outside the quotation marks is misplaced.",
+      like: ["SK-GUM4-4-C09"]
+    },
+    {
+      id: "SK-GUM4-4-S10",
+      type: "ms",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.L.GC.1:C:use-conventional-capitalization-quotation-marks-"
+      ],
+      passages: [],
+      prompt: "In music class, which TWO lines have every mark around the speech right?",
+      pick: 2,
+      choices: [
+        {
+          text: "\"Tap your drum twice,\" said Ms. Vega.",
+          correct: true
+        },
+        {
+          text: "Cal asked, \"May I play the flute?\"",
+          correct: true
+        },
+        {
+          text: "Mina cheered \"That song was great!\""
+        },
+        {
+          text: "\"Who plays next?,\" asked Mr. Ito."
+        },
+        {
+          text: "\"We practiced all week\", said Bea."
+        }
+      ],
+      clue: "Go through each line and find the speech. Then look at the marks next to it one by one.",
+      hints: [
+        "Go through each line and find the speech. Then look at the marks next to it one by one.",
+        "Keep the lines in which the quotation marks, the commas and the closing marks all follow the rules.",
+        "A comma does not come after a question mark that sits inside the quotation marks, so one line is wrong."
+      ],
+      how: [
+        "Look at the marks around the speech in each line.",
+        "In \"Tap your drum twice,\" said Ms. Vega. the comma stays inside the closing quotation marks. In Cal asked, \"May I play the flute?\" the comma follows asked and the question mark stays inside.",
+        "The other lines leave out a comma, add a comma after a question mark, or put a comma outside the quotation marks."
+      ],
+      misconception: "A common mix-up is choosing a line because it has quotation marks. Check the comma and the closing mark, too.",
+      why: "The answers are \"\"Tap your drum twice,\" said Ms. Vega.\" and \"Cal asked, \"May I play the flute?\"\". Ms. Vega's line keeps its comma inside the closing quotation marks, and Cal's line has a comma after asked with the question mark inside. Every other line has a misplaced or missing mark.",
+      like: ["SK-GUM4-4-C10"]
+    },
+    {
+      id: "SK-GUM4-4-S11",
+      type: "mc",
+      points: 1,
+      dok: 3,
+      std: [
+        "3.L.GC.1:C:use-conventional-capitalization-quotation-marks-"
+      ],
+      passages: [],
+      stem: "Two lines from a field trip story. Line 1: Mia shouted, \"Wait for me!\" Line 2: \"Wait for me!\" shouted Mia.",
+      prompt: "What do the two lines share, and what sets them apart?",
+      choices: [
+        {
+          text: "Each line leaves its exclamation point snug against the final quote mark, though only Line 1 needs a comma after the verb.",
+          correct: true
+        },
+        {
+          text: "Each line puts a comma after Mia's name, though only Line 2 keeps its exclamation point within the final quote mark in this pair."
+        },
+        {
+          text: "Each line closes with a period after her name, though only Line 1 wraps the shout in quote marks around it."
+        },
+        {
+          text: "Neither line wants a comma, since each shout ends with an exclamation point, so punctuation matches throughout."
+        }
+      ],
+      clue: "See where Mia's name stands in each line. Then compare the marks that stand near the quote marks.",
+      hints: [
+        "See where Mia's name stands in each line. Then compare the marks that stand near the quote marks.",
+        "Find the comma in each line, if there is one, and find the exclamation point in each line.",
+        "Line 1 finishes on the mark that shows the shout, so a choice saying each line closes with a period after the name cannot be right."
+      ],
+      how: [
+        "In Line 1, Mia comes first, so a comma follows shouted.",
+        "In Line 2, Mia comes last, so no comma follows the exclamation point.",
+        "The answer is \"Each line leaves its exclamation point snug against the final quote mark, though only Line 1 needs a comma after the verb.\""
+      ],
+      misconception: "A common mix-up is believing both lines need the same marks. Where the speaker stands changes the comma.",
+      why: "The answer is \"Each line leaves its exclamation point snug against the final quote mark, though only Line 1 needs a comma after the verb.\" In both lines the exclamation point stays inside the closing quotation marks. Line 1 has a comma after shouted because Mia comes first, and Line 2 needs none because the exclamation point already ends the words.",
+      like: ["SK-GUM4-4-C11"]
+    },
+    {
+      id: "SK-GUM4-4-S12",
+      type: "dropdown",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.L.GC.1:C:use-conventional-capitalization-quotation-marks-"
+      ],
+      passages: ["p6"],
+      prompt: "Which closing marks fix the last part of line 9, where Grandma praises the cookies?",
+      text: "Grandma said, \"These smell wonderful{0}",
+      slots: [
+        {
+          options: [".\"","\".","\",","\""],
+          answer: 0
+        }
+      ],
+      clue: "Notice how her remark ends and where the closing quotation marks stand.",
+      hints: [
+        "Notice how her remark ends and where the closing quotation marks stand.",
+        "Grandma is named first, and the remark she makes is a statement.",
+        "A comma would only be right if Grandma were named after the spoken remark."
+      ],
+      how: [
+        "Grandma comes first, and her remark is a statement.",
+        "A statement that closes the whole line takes a period, and the period stays inside the closing quotation marks.",
+        "The answer is .\" The other choices put the period outside, use a comma, or leave off the end mark."
+      ],
+      misconception: "A common mix-up is placing the period after the closing quotation marks because it also finishes the line. It belongs inside them.",
+      why: "The answer is .\". The period closes Grandma's remark, so it stays inside the closing quotation marks. A comma would only be used if Grandma were named after her words.",
+      like: ["SK-GUM4-4-C12"]
+    },
+    {
+      id: "SK-GUM4-4-S13",
+      type: "ms",
+      points: 2,
+      dok: 3,
+      std: [
+        "3.L.GC.1:C:use-conventional-capitalization-quotation-marks-"
+      ],
+      passages: ["p6"],
+      prompt: "Pick the TWO versions that repair line 3 of the baking story.",
+      pick: 2,
+      choices: [
+        {
+          text: "I asked, \"How many cups of brown sugar go into the batter?\"",
+          correct: true
+        },
+        {
+          text: "\"How many cups of brown sugar go into the batter?\" I asked.",
+          correct: true
+        },
+        {
+          text: "I asked \"How many cups of brown sugar go into the batter\"?"
+        },
+        {
+          text: "\"How many cups of brown sugar go into the batter?,\" I asked."
+        },
+        {
+          text: "I asked, \"how many cups of brown sugar go into the batter?\""
+        }
+      ],
+      clue: "The speaker may stand first or last. Check each version for marks that suit where the speaker stands.",
+      hints: [
+        "The speaker may stand first or last. Check each version for marks that suit where the speaker stands.",
+        "Keep the versions in which capital letters, commas and question marks all follow the rules.",
+        "A question mark and a comma never sit side by side inside the quotation marks, so one version is not a repair."
+      ],
+      how: [
+        "The draft lacks a comma after asked.",
+        "A repair can add the comma, or it can move the speaker to the end, where the question mark does the work of the comma.",
+        "The answers are \"I asked, \"How many cups of brown sugar go into the batter?\"\" and \"\"How many cups of brown sugar go into the batter?\" I asked.\" The others put the mark outside, add a comma after the question mark, or use a small h."
+      ],
+      misconception: "A common mix-up is thinking the speaker has to stay first. Moving the speaker to the end repairs it, too.",
+      why: "The answers are \"I asked, \"How many cups of brown sugar go into the batter?\"\" and \"\"How many cups of brown sugar go into the batter?\" I asked.\" I asked, \"How many cups of brown sugar go into the batter?\" adds the missing comma, and \"How many cups of brown sugar go into the batter?\" I asked. moves the speaker last with the question mark inside. The other versions misplace a mark or use a small letter.",
+      like: ["SK-GUM4-4-C13"]
+    },
+    {
+      id: "SK-GUM4-4-S14",
+      type: "mc",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.L.GC.1:C:use-conventional-capitalization-quotation-marks-"
+      ],
+      passages: [],
+      prompt: "Select the winter-story line whose quote marks and end mark are placed properly.",
+      choices: [
+        {
+          text: "\"What a giant snowdrift!\" cried Pablo.",
+          correct: true
+        },
+        {
+          text: "\"What a giant snowdrift,\" cried Pablo!"
+        },
+        {
+          text: "\"What a giant snowdrift!,\" cried Pablo."
+        },
+        {
+          text: "\"What a giant snowdrift\"! cried Pablo."
+        }
+      ],
+      clue: "Find the shout, the exclamation point and the speaker in each choice. Ask where each mark belongs.",
+      hints: [
+        "Find the shout, the exclamation point and the speaker in each choice. Ask where each mark belongs.",
+        "The shout belongs to the words that Pablo cries, so check which side of the closing quotation marks it is on.",
+        "An exclamation point that belongs to the spoken words cannot sit outside the closing quotation marks."
+      ],
+      how: [
+        "Pablo cries the words, so the exclamation point is part of what he says.",
+        "An exclamation point that ends spoken words stays inside the closing quotation marks, and no comma follows it.",
+        "The answer is \"What a giant snowdrift!\" cried Pablo. The others move the mark outside, use a comma where the exclamation point belongs, or add a comma after it."
+      ],
+      misconception: "A common mix-up is putting the exclamation point at the end of the whole line. It belongs to Pablo's words, so it goes inside.",
+      why: "The answer is \"\"What a giant snowdrift!\" cried Pablo.\" The exclamation point belongs to Pablo's spoken words, so it stays inside the closing quotation marks with no comma after it. Each other choice misplaces a mark.",
+      like: ["SK-GUM4-4-C14"]
+    },
+    {
+      id: "SK-GUM4-4-S15",
+      type: "dropdown",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.L.GC.1:C:use-conventional-capitalization-quotation-marks-"
+      ],
+      passages: [],
+      prompt: "Fill both blanks of the practice scene so each speech is punctuated properly.",
+      text: "Coach Dunn announced, {0} Kira replied, {1}",
+      slots: [
+        {
+          options: [
+            "\"Practice starts now!\"",
+            "\"practice starts now!\"",
+            "\"Practice starts now\"!",
+            "\"Practice starts now!\","
+          ],
+          answer: 0
+        },
+        {
+          options: [
+            "\"Give me one minute.\"",
+            "\"give me one minute.\"",
+            "\"Give me one minute\".",
+            "\"Give me one minute,\""
+          ],
+          answer: 0
+        }
+      ],
+      clue: "Read each blank as the words a person says out loud. Then check the capital letter and the closing mark in each choice.",
+      hints: [
+        "Read each blank as the words a person says out loud. Then check the capital letter and the closing mark in each choice.",
+        "In the first blank, look at how loudly the coach speaks. In the second blank, look at how calmly Kira replies.",
+        "A comma after the closing quotation marks does not fit here, since Coach Dunn is named first."
+      ],
+      how: [
+        "Each speaker is named first, so a comma follows announced and replied.",
+        "Each blank holds the exact words a person says, so each needs a capital letter and a closing mark inside the quotation marks.",
+        "The answers are \"Practice starts now!\" and \"Give me one minute.\" The others use a small letter, put a mark outside, or add a comma after the closing mark."
+      ],
+      misconception: "A common mix-up is repairing only one of the two quotations. Check the capital letter and the closing mark in both.",
+      why: "The answers are \"Practice starts now!\" and \"Give me one minute.\". Each quotation starts with a capital letter and keeps its closing mark inside the quotation marks. The others use a small letter or misplace a mark.",
+      like: ["SK-GUM4-4-C15"]
+    }
+  ],
+  addons: {
+    "SK-GUM4-4-P1": {
+      hints: [
+        "Check each choice for the comma, the capital letter and the end mark, one at a time.",
+        "Look at what comes right after the speaker's name and at the last mark in each choice.",
+        "A period outside the closing quotation marks is never part of the spoken words."
+      ],
+      how: [
+        "Check three things: a comma after said, a capital letter, and the period.",
+        "The correct sentence has all three. Each other choice leaves one of them out.",
+        "The answer is Nadia said, \"My kitten is asleep.\""
+      ],
+      misconception: "A common mix-up is picking the choice with the most marks. Check where each mark belongs."
+    },
+    "SK-GUM4-4-P2": {
+      hints: [
+        "Think about what Jamal is doing with the words, and look at how each choice ends.",
+        "Look at the mark that ends the question and decide which side of the quotation marks it belongs on.",
+        "A choice with a comma after the question mark is not needed, because Jamal comes last and the question mark already ends the words."
+      ],
+      how: [
+        "Jamal asks a question, so the question mark is part of his spoken words.",
+        "The question mark stays inside the closing quotation marks, and no comma follows it.",
+        "The answer is \"Is it cold outside?\""
+      ],
+      misconception: "A common mix-up is adding a comma after the question mark. The question mark already does that job."
+    },
+    "SK-GUM4-4-P3": {
+      hints: [
+        "Check each sentence for quotation marks, a capital letter and the marks near the closing quotation marks.",
+        "Keep the sentences in which the comma sits where the speaker comes first or last.",
+        "Ruby asked a question, and a small letter starts her spoken words, so that sentence is not one of the two."
+      ],
+      how: [
+        "Check the comma, the capital letter and the end mark in each sentence.",
+        "The correct sentences are \"Let's plant the seeds today,\" said Aunt May. and Carlos whispered, \"The baby is asleep.\" Aunt May's comma sits inside the closing quotation marks, and Carlos's comma follows whispered.",
+        "The other sentences leave out a comma, use a small letter, or put a comma outside the quotation marks."
+      ],
+      misconception: "A common mix-up is picking a sentence just because it has quotation marks. Check the comma and the capital letter, too."
+    },
+    "SK-GUM4-4-P4": {
+      hints: [
+        "Look for the choice with quotation marks at both ends of the spoken words.",
+        "Ella comes last, so look at the mark between the spoken words and her name.",
+        "A choice with only one quotation mark is not complete, since spoken words need marks at both ends."
+      ],
+      how: [
+        "The speaker comes last, so a comma ends the spoken words.",
+        "The comma goes inside the closing quotation marks.",
+        "The answer is \"I found a shiny rock,\" Ella said."
+      ],
+      misconception: "A common mix-up is putting the comma after the closing quotation marks. It belongs inside them."
+    },
+    "SK-GUM4-4-P5": {
+      hints: [
+        "For each sentence, find the spoken words and ask what is missing from them.",
+        "Check three things in each sentence: a comma, a capital letter and quotation marks.",
+        "Grandma's sentence has a comma and a capital letter, so ask what else the spoken words need."
+      ],
+      how: [
+        "Check each sentence for a comma after said or asked, a capital letter and quotation marks.",
+        "Ben's and Mom's sentences need a comma, and Ava's and Dev's sentences need a capital letter.",
+        "Grandma's sentence needs quotation marks around Supper is ready."
+      ],
+      misconception: "A common mix-up is fixing the first thing you notice. Check all three: comma, capital letter and quotation marks."
+    }
+  },
+  /* B8a:core:end */
   test: [
     { id: "SK-GUM4-4-T1", type: "mc", points: 1, dok: 1, passages: [],
       prompt: "Which sentence is punctuated correctly?",
@@ -4697,7 +6095,160 @@ PP.addLesson({
     }
   ],
   parent: "Play a riddle game: \"I am thinking of a person who ...\", \"I am thinking of a thing that ...\" or \"I am thinking of a place where ...\" Take turns finishing the clue and guessing.",
-  passages: [],
+  passages: [
+    /* B8a:passages:start */
+    {
+      id: "p1",
+      title: "A Day at the Science Museum",
+      byline: "A third grader's draft",
+      genre: "Student draft (narrative)",
+      draft: true,
+      paragraphs: [
+        [
+          "(1) Last Friday, our class took a bus to the science museum.",
+          "(2) Our guide was a woman which knew everything about space.",
+          "(3) She showed us a model of a rocket that is taller than a bus.",
+          "(4) Next, we walked into the room who has the moon rocks."
+        ],
+        [
+          "(5) Maya is a girl where loves planets, so she took many pictures.",
+          "(6) We ate lunch in the hall where the dinosaur skeleton stands.",
+          "(7) Spring is the season when many classes visit the museum."
+        ],
+        [
+          "(8) I liked the gift shop when I bought a tiny telescope.",
+          "(9) My friend who sat beside me on the bus fell asleep on the way home.",
+          "(10) It was a trip that I will never forget, and I hope we go again soon."
+        ]
+      ]
+    },
+    {
+      id: "p2",
+      title: "Grandpa's Farm",
+      byline: "A third grader's draft",
+      genre: "Student draft (narrative)",
+      draft: true,
+      paragraphs: [
+        [
+          "(1) Every summer, my cousins and I visit the farm where our grandpa grew up.",
+          "(2) Grandpa has a tractor who stopped working last week.",
+          "(3) My cousin Rosa is a girl where helps with the cows.",
+          "(4) The barn that holds the hay is bright red."
+        ],
+        [
+          "(5) Morning is the time when we collect the eggs from the hens.",
+          "(6) We found a kitten when was hiding behind a bucket.",
+          "(7) Grandma is the cook who makes pancakes for everyone."
+        ],
+        [
+          "(8) Her kitchen is the place where we all gather for breakfast.",
+          "(9) After lunch, we swim at the creek that has cold, clear water.",
+          "(10) I wish our summer on the farm could last all year long."
+        ]
+      ]
+    },
+    {
+      id: "p3",
+      title: "A Soccer Saturday",
+      byline: "A third grader's draft",
+      genre: "Student draft (narrative)",
+      draft: true,
+      paragraphs: [
+        [
+          "(1) On Saturday, our team played at the field where the big oak tree grows.",
+          "(2) Coach Ruiz is a woman which cheers for every player.",
+          "(3) She gave us a plan that helped us pass the ball.",
+          "(4) Marco is the player when scored the first goal."
+        ],
+        [
+          "(5) The ball that he kicked bounced off the post and rolled in.",
+          "(6) Halftime is the moment when we drink water and rest.",
+          "(7) We cheered for the goalie who stopped three shots."
+        ],
+        [
+          "(8) The bench where holds our bags is near the fence.",
+          "(9) We won the game, and the whole town felt proud of us.",
+          "(10) Later, we ate pizza at the shop where Dad works."
+        ]
+      ]
+    },
+    {
+      id: "p4",
+      title: "A Visit to the Bakery",
+      byline: "A third grader's draft",
+      genre: "Student draft (narrative)",
+      draft: true,
+      paragraphs: [
+        [
+          "(1) On Tuesday, our scout troop toured the bakery on Pine Street.",
+          "(2) The baker was a man which wore a tall white hat.",
+          "(3) He showed us an oven that is as big as a closet.",
+          "(4) Then we sat at a table who was covered in flour."
+        ],
+        [
+          "(5) Tom is a boy where likes bread, so he asked many questions.",
+          "(6) We watched the room where the dough is rolled and cut.",
+          "(7) Early morning is the time when the bakers start their work."
+        ],
+        [
+          "(8) I smelled the shelf when the warm rolls were stacked.",
+          "(9) My sister who came along ate two cinnamon buns before noon.",
+          "(10) It was a visit that made us all hungry, and we bought a loaf to share."
+        ]
+      ]
+    },
+    {
+      id: "p5",
+      title: "Camping by the River",
+      byline: "A third grader's draft",
+      genre: "Student draft (narrative)",
+      draft: true,
+      paragraphs: [
+        [
+          "(1) Last July, my uncle took us camping at the river where he fished as a boy.",
+          "(2) He packed a tent who fits six people.",
+          "(3) Nell is a camper where knows every bird song.",
+          "(4) The trail that leads to the water is lined with tall pines."
+        ],
+        [
+          "(5) Night is the time when the stars fill the whole sky.",
+          "(6) We spotted a deer when was drinking from the shallow edge.",
+          "(7) Uncle Ben is the chef who stirs the best campfire stew."
+        ],
+        [
+          "(8) His cooking pot is the one that holds enough stew for ten.",
+          "(9) In the morning, we skip stones on the pond that shines like glass.",
+          "(10) I hope we can camp by the river again before the cold weather comes."
+        ]
+      ]
+    },
+    {
+      id: "p6",
+      title: "Moving Day",
+      byline: "A third grader's draft",
+      genre: "Student draft (narrative)",
+      draft: true,
+      paragraphs: [
+        [
+          "(1) Last month, my family moved to the house where my aunt used to live.",
+          "(2) We hired a mover which carried our heavy couch up the stairs.",
+          "(3) He drove a truck that was long enough to hold our whole living room.",
+          "(4) My little brother is a boy where cried when we packed his bike."
+        ],
+        [
+          "(5) Evening is the hour when the new street grows quiet.",
+          "(6) We found a puppy when was sleeping on our porch.",
+          "(7) Our neighbor is a woman who gave us warm muffins."
+        ],
+        [
+          "(8) My room is the space where I keep my books and paints.",
+          "(9) I hung a shelf that holds my shells from the beach.",
+          "(10) Our new home already feels cozy, and I am glad we came here."
+        ]
+      ]
+    }
+    /* B8a:passages:end */
+  ],
   practice: [
     { id: "SK-GUM4-5-P1", type: "dropdown", points: 1, dok: 1, passages: [],
       prompt: "Choose the word that correctly completes the sentence.",
@@ -4741,6 +6292,1174 @@ PP.addLesson({
       clue: "Ask: Is the noun before the blank a person, a thing or animal, a place, or a time? For a place or a time, add there or then to the words after the blank. If they make a whole sentence, use where or when.",
       why: "Use where for the library and the kitchen: \"we borrow books there\" and \"Dad cooks dinner there\" are whole sentences. Use that for the bike and the song, which are things. Use that for the park too, because \"has a slide there\" is not a whole sentence." }
   ],
+  /* B8a:core:start */
+  /* ---------- Expansion 2026-10-22, batch B8a (GUM Reinforce, first half) ----------
+     core: fifteen items in three sets of five. { ref } reuses a practice item; the other practice items stay in Practice Together.
+     Passages are used only by core and the similar bank; none is used by test.
+     Author log: docs/expansion-2026-10-22/batches/B8a-author-log.md. NOT ACCEPTED: needs independent review. */
+  core: {
+    rev: "1",
+    sets: [
+      {
+        title: "Set 1",
+        items: [
+          {
+            ref: "SK-GUM4-5-P3"
+          },
+          {
+            ref: "SK-GUM4-5-P5"
+          },
+          {
+            id: "SK-GUM4-5-C03",
+            type: "mc",
+            points: 1,
+            dok: 3,
+            std: [
+              "3.L.GC.1:I:use-relative-pronouns-and-relative-adverbs"
+            ],
+            passages: ["p1"],
+            prompt: "A classmate says sentence 4 should use where, because a room is a place. What is the best response?",
+            choices: [
+              {
+                text: "Where does not fit, because the words after it are not a whole sentence when there is added, so the word should be that.",
+                correct: true
+              },
+              {
+                text: "Where fits, because a room is a place, and where is the right word after every place that you can name in a sentence."
+              },
+              {
+                text: "Who fits, because the room is full of moon rocks, and who tells more about anything that holds many things at once."
+              },
+              {
+                text: "When fits, because the class walked into the room at a certain time, and when is used for any moment in a day."
+              }
+            ],
+            clue: "Try the there test on the words after the blank, and think about what kind of noun comes before it.",
+            hints: [
+              "Try the there test on the words after the blank, and think about what kind of noun comes before it.",
+              "Read the words after the blank by themselves and ask what is missing from them.",
+              "Rooms are not people, so a choice about people cannot be right."
+            ],
+            how: [
+              "Read sentence 4: Next, we walked into the room who has the moon rocks.",
+              "Add there to the words after the blank: has the moon rocks there. That is not a whole sentence, because it does not say what has the moon rocks.",
+              "A room is a thing, so the word should be that. The answer is \"Where does not fit, because the words after it are not a whole sentence when there is added, so the word should be that.\""
+            ],
+            misconception: "A common mix-up is using where after every place word. Where needs words after it that make a whole sentence.",
+            why: "The answer is \"Where does not fit, because the words after it are not a whole sentence when there is added, so the word should be that.\" Has the moon rocks there is not a whole sentence, so where does not fit, and a room is not a person or a time. The sentence needs that."
+          },
+          {
+            id: "SK-GUM4-5-C04",
+            type: "dropdown",
+            points: 1,
+            dok: 2,
+            std: [
+              "3.L.GC.1:I:use-relative-pronouns-and-relative-adverbs"
+            ],
+            passages: ["p1"],
+            prompt: "Choose the word that fixes sentence 2.",
+            text: "Our guide was a woman {0} knew everything about space.",
+            slots: [
+              {
+                options: ["which","who","where","when"],
+                answer: 1
+              }
+            ],
+            clue: "Look at the noun right before the blank and ask what kind of noun it is.",
+            hints: [
+              "Look at the noun right before the blank and ask what kind of noun it is.",
+              "Read the sentence with each word in the blank, and listen for the one that suits the noun.",
+              "Where is for places, and a woman is not a place."
+            ],
+            how: [
+              "Find the noun right before the blank: woman. A woman is a person.",
+              "Use who to tell more about a person.",
+              "The answer is who. Which is for things, where is for places, and when is for times."
+            ],
+            misconception: "A common mix-up is choosing which because it sounds fancy. For a person, use who.",
+            why: "The answer is who. A woman is a person, so who fits. Which is for things, where is for places, and when is for times."
+          },
+          {
+            id: "SK-GUM4-5-C05",
+            type: "hottext",
+            points: 1,
+            dok: 2,
+            std: [
+              "3.L.GC.1:I:use-relative-pronouns-and-relative-adverbs"
+            ],
+            passages: ["p1"],
+            prompt: "From sentences 3, 6, 7, 8 and 9, select the ONE that uses who, that, where or when incorrectly.",
+            targets: ["p1:1:3","p1:2:2","p1:2:3","p1:3:1","p1:3:2"],
+            answer: ["p1:3:1"],
+            pick: 1,
+            clue: "Find the tell-more word in each shown sentence. Then find the noun right before it.",
+            hints: [
+              "Find the tell-more word in each shown sentence. Then find the noun right before it.",
+              "For each noun, ask whether it is a person, a thing, a place or a time. Test where and when with there or then.",
+              "Sentence 9 tells more about a person, and who is the word for a person, so it is correct."
+            ],
+            how: [
+              "Find the tell-more word and the noun before it in each shown sentence.",
+              "In sentence 3, that goes with a rocket. In sentence 6, where goes with a hall. In sentence 7, when goes with a season. In sentence 9, who goes with a friend.",
+              "In sentence 8, when goes with a gift shop, but a gift shop is a place, so the sentence needs where."
+            ],
+            misconception: "A common mix-up is picking the sentence with the longest tell-more part. Check the noun before the word.",
+            why: "The answer is sentence 8: \"I liked the gift shop when I bought a tiny telescope.\" A gift shop is a place, and I bought a tiny telescope there is a whole sentence, so the sentence needs where. In the other shown sentences each word matches its noun."
+          }
+        ]
+      },
+      {
+        title: "Set 2",
+        items: [
+          {
+            id: "SK-GUM4-5-C06",
+            type: "ebsr",
+            points: 2,
+            dok: 3,
+            std: [
+              "3.L.GC.1:I:use-relative-pronouns-and-relative-adverbs"
+            ],
+            passages: ["p1"],
+            prompt: "This item has two parts. Begin with Part A and then go on to Part B.",
+            partA: {
+              prompt: "Sentence 5 has a mistake. Which revision fixes it?",
+              choices: [
+                {
+                  text: "Maya is a girl who loves planets, so she took many pictures.",
+                  correct: true
+                },
+                {
+                  text: "Maya is a girl which loves planets, so she took many pictures."
+                },
+                {
+                  text: "Maya is a girl when loves planets, so she took many pictures."
+                },
+                {
+                  text: "Maya is a girl where she loves planets, so she took many pictures."
+                }
+              ]
+            },
+            partB: {
+              prompt: "Which fact explains why the correct revision is right?",
+              choices: [
+                {
+                  text: "Girl names a person, and who is the word that tells more about a person.",
+                  correct: true
+                },
+                {
+                  text: "Planets names a thing, and who is the word that tells more about a thing."
+                },
+                {
+                  text: "Girl names a place, and where is the word that tells more about a place."
+                },
+                {
+                  text: "Pictures names a time, and when is the word that tells more about a time."
+                }
+              ]
+            },
+            clue: "For Part A, look at the noun right before the wrong word in each choice. For Part B, look for the fact about that noun.",
+            hints: [
+              "For Part A, look at the noun right before the wrong word in each choice. For Part B, look for the fact about that noun.",
+              "For Part B, think about what kind of noun girl is and which word goes with that kind.",
+              "The draft already has where after the noun, so a choice that keeps where with a new ending is not the fix."
+            ],
+            how: [
+              "Part A: find the noun before the wrong word: girl. A girl is a person, so the answer is \"Maya is a girl who loves planets, so she took many pictures.\"",
+              "The other choices use which for a person, when for a time, or keep where.",
+              "Part B: the fact is \"Girl names a person, and who is the word that tells more about a person.\""
+            ],
+            misconception: "A common mix-up is changing only the words after the blank. Check the noun before it: Maya is a girl, which is a person.",
+            why: "Part A: \"Maya is a girl who loves planets, so she took many pictures.\" Part B: \"Girl names a person, and who is the word that tells more about a person.\" Part A: a girl is a person, so the sentence needs who. Part B: who tells more about a person."
+          },
+          {
+            id: "SK-GUM4-5-C07",
+            type: "dropdown",
+            points: 1,
+            dok: 2,
+            std: [
+              "3.L.GC.1:I:use-relative-pronouns-and-relative-adverbs"
+            ],
+            passages: ["p2"],
+            prompt: "Pick the word that repairs sentence 2.",
+            text: "Grandpa has a tractor {0} stopped working last week.",
+            slots: [
+              {
+                options: ["who","that","when","whose"],
+                answer: 1
+              }
+            ],
+            clue: "Find the noun right before the blank and ask what kind of noun it is.",
+            hints: [
+              "Find the noun right before the blank and ask what kind of noun it is.",
+              "A tractor is a machine. Ask whether it is a person, a place, a time, or something else.",
+              "Who is for people, and a tractor is not a person."
+            ],
+            how: [
+              "Find the noun right before the blank: tractor. A tractor is a thing.",
+              "Use that to tell more about a thing.",
+              "The answer is that. Who is for people, when is for times, and whose shows who owns something."
+            ],
+            misconception: "A common mix-up is choosing who because Grandpa is a person. Check the noun right before the blank.",
+            why: "The answer is that. A tractor is a thing, so that fits. Who is for people, when is for times, and whose shows who owns something."
+          },
+          {
+            id: "SK-GUM4-5-C08",
+            type: "hottext",
+            points: 1,
+            dok: 2,
+            std: [
+              "3.L.GC.1:I:use-relative-pronouns-and-relative-adverbs"
+            ],
+            passages: ["p2"],
+            prompt: "Look at sentences 1, 3, 4, 5 and 7. Select the ONE that has the wrong word to tell more about its noun.",
+            targets: ["p2:1:1","p2:1:3","p2:1:4","p2:2:1","p2:2:3"],
+            answer: ["p2:1:3"],
+            pick: 1,
+            clue: "Find the word that starts the tell-more part in each shown sentence. Then find the noun before it.",
+            hints: [
+              "Find the word that starts the tell-more part in each shown sentence. Then find the noun before it.",
+              "For a place or a time, try the there or then test on the words after the word.",
+              "The cook in sentence 7 is a person, and who is for people, so that sentence is correct."
+            ],
+            how: [
+              "Find the tell-more word and the noun before it in each shown sentence.",
+              "Sentence 1 uses where for a farm, sentence 4 uses that for a barn, sentence 5 uses when for a time, and sentence 7 uses who for a cook.",
+              "In sentence 3, where goes with a girl, but a girl is a person, so the sentence needs who."
+            ],
+            misconception: "A common mix-up is thinking where works after any noun. Where is for places, and Rosa is a girl.",
+            why: "The answer is sentence 3: \"My cousin Rosa is a girl where helps with the cows.\" Rosa is a girl, which is a person, so the sentence needs who. In the other shown sentences each word matches its noun."
+          },
+          {
+            id: "SK-GUM4-5-C09",
+            type: "mc",
+            points: 1,
+            dok: 3,
+            std: [
+              "3.L.GC.1:I:use-relative-pronouns-and-relative-adverbs"
+            ],
+            passages: ["p2"],
+            prompt: "A classmate says sentence 6 is correct, because the kitten was found at a certain time. Which response is best?",
+            choices: [
+              {
+                text: "A kitten is a thing and not a time, and the words after the blank need a subject, so the word should be that.",
+                correct: true
+              },
+              {
+                text: "Time words like when can follow any noun, as long as the sentence tells about something that happened to us."
+              },
+              {
+                text: "Where is needed instead, because the kitten was in one place, and where is used after any animal at all."
+              },
+              {
+                text: "No change is needed, because when and that mean the same thing in a sentence about an animal or a pet."
+              }
+            ],
+            clue: "Decide what kind of noun comes right before the blank word.",
+            hints: [
+              "Decide what kind of noun comes right before the blank word.",
+              "Read the words after the blank by themselves and ask what is missing from them.",
+              "A kitten was found, not a place, so a choice about places cannot be right."
+            ],
+            how: [
+              "Read sentence 6: We found a kitten when was hiding behind a bucket.",
+              "A kitten is a thing, not a time. The words after the blank are was hiding behind a bucket, and they have no subject of their own.",
+              "The answer is \"A kitten is a thing and not a time, and the words after the blank need a subject, so the word should be that.\""
+            ],
+            misconception: "A common mix-up is trusting when because the sentence tells about something that happened. Check the noun right before it.",
+            why: "The answer is \"A kitten is a thing and not a time, and the words after the blank need a subject, so the word should be that.\" A kitten is a thing, not a time, and was hiding behind a bucket has no subject, so the sentence needs that. Where would only fit if the words after it made a whole sentence."
+          },
+          {
+            id: "SK-GUM4-5-C10",
+            type: "ms",
+            points: 2,
+            dok: 2,
+            std: [
+              "3.L.GC.1:I:use-relative-pronouns-and-relative-adverbs"
+            ],
+            passages: [],
+            prompt: "Which TWO sentences use who, that, where or when correctly?",
+            pick: 2,
+            choices: [
+              {
+                text: "Mr. Chen is the coach who teaches us to swim.",
+                correct: true
+              },
+              {
+                text: "Dawn is the hour when the birds begin to sing.",
+                correct: true
+              },
+              {
+                text: "The meadow who is full of daisies is behind the school."
+              },
+              {
+                text: "The cabin when we sleep is near the river."
+              },
+              {
+                text: "My uncle where fixes boats lives by the dock."
+              }
+            ],
+            clue: "For each sentence, find the noun right before the tell-more word and ask what kind of noun it is.",
+            hints: [
+              "For each sentence, find the noun right before the tell-more word and ask what kind of noun it is.",
+              "Keep the sentences in which the tell-more word matches a person, a thing, a place or a time.",
+              "A meadow is not a person, so one sentence has a word for people that does not fit."
+            ],
+            how: [
+              "Find the noun before the tell-more word in each sentence.",
+              "In \"Mr. Chen is the coach who teaches us to swim.\" who goes with a person. In \"Dawn is the hour when the birds begin to sing.\" when goes with a time.",
+              "In the other sentences, who goes with a meadow, when goes with a cabin, and where goes with a person."
+            ],
+            misconception: "A common mix-up is picking a sentence because the tell-more word sounds familiar. Check the noun before it.",
+            why: "The answers are \"Mr. Chen is the coach who teaches us to swim.\" and \"Dawn is the hour when the birds begin to sing.\" Who goes with the coach, who is a person, and when goes with the hour, which is a time. In the other sentences who is used for a meadow, when for a cabin, and where for a person."
+          }
+        ]
+      },
+      {
+        title: "Set 3",
+        items: [
+          {
+            id: "SK-GUM4-5-C11",
+            type: "mc",
+            points: 1,
+            dok: 3,
+            std: [
+              "3.L.GC.1:I:use-relative-pronouns-and-relative-adverbs"
+            ],
+            passages: [],
+            stem: "Sentence A: The beach where we swim is warm. Sentence B: The beach that has a lifeguard is busy.",
+            prompt: "How are the tell-more words in the two sentences alike and different?",
+            choices: [
+              {
+                text: "Both tell more about a place, but where fits only when the words after it make a whole sentence with there.",
+                correct: true
+              },
+              {
+                text: "Both tell more about a person, but where fits only when the words after it name someone who lives there too."
+              },
+              {
+                text: "Both tell more about a time, but that fits only when the words after it name a moment of the day or night."
+              },
+              {
+                text: "Both tell more about a thing, but where and that mean the same thing in every sentence that you read."
+              }
+            ],
+            clue: "Find the noun that each tell-more word describes. Then try the there test on the words after each word.",
+            hints: [
+              "Find the noun that each tell-more word describes. Then try the there test on the words after each word.",
+              "Add there to the words after where in Sentence A and to the words after that in Sentence B, and see which makes a whole sentence.",
+              "The beach is not a person, so a choice about people cannot be right."
+            ],
+            how: [
+              "Both sentences tell more about the beach, which is a place.",
+              "In Sentence A, we swim there is a whole sentence, so where fits. In Sentence B, has a lifeguard there is not a whole sentence, so that is used.",
+              "The answer is \"Both tell more about a place, but where fits only when the words after it make a whole sentence with there.\""
+            ],
+            misconception: "A common mix-up is thinking a place noun always takes where. The words after the word decide.",
+            why: "The answer is \"Both tell more about a place, but where fits only when the words after it make a whole sentence with there.\" Both words tell more about the beach. We swim there is a whole sentence, so Sentence A uses where. Has a lifeguard there is not a whole sentence, so Sentence B uses that."
+          },
+          {
+            id: "SK-GUM4-5-C12",
+            type: "dropdown",
+            points: 1,
+            dok: 2,
+            std: [
+              "3.L.GC.1:I:use-relative-pronouns-and-relative-adverbs"
+            ],
+            passages: ["p3"],
+            prompt: "Choose the word that corrects sentence 4.",
+            text: "Marco is the player {0} scored the first goal.",
+            slots: [
+              {
+                options: ["when","who","where","whose"],
+                answer: 1
+              }
+            ],
+            clue: "Look at the noun before the blank and decide what kind of noun it is.",
+            hints: [
+              "Look at the noun before the blank and decide what kind of noun it is.",
+              "Read the sentence with each word in the blank, and listen for the one that suits the noun.",
+              "Where is for places, and a player is not a place."
+            ],
+            how: [
+              "Find the noun right before the blank: player. A player is a person.",
+              "Use who to tell more about a person.",
+              "The answer is who. When is for times, where is for places, and whose shows who owns something."
+            ],
+            misconception: "A common mix-up is choosing when because the goal happened at a time. Check the noun right before the blank.",
+            why: "The answer is who. A player is a person, so who fits. When is for times, where is for places, and whose shows who owns something."
+          },
+          {
+            id: "SK-GUM4-5-C13",
+            type: "ms",
+            points: 2,
+            dok: 3,
+            std: [
+              "3.L.GC.1:I:use-relative-pronouns-and-relative-adverbs"
+            ],
+            passages: ["p3"],
+            prompt: "Sentence 8 of the draft has a mistake. Choose the TWO revisions that fix it.",
+            pick: 2,
+            choices: [
+              {
+                text: "The bench that holds our bags is near the fence.",
+                correct: true
+              },
+              {
+                text: "The bench where our bags sit is near the fence.",
+                correct: true
+              },
+              {
+                text: "The bench who holds our bags is near the fence."
+              },
+              {
+                text: "The bench when our bags sit is near the fence."
+              },
+              {
+                text: "The bench where holds our bags is near the fence."
+              }
+            ],
+            clue: "A fix can change the tell-more word, or it can change the words after it. Check each revision for a word that suits the noun.",
+            hints: [
+              "A fix can change the tell-more word, or it can change the words after it. Check each revision for a word that suits the noun.",
+              "Keep the revisions in which the tell-more word and the words after it work together.",
+              "Who is for people, and a bench is not a person."
+            ],
+            how: [
+              "The draft pairs the bench with where, but holds our bags there is not a whole sentence.",
+              "One fix uses that, which goes with a thing. The other fix changes the words after where so that our bags sit there is a whole sentence.",
+              "The answers are \"The bench that holds our bags is near the fence.\" and \"The bench where our bags sit is near the fence.\" The others use who for a thing, use when for a place, or keep the draft."
+            ],
+            misconception: "A common mix-up is thinking only the tell-more word can change. The words after it can change, too.",
+            why: "The answers are \"The bench that holds our bags is near the fence.\" and \"The bench where our bags sit is near the fence.\" That goes with a bench, which is a thing, and our bags sit there is a whole sentence, so where fits the second revision. The others use who for a thing, use when for a place, or keep the draft."
+          },
+          {
+            id: "SK-GUM4-5-C14",
+            type: "mc",
+            points: 1,
+            dok: 2,
+            std: [
+              "3.L.GC.1:I:use-relative-pronouns-and-relative-adverbs"
+            ],
+            passages: [],
+            prompt: "Which sentence uses the right word to tell more?",
+            choices: [
+              {
+                text: "The town where we met Grandpa is small.",
+                correct: true
+              },
+              {
+                text: "The town when we met Grandpa is small today."
+              },
+              {
+                text: "The town who we met Grandpa is small."
+              },
+              {
+                text: "The town that we met Grandpa is small."
+              }
+            ],
+            clue: "Find the noun right before the tell-more word. Ask whether it is a person, a thing, a place or a time.",
+            hints: [
+              "Find the noun right before the tell-more word. Ask whether it is a person, a thing, a place or a time.",
+              "Try the there test on the words after the tell-more word in each choice.",
+              "A town is not a person, so a choice about people cannot be right."
+            ],
+            how: [
+              "Find the noun right before the tell-more word: town. A town is a place.",
+              "We met Grandpa there is a whole sentence, so where fits.",
+              "The answer is \"The town where we met Grandpa is small.\" The others use when for a place, who for a thing, or that where the words after it are already whole."
+            ],
+            misconception: "A common mix-up is choosing that because a town is a thing. The words after the word are already a whole sentence, so use where.",
+            why: "The answer is \"The town where we met Grandpa is small.\" A town is a place, and we met Grandpa there is a whole sentence, so where fits. The others use when for a place, who for a thing, or that with words that are already whole."
+          },
+          {
+            id: "SK-GUM4-5-C15",
+            type: "dropdown",
+            points: 2,
+            dok: 2,
+            std: [
+              "3.L.GC.1:I:use-relative-pronouns-and-relative-adverbs"
+            ],
+            passages: [],
+            prompt: "Choose the words that complete the sentence.",
+            text: "Fall is the season {0} leaves change color, and the park {1} has the old swing is my favorite place.",
+            slots: [
+              {
+                options: ["when","who","whose","which"],
+                answer: 0
+              },
+              {
+                options: ["that","where","when","who"],
+                answer: 0
+              }
+            ],
+            clue: "Find the noun before each blank. Then decide whether it is a person, a thing, a place or a time.",
+            hints: [
+              "Find the noun before each blank. Then decide whether it is a person, a thing, a place or a time.",
+              "For the first blank, add then to the words after it. For the second blank, check whether the words after it make a whole sentence with there.",
+              "Who is for people, and neither noun is a person."
+            ],
+            how: [
+              "Find the nouns: season, which is a time, and park, which is a place that has something in it.",
+              "Leaves change color then is a whole sentence, so the first blank needs when. Has the old swing there is not a whole sentence, so the second blank needs that.",
+              "The answers are when and that. Who is for people, whose shows who owns something, and which does not fit the first blank."
+            ],
+            misconception: "A common mix-up is putting where in the second blank because a park is a place. Check whether the words after it make a whole sentence.",
+            why: "The answers are when and that. A season is a time, and leaves change color then is a whole sentence, so the first blank needs when. Has the old swing there is not a whole sentence, so the second blank needs that."
+          }
+        ]
+      }
+    ]
+  },
+  similar: [
+    {
+      id: "SK-GUM4-5-S01",
+      type: "dropdown",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.L.GC.1:I:use-relative-pronouns-and-relative-adverbs"
+      ],
+      passages: [],
+      prompt: "Select the missing term for this line from a trail journal.",
+      text: "On our hiking trip, the meadow {0} we ate our picnic lunch was covered in yellow daisies and buzzing bees.",
+      slots: [
+        {
+          options: ["where","who","when","whose"],
+          answer: 0
+        }
+      ],
+      clue: "Look at the noun before the blank and decide what kind of noun it is.",
+      hints: [
+        "Look at the noun before the blank and decide what kind of noun it is.",
+        "Add there to the words after the blank and check for a whole sentence.",
+        "Who is for people, and a meadow is not a person."
+      ],
+      how: [
+        "Find the noun before the blank: meadow. A meadow is a place.",
+        "We ate our picnic lunch there is a whole sentence, so the word for a place fits.",
+        "The answer is where. Who is for people, when is for times, and whose shows who owns something."
+      ],
+      misconception: "A common mix-up is choosing who because the writer ate with other people. Check the noun right before the blank.",
+      why: "The answer is where. A meadow is a place, and we ate our picnic lunch there is a whole sentence, so where fits. Who is for people, when is for times, and whose shows who owns something.",
+      like: ["SK-GUM4-5-P3"]
+    },
+    {
+      id: "SK-GUM4-5-S02",
+      type: "match",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.L.GC.1:I:use-relative-pronouns-and-relative-adverbs"
+      ],
+      passages: [],
+      prompt: "Match each phrase with the word that completes it.",
+      cols: ["that","when"],
+      rows: [
+        {
+          text: "the bell ___ rings at noon",
+          answer: 0
+        },
+        {
+          text: "the hour ___ we eat lunch",
+          answer: 1
+        },
+        {
+          text: "the atlas ___ has old maps",
+          answer: 0
+        },
+        {
+          text: "the evening ___ we light the fire",
+          answer: 1
+        },
+        {
+          text: "the coat ___ keeps me warm",
+          answer: 0
+        }
+      ],
+      clue: "For each row, find the noun and decide whether it is a thing or a time.",
+      hints: [
+        "For each row, find the noun and decide whether it is a thing or a time.",
+        "For a time, add then to the words after the blank and check for a whole sentence.",
+        "A coat is not a time, so the word for times cannot go with it."
+      ],
+      how: [
+        "Look at each noun and the words after the blank.",
+        "We eat lunch then and we light the fire then are whole sentences, so the hour and the evening take when.",
+        "Rings at noon then, has old maps then and keeps me warm then are not whole sentences, so the bell, the atlas and the coat take that."
+      ],
+      misconception: "A common mix-up is choosing when for every row with a time word. Add then and check for a whole sentence.",
+      why: "Use when for the hour and the evening: \"we eat lunch then\" and \"we light the fire then\" are whole sentences. Use that for the bell, the atlas and the coat, which are things.",
+      like: ["SK-GUM4-5-P5"]
+    },
+    {
+      id: "SK-GUM4-5-S03",
+      type: "mc",
+      points: 1,
+      dok: 3,
+      std: [
+        "3.L.GC.1:I:use-relative-pronouns-and-relative-adverbs"
+      ],
+      passages: ["p4"],
+      prompt: "A scout believes where is right in line 4 since friends gather at a table. What is the strongest reply?",
+      choices: [
+        {
+          text: "What follows cannot stand alone with there added, so use that.",
+          correct: true
+        },
+        {
+          text: "A table is a spot where friends gather, so where fits any spot."
+        },
+        {
+          text: "A table is shared by the whole troop, so who fits a shared thing."
+        },
+        {
+          text: "The troop sat down at one moment, so when fits what happens once."
+        }
+      ],
+      clue: "Try the there test on the words after the blank, and think about the noun before it.",
+      hints: [
+        "Try the there test on the words after the blank, and think about the noun before it.",
+        "Read the words after the blank by themselves and ask what is missing from them.",
+        "Tables are not people, so a choice about people cannot be right."
+      ],
+      how: [
+        "Read sentence 4: Then we sat at a table who was covered in flour.",
+        "Add there to what follows the blank: was covered in flour there. That is not a whole sentence, because it does not say what was covered.",
+        "A table is a thing, so the joiner should be that. The answer is \"What follows cannot stand alone with there added, so use that.\""
+      ],
+      misconception: "A common mix-up is using where after anything people sit at. Where needs words after it that make a whole sentence.",
+      why: "The answer is \"What follows cannot stand alone with there added, so use that.\" Was covered in flour there is not a whole sentence, so where does not fit, and a table is not a person or a time. The sentence needs that.",
+      like: ["SK-GUM4-5-C03"]
+    },
+    {
+      id: "SK-GUM4-5-S04",
+      type: "dropdown",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.L.GC.1:I:use-relative-pronouns-and-relative-adverbs"
+      ],
+      passages: ["p4"],
+      prompt: "Which term corrects line 2 of the bakery story?",
+      text: "At the bakery on Pine Street, the baker was a man {0} wore a tall white hat and a flour-dusted apron.",
+      slots: [
+        {
+          options: ["which","who","where","when"],
+          answer: 1
+        }
+      ],
+      clue: "Look at the noun right before the blank and ask what kind of noun it is.",
+      hints: [
+        "Look at the noun right before the blank and ask what kind of noun it is.",
+        "Read the line with each word in the blank, and listen for the one that suits the noun.",
+        "When is for times, and a man is not a time."
+      ],
+      how: [
+        "Find the noun right before the blank: man. A man is a person.",
+        "Use who to tell more about a person.",
+        "The answer is who. Which is for things, where is for places, and when is for times."
+      ],
+      misconception: "A common mix-up is choosing which because the baker wears something fancy. For a person, use who.",
+      why: "The answer is who. A man is a person, so who fits. Which is for things, where is for places, and when is for times.",
+      like: ["SK-GUM4-5-C04"]
+    },
+    {
+      id: "SK-GUM4-5-S05",
+      type: "hottext",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.L.GC.1:I:use-relative-pronouns-and-relative-adverbs"
+      ],
+      passages: ["p4"],
+      prompt: "Only one of lines 3, 6, 7, 8 and 9 pairs its joining word with the wrong partner. Which line is it?",
+      targets: ["p4:1:3","p4:2:2","p4:2:3","p4:3:1","p4:3:2"],
+      answer: ["p4:3:1"],
+      pick: 1,
+      clue: "Locate the tell-more word in each shown sentence. Then locate the noun right before it.",
+      hints: [
+        "Locate the tell-more word in each shown sentence. Then locate the noun right before it.",
+        "For each noun, decide whether it is a person, a thing, a place or a time. Test where and when with there or then.",
+        "Sentence 9 tells more about a person, and who is the word for a person, so it is correct."
+      ],
+      how: [
+        "Find the tell-more word and the noun before it in each shown sentence.",
+        "In sentence 3, that goes with an oven. In sentence 6, where goes with a room. In sentence 7, when goes with early morning. In sentence 9, who goes with a sister.",
+        "In sentence 8, when goes with the shelf, but a shelf is a place, so the sentence needs where."
+      ],
+      misconception: "A common mix-up is picking the sentence that has the most words after the tell-more word. Check the noun before the word.",
+      why: "The answer is sentence 8: \"I smelled the shelf when the warm rolls were stacked.\" A shelf is a place, and the warm rolls were stacked there is a whole sentence, so the sentence needs where. In the other shown sentences each word matches its noun.",
+      like: ["SK-GUM4-5-C05"]
+    },
+    {
+      id: "SK-GUM4-5-S06",
+      type: "ebsr",
+      points: 2,
+      dok: 3,
+      std: [
+        "3.L.GC.1:I:use-relative-pronouns-and-relative-adverbs"
+      ],
+      passages: ["p4"],
+      prompt: "Do Part A first, and then do Part B.",
+      partA: {
+        prompt: "Line 5 has a flaw. Which version cures it?",
+        choices: [
+          {
+            text: "Tom is a boy who likes bread, so he asked many questions.",
+            correct: true
+          },
+          {
+            text: "Tom is a boy which likes bread, so he asked many questions."
+          },
+          {
+            text: "Tom is a boy when likes bread, so he asked many questions."
+          },
+          {
+            text: "Tom is a boy where he likes bread, so he asked many questions."
+          }
+        ]
+      },
+      partB: {
+        prompt: "Which reason supports the cured version?",
+        choices: [
+          {
+            text: "A boy is a person, and who goes with a person.",
+            correct: true
+          },
+          {
+            text: "Bread is a thing, and who goes with a thing."
+          },
+          {
+            text: "A boy is a spot, and where goes with a spot."
+          },
+          {
+            text: "Tom asked at a moment, and when goes with a moment."
+          }
+        ]
+      },
+      clue: "For Part A, look at the noun right before the wrong word in each version. For Part B, look for the reason about that noun.",
+      hints: [
+        "For Part A, look at the noun right before the wrong word in each version. For Part B, look for the reason about that noun.",
+        "For Part B, think about what kind of noun boy is and which word goes with that kind.",
+        "The draft already has where after the noun, so a version that keeps where with a new ending is not the cure."
+      ],
+      how: [
+        "Part A: find the noun before the wrong word: boy. A boy is a person, so the answer is \"Tom is a boy who likes bread, so he asked many questions.\"",
+        "The other versions use which for a person, when for a time, or keep where.",
+        "Part B: the reason is \"A boy is a person, and who goes with a person.\""
+      ],
+      misconception: "A common mix-up is changing only the words after the blank. Check the noun before it: Tom is a boy, which is a person.",
+      why: "Part A: \"Tom is a boy who likes bread, so he asked many questions.\" Part B: \"A boy is a person, and who goes with a person.\" Part A: a boy is a person, so the sentence needs who. Part B: who tells more about a person.",
+      like: ["SK-GUM4-5-C06"]
+    },
+    {
+      id: "SK-GUM4-5-S07",
+      type: "dropdown",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.L.GC.1:I:use-relative-pronouns-and-relative-adverbs"
+      ],
+      passages: ["p5"],
+      prompt: "Which term repairs line 2 of the camping story?",
+      text: "My uncle packed a green canvas tent {0} fits six sleeping bags and a lantern.",
+      slots: [
+        {
+          options: ["who","that","where","whose"],
+          answer: 1
+        }
+      ],
+      clue: "Find the noun right before the blank and ask what kind of noun it is.",
+      hints: [
+        "Find the noun right before the blank and ask what kind of noun it is.",
+        "A tent is a shelter. Ask whether it is a person, a place, a time, or something else.",
+        "Who is for people, and a tent is not a person."
+      ],
+      how: [
+        "Find the noun right before the blank: tent. A tent is a thing.",
+        "Use that to tell more about a thing.",
+        "The answer is that. Who is for people, where is for places, and whose shows who owns something."
+      ],
+      misconception: "A common mix-up is choosing who because the uncle is a person. Check the noun right before the blank.",
+      why: "The answer is that. A tent is a thing, so that fits. Who is for people, where is for places, and whose shows who owns something.",
+      like: ["SK-GUM4-5-C07"]
+    },
+    {
+      id: "SK-GUM4-5-S08",
+      type: "hottext",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.L.GC.1:I:use-relative-pronouns-and-relative-adverbs"
+      ],
+      passages: ["p5"],
+      prompt: "Which ONE of lines 1, 3, 4, 5 and 7 attaches the wrong joining word to the person or thing it describes?",
+      targets: ["p5:1:1","p5:1:3","p5:1:4","p5:2:1","p5:2:3"],
+      answer: ["p5:1:3"],
+      pick: 1,
+      clue: "Locate the word that begins the tell-more part in each shown sentence. Then locate the noun before it.",
+      hints: [
+        "Locate the word that begins the tell-more part in each shown sentence. Then locate the noun before it.",
+        "For a place or a time, try the there or then test on the words after the word.",
+        "The chef in sentence 7 is a person, and who is for people, so that sentence is correct."
+      ],
+      how: [
+        "Find the joining word and the noun before it in each shown sentence.",
+        "Sentence 1 uses where for a river, sentence 4 uses that for a trail, sentence 5 uses when for a time, and sentence 7 uses who for a chef.",
+        "In sentence 3, where goes with a camper, but a camper is a person, so the sentence needs who."
+      ],
+      misconception: "A common mix-up is thinking where works after any noun. Where is for places, and Nell is a camper.",
+      why: "The answer is sentence 3: \"Nell is a camper where knows every bird song.\" Nell is a camper, which is a person, so the sentence needs who. In the other shown sentences each word matches its noun.",
+      like: ["SK-GUM4-5-C08"]
+    },
+    {
+      id: "SK-GUM4-5-S09",
+      type: "mc",
+      points: 1,
+      dok: 3,
+      std: [
+        "3.L.GC.1:I:use-relative-pronouns-and-relative-adverbs"
+      ],
+      passages: ["p5"],
+      prompt: "A camper insists line 6 is fine because the deer showed up at a certain hour. Which answer is strongest?",
+      choices: [
+        {
+          text: "Deer is an animal, and what follows has no subject, so use that.",
+          correct: true
+        },
+        {
+          text: "A deer showed up at an hour, so when fits any event on a trip."
+        },
+        {
+          text: "A deer stood in one spot, so where fits any wild animal you see."
+        },
+        {
+          text: "Both words mean the same here, so the line needs no repair at all."
+        }
+      ],
+      clue: "Decide what kind of noun comes right before the blank word.",
+      hints: [
+        "Decide what kind of noun comes right before the blank word.",
+        "Read the words after the blank by themselves and ask what is missing from them.",
+        "A deer was spotted, not a place, so a choice about places cannot be right."
+      ],
+      how: [
+        "Read sentence 6: We spotted a deer when was drinking from the shallow edge.",
+        "A deer is an animal, not a time. What follows the blank is was drinking from the shallow edge, and it has no subject of its own.",
+        "The answer is \"Deer is an animal, and what follows has no subject, so use that.\""
+      ],
+      misconception: "A common mix-up is trusting when because the sentence describes an event. Check the noun right before it.",
+      why: "The answer is \"Deer is an animal, and what follows has no subject, so use that.\" A deer is an animal, not a time, and was drinking from the shallow edge has no subject, so the sentence needs that. Where would only fit if the words after it made a whole sentence.",
+      like: ["SK-GUM4-5-C09"]
+    },
+    {
+      id: "SK-GUM4-5-S10",
+      type: "ms",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.L.GC.1:I:use-relative-pronouns-and-relative-adverbs"
+      ],
+      passages: [],
+      prompt: "In school stories, which TWO lines match the joining word with the right kind of partner?",
+      pick: 2,
+      choices: [
+        {
+          text: "Ms. Park is the nurse who checks our eyes each year.",
+          correct: true
+        },
+        {
+          text: "Recess is the break when we play on the field.",
+          correct: true
+        },
+        {
+          text: "The library who has a reading nook is on Oak Street."
+        },
+        {
+          text: "My cousin where lives in Ohio sends me postcards."
+        },
+        {
+          text: "The gym when we hold class parties is down the hall."
+        }
+      ],
+      clue: "Study each sentence for the noun right before the tell-more word, and decide what kind of noun it is.",
+      hints: [
+        "Study each sentence for the noun right before the tell-more word, and decide what kind of noun it is.",
+        "Keep the sentences in which the tell-more word suits a person, a thing, a place or a time.",
+        "A library is not a person, so one sentence uses a word for people that does not fit."
+      ],
+      how: [
+        "Find the noun before the tell-more word in each sentence.",
+        "In \"Ms. Park is the nurse who checks our eyes each year.\" who goes with a person. In \"Recess is the break when we play on the field.\" when goes with a time.",
+        "In the other sentences, who goes with a library, where goes with a person, and when goes with a gym."
+      ],
+      misconception: "A common mix-up is choosing a sentence because the tell-more word sounds right. Check the noun before it.",
+      why: "The answers are \"Ms. Park is the nurse who checks our eyes each year.\" and \"Recess is the break when we play on the field.\" Who goes with the nurse, who is a person, and when goes with the break, which is a time. In the other sentences who is used for a library, where for a person, and when for a gym.",
+      like: ["SK-GUM4-5-C10"]
+    },
+    {
+      id: "SK-GUM4-5-S11",
+      type: "mc",
+      points: 1,
+      dok: 3,
+      std: [
+        "3.L.GC.1:I:use-relative-pronouns-and-relative-adverbs"
+      ],
+      passages: [],
+      stem: "Line 1: The garden where we planted beans is green. Line 2: The garden that has a scarecrow is tall.",
+      prompt: "What do the joining words in the two lines share, and how do they differ?",
+      choices: [
+        {
+          text: "Both describe a place, but where needs a part that could stand alone.",
+          correct: true
+        },
+        {
+          text: "Both describe a person, but where needs a part naming somebody nearby."
+        },
+        {
+          text: "Both describe a moment, but that needs a part naming a stretch of the day."
+        },
+        {
+          text: "Both describe an object, but where and that carry one shared meaning."
+        }
+      ],
+      clue: "Find the noun that each tell-more word describes. Then try the there test on the words after each word.",
+      hints: [
+        "Find the noun that each tell-more word describes. Then try the there test on the words after each word.",
+        "Add there to the words after where in Line 1 and to the words after that in Line 2, and see which makes a whole sentence.",
+        "A garden is not a person, so a choice about people cannot be right."
+      ],
+      how: [
+        "Both lines describe the garden, which is a place.",
+        "In Line 1, we planted beans there is a whole sentence, so where fits. In Line 2, has a scarecrow there is not a whole sentence, so that is used.",
+        "The answer is \"Both describe a place, but where needs a part that could stand alone.\""
+      ],
+      misconception: "A common mix-up is thinking a place noun always takes where. The words after the word decide.",
+      why: "The answer is \"Both describe a place, but where needs a part that could stand alone.\" Both words describe the garden. We planted beans there is a whole sentence, so Line 1 uses where. Has a scarecrow there is not a whole sentence, so Line 2 uses that.",
+      like: ["SK-GUM4-5-C11"]
+    },
+    {
+      id: "SK-GUM4-5-S12",
+      type: "dropdown",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.L.GC.1:I:use-relative-pronouns-and-relative-adverbs"
+      ],
+      passages: ["p6"],
+      prompt: "Select the term that corrects sentence 4 of the moving story.",
+      text: "On moving day, my little brother is a boy {0} cried when we packed his shiny red bike into the truck.",
+      slots: [
+        {
+          options: ["when","who","which","where"],
+          answer: 1
+        }
+      ],
+      clue: "Look at the noun before the blank and decide what kind of noun it is.",
+      hints: [
+        "Look at the noun before the blank and decide what kind of noun it is.",
+        "Read the sentence with each word in the blank, and listen for the one that suits the noun.",
+        "Which is for things, and a brother is not a thing."
+      ],
+      how: [
+        "Find the noun right before the blank: boy. A boy is a person.",
+        "Use who to tell more about a person.",
+        "The answer is who. When is for times, which is for things, and where is for places."
+      ],
+      misconception: "A common mix-up is choosing where because the family is moving. Check the noun right before the blank.",
+      why: "The answer is who. A boy is a person, so who fits. When is for times, which is for things, and where is for places.",
+      like: ["SK-GUM4-5-C12"]
+    },
+    {
+      id: "SK-GUM4-5-S13",
+      type: "ms",
+      points: 2,
+      dok: 3,
+      std: [
+        "3.L.GC.1:I:use-relative-pronouns-and-relative-adverbs"
+      ],
+      passages: ["p6"],
+      prompt: "Line 6 of the moving story has a problem. Pick the TWO versions that repair it.",
+      pick: 2,
+      choices: [
+        {
+          text: "We found a puppy that was sleeping on our porch.",
+          correct: true
+        },
+        {
+          text: "We found a puppy where it was sleeping on our porch.",
+          correct: true
+        },
+        {
+          text: "We found a puppy when was sleeping on our porch."
+        },
+        {
+          text: "We found a puppy where was sleeping on our porch."
+        },
+        {
+          text: "We found a puppy that it was sleeping on our porch."
+        }
+      ],
+      clue: "A repair can change the tell-more word, or it can change the words after it. Check each version for a word that suits the noun.",
+      hints: [
+        "A repair can change the tell-more word, or it can change the words after it. Check each version for a word that suits the noun.",
+        "Keep the versions in which the tell-more word and the words after it work together.",
+        "A puppy is not a time, so a word for times cannot go with it."
+      ],
+      how: [
+        "The draft pairs the puppy with when, but a puppy is not a time, and was sleeping on our porch has no subject.",
+        "One repair uses that, which goes with a thing. The other repair gives the words after where a subject, so it was sleeping there is a whole sentence.",
+        "The answers are \"We found a puppy that was sleeping on our porch.\" and \"We found a puppy where it was sleeping on our porch.\" The others keep the draft, leave where without a subject, or add a second subject after that."
+      ],
+      misconception: "A common mix-up is thinking only the tell-more word can change. The words after it can change, too.",
+      why: "The answers are \"We found a puppy that was sleeping on our porch.\" and \"We found a puppy where it was sleeping on our porch.\" That goes with a puppy, which is a thing, and it was sleeping there is a whole sentence, so where fits the second version. The others keep the draft, leave where without a subject, or add a second subject after that.",
+      like: ["SK-GUM4-5-C13"]
+    },
+    {
+      id: "SK-GUM4-5-S14",
+      type: "mc",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.L.GC.1:I:use-relative-pronouns-and-relative-adverbs"
+      ],
+      passages: [],
+      prompt: "Pick the line in which the joining word suits its partner.",
+      choices: [
+        {
+          text: "The deep green lake where we paddled our blue canoe last summer is very cold.",
+          correct: true
+        },
+        {
+          text: "The deep green lake when we paddled our blue canoe last summer is very cold."
+        },
+        {
+          text: "The deep green lake who we paddled our blue canoe last summer is very cold."
+        },
+        {
+          text: "The deep green lake that we paddled our blue canoe last summer is very cold."
+        }
+      ],
+      clue: "Find the noun right before the tell-more word. Ask whether it is a person, a thing, a place or a time.",
+      hints: [
+        "Find the noun right before the tell-more word. Ask whether it is a person, a thing, a place or a time.",
+        "Try the there test on the words after the tell-more word in each choice.",
+        "A lake is not a person, so a choice about people cannot be right."
+      ],
+      how: [
+        "Find the noun right before the tell-more word: lake. A lake is a place.",
+        "We paddled our blue canoe there is a whole sentence, so where fits.",
+        "The answer is \"The deep green lake where we paddled our blue canoe last summer is very cold.\" The others use when for a place, who for a thing, or that where the words after it are already whole."
+      ],
+      misconception: "A common mix-up is choosing that because a lake is a thing. The words after the word are already a whole sentence, so use where.",
+      why: "The answer is \"The deep green lake where we paddled our blue canoe last summer is very cold.\" A lake is a place, and we paddled our canoe there is a whole sentence, so where fits. The others use when for a place, who for a thing, or that with words that are already whole.",
+      like: ["SK-GUM4-5-C14"]
+    },
+    {
+      id: "SK-GUM4-5-S15",
+      type: "dropdown",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.L.GC.1:I:use-relative-pronouns-and-relative-adverbs"
+      ],
+      passages: [],
+      prompt: "Pick the terms that finish the line about the town fair.",
+      text: "Spring is a season {0} flowers bloom by the pond near our school, and a wooden bridge {1} crosses the stream is painted green.",
+      slots: [
+        {
+          options: ["when","whose","which","how"],
+          answer: 0
+        },
+        {
+          options: ["that","whom","where","while"],
+          answer: 0
+        }
+      ],
+      clue: "Find the noun before each blank. Then decide whether it is a person, a thing, a place or a time.",
+      hints: [
+        "Find the noun before each blank. Then decide whether it is a person, a thing, a place or a time.",
+        "For the first blank, add then to the words after it. For the second blank, check whether the words after it make a whole sentence with there.",
+        "Whose shows who owns something, and nothing in the first part names an owner."
+      ],
+      how: [
+        "Find the nouns: season, which is a time, and bridge, which is a thing.",
+        "Flowers bloom by the pond then is a whole sentence, so the first blank needs when. Crosses the stream there is not a whole sentence, so the second blank needs that.",
+        "The answers are when and that. Whose shows who owns something, which does not fit the first blank, and how does not tell more about a noun."
+      ],
+      misconception: "A common mix-up is putting where in the second blank because a bridge stands in one spot. Check whether the words after it make a whole sentence.",
+      why: "The answers are when and that. A season is a time, and flowers bloom by the pond then is a whole sentence, so the first blank needs when. Crosses the stream there is not a whole sentence, so the second blank needs that.",
+      like: ["SK-GUM4-5-C15"]
+    }
+  ],
+  addons: {
+    "SK-GUM4-5-P1": {
+      hints: [
+        "Look at the noun right before the blank and decide what kind of noun it is.",
+        "Read the sentence with each word in the blank, and listen for the one that suits the noun.",
+        "Where is for places, and a person is not a place."
+      ],
+      how: [
+        "Find the noun right before the blank: person. A person is not a thing, a place or a time.",
+        "Use who to tell more about a person.",
+        "The answer is who. Which is for things, where is for places, and when is for times."
+      ],
+      misconception: "A common mix-up is choosing which because it sounds fancy. For a person, use who."
+    },
+    "SK-GUM4-5-P2": {
+      hints: [
+        "Find the noun right before the blank and decide whether it is a person, a thing, a place or a time.",
+        "For a time, add then to the words after the blank and check for a whole sentence.",
+        "Who is for people, and a season is not a person."
+      ],
+      how: [
+        "Find the noun right before the blank: season. A season is a time of year.",
+        "The pond freezes then is a whole sentence, so the word for a time fits.",
+        "The answer is when. Who is for people, where is for places, and whose shows who owns something."
+      ],
+      misconception: "A common mix-up is choosing where because a pond is a place. Check the noun before the blank: season."
+    },
+    "SK-GUM4-5-P3": {
+      hints: [
+        "Look at the noun before the blank. Then add there or then to the words after the blank.",
+        "Check whether the words after the blank make a whole sentence with there.",
+        "Who is for people, and a place is not a person."
+      ],
+      how: [
+        "Find the noun before the blank: place. A place is where something is.",
+        "We found the seashells there is a whole sentence, so where fits.",
+        "The answer is where. Which does not fit because the words after the blank are already complete."
+      ],
+      misconception: "A common mix-up is choosing which because a place is a thing. The words after the blank are already complete, so use where."
+    },
+    "SK-GUM4-5-P4": {
+      hints: [
+        "Look at the noun right before the blank and decide what kind of noun it is.",
+        "Add there or then to the words after the blank and check for a whole sentence.",
+        "Who is for people, and a shell is not a person."
+      ],
+      how: [
+        "Find the noun right before the blank: shell. A shell is a thing.",
+        "Looks like a star there is not a whole sentence, so where and when do not fit.",
+        "The answer is that. Who is for people."
+      ],
+      misconception: "A common mix-up is choosing where because shells come from beaches. A shell is a thing, so use that."
+    },
+    "SK-GUM4-5-P5": {
+      hints: [
+        "For each row, find the noun and decide whether it is a thing or a place.",
+        "For a place, add there to the words after the blank and check for a whole sentence.",
+        "A bike is not a place, so the word for places cannot go with it."
+      ],
+      how: [
+        "Look at each noun and the words after the blank.",
+        "We borrow books there and Dad cooks dinner there are whole sentences, so the library and the kitchen take where.",
+        "Has a slide there is not a whole sentence, so the park takes that, just like the bike and the song."
+      ],
+      misconception: "A common mix-up is putting where after every place noun. Add there and check for a whole sentence."
+    }
+  },
+  /* B8a:core:end */
   test: [
     { id: "SK-GUM4-5-T1", type: "dropdown", points: 1, dok: 1, passages: [],
       prompt: "Choose the word that correctly completes the sentence.",

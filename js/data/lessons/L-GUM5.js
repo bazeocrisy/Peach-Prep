@@ -4002,7 +4002,7 @@ PP.addLesson({
   teach: {
     big: "Everyone and each are treated as one, so they go with verbs like is, has and likes. Both and many mean more than one, so they go with verbs like are, have and like.",
     points: [
-      "Some pronouns do not name a certain person. Everyone, everybody, someone and each are like this. They are singular, so they take a singular verb: Everyone is ready. Each has a turn. Everybody likes recess.",
+      "Some pronouns do not name a certain person. Everyone, everybody, someone, somebody, nobody and each are like this. They are singular, so they take a singular verb: Everyone is ready. Each has a turn. Everybody likes recess.",
       "Both and many always mean more than one. They are plural, so they take a plural verb: Both are ready. Many have a turn. Both like recess.",
       "Words like \"of the students\" can come right after the pronoun. Match the verb to the pronoun, not to the word next to the verb: Each of the students has a pencil. Many of the students have pencils."
     ],
@@ -4043,10 +4043,182 @@ PP.addLesson({
         "Each is treated as one, so it is singular. Read it: Each has."
       ],
       answer: "has: \"Each of the puppies has a blue collar.\""
+    },
+    {
+      show: ["Somebody on the porch (hum / hums) a happy tune."],
+      ask: "Which verb is correct?",
+      steps: [
+        "Find the pronoun at the start: Somebody.",
+        "Skip the words \"on the porch.\" The verb must match Somebody.",
+        "Somebody is treated as one, so it takes the singular verb. Read it: Somebody hums."
+      ],
+      answer: "hums: \"Somebody on the porch hums a happy tune.\""
     }
   ],
   parent: "Play a quick game at dinner. Say a starter like \"Everyone at this table ___\" or \"Both of us ___\" and let your child finish it with the right verb, such as likes or like.",
-  passages: [],
+  passages: [
+    /* B8:passages:start */
+    {
+      id: "p1",
+      title: "Pizza Night",
+      byline: "A third grader's draft",
+      genre: "Student draft (narrative)",
+      draft: true,
+      paragraphs: [
+        [
+          "(1) Our family makes pizza on Friday nights.",
+          "(2) Everyone bring a bowl and a spoon to the big table.",
+          "(3) Both of my uncles carry flour and cheese from the car."
+        ],
+        [
+          "(4) First, we roll the dough into flat round shapes.",
+          "(5) Many of the toppings sits in small bowls on the counter.",
+          "(6) Each of the kids adds sauce and a handful of cheese to every pizza.",
+          "(7) Somebody slices red peppers near the sink."
+        ],
+        [
+          "(8) Nobody talk while the pizzas bake in the oven.",
+          "(9) Both of my cousins point at the oven and smile.",
+          "(10) Everybody agrees this is the best meal of the week.",
+          "(11) I love pizza night at home."
+        ]
+      ]
+    },
+    {
+      id: "p2",
+      title: "Bug Hunt",
+      byline: "A third grader's draft",
+      genre: "Student draft (narrative)",
+      draft: true,
+      paragraphs: [
+        [
+          "(1) Our club meets in the school garden for a bug hunt on Saturday morning.",
+          "(2) Each of the members carries a clear jar with a lid.",
+          "(3) Both of the leaders wears tall boots and wide sun hats.",
+          "(4) Everyone checks under leaves and rocks for tiny bugs."
+        ],
+        [
+          "(5) Nobody want to miss the big green beetle.",
+          "(6) Many of the ants carry crumbs across the dusty path.",
+          "(7) By noon, somebody finds a snail under a flat stone."
+        ],
+        [
+          "(8) Both of the jars hold a ladybug by lunch.",
+          "(9) Everybody clap when the leader counts the bugs.",
+          "(10) Each of the members gets a sticker for helping.",
+          "(11) I take home a clear jar and a big smile."
+        ]
+      ]
+    },
+    {
+      id: "p3",
+      title: "Cornhole Contest",
+      byline: "A third grader's draft",
+      genre: "Student draft (narrative)",
+      draft: true,
+      paragraphs: [
+        [
+          "(1) The cornhole contest starts at the park at ten o'clock.",
+          "(2) Each of the teams tosses four bean bags at a painted board.",
+          "(3) Both of the boards have a round hole and a slanted top.",
+          "(4) Nobody steps past the line while the first team tosses."
+        ],
+        [
+          "(5) Many of the families cheer from the lawn chairs.",
+          "(6) Somebody wave a green flag after each round.",
+          "(7) Both of my cousins toss bags from the left side.",
+          "(8) Everyone leans forward on the last toss.",
+          "(9) Each of the bags lands near the hole in a flash."
+        ],
+        [
+          "(10) Both of the winners shakes hands at the end.",
+          "(11) By dinner time, the park is quiet again.",
+          "(12) I hope the contest comes back next year."
+        ]
+      ]
+    },
+    {
+      id: "p4",
+      title: "Chicken Coop",
+      byline: "A third grader's draft",
+      genre: "Student draft (narrative)",
+      draft: true,
+      paragraphs: [
+        [
+          "(1) Our family keeps four hens in a coop behind our old red barn.",
+          "(2) Nobody forget to fill the water bowl each morning.",
+          "(3) Both of our hens lay brown eggs in soft straw.",
+          "(4) Our coop has one tiny door, warm walls and soft floors."
+        ],
+        [
+          "(5) On cold days, hens scratch at dusty ground.",
+          "(6) Many of those chicks peep under warm lamps.",
+          "(7) Each of our nests holds soft hay.",
+          "(8) Somebody collect eggs after breakfast."
+        ],
+        [
+          "(9) Everybody have chores on our farm.",
+          "(10) Both of my brothers clean our coop on Sunday.",
+          "(11) Everyone agrees hens are the best pets.",
+          "(12) I hope we get five more chicks this spring."
+        ]
+      ]
+    },
+    {
+      id: "p5",
+      title: "Karaoke Night",
+      byline: "A third grader's draft",
+      genre: "Student draft (narrative)",
+      draft: true,
+      paragraphs: [
+        [
+          "(1) Our school holds a karaoke night in the gym on a cold Thursday evening.",
+          "(2) Each of our teachers picks a silly song to sing.",
+          "(3) Both of us sets up speakers near the stage.",
+          "(4) Everyone here wears a shiny hat or a bright scarf."
+        ],
+        [
+          "(5) Nobody speak when the music starts.",
+          "(6) Many of those songs sound like old cartoon themes.",
+          "(7) Somebody hands out cups of cold water."
+        ],
+        [
+          "(8) Both of my sisters sing a duet on the stage.",
+          "(9) Everybody cheer loudly as lights flash.",
+          "(10) Each of our guests goes home with a big smile.",
+          "(11) I wish this fun night would last much longer."
+        ]
+      ]
+    },
+    {
+      id: "p6",
+      title: "Sign Language Club",
+      byline: "A third grader's draft",
+      genre: "Student draft (narrative)",
+      draft: true,
+      paragraphs: [
+        [
+          "(1) Our school club learns sign language every Tuesday after lunch.",
+          "(2) Each of the students practices ten new signs each week.",
+          "(3) Both of the teachers know the alphabet by heart.",
+          "(4) Everyone sits in one big circle on soft rugs."
+        ],
+        [
+          "(5) Nobody laughs when signs look silly.",
+          "(6) Somebody make our sign for friend with two hands.",
+          "(7) Many of those signs look like tiny pictures.",
+          "(8) Both of us wave when class begins.",
+          "(9) Everybody in the circle claps with open hands."
+        ],
+        [
+          "(10) Both of those helpers waves goodbye as bells ring.",
+          "(11) By spring, our club knows one hundred signs.",
+          "(12) I love my new club and my new friends."
+        ]
+      ]
+    }
+    /* B8:passages:end */
+  ],
   practice: [
     { id: "SK-GUM5-4-P1", type: "dropdown", points: 1, dok: 1, passages: [],
       prompt: "Choose the word that correctly completes the sentence.",
@@ -4102,6 +4274,1010 @@ PP.addLesson({
       clue: "Singular pronouns: everyone, each. Plural pronouns: both, many. Check that each verb matches its pronoun.",
       why: "The answers are \"Both of the kites are stuck in the tree.\" and \"Each of the kids gets a sticker.\" Both is plural and takes are. Each is singular and takes gets. The others should say \"Everyone has,\" \"Many of the books are\" and \"Both of the dogs bark.\"" }
   ],
+  /* B8:core:start */
+  /* ---------- Expansion 2026-10-22, batch B8 (GUM Introduce/Continue) ----------
+     core: fifteen items in three sets of five. { ref } reuses a practice item; the other practice items stay in Practice Together.
+     Passages are used only by core and the similar bank; none is used by test or testB.
+     Author log: docs/expansion-2026-10-22/batches/B8b-author-log.md. NEEDS INDEPENDENT REVIEW. */
+  core: {
+    rev: "1",
+    sets: [
+      {
+        title: "Set 1",
+        items: [
+          { ref: "SK-GUM5-4-P4" },
+          { ref: "SK-GUM5-4-P5" },
+          {
+            id: "SK-GUM5-4-C03",
+            type: "dropdown",
+            points: 1,
+            dok: 2,
+            std: [
+              "3.L.GC.1:I:use-indefinite-pronouns-with-correct-agreement"
+            ],
+            passages: ["p1"],
+            prompt: "Sentence 2 of the draft needs a fix. Choose the word that makes it correct.",
+            text: "Everyone {0} a bowl and a spoon to the big table.",
+            slots: [
+              {
+                options: ["brings", "bring", "bringing"],
+                answer: 0
+              }
+            ],
+            clue: "Ask whether everyone is treated as one or as more than one. Then think about which verb goes with that.",
+            hints: [
+              "Ask whether everyone is treated as one or as more than one. Then think about which verb goes with that.",
+              "Say each choice in the blank. Think about whether it goes with one person or with more than one.",
+              "One choice ends in ing and does not fit the sentence. Decide between the other two."
+            ],
+            how: [
+              "Find the pronoun at the start: Everyone.",
+              "Everyone is treated as one, so it takes the singular verb.",
+              "The answer is brings."
+            ],
+            misconception: "A common mix-up is thinking everyone means many people, so it needs a plural verb. Everyone is treated as one.",
+            why: "The answer is brings. Everyone is treated as one, so it takes the singular verb brings: \"Everyone brings a bowl and a spoon to the big table.\" Bring goes with plural words, and bringing is not a whole verb."
+          },
+          {
+            id: "SK-GUM5-4-C04",
+            type: "mc",
+            points: 1,
+            dok: 1,
+            std: [
+              "3.L.GC.1:I:use-indefinite-pronouns-with-correct-agreement"
+            ],
+            passages: ["p1"],
+            prompt: "Sentence 8 of the draft has a verb problem. Which choice shows the sentence written correctly?",
+            choices: [
+              { text: "Nobody talk while the pizzas bake in the oven." },
+              { text: "Nobody talking while the pizzas bake in the oven." },
+              { text: "Nobody talks while the pizzas bake in the oven.", correct: true },
+              { text: "Nobody are talking while the pizzas bake in the oven." }
+            ],
+            clue: "Find the pronoun that starts the sentence. Then check which verb goes with it.",
+            hints: [
+              "Find the pronoun that starts the sentence. Then check which verb goes with it.",
+              "Look only at the verb in each choice. Ask whether it goes with one or with more than one.",
+              "One choice has talking with no helper word, so it is not a whole sentence. Decide among the other three."
+            ],
+            how: [
+              "Find the pronoun at the start: Nobody.",
+              "Nobody is treated as one, so it takes a singular verb.",
+              "The answer is \"Nobody talks while the pizzas bake in the oven.\""
+            ],
+            misconception: "A common mix-up is leaving the s off the verb because the sentence tells about a whole group. Nobody is treated as one.",
+            why: "The answer is \"Nobody talks while the pizzas bake in the oven.\" Nobody is treated as one, so it takes talks. Talk is a plural verb, talking has no helper word, and are does not go with nobody."
+          },
+          {
+            id: "SK-GUM5-4-C05",
+            type: "ebsr",
+            points: 2,
+            dok: 2,
+            std: [
+              "3.L.GC.1:I:use-indefinite-pronouns-with-correct-agreement"
+            ],
+            passages: ["p1"],
+            prompt: "This question has two parts. Answer Part A, then Part B.",
+            partA: {
+              prompt: "Which sentence in paragraph 2 of the draft pairs a pronoun with the wrong verb?",
+              choices: [
+                { text: "First, we roll the dough into flat round shapes." },
+                { text: "Many of the toppings sits in small bowls on the counter.", correct: true },
+                { text: "Each of the kids adds sauce and a handful of cheese to every pizza." },
+                { text: "Somebody slices red peppers near the sink." }
+              ]
+            },
+            partB: {
+              prompt: "Which rule gives the reason for the verb change in Part A?",
+              choices: [
+                { text: "Many is treated as one, so it takes a singular verb, one that ends in s." },
+                { text: "Every verb must end in s whenever the sentence names more than one thing." },
+                { text: "Many means more than one, so it takes a plural verb, one with no s on the end.", correct: true },
+                { text: "A verb stays the same no matter which pronoun the writer picks for the sentence." }
+              ]
+            },
+            clue: "Find the pronoun in each sentence. Then ask which rule fits the sentence whose verb does not go with it.",
+            hints: [
+              "Find the pronoun in each sentence. Then ask which rule fits the sentence whose verb does not go with it.",
+              "Read each sentence in paragraph 2 and pair its pronoun with its verb.",
+              "The sentence with Each already pairs it with a verb that fits. Check the other three."
+            ],
+            how: [
+              "Part A: read each sentence in paragraph 2 and pair each pronoun with its verb.",
+              "In \"Many of the toppings sits in small bowls on the counter.\" the pronoun Many does not match the verb sits.",
+              "Part A answer: Many of the toppings sits in small bowls on the counter.",
+              "Part B answer: \"Many means more than one, so it takes a plural verb, one with no s on the end.\""
+            ],
+            misconception: "A common mix-up is thinking every verb needs an s. Many means more than one, so its verb has no s.",
+            why: "Part A: Many of the toppings sits in small bowls on the counter. Part B: \"Many means more than one, so it takes a plural verb, one with no s on the end.\" The sentence should say sing. The other sentences already pair a pronoun with a verb that fits."
+          }
+        ]
+      },
+      {
+        title: "Set 2",
+        items: [
+          {
+            id: "SK-GUM5-4-C06",
+            type: "hottext",
+            points: 2,
+            dok: 2,
+            std: [
+              "3.L.GC.1:I:use-indefinite-pronouns-with-correct-agreement"
+            ],
+            passages: ["p2"],
+            prompt: "Look at sentences 2 through 6 of the draft. Select the TWO sentences that pair a pronoun with the wrong verb.",
+            targets: ["p2:1:2", "p2:1:3", "p2:1:4", "p2:2:1", "p2:2:2"],
+            answer: ["p2:1:3", "p2:2:1"],
+            pick: 2,
+            clue: "Find the pronoun in each sentence. Ask whether it is treated as one or means more than one, and whether its verb fits.",
+            hints: [
+              "Find the pronoun in each sentence. Ask whether it is treated as one or means more than one, and whether its verb fits.",
+              "Read the five sentences one at a time. Pick TWO.",
+              "In sentence 4, the pronoun Everyone goes with a verb that fits. Check the other four."
+            ],
+            how: [
+              "Pair each pronoun with its verb in the five sentences.",
+              "In sentence 3, Both means more than one, so wears does not match. It should be wear.",
+              "In sentence 5, Nobody is treated as one, so want does not match. It should be wants.",
+              "Sentences 2, 4 and 6 already pair each pronoun with a verb that fits."
+            ],
+            misconception: "A common mix-up is picking a sentence just because its verb ends in s. Both needs a verb with no s, and Nobody needs one that ends in s.",
+            why: "The answers are sentence 3 and sentence 5. In sentence 3, Both means more than one, so wears should be wear. In sentence 5, Nobody is treated as one, so want should be wants. Sentences 2, 4 and 6 are written correctly."
+          },
+          {
+            id: "SK-GUM5-4-C07",
+            type: "ms",
+            points: 2,
+            dok: 2,
+            std: [
+              "3.L.GC.1:I:use-indefinite-pronouns-with-correct-agreement"
+            ],
+            passages: [],
+            prompt: "Choose the TWO sentences in which the verb matches its pronoun.",
+            pick: 2,
+            choices: [
+              { text: "Many of the kids is hungry by noon." },
+              { text: "Nobody wants to leave the pool early.", correct: true },
+              { text: "Somebody paint the fence every spring." },
+              { text: "Everybody go to the gym after lunch." },
+              { text: "Both of the ponies eat hay in the barn.", correct: true }
+            ],
+            clue: "Find the pronoun in each sentence. Ask whether it is treated as one or means more than one.",
+            hints: [
+              "Find the pronoun in each sentence. Ask whether it is treated as one or means more than one.",
+              "Pick TWO. In some sentences the verb is made for one, but the pronoun needs one made for more than one, or the other way around.",
+              "In the sentence about the kids, Many means more than one, and the verb is made for one. Decide about the other four."
+            ],
+            how: [
+              "Pair each pronoun with its verb.",
+              "Nobody is treated as one, so \"Nobody wants to leave the pool early.\" fits.",
+              "Both means more than one, so \"Both of the ponies eat hay in the barn.\" fits.",
+              "The other three do not match: Everybody go, Many of the kids is, and Somebody paint."
+            ],
+            misconception: "A common mix-up is trusting the sentence that sounds natural when spoken fast. Check the pronoun, then check the verb.",
+            why: "The answers are \"Nobody wants to leave the pool early.\" and \"Both of the ponies eat hay in the barn.\" Nobody is treated as one, and both means more than one. The others should say \"Everybody goes,\" \"Many of the kids are\" and \"Somebody paints.\""
+          },
+          {
+            id: "SK-GUM5-4-C08",
+            type: "match",
+            points: 2,
+            dok: 2,
+            std: [
+              "3.L.GC.1:I:use-indefinite-pronouns-with-correct-agreement"
+            ],
+            passages: [],
+            prompt: "Each sentence has a pronoun and a blank. Match each sentence with the verb that fits the blank.",
+            cols: ["paints", "paint"],
+            rows: [
+              { text: "Everybody ___ a picture of a pond.", answer: 0 },
+              { text: "Both of my cousins ___ a picture of a barn.", answer: 1 },
+              { text: "Nobody ___ a picture of a snake.", answer: 0 },
+              { text: "Many of the kids ___ a picture of a dragon.", answer: 1 }
+            ],
+            clue: "Look at each pronoun. Does it count as one or as more?",
+            hints: [
+              "Look at each pronoun. Does it count as one or as more?",
+              "Do one row at a time. Cover the words after the pronoun and read the pronoun with each verb.",
+              "Nobody is treated as one. Decide about the other rows."
+            ],
+            how: [
+              "Look at the pronouns: Everybody, Both, Nobody and Many.",
+              "Everybody and Nobody are treated as one, so those rows take the verb that ends in s.",
+              "Both and Many mean more than one, so those rows take the verb with no s."
+            ],
+            misconception: "A common mix-up is matching the verb to the word next to the blank, such as cousins or kids. Match it to the pronoun at the start.",
+            why: "Everybody paints and Nobody paints, because everybody and nobody are treated as one. Both of my cousins paint and Many of the kids paint, because both and many mean more than one."
+          },
+          {
+            id: "SK-GUM5-4-C09",
+            type: "mc",
+            points: 1,
+            dok: 3,
+            std: [
+              "3.L.GC.1:I:use-indefinite-pronouns-with-correct-agreement"
+            ],
+            passages: ["p2"],
+            prompt: "In the draft, sentence 8 uses the verb hold and sentence 10 uses the verb gets. Why does one verb end in s and the other does not?",
+            choices: [
+              { text: "Both means more than one, so it takes hold, but each is treated as one, so it takes gets.", correct: true },
+              { text: "Gets should lose its s, because a verb that comes after members must match that plural word." },
+              { text: "Hold has no s only because sentence 8 comes before sentence 10 in the draft." },
+              { text: "Sentence 8 is wrong, because both is treated as one and needs the verb holds." }
+            ],
+            clue: "Ask which pronoun starts each sentence. Is it treated as one, or does it mean more than one?",
+            hints: [
+              "Ask which pronoun starts each sentence. Is it treated as one, or does it mean more than one?",
+              "Reread sentence 8 and sentence 10 side by side. Look at the first word of each.",
+              "Sentence 8 is not a mistake, so the answer cannot say that it is wrong. Check the other choices."
+            ],
+            how: [
+              "Read sentence 8: Both means more than one, so it takes the verb hold.",
+              "Read sentence 10: Each is treated as one, so it takes the verb gets.",
+              "The answer is \"Both means more than one, so it takes hold, but each is treated as one, so it takes gets.\""
+            ],
+            misconception: "A common mix-up is thinking the noun after the pronoun picks the verb. The pronoun picks it.",
+            why: "The answer is \"Both means more than one, so it takes hold, but each is treated as one, so it takes gets.\" The pronouns decide the verbs, so each sentence is correct. Members and jars are the nouns that follow, but they do not choose the verb."
+          },
+          {
+            id: "SK-GUM5-4-C10",
+            type: "dropdown",
+            points: 1,
+            dok: 1,
+            std: [
+              "3.L.GC.1:I:use-indefinite-pronouns-with-correct-agreement"
+            ],
+            passages: ["p2"],
+            prompt: "Sentence 9 of the draft needs a fix. Choose the word that makes it correct.",
+            text: "Everybody {0} when the leader counts the bugs.",
+            slots: [
+              {
+                options: ["claps", "clap", "clapping"],
+                answer: 0
+              }
+            ],
+            clue: "Ask whether Everybody is treated as one or as more than one.",
+            hints: [
+              "Ask whether Everybody is treated as one or as more than one.",
+              "Say each choice in the blank and think about which one goes with the pronoun.",
+              "One choice ends in ing and is not a whole verb here. Decide between the other two."
+            ],
+            how: [
+              "Read sentence 9. The pronoun is Everybody.",
+              "Everybody is treated as one, so it takes the singular verb.",
+              "The answer is claps."
+            ],
+            misconception: "A common mix-up is dropping the s because the group is clapping together. Everybody is still treated as one.",
+            why: "The answer is claps. Everybody is treated as one, so it takes claps. Clap goes with plural words, and clapping is not a whole verb in this sentence."
+          }
+        ]
+      },
+      {
+        title: "Set 3",
+        items: [
+          {
+            id: "SK-GUM5-4-C11",
+            type: "hottext",
+            points: 1,
+            dok: 2,
+            std: [
+              "3.L.GC.1:I:use-indefinite-pronouns-with-correct-agreement"
+            ],
+            passages: ["p3"],
+            prompt: "Look at sentences 5 through 9 of the draft. Select the sentence that pairs a pronoun with the wrong verb.",
+            targets: ["p3:2:1", "p3:2:2", "p3:2:3", "p3:2:4", "p3:2:5"],
+            answer: ["p3:2:2"],
+            pick: 1,
+            clue: "Find the pronoun in each sentence. Ask whether it is treated as one or means more than one, and whether its verb fits.",
+            hints: [
+              "Find the pronoun in each sentence. Ask whether it is treated as one or means more than one, and whether its verb fits.",
+              "Read the five sentences one at a time. Pick ONE.",
+              "In sentence 8, the pronoun Everyone goes with a verb that fits. Check the other four."
+            ],
+            how: [
+              "Pair each pronoun with its verb in the five sentences.",
+              "In sentence 5, Many means more than one, and cheer fits. In sentence 7, Both means more than one, and toss fits.",
+              "In sentence 6, Somebody is treated as one, so wave does not match. It should be waves."
+            ],
+            misconception: "A common mix-up is thinking a verb with no s is always wrong. Verbs for Many and Both have no s.",
+            why: "The answer is sentence 6, \"Somebody wave a green flag after each round.\" Somebody is treated as one, so wave should be waves. Sentences 5, 7, 8 and 9 each pair a pronoun with a verb that fits."
+          },
+          {
+            id: "SK-GUM5-4-C12",
+            type: "dropdown",
+            points: 1,
+            dok: 2,
+            std: [
+              "3.L.GC.1:I:use-indefinite-pronouns-with-correct-agreement"
+            ],
+            passages: ["p3"],
+            prompt: "Sentence 10 of the draft needs a fix. Choose the word that makes it correct.",
+            text: "Both of the winners {0} hands at the end.",
+            slots: [
+              {
+                options: ["shakes", "shake", "shaking"],
+                answer: 1
+              }
+            ],
+            clue: "Ask whether Both is treated as one or means more than one. Then think about which verb goes with that.",
+            hints: [
+              "Ask whether Both is treated as one or means more than one. Then think about which verb goes with that.",
+              "Say each choice in the blank. Think about whether it goes with one winner or with two.",
+              "One choice ends in ing and is not a whole verb here. Decide between the other two."
+            ],
+            how: [
+              "Read sentence 10. The pronoun is Both.",
+              "Both means more than one, so it takes the plural verb.",
+              "The answer is shake."
+            ],
+            misconception: "A common mix-up is adding an s because winners ends in s. The verb must match Both, not the noun.",
+            why: "The answer is shake. Both means more than one, so it takes shake: \"Both of the winners shake hands at the end.\" Shakes goes with one, and shaking is not a whole verb here."
+          },
+          {
+            id: "SK-GUM5-4-C13",
+            type: "ms",
+            points: 2,
+            dok: 3,
+            std: [
+              "3.L.GC.1:I:use-indefinite-pronouns-with-correct-agreement"
+            ],
+            passages: [],
+            prompt: "Pat says, \"A verb always matches the word right before it.\" Choose the TWO sentences that prove Pat wrong.",
+            pick: 2,
+            choices: [
+              { text: "Nobody in the two classes wants to be late.", correct: true },
+              { text: "Many of the cars park near the gate." },
+              { text: "Each of the girls carries a tray to the table.", correct: true },
+              { text: "Everyone in the room sings a song before lunch." },
+              { text: "Both of the girls carry a tray to the table." }
+            ],
+            clue: "Pat says the verb goes with the word right before it. Look for sentences where the verb goes with a pronoun farther back.",
+            hints: [
+              "Pat says the verb goes with the word right before it. Look for sentences where the verb goes with a pronoun farther back.",
+              "Pick TWO. Find the pronoun in each sentence and the word that sits right before the verb.",
+              "In the sentence about the room, the word before the verb names one thing, so it fits Pat's idea. Decide about the other four."
+            ],
+            how: [
+              "Find the pronoun and the word right before the verb in each sentence.",
+              "In \"Each of the girls carries a tray to the table.\" the verb carries goes with Each, not with girls.",
+              "In \"Nobody in the two classes wants to be late.\" the verb wants goes with Nobody, not with classes.",
+              "In the other three, the verb fits the word before it and the pronoun too, so they do not prove Pat wrong."
+            ],
+            misconception: "A common mix-up is picking sentences with a plural word before the verb. Look for a verb that fits the pronoun, not the plural word.",
+            why: "The answers are \"Each of the girls carries a tray to the table.\" and \"Nobody in the two classes wants to be late.\" In both, the verb goes with the pronoun, not with the plural word right before it. In the other three, the verb fits both the pronoun and the word before it."
+          },
+          {
+            id: "SK-GUM5-4-C14",
+            type: "dropdown",
+            points: 2,
+            dok: 2,
+            std: [
+              "3.L.GC.1:I:use-indefinite-pronouns-with-correct-agreement"
+            ],
+            passages: [],
+            prompt: "Choose the words that finish the sentence.",
+            text: "Nobody on the team {0} the ball too long, and both of the coaches {1} the game.",
+            slots: [
+              {
+                options: ["keeps", "keep", "keeping"],
+                answer: 0
+              },
+              {
+                options: ["watches", "watch", "watching"],
+                answer: 1
+              }
+            ],
+            clue: "Find the pronoun before each blank. Ask whether it is treated as one or means more than one.",
+            hints: [
+              "Find the pronoun before each blank. Ask whether it is treated as one or means more than one.",
+              "Fill one blank at a time. Say each choice out loud and ask which goes with the pronoun.",
+              "In each blank, one choice ends in ing and is not a whole verb here. Decide about the other choices."
+            ],
+            how: [
+              "The first blank follows Nobody, which is treated as one, so it takes the singular verb.",
+              "The second blank follows both, which means more than one, so it takes the plural verb.",
+              "The answers are keeps and watch."
+            ],
+            misconception: "A common mix-up is using the same kind of verb in both blanks. Nobody takes an s, and both does not.",
+            why: "The answers are keeps and watch. Nobody is treated as one, so it takes keeps. Both means more than one, so it takes watch. The ing choices are not whole verbs here."
+          },
+          {
+            id: "SK-GUM5-4-C15",
+            type: "mc",
+            points: 1,
+            dok: 3,
+            std: [
+              "3.L.GC.1:I:use-indefinite-pronouns-with-correct-agreement"
+            ],
+            passages: [],
+            prompt: "Ravi wrote, \"Everybody in the two classes want a turn.\" He says want is right, because classes is plural and sits right before the verb. Is Ravi right?",
+            choices: [
+              { text: "Yes. The verb must match the plural word classes beside it, so want is correct." },
+              { text: "Yes. Everybody names many people, so it always takes a plural verb, like want." },
+              { text: "No. Everybody is treated as one, so the noun must change, and classes should be written as class." },
+              { text: "No. Everybody is treated as one, so the verb must be wants, even though classes is plural.", correct: true }
+            ],
+            clue: "Find the pronoun. Then ask which word the verb should go with, the pronoun or the word beside the verb.",
+            hints: [
+              "Find the pronoun. Then ask which word the verb should go with, the pronoun or the word beside the verb.",
+              "Think about what Everybody is treated as, one or more than one. Then think about what that means for the verb.",
+              "The word classes only tells where the people are. It does not choose the verb. Check the other choices."
+            ],
+            how: [
+              "Find the pronoun: Everybody.",
+              "Everybody is treated as one, so it takes the singular verb wants.",
+              "The answer is \"No. Everybody is treated as one, so the verb must be wants, even though classes is plural.\""
+            ],
+            misconception: "A common mix-up is matching the verb to the plural word next to it. The verb goes with the pronoun at the start.",
+            why: "The answer is \"No. Everybody is treated as one, so the verb must be wants, even though classes is plural.\" Ravi should write wants. The word classes tells where the people are, but it does not choose the verb."
+          }
+        ]
+      }
+    ]
+  },
+  similar: [
+    {
+      id: "SK-GUM5-4-S01",
+      type: "hottext",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.L.GC.1:I:use-indefinite-pronouns-with-correct-agreement"
+      ],
+      passages: [],
+      prompt: "One line pairs its first word with the wrong verb. Which one is it?",
+      options: [
+        "Each of our lambs follows its mother up a hill.",
+        "Both of those tents stand beside a quiet lake.",
+        "Everyone in our van sing along to loud music.",
+        "Many of her paintings hang in museum halls.",
+        "Nobody here misses parades on Main Street."
+      ],
+      answer: [2],
+      pick: 1,
+      clue: "Find the pronoun in each line and ask whether it goes with one or with more than one.",
+      hints: [
+        "Find the pronoun in each line and ask whether it goes with one or with more than one.",
+        "Read the five lines one at a time. Pick ONE line.",
+        "The line about the lambs pairs its pronoun with a verb that fits. Check the other four."
+      ],
+      how: [
+        "Pair each pronoun with its verb: Each follows, Both stand, Everyone sing, Many hang and Nobody misses.",
+        "Each, Nobody and Everyone are treated as one. Both and Many mean more than one.",
+        "Everyone is treated as one, so sing does not match. The error is sing in \"Everyone in our van sing along to loud music.\""
+      ],
+      misconception: "A common mix-up is thinking a verb with an s is wrong when the line names a crowd. Everyone is still treated as one.",
+      why: "The error is in \"Everyone in our van sing along to loud music.\" Everyone is treated as one, so the verb should be sings.",
+      like: ["SK-GUM5-4-P4"]
+    },
+    {
+      id: "SK-GUM5-4-S02",
+      type: "ms",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.L.GC.1:I:use-indefinite-pronouns-with-correct-agreement"
+      ],
+      passages: [],
+      prompt: "Pick the TWO lines that pair the pronoun with the right verb.",
+      pick: 2,
+      choices: [
+        { text: "Somebody leave coats on buses." },
+        { text: "Nobody in my family likes cold soup.", correct: true },
+        { text: "Both of those swings is empty." },
+        { text: "Many of those clowns juggles three balls." },
+        { text: "Both of our puppies chew on ropes.", correct: true }
+      ],
+      clue: "Find the pronoun in each line. Ask whether it goes with one or with more than one.",
+      hints: [
+        "Find the pronoun in each line. Ask whether it goes with one or with more than one.",
+        "Pick TWO. Read each pronoun with its verb and skip the words in between.",
+        "The line about the swings pairs a pronoun that means more than one with a verb made for one. Decide about the other four."
+      ],
+      how: [
+        "Pair each pronoun with its verb.",
+        "Nobody is treated as one, so \"Nobody in my family likes cold soup.\" fits.",
+        "Both means more than one, so \"Both of our puppies chew on ropes.\" fits.",
+        "The other three do not match: Many of those clowns juggles, Somebody leave, and Both of those swings is."
+      ],
+      misconception: "A common mix-up is picking a line because its verb sounds right beside the noun. Pair the verb with the pronoun instead.",
+      why: "The answers are \"Nobody in my family likes cold soup.\" and \"Both of our puppies chew on ropes.\" Nobody is treated as one, and both means more than one. The others should say \"Many of those clowns juggle,\" \"Somebody leaves\" and \"Both of those swings are.\"",
+      like: ["SK-GUM5-4-P5"]
+    },
+    {
+      id: "SK-GUM5-4-S03",
+      type: "dropdown",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.L.GC.1:I:use-indefinite-pronouns-with-correct-agreement"
+      ],
+      passages: ["p4"],
+      prompt: "Line 2 needs the right verb. Pick the form that fits the blank.",
+      text: "Nobody {0} to fill the water bowl each morning.",
+      slots: [
+        {
+          options: ["forgets", "forget", "forgetting"],
+          answer: 0
+        }
+      ],
+      clue: "Ask whether Nobody is treated as one or as more than one. Then think about what that means for the verb.",
+      hints: [
+        "Ask whether Nobody is treated as one or as more than one. Then think about what that means for the verb.",
+        "Say each choice in the blank. Think about whether it goes with one person or with several.",
+        "One choice ends in ing and is not a whole verb here. Decide between the other two."
+      ],
+      how: [
+        "Read line 2. The pronoun is Nobody.",
+        "Nobody is treated as one, so it takes the singular verb.",
+        "The answer is forgets."
+      ],
+      misconception: "A common mix-up is dropping the s because the family has many members. Nobody is still treated as one.",
+      why: "The answer is forgets. Nobody is treated as one, so it takes forgets. Forget goes with plural words, and forgetting is not a whole verb here.",
+      like: ["SK-GUM5-4-C03"]
+    },
+    {
+      id: "SK-GUM5-4-S04",
+      type: "mc",
+      points: 1,
+      dok: 1,
+      std: [
+        "3.L.GC.1:I:use-indefinite-pronouns-with-correct-agreement"
+      ],
+      passages: ["p4"],
+      prompt: "Line 9 is the one with a problem. Pick the version that is written right.",
+      choices: [
+        { text: "Everybody have chores on our farm." },
+        { text: "Everybody has chores on our farm.", correct: true },
+        { text: "Everybody having chores on our farm." },
+        { text: "Everybody do have chores on our farm." }
+      ],
+      clue: "Find the pronoun that starts the line. Then check which verb goes with it.",
+      hints: [
+        "Find the pronoun that starts the line. Then check which verb goes with it.",
+        "Look at the verb part in each choice and ask whether it goes with one or with more than one.",
+        "One choice has having with no helper word, so it is not a whole line. Decide among the other three."
+      ],
+      how: [
+        "Find the pronoun at the start: Everybody.",
+        "Everybody is treated as one, so it takes a singular verb.",
+        "The answer is \"Everybody has chores on our farm.\""
+      ],
+      misconception: "A common mix-up is choosing have because the farm has many people. Everybody is treated as one.",
+      why: "The answer is \"Everybody has chores on our farm.\" Everybody is treated as one, so it takes has. Have and do have go with plural words, and having has no helper word.",
+      like: ["SK-GUM5-4-C04"]
+    },
+    {
+      id: "SK-GUM5-4-S05",
+      type: "ebsr",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.L.GC.1:I:use-indefinite-pronouns-with-correct-agreement"
+      ],
+      passages: ["p4"],
+      prompt: "Work in two steps.",
+      partA: {
+        prompt: "Find the line in paragraph 2 whose action word clashes with the word that starts it.",
+        choices: [
+          { text: "On cold days, hens scratch at dusty ground." },
+          { text: "Many of those chicks peep under warm lamps." },
+          { text: "Somebody collect eggs after breakfast.", correct: true },
+          { text: "Each of our nests holds soft hay." }
+        ]
+      },
+      partB: {
+        prompt: "Which statement explains your first choice?",
+        choices: [
+          { text: "Somebody counts as one person, so its action word gets an s.", correct: true },
+          { text: "Somebody counts as many people, so its action word stays bare." },
+          { text: "Only lines about hens or chicks give action words an s." },
+          { text: "Pronouns never change action words, so any verb works everywhere." }
+        ]
+      },
+      clue: "Find the first word of each line. Then ask which statement fits the line whose verb does not go with it.",
+      hints: [
+        "Find the first word of each line. Then ask which statement fits the line whose verb does not go with it.",
+        "Read each line in the second paragraph and pair its first word with its verb.",
+        "The line with Each already pairs it with a verb that fits. Check the other three."
+      ],
+      how: [
+        "Part A: read each line in the second paragraph and pair each pronoun with its verb.",
+        "In \"Somebody collect eggs after breakfast.\" the pronoun Somebody does not match the verb collect.",
+        "Part A answer: Somebody collect eggs after breakfast.",
+        "Part B answer: \"Somebody counts as one person, so its action word gets an s.\""
+      ],
+      misconception: "A common mix-up is leaving the s off because the farm has many people. Somebody is still treated as one.",
+      why: "Part A: Somebody collect eggs after breakfast. Part B: \"Somebody counts as one person, so its action word gets an s.\" The line should say collects. The other lines already pair a pronoun with a verb that fits.",
+      like: ["SK-GUM5-4-C05"]
+    },
+    {
+      id: "SK-GUM5-4-S06",
+      type: "hottext",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.L.GC.1:I:use-indefinite-pronouns-with-correct-agreement"
+      ],
+      passages: ["p5"],
+      prompt: "Lines 2 to 6 hold two mistakes in verb choice. Mark both.",
+      targets: ["p5:1:2", "p5:1:3", "p5:1:4", "p5:2:1", "p5:2:2"],
+      answer: ["p5:1:3", "p5:2:1"],
+      pick: 2,
+      clue: "Find the pronoun in each line. Check whether it is treated as one or means more than one, and whether its verb fits.",
+      hints: [
+        "Find the pronoun in each line. Check whether it is treated as one or means more than one, and whether its verb fits.",
+        "Go through the five lines one by one. Pick TWO.",
+        "In line 6, the pronoun Many goes with a verb that fits. Check the other four."
+      ],
+      how: [
+        "Pair each pronoun with its verb in the five lines.",
+        "In line 3, Both means more than one, so sets does not match. It should be set.",
+        "In line 5, Nobody is treated as one, so speak does not match. It should be speaks.",
+        "Lines 2, 4 and 6 already pair each pronoun with a verb that fits."
+      ],
+      misconception: "A common mix-up is marking lines just because the verb has no s. Nobody needs a verb with an s, and Both needs one without.",
+      why: "The answers are line 3 and line 5. In line 3, Both means more than one, so sets should be set. In line 5, Nobody is treated as one, so speak should be speaks. Lines 2, 4 and 6 are written correctly.",
+      like: ["SK-GUM5-4-C06"]
+    },
+    {
+      id: "SK-GUM5-4-S07",
+      type: "ms",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.L.GC.1:I:use-indefinite-pronouns-with-correct-agreement"
+      ],
+      passages: [],
+      prompt: "Two of these lines are written correctly. Mark them.",
+      pick: 2,
+      choices: [
+        { text: "Everyone in our group bring snacks." },
+        { text: "Nobody on that late bus wave at drivers." },
+        { text: "Everybody in our choir wears blue scarves.", correct: true },
+        { text: "Both of her mugs is on shelves." },
+        { text: "Both of my uncles tie ropes to docks.", correct: true }
+      ],
+      clue: "Look at the pronoun in each line. Check whether it is treated as one or means more than one.",
+      hints: [
+        "Look at the pronoun in each line. Check whether it is treated as one or means more than one.",
+        "Pick TWO. In some lines the verb is made for one but the pronoun needs the other kind, or the other way around.",
+        "In the line about the mugs, Both means more than one, and the verb is made for one. Decide about the other four."
+      ],
+      how: [
+        "Pair each pronoun with its verb.",
+        "Everybody is treated as one, so \"Everybody in our choir wears blue scarves.\" fits.",
+        "Both means more than one, so \"Both of my uncles tie ropes to docks.\" fits.",
+        "The other three do not match: Everyone bring, Both of her mugs is, and Nobody wave."
+      ],
+      misconception: "A common mix-up is trusting a line that sounds fine when it is read fast. Pair the pronoun with its verb.",
+      why: "The answers are \"Everybody in our choir wears blue scarves.\" and \"Both of my uncles tie ropes to docks.\" The others should say \"Everyone brings,\" \"Both of her mugs are\" and \"Nobody waves.\"",
+      like: ["SK-GUM5-4-C07"]
+    },
+    {
+      id: "SK-GUM5-4-S08",
+      type: "match",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.L.GC.1:I:use-indefinite-pronouns-with-correct-agreement"
+      ],
+      passages: [],
+      prompt: "Sort these lines by the verb their blank needs.",
+      cols: ["rides", "ride"],
+      rows: [
+        { text: "Everyone ___ in our front boat.", answer: 0 },
+        { text: "Both of my aunts ___ on that ferry.", answer: 1 },
+        { text: "Nobody ___ on slow trains.", answer: 0 },
+        { text: "Many of those boys ___ on big wheels.", answer: 1 }
+      ],
+      clue: "Look at each pronoun. Does it count as one or as more?",
+      hints: [
+        "Look at each pronoun. Does it count as one or as more?",
+        "Take one row at a time. Cover the words after the pronoun and read the pronoun with each verb.",
+        "Nobody is treated as one. Decide about the other rows."
+      ],
+      how: [
+        "Look at the pronouns: Everyone, Both, Nobody and Many.",
+        "Everyone and Nobody are treated as one, so those rows take the verb that ends in s.",
+        "Both and Many mean more than one, so those rows take the verb with no s."
+      ],
+      misconception: "A common mix-up is matching the verb to the plural word near the blank, such as aunts or boys. Match it to the pronoun.",
+      why: "Everyone rides and Nobody rides, because everyone and nobody are treated as one. Both of my aunts ride and Many of those boys ride, because both and many mean more than one.",
+      like: ["SK-GUM5-4-C08"]
+    },
+    {
+      id: "SK-GUM5-4-S09",
+      type: "mc",
+      points: 1,
+      dok: 3,
+      std: [
+        "3.L.GC.1:I:use-indefinite-pronouns-with-correct-agreement"
+      ],
+      passages: ["p5"],
+      prompt: "Compare sing in line 8 with goes in line 10. What makes their endings differ?",
+      choices: [
+        { text: "Goes is a mistake, since guests are several and sit right next to that verb in line 10." },
+        { text: "Both means two girls, so sing stays plain. Each means one guest, so goes takes s.", correct: true },
+        { text: "Sing stays plain just since line 8 appears early on that page." },
+        { text: "Line 8 should read sings, since both means a single girl there." }
+      ],
+      clue: "Ask which pronoun starts each line. Is it a word for one, or for more than one?",
+      hints: [
+        "Ask which pronoun starts each line. Is it a word for one, or for more than one?",
+        "Reread line 8 and line 10 side by side. Look at the first word of each.",
+        "Line 8 is correct as written, so a choice that calls it wrong cannot be the answer. Check the other choices."
+      ],
+      how: [
+        "Read line 8: Both is a word for two, so its verb sing has no s.",
+        "Read line 10: Each is a word for one at a time, so its verb goes ends in s.",
+        "The answer is \"Both means two girls, so sing stays plain. Each means one guest, so goes takes s.\""
+      ],
+      misconception: "A common mix-up is letting the noun after the pronoun pick the verb. The pronoun picks it.",
+      why: "The answer is \"Both means two girls, so sing stays plain. Each means one guest, so goes takes s.\" The pronouns decide the verbs, so both lines are correct. My sisters and our guests are the nouns that follow, but they do not choose the verb.",
+      like: ["SK-GUM5-4-C09"]
+    },
+    {
+      id: "SK-GUM5-4-S10",
+      type: "dropdown",
+      points: 1,
+      dok: 1,
+      std: [
+        "3.L.GC.1:I:use-indefinite-pronouns-with-correct-agreement"
+      ],
+      passages: ["p5"],
+      prompt: "Line 9 has a verb mistake. Pick the right form.",
+      text: "Everybody {0} loudly as lights flash.",
+      slots: [
+        {
+          options: ["cheers", "cheer", "cheering"],
+          answer: 0
+        }
+      ],
+      clue: "Ask whether Everybody is treated as one or as more than one.",
+      hints: [
+        "Ask whether Everybody is treated as one or as more than one.",
+        "Say each choice in the blank and think about which one goes with the pronoun.",
+        "One choice ends in ing and is not a whole verb here. Decide between the other two."
+      ],
+      how: [
+        "Read line 9. The pronoun is Everybody.",
+        "Everybody is treated as one, so it takes the singular verb.",
+        "The answer is cheers."
+      ],
+      misconception: "A common mix-up is dropping the s because many people cheer at once. Everybody is still treated as one.",
+      why: "The answer is cheers. Everybody is treated as one, so it takes cheers. Cheer goes with plural words, and cheering is not a whole verb here.",
+      like: ["SK-GUM5-4-C10"]
+    },
+    {
+      id: "SK-GUM5-4-S11",
+      type: "hottext",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.L.GC.1:I:use-indefinite-pronouns-with-correct-agreement"
+      ],
+      passages: ["p6"],
+      prompt: "Read lines 5 to 9. Which line needs its verb changed?",
+      targets: ["p6:2:1", "p6:2:2", "p6:2:3", "p6:2:4", "p6:2:5"],
+      answer: ["p6:2:2"],
+      pick: 1,
+      clue: "Find the pronoun in each line. Check whether it is treated as one or means more than one, and whether its verb fits.",
+      hints: [
+        "Find the pronoun in each line. Check whether it is treated as one or means more than one, and whether its verb fits.",
+        "Go through the five lines one by one. Pick ONE.",
+        "In line 9, the pronoun Everybody goes with a verb that fits. Check the other four."
+      ],
+      how: [
+        "Pair each pronoun with its verb in the five lines.",
+        "In line 5, Nobody takes laughs. In line 7, Many takes look. In line 8, Both takes wave. In line 9, Everybody takes claps.",
+        "In line 6, Somebody is treated as one, so make does not match. It should be makes."
+      ],
+      misconception: "A common mix-up is thinking a verb that ends in s is the problem. Somebody needs a verb that ends in s.",
+      why: "The answer is line 6, \"Somebody make the sign for friend with two hands.\" Somebody is treated as one, so make should be makes. Lines 5, 7, 8 and 9 each pair a pronoun with a verb that fits.",
+      like: ["SK-GUM5-4-C11"]
+    },
+    {
+      id: "SK-GUM5-4-S12",
+      type: "dropdown",
+      points: 1,
+      dok: 2,
+      std: [
+        "3.L.GC.1:I:use-indefinite-pronouns-with-correct-agreement"
+      ],
+      passages: ["p6"],
+      prompt: "Line 10 has a verb mistake. Pick the right form.",
+      text: "Both of those helpers {0} goodbye as bells ring.",
+      slots: [
+        {
+          options: ["waves", "wave", "waving"],
+          answer: 1
+        }
+      ],
+      clue: "Ask whether Both is treated as one or means more than one. Then think about what that means for the verb.",
+      hints: [
+        "Ask whether Both is treated as one or means more than one. Then think about what that means for the verb.",
+        "Say each choice in the blank. Think about whether it goes with one helper or with two.",
+        "One choice ends in ing and is not a whole verb here. Decide between the other two."
+      ],
+      how: [
+        "Read line 10. The pronoun is Both.",
+        "Both means more than one, so it takes the plural verb.",
+        "The answer is wave."
+      ],
+      misconception: "A common mix-up is adding an s because helpers ends in s. The verb must go with Both.",
+      why: "The answer is wave. Both means more than one, so it takes wave. Waves goes with one, and waving is not a whole verb here.",
+      like: ["SK-GUM5-4-C12"]
+    },
+    {
+      id: "SK-GUM5-4-S13",
+      type: "ms",
+      points: 2,
+      dok: 3,
+      std: [
+        "3.L.GC.1:I:use-indefinite-pronouns-with-correct-agreement"
+      ],
+      passages: [],
+      prompt: "Lena claims that both and many must be followed by a verb ending in s. Pick the TWO lines that disprove her claim.",
+      pick: 2,
+      choices: [
+        { text: "Both of those dancers wear bright scarves.", correct: true },
+        { text: "Everybody in our van sings loudly." },
+        { text: "Many of those pies cool by open windows.", correct: true },
+        { text: "Nobody in our kitchen cooks without aprons." },
+        { text: "Each of those dancers wears bright scarves." }
+      ],
+      clue: "Lena makes a rule about certain words. Decide whether her rule is true for each line.",
+      hints: [
+        "Lena makes a rule about certain words. Decide whether her rule is true for each line.",
+        "Pick TWO. Find the pronoun in each line, then check whether Lena's rule is about that pronoun.",
+        "The line about the van has a pronoun that is not in Lena's rule. Decide about the other four."
+      ],
+      how: [
+        "Look at Lena's claim: both and many must be followed by a verb ending in s.",
+        "In \"Both of those dancers wear bright scarves.\" both goes with wear, which has no s.",
+        "In \"Many of those pies cool by open windows.\" many goes with cool, which has no s.",
+        "The other three have pronouns that Lena's claim does not name, so they do not disprove it."
+      ],
+      misconception: "A common mix-up is choosing the lines whose verbs end in s, because Lena's claim talks about s. Her claim is wrong when both or many goes with a verb that has no s.",
+      why: "The answers are \"Both of those dancers wear bright scarves.\" and \"Many of those pies cool by open windows.\" Both and many mean more than one, so their verbs have no s, and that disproves Lena's claim. The other three use pronouns that her claim does not name.",
+      like: ["SK-GUM5-4-C13"]
+    },
+    {
+      id: "SK-GUM5-4-S14",
+      type: "dropdown",
+      points: 2,
+      dok: 2,
+      std: [
+        "3.L.GC.1:I:use-indefinite-pronouns-with-correct-agreement"
+      ],
+      passages: [],
+      prompt: "Pick the words that complete the line below.",
+      text: "Many of the ducks {0} bread from our hands, and each of the geese {1} a different spot.",
+      slots: [
+        {
+          options: ["peck", "pecks", "pecking"],
+          answer: 0
+        },
+        {
+          options: ["picks", "pick", "picking"],
+          answer: 0
+        }
+      ],
+      clue: "Look at the pronoun in front of each blank. Check whether it is treated as one or means more than one.",
+      hints: [
+        "Look at the pronoun in front of each blank. Check whether it is treated as one or means more than one.",
+        "Work on one blank at a time. Say each choice aloud and ask which goes with the pronoun.",
+        "In each blank, one choice ends in ing and is not a whole verb here. Decide about the other choices."
+      ],
+      how: [
+        "The first blank follows Many, which means more than one, so it takes the verb with no s.",
+        "The second blank follows each, which is treated as one, so it takes the verb that ends in s.",
+        "The answers are peck and picks."
+      ],
+      misconception: "A common mix-up is picking the same kind of verb twice. Many takes no s, and each takes an s.",
+      why: "The answers are peck and picks. Many means more than one, so it takes peck. Each is treated as one, so it takes picks. The ing choices are not whole verbs here.",
+      like: ["SK-GUM5-4-C14"]
+    },
+    {
+      id: "SK-GUM5-4-S15",
+      type: "mc",
+      points: 1,
+      dok: 3,
+      std: [
+        "3.L.GC.1:I:use-indefinite-pronouns-with-correct-agreement"
+      ],
+      passages: [],
+      prompt: "Mia's line reads, \"Both of the pies is cooling on the sill.\" She defends it: both names a pair, so one thing. Is Mia correct?",
+      choices: [
+        { text: "Yes. Pair counts as one thing, so a verb for one thing fits here." },
+        { text: "Yes. Verbs near line ends never change, so any pronoun fits." },
+        { text: "No. Pair means two pies, so the verb needs a plural form: are cooling.", correct: true },
+        { text: "No. Both means two pies, so the verb needs the form was cooling, which suits plurals." }
+      ],
+      clue: "Find the pronoun. Then ask whether it names one thing or more than one.",
+      hints: [
+        "Find the pronoun. Then ask whether it names one thing or more than one.",
+        "Think about Mia's idea that a pair is one thing. Ask what both really tells about the pies.",
+        "The word was in one choice goes with one thing, not with more than one. Check the other choices."
+      ],
+      how: [
+        "Find the pronoun: Both.",
+        "Both means two pies, even if the pies make a pair, so it takes a plural verb.",
+        "The answer is \"No. Pair means two pies, so the verb needs a plural form: are cooling.\""
+      ],
+      misconception: "A common mix-up is thinking a pair is a single thing. Both still means more than one, so its verb must be plural.",
+      why: "The answer is \"No. Pair means two pies, so the verb needs a plural form: are cooling.\" Mia should write are cooling. Both names two pies, so it needs a plural verb. Was is made for one.",
+      like: ["SK-GUM5-4-C15"]
+    }
+  ],
+  addons: {
+    "SK-GUM5-4-P1": {
+      hints: [
+        "Ask whether Everyone counts as one or as more than one. Then think about which verb goes with that.",
+        "Skip the words on the bus. Read the pronoun with each choice.",
+        "One choice, be, does not fit this sentence by itself. Decide between the other two."
+      ],
+      how: [
+        "Find the pronoun at the start: Everyone.",
+        "Everyone is treated as one, so it takes a singular verb.",
+        "The answer is is: \"Everyone on the bus is ready for the field trip.\""
+      ],
+      misconception: "A common mix-up is thinking everyone means many people, so it needs a plural verb. Everyone is treated as one."
+    },
+    "SK-GUM5-4-P2": {
+      hints: [
+        "Find the pronoun in each sentence. Then decide whether it goes with one or with more than one.",
+        "Read each pronoun with its verb. Skip the words that come between them.",
+        "The sentence about the cookies pairs both, which means more than one, with the verb is. Check the other choices."
+      ],
+      how: [
+        "Find the pronoun in each sentence.",
+        "Many means more than one, so it takes have. The other three each pair a pronoun with the wrong kind of verb.",
+        "The answer is \"Many of the flowers have yellow petals.\""
+      ],
+      misconception: "A common mix-up is matching the verb to the word beside it, such as boys or cookies. Match the verb to the pronoun."
+    },
+    "SK-GUM5-4-P3": {
+      hints: [
+        "Look at the first word of each sentence. Ask whether it is treated as one or means more than one.",
+        "Do one row at a time. Cover the words after the pronoun and read the pronoun with each verb.",
+        "In the row that starts with Both, the pronoun means more than one. Decide about the other rows."
+      ],
+      how: [
+        "Look at the pronouns: Everyone, Both, Each and Many.",
+        "Everyone and Each are treated as one, so those rows take is.",
+        "Both and Many mean more than one, so those rows take are."
+      ],
+      misconception: "A common mix-up is matching the verb to the word before the blank, such as shoes or apples. Match it to the pronoun."
+    },
+    "SK-GUM5-4-P4": {
+      hints: [
+        "Find the pronoun in each sentence and ask whether it goes with one or with more than one.",
+        "Read the five sentences one at a time. Pick ONE.",
+        "The sentence about the players pairs Each, which is treated as one, with has. Check the other four."
+      ],
+      how: [
+        "Pair each pronoun with its verb: Each has, Both live, Everyone likes, Many flies and Somebody left.",
+        "Each, Everyone and Somebody are treated as one, and Both means more than one. Left fits Somebody.",
+        "Many means more than one, so flies does not match. The error is flies in \"Many of the birds flies south for the winter.\""
+      ],
+      misconception: "A common mix-up is thinking a verb with an s is right after a plural noun such as birds. Many needs a verb with no s."
+    },
+    "SK-GUM5-4-P5": {
+      hints: [
+        "Find the pronoun in each sentence. Ask whether it goes with one or with more than one.",
+        "Pick TWO. Read each pronoun with its verb and skip the words in between.",
+        "The sentence about the books pairs Many, which means more than one, with the verb is. Decide about the other four."
+      ],
+      how: [
+        "Pair each pronoun with its verb.",
+        "Both means more than one, so \"Both of the kites are stuck in the tree.\" fits. Each is treated as one, so \"Each of the kids gets a sticker.\" fits.",
+        "The other three do not match: Everyone have, Many of the books is, and Both of the dogs barks."
+      ],
+      misconception: "A common mix-up is trusting the sentence that sounds right beside the noun. Match the verb to the pronoun."
+    }
+  },
+  /* B8:core:end */
   test: [
     { id: "SK-GUM5-4-T1", type: "mc", points: 1, dok: 2, passages: [],
       prompt: "Which sentence is correct?",

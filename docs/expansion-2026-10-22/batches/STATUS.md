@@ -76,13 +76,14 @@
 | B7b | 3.L.GC.1:R:capitalize-proper-nouns | NOT ACCEPTED: awaiting independent review | B7b-author-log.md; authored, not reviewed |
 | B7b | 3.L.GC.1:R:use-end-punctuation-period-exclamation-point-que | NOT ACCEPTED: awaiting independent review | B7b-author-log.md; authored, not reviewed |
 | B7b | 3.L.GC.1:R:form-plural-nouns-by-changing-y-to-ies | NOT ACCEPTED: awaiting independent review | B7b-author-log.md; authored, not reviewed |
-| B7b | 3.L.GC.1:R:use-personal-pronouns-subject-object-possessive | NOT ACCEPTED: awaiting independent review | B7b-author-log.md; authored, not reviewed |
-| B7b | 3.L.GC.1:R:use-frequently-occurring-prepositions | NOT ACCEPTED: awaiting independent review | B7b-author-log.md; authored, not reviewed |
+| B7b | 3.L.GC.1:R:use-personal-pronouns-subject-object-possessive | ACCEPTED | Second independent review ACCEPT (L6); open SHOULDs in B7b-review.md |
+| B7b | 3.L.GC.1:R:use-frequently-occurring-prepositions | ACCEPTED | Second independent review ACCEPT (L7); open SHOULDs in B7b-review.md |
 | B7b | 3.L.GC.1:R:use-commas-in-a-series-and-in-dates-addresses-sa | NOT ACCEPTED: awaiting independent review | B7b-author-log.md; authored, not reviewed |
 | B7b | 3.L.GC.1:R:form-and-use-verbs-by-adding-d-or-es | NOT ACCEPTED: awaiting independent review | B7b-author-log.md; authored, not reviewed |
 | B8a | 3.L.GC.1:C:form-and-use-prepositional-phrases | NOT ACCEPTED: awaiting independent review | B8a-author-log.md; authored, not reviewed |
 | B8a | 3.L.GC.1:C:form-and-use-comparative-and-superlative-adjecti | NOT ACCEPTED: awaiting independent review | B8a-author-log.md; authored, not reviewed |
 | B8a | 3.L.GC.1:C:ensure-pronoun-antecedent-agreement | NOT ACCEPTED: awaiting independent review | B8a-author-log.md; authored, not reviewed |
+| B8a | 3.L.GC.1:C:use-conventional-capitalization-quotation-marks- | NOT ACCEPTED: awaiting independent review | B8a-author-log.md; authored, not reviewed |
 
 "Accepted" means an independent reviewer blind-solved the items, found every key defensible, and found no hint ladder that leaves only the key (see AUTHOR-BRIEF rules). It does not mean the lesson has been tried by a child.
 

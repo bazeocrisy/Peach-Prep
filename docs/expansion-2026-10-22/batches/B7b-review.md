@@ -270,3 +270,173 @@ Blind 38 of 38 agree. Rule verified; two disputed words checked (M-W above).
 
 - Whether the player lets a child go back inside a set (relevant to the same-set giveaways); I did not test it. I did not test keyboard or screen-reader use.
 - No lesson, log or other file was edited; no git command was run.
+
+
+---
+
+## Second review (B7b lessons 6-9)
+
+Reviewer: independent second reviewer (did not author, did not write the first review). Lessons: 6 personal pronouns, 7 prepositions, 8 commas, 9 verbs with -d or -es (array indices 5-8 of `js/data/lessons/L-GUM2.js`; ids and order checked against the `B7b` rows of `STATUS.md` lines 79-82: pronouns, prepositions, commas, verbs). Final files at worktree commit fc9c50c. Read-only: no lesson edits, no git, nothing marked ACCEPTED. The local test server (port 8955) was started by me and is stopped by pid at the end.
+
+### Verdicts
+
+| Lesson | Verdict | MUST | SHOULD | NOTE |
+|---|---|---|---|---|
+| 6 Pronouns | ACCEPT (with SHOULDs) | 0 | 4 | 5 |
+| 7 Prepositions | ACCEPT (with SHOULDs) | 0 | 6 | 5 |
+| 8 Commas | REVISE | 1 | 6 | 7 |
+| 9 Verbs -d / -es | REVISE | 2 | 5 | 4 |
+
+Every first-review MUST (L6 three, L7 three, L8 four, L9 four in its verdict table; the rows are itemised below) is really fixed in the final files; I re-measured each (table below). The author log's "no hint narrows" and "twin vs core at most 0.209" are true on the author's tokeniser (letters only), and the keys are sound (119 of 120 blind). The new MUSTs are small and were introduced by the round-2 edits: one stem that prints another item's key (L8 C05 prints the key of C04), one stale `how`/`why` that explains a different verb (L9 S03), and one hint 3 that removes both wrong options (L9 C12 and S12).
+
+### Method and blindness
+
+- **Blind solve.** `scratchpad/b7c2/blind.js` loads `L-GUM2.js` in a Node `vm` sandbox with a mock `PP.addLesson` and prints, for each of lessons 6-9, the six drafts (no figures or alt text exist in these lessons: `fig:none` on all 24 drafts), every `core` item (refs resolved, so P4 and P5 included) and every `similar` item: 30 items per lesson, 120 in all. A whitelist prints only id, type, points, passage ids, `stem`, `prompt`, choice text, option text, dropdown text and slot options, hot-text targets (as sentence text), match rows and columns, and the pick count. Choices, options, slots, ebsr parts and hot-text target order are shuffled by a seeded LCG (`33000 + 1291 x lesson`; a different seed from the first review). No `correct`, `answer`, `why`, hints, `how`, `clue`, `misconception`, `like` or `addons` text was printed. Permutations went to `hidden-N.json` and were not opened until `ans6.json` to `ans9.json` were saved; then `grade.js` compared them with the data.
+- **Agreement: 119 of 120 (99.2%).** Lesson 6: 29 of 30; lessons 7, 8 and 9: 30 of 30. The one miss is **6-S07 Part A**: I picked "Us belongs to words that do things, but this spot is for the one who receives" (the exact reverse of the key, "Us goes with words that receive, but this spot is for the one who lets"). I misread the do/receive wording backwards. The first reviewer made the same slip on the same item, so this is a wording defect, not an answer-key error (SHOULD S6-1).
+- **How blind.** Fully blind for the 120 items. Before solving I had seen only the brief, the STATUS rows, file line numbers from two greps (one grep line printed the `why` of a Test item in lesson 6, which is not one of the 120), and the `blind.js` code of the first review (no answers). I read the first review and the author log only after `grade.js` had run, and dumped the keyed items (`dump.js`, `keyed-N.txt`) after that. Passages were read in full in the blind output.
+- **Scripted measurements on the final files** (all in `scratchpad/b7c2/`): `jac.js` and `jac_nd.js` (Jaccard, set and multiset, twin vs core on all 15 x 15 pairs, core vs core, twin vs twin; `jac_nd.js` ignores numerals, `jac.js` counts them), `jac_h.js` (same with hints, how and why added), `longest.js` (longest-key check on mc, ms, ebsr parts, dropdown slots, hot-text option lists), `leak.js` and `leak2.js` (key text of one item inside another item's surface, hot-text key sentence numbers named by other items of the set, dropdown keys inside stems), `dup.js 5|6` (n-gram scan of every item and passage against all of `js/data/**` strings, the other lessons of `L-GUM2.js`, and each lesson's own Teach, Learn, Together and Test), `hdup.js` (identical hint and how lines inside a lesson), `stray.js`, a points and DOK check, and a passage word and FK count.
+- **Browser (390 x 844, touch, `pp.path.v1` browse mode).** `run390.py` plays, for each lesson, all three core sets with real taps: three presses of Hint, then the key by tap (choice, hot-text option, `select` option for dropdowns, match buttons, both ebsr parts), Check, then "Try a similar question" and the same for the twin, then Next. **120 of 120 items (60 core, 60 twins) take the key and show "That's right"**; the Similar button appears after every one of the 60 core items; no horizontal overflow (`scrollWidth` 390 on every screen); every tap target at least 40 px tall and inside 391 px; zero page errors. This confirms the engine path, not the content: the taps use the data's own keys, and the content check is the blind solve above.
+
+### Verification of the first review's MUST and SHOULD items
+
+Status in the final files, re-measured (author-log claims were not trusted).
+
+| First-review item | Status | Evidence |
+|---|---|---|
+| L6 MUST C04/C12 frame repeat | FIXED | C04 options `they / them / their`, C12 `I / me / my`; item-text Jaccard no longer in any list above 0.25. Hint ladders still templated (SHOULD S6-4). |
+| L6 MUST C07/C10 same sentence | FIXED | C06 keys are sentences 2 and 4, C07 is sentence 8, C10 is sentence 1 (outside 2-6). |
+| L6 MUST S05 hint 3 stale | FIXED | Now "Whether a name is a leader or a helper does not decide the pronoun", which rules out a real distractor. |
+| L6 SHOULD C12 hint 2, S10 `like`, p5 sentence 5 `hers` referent, Learn It, C14 stem | FIXED | C12 H2 "Look at the word that comes right before the blank"; S10 is now an I-vs-me claim; p5 has "Grandma left her tools"; Learn 3 shows `mine` against `my`; C14 stem is plain. |
+| L6 SHOULD twin overlap | PARTLY | 0.184 / 0.208 max on letters-only tokens; 0.228 / 0.241 (S06 / C06) if numerals count. See S6-3. |
+| L7 MUST S13 hint 1 false | FIXED | "Both gaps need a preposition. Decide what each noun names." |
+| L7 MUST S12 `beside my side` | FIXED | Now `at my side`. |
+| L7 MUST P4 hint 3 names all three Where rows | FIXED | "Use the noun at the end of one group to sort it first." |
+| L7 SHOULD conjunction clauses (C05, C10, S08 A) | FIXED for the named items | `until sunset`, `until the end of recess`, `before sunrise`. One new clause use remains in S14 (S7-5). |
+| L7 SHOULD hint 2 states category, C04/C12 same key and distractor, Teach lacks along/toward | FIXED | C04 `near / until / during`, C12 `on / since / among`; Teach point 1 lists along and toward. |
+| L7 SHOULD P5 weak item, S10 distractors | NOT FIXED / PARTLY | P5 still in the fifteen; S10 distractors rewritten but the key is now the structural odd one (S7-2, S7-3). T4 longest key is fixed (no longer unique). |
+| L8 MUST C04 and C12 stem narrows | FIXED | Stems are neutral ("Which version of the place name is right for line 3?", "Which date fits line 5?"). |
+| L8 MUST C03/C10, C03/C07 overlap | FIXED | No longer in the over-0.25 list; C10 is now an address claim, C07 Part A options are reworded. |
+| L8 SHOULD address and closing never keyed; Learn It; C03 key vs Teach date; hint 2 of S01 and P3; `like` S10; S08 legacy near-copy; p1 line 12; Learn 3 "and Utah" | FIXED | C10 keys the address, C07 keys the closing; Learn 3 shows greeting and closing; C03 key is `June 14, 2026` (Teach uses July 9); p1 line 12 now `Your granddaughter,`. |
+| L8 SHOULD `like` S05 to C05 different rule | NOT FIXED | See S8-3. |
+| L9 MUST C13/S13 hint 1 false | FIXED | "Each blank needs a verb that tells about one person now." |
+| L9 MUST C04/C12 identical hints | FIXED | C12 is now a vowel-plus-y contrast with its own hints (but see new MUST 9-2). |
+| L9 MUST C03/C07 distractor template | FIXED | Not in any overlap list. |
+| L9 SHOULD S02 tense cues, hint 3 of C07/S07, set 2 sentence stacking, Teach and Learn words reused | FIXED | S02 rows have Mondays / These days / On weekends / Each week; C07 is sentence 7 and C10 is sentence 9 (outside C06's keys 2 and 5). |
+
+### Measurements
+
+**Whole-text Jaccard** (stem, prompt, text, choices, slot options, rows, columns, both ebsr parts, hot-text target sentences; lowercase tokens). Limits: twin vs core at most 0.21 target, 0.30 MUST; core vs core at most 0.30.
+
+| Lesson | Twin vs core, max set / multiset, letters only | Twin vs core, numerals counted | Core vs core | Twin vs twin |
+|---|---|---|---|---|
+| 6 | 0.184 / 0.208 | 0.228 / 0.241 (S06/C06) | 0.300 / 0.279 (C05/C10) | 0.180 / 0.211 |
+| 7 | 0.195 / 0.209 | 0.186 / 0.221 (S11/C11) | 0.269 / 0.242 (C03/C07) | 0.281 / 0.225 (S11/S12) |
+| 8 | 0.209 / 0.208 | 0.225 / 0.238 (S11/C11) | 0.242 / 0.250 | 0.192 / 0.161 |
+| 9 | 0.198 / 0.191 | 0.198 / 0.231 (S06/C06) | 0.243 / 0.235 | 0.187 / 0.205 |
+
+No pair reaches 0.30 on any tokenisation (no MUST by the overlap rule). The author's figures match the letters-only column. Numerals (`sentences 2 to 6`, `(5)` markers) are visible item text, and a numerals-counted reading puts six twin pairs at 0.22-0.24 (SHOULD, tokeniser-dependent). L6 C05/C10 sits exactly on the 0.300 core limit with numerals ignored. If the hints, how and why are added to the text, twin vs core is 0.3-0.65 in all four lessons (L6 S12/C04 0.59/0.65); that is by design, but it shows how much of each twin ladder is a copy (SHOULD S6-4, S8-7).
+
+**Longest key.** Key uniquely longest in 1 of 28 choice sets in lesson 6 (C08, one of two keys, 50 characters against 43) and 0 of 28 in lessons 7, 8 and 9. Practice and Test: L6 T4 (38 against 40; no), L8 T5 (40 against 35, NOTE), L9 T4 (36 against 35, negligible).
+
+**Points, DOK, std, form counts.** Points agree with format in all 120 items (choose-two, two-slot dropdowns, ebsr and match are 2). DOK per fifteen is 1 / 10 / 4 in every lesson; DOK 3 items are C05, C07, C10, C15. `std` equals the lesson code on every new item. No `cr` items exist in lessons 6-9.
+
+**Leak scan.** One real leak: 8-C05 stem prints the key of 8-C04 (see M8-1). Hot-text key sentence numbers are not named by other items of the same set in any lesson (C07 and C10 are outside C06's range everywhere). C12 in lessons 6, 7, 8 and 9 repairs a non-key distractor of C11 (NOTE: it tells the child that sentence is wrong, not which are the keys).
+
+**Duplicate scan.** Six-gram hits over all `js/data` and the lessons' own Teach, Learn, Together and Test: only generic prompt boilerplate ("select the sentence that has a", "two of sentences 2 to 6", "answer part a first then", "part a then move to part b") and five-gram near-copies noted below. No whole item or passage repeats elsewhere.
+
+### Web and dictionary verification
+
+- **between is not limited to two things.** https://www.merriam-webster.com/dictionary/between : the usage note calls "only two" "a persistent but unfounded notion" and allows more than two or an unspecified number; the examples all name two boundaries ("between the butcher shop and the pharmacy", "between the desk and the wall"). The lesson wording "usually goes with two things" is therefore accurate, and every keyed `between` error (`between the wall`, `between the ceiling`, `between the ladder`, `between noon`) has a single object, which M-W gives no sense for. Supports L7 S03, S05, C11 (5) and (7) of p6.
+- **until is a preposition before a noun and a conjunction before a clause.** https://www.merriam-webster.com/dictionary/until : `stayed until morning`, `until Monday`, `until the end of recess` are prepositional; `we played until it got dark` is a conjunction. Supports the round-2 noun objects (L7 C05, C10). Same page family for before and after (checked by the first review, https://www.merriam-webster.com/dictionary/before) is the reason S14 option E, `after the sun went down`, is a clause use (S7-5).
+- **Pronoun case.** https://www.kent.edu/writingcommons/using-case-subjective-objective-possessive : subjective I, you, he, she, it, we, they; objective for receiving the action; stand-alone owning words `mine, yours, his, hers, ours, theirs` and noun-modifying `my, your, his, her, its, our, their`; "Jane got sunburn on hers shoulders" is wrong (supports L6 C14 and S14 keys); `John, Maria, Marty, and me went` is corrected to `and I`, with the cover-up check, as the lesson teaches. Every L6 key agrees.
+- **Commas.** https://fscj.pressbooks.pub/successfulwriting/chapter/3-1-commas/5 : comma between day and year, none between month and day; a comma after the street and after the city in an address; comma after a greeting and after a closing; **the page also says there is no comma before the final and in a series**, so the serial comma the lesson requires is a style choice (NOTE N8-1; no item turns on it: every list distractor has another error). https://owl.purdue.edu/owl/general_writing/punctuation/commas/index.html : commas set off items in dates (except month and day), addresses (except the street number and name) and geographical names, and separate three or more items in a series; the page is silent on the Oxford comma and on greetings and closings. Supports L8 keys C03, C08, C09, C10, C11, C12, C13, S03, S09, S10, S14.
+- **Verb spelling.** https://www.k12reader.com/spelling/plurals_nouns_and_verbs_ending_in_y.pdf : consonant plus y changes to -ies/-es (`try tries`), vowel plus y adds -s (`play plays`, `enjoy enjoys`). Supports L9 C04, C12, S04, S12 and the `spray sprays`, `copy copies`, `hurry hurries`, `carry carries` keys. The -es after s, sh, ch, x, z rule and silent-e -d rule are from the same sources the first review used (https://human.libretexts.org/Courses/Irvine_Valley_College/The_Grand_Grammar_Guide_(ESL_388)/01%3A_UNIT_1-_Verb_Tense_Review_(Theme-_Identity)/1.15%3A_Parts_of_Speech/1.15.03%3A_Spelling_Rules_for_Nouns_and_Verbs); no disputed variant found among `brushs`, `trys`, `passs`, `inviteed`, `dancd`, `catchs`, `rakeed`, `pitchs`, `latchs`, `shapeed`, `lovd`, `enjoyes`, `boxs`, `glueed`, `dashs`, `scratchs`.
+- **Official wording** (`js/data/standards.js`, and `docs/audits/work/official-gr3-gum.json`): L6 "Use personal pronouns (subject, object, and possessive)." (p. 15); L7 "Use frequently occurring prepositions." (p. 15); L8 "Use commas to separate items in a series and to format dates, addresses, salutations, and closings." (p. 15); L9 "Form and use verbs by adding -d or -es." (p. 16). The lesson content tests every named element.
+- **Could not verify:** the Merriam-Webster page for `out of` was not on the session allowlist, so "out of" as a compound preposition (L7 C11 sentence 6) rests on the web search result for compound prepositions only (e.g. https://fiveable.me/english-grammar-usage/key-terms/compound-preposition, not fetched).
+
+### Lesson 6: personal pronouns (ACCEPT)
+
+Strengths: keys agree with an independent solve on 29 of 30; the cover-up strategy is used consistently; hot-text ranges are scoped; Learn It now shows both stand-alone and noun-modifying owning words; every first-review MUST is fixed; the DOK 3 claim items (C10, C15, S10, S15) and the "same words, different job" item (C05) are good.
+
+| Sev | Item | Finding | Fix |
+|---|---|---|---|
+| SHOULD | S6-1: 6-C07 Part A and 6-S07 Part A wording | Part A keys read "Us gets the action, but here the pronoun does the teaching, so it should be we" and "Us goes with words that receive, but this spot is for the one who lets." The mirrored distractors ("Us belongs to words that do things, but this spot is for the one who receives") are the same sentence reversed. I slipped on S07 A blind and so did the first reviewer; for a third grader the abstraction is heavier than the skill. | Plain terms: "Us is for the one who gets the action, but here the word does the teaching, so it should be we." Make the reversed distractor less of an exact mirror. |
+| SHOULD | S6-2: 6-C05 / 6-C10 overlap | 0.300 set (numerals ignored), 0.288 (numerals counted): on the core-vs-core limit; both are DOK 3 "why / which reply" items on drafts with a name and a pronoun. | Vary C10's reply options (they share "cover up", "sounds") or make C05's options less like C10's. |
+| SHOULD | S6-3: twin overlap | S06/C06 0.228/0.241 and S11/C11 0.188/0.212 when numerals count; S05/C05, S08/C08 0.20-0.21. Within the author's tokeniser all are at most 0.209, so this is borderline, not a defect. | Vary the target sentences' names and verbs in S06 and S11. |
+| SHOULD | S6-4: templated ladders in C04, C12, S04, S12 | H1 is word for word the same in all four ("A pronoun takes the place of a noun. Decide what job the blank does in the sentence."); H2 is "right after the blank" in three of them; H3 is the same sentence frame ("X tells who owns something, and it needs a noun after it. Look at what follows the blank."); how step 2 is identical. The items differ only by sentence, pronoun triple and one noun in the how. | Give each ladder its own wording (for example name the verb the child should read next to the blank in one item and the word before the blank in another). |
+| NOTE | 6-C13 / S13 slot 0 | H2 "The first blank comes right before a noun" plus Teach point 3 means `their` is the only option that fits; slot 0 has three options by count but one in substance. Allowed (the key is not named). | none |
+| NOTE | 6-C08 | Key `Coach Dunn asked them to carry the equipment bags.` is the uniquely longest choice (50 against 43), one of two keys. | none, or trim. |
+| NOTE | p1 sentence 5 | `Mrs. Reed handed Jada a dollar, and she smiled back.` is ambiguous (Mrs. Reed or Jada) in a pronoun lesson; no item targets it. | Optional. |
+| NOTE | 6-C05 / 6-S05 keys | The `why` keys name the job of the pronoun in sentence 2 and 3 (and 2 and 3 of p4), which is the answer to C03 and S03 in the same draft. It is the architecture's design (explain-the-pair after find-the-fix) and no key is printed. | none |
+| NOTE | Near-copies | S14 key `Theirs dog barked at the mail truck.` shares its frame with a different-skill L-GUM1 item (`{0} barked at the mail truck.`); C08 option `built a snow fort in` appears in T-T1. Different skills. | none |
+
+### Lesson 7: prepositions (ACCEPT)
+
+Strengths: place against time is a clean contrast; every error is a real mismatch; all 30 keys agree blind; the hint ladders name at most one wrong choice except as noted; C04/C12 and S04/S12 are now genuinely different (`near`, `on`, `by`, `at`); the noun-object rewrite of the clause items is done; Teach lists along and toward; DOK 3 claim items work.
+
+| Sev | Item | Finding | Fix |
+|---|---|---|---|
+| SHOULD | S7-1: 7-C10 hint 3 | "Until does not need a day or a name after it" refers to two wrong choices ("followed by a day or a month" and "only before a person's name"); two choices stay live (key and the "word for where" reply), so the ladder is allowed, but the brief rule is one named wrong choice. | "Until does not need a name after it. Think about the other choices." |
+| SHOULD | S7-2: 7-S10 | The key `Dark is a moment, so before already suits sentence 9.` is the only option that does not begin `Dani is ...`; the three distractors share that opening, so a test-wise child finds the key by shape. Distractor D `under is a word for water` is a false statement a child would not believe. | Open all four with the same shape (`Dani is wrong, since dark is a moment and before already fits` / `Dani is right, since...`), and give D a believable error. |
+| SHOULD | S7-3: 7-P5 and 7-C14 (and S01/S14) | P5 `The fish swam during the bowl.` is self-evidently wrong (the first review's SHOULD, still in the fifteen) and C14 is the same item again: hot-text, five options, one `during` plus a place (`during the kitchen counter`), same how line "Look at the noun after each preposition." (identical in P5, C08, C14, S01, S08, S14). | Give C14 a different error (a place word before a time noun, for example `We met on lunch`) and move P5 out of the fifteen or make it a draft-based item. |
+| SHOULD | S7-4: Teach does not cover several keys; C11 (4) | Keys and keyed sentences use `at` (C13 slot 1 `at noon`, S08 `at six`), `inside` and `out of` (C11 keys), `from` (S07 B) and distractors `since`, `among`, which Teach never lists; `out of` is two words, against Teach's "a small word". Elimination works, but Learn and Teach do not model them. Also C11 sentence (4) `set the muffin tin across the oven for twenty minutes` is odd rather than plainly wrong (a tin can lie across an oven), so the item's second wrong sentence is less defensible than (5) and (7). | Add `at`, `inside`, `from`, `out of` to Teach point 1 or 2; replace (4) with a plainly wrong preposition (`during the oven`). |
+| SHOULD | S7-5: 7-S14 option E | `The soccer team practiced after the sun went down.` is keyed as a correct distractor; `after` here starts a clause (conjunction), and how step 2 calls `the sun going down` a group that "fits". The first review asked for noun objects in exactly this kind of line. The same shape sits in the drafts (`before we started`, `before we left`), untargeted. | `after sunset` in S14; optional in the drafts. |
+| SHOULD | S7-6: twin overlap | S11/C11 0.221 multiset and S06/C06 0.197 when numerals count; S11/S12 twin vs twin 0.281 / 0.270 (limit 0.30). | Vary the target sentences. |
+| NOTE | 7-S13 slot 1 | Distractor `slept between the stars` is grammatical per Merriam-Webster (between is not limited to two); the lesson says "usually", and hint 3 names `during`, so the child is not told otherwise. | Optional: `slept beside the stars` or a time word. |
+| NOTE | 7-C04, C12, S04, S12 | The ladder says `decide place or time` in hint 1 and names one wrong word in hint 3, so by reasoning only the key is a place word. By naming, two stay live (allowed). Inherent to a place/time item. | none |
+| NOTE | 7-S05 `like` C05 | Both are "same word, one fine, one wrong" DOK 3 items, but S05 turns on between's two-things rule and C05 on place against time. Honest enough. | none |
+| NOTE | Near-copies | S01 option A `We sang songs around the glowing campfire.` (L-GUM3 `We sang songs around the campfire.`); S07 B key `we drank cold water from a big cooler` (L-GUM1 passage `We drank cold water from big coolers.`); S14 E (L-GC2 `after the sun went down.`); p5 sentence 9 (L-V3 `We packed our bag and walked home.`). Different skills. | Vary one noun each. |
+| NOTE | 7-S11 / S12 | S12 repairs sentence 6 of p6 (`at my side`), which is a non-key distractor of S11. | none |
+
+### Lesson 8: commas (REVISE)
+
+Strengths: letters are a good Milestones-shaped context; every first-review MUST is fixed; address and closing are now keyed (C10, C07, S10, S14, S07); stems of C04 and C12 are neutral; every list distractor has a second error, so no item hangs on the serial comma; drafts p2-p6 have no untargeted error.
+
+| Sev | Item | Finding | Fix |
+|---|---|---|---|
+| MUST | M8-1: 8-C05 stem prints the key of 8-C04 | C04 (set 1) asks `Which version of the place name is right for line 3?` and its key is `Dayton, Ohio`. C05 (same set, next item) opens `Dayton, Ohio shows up in lines 3 and 7, but only one line is wrong. Why?` and its key says line 3 leaves the comma out. A child who reads C05 (or goes back: the player has `prev()`) gets C04's answer, in its exact string. This is the same defect the first review of lessons 1-5 rated MUST (L4 C05, L5 C05/S05 printing a dropdown key). The twin pair does not repeat it (S04 `Fresno, California`, S05 is about the list lines). | Do not compare line 3 with line 7 in C05. Retarget C05 to two other lines of the draft (for example the address line 7 against the date line 8: one comma between city and state against one between day and year), or retarget C04 to a place C05 never names. If C05 keeps lines 3 and 7, drop the printed string and the key's "line 3 leaves it out". |
+| SHOULD | S8-2: 8-C07 Part A key wording | `Nothing follows friend, and a closing always needs a comma at its end.` reads as "nothing comes after the word friend" (true of every closing) rather than "no comma follows friend". I solved it correctly only by elimination. | `Line 14 has no comma after friend, and a closing always ends with a comma.` |
+| SHOULD | S8-3: 8-S05 `like` 8-C05 (not fixed) | The first review's finding stands: C05 is about the city-and-state comma shown in two lines; S05 is about a missing comma inside a list (`a map a hat, and`). Same format and DOK, different rule, so the twin does not practise what its core item tests. | Re-point S05's `like` to nothing and write an S05 about the city-and-state comma on the twin draft (lines 3 against 7 of p4), or write a list-based core and re-point. |
+| SHOULD | S8-4: 8-P3 and 8-S01 hint 3 | P3: "The date and the list are written correctly." S01: "The list and the greeting are written correctly." Each names two wrong (non-key) lines, leaving three of five live: allowed by the live-choice rule, but the brief rule is one named wrong choice. | Name one: "The list is written correctly." |
+| SHOULD | S8-5: Learn It has no address example | C10 (key), S10 (key), S14 (key), C11 line 4 and C14 option B rely on the comma after the street; Teach point 3 states it in text, but none of the three Watch Me examples shows it (Learn 2 shows `Dalton, Georgia`; Learn 3 now shows greeting and closing). | Add `12 Oak Lane, Macon, Georgia` to Learn 2. |
+| SHOULD | S8-6: twin overlap | S11/C11 0.225/0.233, S06/C06 0.222/0.238 when numerals count; S10/C03 0.209 on letters only. | Vary names and verbs. |
+| SHOULD | S8-7: copied twin ladders | C11/S11 share H1, H2, H3 and both how lines word for word; C12/S12 share all three hints; C09/S09, C13/S13 near. The twin is a fresh item with the old ladder. | Rewrite at least the how lines and hint 3 of each twin. |
+| NOTE | N8-1: serial comma | The lesson requires the comma before and (Teach, Learn 1, every key list). https://fscj.pressbooks.pub/successfulwriting/chapter/3-1-commas/5 says to put no comma before the final and; Purdue OWL is silent. A style choice. No keyed list is correct only with it (every wrong list has another error), so nothing turns on it. | Optional: "many teachers use". |
+| NOTE | p1 | Line 5 `two beds three shelves, and four hooks` (missing comma after beds) and lines 10 and 11 (compound sentences joined by `and` with no comma) are untargeted by any item of the six-draft bank; line 5 is the only one that breaks a taught rule. | Add the comma to line 5 or target it. |
+| NOTE | 8-C15 / S15 | Three of the four options are near-identical list sentences, so the odd one is visible without the rule. DOK 3 in name; the claim needs the rule to state, not to find. | none |
+| NOTE | 8-C14 hint 2 | Names list, date, address: every distractor's comma has one of those jobs, so only the key's comma has none. | none |
+| NOTE | 8-C08 hint 3 | "Each choice has at least one comma. Check where each one sits." removes nothing; allowed. | none |
+| NOTE | 8-S03, S07 | Distractors `April 18 2026,.` and `Yours truly-` (dash) are implausible. | Optional. |
+| NOTE | 8-T5 (Test) | Key uniquely longest (40 against 35). | Optional. |
+
+### Lesson 9: verbs with -d or -es (REVISE)
+
+Strengths: every wrong form is a clear error; the rule set is applied consistently; every first-review MUST is fixed; hints 1 of C13 and S13 are now true; S02 has tense cues; the vowel-plus-y contrast is in; the DOK 3 claim items are good; the browser run is clean.
+
+| Sev | Item | Finding | Fix |
+|---|---|---|---|
+| MUST | M9-1: 9-S03 `how` and `why` explain a different verb | S03 is `latch` (key `latches, since verbs ending in ch take -es`; sentence 2 of p4 is `latchs`). Its how step 1 reads "The plain verb is catch. Its last two letters are ch." and its why reads "Catch does not end in e or y, and adding only -s leaves the ending hard to say." Stale text from an earlier draft; the child who opens Show Me How is told the verb is catch. (The why of C03 is also near-verbatim "Brush does not end in e or y, and adding only -s leaves the ending hard to say", which is where the sentence was copied.) | how1 "The plain verb is latch. Its last two letters are ch."; why "Latch ends in ch, so it adds -es." |
+| MUST | M9-2: 9-C12 and 9-S12 hint 3 leaves one live choice | Options `sprays / sprayes / spraies` and `enjoys / enjoyes / enjoies`. Hint 3: "Adding -es after a y is not needed for every verb. Look at the other choices." Both wrong forms are -es forms, so the hint rules out both and leaves the key alone (hint 2 already asks vowel or consonant). A child reads it as "no -es", picks `sprays`. This was introduced when C12 was changed to the vowel-plus-y contrast. | Name one: "Sprayes keeps the y and adds -es. Think about the other choices." (S12: "Enjoyes ..."), leaving key and `spraies` live. |
+| SHOULD | S9-3: keys reused inside the fifteen | P5 key `teachs` (fixed form `teaches`) and C15 key `The coach teaches us a new drill.` are the same verb in the same frame (P5 is `Our teacher teachs us a new word each day.`); P4 row `Every day, Ben ___ the mail up the steps. (carry)` and C13 slot 0 `Every day, Ben {carries} his lunch to school` are the same subject, cue and verb; P4 `mix` and C08 key `mixes`. Core item keys appear in other core items, so one answers the other. And P5 / C14 are the same item twice (hot-text, five options, one `-ch` error, H1, H2 and how word for word). | Use different verbs for C13 (`copies`), C15 (`rushes`), C08 (`fixes` is Teach; use `waxes`), and give C14 an `-x` or `-z` error. |
+| SHOULD | S9-4: 9-C10 and 9-S10 hint 3 | "The ending depends on how the plain verb finishes. Think about the other choices." removes both `Ben is right` options (S10: both `Bowd is better` and `Bowes is better`) by implication; two live (key and one -es distractor). | Name one: "A short ending does not always save space." |
+| SHOULD | S9-5: -ed is never taught | Official wording is "-d or -es". C10 and S10 keys turn on `keeps the full -ed` for a verb that does not end in e (cleaned, bowed); correct distractors use `hiked`, `baked`. Teach and Learn say only "ends in e: add -d". Learn 2 says "Do not add another e", which a child can read as "never write ed". | Add one Teach sentence: a verb that does not end in e adds -ed for the past (clean becomes cleaned). |
+| SHOULD | S9-6: twin overlap | S06/C06 0.231 multiset (numerals counted), S02/P4 0.198; copied hints C04/S04, C11/S11, C12/S12 (H1, H2, H3 word for word). | Vary the target sentences and rewrite the twin ladders. |
+| NOTE | 9-C13 / S13 H2 | Names the plain verbs and that the second ends in sh or ch. Allowed (hint 3 then names one wrong form). | none |
+| NOTE | 9-C05 / S05 keys | The key states that the y turns into i before -es in sentence 5, which tells a child who has not answered C04 that `tries` is the form. Design of the set, no string printed. | none |
+| NOTE | Draft p3 | `Dad do the grocery shopping` covers `do` / `does` (Teach point 4), which is outside "-d or -es" but inside the lesson's own Teach. | none |
+| NOTE | 9-C03 hint 3 | "Look at the very last letter of brush" is `h`, while the key explains by `sh`. | "last two letters". |
+
+### Cross-lesson notes
+
+- **Hint ladder recount** (every core and similar item and every dropdown slot, read by hand): exactly one live choice by naming or by reading: L9 C12 and S12 (M9-2). Two live (allowed): L6 C04, C10, C12, S04, S12, C13 slot 1, S13 slot 1; L7 C04, C12, S04, S12, C07 B, C10, C13 slot 1, S13 slot 1; L8 C04, C12, S04, S12, C13 slot 1, S13 slot 1, C13 slot 0 and S13 slot 0 three; L9 C04, S04, C10, S10, C13 slot 1, S13 slot 1. Hint 3 names two wrong choices at: L7 C10, L8 P3, L8 S01 (SHOULD), and L9 C10, S10 by implication. No hint 3 states the key or quotes it. No false statement remains in any hint 1.
+- **Key and why consistency.** Every key text appears in its how step 3 and why, except L9 S03 (M9-1). The first review's stale S05 text is gone.
+- **Item stacking in set 2.** C06, C07, C10 sit on different sentences in all four lessons, so C06's keys are not shown by C07 or C10.
+- **Back navigation.** The player allows Previous inside a set, so a key printed in a later item (L8 C05) is readable before the child commits.
+- **Grade 3.** No item is below grade 3. Passages are 101-123 words and Flesch-Kincaid at most 4.2 on my count (0.39 words per sentence, 11.8 syllables per word, 15.59). The abstract wording is in L6 C07/S07 Part A; the rest reads at grade 3.
+- **`like`.** Honest for all 15 twins of lessons 6, 7 and 9 and for 14 of 15 in lesson 8 (S05 as above). Every core item has a twin that is unused when the child reaches it (60 of 60 Similar buttons present in the browser run).
+- **Distinct items.** No two core items differ only by names or numbers by Jaccard; the frame repeats are P5/C14 in L7 and L9 and the templated ladders listed above.
+- **What I could not verify.** Keyboard and screen-reader use; the Merriam-Webster `out of` entry (not on the allowlist).
+
+### Recommended next step
+
+Lessons 6 and 7: ACCEPT, with the SHOULDs open (S6-1 and S7-2 are the ones a child would notice). Lessons 8 and 9: REVISE the three MUSTs (M8-1, M9-1, M9-2), all one-line edits to existing text; a short re-read of those items, and a re-measure of 8-C05 and 8-C04, should be enough.
