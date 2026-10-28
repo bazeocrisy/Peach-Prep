@@ -13324,7 +13324,7 @@ PP.addLesson({
       steps: [
         "One person, my dad, does the action, and it happens every night. So the verb needs an ending.",
         "Look at how wash ends. It ends in sh.",
-        "Verbs that end in sh add -es: washes."
+        "Verbs that end in sh add -es: washes. The short verb do also adds -es: does."
       ],
       answer: "Washes. Every night, my dad washes the dishes."
     },
@@ -13334,7 +13334,7 @@ PP.addLesson({
       steps: [
         "Last week is in the past, so the verb needs a past ending.",
         "Bake already ends in e.",
-        "Just add -d: baked. Do not add another e."
+        "Just add -d: baked. Do not add another e. A verb that does not end in e adds the full -ed, like walk becomes walked."
       ],
       answer: "Baked. Last week, we baked a cake for Grandma."
     },
@@ -13540,7 +13540,7 @@ PP.addLesson({
         { text: "Every day, Ben ___ the mail up the steps. (carry)", answer: 2 }
       ],
       clue: "Look at the last letters of each verb in ( ). An e at the end, an x or z at the end, and a consonant plus y at the end each get a different ending.",
-      why: "Save and practice end in e, so they become saved and practiced. Mix and buzz end in x and z, so they become mixes and buzzes. Hurry and carry end in a consonant and y, so they become hurries and carries." },
+      why: "Save and practice end in e, so they become saved and practiced. Mix and buzz end in x and z, so they become mixes and buzzes. Hurry and carry end in a consonant and y, so each one changes its y to i and adds -es." },
     { id: "SK-GUM2-9-P5", type: "hottext", points: 1, dok: 2, passages: [],
       prompt: "Select the sentence that has a spelling error.",
       options: [
@@ -13867,7 +13867,6 @@ PP.addLesson({
             ],
             "passages": [],
             "prompt": "Pick the correct spelling to finish the sentence. Last night, Dad ___ with us at dinner.",
-            "stem": "Last night, Dad joked with us at dinner.",
             "choices": [
               {
                 "text": "joked",
@@ -14251,7 +14250,7 @@ PP.addLesson({
         "Share and hike end in e. Kiss and wish end in ss and sh. Empty and reply end in a consonant and y.",
         "Put each sentence in the group that fits its verb."
       ],
-      "misconception": "A common mix-up is sorting by the time word. The last letters of the verb decide the group.",
+      "misconception": "A common mix-up is letting words like Yesterday pick the group. The end of the plain verb picks it.",
       "why": "Share and hike end in e, so they become shared and hiked. Kiss and wish end in ss and sh, so they become kisses and wishes. Empty and reply end in a consonant and y, so they become empties and replies.",
       "like": [
         "SK-GUM2-9-P4"
@@ -14335,7 +14334,7 @@ PP.addLesson({
         "R is a consonant, so the y turns into i and -es follows.",
         "The answer is hurries."
       ],
-      "misconception": "A common mix-up is adding only -s after a y. A consonant before the y means the y changes to i.",
+      "misconception": "A common mix-up is stopping at -s when a verb ends in y. After a consonant, the y becomes i first.",
       "why": "The answer is hurries. Hurry has an r, a consonant, before the y, so the y changes to i and -es is added.",
       "like": [
         "SK-GUM2-9-C04"
@@ -14420,7 +14419,7 @@ PP.addLesson({
         "Practiced, bowed, thanked and praised all have endings that match their plain verbs.",
         "In sentences 2 and 5, the verbs have the wrong ending."
       ],
-      "misconception": "A common mix-up is trusting a verb because it looks long and careful. Check its ending against its plain form.",
+      "misconception": "A common mix-up is believing a long verb must be right. The ending has to fit the plain verb.",
       "why": "The answers are \"Mr. Park shapeed a shiny cardboard sword for the knight by hand.\" and \"The audience lovd every joke and clapped for a long time.\" Shape and love already end in e, so they just add -d: shaped and loved. Sentences 3, 4 and 6 are spelled correctly.",
       "like": [
         "SK-GUM2-9-C06"
@@ -14485,7 +14484,7 @@ PP.addLesson({
         "Part B: the story is about last spring, so the verb needs a past ending.",
         "The answers are \"A verb already ending in e only takes -d.\" and \"Then the cast celebrated backstage with juice and cookies.\""
       ],
-      "misconception": "A common mix-up is adding a whole -ed to a verb that already ends in e. Only -d is added.",
+      "misconception": "A common mix-up is putting -ed on every past verb. A verb with a final e takes only -d.",
       "why": "Part A: \"A verb already ending in e only takes -d.\" Part B: \"Then the cast celebrated backstage with juice and cookies.\" Celebrates would not tell about the past.",
       "like": [
         "SK-GUM2-9-C07"
@@ -14574,7 +14573,7 @@ PP.addLesson({
         "A final e means only -d is added.",
         "The answer is teased."
       ],
-      "misconception": "A common mix-up is adding a whole -ed to a verb that ends in e. Only -d is added.",
+      "misconception": "A common mix-up is doubling the e in a past verb. A final e already there needs only -d.",
       "why": "The answer is teased. Tease already ends in e, so only -d is added for the past. Teaseed has an extra e, teasd drops the e, and teases does not tell about the past.",
       "like": [
         "SK-GUM2-9-C09"
@@ -14618,7 +14617,7 @@ PP.addLesson({
         "A verb that ends in e only takes -d, and bow does not end in e.",
         "The answer is \"Bowed is correct: bow lacks a final e, so a full -ed attaches.\""
       ],
-      "misconception": "A common mix-up is using just -d for every verb. Only verbs that end in e take just -d.",
+      "misconception": "A common mix-up is thinking -d is the ending for every past verb. Only a verb with a final e uses just -d.",
       "why": "The answer is \"Bowed is correct: bow lacks a final e, so a full -ed attaches.\" Bowd is not a word, and bowes uses a present ending.",
       "like": [
         "SK-GUM2-9-C10"
@@ -14659,7 +14658,7 @@ PP.addLesson({
         "Reaches and tries carry the endings their plain verbs need.",
         "Enjoyes, boxs and do do not match."
       ],
-      "misconception": "A common mix-up is picking a sentence because it looks simple. Check each verb's ending.",
+      "misconception": "A common mix-up is trusting a short, plain-looking sentence. Each verb's ending has to be checked.",
       "why": "The answers are \"Aunt Rose reaches the top shelf without a stool.\" and \"Pop tries a new tool every single week.\" Reach ends in ch, so it adds -es. Try ends in a consonant and y, so the y changes to i. Enjoyes, boxs and do are wrong.",
       "like": [
         "SK-GUM2-9-C11"
@@ -14699,7 +14698,7 @@ PP.addLesson({
         "O is a vowel, so the y stays and only -s is added.",
         "The answer is enjoys."
       ],
-      "misconception": "A common mix-up is changing the y to i every time. A vowel before the y means the y stays.",
+      "misconception": "A common mix-up is turning every y into i. After a vowel the y stays put.",
       "why": "The answer is enjoys. Enjoy has an o, a vowel, before the y, so the y stays and just -s is added.",
       "like": [
         "SK-GUM2-9-C12"
@@ -14772,10 +14771,10 @@ PP.addLesson({
         2
       ],
       "pick": 1,
-      "clue": "Find the verb in each sentence. Think of its plain form.",
+      "clue": "Spot the verb in each line and say its plain form aloud.",
       "hints": [
-        "Find the verb in each sentence. Think of its plain form.",
-        "Look at the last letters of each plain verb. Check that the ending matches.",
+        "Spot the verb in each line and say its plain form aloud.",
+        "Does each ending fit the last letters of its plain verb?",
         "The sentence about the onions has a verb that is spelled right. Think about the rest."
       ],
       "how": [
@@ -14825,7 +14824,7 @@ PP.addLesson({
         "Dig, sing and walk just add -s.",
         "The answer is \"My sister polishes the car on Saturdays.\""
       ],
-      "misconception": "A common mix-up is thinking every verb adds only -s. Verbs that end in ch, sh, s, x or z need -es.",
+      "misconception": "A common mix-up is believing -s is the only ending. Verbs ending in ch, sh, s, x or z take -es.",
       "why": "The answer is \"My sister polishes the car on Saturdays.\" Polish ends in sh, so it needs -es. That proves Rob mistaken. Digs, sings and walks just add -s.",
       "like": [
         "SK-GUM2-9-C15"
