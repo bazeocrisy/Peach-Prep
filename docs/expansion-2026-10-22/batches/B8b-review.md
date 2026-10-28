@@ -610,3 +610,72 @@ All seven first-review MUSTs for these lessons (Av./Str., the C03/C10/C12 triple
 - **L6 ACCEPT** and **L7 ACCEPT**, each with three SHOULDs (hint echoes from check-content on L6 S15 and L7 C09; wording drift; L7 C12/S10 0.214).
 - Over the 0.21 twin bar, precisely: L5 C11/S11 0.212 (multiset), L5 C12/S12 0.211 (multiset), L7 C12/S10 0.214 (multiset). Nothing at 0.30.
 - Do not mark anything ACCEPTED here; the lead decides after the L5 fixes and the SHOULDs.
+
+## Third review (B8b lesson 3)
+
+**Reviewer:** independent content reviewer (did not author). Scope: lesson 3, "Apostrophes for more than one owner" (`use-apostrophes-to-form-plural-possessive-nouns`), `js/data/lessons/L-GUM5.js` as on disk. Wrote only this section; edited no lesson, ran no git. Scripts and outputs: `scratchpad/b8b3r/` (`blind.js`, `mine.json`, `cmp.js`, `full.js`, `jac.js`, `early.js`, `longest.js`, `fill.js`, `trip.js`, `meas.js`, `dup.js`, `run390.py`, `run390.txt`).
+
+### Verdict: **REVISE** (1 MUST, 2 SHOULD, 6 NOTE)
+
+The keys are right and playable. The one MUST is the new risk the lead asked about: twin S12 is now the same item as test T1.
+
+### 1. Blind solve
+
+- Method: new `blind.js` (fresh seed 9931 + 17 x lesson) loads the lesson in Node, resolves the `{ref}` items, and prints the 6 passages and all 15 core and 15 twin items with shuffled choices and no `correct`, `answer`, `why`, `clue`, `hints`, `how`, `misconception` or `like`. Hot-text targets print as ids (`p2:1:3` = paragraph 1, sentence 3). I saved `mine.json` and only then ran `cmp.js`.
+- **Result: 30 of 30 agree (100%).** `cmp.js` first showed 26/30; the four were my answer format (a short quote of the sentence instead of the full text, on P5, S02, C07, S07), and each matches the key. **Fully blind: yes.** I had read the earlier B8b reviews, which contain no keys, and the author log only after `mine.json` was saved.
+- Close calls: C12 option A ("The peoples', because peoples ends in s ...") is the only live distractor; I rejected it because the stem says several *people* (see N3-4). S13 C versus B/E: the squirrels sentence has no apostrophe but is wrong, so only B and E prove Lena wrong.
+
+### 2. Second-review SHOULDs S3-A to S3-E
+
+| Item | Result on disk |
+|---|---|
+| **S3-A** C10/C12 distinct, hint 3s | **Fixed for hint 3 and format.** C10 h3 "The choice with no apostrophe cannot show who owns the closet. Decide between the other two."; C12 h3 "The choice about one person does not match the faces in the story. Compare the other three."; no two hint 3s in the lesson are the same. C10 is a dropdown (children's), C12 is now a fix-plus-reason mc (people's). Item overlap C10/C12 0.143 set / 0.137 multiset. Skill is still "irregular plural takes 's", see N3-2. |
+| **S3-B** S13 hint 1 | **Fixed.** S13 now has the wrong no-apostrophe sentence `The squirrels nest was high in the old oak.` and h1 "Lena says always. Find the sentences that prove her wrong." Scanning for "no apostrophe" now finds three sentences, two correct. |
+| **S3-C** keys printed earlier | **Fixed.** `early.js` finds no core key in any earlier core item (word-bounded). C07 keys are nurses'/coaches' (no mice's), P4 row 3 is `the teachers' songs`. Residuals: N3-3. |
+| **S3-D** S12 noun | **Not fixed, and it is worse**: S12 now uses *women*, which tests T1 and T2 use. See M3-1. |
+| **S3-E** C09/S09 overlap | **Fixed.** Own pair 0.181 / 0.136; worst twin x core in the lesson is 0.196 set (C11/S11) and 0.202 multiset (P5/S07). Author reports 0.183 / 0.202; I reproduce within 0.013. |
+
+### 3. Findings
+
+**MUST**
+
+| ID | Evidence | Fix |
+|---|---|---|
+| **M3-1** S12 is the test item T1 | S12 options are `Women's` / `Womens'` / `Womens` / `Woman's` with key `Women's: women has no s on its end, so add 's.` T1 (test) asks "Which words show the hats that belong to many women?" with `the women's hats` / `the womens' hats` / `the woman's hats` / `the womens hats`. Same noun, same four forms, same key, and S12's key states the rule in words. A child who presses "Try a similar question" on C12 and later takes the test meets the same item with the answer printed in practice. The author log itself flags this (S3-D). `women` also sits in p6 s10 (`The womens table`) and S12's `why`. T2 uses `men's`, which S12 does not print, but it is the same pattern. | Pick one: (a) give S12, and p6 s10 with it, a noun the tests do not use. Not children, people or mice (core keys) and not women/men (tests): for example *oxen* (`The oxen's yoke`), or geese (Teach and Learn It teach it, so it would be a repeat of taught content, not a new noun). (b) Change T1/T2 to a noun that no practice item prints and keep women in S12; the test then needs a new noun, so this is the larger edit. Either way re-run `readability.py` on p6 if the passage changes (p6 FK 4.4 now; p4 is 4.5). |
+
+**SHOULD**
+
+| ID | Evidence | Fix |
+|---|---|---|
+| **S3-1** S07 option E `The peoples' choir sang at noon in the big hall.` can be defended | It is a "pick the TWO correct" item, and E is a wrong choice. "Peoples" is a real plural (nations, ethnic groups), so "the peoples' choir" is a grammatical sentence; nothing in S07 says it means several *people*. The author log's design note says "peoples' is a valid plural, so it is never marked as an error", yet E, S14 slot 1 and C12 A all treat it as wrong (C12 and S14 have a stem that says several people or a crowd, so those two are safe). A hard-nosed adult sees three correct sentences in S07. Blind solve did not stumble (I took B and D), but it is the one choice with a real defense. | Replace E with an error nobody can defend, for example `The mices' nest was behind the barn.` (non-word, like `childrens'`), or give E a context that fixes the meaning ("The peoples' choir of our town ..." does not help; the first is cleaner). Also fix the log line. |
+| **S3-2** S12's stem gives no count | "Line 10 tells who ran the seed table." Option D, `Woman's: only one woman ran it`, cannot be ruled out from the stem; the only evidence is the plural form `womens` in the passage line. C12 (and S10, S14) say "several people" or "Two coaches". The how says "Several women ran the table", which the child never sees. | Add the count to the stem: "Line 10 tells which women ran the seed table, and there were several." (If M3-1 changes the noun, apply the same count to the new noun.) |
+
+**NOTE**
+
+- **N3-1 New C12/S12 have exactly one defensible key.** C12: A `The peoples', because peoples ends in s ...` (word wrong for the stem), B key, C `The peoples, ... just adds an s` (no apostrophe and a false rule), D `The person's` (singular). Each wrong choice fails on the word or the reason, and the key is the only choice where both halves are true. No key is uniquely longest (A 66 characters, key 63, S12 key 46 against 54). After hint 3 (removes D) three choices stay live. S12 is the same shape.
+- **N3-2 C10 and C12 are still the same skill.** Both are "irregular plural takes 's". The fix-plus-reason frame makes C12 a harder task (DOK 2, explain), and they sit in different sets (2 and 3). Seven of fifteen core items touch an irregular plural (P5, C06 s5, C07 distractor, C08 two rows, C10, C12, C14 slot 1) while Teach names only geese. If the lead wants the spread more even, one of C10/C12 could become a "does it own anything" or one-owner-versus-many task. Not required.
+- **N3-3 Recall residuals.** C10 has the same option triple and key as legacy Together P2 slot 1 (`childrens'` / `children's` / `childrens`), so a child who did P2 can answer C10 from memory; and C08 row 4 (`mice, when several mice share the nest`, answer "'s") settles C14 slot 1 (`mice's` against `mices'`) before it is asked. The key strings are not printed earlier, so this is practice, not a giveaway.
+- **N3-4 Vocabulary drift to "mark".** C12 A and the whole twin bank say "mark" for the apostrophe (`takes just a mark`, `missing a mark`). Teach, Learn It and the core say apostrophe. Understandable (it avoids copying core wording) but a grade 3 reader meets a second word for the same thing; S01's stem does say "apostrophe".
+- **N3-5 Teach is thin for what the core asks.** Teach and Learn It model teachers', geese's and a plural that owns nothing. The core also needs children's, people's, mice's (7 items) and the singular-versus-plural owner choice (C15, S15). The rule transfers, but one more example in Teach (children's, people's) would match the fifteen. Unchanged from the second review.
+- **N3-6 Hint 3 on C08/S08** ("Pilots already ends in s", "Neighbors already ends in s") completes one row; allowed.
+
+### 4. Measurements (final file)
+
+- **Browser, 390 x 844, touch** (`run390.py`; own server on 8847; real taps for choices, hot-text and match buttons; `select_option` for `<select>`). For sets y, y2, y3: hint pressed three times, key answered, Check pressed, then "Try a similar question" and the same for the twin. **30 of 30 "That's right"** (15 core + 15 twin, including the new C12 and S12 four-choice items). Hint button "No more hints" and disabled after three presses on every item. `scrollWidth` 390; no target under 40 px or past 391 px; 0 page errors; 0 problems. No slot has an option over 28 characters, so no dropdown renders as buttons (longest `The childrens'`, 14).
+- **Format, points, DOK.** Types: match 2, hottext 3, dropdown 3, mc 4, ebsr 1, ms 2; twins mirror it exactly and each `like` maps to a same-type, same-points, same-DOK core item. Sets 7 / 8 / 7 points. DOK 1 x2, DOK 2 x10, DOK 3 x3. Points correct (choose-two, match, ebsr, two-slot dropdown = 2). `std` is the one official code on all items (the two legacy P items carry none, as before).
+- **Overlap (item text, `(n)` markers counted).** Twin x core, all 225 pairs: max **0.196 set / 0.202 multiset**, under 0.21 either way, and nothing over 0.30. Core x core: max **0.236 set (C05/C09) / 0.216 multiset**, under 0.30. Triplet C03/C10/C12: 0.160/0.200, 0.155/0.143, 0.143/0.137. (With the passage text counted, same-passage pairs go over 0.30 because they share a passage; that is not the bar.)
+- **Hints (read all 30).** Hint 3 names at most one wrong choice on every item and slot; after hints 1 to 3 at least two choices stay live on all 30 (fewest is two: three-option dropdown slots; C06/S06 keep four sentences for pick two). No hint 1 or 2 quotes a key. The C09/S09 h3 ("Sentence 8 is not a mistake, so the answer cannot say that it is wrong") names one wrong choice. C13 h1 and S13 h1 do not find the keys by scanning.
+- **Longest key:** no key uniquely longest (mc, ms, ebsr A/B, every slot); only ties among short dropdown words.
+- **Giveaways within the lesson.** No core key printed in an earlier core item (`early.js`: none). No dropdown's filled sentence is in a passage (the passage holds the wrong version, which for C03, C10 and S03 is a distractor). The ebsr key sentences C05 and S05 equal a passage sentence by design (the planted error). Test items T3, T4, T5 have no overlap with any practice item or twin; **T1/T2 versus S12: see M3-1.**
+- **Passages.** Six, 111 to 140 words with `(n)` markers and 101 to 128 without; FK 3.7, 3.7, 2.6, **4.5**, 3.7, 4.4 (`verification/readability.py`; p4 sits exactly on the limit). `(n)` numbering is continuous. No figures.
+- **Duplicates over all `js/data`** (`dup.js`, every sentence of five or more words from this lesson, 624 sentences, 55 files): no passage, item or key sentence appears anywhere else. Only boilerplate stems ("Choose the words that correctly complete the sentence", "This question has two parts") repeat, as everywhere. One legacy test sentence pair is unaffected.
+- **Standards, grade, how/key/why.** Wording stays inside "use apostrophes to form plural possessive nouns". Every `how` agrees with its key and `why`; no key/why contradiction found. Topics and names are grade 3 (bands, coat drives, sleds, chili, archery, seeds); nothing kindergarten-like; no real child's data.
+- **Facts** (rule and word forms): UHCL writing center plural possessives tip sheet (https://www.uhcl.edu/writing-center/documents/tip-sheets/pluralpossessives.pdf), dummies.com "How to form plural possessives in English" (https://www.dummies.com/article/academics-the-arts/language-language-arts/grammar-vocabulary/how-to-form-plural-possessives-in-english-190508), simplifylivelove.com "How to make the word people possessive" (https://simplifylivelove.com/how-to-make-people-possessive/): plural ending in s takes the apostrophe alone; irregular plurals (children, women, men, people, mice, geese) take 's; "peoples" is a separate real word (nations), which is the basis of S3-1.
+- **Teach / Watch Me / Together.** Teach, Learn It and Together model the rule for s-plurals, irregular plurals (geese) and "owns nothing, no apostrophe", the three things the fifteen test, plus the one-versus-many owner distinction (see N3-5).
+
+### 5. Summary for the lead
+
+- Blind 30/30, phone 30/30, every second-review SHOULD fixed except S3-D, which became M3-1.
+- **M3-1:** S12 duplicates test T1 (same noun, four forms, key and rule printed in practice). Change S12's noun, or T1/T2's.
+- S3-1 (S07 E `peoples'`) and S3-2 (S12 stem needs "several") are two small wording edits; do them with M3-1.
+- Not marked ACCEPTED here; the lead decides. After M3-1 and the two SHOULDs I expect ACCEPT with no further review beyond a re-run of the overlap and readability scripts.

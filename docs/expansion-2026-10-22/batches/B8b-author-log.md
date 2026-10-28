@@ -18,9 +18,9 @@ Twin x core overlap is the maximum over all 225 twin/core pairs (15 x 15, includ
 | L2 commas, direct address and yes/no | 0.197 / 0.204 | 0.197 / 0.204 | 118 | 2.9 | match 2, ms 3, dropdown 4, mc 3, ebsr 1, hottext 2 | 2/10/3 |
 | L3 plural possessive apostrophes | 0.183 / 0.202 | 0.173 / 0.202 | 111 | 4.5 | match 2, hottext 3, dropdown 3, mc 4, ebsr 1, ms 2 | 2/10/3 |
 | L4 indefinite pronouns, agreement | 0.200 / 0.214 | 0.207 / 0.204 | 111 | 3.9 | hottext 3, ms 3, dropdown 4, mc 3, ebsr 1, match 1 | 2/10/3 |
-| L5 subordinating conjunctions | 0.191 / 0.212 | 0.177 / 0.196 | 111 | 3.4 | hottext 3, match 2, dropdown 4, mc 3, ebsr 1, ms 2 | 2/10/3 |
+| L5 subordinating conjunctions | 0.209 / 0.204 | 0.195 / 0.191 | 111 | 3.4 | hottext 3, match 2, dropdown 4, mc 3, ebsr 1, ms 2 | 2/10/3 |
 | L6 commas after opening parts | 0.208 / 0.206 | 0.208 / 0.206 | 116 | 3.3 | hottext 3, ms 2, dropdown 4, mc 3, ebsr 1, match 2 | 2/10/3 |
-| L7 titles of works | 0.193 / 0.214 | 0.191 / 0.204 | 117 | 4.4 | hottext 3, dropdown 4, mc 3, ebsr 1, ms 2, match 2 | 2/10/3 |
+| L7 titles of works | 0.193 / 0.200 | 0.191 / 0.204 | 117 | 4.4 | hottext 3, dropdown 4, mc 3, ebsr 1, ms 2, match 2 | 2/10/3 |
 
 Twin format counts and DOK counts equal the core counts in every lesson, and every twin has the same type and DOK as the core item it mirrors (`like` check: no mismatch in any lesson). Passage word counts exclude the (n) markers. FK is from `verification/readability.py` (heuristic, screening only).
 
@@ -30,7 +30,7 @@ Live choices (`live.js`, scripted recount after hints 1, 2 and 3): no item names
 
 Key text appears in why or how on every item. No core key appears in Teach or Watch Me (`qa.js`: no KEY-IN-TEACH), and no Teach or Watch Me example equals a core key.
 
-Core-vs-core item-text overlap (digits and (n) markers counted; limit 0.30), maximum per lesson: L1 0.215, L2 0.250, L3 0.232, L4 0.295, L5 0.270, L6 0.279, L7 0.282. With passage text added, the same-passage dropdown and hot-text pairs reach 0.8 to 0.9 because they share a draft; that figure is informational. Passage words and FK come from `verification/readability.py` (script word counts; FK maximum 4.5 on L3, 4.4 on L7).
+Core-vs-core item-text overlap (digits and (n) markers counted; limit 0.30), maximum per lesson: L1 0.215, L2 0.250, L3 0.232, L4 0.295, L5 0.238, L6 0.279, L7 0.282. With passage text added, the same-passage dropdown and hot-text pairs reach 0.8 to 0.9 because they share a draft; that figure is informational. Passage words and FK come from `verification/readability.py` (script word counts; FK maximum 4.5 on L3, 4.4 on L7).
 
 ## First-review revision (all seven lessons)
 
@@ -59,6 +59,16 @@ Final-file figures for L3: twin x core 0.183 set / 0.202 multiset (item text, di
 - S3-C: C07's second key is now "The coaches' whistles hung by the gym door." so mice's is not printed before C14; legacy P4 row 3 is "the teachers' songs", so children's is not printed before C10.
 - S3-D: S12 uses women (twin bank only; tests T1/T2 also use women, so a reviewer may want a different noun).
 - S3-E: C09/S09 reworded (stem and three distractors; key "Students' owns the scores, while archers just labels a group."); item overlap 0.212 to 0.164 multiset and under 0.21 set.
+
+## Second-review revision (lessons 5 to 7)
+
+Final-file figures: L5 twin x core 0.209 set / 0.204 multiset (item text, digits and (n) markers counted), 0.195 / 0.191 with passages, core-vs-core 0.238; L6 and L7 as in the table (L7 after the S10 rewording: no pair above 0.20 set or multiset). No key is uniquely longest and no choose-two item has both keys longest. check-content: PASS, 0 failures, and no warning on any SK-GUM5-5, SK-GUM5-6 or SK-GUM5-7 item.
+
+- L5 C03/S03: each stem now gives context that excludes the surprise reading (C03: "The rain began at noon and stopped at one. Jo's team sat on the bench from noon to one."; S03: "Tess began jogging in full daylight. Dark fell much later."). Options are until / because / if for both. Hint 3s name the reason or case choice, not a surprise.
+- L5 C06: sentence 3 is now "We could not start although Dad had not found the red ball." (not finding the ball is the reason, so although is a clear clash; the fix is because). how and why updated.
+- L5 C14 and S14 redesigned to reason (first blank) plus how long (second blank), with new characters and nouns (Mara and the bus; Omar and Dad), so they no longer mirror form A test T4.
+- L5 hints and wording: C10 h1 and S10 h1 are neutral ("Ask how the ... and the ... are connected"); C12 hint 3 and the C14 hint 3 differ from C03; "while" in the S09 and S15 keys became "and" and "but"; C11/S11 and C12/S12 stems were reworded and are now under 0.21 both ways.
+- L6 S15 hint 2 ("Say the opening part by itself.") and L7 C09 hint 1 ("... or something you read in a minute.") were reworded to clear the key-word warnings; no key, option or point changed. L7 S10 stem "Beth sang {0} after supper." removed the C12 overlap; wording only.
 
 ## Design notes that affect review
 

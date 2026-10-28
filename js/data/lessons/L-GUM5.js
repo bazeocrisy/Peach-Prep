@@ -5428,7 +5428,7 @@ PP.addLesson({
         [
           "(1) Our family set up a croquet game in the backyard on Sunday.",
           "(2) Grandpa hammered the wickets into the grass because the ground was soft.",
-          "(3) We could not start although Dad found the red ball.",
+          "(3) We could not start although Dad had not found the red ball.",
           "(4) My sister hit first because she was the oldest."
         ],
         [
@@ -5630,11 +5630,11 @@ PP.addLesson({
               "3.L.GC.1:I:use-subordinating-conjunctions-to-join-clauses"
             ],
             passages: [],
-            prompt: "Choose the words that finish Jo's sentence.",
+            prompt: "The rain began at noon and stopped at one. Jo's team sat on the bench from noon to one. Choose the words that finish Jo's sentence.",
             text: "Jo's team rested on the bench {0}.",
             slots: [
               {
-                options: ["until the rain stopped", "although the rain stopped", "because the rain stopped"],
+                options: ["until the rain stopped", "because the rain stopped", "if the rain stopped"],
                 answer: 0
               }
             ],
@@ -5642,15 +5642,15 @@ PP.addLesson({
             hints: [
               "Ask how the resting and the rain are connected.",
               "Say each choice after the bench. Ask which one makes sense for the whole sentence.",
-              "One choice shows a surprise, but nothing here is surprising. Decide between the other two."
+              "One choice gives a reason, but the story says the rain ended when the resting did. Decide between the other two."
             ],
             how: [
-              "Read the whole sentence. Jo's team rested, and the rain stopped.",
+              "Read the story. The rain and the resting both lasted from noon to one.",
               "A joining word that tells how long something lasts is until.",
               "The answer is until the rain stopped."
             ],
             misconception: "A common mix-up is picking the choice that gives a reason. The rain stopping is the time the resting lasted up to, not the reason for it.",
-            why: "The answer is until the rain stopped. The team rested up to the time the rain ended. One choice shows a surprise, and the other gives a reason."
+            why: "The answer is until the rain stopped. The team rested up to the time the rain ended. One choice gives a reason, and the other sets up a case that may not happen."
           },
           {
             id: "SK-GUM5-5-C04",
@@ -5754,12 +5754,12 @@ PP.addLesson({
             ],
             how: [
               "Check each sentence for a whole idea and a joining word that fits.",
-              "In sentence 3, finding the ball is not a surprise. The joining word should tell how long the family waited: until.",
+              "In sentence 3, not finding the ball is the reason they could not start, so although does not fit. The sentence should say because.",
               "In sentence 5, \"After we finished the first game.\" has a joining word but no second idea, so it cannot stand alone.",
               "Sentences 2, 4 and 6 are already written correctly."
             ],
             misconception: "A common mix-up is picking only the sentence that sounds strange. One mistake is a joining word that does not fit, and the other is a group of words that is not finished.",
-            why: "The answers are sentence 3 and sentence 5. In sentence 3, although does not fit, and the sentence should say until. In sentence 5, \"After we finished the first game.\" is not a complete sentence. Sentences 2, 4 and 6 are written correctly."
+            why: "The answers are sentence 3 and sentence 5. In sentence 3, although does not fit, and the sentence should say because. In sentence 5, \"After we finished the first game.\" is not a complete sentence. Sentences 2, 4 and 6 are written correctly."
           },
           {
             id: "SK-GUM5-5-C07",
@@ -5877,9 +5877,9 @@ PP.addLesson({
                 answer: 0
               }
             ],
-            clue: "Ask why the kitten crept away.",
+            clue: "Ask how the creeping and the thunder are connected.",
             hints: [
-              "Ask why the kitten crept away.",
+              "Ask how the creeping and the thunder are connected.",
               "Try each choice after couch. Say the whole sentence.",
               "Hiding is not a surprise when thunder is loud, so one choice cannot be right. Check the other two."
             ],
@@ -5944,7 +5944,7 @@ PP.addLesson({
             hints: [
               "Look at the times in the story. Ask which thing came first.",
               "Say each choice at the start of the sentence. Check it against the times.",
-              "One choice shows a surprise, but nothing here is surprising. Compare the other two with the times."
+              "The choice with although would need a surprise, and none happens here. Compare the other two with the times."
             ],
             how: [
               "Read the times. Nia set the table at eleven, and the guests came at noon, so the setting came first.",
@@ -5995,15 +5995,15 @@ PP.addLesson({
               "3.L.GC.1:I:use-subordinating-conjunctions-to-join-clauses"
             ],
             passages: [],
-            prompt: "Choose the words that best finish the sentence.",
-            text: "Kim wore a coat {0}, and {1}, she took it off.",
+            prompt: "Mara stood outside for an hour, and the bus arrived at eight. Pick what belongs in each blank.",
+            text: "Mara rubbed her hands {0}, and she stayed on the porch {1}.",
             slots: [
               {
-                options: ["although the day was warm", "because the whole day was warm", "if the day was warm"],
+                options: ["because the air was chilly", "although the air was chilly", "until the air was chilly"],
                 answer: 0
               },
               {
-                options: ["after she got too hot", "although she got too hot", "until she got too hot"],
+                options: ["until the bus arrived", "because the bus arrived", "if the bus arrived"],
                 answer: 0
               }
             ],
@@ -6011,15 +6011,15 @@ PP.addLesson({
             hints: [
               "Read the whole sentence. Ask how each blank connects its two ideas.",
               "Fill one blank at a time. Say each choice and see whether it makes sense.",
-              "In the second blank, one choice shows a surprise, but nothing there is surprising. Decide about the other choices."
+              "In the first blank, one choice says the rubbing lasted up to a time, which does not fit. Decide about the other choices."
             ],
             how: [
-              "The first blank: wearing a coat on a warm day is a surprise, and although shows a surprise.",
-              "The second blank: she took the coat off once she was too hot, so after tells when.",
-              "The answers are although the day was warm and after she got too hot."
+              "The first blank: the chilly air is the reason she rubbed her hands, so because gives a reason.",
+              "The second blank: she stood outside for an hour until the bus arrived, so until tells how long.",
+              "The answers are because the air was chilly and until the bus arrived."
             ],
-            misconception: "A common mix-up is using one kind of joining word in both blanks. The first blank shows a surprise, and the second tells when.",
-            why: "The answers are although the day was warm and after she got too hot. Wearing a coat on a warm day is a surprise, and taking it off came once she was hot."
+            misconception: "A common mix-up is using one kind of joining word in both blanks. The first blank gives a reason, and the second tells how long.",
+            why: "The answers are because the air was chilly and until the bus arrived. The chilly air is why she rubbed her hands, and she stayed on the porch up to the time the bus arrived."
           },
           {
             id: "SK-GUM5-5-C15",
@@ -6131,11 +6131,11 @@ PP.addLesson({
         "3.L.GC.1:I:use-subordinating-conjunctions-to-join-clauses"
       ],
       passages: [],
-      prompt: "Which choice makes the sentence read well?",
+      prompt: "Tess began jogging in full daylight. Dark fell much later. Pick the ending that fits.",
       text: "Tess jogged around the track {0}.",
       slots: [
         {
-          options: ["until dark fell", "although dark fell", "if dark fell"],
+          options: ["until dark fell", "because dark fell", "if dark fell"],
           answer: 0
         }
       ],
@@ -6151,7 +6151,7 @@ PP.addLesson({
         "The answer is until dark fell."
       ],
       misconception: "A common mix-up is picking the choice that sets up a case that may not happen. Dark did fall.",
-      why: "The answer is until dark fell. Tess jogged up to the time dark came. One choice shows a surprise, and one sets up a case that may not happen.",
+      why: "The answer is until dark fell. Tess jogged up to the time dark came. One choice gives a reason, and one sets up a case that may not happen.",
       like: ["SK-GUM5-5-C03"]
     },
     {
@@ -6336,7 +6336,7 @@ PP.addLesson({
       prompt: "Compare lines 10 and 11. What is different about after and if?",
       choices: [
         { text: "They do the same job, so either word works in either line without any change." },
-        { text: "After sets a time, while if sets a case that may happen.", correct: true },
+        { text: "After sets a time, and if sets a case that may happen.", correct: true },
         { text: "Line 10 needs fixing, because after cannot join two ideas in one line." },
         { text: "Line 11 needs fixing, because if must follow an event that is already finished." }
       ],
@@ -6349,10 +6349,10 @@ PP.addLesson({
       how: [
         "Read line 10: the juice came when the last winner got a medal, so after sets a time.",
         "Read line 11: more jumping depends on dry weather, so if sets a case that may happen.",
-        "The answer is \"After sets a time, while if sets a case that may happen.\""
+        "The answer is \"After sets a time, and if sets a case that may happen.\""
       ],
       misconception: "A common mix-up is thinking all joining words do the same job. Each one shows a different connection.",
-      why: "The answer is \"After sets a time, while if sets a case that may happen.\" Each joining word shows a different connection, so both lines are correct.",
+      why: "The answer is \"After sets a time, and if sets a case that may happen.\" Each joining word shows a different connection, so both lines are correct.",
       like: ["SK-GUM5-5-C09"]
     },
     {
@@ -6372,9 +6372,9 @@ PP.addLesson({
           answer: 0
         }
       ],
-      clue: "Ask when Gus pulled mittens on.",
+      clue: "Ask how the mittens and the frost are connected.",
       hints: [
-        "Ask when Gus pulled mittens on.",
+        "Ask how the mittens and the frost are connected.",
         "Say each choice after mittens. Ask which one makes sense.",
         "Pulling on mittens in frost is not a surprise, so one choice cannot be right. Check the other two."
       ],
@@ -6396,7 +6396,7 @@ PP.addLesson({
         "3.L.GC.1:I:use-subordinating-conjunctions-to-join-clauses"
       ],
       passages: ["p6"],
-      prompt: "Read lines 5 to 9. Which line has a joining word that seems wrong?",
+      prompt: "Read lines five to nine. Which line has a joining word that seems wrong?",
       targets: ["p6:2:1", "p6:2:2", "p6:2:3", "p6:2:4", "p6:2:5"],
       answer: ["p6:2:3"],
       pick: 1,
@@ -6424,7 +6424,7 @@ PP.addLesson({
         "3.L.GC.1:I:use-subordinating-conjunctions-to-join-clauses"
       ],
       passages: [],
-      prompt: "The bus left at eight. Mia reached the corner at seven. Which choice completes it?",
+      prompt: "Mia reached the corner early. The bus left later. Choose how the line should close.",
       text: "Mia reached the corner {0}.",
       slots: [
         {
@@ -6432,19 +6432,19 @@ PP.addLesson({
           answer: 0
         }
       ],
-      clue: "Compare the two clock times. Who arrived earlier?",
+      clue: "Compare when each thing happened. Which came first?",
       hints: [
-        "Compare the two clock times. Who arrived earlier?",
-        "Try each choice after corner and see if it matches the clock.",
-        "The choice with although would show a surprise, and nothing surprising happens. Weigh the other two against the clock."
+        "Compare when each thing happened. Which came first?",
+        "Try each choice after corner and test it against the story.",
+        "The choice with although would show a surprise, and nothing surprising happens. Weigh the other two against the story."
       ],
       how: [
-        "Read the times. Mia reached the corner at seven, and the bus left at eight, so she came first.",
+        "Read the story. Mia reached the corner early, and the bus left later, so she came first.",
         "A joining word that tells what comes first is before.",
         "The answer is before the bus left."
       ],
       misconception: "A common mix-up is picking a time word without checking the order. Mia came first, so the word has to match that order.",
-      why: "The answer is before the bus left. Mia reached the corner at seven, and the bus left at eight. One choice shows a surprise, and one puts the bus first.",
+      why: "The answer is before the bus left. Mia reached the corner early, and the bus left later. One choice shows a surprise, and one puts the bus first.",
       like: ["SK-GUM5-5-C12"]
     },
     {
@@ -6489,31 +6489,31 @@ PP.addLesson({
         "3.L.GC.1:I:use-subordinating-conjunctions-to-join-clauses"
       ],
       passages: [],
-      prompt: "Pick words for both blanks.",
-      text: "Ravi swam laps {0}, and {1}, he toweled dry.",
+      prompt: "Omar sat down at four. Dad came at five. Fill both blanks.",
+      text: "{0}, Omar zipped his jacket, and he sat on the step {1}.",
       slots: [
         {
-          options: ["although the pool felt cold", "because the pool felt very cold", "if the pool felt cold"],
+          options: ["Because gusts blew", "Although gusts blew", "Until gusts blew"],
           answer: 0
         },
         {
-          options: ["before he ate lunch", "although he ate lunch", "until he ate lunch"],
+          options: ["until Dad came", "because Dad came", "if Dad came"],
           answer: 0
         }
       ],
-      clue: "Read the whole sentence. Ask how each blank connects its two ideas.",
+      clue: "Think about what each blank must tell about its two ideas.",
       hints: [
-        "Read the whole sentence. Ask how each blank connects its two ideas.",
-        "Work on one blank at a time. Say each choice and see whether it makes sense.",
-        "In the second blank, one choice says the drying off lasted up to a time, which does not fit. Decide about the other choices."
+        "Think about what each blank must tell about its two ideas.",
+        "Take the blanks one by one and test each choice aloud.",
+        "In the second blank, one choice sets up a case that may not happen, but Dad did come. Decide about the other choices."
       ],
       how: [
-        "The first blank: swimming in cold water is a surprise, so although shows a surprise.",
-        "The second blank: drying off came first and lunch came next, so before tells what comes first.",
-        "The answers are although the pool felt cold and before he ate lunch."
+        "The first blank: the wind is the reason he zipped his jacket, so Because gives a reason.",
+        "The second blank: he sat for an hour until Dad came, so until tells how long.",
+        "The answers are Because gusts blew and until Dad came."
       ],
-      misconception: "A common mix-up is using one kind of joining word in both blanks. The first blank shows a surprise, and the second tells the order.",
-      why: "The answers are although the pool felt cold and before he ate lunch. Swimming in cold water is a surprise, and drying off came first, then lunch.",
+      misconception: "A common mix-up is using one kind of joining word in both blanks. The first blank gives a reason, and the second tells how long.",
+      why: "The answers are Because gusts blew and until Dad came. The wind is why he zipped his jacket, and he sat on the step up to the time Dad came.",
       like: ["SK-GUM5-5-C14"]
     },
     {
@@ -6529,7 +6529,7 @@ PP.addLesson({
       choices: [
         { text: "Yes. Both words are about time, so the meaning stays put after any swap." },
         { text: "Yes. Mia kept every other word the same, so nothing about the waiting changed." },
-        { text: "No. Until stretches the waiting up to the bell, while when names a single moment.", correct: true },
+        { text: "No. Until stretches the waiting up to the bell, but when names a single moment.", correct: true },
         { text: "No. The new line cannot stand alone, so the swap leaves only a piece of a sentence." }
       ],
       clue: "Say both lines aloud, one after the other.",
@@ -6541,10 +6541,10 @@ PP.addLesson({
       how: [
         "Read both lines. The first says the waiting went on up to the bell.",
         "The second sounds like the waiting happened at a single moment, so the meaning changes.",
-        "The answer is \"No. Until stretches the waiting up to the bell, while when names a single moment.\""
+        "The answer is \"No. Until stretches the waiting up to the bell, but when names a single moment.\""
       ],
       misconception: "A common mix-up is thinking two words about time are the same. Each one shows a different link between the ideas.",
-      why: "The answer is \"No. Until stretches the waiting up to the bell, while when names a single moment.\" Mia's swap shows that the two words are not the same.",
+      why: "The answer is \"No. Until stretches the waiting up to the bell, but when names a single moment.\" Mia's swap shows that the two words are not the same.",
       like: ["SK-GUM5-5-C15"]
     }
   ],
@@ -7878,7 +7878,7 @@ PP.addLesson({
       clue: "Ask what comes before the comma and what comes after it.",
       hints: [
         "Ask what comes before the comma and what comes after it.",
-        "Say the first part by itself. Ask whether it feels finished.",
+        "Say the opening part by itself. Ask whether it feels finished.",
         "There is no list in the sentence, so a choice about list items cannot be right. Check the other choices."
       ],
       how: [
@@ -8532,9 +8532,9 @@ PP.addLesson({
               { text: "Sam is right, since a poem is short and its title takes quotation marks.", correct: true },
               { text: "Both are right, since marks never matter when the capital letters are correct." }
             ],
-            clue: "Ask whether a poem is a whole book or a short work.",
+            clue: "Ask whether a poem is a whole book or something you read in a minute.",
             hints: [
-              "Ask whether a poem is a whole book or a short work.",
+              "Ask whether a poem is a whole book or something you read in a minute.",
               "Think about which kind of work gets quotation marks and which kind gets a line under it.",
               "A poem is not a whole book, so the answer cannot say it counts as one. Check the other choices."
             ],
@@ -9046,7 +9046,7 @@ PP.addLesson({
       ],
       passages: [],
       prompt: "Pick the right way to write the song.",
-      text: "Beth sang {0} at camp.",
+      text: "Beth sang {0} after supper.",
       slots: [
         {
           options: ["\"Pickles in the Pool\"", "\"pickles in the Pool\"", "Pickles in the Pool"],
@@ -9056,7 +9056,7 @@ PP.addLesson({
       clue: "Ask what kind of work the title names and which words need capitals.",
       hints: [
         "Ask what kind of work the title names and which words need capitals.",
-        "Say each choice and check the marks around it, then its first letter.",
+        "Read each choice aloud and check the marks around it, then its first letter.",
         "One choice has no quotation marks at all. Decide between the other two."
       ],
       how: [
