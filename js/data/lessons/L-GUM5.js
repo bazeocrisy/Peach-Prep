@@ -8,7 +8,7 @@ PP.addLesson({
     big: "Titles like Mr. and Dr., short forms of names like Jan. and St., and describing words made from place names like American all start with a capital letter.",
     points: [
       "A title right before a person's name starts with a capital letter: Mr. Cole, Dr. Shah, Mayor Green. The short titles Mr., Mrs., Ms. and Dr. end with a period. When no name comes after it, a word like mayor or doctor usually stays lowercase.",
-      "An abbreviation is a short way to write a word. We use short forms of days, months and streets in addresses, dates and schedules, not in ordinary sentences. If the long word is a name, the short form gets a capital too: Mon. for Monday, Jan. for January, Pine St. for Pine Street, Lake Rd. for Lake Road, Elm Blvd. for Elm Boulevard.",
+      "An abbreviation is a short way to write a word. We use short forms of days, months and streets in addresses, dates and schedules, not in ordinary sentences. If the long word is a name, the short form gets a capital too: Mon. for Monday, Jan. for January, Pine St. for Pine Street, Lake Rd. for Lake Road, Pine Ave. for Pine Avenue, Elm Blvd. for Elm Boulevard.",
       "Some describing words are made from names, like the names of places. Mexico is a place, and Mexican is a describing word: Mexican food. These words start with a capital: an American flag, a Chinese kite."
     ],
     words: [
@@ -290,7 +290,7 @@ PP.addLesson({
               "3.L.GC.1:I:use-conventional-capitalization-in-abbreviations"
             ],
             passages: ["p1"],
-            prompt: "Sentence 2 of the draft has a title that is written wrongly. Choose the words that fix it.",
+            prompt: "Fix the title in sentence 2 of the draft.",
             text: "At the door, {0} cut the ribbon and welcomed every family.",
             slots: [
               {
@@ -364,7 +364,7 @@ PP.addLesson({
             partB: {
               prompt: "Why does the word in Part A need a capital letter?",
               choices: [
-                { text: "Short forms of days, months and streets start with capitals." },
+                { text: "Abbreviations for days, months and roads start with capitals." },
                 { text: "Words made from a country's name start with capitals.", correct: true },
                 { text: "The names of friends and classmates start with capitals." },
                 { text: "Titles right before a person's name start with capitals." }
@@ -427,7 +427,7 @@ PP.addLesson({
               "3.L.GC.1:I:use-conventional-capitalization-in-abbreviations"
             ],
             passages: [],
-            prompt: "Choose the TWO sentences that use capital letters correctly.",
+            prompt: "Pick the TWO sentences whose capital letters are all correct.",
             pick: 2,
             choices: [
               { text: "My neighbor plays an egyptian drum at night." },
@@ -461,7 +461,7 @@ PP.addLesson({
             ],
             passages: [],
             prompt: "Is the day, month or street short form written correctly? Match each sentence.",
-            cols: ["Written correctly", "Needs a capital letter"],
+            cols: ["Correct as written", "Needs a capital"],
             rows: [
               { text: "The class play is on Wed., Dec. 9.", answer: 0 },
               { text: "Please mail the card to 17 Hill st.", answer: 1 },
@@ -495,7 +495,7 @@ PP.addLesson({
             choices: [
               { text: "Mayor has a capital in sentence 2 because it comes in the first paragraph, and later ones stay small." },
               { text: "Mayor always needs a capital letter when it names the person who runs the town." },
-              { text: "Sentence 2 is the one that is wrong, because a title needs a capital only at the start of a sentence." },
+              { text: "Sentence 2 is the one that is wrong, because titles need a capital just when they begin a sentence." },
               {
                 text: "Mayor gets a capital letter when a name comes right after it and stays small when it stands alone.",
                 correct: true
@@ -524,7 +524,7 @@ PP.addLesson({
               "3.L.GC.1:I:use-conventional-capitalization-in-abbreviations"
             ],
             passages: ["p2"],
-            prompt: "Sentence 8 of the draft has a word that is written wrongly. Choose the word that fixes it.",
+            prompt: "Pick the word for the blank in sentence 8.",
             text: "By evening, a {0} band played happy music in the park.",
             slots: [
               {
@@ -587,7 +587,7 @@ PP.addLesson({
               "3.L.GC.1:I:use-conventional-capitalization-in-abbreviations"
             ],
             passages: ["p3"],
-            prompt: "Sentence 10 of the draft has a short form that is written wrongly. Choose the words that fix it.",
+            prompt: "Choose the date that repairs sentence 10.",
             text: "I cannot wait for our next game on {0}.",
             slots: [
               {
@@ -618,7 +618,7 @@ PP.addLesson({
               "3.L.GC.1:I:use-conventional-capitalization-in-abbreviations"
             ],
             passages: [],
-            prompt: "Dan says, \"A title always starts with a capital letter.\" Choose the TWO sentences that show Dan is not right.",
+            prompt: "Dan says, \"Every title begins with a capital letter.\" Choose the TWO sentences that show Dan is not right.",
             pick: 2,
             choices: [
               { text: "Our principal waved from the stage.", correct: true },
@@ -627,9 +627,9 @@ PP.addLesson({
               { text: "Mrs. Diaz called our names." },
               { text: "Principal Hale waved from the stage." }
             ],
-            clue: "A title keeps its capital in one kind of sentence, not another. Find where it stays small.",
+            clue: "Dan says always. Look for sentences that prove him wrong.",
             hints: [
-              "A title keeps its capital in one kind of sentence, not another. Find where it stays small.",
+              "Dan says always. Look for sentences that prove him wrong.",
               "Pick TWO. Check whether a name comes right after each title.",
               "Judge Ramos has a name right after the title. Decide about the other four."
             ],
@@ -658,7 +658,7 @@ PP.addLesson({
                 answer: 2
               },
               {
-                options: ["ave.", "Av.", "Ave."],
+                options: ["rd.", "rD.", "Rd."],
                 answer: 2
               }
             ],
@@ -670,11 +670,11 @@ PP.addLesson({
             ],
             how: [
               "The first blank is a title before the name Reed. Doctor is shortened to Dr., with a capital and a period.",
-              "The second blank is part of a street name. Avenue is shortened to Ave., with a capital and a period.",
-              "The answers are Dr. and Ave."
+              "The second blank is part of a street name. Road is shortened to Rd., with a capital and a period.",
+              "The answers are Dr. and Rd."
             ],
             misconception: "A common mix-up is writing a short form with a small letter. A short form of a name or title keeps its capital.",
-            why: "The answers are Dr. and Ave. Dr. is the short form of the title Doctor, and Ave. is the short form of Avenue, part of a street name. Both keep their capital letters. Doc. and Av. are not the standard short forms."
+            why: "The answers are Dr. and Rd. Dr. is the short form of the title Doctor, and Rd. is the short form of Road, part of a street name. Both keep their capital letters, and the small-letter forms dr. and rd. are wrong."
           },
           {
             id: "SK-GUM5-1-C15",
@@ -687,10 +687,10 @@ PP.addLesson({
             passages: [],
             prompt: "Ravi wrote, \"The vietnamese farmer showed us how rice grows.\" He says vietnamese can stay small because farmer is not a title. Is Ravi right?",
             choices: [
-              { text: "No. Vietnamese is made from the name of a country, so it needs a capital letter.", correct: true },
-              { text: "Yes. A describing word stays small when it comes before an everyday noun like farmer." },
-              { text: "Yes. A describing word needs a capital only when it is the first word in a sentence." },
-              { text: "No. Farmer is a title, so farmer needs the capital letter and vietnamese can stay small." }
+              { text: "No. The word is built from Vietnam, so it gets a capital.", correct: true },
+              { text: "Yes. A word stays small when an everyday noun like farmer follows it." },
+              { text: "Yes. Only the opening word of a sentence needs a capital." },
+              { text: "No. Farmer is a title, so farmer needs the capital and vietnamese can stay small." }
             ],
             clue: "Ask what vietnamese does in the sentence and where the word comes from. Then ask whether the word farmer changes that.",
             hints: [
@@ -701,10 +701,10 @@ PP.addLesson({
             how: [
               "Ask what vietnamese tells about the farmer: where the farmer is from.",
               "Vietnamese is made from Vietnam, the name of a country, so it is a describing word from a place name.",
-              "The answer is \"No. Vietnamese is made from the name of a country, so it needs a capital letter.\""
+              "The answer is \"No. The word is built from Vietnam, so it gets a capital.\""
             ],
             misconception: "A common mix-up is thinking the next word decides the capital. A word made from a place name needs one wherever it appears.",
-            why: "The answer is \"No. Vietnamese is made from the name of a country, so it needs a capital letter.\" It does not matter that farmer is an everyday word. Ravi should write Vietnamese. A describing word made from a place name always starts with a capital letter."
+            why: "The answer is \"No. The word is built from Vietnam, so it gets a capital.\" It does not matter that farmer is an everyday word. Ravi should write Vietnamese. A describing word made from a place name always starts with a capital letter."
           }
         ]
       }
@@ -893,7 +893,7 @@ PP.addLesson({
         "3.L.GC.1:I:use-conventional-capitalization-in-abbreviations"
       ],
       passages: ["p5"],
-      prompt: "Read sentences 2 through 6 of the draft. Pick the TWO sentences where a capital letter is missing.",
+      prompt: "Sentences 2 to 6 hide two missing capitals. Mark both sentences.",
       targets: ["p5:1:2", "p5:1:3", "p5:1:4", "p5:2:1", "p5:2:2"],
       answer: ["p5:1:3", "p5:2:1"],
       pick: 2,
@@ -922,7 +922,7 @@ PP.addLesson({
         "3.L.GC.1:I:use-conventional-capitalization-in-abbreviations"
       ],
       passages: [],
-      prompt: "Which TWO sentences have every capital letter in the right place?",
+      prompt: "Which TWO sentences are free of capital-letter mistakes?",
       pick: 2,
       choices: [
         { text: "Our neighbor bakes turkish bread on Saturday." },
@@ -1019,7 +1019,7 @@ PP.addLesson({
         "3.L.GC.1:I:use-conventional-capitalization-in-abbreviations"
       ],
       passages: ["p5"],
-      prompt: "Fix the mistake in sentence 8 by choosing the right word for the blank.",
+      prompt: "Choose what fills the blank correctly.",
       text: "Later, an {0} dancer told us a tale using only her hands.",
       slots: [
         {
@@ -1051,7 +1051,7 @@ PP.addLesson({
         "3.L.GC.1:I:use-conventional-capitalization-in-abbreviations"
       ],
       passages: ["p6"],
-      prompt: "In sentences 5 to 9, one capital letter was added by mistake. Select that sentence.",
+      prompt: "A capital in one of sentences 5 to 9 should be small. Mark that sentence.",
       targets: ["p6:2:2", "p6:2:3", "p6:3:1", "p6:3:2", "p6:3:3"],
       answer: ["p6:2:3"],
       pick: 1,
@@ -1079,8 +1079,8 @@ PP.addLesson({
         "3.L.GC.1:I:use-conventional-capitalization-in-abbreviations"
       ],
       passages: ["p6"],
-      prompt: "Which version of the date in sentence 10 is written correctly?",
-      text: "Come cheer for us at the pool on {0}.",
+      prompt: "Choose the right date.",
+      text: "Swim meet: {0}.",
       slots: [
         {
           options: ["Sun., aug. 15", "sun., Aug. 15", "Sun., Aug. 15"],
@@ -1120,9 +1120,9 @@ PP.addLesson({
         { text: "Coach Nell set up all the orange cones early." },
         { text: "My cousin wants to be a captain someday.", correct: true }
       ],
-      clue: "A title keeps a capital in one kind of sentence and not in another. Look for the sentences where the title stays small.",
+      clue: "Mia says every title needs one. Look for the sentences that prove her wrong.",
       hints: [
-        "A title keeps a capital in one kind of sentence and not in another. Look for the sentences where the title stays small.",
+        "Mia says every title needs one. Look for the sentences that prove her wrong.",
         "Pick TWO. Check whether a name comes right after each title.",
         "Officer Gray has a name right after the title. Decide about the other four."
       ],
@@ -1148,11 +1148,11 @@ PP.addLesson({
       text: "Mail to: {0} Cruz, 25 Maple {1}",
       slots: [
         {
-          options: ["Ms.", "ms.", "Mz."],
+          options: ["Ms.", "ms.", "mS."],
           answer: 0
         },
         {
-          options: ["st.", "Str.", "St."],
+          options: ["st.", "sT.", "St."],
           answer: 2
         }
       ],
@@ -1160,7 +1160,7 @@ PP.addLesson({
       hints: [
         "Ask which short forms stand for a title and for part of a street name. Then ask how each should be written.",
         "Work on one blank at a time. Say the short form with its long word.",
-        "Mz. is not a standard short form of any title. Think about the other choices."
+        "One choice has a capital letter in the wrong place. Think about the other choices."
       ],
       how: [
         "The first blank is a title before the name Cruz. Ms. is written with a capital and a period.",
@@ -1168,7 +1168,7 @@ PP.addLesson({
         "The answers are Ms. and St."
       ],
       misconception: "A common mix-up is writing a short form in small letters. A short form of a title or a street name keeps its capital.",
-      why: "The answers are Ms. and St. Ms. is a title before a name, and St. is the short form of Street in a street name. Both start with a capital letter and end with a period. The choices mz. and Str. are not standard.",
+      why: "The answers are Ms. and St. Ms. is a title before a name, and St. is the short form of Street in a street name. Both start with a capital letter and end with a period. The choices mS. and sT. put a capital in the wrong place.",
       like: ["SK-GUM5-1-C14"]
     },
     {
@@ -1460,7 +1460,7 @@ PP.addLesson({
           "(9) Grandpa: No, I have plenty already."
         ],
         [
-          "(10) Mom: Please set the small fern in the middle Lee.",
+          "(10) Mom: Please set the fern Lee in the middle.",
           "(11) Lee: Yes, Mom, I will do it right now.",
           "(12) Rosa: I will water the moss too and then I will close the lid."
         ]
@@ -1537,7 +1537,7 @@ PP.addLesson({
           "(9) Luis: No, my wing is going fine."
         ],
         [
-          "(10) Dad: Set the cranes by the window Luis.",
+          "(10) Dad: Set the cranes Luis by the window.",
           "(11) Luis: Yes, Dad, I will put them there soon.",
           "(12) Zoe: Later I plan to fold another one before bed."
         ]
@@ -1622,7 +1622,7 @@ PP.addLesson({
               "3.L.GC.1:I:use-commas-for-direct-address-and-to-set-off-yes"
             ],
             passages: ["p1"],
-            prompt: "Sentence 2 of the draft is missing a comma. Choose the words that fix it.",
+            prompt: "Fix the start of sentence 2.",
             text: "Mia: {0} hold this corner piece while I find its match.",
             slots: [
               {
@@ -1694,7 +1694,7 @@ PP.addLesson({
               ]
             },
             partB: {
-              prompt: "Which rule explains why the sentence in Part A needs a comma?",
+              prompt: "What rule makes the Part A sentence need a comma?",
               choices: [
                 { text: "A comma goes after the first word of every question." },
                 { text: "A comma goes before the word can when a sentence asks for help." },
@@ -1853,7 +1853,7 @@ PP.addLesson({
               "3.L.GC.1:I:use-commas-for-direct-address-and-to-set-off-yes"
             ],
             passages: ["p2"],
-            prompt: "Sentence 10 of the draft is missing a comma. Choose the words that fix it.",
+            prompt: "Which words repair Dev's thank-you in sentence 10?",
             text: "Dev: {0} I think it will win a prize today.",
             slots: [
               {
@@ -1864,7 +1864,7 @@ PP.addLesson({
             clue: "Ask who Dev is thanking, and think about what should separate that name from the rest.",
             hints: [
               "Ask who Dev is thanking, and think about what should separate that name from the rest.",
-              "Say each choice out loud. Listen for where the speaker would pause.",
+              "Try each choice in the line. Notice what follows the name.",
               "One choice puts the comma after the first word, where the speaker would not pause. Decide between the other two."
             ],
             how: [
@@ -1916,27 +1916,27 @@ PP.addLesson({
               "3.L.GC.1:I:use-commas-for-direct-address-and-to-set-off-yes"
             ],
             passages: ["p3"],
-            prompt: "Sentence 10 of the draft is missing a comma. Choose the words that fix it.",
-            text: "Mom: Please set the small fern in the {0}",
+            prompt: "Choose the words that fix sentence 10.",
+            text: "Mom: Please set the {0} in the middle.",
             slots: [
               {
-                options: ["middle, Lee.", "middle Lee.", "middle; Lee."],
+                options: ["fern, Lee,", "fern, Lee", "fern; Lee;"],
                 answer: 0
               }
             ],
             clue: "Ask who Mom is talking to, and where that name sits in the sentence.",
             hints: [
               "Ask who Mom is talking to, and where that name sits in the sentence.",
-              "Say each choice at the end of the sentence. Listen for the pause between the last two words.",
-              "One choice uses a mark that is not a comma. Decide between the other two."
+              "Say each choice inside the sentence. Count the pauses before and after the name.",
+              "One choice sets the name off on only one side. Decide between the other two."
             ],
             how: [
-              "Read sentence 10. Mom is talking to Lee, and his name comes last.",
-              "A name at the end of a sentence gets a comma before it.",
-              "The answer is middle, Lee."
+              "Read sentence 10. Mom is talking to Lee, and his name sits in the middle.",
+              "A name in the middle of a sentence gets a comma before it and a comma after it.",
+              "The answer is fern, Lee, with a comma on each side of the name."
             ],
-            misconception: "A common mix-up is putting the comma after the name instead of before it. A name at the end needs its comma on the left.",
-            why: "The answer is middle, Lee. Mom is talking to Lee, and his name comes last, so the comma goes before it. Middle Lee. leaves the comma out, and middle; Lee. uses a semicolon instead of a comma."
+            misconception: "A common mix-up is putting only one comma next to a name in the middle. It needs one on each side.",
+            why: "The answer is fern, Lee, with a comma on each side of the name. Mom is talking to Lee, and his name sits in the middle. One choice has only one comma, and one uses semicolons instead of commas."
           },
           {
             id: "SK-GUM5-2-C13",
@@ -1954,21 +1954,21 @@ PP.addLesson({
               { text: "Is the pizza ready, Tim?" },
               { text: "Tim carried the box to the car.", correct: true },
               { text: "Please wait here, Tim, and sit." },
-              { text: "Tim, carry the box to the car." }
+              { text: "Tim carry the box to the car." }
             ],
-            clue: "Kai says a name needs a comma every time. Look for sentences where a name has no comma next to it and the sentence is still right.",
+            clue: "Kai says a name needs a comma every time. Find sentences that prove him wrong.",
             hints: [
-              "Kai says a name needs a comma every time. Look for sentences where a name has no comma next to it and the sentence is still right.",
+              "Kai says a name needs a comma every time. Find sentences that prove him wrong.",
               "Pick TWO. Check whether each sentence speaks to the person or only tells about the person.",
-              "The sentence that starts with Tim, speaks right to Tim. Decide about the other four."
+              "The sentence about the pizza has a name with a comma that belongs. Decide about the other four."
             ],
             how: [
               "Look for a name with no comma next to it in a sentence that is correct.",
               "\"Tim carried the box to the car.\" and \"Mom hugged Tim at the door.\" only tell about Tim, so no comma is needed.",
-              "The other three speak right to Tim, so each has a comma next to his name."
+              "The other three speak right to Tim, so a comma belongs next to his name. Two of them have it, and one is missing it, so none of them shows Kai is wrong."
             ],
             misconception: "A common mix-up is picking sentences that have commas. Kai is wrong when a sentence only tells about a person, so the name needs no comma.",
-            why: "The answers are \"Tim carried the box to the car.\" and \"Mom hugged Tim at the door.\" Both only tell about Tim, so his name needs no comma. In the other three, someone is talking to Tim, so a comma sets off his name."
+            why: "The answers are \"Tim carried the box to the car.\" and \"Mom hugged Tim at the door.\" Both only tell about Tim, so his name needs no comma. In the other three, someone is talking to Tim, so a comma belongs next to his name, and one of them leaves it out."
           },
           {
             id: "SK-GUM5-2-C14",
@@ -2019,13 +2019,13 @@ PP.addLesson({
               { text: "No. Yes needs a comma only when it starts an answer, and here it tells what Mom said.", correct: true },
               { text: "Yes. The word yes needs a comma every single time that it is used in any sentence at all." },
               { text: "Yes. A comma is needed after any word that tells what a person has said to another person." },
-              { text: "No. Yes needs a comma only when it is the very last word in the whole sentence, never first." }
+              { text: "No. Yes needs a comma only when a name follows it, and here none does." }
             ],
             clue: "Ask what the word yes is doing in the sentence. Is it being said to a person, or is it telling what Mom said?",
             hints: [
               "Ask what the word yes is doing in the sentence. Is it being said to a person, or is it telling what Mom said?",
               "Think about someone who says yes to a question. Ask where the comma goes, and why.",
-              "The end of a sentence is not the reason a word needs a comma. Check the other three."
+              "A name after the word is not what decides it here. Check the other three."
             ],
             how: [
               "Ask what yes is doing. Mom is not answering anyone in this sentence.",
@@ -2222,7 +2222,7 @@ PP.addLesson({
         "3.L.GC.1:I:use-commas-for-direct-address-and-to-set-off-yes"
       ],
       passages: ["p5"],
-      prompt: "In lines 2 through 6 of the script, which TWO lines leave out a comma they need? Select both.",
+      prompt: "Two of lines 2 to 6 skip a needed comma. Mark both lines.",
       targets: ["p5:1:2", "p5:1:3", "p5:1:4", "p5:2:1", "p5:2:2"],
       answer: ["p5:1:2", "p5:2:2"],
       pick: 2,
@@ -2408,27 +2408,27 @@ PP.addLesson({
         "3.L.GC.1:I:use-commas-for-direct-address-and-to-set-off-yes"
       ],
       passages: ["p6"],
-      prompt: "Near the end of the script, one line lacks the mark that should sit beside its name. Pick the right ending.",
-      text: "Dad: Set the cranes by the {0}",
+      prompt: "Which choice makes the line right?",
+      text: "Dad: Set the {0} by the window.",
       slots: [
         {
-          options: ["window, Luis.", "window Luis.", "window; Luis."],
+          options: ["cranes, Luis,", "cranes, Luis", "cranes; Luis;"],
           answer: 0
         }
       ],
       clue: "Ask who Dad is talking to, and where that name falls in the line.",
       hints: [
         "Ask who Dad is talking to, and where that name falls in the line.",
-        "Say each choice at the end of the line and listen for the pause before the last word.",
-        "One choice uses a mark that is not a comma. Decide between the other two."
+        "Say each choice inside the line and listen for the pauses around the name.",
+        "One choice sets the name off on only the left side. Decide between the other two."
       ],
       how: [
-        "Read line 10. Dad is talking to Luis, and his name is last.",
-        "A name at the end of a sentence has a comma before it.",
-        "The answer is window, Luis."
+        "Read line 10. Dad is talking to Luis, and his name sits in the middle.",
+        "A name in the middle of a line gets a comma on its left and a comma on its right.",
+        "The answer is cranes, Luis, with a comma on each side of the name."
       ],
-      misconception: "A common mix-up is leaving out the comma because the name closes the line. At the end of a sentence, the comma goes before the name.",
-      why: "The answer is window, Luis. Dad is talking to Luis, and the name closes the line, so the comma goes before it. Window Luis. leaves it out, and window; Luis. uses a semicolon instead of a comma.",
+      misconception: "A common mix-up is stopping after one comma. A name in the middle needs a comma on both sides.",
+      why: "The answer is cranes, Luis, with a comma on each side of the name. Dad is talking to Luis, and his name sits in the middle. One choice has only one comma, and one uses semicolons instead of commas.",
       like: ["SK-GUM5-2-C12"]
     },
     {
@@ -2443,22 +2443,22 @@ PP.addLesson({
       prompt: "Gus says, \"Any sentence with a name in it has to have commas.\" Pick the TWO sentences that prove Gus wrong.",
       pick: 2,
       choices: [
-        { text: "Dan, look at this seashell." },
+        { text: "Dan look at this seashell." },
         { text: "Dan found a seashell on the beach.", correct: true },
         { text: "I think, Dan, that it is time to go." },
         { text: "Our team cheered for Nell.", correct: true },
         { text: "Can you swim, Nell?" }
       ],
-      clue: "Gus says every sentence with a name has commas. Look for sentences that have a name, no commas, and are still right.",
+      clue: "Gus says every sentence with a name has commas. Find the sentences that prove him wrong.",
       hints: [
-        "Gus says every sentence with a name has commas. Look for sentences that have a name, no commas, and are still right.",
+        "Gus says every sentence with a name has commas. Find the sentences that prove him wrong.",
         "Pick TWO. Ask whether each sentence speaks to a person or only tells about a person.",
-        "The sentence with I think speaks to Dan in the middle of a line. Decide about the other four."
+        "The sentence with I think has its commas where they belong. Decide about the other four."
       ],
       how: [
         "Look for a sentence that has a name and no commas and is still right.",
         "\"Dan found a seashell on the beach.\" and \"Our team cheered for Nell.\" only tell about people, so they need no commas.",
-        "The other three speak right to Dan or Nell, so each has commas next to the name."
+        "The other three speak right to Dan or Nell, so commas belong next to the name. Two of them have them, and one is missing its comma, so none of them proves Gus wrong."
       ],
       misconception: "A common mix-up is choosing sentences with commas, because those are the ones that follow the rule. Gus is wrong where a name needs no commas.",
       why: "The answers are \"Dan found a seashell on the beach.\" and \"Our team cheered for Nell.\" Both only tell about a person, so no commas are needed. In the other three, someone speaks to Dan or Nell, so commas set off the name.",
@@ -2473,15 +2473,15 @@ PP.addLesson({
         "3.L.GC.1:I:use-commas-for-direct-address-and-to-set-off-yes"
       ],
       passages: [],
-      prompt: "Uncle Joe asks a question, and Pia answers it. Pick the words that complete each line.",
+      prompt: "Pick the words for each line.",
       text: "Uncle Joe: {0} Pia: {1}",
       slots: [
         {
-          options: ["Pia, did you feed the fish?", "Pia did you feed the fish?", "Pia did, you feed the fish?"],
+          options: ["Pia, did the fish eat?", "Pia did the fish eat?", "Pia did, the fish eat?"],
           answer: 0
         },
         {
-          options: ["Yes, I fed them this morning.", "Yes I fed them this morning.", "Yes I fed, them this morning."],
+          options: ["Yes, they ate at dawn.", "Yes they ate at dawn.", "Yes they ate, at dawn."],
           answer: 0
         }
       ],
@@ -2489,15 +2489,15 @@ PP.addLesson({
       hints: [
         "Think about who speaks to whom in each line, and which words should be set off.",
         "Work on one blank at a time. Read each choice aloud and notice where the speaker would pause.",
-        "In the second blank, one choice has its only comma after the word fed. Decide about the other choices."
+        "In the second blank, one choice has its only comma after the word ate. Decide about the other choices."
       ],
       how: [
         "In the first blank, Uncle Joe speaks to Pia. Her name opens the line, so a comma follows it.",
         "In the second blank, Pia answers with yes. Yes opens her answer, so a comma follows it.",
-        "The answers are \"Pia, did you feed the fish?\" and \"Yes, I fed them this morning.\""
+        "The answers are \"Pia, did the fish eat?\" and \"Yes, they ate at dawn.\""
       ],
       misconception: "A common mix-up is putting the comma deeper into the line. It goes right after the name and right after the answer word.",
-      why: "The answers are \"Pia, did you feed the fish?\" and \"Yes, I fed them this morning.\" Uncle Joe speaks to Pia, so her name gets a comma after it. Yes opens Pia's answer, so it gets a comma after it. The other choices leave the comma out or put it in the wrong place.",
+      why: "The answers are \"Pia, did the fish eat?\" and \"Yes, they ate at dawn.\" Uncle Joe speaks to Pia, so her name gets a comma after it. Yes opens Pia's answer, so it gets a comma after it. The other choices leave the comma out or put it in the wrong place.",
       like: ["SK-GUM5-2-C14"]
     },
     {
@@ -2512,9 +2512,7 @@ PP.addLesson({
       prompt: "Tia reads \"Our teacher gave a firm no to extra recess.\" She claims a comma must come after each no she sees. Which choice judges her claim?",
       choices: [
         { text: "She is right. Wherever a no shows up on a page, a comma has to come right after it, without exception." },
-        {
-          text: "She is wrong. Commas are saved for the reply yes, and the reply no gets none at all, even when spoken aloud."
-        },
+        { text: "She is wrong. Only the word yes gets a comma, so no is left alone." },
         { text: "She is right. A teacher is the one speaking here, so whatever the teacher says gets a comma." },
         {
           text: "She is wrong. A comma follows a no that begins a reply, but this no is something the teacher gave.",
@@ -2671,7 +2669,7 @@ PP.addLesson({
     points: [
       "You already know that one owner gets 's: one student's desk. Now there is more than one owner, so start with the plural word.",
       "Most plurals end in s. To show they own something, put the apostrophe after the s: the students' desks, the two dogs' bowls.",
-      "A few plurals do not end in s, like children and geese. Add 's to these: the children's books, the geese's pond.",
+      "A few plurals do not end in s, like geese. Add 's to this kind of word: the geese's pond.",
       "A plural that owns nothing needs no apostrophe at all: two cats sat on the step."
     ],
     words: [
@@ -2682,9 +2680,9 @@ PP.addLesson({
       label: "Example",
       lines: [
         "one girl's coat → many girls' coats",
-        "one child's toy → many children's toys"
+        "one goose's feather → many geese's feathers"
       ],
-      note: "Girls already ends in s, so only an apostrophe is added after the s. Children does not end in s, so 's is added."
+      note: "Girls already ends in s, so only an apostrophe is added after the s. Geese does not end in s, so 's is added."
     },
     tip: "Before you choose, ask: How many owners are there? Look for words like two, all or many."
   },
@@ -2700,14 +2698,14 @@ PP.addLesson({
       answer: "Write teachers': \"All of the teachers' cars were parked in the front row.\""
     },
     {
-      show: ["The ___ coats hung on hooks by the door.", "(The coats belong to many children.)"],
-      ask: "How should you write children to show the coats belong to them?",
+      show: ["The ___ nests were high in the tall pine tree.", "(The nests belong to many geese.)"],
+      ask: "How should you write geese to show the nests belong to them?",
       steps: [
-        "There is more than one owner, so start with the plural: children.",
-        "Check the end of the word. Children does not end in s.",
+        "There is more than one owner, so start with the plural: geese.",
+        "Check the end of the word. Geese does not end in s.",
         "When a plural does not end in s, add 's."
       ],
-      answer: "Write children's: \"The children's coats hung on hooks by the door.\""
+      answer: "Write geese's: \"The geese's nests were high in the tall pine tree.\""
     }
   ],
   parent: "Around the house, name things that belong to more than one person, like the boys' room or your grandparents' car. Have your child write the words on a sticky note and check where the apostrophe goes.",
@@ -2748,7 +2746,7 @@ PP.addLesson({
         [
           "(1) Our school held a coat drive to help families get ready for the cold months.",
           "(2) The firefighters' truck brought the first boxes of coats to the front door.",
-          "(3) Two volunteers hung the mens jackets on a long metal rack.",
+          "(3) Two volunteers hung the boys jackets on a long metal rack.",
           "(4) Piles of scarves and gloves sat beside the sorting table."
         ],
         [
@@ -2759,7 +2757,7 @@ PP.addLesson({
         [
           "(8) The principal read a note about the families' kind gifts.",
           "(9) Our two janitors carried the last boxes out to the truck.",
-          "(10) The janitors closet was empty by the end of the day."
+          "(10) The childrens closet was empty by the end of the day."
         ]
       ]
     },
@@ -2784,7 +2782,7 @@ PP.addLesson({
           "(9) The parents' cocoa was gone before the third run was over."
         ],
         [
-          "(10) The mens faces were red from the cold wind.",
+          "(10) The peoples faces were red from the cold wind.",
           "(11) At sunset, the families walked home with tired legs and happy smiles.",
           "(12) I hope the snow comes back again next week."
         ]
@@ -2861,7 +2859,7 @@ PP.addLesson({
           "(9) Neighbors' extra packets went into a box for our class garden."
         ],
         [
-          "(10) The womens table ran out of marigold seeds before lunch.",
+          "(10) The childrens table ran out of marigold seeds before lunch.",
           "(11) By dinner, the hall smelled like soil.",
           "(12) I took home a packet of purple flowers."
         ]
@@ -2915,13 +2913,13 @@ PP.addLesson({
       options: [
         "The babies' blankets were folded in a pile.",
         "Both of my aunts' houses are in Augusta.",
-        "The mens' choir sang at the fair.",
+        "The childrens' choir sang at the fair.",
         "My two cousins' dog is named Biscuit.",
         "The kittens' basket sat by the warm stove."
       ],
       answer: [2], pick: 1,
       clue: "For each owner word, decide if it is plural. Then check where the apostrophe goes.",
-      why: "The error is in \"The mens' choir sang at the fair.\" Men does not end in s, so it gets 's: the men's choir." }
+      why: "The error is in \"The childrens' choir sang at the fair.\" Children does not end in s, so it gets 's: the children's choir." }
   ],
   /* B8:core:start */
   /* ---------- Expansion 2026-10-22, batch B8 (GUM Introduce/Continue) ----------
@@ -3066,12 +3064,12 @@ PP.addLesson({
             ],
             how: [
               "Find each owner word and ask whether it is plural and how it ends.",
-              "In sentence 3, men does not end in s, so it needs 's: men's jackets.",
+              "In sentence 3, the jackets belong to the boys, so boys needs an apostrophe after the s: boys' jackets.",
               "In sentence 5, children does not end in s either, so it needs 's: children's mittens.",
               "Sentences 2, 4 and 6 are already written correctly."
             ],
-            misconception: "A common mix-up is thinking a word that ends in s' is always right. Plurals like men and children do not end in s, so they need 's.",
-            why: "The answers are sentence 3 and sentence 5. In sentence 3, the word men needs 's: men's jackets. In sentence 5, childrens' should be children's, because children does not end in s. Sentences 2, 4 and 6 are written correctly."
+            misconception: "A common mix-up is thinking only a missing apostrophe can be wrong. One mistake here leaves the apostrophe out, and one puts it in the wrong place.",
+            why: "The answers are sentence 3 and sentence 5. In sentence 3, the word boys needs an apostrophe: boys' jackets. In sentence 5, childrens' should be children's, because children does not end in s. Sentences 2, 4 and 6 are written correctly."
           },
           {
             id: "SK-GUM5-3-C07",
@@ -3082,14 +3080,14 @@ PP.addLesson({
               "3.L.GC.1:I:use-apostrophes-to-form-plural-possessive-nouns"
             ],
             passages: [],
-            prompt: "Choose the TWO sentences that use apostrophes correctly.",
+            prompt: "Pick the TWO sentences in which each apostrophe is placed correctly.",
             pick: 2,
             choices: [
-              { text: "Both boys's jackets were on the floor." },
+              { text: "Both boys's jackets were left on the gym floor." },
               { text: "The nurses' office was closed on Monday.", correct: true },
-              { text: "The mens' team won the game." },
+              { text: "The geeses' pond froze overnight." },
               { text: "Two apple's fell from the tree." },
-              { text: "The women's club met in the library.", correct: true }
+              { text: "The mice's nest was hidden under the shed.", correct: true }
             ],
             clue: "Check each sentence for a word that names who owns something. Ask whether it is plural and how it ends.",
             hints: [
@@ -3100,11 +3098,11 @@ PP.addLesson({
             how: [
               "Check each sentence for an owner word and for the way it ends.",
               "Nurses ends in s, so \"The nurses' office was closed on Monday.\" needs only an apostrophe.",
-              "Women does not end in s, so \"The women's club met in the library.\" needs 's.",
-              "The other three are wrong: apple's owns nothing, boys's adds an extra s, and mens' puts the apostrophe where men needs 's."
+              "Mice does not end in s, so \"The mice's nest was hidden under the shed.\" needs 's.",
+              "The other three are wrong: apple's owns nothing, boys's adds an extra s, and geeses' puts the apostrophe where geese needs 's."
             ],
             misconception: "A common mix-up is thinking more marks make a word more correct. A plural that ends in s needs only an apostrophe, and a plural that does not end in s needs 's.",
-            why: "The answers are \"The nurses' office was closed on Monday.\" and \"The women's club met in the library.\" Nurses ends in s, and women does not. The others should say \"Two apples fell from the tree.\", \"Both boys' jackets were on the floor.\" and \"The men's team won the game.\""
+            why: "The answers are \"The nurses' office was closed on Monday.\" and \"The mice's nest was hidden under the shed.\" Nurses ends in s, and mice does not. The others should say \"Two apples fell from the tree.\", \"Both boys' jackets were left on the gym floor.\" and \"The geese's pond froze overnight.\""
           },
           {
             id: "SK-GUM5-3-C08",
@@ -3119,9 +3117,9 @@ PP.addLesson({
             cols: ["Add only an apostrophe", "Add an apostrophe and s"],
             rows: [
               { text: "players, when many players own the cleats", answer: 0 },
-              { text: "men, when many men own the boots", answer: 1 },
+              { text: "geese, when many geese own the pond", answer: 1 },
               { text: "pilots, when two pilots share a plane", answer: 0 },
-              { text: "women, when several women own the shop", answer: 1 }
+              { text: "mice, when several mice share the nest", answer: 1 }
             ],
             clue: "Look at the last letter of each plural word. Ask whether it is s.",
             hints: [
@@ -3130,12 +3128,12 @@ PP.addLesson({
               "Pilots already ends in s. Decide about the other rows."
             ],
             how: [
-              "Look at the end of each plural: players, men, pilots and women.",
+              "Look at the end of each plural: players, geese, pilots and mice.",
               "Players and pilots end in s, so each needs only an apostrophe after the s.",
-              "Men and women do not end in s, so each needs an apostrophe and s."
+              "Geese and mice do not end in s, so each needs an apostrophe and s."
             ],
             misconception: "A common mix-up is treating every plural the same way. The ending of the plural word decides what is added.",
-            why: "Players and pilots end in s, so they need only an apostrophe: players' cleats and pilots' plane. Men and women do not end in s, so they need an apostrophe and s: men's boots and women's shop."
+            why: "Players and pilots end in s, so they need only an apostrophe: players' cleats and pilots' plane. Geese and mice do not end in s, so they need an apostrophe and s: geese's pond and mice's nest."
           },
           {
             id: "SK-GUM5-3-C09",
@@ -3181,27 +3179,27 @@ PP.addLesson({
               "3.L.GC.1:I:use-apostrophes-to-form-plural-possessive-nouns"
             ],
             passages: ["p2"],
-            prompt: "Sentence 10 of the draft needs a fix. The closet belongs to both janitors. Choose the word that fixes it.",
+            prompt: "Some kids share a closet in sentence 10. Which choice shows who owns it?",
             text: "The {0} closet was empty by the end of the day.",
             slots: [
               {
-                options: ["janitor's", "janitors'", "janitors"],
-                answer: 1
+                options: ["children's", "childrens'", "childrens"],
+                answer: 0
               }
             ],
-            clue: "Ask who owns the closet and how many owners there are.",
+            clue: "Count the owners of the closet, then ask whether that plural ends in s.",
             hints: [
-              "Ask who owns the closet and how many owners there are.",
-              "Say each choice in the blank and think about where the apostrophe sits.",
-              "One choice has no apostrophe, so it does not show who owns the closet. Decide between the other two."
+              "Count the owners of the closet, then ask whether that plural ends in s.",
+              "Say each choice in the blank. Look at what comes before the apostrophe.",
+              "One choice has no apostrophe at all. Decide between the other two."
             ],
             how: [
-              "Read sentence 10. The closet belongs to both janitors.",
-              "Janitors is plural and ends in s, so only an apostrophe goes after the s.",
-              "The answer is janitors'."
+              "Read sentence 10. The closet belongs to several children.",
+              "Children is plural, but it does not end in s, so it needs an apostrophe and s.",
+              "The answer is children's."
             ],
-            misconception: "A common mix-up is putting the apostrophe before the s. That would mean only one janitor.",
-            why: "The answer is janitors'. Both janitors share the closet, so the plural word janitors needs an apostrophe after the s. Janitor's would mean one janitor, and janitors alone does not show ownership."
+            misconception: "A common mix-up is treating children like a plural that ends in s. Children does not end in s, so it needs 's.",
+            why: "The answer is children's. Several children share the closet. Children is already plural and does not end in s, so it gets an apostrophe and s. The childrens' has the apostrophe in the wrong place, and childrens has none."
           }
         ]
       },
@@ -3244,27 +3242,27 @@ PP.addLesson({
               "3.L.GC.1:I:use-apostrophes-to-form-plural-possessive-nouns"
             ],
             passages: ["p3"],
-            prompt: "Sentence 10 of the draft needs an apostrophe fix. The faces belong to several men. Choose the words that fix it.",
+            prompt: "In sentence 10, the faces belong to several people. Choose the words that finish it.",
             text: "{0} faces were red from the cold wind.",
             slots: [
               {
-                options: ["The men's", "The mens'", "The mens"],
+                options: ["The people's", "The peoples'", "The peoples"],
                 answer: 0
               }
             ],
-            clue: "Ask whether the plural word for several men ends in s. Then think about what an owner word needs.",
+            clue: "Ask whether the word for several people ends in s. Then think about what an owner word needs.",
             hints: [
-              "Ask whether the plural word for several men ends in s. Then think about what an owner word needs.",
+              "Ask whether the word for several people ends in s. Then think about what an owner word needs.",
               "Say each choice at the start of the sentence. Look at where the apostrophe sits and what comes before it.",
               "One choice has no apostrophe at all. Decide between the other two."
             ],
             how: [
-              "Read sentence 10. The faces belong to several men.",
-              "Men is plural, but it does not end in s, so it needs an apostrophe and s.",
-              "The answer is The men's."
+              "Read sentence 10. The faces belong to several people.",
+              "People is plural, but it does not end in s, so it needs an apostrophe and s.",
+              "The answer is The people's."
             ],
-            misconception: "A common mix-up is treating men like a plural that ends in s. Because men does not end in s, it needs 's.",
-            why: "The answer is The men's. The faces belong to several men. Men is already plural and does not end in s, so it gets an apostrophe and s. The mens' has the apostrophe in the wrong place, and The mens has none."
+            misconception: "A common mix-up is treating people like a plural that ends in s. Because people does not end in s, it needs 's.",
+            why: "The answer is The people's. The faces belong to several people. People is already plural and does not end in s, so it gets an apostrophe and s. The peoples' has the apostrophe in the wrong place, and The peoples has none."
           },
           {
             id: "SK-GUM5-3-C13",
@@ -3281,22 +3279,22 @@ PP.addLesson({
               { text: "My cousins visit us every summer.", correct: true },
               { text: "The cats' bowl was empty again by dinner." },
               { text: "Three bakers sold pies at the fair.", correct: true },
-              { text: "The women's club met in the library on Friday." },
+              { text: "The kittens food was gone by dinner." },
               { text: "The bakers' oven was hot after the long morning." }
             ],
-            clue: "Pat says each plural noun needs an apostrophe. Look for sentences that have a plural noun with no apostrophe and are still right.",
+            clue: "Pat says every plural noun needs one. Find sentences that prove Pat wrong.",
             hints: [
-              "Pat says each plural noun needs an apostrophe. Look for sentences that have a plural noun with no apostrophe and are still right.",
+              "Pat says every plural noun needs one. Find sentences that prove Pat wrong.",
               "Pick TWO. Check whether a plural noun in each sentence owns something.",
-              "In the sentence about the club, the plural noun owns something and has its apostrophe. Decide about the other four."
+              "In the sentence about the bakers' oven, the plural noun owns something and has its apostrophe. Decide about the other four."
             ],
             how: [
               "Look for a sentence with a plural noun and no apostrophe that is still correct.",
               "In \"Three bakers sold pies at the fair.\" and \"My cousins visit us every summer.\" the plural nouns own nothing, so they need no apostrophe.",
-              "The other three have a plural noun that owns something, so each has an apostrophe."
+              "The other three have a plural noun that owns something, so an apostrophe belongs there. Two have it, and one is missing it, so none of them shows Pat is wrong."
             ],
             misconception: "A common mix-up is choosing the sentences with apostrophes, because those follow Pat's rule. Pat is wrong when a plural noun owns nothing.",
-            why: "The answers are \"Three bakers sold pies at the fair.\" and \"My cousins visit us every summer.\" Their plural nouns own nothing, so they need no apostrophe. In the other three, the bakers, the cats and the women own something, so each plural noun has an apostrophe."
+            why: "The answers are \"Three bakers sold pies at the fair.\" and \"My cousins visit us every summer.\" Their plural nouns own nothing, so they need no apostrophe. In the other three, the bakers, the cats and the kittens own something, so an apostrophe belongs on each plural noun, and one of them leaves it out."
           },
           {
             id: "SK-GUM5-3-C14",
@@ -3307,15 +3305,15 @@ PP.addLesson({
               "3.L.GC.1:I:use-apostrophes-to-form-plural-possessive-nouns"
             ],
             passages: [],
-            prompt: "The lunch boxes belong to both twins, and the coats belong to several women. Choose the words that finish the sentence.",
-            text: "Both {0} lunch boxes sat beside the {1} coats.",
+            prompt: "The lunch boxes belong to both twins, and the nest belongs to several mice. Choose the words that finish the sentence.",
+            text: "Both {0} lunch boxes sat beside the {1} nest.",
             slots: [
               {
                 options: ["twin's", "twins'", "twins"],
                 answer: 1
               },
               {
-                options: ["women's", "womens'", "womens"],
+                options: ["mice's", "mices'", "mices"],
                 answer: 0
               }
             ],
@@ -3327,11 +3325,11 @@ PP.addLesson({
             ],
             how: [
               "The first blank has two owners, the twins. Twins ends in s, so only an apostrophe goes after the s.",
-              "The second blank has several women. Women does not end in s, so it needs an apostrophe and s.",
-              "The answers are twins' and women's."
+              "The second blank has several mice. Mice does not end in s, so it needs an apostrophe and s.",
+              "The answers are twins' and mice's."
             ],
-            misconception: "A common mix-up is using the same ending for both plurals. Twins ends in s, and women does not.",
-            why: "The answers are twins' and women's. Twins is plural and ends in s, so it needs only an apostrophe. Women is plural but does not end in s, so it needs an apostrophe and s. The other choices put the apostrophe in the wrong place or leave it out."
+            misconception: "A common mix-up is using the same ending for both plurals. Twins ends in s, and mice does not.",
+            why: "The answers are twins' and mice's. Twins is plural and ends in s, so it needs only an apostrophe. Mice is plural but does not end in s, so it needs an apostrophe and s. The other choices put the apostrophe in the wrong place or leave it out."
           },
           {
             id: "SK-GUM5-3-C15",
@@ -3380,7 +3378,7 @@ PP.addLesson({
         "3.L.GC.1:I:use-apostrophes-to-form-plural-possessive-nouns"
       ],
       passages: [],
-      prompt: "Hide the mark and the s after it in every row. What kind of name is left, a single person or a crowd?",
+      prompt: "Cover the apostrophe (and the s after it, if there is one) in every row. What kind of name is left, a single person or a crowd?",
       cols: ["A single person", "A crowd"],
       rows: [
         { text: "the pilot's cap", answer: 0 },
@@ -3416,7 +3414,7 @@ PP.addLesson({
       options: [
         "The sailors' boots dried on the dock after the storm.",
         "Three of the artists' brushes rolled under the easel.",
-        "The womens' soccer team won the final game.",
+        "The childrens' soccer team won the final game.",
         "My two uncles' truck needs a new tire.",
         "The twins' lunch boxes were packed with grapes."
       ],
@@ -3429,12 +3427,12 @@ PP.addLesson({
         "In the line about the sailors, the group's name ends in s and the mark follows it. Check the other four."
       ],
       how: [
-        "Check each group's name: sailors, artists, women, uncles and twins.",
+        "Check each group's name: sailors, artists, children, uncles and twins.",
         "Sailors, artists, uncles and twins end in s, so each needs only the mark after the s, and each line has it.",
-        "Women does not end in s, so it needs 's: the women's soccer team."
+        "Children does not end in s, so it needs 's: the children's soccer team."
       ],
       misconception: "A common mix-up is thinking the mark after the s is right for every group. A group name that does not end in s needs 's.",
-      why: "The error is in \"The womens' soccer team won the final game.\" Women does not end in s, so it gets an apostrophe and s: the women's soccer team. The other lines already have the marks they need.",
+      why: "The error is in \"The childrens' soccer team won the final game.\" Children does not end in s, so it gets an apostrophe and s: the children's soccer team. The other lines already have the marks they need.",
       like: ["SK-GUM5-3-P5"]
     },
     {
@@ -3592,7 +3590,7 @@ PP.addLesson({
         { text: "The skaters' helmets hung by the door.", correct: true },
         { text: "The nurses's masks were on the shelf by the sink." },
         { text: "The children's table was set for lunch.", correct: true },
-        { text: "The womens' choir sang at noon in the big hall." }
+        { text: "The peoples' choir sang at noon in the big hall." }
       ],
       clue: "Look at each name for people or animals that have something. Check how it ends and where its mark sits.",
       hints: [
@@ -3604,10 +3602,10 @@ PP.addLesson({
         "Check each name for a group that has something and how it ends.",
         "Skaters ends in s, so \"The skaters' helmets hung by the door.\" needs only the mark.",
         "Children does not end in s, so \"The children's table was set for lunch.\" needs 's.",
-        "The other three are wrong: goat's has nothing, nurses's adds an extra s, and womens' puts the mark where women needs 's."
+        "The other three are wrong: goat's has nothing, nurses's adds an extra s, and peoples' puts the mark where people needs 's."
       ],
       misconception: "A common mix-up is picking the lines with the most marks. A group name that ends in s needs only the mark, and one that does not end in s needs 's.",
-      why: "The answers are \"The skaters' helmets hung by the door.\" and \"The children's table was set for lunch.\" Skaters ends in s, and children does not. The others should say \"Six goats ate the fresh hay.\", \"The nurses' masks were on the shelf.\" and \"The women's choir sang at noon.\"",
+      why: "The answers are \"The skaters' helmets hung by the door.\" and \"The children's table was set for lunch.\" Skaters ends in s, and children does not. The others should say \"Six goats ate the fresh hay.\", \"The nurses' masks were on the shelf.\" and \"The people's choir sang at noon.\"",
       like: ["SK-GUM5-3-C07"]
     },
     {
@@ -3651,9 +3649,9 @@ PP.addLesson({
         "3.L.GC.1:I:use-apostrophes-to-form-plural-possessive-nouns"
       ],
       passages: ["p5"],
-      prompt: "The word archers in line 7 has no mark, but students' in line 8 has one. Why?",
+      prompt: "Archers in line 7 has no mark, yet students' in line 8 has one. Why is that?",
       choices: [
-        { text: "Students have the best scores in line 8, yet archers have nothing in line 7.", correct: true },
+        { text: "Scores belong to the students, so they get a mark; archers only names a group.", correct: true },
         { text: "Archers lost its mark by accident, as group names for people always end with one." },
         { text: "Students' got its mark simply because line 8 names a coach, who is a grown-up." },
         { text: "Line 8 is the faulty one, since that mark suits a lone person and no crowd." }
@@ -3667,10 +3665,10 @@ PP.addLesson({
       how: [
         "Read line 8: the best scores belong to the students, so students' shows who has them.",
         "Read line 7: the archers hit a ring, but nothing belongs to the archers, so the word only names a group.",
-        "The answer is \"Students have the best scores in line 8, yet archers have nothing in line 7.\""
+        "The answer is \"Scores belong to the students, so they get a mark; archers only names a group.\""
       ],
       misconception: "A common mix-up is thinking a group name needs the mark every time. It needs the mark only when the group has something.",
-      why: "The answer is \"Students have the best scores in line 8, yet archers have nothing in line 7.\" In line 8, the scores belong to the students. In line 7, the archers have nothing. Both lines are correct.",
+      why: "The answer is \"Scores belong to the students, so they get a mark; archers only names a group.\" In line 8, the scores belong to the students. In line 7, nothing belongs to the archers, so the word only names a group. Both lines are correct.",
       like: ["SK-GUM5-3-C09"]
     },
     {
@@ -3742,27 +3740,27 @@ PP.addLesson({
         "3.L.GC.1:I:use-apostrophes-to-form-plural-possessive-nouns"
       ],
       passages: ["p6"],
-      prompt: "In the last paragraph of the draft, a table of seeds is described with the wrong ending. Several women ran that table. Pick the words that make line 10 correct.",
+      prompt: "Line 10 describes a seed table that several children ran. Pick words that fix its ending.",
       text: "{0} table ran out of marigold seeds before lunch.",
       slots: [
         {
-          options: ["The womens'", "The women's", "The womens"],
+          options: ["The childrens'", "The children's", "The childrens"],
           answer: 1
         }
       ],
-      clue: "Ask whether the word for several women ends in s. Then think about what the name needs.",
+      clue: "Does children end in s? Then decide which ending fits.",
       hints: [
-        "Ask whether the word for several women ends in s. Then think about what the name needs.",
-        "Say each choice at the start of the line. Look at where the mark sits and what comes before it.",
+        "Does children end in s? Then decide which ending fits.",
+        "Try each choice at line start. Notice where its mark sits.",
         "One choice has no mark at all. Decide between the other two."
       ],
       how: [
-        "Read line 10. The table belongs to several women.",
-        "Women means more than one, but it does not end in s, so it needs 's.",
-        "The answer is The women's."
+        "Line 10 tells of a table that several children ran.",
+        "Children means more than one, but it does not end in s, so it needs 's.",
+        "The answer is The children's."
       ],
-      misconception: "A common mix-up is adding an s to women first. Because women already means more than one, the ending is 's.",
-      why: "The answer is The women's. The table belongs to several women. Women already means more than one and does not end in s, so it gets an apostrophe and s. The womens' has the mark in the wrong place, and The womens has none.",
+      misconception: "A common mix-up is adding an s to children first. Because children already means more than one, the ending is 's.",
+      why: "The answer is The children's. The table belongs to several children. Children already means more than one and does not end in s, so it gets an apostrophe and s. The childrens' has the mark in the wrong place, and The childrens has none.",
       like: ["SK-GUM5-3-C12"]
     },
     {
@@ -3807,15 +3805,15 @@ PP.addLesson({
         "3.L.GC.1:I:use-apostrophes-to-form-plural-possessive-nouns"
       ],
       passages: [],
-      prompt: "The caps are owned by skaters, and the cheese is owned by mice. Pick the words that complete the line below.",
-      text: "Some {0} caps lay near a pile of {1} cheese.",
+      prompt: "Skaters own the caps, and a crowd owns that bench. Pick words that complete the line below.",
+      text: "Some {0} caps lay near the {1} bench.",
       slots: [
         {
           options: ["skater's", "skaters'", "skaters"],
           answer: 1
         },
         {
-          options: ["mice's", "mices'", "mices"],
+          options: ["people's", "peoples'", "peoples"],
           answer: 0
         }
       ],
@@ -3827,11 +3825,11 @@ PP.addLesson({
       ],
       how: [
         "The first blank has several skaters. Skaters ends in s, so only the mark goes after the s.",
-        "The second blank has some mice. Mice does not end in s, so it needs the mark and s.",
-        "The answers are skaters' and mice's."
+        "The second blank has several people. People does not end in s, so it needs the mark and s.",
+        "The answers are skaters' and people's."
       ],
-      misconception: "A common mix-up is giving both groups the same finish. Skaters ends in s, and mice does not.",
-      why: "The answers are skaters' and mice's. Skaters is a group name that ends in s, so it needs only the mark. Mice means more than one but does not end in s, so it needs the mark and s. The other choices put the mark in the wrong place or leave it out.",
+      misconception: "A common mix-up is giving both groups the same finish. Skaters ends in s, and people does not.",
+      why: "The answers are skaters' and people's. Skaters is a group name that ends in s, so it needs only the mark. People means more than one but does not end in s, so it needs the mark and s. The other choices put the mark in the wrong place or leave it out.",
       like: ["SK-GUM5-3-C14"]
     },
     {
@@ -3929,11 +3927,11 @@ PP.addLesson({
         "The sentence about the babies already has its apostrophe after the s of a plural that ends in s. Check the other four."
       ],
       how: [
-        "Check each owner word: babies, aunts, men, cousins and kittens.",
+        "Check each owner word: babies, aunts, children, cousins and kittens.",
         "Babies, aunts, cousins and kittens end in s, so each needs only an apostrophe after the s, and each sentence has one.",
-        "Men does not end in s, so it needs 's. The error is mens' in \"The mens' choir sang at the fair.\""
+        "Children does not end in s, so it needs 's. The error is childrens' in \"The childrens' choir sang at the fair.\""
       ],
-      misconception: "A common mix-up is thinking an apostrophe after s is right for every plural. A plural like men needs 's."
+      misconception: "A common mix-up is thinking an apostrophe after s is right for every plural. A plural like children needs 's."
     }
   },
   /* B8:core:end */
@@ -4205,7 +4203,7 @@ PP.addLesson({
         ],
         [
           "(5) Nobody laughs when signs look silly.",
-          "(6) Somebody make our sign for friend with two hands.",
+          "(6) Somebody make the sign for the word friend with two hands.",
           "(7) Many of those signs look like tiny pictures.",
           "(8) Both of us wave when class begins.",
           "(9) Everybody in the circle claps with open hands."
@@ -4300,7 +4298,7 @@ PP.addLesson({
             text: "Everyone {0} a bowl and a spoon to the big table.",
             slots: [
               {
-                options: ["brings", "bring", "bringing"],
+                options: ["brings", "bring", "have brought"],
                 answer: 0
               }
             ],
@@ -4308,7 +4306,7 @@ PP.addLesson({
             hints: [
               "Ask whether everyone is treated as one or as more than one. Then think about which verb goes with that.",
               "Say each choice in the blank. Think about whether it goes with one person or with more than one.",
-              "One choice ends in ing and does not fit the sentence. Decide between the other two."
+              "The choice with have goes with plural words. Choose between the other two."
             ],
             how: [
               "Find the pronoun at the start: Everyone.",
@@ -4316,7 +4314,7 @@ PP.addLesson({
               "The answer is brings."
             ],
             misconception: "A common mix-up is thinking everyone means many people, so it needs a plural verb. Everyone is treated as one.",
-            why: "The answer is brings. Everyone is treated as one, so it takes the singular verb brings: \"Everyone brings a bowl and a spoon to the big table.\" Bring goes with plural words, and bringing is not a whole verb."
+            why: "The answer is brings. Everyone is treated as one, so it takes the singular verb brings: \"Everyone brings a bowl and a spoon to the big table.\" Bring and have brought go with plural words."
           },
           {
             id: "SK-GUM5-4-C04",
@@ -4370,7 +4368,7 @@ PP.addLesson({
             partB: {
               prompt: "Which rule gives the reason for the verb change in Part A?",
               choices: [
-                { text: "Many is treated as one, so it takes a singular verb, one that ends in s." },
+                { text: "Many stands for a single thing, so the verb must take the s ending." },
                 { text: "Every verb must end in s whenever the sentence names more than one thing." },
                 { text: "Many means more than one, so it takes a plural verb, one with no s on the end.", correct: true },
                 { text: "A verb stays the same no matter which pronoun the writer picks for the sentence." }
@@ -4499,7 +4497,7 @@ PP.addLesson({
             passages: ["p2"],
             prompt: "In the draft, sentence 8 uses the verb hold and sentence 10 uses the verb gets. Why does one verb end in s and the other does not?",
             choices: [
-              { text: "Both means more than one, so it takes hold, but each is treated as one, so it takes gets.", correct: true },
+              { text: "Both means more than one, so it takes hold, but each counts as one, so it takes gets.", correct: true },
               { text: "Gets should lose its s, because a verb that comes after members must match that plural word." },
               { text: "Hold has no s only because sentence 8 comes before sentence 10 in the draft." },
               { text: "Sentence 8 is wrong, because both is treated as one and needs the verb holds." }
@@ -4513,10 +4511,10 @@ PP.addLesson({
             how: [
               "Read sentence 8: Both means more than one, so it takes the verb hold.",
               "Read sentence 10: Each is treated as one, so it takes the verb gets.",
-              "The answer is \"Both means more than one, so it takes hold, but each is treated as one, so it takes gets.\""
+              "The answer is \"Both means more than one, so it takes hold, but each counts as one, so it takes gets.\""
             ],
             misconception: "A common mix-up is thinking the noun after the pronoun picks the verb. The pronoun picks it.",
-            why: "The answer is \"Both means more than one, so it takes hold, but each is treated as one, so it takes gets.\" The pronouns decide the verbs, so each sentence is correct. Members and jars are the nouns that follow, but they do not choose the verb."
+            why: "The answer is \"Both means more than one, so it takes hold, but each counts as one, so it takes gets.\" The pronouns decide the verbs, so each sentence is correct. Members and jars are the nouns that follow, but they do not choose the verb."
           },
           {
             id: "SK-GUM5-4-C10",
@@ -4527,19 +4525,19 @@ PP.addLesson({
               "3.L.GC.1:I:use-indefinite-pronouns-with-correct-agreement"
             ],
             passages: ["p2"],
-            prompt: "Sentence 9 of the draft needs a fix. Choose the word that makes it correct.",
+            prompt: "Pick the verb for sentence 9 of the draft.",
             text: "Everybody {0} when the leader counts the bugs.",
             slots: [
               {
-                options: ["claps", "clap", "clapping"],
+                options: ["claps", "clap", "do clap"],
                 answer: 0
               }
             ],
             clue: "Ask whether Everybody is treated as one or as more than one.",
             hints: [
               "Ask whether Everybody is treated as one or as more than one.",
-              "Say each choice in the blank and think about which one goes with the pronoun.",
-              "One choice ends in ing and is not a whole verb here. Decide between the other two."
+              "Try each choice after the pronoun and listen for the one that sounds like one clapper.",
+              "Do goes with more than one, so skip that choice. Think about the other two."
             ],
             how: [
               "Read sentence 9. The pronoun is Everybody.",
@@ -4547,7 +4545,7 @@ PP.addLesson({
               "The answer is claps."
             ],
             misconception: "A common mix-up is dropping the s because the group is clapping together. Everybody is still treated as one.",
-            why: "The answer is claps. Everybody is treated as one, so it takes claps. Clap goes with plural words, and clapping is not a whole verb in this sentence."
+            why: "The answer is claps. Everybody is treated as one, so it takes claps. Clap and do clap go with plural words."
           }
         ]
       },
@@ -4590,19 +4588,19 @@ PP.addLesson({
               "3.L.GC.1:I:use-indefinite-pronouns-with-correct-agreement"
             ],
             passages: ["p3"],
-            prompt: "Sentence 10 of the draft needs a fix. Choose the word that makes it correct.",
+            prompt: "Fill the blank in sentence 10 so the pronoun and verb match.",
             text: "Both of the winners {0} hands at the end.",
             slots: [
               {
-                options: ["shakes", "shake", "shaking"],
+                options: ["shakes", "shake", "is shaking"],
                 answer: 1
               }
             ],
             clue: "Ask whether Both is treated as one or means more than one. Then think about which verb goes with that.",
             hints: [
               "Ask whether Both is treated as one or means more than one. Then think about which verb goes with that.",
-              "Say each choice in the blank. Think about whether it goes with one winner or with two.",
-              "One choice ends in ing and is not a whole verb here. Decide between the other two."
+              "Cover the words between Both and the blank, then read Both with each verb.",
+              "One choice has is, which goes with one. Decide between the other two."
             ],
             how: [
               "Read sentence 10. The pronoun is Both.",
@@ -4610,7 +4608,7 @@ PP.addLesson({
               "The answer is shake."
             ],
             misconception: "A common mix-up is adding an s because winners ends in s. The verb must match Both, not the noun.",
-            why: "The answer is shake. Both means more than one, so it takes shake: \"Both of the winners shake hands at the end.\" Shakes goes with one, and shaking is not a whole verb here."
+            why: "The answer is shake. Both means more than one, so it takes shake: \"Both of the winners shake hands at the end.\" Shakes and is shaking go with one."
           },
           {
             id: "SK-GUM5-4-C13",
@@ -4658,11 +4656,11 @@ PP.addLesson({
             text: "Nobody on the team {0} the ball too long, and both of the coaches {1} the game.",
             slots: [
               {
-                options: ["keeps", "keep", "keeping"],
+                options: ["keeps", "keep", "have kept"],
                 answer: 0
               },
               {
-                options: ["watches", "watch", "watching"],
+                options: ["watches", "watch", "is watching"],
                 answer: 1
               }
             ],
@@ -4670,7 +4668,7 @@ PP.addLesson({
             hints: [
               "Find the pronoun before each blank. Ask whether it is treated as one or means more than one.",
               "Fill one blank at a time. Say each choice out loud and ask which goes with the pronoun.",
-              "In each blank, one choice ends in ing and is not a whole verb here. Decide about the other choices."
+              "In the first blank, the choice with have goes with more than one. Decide about the other choices."
             ],
             how: [
               "The first blank follows Nobody, which is treated as one, so it takes the singular verb.",
@@ -4678,7 +4676,7 @@ PP.addLesson({
               "The answers are keeps and watch."
             ],
             misconception: "A common mix-up is using the same kind of verb in both blanks. Nobody takes an s, and both does not.",
-            why: "The answers are keeps and watch. Nobody is treated as one, so it takes keeps. Both means more than one, so it takes watch. The ing choices are not whole verbs here."
+            why: "The answers are keeps and watch. Nobody is treated as one, so it takes keeps. Both means more than one, so it takes watch. Have kept goes with more than one, and is watching goes with one."
           },
           {
             id: "SK-GUM5-4-C15",
@@ -4792,11 +4790,11 @@ PP.addLesson({
         "3.L.GC.1:I:use-indefinite-pronouns-with-correct-agreement"
       ],
       passages: ["p4"],
-      prompt: "Line 2 needs the right verb. Pick the form that fits the blank.",
+      prompt: "Line 2 needs one verb form. Which one belongs?",
       text: "Nobody {0} to fill the water bowl each morning.",
       slots: [
         {
-          options: ["forgets", "forget", "forgetting"],
+          options: ["forgets", "forget", "have forgotten"],
           answer: 0
         }
       ],
@@ -4804,7 +4802,7 @@ PP.addLesson({
       hints: [
         "Ask whether Nobody is treated as one or as more than one. Then think about what that means for the verb.",
         "Say each choice in the blank. Think about whether it goes with one person or with several.",
-        "One choice ends in ing and is not a whole verb here. Decide between the other two."
+        "Nobody does not fit with a helper word like have. Compare the other two."
       ],
       how: [
         "Read line 2. The pronoun is Nobody.",
@@ -4812,7 +4810,7 @@ PP.addLesson({
         "The answer is forgets."
       ],
       misconception: "A common mix-up is dropping the s because the family has many members. Nobody is still treated as one.",
-      why: "The answer is forgets. Nobody is treated as one, so it takes forgets. Forget goes with plural words, and forgetting is not a whole verb here.",
+      why: "The answer is forgets. Nobody is treated as one, so it takes forgets. Forget and have forgotten go with plural words.",
       like: ["SK-GUM5-4-C03"]
     },
     {
@@ -4903,9 +4901,9 @@ PP.addLesson({
       targets: ["p5:1:2", "p5:1:3", "p5:1:4", "p5:2:1", "p5:2:2"],
       answer: ["p5:1:3", "p5:2:1"],
       pick: 2,
-      clue: "Find the pronoun in each line. Check whether it is treated as one or means more than one, and whether its verb fits.",
+      clue: "Read each line's first word. Does it stand for one or for more than one, and does its verb fit?",
       hints: [
-        "Find the pronoun in each line. Check whether it is treated as one or means more than one, and whether its verb fits.",
+        "Read each line's first word. Does it stand for one or for more than one, and does its verb fit?",
         "Go through the five lines one by one. Pick TWO.",
         "In line 6, the pronoun Many goes with a verb that fits. Check the other four."
       ],
@@ -5025,19 +5023,19 @@ PP.addLesson({
         "3.L.GC.1:I:use-indefinite-pronouns-with-correct-agreement"
       ],
       passages: ["p5"],
-      prompt: "Line 9 has a verb mistake. Pick the right form.",
+      prompt: "Choose what fits the blank in line 9.",
       text: "Everybody {0} loudly as lights flash.",
       slots: [
         {
-          options: ["cheers", "cheer", "cheering"],
+          options: ["cheers", "cheer", "are cheering"],
           answer: 0
         }
       ],
       clue: "Ask whether Everybody is treated as one or as more than one.",
       hints: [
         "Ask whether Everybody is treated as one or as more than one.",
-        "Say each choice in the blank and think about which one goes with the pronoun.",
-        "One choice ends in ing and is not a whole verb here. Decide between the other two."
+        "Picture one cheerer and then many. Which choices match each picture?",
+        "Look at the choice that starts with are. Does it fit Everybody?"
       ],
       how: [
         "Read line 9. The pronoun is Everybody.",
@@ -5045,7 +5043,7 @@ PP.addLesson({
         "The answer is cheers."
       ],
       misconception: "A common mix-up is dropping the s because many people cheer at once. Everybody is still treated as one.",
-      why: "The answer is cheers. Everybody is treated as one, so it takes cheers. Cheer goes with plural words, and cheering is not a whole verb here.",
+      why: "The answer is cheers. Everybody is treated as one, so it takes cheers. Cheer and are cheering go with plural words.",
       like: ["SK-GUM5-4-C10"]
     },
     {
@@ -5061,9 +5059,9 @@ PP.addLesson({
       targets: ["p6:2:1", "p6:2:2", "p6:2:3", "p6:2:4", "p6:2:5"],
       answer: ["p6:2:2"],
       pick: 1,
-      clue: "Find the pronoun in each line. Check whether it is treated as one or means more than one, and whether its verb fits.",
+      clue: "Read each line's first word. Does it stand for one or for more than one, and does its verb fit?",
       hints: [
-        "Find the pronoun in each line. Check whether it is treated as one or means more than one, and whether its verb fits.",
+        "Read each line's first word. Does it stand for one or for more than one, and does its verb fit?",
         "Go through the five lines one by one. Pick ONE.",
         "In line 9, the pronoun Everybody goes with a verb that fits. Check the other four."
       ],
@@ -5073,7 +5071,7 @@ PP.addLesson({
         "In line 6, Somebody is treated as one, so make does not match. It should be makes."
       ],
       misconception: "A common mix-up is thinking a verb that ends in s is the problem. Somebody needs a verb that ends in s.",
-      why: "The answer is line 6, \"Somebody make the sign for friend with two hands.\" Somebody is treated as one, so make should be makes. Lines 5, 7, 8 and 9 each pair a pronoun with a verb that fits.",
+      why: "The answer is line 6, \"Somebody make the sign for the word friend with two hands.\" Somebody is treated as one, so make should be makes. Lines 5, 7, 8 and 9 each pair a pronoun with a verb that fits.",
       like: ["SK-GUM5-4-C11"]
     },
     {
@@ -5085,19 +5083,19 @@ PP.addLesson({
         "3.L.GC.1:I:use-indefinite-pronouns-with-correct-agreement"
       ],
       passages: ["p6"],
-      prompt: "Line 10 has a verb mistake. Pick the right form.",
+      prompt: "Which form fits line 10?",
       text: "Both of those helpers {0} goodbye as bells ring.",
       slots: [
         {
-          options: ["waves", "wave", "waving"],
+          options: ["waves", "wave", "is waving"],
           answer: 1
         }
       ],
-      clue: "Ask whether Both is treated as one or means more than one. Then think about what that means for the verb.",
+      clue: "Does Both name one helper or more than one? Use that to choose the verb.",
       hints: [
-        "Ask whether Both is treated as one or means more than one. Then think about what that means for the verb.",
-        "Say each choice in the blank. Think about whether it goes with one helper or with two.",
-        "One choice ends in ing and is not a whole verb here. Decide between the other two."
+        "Does Both name one helper or more than one? Use that to choose the verb.",
+        "Skip the words between Both and the blank. Read Both with each choice.",
+        "Look at the choice that starts with is. Does it fit Both?"
       ],
       how: [
         "Read line 10. The pronoun is Both.",
@@ -5105,7 +5103,7 @@ PP.addLesson({
         "The answer is wave."
       ],
       misconception: "A common mix-up is adding an s because helpers ends in s. The verb must go with Both.",
-      why: "The answer is wave. Both means more than one, so it takes wave. Waves goes with one, and waving is not a whole verb here.",
+      why: "The answer is wave. Both means more than one, so it takes wave. Waves and is waving go with one.",
       like: ["SK-GUM5-4-C12"]
     },
     {
@@ -5117,29 +5115,29 @@ PP.addLesson({
         "3.L.GC.1:I:use-indefinite-pronouns-with-correct-agreement"
       ],
       passages: [],
-      prompt: "Lena claims that both and many must be followed by a verb ending in s. Pick the TWO lines that disprove her claim.",
+      prompt: "Lena says, \"A verb copies whichever noun sits closest to it.\" Pick the TWO lines that show Lena is mistaken.",
       pick: 2,
       choices: [
-        { text: "Both of those dancers wear bright scarves.", correct: true },
+        { text: "Each of those dancers wears bright scarves.", correct: true },
+        { text: "Many of those pies cool by open windows." },
+        { text: "Nobody in our busy kitchens cooks without aprons.", correct: true },
         { text: "Everybody in our van sings loudly." },
-        { text: "Many of those pies cool by open windows.", correct: true },
-        { text: "Nobody in our kitchen cooks without aprons." },
-        { text: "Each of those dancers wears bright scarves." }
+        { text: "Both of those dancers wear bright scarves on stage." }
       ],
-      clue: "Lena makes a rule about certain words. Decide whether her rule is true for each line.",
+      clue: "Lena makes a rule about the noun nearest the verb. Test her rule on each line.",
       hints: [
-        "Lena makes a rule about certain words. Decide whether her rule is true for each line.",
-        "Pick TWO. Find the pronoun in each line, then check whether Lena's rule is about that pronoun.",
-        "The line about the van has a pronoun that is not in Lena's rule. Decide about the other four."
+        "Lena makes a rule about the noun nearest the verb. Test her rule on each line.",
+        "Pick TWO. In each line, find the pronoun and the noun just before the verb, then compare how many each names.",
+        "In the line about the van, the noun near the verb names one thing, so Lena's rule works there. Decide about the other four."
       ],
       how: [
-        "Look at Lena's claim: both and many must be followed by a verb ending in s.",
-        "In \"Both of those dancers wear bright scarves.\" both goes with wear, which has no s.",
-        "In \"Many of those pies cool by open windows.\" many goes with cool, which has no s.",
-        "The other three have pronouns that Lena's claim does not name, so they do not disprove it."
+        "Look at Lena's rule: the verb copies the noun closest to it.",
+        "In \"Each of those dancers wears bright scarves.\" the closest noun is dancers, which is more than one, but wears goes with Each.",
+        "In \"Nobody in our busy kitchens cooks without aprons.\" the closest noun is kitchens, which is more than one, but cooks goes with Nobody.",
+        "In the other three lines, the verb also fits the closest noun, so they do not prove Lena wrong."
       ],
-      misconception: "A common mix-up is choosing the lines whose verbs end in s, because Lena's claim talks about s. Her claim is wrong when both or many goes with a verb that has no s.",
-      why: "The answers are \"Both of those dancers wear bright scarves.\" and \"Many of those pies cool by open windows.\" Both and many mean more than one, so their verbs have no s, and that disproves Lena's claim. The other three use pronouns that her claim does not name.",
+      misconception: "A common mix-up is choosing lines with a plural noun next to the verb. Lena is wrong when the verb fits the pronoun but not the noun beside it.",
+      why: "The answers are \"Each of those dancers wears bright scarves.\" and \"Nobody in our busy kitchens cooks without aprons.\" In both, the verb goes with the pronoun, not with the plural noun beside it. In the other three lines, the verb fits the closest noun too.",
       like: ["SK-GUM5-4-C13"]
     },
     {
@@ -5155,11 +5153,11 @@ PP.addLesson({
       text: "Many of the ducks {0} bread from our hands, and each of the geese {1} a different spot.",
       slots: [
         {
-          options: ["peck", "pecks", "pecking"],
+          options: ["peck", "pecks", "is pecking"],
           answer: 0
         },
         {
-          options: ["picks", "pick", "picking"],
+          options: ["picks", "pick", "are picking"],
           answer: 0
         }
       ],
@@ -5167,7 +5165,7 @@ PP.addLesson({
       hints: [
         "Look at the pronoun in front of each blank. Check whether it is treated as one or means more than one.",
         "Work on one blank at a time. Say each choice aloud and ask which goes with the pronoun.",
-        "In each blank, one choice ends in ing and is not a whole verb here. Decide about the other choices."
+        "In the second blank, the choice with are goes with more than one. Decide about the other choices."
       ],
       how: [
         "The first blank follows Many, which means more than one, so it takes the verb with no s.",
@@ -5175,7 +5173,7 @@ PP.addLesson({
         "The answers are peck and picks."
       ],
       misconception: "A common mix-up is picking the same kind of verb twice. Many takes no s, and each takes an s.",
-      why: "The answers are peck and picks. Many means more than one, so it takes peck. Each is treated as one, so it takes picks. The ing choices are not whole verbs here.",
+      why: "The answers are peck and picks. Many means more than one, so it takes peck. Each is treated as one, so it takes picks. Is pecking goes with one, and are picking goes with more than one.",
       like: ["SK-GUM5-4-C14"]
     },
     {
@@ -5187,26 +5185,26 @@ PP.addLesson({
         "3.L.GC.1:I:use-indefinite-pronouns-with-correct-agreement"
       ],
       passages: [],
-      prompt: "Mia's line reads, \"Both of the pies is cooling on the sill.\" She defends it: both names a pair, so one thing. Is Mia correct?",
+      prompt: "Mia's line: \"Both of the pies is cooling on the sill.\" Mia thinks a pair is one thing. Was she correct?",
       choices: [
-        { text: "Yes. Pair counts as one thing, so a verb for one thing fits here." },
-        { text: "Yes. Verbs near line ends never change, so any pronoun fits." },
-        { text: "No. Pair means two pies, so the verb needs a plural form: are cooling.", correct: true },
-        { text: "No. Both means two pies, so the verb needs the form was cooling, which suits plurals." }
+        { text: "She was, since a pair counts as one thing and a verb for one thing fits." },
+        { text: "She was not, since both means a lone pie and only pies must change to pie." },
+        { text: "She was not, since both means two pies and the verb should be are cooling.", correct: true },
+        { text: "She was not, since both is plural and the verb should be was cooling." }
       ],
       clue: "Find the pronoun. Then ask whether it names one thing or more than one.",
       hints: [
         "Find the pronoun. Then ask whether it names one thing or more than one.",
         "Think about Mia's idea that a pair is one thing. Ask what both really tells about the pies.",
-        "The word was in one choice goes with one thing, not with more than one. Check the other choices."
+        "The form was cooling goes with one thing, not with more than one. Check the other choices."
       ],
       how: [
         "Find the pronoun: Both.",
         "Both means two pies, even if the pies make a pair, so it takes a plural verb.",
-        "The answer is \"No. Pair means two pies, so the verb needs a plural form: are cooling.\""
+        "The answer is \"She was not, since both means two pies and the verb should be are cooling.\""
       ],
       misconception: "A common mix-up is thinking a pair is a single thing. Both still means more than one, so its verb must be plural.",
-      why: "The answer is \"No. Pair means two pies, so the verb needs a plural form: are cooling.\" Mia should write are cooling. Both names two pies, so it needs a plural verb. Was is made for one.",
+      why: "The answer is \"She was not, since both means two pies and the verb should be are cooling.\" Mia should write are cooling. Both means more than one pie, so it needs a plural verb. Was is made for one.",
       like: ["SK-GUM5-4-C15"]
     }
   ],
@@ -6242,13 +6240,13 @@ PP.addLesson({
         "3.L.GC.1:I:use-subordinating-conjunctions-to-join-clauses"
       ],
       passages: ["p5"],
-      prompt: "Two of the lines numbered 2 to 6 are not written correctly. Mark both.",
+      prompt: "Lines 2 to 6 hide two problems. Mark both lines that have one.",
       targets: ["p5:1:2", "p5:1:3", "p5:1:4", "p5:2:1", "p5:2:2"],
       answer: ["p5:1:3", "p5:2:1"],
       pick: 2,
-      clue: "Check each line. Ask whether it is a whole sentence and whether its joining word fits the ideas.",
+      clue: "Read every line. Does it hold a whole idea, and does its joining word suit the ideas?",
       hints: [
-        "Check each line. Ask whether it is a whole sentence and whether its joining word fits the ideas.",
+        "Read every line. Does it hold a whole idea, and does its joining word suit the ideas?",
         "Go through the five lines one by one. Pick TWO.",
         "In line 6, the joining word tells two things happened together, which fits. Check the other four."
       ],
@@ -6275,7 +6273,7 @@ PP.addLesson({
       pick: 2,
       choices: [
         { text: "While soup bubbled." },
-        { text: "If the roof was fixed." },
+        { text: "If the old roof was fixed by Friday." },
         { text: "Dad cooked dinner while we set the table.", correct: true },
         { text: "When it rained." },
         { text: "After the show ended, we clapped.", correct: true }
@@ -6404,14 +6402,14 @@ PP.addLesson({
       targets: ["p6:2:1", "p6:2:2", "p6:2:3", "p6:2:4", "p6:2:5"],
       answer: ["p6:2:3"],
       pick: 1,
-      clue: "Find the joining word in each line. Ask whether it matches how the two ideas connect.",
+      clue: "Spot the joining word in each line. Does it fit how its two ideas relate?",
       hints: [
-        "Find the joining word in each line. Ask whether it matches how the two ideas connect.",
+        "Spot the joining word in each line. Does it fit how its two ideas relate?",
         "Go through the five lines one by one. Pick ONE.",
-        "In line 8, the joining word tells how long the coach waited, which makes sense. Check the other four."
+        "Line 8 tells how long the coach waited, and its joining word fits. Check the other four."
       ],
       how: [
-        "Find the joining word in each line and check how the ideas connect.",
+        "Spot each line's joining word and test it against its ideas.",
         "Line 5 gives a reason, line 6 sets up a case, line 8 tells how long, and line 9 shows a surprise.",
         "In line 7, learning the cheer is not a surprise, so although does not fit."
       ],
@@ -6436,11 +6434,11 @@ PP.addLesson({
           answer: 0
         }
       ],
-      clue: "Look at the times in the story. Ask who got there first.",
+      clue: "Compare the two clock times. Who arrived earlier?",
       hints: [
-        "Look at the times in the story. Ask who got there first.",
-        "Say each choice after corner. Check it against the times.",
-        "One choice shows a surprise, but nothing here is surprising. Compare the other two with the times."
+        "Compare the two clock times. Who arrived earlier?",
+        "Try each choice after corner and see if it matches the clock.",
+        "The choice with although would show a surprise, and nothing surprising happens. Weigh the other two against the clock."
       ],
       how: [
         "Read the times. Mia reached the corner at seven, and the bus left at eight, so she came first.",
@@ -6497,7 +6495,7 @@ PP.addLesson({
       text: "Ravi swam laps {0}, and {1}, he toweled dry.",
       slots: [
         {
-          options: ["although the water was cold", "because the water was very cold", "if the water was cold"],
+          options: ["although the pool felt cold", "because the pool felt very cold", "if the pool felt cold"],
           answer: 0
         },
         {
@@ -6514,10 +6512,10 @@ PP.addLesson({
       how: [
         "The first blank: swimming in cold water is a surprise, so although shows a surprise.",
         "The second blank: drying off came first and lunch came next, so before tells what comes first.",
-        "The answers are although the water was cold and before he ate lunch."
+        "The answers are although the pool felt cold and before he ate lunch."
       ],
       misconception: "A common mix-up is using one kind of joining word in both blanks. The first blank shows a surprise, and the second tells the order.",
-      why: "The answers are although the water was cold and before he ate lunch. Swimming in cold water is a surprise, and drying off came first, then lunch.",
+      why: "The answers are although the pool felt cold and before he ate lunch. Swimming in cold water is a surprise, and drying off came first, then lunch.",
       like: ["SK-GUM5-5-C14"]
     },
     {
@@ -7280,7 +7278,7 @@ PP.addLesson({
               "3.L.GC.1:I:use-commas-after-introductory-phrases-or-clauses"
             ],
             passages: [],
-            prompt: "Which choice completes the sentence correctly?",
+            prompt: "Pick the correct ending.",
             text: "Mrs. Lee read to the class {0}.",
             slots: [
               {
@@ -7775,7 +7773,7 @@ PP.addLesson({
       text: "Jo danced in the kitchen {0}.",
       slots: [
         {
-          options: ["when the music began", ", when the music began", "when the music, began"],
+          options: ["before the music began", ", before the music began", "before the music, began"],
           answer: 0
         }
       ],
@@ -7788,10 +7786,10 @@ PP.addLesson({
       how: [
         "Read the sentence. The part about the music closes the sentence.",
         "A part that closes the sentence needs no comma before it.",
-        "The answer is when the music began."
+        "The answer is before the music began."
       ],
-      misconception: "A common mix-up is adding a comma ahead of when every time. A closing part needs no comma.",
-      why: "The answer is when the music began. The part about the music closes the sentence, so no comma is needed. One choice adds a comma before it, and one puts a comma inside it.",
+      misconception: "A common mix-up is adding a comma ahead of a closing part every time. A closing part needs no comma.",
+      why: "The answer is before the music began. The part about the music closes the sentence, so no comma is needed. One choice adds a comma before it, and one puts a comma inside it.",
       like: ["SK-GUM5-6-C12"]
     },
     {
@@ -8124,10 +8122,10 @@ PP.addLesson({
           "(4) Dana sang \"a Kazoo for the King\" with a big grin."
         ],
         [
-          "(5) Everyone clapped along to Marimba in the Snow.",
+          "(5) Everyone clapped along to the song Marimba in the Snow.",
           "(6) Several of us tapped a steady beat on our desks.",
           "(7) Mrs. Cho taught us a new song called \"The Clover Waltz.\"",
-          "(8) Our last song was \"Turnips for the Tuba\" and it was silly."
+          "(8) Our last song was Turnips For The Tuba and it was silly."
         ],
         [
           "(9) At the end, we sang \"Cobwebs and Candlelight\" as a group.",
@@ -8208,10 +8206,10 @@ PP.addLesson({
           "(4) Ruth sang \"the Mushroom Dance\" in a tiny voice."
         ],
         [
-          "(5) The crowd cheered for Xylophone Sunrise.",
+          "(5) The crowd cheered for the song Xylophone Sunrise.",
           "(6) Several kids waited quietly on a rug.",
           "(7) Mr. Dean read the poem \"Ladders to the Sky.\"",
-          "(8) We ended the show with \"Pirates and Mermaids.\""
+          "(8) We ended the show with Pirates And Mermaids."
         ],
         [
           "(9) Everyone applauded \"Wizards of the Wind\" for one full minute.",
@@ -8473,7 +8471,7 @@ PP.addLesson({
               { text: "the song Pickle Parade", answer: 0 },
               { text: "the picture book Otter Island", answer: 1 },
               { text: "the short story The Tin Whistle", answer: 0 },
-              { text: "the chapter book Penguin Express", answer: 1 }
+              { text: "the book Penguin Express", answer: 1 }
             ],
             clue: "Ask whether each title names a whole book or a short work.",
             hints: [
@@ -8484,10 +8482,10 @@ PP.addLesson({
             how: [
               "Look at what kind of work each title names.",
               "Songs and short stories are short works, so their titles go in quotation marks.",
-              "Picture books and chapter books are whole books, so their titles go in italics when typed or are underlined by hand."
+              "The picture book and the book are whole books, so their titles go in italics when typed or are underlined by hand."
             ],
             misconception: "A common mix-up is putting every title in quotation marks. Whole books use italics or underlining.",
-            why: "The song and the short story are short works, so their titles go in quotation marks. The picture book and the chapter book are whole books, so their titles go in italics when typed or are underlined by hand."
+            why: "The song and the short story are short works, so their titles go in quotation marks. The picture book and the book are whole books, so their titles go in italics when typed or are underlined by hand."
           },
           {
             id: "SK-GUM5-7-C08",
@@ -8498,7 +8496,7 @@ PP.addLesson({
               "3.L.GC.1:I:use-capitalization-and-underlining-quotation-mar"
             ],
             passages: ["p2"],
-            prompt: "Choose the title that finishes sentence 8 of the draft.",
+            prompt: "Sentence 8 of the draft has a title that is not written correctly. Choose the title that fixes it.",
             text: "Our last song was {0} and it was silly.",
             slots: [
               {
@@ -8513,12 +8511,12 @@ PP.addLesson({
               "One choice makes the last word lowercase, but the last word of a title is always capitalized. Decide between the other two."
             ],
             how: [
-              "Read sentence 8. The title is a song, so it goes in quotation marks.",
+              "Read sentence 8. The title names a song, a short work, so it goes in quotation marks.",
               "Turnips and Tuba are important words, and for is a small word in the middle, so it stays lowercase.",
               "The answer is \"Turnips for the Tuba\" with quotation marks."
             ],
             misconception: "A common mix-up is capitalizing a small word because it looks important. Small words in the middle of a title stay lowercase.",
-            why: "The answer is \"Turnips for the Tuba\" with quotation marks. Turnips and Tuba are important words, and for and the are small words in the middle. One choice capitalizes For, and one lowercases the last word."
+            why: "The answer is \"Turnips for the Tuba\" with quotation marks. The draft shows the title with no quotation marks and with capitals on small words. One choice capitalizes For, and one lowercases the last word."
           },
           {
             id: "SK-GUM5-7-C09",
@@ -8528,32 +8526,27 @@ PP.addLesson({
             std: [
               "3.L.GC.1:I:use-capitalization-and-underlining-quotation-mar"
             ],
-            passages: ["p2"],
-            prompt: "In sentence 9, the word and has a lowercase a, but Cobwebs and Candlelight have capitals. Why?",
+            passages: [],
+            prompt: "Sam wrote the poem title \"Moon on the Pond\" with quotation marks. Ava wrote the same title with a line under it. Who is right, and why?",
             choices: [
-              {
-                text: "And should have a capital letter too, because every word in the whole title of a song needs one, even a small word like this."
-              },
-              { text: "The first word is the only word that needs a capital, so Candlelight should be written in lowercase." },
-              {
-                text: "And is a small joining word in the middle of the title, so it stays lowercase, but the important words get capitals.",
-                correct: true
-              },
-              { text: "The word and is the last word, so it is the one word in a title that must be written in lowercase." }
+              { text: "Ava is right, since every title gets a line under it, whatever work it names." },
+              { text: "Ava is right, because a poem is long enough to count as a whole book." },
+              { text: "Sam is right, since a poem is short and its title takes quotation marks.", correct: true },
+              { text: "Both are right, since marks never matter when the capital letters are correct." }
             ],
-            clue: "Think about which words in a title get capitals and which words do not.",
+            clue: "Ask whether a poem is a whole book or a short work.",
             hints: [
-              "Think about which words in a title get capitals and which words do not.",
-              "Ask what job the word and does, then compare it with the words around it.",
-              "The title is already written correctly, so the answer cannot say that and is missing a capital. Check the other choices."
+              "Ask whether a poem is a whole book or a short work.",
+              "Think about which kind of work gets quotation marks and which kind gets a line under it.",
+              "A poem is not a whole book, so the answer cannot say it counts as one. Check the other choices."
             ],
             how: [
-              "Read sentence 9. The title is \"Cobwebs and Candlelight.\"",
-              "Cobwebs and Candlelight are important words, so they get capitals. And is a small joining word in the middle, so it stays lowercase.",
-              "The answer is \"And is a small joining word in the middle of the title, so it stays lowercase, but the important words get capitals.\""
+              "Think about the kind of work: a poem is short, not a whole book.",
+              "Titles of short works go in quotation marks, and titles of whole books are underlined when written by hand.",
+              "The answer is \"Sam is right, since a poem is short and its title takes quotation marks.\""
             ],
-            misconception: "A common mix-up is thinking every word in a title needs a capital. Small words in the middle stay lowercase.",
-            why: "The answer is \"And is a small joining word in the middle of the title, so it stays lowercase, but the important words get capitals.\" The title is written correctly. Cobwebs and Candlelight are important words."
+            misconception: "A common mix-up is thinking every title is underlined. Only whole books are underlined by hand.",
+            why: "The answer is \"Sam is right, since a poem is short and its title takes quotation marks.\" A line under a title is for a whole book."
           },
           {
             id: "SK-GUM5-7-C10",
@@ -8563,12 +8556,12 @@ PP.addLesson({
             std: [
               "3.L.GC.1:I:use-capitalization-and-underlining-quotation-mar"
             ],
-            passages: ["p2"],
-            prompt: "Choose the title that finishes sentence 7 of the draft.",
-            text: "Mrs. Cho taught us a new song called {0}",
+            passages: [],
+            prompt: "Which choice shows the poem title written correctly?",
+            text: "{0} was the funniest poem in the book.",
             slots: [
               {
-                options: ["\"The Clover Waltz.\"", "\"The clover Waltz.\"", "The Clover Waltz."],
+                options: ["\"Cheese for the Chimp\"", "\"Cheese For the Chimp\"", "Cheese for the Chimp"],
                 answer: 0
               }
             ],
@@ -8579,12 +8572,12 @@ PP.addLesson({
               "One choice has no quotation marks at all. Decide between the other two."
             ],
             how: [
-              "Read sentence 7. A song is a short work, so its title goes in quotation marks.",
-              "The first word and the important words get capitals: The, Clover and Waltz.",
-              "The answer is \"The Clover Waltz.\" with quotation marks."
+              "Read the choices. A poem is a short work, so its title goes in quotation marks.",
+              "Cheese and Chimp are important words, and for and the are small words in the middle, so they stay lowercase.",
+              "The answer is \"Cheese for the Chimp\" with quotation marks."
             ],
-            misconception: "A common mix-up is leaving off quotation marks. The title of a song goes inside them.",
-            why: "The answer is \"The Clover Waltz.\" A song title goes in quotation marks, and The, Clover and Waltz all get capitals. One choice has a lowercase clover, and one has no quotation marks."
+            misconception: "A common mix-up is leaving off quotation marks. The title of a poem goes inside them.",
+            why: "The answer is \"Cheese for the Chimp\" in quotation marks. A poem title goes in quotation marks, and for and the stay lowercase in the middle. One choice has no quotation marks, and one capitalizes For."
           }
         ]
       },
@@ -8626,28 +8619,28 @@ PP.addLesson({
             std: [
               "3.L.GC.1:I:use-capitalization-and-underlining-quotation-mar"
             ],
-            passages: ["p3"],
-            prompt: "Choose the title that finishes sentence 10 of the draft.",
-            text: "Our teacher added her own poem, {0}",
+            passages: [],
+            prompt: "Which title fits the blank?",
+            text: "Mr. Reyes announced a story named \"{0}\" at assembly.",
             slots: [
               {
-                options: ["\"Clover in the Orchard.\"", "\"Clover In the Orchard.\"", "\"Clover in the orchard.\""],
+                options: ["Pigs in the Rain", "Pigs In the Rain", "pigs in the Rain"],
                 answer: 0
               }
             ],
             clue: "Ask which words in the title are important and which are small.",
             hints: [
               "Ask which words in the title are important and which are small.",
-              "Say each choice and check its capital letters.",
-              "One choice capitalizes a small word in the middle. Decide between the other two."
+              "Say each choice and look at its first letter and its small words.",
+              "One choice starts with a lowercase letter, but the first word always gets a capital. Decide between the other two."
             ],
             how: [
-              "Read sentence 10. A poem is a short work, so its title goes in quotation marks.",
-              "Clover and Orchard are important words, and in and the are small words, so they stay lowercase.",
-              "The answer is \"Clover in the Orchard.\" with quotation marks."
+              "Read the sentence. The quotation marks are already there, so only the capital letters matter.",
+              "Pigs and Rain are important words, and in and the are small words in the middle, so they stay lowercase.",
+              "The answer is Pigs in the Rain."
             ],
-            misconception: "A common mix-up is lowercasing the last word of a title. The last word always gets a capital letter.",
-            why: "The answer is \"Clover in the Orchard.\" Clover and Orchard are important words, and in and the are small words in the middle. One choice capitalizes In, and one lowercases the last word."
+            misconception: "A common mix-up is capitalizing a small word because it sits in a title. Small words in the middle stay lowercase.",
+            why: "The answer is Pigs in the Rain. Pigs and Rain are important words, and in and the are small words in the middle. One choice capitalizes In, and one starts with a lowercase letter."
           },
           {
             id: "SK-GUM5-7-C13",
@@ -8661,25 +8654,25 @@ PP.addLesson({
             prompt: "Pat says, \"Every word in a title needs a capital letter.\" Choose the TWO titles that show Pat is wrong.",
             pick: 2,
             choices: [
-              { text: "Giant Purple Mushroom" },
+              { text: "The Giant Mushroom" },
               { text: "The Pelican and the Bagpipe", correct: true },
               { text: "Silver Spoon Soup" },
               { text: "Honey for the Bear", correct: true },
               { text: "Rainy Day Parade" }
             ],
-            clue: "Pat says every word needs a capital letter. Look for titles where some small words stay lowercase.",
+            clue: "Pat says every word needs a capital letter. Look for titles where some words stay lowercase.",
             hints: [
-              "Pat says every word needs a capital letter. Look for titles where some small words stay lowercase.",
-              "Pick TWO. Check each title for words like a, an, the, and, of, in, on, at, to and for.",
-              "The title about the mushroom has a capital on every word and no small words. Decide about the other four."
+              "Pat says every word needs a capital letter. Look for titles where some words stay lowercase.",
+              "Pick TWO. Check each title for small words in the middle.",
+              "The title about the mushroom has a capital on every word. Decide about the other four."
             ],
             how: [
               "Look for titles with small words in the middle.",
               "\"The Pelican and the Bagpipe\" and \"Honey for the Bear\" are written correctly, and each has lowercase small words in the middle.",
-              "The other three have only important words, so they do not show Pat is wrong."
+              "The other three have a capital on every word, so they do not show Pat is wrong."
             ],
             misconception: "A common mix-up is choosing titles with the most capitals. Pat is wrong about titles that have small words in the middle.",
-            why: "The answers are \"The Pelican and the Bagpipe\" and \"Honey for the Bear.\" In each, small words in the middle stay lowercase, so not every word has a capital. The other three have only important words."
+            why: "The answers are \"The Pelican and the Bagpipe\" and \"Honey for the Bear.\" In each, small words in the middle stay lowercase, so not every word has a capital. The other three have a capital on every word."
           },
           {
             id: "SK-GUM5-7-C14",
@@ -8827,7 +8820,7 @@ PP.addLesson({
         { text: "Cal liked \"Robots at the ladder\" best." },
         { text: "Her last poem was Mittens for Pirates." },
         { text: "Fay picked \"a Castle in a Pocket\" for her favorite." },
-        { text: "Her first story was \"Harmonica Hill.\"", correct: true }
+        { text: "We all loved \"Harmonica Hill\" most of all.", correct: true }
       ],
       clue: "Check the marks around each title and then its capital letters.",
       hints: [
@@ -8837,11 +8830,11 @@ PP.addLesson({
       ],
       how: [
         "Check the marks and the capital letters in each title.",
-        "In \"Her first story was \"Harmonica Hill.\"\" the title has quotation marks and a capital on each important word.",
-        "The answer is \"Her first story was \"Harmonica Hill.\"\""
+        "In \"We all loved \"Harmonica Hill\" most of all.\" the title has quotation marks and a capital on each important word.",
+        "The answer is \"We all loved \"Harmonica Hill\" most of all.\""
       ],
       misconception: "A common mix-up is trusting a line because it looks neat. Check each mark and each capital letter.",
-      why: "The answer is \"Her first story was \"Harmonica Hill.\"\" Its title has quotation marks and correct capitals. One title has a lowercase last word, one has no quotation marks, and one has a lowercase first word.",
+      why: "The answer is \"We all loved \"Harmonica Hill\" most of all.\" Its title has quotation marks and correct capitals. One title has a lowercase last word, one has no quotation marks, and one has a lowercase first word.",
       like: ["SK-GUM5-7-C03"]
     },
     {
@@ -8855,7 +8848,7 @@ PP.addLesson({
       passages: ["p4"],
       prompt: "Two steps follow.",
       partA: {
-        prompt: "Which line in the second paragraph has a name that looks wrong?",
+        prompt: "Find the line in the second paragraph whose title looks wrong.",
         choices: [
           { text: "Everybody asked her many questions." },
           { text: "Ivy shared \"A Mermaid in a Bucket\" with our guest." },
@@ -8866,10 +8859,10 @@ PP.addLesson({
       partB: {
         prompt: "Pick the best fix for that line.",
         choices: [
-          { text: "Lowercase For, since little linking words inside a name stay plain.", correct: true },
-          { text: "Lowercase Windmills, since a name allows a capital only on its opening word." },
-          { text: "Erase the quotation marks, since a story name is meant to be underlined." },
-          { text: "Lowercase Mules, since a name may not finish on a capitalized word." }
+          { text: "Lowercase For, since small words in the middle stay lowercase.", correct: true },
+          { text: "Lowercase Windmills, since only the first word gets a capital." },
+          { text: "Erase the quotation marks, since stories get underlined." },
+          { text: "Lowercase Mules, since the last word stays lowercase." }
         ]
       },
       clue: "Read each line in the second paragraph. Check any title for its marks and capital letters.",
@@ -8882,10 +8875,10 @@ PP.addLesson({
         "Part A: read each line in the second paragraph and check any title.",
         "In \"Gus read aloud \"Windmills For Mules\" before lunch.\" the small word For has a capital letter.",
         "Part A answer: Gus read aloud \"Windmills For Mules\" before lunch.",
-        "Part B answer: \"Lowercase For, since little linking words inside a name stay plain.\""
+        "Part B answer: \"Lowercase For, since small words in the middle stay lowercase.\""
       ],
       misconception: "A common mix-up is changing an important word. The small word in the middle is the one that needs fixing.",
-      why: "Part A: Gus read aloud \"Windmills For Mules\" before lunch. Part B: \"Lowercase For, since little linking words inside a name stay plain.\" The title should be \"Windmills for Mules.\" The other lines are written correctly.",
+      why: "Part A: Gus read aloud \"Windmills For Mules\" before lunch. Part B: \"Lowercase For, since small words in the middle stay lowercase.\" The title should be \"Windmills for Mules.\" The other lines are written correctly.",
       like: ["SK-GUM5-7-C04"]
     },
     {
@@ -8991,7 +8984,7 @@ PP.addLesson({
         "3.L.GC.1:I:use-capitalization-and-underlining-quotation-mar"
       ],
       passages: ["p5"],
-      prompt: "Pick the title that completes line 8.",
+      prompt: "Line 8 shows a song name written wrongly. Pick the repair.",
       text: "We ended the show with {0}",
       slots: [
         {
@@ -9022,27 +9015,27 @@ PP.addLesson({
       std: [
         "3.L.GC.1:I:use-capitalization-and-underlining-quotation-mar"
       ],
-      passages: ["p5"],
-      prompt: "Lines 8 and 9 each name a work with a little linking word inside. What is true of both names?",
+      passages: [],
+      prompt: "Kofi typed Penguin Parade, a whole book, in italics. Lena typed it in quotation marks. Which classmate is correct?",
       choices: [
-        { text: "Each is wrong, because a linking word ought to be capitalized when it sits between two nouns." },
-        { text: "Each begins and ends with a main word, and the little words between them have no capitals.", correct: true },
-        { text: "Only line 9 is right, because a name may include an uncapitalized word only if it includes two of them." },
-        { text: "Neither takes quotation marks, because names near the close of a draft stay plain." }
+        { text: "Lena: italics are only for stories." },
+        { text: "Kofi: books are typed in italics.", correct: true },
+        { text: "Lena: all titles use quotation marks." },
+        { text: "Neither: typed titles stay plain." }
       ],
-      clue: "Look at the first word and the last word of each name.",
+      clue: "Ask whether Penguin Parade is a whole book or a short piece.",
       hints: [
-        "Look at the first word and the last word of each name.",
-        "Sort the words in each name into two groups: big ones and little ones.",
-        "Both names are short works, so they do need quotation marks. Check the other choices."
+        "Ask whether Penguin Parade is a whole book or a short piece.",
+        "Think about how a typed whole book is shown and how a typed short piece is shown.",
+        "A typed book title is not left plain, so one choice cannot be right. Check the other choices."
       ],
       how: [
-        "Read the two names: \"Pirates and Mermaids\" and \"Wizards of the Wind.\"",
-        "Each starts and ends with a main word, and the little words and, of and the sit between them without capitals.",
-        "The answer is \"Each begins and ends with a main word, and the little words between them have no capitals.\""
+        "Think about the kind of work: Penguin Parade is a whole book.",
+        "A whole book is shown in italics when typed, and a short story, poem or song goes in quotation marks.",
+        "The answer is \"Kofi: books are typed in italics.\""
       ],
-      misconception: "A common mix-up is thinking little words need capitals. Between the main words they stay as they are.",
-      why: "The answer is \"Each begins and ends with a main word, and the little words between them have no capitals.\" Both names are written correctly and need quotation marks. Only the main words have capitals.",
+      misconception: "A common mix-up is putting every title in quotation marks. Whole books use italics or underlining.",
+      why: "The answer is \"Kofi: books are typed in italics.\" Quotation marks are for short works such as songs and poems.",
       like: ["SK-GUM5-7-C09"]
     },
     {
@@ -9053,28 +9046,28 @@ PP.addLesson({
       std: [
         "3.L.GC.1:I:use-capitalization-and-underlining-quotation-mar"
       ],
-      passages: ["p5"],
-      prompt: "Which title best completes line 7?",
-      text: "Mr. Dean read the poem {0}",
+      passages: [],
+      prompt: "Pick the right way to write the song.",
+      text: "Beth sang {0} at camp.",
       slots: [
         {
-          options: ["\"Ladders to the Sky.\"", "\"Ladders to the sky.\"", "Ladders to the Sky."],
+          options: ["\"Pickles in the Pool\"", "\"pickles in the Pool\"", "Pickles in the Pool"],
           answer: 0
         }
       ],
       clue: "Ask what kind of work the title names and which words need capitals.",
       hints: [
         "Ask what kind of work the title names and which words need capitals.",
-        "Say each choice and check the marks around it.",
+        "Say each choice and check the marks around it, then its first letter.",
         "One choice has no quotation marks at all. Decide between the other two."
       ],
       how: [
-        "Read line 7. A poem is a short work, so its title goes in quotation marks.",
-        "Ladders and Sky are important words, and to and the are small words in the middle.",
-        "The answer is \"Ladders to the Sky.\" with quotation marks."
+        "Read the choices. A song is a short work, so its title goes in quotation marks.",
+        "Pickles and Pool are important words, and in and the are small words in the middle, so they stay lowercase.",
+        "The answer is \"Pickles in the Pool\" with quotation marks."
       ],
-      misconception: "A common mix-up is leaving off quotation marks. The title of a poem goes inside them.",
-      why: "The answer is \"Ladders to the Sky.\" A poem title goes in quotation marks, and Ladders and Sky get capitals. One choice has a lowercase sky, and one has no quotation marks.",
+      misconception: "A common mix-up is leaving off quotation marks. The title of a song goes inside them.",
+      why: "The answer is \"Pickles in the Pool\" in quotation marks. A song title goes in quotation marks, and the first word always gets a capital. One choice has no quotation marks, and one starts with a lowercase letter.",
       like: ["SK-GUM5-7-C10"]
     },
     {
@@ -9113,28 +9106,28 @@ PP.addLesson({
       std: [
         "3.L.GC.1:I:use-capitalization-and-underlining-quotation-mar"
       ],
-      passages: ["p6"],
-      prompt: "Which choice fits at the end of line 10?",
-      text: "Our teacher closed with a story, {0}",
+      passages: [],
+      prompt: "Which title did Gran sing?",
+      text: "Gran sang \"{0}\" while supper cooked.",
       slots: [
         {
-          options: ["\"A Candle on the Bridge.\"", "\"A Candle On the Bridge.\"", "\"A candle on the Bridge.\""],
+          options: ["Ladders to the Moon", "Ladders To the Moon", "ladders to the Moon"],
           answer: 0
         }
       ],
       clue: "Think about which words in the title are important and which are small.",
       hints: [
         "Think about which words in the title are important and which are small.",
-        "Say each choice and look at its capital letters.",
+        "Try each choice. Compare first letters and small words.",
         "One choice makes the first word lowercase, but a first word always gets a capital. Decide between the other two."
       ],
       how: [
-        "Read line 10. A story is a short work, so its title goes in quotation marks.",
-        "Candle and Bridge are important words, A is the first word, and on and the are small words in the middle.",
-        "The answer is \"A Candle on the Bridge.\" with quotation marks."
+        "Read the line. The quotation marks are already there, so only the capital letters matter.",
+        "Ladders and Moon are important words, and to and the are small words in the middle, so they stay lowercase.",
+        "The answer is Ladders to the Moon."
       ],
-      misconception: "A common mix-up is capitalizing a small word in the middle. Words like on and the stay lowercase there.",
-      why: "The answer is \"A Candle on the Bridge.\" A is first, Candle and Bridge are important, and on and the are small words in the middle. One choice capitalizes On, and one lowercases the first word.",
+      misconception: "A common mix-up is capitalizing a small word in the middle. Words like to and the stay lowercase there.",
+      why: "The answer is Ladders to the Moon. Ladders and Moon are important words, and to and the are small words in the middle. One choice capitalizes To, and one starts with a lowercase letter.",
       like: ["SK-GUM5-7-C12"]
     },
     {
@@ -9146,28 +9139,28 @@ PP.addLesson({
         "3.L.GC.1:I:use-capitalization-and-underlining-quotation-mar"
       ],
       passages: [],
-      prompt: "Rae claims a name can have a lowercase word only at its very end. Which TWO names prove her wrong?",
+      prompt: "Rae claims small words must always start with a capital. Which TWO titles prove her wrong?",
       pick: 2,
       choices: [
         { text: "Mittens for the Penguin", correct: true },
         { text: "Wobbly Yellow Boat" },
         { text: "Cheerful Brown Pony" },
-        { text: "Tiny Orange Pumpkin" },
+        { text: "The Tiny Pumpkin" },
         { text: "The Cat in the Rain", correct: true }
       ],
-      clue: "Rae makes a claim about little words. Look for names that keep little words lowercase somewhere else.",
+      clue: "Rae makes a claim about small words. Look for titles that keep small words lowercase.",
       hints: [
-        "Rae makes a claim about little words. Look for names that keep little words lowercase somewhere else.",
-        "Pick TWO. Check each name for words like a, an, the, and, of, in, on, at, to and for.",
-        "The name about the pony has no little words at all. Decide about the other four."
+        "Rae makes a claim about small words. Look for titles that keep small words lowercase.",
+        "Pick TWO. Check each title for small words in the middle.",
+        "The title about the pumpkin has a capital on every word. Decide about the other four."
       ],
       how: [
-        "Look for names with little words in the middle.",
-        "\"Mittens for the Penguin\" and \"The Cat in the Rain\" each keep little words lowercase in the middle, so they prove Rae wrong.",
-        "The other three have only main words, so they say nothing about little words."
+        "Look for titles with small words in the middle.",
+        "\"Mittens for the Penguin\" and \"The Cat in the Rain\" each keep small words lowercase in the middle, so they prove Rae wrong.",
+        "The other three have a capital on every word, so they say nothing against Rae."
       ],
-      misconception: "A common mix-up is picking names with many capitals. Rae is wrong about names that have little words in the middle.",
-      why: "The answers are \"Mittens for the Penguin\" and \"The Cat in the Rain.\" Each has little words that stay lowercase in the middle, and a little word does not have to come last. The other three have only main words.",
+      misconception: "A common mix-up is picking titles with many capitals. Rae is wrong about titles that have small words in the middle.",
+      why: "The answers are \"Mittens for the Penguin\" and \"The Cat in the Rain.\" Each has small words that stay lowercase in the middle. The other three have a capital on every word.",
       like: ["SK-GUM5-7-C13"]
     },
     {
@@ -9211,26 +9204,26 @@ PP.addLesson({
         "3.L.GC.1:I:use-capitalization-and-underlining-quotation-mar"
       ],
       passages: [],
-      prompt: "Cora named her story \"the Frog And the Lamp.\" Which edits make the name right?",
+      prompt: "Cora wrote \"the Frog And the Lamp\" as her story title. What should she change?",
       choices: [
-        { text: "Begin with a T, and give each other word a big first letter." },
-        { text: "Turn Frog into frog, since only an opening word may start with a big letter." },
-        { text: "Begin with a T, and turn And into and.", correct: true },
-        { text: "Fix only the second the, since everything else is already fine." }
+        { text: "Start with T, and capitalize each remaining word." },
+        { text: "Lowercase Frog, since just the opening word is capitalized." },
+        { text: "Start with T, and make And lowercase.", correct: true },
+        { text: "Capitalize the second the, since every small word needs it." }
       ],
-      clue: "Check the first word of the name. Then sort the other words into main words and little words.",
+      clue: "Check the first word of the title. Then sort the other words into important words and small words.",
       hints: [
-        "Check the first word of the name. Then sort the other words into main words and little words.",
-        "Look at what and does in the middle of a name.",
-        "Frog is a main word, so it keeps its capital letter. Check the other choices."
+        "Check the first word of the title. Then sort the other words into important words and small words.",
+        "Look at what and does in the middle of a title.",
+        "Frog is an important word, so it keeps its capital letter. Check the other choices."
       ],
       how: [
-        "Look at each word: the first word needs a capital, and And is a little word in the middle.",
-        "Frog and Lamp are main words, so they keep their capitals.",
-        "The answer is \"Begin with a T, and turn And into and.\""
+        "Look at each word: the first word needs a capital letter, and And is a small word in the middle.",
+        "Frog and Lamp are important words, so they keep their capitals.",
+        "The answer is \"Start with T, and make And lowercase.\""
       ],
-      misconception: "A common mix-up is fixing only one thing. This name has a first-word mistake and a little-word mistake.",
-      why: "The answer is \"Begin with a T, and turn And into and.\" The name should be \"The Frog and the Lamp.\" Frog and Lamp are main words and keep their capitals.",
+      misconception: "A common mix-up is fixing only one thing. This title has a first-word mistake and a small-word mistake.",
+      why: "The answer is \"Start with T, and make And lowercase.\" The title should be \"The Frog and the Lamp.\" Frog and Lamp are important words and keep their capitals.",
       like: ["SK-GUM5-7-C15"]
     }
   ],

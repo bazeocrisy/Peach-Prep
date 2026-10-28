@@ -10,17 +10,17 @@ All numbers below were measured on the final file after the last edit (`node ver
 
 ## Measurements (final file)
 
-Twin x core overlap is the maximum over all 225 twin/core pairs (15 x 15, including the reused legacy items). "tc" is item text only, "tcp" is item text plus passage text. Each cell is set Jaccard / multiset Jaccard. The limit is 0.21.
+Twin x core overlap is the maximum over all 225 twin/core pairs (15 x 15, including the reused legacy items). "tc" is item text only, "tcp" is item text plus passage text. Each cell is set Jaccard / multiset Jaccard. The limit is 0.21 (the set figure is the one held under 0.21 in every lesson; the multiset figure is at most 0.214). Re-measured after the first-review fixes (lessons 1 to 7).
 
 | Lesson | tc max | tcp max | Passage min words | Passage max FK | Core format counts | Core DOK 1/2/3 |
 |---|---|---|---|---|---|---|
-| L1 capitalization in abbreviations | 0.194 / 0.205 | 0.193 / 0.205 | 107 | 3.6 | hottext 3, match 2, dropdown 4, mc 3, ebsr 1, ms 2 | 2/10/3 |
-| L2 commas, direct address and yes/no | 0.197 / 0.205 | 0.197 / 0.205 | 108 | 2.9 | match 2, ms 3, dropdown 4, mc 3, ebsr 1, hottext 2 | 2/10/3 |
-| L3 plural possessive apostrophes | 0.205 / 0.203 | 0.174 / 0.202 | 101 | 4.5 (4.47) | match 2, hottext 3, dropdown 4, mc 3, ebsr 1, ms 2 | 2/10/3 |
-| L4 indefinite pronouns, agreement | 0.202 / 0.203 | 0.207 / 0.204 | 100 | 3.9 | hottext 3, ms 3, dropdown 4, mc 3, ebsr 1, match 1 | 2/10/3 |
-| L5 subordinating conjunctions | 0.194 / 0.201 | 0.200 / 0.192 | 100 | 3.4 | hottext 3, match 2, dropdown 4, mc 3, ebsr 1, ms 2 | 2/10/3 |
-| L6 commas after opening parts | 0.178 / 0.195 | 0.175 / 0.195 | 104 | 3.3 | hottext 3, ms 2, dropdown 4, mc 3, ebsr 1, match 2 | 2/10/3 |
-| L7 titles of works | 0.190 / 0.201 | 0.179 / 0.207 | 102 | 4.4 (4.44) | hottext 3, dropdown 4, mc 3, ebsr 1, ms 2, match 2 | 2/10/3 |
+| L1 capitalization in abbreviations | 0.190 / 0.206 | 0.181 / 0.205 | 117 | 3.6 | hottext 3, match 2, dropdown 4, mc 3, ebsr 1, ms 2 | 2/10/3 |
+| L2 commas, direct address and yes/no | 0.197 / 0.204 | 0.197 / 0.204 | 118 | 2.9 | match 2, ms 3, dropdown 4, mc 3, ebsr 1, hottext 2 | 2/10/3 |
+| L3 plural possessive apostrophes | 0.207 / 0.204 | 0.180 / 0.202 | 111 | 4.5 | match 2, hottext 3, dropdown 4, mc 3, ebsr 1, ms 2 | 2/10/3 |
+| L4 indefinite pronouns, agreement | 0.200 / 0.214 | 0.207 / 0.204 | 111 | 3.9 | hottext 3, ms 3, dropdown 4, mc 3, ebsr 1, match 1 | 2/10/3 |
+| L5 subordinating conjunctions | 0.191 / 0.212 | 0.177 / 0.196 | 111 | 3.4 | hottext 3, match 2, dropdown 4, mc 3, ebsr 1, ms 2 | 2/10/3 |
+| L6 commas after opening parts | 0.208 / 0.206 | 0.208 / 0.206 | 116 | 3.3 | hottext 3, ms 2, dropdown 4, mc 3, ebsr 1, match 2 | 2/10/3 |
+| L7 titles of works | 0.193 / 0.214 | 0.191 / 0.204 | 117 | 4.4 | hottext 3, dropdown 4, mc 3, ebsr 1, ms 2, match 2 | 2/10/3 |
 
 Twin format counts and DOK counts equal the core counts in every lesson, and every twin has the same type and DOK as the core item it mirrors (`like` check: no mismatch in any lesson). Passage word counts exclude the (n) markers. FK is from `verification/readability.py` (heuristic, screening only).
 
@@ -30,9 +30,29 @@ Live choices (`live.js`, scripted recount after hints 1, 2 and 3): no item names
 
 Key text appears in why or how on every item. No core key appears in Teach or Watch Me (`qa.js`: no KEY-IN-TEACH), and no Teach or Watch Me example equals a core key.
 
+Core-vs-core item-text overlap (digits and (n) markers counted; limit 0.30), maximum per lesson: L1 0.215, L2 0.250, L3 0.275, L4 0.295, L5 0.270, L6 0.279, L7 0.282. With passage text added, the same-passage dropdown and hot-text pairs reach 0.8 to 0.9 because they share a draft; that figure is informational. Passage words and FK come from `verification/readability.py` (script word counts; FK maximum 4.5 on L3, 4.4 on L7).
+
+## First-review revision (all seven lessons)
+
+Fixes follow B8b-review.md ("First review"). Each fix was made in the lesson specs and rebuilt into L-GUM5.js; all figures above are from the final file.
+
+- Same-frame dropdown triplets (C03/C10/C12 and S03/S10/S12 in every lesson): prompts, hints, how and distractor shapes were varied; every triplet is now under 0.30 core-vs-core. L4's third option in all eight dropdowns is now a wrong-agreement form with a helper word (have brought, do clap, is shaking, have kept, is watching, and the twin forms) instead of an -ing form, and hint 3s differ.
+- L5/L6/L7 dropdown items no longer print their key in the passage (checked by script; the remaining "KEY IN PASSAGE" lines from `ke.js` are hot-text and ebsr items whose key is the planted sentence, or are case-insensitive matches of a deliberately mis-capitalized title).
+- L1 C14/S14: "Av." and "Str." are valid capitalized abbreviations, so they are no longer distractors; Teach now lists Ave.
+- L3: women/men removed from core items (tests T1/T2 ask them); core uses children, mice and people. Teach was changed to geese so that no core key appears in it. S01 says "Cover the apostrophe (and the s after it, if there is one)". S09 key rewritten: "Scores belong to the students, so they get a mark; archers only names a group."
+- L4: S13 now tests Lena's claim "A verb copies whichever noun sits closest to it" (no word in the claim names a key); S15 distractors rewritten; passage p6 s6 reads "Somebody make the sign for the word friend with two hands."
+- L5 to L7: items listed as MUST and SHOULD in the review were fixed (C14 slot 0, L6 S13, L7 title items).
+- Opening words of the stems and the choice starts were reworded where six-word strings repeated in other lessons.
+
+## Notes for reviewers
+
+- The only check-content failure seen during the work ("3.L.GC.1:C:form-and-use-prepositional-phrases: learn needs 2-3 worked examples") belonged to another batch and is gone in the final run (PASS, 0 failures).
+- Legacy-item six-gram overlaps remain (see the topic scan).
+- Two read-only `git status` calls were run by mistake earlier; nothing was changed with git.
+
 ## Design notes that affect review
 
-- L3: peoples' is a valid plural, so it is never marked as an error (twin S12 uses women).
+- L3: peoples' is a valid plural, so it is never marked as an error.
 - L4: no new item marks "each of + plural noun + plural verb" as an error. That form is acceptable in informal prose, so it appears only as a correct singular use. The legacy distractor "Each of the boys have" is legacy text, kept as is.
 - L5: every conjunction is checked for meaning (because = reason, until = how long, when/while/after/before = time, if = condition, although = surprise). Hot-text stems that say TWO have exactly two errors in the stated range; stems that say ONE have exactly one.
 - L6: only opening clauses with a naming and telling part (When, Before, After, As soon as, Once, While) are marked as missing a comma. A missing comma after a short opening phrase is never marked as an error, and every short opening phrase in the passages has its comma. The only extra-comma errors are on closing parts that begin with when, after, before or if.

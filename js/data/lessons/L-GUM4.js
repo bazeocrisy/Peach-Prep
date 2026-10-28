@@ -44,14 +44,14 @@ PP.addLesson({
       answer: "The phrases are during the storm and in the kitchen. During the storm tells when."
     },
     {
-      show: ["Mia packed her bag before the trip.", "Mia packed her bag beside the door."],
-      ask: "Which sentence has a phrase that tells when?",
+      show: ["The shop stays open ___ nine o'clock."],
+      ask: "Which word fits: until, under or beside?",
       steps: [
-        "Find the prepositional phrase in each sentence: before the trip and beside the door.",
-        "Name the noun that ends each phrase. A door is a place you can point to, and a trip is something that happens at a time.",
-        "Use the noun to decide what each phrase tells."
+        "Look at the noun after the blank. Nine o'clock is a time, not a place.",
+        "Try each word. Under nine o'clock and beside nine o'clock make no sense.",
+        "Until works with a time, so use it."
       ],
-      answer: "The first sentence. Before the trip tells when, and beside the door tells where."
+      answer: "Until: The shop stays open until nine o'clock."
     }
   ],
   parent: "On a walk or in the car, take turns telling where things are with a prepositional phrase, like \"The bird is on the fence\" or \"The ball is under the bench.\"",
@@ -314,7 +314,7 @@ PP.addLesson({
               "The answer is \"about dragons\". Holds a thick book and He holds a thick book have no preposition, and a thick book about stops before the noun."
             ],
             misconception: "A common mix-up is picking the words around the preposition. The phrase starts at the preposition and ends at its noun.",
-            why: "The answer is \"about dragons\" About is the preposition that starts the phrase, and dragons is the noun that ends it. The other choices have no preposition or stop before the noun."
+            why: "The answer is \"about dragons\". About is the preposition that starts the phrase, and dragons is the noun that ends it. The other choices have no preposition or stop before the noun."
           },
           {
             id: "SK-GUM4-1-C04",
@@ -568,20 +568,20 @@ PP.addLesson({
             ],
             passages: [],
             stem: "Sentence A: The goats slept in the barn. Sentence B: The goats woke in the morning.",
-            prompt: "How are the phrases in the two sentences alike and different?",
+            prompt: "What do the groups of words in A and B share, and how do they differ?",
             choices: [
               {
-                text: "Both start with in, but the first tells where and the second tells when.",
+                text: "Each begins with in; the first ends with a spot, and the second ends with a time.",
                 correct: true
               },
               {
-                text: "Both start with in, so both phrases must tell where the goats were."
+                text: "Each begins with in, so each must end with a spot where the goats were that day."
               },
               {
-                text: "Neither phrase starts with a preposition, so neither one is a prepositional phrase."
+                text: "Neither begins with a preposition, so no group of words here counts as a real phrase."
               },
               {
-                text: "The first phrase tells when, and the second phrase tells where the goats woke."
+                text: "The first ends with a time, and the second ends with a spot where the goats woke."
               }
             ],
             clue: "Compare the first word of each phrase. Then compare the noun at the end of each phrase.",
@@ -593,10 +593,10 @@ PP.addLesson({
             how: [
               "Both phrases start with in, so they begin alike.",
               "Barn names a place, so in the barn tells where. Morning names a time, so in the morning tells when.",
-              "The answer is \"Both start with in, but the first tells where and the second tells when.\""
+              "The answer is \"Each begins with in; the first ends with a spot, and the second ends with a time.\""
             ],
             misconception: "A common mix-up is thinking the same preposition always gives the same kind of detail. The noun decides.",
-            why: "The answer is \"Both start with in, but the first tells where and the second tells when.\" In the barn tells where the goats slept, and in the morning tells when they woke. The same preposition starts both phrases."
+            why: "The answer is \"Each begins with in; the first ends with a spot, and the second ends with a time.\" In the barn tells where the goats slept, and in the morning tells when they woke. The same preposition starts both phrases."
           }
         ]
       },
@@ -632,34 +632,48 @@ PP.addLesson({
           },
           {
             id: "SK-GUM4-1-C12",
-            type: "dropdown",
-            points: 1,
+            type: "ms",
+            points: 2,
             dok: 2,
             std: [
               "3.L.GC.1:C:form-and-use-prepositional-phrases"
             ],
             passages: ["p3"],
-            prompt: "Sentence 6 of the draft has a mistake. Choose the word that fixes it.",
-            text: "We ate our sandwiches {0} a flat rock, and the sun felt warm.",
-            slots: [
+            stem: "Sentence 6 of the draft: We ate our sandwiches during a flat rock, and the sun felt warm.",
+            prompt: "The phrase in this sentence does not make sense. Choose the TWO replacements that fix it.",
+            pick: 2,
+            choices: [
               {
-                options: ["on","during","after"],
-                answer: 0
+                text: "on a flat rock",
+                correct: true
+              },
+              {
+                text: "beside a flat rock",
+                correct: true
+              },
+              {
+                text: "until a flat rock"
+              },
+              {
+                text: "since a flat rock"
+              },
+              {
+                text: "after a flat rock"
               }
             ],
-            clue: "Read the sentence and think about what the phrase should tell. Then try each word in the blank and listen.",
+            clue: "Read the sentence with each replacement and listen.",
             hints: [
-              "Read the sentence and think about what the phrase should tell. Then try each word in the blank and listen.",
-              "Say the noun after the blank. Then read the words before the blank and test each choice with both.",
-              "A rock is not an event that has a start and an end, so the word that is in the draft now does not fit."
+              "Read the sentence with each replacement and listen.",
+              "Name the last word of each replacement, and ask what kind of thing a rock is.",
+              "After is a time word, and a rock is not an event."
             ],
             how: [
-              "Read the sentence with each word in the blank.",
+              "Read the sentence with each replacement.",
               "A flat rock is a place where you can sit, so the phrase should tell where.",
-              "The answer is on. During and after are time words, and they do not make sense with a rock."
+              "The answers are \"on a flat rock\" and \"beside a flat rock\". Until, since and after are time words, and a rock is not a time."
             ],
             misconception: "A common mix-up is trusting the word that is already in the draft. Read the whole phrase out loud.",
-            why: "The answer is on. On a flat rock tells where the family ate. During and after are time words, so they do not fit with a rock."
+            why: "The answers are \"on a flat rock\" and \"beside a flat rock\". On a flat rock and beside a flat rock both tell where the family ate. Until, since and after are time words, so they do not fit with a rock."
           },
           {
             id: "SK-GUM4-1-C13",
@@ -754,14 +768,14 @@ PP.addLesson({
               "3.L.GC.1:C:form-and-use-prepositional-phrases"
             ],
             passages: [],
-            prompt: "Which sentence has one phrase that tells where and one phrase that tells when?",
+            prompt: "Pick the line that gives one location and one moment.",
             choices: [
               {
                 text: "Before the game, our coach waited at the gate.",
                 correct: true
               },
               {
-                text: "Our coach waited at the gate and beside the bus."
+                text: "Our coach waited at the gate and beside the van."
               },
               {
                 text: "Before the game and after the game, our coach waited."
@@ -907,7 +921,7 @@ PP.addLesson({
         "The answer is \"across the porch\". Bright paper chains and hung bright paper chains have no preposition, and chains across the stops before the noun."
       ],
       misconception: "A common mix-up is picking words that include the thing being hung. The phrase begins at the preposition.",
-      why: "The answer is \"across the porch\" Across is the preposition, and porch is the noun that ends the phrase. The other choices have no preposition or stop before the noun.",
+      why: "The answer is \"across the porch\". Across is the preposition, and porch is the noun that ends the phrase. The other choices have no preposition or stop before the noun.",
       like: ["SK-GUM4-1-C03"]
     },
     {
@@ -958,13 +972,13 @@ PP.addLesson({
           correct: true
         },
         {
-          text: "Sunset is a hill behind the house, so those words name the place for the cheer."
+          text: "At always points to a spot, so those words must name the place where everyone stood while cheering."
         },
         {
           text: "At is a describing word here, so those words cannot be counted as a real phrase."
         },
         {
-          text: "Sunset is a feeling, so those words give the way everyone cheered."
+          text: "Sunset describes the color of the sky, so those words tell how the evening looked to the cousins."
         }
       ],
       clue: "Do not stop at the small word at the start of a group of words. Look at what the last word of the group names.",
@@ -991,7 +1005,7 @@ PP.addLesson({
         "3.L.GC.1:C:form-and-use-prepositional-phrases"
       ],
       passages: ["p5"],
-      prompt: "Look at sentences 2, 3, 4, 5 and 7. Pick the TWO shown sentences that give a location.",
+      prompt: "Five lines from the ice draft are shown. Tap the TWO that name somewhere.",
       targets: ["p5:1:2","p5:1:3","p5:2:1","p5:2:2","p5:3:1"],
       answer: ["p5:1:2","p5:1:3"],
       pick: 2,
@@ -1019,7 +1033,7 @@ PP.addLesson({
         "3.L.GC.1:C:form-and-use-prepositional-phrases"
       ],
       passages: ["p5"],
-      prompt: "Answer Part A first, and then answer Part B.",
+      prompt: "Solve Part A, and next solve Part B.",
       partA: {
         prompt: "Sentence 9 needs words that show where the class will do the work. Which new version does that job?",
         choices: [
@@ -1042,17 +1056,17 @@ PP.addLesson({
         prompt: "Which statement proves that the added words name a location?",
         choices: [
           {
-            text: "A gym is a building that students can walk to.",
+            text: "The gym is a building, and a building is somewhere you can go.",
             correct: true
           },
           {
-            text: "Monday is a school day that comes once each week."
+            text: "Behind is a small word, and every small word like it names a place."
           },
           {
-            text: "A holiday is a break from school that lasts for days."
+            text: "Experiment comes first in the sentence, so it decides what the phrase tells."
           },
           {
-            text: "A timer is a small tool that counts the seconds."
+            text: "Repeat is the verb, and the verb decides whether a phrase tells where."
           }
         ]
       },
@@ -1060,15 +1074,15 @@ PP.addLesson({
       hints: [
         "Think about what kind of noun finishes each new group of words. Then see which kind answers a where question.",
         "For Part A, add each group of words to sentence 9 and listen for the one that answers where. For Part B, name the kind of noun that finishes the one you picked.",
-        "A timer is a tool, so a statement about a timer cannot prove a place."
+        "Small words like until and during tell about time, so a claim about every small word cannot prove a place."
       ],
       how: [
         "Part A: a where phrase must end with a noun that names somewhere to go. The answer is \"Our class will repeat the experiment behind the gym.\"",
         "The other versions end with Monday afternoon, winter holiday and timer, which are two times and a tool.",
-        "Part B: the statement is \"A gym is a building that students can walk to.\""
+        "Part B: the statement is \"The gym is a building, and a building is somewhere you can go.\""
       ],
       misconception: "A common mix-up is choosing the version with the most words. Check what the noun at the end of the phrase names.",
-      why: "Part A: \"Our class will repeat the experiment behind the gym.\" Part B: \"A gym is a building that students can walk to.\" Behind the gym ends with a building, so it shows where. The other phrases end with a time of day, a break and a tool.",
+      why: "Part A: \"Our class will repeat the experiment behind the gym.\" Part B: \"The gym is a building, and a building is somewhere you can go.\" Behind the gym ends with a building, so it shows where. The other phrases end with a time of day, a break and a tool.",
       like: ["SK-GUM4-1-C07"]
     },
     {
@@ -1163,20 +1177,20 @@ PP.addLesson({
       ],
       passages: [],
       stem: "1. The kayaks rested by the dock. 2. The kayaks were back by noon.",
-      prompt: "Mia says both groups of words begin with by, so they must give the same kind of detail. Is she right?",
+      prompt: "Mia claims that by always gives one kind of detail. Does by do the same job in lines 1 and 2?",
       choices: [
         {
           text: "No, a dock is a spot and noon is a moment, so the details differ.",
           correct: true
         },
         {
-          text: "Yes, any group of words that begins with by gives a spot."
+          text: "Yes, by shows a spot every time it is used."
         },
         {
-          text: "Yes, the small word by alone decides what a group of words gives."
+          text: "Yes, the small word by alone decides the detail."
         },
         {
-          text: "No, by is not a preposition, so neither group is a real phrase."
+          text: "No, by is only a describing word, so neither line holds a phrase."
         }
       ],
       clue: "Find the noun that finishes each piece that starts with by. Then compare the two nouns.",
@@ -1203,7 +1217,7 @@ PP.addLesson({
         "3.L.GC.1:C:form-and-use-prepositional-phrases"
       ],
       passages: ["p6"],
-      prompt: "Sentences 2 to 6 are shown from the swim meet draft. Pick the ONE with no group of words that starts with a preposition.",
+      prompt: "Five lines from the swim meet draft are shown. Pick the ONE that never uses a preposition with a noun after it.",
       targets: ["p6:1:2","p6:1:3","p6:2:1","p6:2:2","p6:2:3"],
       answer: ["p6:2:3"],
       pick: 1,
@@ -1224,34 +1238,48 @@ PP.addLesson({
     },
     {
       id: "SK-GUM4-1-S12",
-      type: "dropdown",
-      points: 1,
+      type: "ms",
+      points: 2,
       dok: 2,
       std: [
         "3.L.GC.1:C:form-and-use-prepositional-phrases"
       ],
       passages: ["p6"],
-      prompt: "Pick a better preposition for the blank so sentence 9 makes sense.",
-      text: "My team cheered {0} the last relay, and our voices were loud.",
-      slots: [
+      stem: "Line 9, swim draft: My team cheered across the last relay, and our voices were loud.",
+      prompt: "Something is off in that line. Pick the TWO swaps that give a sensible sentence.",
+      pick: 2,
+      choices: [
         {
-          options: ["during","beside","toward"],
-          answer: 0
+          text: "during the last relay",
+          correct: true
+        },
+        {
+          text: "before the last relay",
+          correct: true
+        },
+        {
+          text: "inside the last relay"
+        },
+        {
+          text: "toward the last relay"
+        },
+        {
+          text: "under the last relay"
         }
       ],
-      clue: "Say the sentence out loud with each word in the blank. Decide which one makes sense with the noun.",
+      clue: "Say the line out loud with each swap, one at a time.",
       hints: [
-        "Say the sentence out loud with each word in the blank. Decide which one makes sense with the noun.",
-        "Say the noun after the blank. Then read the words before the blank and test each choice with both.",
-        "A relay is a race, not a road, so one of the place words cannot fit."
+        "Say the line out loud with each swap, one at a time.",
+        "Say the noun at the end of each swap. Think about whether a relay is a spot or something that happens.",
+        "Toward shows a direction, and a race is not a road."
       ],
       how: [
-        "Read the sentence with each word in the blank.",
+        "Read the line with each swap.",
         "A relay is a race that takes a few minutes, so the phrase should tell when.",
-        "The answer is during. Beside and toward name places or directions, and a race is not a place."
+        "The answers are \"during the last relay\" and \"before the last relay\". Inside, toward and under name places or directions, and a race is not a place."
       ],
       misconception: "A common mix-up is leaving the word in the draft. Say the full phrase and ask if it makes sense.",
-      why: "The answer is during. During the last relay tells when the team cheered. Beside and toward are place words, so they do not fit a race.",
+      why: "The answers are \"during the last relay\" and \"before the last relay\". During the last relay and before the last relay both tell when the team cheered. Inside, toward and under are place words, so they do not fit a race.",
       like: ["SK-GUM4-1-C12"]
     },
     {
@@ -1546,14 +1574,14 @@ PP.addLesson({
       answer: "Worse, because it compares two days."
     },
     {
-      show: ["Mia answers the phone ___ than her brother does."],
-      ask: "Which fits the blank: more politely, most politely or more polite?",
+      show: ["The puppy looks ___ than our old dog."],
+      ask: "Which word fits: happyer, happier or more happy?",
       steps: [
-        "Count what is compared. Mia and her brother are two people.",
-        "The blank tells how Mia answers, so use a word that ends in -ly. Two people means more, not most.",
-        "More polite describes a noun, and this blank tells how, so cross it out."
+        "Count what is compared. The puppy and the old dog are two things, so use the -er form.",
+        "Happy ends in y after a consonant, so swap the y for i, then add -er.",
+        "A short word with one vowel and one consonant doubles its last letter first, like big and bigger."
       ],
-      answer: "More politely, because it tells how and it compares two people."
+      answer: "Happier: The puppy looks happier than our old dog."
     }
   ],
   parent: "At the store or in the kitchen, compare things in twos and threes: \"Which apple is bigger? Which one is the biggest?\" Let your child choose the -er or -est word.",
@@ -1696,7 +1724,7 @@ PP.addLesson({
           "(3) The tallest float had a giant paper dragon on top."
         ],
         [
-          "(4) A girl on a bike rode more slower than the other kids in the line.",
+          "(4) A girl on a bike rode more faster than the other kids in the line.",
           "(5) Mr. Lopez had the worse job of all, because he cleaned the street after the parade.",
           "(6) Fireworks over the river were the better show of that summer, so everyone stayed late."
         ],
@@ -1774,34 +1802,42 @@ PP.addLesson({
           },
           {
             id: "SK-GUM4-2-C03",
-            type: "dropdown",
+            type: "mc",
             points: 1,
             dok: 2,
             std: [
               "3.L.GC.1:C:form-and-use-comparative-and-superlative-adjecti"
             ],
             passages: ["p1"],
-            prompt: "Sentence 2 of the draft has a mistake. Choose the word that fixes it.",
-            text: "The sunflowers grew {0} than the beans, so we put them in the back row.",
-            slots: [
+            prompt: "Which revision of sentence 2 fixes the mistake?",
+            choices: [
               {
-                options: ["taller","tallest","more tall","most tall"],
-                answer: 0
+                text: "The sunflowers grew taller than the beans, so we put them in the back row.",
+                correct: true
+              },
+              {
+                text: "The sunflowers grew tallest than the beans, so we put them in the back row."
+              },
+              {
+                text: "The sunflowers grew more tall than the beans, so we put them in the back row."
+              },
+              {
+                text: "The sunflowers grew most tall than the beans, so we put them in the back row."
               }
             ],
-            clue: "Look at the little word right after the blank. Then think about what the sentence is comparing.",
+            clue: "Name the two kinds of plants in sentence 2, then see which revision fits them.",
             hints: [
-              "Look at the little word right after the blank. Then think about what the sentence is comparing.",
-              "Reread the sentence and name each kind of plant it talks about. Then test each choice in the blank.",
+              "Name the two kinds of plants in sentence 2, then see which revision fits them.",
+              "Look at the word right before than in each revision, and check how it is built.",
               "Tallest is the form for the top one in a group of three or more."
             ],
             how: [
               "Name what the sentence compares: the sunflowers and the beans, which are two kinds of plants.",
               "The word than shows a comparison of two, and tall is a short word, so it adds -er.",
-              "The answer is taller. Tallest is for three or more, and more tall and most tall add a helper word that a short word does not need."
+              "The answer is \"The sunflowers grew taller than the beans, so we put them in the back row.\" Tallest is for three or more, and more tall and most tall add a helper word that a short word does not need."
             ],
             misconception: "A common mix-up is leaving the word that is already in the draft. Count what is being compared before you choose.",
-            why: "The answer is taller. Taller compares the sunflowers with the beans, which is two things. Tallest is for three or more things, and more tall and most tall add a helper word that a short word does not need."
+            why: "The answer is \"The sunflowers grew taller than the beans, so we put them in the back row.\" Taller compares the sunflowers with the beans, which is two things. Tallest is for three or more things, and more tall and most tall add a helper word that a short word does not need."
           },
           {
             id: "SK-GUM4-2-C04",
@@ -1912,10 +1948,10 @@ PP.addLesson({
                 answer: 0
               }
             ],
-            clue: "Say the sentence with each choice and listen for the one that is built the way a comparing word should be.",
+            clue: "Try each choice in the blank and listen for a form that sounds right.",
             hints: [
-              "Say the sentence with each choice and listen for the one that is built the way a comparing word should be.",
-              "Look at the words in the draft that come before than. Ask whether both of them are needed.",
+              "Try each choice in the blank and listen for a form that sounds right.",
+              "Look at the part of the draft right before than, and check how each word is built.",
               "Most easy uses the helper word for three or more, and this sentence compares today with tomorrow."
             ],
             how: [
@@ -1979,8 +2015,8 @@ PP.addLesson({
               "3.L.GC.1:C:form-and-use-comparative-and-superlative-adjecti"
             ],
             passages: [],
-            prompt: "Choose the words that make the sentence correct.",
-            text: "Rosa writes {0} than her brother, but Grandpa writes the {1} of all.",
+            prompt: "Pick the wording that fits each blank.",
+            text: "Rosa colors {0} than her sister, yet Grandpa colors the {1} on our whole street.",
             slots: [
               {
                 options: ["more neatly","neatlier","more neat","most neatly"],
@@ -1998,12 +2034,12 @@ PP.addLesson({
               "Look only at the first blank. Neatlier is not a word, so cross it out."
             ],
             how: [
-              "The first part compares Rosa with her brother, which is two people. The second part compares Grandpa with both of them and the rest of his family.",
+              "The first part compares Rosa with her sister, which is two people. The second part compares Grandpa with everyone on the street.",
               "Words that end in -ly use more for two and most for three or more.",
-              "The answers are more neatly and most neatly. Neatlier and neatlest are not words, and neat describes a noun instead of telling how someone writes."
+              "The answers are more neatly and most neatly. Neatlier and neatlest are not words, and neat describes a noun instead of telling how someone colors."
             ],
-            misconception: "A common mix-up is using the adjective form for a word that tells how. Writing neatly tells how, so it needs neatly.",
-            why: "The answers are more neatly and most neatly. Rosa and her brother are two people, so more neatly fits the first blank. Grandpa is compared with everyone else, so most neatly fits the second. Neat describes a noun, and it does not tell how someone writes."
+            misconception: "A common mix-up is using the adjective form for a word that tells how. Coloring neatly tells how, so it needs neatly.",
+            why: "The answers are more neatly and most neatly. Rosa and her sister are two people, so more neatly fits the first blank. Grandpa is compared with everyone else, so most neatly fits the second. Neat describes a noun, and it does not tell how someone colors."
           },
           {
             id: "SK-GUM4-2-C09",
@@ -2030,10 +2066,10 @@ PP.addLesson({
                 text: "Hardest should be spelled hardiest because it ends in a consonant."
               }
             ],
-            clue: "Look at the two comparing parts in the phrase. Ask what each part does on its own.",
+            clue: "Find the phrase in sentence 4 that sits right before race.",
             hints: [
-              "Look at the two comparing parts in the phrase. Ask what each part does on its own.",
-              "Read the phrase most hardest and decide whether hardest needs any help to show the top one.",
+              "Find the phrase in sentence 4 that sits right before race.",
+              "Read that phrase out loud, then look at the ending on its last word.",
               "The race is compared with every race of the year, so a response about two races does not fit."
             ],
             how: [
@@ -2118,34 +2154,48 @@ PP.addLesson({
           },
           {
             id: "SK-GUM4-2-C12",
-            type: "dropdown",
-            points: 1,
+            type: "ms",
+            points: 2,
             dok: 2,
             std: [
               "3.L.GC.1:C:form-and-use-comparative-and-superlative-adjecti"
             ],
             passages: ["p3"],
-            prompt: "Sentence 6 of the draft has a mistake. Choose the word that fixes it.",
-            text: "The rabbit had the {0} day of the whole week, since she got a shot.",
-            slots: [
+            stem: "Sentence 6: The rabbit had the worse day of the whole week, since she got a shot.",
+            prompt: "The rabbit's day is set beside every day of the week. Pick the TWO wordings that suit it.",
+            pick: 2,
+            choices: [
               {
-                options: ["worst","worse","most worse","more bad"],
-                answer: 0
+                text: "had the worst day of the whole week",
+                correct: true
+              },
+              {
+                text: "had the most terrible day of the whole week",
+                correct: true
+              },
+              {
+                text: "had the worse day of the whole week"
+              },
+              {
+                text: "had the most worse day of the whole week"
+              },
+              {
+                text: "had the more terrible day of the whole week"
               }
             ],
-            clue: "Read the sentence and count how many days are being compared. Then say each choice in the blank.",
+            clue: "Say each wording out loud, and think about how many days the sentence sets side by side.",
             hints: [
-              "Read the sentence and count how many days are being compared. Then say each choice in the blank.",
-              "Look at the last words of the phrase that tell what the rabbit's day is compared with.",
-              "Putting the helper word for three or more in front of a word that already compares makes a double comparison."
+              "Say each wording out loud, and think about how many days the sentence sets side by side.",
+              "Look at the word in front of day in each wording, and ask whether its build fits a group of seven days.",
+              "More terrible is built for a pair of days, not for a group."
             ],
             how: [
               "The sentence compares the rabbit's day with every day in the whole week, which is more than two.",
-              "Bad is a word that changes completely: bad, worse, worst. The word for three or more is worst.",
-              "The answer is worst. Worse is for two things, and most worse and more bad are not correct."
+              "Bad changes completely: bad, worse, worst. Terrible is a long word, so it takes most.",
+              "The answers are \"had the worst day of the whole week\" and \"had the most terrible day of the whole week\". Worse and more terrible are for two things, and most worse stacks two comparing parts."
             ],
-            misconception: "A common mix-up is leaving worse because it sounds strong. Use the form that matches the number of things compared.",
-            why: "The answer is worst. The rabbit's day is compared with every day of the whole week, which is more than two, so it needs the form for three or more. Bad changes completely: bad, worse, worst."
+            misconception: "A common mix-up is leaving worse because it sounds strong. Use a form that fits a group of three or more.",
+            why: "The answers are \"had the worst day of the whole week\" and \"had the most terrible day of the whole week\". Worst and most terrible both fit a day that is compared with the whole week. Worse and more terrible are for two things, and most worse stacks two comparing parts."
           },
           {
             id: "SK-GUM4-2-C13",
@@ -2366,34 +2416,42 @@ PP.addLesson({
     },
     {
       id: "SK-GUM4-2-S03",
-      type: "dropdown",
+      type: "mc",
       points: 1,
       dok: 2,
       std: [
         "3.L.GC.1:C:form-and-use-comparative-and-superlative-adjecti"
       ],
       passages: ["p4"],
-      prompt: "The writer made an error in sentence 2. Pick the word that corrects it.",
-      text: "My fishing pole was {0} than his, but it felt light in my hands.",
-      slots: [
+      prompt: "Pick the version of line 2 that corrects the writer's slip.",
+      choices: [
         {
-          options: ["shorter","shortest","more short","most short"],
-          answer: 0
+          text: "My fishing pole was shorter than his, but it felt light in my small hands during the long morning.",
+          correct: true
+        },
+        {
+          text: "My fishing pole was shortest than his, but it felt light in my small hands during the long morning."
+        },
+        {
+          text: "My fishing pole was more short than his, but it felt light in my small hands during the long morning."
+        },
+        {
+          text: "My fishing pole was most short than his, but it felt light in my small hands during the long morning."
         }
       ],
-      clue: "Think about how many poles are in the sentence before you choose.",
+      clue: "Name the two poles in line 2, then see which version fits them.",
       hints: [
-        "Think about how many poles are in the sentence before you choose.",
-        "Find each pole the writer mentions, then try every choice in the blank.",
+        "Name the two poles in line 2, then see which version fits them.",
+        "Look at the word just before than in each version.",
         "Shortest picks out one pole from a whole row of poles."
       ],
       how: [
         "The writer sets one pole beside one other pole, so two things are compared.",
         "The word than goes with a pair, and short takes -er.",
-        "The answer is shorter. Shortest is for three or more, and the choices with more or most add a helper word that short does not need."
+        "The answer is \"My fishing pole was shorter than his, but it felt light in my small hands during the long morning.\" Shortest is for three or more, and the choices with more or most add a helper word that short does not need."
       ],
       misconception: "A common mix-up is trusting the word that the writer first wrote. Count what the sentence compares before you decide.",
-      why: "The answer is shorter. Shorter sets the writer's pole beside one other pole. Shortest is for three or more, and more short and most short add a helper word that a short word does not need.",
+      why: "The answer is \"My fishing pole was shorter than his, but it felt light in my small hands during the long morning.\" Shorter sets the writer's pole beside one other pole. Shortest is for three or more, and more short and most short add a helper word that a short word does not need.",
       like: ["SK-GUM4-2-C03"]
     },
     {
@@ -2405,23 +2463,23 @@ PP.addLesson({
         "3.L.GC.1:C:form-and-use-comparative-and-superlative-adjecti"
       ],
       passages: ["p4"],
-      prompt: "Look at sentences 4, 6, 7, 8 and 10 on the draft. Pick the ONE of them with a faulty comparing word.",
-      targets: ["p4:2:1","p4:2:3","p4:3:1","p4:3:2","p4:3:4"],
+      prompt: "Five lines from the fishing draft are shown. Pick the ONE with a faulty comparing word.",
+      targets: ["p4:1:1","p4:2:1","p4:2:3","p4:3:3","p4:3:4"],
       answer: ["p4:2:1"],
       pick: 1,
-      clue: "Find the comparing word in each of the five sentences. Skip any sentence that has none.",
+      clue: "Find the comparing word in each of the five lines. Skip any line that has none.",
       hints: [
-        "Find the comparing word in each of the five sentences. Skip any sentence that has none.",
+        "Find the comparing word in each of the five lines. Skip any line that has none.",
         "Ask how many things each comparing word sets side by side, then see if the word suits that number.",
-        "Sentence 8 names one fish and the whole morning, and its comparing word suits that."
+        "Sentence 9 names one day and the whole summer, and its comparing word suits that."
       ],
       how: [
-        "Look for a comparing word in each of the five sentences.",
-        "Sentences 7, 8 and 10 use words that suit what they compare, and sentence 6 has no comparing word.",
+        "Look for a comparing word in each of the five lines.",
+        "Sentences 9 and 10 use words that suit what they compare, and sentences 1 and 6 have no comparing word.",
         "Sentence 4 sets the cabin beside every spot for miles around, so it needs most peaceful, not more peaceful."
       ],
       misconception: "A common mix-up is trusting a sentence that sounds smooth. Count what each comparing word sets side by side.",
-      why: "The answer is sentence 4: \"The cabin is the more peaceful spot for miles, my grandpa says.\" The cabin is set beside every spot for miles around, so the sentence needs most peaceful. Sentence 6 has no comparing word, and sentences 7, 8 and 10 use farther than, biggest and warmest correctly.",
+      why: "The answer is sentence 4: \"The cabin is the more peaceful spot for miles, my grandpa says.\" The cabin is set beside every spot for miles around, so the sentence needs most peaceful. Sentences 1 and 6 have no comparing word, and sentences 9 and 10 use happiest and warmest correctly.",
       like: ["SK-GUM4-2-C04"]
     },
     {
@@ -2505,7 +2563,7 @@ PP.addLesson({
       clue: "Try each choice in the blank and notice which one is built the way a comparing word should be.",
       hints: [
         "Try each choice in the blank and notice which one is built the way a comparing word should be.",
-        "Look at the part of the draft that comes before than. Ask whether it has two jobs that do the same thing.",
+        "Look at the part of the draft just before than, and check how each word is built.",
         "Most flat has the helper word for a group, and the sentence sets one sheet beside one other."
       ],
       how: [
@@ -2607,26 +2665,26 @@ PP.addLesson({
         "3.L.GC.1:C:form-and-use-comparative-and-superlative-adjecti"
       ],
       passages: ["p5"],
-      prompt: "Mara reads most longest in sentence 5 and sees no problem. Which reply is the strongest?",
+      prompt: "Mara reads the phrase most longest in sentence 5 and sees no problem with it. Which reply is the strongest one to give her?",
       choices: [
         {
           text: "Longest ends in -est and names the top one by itself, so the extra word most can go.",
           correct: true
         },
         {
-          text: "Longest should turn into longer, since only a pair of flights was timed on that day."
+          text: "Longest should turn into longer, since only a pair of flights was timed during that test."
         },
         {
-          text: "Most should turn into more, since the plane glided so far down the hall."
+          text: "Longest should lose its ending, since the helper already names the top flight during that test."
         },
         {
-          text: "Longest needs a second g, since a lone vowel sits in front of the n."
+          text: "Both words belong, since the extra helper adds extra strength to the top flight during that test."
         }
       ],
-      clue: "Examine the two parts of the phrase. Ask whether either part repeats the work of the other.",
+      clue: "Look at the last word of the phrase, and think about what its ending already does.",
       hints: [
-        "Examine the two parts of the phrase. Ask whether either part repeats the work of the other.",
-        "Say the phrase without the first part and decide whether the meaning is still complete.",
+        "Look at the last word of the phrase, and think about what its ending already does.",
+        "Read the phrase out loud and ask whether that word still needs any help.",
         "The sentence names the longest flight of the whole day, so a reply about only two flights does not suit it."
       ],
       how: [
@@ -2647,7 +2705,7 @@ PP.addLesson({
         "3.L.GC.1:C:form-and-use-comparative-and-superlative-adjecti"
       ],
       passages: ["p5"],
-      prompt: "Look at sentences 2, 3, 4, 8 and 9 on the draft. Pick the TWO of them that compare one thing with one other thing.",
+      prompt: "Five lines from the airplane draft are shown. Tap the TWO that set one object beside exactly one other object.",
       targets: ["p5:1:2","p5:1:3","p5:2:1","p5:3:2","p5:3:3"],
       answer: ["p5:1:2","p5:3:2"],
       pick: 2,
@@ -2689,7 +2747,7 @@ PP.addLesson({
           text: "Each is a form of good: worse points to a pair of storms, and worst points to a whole year of storms."
         },
         {
-          text: "Neither one is linked to the other, because worse adds -er and worst adds most to the same base word."
+          text: "The two are just different spellings of one word, so either one can be used for any number of storms."
         }
       ],
       clue: "Think about which base word each comparing word is built from and what each one sets side by side.",
@@ -2709,34 +2767,48 @@ PP.addLesson({
     },
     {
       id: "SK-GUM4-2-S12",
-      type: "dropdown",
-      points: 1,
+      type: "ms",
+      points: 2,
       dok: 2,
       std: [
         "3.L.GC.1:C:form-and-use-comparative-and-superlative-adjecti"
       ],
       passages: ["p6"],
-      prompt: "Line 6 in this account is wrong. Pick the choice that repairs it.",
-      text: "Fireworks over the river were the {0} show of that summer, and everyone stayed late.",
-      slots: [
+      stem: "Line 6: Fireworks over the river were the better show of that summer, so everyone stayed late.",
+      prompt: "Pick the TWO wordings that repair that line.",
+      pick: 2,
+      choices: [
         {
-          options: ["best","better","most best","more good"],
-          answer: 0
+          text: "were the best show of that summer",
+          correct: true
+        },
+        {
+          text: "were the most dazzling show of that summer",
+          correct: true
+        },
+        {
+          text: "were the better show of that summer"
+        },
+        {
+          text: "were the most best show of that summer"
+        },
+        {
+          text: "were the more dazzling show of that summer"
         }
       ],
-      clue: "Say each choice in the blank and think about how many shows the writer has in mind.",
+      clue: "Say each wording out loud, and think about how many shows the writer has in mind.",
       hints: [
-        "Say each choice in the blank and think about how many shows the writer has in mind.",
-        "Notice the words after the blank that name how long a time the writer is talking about.",
-        "More good is not built the way school writing builds a comparing word."
+        "Say each wording out loud, and think about how many shows the writer has in mind.",
+        "Check the word in front of show in each wording, and ask whether it suits a whole summer of shows.",
+        "More dazzling is built for a pair of shows, not for a group."
       ],
       how: [
         "The writer sets the fireworks beside every show of the summer, which is more than two.",
-        "Good changes completely: good, better, best. The form for a group is best.",
-        "The answer is best. Better is for a pair, and most best and more good are not correct."
+        "Good changes completely: good, better, best. Dazzling is a long word, so it takes most.",
+        "The answers are \"were the best show of that summer\" and \"were the most dazzling show of that summer\". Better and more dazzling are for a pair, and most best stacks two comparing parts."
       ],
       misconception: "A common mix-up is keeping better because it sounds nice. Match the form to the number of shows.",
-      why: "The answer is best. The fireworks are set beside every show of that summer, so the line needs the form for a group. Good changes completely: good, better, best.",
+      why: "The answers are \"were the best show of that summer\" and \"were the most dazzling show of that summer\". Best and most dazzling both fit a show that is set beside a whole summer of shows. Better and more dazzling are for a pair, and most best stacks two comparing parts.",
       like: ["SK-GUM4-2-C12"]
     },
     {
@@ -2752,36 +2824,36 @@ PP.addLesson({
       pick: 2,
       choices: [
         {
-          text: "A girl on a red bike rode slower than the other kids in the long line.",
+          text: "A girl on a red bike with shiny blue tassels rode faster than the other kids in the long line near the school gate.",
           correct: true
         },
         {
-          text: "A girl on a red bike rode more slowly than the other kids in the long line.",
+          text: "A girl on a red bike with shiny blue tassels rode more quickly than the other kids in the long line near the school gate.",
           correct: true
         },
         {
-          text: "A girl on a red bike rode slowest than the other kids in the long line."
+          text: "A girl on a red bike with shiny blue tassels rode most fast than the other kids in the long line near the school gate."
         },
         {
-          text: "A girl on a red bike rode more slowlier than the other kids in the long line."
+          text: "A girl on a red bike with shiny blue tassels rode more fastly than the other kids in the long line near the school gate."
         },
         {
-          text: "A girl on a red bike rode most slowly than the other kids in the long line."
+          text: "A girl on a red bike with shiny blue tassels rode fast than the other kids in the long line near the school gate."
         }
       ],
       clue: "Both repairs must keep the meaning. Look at the comparing word in each version and check how it is built.",
       hints: [
         "Both repairs must keep the meaning. Look at the comparing word in each version and check how it is built.",
         "Find the comparing word in every version. Ask whether it is built correctly and whether it suits the girl and the rest of the line.",
-        "Slowest than puts the form for a group beside than, which sets only two things side by side."
+        "Fast with no ending cannot compare two things, so one version cannot be a repair."
       ],
       how: [
         "The girl is set beside the other kids in the line, so the sentence compares her with the rest.",
-        "Slow adds -er: slower. Slowly ends in -ly, so it takes more: more slowly.",
-        "The answers are \"A girl on a red bike rode slower than the other kids in the long line.\" and \"A girl on a red bike rode more slowly than the other kids in the long line.\" The others stack comparing parts or use -est or most with than."
+        "Fast is a short word, so it adds -er: faster. Quickly ends in -ly, so it takes more: more quickly.",
+        "The answers are \"A girl on a red bike with shiny blue tassels rode faster than the other kids in the long line near the school gate.\" and \"A girl on a red bike with shiny blue tassels rode more quickly than the other kids in the long line near the school gate.\" The others use -est or most with than, or stack a helper word on a word that already compares."
       ],
-      misconception: "A common mix-up is thinking only one repair works. Slow can add -er, and slowly can take more.",
-      why: "The answers are \"A girl on a red bike rode slower than the other kids in the long line.\" and \"A girl on a red bike rode more slowly than the other kids in the long line.\" Slower and more slowly both set the girl beside the other kids. The other versions stack comparing parts or use -est or most with than.",
+      misconception: "A common mix-up is thinking only one repair works. Fast can add -er, and quickly can take more.",
+      why: "The answers are \"A girl on a red bike with shiny blue tassels rode faster than the other kids in the long line near the school gate.\" and \"A girl on a red bike with shiny blue tassels rode more quickly than the other kids in the long line near the school gate.\" Faster and more quickly both set the girl beside the other kids. The other versions use -est or most with than, or add -ly to fast.",
       like: ["SK-GUM4-2-C13"]
     },
     {
@@ -2842,13 +2914,13 @@ PP.addLesson({
           correct: true
         },
         {
-          text: "Clearly has only one syllable, so the ending -er has to be added right onto its last letter by the writer, always."
+          text: "Clearly is a short word, so the ending -er should be added right onto its last letter for this comparison at the show."
         },
         {
           text: "Clearly belongs to a group comparison at the show, so the wording needs most clearly in this spot, not more."
         },
         {
-          text: "Clearly describes a singer instead of an action, so no helper word may sit in front of it at all, ever."
+          text: "Clearly describes a singer instead of an action, so a helper word does not belong in front of it."
         }
       ],
       clue: "Check how many syllables clearly has and what letters finish it.",
@@ -2995,7 +3067,9 @@ PP.addLesson({
       "If the noun means one, use a pronoun for one, like he, she, it, him, her, his or its. If the noun means more than one, use they, them or their.",
       "Match boy, girl or thing, too. Use he, him or his for a boy or man, she or her for a girl or woman, and it or its for a thing.",
       "Two nouns joined by and mean more than one. In \"Dan and Rosa hung their coats,\" the pronoun their stands for both children.",
-      "A pronoun for a thing that owns something is its, with no apostrophe. The word it's is short for it is, so it cannot show ownership."
+      "A pronoun for a thing that owns something is its, with no apostrophe. The word it's is short for it is, so it cannot show ownership.",
+      "Some ownership words stand alone: mine, hers, ours and theirs. Use them without a noun after them, as in \"The coat is hers.\" Before a noun, use her, our or their, as in \"her coat.\"",
+      "If a pronoun and its noun do not match, you can change either one. Change the pronoun to match the noun, or change the noun to match the pronoun."
     ],
     words: [
       { term: "pronoun", means: "a word that takes the place of a noun, like she, it or them" },
@@ -3010,15 +3084,16 @@ PP.addLesson({
   },
   learn: [
     {
-      show: ["The players grabbed ___ water bottles after the game."],
-      ask: "Which pronoun fits: his, her or their?",
+      show: ["The twins ate lunch, and he finished first."],
+      ask: "The noun and the pronoun do not match. How can you fix it?",
       steps: [
-        "Find the noun the pronoun stands for. The bottles belong to the players.",
-        "Ask whether players means one or more than one. It means more than one.",
-        "Choose the pronoun for more than one."
+        "Find the noun the pronoun stands for. It is the twins, which means more than one.",
+        "He is for one boy, so the two do not match.",
+        "Change the pronoun to they, or change the noun to one twin and keep he."
       ],
-      answer: "Their, because players means more than one."
+      answer: "Either change he to they, or change the twins to one twin."
     },
+
     {
       show: ["Grandma Rose found an old quilt in the attic and washed ___."],
       ask: "Which pronoun fits: it, them or her?",
@@ -3292,7 +3367,7 @@ PP.addLesson({
               "The answer is a book about birds. Ana and me are people, and the birds are only what the book is about."
             ],
             misconception: "A common mix-up is picking the noun closest to the pronoun. The pronoun stands for the thing that was found and then shown.",
-            why: "The answer is \"a book about birds\" It stands for the thing Ana found and showed, which is a book about birds. Ana and me are people, and the birds are only what the book is about."
+            why: "The answer is \"a book about birds\". It stands for the thing Ana found and showed, which is a book about birds. Ana and me are people, and the birds are only what the book is about."
           },
           {
             id: "SK-GUM4-3-C04",
@@ -3503,7 +3578,7 @@ PP.addLesson({
             clue: "Look at the noun that the pronoun stands for. Ask what that noun tells you about how many.",
             hints: [
               "Look at the noun that the pronoun stands for. Ask what that noun tells you about how many.",
-              "Reread the first words of sentence 7 and decide what matters most here: how many, or boy or girl.",
+              "Reread the first words of sentence 7 and find the noun the pronoun stands for.",
               "A firefighter is a person, so a response that calls the firefighters a thing cannot be right."
             ],
             how: [
@@ -3605,34 +3680,42 @@ PP.addLesson({
         items: [
           {
             id: "SK-GUM4-3-C12",
-            type: "dropdown",
+            type: "mc",
             points: 1,
             dok: 2,
             std: [
               "3.L.GC.1:C:ensure-pronoun-antecedent-agreement"
             ],
             passages: ["p3"],
-            prompt: "Pick the blank word that repairs sentence 3, where the pronoun does not suit its noun.",
-            text: "Grandma packed the food, and {0} put it in the cooler.",
-            slots: [
+            prompt: "Which revision fixes sentence 3?",
+            choices: [
               {
-                options: ["she","he","they","it"],
-                answer: 0
+                text: "Grandma packed the food, and she put it in the cooler.",
+                correct: true
+              },
+              {
+                text: "Grandma packed the food, and he put it in the cooler."
+              },
+              {
+                text: "Grandma packed the food, and they put it in the cooler."
+              },
+              {
+                text: "Grandma packed the food, and it put it in the cooler."
               }
             ],
-            clue: "Find the noun that the blank stands for. Then decide: boy or man, girl or woman, or thing?",
+            clue: "Find the noun that the pronoun after and stands for. Then compare it with each choice.",
             hints: [
-              "Find the noun that the blank stands for. Then decide: boy or man, girl or woman, or thing?",
+              "Find the noun that the pronoun after and stands for. Then compare it with each choice.",
               "Check who did the packing in the opening words.",
               "They is for more than one, and the packing was done by one person."
             ],
             how: [
-              "Find the noun the blank stands for: Grandma.",
+              "Find the noun the pronoun stands for: Grandma.",
               "Grandma is one woman, so the pronoun must be the one for a woman.",
-              "The answer is she. He is for a man, they is for more than one, and it is for a thing."
+              "The answer is \"Grandma packed the food, and she put it in the cooler.\" He is for a man, they is for more than one, and it is for a thing."
             ],
-            misconception: "A common mix-up is picking the pronoun for the nearest noun. The blank stands for the person who packed the food.",
-            why: "The answer is she. Grandma is one woman, so the pronoun is she. He is for a man, they is for more than one, and it is for a thing."
+            misconception: "A common mix-up is picking the pronoun for the nearest noun. The pronoun stands for the person who packed the food.",
+            why: "The answer is \"Grandma packed the food, and she put it in the cooler.\" Grandma is one woman, so the pronoun is she. He is for a man, they is for more than one, and it is for a thing."
           },
           {
             id: "SK-GUM4-3-C13",
@@ -3762,20 +3845,20 @@ PP.addLesson({
             ],
             passages: [],
             stem: "The gloves were wet, so Dana hung it on the line to dry.",
-            prompt: "Which explanation shows why the pronoun it is wrong in this sentence?",
+            prompt: "What goes wrong with it in this line?",
             choices: [
               {
-                text: "Gloves means more than one thing, so a pronoun for one thing does not match.",
+                text: "Gloves come as a pair, but it points to just one object, so the two do not agree.",
                 correct: true
               },
               {
-                text: "Dana is a girl, so the pronoun should show that a girl owns the gloves."
+                text: "Dana is a girl, so the word needs to say that a girl owns the gloves."
               },
               {
-                text: "Line is a thing, so the pronoun should stand for the line instead of the gloves."
+                text: "Line is the closest noun, so the word needs to point at the line instead of the gloves."
               },
               {
-                text: "Dry is an action, so the pronoun should be a pronoun for an action."
+                text: "Dry names an action, so the word needs to point at an action here."
               }
             ],
             clue: "Find the noun that the pronoun it stands for. Then ask what that noun tells you about how many.",
@@ -3787,10 +3870,10 @@ PP.addLesson({
             how: [
               "The pronoun it stands for the gloves, because the gloves are what Dana hung.",
               "Gloves means more than one thing, but it is for one thing, so the two do not match.",
-              "The answer is \"Gloves means more than one thing, so a pronoun for one thing does not match.\""
+              "The answer is \"Gloves come as a pair, but it points to just one object, so the two do not agree.\""
             ],
             misconception: "A common mix-up is blaming the nearest noun. The pronoun must match the noun it stands for.",
-            why: "The answer is \"Gloves means more than one thing, so a pronoun for one thing does not match.\" Gloves means more than one thing, and it is a pronoun for one thing, so they do not match. The sentence needs them."
+            why: "The answer is \"Gloves come as a pair, but it points to just one object, so the two do not agree.\" Gloves means more than one thing, and it is a pronoun for one thing, so they do not match. The sentence needs them."
           }
         ]
       }
@@ -3883,7 +3966,7 @@ PP.addLesson({
         "The answer is a big tent. Sam is a person, the zoo is another noun, and bright red paint tells how the tent was colored."
       ],
       misconception: "A common mix-up is choosing the name at the start of the sentence. The pronoun stands for the thing that was drawn.",
-      why: "The answer is \"a big tent\" It replaces the thing Sam drew, which is a big tent. Sam is a person, the zoo is a different noun, and bright red paint is a color.",
+      why: "The answer is \"a big tent\". It replaces the thing Sam drew, which is a big tent. Sam is a person, the zoo is a different noun, and bright red paint is a color.",
       like: ["SK-GUM4-3-C03"]
     },
     {
@@ -3927,9 +4010,9 @@ PP.addLesson({
         "3.L.GC.1:C:ensure-pronoun-antecedent-agreement"
       ],
       passages: ["p4"],
-      prompt: "Lines from a classmate's painting-class account are numbered below. Choose the single line in which a replacement word clashes with whatever it stands for.",
-      targets: ["p4:1:3","p4:2:2","p4:2:3","p4:3:1","p4:3:3"],
-      answer: ["p4:2:3"],
+      prompt: "Five lines from a classmate's painting class account are shown, and one of them holds a replacement word that clashes with whatever it stands for. Tap that single line.",
+      targets: ["p4:1:1","p4:1:2","p4:1:3","p4:3:3","p4:3:4"],
+      answer: ["p4:1:2"],
       pick: 1,
       clue: "Find every pronoun in the five sentences and the noun each one replaces.",
       hints: [
@@ -3938,12 +4021,12 @@ PP.addLesson({
         "In sentence 9, both pronouns stand for people or things that they match."
       ],
       how: [
-        "Find the pronouns: their in sentence 3, he and it in sentence 5, she and them in sentence 6, she in sentence 7, and they and them in sentence 9.",
+        "Find the pronouns: we in sentence 1, her in sentence 2, their in sentence 3, they and them in sentence 9, and our in sentence 10.",
         "Each pronoun matches its noun except one pair.",
-        "In sentence 6, them stands for one brush, but them means more than one, so the sentence needs it."
+        "In sentence 2, her stands for Mr. Brooks, who is a man, so the sentence needs his."
       ],
       misconception: "A common mix-up is checking only the first pronoun in a sentence. Check every pronoun against its noun.",
-      why: "The answer is sentence 6: \"Ella's brush fell on the floor, so she picked them up.\" Ella's brush is one thing, but them means more than one, so the sentence needs it. In the other sentences each pronoun matches its noun.",
+      why: "The answer is sentence 2: \"Mr. Brooks mixed the paint and wiped her brush on a rag.\" Mr. Brooks is a man, so the sentence needs his. In the other shown sentences each pronoun matches its noun.",
       like: ["SK-GUM4-3-C05"]
     },
     {
@@ -4048,19 +4131,19 @@ PP.addLesson({
         "3.L.GC.1:C:ensure-pronoun-antecedent-agreement"
       ],
       passages: ["p5"],
-      prompt: "From one student's account of a neighborhood bake sale full of freshly baked treats, five numbered lines are shown. Exactly one links an owner or doer word to the wrong kind of person or thing. Select it.",
-      targets: ["p5:1:2","p5:2:1","p5:2:3","p5:3:2","p5:3:4"],
+      prompt: "Five lines from the bake sale draft are shown below. Tap the single line in which a replacement word clashes with whatever it points back to.",
+      targets: ["p5:1:1","p5:1:2","p5:2:1","p5:2:2","p5:3:3"],
       answer: ["p5:2:1"],
       pick: 1,
       clue: "Find each pronoun and the noun it replaces. Then compare the two.",
       hints: [
         "Find each pronoun and the noun it replaces. Then compare the two.",
         "For each pronoun, check whether its noun is a boy or man, a girl or woman, or a thing.",
-        "Sentence 10 has a pronoun for the bakers, which is more than one, and the pronoun fits."
+        "Sentence 9 has a pronoun for my aunt, who is one woman, and the pronoun fits."
       ],
       how: [
-        "Find the pronouns: her in sentence 2, she and it in sentence 4, it and its in sentence 6, us in sentence 8, and their in sentence 10.",
-        "Her stands for Mrs. Park, it and its stand for the sign, us stands for the writer's group, and their stands for the bakers.",
+        "Find the pronouns: her in sentence 2, she and it in sentence 4, they in sentence 5, and she in sentence 9.",
+        "Her stands for Mrs. Park, it stands for the bread, they stands for the twins, and she stands for my aunt.",
         "She in sentence 4 stands for Mr. Reed, who is a man, so the sentence needs he."
       ],
       misconception: "A common mix-up is trusting a pronoun because it sounds natural. Check that it matches a boy, a girl or a thing.",
@@ -4076,20 +4159,20 @@ PP.addLesson({
         "3.L.GC.1:C:ensure-pronoun-antecedent-agreement"
       ],
       passages: ["p5"],
-      prompt: "A student wrote that two workers drove his truck home. Which fix for sentence 7, with its reason, is best?",
+      prompt: "Sentence 7 of the bake sale story says two workers drove his truck home. Choose the repair that comes with a sound reason.",
       choices: [
         {
-          text: "their, since the workers add up to more than one person",
+          text: "their, because two workers add up to a group of people",
           correct: true
         },
         {
-          text: "its, since a truck is a thing and not a person at all, whatever else is true"
+          text: "its, because a truck is an object and never a person, so it needs an object word"
         },
         {
-          text: "hers, since both workers might turn out to be women"
+          text: "hers, because both workers might turn out to be women"
         },
         {
-          text: "our, since the writer was standing there to watch them work all day"
+          text: "our, because the writer was standing nearby, watching them load chairs"
         }
       ],
       clue: "Find the noun that his stands for, and ask what it tells you about how many.",
@@ -4101,10 +4184,10 @@ PP.addLesson({
       how: [
         "Find the pronoun in sentence 7: his. It stands for two workers.",
         "Two workers is more than one. A pronoun for more than one fits, even if both workers are men.",
-        "The answer is \"their, since the workers add up to more than one person.\""
+        "The answer is \"their, because two workers add up to a group of people.\""
       ],
       misconception: "A common mix-up is thinking a boy pronoun fits two boys. His is for one man, and their is for more than one.",
-      why: "The answer is \"their, since the workers add up to more than one person\" Two workers is more than one person, so the pronoun must be their. His is for one man, so it cannot fit two workers.",
+      why: "The answer is \"their, because two workers add up to a group of people\". Two workers is more than one person, so the pronoun must be their. His is for one man, so it cannot fit two workers.",
       like: ["SK-GUM4-3-C09"]
     },
     {
@@ -4195,34 +4278,42 @@ PP.addLesson({
     },
     {
       id: "SK-GUM4-3-S11",
-      type: "dropdown",
+      type: "mc",
       points: 1,
       dok: 2,
       std: [
         "3.L.GC.1:C:ensure-pronoun-antecedent-agreement"
       ],
       passages: ["p6"],
-      prompt: "One word in the second line below clashes with its subject. Pick the fix.",
-      text: "Last July, my family spent a sunny day at the beach near our grandparents' cabin. My brothers dug a big hole, and {0} filled it with water from a blue bucket.",
-      slots: [
+      prompt: "Pick the way to repair the third line of the beach story.",
+      choices: [
         {
-          options: ["they","he","them","us"],
-          answer: 0
+          text: "My brothers dug a big hole in the warm sand, and they filled it with water from a blue plastic bucket.",
+          correct: true
+        },
+        {
+          text: "My brothers dug a big hole in the warm sand, and he quickly filled it with water from a blue plastic bucket."
+        },
+        {
+          text: "My brothers dug a big hole in the warm sand, and she filled it with water from a blue plastic bucket."
+        },
+        {
+          text: "My brothers dug a big hole in the warm sand, and it filled it with water from a blue plastic bucket."
         }
       ],
-      clue: "Find the noun the blank stands for, and ask how many it names.",
+      clue: "Find the noun the pronoun after and stands for, then compare each pick.",
       hints: [
-        "Find the noun the blank stands for, and ask how many it names.",
-        "Check who did the digging in the opening words of the second line.",
-        "Them is not able to act, so the line does not need it."
+        "Find the noun the pronoun after and stands for, then compare each pick.",
+        "Count the diggers in the opening words of the line.",
+        "She is for a girl or woman, and the diggers are boys."
       ],
       how: [
-        "The blank stands for my brothers.",
-        "My brothers means more than one, so the pronoun must be one for more than one that can do an action.",
-        "The answer is they. He is for one boy, them cannot do an action, and us includes the speaker."
+        "Find the noun the pronoun stands for: my brothers.",
+        "My brothers means more than one boy, so the pronoun must mean more than one.",
+        "The answer is \"My brothers dug a big hole in the warm sand, and they filled it with water from a blue plastic bucket.\" He is for one boy, she is for a girl, and it is for a thing."
       ],
-      misconception: "A common mix-up is picking the pronoun for the hole. The blank stands for the people who dug.",
-      why: "The answer is they. My brothers means more than one, so the pronoun is they. He is for one boy, them cannot do an action, and us includes the speaker.",
+      misconception: "A common mix-up is choosing the pronoun that sounds like the draft. The pronoun stands for the people who dug.",
+      why: "The answer is \"My brothers dug a big hole in the warm sand, and they filled it with water from a blue plastic bucket.\" My brothers means more than one boy, so the pronoun is they. He is for one boy, she is for a girl, and it is for a thing.",
       like: ["SK-GUM4-3-C12"]
     },
     {
@@ -4319,8 +4410,8 @@ PP.addLesson({
         "3.L.GC.1:C:ensure-pronoun-antecedent-agreement"
       ],
       passages: [],
-      prompt: "Pick the words that finish this story about a fence.",
-      text: "Mrs. Webb and her daughter painted {0} fence, and the fence looked bright in {1} fresh color.",
+      prompt: "Pick the words that finish this story about a backyard fence.",
+      text: "Mrs. Webb and her daughter painted {0} wooden fence on Saturday, and the fence looked bright in {1} fresh coat of color.",
       slots: [
         {
           options: ["their","theirs","them","they"],
@@ -4335,7 +4426,7 @@ PP.addLesson({
       hints: [
         "Find the noun each blank stands for. Then work out how many and what kind each noun is.",
         "For the first blank, count the painters. For the second blank, look at what the fresh color covers.",
-        "Hers shows who owns something, and the fence does not belong to a woman in this sentence."
+        "Hers is for one woman, and this blank stands for the fence, which is a thing."
       ],
       how: [
         "The first blank stands for Mrs. Webb and her daughter, which is more than one person. The second blank stands for the fence, which is one thing.",
@@ -4356,20 +4447,20 @@ PP.addLesson({
       ],
       passages: [],
       stem: "The lamp glowed brightly while Dad turned them off before bed.",
-      prompt: "What makes them a poor choice in this line about a bedroom lamp?",
+      prompt: "Why does them clash with the lamp?",
       choices: [
         {
-          text: "The word lamp names a single thing, but them points to several, and the two clash.",
+          text: "A lamp is a single thing, yet them means several; these two words disagree.",
           correct: true
         },
         {
-          text: "Dad is a man, and a word that shows a man is needed to stand in for the lamp; he is better."
+          text: "Dad turned the lamp off, so he is the word that belongs here, not a plural one."
         },
         {
-          text: "Off is the last word, and the stand-in ought to point to the word off, since it ends the line."
+          text: "Off ends the sentence, so the pronoun must refer back to that closing word."
         },
         {
-          text: "Bright is a describing word, and a stand-in ought to point to a describing word in the line."
+          text: "Bright describes the lamp, so the pronoun must refer back to that opening word."
         }
       ],
       clue: "Find the noun that the word them replaces. Then ask what that noun tells you about how many.",
@@ -4381,10 +4472,10 @@ PP.addLesson({
       how: [
         "The word them replaces the lamp, because the lamp is what Dad turned off.",
         "Lamp names a single thing, but them points to several things, so the two do not agree.",
-        "The answer is \"The word lamp names a single thing, but them points to several, and the two clash.\""
+        "The answer is \"A lamp is a single thing, yet them means several; these two words disagree.\""
       ],
       misconception: "A common mix-up is blaming the closest word. The pronoun has to agree with the noun it replaces.",
-      why: "The answer is \"The word lamp names a single thing, but them points to several, and the two clash.\" Lamp names a single thing, and them points to several things, so they do not agree. The sentence needs it.",
+      why: "The answer is \"A lamp is a single thing, yet them means several; these two words disagree.\" Lamp names a single thing, and them points to several things, so they do not agree. The sentence needs it.",
       like: ["SK-GUM4-3-C16"]
     }
   ],
@@ -4748,12 +4839,12 @@ PP.addLesson({
       choices: [
         { text: "\"Let's plant the seeds today,\" said Aunt May.", correct: true },
         { text: "Carlos whispered, \"The baby is asleep.\"", correct: true },
-        { text: "\"We won the game\" Lily told her dad." },
+        { text: "\"We won the big game of the year\" Lily told her dad." },
         { text: "Ruby asked, \"can we go to the park?\"" },
         { text: "\"Thank you\", said Mr. Lee." }
       ],
       clue: "Check the comma, the capital letter, and where each mark sits next to the closing quotation marks.",
-      why: "The answers are \"Let's plant the seeds today,\" said Aunt May. and Carlos whispered, \"The baby is asleep.\" The sentence about Lily needs a comma after game, inside the quotation marks. Ruby's question needs a capital C. The comma after Thank you belongs inside the quotation marks." },
+      why: "The answers are \"Let's plant the seeds today,\" said Aunt May. and Carlos whispered, \"The baby is asleep.\" The sentence about Lily needs a comma after year, inside the quotation marks. Ruby's question needs a capital C. The comma after Thank you belongs inside the quotation marks." },
     { id: "SK-GUM4-4-P4", type: "hottext", points: 1, dok: 2, passages: [],
       prompt: "Which sentence is written correctly?",
       options: [
@@ -4804,20 +4895,20 @@ PP.addLesson({
               "3.L.GC.1:C:use-conventional-capitalization-quotation-marks-"
             ],
             passages: ["p1"],
-            prompt: "A classmate says sentence 8 needs quotation marks because Ms. Ortiz is the one talking. What is the best response?",
+            prompt: "Someone claims sentence 8 should have quotation marks because Ms. Ortiz is the one talking. Pick the best reply.",
             choices: [
               {
-                text: "Sentence 8 retells her idea in the writer's own words, and only exact words go inside quotation marks.",
+                text: "Sentence 8 retells her idea in the writer's own words; only exact words go inside quotation marks.",
                 correct: true
               },
               {
-                text: "Sentence 8 names a speaker, and every sentence that names a speaker needs quotation marks around its words."
+                text: "Sentence 8 names a speaker; every sentence that names a speaker gets quotation marks around its words."
               },
               {
-                text: "Sentence 8 uses the word told, and that word always shows that quotation marks are needed right after it."
+                text: "Sentence 8 uses the word told; that word always shows that quotation marks are needed right after it."
               },
               {
-                text: "Sentence 8 is a plain statement, and quotation marks are only used with questions and exclamations."
+                text: "Sentence 8 is a plain statement; quotation marks are only used with questions and exclamations."
               }
             ],
             clue: "Decide what sentence 8 does with the speaker's words, and what job quotation marks do.",
@@ -4829,10 +4920,10 @@ PP.addLesson({
             how: [
               "Read sentence 8: Ms. Ortiz told us that Biscuit would be brave soon.",
               "The writer retells her idea in the writer's own words. These are not the words she said out loud.",
-              "The answer is \"Sentence 8 retells her idea in the writer's own words, and only exact words go inside quotation marks.\""
+              "The answer is \"Sentence 8 retells her idea in the writer's own words; only exact words go inside quotation marks.\""
             ],
             misconception: "A common mix-up is putting quotation marks around any sentence that names a speaker. Only the exact words someone says go inside them.",
-            why: "The answer is \"Sentence 8 retells her idea in the writer's own words, and only exact words go inside quotation marks.\" Sentence 8 tells her idea but not her exact words, so it needs no quotation marks. In sentence 2, the exact words she said are inside quotation marks."
+            why: "The answer is \"Sentence 8 retells her idea in the writer's own words; only exact words go inside quotation marks.\" Sentence 8 tells her idea but not her exact words, so it needs no quotation marks. In sentence 2, the exact words she said are inside quotation marks."
           },
           {
             id: "SK-GUM4-4-C04",
@@ -4880,21 +4971,21 @@ PP.addLesson({
             ],
             passages: ["p1"],
             prompt: "From sentences 2, 4, 6, 7 and 8, select the ONE that is punctuated incorrectly.",
-            targets: ["p1:1:2","p1:1:4","p1:2:2","p1:2:3","p1:3:1"],
+            targets: ["p1:1:2","p1:1:4","p1:2:2","p1:2:3","p1:3:3"],
             answer: ["p1:2:3"],
             pick: 1,
             clue: "Take the shown sentences in turn. Look for spoken words and test the marks around them.",
             hints: [
               "Take the shown sentences in turn. Look for spoken words and test the marks around them.",
               "In each shown sentence, check the capital letters, the commas and the marks that end the spoken words.",
-              "Sentence 8 retells an idea with no quotation marks, and retelling needs none, so it is already correct."
+              "Sentence 10 has no spoken words, so there is nothing in it to punctuate wrongly."
             ],
             how: [
               "Examine every shown sentence for spoken words and for the marks around them.",
-              "Sentences 2, 4 and 6 have correct capital letters, commas and end marks, and sentence 8 retells an idea with no quotation marks.",
+              "Sentences 2, 4 and 6 have correct capital letters, commas and end marks, and sentence 10 has no spoken words.",
               "Sentence 7 has no comma after shy, so it is the answer."
             ],
-            misconception: "A common mix-up is choosing sentence 8 because it has no quotation marks. It only retells an idea, so it needs none.",
+            misconception: "A common mix-up is choosing a sentence because it has no quotation marks. A sentence with no spoken words needs none.",
             why: "The answer is sentence 7: \"\"He is shy\" said Noah.\" Sentence 7 needs a comma after shy, inside the closing quotation marks. The other shown sentences are punctuated correctly."
           }
         ]
@@ -4948,10 +5039,10 @@ PP.addLesson({
                 }
               ]
             },
-            clue: "For Part A, compare what each choice puts after said and at the end of the quote. For Part B, look for the fact that matches the change.",
+            clue: "For Part A, compare the choices letter by letter and mark by mark. For Part B, look for the fact that matches the change.",
             hints: [
-              "For Part A, compare what each choice puts after said and at the end of the quote. For Part B, look for the fact that matches the change.",
-              "For Part B, think about what divides the name of the person talking from what that person says.",
+              "For Part A, compare the choices letter by letter and mark by mark. For Part B, look for the fact that matches the change.",
+              "For Part B, think about what the fix in Part A adds, and look for the fact about it.",
               "The draft already has a capital I, so a choice that changes it to a small letter cannot be the fix."
             ],
             how: [
@@ -4987,7 +5078,7 @@ PP.addLesson({
             clue: "Look at the mark that ends Lina's words. Ask what, if anything, may come after it.",
             hints: [
               "Look at the mark that ends Lina's words. Ask what, if anything, may come after it.",
-              "Think about what an exclamation point already does at the end of spoken words.",
+              "Look at what sits right before and right after the closing quotation marks in each choice.",
               "The exclamation is part of what Lina shouts, so it cannot sit outside the closing quotation marks."
             ],
             how: [
@@ -5419,35 +5510,35 @@ PP.addLesson({
         "3.L.GC.1:C:use-conventional-capitalization-quotation-marks-"
       ],
       passages: ["p4"],
-      prompt: "A friend argues that line 8 must be wrapped in quote marks since Mr. Hale appears in it. Which reply is strongest?",
+      prompt: "A friend says line 8 needs quote marks since Mr. Hale is in it. What should you tell the friend?",
       choices: [
         {
-          text: "It reports his plan in the author's wording, so quote marks do not belong, since they mark only word-for-word speech.",
+          text: "Line 8 only sums up his plan; quote marks are saved for words he really said.",
           correct: true
         },
         {
-          text: "It names a person who speaks, so quote marks must wrap whatever follows his name, whatever the wording is."
+          text: "Line 8 mentions a speaker, and quote marks go wherever a speaker is mentioned in a line."
         },
         {
-          text: "It contains the verb told, and that verb is a signal that quote marks must appear somewhere in the same line of text."
+          text: "Line 8 has a verb of saying, so quote marks must show up somewhere nearby in the story."
         },
         {
-          text: "It is a short statement, so quote marks can never be used in it unless the line turns into a question."
+          text: "Line 8 is quite short, and quote marks only fit when someone yells or wonders aloud for readers."
         }
       ],
-      clue: "Decide whether line 8 gives a person's own words or only sums up what that person said, and think about what quote marks are for.",
+      clue: "Look at what line 8 does with the speaker's words, and think about the job of quote marks.",
       hints: [
-        "Decide whether line 8 gives a person's own words or only sums up what that person said, and think about what quote marks are for.",
-        "Compare sentence 8 with sentence 5 and notice which of the two repeats the speaker's actual words.",
-        "Speech marks can surround statements as well as questions, so one reply makes a false claim about statements."
+        "Look at what line 8 does with the speaker's words, and think about the job of quote marks.",
+        "Compare line 8 with line 5, and notice which of the two repeats the speaker's actual words.",
+        "Quote marks can surround a plain statement as well as a question, so one reply makes a false claim about statements."
       ],
       how: [
         "Read sentence 8: Mr. Hale told her that he would check the lost box.",
         "The writer sums up his plan without his actual words, so nothing here is marked as speech.",
-        "The answer is \"It reports his plan in the author's wording, so quote marks do not belong, since they mark only word-for-word speech.\""
+        "The answer is \"Line 8 only sums up his plan; quote marks are saved for words he really said.\""
       ],
-      misconception: "A common mix-up is marking every line that names a speaker. Only word-for-word speech goes between quotation marks.",
-      why: "The answer is \"It reports his plan in the author's wording, so quote marks do not belong, since they mark only word-for-word speech.\" Sentence 8 sums up what Mr. Hale said in the writer's words. In sentence 5, his actual words sit between quotation marks.",
+      misconception: "A common mix-up is marking every line that names a speaker. Only exact words go between quote marks.",
+      why: "The answer is \"Line 8 only sums up his plan; quote marks are saved for words he really said.\" Sentence 8 sums up what Mr. Hale said in the writer's words. In sentence 5, his actual words sit between quotation marks.",
       like: ["SK-GUM4-4-C03"]
     },
     {
@@ -5496,8 +5587,8 @@ PP.addLesson({
         "3.L.GC.1:C:use-conventional-capitalization-quotation-marks-"
       ],
       passages: ["p4"],
-      prompt: "Study sentences 2, 5, 7, 8 and 9. Which ONE has a punctuation error?",
-      targets: ["p4:1:2","p4:2:1","p4:2:3","p4:3:1","p4:3:2"],
+      prompt: "Five lines from the lost mitten story are shown. Which ONE has a punctuation error?",
+      targets: ["p4:1:2","p4:2:1","p4:2:3","p4:3:2","p4:3:4"],
       answer: ["p4:2:3"],
       pick: 1,
       clue: "Take the shown sentences in order. Find the spoken words in each and test what surrounds them.",
@@ -5508,10 +5599,10 @@ PP.addLesson({
       ],
       how: [
         "Check each shown sentence for the spoken words and the marks around them.",
-        "Sentences 2, 5 and 9 have the right capital letters, commas and end marks, and sentence 8 only retells what Mr. Hale said.",
+        "Sentences 2, 5 and 9 have the right capital letters, commas and end marks, and sentence 11 has no spoken words.",
         "Sentence 7 has no comma after gym, so it is the answer."
       ],
-      misconception: "A common mix-up is picking sentence 8 because nothing there is in quotation marks. It only retells, so it needs none.",
+      misconception: "A common mix-up is picking a sentence because it has no quotation marks. A sentence with no spoken words needs none.",
       why: "The answer is sentence 7: \"\"I saw one like that near the gym\" said Mr. Hale.\" Sentence 7 needs a comma after gym, inside the closing quotation marks. The other shown sentences are punctuated correctly.",
       like: ["SK-GUM4-4-C05"]
     },
@@ -5547,33 +5638,33 @@ PP.addLesson({
         prompt: "Which reason supports the repaired version?",
         choices: [
           {
-            text: "Someone is named first and talking follows, so a comma goes between name and talking.",
+            text: "The person talking is named first and the speech follows, so a comma goes between them.",
             correct: true
           },
           {
-            text: "Nothing separates them, since quote marks alone do that job for any reader who looks at this page today."
+            text: "Nothing separates them, since quotation marks alone do that job."
           },
           {
-            text: "A period must stand between them, since the speaker's name is a whole sentence by itself right here today."
+            text: "A period must stand between them, since the person's name is a whole sentence by itself."
           },
           {
-            text: "A dash must stand between them, since a dash shows that someone is speaking to another person nearby."
+            text: "A dash must stand between them, since a dash shows that someone is speaking."
           }
         ]
       },
-      clue: "For Part A, compare what each revision places after said and around the spoken words. For Part B, pick the reason that fits that change.",
+      clue: "For Part A, compare each version letter by letter and mark by mark. For Part B, pick the reason that fits the change.",
       hints: [
-        "For Part A, compare what each revision places after said and around the spoken words. For Part B, pick the reason that fits that change.",
-        "For Part B, think about what divides the speaker's name from the words that the speaker says.",
+        "For Part A, compare each version letter by letter and mark by mark. For Part B, pick the reason that fits the change.",
+        "For Part B, think about what the repair in Part A adds, and find the reason about it.",
         "One revision removes the quotation marks, and spoken words need them, so that revision cannot be the repair."
       ],
       how: [
         "Part A: the speaker comes first, so a comma is needed right after said. The answer is \"The bus driver said, \"Look under your seat.\"\"",
         "The other revisions use a small letter, move the period outside, or drop the quotation marks.",
-        "Part B: the reason is \"Someone is named first and talking follows, so a comma goes between name and talking.\""
+        "Part B: the reason is \"The person talking is named first and the speech follows, so a comma goes between them.\""
       ],
       misconception: "A common mix-up is changing a capital letter or an end mark when a comma is missing. Look at what comes right after said.",
-      why: "Part A: \"The bus driver said, \"Look under your seat.\"\" Part B: \"Someone is named first and talking follows, so a comma goes between name and talking.\" Part A needs a comma after said, because the speaker comes first. Part B: the comma separates the speaker's name from the spoken words.",
+      why: "Part A: \"The bus driver said, \"Look under your seat.\"\" Part B: \"The person talking is named first and the speech follows, so a comma goes between them.\" Part A needs a comma after said, because the speaker comes first. Part B: the comma separates the speaker's name from the spoken words.",
       like: ["SK-GUM4-4-C06"]
     },
     {
@@ -5601,7 +5692,7 @@ PP.addLesson({
       clue: "Look at how the question ends. Ask what may follow that ending before the words I asked.",
       hints: [
         "Look at how the question ends. Ask what may follow that ending before the words I asked.",
-        "Think about the job a question mark already does when it closes a spoken question.",
+        "Look at what sits right before and right after the closing quotation marks in each choice.",
         "The question mark belongs to the words that are asked, so it cannot sit outside the closing quotation marks."
       ],
       how: [
@@ -5622,7 +5713,7 @@ PP.addLesson({
         "3.L.GC.1:C:use-conventional-capitalization-quotation-marks-"
       ],
       passages: ["p5"],
-      prompt: "Which ONE of sentences 2, 4, 6, 7 and 9 puts a punctuation mark beyond the final quote mark when it should come before it?",
+      prompt: "Tap the ONE line, out of the five shown from the pond story, whose punctuation lands beyond the last quote when it belongs ahead of it.",
       targets: ["p5:1:2","p5:1:4","p5:2:2","p5:2:3","p5:3:2"],
       answer: ["p5:2:3"],
       pick: 1,
@@ -5650,35 +5741,35 @@ PP.addLesson({
         "3.L.GC.1:C:use-conventional-capitalization-quotation-marks-"
       ],
       passages: ["p5"],
-      prompt: "One reader says that line 9 reads fine with nothing following crackers. What reply is strongest?",
+      prompt: "Someone feels line 9 needs nothing following crackers. Pick the strongest reply.",
       choices: [
         {
-          text: "Her remark finishes plainly and Mom is named afterward, so a comma belongs just behind crackers, before the last quote mark.",
+          text: "Put a comma right after crackers, within the quotes, since Mom follows and nothing else closes her speech.",
           correct: true
         },
         {
-          text: "Nothing more is called for, since naming Mom tells readers whom to hear, and extra punctuation would only repeat it all over again."
+          text: "Leave it alone; the name Mom shows who speaks, so extra marks would only repeat that same idea again and again."
         },
         {
-          text: "A period belongs right behind crackers, since this remark is a complete thought, and complete thoughts finish with one."
+          text: "Put a period right after crackers, within the quotes, since her speech is a full thought and a period closes one."
         },
         {
-          text: "A comma belongs beyond the last quote mark, since commas are never part of whatever someone says aloud."
+          text: "Put a comma after the second quote mark, since a comma is never part of anything a person says aloud, ever."
         }
       ],
       clue: "Ask what has to divide the spoken words from the speaker's name when the name comes last.",
       hints: [
         "Ask what has to divide the spoken words from the speaker's name when the name comes last.",
         "Look at the way the spoken words end. Is a question mark or an exclamation point there?",
-        "Mom said shows the speaker, but naming a speaker does not take the place of a mark at the end of the words."
+        "Mom said shows who speaks, but naming a speaker does not take the place of a mark at the end of the words."
       ],
       how: [
         "Find the spoken words in sentence 9: Ducks should eat seeds, not crackers.",
         "The speaker comes last, and the words do not end with a question mark or an exclamation point.",
-        "The answer is \"Her remark finishes plainly and Mom is named afterward, so a comma belongs just behind crackers, before the last quote mark.\""
+        "The answer is \"Put a comma right after crackers, within the quotes, since Mom follows and nothing else closes her speech.\""
       ],
       misconception: "A common mix-up is believing the speaker's name is enough to end the spoken words. A mark must still come after the words.",
-      why: "The answer is \"Her remark finishes plainly and Mom is named afterward, so a comma belongs just behind crackers, before the last quote mark.\" The spoken words end with no question mark or exclamation point, so a comma goes right after crackers, inside the closing quotation marks, before Mom. A period would end the sentence too early, and a comma outside the quotation marks is misplaced.",
+      why: "The answer is \"Put a comma right after crackers, within the quotes, since Mom follows and nothing else closes her speech.\" The spoken words end with no question mark or exclamation point, so a comma goes right after crackers, inside the closing quotation marks, before Mom. A period would end the sentence too early, and a comma outside the quotation marks is misplaced.",
       like: ["SK-GUM4-4-C09"]
     },
     {
@@ -5735,36 +5826,36 @@ PP.addLesson({
         "3.L.GC.1:C:use-conventional-capitalization-quotation-marks-"
       ],
       passages: [],
-      stem: "Two lines from a field trip story. Line 1: Mia shouted, \"Wait for me!\" Line 2: \"Wait for me!\" shouted Mia.",
+      stem: "Two lines from a field trip story. Line 1: Kai yelled, \"We found the cave!\" Line 2: \"We found the cave!\" yelled Kai.",
       prompt: "What do the two lines share, and what sets them apart?",
       choices: [
         {
-          text: "Each line leaves its exclamation point snug against the final quote mark, though only Line 1 needs a comma after the verb.",
+          text: "Line 1 calls for a comma after yelled, but Line 2 does not; the shout stays inside the quotes each time.",
           correct: true
         },
         {
-          text: "Each line puts a comma after Mia's name, though only Line 2 keeps its exclamation point within the final quote mark in this pair."
+          text: "Line 2 calls for a comma after Kai, but Line 1 does not; the shout stays inside the quotes each time."
         },
         {
-          text: "Each line closes with a period after her name, though only Line 1 wraps the shout in quote marks around it."
+          text: "Line 2 ends with a period after Kai, while Line 1 ends with an exclamation point inside the quotes."
         },
         {
-          text: "Neither line wants a comma, since each shout ends with an exclamation point, so punctuation matches throughout."
+          text: "Neither line has any use for a comma, since a shout always ends with an exclamation point and nothing else."
         }
       ],
-      clue: "See where Mia's name stands in each line. Then compare the marks that stand near the quote marks.",
+      clue: "See where Kai's name stands in each line. Then compare the marks that stand near the quotation marks.",
       hints: [
-        "See where Mia's name stands in each line. Then compare the marks that stand near the quote marks.",
+        "See where Kai's name stands in each line. Then compare the marks that stand near the quotation marks.",
         "Find the comma in each line, if there is one, and find the exclamation point in each line.",
-        "Line 1 finishes on the mark that shows the shout, so a choice saying each line closes with a period after the name cannot be right."
+        "Both lines hold the same shout, so a choice that gives the two lines different end marks cannot be right."
       ],
       how: [
-        "In Line 1, Mia comes first, so a comma follows shouted.",
-        "In Line 2, Mia comes last, so no comma follows the exclamation point.",
-        "The answer is \"Each line leaves its exclamation point snug against the final quote mark, though only Line 1 needs a comma after the verb.\""
+        "In Line 1, Kai comes first, so a comma follows yelled.",
+        "In Line 2, Kai comes last, so no comma follows the exclamation point.",
+        "The answer is \"Line 1 calls for a comma after yelled, but Line 2 does not; the shout stays inside the quotes each time.\""
       ],
       misconception: "A common mix-up is believing both lines need the same marks. Where the speaker stands changes the comma.",
-      why: "The answer is \"Each line leaves its exclamation point snug against the final quote mark, though only Line 1 needs a comma after the verb.\" In both lines the exclamation point stays inside the closing quotation marks. Line 1 has a comma after shouted because Mia comes first, and Line 2 needs none because the exclamation point already ends the words.",
+      why: "The answer is \"Line 1 calls for a comma after yelled, but Line 2 does not; the shout stays inside the quotes each time.\" In both lines the exclamation point stays inside the closing quotation marks. Line 1 has a comma after yelled because Kai comes first, and Line 2 needs none because the exclamation point already ends the words.",
       like: ["SK-GUM4-4-C11"]
     },
     {
@@ -5784,19 +5875,19 @@ PP.addLesson({
           answer: 0
         }
       ],
-      clue: "Notice how her remark ends and where the closing quotation marks stand.",
+      clue: "Notice how her words end and where the closing quotation marks stand.",
       hints: [
-        "Notice how her remark ends and where the closing quotation marks stand.",
-        "Grandma is named first, and the remark she makes is a statement.",
-        "A comma would only be right if Grandma were named after the spoken remark."
+        "Notice how her words end and where the closing quotation marks stand.",
+        "Grandma is named first, and the words she says are a statement.",
+        "A comma would only be right if Grandma were named after her spoken words."
       ],
       how: [
-        "Grandma comes first, and her remark is a statement.",
+        "Grandma comes first, and her words are a statement.",
         "A statement that closes the whole line takes a period, and the period stays inside the closing quotation marks.",
         "The answer is .\" The other choices put the period outside, use a comma, or leave off the end mark."
       ],
       misconception: "A common mix-up is placing the period after the closing quotation marks because it also finishes the line. It belongs inside them.",
-      why: "The answer is .\". The period closes Grandma's remark, so it stays inside the closing quotation marks. A comma would only be used if Grandma were named after her words.",
+      why: "The answer is .\". The period closes Grandma's words, so it stays inside the closing quotation marks. A comma would only be used if Grandma were named after her words.",
       like: ["SK-GUM4-4-C12"]
     },
     {
@@ -5918,7 +6009,7 @@ PP.addLesson({
       clue: "Read each blank as the words a person says out loud. Then check the capital letter and the closing mark in each choice.",
       hints: [
         "Read each blank as the words a person says out loud. Then check the capital letter and the closing mark in each choice.",
-        "In the first blank, look at how loudly the coach speaks. In the second blank, look at how calmly Kira replies.",
+        "Read each speaker's words aloud, then compare how each choice ends.",
         "A comma after the closing quotation marks does not fit here, since Coach Dunn is named first."
       ],
       how: [
@@ -6355,7 +6446,7 @@ PP.addLesson({
             how: [
               "Read sentence 4: Next, we walked into the room who has the moon rocks.",
               "Add there to the words after the blank: has the moon rocks there. That is not a whole sentence, because it does not say what has the moon rocks.",
-              "A room is a thing, so the word should be that. The answer is \"Where does not fit, because the words after it are not a whole sentence when there is added, so the word should be that.\""
+              "A room is a place, but has the moon rocks there is not a whole sentence, so the word should be that. The answer is \"Where does not fit, because the words after it are not a whole sentence when there is added, so the word should be that.\""
             ],
             misconception: "A common mix-up is using where after every place word. Where needs words after it that make a whole sentence.",
             why: "The answer is \"Where does not fit, because the words after it are not a whole sentence when there is added, so the word should be that.\" Has the moon rocks there is not a whole sentence, so where does not fit, and a room is not a person or a time. The sentence needs that."
@@ -6369,11 +6460,11 @@ PP.addLesson({
               "3.L.GC.1:I:use-relative-pronouns-and-relative-adverbs"
             ],
             passages: ["p1"],
-            prompt: "Choose the word that fixes sentence 2.",
+            prompt: "Pick the best fix for line 2 of the museum draft.",
             text: "Our guide was a woman {0} knew everything about space.",
             slots: [
               {
-                options: ["which","who","where","when"],
+                options: ["what","who","whose","how"],
                 answer: 1
               }
             ],
@@ -6381,15 +6472,15 @@ PP.addLesson({
             hints: [
               "Look at the noun right before the blank and ask what kind of noun it is.",
               "Read the sentence with each word in the blank, and listen for the one that suits the noun.",
-              "Where is for places, and a woman is not a place."
+              "Whose shows who owns something, and nothing here is owned."
             ],
             how: [
               "Find the noun right before the blank: woman. A woman is a person.",
               "Use who to tell more about a person.",
-              "The answer is who. Which is for things, where is for places, and when is for times."
+              "The answer is who. Whose shows who owns something, what asks a question, and how asks in what way."
             ],
-            misconception: "A common mix-up is choosing which because it sounds fancy. For a person, use who.",
-            why: "The answer is who. A woman is a person, so who fits. Which is for things, where is for places, and when is for times."
+            misconception: "A common mix-up is choosing what because it sounds like a word for anything. For a person, use who.",
+            why: "The answer is who. A woman is a person, so who fits. Whose shows who owns something, what asks a question, and how asks in what way."
           },
           {
             id: "SK-GUM4-5-C05",
@@ -6550,20 +6641,20 @@ PP.addLesson({
               "3.L.GC.1:I:use-relative-pronouns-and-relative-adverbs"
             ],
             passages: ["p2"],
-            prompt: "A classmate says sentence 6 is correct, because the kitten was found at a certain time. Which response is best?",
+            prompt: "Someone argues that sentence 6 is fine as written, since the kitten turned up at some moment. Which reply is best?",
             choices: [
               {
-                text: "A kitten is an animal and not a time, and the words after the blank need a subject, so the word should be that.",
+                text: "Kitten names an animal, not a time; what follows has no subject of its own, so that is the word.",
                 correct: true
               },
               {
-                text: "Time words like when can follow any noun, as long as the sentence tells about something that happened to us that day."
+                text: "Time words like when can follow any noun, so long as the sentence tells about something that happened that day."
               },
               {
-                text: "Where is needed instead, because the kitten was in one place, and where is used after any animal at all."
+                text: "Where is needed instead, since the kitten stayed in one spot, and where is used after any animal."
               },
               {
-                text: "No change is needed, because when and that mean the same thing in a sentence about an animal or a pet."
+                text: "No change is needed, since when and that mean the same thing in a sentence about a pet."
               }
             ],
             clue: "Decide what kind of noun comes right before the wrong word.",
@@ -6575,10 +6666,10 @@ PP.addLesson({
             how: [
               "Read sentence 6: We found a kitten when was hiding behind a bucket.",
               "A kitten is an animal, not a time. The words after the blank are was hiding behind a bucket, and they have no subject of their own.",
-              "The answer is \"A kitten is an animal and not a time, and the words after the blank need a subject, so the word should be that.\""
+              "The answer is \"Kitten names an animal, not a time; what follows has no subject of its own, so that is the word.\""
             ],
             misconception: "A common mix-up is trusting when because the sentence tells about something that happened. Check the noun right before it.",
-            why: "The answer is \"A kitten is an animal and not a time, and the words after the blank need a subject, so the word should be that.\" A kitten is an animal, not a time, and was hiding behind a bucket has no subject, so the sentence needs that. Where would only fit if the words after it made a whole sentence."
+            why: "The answer is \"Kitten names an animal, not a time; what follows has no subject of its own, so that is the word.\" A kitten is an animal, not a time, and was hiding behind a bucket has no subject, so the sentence needs that. Where would only fit if the words after it made a whole sentence."
           },
           {
             id: "SK-GUM4-5-C10",
@@ -6642,17 +6733,17 @@ PP.addLesson({
             prompt: "How are the tell-more words in the two sentences alike and different?",
             choices: [
               {
-                text: "Both tell more about a place, but where fits only when the words after it make a whole sentence with there.",
+                text: "Each describes a place; where works only if what follows could stand alone, with there added.",
                 correct: true
               },
               {
-                text: "Both tell more about a person, but where fits only when the words after it name someone who lives there too."
+                text: "Each describes a person; where works only if what follows names someone who also lives there."
               },
               {
-                text: "Both tell more about a time, but that fits only when the words after it name a moment of the day or night."
+                text: "Each describes a time; that works only if what follows names a moment during the day or night."
               },
               {
-                text: "Both tell more about a thing, but where and that mean the same thing in every sentence that you read."
+                text: "Each describes a thing; where and that always mean the same, whatever sentence you read."
               }
             ],
             clue: "Find the noun that each tell-more word describes. Then try the there test on what follows each word.",
@@ -6664,41 +6755,49 @@ PP.addLesson({
             how: [
               "Both sentences tell more about the beach, which is a place.",
               "In Sentence A, we swim there is a whole sentence, so where fits. In Sentence B, has a lifeguard there is not a whole sentence, so that is used.",
-              "The answer is \"Both tell more about a place, but where fits only when the words after it make a whole sentence with there.\""
+              "The answer is \"Each describes a place; where works only if what follows could stand alone as a sentence, with there added.\""
             ],
             misconception: "A common mix-up is thinking a place noun always takes where. The words after the word decide.",
-            why: "The answer is \"Both tell more about a place, but where fits only when the words after it make a whole sentence with there.\" Both words tell more about the beach. We swim there is a whole sentence, so Sentence A uses where. Has a lifeguard there is not a whole sentence, so Sentence B uses that."
+            why: "The answer is \"Each describes a place; where works only if what follows could stand alone, with there added.\" Both words tell more about the beach. We swim there is a whole sentence, so Sentence A uses where. Has a lifeguard there is not a whole sentence, so Sentence B uses that."
           },
           {
             id: "SK-GUM4-5-C12",
-            type: "dropdown",
+            type: "mc",
             points: 1,
             dok: 2,
             std: [
               "3.L.GC.1:I:use-relative-pronouns-and-relative-adverbs"
             ],
             passages: ["p3"],
-            prompt: "Choose the word that corrects sentence 4.",
-            text: "Marco is the player {0} scored the first goal.",
-            slots: [
+            prompt: "Which revision of sentence 4 fixes the mistake?",
+            choices: [
               {
-                options: ["when","who","where","whose"],
-                answer: 1
+                text: "Marco is the player who scored the first goal.",
+                correct: true
+              },
+              {
+                text: "Marco is the player when scored the first goal."
+              },
+              {
+                text: "Marco is the player where scored the first goal."
+              },
+              {
+                text: "Marco is the player whose scored the first goal."
               }
             ],
-            clue: "Look at the noun before the blank and decide what kind of noun it is.",
+            clue: "Look at the noun before the wrong word and decide what kind of noun it is.",
             hints: [
-              "Look at the noun before the blank and decide what kind of noun it is.",
-              "Read the sentence with each word in the blank, and listen for the one that suits the noun.",
+              "Look at the noun before the wrong word and decide what kind of noun it is.",
+              "Read each revision out loud and listen for the one that suits the noun.",
               "Where is for places, and a player is not a place."
             ],
             how: [
-              "Find the noun right before the blank: player. A player is a person.",
+              "Find the noun right before the wrong word: player. A player is a person.",
               "Use who to tell more about a person.",
-              "The answer is who. When is for times, where is for places, and whose shows who owns something."
+              "The answer is \"Marco is the player who scored the first goal.\" When is for times, where is for places, and whose shows who owns something."
             ],
-            misconception: "A common mix-up is choosing when because the goal happened at a time. Check the noun right before the blank.",
-            why: "The answer is who. A player is a person, so who fits. When is for times, where is for places, and whose shows who owns something."
+            misconception: "A common mix-up is choosing when because the goal happened at a time. Check the noun right before the wrong word.",
+            why: "The answer is \"Marco is the player who scored the first goal.\" A player is a person, so who fits. When is for times, where is for places, and whose shows who owns something."
           },
           {
             id: "SK-GUM4-5-C13",
@@ -6717,7 +6816,7 @@ PP.addLesson({
                 correct: true
               },
               {
-                text: "The bench where our bags sit is near the fence.",
+                text: "The bench which holds our bags is near the fence.",
                 correct: true
               },
               {
@@ -6730,19 +6829,19 @@ PP.addLesson({
                 text: "The bench where holds our bags is near the fence."
               }
             ],
-            clue: "A fix can change the tell-more word or the words after it.",
+            clue: "Two different words can fix this sentence. Check the noun before the wrong word and the words after it.",
             hints: [
-              "A fix can change the tell-more word or the words after it.",
+              "Two different words can fix this sentence. Check the noun before the wrong word and the words after it.",
               "Keep the revisions in which the tell-more word and the words after it work together.",
               "Who is for people, and a bench is not a person."
             ],
             how: [
               "The draft pairs the bench with where, but holds our bags there is not a whole sentence.",
-              "One fix uses that, which goes with a thing. The other fix changes the words after where so that our bags sit there is a whole sentence.",
-              "The answers are \"The bench that holds our bags is near the fence.\" and \"The bench where our bags sit is near the fence.\" The others use who for a thing, use when for a place, or keep the draft."
+              "A bench is a thing, so that and which both tell more about it, and the words after the word stay the same.",
+              "The answers are \"The bench that holds our bags is near the fence.\" and \"The bench which holds our bags is near the fence.\" The others use who for a thing, use when for a place, or keep the draft."
             ],
-            misconception: "A common mix-up is thinking only the tell-more word can change. The words after it can change, too.",
-            why: "The answers are \"The bench that holds our bags is near the fence.\" and \"The bench where our bags sit is near the fence.\" That goes with a bench, which is a thing, and our bags sit there is a whole sentence, so where fits the second revision. The others use who for a thing, use when for a place, or keep the draft."
+            misconception: "A common mix-up is thinking only that works for a thing. Which fits a thing, too.",
+            why: "The answers are \"The bench that holds our bags is near the fence.\" and \"The bench which holds our bags is near the fence.\" That and which both tell more about a bench, which is a thing. The others use who for a thing, use when for a place, or keep the draft."
           },
           {
             id: "SK-GUM4-5-C14",
@@ -6753,20 +6852,20 @@ PP.addLesson({
               "3.L.GC.1:I:use-relative-pronouns-and-relative-adverbs"
             ],
             passages: [],
-            prompt: "Which sentence uses the right word to tell more?",
+            prompt: "Pick the line with a correct tell-more word.",
             choices: [
               {
-                text: "The town where we met Grandpa is small.",
+                text: "The town where we met Grandpa is small and sits in the Georgia hills.",
                 correct: true
               },
               {
-                text: "The town when we met Grandpa is small today."
+                text: "The town when we met Grandpa is small today and sits in the Georgia hills."
               },
               {
-                text: "The town who we met Grandpa is small."
+                text: "The town who we met Grandpa is small and sits in the Georgia hills."
               },
               {
-                text: "The town that we met Grandpa is small."
+                text: "The town that we met Grandpa is small and sits in the Georgia hills."
               }
             ],
             clue: "Find the noun right before the tell-more word. Ask whether it is a person, a thing, a place or a time.",
@@ -6778,10 +6877,10 @@ PP.addLesson({
             how: [
               "Find the noun right before the tell-more word: town. A town is a place.",
               "We met Grandpa there is a whole sentence, so where fits.",
-              "The answer is \"The town where we met Grandpa is small.\" The others use when for a place, who for a thing, or that where the words after it are already whole."
+              "The answer is \"The town where we met Grandpa is small and sits in the Georgia hills.\" The others use when for a place, who for a thing, or that where the words after it are already whole."
             ],
             misconception: "A common mix-up is choosing that because a town is a thing. The words after the word are already a whole sentence, so use where.",
-            why: "The answer is \"The town where we met Grandpa is small.\" A town is a place, and we met Grandpa there is a whole sentence, so where fits. The others use when for a place, who for a thing, or that with words that are already whole."
+            why: "The answer is \"The town where we met Grandpa is small and sits in the Georgia hills.\" A town is a place, and we met Grandpa there is a whole sentence, so where fits. The others use when for a place, who for a thing, or that with words that are already whole."
           },
           {
             id: "SK-GUM4-5-C15",
@@ -6792,7 +6891,7 @@ PP.addLesson({
               "3.L.GC.1:I:use-relative-pronouns-and-relative-adverbs"
             ],
             passages: [],
-            prompt: "Choose the words that complete the sentence.",
+            prompt: "Fill each gap so the sentence about fall reads smoothly.",
             text: "Fall is the season {0} leaves change color, and the park {1} has the old swing is my favorite place.",
             slots: [
               {
@@ -6832,8 +6931,8 @@ PP.addLesson({
         "3.L.GC.1:I:use-relative-pronouns-and-relative-adverbs"
       ],
       passages: [],
-      prompt: "Select the missing term for this line from a trail journal.",
-      text: "On our hiking trip, the meadow {0} we ate our picnic lunch was covered in yellow daisies and buzzing bees.",
+      prompt: "Select the missing term for this journal entry.",
+      text: "During a long hike, the meadow {0} we ate our picnic lunch was covered in yellow daisies and buzzing bees.",
       slots: [
         {
           options: ["where","who","when","whose"],
@@ -6865,42 +6964,42 @@ PP.addLesson({
       ],
       passages: [],
       prompt: "Match each phrase with the word that completes it.",
-      cols: ["that","when"],
+      cols: ["who","where"],
       rows: [
         {
-          text: "the bell ___ rings at noon from the old tower",
+          text: "my neighbor ___ walks a tiny dog",
           answer: 0
         },
         {
-          text: "the hour ___ we eat lunch in the cafeteria",
+          text: "the beach ___ we build sandcastles",
           answer: 1
         },
         {
-          text: "the atlas ___ has faded maps of oceans",
+          text: "the nurse ___ checks my ears",
           answer: 0
         },
         {
-          text: "the evening ___ we light the fire by the lake",
+          text: "the cave ___ the bats sleep all winter",
           answer: 1
         },
         {
-          text: "the coat ___ keeps me warm in winter snow",
+          text: "the girl ___ plays the drums",
           answer: 0
         }
       ],
-      clue: "For each row, find the noun and decide whether it is a thing or a time.",
+      clue: "For each row, find the noun and decide whether it is a person or a place.",
       hints: [
-        "For each row, find the noun and decide whether it is a thing or a time.",
-        "For a time, add then to the words after the blank and check for a whole sentence.",
-        "A coat is not a time, so the word for times cannot go with it."
+        "For each row, find the noun and decide whether it is a person or a place.",
+        "For a place, add there to the words after the blank and check for a whole sentence.",
+        "A cave is not a person, so the word for people cannot go with it."
       ],
       how: [
-        "Look at each noun and the words after the blank.",
-        "We eat lunch then and we light the fire then are whole sentences, so the hour and the evening take when.",
-        "Rings at noon then, has old maps then and keeps me warm then are not whole sentences, so the bell, the atlas and the coat take that."
+        "Find the noun before each blank and decide what kind it is.",
+        "Neighbor, nurse and girl are people, so each needs who. Beach and cave are places, and we build sandcastles there and the bats sleep there are whole sentences, so each needs where.",
+        "Use who for a person and where for a place."
       ],
-      misconception: "A common mix-up is choosing when for every row with a time word. Add then and check for a whole sentence.",
-      why: "Use when for the hour and the evening: \"we eat lunch then\" and \"we light the fire then\" are whole sentences. Use that for the bell, the atlas and the coat, which are things.",
+      misconception: "A common mix-up is choosing by sound. Check the noun before the blank.",
+      why: "Who goes with neighbor, nurse and girl, which are people. Where goes with beach and cave, because we build sandcastles there and the bats sleep there are whole sentences.",
       like: ["SK-GUM4-5-P5"]
     },
     {
@@ -6952,8 +7051,8 @@ PP.addLesson({
         "3.L.GC.1:I:use-relative-pronouns-and-relative-adverbs"
       ],
       passages: ["p4"],
-      prompt: "Which term corrects line 2 of the bakery story?",
-      text: "At the bakery on Pine Street, the baker was a man {0} wore a tall white hat and a flour-dusted apron.",
+      prompt: "Choose the term that mends the second line of the bakery tour.",
+      text: "At the bakery on Pine Street, the friendly baker was a tall man {0} wore a white hat and a flour-dusted apron every single morning.",
       slots: [
         {
           options: ["which","who","where","when"],
@@ -6984,19 +7083,19 @@ PP.addLesson({
         "3.L.GC.1:I:use-relative-pronouns-and-relative-adverbs"
       ],
       passages: ["p4"],
-      prompt: "Just a single line among 3, 6, 7, 8 and 9 pairs its connector with an unsuitable partner. Which is it?",
-      targets: ["p4:1:3","p4:2:2","p4:2:3","p4:3:1","p4:3:2"],
+      prompt: "Five lines from the bakery draft are shown. Which ONE pairs its connector with an unsuitable partner?",
+      targets: ["p4:1:1","p4:1:3","p4:2:2","p4:3:1","p4:3:3"],
       answer: ["p4:3:1"],
       pick: 1,
       clue: "Locate the tell-more word in each shown sentence. Then locate the noun right before it.",
       hints: [
         "Locate the tell-more word in each shown sentence. Then locate the noun right before it.",
         "For each noun, decide whether it is a person, a thing, a place or a time. Test where and when with there or then.",
-        "Sentence 9 tells more about a person, and who is the word for a person, so it is correct."
+        "Sentence 6 tells more about a room, and where fits it, so that sentence is correct."
       ],
       how: [
         "Find the tell-more word and the noun before it in each shown sentence.",
-        "In sentence 3, that goes with an oven. In sentence 6, where goes with a room. In sentence 7, when goes with early morning. In sentence 9, who goes with a sister.",
+        "In sentence 3, that goes with an oven. In sentence 6, where goes with a room. In sentence 10, that goes with a visit. Sentence 1 has no joining word.",
         "In sentence 8, when goes with the shelf, but a shelf is a place, so the sentence needs where."
       ],
       misconception: "A common mix-up is picking the sentence that has the most words after the tell-more word. Check the noun before the word.",
@@ -7073,8 +7172,8 @@ PP.addLesson({
         "3.L.GC.1:I:use-relative-pronouns-and-relative-adverbs"
       ],
       passages: ["p5"],
-      prompt: "Which term repairs line 2 of the camping story?",
-      text: "My uncle packed a green canvas tent {0} fits six sleeping bags and a lantern.",
+      prompt: "What repairs the second sentence of the camping story?",
+      text: "My uncle packed a green canvas tent {0} fits six sleeping bags and a bright lantern for the whole weekend.",
       slots: [
         {
           options: ["who","that","where","whose"],
@@ -7105,19 +7204,19 @@ PP.addLesson({
         "3.L.GC.1:I:use-relative-pronouns-and-relative-adverbs"
       ],
       passages: ["p5"],
-      prompt: "Which ONE of lines 1, 3, 4, 5 and 7 attaches the wrong joining word to the person or thing it describes?",
-      targets: ["p5:1:1","p5:1:3","p5:1:4","p5:2:1","p5:2:3"],
+      prompt: "Five lines from the camping draft are shown. Which ONE pairs an incorrect joining word with the noun before it?",
+      targets: ["p5:1:3","p5:1:4","p5:3:1","p5:3:2","p5:3:3"],
       answer: ["p5:1:3"],
       pick: 1,
       clue: "Locate the word that begins the tell-more part in each shown sentence. Then locate the noun before it.",
       hints: [
         "Locate the word that begins the tell-more part in each shown sentence. Then locate the noun before it.",
         "For a place or a time, try the there or then test on the words after the word.",
-        "The chef in sentence 7 is a person, and who is for people, so that sentence is correct."
+        "The pond in sentence 9 is a thing that shines, and that fits it, so that sentence is correct."
       ],
       how: [
         "Find the joining word and the noun before it in each shown sentence.",
-        "Sentence 1 uses where for a river, sentence 4 uses that for a trail, sentence 5 uses when for a time, and sentence 7 uses who for a chef.",
+        "Sentence 4 uses that for a trail, sentence 8 uses that for a pot, sentence 9 uses that for a pond, and sentence 10 has no joining word.",
         "In sentence 3, where goes with a camper, but a camper is a person, so the sentence needs who."
       ],
       misconception: "A common mix-up is thinking where works after any noun. Where is for places, and Nell is a camper.",
@@ -7133,20 +7232,20 @@ PP.addLesson({
         "3.L.GC.1:I:use-relative-pronouns-and-relative-adverbs"
       ],
       passages: ["p5"],
-      prompt: "A camper claims line 6 works as written, since a deer came at some hour. What reply explains the repair best?",
+      prompt: "Why does the deer line in the camping story work with that but fail with when?",
       choices: [
         {
-          text: "Deer names an animal and the rest has no subject; that fits.",
+          text: "Deer is an animal, so the words afterward lack someone doing the drinking without that.",
           correct: true
         },
         {
-          text: "Deer appeared at an hour; when fits any trip event or story."
+          text: "Deer shows up at certain times, so the words afterward could be about any trip event."
         },
         {
-          text: "Deer stood in one spot; where fits any wild animal here."
+          text: "Deer lives in the woods, so the words afterward should name where it stood this morning."
         },
         {
-          text: "Both words carry one meaning here; leave this line completely alone."
+          text: "Deer, that, and when are interchangeable, so the words afterward read well either way."
         }
       ],
       clue: "Decide what kind of noun comes right before the blank word.",
@@ -7158,10 +7257,10 @@ PP.addLesson({
       how: [
         "Read sentence 6: We spotted a deer when was drinking from the shallow edge.",
         "A deer is an animal, not a time. What follows the blank is was drinking from the shallow edge, and it has no subject of its own.",
-        "The answer is \"Deer names an animal and the rest has no subject; that fits.\""
+        "The answer is \"Deer is an animal, so the words afterward lack someone doing the drinking without that.\""
       ],
       misconception: "A common mix-up is trusting when because the sentence describes an event. Check the noun right before it.",
-      why: "The answer is \"Deer names an animal and the rest has no subject; that fits.\" A deer is an animal, not a time, and was drinking from the shallow edge has no subject, so the sentence needs that. Where would only fit if the words after it made a whole sentence.",
+      why: "The answer is \"Deer is an animal, so the words afterward lack someone doing the drinking without that.\" A deer is an animal, not a time, and was drinking from the shallow edge has no subject, so the sentence needs that. Where would only fit if the words after it made a whole sentence.",
       like: ["SK-GUM4-5-C09"]
     },
     {
@@ -7218,68 +7317,76 @@ PP.addLesson({
         "3.L.GC.1:I:use-relative-pronouns-and-relative-adverbs"
       ],
       passages: [],
-      stem: "Line 1: Beans grow in the garden where we plant them. Line 2: A scarecrow stands in a garden that has tall corn.",
-      prompt: "What links and what separates the joining words in these two lines?",
+      stem: "Line 1: Friday is the day when we visit the library. Line 2: Friday is a day that feels very short.",
+      prompt: "Why does each line need its own joining word?",
       choices: [
         {
-          text: "Each names a place; where works only if the rest could stand alone.",
+          text: "Line 1 adds then to a whole sentence, so it takes when; Line 2 lacks a subject, so it takes that.",
           correct: true
         },
         {
-          text: "Each names a person; where works only if the rest names somebody nearby."
+          text: "Line 1 describes a person who visits, so it takes who, while Line 2 takes that for a lonely place."
         },
         {
-          text: "Each names a moment; that works only if the rest names part of a day."
+          text: "Both lines mention a day, so either joining word may replace the other one in either line."
         },
         {
-          text: "Each names an object; where and that carry one shared meaning always."
+          text: "Line 2 takes where because Friday feels like a spot, and Line 1 takes which for an object."
         }
       ],
-      clue: "Find the noun that each tell-more word describes. Then try the there test on the words after each word.",
+      clue: "Find the noun before each joining word. Then try then and there on the words that follow.",
       hints: [
-        "Find the noun that each tell-more word describes. Then try the there test on the words after each word.",
-        "Add there to the words after where in Line 1 and to the words after that in Line 2, and see which makes a whole sentence.",
-        "A garden is not a person, so a choice about people cannot be right."
+        "Find the noun before each joining word. Then try then and there on the words that follow.",
+        "Add then to the words after the joining word in Line 1, and look at what the words in Line 2 are missing.",
+        "A day is not a person, so a choice about a person cannot be right."
       ],
       how: [
-        "Both lines describe a garden, which is a place.",
-        "In Line 1, we plant them there is a whole sentence, so where fits. In Line 2, has tall corn there is not a whole sentence, so that is used.",
-        "The answer is \"Each names a place; where works only if the rest could stand alone.\""
+        "Both lines describe Friday, which is a time.",
+        "In Line 1, we visit the library then is a whole sentence, so when fits. In Line 2, feels very short has no subject, so that is used.",
+        "The answer is \"Line 1 adds then to a whole sentence, so it takes when; Line 2 lacks a subject, so it takes that.\""
       ],
-      misconception: "A common mix-up is thinking a place noun always takes where. The words after the word decide.",
-      why: "The answer is \"Each names a place; where works only if the rest could stand alone.\" Both words describe the garden. We planted beans there is a whole sentence, so Line 1 uses where. Has a scarecrow there is not a whole sentence, so Line 2 uses that.",
+      misconception: "A common mix-up is thinking a time noun always takes when. The words after the word decide.",
+      why: "The answer is \"Line 1 adds then to a whole sentence, so it takes when; Line 2 lacks a subject, so it takes that.\" Friday is a time. We visit the library then is a whole sentence, so Line 1 uses when. Feels very short has no subject, so Line 2 uses that.",
       like: ["SK-GUM4-5-C11"]
     },
     {
       id: "SK-GUM4-5-S12",
-      type: "dropdown",
+      type: "mc",
       points: 1,
       dok: 2,
       std: [
         "3.L.GC.1:I:use-relative-pronouns-and-relative-adverbs"
       ],
       passages: ["p6"],
-      prompt: "Select the missing term in line 4 of the moving story.",
-      text: "My little brother is a boy {0} cried when we packed his shiny red bike into the long truck.",
-      slots: [
+      prompt: "Which rewrite of the moving story's fourth sentence reads well?",
+      choices: [
         {
-          options: ["when","who","which","where"],
-          answer: 1
+          text: "My little brother is a boy who cried loudly when we packed his shiny red bike into the long truck at dawn.",
+          correct: true
+        },
+        {
+          text: "My little brother is a boy where cried loudly when we packed his shiny red bike into the long truck at dawn."
+        },
+        {
+          text: "My little brother is a boy which cried loudly when we packed his shiny red bike into the long truck at dawn."
+        },
+        {
+          text: "My little brother is a boy when cried loudly when we packed his shiny red bike into the long truck at dawn."
         }
       ],
-      clue: "Look at the noun before the blank and decide what kind of noun it is.",
+      clue: "Look at the noun before the wrong word and decide what kind of noun it is.",
       hints: [
-        "Look at the noun before the blank and decide what kind of noun it is.",
-        "Read the sentence with each word in the blank, and listen for the one that suits the noun.",
+        "Look at the noun before the wrong word and decide what kind of noun it is.",
+        "Say each revision out loud and listen for the one that suits the noun.",
         "Which is for things, and a brother is not a thing."
       ],
       how: [
-        "Find the noun right before the blank: boy. A boy is a person.",
+        "Find the noun right before the wrong word: boy. A boy is a person.",
         "Use who to tell more about a person.",
-        "The answer is who. When is for times, which is for things, and where is for places."
+        "The answer is \"My little brother is a boy who cried loudly when we packed his shiny red bike into the long truck at dawn.\" When is for times, which is for things, and where is for places."
       ],
       misconception: "A common mix-up is choosing where because the family is moving. Check the noun right before the blank.",
-      why: "The answer is who. A boy is a person, so who fits. When is for times, which is for things, and where is for places.",
+      why: "The answer is \"My little brother is a boy who cried loudly when we packed his shiny red bike into the long truck at dawn.\" A boy is a person, so who fits. When is for times, which is for things, and where is for places.",
       like: ["SK-GUM4-5-C12"]
     },
     {
@@ -7291,40 +7398,40 @@ PP.addLesson({
         "3.L.GC.1:I:use-relative-pronouns-and-relative-adverbs"
       ],
       passages: ["p6"],
-      prompt: "Two of these versions repair line 6 of the moving story. Which two?",
+      prompt: "Select two fixes for the puppy sentence in the moving story.",
       pick: 2,
       choices: [
         {
-          text: "We found a tiny, shivering puppy that was sleeping on my front porch.",
+          text: "A tiny, shivering puppy that was sleeping on my front porch greeted us.",
           correct: true
         },
         {
-          text: "We found a tiny, shivering puppy where it was sleeping on my front porch.",
+          text: "A tiny, shivering puppy which was sleeping on my front porch greeted us.",
           correct: true
         },
         {
-          text: "We found a tiny, shivering puppy when was sleeping on my front porch."
+          text: "A tiny, shivering puppy when was sleeping on my front porch greeted us."
         },
         {
-          text: "We found a tiny, shivering puppy where was sleeping on my front porch."
+          text: "A tiny, shivering puppy whose was sleeping on my front porch greeted us."
         },
         {
-          text: "We found a tiny, shivering puppy that it was sleeping on my front porch."
+          text: "A tiny, shivering puppy that it was sleeping on my front porch greeted us."
         }
       ],
-      clue: "A repair can change the tell-more word or the words after it.",
+      clue: "Two different words can fix this line. Check the noun before the wrong word and the words after it.",
       hints: [
-        "A repair can change the tell-more word or the words after it.",
+        "Two different words can fix this line. Check the noun before the wrong word and the words after it.",
         "Keep the versions in which the tell-more word and the words after it work together.",
         "A puppy is not a time, so a word for times cannot go with it."
       ],
       how: [
         "The draft pairs the puppy with when, but a puppy is not a time, and was sleeping on my front porch has no subject.",
-        "One repair uses that, which goes with a thing. The other repair gives the words after where a subject, so it was sleeping there is a whole sentence.",
-        "The answers are \"We found a tiny, shivering puppy that was sleeping on my front porch.\" and \"We found a tiny, shivering puppy where it was sleeping on my front porch.\" The others keep the draft, leave where without a subject, or add a second subject after that."
+        "A puppy is an animal, so that and which both tell more about it, and the words after the word stay the same.",
+        "The answers are \"A tiny, shivering puppy that was sleeping on my front porch greeted us.\" and \"A tiny, shivering puppy which was sleeping on my front porch greeted us.\" The others keep the draft, use whose with no owner, or add a second subject after that."
       ],
-      misconception: "A common mix-up is thinking only the tell-more word can change. The words after it can change, too.",
-      why: "The answers are \"We found a tiny, shivering puppy that was sleeping on my front porch.\" and \"We found a tiny, shivering puppy where it was sleeping on my front porch.\" That goes with a puppy, which is a thing, and it was sleeping there is a whole sentence, so where fits the second version. The others keep the draft, leave where without a subject, or add a second subject after that.",
+      misconception: "A common mix-up is thinking only that works for an animal. Which fits an animal, too.",
+      why: "The answers are \"A tiny, shivering puppy that was sleeping on my front porch greeted us.\" and \"A tiny, shivering puppy which was sleeping on my front porch greeted us.\" That and which both tell more about a puppy, which is an animal. The others keep the draft, use whose with no owner, or add a second subject after that.",
       like: ["SK-GUM4-5-C13"]
     },
     {
@@ -7339,17 +7446,17 @@ PP.addLesson({
       prompt: "Select the line whose connector matches its partner.",
       choices: [
         {
-          text: "The deep green lake where we paddled our blue canoe past the dusty dock last summer is very cold.",
+          text: "The deep green lake where we paddled our blue canoe past the dusty dock last summer is very cold today.",
           correct: true
         },
         {
-          text: "The deep green lake when we paddled our blue canoe past the dusty dock last summer is very cold today."
+          text: "The deep green lake when we paddled our blue canoe past the dusty dock last summer is very cold today indeed."
         },
         {
-          text: "The deep green lake who we paddled our blue canoe past the dusty dock last summer is very cold today."
+          text: "The deep green lake who we paddled our blue canoe past the dusty dock last summer is very cold today indeed."
         },
         {
-          text: "The deep green lake that we paddled our blue canoe past the dusty dock last summer is very cold today."
+          text: "The deep green lake that we paddled our blue canoe past the dusty dock last summer is very cold today indeed."
         }
       ],
       clue: "Find the noun right before the tell-more word. Ask whether it is a person, a thing, a place or a time.",
@@ -7361,10 +7468,10 @@ PP.addLesson({
       how: [
         "Find the noun right before the tell-more word: lake. A lake is a place.",
         "We paddled our blue canoe past the dusty dock there is a whole sentence, so where fits.",
-        "The answer is \"The deep green lake where we paddled our blue canoe past the dusty dock last summer is very cold.\" The others use when for a place, who for a thing, or that where the words after it are already whole."
+        "The answer is \"The deep green lake where we paddled our blue canoe past the dusty dock last summer is very cold today.\" The others use when for a place, who for a thing, or that where the words after it are already whole."
       ],
       misconception: "A common mix-up is choosing that because a lake is a thing. The words after the word are already a whole sentence, so use where.",
-      why: "The answer is \"The deep green lake where we paddled our blue canoe past the dusty dock last summer is very cold.\" A lake is a place, and we paddled our canoe there is a whole sentence, so where fits. The others use when for a place, who for a thing, or that with words that are already whole.",
+      why: "The answer is \"The deep green lake where we paddled our blue canoe past the dusty dock last summer is very cold today.\" A lake is a place, and we paddled our canoe there is a whole sentence, so where fits. The others use when for a place, who for a thing, or that with words that are already whole.",
       like: ["SK-GUM4-5-C14"]
     },
     {
@@ -7376,15 +7483,15 @@ PP.addLesson({
         "3.L.GC.1:I:use-relative-pronouns-and-relative-adverbs"
       ],
       passages: [],
-      prompt: "Fill both gaps in this line about the town fair.",
-      text: "Spring is a season {0} flowers bloom beside our pond, and a wooden bridge {1} crosses a stream is painted green.",
+      prompt: "Complete both gaps in this fair program line.",
+      text: "Spring is a season {0} flowers bloom beside our quiet pond, and a wooden bridge {1} crosses a narrow stream is painted bright green.",
       slots: [
         {
-          options: ["when","whose","which","how"],
+          options: ["when","what","how","why"],
           answer: 0
         },
         {
-          options: ["that","whom","where","while"],
+          options: ["that","whose","what","how"],
           answer: 0
         }
       ],
@@ -7397,7 +7504,7 @@ PP.addLesson({
       how: [
         "Find the nouns: season, which is a time, and bridge, which is a thing.",
         "Flowers bloom by the pond then is a whole sentence, so the first blank needs when. Crosses the stream there is not a whole sentence, so the second blank needs that.",
-        "The answers are when and that. Whose shows who owns something, which does not fit the first blank, and how does not tell more about a noun."
+        "The answers are when and that. Whose shows who owns something, and the other words do not fit either blank."
       ],
       misconception: "A common mix-up is putting where in the second blank because a bridge stands in one spot. Check whether the words after it make a whole sentence.",
       why: "The answers are when and that. A season is a time, and flowers bloom by the pond then is a whole sentence, so the first blank needs when. Crosses the stream there is not a whole sentence, so the second blank needs that.",
@@ -9982,23 +10089,23 @@ PP.addLesson({
         "3.L.GC.1:I:use-helping-and-linking-verbs"
       ],
       passages: ["p4"],
-      prompt: "Tap the ONE line among numbers 2, 3, 4, 6 and 10 whose verb joins the subject to a describing word.",
-      targets: ["p4:1:2","p4:1:3","p4:1:4","p4:2:2","p4:3:3"],
-      answer: ["p4:1:3"],
+      prompt: "Five lines from the science fair draft are shown. Which ONE has a verb that links its subject to a describing word?",
+      targets: ["p4:1:1","p4:1:4","p4:2:2","p4:2:3","p4:3:4"],
+      answer: ["p4:2:3"],
       pick: 1,
       clue: "Pick out the verb in each shown line and decide what comes right after it.",
       hints: [
         "Pick out the verb in each shown line and decide what comes right after it.",
         "A helper stands before another verb. A joining verb ties the subject to a word that describes it.",
-        "Line 4 has can before ask, so its verb helps another verb."
+        "Line 6 has should before talk, so its verb helps another verb."
       ],
       how: [
         "Pick out the verb in each shown line and check the word after it.",
-        "Will show, can ask, should speak and has earn each have a helper before a main verb.",
-        "In sentence 3, is links the gym to loud, a word that describes it, so it is the answer."
+        "Holds, cheer and hug, and give are actions, while can ask and should talk have a helper before a main verb.",
+        "In sentence 7, are links the judges to kind, a word that describes them, so it is the answer."
       ],
       misconception: "A common mix-up is choosing a line because it is short. Check what comes after the verb.",
-      why: "The answer is sentence 3: \"The gym is loud and crowded with families.\" Is links the gym to loud, a word that describes it. The other shown lines have a helper before a main verb: will show, can ask, should speak and has earn.",
+      why: "The answer is sentence 7: \"The judges are kind about our paper model.\" Are links the judges to kind, a word that describes them. The other shown lines have actions alone or a helper before a main verb: can ask and should talk.",
       like: ["SK-GUM4-7-C04"]
     },
     {
@@ -10143,23 +10250,23 @@ PP.addLesson({
         "3.L.GC.1:I:use-helping-and-linking-verbs"
       ],
       passages: ["p5"],
-      prompt: "Tap the ONE line among numbers 2, 6, 7, 9 and 10 whose verb helps another verb.",
-      targets: ["p5:1:2","p5:2:2","p5:2:3","p5:3:2","p5:3:3"],
-      answer: ["p5:2:3"],
+      prompt: "Five lines from the pancake draft are shown. Which ONE has a verb that helps another verb?",
+      targets: ["p5:1:3","p5:1:4","p5:3:2","p5:3:3","p5:3:5"],
+      answer: ["p5:1:3"],
       pick: 1,
       clue: "Pick out the verb in each shown line and look at the word that follows it.",
       hints: [
         "Pick out the verb in each shown line and look at the word that follows it.",
         "A helper stands before another verb. A joining verb ties the subject to a describing word.",
-        "Line 9 says the syrup becomes sticky, and sticky is not a verb."
+        "Line 9 says the syrup seems sticky, and sticky is not a verb."
       ],
       how: [
         "Pick out the verb in each shown line and check the word after it.",
-        "Is full, are soft and becomes sticky each connect a subject to a describing word. Laugh and tap are actions.",
-        "In sentence 7, will comes right before the main verb pour, so it is the answer."
+        "Become taller and seems sticky each connect a subject to a describing word. Giggle, tap, washes and wipes are actions.",
+        "In sentence 3, can comes right before the main verb crack, so it is the answer."
       ],
       misconception: "A common mix-up is picking a line with an action verb. A helper comes before another verb.",
-      why: "The answer is sentence 7: \"My sister will pour the juice at the table.\" In sentence 7, will comes before the main verb pour, so it is a helping verb. The other shown lines have linking verbs or action verbs alone.",
+      why: "The answer is sentence 3: \"Mom says I can crack three eggs into the big bowl.\" In sentence 3, can comes before the main verb crack, so it is a helping verb. The other shown lines have linking verbs or action verbs alone.",
       like: ["SK-GUM4-7-C08"]
     },
     {
