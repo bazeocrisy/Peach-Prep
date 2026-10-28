@@ -5464,7 +5464,7 @@ PP.addLesson({
         [
           "(5) My partner served first because she had the best aim.",
           "(6) We lost a point if the birdie hit the floor.",
-          "(7) We cheered although our friends scored a point.",
+          "(7) We cheered although our team scored a point.",
           "(8) Our teacher watched from a chair until the match ended.",
           "(9) I felt tired although I had eaten a big breakfast."
         ],
@@ -5497,7 +5497,7 @@ PP.addLesson({
         [
           "(9) Rosa packed the paddles away although the last game ended.",
           "(10) If rain returns next week, Kai will bring his own spare paddle.",
-          "(11) Everyone clapped once the winner got a prize.",
+          "(11) Everyone clapped when the winner got a prize.",
           "(12) Kai grinned while he walked to the bus."
         ]
       ]
@@ -5538,7 +5538,7 @@ PP.addLesson({
         [
           "(1) A squad practiced a new cheer in the gym on Thursday.",
           "(2) Everyone stood in two long straight rows.",
-          "(3) The coach started music as soon as Tia found her spot.",
+          "(3) The coach started music when Tia found her spot.",
           "(4) Tia waved pom-poms high because the music was loud."
         ],
         [
@@ -5633,32 +5633,28 @@ PP.addLesson({
             std: [
               "3.L.GC.1:I:use-subordinating-conjunctions-to-join-clauses"
             ],
-            passages: ["p1"],
-            prompt: "Sentence 3 of the draft needs the best joining words. Choose the words that finish it.",
-            text: "We waited {0}.",
+            passages: [],
+            prompt: "Choose the words that finish Jo's sentence.",
+            text: "Jo's team rested on the bench {0}.",
             slots: [
               {
-                options: [
-                  "until our teammates finished their turns",
-                  "although our teammates finished their turns",
-                  "if our teammates finished their turns"
-                ],
+                options: ["until the rain stopped", "although the rain stopped", "because the rain stopped"],
                 answer: 0
               }
             ],
-            clue: "Ask how the waiting and the finished turns are connected.",
+            clue: "Ask how the resting and the rain are connected.",
             hints: [
-              "Ask how the waiting and the finished turns are connected.",
-              "Say each choice after waited. Ask which one makes sense for the whole sentence.",
-              "One choice shows a surprise, but nothing in this sentence is surprising. Decide between the other two."
+              "Ask how the resting and the rain are connected.",
+              "Say each choice after the bench. Ask which one makes sense for the whole sentence.",
+              "One choice shows a surprise, but nothing here is surprising. Decide between the other two."
             ],
             how: [
-              "Read sentence 3. The waiting lasted up to the time the turns were done.",
+              "Read the whole sentence. Jo's team rested, and the rain stopped.",
               "A joining word that tells how long something lasts is until.",
-              "The answer is until our teammates finished their turns."
+              "The answer is until the rain stopped."
             ],
-            misconception: "A common mix-up is picking the choice that sets up a case that may not happen. The turns did finish.",
-            why: "The answer is until our teammates finished their turns. The waiting lasted up to the time the turns were done. One choice shows a surprise, and the other sets up a case that may not happen."
+            misconception: "A common mix-up is picking the choice that gives a reason. The rain stopping is the time the resting lasted up to, not the reason for it.",
+            why: "The answer is until the rain stopped. The team rested up to the time the rain ended. One choice shows a surprise, and the other gives a reason."
           },
           {
             id: "SK-GUM5-5-C04",
@@ -5876,28 +5872,28 @@ PP.addLesson({
             std: [
               "3.L.GC.1:I:use-subordinating-conjunctions-to-join-clauses"
             ],
-            passages: ["p2"],
-            prompt: "Choose the words that finish sentence 9 of the draft.",
-            text: "We stopped playing {0}.",
+            passages: [],
+            prompt: "Pick the best ending.",
+            text: "The kitten crept behind the couch {0}.",
             slots: [
               {
-                options: ["when it got too dark to see", "although it got too dark to see", "until it got too dark to see"],
+                options: ["because the thunder was loud", "although the thunder was loud", "until the thunder was loud"],
                 answer: 0
               }
             ],
-            clue: "Ask when the family stopped playing.",
+            clue: "Ask why the kitten crept away.",
             hints: [
-              "Ask when the family stopped playing.",
-              "Say each choice after playing. Ask which one makes sense.",
-              "One choice shows a surprise, but nothing here is surprising. Decide between the other two."
+              "Ask why the kitten crept away.",
+              "Try each choice after couch. Say the whole sentence.",
+              "Hiding is not a surprise when thunder is loud, so one choice cannot be right. Check the other two."
             ],
             how: [
-              "Read sentence 9. The playing stopped at a certain time.",
-              "A joining word that tells when something happened is when.",
-              "The answer is when it got too dark to see."
+              "Read the sentence. The loud thunder is the reason the kitten crept behind the couch.",
+              "A joining word that gives a reason is because.",
+              "The answer is because the thunder was loud."
             ],
-            misconception: "A common mix-up is thinking until fits any sentence about time. Until tells how long something lasts, but the playing stopped.",
-            why: "The answer is when it got too dark to see. The playing stopped at the time it got too dark. One choice shows a surprise, and the other tells how long something lasts."
+            misconception: "A common mix-up is picking the choice about time. The loud thunder tells why the kitten crept away, not how long.",
+            why: "The answer is because the thunder was loud. The thunder is the reason the kitten crept behind the couch. One choice shows a surprise, and one tells how long something lasts."
           }
         ]
       },
@@ -5926,10 +5922,10 @@ PP.addLesson({
             how: [
               "Find the joining word in each sentence and check how the ideas connect.",
               "Sentence 5 gives a reason, sentence 6 sets up a case, sentence 8 tells how long, and sentence 9 shows a surprise.",
-              "In sentence 7, cheering for a friend's point is not a surprise, so although does not fit."
+              "In sentence 7, cheering for your own team's point is not a surprise, so although does not fit."
             ],
             misconception: "A common mix-up is picking the sentence that sounds longest. Check whether each joining word matches the connection.",
-            why: "The answer is sentence 7, \"We cheered although our friends scored a point.\" Cheering for a friend's point is not a surprise, so although does not fit. Sentences 5, 6, 8 and 9 each use a joining word that fits."
+            why: "The answer is sentence 7, \"We cheered although our team scored a point.\" Cheering for your own team's point is not a surprise, so although does not fit. Sentences 5, 6, 8 and 9 each use a joining word that fits."
           },
           {
             id: "SK-GUM5-5-C12",
@@ -5939,28 +5935,28 @@ PP.addLesson({
             std: [
               "3.L.GC.1:I:use-subordinating-conjunctions-to-join-clauses"
             ],
-            passages: ["p3"],
-            prompt: "Choose the words that best finish sentence 10 of the draft.",
-            text: "We shook hands {0}.",
+            passages: [],
+            prompt: "Nia set the table at eleven, and her guests came at noon. Pick the words that start her next sentence.",
+            text: "{0}, Nia set the table.",
             slots: [
               {
-                options: ["after the match was over", "although the match was over", "until the match was over"],
+                options: ["Before the guests came", "After the guests came", "Although the guests came"],
                 answer: 0
               }
             ],
-            clue: "Ask how the handshakes and the end of the match are connected.",
+            clue: "Look at the times in the story. Ask which thing came first.",
             hints: [
-              "Ask how the handshakes and the end of the match are connected.",
-              "Say each choice to finish the sentence. Ask which one makes sense.",
-              "One choice says the shaking went on up to a time, but shaking hands is quick. Decide between the other two."
+              "Look at the times in the story. Ask which thing came first.",
+              "Say each choice at the start of the sentence. Check it against the times.",
+              "One choice shows a surprise, but nothing here is surprising. Compare the other two with the times."
             ],
             how: [
-              "Read sentence 10. The handshakes came once the match had ended.",
-              "A joining word that tells what came next in time is after.",
-              "The answer is after the match was over."
+              "Read the times. Nia set the table at eleven, and the guests came at noon, so the setting came first.",
+              "A joining word that tells what comes first is before.",
+              "The answer is Before the guests came."
             ],
-            misconception: "A common mix-up is picking a joining word because it is long. The word has to match the order of the two ideas.",
-            why: "The answer is after the match was over. The handshakes came once the match had ended. One choice shows a surprise, and one says the shaking lasted up to a time."
+            misconception: "A common mix-up is picking a time word without checking the order. The table was set first, so the word has to match that order.",
+            why: "The answer is Before the guests came. Nia set the table at eleven, and the guests came at noon. One choice shows a surprise, and one puts the guests first."
           },
           {
             id: "SK-GUM5-5-C13",
@@ -6007,7 +6003,7 @@ PP.addLesson({
             text: "Kim wore a coat {0}, and {1}, she took it off.",
             slots: [
               {
-                options: ["although the day was warm", "just because the day was warm", "until the day was warm"],
+                options: ["although the day was warm", "because the whole day was warm", "if the day was warm"],
                 answer: 0
               },
               {
@@ -6076,10 +6072,10 @@ PP.addLesson({
       prompt: "Which one is only a piece of a sentence?",
       options: [
         "Dad grilled corn on Friday.",
-        "As soon as the lights came back on.",
+        "When the lights came back on.",
         "Maya painted a blue door.",
-        "Nan reads aloud whenever it rains.",
-        "Unless Ben calls, the club meets at noon."
+        "Nan reads aloud while it rains.",
+        "If Ben calls, the club meets at noon."
       ],
       answer: [1],
       pick: 1,
@@ -6091,11 +6087,11 @@ PP.addLesson({
       ],
       how: [
         "Check each group of words for a whole idea.",
-        "\"Nan reads aloud whenever it rains.\" and \"Unless Ben calls, the club meets at noon.\" each join two ideas, so they are complete.",
-        "\"As soon as the lights came back on.\" has a joining word but no second idea, so it cannot stand alone."
+        "\"Nan reads aloud while it rains.\" and \"If Ben calls, the club meets at noon.\" each join two ideas, so they are complete.",
+        "\"When the lights came back on.\" has a joining word but no second idea, so it cannot stand alone."
       ],
       misconception: "A common mix-up is choosing a group just because it has a joining word. A joining word is fine when a second idea goes with it.",
-      why: "The answer is \"As soon as the lights came back on.\" It begins with a joining word but has no second idea. It could say, \"As soon as the lights came back on, we played cards.\"",
+      why: "The answer is \"When the lights came back on.\" It begins with a joining word but has no second idea. It could say, \"As soon as the lights came back on, we played cards.\"",
       like: ["SK-GUM5-5-P3"]
     },
     {
@@ -6108,11 +6104,11 @@ PP.addLesson({
       ],
       passages: [],
       prompt: "What job does each joining word do?",
-      cols: ["Time", "In spite of"],
+      cols: ["Time", "A surprise"],
       rows: [
-        { text: "Rita hummed whenever dishes needed washing.", answer: 0 },
+        { text: "Rita hummed while dishes needed washing.", answer: 0 },
         { text: "Rita hummed although her throat hurt.", answer: 1 },
-        { text: "Omar rested once the race was over.", answer: 0 },
+        { text: "Omar rested after the race was over.", answer: 0 },
         { text: "Omar ran although the shoe was loose.", answer: 1 }
       ],
       clue: "Spot the joining word in every line. Ask what job it does.",
@@ -6122,12 +6118,12 @@ PP.addLesson({
         "In the line about the loose shoe, the running is unexpected. Decide about the other lines."
       ],
       how: [
-        "Look at the joining word in each row: whenever, although, once and although.",
-        "Whenever and once tell about time: Rita hummed at each dishwashing, and Omar rested as soon as the race was over.",
-        "Although means in spite of: Rita's throat hurt and the shoe was loose, yet each kept going."
+        "Look at the joining word in each row: while, although, after and although.",
+        "While and after tell about time: Rita hummed during the dishwashing, and Omar rested when the race was over.",
+        "Although shows a surprise: Rita's throat hurt and the shoe was loose, yet each kept going."
       ],
-      misconception: "A common mix-up is thinking every joining word is about time. Some of them mean in spite of.",
-      why: "Rita hummed whenever dishes needed washing, and Omar rested once the race was over, are about time. Rita hummed although her throat hurt, and Omar ran although the shoe was loose, mean in spite of.",
+      misconception: "A common mix-up is thinking every joining word is about time. Some of them show a surprise.",
+      why: "Rita hummed while dishes needed washing, and Omar rested when the race was over, are about time. Rita hummed although her throat hurt, and Omar ran although the shoe was loose, show a surprise.",
       like: ["SK-GUM5-5-P4"]
     },
     {
@@ -6138,28 +6134,28 @@ PP.addLesson({
       std: [
         "3.L.GC.1:I:use-subordinating-conjunctions-to-join-clauses"
       ],
-      passages: ["p4"],
-      prompt: "Which choice makes line 3 read well?",
-      text: "Kai stretched his arms {0}.",
+      passages: [],
+      prompt: "Which choice makes the sentence read well?",
+      text: "Tess jogged around the track {0}.",
       slots: [
         {
-          options: ["while Rosa counted aloud", "unless Rosa counted aloud", "although Rosa counted aloud"],
+          options: ["until dark fell", "although dark fell", "if dark fell"],
           answer: 0
         }
       ],
-      clue: "Ask whether the stretching and the counting happened at the same time.",
+      clue: "Ask how the jogging and the dark are connected.",
       hints: [
-        "Ask whether the stretching and the counting happened at the same time.",
-        "Say each choice after arms. Ask which one makes sense.",
-        "One choice shows a surprise, but nothing in this line is surprising. Decide between the other two."
+        "Ask how the jogging and the dark are connected.",
+        "Say each choice after track. Ask which one makes sense.",
+        "One choice sets up a case that may not happen, but dark did fall. Decide between the other two."
       ],
       how: [
-        "Read line 3. The stretching and the counting went on together.",
-        "A joining word that tells two things happen together is while.",
-        "The answer is while Rosa counted aloud."
+        "Read the sentence. Tess jogged, and dark fell.",
+        "A joining word that tells how long something lasts is until.",
+        "The answer is until dark fell."
       ],
-      misconception: "A common mix-up is picking the choice that sets up a case that may not happen. Rosa did count.",
-      why: "The answer is while Rosa counted aloud. The stretching and the counting went on together. One choice shows a surprise, and the other sets up a case that may not happen.",
+      misconception: "A common mix-up is picking the choice that sets up a case that may not happen. Dark did fall.",
+      why: "The answer is until dark fell. Tess jogged up to the time dark came. One choice shows a surprise, and one sets up a case that may not happen.",
       like: ["SK-GUM5-5-C03"]
     },
     {
@@ -6202,39 +6198,39 @@ PP.addLesson({
         "3.L.GC.1:I:use-subordinating-conjunctions-to-join-clauses"
       ],
       passages: ["p4"],
-      prompt: "Finish both steps.",
+      prompt: "Do Part A, then Part B.",
       partA: {
-        prompt: "Which of lines 9 to 12 has a linking word that clashes with its meaning?",
+        prompt: "Find the one line from 9 to 12 whose joining word does not suit it.",
         choices: [
           { text: "If rain returns next week, Kai will bring his own spare paddle." },
-          { text: "Everyone clapped once the winner got a prize." },
+          { text: "Everyone clapped when the winner got a prize." },
           { text: "Kai grinned while he walked to the bus." },
           { text: "Rosa packed the paddles away although the last game ended.", correct: true }
         ]
       },
       partB: {
-        prompt: "Which reason shows why that line needs a new word?",
+        prompt: "Pick the reason the line needs another word.",
         choices: [
-          { text: "Packing happens once games are done, so the line needs a word that names a time.", correct: true },
-          { text: "A surprise word has to sit at the front of a line, so although belongs somewhere else in it." },
+          { text: "Packing follows game ends, so it needs a time word.", correct: true },
+          { text: "Although has to start a line, so it cannot sit inside one." },
           { text: "Although works only for ideas that agree." },
-          { text: "Linking words are interchangeable, so this line needs no change." }
+          { text: "Any joining word works here, so no change is needed." }
         ]
       },
-      clue: "Read lines 9 to 12 one at a time. Ask whether its linking word fits the two ideas.",
+      clue: "Read lines 9 to 12 one at a time. Ask whether its joining word fits the two ideas.",
       hints: [
-        "Read lines 9 to 12 one at a time. Ask whether its linking word fits the two ideas.",
-        "Say what each linking word shows, then check it against the ideas.",
+        "Read lines 9 to 12 one at a time. Ask whether its joining word fits the two ideas.",
+        "Say what each joining word shows, then check it against the ideas.",
         "The line with If already sets up a case that makes sense. Check the other three."
       ],
       how: [
-        "Part A: read lines 9 to 12 and check its linking word.",
-        "In \"Rosa packed the paddles away although the last game ended.\" packing is not a surprise. It comes once the game ends.",
+        "Part A: read lines 9 to 12 and check its joining word.",
+        "In \"Rosa packed the paddles away although the last game ended.\" packing is not a surprise. It comes when the game ends.",
         "Part A answer: Rosa packed the paddles away although the last game ended.",
-        "Part B answer: \"Packing happens once games are done, so the line needs a word that names a time.\""
+        "Part B answer: \"Packing follows game ends, so it needs a time word.\""
       ],
       misconception: "A common mix-up is thinking any word that links two ideas will work. The word has to match how the ideas connect.",
-      why: "Part A: Rosa packed the paddles away although the last game ended. Part B: \"Packing happens once games are done, so the line needs a word that names a time.\" The line should say after, not although. The other lines use linking words that fit.",
+      why: "Part A: Rosa packed the paddles away although the last game ended. Part B: \"Packing follows game ends, so it needs a time word.\" The line should say after, not although. The other lines use joining words that fit.",
       like: ["SK-GUM5-5-C05"]
     },
     {
@@ -6275,13 +6271,13 @@ PP.addLesson({
         "3.L.GC.1:I:use-subordinating-conjunctions-to-join-clauses"
       ],
       passages: [],
-      prompt: "Which TWO lines tell a whole idea?",
+      prompt: "Pick TWO lines that stand alone.",
       pick: 2,
       choices: [
-        { text: "While the soup cooked on the stove all afternoon." },
-        { text: "Unless the roof was fixed." },
+        { text: "While soup bubbled." },
+        { text: "If the roof was fixed." },
         { text: "Dad cooked dinner while we set the table.", correct: true },
-        { text: "Whenever it rained." },
+        { text: "When it rained." },
         { text: "After the show ended, we clapped.", correct: true }
       ],
       clue: "Look at each line. Does it hold a whole idea, or does it stop too soon?",
@@ -6294,10 +6290,10 @@ PP.addLesson({
         "Check each line for a joining word and a second idea.",
         "\"Dad cooked dinner while we set the table.\" joins two ideas, so it is complete.",
         "\"After the show ended, we clapped.\" has a second idea after the comma, so it is complete.",
-        "The other three begin with while, whenever or unless and stop before the idea is done."
+        "The other three begin with while, when or if and stop before the idea is done."
       ],
       misconception: "A common mix-up is trusting any line that has a joining word. A joining word needs a second idea to go with it.",
-      why: "The answers are \"Dad cooked dinner while we set the table.\" and \"After the show ended, we clapped.\" Each one joins two ideas. The others begin with while, whenever or unless and stop before the idea is done.",
+      why: "The answers are \"Dad cooked dinner while we set the table.\" and \"After the show ended, we clapped.\" Each one joins two ideas. The others begin with while, when or if and stop before the idea is done.",
       like: ["SK-GUM5-5-C07"]
     },
     {
@@ -6344,7 +6340,7 @@ PP.addLesson({
       prompt: "Compare lines 10 and 11. What is different about after and if?",
       choices: [
         { text: "They do the same job, so either word works in either line without any change." },
-        { text: "After sets a time, while if sets a condition that may not happen.", correct: true },
+        { text: "After sets a time, while if sets a case that may happen.", correct: true },
         { text: "Line 10 needs fixing, because after cannot join two ideas in one line." },
         { text: "Line 11 needs fixing, because if must follow an event that is already finished." }
       ],
@@ -6355,12 +6351,12 @@ PP.addLesson({
         "Line 10 is not a mistake, so the answer cannot say that it needs fixing. Check the other choices."
       ],
       how: [
-        "Read line 10: the juice came once the last winner got a medal, so after sets a time.",
-        "Read line 11: more jumping depends on dry weather, so if sets a condition that may not happen.",
-        "The answer is \"After sets a time, while if sets a condition that may not happen.\""
+        "Read line 10: the juice came when the last winner got a medal, so after sets a time.",
+        "Read line 11: more jumping depends on dry weather, so if sets a case that may happen.",
+        "The answer is \"After sets a time, while if sets a case that may happen.\""
       ],
       misconception: "A common mix-up is thinking all joining words do the same job. Each one shows a different connection.",
-      why: "The answer is \"After sets a time, while if sets a condition that may not happen.\" Each joining word shows a different connection, so both lines are correct.",
+      why: "The answer is \"After sets a time, while if sets a case that may happen.\" Each joining word shows a different connection, so both lines are correct.",
       like: ["SK-GUM5-5-C09"]
     },
     {
@@ -6371,28 +6367,28 @@ PP.addLesson({
       std: [
         "3.L.GC.1:I:use-subordinating-conjunctions-to-join-clauses"
       ],
-      passages: ["p5"],
-      prompt: "Which words best finish line 9?",
-      text: "{0}, fans clapped loudly.",
+      passages: [],
+      prompt: "Complete the line.",
+      text: "Gus pulled mittens over his hands {0}.",
       slots: [
         {
-          options: ["When the final jump ended", "Although the final jump ended", "Unless the final jump ended"],
+          options: ["when frost formed", "although frost formed", "until frost formed"],
           answer: 0
         }
       ],
-      clue: "Ask when the clapping happened.",
+      clue: "Ask when Gus pulled mittens on.",
       hints: [
-        "Ask when the clapping happened.",
-        "Say each choice at the start of the line. Ask which one makes sense.",
-        "One choice shows a surprise, but nothing here is surprising. Decide between the other two."
+        "Ask when Gus pulled mittens on.",
+        "Say each choice after mittens. Ask which one makes sense.",
+        "Pulling on mittens in frost is not a surprise, so one choice cannot be right. Check the other two."
       ],
       how: [
-        "Read line 9. The clapping happened at a certain time.",
-        "A joining word that tells when something happened is When.",
-        "The answer is When the final jump ended."
+        "Read the line. Gus pulled mittens on at the time frost formed.",
+        "A joining word that tells when something happened is when.",
+        "The answer is when frost formed."
       ],
-      misconception: "A common mix-up is picking the choice that sets up a case that may not happen. The final jump did end.",
-      why: "The answer is When the final jump ended. The clapping happened at the time the final jump ended. One choice shows a surprise, and the other sets up a case that may not happen.",
+      misconception: "A common mix-up is picking until because the line is about time. Until tells how long something lasts, but the mittens went on at one moment.",
+      why: "The answer is when frost formed. The mittens went on at the time frost formed. One choice shows a surprise, and one tells how long something lasts.",
       like: ["SK-GUM5-5-C10"]
     },
     {
@@ -6404,7 +6400,7 @@ PP.addLesson({
         "3.L.GC.1:I:use-subordinating-conjunctions-to-join-clauses"
       ],
       passages: ["p6"],
-      prompt: "Read lines 5 to 9. Which line has a linking word that seems wrong?",
+      prompt: "Read lines 5 to 9. Which line has a joining word that seems wrong?",
       targets: ["p6:2:1", "p6:2:2", "p6:2:3", "p6:2:4", "p6:2:5"],
       answer: ["p6:2:3"],
       pick: 1,
@@ -6420,7 +6416,7 @@ PP.addLesson({
         "In line 7, learning the cheer is not a surprise, so although does not fit."
       ],
       misconception: "A common mix-up is picking the line that sounds longest. Check whether each joining word matches the connection.",
-      why: "The answer is line 7, \"We felt proud although we learned the whole cheer.\" Learning the cheer is not a surprise, so although does not fit. Lines 5, 6, 8 and 9 each use a joining word that fits.",
+      why: "The answer is line 7, \"Tia felt proud although she learned the whole cheer.\" Learning the cheer is not a surprise, so although does not fit. Lines 5, 6, 8 and 9 each use a joining word that fits.",
       like: ["SK-GUM5-5-C11"]
     },
     {
@@ -6431,28 +6427,28 @@ PP.addLesson({
       std: [
         "3.L.GC.1:I:use-subordinating-conjunctions-to-join-clauses"
       ],
-      passages: ["p6"],
-      prompt: "Complete line 10 in the best way.",
-      text: "Squad members stretched {0}.",
+      passages: [],
+      prompt: "The bus left at eight. Mia reached the corner at seven. Which choice completes it?",
+      text: "Mia reached the corner {0}.",
       slots: [
         {
-          options: ["before practice began", "although practice began", "if practice began"],
+          options: ["before the bus left", "after the bus left", "although the bus left"],
           answer: 0
         }
       ],
-      clue: "Ask how stretching and the start of practice are connected.",
+      clue: "Look at the times in the story. Ask who got there first.",
       hints: [
-        "Ask how stretching and the start of practice are connected.",
-        "Say each choice after stretched. Ask which one makes sense.",
-        "One choice shows a surprise, but nothing here is surprising. Decide between the other two."
+        "Look at the times in the story. Ask who got there first.",
+        "Say each choice after corner. Check it against the times.",
+        "One choice shows a surprise, but nothing here is surprising. Compare the other two with the times."
       ],
       how: [
-        "Read line 10. The stretching came first, and then practice began.",
+        "Read the times. Mia reached the corner at seven, and the bus left at eight, so she came first.",
         "A joining word that tells what comes first is before.",
-        "The answer is before practice began."
+        "The answer is before the bus left."
       ],
-      misconception: "A common mix-up is picking a joining word because it is long. The word has to match the order of the two ideas.",
-      why: "The answer is before practice began. The stretching came first, and then practice began. One choice shows a surprise, and the other sets up a case that may not happen.",
+      misconception: "A common mix-up is picking a time word without checking the order. Mia came first, so the word has to match that order.",
+      why: "The answer is before the bus left. Mia reached the corner at seven, and the bus left at eight. One choice shows a surprise, and one puts the bus first.",
       like: ["SK-GUM5-5-C12"]
     },
     {
@@ -6464,7 +6460,7 @@ PP.addLesson({
         "3.L.GC.1:I:use-subordinating-conjunctions-to-join-clauses"
       ],
       passages: [],
-      prompt: "Lena claims no line with although inside can be finished. Pick the TWO lines that prove her wrong.",
+      prompt: "Lena claims no line with although inside can be a whole sentence. Pick the TWO lines that prove her wrong.",
       pick: 2,
       choices: [
         { text: "Our team won although the field was muddy.", correct: true },
@@ -6473,9 +6469,9 @@ PP.addLesson({
         { text: "Although the ice was thin near the shore." },
         { text: "Although the music was loud." }
       ],
-      clue: "Lena says no line with although is ever finished. Look for lines with although that give a whole idea.",
+      clue: "Lena says no line with although is ever a whole sentence. Look for lines with although that give a whole idea.",
       hints: [
-        "Lena says no line with although is ever finished. Look for lines with although that give a whole idea.",
+        "Lena says no line with although is ever a whole sentence. Look for lines with although that give a whole idea.",
         "Pick TWO. Check whether each line is finished or leaves you waiting.",
         "The line about thin ice stops before the idea is finished. Decide about the other four."
       ],
@@ -6497,15 +6493,15 @@ PP.addLesson({
         "3.L.GC.1:I:use-subordinating-conjunctions-to-join-clauses"
       ],
       passages: [],
-      prompt: "Fill both blanks so the sentence makes sense.",
-      text: "{0}, Sam stayed home, and he fell asleep {1}.",
+      prompt: "Pick words for both blanks.",
+      text: "Ravi swam laps {0}, and {1}, he toweled dry.",
       slots: [
         {
-          options: ["Because he felt sick", "Although he felt sick", "Until he felt sick"],
+          options: ["although the water was cold", "because the water was very cold", "if the water was cold"],
           answer: 0
         },
         {
-          options: ["while he read a book", "although he read a book", "unless he read a book"],
+          options: ["before he ate lunch", "although he ate lunch", "until he ate lunch"],
           answer: 0
         }
       ],
@@ -6513,15 +6509,15 @@ PP.addLesson({
       hints: [
         "Read the whole sentence. Ask how each blank connects its two ideas.",
         "Work on one blank at a time. Say each choice and see whether it makes sense.",
-        "In the first blank, one choice says the staying home lasted up to a time, which is not the point. Decide about the other choices."
+        "In the second blank, one choice says the drying off lasted up to a time, which does not fit. Decide about the other choices."
       ],
       how: [
-        "The first blank: feeling sick is the reason Sam stayed home, so Because gives a reason.",
-        "The second blank: Sam fell asleep at the same time as he read, so while tells that two things went on together.",
-        "The answers are Because he felt sick and while he read a book."
+        "The first blank: swimming in cold water is a surprise, so although shows a surprise.",
+        "The second blank: drying off came first and lunch came next, so before tells what comes first.",
+        "The answers are although the water was cold and before he ate lunch."
       ],
-      misconception: "A common mix-up is using one kind of joining word in both blanks. The first blank gives a reason, and the second tells when.",
-      why: "The answers are Because he felt sick and while he read a book. Feeling sick is the reason Sam stayed home, and the falling asleep went on while he read.",
+      misconception: "A common mix-up is using one kind of joining word in both blanks. The first blank shows a surprise, and the second tells the order.",
+      why: "The answers are although the water was cold and before he ate lunch. Swimming in cold water is a surprise, and drying off came first, then lunch.",
       like: ["SK-GUM5-5-C14"]
     },
     {
@@ -6600,12 +6596,12 @@ PP.addLesson({
       hints: [
         "Find the joining word in each sentence. Ask what it gives.",
         "Do one row at a time. Say the sentence with each label and see which one fits.",
-        "In the row about Lee yawning, the joining word gives a reason. Decide about the other rows."
+        "The row about being sleepy gives a reason. Decide about the other rows."
       ],
       how: [
         "Find the joining word in each row: because, after, because and before.",
         "Because gives a reason: Sam found his hat, and Lee was sleepy.",
-        "After and before tell when: Sam smiled once he found his hat, and Lee yawned ahead of bed."
+        "After and before tell when: Sam smiled when he found his hat, and Lee yawned before she went to bed."
       ],
       misconception: "A common mix-up is thinking every joining word tells when. Some of them give a reason."
     },
@@ -6925,13 +6921,13 @@ PP.addLesson({
       options: [
         "In the spring, our class planted bean seeds.",
         "If you need help, raise your hand.",
-        "While Dad cooked we set the table.",
+        "While Dad cooked dinner in the kitchen we set the table.",
         "After the fire drill, we went back inside.",
-        "We set the table while Dad cooked."
+        "We set the table while Dad cooked dinner in the kitchen."
       ],
       answer: [2], pick: 1,
       clue: "Find each sentence that starts with an opening part. Does each one have a comma before the main idea?",
-      why: "The error is in \"While Dad cooked we set the table.\" The opening part, \"While Dad cooked,\" needs a comma after it: \"While Dad cooked, we set the table.\" The last sentence needs no comma because the while part comes at the end." },
+      why: "The error is in \"While Dad cooked dinner in the kitchen we set the table.\" The opening part, \"While Dad cooked dinner in the kitchen,\" needs a comma after it: \"While Dad cooked dinner in the kitchen, we set the table.\" The last sentence needs no comma because the while part comes at the end." },
     { id: "SK-GUM5-6-P4", type: "ms", points: 2, dok: 2, passages: [],
       prompt: "Choose the TWO sentences that use commas correctly.",
       choices: [
@@ -6977,12 +6973,12 @@ PP.addLesson({
             std: [
               "3.L.GC.1:I:use-commas-after-introductory-phrases-or-clauses"
             ],
-            passages: ["p1"],
-            prompt: "Sentence 3 of the draft needs its comma in the right place. Choose the words that finish it.",
-            text: "{0} we left the park gate.",
+            passages: [],
+            prompt: "Choose the words that start Eli's sentence.",
+            text: "{0} we lined up by the door.",
             slots: [
               {
-                options: ["When the clock struck eight,", "When the clock struck, eight", "When, the clock struck eight"],
+                options: ["When the lunch bell rang,", "When the lunch bell rang", "When the lunch, bell rang"],
                 answer: 0
               }
             ],
@@ -6990,15 +6986,15 @@ PP.addLesson({
             hints: [
               "Find where the opening part ends and the main idea begins.",
               "Say each choice, then the rest of the sentence. Listen for where you pause.",
-              "One choice puts the comma right after When, which cuts the opening part off too early. Decide between the other two."
+              "One choice cuts the opening part in two, with a comma before the last word. Decide between the other two."
             ],
             how: [
-              "Read sentence 3. The opening part is the words that tell when, and the main idea is \"we left the park gate.\"",
+              "Read the sentence. The opening part tells when, and the main idea is \"we lined up by the door.\"",
               "The comma goes at the end of the opening part, right before the main idea.",
-              "The answer is \"When the clock struck eight,\" with the comma after eight."
+              "The answer is \"When the lunch bell rang,\" with the comma after rang."
             ],
-            misconception: "A common mix-up is putting the comma after the first word. The comma belongs after the whole opening part.",
-            why: "The answer is \"When the clock struck eight,\" with the comma after eight. The opening part tells when, and the main idea comes after the comma. One choice cuts the opening part off after When, and one cuts it off after struck."
+            misconception: "A common mix-up is leaving the comma out because the sentence still reads smoothly. The comma marks where the opening part ends.",
+            why: "The answer is \"When the lunch bell rang,\" with the comma after rang. The opening part tells when, and the main idea comes after the comma. One choice has no comma, and one cuts the opening part short."
           },
           {
             id: "SK-GUM5-6-C04",
@@ -7011,7 +7007,7 @@ PP.addLesson({
             passages: ["p1"],
             prompt: "Which sentence from the draft has a comma in the right place after its opening part?",
             choices: [
-              { text: "Before we crossed the street the leader raised a flag." },
+              { text: "We will walk again on Thursday if the weather stays dry." },
               { text: "When the school came into view, we walked faster.", correct: true },
               { text: "We sang a song, when the rain began." },
               { text: "We walked in pairs because the sidewalk was narrow." }
@@ -7028,7 +7024,7 @@ PP.addLesson({
               "The answer is \"When the school came into view, we walked faster.\""
             ],
             misconception: "A common mix-up is picking a sentence just because it has a comma. The comma has to come right after the opening part.",
-            why: "The answer is \"When the school came into view, we walked faster.\" The comma comes right after the opening part. One choice leaves the comma out, one has a comma it does not need, and one has no opening part."
+            why: "The answer is \"When the school came into view, we walked faster.\" The comma comes right after the opening part. One choice has a comma it does not need, and two have no opening part."
           },
           {
             id: "SK-GUM5-6-C05",
@@ -7123,10 +7119,10 @@ PP.addLesson({
             prompt: "Decide whether each sentence needs a comma after an opening part or needs none.",
             cols: ["Needs a comma", "Needs no comma"],
             rows: [
-              { text: "After the rain stopped we ran outside.", answer: 0 },
-              { text: "We ran outside after the rain stopped.", answer: 1 },
-              { text: "If you call me I will answer.", answer: 0 },
-              { text: "I will answer if you call me.", answer: 1 }
+              { text: "After the heavy rain stopped on the field we ran outside.", answer: 0 },
+              { text: "We ran outside after the heavy rain stopped on the field.", answer: 1 },
+              { text: "If you call me after supper tonight I will answer.", answer: 0 },
+              { text: "I will answer if you call me after supper tonight.", answer: 1 }
             ],
             clue: "Find the opening part in each sentence. Ask whether the sentence begins with it.",
             hints: [
@@ -7136,11 +7132,11 @@ PP.addLesson({
             ],
             how: [
               "Look at where the After and If parts sit in each row.",
-              "When the After or If part starts the sentence, a comma goes after it: After the rain stopped, we ran outside. If you call me, I will answer.",
-              "When the same part comes last, no comma is needed: We ran outside after the rain stopped. I will answer if you call me."
+              "When the After or If part starts the sentence, a comma goes after it: After the heavy rain stopped on the field, we ran outside. If you call me after supper tonight, I will answer.",
+              "When the same part comes last, no comma is needed: We ran outside after the heavy rain stopped on the field. I will answer if you call me after supper tonight."
             ],
             misconception: "A common mix-up is thinking a sentence with after or if always needs a comma. The comma depends on where that part sits.",
-            why: "After the rain stopped we ran outside, and If you call me I will answer, each need a comma after the opening part. We ran outside after the rain stopped, and I will answer if you call me, need no comma because the part comes last."
+            why: "After the heavy rain stopped on the field we ran outside, and If you call me after supper tonight I will answer, each need a comma after the opening part. We ran outside after the heavy rain stopped on the field, and I will answer if you call me after supper tonight, need no comma because the part comes last."
           },
           {
             id: "SK-GUM5-6-C08",
@@ -7216,15 +7212,15 @@ PP.addLesson({
             std: [
               "3.L.GC.1:I:use-commas-after-introductory-phrases-or-clauses"
             ],
-            passages: ["p2"],
-            prompt: "Choose the words that finish sentence 9 of the draft.",
-            text: "{0} the coach blew a whistle.",
+            passages: [],
+            prompt: "Mia's draft says, \"Because the snow kept falling we stayed home.\" Pick the words that fix the start of her sentence.",
+            text: "{0} we stayed home.",
             slots: [
               {
                 options: [
-                  "When the last skater finished,",
-                  "When the last skater finished",
-                  "When the last skater finished."
+                  "Because the snow kept falling,",
+                  "Because, the snow kept falling",
+                  "Because the snow kept, falling"
                 ],
                 answer: 0
               }
@@ -7232,16 +7228,16 @@ PP.addLesson({
             clue: "Ask which words are the opening part and which words are the main idea.",
             hints: [
               "Ask which words are the opening part and which words are the main idea.",
-              "Say each choice, then the rest of the sentence. Listen for the pause.",
-              "One choice ends with a period, which would end the sentence too soon. Decide between the other two."
+              "Put each comma where it sits in the choice and listen to the pause.",
+              "A comma right after Because would leave that opening part with only one word. Check the other choices."
             ],
             how: [
-              "Read sentence 9. The opening part tells when, and the main idea is \"the coach blew a whistle.\"",
+              "Read the draft. The opening part tells why, and the main idea is \"we stayed home.\"",
               "A comma goes right after the opening part, before the main idea.",
-              "The answer is \"When the last skater finished,\" with a comma at the end."
+              "The answer is \"Because the snow kept falling,\" with a comma at the end."
             ],
-            misconception: "A common mix-up is leaving the comma out because the opening part is short. A comma still goes after an opening part like this one.",
-            why: "The answer is \"When the last skater finished,\" with a comma at the end. The comma marks where the opening part stops and the main idea begins. One choice has no comma, and one ends the sentence too soon with a period."
+            misconception: "A common mix-up is putting the comma after the first word. The comma belongs after the whole opening part.",
+            why: "The answer is \"Because the snow kept falling,\" with a comma at the end. The comma marks where the opening part stops and the main idea begins. One choice puts the comma after Because, and one puts it before the last word."
           }
         ]
       },
@@ -7283,28 +7279,28 @@ PP.addLesson({
             std: [
               "3.L.GC.1:I:use-commas-after-introductory-phrases-or-clauses"
             ],
-            passages: ["p3"],
-            prompt: "Choose the words that best finish sentence 6 of the draft.",
-            text: "The lead dog pulled the sled forward {0}.",
+            passages: [],
+            prompt: "Which choice completes the sentence correctly?",
+            text: "Mrs. Lee read to the class {0}.",
             slots: [
               {
-                options: ["when the driver called", ", when the driver called", "when, the driver called"],
+                options: ["after the recess bell rang", ", after the recess bell rang", "after the recess, bell rang"],
                 answer: 0
               }
             ],
-            clue: "Ask whether the part about the driver comes first or last in this sentence.",
+            clue: "Ask whether the part about the bell opens the sentence or closes it.",
             hints: [
-              "Ask whether the part about the driver comes first or last in this sentence.",
-              "Say each choice after forward. Listen for whether a pause is needed there.",
-              "One choice puts a comma inside the part about the driver, which cuts it in half. Decide between the other two."
+              "Ask whether the part about the bell opens the sentence or closes it.",
+              "Say each choice after class. Listen for whether a pause is needed there.",
+              "One choice puts a comma inside the part about the bell, which cuts it in half. Decide between the other two."
             ],
             how: [
-              "Read sentence 6. The part about the driver comes last.",
+              "Read the sentence. The part about the bell comes last.",
               "A part that comes last does not need a comma in front of it.",
-              "The answer is when the driver called."
+              "The answer is after the recess bell rang."
             ],
-            misconception: "A common mix-up is putting a comma before every word like when. A comma is not needed when that part comes last.",
-            why: "The answer is when the driver called. The part about the driver comes last, so no comma is needed. One choice puts a comma before it, and one puts a comma inside it."
+            misconception: "A common mix-up is putting a comma before every word like after. A comma is not needed when that part comes last.",
+            why: "The answer is after the recess bell rang. The part about the bell comes last, so no comma is needed. One choice puts a comma before it, and one puts a comma inside it."
           },
           {
             id: "SK-GUM5-6-C13",
@@ -7483,28 +7479,28 @@ PP.addLesson({
       std: [
         "3.L.GC.1:I:use-commas-after-introductory-phrases-or-clauses"
       ],
-      passages: ["p4"],
-      prompt: "Which choice puts the comma in the right place in line 3?",
-      text: "{0} the first girl stepped up.",
+      passages: [],
+      prompt: "Pick the choice with the comma in the right place.",
+      text: "{0} the rider tightened her helmet.",
       slots: [
         {
-          options: ["As soon as the music began,", "As soon as the music, began", "As soon as, the music began"],
+          options: ["Before the race began,", "Before the race, began", "Before, the race began"],
           answer: 0
         }
       ],
-      clue: "Ask which words make up the whole opening part of line 3.",
+      clue: "Ask which words make up the whole opening part.",
       hints: [
-        "Ask which words make up the whole opening part of line 3.",
-        "Say each choice, then the rest of the line. Listen for the natural pause.",
-        "One choice puts the comma inside the opening part, right before began. Decide between the other two."
+        "Ask which words make up the whole opening part.",
+        "Say each choice, then the rest. Listen for the natural pause.",
+        "One choice puts the comma right after Before, so the opening part is only one word long. Decide between the other two."
       ],
       how: [
-        "Read line 3. The opening part tells when the girl stepped up.",
+        "Read the sentence. The opening part tells when the rider tightened her helmet.",
         "The comma goes at the end of the opening part, before the main idea.",
-        "The answer is \"As soon as the music began,\" with the comma after began."
+        "The answer is \"Before the race began,\" with the comma after began."
       ],
       misconception: "A common mix-up is placing the comma in the middle of the opening part. It belongs where that part ends.",
-      why: "The answer is \"As soon as the music began,\" with the comma after began. The opening part ends there, and the main idea comes next. One choice cuts it off after music, and one cuts it off after soon as.",
+      why: "The answer is \"Before the race began,\" with the comma after began. The opening part ends there, and the main idea comes next. One choice cuts it off after race, and one cuts it off after Before.",
       like: ["SK-GUM5-6-C03"]
     },
     {
@@ -7518,7 +7514,7 @@ PP.addLesson({
       passages: ["p4"],
       prompt: "Pick the line whose comma sits where its opening part ends.",
       choices: [
-        { text: "Once she reached the end she hopped down." },
+        { text: "Nell held her arms wide since the beam looked thin." },
         { text: "We clapped loudly, after the last turn ended." },
         { text: "Our gym club held a balance beam meet last Saturday." },
         { text: "Whenever a girl finished, her friends hugged her.", correct: true }
@@ -7535,7 +7531,7 @@ PP.addLesson({
         "The answer is \"Whenever a girl finished, her friends hugged her.\""
       ],
       misconception: "A common mix-up is choosing the line that has any comma at all. The comma must follow the opening part.",
-      why: "The answer is \"Whenever a girl finished, her friends hugged her.\" The comma sits where the opening part ends. One choice has no comma, one has a comma it does not need, and one has no opening part.",
+      why: "The answer is \"Whenever a girl finished, her friends hugged her.\" The comma sits where the opening part ends. One choice has a comma it does not need, and two have no opening part.",
       like: ["SK-GUM5-6-C04"]
     },
     {
@@ -7623,24 +7619,24 @@ PP.addLesson({
       prompt: "Sort the lines by whether a comma is needed.",
       cols: ["A comma is needed", "No comma is needed"],
       rows: [
-        { text: "Once Mom unlocked the door we rushed in.", answer: 0 },
-        { text: "We rushed in once Mom unlocked the door.", answer: 1 },
-        { text: "Since it was foggy we drove slowly.", answer: 0 },
-        { text: "We drove slowly since it was foggy.", answer: 1 }
+        { text: "When Mom unlocked the front door we rushed inside.", answer: 0 },
+        { text: "We rushed inside when Mom unlocked the front door.", answer: 1 },
+        { text: "Because it was foggy on the hill road we drove slowly.", answer: 0 },
+        { text: "We drove slowly because it was foggy on the hill road.", answer: 1 }
       ],
       clue: "Spot the opening part in each line. Ask whether the line starts with it.",
       hints: [
         "Spot the opening part in each line. Ask whether the line starts with it.",
         "Take one row at a time. Say the line and listen for a pause after the first idea.",
-        "In the row that starts with Since, the opening part comes first. Decide about the other rows."
+        "In the row that starts with Because, the opening part comes first. Decide about the other rows."
       ],
       how: [
-        "Look at where the Once and Since parts sit in each row.",
-        "When the Once or Since part starts the line, a comma follows it: Once Mom unlocked the door, we rushed in. Since it was foggy, we drove slowly.",
-        "When the same part comes last, no comma is needed: We rushed in once Mom unlocked the door. We drove slowly since it was foggy."
+        "Look at where the When and Because parts sit in each row.",
+        "When the When or Because part starts the line, a comma follows it: When Mom unlocked the front door, we rushed inside. Because it was foggy on the hill road, we drove slowly.",
+        "When the same part comes last, no comma is needed: We rushed inside when Mom unlocked the front door. We drove slowly because it was foggy on the hill road."
       ],
-      misconception: "A common mix-up is thinking a line with once or since always needs a comma. The comma depends on where that part sits.",
-      why: "Once Mom unlocked the door we rushed in, and Since it was foggy we drove slowly, need a comma after the opening part. We rushed in once Mom unlocked the door, and We drove slowly since it was foggy, need no comma because the part comes last.",
+      misconception: "A common mix-up is thinking a line with when or because always needs a comma. The comma depends on where that part sits.",
+      why: "When Mom unlocked the front door we rushed inside, and Because it was foggy on the hill road we drove slowly, need a comma after the opening part. We rushed inside when Mom unlocked the front door, and We drove slowly because it was foggy on the hill road, need no comma because the part comes last.",
       like: ["SK-GUM5-6-C07"]
     },
     {
@@ -7714,32 +7710,28 @@ PP.addLesson({
       std: [
         "3.L.GC.1:I:use-commas-after-introductory-phrases-or-clauses"
       ],
-      passages: ["p5"],
-      prompt: "Which words best finish line 9?",
-      text: "{0} Jo waved goodbye.",
+      passages: [],
+      prompt: "Ty wrote, \"Before the guests arrived we hid the cake.\" Choose the repair for his opening part.",
+      text: "{0} we hid the cake.",
       slots: [
         {
-          options: [
-            "As soon as the line reached the door,",
-            "As soon as the line reached the door",
-            "As soon as the line reached the door."
-          ],
+          options: ["Before the guests arrived,", "Before, the guests arrived", "Before the guests, arrived"],
           answer: 0
         }
       ],
-      clue: "Ask which words open the line and which words are the main idea.",
+      clue: "Find the words that tell when, then find the main idea.",
       hints: [
-        "Ask which words open the line and which words are the main idea.",
-        "Say each choice, then the rest of the line. Listen for the pause.",
-        "One choice ends with a period, which would stop the line too soon. Decide between the other two."
+        "Find the words that tell when, then find the main idea.",
+        "Say each choice and listen for the pause before the main idea.",
+        "One choice puts a comma inside the opening part, before arrived. Decide between the other two."
       ],
       how: [
-        "Read line 9. The opening part tells when Jo waved, and the main idea is \"Jo waved goodbye.\"",
+        "Read Ty's sentence. The opening part tells when, and the main idea is \"we hid the cake.\"",
         "A comma goes right after the opening part.",
-        "The answer is \"As soon as the line reached the door,\" with a comma at the end."
+        "The answer is \"Before the guests arrived,\" with a comma at the end."
       ],
-      misconception: "A common mix-up is skipping the comma because the line reads smoothly without it. A comma still marks the end of the opening part.",
-      why: "The answer is \"As soon as the line reached the door,\" with a comma at the end. The comma marks where the opening part ends. One choice has no comma, and one stops the line too soon with a period.",
+      misconception: "A common mix-up is putting the comma too early. It goes after the whole opening part.",
+      why: "The answer is \"Before the guests arrived,\" with a comma at the end. The comma marks where the opening part ends. One choice puts it after Before, and one puts it before arrived.",
       like: ["SK-GUM5-6-C10"]
     },
     {
@@ -7778,28 +7770,28 @@ PP.addLesson({
       std: [
         "3.L.GC.1:I:use-commas-after-introductory-phrases-or-clauses"
       ],
-      passages: ["p6"],
-      prompt: "Which choice best completes line 6?",
-      text: "The ringing began {0}.",
+      passages: [],
+      prompt: "Pick the ending.",
+      text: "Jo danced in the kitchen {0}.",
       slots: [
         {
-          options: ["when Mrs. Hale nodded", ", when Mrs. Hale nodded", "when, Mrs. Hale nodded"],
+          options: ["when the music began", ", when the music began", "when the music, began"],
           answer: 0
         }
       ],
-      clue: "Ask whether the part about Mrs. Hale opens the line or closes it.",
+      clue: "Ask whether the part about the music opens the sentence or closes it.",
       hints: [
-        "Ask whether the part about Mrs. Hale opens the line or closes it.",
-        "Say each choice after began. Listen for whether a pause belongs there.",
-        "One choice puts a comma in the middle of the part about Mrs. Hale. Decide between the other two."
+        "Ask whether the part about the music opens the sentence or closes it.",
+        "Say each choice after kitchen. Listen for whether a pause belongs there.",
+        "One choice puts a comma in the middle of the part about the music. Decide between the other two."
       ],
       how: [
-        "Read line 6. The part about Mrs. Hale closes the line.",
-        "A part that closes the line needs no comma before it.",
-        "The answer is when Mrs. Hale nodded."
+        "Read the sentence. The part about the music closes the sentence.",
+        "A part that closes the sentence needs no comma before it.",
+        "The answer is when the music began."
       ],
       misconception: "A common mix-up is adding a comma ahead of when every time. A closing part needs no comma.",
-      why: "The answer is when Mrs. Hale nodded. The part about her closes the line, so no comma is needed. One choice adds a comma before it, and one puts a comma inside it.",
+      why: "The answer is when the music began. The part about the music closes the sentence, so no comma is needed. One choice adds a comma before it, and one puts a comma inside it.",
       like: ["SK-GUM5-6-C12"]
     },
     {
@@ -7811,28 +7803,28 @@ PP.addLesson({
         "3.L.GC.1:I:use-commas-after-introductory-phrases-or-clauses"
       ],
       passages: [],
-      prompt: "Lia says, \"A comma always goes in front of since, once or while.\" Which TWO sentences show she is wrong?",
+      prompt: "Lia says, \"A sentence with while, because or although always needs a comma.\" Which TWO sentences show she is wrong?",
       pick: 2,
       choices: [
         { text: "We stayed inside while it stormed.", correct: true },
         { text: "If the roads freeze, school will close." },
         { text: "While the kettle whistled, Gran poured tea." },
-        { text: "Tom smiled since the test was easy.", correct: true },
-        { text: "Once the soup boiled, Dad added salt." }
+        { text: "Tom smiled because the test was easy.", correct: true },
+        { text: "Although the soup boiled, Dad added salt." }
       ],
-      clue: "Lia thinks a comma must sit before those words. Look for sentences that are correct with no comma there.",
+      clue: "Lia thinks a comma is always needed with those words. Look for sentences that are correct without one.",
       hints: [
-        "Lia thinks a comma must sit before those words. Look for sentences that are correct with no comma there.",
-        "Pick TWO. Check whether the since, once or while part opens or closes each sentence.",
+        "Lia thinks a comma is always needed with those words. Look for sentences that are correct without one.",
+        "Pick TWO. Check each sentence that uses one of those words for its commas.",
         "In the sentence about the roads, a comma follows an opening part, which is correct. Decide about the other four."
       ],
       how: [
-        "Look for sentences that use since, once or while and have no comma before them.",
-        "\"We stayed inside while it stormed.\" and \"Tom smiled since the test was easy.\" are correct, and each closes with that part.",
-        "The other three open with a part and a comma follows it, which does not show Lia is wrong."
+        "Look for sentences that use while, because or although and have no comma.",
+        "\"We stayed inside while it stormed.\" and \"Tom smiled because the test was easy.\" are correct, and each closes with that part.",
+        "The other three open with a part and a comma follows it, or use none of those words, so they do not show Lia is wrong."
       ],
       misconception: "A common mix-up is choosing the sentences that contain commas. Lia is wrong about sentences where the part closes the sentence.",
-      why: "The answers are \"We stayed inside while it stormed.\" and \"Tom smiled since the test was easy.\" Each is correct with no comma because the part closes the sentence. The other three open with a part, so the comma follows it.",
+      why: "The answers are \"We stayed inside while it stormed.\" and \"Tom smiled because the test was easy.\" Each is correct with no comma because the part closes the sentence. The other three open with a part, so the comma follows it, or use none of those words.",
       like: ["SK-GUM5-6-C13"]
     },
     {
@@ -7880,26 +7872,26 @@ PP.addLesson({
         "3.L.GC.1:I:use-commas-after-introductory-phrases-or-clauses"
       ],
       passages: [],
-      prompt: "What job does the comma do in this sentence: \"If it rains, we will stay home.\"",
+      prompt: "Dana says the comma in \"If it rains, we will stay home\" only makes readers pause. Is Dana's claim right?",
       choices: [
-        { text: "It separates items in a list, since rain and home are two things standing in a row together." },
-        { text: "It signals a short pause between the rain talk and the plan, helping readers follow along.", correct: true },
-        { text: "It stands in for the word and, since the words join two matching thoughts." },
-        { text: "It tells us someone is speaking, so quotation marks should wrap those words." }
+        { text: "Dana is right, since commas only mark breath pauses, and a reader may add one anywhere." },
+        { text: "Dana is wrong, since the comma tells where the first part stops and the plan starts.", correct: true },
+        { text: "Dana is right, since any writer may drop it with no change." },
+        { text: "Dana is wrong, since it splits two list items, rain and home." }
       ],
       clue: "Ask what comes before the comma and what comes after it.",
       hints: [
         "Ask what comes before the comma and what comes after it.",
-        "Think about which words tell a condition and which words tell what will happen.",
-        "No one is speaking inside the sentence, so one choice about speech cannot be right. Check the other choices."
+        "Say the first part by itself. Ask whether it feels finished.",
+        "There is no list in the sentence, so a choice about list items cannot be right. Check the other choices."
       ],
       how: [
         "Read the sentence. The words before the comma tell a condition, and the words after it tell the plan.",
-        "The comma marks the pause between them.",
-        "The answer is \"It signals a short pause between the rain talk and the plan, helping readers follow along.\""
+        "The comma tells readers where the first part stops and the plan starts, not just where to pause.",
+        "The answer is \"Dana is wrong, since the comma tells where the first part stops and the plan starts.\""
       ],
-      misconception: "A common mix-up is thinking every comma belongs to a list. This one marks a pause after the opening words.",
-      why: "The answer is \"It signals a short pause between the rain talk and the plan, helping readers follow along.\" The words before the comma tell the condition, and the words after it tell the plan.",
+      misconception: "A common mix-up is thinking a comma only shows a pause. This one marks the end of the opening part.",
+      why: "The answer is \"Dana is wrong, since the comma tells where the first part stops and the plan starts.\" Dana is not correct, because the comma has a job beyond a pause.",
       like: ["SK-GUM5-6-C15"]
     }
   ],
@@ -7939,7 +7931,7 @@ PP.addLesson({
       how: [
         "Check each sentence for an opening part and a comma.",
         "The other four are correct, and one of them puts its while part at the end, where no comma is needed.",
-        "\"While Dad cooked we set the table.\" has an opening part with no comma after cooked."
+        "\"While Dad cooked dinner in the kitchen we set the table.\" has an opening part with no comma after kitchen."
       ],
       misconception: "A common mix-up is picking the sentence that sounds odd. Look for the opening part with no comma after it."
     },
