@@ -9474,7 +9474,7 @@ PP.addLesson({
               "The answer is \"Tomorrow, we will water the plants before the bell rings.\" The other choices add -ed, -s or -ing after will."
             ],
             misconception: "A common mix-up is adding -ed to a verb that follows will. Will already shows the time.",
-            why: "The answer is Tomorrow, we will water the plants before the bell rings.. After the helping verb will, the main verb stays in its plain form, so water is right. The other choices add -ed, -s or -ing after will."
+            why: "The answer is Tomorrow, we will water the plants before the bell rings. After the helping verb will, the main verb stays in its plain form, so water is right. The other choices add -ed, -s or -ing after will."
           },
           {
             id: "SK-GUM4-7-C04",
@@ -9605,7 +9605,7 @@ PP.addLesson({
               "Part B: the fact is \"Has is a helping verb, so the main verb after it needs its past form, planted.\""
             ],
             misconception: "A common mix-up is leaving the plain verb after has. Has, have and had go with the past form.",
-            why: "Part A: \"By now, our club has planted ten rows of corn along the fence.\" Part B: \"Has is a helping verb, so the main verb after it needs its past form, planted.\" Part A: By now, our club has planted ten rows of corn along the fence. uses has with the past form planted. Part B: has is a helping verb, so the main verb after it needs its past form."
+            why: "Part A: \"By now, our club has planted ten rows of corn along the fence.\" Part B: \"Has is a helping verb, so the main verb after it needs its past form, planted.\" Has goes with the past form planted, not the plain form plant. A helping verb like has needs the past form of the main verb."
           },
           {
             id: "SK-GUM4-7-C07",
@@ -9783,7 +9783,7 @@ PP.addLesson({
             hints: [
               "Spot the verb in every line and see what word follows it.",
               "Ask whether the next word is another verb or a name for Dad.",
-              "Neither sentence tells an action that is done by is, so a choice about action for both cannot be right."
+              "Is does not show anything Dad does."
             ],
             how: [
               "The verbs are will in Sentence A and is in Sentence B.",
@@ -9931,7 +9931,7 @@ PP.addLesson({
             clue: "For the first blank, use the time clues, Last night and was free. For the second, match the helper you pick.",
             hints: [
               "For the first blank, use the time clues, Last night and was free. For the second, match the helper you pick.",
-              "A helper that points to the past needs a main verb in its past form.",
+              "Look at the helper you chose, and compare the verb forms that can follow it.",
               "Can tells what is possible now, not what happened last night, so it does not fit here."
             ],
             how: [
@@ -9987,7 +9987,7 @@ PP.addLesson({
       hints: [
         "Look at the word that follows each verb and decide what kind of word it is.",
         "Sort the lines you know first, then use the same check for the rest.",
-        "In Those boots are muddy, muddy tells about the boots and is not a verb."
+        "Check whether the word right after each verb is another verb or a word that describes the subject."
       ],
       how: [
         "Check the word that follows each verb.",
@@ -10065,19 +10065,19 @@ PP.addLesson({
           answer: 1
         }
       ],
-      clue: "Study the helper will, and ask what shape the action word takes after it.",
+      clue: "Study the helper will, and ask what form the main verb takes after it.",
       hints: [
-        "Study the helper will, and ask what shape the action word takes after it.",
-        "Compare the word after will in each line, and see which shape matches a helper.",
+        "Study the helper will, and ask what form the main verb takes after it.",
+        "Compare the word after will in each line, and see which form matches a helper.",
         "The line that ends the verb in -ing would need a different helper."
       ],
       how: [
         "The helper is will, and the action word comes next.",
-        "After will, the action word stays plain, with no -ed, -s or -ing.",
+        "After will, the main verb stays plain, with no -ed, -s or -ing.",
         "The answer is \"Soon, our volcano will explode for the whole crowd.\" The others put -ed, -s or -ing on the verb."
       ],
       misconception: "A common mix-up is adding -ed because the story is about a school event. Will already shows the time.",
-      why: "The answer is Soon, our volcano will explode for the whole crowd.. After the helper will, the action word stays plain, so explode is right. The other lines add -ed, -s or -ing after will.",
+      why: "The answer is Soon, our volcano will explode for the whole crowd. After the helping verb will, the main verb stays plain, so explode is right. The other lines add -ed, -s or -ing after will.",
       like: ["SK-GUM4-7-C03"]
     },
     {
@@ -10096,12 +10096,12 @@ PP.addLesson({
       clue: "Pick out the verb in each shown line and decide what comes right after it.",
       hints: [
         "Pick out the verb in each shown line and decide what comes right after it.",
-        "A helper stands before another verb. A joining verb ties the subject to a word that describes it.",
+        "A helper stands before another verb. A linking verb ties the subject to a word that describes it.",
         "Line 6 has should before talk, so its verb helps another verb."
       ],
       how: [
         "Pick out the verb in each shown line and check the word after it.",
-        "Holds, cheer and hug, and give are actions, while can ask and should talk have a helper before a main verb.",
+        "Holds and cheer and hug are actions, while can ask and should talk have a helper before a main verb.",
         "In sentence 7, are links the judges to kind, a word that describes them, so it is the answer."
       ],
       misconception: "A common mix-up is choosing a line because it is short. Check what comes after the verb.",
@@ -10117,17 +10117,17 @@ PP.addLesson({
         "3.L.GC.1:I:use-helping-and-linking-verbs"
       ],
       passages: ["p4"],
-      prompt: "A friend argues that seems in line 9 is something the volcano does. How should you answer?",
+      prompt: "Someone says the word seems in line 9 tells what the volcano does. What do you say?",
       choices: [
         {
-          text: "No deed occurs; seems ties the volcano to small, which says what that model is like, making it a joining word.",
+          text: "Nothing is done here; seems ties the volcano to small, which says what that model is like, so seems is a linking verb.",
           correct: true
         },
         {
-          text: "A deed occurs, since the volcano must be busy doing something while it sits upon the long table near the judges."
+          text: "An action occurs, since the volcano must be busy doing something while it sits upon the long table near the judges."
         },
         {
-          text: "Seems works as a helper, since it stands beside the word small and lends that word extra meaning for readers."
+          text: "Seems works as a helper, since it stands beside the word small and gives that word extra meaning for readers."
         },
         {
           text: "Seems cannot be a verb, since a verb must show movement across a room, a yard, or a field of green grass."
@@ -10142,10 +10142,10 @@ PP.addLesson({
       how: [
         "Read sentence 9: The volcano seems small, but it will erupt with red foam.",
         "Nothing happens in the first half. Small tells what the volcano is like, and seems connects the two.",
-        "The answer is \"No deed occurs; seems ties the volcano to small, which says what that model is like, making it a joining word.\""
+        "The answer is \"Nothing is done here; seems ties the volcano to small, which says what that model is like, so seems is a linking verb.\""
       ],
       misconception: "A common mix-up is thinking every verb shows an action. A linking verb only connects words.",
-      why: "The answer is \"No deed occurs; seems ties the volcano to small, which says what that model is like, making it a joining word.\" Seems does nothing here. It ties the volcano to small, which says what the model is like, so it is a linking verb.",
+      why: "The answer is \"Nothing is done here; seems ties the volcano to small, which says what that model is like, so seems is a linking verb.\" Seems does nothing here. It ties the volcano to small, which says what the model is like, so it is a linking verb.",
       like: ["SK-GUM4-7-C05"]
     },
     {
@@ -10180,33 +10180,33 @@ PP.addLesson({
         prompt: "Pick the statement that gives the reason for that repair.",
         choices: [
           {
-            text: "A helper such as has calls for the past shape of the next action word, earned.",
+            text: "A helping verb like has calls for the past form of the main verb, earned.",
             correct: true
           },
           {
-            text: "The word after has must keep its base shape, earn, just as it does after will."
+            text: "Earn stays plain after has, the same way earn stays plain after will."
           },
           {
-            text: "Has joins the team to a describing word, so the next word stays as written."
+            text: "This verb links the team to a describing word, so earn needs no change."
           },
           {
-            text: "Has is the only verb in the line, so the next word just names the shiny gold star."
+            text: "This word stands alone as the only verb here, so the next word simply names the shiny gold star."
           }
         ]
       },
       clue: "For Part A, find the helper and the word after it. For Part B, find the statement that fits the correction.",
       hints: [
         "For Part A, find the helper and the word after it. For Part B, find the statement that fits the correction.",
-        "Think about the shape an action word takes after has, have or had.",
+        "Think about the form a main verb takes after has, have or had.",
         "Will looks ahead, but line 10 begins with Today, so a version with will does not fit."
       ],
       how: [
-        "Part A: the draft has the helper has before the plain verb earn. The answer is \"Today, the red team has earned a gold star from the judges.\"",
-        "The other versions add -s to the action word, change has to have, or use will with the past form.",
-        "Part B: the statement is \"A helper such as has calls for the past shape of the next action word, earned.\""
+        "Part A: the draft has the helping verb has before the plain verb earn. The answer is \"Today, the red team has earned a gold star from the judges.\"",
+        "The other versions add -s to the main verb, change has to have, or use will with the past form.",
+        "Part B: the statement is \"A helping verb like has calls for the past form of the main verb, earned.\""
       ],
-      misconception: "A common mix-up is leaving the action word plain after has. Has, have and had go with the past form.",
-      why: "Part A: \"Today, the red team has earned a gold star from the judges.\" Part B: \"A helper such as has calls for the past shape of the next action word, earned.\" Part A: Today, the red team has earned a gold star from the judges. uses has with the past form earned. Part B: the past shape of the next action word is what a helper such as has calls for.",
+      misconception: "A common mix-up is leaving the main verb plain after has. Has, have and had go with the past form.",
+      why: "Part A: \"Today, the red team has earned a gold star from the judges.\" Part B: \"A helping verb like has calls for the past form of the main verb, earned.\" Has goes with the past form earned, not the plain form earn. A helping verb like has calls for the past form of the main verb.",
       like: ["SK-GUM4-7-C06"]
     },
     {
@@ -10257,7 +10257,7 @@ PP.addLesson({
       clue: "Pick out the verb in each shown line and look at the word that follows it.",
       hints: [
         "Pick out the verb in each shown line and look at the word that follows it.",
-        "A helper stands before another verb. A joining verb ties the subject to a describing word.",
+        "A helper stands before another verb. A linking verb ties the subject to a describing word.",
         "Line 9 says the syrup seems sticky, and sticky is not a verb."
       ],
       how: [
@@ -10278,10 +10278,10 @@ PP.addLesson({
         "3.L.GC.1:I:use-helping-and-linking-verbs"
       ],
       passages: ["p5"],
-      prompt: "Your partner argues that line 5 needs no repair, since stirred places the action in the past. How should you answer?",
+      prompt: "A partner thinks line 5 is fine, as stirred puts the action in the past. What is your best reply?",
       choices: [
         {
-          text: "Could comes first, so the action word must stay basic; write stir, not stirred.",
+          text: "Could comes first, so the main verb must stay plain; write stir, not stirred.",
           correct: true
         },
         {
@@ -10291,22 +10291,22 @@ PP.addLesson({
           text: "Stirred is correct, since an event that already finished calls for the ending -ed."
         },
         {
-          text: "Could acts as the lone verb, which leaves stirred as a noun for the batter in the bowl."
+          text: "Could acts as the only verb, which leaves stirred as a noun for the batter in the bowl."
         }
       ],
-      clue: "Find the helper in line 5 and think about what shape the next verb takes after it.",
+      clue: "Find the helper in line 5 and think about what form the next verb takes after it.",
       hints: [
-        "Find the helper in line 5 and think about what shape the next verb takes after it.",
+        "Find the helper in line 5 and think about what form the next verb takes after it.",
         "Compare stirred with the verb that would follow a helper such as will or can.",
         "Stirred is not a describing word in this line, because it tells the action."
       ],
       how: [
         "Read line 5: My brother could stirred the batter slowly with the wooden spoon.",
-        "Could is the helper, and the action word after it must keep its basic form.",
-        "The answer is \"Could comes first, so the action word must stay basic; write stir, not stirred.\""
+        "Could is the helping verb, and the main verb after it must keep its plain form.",
+        "The answer is \"Could comes first, so the main verb must stay plain; write stir, not stirred.\""
       ],
-      misconception: "A common mix-up is putting -ed on a verb to show the past. A verb after could stays basic.",
-      why: "The answer is \"Could comes first, so the action word must stay basic; write stir, not stirred.\" Could is a helping verb, so the action word after it keeps its basic form: My brother could stir the batter. Adding -ed does not fit after could.",
+      misconception: "A common mix-up is putting -ed on a verb to show the past. A verb after could stays plain.",
+      why: "The answer is \"Could comes first, so the main verb must stay plain; write stir, not stirred.\" Could is a helping verb, so the main verb after it keeps its plain form: My brother could stir the batter. Adding -ed does not fit after could.",
       like: ["SK-GUM4-7-C09"]
     },
     {
@@ -10342,7 +10342,7 @@ PP.addLesson({
       clue: "Pick out the verb in each line and check the word right after it.",
       hints: [
         "Pick out the verb in each line and check the word right after it.",
-        "A helper stands before another verb. A joining verb ties the subject to a word that names or describes it.",
+        "A helper stands before another verb. A linking verb ties the subject to a word that names or describes it.",
         "In the line about the road, the word after the verb is not a verb."
       ],
       how: [
@@ -10374,7 +10374,7 @@ PP.addLesson({
           text: "Seems leads into tired, but should ties the pup to rest."
         },
         {
-          text: "Neither ties anything; both prop up a second action after them."
+          text: "Neither ties anything; both help a second verb that comes after them."
         },
         {
           text: "Neither tells about the pup; each describes a trip across the yard."
@@ -10415,7 +10415,7 @@ PP.addLesson({
       clue: "Look at who is doing the blocking, and decide whether that is one player or several.",
       hints: [
         "Look at who is doing the blocking, and decide whether that is one player or several.",
-        "Check the verb blocked after the blank, and think about which helpers go with that shape.",
+        "Check the verb blocked after the blank, and think about which helpers go with that form.",
         "Am goes only with the word I, and the subject here is not I."
       ],
       how: [
@@ -10536,16 +10536,16 @@ PP.addLesson({
       clue: "For the first blank, use the time clue and the subject. For the second, match the helper.",
       hints: [
         "For the first blank, use the time clue and the subject. For the second, match the helper.",
-        "A helper that points to the past needs an action word in its past shape.",
+        "Look at the helper you chose, and compare the verb forms that can follow it.",
         "Has goes with one person, and the twins number two or more."
       ],
       how: [
         "Yesterday is the time clue, and it places the action in the past; twins names more than one person.",
-        "The helper had goes with the past shape of the action word, painted.",
+        "The helper had goes with the past form of the main verb, painted.",
         "The answers are had and painted. Has goes with one person, is and are point to the present, and paint, paints and painting do not fit after had."
       ],
-      misconception: "A common mix-up is choosing a helper and leaving the action word plain. Had needs the past shape.",
-      why: "The answers are had and painted. Yesterday is in the past, so had goes with the past shape painted. Has goes with one person, is and are point to the present, and the other verb forms do not fit after had.",
+      misconception: "A common mix-up is choosing a helper and leaving the main verb plain. Had needs the past form.",
+      why: "The answers are had and painted. Yesterday is in the past, so had goes with the past form painted. Has goes with one person, is and are point to the present, and the other verb forms do not fit after had.",
       like: ["SK-GUM4-7-C15"]
     }
   ],

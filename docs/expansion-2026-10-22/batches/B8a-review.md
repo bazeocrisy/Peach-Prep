@@ -360,3 +360,72 @@ Blind 30/30. No MUST. All first-review L7 items are fixed.
 | 5 relative pronouns/adverbs | REVISE | 1 (S14 key still the only choice with a different ending: "indeed") | 7 |
 | 7 helping/linking verbs | ACCEPT | 0 | 5 |
 Blind agreement 60/60. Browser 60/60 at 390x844. Twin-vs-core max 0.206/0.208 (L5) and 0.200/0.192 (L7); core-vs-core max 0.277 (L5) and 0.287 (L7). Of the first review's L5/L7 MUST/SHOULD list everything is fixed except L5 S14 (a new tell took the old one's place) and the twin hot-text key positions (partly).
+
+## Third review (B8a lesson 4)
+
+Reviewer: independent third reviewer (did not author; not the first or second reviewer). `js/data/lessons/L-GUM4.js` lesson 4 (`use-conventional-capitalization-quotation-marks-...`, "Punctuating what people say") as on disk. Read-only; only this section was written. The verdict is a recommendation; nothing is marked ACCEPTED here.
+
+### Method and blind solve
+- `scratchpad/b8arev3/blind.js` loads the file in Node, resolves refs, prints numbered passages, `stem` and all 15 core and 15 twin items with seeded-shuffled choices (seed 20261104) and no key, answer, why, clue, hints, how, misconception or like. I saved my answers (`myans.SAVED.js`) before opening any key, hint, `how`, the author log or the second review. Earlier I had seen only the second review's section of this file when told to read it after the solve; I did not read it before solving. The solve was fully blind.
+- **Agreement: 30 of 30 (100%)** (`cmp.js` maps my letters to the displayed text and compares to the key text, including both slots of C15/S15, both parts of C06/S06 and each match row).
+- Close calls while solving: C12/S12 (`."` against `".` differ only in order; the sentence stem shows the words), C09/S09 (comma inside is clearly the only option that is both needed and correctly placed).
+
+### Scripted measurements (final file)
+- **Twin x core, item text with the (n) sentence-number markers and the targeted sentences, item only (set / multiset):** max **0.200** (P5 x S02) / **0.206** (C12 x S12). Nothing above 0.21 on either measure. With the whole shared passage text appended, the worst twin pair is 0.229 / 0.245 (C03 x S03, C09 x S09), still far under 0.30 (`jac.js`).
+- **Core x core, item only (set / multiset):** max **0.247** (C03 x C09) / **0.267** (C09 x C11). All at or under 0.30. (With a shared passage appended core pairs read 0.6-0.9; that is the shared draft, not item overlap.)
+- **Hot-text prompt numbers against rendered targets (`numchk.js`):** C05 prompt "2, 4, 6, 7 and 10" = targets 2, 4, 6, 7, 10 (OK); C08 prompt "3, 5, 6, 7 and 9" = 3, 5, 6, 7, 9 (OK); S05 and S08 list no numbers. Every sentence number named in any hint, how or why of the four hot-text items is one of the five displayed sentences. The browser render matches (C05 shows (2) (4) (6) (7) (10)).
+- **Passages:** six passages, 114-122 words (markers removed), FK 0.90-3.17 (max p6 3.17). All pass (min 100 words, max FK 4.5).
+- **Longest key:** no key is the unique longest and no choose-two has both keys longer than every distractor. Ties only on C06 A / S06 A (42/44 chars, the lowercase-i/I pair), C12/S12 slot (2 chars), C15 slot 1, S04, S15 slot 1 (`longest.js`).
+- **Points and DOK:** every item's points equal its keyed count (ms = 2, match = 2, ebsr = 2, C15 and S15 two slots = 2); every item has DOK; sets total 7, 7, 7 points.
+- **Leak scan (`leak.js`):** no key (choice, filled dropdown, repaired sentence) is printed in any other item's prompt/stem/choices/hints, in Teach, Learn or the parent text. The only matches are the hot-text keys inside their own passage (inherent) and case-fold false positives where the passage holds the lower-case error (C04, S04). No dropdown's filled key equals a passage sentence.
+- **Duplicate scan over all js/data (`dupall.js`, `xfile.js`):** 238 strings (passages, prompts, stems, options, filled sentences, option strings of 22+ characters) searched in every other js/data file: **0 hits**.
+- **Hint 3 / live choices (all 30 read in full):** every hint 3 names at most one wrong choice (C03 the "only questions" rule, C04 the comma after the question mark, C05 sentence 10, C06 Part A the small i, C07 the outside mark, C09 "no mark", C11 "period", C14 the outside question mark, and so on) and none gives the key's wording. At least two live choices remain after hints 1-3 everywhere (mc and dropdowns three; hot-text four; C15 and S15 three per slot). Exception in kind, not count: S02 H3 (see SHOULD).
+- **Key / why / how consistency:** read for all 30; keys, `why` and `how` agree. Minor wording notes below.
+- **Grade 3:** vocabulary is grade 3 (no "trio" in this lesson; "verb of saying" in S03 option C is the one adult term, NOTE).
+- **Facts / sources (one defensible key):** periods and commas go inside closing quotation marks; a question mark or exclamation point goes inside when it belongs to the quoted words: https://owl.purdue.edu/owl/general_writing/punctuation/quotation_marks/more_quotation_mark_rules.html . A quoted question or exclamation takes no comma before the dialogue tag ("...movies with us?" Mary asked., not ?",): https://www.grammarly.com/blog/punctuation-capitalization/comma-after-question-mark . A comma introduces a quotation after the speaker, and a comma ends spoken words when the tag follows (also https://www.authorlearningcenter.com/writing/fiction/w/character-development/6491/8-essential-rules-for-punctuating-dialogue , cited in the second review). Retelling without quotation marks is the indirect-speech rule on the same pages. The one convention that could be debated (British "single quote" style or outside-comma placement) is not used; the lesson states and tests the American rule consistently (Teach points 2, 3, 5), and the "comma outside the closing marks" options are wrong under it.
+- **Browser, 390x844, touch emulation, browse mode, real `tap`** (`run3.py`, server on 8873, then stopped): three core sets via `#play/SK:3.L.GC.1:C:use-conventional-capitalization-quotation-marks-:y|y2|y3/try`, each item with all three hints pressed, then answered with the key and checked, plus each of the 15 twins through "Try a similar question". **30 of 30 items "That's right!"**, document scrollWidth 390 on every one, no choice, hot-text, match button or select under 40 px or past the right edge, no `pageerror`, hint button "No more hints" and disabled after three presses. Hot-text items render the numbered sentences as authored. **S07 (longest option 39 characters) renders as tap-buttons under the sentence, not a select; the tap selected, Check enabled, key accepted.** The other dropdowns render as selects (C04, C07, C12, S04, S12 one; C15, S15 two) with options under 28 characters. Limits: wrong-answer feedback was not exercised and no child's finger was used.
+
+### Verification of the second review's L4 items
+| Item | Second review | On disk now | Status |
+|---|---|---|---|
+| C05 prompt numbers | MUST: prompt said 8, display shows 10 | Prompt reads "2, 4, 6, 7 and 10"; targets and render match; H3, how and why all say sentence 10 | **Fixed** |
+| C04 hint 3 | MUST: false rule about a comma after the question mark | "Tess comes first, and a question mark already ends her words, so no comma follows it." Matches Teach points 3 and 5 and the sources above; names one wrong choice; three choices stay live | **Fixed** |
+| C09 / S09 hints | SHOULD: H1+H2 gave the rule | H1 "Read the end of the spoken words and the name of the speaker that follows them" / H2 "Compare how the choices treat the end of what the speaker says" (the reviewer's own suggestion; location and strategy only). H3 refutes only the "no mark needed" option | **Fixed** (H3 leans slightly, NOTE) |
+| S09 distractors | SHOULD: absolutes and padding ("ever", "again and again") | The wrong options are now plain parallel statements; key is not the longest | **Fixed** |
+| S08 prompt | SHOULD: above grade 3 | "Tap the ONE line, out of the five shown from the pond story, whose mark is placed outside the quotes when it belongs inside." Readable at grade 3 | **Fixed** |
+| P3 prompt "Which two" | SHOULD (one-word) | Still "Which two sentences are punctuated correctly?" (choose-two items elsewhere use TWO; the "(pick 2)" line is shown) | Not changed (NOTE) |
+| C12/S12 bare-mark options | NOTE | Unchanged; legible, the sentence stem shows the words | NOTE |
+
+### Item review
+All 30 items have one defensible key under the stated convention, plausible distractors (each distractor is one rule broken: lower-case start, comma outside, mark outside, comma after ? or !, missing comma, missing quotation marks) and prompts at grade 3. Standard wording ("capitalization, quotation marks, and commas" in the dialogue standard) is covered. Hint ladders are strategy, then place, then scaffold, and none narrows to the key. Twins test the same skill with new sentences, a different speaker and a different story; `like` mappings are honest (S02 to P5, S03 to C03, S11 to C11, and so on).
+
+### Findings
+
+**Verdict: ACCEPT (no MUST).**
+
+- MUST: none.
+- SHOULD
+  - **All four hot-text keys are sentence (7)** (C05, C08 in core; S05, S08 in twins) and three of the four sit fourth among the five shown sentences (C05 2,4,6,**7**,10; C08 3,5,6,**7**,9; S08 2,4,6,**7**,9; S05 2,5,**7**,9,11). A child who gets C05 and then meets the twin sees the same number and the same flaw (no comma after the quote when the speaker follows). Move one or two keys (for example S05 to a different numbered line, S08 to the sentence-9 or sentence-4 slot) so the position is not a repeating tell. Data only; the sentences already exist in the passages.
+  - **S02 H3 hands over one match row.** "Tina's line has quotation marks and a capital letter, so ask what is missing between her name and her words." Between a name and the words is where a comma goes, so this is Tina's key (row 1 = Add a comma), not a scaffold. Use a location hint that applies to every row, for example "Tina's line already has quotation marks, so compare what comes right after said in each line."
+- NOTE
+  - C12 H2 and S12 H2 ("Ravi comes first, and the words he says are a statement" / "Grandma is named first, and the words she says are a statement") plus H1 point to a period inside; this is the item's reason and borders on a key hint. Acceptable (a child still has to place the mark inside or outside), but a plainer H2 would be "Look at the last word she says and at what follows it."
+  - C09 and S09 H3 say a mark "finishes what is said" / "at the end of the words"; with the premise in the prompt this is a small lean toward "a mark is needed", fine.
+  - C15 H2 "think about how Aunt Beth calls to the family" mildly signals the exclamation point; C15 and S15 `how3` say the wrong options "add a comma after the end mark", but the slot 1 distractors (`"I will wash my hands,"`, `"Give me one minute,"`) swap the period for a comma inside the quotes rather than adding one after.
+  - S03 option C uses "verb of saying", the only adult term in the lesson; "has a word like said" would match the grade.
+  - P3 prompt keeps lowercase "two" (see table); P3 and P5 are older reused practice items with a single clue instead of a three-step ladder (button reads "No more hints" after one press). Not new, not a fault of this lesson's authoring.
+  - Hot-text `why` fields nest quotation marks ("""He is shy" said Noah."" renders as a doubled mark pair); readable but awkward for a lesson about quotation marks. C05 `why` is the clearest example.
+  - Learn It and Watch Me model comma-first, comma-inside when the speaker comes last, and the exclamation point inside. Retelling without quotation marks (C03, S03, DOK 3) and a question mark with the speaker last (C11, C14, S11, S14) appear in Teach only.
+  - C08 displays sentence 9, which C09 asks about in the same set; it shows the faulty sentence (the subject of C09), not C09's key, so there is no giveaway.
+  - Hot-text drafts keep untested errors (p4 sentence 10 `"Thank you, Mr. Hale".`, p1 sentence 9, p3 sentences 4, 7 and 9 outside C13/C12); the shown lists exclude them, and this is intentional.
+
+### Summary
+| Lesson 4 | Result |
+|---|---|
+| Blind solve | 30/30, fully blind |
+| Twin x core | 0.200 / 0.206 (limit 0.21) |
+| Core x core | 0.247 / 0.267 (limit 0.30) |
+| Passages | 114-122 words, FK max 3.17 |
+| Leak / duplicate scans | none |
+| Browser 390x844, taps | 30/30 right, no overflow, S07 button fallback works |
+| Second-review MUSTs (C05 prompt, C04 hint 3) | both fixed on disk |
+| Verdict | **ACCEPT** (0 MUST, 2 SHOULD: hot-text key always sentence 7; S02 H3) |

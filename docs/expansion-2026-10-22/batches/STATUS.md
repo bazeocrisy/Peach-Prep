@@ -83,7 +83,7 @@
 | B8a | 3.L.GC.1:C:form-and-use-prepositional-phrases | ACCEPTED | Second independent review ACCEPT (L1) with browser verification; open SHOULDs in B8a-review.md |
 | B8a | 3.L.GC.1:C:form-and-use-comparative-and-superlative-adjecti | ACCEPTED | Second independent review ACCEPT (L2) with browser verification; open SHOULDs in B8a-review.md |
 | B8a | 3.L.GC.1:C:ensure-pronoun-antecedent-agreement | ACCEPTED | Second independent review ACCEPT (L3) with browser verification; open SHOULDs in B8a-review.md |
-| B8a | 3.L.GC.1:C:use-conventional-capitalization-quotation-marks- | NOT ACCEPTED: awaiting independent review | B8a-author-log.md; authored, not reviewed |
+| B8a | 3.L.GC.1:C:use-conventional-capitalization-quotation-marks- | ACCEPTED | Third independent review ACCEPT (L4) with browser verification; open SHOULDs in B8a-review.md |
 | B8a | 3.L.GC.1:I:use-relative-pronouns-and-relative-adverbs | NOT ACCEPTED: awaiting independent review | B8a-author-log.md; authored, not reviewed |
 | B8a | 3.L.GC.1:I:use-interjections | ACCEPTED | First independent review ACCEPT (L6) with browser verification; open SHOULDs in B8a-review.md |
 | B8a | 3.L.GC.1:I:use-helping-and-linking-verbs | ACCEPTED | Second independent review ACCEPT (L7) with browser verification; open SHOULDs in B8a-review.md |
